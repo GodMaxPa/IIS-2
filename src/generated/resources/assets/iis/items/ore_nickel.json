@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/ore_nickel",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13158650
+      }
+    ]
+  }
+}

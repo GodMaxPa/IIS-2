@@ -26,7 +26,10 @@ until grep -q 'Done (' "$LOG"; do
 done
 echo "iis" >&3
 echo "iis voltages" >&3
-sleep 3
+echo "iis scan 4" >&3
+# скан 81 чанка с генерацией занимает время
+for i in $(seq 1 60); do grep -q 'IIS scan:' "$LOG" && break; sleep 3; done
+sleep 2
 echo "stop" >&3
 wait $GRADLE_PID
 exec 3>&-; rm -f "$FIFO"
@@ -34,6 +37,9 @@ exec 3>&-; rm -f "$FIFO"
 ok=1
 grep -q '\[IIS\] Ideal Industrial 2.0 loaded' "$LOG" && echo "OK: mod loaded" || { echo "FAIL: load marker missing"; ok=0; }
 grep -q 'ZPM — 131072 EU/t' "$LOG" && echo "OK: /iis voltages works" || { echo "FAIL: /iis voltages output missing"; ok=0; }
+if grep -qE 'IIS scan: .*IIS ore blocks=[1-9]' "$LOG"; then echo "OK: GT ore veins generated"; else echo "FAIL: no IIS ores found by /iis scan"; ok=0; fi
+if grep -qE 'IIS scan: .*vanilla ore blocks=0$' "$LOG"; then echo "OK: no vanilla ores"; else echo "FAIL: vanilla ores present"; grep 'IIS scan:' "$LOG"; ok=0; fi
+grep -A100 'IIS scan:' "$LOG" | grep -E '^\[.*\]:   ' | sed 's/.*]:  /   /' | head -40
 ERRS=$(grep -iE 'Exception|ERROR' "$LOG" | grep -vE 'yggdrasil|minecraftservices|server.properties|NoSuchFileException' || true)
 [ -n "$ERRS" ] && { echo "WARN: errors in log:"; echo "$ERRS" | head -20; }
 [ $ok = 1 ] && echo "SMOKE TEST PASSED" || { echo "SMOKE TEST FAILED"; exit 1; }

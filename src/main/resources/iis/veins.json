@@ -1,0 +1,543 @@
+[
+  {
+    "name": "apatite",
+    "minY": 0,
+    "maxY": 32,
+    "legacyMinY": 40,
+    "legacyMaxY": 60,
+    "weight": 60,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:apatite",
+    "secondary": "iis:apatite",
+    "between": "iis:tricalcium_phosphate",
+    "sporadic": "iis:pyrochlore",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "bauxite",
+    "minY": 16,
+    "maxY": 80,
+    "legacyMinY": 50,
+    "legacyMaxY": 90,
+    "weight": 80,
+    "density": 4,
+    "size": 24,
+    "primary": "iis:bauxite",
+    "secondary": "iis:bauxite",
+    "between": "iis:aluminium",
+    "sporadic": "iis:ilmenite",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "beryllium",
+    "minY": -56,
+    "maxY": -16,
+    "legacyMinY": 5,
+    "legacyMaxY": 30,
+    "weight": 30,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:beryllium",
+    "secondary": "iis:beryllium",
+    "between": "iis:emerald",
+    "sporadic": "iis:thorium",
+    "dimensions": [
+      "end",
+      "overworld"
+    ]
+  },
+  {
+    "name": "cassiterite",
+    "minY": 0,
+    "maxY": 128,
+    "legacyMinY": 40,
+    "legacyMaxY": 120,
+    "weight": 100,
+    "density": 5,
+    "size": 32,
+    "primary": "iis:tin",
+    "secondary": "iis:tin",
+    "between": "iis:cassiterite",
+    "sporadic": "iis:tin",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "coal",
+    "minY": 16,
+    "maxY": 64,
+    "legacyMinY": 50,
+    "legacyMaxY": 80,
+    "weight": 80,
+    "density": 6,
+    "size": 32,
+    "primary": "iis:coal",
+    "secondary": "iis:coal",
+    "between": "iis:coal",
+    "sporadic": "iis:lignite",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "copper",
+    "minY": -48,
+    "maxY": -16,
+    "legacyMinY": 10,
+    "legacyMaxY": 30,
+    "weight": 80,
+    "density": 4,
+    "size": 24,
+    "primary": "iis:chalcopyrite",
+    "secondary": "iis:iron",
+    "between": "iis:pyrite",
+    "sporadic": "iis:copper",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "diamond",
+    "minY": -56,
+    "maxY": -32,
+    "legacyMinY": 5,
+    "legacyMaxY": 20,
+    "weight": 40,
+    "density": 2,
+    "size": 16,
+    "primary": "iis:graphite",
+    "secondary": "iis:graphite",
+    "between": "iis:diamond",
+    "sporadic": "iis:coal",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "galena",
+    "minY": -16,
+    "maxY": 32,
+    "legacyMinY": 30,
+    "legacyMaxY": 60,
+    "weight": 40,
+    "density": 5,
+    "size": 16,
+    "primary": "iis:galena",
+    "secondary": "iis:galena",
+    "between": "iis:silver",
+    "sporadic": "iis:lead",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "gold",
+    "minY": 32,
+    "maxY": 64,
+    "legacyMinY": 60,
+    "legacyMaxY": 80,
+    "weight": 160,
+    "density": 3,
+    "size": 32,
+    "primary": "iis:magnetite",
+    "secondary": "iis:magnetite",
+    "between": "iis:vanadium_magnetite",
+    "sporadic": "iis:gold",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "iron",
+    "minY": -48,
+    "maxY": 0,
+    "legacyMinY": 10,
+    "legacyMaxY": 40,
+    "weight": 120,
+    "density": 4,
+    "size": 24,
+    "primary": "iis:brown_limonite",
+    "secondary": "iis:yellow_limonite",
+    "between": "iis:banded_iron",
+    "sporadic": "iis:malachite",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "lapis",
+    "minY": -32,
+    "maxY": 16,
+    "legacyMinY": 20,
+    "legacyMaxY": 50,
+    "weight": 40,
+    "density": 5,
+    "size": 16,
+    "primary": "iis:lazurite",
+    "secondary": "iis:sodalite",
+    "between": "iis:lapis",
+    "sporadic": "iis:calcite",
+    "dimensions": [
+      "end",
+      "overworld"
+    ]
+  },
+  {
+    "name": "lignite",
+    "minY": 16,
+    "maxY": 144,
+    "legacyMinY": 50,
+    "legacyMaxY": 130,
+    "weight": 100,
+    "density": 8,
+    "size": 32,
+    "primary": "iis:lignite",
+    "secondary": "iis:lignite",
+    "between": "iis:lignite",
+    "sporadic": "iis:coal",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "magnetite",
+    "minY": 16,
+    "maxY": 128,
+    "legacyMinY": 50,
+    "legacyMaxY": 120,
+    "weight": 160,
+    "density": 3,
+    "size": 32,
+    "primary": "iis:magnetite",
+    "secondary": "iis:magnetite",
+    "between": "iis:iron",
+    "sporadic": "iis:vanadium_magnetite",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "manganese",
+    "minY": -32,
+    "maxY": -16,
+    "legacyMinY": 20,
+    "legacyMaxY": 30,
+    "weight": 20,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:grossular",
+    "secondary": "iis:spessartine",
+    "between": "iis:pyrolusite",
+    "sporadic": "iis:tantalite",
+    "dimensions": [
+      "end",
+      "overworld"
+    ]
+  },
+  {
+    "name": "molybdenum",
+    "minY": -32,
+    "maxY": 0,
+    "legacyMinY": 20,
+    "legacyMaxY": 40,
+    "weight": 5,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:wulfenite",
+    "secondary": "iis:molybdenite",
+    "between": "iis:molybdenum",
+    "sporadic": "iis:powellite",
+    "dimensions": [
+      "end",
+      "overworld"
+    ]
+  },
+  {
+    "name": "monazite",
+    "minY": -32,
+    "maxY": 0,
+    "legacyMinY": 20,
+    "legacyMaxY": 40,
+    "weight": 30,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:bastnasite",
+    "secondary": "iis:bastnasite",
+    "between": "iis:monazite",
+    "sporadic": "iis:neodymium",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "netherquartz",
+    "minY": 0,
+    "maxY": 64,
+    "legacyMinY": 40,
+    "legacyMaxY": 80,
+    "weight": 80,
+    "density": 5,
+    "size": 24,
+    "primary": "iis:nether_quartz",
+    "secondary": "iis:nether_quartz",
+    "between": "iis:nether_quartz",
+    "sporadic": "iis:nether_quartz",
+    "dimensions": [
+      "nether"
+    ]
+  },
+  {
+    "name": "nickel",
+    "minY": -48,
+    "maxY": 0,
+    "legacyMinY": 10,
+    "legacyMaxY": 40,
+    "weight": 40,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:garnierite",
+    "secondary": "iis:nickel",
+    "between": "iis:cobaltite",
+    "sporadic": "iis:pentlandite",
+    "dimensions": [
+      "end",
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "oilsand",
+    "minY": 16,
+    "maxY": 64,
+    "legacyMinY": 50,
+    "legacyMaxY": 80,
+    "weight": 80,
+    "density": 6,
+    "size": 32,
+    "primary": "iis:oilsands",
+    "secondary": "iis:oilsands",
+    "between": "iis:oilsands",
+    "sporadic": "iis:oilsands",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "olivine",
+    "minY": -48,
+    "maxY": 0,
+    "legacyMinY": 10,
+    "legacyMaxY": 40,
+    "weight": 60,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:bentonite",
+    "secondary": "iis:magnesite",
+    "between": "iis:olivine",
+    "sporadic": "iis:glauconite",
+    "dimensions": [
+      "end",
+      "overworld"
+    ]
+  },
+  {
+    "name": "pitchblende",
+    "minY": -48,
+    "maxY": 0,
+    "legacyMinY": 10,
+    "legacyMaxY": 40,
+    "weight": 40,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:pitchblende",
+    "secondary": "iis:pitchblende",
+    "between": "iis:uranium",
+    "sporadic": "iis:uraninite",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "platinum",
+    "minY": 0,
+    "maxY": 16,
+    "legacyMinY": 40,
+    "legacyMaxY": 50,
+    "weight": 5,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:cooperite",
+    "secondary": "iis:palladium",
+    "between": "iis:platinum",
+    "sporadic": "iis:iridium",
+    "dimensions": [
+      "end",
+      "overworld"
+    ]
+  },
+  {
+    "name": "quartz",
+    "minY": 0,
+    "maxY": 64,
+    "legacyMinY": 40,
+    "legacyMaxY": 80,
+    "weight": 60,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:quartzite",
+    "secondary": "iis:barite",
+    "between": "iis:certus_quartz",
+    "sporadic": "iis:certus_quartz",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "redstone",
+    "minY": -48,
+    "maxY": 0,
+    "legacyMinY": 10,
+    "legacyMaxY": 40,
+    "weight": 60,
+    "density": 3,
+    "size": 24,
+    "primary": "iis:redstone",
+    "secondary": "iis:redstone",
+    "between": "iis:ruby",
+    "sporadic": "iis:cinnabar",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "salts",
+    "minY": 16,
+    "maxY": 32,
+    "legacyMinY": 50,
+    "legacyMaxY": 60,
+    "weight": 50,
+    "density": 3,
+    "size": 24,
+    "primary": "iis:rock_salt",
+    "secondary": "iis:salt",
+    "between": "iis:lepidolite",
+    "sporadic": "iis:spodumene",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "sapphire",
+    "minY": -48,
+    "maxY": 0,
+    "legacyMinY": 10,
+    "legacyMaxY": 40,
+    "weight": 60,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:almandine",
+    "secondary": "iis:pyrope",
+    "between": "iis:sapphire",
+    "sporadic": "iis:green_sapphire",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "soapstone",
+    "minY": -48,
+    "maxY": 0,
+    "legacyMinY": 10,
+    "legacyMaxY": 40,
+    "weight": 40,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:soapstone",
+    "secondary": "iis:talc",
+    "between": "iis:glauconite",
+    "sporadic": "iis:pentlandite",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "sulfur",
+    "minY": -56,
+    "maxY": -32,
+    "legacyMinY": 5,
+    "legacyMaxY": 20,
+    "weight": 100,
+    "density": 5,
+    "size": 24,
+    "primary": "iis:sulfur",
+    "secondary": "iis:sulfur",
+    "between": "iis:pyrite",
+    "sporadic": "iis:sphalerite",
+    "dimensions": [
+      "nether"
+    ]
+  },
+  {
+    "name": "tetrahedrite",
+    "minY": 64,
+    "maxY": 128,
+    "legacyMinY": 80,
+    "legacyMaxY": 120,
+    "weight": 80,
+    "density": 4,
+    "size": 32,
+    "primary": "iis:tetrahedrite",
+    "secondary": "iis:tetrahedrite",
+    "between": "iis:copper",
+    "sporadic": "iis:stibnite",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "tungstate",
+    "minY": -32,
+    "maxY": 16,
+    "legacyMinY": 20,
+    "legacyMaxY": 50,
+    "weight": 10,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:scheelite",
+    "secondary": "iis:scheelite",
+    "between": "iis:tungstate",
+    "sporadic": "iis:lithium",
+    "dimensions": [
+      "end",
+      "overworld"
+    ]
+  },
+  {
+    "name": "uranium",
+    "minY": -32,
+    "maxY": -16,
+    "legacyMinY": 20,
+    "legacyMaxY": 30,
+    "weight": 20,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:uraninite",
+    "secondary": "iis:uraninite",
+    "between": "iis:uranium",
+    "sporadic": "iis:uranium",
+    "dimensions": [
+      "overworld"
+    ]
+  }
+]

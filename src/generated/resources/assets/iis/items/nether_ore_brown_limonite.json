@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/nether_ore_brown_limonite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13132800
+      }
+    ]
+  }
+}

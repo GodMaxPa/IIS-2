@@ -49,6 +49,10 @@ neoForge {
     runs {
         client {
             client()
+            // scripts/showcase.sh: ./gradlew runClient -Pshowcase loads the prepared world directly
+            if (project.hasProperty('showcase')) {
+                programArguments.addAll '--quickPlaySingleplayer', 'showcase', '--width', '1600', '--height', '900'
+            }
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
@@ -115,6 +119,8 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.13.4')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Minecraft's own libraries are not on the plain unit-test runtime classpath
+    testRuntimeOnly 'com.google.code.gson:gson:2.13.2'
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

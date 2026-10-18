@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/deepslate_ore_pitchblende",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13160960
+      }
+    ]
+  }
+}

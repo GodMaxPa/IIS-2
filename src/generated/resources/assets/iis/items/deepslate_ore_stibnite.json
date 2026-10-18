@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/deepslate_ore_stibnite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 4605510
+      }
+    ]
+  }
+}

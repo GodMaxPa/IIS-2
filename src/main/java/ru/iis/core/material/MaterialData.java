@@ -1,0 +1,80 @@
+package ru.iis.core.material;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import ru.iis.world.vein.VeinDefinition;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
+
+/**
+ * Загрузка встроенных в мод данных (материалы, жилы). Читается один раз при старте,
+ * потому что блоки регистрируются до загрузки датапаков.
+ */
+public final class MaterialData {
+    private MaterialData() {}
+
+    private static List<IISMaterial> materials;
+    private static List<VeinDefinition> veins;
+
+    public static synchronized List<IISMaterial> materials() {
+        if (materials == null) materials = parseMaterials(read("/iis/materials.json"));
+        return materials;
+    }
+
+    public static synchronized List<VeinDefinition> veins() {
+        if (veins == null) veins = parseVeins(read("/iis/veins.json"));
+        return veins;
+    }
+
+    static JsonArray read(String path) {
+        try (InputStream in = MaterialData.class.getResourceAsStream(path)) {
+            if (in == null) throw new IllegalStateException("Missing resource " + path);
+            try (Reader r = new InputStreamReader(in, StandardCharsets.UTF_8)) {
+                return JsonParser.parseReader(r).getAsJsonArray();
+            }
+        } catch (IOException e) {
+            throw new IllegalStateException("Cannot read " + path, e);
+        }
+    }
+
+    static List<IISMaterial> parseMaterials(JsonArray arr) {
+        List<IISMaterial> out = new ArrayList<>();
+        Set<String> ids = new HashSet<>();
+        for (JsonElement e : arr) {
+            JsonObject o = e.getAsJsonObject();
+            List<String> hosts = new ArrayList<>();
+            o.getAsJsonArray("hosts").forEach(h -> hosts.add(h.getAsString()));
+            IISMaterial m = new IISMaterial(o.get("id").getAsString(), o.get("gtName").getAsString(),
+                    o.get("en").getAsString(), o.get("ru").getAsString(), o.get("color").getAsInt(),
+                    o.get("iconSet").getAsString(), o.get("harvestLevel").getAsInt(), hosts);
+            if (!ids.add(m.id())) throw new IllegalStateException("Duplicate material " + m.id());
+            out.add(m);
+        }
+        return List.copyOf(out);
+    }
+
+    static List<VeinDefinition> parseVeins(JsonArray arr) {
+        List<VeinDefinition> out = new ArrayList<>();
+        for (JsonElement e : arr) {
+            JsonObject o = e.getAsJsonObject();
+            Set<String> dims = new HashSet<>();
+            o.getAsJsonArray("dimensions").forEach(d -> dims.add(d.getAsString()));
+            out.add(new VeinDefinition(o.get("name").getAsString(), o.get("minY").getAsInt(), o.get("maxY").getAsInt(),
+                    o.get("weight").getAsInt(), o.get("density").getAsInt(), o.get("size").getAsInt(),
+                    str(o, "primary"), str(o, "secondary"), str(o, "between"), str(o, "sporadic"), dims));
+        }
+        return List.copyOf(out);
+    }
+
+    private static String str(JsonObject o, String key) {
+        JsonElement e = o.get(key);
+        return e == null || e.isJsonNull() ? null : e.getAsString();
+    }
+}

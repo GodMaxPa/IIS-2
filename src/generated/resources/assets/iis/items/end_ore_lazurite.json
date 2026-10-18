@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/end_ore_lazurite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6584575
+      }
+    ]
+  }
+}

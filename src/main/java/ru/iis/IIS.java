@@ -8,6 +8,8 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import org.slf4j.Logger;
 import ru.iis.command.IISCommand;
+import ru.iis.world.IISWorldgen;
+import ru.iis.world.ore.OreBlocks;
 
 /**
  * Точка входа мода Ideal Industrial 2.0.
@@ -20,6 +22,8 @@ public final class IIS {
 
     public IIS(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
+        OreBlocks.register(modEventBus);
+        IISWorldgen.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(IISCommand::register);
     }
 

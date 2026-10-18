@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/deepslate_ore_vanadium_magnetite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 2302780
+      }
+    ]
+  }
+}

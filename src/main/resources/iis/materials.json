@@ -1,0 +1,1308 @@
+[
+  {
+    "id": "almandine",
+    "gtName": "Almandine",
+    "gtId": 820,
+    "en": "Almandine",
+    "ru": "Альмандин",
+    "ruOre": "Альмандин",
+    "color": 16711680,
+    "iconSet": "ROUGH",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "aluminium",
+    "gtName": "Aluminium",
+    "gtId": 19,
+    "en": "Aluminium",
+    "ru": "Алюминий",
+    "ruOre": "Алюминиевая руда",
+    "color": 8440048,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "apatite",
+    "gtName": "Apatite",
+    "gtId": 530,
+    "en": "Apatite",
+    "ru": "Апатит",
+    "ruOre": "Апатит",
+    "color": 13158655,
+    "iconSet": "DIAMOND",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "banded_iron",
+    "gtName": "BandedIron",
+    "gtId": 917,
+    "en": "Banded Iron",
+    "ru": "Полосатое железо",
+    "ruOre": "Руда полосчатого железа",
+    "color": 9525850,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "barite",
+    "gtName": "Barite",
+    "gtId": 904,
+    "en": "Barite",
+    "ru": "Барит",
+    "ruOre": "Барит",
+    "color": 15133695,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "bastnasite",
+    "gtName": "Bastnasite",
+    "gtId": 905,
+    "en": "Bastnasite",
+    "ru": "Бастнезит",
+    "ruOre": "Бастнезит",
+    "color": 13135405,
+    "iconSet": "FINE",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "bauxite",
+    "gtName": "Bauxite",
+    "gtId": 822,
+    "en": "Bauxite",
+    "ru": "Боксит",
+    "ruOre": "Боксит",
+    "color": 13132800,
+    "iconSet": "DULL",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "bentonite",
+    "gtName": "Bentonite",
+    "gtId": 927,
+    "en": "Bentonite",
+    "ru": "Бентонит",
+    "ruOre": "Бентонит",
+    "color": 16111570,
+    "iconSet": "ROUGH",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "beryllium",
+    "gtName": "Beryllium",
+    "gtId": 8,
+    "en": "Beryllium",
+    "ru": "Бериллий",
+    "ruOre": "Бериллиевая руда",
+    "color": 6599780,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "brown_limonite",
+    "gtName": "BrownLimonite",
+    "gtId": 930,
+    "en": "Brown Limonite",
+    "ru": "Коричневый лимонит",
+    "ruOre": "Коричневый лимонит",
+    "color": 13132800,
+    "iconSet": "METALLIC",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "calcite",
+    "gtName": "Calcite",
+    "gtId": 823,
+    "en": "Calcite",
+    "ru": "Кальцит",
+    "ruOre": "Кальцит",
+    "color": 16443100,
+    "iconSet": "DULL",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "cassiterite",
+    "gtName": "Cassiterite",
+    "gtId": 824,
+    "en": "Cassiterite",
+    "ru": "Касситерит",
+    "ruOre": "Касситерит",
+    "color": 14474460,
+    "iconSet": "METALLIC",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "certus_quartz",
+    "gtName": "CertusQuartz",
+    "gtId": 516,
+    "en": "Certus Quartz",
+    "ru": "Истинный кварц",
+    "ruOre": "Истинный кварц",
+    "color": 13816550,
+    "iconSet": "QUARTZ",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "chalcopyrite",
+    "gtName": "Chalcopyrite",
+    "gtId": 855,
+    "en": "Chalcopyrite",
+    "ru": "Халькопирит",
+    "ruOre": "Халькопирит",
+    "color": 10516520,
+    "iconSet": "DULL",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "cinnabar",
+    "gtName": "Cinnabar",
+    "gtId": 826,
+    "en": "Cinnabar",
+    "ru": "Киноварь",
+    "ruOre": "Киноварь",
+    "color": 9830400,
+    "iconSet": "ROUGH",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "coal",
+    "gtName": "Coal",
+    "gtId": 535,
+    "en": "Coal",
+    "ru": "Уголь",
+    "ruOre": "Уголь",
+    "color": 4605510,
+    "iconSet": "ROUGH",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "cobaltite",
+    "gtName": "Cobaltite",
+    "gtId": 827,
+    "en": "Cobaltite",
+    "ru": "Кобальтин",
+    "ruOre": "Кобальтин",
+    "color": 5263610,
+    "iconSet": "METALLIC",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "cooperite",
+    "gtName": "Cooperite",
+    "gtId": 828,
+    "en": "Sheldonite",
+    "ru": "Шелдонит",
+    "ruOre": "Шелдонит",
+    "color": 16777160,
+    "iconSet": "METALLIC",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "copper",
+    "gtName": "Copper",
+    "gtId": 35,
+    "en": "Copper",
+    "ru": "Медь",
+    "ruOre": "Медная руда",
+    "color": 16737280,
+    "iconSet": "SHINY",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "diamond",
+    "gtName": "Diamond",
+    "gtId": 500,
+    "en": "Diamond",
+    "ru": "Алмаз",
+    "ruOre": "Алмазная руда",
+    "color": 13172735,
+    "iconSet": "DIAMOND",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "emerald",
+    "gtName": "Emerald",
+    "gtId": 501,
+    "en": "Emerald",
+    "ru": "Изумруд",
+    "ruOre": "Изумрудная руда",
+    "color": 5308240,
+    "iconSet": "EMERALD",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "galena",
+    "gtName": "Galena",
+    "gtId": 830,
+    "en": "Galena",
+    "ru": "Галенит",
+    "ruOre": "Галенит",
+    "color": 6569060,
+    "iconSet": "DULL",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "garnierite",
+    "gtName": "Garnierite",
+    "gtId": 906,
+    "en": "Garnierite",
+    "ru": "Гарниерит",
+    "ruOre": "Гарниерит",
+    "color": 3328070,
+    "iconSet": "METALLIC",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "glauconite",
+    "gtName": "Glauconite",
+    "gtId": 933,
+    "en": "Glauconite",
+    "ru": "Глауконит",
+    "ruOre": "Глауконит",
+    "color": 8565820,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "gold",
+    "gtName": "Gold",
+    "gtId": 86,
+    "en": "Gold",
+    "ru": "Золото",
+    "ruOre": "Золотая руда",
+    "color": 16776990,
+    "iconSet": "SHINY",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "graphite",
+    "gtName": "Graphite",
+    "gtId": 865,
+    "en": "Graphite",
+    "ru": "Графит",
+    "ruOre": "Графит",
+    "color": 8421504,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "green_sapphire",
+    "gtName": "GreenSapphire",
+    "gtId": 504,
+    "en": "Green Sapphire",
+    "ru": "Зелёный сапфир",
+    "ruOre": "Руда зелёного сапфира",
+    "color": 6604930,
+    "iconSet": "GEM_HORIZONTAL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "grossular",
+    "gtName": "Grossular",
+    "gtId": 831,
+    "en": "Grossular",
+    "ru": "Гроссуляр",
+    "ruOre": "Гроссуляр",
+    "color": 13132800,
+    "iconSet": "ROUGH",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "ilmenite",
+    "gtName": "Ilmenite",
+    "gtId": 918,
+    "en": "Ilmenite",
+    "ru": "Ильменит",
+    "ruOre": "Ильменит",
+    "color": 4601650,
+    "iconSet": "METALLIC",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "iridium",
+    "gtName": "Iridium",
+    "gtId": 84,
+    "en": "Iridium",
+    "ru": "Иридий",
+    "ruOre": "Иридиевая руда",
+    "color": 11862015,
+    "iconSet": "DULL",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "iron",
+    "gtName": "Iron",
+    "gtId": 32,
+    "en": "Iron",
+    "ru": "Железо",
+    "ruOre": "Железная руда",
+    "color": 13158600,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "lapis",
+    "gtName": "Lapis",
+    "gtId": 526,
+    "en": "Lapis",
+    "ru": "Ляпис-лазурь",
+    "ruOre": "Ляпис-лазурь",
+    "color": 4605660,
+    "iconSet": "LAPIS",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "lazurite",
+    "gtName": "Lazurite",
+    "gtId": 524,
+    "en": "Lazurite",
+    "ru": "Лазурит",
+    "ruOre": "Лазурит",
+    "color": 6584575,
+    "iconSet": "LAPIS",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "lead",
+    "gtName": "Lead",
+    "gtId": 89,
+    "en": "Lead",
+    "ru": "Свинец",
+    "ruOre": "Свинцовая руда",
+    "color": 9200780,
+    "iconSet": "DULL",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "lepidolite",
+    "gtName": "Lepidolite",
+    "gtId": 907,
+    "en": "Lepidolite",
+    "ru": "Лепидолит",
+    "ruOre": "Лепидолит",
+    "color": 15741580,
+    "iconSet": "FINE",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "lignite",
+    "gtName": "Lignite",
+    "gtId": 538,
+    "en": "Lignite Coal",
+    "ru": "Бурый уголь",
+    "ruOre": "Бурый уголь",
+    "color": 6571590,
+    "iconSet": "LIGNITE",
+    "harvestLevel": 0,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "lithium",
+    "gtName": "Lithium",
+    "gtId": 6,
+    "en": "Lithium",
+    "ru": "Литий",
+    "ruOre": "Литиевая руда",
+    "color": 14802175,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "magnesite",
+    "gtName": "Magnesite",
+    "gtId": 908,
+    "en": "Magnesite",
+    "ru": "Магнезит",
+    "ruOre": "Магнезит",
+    "color": 16448180,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "magnetite",
+    "gtName": "Magnetite",
+    "gtId": 870,
+    "en": "Magnetite",
+    "ru": "Магнетит",
+    "ruOre": "Магнетит",
+    "color": 1973790,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "malachite",
+    "gtName": "Malachite",
+    "gtId": 871,
+    "en": "Malachite",
+    "ru": "Малахит",
+    "ruOre": "Малахит",
+    "color": 352005,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "molybdenite",
+    "gtName": "Molybdenite",
+    "gtId": 942,
+    "en": "Molybdenite",
+    "ru": "Молибденит",
+    "ruOre": "Молибденит",
+    "color": 1644825,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "molybdenum",
+    "gtName": "Molybdenum",
+    "gtId": 48,
+    "en": "Molybdenum",
+    "ru": "Молибден",
+    "ruOre": "Молибденовая руда",
+    "color": 11842780,
+    "iconSet": "SHINY",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "monazite",
+    "gtName": "Monazite",
+    "gtId": 520,
+    "en": "Monazite",
+    "ru": "Монацит",
+    "ruOre": "Монацит",
+    "color": 3294770,
+    "iconSet": "DIAMOND",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "neodymium",
+    "gtName": "Neodymium",
+    "gtId": 67,
+    "en": "Neodymium",
+    "ru": "Неодим",
+    "ruOre": "Неодимовая руда",
+    "color": 6579300,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "nether_quartz",
+    "gtName": "NetherQuartz",
+    "gtId": 522,
+    "en": "Nether Quartz",
+    "ru": "Кварц нижнего мира",
+    "ruOre": "Кварц Нижнего мира",
+    "color": 15127250,
+    "iconSet": "QUARTZ",
+    "harvestLevel": 1,
+    "hosts": [
+      "netherrack"
+    ]
+  },
+  {
+    "id": "nickel",
+    "gtName": "Nickel",
+    "gtId": 34,
+    "en": "Nickel",
+    "ru": "Никель",
+    "ruOre": "Никелевая руда",
+    "color": 13158650,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "oilsands",
+    "gtName": "Oilsands",
+    "gtId": 878,
+    "en": "Oilsands",
+    "ru": "Нефтеносный песок",
+    "ruOre": "Нефтеносные пески",
+    "color": 657930,
+    "iconSet": "NONE",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "olivine",
+    "gtName": "Olivine",
+    "gtId": 505,
+    "en": "Olivine",
+    "ru": "Оливин",
+    "ruOre": "Оливиновая руда",
+    "color": 9895830,
+    "iconSet": "RUBY",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "palladium",
+    "gtName": "Palladium",
+    "gtId": 52,
+    "en": "Palladium",
+    "ru": "Палладий",
+    "ruOre": "Палладиевая руда",
+    "color": 8421504,
+    "iconSet": "SHINY",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "pentlandite",
+    "gtName": "Pentlandite",
+    "gtId": 909,
+    "en": "Pentlandite",
+    "ru": "Пентландит",
+    "ruOre": "Пентландит",
+    "color": 10851845,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "pitchblende",
+    "gtName": "Pitchblende",
+    "gtId": 873,
+    "en": "Pitchblende",
+    "ru": "Настуран",
+    "ruOre": "Настуран",
+    "color": 13160960,
+    "iconSet": "DULL",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "platinum",
+    "gtName": "Platinum",
+    "gtId": 85,
+    "en": "Platinum",
+    "ru": "Платина",
+    "ruOre": "Платиновая руда",
+    "color": 16777160,
+    "iconSet": "SHINY",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "powellite",
+    "gtName": "Powellite",
+    "gtId": 883,
+    "en": "Powellite",
+    "ru": "Повеллит",
+    "ruOre": "Повеллит",
+    "color": 16776960,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "pyrite",
+    "gtName": "Pyrite",
+    "gtId": 834,
+    "en": "Pyrite",
+    "ru": "Пирит",
+    "ruOre": "Пирит",
+    "color": 9861160,
+    "iconSet": "ROUGH",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "pyrochlore",
+    "gtName": "Pyrochlore",
+    "gtId": 607,
+    "en": "Pyrochlore",
+    "ru": "Пирохлор",
+    "ruOre": "Пирохлор",
+    "color": 2822400,
+    "iconSet": "METALLIC",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "pyrolusite",
+    "gtName": "Pyrolusite",
+    "gtId": 943,
+    "en": "Pyrolusite",
+    "ru": "Пиролюзит",
+    "ruOre": "Пиролюзит",
+    "color": 9868970,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "pyrope",
+    "gtName": "Pyrope",
+    "gtId": 835,
+    "en": "Pyrope",
+    "ru": "Пироп",
+    "ruOre": "Пироп",
+    "color": 7877220,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "quartzite",
+    "gtName": "Quartzite",
+    "gtId": 523,
+    "en": "Quartzite",
+    "ru": "Кварцит",
+    "ruOre": "Кварцит",
+    "color": 13821650,
+    "iconSet": "QUARTZ",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "redstone",
+    "gtName": "Redstone",
+    "gtId": 810,
+    "en": "Redstone",
+    "ru": "Красная пыль",
+    "ruOre": "Красная пыль",
+    "color": 13107200,
+    "iconSet": "ROUGH",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "rock_salt",
+    "gtName": "RockSalt",
+    "gtId": 944,
+    "en": "Rock Salt",
+    "ru": "Каменная соль",
+    "ruOre": "Каменная соль",
+    "color": 15780040,
+    "iconSet": "FINE",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "ruby",
+    "gtName": "Ruby",
+    "gtId": 502,
+    "en": "Ruby",
+    "ru": "Рубин",
+    "ruOre": "Рубиновая руда",
+    "color": 16737380,
+    "iconSet": "RUBY",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "salt",
+    "gtName": "Salt",
+    "gtId": 817,
+    "en": "Salt",
+    "ru": "Соль",
+    "ruOre": "Соль",
+    "color": 16448250,
+    "iconSet": "FINE",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "sapphire",
+    "gtName": "Sapphire",
+    "gtId": 503,
+    "en": "Sapphire",
+    "ru": "Сапфир",
+    "ruOre": "Сапфировая руда",
+    "color": 6579400,
+    "iconSet": "GEM_VERTICAL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "scheelite",
+    "gtName": "Scheelite",
+    "gtId": 910,
+    "en": "Scheelite",
+    "ru": "Шеелит",
+    "ruOre": "Шеелит",
+    "color": 13143060,
+    "iconSet": "DULL",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "silver",
+    "gtName": "Silver",
+    "gtId": 54,
+    "en": "Silver",
+    "ru": "Серебро",
+    "ruOre": "Серебряная руда",
+    "color": 14474495,
+    "iconSet": "SHINY",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "soapstone",
+    "gtName": "Soapstone",
+    "gtId": 877,
+    "en": "Soapstone",
+    "ru": "Талькохлорит",
+    "ruOre": "Талькохлорит",
+    "color": 6263135,
+    "iconSet": "DULL",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "sodalite",
+    "gtName": "Sodalite",
+    "gtId": 525,
+    "en": "Sodalite",
+    "ru": "Содалит",
+    "ruOre": "Содалит",
+    "color": 1316095,
+    "iconSet": "LAPIS",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "spessartine",
+    "gtName": "Spessartine",
+    "gtId": 838,
+    "en": "Spessartine",
+    "ru": "Спессартин",
+    "ruOre": "Спессартин",
+    "color": 16737380,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "sphalerite",
+    "gtName": "Sphalerite",
+    "gtId": 839,
+    "en": "Sphalerite",
+    "ru": "Сфалерит",
+    "ruOre": "Сфалерит",
+    "color": 16777215,
+    "iconSet": "DULL",
+    "harvestLevel": 1,
+    "hosts": [
+      "netherrack"
+    ]
+  },
+  {
+    "id": "spodumene",
+    "gtName": "Spodumene",
+    "gtId": 920,
+    "en": "Spodumene",
+    "ru": "Сподумен",
+    "ruOre": "Сподумен",
+    "color": 12495530,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "stibnite",
+    "gtName": "Stibnite",
+    "gtId": 945,
+    "en": "Stibnite",
+    "ru": "Антимонит",
+    "ruOre": "Антимонит",
+    "color": 4605510,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "sulfur",
+    "gtName": "Sulfur",
+    "gtId": 22,
+    "en": "Sulfur",
+    "ru": "Сера",
+    "ruOre": "Сера",
+    "color": 13158400,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "netherrack"
+    ]
+  },
+  {
+    "id": "talc",
+    "gtName": "Talc",
+    "gtId": 902,
+    "en": "Talc",
+    "ru": "Тальк",
+    "ruOre": "Тальк",
+    "color": 5944410,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "tantalite",
+    "gtName": "Tantalite",
+    "gtId": 921,
+    "en": "Tantalite",
+    "ru": "Танталит",
+    "ruOre": "Танталит",
+    "color": 9523240,
+    "iconSet": "METALLIC",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "tetrahedrite",
+    "gtName": "Tetrahedrite",
+    "gtId": 840,
+    "en": "Tetrahedrite",
+    "ru": "Тетраэдрит",
+    "ruOre": "Тетраэдрит",
+    "color": 13115392,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "thorium",
+    "gtName": "Thorium",
+    "gtId": 96,
+    "en": "Thorium",
+    "ru": "Торий",
+    "ruOre": "Ториевая руда",
+    "color": 7680,
+    "iconSet": "SHINY",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "tin",
+    "gtName": "Tin",
+    "gtId": 57,
+    "en": "Tin",
+    "ru": "Олово",
+    "ruOre": "Оловянная руда",
+    "color": 14474460,
+    "iconSet": "DULL",
+    "harvestLevel": 1,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "tricalcium_phosphate",
+    "gtName": "TricalciumPhosphate",
+    "gtId": 534,
+    "en": "Tricalcium Phosphate",
+    "ru": "Трикальцийфосфат",
+    "ruOre": "Фосфат кальция",
+    "color": 16776960,
+    "iconSet": "FLINT",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "tungstate",
+    "gtName": "Tungstate",
+    "gtId": 841,
+    "en": "Tungstate",
+    "ru": "Вольфрамат",
+    "ruOre": "Вольфрамат",
+    "color": 3617315,
+    "iconSet": "DULL",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "uraninite",
+    "gtName": "Uraninite",
+    "gtId": 922,
+    "en": "Uraninite",
+    "ru": "Уранинит",
+    "ruOre": "Уранинит",
+    "color": 2302755,
+    "iconSet": "METALLIC",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "uranium",
+    "gtName": "Uranium",
+    "gtId": 98,
+    "en": "Uranium 238",
+    "ru": "Уран-238",
+    "ruOre": "Руда урана-238",
+    "color": 3338290,
+    "iconSet": "METALLIC",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ]
+  },
+  {
+    "id": "vanadium_magnetite",
+    "gtName": "VanadiumMagnetite",
+    "gtId": 923,
+    "en": "Vanadium Magnetite",
+    "ru": "Ванадий-магнетит",
+    "ruOre": "Ванадий-магнетит",
+    "color": 2302780,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  },
+  {
+    "id": "wulfenite",
+    "gtName": "Wulfenite",
+    "gtId": 882,
+    "en": "Wulfenite",
+    "ru": "Вульфенит",
+    "ruOre": "Вульфенит",
+    "color": 16744448,
+    "iconSet": "DULL",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "end_stone"
+    ]
+  },
+  {
+    "id": "yellow_limonite",
+    "gtName": "YellowLimonite",
+    "gtId": 931,
+    "en": "Yellow Limonite",
+    "ru": "Лимонит",
+    "ruOre": "Лимонит",
+    "color": 13158400,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ]
+  }
+]
