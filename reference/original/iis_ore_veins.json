@@ -1,0 +1,622 @@
+[
+ {
+  "name": "apatite",
+  "minY": 40,
+  "maxY": 60,
+  "weight": 60,
+  "density": 3,
+  "size": 16,
+  "primary": "Apatite",
+  "secondary": "Apatite",
+  "between": "TricalciumPhosphate",
+  "sporadic": "Pyrochlore",
+  "dimensions": [
+   "Overworld"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "bauxite",
+  "minY": 50,
+  "maxY": 90,
+  "weight": 80,
+  "density": 4,
+  "size": 24,
+  "primary": "Bauxite",
+  "secondary": "Bauxite",
+  "between": "Aluminium",
+  "sporadic": "Ilmenite",
+  "dimensions": [
+   "Overworld",
+   "Moon"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "beryllium",
+  "minY": 5,
+  "maxY": 30,
+  "weight": 30,
+  "density": 3,
+  "size": 16,
+  "primary": "Beryllium",
+  "secondary": "Beryllium",
+  "between": "Emerald",
+  "sporadic": "Thorium",
+  "dimensions": [
+   "Overworld",
+   "TheEnd"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "cassiterite",
+  "minY": 40,
+  "maxY": 120,
+  "weight": 100,
+  "density": 5,
+  "size": 32,
+  "primary": "Tin",
+  "secondary": "Tin",
+  "between": "Cassiterite",
+  "sporadic": "Tin",
+  "dimensions": [
+   "Overworld"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "coal",
+  "minY": 50,
+  "maxY": 80,
+  "weight": 80,
+  "density": 6,
+  "size": 32,
+  "primary": "Coal",
+  "secondary": "Coal",
+  "between": "Coal",
+  "sporadic": "Lignite",
+  "dimensions": [
+   "Overworld"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "copper",
+  "minY": 10,
+  "maxY": 30,
+  "weight": 80,
+  "density": 4,
+  "size": 24,
+  "primary": "Chalcopyrite",
+  "secondary": "Iron",
+  "between": "Pyrite",
+  "sporadic": "Copper",
+  "dimensions": [
+   "Overworld",
+   "Nether"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "custom.00",
+  "minY": 20,
+  "maxY": 50,
+  "weight": 10,
+  "density": 2,
+  "size": 16,
+  "primary": "Sapphire",
+  "secondary": "MeteoricIron",
+  "between": "Platinum",
+  "sporadic": "Iridium",
+  "dimensions": [
+   "Moon"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "custom.01",
+  "minY": 50,
+  "maxY": 120,
+  "weight": 50,
+  "density": 3,
+  "size": 16,
+  "primary": "Titanium",
+  "secondary": "Tungsten",
+  "between": "Neodymium",
+  "sporadic": "Vanadium",
+  "dimensions": [
+   "Mars"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "custom.02",
+  "minY": 5,
+  "maxY": 40,
+  "weight": 20,
+  "density": 2,
+  "size": 16,
+  "primary": "Graphite",
+  "secondary": "Ruby",
+  "between": "Desh",
+  "sporadic": "Diamond",
+  "dimensions": [
+   "Mars"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "custom.03",
+  "minY": 10,
+  "maxY": 20,
+  "weight": 10,
+  "density": 2,
+  "size": 16,
+  "primary": "Naquadah",
+  "secondary": "Europium",
+  "between": "Naquadah",
+  "sporadic": "Naquadah",
+  "dimensions": [
+   "Mars"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "custom.04",
+  "minY": 20,
+  "maxY": 200,
+  "weight": 30,
+  "density": 8,
+  "size": 24,
+  "primary": "Lutetium",
+  "secondary": "Naquadah",
+  "between": "Gallium",
+  "sporadic": "NaquadahEnriched",
+  "dimensions": [
+   "Asteroid"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "diamond",
+  "minY": 5,
+  "maxY": 20,
+  "weight": 40,
+  "density": 2,
+  "size": 16,
+  "primary": "Graphite",
+  "secondary": "Graphite",
+  "between": "Diamond",
+  "sporadic": "Coal",
+  "dimensions": [
+   "Overworld"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "galena",
+  "minY": 30,
+  "maxY": 60,
+  "weight": 40,
+  "density": 5,
+  "size": 16,
+  "primary": "Galena",
+  "secondary": "Galena",
+  "between": "Silver",
+  "sporadic": "Lead",
+  "dimensions": [
+   "Overworld"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "gold",
+  "minY": 60,
+  "maxY": 80,
+  "weight": 160,
+  "density": 3,
+  "size": 32,
+  "primary": "Magnetite",
+  "secondary": "Magnetite",
+  "between": "VanadiumMagnetite",
+  "sporadic": "Gold",
+  "dimensions": [
+   "Overworld",
+   "Moon",
+   "Mars"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "iron",
+  "minY": 10,
+  "maxY": 40,
+  "weight": 120,
+  "density": 4,
+  "size": 24,
+  "primary": "BrownLimonite",
+  "secondary": "YellowLimonite",
+  "between": "BandedIron",
+  "sporadic": "Malachite",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "lapis",
+  "minY": 20,
+  "maxY": 50,
+  "weight": 40,
+  "density": 5,
+  "size": 16,
+  "primary": "Lazurite",
+  "secondary": "Sodalite",
+  "between": "Lapis",
+  "sporadic": "Calcite",
+  "dimensions": [
+   "Overworld",
+   "TheEnd",
+   "Moon"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "lignite",
+  "minY": 50,
+  "maxY": 130,
+  "weight": 100,
+  "density": 8,
+  "size": 32,
+  "primary": "Lignite",
+  "secondary": "Lignite",
+  "between": "Lignite",
+  "sporadic": "Coal",
+  "dimensions": [
+   "Overworld"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "magnetite",
+  "minY": 50,
+  "maxY": 120,
+  "weight": 160,
+  "density": 3,
+  "size": 32,
+  "primary": "Magnetite",
+  "secondary": "Magnetite",
+  "between": "Iron",
+  "sporadic": "VanadiumMagnetite",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "manganese",
+  "minY": 20,
+  "maxY": 30,
+  "weight": 20,
+  "density": 3,
+  "size": 16,
+  "primary": "Grossular",
+  "secondary": "Spessartine",
+  "between": "Pyrolusite",
+  "sporadic": "Tantalite",
+  "dimensions": [
+   "Overworld",
+   "TheEnd"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "molybdenum",
+  "minY": 20,
+  "maxY": 40,
+  "weight": 5,
+  "density": 3,
+  "size": 16,
+  "primary": "Wulfenite",
+  "secondary": "Molybdenite",
+  "between": "Molybdenum",
+  "sporadic": "Powellite",
+  "dimensions": [
+   "Overworld",
+   "TheEnd"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "monazite",
+  "minY": 20,
+  "maxY": 40,
+  "weight": 30,
+  "density": 3,
+  "size": 16,
+  "primary": "Bastnasite",
+  "secondary": "Bastnasite",
+  "between": "Monazite",
+  "sporadic": "Neodymium",
+  "dimensions": [
+   "Overworld",
+   "Moon",
+   "Mars"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "naquadah",
+  "minY": 10,
+  "maxY": 60,
+  "weight": 10,
+  "density": 5,
+  "size": 32,
+  "primary": "Naquadah",
+  "secondary": "Naquadah",
+  "between": "Naquadah",
+  "sporadic": "NaquadahEnriched",
+  "dimensions": [
+   "Asteroid"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "netherquartz",
+  "minY": 40,
+  "maxY": 80,
+  "weight": 80,
+  "density": 5,
+  "size": 24,
+  "primary": "NetherQuartz",
+  "secondary": "NetherQuartz",
+  "between": "NetherQuartz",
+  "sporadic": "NetherQuartz",
+  "dimensions": [
+   "Nether"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "nickel",
+  "minY": 10,
+  "maxY": 40,
+  "weight": 40,
+  "density": 3,
+  "size": 16,
+  "primary": "Garnierite",
+  "secondary": "Nickel",
+  "between": "Cobaltite",
+  "sporadic": "Pentlandite",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "TheEnd"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "oilsand",
+  "minY": 50,
+  "maxY": 80,
+  "weight": 80,
+  "density": 6,
+  "size": 32,
+  "primary": "Oilsands",
+  "secondary": "Oilsands",
+  "between": "Oilsands",
+  "sporadic": "Oilsands",
+  "dimensions": [
+   "Overworld"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "olivine",
+  "minY": 10,
+  "maxY": 40,
+  "weight": 60,
+  "density": 3,
+  "size": 16,
+  "primary": "Bentonite",
+  "secondary": "Magnesite",
+  "between": "Olivine",
+  "sporadic": "Glauconite",
+  "dimensions": [
+   "Overworld",
+   "TheEnd"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "pitchblende",
+  "minY": 10,
+  "maxY": 40,
+  "weight": 40,
+  "density": 3,
+  "size": 16,
+  "primary": "Pitchblende",
+  "secondary": "Pitchblende",
+  "between": "Uranium",
+  "sporadic": "Uraninite",
+  "dimensions": [
+   "Overworld"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "platinum",
+  "minY": 40,
+  "maxY": 50,
+  "weight": 5,
+  "density": 3,
+  "size": 16,
+  "primary": "Cooperite",
+  "secondary": "Palladium",
+  "between": "Platinum",
+  "sporadic": "Iridium",
+  "dimensions": [
+   "Overworld",
+   "TheEnd",
+   "Mars"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "quartz",
+  "minY": 40,
+  "maxY": 80,
+  "weight": 60,
+  "density": 3,
+  "size": 16,
+  "primary": "Quartzite",
+  "secondary": "Barite",
+  "between": "CertusQuartz",
+  "sporadic": "CertusQuartz",
+  "dimensions": [
+   "Overworld",
+   "Moon"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "redstone",
+  "minY": 10,
+  "maxY": 40,
+  "weight": 60,
+  "density": 3,
+  "size": 24,
+  "primary": "Redstone",
+  "secondary": "Redstone",
+  "between": "Ruby",
+  "sporadic": "Cinnabar",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Moon",
+   "Mars"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "salts",
+  "minY": 50,
+  "maxY": 60,
+  "weight": 50,
+  "density": 3,
+  "size": 24,
+  "primary": "RockSalt",
+  "secondary": "Salt",
+  "between": "Lepidolite",
+  "sporadic": "Spodumene",
+  "dimensions": [
+   "Overworld"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "sapphire",
+  "minY": 10,
+  "maxY": 40,
+  "weight": 60,
+  "density": 3,
+  "size": 16,
+  "primary": "Almandine",
+  "secondary": "Pyrope",
+  "between": "Sapphire",
+  "sporadic": "GreenSapphire",
+  "dimensions": [
+   "Overworld"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "soapstone",
+  "minY": 10,
+  "maxY": 40,
+  "weight": 40,
+  "density": 3,
+  "size": 16,
+  "primary": "Soapstone",
+  "secondary": "Talc",
+  "between": "Glauconite",
+  "sporadic": "Pentlandite",
+  "dimensions": [
+   "Overworld"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "sulfur",
+  "minY": 5,
+  "maxY": 20,
+  "weight": 100,
+  "density": 5,
+  "size": 24,
+  "primary": "Sulfur",
+  "secondary": "Sulfur",
+  "between": "Pyrite",
+  "sporadic": "Sphalerite",
+  "dimensions": [
+   "Nether"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "tetrahedrite",
+  "minY": 80,
+  "maxY": 120,
+  "weight": 80,
+  "density": 4,
+  "size": 32,
+  "primary": "Tetrahedrite",
+  "secondary": "Tetrahedrite",
+  "between": "Copper",
+  "sporadic": "Stibnite",
+  "dimensions": [
+   "Overworld",
+   "Nether"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "tungstate",
+  "minY": 20,
+  "maxY": 50,
+  "weight": 10,
+  "density": 3,
+  "size": 16,
+  "primary": "Scheelite",
+  "secondary": "Scheelite",
+  "between": "Tungstate",
+  "sporadic": "Lithium",
+  "dimensions": [
+   "Overworld",
+   "TheEnd",
+   "Moon"
+  ],
+  "restrictBiome": "None"
+ },
+ {
+  "name": "uranium",
+  "minY": 20,
+  "maxY": 30,
+  "weight": 20,
+  "density": 3,
+  "size": 16,
+  "primary": "Uraninite",
+  "secondary": "Uraninite",
+  "between": "Uranium",
+  "sporadic": "Uranium",
+  "dimensions": [
+   "Overworld",
+   "Moon"
+  ],
+  "restrictBiome": "None"
+ }
+]

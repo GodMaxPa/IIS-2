@@ -17,3 +17,11 @@
 
 ## Оригинальные моды
 См. `ORIGINAL_MODS.md`.
+
+## Мир
+
+### Рудные жилы (исследование, реализации ещё нет)
+- Источники: `GT_Worldgenerator.WorldGenContainer#run`, `GT_Worldgen_GT_Ore_Layer#executeWorldgen`, настройки сборки `config/GregTech/WorldGeneration.cfg`.
+- Данные ИИС извлечены в `reference/original/iis_ore_veins.json` (37 жил) скриптом `tools/extract/gt5_veins.py`.
+- Алгоритм описан в `docs/SLICE2_PLAN.md`. Перенос высот — решение владельца (В1).
+- Известная особенность оригинала: в `getRandom` выражение `nextLong() >> 2 + 1L` — это сдвиг на 3 (приоритет операторов Java). Для нас неважно: побитовая совместимость с миром 1.7.10 не нужна.
