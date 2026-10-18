@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/vanadium_magnetite",
+    "#iis:small_dusts/vanadium_magnetite",
+    "#iis:small_dusts/vanadium_magnetite",
+    "#iis:small_dusts/vanadium_magnetite"
+  ],
+  "result": {
+    "id": "iis:dust_vanadium_magnetite"
+  }
+}

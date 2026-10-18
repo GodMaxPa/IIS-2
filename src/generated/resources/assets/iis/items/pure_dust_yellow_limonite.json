@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/pure_dust_yellow_limonite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13158400
+      }
+    ]
+  }
+}

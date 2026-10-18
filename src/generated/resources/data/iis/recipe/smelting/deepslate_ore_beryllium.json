@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:deepslate_ore_beryllium",
+  "result": {
+    "id": "iis:ingot_beryllium"
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/purified_almandine",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 16711680
+      }
+    ]
+  }
+}

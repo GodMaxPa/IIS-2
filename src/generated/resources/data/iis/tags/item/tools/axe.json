@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "iis:axe_aluminium",
+    "iis:axe_beryllium",
+    "iis:axe_bronze",
+    "iis:axe_certus_quartz",
+    "iis:axe_cobalt",
+    "iis:axe_diamond",
+    "iis:axe_emerald",
+    "iis:axe_green_sapphire",
+    "iis:axe_iron",
+    "iis:axe_manganese",
+    "iis:axe_molybdenum",
+    "iis:axe_nether_quartz",
+    "iis:axe_nickel",
+    "iis:axe_olivine",
+    "iis:axe_ruby",
+    "iis:axe_sapphire"
+  ]
+}

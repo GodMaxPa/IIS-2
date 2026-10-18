@@ -10,6 +10,9 @@ import org.slf4j.Logger;
 import ru.iis.command.IISCommand;
 import ru.iis.world.IISWorldgen;
 import ru.iis.world.ore.OreBlocks;
+import ru.iis.core.item.MaterialItems;
+import ru.iis.tool.GtTools;
+import ru.iis.tool.HammerDrops;
 
 /**
  * Точка входа мода Ideal Industrial 2.0.
@@ -24,6 +27,10 @@ public final class IIS {
         modEventBus.addListener(this::commonSetup);
         OreBlocks.register(modEventBus);
         IISWorldgen.register(modEventBus);
+        MaterialItems.register(modEventBus);
+        modEventBus.addListener(IISPacks::addPacks);
+        GtTools.register(modEventBus);
+        NeoForge.EVENT_BUS.addListener(HammerDrops::onBlockDrops);
         NeoForge.EVENT_BUS.addListener(IISCommand::register);
     }
 

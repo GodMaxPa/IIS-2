@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/plate_molybdenum",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 11842780
+      }
+    ]
+  }
+}

@@ -1,3 +1,4 @@
 {
-  "iis.command.info": "Ideal Industrial 2.0, version %s. Try /iis voltages"
+  "iis.command.info": "Ideal Industrial 2.0, version %s. Try /iis voltages",
+  "iis.tooltip.cauldron_wash": "Throw into a water cauldron to wash"
 }

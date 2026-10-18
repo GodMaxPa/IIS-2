@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/lead",
+    "#iis:small_dusts/lead",
+    "#iis:small_dusts/lead",
+    "#iis:small_dusts/lead"
+  ],
+  "result": {
+    "id": "iis:dust_lead"
+  }
+}

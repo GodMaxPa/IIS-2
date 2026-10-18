@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/hoe/nether_quartz",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:hoe_nether_quartz"
+  }
+}

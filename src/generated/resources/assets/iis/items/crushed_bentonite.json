@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/crushed_bentonite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 16111570
+      }
+    ]
+  }
+}

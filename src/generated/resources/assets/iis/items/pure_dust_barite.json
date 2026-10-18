@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/pure_dust_barite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 15133695
+      }
+    ]
+  }
+}

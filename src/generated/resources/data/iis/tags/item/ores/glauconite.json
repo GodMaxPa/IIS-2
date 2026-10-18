@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_glauconite",
+    "iis:deepslate_ore_glauconite",
+    "iis:end_ore_glauconite"
+  ]
+}

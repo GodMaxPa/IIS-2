@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/grossular",
+    "#iis:small_dusts/grossular",
+    "#iis:small_dusts/grossular",
+    "#iis:small_dusts/grossular"
+  ],
+  "result": {
+    "id": "iis:dust_grossular"
+  }
+}

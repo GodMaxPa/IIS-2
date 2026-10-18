@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X",
+    "m"
+  ],
+  "key": {
+    "X": "#c:ingots/iron",
+    "m": "#iis:tools/mortar"
+  },
+  "result": {
+    "id": "iis:dust_iron"
+  }
+}

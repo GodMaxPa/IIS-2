@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/tricalcium_phosphate",
+    "#iis:tiny_dusts/tricalcium_phosphate",
+    "#iis:tiny_dusts/tricalcium_phosphate",
+    "#iis:tiny_dusts/tricalcium_phosphate",
+    "#iis:tiny_dusts/tricalcium_phosphate",
+    "#iis:tiny_dusts/tricalcium_phosphate",
+    "#iis:tiny_dusts/tricalcium_phosphate",
+    "#iis:tiny_dusts/tricalcium_phosphate",
+    "#iis:tiny_dusts/tricalcium_phosphate"
+  ],
+  "result": {
+    "id": "iis:dust_tricalcium_phosphate"
+  }
+}

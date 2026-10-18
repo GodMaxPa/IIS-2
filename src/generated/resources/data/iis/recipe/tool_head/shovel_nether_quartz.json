@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "fG"
+  ],
+  "key": {
+    "G": "#c:gems/nether_quartz",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:shovel_head_nether_quartz"
+  }
+}

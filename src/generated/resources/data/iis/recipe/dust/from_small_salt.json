@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/salt",
+    "#iis:small_dusts/salt",
+    "#iis:small_dusts/salt",
+    "#iis:small_dusts/salt"
+  ],
+  "result": {
+    "id": "iis:dust_salt"
+  }
+}

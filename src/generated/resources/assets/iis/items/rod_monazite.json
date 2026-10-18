@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/rod_monazite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 3294770
+      }
+    ]
+  }
+}

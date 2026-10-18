@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "iis:wrench_aluminium",
+    "iis:wrench_beryllium",
+    "iis:wrench_bronze",
+    "iis:wrench_certus_quartz",
+    "iis:wrench_cobalt",
+    "iis:wrench_diamond",
+    "iis:wrench_emerald",
+    "iis:wrench_green_sapphire",
+    "iis:wrench_iron",
+    "iis:wrench_manganese",
+    "iis:wrench_molybdenum",
+    "iis:wrench_nether_quartz",
+    "iis:wrench_nickel",
+    "iis:wrench_olivine",
+    "iis:wrench_ruby",
+    "iis:wrench_sapphire"
+  ]
+}

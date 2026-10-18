@@ -1,0 +1,13 @@
+{
+  "pack": {
+    "description": "IIS 2.0: overrides of vanilla data",
+    "min_format": [
+      101,
+      1
+    ],
+    "max_format": [
+      101,
+      1
+    ]
+  }
+}

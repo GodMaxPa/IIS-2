@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:end_ore_platinum",
+  "result": {
+    "id": "iis:ingot_platinum",
+    "count": 2
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

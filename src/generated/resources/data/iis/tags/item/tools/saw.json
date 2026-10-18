@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "iis:saw_aluminium",
+    "iis:saw_beryllium",
+    "iis:saw_bronze",
+    "iis:saw_certus_quartz",
+    "iis:saw_cobalt",
+    "iis:saw_diamond",
+    "iis:saw_emerald",
+    "iis:saw_green_sapphire",
+    "iis:saw_iron",
+    "iis:saw_manganese",
+    "iis:saw_molybdenum",
+    "iis:saw_nether_quartz",
+    "iis:saw_nickel",
+    "iis:saw_olivine",
+    "iis:saw_ruby",
+    "iis:saw_sapphire"
+  ]
+}

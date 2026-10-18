@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:end_ore_pyrolusite",
+  "result": {
+    "id": "iis:ingot_manganese",
+    "count": 2
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

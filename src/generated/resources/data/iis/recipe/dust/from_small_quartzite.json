@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/quartzite",
+    "#iis:small_dusts/quartzite",
+    "#iis:small_dusts/quartzite",
+    "#iis:small_dusts/quartzite"
+  ],
+  "result": {
+    "id": "iis:dust_quartzite"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:deepslate_ore_certus_quartz",
+  "result": {
+    "id": "iis:gem_certus_quartz"
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

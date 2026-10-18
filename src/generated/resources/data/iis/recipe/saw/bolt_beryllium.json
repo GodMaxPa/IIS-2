@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:rods/beryllium",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:bolt_beryllium",
+    "count": 2
+  }
+}

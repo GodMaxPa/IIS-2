@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "iis:sword_aluminium",
+    "iis:sword_beryllium",
+    "iis:sword_bronze",
+    "iis:sword_certus_quartz",
+    "iis:sword_cobalt",
+    "iis:sword_diamond",
+    "iis:sword_emerald",
+    "iis:sword_green_sapphire",
+    "iis:sword_iron",
+    "iis:sword_manganese",
+    "iis:sword_molybdenum",
+    "iis:sword_nether_quartz",
+    "iis:sword_nickel",
+    "iis:sword_olivine",
+    "iis:sword_ruby",
+    "iis:sword_sapphire"
+  ]
+}

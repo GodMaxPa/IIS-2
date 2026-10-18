@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/cassiterite",
+    "#iis:small_dusts/cassiterite",
+    "#iis:small_dusts/cassiterite",
+    "#iis:small_dusts/cassiterite"
+  ],
+  "result": {
+    "id": "iis:dust_cassiterite"
+  }
+}

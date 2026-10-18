@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:end_ore_magnesite",
+  "result": {
+    "id": "iis:ingot_magnesium",
+    "count": 2
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

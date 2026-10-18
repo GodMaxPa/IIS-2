@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:end_ore_lazurite",
+  "result": {
+    "id": "iis:gem_lazurite",
+    "count": 6
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

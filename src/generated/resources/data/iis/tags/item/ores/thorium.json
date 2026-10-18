@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_thorium",
+    "iis:deepslate_ore_thorium",
+    "iis:end_ore_thorium"
+  ]
+}

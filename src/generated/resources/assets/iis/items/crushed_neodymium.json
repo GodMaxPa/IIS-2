@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/crushed_neodymium",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6579300
+      }
+    ]
+  }
+}

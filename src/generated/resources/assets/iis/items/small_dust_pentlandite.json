@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/small_dust_pentlandite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 10851845
+      }
+    ]
+  }
+}

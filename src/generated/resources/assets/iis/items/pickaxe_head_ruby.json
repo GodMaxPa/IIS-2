@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/pickaxe_head_ruby",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 16737380
+      }
+    ]
+  }
+}

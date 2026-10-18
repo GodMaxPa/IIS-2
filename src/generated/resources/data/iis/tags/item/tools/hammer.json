@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "iis:hammer_aluminium",
+    "iis:hammer_beryllium",
+    "iis:hammer_bronze",
+    "iis:hammer_certus_quartz",
+    "iis:hammer_cobalt",
+    "iis:hammer_diamond",
+    "iis:hammer_emerald",
+    "iis:hammer_green_sapphire",
+    "iis:hammer_iron",
+    "iis:hammer_manganese",
+    "iis:hammer_molybdenum",
+    "iis:hammer_nether_quartz",
+    "iis:hammer_nickel",
+    "iis:hammer_olivine",
+    "iis:hammer_ruby",
+    "iis:hammer_sapphire"
+  ]
+}

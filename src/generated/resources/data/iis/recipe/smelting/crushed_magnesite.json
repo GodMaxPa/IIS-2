@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "#iis:crushed_ores/magnesite",
+  "result": {
+    "id": "iis:nugget_magnesium",
+    "count": 6
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

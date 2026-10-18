@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/pure_dust_tetrahedrite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13115392
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:deepslate_ore_sodalite",
+  "result": {
+    "id": "iis:gem_sodalite",
+    "count": 3
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

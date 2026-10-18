@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/nickel",
+    "#iis:small_dusts/nickel",
+    "#iis:small_dusts/nickel",
+    "#iis:small_dusts/nickel"
+  ],
+  "result": {
+    "id": "iis:dust_nickel"
+  }
+}

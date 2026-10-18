@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "iis:file_aluminium",
+    "iis:file_beryllium",
+    "iis:file_bronze",
+    "iis:file_certus_quartz",
+    "iis:file_cobalt",
+    "iis:file_diamond",
+    "iis:file_emerald",
+    "iis:file_green_sapphire",
+    "iis:file_iron",
+    "iis:file_manganese",
+    "iis:file_molybdenum",
+    "iis:file_nether_quartz",
+    "iis:file_nickel",
+    "iis:file_olivine",
+    "iis:file_ruby",
+    "iis:file_sapphire"
+  ]
+}

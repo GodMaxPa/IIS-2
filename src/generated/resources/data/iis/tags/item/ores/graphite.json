@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_graphite",
+    "iis:deepslate_ore_graphite"
+  ]
+}

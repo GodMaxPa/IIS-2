@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_nickel",
+    "iis:deepslate_ore_nickel",
+    "iis:nether_ore_nickel",
+    "iis:end_ore_nickel"
+  ]
+}

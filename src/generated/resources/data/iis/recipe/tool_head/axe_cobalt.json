@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PIh",
+    "P  ",
+    "f  "
+  ],
+  "key": {
+    "P": "#c:plates/cobalt",
+    "I": "#c:ingots/cobalt",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:axe_head_cobalt"
+  }
+}

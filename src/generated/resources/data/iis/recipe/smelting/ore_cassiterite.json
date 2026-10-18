@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:ore_cassiterite",
+  "result": {
+    "id": "iis:ingot_tin",
+    "count": 2
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

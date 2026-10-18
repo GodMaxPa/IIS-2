@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/bronze",
+    "#iis:small_dusts/bronze",
+    "#iis:small_dusts/bronze",
+    "#iis:small_dusts/bronze"
+  ],
+  "result": {
+    "id": "iis:dust_bronze"
+  }
+}

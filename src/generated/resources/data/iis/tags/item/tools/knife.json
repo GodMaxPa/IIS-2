@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "iis:knife_aluminium",
+    "iis:knife_beryllium",
+    "iis:knife_bronze",
+    "iis:knife_certus_quartz",
+    "iis:knife_cobalt",
+    "iis:knife_diamond",
+    "iis:knife_emerald",
+    "iis:knife_green_sapphire",
+    "iis:knife_iron",
+    "iis:knife_manganese",
+    "iis:knife_molybdenum",
+    "iis:knife_nether_quartz",
+    "iis:knife_nickel",
+    "iis:knife_olivine",
+    "iis:knife_ruby",
+    "iis:knife_sapphire"
+  ]
+}

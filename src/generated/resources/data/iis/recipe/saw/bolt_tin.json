@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:rods/tin",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:bolt_tin",
+    "count": 2
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_platinum",
+    "iis:deepslate_ore_platinum",
+    "iis:end_ore_platinum"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/bolt_apatite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13158655
+      }
+    ]
+  }
+}

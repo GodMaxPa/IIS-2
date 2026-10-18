@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/zinc",
+    "#iis:tiny_dusts/zinc",
+    "#iis:tiny_dusts/zinc",
+    "#iis:tiny_dusts/zinc",
+    "#iis:tiny_dusts/zinc",
+    "#iis:tiny_dusts/zinc",
+    "#iis:tiny_dusts/zinc",
+    "#iis:tiny_dusts/zinc",
+    "#iis:tiny_dusts/zinc"
+  ],
+  "result": {
+    "id": "iis:dust_zinc"
+  }
+}

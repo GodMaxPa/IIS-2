@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GG ",
+    "f  "
+  ],
+  "key": {
+    "G": "#c:gems/sapphire",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:hoe_head_sapphire"
+  }
+}

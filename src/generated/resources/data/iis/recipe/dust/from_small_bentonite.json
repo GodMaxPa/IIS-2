@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/bentonite",
+    "#iis:small_dusts/bentonite",
+    "#iis:small_dusts/bentonite",
+    "#iis:small_dusts/bentonite"
+  ],
+  "result": {
+    "id": "iis:dust_bentonite"
+  }
+}

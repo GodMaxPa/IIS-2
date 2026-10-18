@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/brown_limonite",
+    "#iis:small_dusts/brown_limonite",
+    "#iis:small_dusts/brown_limonite",
+    "#iis:small_dusts/brown_limonite"
+  ],
+  "result": {
+    "id": "iis:dust_brown_limonite"
+  }
+}

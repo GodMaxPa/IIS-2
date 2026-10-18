@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/dust_lapis",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 4605660
+      }
+    ]
+  }
+}

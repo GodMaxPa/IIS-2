@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/tiny_dust_platinum",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 16777160
+      }
+    ]
+  }
+}

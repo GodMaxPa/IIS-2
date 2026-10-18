@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:mortar_flint",
+    "iis:mortar_bronze",
+    "iis:mortar_iron"
+  ]
+}

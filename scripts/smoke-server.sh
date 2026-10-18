@@ -26,6 +26,8 @@ until grep -q 'Done (' "$LOG"; do
 done
 echo "iis" >&3
 echo "iis voltages" >&3
+echo "iis selftest" >&3
+for i in $(seq 1 20); do grep -qE 'SELFTEST (PASSED|FAILED)' "$LOG" && break; sleep 2; done
 echo "iis scan 4" >&3
 # скан 81 чанка с генерацией занимает время
 for i in $(seq 1 60); do grep -q 'IIS scan:' "$LOG" && break; sleep 3; done
@@ -37,6 +39,8 @@ exec 3>&-; rm -f "$FIFO"
 ok=1
 grep -q '\[IIS\] Ideal Industrial 2.0 loaded' "$LOG" && echo "OK: mod loaded" || { echo "FAIL: load marker missing"; ok=0; }
 grep -q 'ZPM — 131072 EU/t' "$LOG" && echo "OK: /iis voltages works" || { echo "FAIL: /iis voltages output missing"; ok=0; }
+grep -E '\]:   (PASS|FAIL) ' "$LOG" | sed 's/.*]:  /   /'
+if grep -q 'SELFTEST PASSED' "$LOG"; then echo "OK: selftest"; else echo "FAIL: selftest"; ok=0; fi
 if grep -qE 'IIS scan: .*IIS ore blocks=[1-9]' "$LOG"; then echo "OK: GT ore veins generated"; else echo "FAIL: no IIS ores found by /iis scan"; ok=0; fi
 if grep -qE 'IIS scan: .*vanilla ore blocks=0$' "$LOG"; then echo "OK: no vanilla ores"; else echo "FAIL: vanilla ores present"; grep 'IIS scan:' "$LOG"; ok=0; fi
 grep -A100 'IIS scan:' "$LOG" | grep -E '^\[.*\]:   ' | sed 's/.*]:  /   /' | head -40

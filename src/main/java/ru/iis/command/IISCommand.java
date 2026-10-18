@@ -46,6 +46,9 @@ public final class IISCommand {
                                 .then(Commands.argument("pos", BlockPosArgument.blockPos())
                                         .executes(ctx -> placeVein(ctx.getSource(), StringArgumentType.getString(ctx, "name"),
                                                 BlockPosArgument.getLoadedBlockPos(ctx, "pos"))))))
+                .then(Commands.literal("selftest")
+                        .requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
+                        .executes(ctx -> SelfTest.run(ctx.getSource())))
                 .then(Commands.literal("scan")
                         .requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
                         .executes(ctx -> scan(ctx.getSource(), 4))

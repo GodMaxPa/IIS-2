@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/lapis",
+    "#iis:small_dusts/lapis",
+    "#iis:small_dusts/lapis",
+    "#iis:small_dusts/lapis"
+  ],
+  "result": {
+    "id": "iis:dust_lapis"
+  }
+}

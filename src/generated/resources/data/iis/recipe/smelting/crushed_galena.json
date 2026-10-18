@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "#iis:crushed_ores/galena",
+  "result": {
+    "id": "iis:nugget_lead",
+    "count": 6
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

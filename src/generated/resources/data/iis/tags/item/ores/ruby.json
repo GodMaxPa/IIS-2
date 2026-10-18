@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_ruby",
+    "iis:deepslate_ore_ruby",
+    "iis:nether_ore_ruby"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_bentonite",
+    "iis:deepslate_ore_bentonite",
+    "iis:end_ore_bentonite"
+  ]
+}

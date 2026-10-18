@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_garnierite",
+    "iis:deepslate_ore_garnierite",
+    "iis:nether_ore_garnierite",
+    "iis:end_ore_garnierite"
+  ]
+}

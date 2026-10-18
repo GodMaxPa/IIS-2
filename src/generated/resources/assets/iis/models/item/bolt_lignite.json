@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "iis:item/materialicons/lignite/bolt",
+    "layer1": "iis:item/materialicons/lignite/bolt_overlay"
+  }
+}

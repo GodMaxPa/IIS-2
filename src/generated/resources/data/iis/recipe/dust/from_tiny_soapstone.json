@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/soapstone",
+    "#iis:tiny_dusts/soapstone",
+    "#iis:tiny_dusts/soapstone",
+    "#iis:tiny_dusts/soapstone",
+    "#iis:tiny_dusts/soapstone",
+    "#iis:tiny_dusts/soapstone",
+    "#iis:tiny_dusts/soapstone",
+    "#iis:tiny_dusts/soapstone",
+    "#iis:tiny_dusts/soapstone"
+  ],
+  "result": {
+    "id": "iis:dust_soapstone"
+  }
+}

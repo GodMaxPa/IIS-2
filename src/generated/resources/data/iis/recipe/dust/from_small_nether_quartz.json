@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/nether_quartz",
+    "#iis:small_dusts/nether_quartz",
+    "#iis:small_dusts/nether_quartz",
+    "#iis:small_dusts/nether_quartz"
+  ],
+  "result": {
+    "id": "iis:dust_nether_quartz"
+  }
+}

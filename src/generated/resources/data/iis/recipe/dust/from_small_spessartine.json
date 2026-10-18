@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/spessartine",
+    "#iis:small_dusts/spessartine",
+    "#iis:small_dusts/spessartine",
+    "#iis:small_dusts/spessartine"
+  ],
+  "result": {
+    "id": "iis:dust_spessartine"
+  }
+}

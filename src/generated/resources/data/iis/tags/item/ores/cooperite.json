@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_cooperite",
+    "iis:deepslate_ore_cooperite",
+    "iis:end_ore_cooperite"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/magnesite",
+    "#iis:small_dusts/magnesite",
+    "#iis:small_dusts/magnesite",
+    "#iis:small_dusts/magnesite"
+  ],
+  "result": {
+    "id": "iis:dust_magnesite"
+  }
+}

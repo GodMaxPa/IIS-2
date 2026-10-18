@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/molybdenum",
+    "#iis:small_dusts/molybdenum",
+    "#iis:small_dusts/molybdenum",
+    "#iis:small_dusts/molybdenum"
+  ],
+  "result": {
+    "id": "iis:dust_molybdenum"
+  }
+}

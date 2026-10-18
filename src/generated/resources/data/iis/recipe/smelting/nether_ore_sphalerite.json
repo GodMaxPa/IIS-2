@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:nether_ore_sphalerite",
+  "result": {
+    "id": "iis:ingot_zinc",
+    "count": 2
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

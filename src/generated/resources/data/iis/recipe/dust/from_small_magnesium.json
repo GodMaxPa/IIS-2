@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/magnesium",
+    "#iis:small_dusts/magnesium",
+    "#iis:small_dusts/magnesium",
+    "#iis:small_dusts/magnesium"
+  ],
+  "result": {
+    "id": "iis:dust_magnesium"
+  }
+}

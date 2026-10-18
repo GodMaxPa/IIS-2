@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_tungstate",
+    "iis:deepslate_ore_tungstate",
+    "iis:end_ore_tungstate"
+  ]
+}

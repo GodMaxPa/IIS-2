@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/pickaxe_head_beryllium",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6599780
+      }
+    ]
+  }
+}

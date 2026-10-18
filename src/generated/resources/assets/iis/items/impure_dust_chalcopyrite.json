@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/impure_dust_chalcopyrite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 10516520
+      }
+    ]
+  }
+}

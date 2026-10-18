@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " I ",
+    "SIS",
+    "SSS"
+  ],
+  "key": {
+    "I": "#c:ingots/iron",
+    "S": "#c:stones"
+  },
+  "result": {
+    "id": "iis:mortar_iron"
+  }
+}

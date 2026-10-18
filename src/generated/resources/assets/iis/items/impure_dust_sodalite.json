@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/impure_dust_sodalite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 1316095
+      }
+    ]
+  }
+}

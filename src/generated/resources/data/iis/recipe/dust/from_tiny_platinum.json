@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/platinum",
+    "#iis:tiny_dusts/platinum",
+    "#iis:tiny_dusts/platinum",
+    "#iis:tiny_dusts/platinum",
+    "#iis:tiny_dusts/platinum",
+    "#iis:tiny_dusts/platinum",
+    "#iis:tiny_dusts/platinum",
+    "#iis:tiny_dusts/platinum",
+    "#iis:tiny_dusts/platinum"
+  ],
+  "result": {
+    "id": "iis:dust_platinum"
+  }
+}

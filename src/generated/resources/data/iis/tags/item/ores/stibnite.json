@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_stibnite",
+    "iis:deepslate_ore_stibnite",
+    "iis:nether_ore_stibnite"
+  ]
+}

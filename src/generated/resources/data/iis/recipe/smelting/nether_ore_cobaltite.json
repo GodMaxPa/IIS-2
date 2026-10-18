@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:nether_ore_cobaltite",
+  "result": {
+    "id": "iis:ingot_cobalt",
+    "count": 2
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

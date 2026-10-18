@@ -22,6 +22,63 @@ public final class MaterialData {
 
     private static List<IISMaterial> materials;
     private static List<VeinDefinition> veins;
+    private static List<FormItem> items;
+    private static List<ToolDef> tools;
+    private static Map<String, String> forms;
+
+    /** Предмет-форма материала (дроблёная руда, пыль, слиток...), который регистрирует мод. */
+    public record FormItem(String id, String prefix, String material) {}
+
+    /** Инструмент GT. Повреждение в единицах 1 = 50 единиц GT5. */
+    public record ToolDef(String id, String tool, String material, String handle, int maxDamage, int blockDamage,
+                          int craftDamage, float speed, int quality, String kind) {}
+
+    public static synchronized List<FormItem> items() {
+        if (items == null) {
+            List<FormItem> out = new ArrayList<>();
+            for (JsonElement e : read("/iis/items.json")) {
+                JsonObject o = e.getAsJsonObject();
+                out.add(new FormItem(o.get("id").getAsString(), o.get("prefix").getAsString(), o.get("material").getAsString()));
+            }
+            items = List.copyOf(out);
+        }
+        return items;
+    }
+
+    public static synchronized List<ToolDef> tools() {
+        if (tools == null) {
+            List<ToolDef> out = new ArrayList<>();
+            for (JsonElement e : read("/iis/tools.json")) {
+                JsonObject o = e.getAsJsonObject();
+                out.add(new ToolDef(o.get("id").getAsString(), o.get("tool").getAsString(), o.get("material").getAsString(),
+                        o.get("handle").getAsString(), o.get("maxDamage").getAsInt(), o.get("blockDamage").getAsInt(),
+                        o.get("craftDamage").getAsInt(), o.get("speed").getAsFloat(), o.get("quality").getAsInt(), str(o, "kind")));
+            }
+            tools = List.copyOf(out);
+        }
+        return tools;
+    }
+
+    /** Форма/материал -> ID предмета (свой или ванильный), например "dust/redstone" -> "minecraft:redstone". */
+    public static synchronized Map<String, String> forms() {
+        if (forms == null) {
+            Map<String, String> out = new HashMap<>();
+            readObject("/iis/forms.json").entrySet().forEach(en -> out.put(en.getKey(), en.getValue().getAsString()));
+            forms = Map.copyOf(out);
+        }
+        return forms;
+    }
+
+    static JsonObject readObject(String path) {
+        try (InputStream in = MaterialData.class.getResourceAsStream(path)) {
+            if (in == null) throw new IllegalStateException("Missing resource " + path);
+            try (Reader r = new InputStreamReader(in, StandardCharsets.UTF_8)) {
+                return JsonParser.parseReader(r).getAsJsonObject();
+            }
+        } catch (IOException e) {
+            throw new IllegalStateException("Cannot read " + path, e);
+        }
+    }
 
     public static synchronized List<IISMaterial> materials() {
         if (materials == null) materials = parseMaterials(read("/iis/materials.json"));
@@ -51,9 +108,12 @@ public final class MaterialData {
             JsonObject o = e.getAsJsonObject();
             List<String> hosts = new ArrayList<>();
             o.getAsJsonArray("hosts").forEach(h -> hosts.add(h.getAsString()));
+            List<String> subTags = new ArrayList<>();
+            o.getAsJsonArray("subTags").forEach(h -> subTags.add(h.getAsString()));
             IISMaterial m = new IISMaterial(o.get("id").getAsString(), o.get("gtName").getAsString(),
                     o.get("en").getAsString(), o.get("ru").getAsString(), o.get("color").getAsInt(),
-                    o.get("iconSet").getAsString(), o.get("harvestLevel").getAsInt(), hosts);
+                    o.get("iconSet").getAsString(), o.get("harvestLevel").getAsInt(), hosts, str(o, "formula"),
+                    o.get("directSmelting").getAsString(), o.get("oreMultiplier").getAsInt(), subTags);
             if (!ids.add(m.id())) throw new IllegalStateException("Duplicate material " + m.id());
             out.add(m);
         }

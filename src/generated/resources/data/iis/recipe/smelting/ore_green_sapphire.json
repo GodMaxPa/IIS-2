@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:ore_green_sapphire",
+  "result": {
+    "id": "iis:gem_green_sapphire"
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

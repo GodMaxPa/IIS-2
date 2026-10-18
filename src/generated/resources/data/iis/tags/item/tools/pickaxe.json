@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "iis:pickaxe_aluminium",
+    "iis:pickaxe_beryllium",
+    "iis:pickaxe_bronze",
+    "iis:pickaxe_certus_quartz",
+    "iis:pickaxe_cobalt",
+    "iis:pickaxe_diamond",
+    "iis:pickaxe_emerald",
+    "iis:pickaxe_green_sapphire",
+    "iis:pickaxe_iron",
+    "iis:pickaxe_manganese",
+    "iis:pickaxe_molybdenum",
+    "iis:pickaxe_nether_quartz",
+    "iis:pickaxe_nickel",
+    "iis:pickaxe_olivine",
+    "iis:pickaxe_ruby",
+    "iis:pickaxe_sapphire"
+  ]
+}

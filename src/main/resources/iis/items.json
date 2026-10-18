@@ -1,0 +1,4737 @@
+[
+  {
+    "id": "crushed_almandine",
+    "prefix": "crushed",
+    "material": "almandine"
+  },
+  {
+    "id": "purified_almandine",
+    "prefix": "purified",
+    "material": "almandine"
+  },
+  {
+    "id": "impure_dust_almandine",
+    "prefix": "impure_dust",
+    "material": "almandine"
+  },
+  {
+    "id": "pure_dust_almandine",
+    "prefix": "pure_dust",
+    "material": "almandine"
+  },
+  {
+    "id": "dust_almandine",
+    "prefix": "dust",
+    "material": "almandine"
+  },
+  {
+    "id": "small_dust_almandine",
+    "prefix": "small_dust",
+    "material": "almandine"
+  },
+  {
+    "id": "tiny_dust_almandine",
+    "prefix": "tiny_dust",
+    "material": "almandine"
+  },
+  {
+    "id": "crushed_aluminium",
+    "prefix": "crushed",
+    "material": "aluminium"
+  },
+  {
+    "id": "purified_aluminium",
+    "prefix": "purified",
+    "material": "aluminium"
+  },
+  {
+    "id": "impure_dust_aluminium",
+    "prefix": "impure_dust",
+    "material": "aluminium"
+  },
+  {
+    "id": "pure_dust_aluminium",
+    "prefix": "pure_dust",
+    "material": "aluminium"
+  },
+  {
+    "id": "dust_aluminium",
+    "prefix": "dust",
+    "material": "aluminium"
+  },
+  {
+    "id": "small_dust_aluminium",
+    "prefix": "small_dust",
+    "material": "aluminium"
+  },
+  {
+    "id": "tiny_dust_aluminium",
+    "prefix": "tiny_dust",
+    "material": "aluminium"
+  },
+  {
+    "id": "ingot_aluminium",
+    "prefix": "ingot",
+    "material": "aluminium"
+  },
+  {
+    "id": "nugget_aluminium",
+    "prefix": "nugget",
+    "material": "aluminium"
+  },
+  {
+    "id": "plate_aluminium",
+    "prefix": "plate",
+    "material": "aluminium"
+  },
+  {
+    "id": "rod_aluminium",
+    "prefix": "rod",
+    "material": "aluminium"
+  },
+  {
+    "id": "bolt_aluminium",
+    "prefix": "bolt",
+    "material": "aluminium"
+  },
+  {
+    "id": "screw_aluminium",
+    "prefix": "screw",
+    "material": "aluminium"
+  },
+  {
+    "id": "ring_aluminium",
+    "prefix": "ring",
+    "material": "aluminium"
+  },
+  {
+    "id": "dust_antimony",
+    "prefix": "dust",
+    "material": "antimony"
+  },
+  {
+    "id": "small_dust_antimony",
+    "prefix": "small_dust",
+    "material": "antimony"
+  },
+  {
+    "id": "tiny_dust_antimony",
+    "prefix": "tiny_dust",
+    "material": "antimony"
+  },
+  {
+    "id": "ingot_antimony",
+    "prefix": "ingot",
+    "material": "antimony"
+  },
+  {
+    "id": "nugget_antimony",
+    "prefix": "nugget",
+    "material": "antimony"
+  },
+  {
+    "id": "plate_antimony",
+    "prefix": "plate",
+    "material": "antimony"
+  },
+  {
+    "id": "rod_antimony",
+    "prefix": "rod",
+    "material": "antimony"
+  },
+  {
+    "id": "bolt_antimony",
+    "prefix": "bolt",
+    "material": "antimony"
+  },
+  {
+    "id": "screw_antimony",
+    "prefix": "screw",
+    "material": "antimony"
+  },
+  {
+    "id": "ring_antimony",
+    "prefix": "ring",
+    "material": "antimony"
+  },
+  {
+    "id": "crushed_apatite",
+    "prefix": "crushed",
+    "material": "apatite"
+  },
+  {
+    "id": "purified_apatite",
+    "prefix": "purified",
+    "material": "apatite"
+  },
+  {
+    "id": "impure_dust_apatite",
+    "prefix": "impure_dust",
+    "material": "apatite"
+  },
+  {
+    "id": "pure_dust_apatite",
+    "prefix": "pure_dust",
+    "material": "apatite"
+  },
+  {
+    "id": "dust_apatite",
+    "prefix": "dust",
+    "material": "apatite"
+  },
+  {
+    "id": "small_dust_apatite",
+    "prefix": "small_dust",
+    "material": "apatite"
+  },
+  {
+    "id": "tiny_dust_apatite",
+    "prefix": "tiny_dust",
+    "material": "apatite"
+  },
+  {
+    "id": "gem_apatite",
+    "prefix": "gem",
+    "material": "apatite"
+  },
+  {
+    "id": "plate_apatite",
+    "prefix": "plate",
+    "material": "apatite"
+  },
+  {
+    "id": "rod_apatite",
+    "prefix": "rod",
+    "material": "apatite"
+  },
+  {
+    "id": "bolt_apatite",
+    "prefix": "bolt",
+    "material": "apatite"
+  },
+  {
+    "id": "screw_apatite",
+    "prefix": "screw",
+    "material": "apatite"
+  },
+  {
+    "id": "crushed_banded_iron",
+    "prefix": "crushed",
+    "material": "banded_iron"
+  },
+  {
+    "id": "purified_banded_iron",
+    "prefix": "purified",
+    "material": "banded_iron"
+  },
+  {
+    "id": "impure_dust_banded_iron",
+    "prefix": "impure_dust",
+    "material": "banded_iron"
+  },
+  {
+    "id": "pure_dust_banded_iron",
+    "prefix": "pure_dust",
+    "material": "banded_iron"
+  },
+  {
+    "id": "dust_banded_iron",
+    "prefix": "dust",
+    "material": "banded_iron"
+  },
+  {
+    "id": "small_dust_banded_iron",
+    "prefix": "small_dust",
+    "material": "banded_iron"
+  },
+  {
+    "id": "tiny_dust_banded_iron",
+    "prefix": "tiny_dust",
+    "material": "banded_iron"
+  },
+  {
+    "id": "crushed_barite",
+    "prefix": "crushed",
+    "material": "barite"
+  },
+  {
+    "id": "purified_barite",
+    "prefix": "purified",
+    "material": "barite"
+  },
+  {
+    "id": "impure_dust_barite",
+    "prefix": "impure_dust",
+    "material": "barite"
+  },
+  {
+    "id": "pure_dust_barite",
+    "prefix": "pure_dust",
+    "material": "barite"
+  },
+  {
+    "id": "dust_barite",
+    "prefix": "dust",
+    "material": "barite"
+  },
+  {
+    "id": "small_dust_barite",
+    "prefix": "small_dust",
+    "material": "barite"
+  },
+  {
+    "id": "tiny_dust_barite",
+    "prefix": "tiny_dust",
+    "material": "barite"
+  },
+  {
+    "id": "crushed_bastnasite",
+    "prefix": "crushed",
+    "material": "bastnasite"
+  },
+  {
+    "id": "purified_bastnasite",
+    "prefix": "purified",
+    "material": "bastnasite"
+  },
+  {
+    "id": "impure_dust_bastnasite",
+    "prefix": "impure_dust",
+    "material": "bastnasite"
+  },
+  {
+    "id": "pure_dust_bastnasite",
+    "prefix": "pure_dust",
+    "material": "bastnasite"
+  },
+  {
+    "id": "dust_bastnasite",
+    "prefix": "dust",
+    "material": "bastnasite"
+  },
+  {
+    "id": "small_dust_bastnasite",
+    "prefix": "small_dust",
+    "material": "bastnasite"
+  },
+  {
+    "id": "tiny_dust_bastnasite",
+    "prefix": "tiny_dust",
+    "material": "bastnasite"
+  },
+  {
+    "id": "crushed_bauxite",
+    "prefix": "crushed",
+    "material": "bauxite"
+  },
+  {
+    "id": "purified_bauxite",
+    "prefix": "purified",
+    "material": "bauxite"
+  },
+  {
+    "id": "impure_dust_bauxite",
+    "prefix": "impure_dust",
+    "material": "bauxite"
+  },
+  {
+    "id": "pure_dust_bauxite",
+    "prefix": "pure_dust",
+    "material": "bauxite"
+  },
+  {
+    "id": "dust_bauxite",
+    "prefix": "dust",
+    "material": "bauxite"
+  },
+  {
+    "id": "small_dust_bauxite",
+    "prefix": "small_dust",
+    "material": "bauxite"
+  },
+  {
+    "id": "tiny_dust_bauxite",
+    "prefix": "tiny_dust",
+    "material": "bauxite"
+  },
+  {
+    "id": "crushed_bentonite",
+    "prefix": "crushed",
+    "material": "bentonite"
+  },
+  {
+    "id": "purified_bentonite",
+    "prefix": "purified",
+    "material": "bentonite"
+  },
+  {
+    "id": "impure_dust_bentonite",
+    "prefix": "impure_dust",
+    "material": "bentonite"
+  },
+  {
+    "id": "pure_dust_bentonite",
+    "prefix": "pure_dust",
+    "material": "bentonite"
+  },
+  {
+    "id": "dust_bentonite",
+    "prefix": "dust",
+    "material": "bentonite"
+  },
+  {
+    "id": "small_dust_bentonite",
+    "prefix": "small_dust",
+    "material": "bentonite"
+  },
+  {
+    "id": "tiny_dust_bentonite",
+    "prefix": "tiny_dust",
+    "material": "bentonite"
+  },
+  {
+    "id": "crushed_beryllium",
+    "prefix": "crushed",
+    "material": "beryllium"
+  },
+  {
+    "id": "purified_beryllium",
+    "prefix": "purified",
+    "material": "beryllium"
+  },
+  {
+    "id": "impure_dust_beryllium",
+    "prefix": "impure_dust",
+    "material": "beryllium"
+  },
+  {
+    "id": "pure_dust_beryllium",
+    "prefix": "pure_dust",
+    "material": "beryllium"
+  },
+  {
+    "id": "dust_beryllium",
+    "prefix": "dust",
+    "material": "beryllium"
+  },
+  {
+    "id": "small_dust_beryllium",
+    "prefix": "small_dust",
+    "material": "beryllium"
+  },
+  {
+    "id": "tiny_dust_beryllium",
+    "prefix": "tiny_dust",
+    "material": "beryllium"
+  },
+  {
+    "id": "ingot_beryllium",
+    "prefix": "ingot",
+    "material": "beryllium"
+  },
+  {
+    "id": "nugget_beryllium",
+    "prefix": "nugget",
+    "material": "beryllium"
+  },
+  {
+    "id": "plate_beryllium",
+    "prefix": "plate",
+    "material": "beryllium"
+  },
+  {
+    "id": "rod_beryllium",
+    "prefix": "rod",
+    "material": "beryllium"
+  },
+  {
+    "id": "bolt_beryllium",
+    "prefix": "bolt",
+    "material": "beryllium"
+  },
+  {
+    "id": "screw_beryllium",
+    "prefix": "screw",
+    "material": "beryllium"
+  },
+  {
+    "id": "ring_beryllium",
+    "prefix": "ring",
+    "material": "beryllium"
+  },
+  {
+    "id": "dust_bronze",
+    "prefix": "dust",
+    "material": "bronze"
+  },
+  {
+    "id": "small_dust_bronze",
+    "prefix": "small_dust",
+    "material": "bronze"
+  },
+  {
+    "id": "tiny_dust_bronze",
+    "prefix": "tiny_dust",
+    "material": "bronze"
+  },
+  {
+    "id": "ingot_bronze",
+    "prefix": "ingot",
+    "material": "bronze"
+  },
+  {
+    "id": "nugget_bronze",
+    "prefix": "nugget",
+    "material": "bronze"
+  },
+  {
+    "id": "plate_bronze",
+    "prefix": "plate",
+    "material": "bronze"
+  },
+  {
+    "id": "rod_bronze",
+    "prefix": "rod",
+    "material": "bronze"
+  },
+  {
+    "id": "bolt_bronze",
+    "prefix": "bolt",
+    "material": "bronze"
+  },
+  {
+    "id": "screw_bronze",
+    "prefix": "screw",
+    "material": "bronze"
+  },
+  {
+    "id": "ring_bronze",
+    "prefix": "ring",
+    "material": "bronze"
+  },
+  {
+    "id": "crushed_brown_limonite",
+    "prefix": "crushed",
+    "material": "brown_limonite"
+  },
+  {
+    "id": "purified_brown_limonite",
+    "prefix": "purified",
+    "material": "brown_limonite"
+  },
+  {
+    "id": "impure_dust_brown_limonite",
+    "prefix": "impure_dust",
+    "material": "brown_limonite"
+  },
+  {
+    "id": "pure_dust_brown_limonite",
+    "prefix": "pure_dust",
+    "material": "brown_limonite"
+  },
+  {
+    "id": "dust_brown_limonite",
+    "prefix": "dust",
+    "material": "brown_limonite"
+  },
+  {
+    "id": "small_dust_brown_limonite",
+    "prefix": "small_dust",
+    "material": "brown_limonite"
+  },
+  {
+    "id": "tiny_dust_brown_limonite",
+    "prefix": "tiny_dust",
+    "material": "brown_limonite"
+  },
+  {
+    "id": "crushed_calcite",
+    "prefix": "crushed",
+    "material": "calcite"
+  },
+  {
+    "id": "purified_calcite",
+    "prefix": "purified",
+    "material": "calcite"
+  },
+  {
+    "id": "impure_dust_calcite",
+    "prefix": "impure_dust",
+    "material": "calcite"
+  },
+  {
+    "id": "pure_dust_calcite",
+    "prefix": "pure_dust",
+    "material": "calcite"
+  },
+  {
+    "id": "dust_calcite",
+    "prefix": "dust",
+    "material": "calcite"
+  },
+  {
+    "id": "small_dust_calcite",
+    "prefix": "small_dust",
+    "material": "calcite"
+  },
+  {
+    "id": "tiny_dust_calcite",
+    "prefix": "tiny_dust",
+    "material": "calcite"
+  },
+  {
+    "id": "crushed_cassiterite",
+    "prefix": "crushed",
+    "material": "cassiterite"
+  },
+  {
+    "id": "purified_cassiterite",
+    "prefix": "purified",
+    "material": "cassiterite"
+  },
+  {
+    "id": "impure_dust_cassiterite",
+    "prefix": "impure_dust",
+    "material": "cassiterite"
+  },
+  {
+    "id": "pure_dust_cassiterite",
+    "prefix": "pure_dust",
+    "material": "cassiterite"
+  },
+  {
+    "id": "dust_cassiterite",
+    "prefix": "dust",
+    "material": "cassiterite"
+  },
+  {
+    "id": "small_dust_cassiterite",
+    "prefix": "small_dust",
+    "material": "cassiterite"
+  },
+  {
+    "id": "tiny_dust_cassiterite",
+    "prefix": "tiny_dust",
+    "material": "cassiterite"
+  },
+  {
+    "id": "crushed_certus_quartz",
+    "prefix": "crushed",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "purified_certus_quartz",
+    "prefix": "purified",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "impure_dust_certus_quartz",
+    "prefix": "impure_dust",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "pure_dust_certus_quartz",
+    "prefix": "pure_dust",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "dust_certus_quartz",
+    "prefix": "dust",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "small_dust_certus_quartz",
+    "prefix": "small_dust",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "tiny_dust_certus_quartz",
+    "prefix": "tiny_dust",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "gem_certus_quartz",
+    "prefix": "gem",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "plate_certus_quartz",
+    "prefix": "plate",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "rod_certus_quartz",
+    "prefix": "rod",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "bolt_certus_quartz",
+    "prefix": "bolt",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "screw_certus_quartz",
+    "prefix": "screw",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "crushed_chalcopyrite",
+    "prefix": "crushed",
+    "material": "chalcopyrite"
+  },
+  {
+    "id": "purified_chalcopyrite",
+    "prefix": "purified",
+    "material": "chalcopyrite"
+  },
+  {
+    "id": "impure_dust_chalcopyrite",
+    "prefix": "impure_dust",
+    "material": "chalcopyrite"
+  },
+  {
+    "id": "pure_dust_chalcopyrite",
+    "prefix": "pure_dust",
+    "material": "chalcopyrite"
+  },
+  {
+    "id": "dust_chalcopyrite",
+    "prefix": "dust",
+    "material": "chalcopyrite"
+  },
+  {
+    "id": "small_dust_chalcopyrite",
+    "prefix": "small_dust",
+    "material": "chalcopyrite"
+  },
+  {
+    "id": "tiny_dust_chalcopyrite",
+    "prefix": "tiny_dust",
+    "material": "chalcopyrite"
+  },
+  {
+    "id": "crushed_cinnabar",
+    "prefix": "crushed",
+    "material": "cinnabar"
+  },
+  {
+    "id": "purified_cinnabar",
+    "prefix": "purified",
+    "material": "cinnabar"
+  },
+  {
+    "id": "impure_dust_cinnabar",
+    "prefix": "impure_dust",
+    "material": "cinnabar"
+  },
+  {
+    "id": "pure_dust_cinnabar",
+    "prefix": "pure_dust",
+    "material": "cinnabar"
+  },
+  {
+    "id": "dust_cinnabar",
+    "prefix": "dust",
+    "material": "cinnabar"
+  },
+  {
+    "id": "small_dust_cinnabar",
+    "prefix": "small_dust",
+    "material": "cinnabar"
+  },
+  {
+    "id": "tiny_dust_cinnabar",
+    "prefix": "tiny_dust",
+    "material": "cinnabar"
+  },
+  {
+    "id": "crushed_coal",
+    "prefix": "crushed",
+    "material": "coal"
+  },
+  {
+    "id": "purified_coal",
+    "prefix": "purified",
+    "material": "coal"
+  },
+  {
+    "id": "impure_dust_coal",
+    "prefix": "impure_dust",
+    "material": "coal"
+  },
+  {
+    "id": "pure_dust_coal",
+    "prefix": "pure_dust",
+    "material": "coal"
+  },
+  {
+    "id": "dust_coal",
+    "prefix": "dust",
+    "material": "coal"
+  },
+  {
+    "id": "small_dust_coal",
+    "prefix": "small_dust",
+    "material": "coal"
+  },
+  {
+    "id": "tiny_dust_coal",
+    "prefix": "tiny_dust",
+    "material": "coal"
+  },
+  {
+    "id": "plate_coal",
+    "prefix": "plate",
+    "material": "coal"
+  },
+  {
+    "id": "rod_coal",
+    "prefix": "rod",
+    "material": "coal"
+  },
+  {
+    "id": "bolt_coal",
+    "prefix": "bolt",
+    "material": "coal"
+  },
+  {
+    "id": "screw_coal",
+    "prefix": "screw",
+    "material": "coal"
+  },
+  {
+    "id": "dust_cobalt",
+    "prefix": "dust",
+    "material": "cobalt"
+  },
+  {
+    "id": "small_dust_cobalt",
+    "prefix": "small_dust",
+    "material": "cobalt"
+  },
+  {
+    "id": "tiny_dust_cobalt",
+    "prefix": "tiny_dust",
+    "material": "cobalt"
+  },
+  {
+    "id": "ingot_cobalt",
+    "prefix": "ingot",
+    "material": "cobalt"
+  },
+  {
+    "id": "nugget_cobalt",
+    "prefix": "nugget",
+    "material": "cobalt"
+  },
+  {
+    "id": "plate_cobalt",
+    "prefix": "plate",
+    "material": "cobalt"
+  },
+  {
+    "id": "rod_cobalt",
+    "prefix": "rod",
+    "material": "cobalt"
+  },
+  {
+    "id": "bolt_cobalt",
+    "prefix": "bolt",
+    "material": "cobalt"
+  },
+  {
+    "id": "screw_cobalt",
+    "prefix": "screw",
+    "material": "cobalt"
+  },
+  {
+    "id": "ring_cobalt",
+    "prefix": "ring",
+    "material": "cobalt"
+  },
+  {
+    "id": "crushed_cobaltite",
+    "prefix": "crushed",
+    "material": "cobaltite"
+  },
+  {
+    "id": "purified_cobaltite",
+    "prefix": "purified",
+    "material": "cobaltite"
+  },
+  {
+    "id": "impure_dust_cobaltite",
+    "prefix": "impure_dust",
+    "material": "cobaltite"
+  },
+  {
+    "id": "pure_dust_cobaltite",
+    "prefix": "pure_dust",
+    "material": "cobaltite"
+  },
+  {
+    "id": "dust_cobaltite",
+    "prefix": "dust",
+    "material": "cobaltite"
+  },
+  {
+    "id": "small_dust_cobaltite",
+    "prefix": "small_dust",
+    "material": "cobaltite"
+  },
+  {
+    "id": "tiny_dust_cobaltite",
+    "prefix": "tiny_dust",
+    "material": "cobaltite"
+  },
+  {
+    "id": "crushed_cooperite",
+    "prefix": "crushed",
+    "material": "cooperite"
+  },
+  {
+    "id": "purified_cooperite",
+    "prefix": "purified",
+    "material": "cooperite"
+  },
+  {
+    "id": "impure_dust_cooperite",
+    "prefix": "impure_dust",
+    "material": "cooperite"
+  },
+  {
+    "id": "pure_dust_cooperite",
+    "prefix": "pure_dust",
+    "material": "cooperite"
+  },
+  {
+    "id": "dust_cooperite",
+    "prefix": "dust",
+    "material": "cooperite"
+  },
+  {
+    "id": "small_dust_cooperite",
+    "prefix": "small_dust",
+    "material": "cooperite"
+  },
+  {
+    "id": "tiny_dust_cooperite",
+    "prefix": "tiny_dust",
+    "material": "cooperite"
+  },
+  {
+    "id": "crushed_copper",
+    "prefix": "crushed",
+    "material": "copper"
+  },
+  {
+    "id": "purified_copper",
+    "prefix": "purified",
+    "material": "copper"
+  },
+  {
+    "id": "impure_dust_copper",
+    "prefix": "impure_dust",
+    "material": "copper"
+  },
+  {
+    "id": "pure_dust_copper",
+    "prefix": "pure_dust",
+    "material": "copper"
+  },
+  {
+    "id": "dust_copper",
+    "prefix": "dust",
+    "material": "copper"
+  },
+  {
+    "id": "small_dust_copper",
+    "prefix": "small_dust",
+    "material": "copper"
+  },
+  {
+    "id": "tiny_dust_copper",
+    "prefix": "tiny_dust",
+    "material": "copper"
+  },
+  {
+    "id": "plate_copper",
+    "prefix": "plate",
+    "material": "copper"
+  },
+  {
+    "id": "rod_copper",
+    "prefix": "rod",
+    "material": "copper"
+  },
+  {
+    "id": "bolt_copper",
+    "prefix": "bolt",
+    "material": "copper"
+  },
+  {
+    "id": "screw_copper",
+    "prefix": "screw",
+    "material": "copper"
+  },
+  {
+    "id": "ring_copper",
+    "prefix": "ring",
+    "material": "copper"
+  },
+  {
+    "id": "crushed_diamond",
+    "prefix": "crushed",
+    "material": "diamond"
+  },
+  {
+    "id": "purified_diamond",
+    "prefix": "purified",
+    "material": "diamond"
+  },
+  {
+    "id": "impure_dust_diamond",
+    "prefix": "impure_dust",
+    "material": "diamond"
+  },
+  {
+    "id": "pure_dust_diamond",
+    "prefix": "pure_dust",
+    "material": "diamond"
+  },
+  {
+    "id": "dust_diamond",
+    "prefix": "dust",
+    "material": "diamond"
+  },
+  {
+    "id": "small_dust_diamond",
+    "prefix": "small_dust",
+    "material": "diamond"
+  },
+  {
+    "id": "tiny_dust_diamond",
+    "prefix": "tiny_dust",
+    "material": "diamond"
+  },
+  {
+    "id": "plate_diamond",
+    "prefix": "plate",
+    "material": "diamond"
+  },
+  {
+    "id": "rod_diamond",
+    "prefix": "rod",
+    "material": "diamond"
+  },
+  {
+    "id": "bolt_diamond",
+    "prefix": "bolt",
+    "material": "diamond"
+  },
+  {
+    "id": "screw_diamond",
+    "prefix": "screw",
+    "material": "diamond"
+  },
+  {
+    "id": "crushed_emerald",
+    "prefix": "crushed",
+    "material": "emerald"
+  },
+  {
+    "id": "purified_emerald",
+    "prefix": "purified",
+    "material": "emerald"
+  },
+  {
+    "id": "impure_dust_emerald",
+    "prefix": "impure_dust",
+    "material": "emerald"
+  },
+  {
+    "id": "pure_dust_emerald",
+    "prefix": "pure_dust",
+    "material": "emerald"
+  },
+  {
+    "id": "dust_emerald",
+    "prefix": "dust",
+    "material": "emerald"
+  },
+  {
+    "id": "small_dust_emerald",
+    "prefix": "small_dust",
+    "material": "emerald"
+  },
+  {
+    "id": "tiny_dust_emerald",
+    "prefix": "tiny_dust",
+    "material": "emerald"
+  },
+  {
+    "id": "plate_emerald",
+    "prefix": "plate",
+    "material": "emerald"
+  },
+  {
+    "id": "rod_emerald",
+    "prefix": "rod",
+    "material": "emerald"
+  },
+  {
+    "id": "bolt_emerald",
+    "prefix": "bolt",
+    "material": "emerald"
+  },
+  {
+    "id": "screw_emerald",
+    "prefix": "screw",
+    "material": "emerald"
+  },
+  {
+    "id": "dust_flint",
+    "prefix": "dust",
+    "material": "flint"
+  },
+  {
+    "id": "small_dust_flint",
+    "prefix": "small_dust",
+    "material": "flint"
+  },
+  {
+    "id": "tiny_dust_flint",
+    "prefix": "tiny_dust",
+    "material": "flint"
+  },
+  {
+    "id": "crushed_galena",
+    "prefix": "crushed",
+    "material": "galena"
+  },
+  {
+    "id": "purified_galena",
+    "prefix": "purified",
+    "material": "galena"
+  },
+  {
+    "id": "impure_dust_galena",
+    "prefix": "impure_dust",
+    "material": "galena"
+  },
+  {
+    "id": "pure_dust_galena",
+    "prefix": "pure_dust",
+    "material": "galena"
+  },
+  {
+    "id": "dust_galena",
+    "prefix": "dust",
+    "material": "galena"
+  },
+  {
+    "id": "small_dust_galena",
+    "prefix": "small_dust",
+    "material": "galena"
+  },
+  {
+    "id": "tiny_dust_galena",
+    "prefix": "tiny_dust",
+    "material": "galena"
+  },
+  {
+    "id": "crushed_garnierite",
+    "prefix": "crushed",
+    "material": "garnierite"
+  },
+  {
+    "id": "purified_garnierite",
+    "prefix": "purified",
+    "material": "garnierite"
+  },
+  {
+    "id": "impure_dust_garnierite",
+    "prefix": "impure_dust",
+    "material": "garnierite"
+  },
+  {
+    "id": "pure_dust_garnierite",
+    "prefix": "pure_dust",
+    "material": "garnierite"
+  },
+  {
+    "id": "dust_garnierite",
+    "prefix": "dust",
+    "material": "garnierite"
+  },
+  {
+    "id": "small_dust_garnierite",
+    "prefix": "small_dust",
+    "material": "garnierite"
+  },
+  {
+    "id": "tiny_dust_garnierite",
+    "prefix": "tiny_dust",
+    "material": "garnierite"
+  },
+  {
+    "id": "crushed_glauconite",
+    "prefix": "crushed",
+    "material": "glauconite"
+  },
+  {
+    "id": "purified_glauconite",
+    "prefix": "purified",
+    "material": "glauconite"
+  },
+  {
+    "id": "impure_dust_glauconite",
+    "prefix": "impure_dust",
+    "material": "glauconite"
+  },
+  {
+    "id": "pure_dust_glauconite",
+    "prefix": "pure_dust",
+    "material": "glauconite"
+  },
+  {
+    "id": "dust_glauconite",
+    "prefix": "dust",
+    "material": "glauconite"
+  },
+  {
+    "id": "small_dust_glauconite",
+    "prefix": "small_dust",
+    "material": "glauconite"
+  },
+  {
+    "id": "tiny_dust_glauconite",
+    "prefix": "tiny_dust",
+    "material": "glauconite"
+  },
+  {
+    "id": "crushed_gold",
+    "prefix": "crushed",
+    "material": "gold"
+  },
+  {
+    "id": "purified_gold",
+    "prefix": "purified",
+    "material": "gold"
+  },
+  {
+    "id": "impure_dust_gold",
+    "prefix": "impure_dust",
+    "material": "gold"
+  },
+  {
+    "id": "pure_dust_gold",
+    "prefix": "pure_dust",
+    "material": "gold"
+  },
+  {
+    "id": "dust_gold",
+    "prefix": "dust",
+    "material": "gold"
+  },
+  {
+    "id": "small_dust_gold",
+    "prefix": "small_dust",
+    "material": "gold"
+  },
+  {
+    "id": "tiny_dust_gold",
+    "prefix": "tiny_dust",
+    "material": "gold"
+  },
+  {
+    "id": "plate_gold",
+    "prefix": "plate",
+    "material": "gold"
+  },
+  {
+    "id": "rod_gold",
+    "prefix": "rod",
+    "material": "gold"
+  },
+  {
+    "id": "bolt_gold",
+    "prefix": "bolt",
+    "material": "gold"
+  },
+  {
+    "id": "screw_gold",
+    "prefix": "screw",
+    "material": "gold"
+  },
+  {
+    "id": "ring_gold",
+    "prefix": "ring",
+    "material": "gold"
+  },
+  {
+    "id": "crushed_graphite",
+    "prefix": "crushed",
+    "material": "graphite"
+  },
+  {
+    "id": "purified_graphite",
+    "prefix": "purified",
+    "material": "graphite"
+  },
+  {
+    "id": "impure_dust_graphite",
+    "prefix": "impure_dust",
+    "material": "graphite"
+  },
+  {
+    "id": "pure_dust_graphite",
+    "prefix": "pure_dust",
+    "material": "graphite"
+  },
+  {
+    "id": "dust_graphite",
+    "prefix": "dust",
+    "material": "graphite"
+  },
+  {
+    "id": "small_dust_graphite",
+    "prefix": "small_dust",
+    "material": "graphite"
+  },
+  {
+    "id": "tiny_dust_graphite",
+    "prefix": "tiny_dust",
+    "material": "graphite"
+  },
+  {
+    "id": "crushed_green_sapphire",
+    "prefix": "crushed",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "purified_green_sapphire",
+    "prefix": "purified",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "impure_dust_green_sapphire",
+    "prefix": "impure_dust",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "pure_dust_green_sapphire",
+    "prefix": "pure_dust",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "dust_green_sapphire",
+    "prefix": "dust",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "small_dust_green_sapphire",
+    "prefix": "small_dust",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "tiny_dust_green_sapphire",
+    "prefix": "tiny_dust",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "gem_green_sapphire",
+    "prefix": "gem",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "plate_green_sapphire",
+    "prefix": "plate",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "rod_green_sapphire",
+    "prefix": "rod",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "bolt_green_sapphire",
+    "prefix": "bolt",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "screw_green_sapphire",
+    "prefix": "screw",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "crushed_grossular",
+    "prefix": "crushed",
+    "material": "grossular"
+  },
+  {
+    "id": "purified_grossular",
+    "prefix": "purified",
+    "material": "grossular"
+  },
+  {
+    "id": "impure_dust_grossular",
+    "prefix": "impure_dust",
+    "material": "grossular"
+  },
+  {
+    "id": "pure_dust_grossular",
+    "prefix": "pure_dust",
+    "material": "grossular"
+  },
+  {
+    "id": "dust_grossular",
+    "prefix": "dust",
+    "material": "grossular"
+  },
+  {
+    "id": "small_dust_grossular",
+    "prefix": "small_dust",
+    "material": "grossular"
+  },
+  {
+    "id": "tiny_dust_grossular",
+    "prefix": "tiny_dust",
+    "material": "grossular"
+  },
+  {
+    "id": "crushed_ilmenite",
+    "prefix": "crushed",
+    "material": "ilmenite"
+  },
+  {
+    "id": "purified_ilmenite",
+    "prefix": "purified",
+    "material": "ilmenite"
+  },
+  {
+    "id": "impure_dust_ilmenite",
+    "prefix": "impure_dust",
+    "material": "ilmenite"
+  },
+  {
+    "id": "pure_dust_ilmenite",
+    "prefix": "pure_dust",
+    "material": "ilmenite"
+  },
+  {
+    "id": "dust_ilmenite",
+    "prefix": "dust",
+    "material": "ilmenite"
+  },
+  {
+    "id": "small_dust_ilmenite",
+    "prefix": "small_dust",
+    "material": "ilmenite"
+  },
+  {
+    "id": "tiny_dust_ilmenite",
+    "prefix": "tiny_dust",
+    "material": "ilmenite"
+  },
+  {
+    "id": "crushed_iridium",
+    "prefix": "crushed",
+    "material": "iridium"
+  },
+  {
+    "id": "purified_iridium",
+    "prefix": "purified",
+    "material": "iridium"
+  },
+  {
+    "id": "impure_dust_iridium",
+    "prefix": "impure_dust",
+    "material": "iridium"
+  },
+  {
+    "id": "pure_dust_iridium",
+    "prefix": "pure_dust",
+    "material": "iridium"
+  },
+  {
+    "id": "dust_iridium",
+    "prefix": "dust",
+    "material": "iridium"
+  },
+  {
+    "id": "small_dust_iridium",
+    "prefix": "small_dust",
+    "material": "iridium"
+  },
+  {
+    "id": "tiny_dust_iridium",
+    "prefix": "tiny_dust",
+    "material": "iridium"
+  },
+  {
+    "id": "ingot_iridium",
+    "prefix": "ingot",
+    "material": "iridium"
+  },
+  {
+    "id": "nugget_iridium",
+    "prefix": "nugget",
+    "material": "iridium"
+  },
+  {
+    "id": "plate_iridium",
+    "prefix": "plate",
+    "material": "iridium"
+  },
+  {
+    "id": "rod_iridium",
+    "prefix": "rod",
+    "material": "iridium"
+  },
+  {
+    "id": "bolt_iridium",
+    "prefix": "bolt",
+    "material": "iridium"
+  },
+  {
+    "id": "screw_iridium",
+    "prefix": "screw",
+    "material": "iridium"
+  },
+  {
+    "id": "ring_iridium",
+    "prefix": "ring",
+    "material": "iridium"
+  },
+  {
+    "id": "crushed_iron",
+    "prefix": "crushed",
+    "material": "iron"
+  },
+  {
+    "id": "purified_iron",
+    "prefix": "purified",
+    "material": "iron"
+  },
+  {
+    "id": "impure_dust_iron",
+    "prefix": "impure_dust",
+    "material": "iron"
+  },
+  {
+    "id": "pure_dust_iron",
+    "prefix": "pure_dust",
+    "material": "iron"
+  },
+  {
+    "id": "dust_iron",
+    "prefix": "dust",
+    "material": "iron"
+  },
+  {
+    "id": "small_dust_iron",
+    "prefix": "small_dust",
+    "material": "iron"
+  },
+  {
+    "id": "tiny_dust_iron",
+    "prefix": "tiny_dust",
+    "material": "iron"
+  },
+  {
+    "id": "plate_iron",
+    "prefix": "plate",
+    "material": "iron"
+  },
+  {
+    "id": "rod_iron",
+    "prefix": "rod",
+    "material": "iron"
+  },
+  {
+    "id": "bolt_iron",
+    "prefix": "bolt",
+    "material": "iron"
+  },
+  {
+    "id": "screw_iron",
+    "prefix": "screw",
+    "material": "iron"
+  },
+  {
+    "id": "ring_iron",
+    "prefix": "ring",
+    "material": "iron"
+  },
+  {
+    "id": "crushed_lapis",
+    "prefix": "crushed",
+    "material": "lapis"
+  },
+  {
+    "id": "purified_lapis",
+    "prefix": "purified",
+    "material": "lapis"
+  },
+  {
+    "id": "impure_dust_lapis",
+    "prefix": "impure_dust",
+    "material": "lapis"
+  },
+  {
+    "id": "pure_dust_lapis",
+    "prefix": "pure_dust",
+    "material": "lapis"
+  },
+  {
+    "id": "dust_lapis",
+    "prefix": "dust",
+    "material": "lapis"
+  },
+  {
+    "id": "small_dust_lapis",
+    "prefix": "small_dust",
+    "material": "lapis"
+  },
+  {
+    "id": "tiny_dust_lapis",
+    "prefix": "tiny_dust",
+    "material": "lapis"
+  },
+  {
+    "id": "plate_lapis",
+    "prefix": "plate",
+    "material": "lapis"
+  },
+  {
+    "id": "rod_lapis",
+    "prefix": "rod",
+    "material": "lapis"
+  },
+  {
+    "id": "bolt_lapis",
+    "prefix": "bolt",
+    "material": "lapis"
+  },
+  {
+    "id": "screw_lapis",
+    "prefix": "screw",
+    "material": "lapis"
+  },
+  {
+    "id": "crushed_lazurite",
+    "prefix": "crushed",
+    "material": "lazurite"
+  },
+  {
+    "id": "purified_lazurite",
+    "prefix": "purified",
+    "material": "lazurite"
+  },
+  {
+    "id": "impure_dust_lazurite",
+    "prefix": "impure_dust",
+    "material": "lazurite"
+  },
+  {
+    "id": "pure_dust_lazurite",
+    "prefix": "pure_dust",
+    "material": "lazurite"
+  },
+  {
+    "id": "dust_lazurite",
+    "prefix": "dust",
+    "material": "lazurite"
+  },
+  {
+    "id": "small_dust_lazurite",
+    "prefix": "small_dust",
+    "material": "lazurite"
+  },
+  {
+    "id": "tiny_dust_lazurite",
+    "prefix": "tiny_dust",
+    "material": "lazurite"
+  },
+  {
+    "id": "gem_lazurite",
+    "prefix": "gem",
+    "material": "lazurite"
+  },
+  {
+    "id": "plate_lazurite",
+    "prefix": "plate",
+    "material": "lazurite"
+  },
+  {
+    "id": "rod_lazurite",
+    "prefix": "rod",
+    "material": "lazurite"
+  },
+  {
+    "id": "bolt_lazurite",
+    "prefix": "bolt",
+    "material": "lazurite"
+  },
+  {
+    "id": "screw_lazurite",
+    "prefix": "screw",
+    "material": "lazurite"
+  },
+  {
+    "id": "crushed_lead",
+    "prefix": "crushed",
+    "material": "lead"
+  },
+  {
+    "id": "purified_lead",
+    "prefix": "purified",
+    "material": "lead"
+  },
+  {
+    "id": "impure_dust_lead",
+    "prefix": "impure_dust",
+    "material": "lead"
+  },
+  {
+    "id": "pure_dust_lead",
+    "prefix": "pure_dust",
+    "material": "lead"
+  },
+  {
+    "id": "dust_lead",
+    "prefix": "dust",
+    "material": "lead"
+  },
+  {
+    "id": "small_dust_lead",
+    "prefix": "small_dust",
+    "material": "lead"
+  },
+  {
+    "id": "tiny_dust_lead",
+    "prefix": "tiny_dust",
+    "material": "lead"
+  },
+  {
+    "id": "ingot_lead",
+    "prefix": "ingot",
+    "material": "lead"
+  },
+  {
+    "id": "nugget_lead",
+    "prefix": "nugget",
+    "material": "lead"
+  },
+  {
+    "id": "plate_lead",
+    "prefix": "plate",
+    "material": "lead"
+  },
+  {
+    "id": "rod_lead",
+    "prefix": "rod",
+    "material": "lead"
+  },
+  {
+    "id": "bolt_lead",
+    "prefix": "bolt",
+    "material": "lead"
+  },
+  {
+    "id": "screw_lead",
+    "prefix": "screw",
+    "material": "lead"
+  },
+  {
+    "id": "ring_lead",
+    "prefix": "ring",
+    "material": "lead"
+  },
+  {
+    "id": "crushed_lepidolite",
+    "prefix": "crushed",
+    "material": "lepidolite"
+  },
+  {
+    "id": "purified_lepidolite",
+    "prefix": "purified",
+    "material": "lepidolite"
+  },
+  {
+    "id": "impure_dust_lepidolite",
+    "prefix": "impure_dust",
+    "material": "lepidolite"
+  },
+  {
+    "id": "pure_dust_lepidolite",
+    "prefix": "pure_dust",
+    "material": "lepidolite"
+  },
+  {
+    "id": "dust_lepidolite",
+    "prefix": "dust",
+    "material": "lepidolite"
+  },
+  {
+    "id": "small_dust_lepidolite",
+    "prefix": "small_dust",
+    "material": "lepidolite"
+  },
+  {
+    "id": "tiny_dust_lepidolite",
+    "prefix": "tiny_dust",
+    "material": "lepidolite"
+  },
+  {
+    "id": "crushed_lignite",
+    "prefix": "crushed",
+    "material": "lignite"
+  },
+  {
+    "id": "purified_lignite",
+    "prefix": "purified",
+    "material": "lignite"
+  },
+  {
+    "id": "impure_dust_lignite",
+    "prefix": "impure_dust",
+    "material": "lignite"
+  },
+  {
+    "id": "pure_dust_lignite",
+    "prefix": "pure_dust",
+    "material": "lignite"
+  },
+  {
+    "id": "dust_lignite",
+    "prefix": "dust",
+    "material": "lignite"
+  },
+  {
+    "id": "small_dust_lignite",
+    "prefix": "small_dust",
+    "material": "lignite"
+  },
+  {
+    "id": "tiny_dust_lignite",
+    "prefix": "tiny_dust",
+    "material": "lignite"
+  },
+  {
+    "id": "gem_lignite",
+    "prefix": "gem",
+    "material": "lignite"
+  },
+  {
+    "id": "plate_lignite",
+    "prefix": "plate",
+    "material": "lignite"
+  },
+  {
+    "id": "rod_lignite",
+    "prefix": "rod",
+    "material": "lignite"
+  },
+  {
+    "id": "bolt_lignite",
+    "prefix": "bolt",
+    "material": "lignite"
+  },
+  {
+    "id": "screw_lignite",
+    "prefix": "screw",
+    "material": "lignite"
+  },
+  {
+    "id": "crushed_lithium",
+    "prefix": "crushed",
+    "material": "lithium"
+  },
+  {
+    "id": "purified_lithium",
+    "prefix": "purified",
+    "material": "lithium"
+  },
+  {
+    "id": "impure_dust_lithium",
+    "prefix": "impure_dust",
+    "material": "lithium"
+  },
+  {
+    "id": "pure_dust_lithium",
+    "prefix": "pure_dust",
+    "material": "lithium"
+  },
+  {
+    "id": "dust_lithium",
+    "prefix": "dust",
+    "material": "lithium"
+  },
+  {
+    "id": "small_dust_lithium",
+    "prefix": "small_dust",
+    "material": "lithium"
+  },
+  {
+    "id": "tiny_dust_lithium",
+    "prefix": "tiny_dust",
+    "material": "lithium"
+  },
+  {
+    "id": "ingot_lithium",
+    "prefix": "ingot",
+    "material": "lithium"
+  },
+  {
+    "id": "nugget_lithium",
+    "prefix": "nugget",
+    "material": "lithium"
+  },
+  {
+    "id": "plate_lithium",
+    "prefix": "plate",
+    "material": "lithium"
+  },
+  {
+    "id": "rod_lithium",
+    "prefix": "rod",
+    "material": "lithium"
+  },
+  {
+    "id": "bolt_lithium",
+    "prefix": "bolt",
+    "material": "lithium"
+  },
+  {
+    "id": "screw_lithium",
+    "prefix": "screw",
+    "material": "lithium"
+  },
+  {
+    "id": "ring_lithium",
+    "prefix": "ring",
+    "material": "lithium"
+  },
+  {
+    "id": "crushed_magnesite",
+    "prefix": "crushed",
+    "material": "magnesite"
+  },
+  {
+    "id": "purified_magnesite",
+    "prefix": "purified",
+    "material": "magnesite"
+  },
+  {
+    "id": "impure_dust_magnesite",
+    "prefix": "impure_dust",
+    "material": "magnesite"
+  },
+  {
+    "id": "pure_dust_magnesite",
+    "prefix": "pure_dust",
+    "material": "magnesite"
+  },
+  {
+    "id": "dust_magnesite",
+    "prefix": "dust",
+    "material": "magnesite"
+  },
+  {
+    "id": "small_dust_magnesite",
+    "prefix": "small_dust",
+    "material": "magnesite"
+  },
+  {
+    "id": "tiny_dust_magnesite",
+    "prefix": "tiny_dust",
+    "material": "magnesite"
+  },
+  {
+    "id": "dust_magnesium",
+    "prefix": "dust",
+    "material": "magnesium"
+  },
+  {
+    "id": "small_dust_magnesium",
+    "prefix": "small_dust",
+    "material": "magnesium"
+  },
+  {
+    "id": "tiny_dust_magnesium",
+    "prefix": "tiny_dust",
+    "material": "magnesium"
+  },
+  {
+    "id": "ingot_magnesium",
+    "prefix": "ingot",
+    "material": "magnesium"
+  },
+  {
+    "id": "nugget_magnesium",
+    "prefix": "nugget",
+    "material": "magnesium"
+  },
+  {
+    "id": "plate_magnesium",
+    "prefix": "plate",
+    "material": "magnesium"
+  },
+  {
+    "id": "rod_magnesium",
+    "prefix": "rod",
+    "material": "magnesium"
+  },
+  {
+    "id": "bolt_magnesium",
+    "prefix": "bolt",
+    "material": "magnesium"
+  },
+  {
+    "id": "screw_magnesium",
+    "prefix": "screw",
+    "material": "magnesium"
+  },
+  {
+    "id": "ring_magnesium",
+    "prefix": "ring",
+    "material": "magnesium"
+  },
+  {
+    "id": "crushed_magnetite",
+    "prefix": "crushed",
+    "material": "magnetite"
+  },
+  {
+    "id": "purified_magnetite",
+    "prefix": "purified",
+    "material": "magnetite"
+  },
+  {
+    "id": "impure_dust_magnetite",
+    "prefix": "impure_dust",
+    "material": "magnetite"
+  },
+  {
+    "id": "pure_dust_magnetite",
+    "prefix": "pure_dust",
+    "material": "magnetite"
+  },
+  {
+    "id": "dust_magnetite",
+    "prefix": "dust",
+    "material": "magnetite"
+  },
+  {
+    "id": "small_dust_magnetite",
+    "prefix": "small_dust",
+    "material": "magnetite"
+  },
+  {
+    "id": "tiny_dust_magnetite",
+    "prefix": "tiny_dust",
+    "material": "magnetite"
+  },
+  {
+    "id": "crushed_malachite",
+    "prefix": "crushed",
+    "material": "malachite"
+  },
+  {
+    "id": "purified_malachite",
+    "prefix": "purified",
+    "material": "malachite"
+  },
+  {
+    "id": "impure_dust_malachite",
+    "prefix": "impure_dust",
+    "material": "malachite"
+  },
+  {
+    "id": "pure_dust_malachite",
+    "prefix": "pure_dust",
+    "material": "malachite"
+  },
+  {
+    "id": "dust_malachite",
+    "prefix": "dust",
+    "material": "malachite"
+  },
+  {
+    "id": "small_dust_malachite",
+    "prefix": "small_dust",
+    "material": "malachite"
+  },
+  {
+    "id": "tiny_dust_malachite",
+    "prefix": "tiny_dust",
+    "material": "malachite"
+  },
+  {
+    "id": "crushed_manganese",
+    "prefix": "crushed",
+    "material": "manganese"
+  },
+  {
+    "id": "purified_manganese",
+    "prefix": "purified",
+    "material": "manganese"
+  },
+  {
+    "id": "impure_dust_manganese",
+    "prefix": "impure_dust",
+    "material": "manganese"
+  },
+  {
+    "id": "pure_dust_manganese",
+    "prefix": "pure_dust",
+    "material": "manganese"
+  },
+  {
+    "id": "dust_manganese",
+    "prefix": "dust",
+    "material": "manganese"
+  },
+  {
+    "id": "small_dust_manganese",
+    "prefix": "small_dust",
+    "material": "manganese"
+  },
+  {
+    "id": "tiny_dust_manganese",
+    "prefix": "tiny_dust",
+    "material": "manganese"
+  },
+  {
+    "id": "ingot_manganese",
+    "prefix": "ingot",
+    "material": "manganese"
+  },
+  {
+    "id": "nugget_manganese",
+    "prefix": "nugget",
+    "material": "manganese"
+  },
+  {
+    "id": "plate_manganese",
+    "prefix": "plate",
+    "material": "manganese"
+  },
+  {
+    "id": "rod_manganese",
+    "prefix": "rod",
+    "material": "manganese"
+  },
+  {
+    "id": "bolt_manganese",
+    "prefix": "bolt",
+    "material": "manganese"
+  },
+  {
+    "id": "screw_manganese",
+    "prefix": "screw",
+    "material": "manganese"
+  },
+  {
+    "id": "ring_manganese",
+    "prefix": "ring",
+    "material": "manganese"
+  },
+  {
+    "id": "crushed_molybdenite",
+    "prefix": "crushed",
+    "material": "molybdenite"
+  },
+  {
+    "id": "purified_molybdenite",
+    "prefix": "purified",
+    "material": "molybdenite"
+  },
+  {
+    "id": "impure_dust_molybdenite",
+    "prefix": "impure_dust",
+    "material": "molybdenite"
+  },
+  {
+    "id": "pure_dust_molybdenite",
+    "prefix": "pure_dust",
+    "material": "molybdenite"
+  },
+  {
+    "id": "dust_molybdenite",
+    "prefix": "dust",
+    "material": "molybdenite"
+  },
+  {
+    "id": "small_dust_molybdenite",
+    "prefix": "small_dust",
+    "material": "molybdenite"
+  },
+  {
+    "id": "tiny_dust_molybdenite",
+    "prefix": "tiny_dust",
+    "material": "molybdenite"
+  },
+  {
+    "id": "crushed_molybdenum",
+    "prefix": "crushed",
+    "material": "molybdenum"
+  },
+  {
+    "id": "purified_molybdenum",
+    "prefix": "purified",
+    "material": "molybdenum"
+  },
+  {
+    "id": "impure_dust_molybdenum",
+    "prefix": "impure_dust",
+    "material": "molybdenum"
+  },
+  {
+    "id": "pure_dust_molybdenum",
+    "prefix": "pure_dust",
+    "material": "molybdenum"
+  },
+  {
+    "id": "dust_molybdenum",
+    "prefix": "dust",
+    "material": "molybdenum"
+  },
+  {
+    "id": "small_dust_molybdenum",
+    "prefix": "small_dust",
+    "material": "molybdenum"
+  },
+  {
+    "id": "tiny_dust_molybdenum",
+    "prefix": "tiny_dust",
+    "material": "molybdenum"
+  },
+  {
+    "id": "ingot_molybdenum",
+    "prefix": "ingot",
+    "material": "molybdenum"
+  },
+  {
+    "id": "nugget_molybdenum",
+    "prefix": "nugget",
+    "material": "molybdenum"
+  },
+  {
+    "id": "plate_molybdenum",
+    "prefix": "plate",
+    "material": "molybdenum"
+  },
+  {
+    "id": "rod_molybdenum",
+    "prefix": "rod",
+    "material": "molybdenum"
+  },
+  {
+    "id": "bolt_molybdenum",
+    "prefix": "bolt",
+    "material": "molybdenum"
+  },
+  {
+    "id": "screw_molybdenum",
+    "prefix": "screw",
+    "material": "molybdenum"
+  },
+  {
+    "id": "ring_molybdenum",
+    "prefix": "ring",
+    "material": "molybdenum"
+  },
+  {
+    "id": "crushed_monazite",
+    "prefix": "crushed",
+    "material": "monazite"
+  },
+  {
+    "id": "purified_monazite",
+    "prefix": "purified",
+    "material": "monazite"
+  },
+  {
+    "id": "impure_dust_monazite",
+    "prefix": "impure_dust",
+    "material": "monazite"
+  },
+  {
+    "id": "pure_dust_monazite",
+    "prefix": "pure_dust",
+    "material": "monazite"
+  },
+  {
+    "id": "dust_monazite",
+    "prefix": "dust",
+    "material": "monazite"
+  },
+  {
+    "id": "small_dust_monazite",
+    "prefix": "small_dust",
+    "material": "monazite"
+  },
+  {
+    "id": "tiny_dust_monazite",
+    "prefix": "tiny_dust",
+    "material": "monazite"
+  },
+  {
+    "id": "gem_monazite",
+    "prefix": "gem",
+    "material": "monazite"
+  },
+  {
+    "id": "plate_monazite",
+    "prefix": "plate",
+    "material": "monazite"
+  },
+  {
+    "id": "rod_monazite",
+    "prefix": "rod",
+    "material": "monazite"
+  },
+  {
+    "id": "bolt_monazite",
+    "prefix": "bolt",
+    "material": "monazite"
+  },
+  {
+    "id": "screw_monazite",
+    "prefix": "screw",
+    "material": "monazite"
+  },
+  {
+    "id": "crushed_neodymium",
+    "prefix": "crushed",
+    "material": "neodymium"
+  },
+  {
+    "id": "purified_neodymium",
+    "prefix": "purified",
+    "material": "neodymium"
+  },
+  {
+    "id": "impure_dust_neodymium",
+    "prefix": "impure_dust",
+    "material": "neodymium"
+  },
+  {
+    "id": "pure_dust_neodymium",
+    "prefix": "pure_dust",
+    "material": "neodymium"
+  },
+  {
+    "id": "dust_neodymium",
+    "prefix": "dust",
+    "material": "neodymium"
+  },
+  {
+    "id": "small_dust_neodymium",
+    "prefix": "small_dust",
+    "material": "neodymium"
+  },
+  {
+    "id": "tiny_dust_neodymium",
+    "prefix": "tiny_dust",
+    "material": "neodymium"
+  },
+  {
+    "id": "ingot_neodymium",
+    "prefix": "ingot",
+    "material": "neodymium"
+  },
+  {
+    "id": "nugget_neodymium",
+    "prefix": "nugget",
+    "material": "neodymium"
+  },
+  {
+    "id": "plate_neodymium",
+    "prefix": "plate",
+    "material": "neodymium"
+  },
+  {
+    "id": "rod_neodymium",
+    "prefix": "rod",
+    "material": "neodymium"
+  },
+  {
+    "id": "bolt_neodymium",
+    "prefix": "bolt",
+    "material": "neodymium"
+  },
+  {
+    "id": "screw_neodymium",
+    "prefix": "screw",
+    "material": "neodymium"
+  },
+  {
+    "id": "ring_neodymium",
+    "prefix": "ring",
+    "material": "neodymium"
+  },
+  {
+    "id": "crushed_nether_quartz",
+    "prefix": "crushed",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "purified_nether_quartz",
+    "prefix": "purified",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "impure_dust_nether_quartz",
+    "prefix": "impure_dust",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "pure_dust_nether_quartz",
+    "prefix": "pure_dust",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "dust_nether_quartz",
+    "prefix": "dust",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "small_dust_nether_quartz",
+    "prefix": "small_dust",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "tiny_dust_nether_quartz",
+    "prefix": "tiny_dust",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "plate_nether_quartz",
+    "prefix": "plate",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "rod_nether_quartz",
+    "prefix": "rod",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "bolt_nether_quartz",
+    "prefix": "bolt",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "screw_nether_quartz",
+    "prefix": "screw",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "crushed_nickel",
+    "prefix": "crushed",
+    "material": "nickel"
+  },
+  {
+    "id": "purified_nickel",
+    "prefix": "purified",
+    "material": "nickel"
+  },
+  {
+    "id": "impure_dust_nickel",
+    "prefix": "impure_dust",
+    "material": "nickel"
+  },
+  {
+    "id": "pure_dust_nickel",
+    "prefix": "pure_dust",
+    "material": "nickel"
+  },
+  {
+    "id": "dust_nickel",
+    "prefix": "dust",
+    "material": "nickel"
+  },
+  {
+    "id": "small_dust_nickel",
+    "prefix": "small_dust",
+    "material": "nickel"
+  },
+  {
+    "id": "tiny_dust_nickel",
+    "prefix": "tiny_dust",
+    "material": "nickel"
+  },
+  {
+    "id": "ingot_nickel",
+    "prefix": "ingot",
+    "material": "nickel"
+  },
+  {
+    "id": "nugget_nickel",
+    "prefix": "nugget",
+    "material": "nickel"
+  },
+  {
+    "id": "plate_nickel",
+    "prefix": "plate",
+    "material": "nickel"
+  },
+  {
+    "id": "rod_nickel",
+    "prefix": "rod",
+    "material": "nickel"
+  },
+  {
+    "id": "bolt_nickel",
+    "prefix": "bolt",
+    "material": "nickel"
+  },
+  {
+    "id": "screw_nickel",
+    "prefix": "screw",
+    "material": "nickel"
+  },
+  {
+    "id": "ring_nickel",
+    "prefix": "ring",
+    "material": "nickel"
+  },
+  {
+    "id": "crushed_oilsands",
+    "prefix": "crushed",
+    "material": "oilsands"
+  },
+  {
+    "id": "purified_oilsands",
+    "prefix": "purified",
+    "material": "oilsands"
+  },
+  {
+    "id": "impure_dust_oilsands",
+    "prefix": "impure_dust",
+    "material": "oilsands"
+  },
+  {
+    "id": "pure_dust_oilsands",
+    "prefix": "pure_dust",
+    "material": "oilsands"
+  },
+  {
+    "id": "dust_oilsands",
+    "prefix": "dust",
+    "material": "oilsands"
+  },
+  {
+    "id": "small_dust_oilsands",
+    "prefix": "small_dust",
+    "material": "oilsands"
+  },
+  {
+    "id": "tiny_dust_oilsands",
+    "prefix": "tiny_dust",
+    "material": "oilsands"
+  },
+  {
+    "id": "crushed_olivine",
+    "prefix": "crushed",
+    "material": "olivine"
+  },
+  {
+    "id": "purified_olivine",
+    "prefix": "purified",
+    "material": "olivine"
+  },
+  {
+    "id": "impure_dust_olivine",
+    "prefix": "impure_dust",
+    "material": "olivine"
+  },
+  {
+    "id": "pure_dust_olivine",
+    "prefix": "pure_dust",
+    "material": "olivine"
+  },
+  {
+    "id": "dust_olivine",
+    "prefix": "dust",
+    "material": "olivine"
+  },
+  {
+    "id": "small_dust_olivine",
+    "prefix": "small_dust",
+    "material": "olivine"
+  },
+  {
+    "id": "tiny_dust_olivine",
+    "prefix": "tiny_dust",
+    "material": "olivine"
+  },
+  {
+    "id": "gem_olivine",
+    "prefix": "gem",
+    "material": "olivine"
+  },
+  {
+    "id": "plate_olivine",
+    "prefix": "plate",
+    "material": "olivine"
+  },
+  {
+    "id": "rod_olivine",
+    "prefix": "rod",
+    "material": "olivine"
+  },
+  {
+    "id": "bolt_olivine",
+    "prefix": "bolt",
+    "material": "olivine"
+  },
+  {
+    "id": "screw_olivine",
+    "prefix": "screw",
+    "material": "olivine"
+  },
+  {
+    "id": "crushed_palladium",
+    "prefix": "crushed",
+    "material": "palladium"
+  },
+  {
+    "id": "purified_palladium",
+    "prefix": "purified",
+    "material": "palladium"
+  },
+  {
+    "id": "impure_dust_palladium",
+    "prefix": "impure_dust",
+    "material": "palladium"
+  },
+  {
+    "id": "pure_dust_palladium",
+    "prefix": "pure_dust",
+    "material": "palladium"
+  },
+  {
+    "id": "dust_palladium",
+    "prefix": "dust",
+    "material": "palladium"
+  },
+  {
+    "id": "small_dust_palladium",
+    "prefix": "small_dust",
+    "material": "palladium"
+  },
+  {
+    "id": "tiny_dust_palladium",
+    "prefix": "tiny_dust",
+    "material": "palladium"
+  },
+  {
+    "id": "ingot_palladium",
+    "prefix": "ingot",
+    "material": "palladium"
+  },
+  {
+    "id": "nugget_palladium",
+    "prefix": "nugget",
+    "material": "palladium"
+  },
+  {
+    "id": "plate_palladium",
+    "prefix": "plate",
+    "material": "palladium"
+  },
+  {
+    "id": "rod_palladium",
+    "prefix": "rod",
+    "material": "palladium"
+  },
+  {
+    "id": "bolt_palladium",
+    "prefix": "bolt",
+    "material": "palladium"
+  },
+  {
+    "id": "screw_palladium",
+    "prefix": "screw",
+    "material": "palladium"
+  },
+  {
+    "id": "ring_palladium",
+    "prefix": "ring",
+    "material": "palladium"
+  },
+  {
+    "id": "crushed_pentlandite",
+    "prefix": "crushed",
+    "material": "pentlandite"
+  },
+  {
+    "id": "purified_pentlandite",
+    "prefix": "purified",
+    "material": "pentlandite"
+  },
+  {
+    "id": "impure_dust_pentlandite",
+    "prefix": "impure_dust",
+    "material": "pentlandite"
+  },
+  {
+    "id": "pure_dust_pentlandite",
+    "prefix": "pure_dust",
+    "material": "pentlandite"
+  },
+  {
+    "id": "dust_pentlandite",
+    "prefix": "dust",
+    "material": "pentlandite"
+  },
+  {
+    "id": "small_dust_pentlandite",
+    "prefix": "small_dust",
+    "material": "pentlandite"
+  },
+  {
+    "id": "tiny_dust_pentlandite",
+    "prefix": "tiny_dust",
+    "material": "pentlandite"
+  },
+  {
+    "id": "crushed_pitchblende",
+    "prefix": "crushed",
+    "material": "pitchblende"
+  },
+  {
+    "id": "purified_pitchblende",
+    "prefix": "purified",
+    "material": "pitchblende"
+  },
+  {
+    "id": "impure_dust_pitchblende",
+    "prefix": "impure_dust",
+    "material": "pitchblende"
+  },
+  {
+    "id": "pure_dust_pitchblende",
+    "prefix": "pure_dust",
+    "material": "pitchblende"
+  },
+  {
+    "id": "dust_pitchblende",
+    "prefix": "dust",
+    "material": "pitchblende"
+  },
+  {
+    "id": "small_dust_pitchblende",
+    "prefix": "small_dust",
+    "material": "pitchblende"
+  },
+  {
+    "id": "tiny_dust_pitchblende",
+    "prefix": "tiny_dust",
+    "material": "pitchblende"
+  },
+  {
+    "id": "crushed_platinum",
+    "prefix": "crushed",
+    "material": "platinum"
+  },
+  {
+    "id": "purified_platinum",
+    "prefix": "purified",
+    "material": "platinum"
+  },
+  {
+    "id": "impure_dust_platinum",
+    "prefix": "impure_dust",
+    "material": "platinum"
+  },
+  {
+    "id": "pure_dust_platinum",
+    "prefix": "pure_dust",
+    "material": "platinum"
+  },
+  {
+    "id": "dust_platinum",
+    "prefix": "dust",
+    "material": "platinum"
+  },
+  {
+    "id": "small_dust_platinum",
+    "prefix": "small_dust",
+    "material": "platinum"
+  },
+  {
+    "id": "tiny_dust_platinum",
+    "prefix": "tiny_dust",
+    "material": "platinum"
+  },
+  {
+    "id": "ingot_platinum",
+    "prefix": "ingot",
+    "material": "platinum"
+  },
+  {
+    "id": "nugget_platinum",
+    "prefix": "nugget",
+    "material": "platinum"
+  },
+  {
+    "id": "plate_platinum",
+    "prefix": "plate",
+    "material": "platinum"
+  },
+  {
+    "id": "rod_platinum",
+    "prefix": "rod",
+    "material": "platinum"
+  },
+  {
+    "id": "bolt_platinum",
+    "prefix": "bolt",
+    "material": "platinum"
+  },
+  {
+    "id": "screw_platinum",
+    "prefix": "screw",
+    "material": "platinum"
+  },
+  {
+    "id": "ring_platinum",
+    "prefix": "ring",
+    "material": "platinum"
+  },
+  {
+    "id": "crushed_powellite",
+    "prefix": "crushed",
+    "material": "powellite"
+  },
+  {
+    "id": "purified_powellite",
+    "prefix": "purified",
+    "material": "powellite"
+  },
+  {
+    "id": "impure_dust_powellite",
+    "prefix": "impure_dust",
+    "material": "powellite"
+  },
+  {
+    "id": "pure_dust_powellite",
+    "prefix": "pure_dust",
+    "material": "powellite"
+  },
+  {
+    "id": "dust_powellite",
+    "prefix": "dust",
+    "material": "powellite"
+  },
+  {
+    "id": "small_dust_powellite",
+    "prefix": "small_dust",
+    "material": "powellite"
+  },
+  {
+    "id": "tiny_dust_powellite",
+    "prefix": "tiny_dust",
+    "material": "powellite"
+  },
+  {
+    "id": "crushed_pyrite",
+    "prefix": "crushed",
+    "material": "pyrite"
+  },
+  {
+    "id": "purified_pyrite",
+    "prefix": "purified",
+    "material": "pyrite"
+  },
+  {
+    "id": "impure_dust_pyrite",
+    "prefix": "impure_dust",
+    "material": "pyrite"
+  },
+  {
+    "id": "pure_dust_pyrite",
+    "prefix": "pure_dust",
+    "material": "pyrite"
+  },
+  {
+    "id": "dust_pyrite",
+    "prefix": "dust",
+    "material": "pyrite"
+  },
+  {
+    "id": "small_dust_pyrite",
+    "prefix": "small_dust",
+    "material": "pyrite"
+  },
+  {
+    "id": "tiny_dust_pyrite",
+    "prefix": "tiny_dust",
+    "material": "pyrite"
+  },
+  {
+    "id": "crushed_pyrochlore",
+    "prefix": "crushed",
+    "material": "pyrochlore"
+  },
+  {
+    "id": "purified_pyrochlore",
+    "prefix": "purified",
+    "material": "pyrochlore"
+  },
+  {
+    "id": "impure_dust_pyrochlore",
+    "prefix": "impure_dust",
+    "material": "pyrochlore"
+  },
+  {
+    "id": "pure_dust_pyrochlore",
+    "prefix": "pure_dust",
+    "material": "pyrochlore"
+  },
+  {
+    "id": "dust_pyrochlore",
+    "prefix": "dust",
+    "material": "pyrochlore"
+  },
+  {
+    "id": "small_dust_pyrochlore",
+    "prefix": "small_dust",
+    "material": "pyrochlore"
+  },
+  {
+    "id": "tiny_dust_pyrochlore",
+    "prefix": "tiny_dust",
+    "material": "pyrochlore"
+  },
+  {
+    "id": "crushed_pyrolusite",
+    "prefix": "crushed",
+    "material": "pyrolusite"
+  },
+  {
+    "id": "purified_pyrolusite",
+    "prefix": "purified",
+    "material": "pyrolusite"
+  },
+  {
+    "id": "impure_dust_pyrolusite",
+    "prefix": "impure_dust",
+    "material": "pyrolusite"
+  },
+  {
+    "id": "pure_dust_pyrolusite",
+    "prefix": "pure_dust",
+    "material": "pyrolusite"
+  },
+  {
+    "id": "dust_pyrolusite",
+    "prefix": "dust",
+    "material": "pyrolusite"
+  },
+  {
+    "id": "small_dust_pyrolusite",
+    "prefix": "small_dust",
+    "material": "pyrolusite"
+  },
+  {
+    "id": "tiny_dust_pyrolusite",
+    "prefix": "tiny_dust",
+    "material": "pyrolusite"
+  },
+  {
+    "id": "crushed_pyrope",
+    "prefix": "crushed",
+    "material": "pyrope"
+  },
+  {
+    "id": "purified_pyrope",
+    "prefix": "purified",
+    "material": "pyrope"
+  },
+  {
+    "id": "impure_dust_pyrope",
+    "prefix": "impure_dust",
+    "material": "pyrope"
+  },
+  {
+    "id": "pure_dust_pyrope",
+    "prefix": "pure_dust",
+    "material": "pyrope"
+  },
+  {
+    "id": "dust_pyrope",
+    "prefix": "dust",
+    "material": "pyrope"
+  },
+  {
+    "id": "small_dust_pyrope",
+    "prefix": "small_dust",
+    "material": "pyrope"
+  },
+  {
+    "id": "tiny_dust_pyrope",
+    "prefix": "tiny_dust",
+    "material": "pyrope"
+  },
+  {
+    "id": "crushed_quartzite",
+    "prefix": "crushed",
+    "material": "quartzite"
+  },
+  {
+    "id": "purified_quartzite",
+    "prefix": "purified",
+    "material": "quartzite"
+  },
+  {
+    "id": "impure_dust_quartzite",
+    "prefix": "impure_dust",
+    "material": "quartzite"
+  },
+  {
+    "id": "pure_dust_quartzite",
+    "prefix": "pure_dust",
+    "material": "quartzite"
+  },
+  {
+    "id": "dust_quartzite",
+    "prefix": "dust",
+    "material": "quartzite"
+  },
+  {
+    "id": "small_dust_quartzite",
+    "prefix": "small_dust",
+    "material": "quartzite"
+  },
+  {
+    "id": "tiny_dust_quartzite",
+    "prefix": "tiny_dust",
+    "material": "quartzite"
+  },
+  {
+    "id": "gem_quartzite",
+    "prefix": "gem",
+    "material": "quartzite"
+  },
+  {
+    "id": "plate_quartzite",
+    "prefix": "plate",
+    "material": "quartzite"
+  },
+  {
+    "id": "rod_quartzite",
+    "prefix": "rod",
+    "material": "quartzite"
+  },
+  {
+    "id": "bolt_quartzite",
+    "prefix": "bolt",
+    "material": "quartzite"
+  },
+  {
+    "id": "screw_quartzite",
+    "prefix": "screw",
+    "material": "quartzite"
+  },
+  {
+    "id": "crushed_redstone",
+    "prefix": "crushed",
+    "material": "redstone"
+  },
+  {
+    "id": "purified_redstone",
+    "prefix": "purified",
+    "material": "redstone"
+  },
+  {
+    "id": "impure_dust_redstone",
+    "prefix": "impure_dust",
+    "material": "redstone"
+  },
+  {
+    "id": "pure_dust_redstone",
+    "prefix": "pure_dust",
+    "material": "redstone"
+  },
+  {
+    "id": "small_dust_redstone",
+    "prefix": "small_dust",
+    "material": "redstone"
+  },
+  {
+    "id": "tiny_dust_redstone",
+    "prefix": "tiny_dust",
+    "material": "redstone"
+  },
+  {
+    "id": "crushed_rock_salt",
+    "prefix": "crushed",
+    "material": "rock_salt"
+  },
+  {
+    "id": "purified_rock_salt",
+    "prefix": "purified",
+    "material": "rock_salt"
+  },
+  {
+    "id": "impure_dust_rock_salt",
+    "prefix": "impure_dust",
+    "material": "rock_salt"
+  },
+  {
+    "id": "pure_dust_rock_salt",
+    "prefix": "pure_dust",
+    "material": "rock_salt"
+  },
+  {
+    "id": "dust_rock_salt",
+    "prefix": "dust",
+    "material": "rock_salt"
+  },
+  {
+    "id": "small_dust_rock_salt",
+    "prefix": "small_dust",
+    "material": "rock_salt"
+  },
+  {
+    "id": "tiny_dust_rock_salt",
+    "prefix": "tiny_dust",
+    "material": "rock_salt"
+  },
+  {
+    "id": "crushed_ruby",
+    "prefix": "crushed",
+    "material": "ruby"
+  },
+  {
+    "id": "purified_ruby",
+    "prefix": "purified",
+    "material": "ruby"
+  },
+  {
+    "id": "impure_dust_ruby",
+    "prefix": "impure_dust",
+    "material": "ruby"
+  },
+  {
+    "id": "pure_dust_ruby",
+    "prefix": "pure_dust",
+    "material": "ruby"
+  },
+  {
+    "id": "dust_ruby",
+    "prefix": "dust",
+    "material": "ruby"
+  },
+  {
+    "id": "small_dust_ruby",
+    "prefix": "small_dust",
+    "material": "ruby"
+  },
+  {
+    "id": "tiny_dust_ruby",
+    "prefix": "tiny_dust",
+    "material": "ruby"
+  },
+  {
+    "id": "gem_ruby",
+    "prefix": "gem",
+    "material": "ruby"
+  },
+  {
+    "id": "plate_ruby",
+    "prefix": "plate",
+    "material": "ruby"
+  },
+  {
+    "id": "rod_ruby",
+    "prefix": "rod",
+    "material": "ruby"
+  },
+  {
+    "id": "bolt_ruby",
+    "prefix": "bolt",
+    "material": "ruby"
+  },
+  {
+    "id": "screw_ruby",
+    "prefix": "screw",
+    "material": "ruby"
+  },
+  {
+    "id": "crushed_salt",
+    "prefix": "crushed",
+    "material": "salt"
+  },
+  {
+    "id": "purified_salt",
+    "prefix": "purified",
+    "material": "salt"
+  },
+  {
+    "id": "impure_dust_salt",
+    "prefix": "impure_dust",
+    "material": "salt"
+  },
+  {
+    "id": "pure_dust_salt",
+    "prefix": "pure_dust",
+    "material": "salt"
+  },
+  {
+    "id": "dust_salt",
+    "prefix": "dust",
+    "material": "salt"
+  },
+  {
+    "id": "small_dust_salt",
+    "prefix": "small_dust",
+    "material": "salt"
+  },
+  {
+    "id": "tiny_dust_salt",
+    "prefix": "tiny_dust",
+    "material": "salt"
+  },
+  {
+    "id": "crushed_sapphire",
+    "prefix": "crushed",
+    "material": "sapphire"
+  },
+  {
+    "id": "purified_sapphire",
+    "prefix": "purified",
+    "material": "sapphire"
+  },
+  {
+    "id": "impure_dust_sapphire",
+    "prefix": "impure_dust",
+    "material": "sapphire"
+  },
+  {
+    "id": "pure_dust_sapphire",
+    "prefix": "pure_dust",
+    "material": "sapphire"
+  },
+  {
+    "id": "dust_sapphire",
+    "prefix": "dust",
+    "material": "sapphire"
+  },
+  {
+    "id": "small_dust_sapphire",
+    "prefix": "small_dust",
+    "material": "sapphire"
+  },
+  {
+    "id": "tiny_dust_sapphire",
+    "prefix": "tiny_dust",
+    "material": "sapphire"
+  },
+  {
+    "id": "gem_sapphire",
+    "prefix": "gem",
+    "material": "sapphire"
+  },
+  {
+    "id": "plate_sapphire",
+    "prefix": "plate",
+    "material": "sapphire"
+  },
+  {
+    "id": "rod_sapphire",
+    "prefix": "rod",
+    "material": "sapphire"
+  },
+  {
+    "id": "bolt_sapphire",
+    "prefix": "bolt",
+    "material": "sapphire"
+  },
+  {
+    "id": "screw_sapphire",
+    "prefix": "screw",
+    "material": "sapphire"
+  },
+  {
+    "id": "crushed_scheelite",
+    "prefix": "crushed",
+    "material": "scheelite"
+  },
+  {
+    "id": "purified_scheelite",
+    "prefix": "purified",
+    "material": "scheelite"
+  },
+  {
+    "id": "impure_dust_scheelite",
+    "prefix": "impure_dust",
+    "material": "scheelite"
+  },
+  {
+    "id": "pure_dust_scheelite",
+    "prefix": "pure_dust",
+    "material": "scheelite"
+  },
+  {
+    "id": "dust_scheelite",
+    "prefix": "dust",
+    "material": "scheelite"
+  },
+  {
+    "id": "small_dust_scheelite",
+    "prefix": "small_dust",
+    "material": "scheelite"
+  },
+  {
+    "id": "tiny_dust_scheelite",
+    "prefix": "tiny_dust",
+    "material": "scheelite"
+  },
+  {
+    "id": "crushed_silver",
+    "prefix": "crushed",
+    "material": "silver"
+  },
+  {
+    "id": "purified_silver",
+    "prefix": "purified",
+    "material": "silver"
+  },
+  {
+    "id": "impure_dust_silver",
+    "prefix": "impure_dust",
+    "material": "silver"
+  },
+  {
+    "id": "pure_dust_silver",
+    "prefix": "pure_dust",
+    "material": "silver"
+  },
+  {
+    "id": "dust_silver",
+    "prefix": "dust",
+    "material": "silver"
+  },
+  {
+    "id": "small_dust_silver",
+    "prefix": "small_dust",
+    "material": "silver"
+  },
+  {
+    "id": "tiny_dust_silver",
+    "prefix": "tiny_dust",
+    "material": "silver"
+  },
+  {
+    "id": "ingot_silver",
+    "prefix": "ingot",
+    "material": "silver"
+  },
+  {
+    "id": "nugget_silver",
+    "prefix": "nugget",
+    "material": "silver"
+  },
+  {
+    "id": "plate_silver",
+    "prefix": "plate",
+    "material": "silver"
+  },
+  {
+    "id": "rod_silver",
+    "prefix": "rod",
+    "material": "silver"
+  },
+  {
+    "id": "bolt_silver",
+    "prefix": "bolt",
+    "material": "silver"
+  },
+  {
+    "id": "screw_silver",
+    "prefix": "screw",
+    "material": "silver"
+  },
+  {
+    "id": "ring_silver",
+    "prefix": "ring",
+    "material": "silver"
+  },
+  {
+    "id": "crushed_soapstone",
+    "prefix": "crushed",
+    "material": "soapstone"
+  },
+  {
+    "id": "purified_soapstone",
+    "prefix": "purified",
+    "material": "soapstone"
+  },
+  {
+    "id": "impure_dust_soapstone",
+    "prefix": "impure_dust",
+    "material": "soapstone"
+  },
+  {
+    "id": "pure_dust_soapstone",
+    "prefix": "pure_dust",
+    "material": "soapstone"
+  },
+  {
+    "id": "dust_soapstone",
+    "prefix": "dust",
+    "material": "soapstone"
+  },
+  {
+    "id": "small_dust_soapstone",
+    "prefix": "small_dust",
+    "material": "soapstone"
+  },
+  {
+    "id": "tiny_dust_soapstone",
+    "prefix": "tiny_dust",
+    "material": "soapstone"
+  },
+  {
+    "id": "crushed_sodalite",
+    "prefix": "crushed",
+    "material": "sodalite"
+  },
+  {
+    "id": "purified_sodalite",
+    "prefix": "purified",
+    "material": "sodalite"
+  },
+  {
+    "id": "impure_dust_sodalite",
+    "prefix": "impure_dust",
+    "material": "sodalite"
+  },
+  {
+    "id": "pure_dust_sodalite",
+    "prefix": "pure_dust",
+    "material": "sodalite"
+  },
+  {
+    "id": "dust_sodalite",
+    "prefix": "dust",
+    "material": "sodalite"
+  },
+  {
+    "id": "small_dust_sodalite",
+    "prefix": "small_dust",
+    "material": "sodalite"
+  },
+  {
+    "id": "tiny_dust_sodalite",
+    "prefix": "tiny_dust",
+    "material": "sodalite"
+  },
+  {
+    "id": "gem_sodalite",
+    "prefix": "gem",
+    "material": "sodalite"
+  },
+  {
+    "id": "plate_sodalite",
+    "prefix": "plate",
+    "material": "sodalite"
+  },
+  {
+    "id": "rod_sodalite",
+    "prefix": "rod",
+    "material": "sodalite"
+  },
+  {
+    "id": "bolt_sodalite",
+    "prefix": "bolt",
+    "material": "sodalite"
+  },
+  {
+    "id": "screw_sodalite",
+    "prefix": "screw",
+    "material": "sodalite"
+  },
+  {
+    "id": "crushed_spessartine",
+    "prefix": "crushed",
+    "material": "spessartine"
+  },
+  {
+    "id": "purified_spessartine",
+    "prefix": "purified",
+    "material": "spessartine"
+  },
+  {
+    "id": "impure_dust_spessartine",
+    "prefix": "impure_dust",
+    "material": "spessartine"
+  },
+  {
+    "id": "pure_dust_spessartine",
+    "prefix": "pure_dust",
+    "material": "spessartine"
+  },
+  {
+    "id": "dust_spessartine",
+    "prefix": "dust",
+    "material": "spessartine"
+  },
+  {
+    "id": "small_dust_spessartine",
+    "prefix": "small_dust",
+    "material": "spessartine"
+  },
+  {
+    "id": "tiny_dust_spessartine",
+    "prefix": "tiny_dust",
+    "material": "spessartine"
+  },
+  {
+    "id": "crushed_sphalerite",
+    "prefix": "crushed",
+    "material": "sphalerite"
+  },
+  {
+    "id": "purified_sphalerite",
+    "prefix": "purified",
+    "material": "sphalerite"
+  },
+  {
+    "id": "impure_dust_sphalerite",
+    "prefix": "impure_dust",
+    "material": "sphalerite"
+  },
+  {
+    "id": "pure_dust_sphalerite",
+    "prefix": "pure_dust",
+    "material": "sphalerite"
+  },
+  {
+    "id": "dust_sphalerite",
+    "prefix": "dust",
+    "material": "sphalerite"
+  },
+  {
+    "id": "small_dust_sphalerite",
+    "prefix": "small_dust",
+    "material": "sphalerite"
+  },
+  {
+    "id": "tiny_dust_sphalerite",
+    "prefix": "tiny_dust",
+    "material": "sphalerite"
+  },
+  {
+    "id": "crushed_spodumene",
+    "prefix": "crushed",
+    "material": "spodumene"
+  },
+  {
+    "id": "purified_spodumene",
+    "prefix": "purified",
+    "material": "spodumene"
+  },
+  {
+    "id": "impure_dust_spodumene",
+    "prefix": "impure_dust",
+    "material": "spodumene"
+  },
+  {
+    "id": "pure_dust_spodumene",
+    "prefix": "pure_dust",
+    "material": "spodumene"
+  },
+  {
+    "id": "dust_spodumene",
+    "prefix": "dust",
+    "material": "spodumene"
+  },
+  {
+    "id": "small_dust_spodumene",
+    "prefix": "small_dust",
+    "material": "spodumene"
+  },
+  {
+    "id": "tiny_dust_spodumene",
+    "prefix": "tiny_dust",
+    "material": "spodumene"
+  },
+  {
+    "id": "crushed_stibnite",
+    "prefix": "crushed",
+    "material": "stibnite"
+  },
+  {
+    "id": "purified_stibnite",
+    "prefix": "purified",
+    "material": "stibnite"
+  },
+  {
+    "id": "impure_dust_stibnite",
+    "prefix": "impure_dust",
+    "material": "stibnite"
+  },
+  {
+    "id": "pure_dust_stibnite",
+    "prefix": "pure_dust",
+    "material": "stibnite"
+  },
+  {
+    "id": "dust_stibnite",
+    "prefix": "dust",
+    "material": "stibnite"
+  },
+  {
+    "id": "small_dust_stibnite",
+    "prefix": "small_dust",
+    "material": "stibnite"
+  },
+  {
+    "id": "tiny_dust_stibnite",
+    "prefix": "tiny_dust",
+    "material": "stibnite"
+  },
+  {
+    "id": "crushed_sulfur",
+    "prefix": "crushed",
+    "material": "sulfur"
+  },
+  {
+    "id": "purified_sulfur",
+    "prefix": "purified",
+    "material": "sulfur"
+  },
+  {
+    "id": "impure_dust_sulfur",
+    "prefix": "impure_dust",
+    "material": "sulfur"
+  },
+  {
+    "id": "pure_dust_sulfur",
+    "prefix": "pure_dust",
+    "material": "sulfur"
+  },
+  {
+    "id": "dust_sulfur",
+    "prefix": "dust",
+    "material": "sulfur"
+  },
+  {
+    "id": "small_dust_sulfur",
+    "prefix": "small_dust",
+    "material": "sulfur"
+  },
+  {
+    "id": "tiny_dust_sulfur",
+    "prefix": "tiny_dust",
+    "material": "sulfur"
+  },
+  {
+    "id": "crushed_talc",
+    "prefix": "crushed",
+    "material": "talc"
+  },
+  {
+    "id": "purified_talc",
+    "prefix": "purified",
+    "material": "talc"
+  },
+  {
+    "id": "impure_dust_talc",
+    "prefix": "impure_dust",
+    "material": "talc"
+  },
+  {
+    "id": "pure_dust_talc",
+    "prefix": "pure_dust",
+    "material": "talc"
+  },
+  {
+    "id": "dust_talc",
+    "prefix": "dust",
+    "material": "talc"
+  },
+  {
+    "id": "small_dust_talc",
+    "prefix": "small_dust",
+    "material": "talc"
+  },
+  {
+    "id": "tiny_dust_talc",
+    "prefix": "tiny_dust",
+    "material": "talc"
+  },
+  {
+    "id": "crushed_tantalite",
+    "prefix": "crushed",
+    "material": "tantalite"
+  },
+  {
+    "id": "purified_tantalite",
+    "prefix": "purified",
+    "material": "tantalite"
+  },
+  {
+    "id": "impure_dust_tantalite",
+    "prefix": "impure_dust",
+    "material": "tantalite"
+  },
+  {
+    "id": "pure_dust_tantalite",
+    "prefix": "pure_dust",
+    "material": "tantalite"
+  },
+  {
+    "id": "dust_tantalite",
+    "prefix": "dust",
+    "material": "tantalite"
+  },
+  {
+    "id": "small_dust_tantalite",
+    "prefix": "small_dust",
+    "material": "tantalite"
+  },
+  {
+    "id": "tiny_dust_tantalite",
+    "prefix": "tiny_dust",
+    "material": "tantalite"
+  },
+  {
+    "id": "crushed_tetrahedrite",
+    "prefix": "crushed",
+    "material": "tetrahedrite"
+  },
+  {
+    "id": "purified_tetrahedrite",
+    "prefix": "purified",
+    "material": "tetrahedrite"
+  },
+  {
+    "id": "impure_dust_tetrahedrite",
+    "prefix": "impure_dust",
+    "material": "tetrahedrite"
+  },
+  {
+    "id": "pure_dust_tetrahedrite",
+    "prefix": "pure_dust",
+    "material": "tetrahedrite"
+  },
+  {
+    "id": "dust_tetrahedrite",
+    "prefix": "dust",
+    "material": "tetrahedrite"
+  },
+  {
+    "id": "small_dust_tetrahedrite",
+    "prefix": "small_dust",
+    "material": "tetrahedrite"
+  },
+  {
+    "id": "tiny_dust_tetrahedrite",
+    "prefix": "tiny_dust",
+    "material": "tetrahedrite"
+  },
+  {
+    "id": "crushed_thorium",
+    "prefix": "crushed",
+    "material": "thorium"
+  },
+  {
+    "id": "purified_thorium",
+    "prefix": "purified",
+    "material": "thorium"
+  },
+  {
+    "id": "impure_dust_thorium",
+    "prefix": "impure_dust",
+    "material": "thorium"
+  },
+  {
+    "id": "pure_dust_thorium",
+    "prefix": "pure_dust",
+    "material": "thorium"
+  },
+  {
+    "id": "dust_thorium",
+    "prefix": "dust",
+    "material": "thorium"
+  },
+  {
+    "id": "small_dust_thorium",
+    "prefix": "small_dust",
+    "material": "thorium"
+  },
+  {
+    "id": "tiny_dust_thorium",
+    "prefix": "tiny_dust",
+    "material": "thorium"
+  },
+  {
+    "id": "ingot_thorium",
+    "prefix": "ingot",
+    "material": "thorium"
+  },
+  {
+    "id": "nugget_thorium",
+    "prefix": "nugget",
+    "material": "thorium"
+  },
+  {
+    "id": "plate_thorium",
+    "prefix": "plate",
+    "material": "thorium"
+  },
+  {
+    "id": "rod_thorium",
+    "prefix": "rod",
+    "material": "thorium"
+  },
+  {
+    "id": "bolt_thorium",
+    "prefix": "bolt",
+    "material": "thorium"
+  },
+  {
+    "id": "screw_thorium",
+    "prefix": "screw",
+    "material": "thorium"
+  },
+  {
+    "id": "ring_thorium",
+    "prefix": "ring",
+    "material": "thorium"
+  },
+  {
+    "id": "crushed_tin",
+    "prefix": "crushed",
+    "material": "tin"
+  },
+  {
+    "id": "purified_tin",
+    "prefix": "purified",
+    "material": "tin"
+  },
+  {
+    "id": "impure_dust_tin",
+    "prefix": "impure_dust",
+    "material": "tin"
+  },
+  {
+    "id": "pure_dust_tin",
+    "prefix": "pure_dust",
+    "material": "tin"
+  },
+  {
+    "id": "dust_tin",
+    "prefix": "dust",
+    "material": "tin"
+  },
+  {
+    "id": "small_dust_tin",
+    "prefix": "small_dust",
+    "material": "tin"
+  },
+  {
+    "id": "tiny_dust_tin",
+    "prefix": "tiny_dust",
+    "material": "tin"
+  },
+  {
+    "id": "ingot_tin",
+    "prefix": "ingot",
+    "material": "tin"
+  },
+  {
+    "id": "nugget_tin",
+    "prefix": "nugget",
+    "material": "tin"
+  },
+  {
+    "id": "plate_tin",
+    "prefix": "plate",
+    "material": "tin"
+  },
+  {
+    "id": "rod_tin",
+    "prefix": "rod",
+    "material": "tin"
+  },
+  {
+    "id": "bolt_tin",
+    "prefix": "bolt",
+    "material": "tin"
+  },
+  {
+    "id": "screw_tin",
+    "prefix": "screw",
+    "material": "tin"
+  },
+  {
+    "id": "ring_tin",
+    "prefix": "ring",
+    "material": "tin"
+  },
+  {
+    "id": "crushed_tricalcium_phosphate",
+    "prefix": "crushed",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "purified_tricalcium_phosphate",
+    "prefix": "purified",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "impure_dust_tricalcium_phosphate",
+    "prefix": "impure_dust",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "pure_dust_tricalcium_phosphate",
+    "prefix": "pure_dust",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "dust_tricalcium_phosphate",
+    "prefix": "dust",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "small_dust_tricalcium_phosphate",
+    "prefix": "small_dust",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "tiny_dust_tricalcium_phosphate",
+    "prefix": "tiny_dust",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "gem_tricalcium_phosphate",
+    "prefix": "gem",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "plate_tricalcium_phosphate",
+    "prefix": "plate",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "rod_tricalcium_phosphate",
+    "prefix": "rod",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "bolt_tricalcium_phosphate",
+    "prefix": "bolt",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "screw_tricalcium_phosphate",
+    "prefix": "screw",
+    "material": "tricalcium_phosphate"
+  },
+  {
+    "id": "crushed_tungstate",
+    "prefix": "crushed",
+    "material": "tungstate"
+  },
+  {
+    "id": "purified_tungstate",
+    "prefix": "purified",
+    "material": "tungstate"
+  },
+  {
+    "id": "impure_dust_tungstate",
+    "prefix": "impure_dust",
+    "material": "tungstate"
+  },
+  {
+    "id": "pure_dust_tungstate",
+    "prefix": "pure_dust",
+    "material": "tungstate"
+  },
+  {
+    "id": "dust_tungstate",
+    "prefix": "dust",
+    "material": "tungstate"
+  },
+  {
+    "id": "small_dust_tungstate",
+    "prefix": "small_dust",
+    "material": "tungstate"
+  },
+  {
+    "id": "tiny_dust_tungstate",
+    "prefix": "tiny_dust",
+    "material": "tungstate"
+  },
+  {
+    "id": "crushed_uraninite",
+    "prefix": "crushed",
+    "material": "uraninite"
+  },
+  {
+    "id": "purified_uraninite",
+    "prefix": "purified",
+    "material": "uraninite"
+  },
+  {
+    "id": "impure_dust_uraninite",
+    "prefix": "impure_dust",
+    "material": "uraninite"
+  },
+  {
+    "id": "pure_dust_uraninite",
+    "prefix": "pure_dust",
+    "material": "uraninite"
+  },
+  {
+    "id": "dust_uraninite",
+    "prefix": "dust",
+    "material": "uraninite"
+  },
+  {
+    "id": "small_dust_uraninite",
+    "prefix": "small_dust",
+    "material": "uraninite"
+  },
+  {
+    "id": "tiny_dust_uraninite",
+    "prefix": "tiny_dust",
+    "material": "uraninite"
+  },
+  {
+    "id": "crushed_uranium",
+    "prefix": "crushed",
+    "material": "uranium"
+  },
+  {
+    "id": "purified_uranium",
+    "prefix": "purified",
+    "material": "uranium"
+  },
+  {
+    "id": "impure_dust_uranium",
+    "prefix": "impure_dust",
+    "material": "uranium"
+  },
+  {
+    "id": "pure_dust_uranium",
+    "prefix": "pure_dust",
+    "material": "uranium"
+  },
+  {
+    "id": "dust_uranium",
+    "prefix": "dust",
+    "material": "uranium"
+  },
+  {
+    "id": "small_dust_uranium",
+    "prefix": "small_dust",
+    "material": "uranium"
+  },
+  {
+    "id": "tiny_dust_uranium",
+    "prefix": "tiny_dust",
+    "material": "uranium"
+  },
+  {
+    "id": "ingot_uranium",
+    "prefix": "ingot",
+    "material": "uranium"
+  },
+  {
+    "id": "nugget_uranium",
+    "prefix": "nugget",
+    "material": "uranium"
+  },
+  {
+    "id": "plate_uranium",
+    "prefix": "plate",
+    "material": "uranium"
+  },
+  {
+    "id": "rod_uranium",
+    "prefix": "rod",
+    "material": "uranium"
+  },
+  {
+    "id": "bolt_uranium",
+    "prefix": "bolt",
+    "material": "uranium"
+  },
+  {
+    "id": "screw_uranium",
+    "prefix": "screw",
+    "material": "uranium"
+  },
+  {
+    "id": "ring_uranium",
+    "prefix": "ring",
+    "material": "uranium"
+  },
+  {
+    "id": "crushed_vanadium_magnetite",
+    "prefix": "crushed",
+    "material": "vanadium_magnetite"
+  },
+  {
+    "id": "purified_vanadium_magnetite",
+    "prefix": "purified",
+    "material": "vanadium_magnetite"
+  },
+  {
+    "id": "impure_dust_vanadium_magnetite",
+    "prefix": "impure_dust",
+    "material": "vanadium_magnetite"
+  },
+  {
+    "id": "pure_dust_vanadium_magnetite",
+    "prefix": "pure_dust",
+    "material": "vanadium_magnetite"
+  },
+  {
+    "id": "dust_vanadium_magnetite",
+    "prefix": "dust",
+    "material": "vanadium_magnetite"
+  },
+  {
+    "id": "small_dust_vanadium_magnetite",
+    "prefix": "small_dust",
+    "material": "vanadium_magnetite"
+  },
+  {
+    "id": "tiny_dust_vanadium_magnetite",
+    "prefix": "tiny_dust",
+    "material": "vanadium_magnetite"
+  },
+  {
+    "id": "crushed_wulfenite",
+    "prefix": "crushed",
+    "material": "wulfenite"
+  },
+  {
+    "id": "purified_wulfenite",
+    "prefix": "purified",
+    "material": "wulfenite"
+  },
+  {
+    "id": "impure_dust_wulfenite",
+    "prefix": "impure_dust",
+    "material": "wulfenite"
+  },
+  {
+    "id": "pure_dust_wulfenite",
+    "prefix": "pure_dust",
+    "material": "wulfenite"
+  },
+  {
+    "id": "dust_wulfenite",
+    "prefix": "dust",
+    "material": "wulfenite"
+  },
+  {
+    "id": "small_dust_wulfenite",
+    "prefix": "small_dust",
+    "material": "wulfenite"
+  },
+  {
+    "id": "tiny_dust_wulfenite",
+    "prefix": "tiny_dust",
+    "material": "wulfenite"
+  },
+  {
+    "id": "crushed_yellow_limonite",
+    "prefix": "crushed",
+    "material": "yellow_limonite"
+  },
+  {
+    "id": "purified_yellow_limonite",
+    "prefix": "purified",
+    "material": "yellow_limonite"
+  },
+  {
+    "id": "impure_dust_yellow_limonite",
+    "prefix": "impure_dust",
+    "material": "yellow_limonite"
+  },
+  {
+    "id": "pure_dust_yellow_limonite",
+    "prefix": "pure_dust",
+    "material": "yellow_limonite"
+  },
+  {
+    "id": "dust_yellow_limonite",
+    "prefix": "dust",
+    "material": "yellow_limonite"
+  },
+  {
+    "id": "small_dust_yellow_limonite",
+    "prefix": "small_dust",
+    "material": "yellow_limonite"
+  },
+  {
+    "id": "tiny_dust_yellow_limonite",
+    "prefix": "tiny_dust",
+    "material": "yellow_limonite"
+  },
+  {
+    "id": "crushed_zinc",
+    "prefix": "crushed",
+    "material": "zinc"
+  },
+  {
+    "id": "purified_zinc",
+    "prefix": "purified",
+    "material": "zinc"
+  },
+  {
+    "id": "impure_dust_zinc",
+    "prefix": "impure_dust",
+    "material": "zinc"
+  },
+  {
+    "id": "pure_dust_zinc",
+    "prefix": "pure_dust",
+    "material": "zinc"
+  },
+  {
+    "id": "dust_zinc",
+    "prefix": "dust",
+    "material": "zinc"
+  },
+  {
+    "id": "small_dust_zinc",
+    "prefix": "small_dust",
+    "material": "zinc"
+  },
+  {
+    "id": "tiny_dust_zinc",
+    "prefix": "tiny_dust",
+    "material": "zinc"
+  },
+  {
+    "id": "ingot_zinc",
+    "prefix": "ingot",
+    "material": "zinc"
+  },
+  {
+    "id": "nugget_zinc",
+    "prefix": "nugget",
+    "material": "zinc"
+  },
+  {
+    "id": "plate_zinc",
+    "prefix": "plate",
+    "material": "zinc"
+  },
+  {
+    "id": "rod_zinc",
+    "prefix": "rod",
+    "material": "zinc"
+  },
+  {
+    "id": "bolt_zinc",
+    "prefix": "bolt",
+    "material": "zinc"
+  },
+  {
+    "id": "screw_zinc",
+    "prefix": "screw",
+    "material": "zinc"
+  },
+  {
+    "id": "ring_zinc",
+    "prefix": "ring",
+    "material": "zinc"
+  },
+  {
+    "id": "sword_head_aluminium",
+    "prefix": "sword_head",
+    "material": "aluminium"
+  },
+  {
+    "id": "pickaxe_head_aluminium",
+    "prefix": "pickaxe_head",
+    "material": "aluminium"
+  },
+  {
+    "id": "shovel_head_aluminium",
+    "prefix": "shovel_head",
+    "material": "aluminium"
+  },
+  {
+    "id": "axe_head_aluminium",
+    "prefix": "axe_head",
+    "material": "aluminium"
+  },
+  {
+    "id": "hoe_head_aluminium",
+    "prefix": "hoe_head",
+    "material": "aluminium"
+  },
+  {
+    "id": "saw_head_aluminium",
+    "prefix": "saw_head",
+    "material": "aluminium"
+  },
+  {
+    "id": "sword_head_beryllium",
+    "prefix": "sword_head",
+    "material": "beryllium"
+  },
+  {
+    "id": "pickaxe_head_beryllium",
+    "prefix": "pickaxe_head",
+    "material": "beryllium"
+  },
+  {
+    "id": "shovel_head_beryllium",
+    "prefix": "shovel_head",
+    "material": "beryllium"
+  },
+  {
+    "id": "axe_head_beryllium",
+    "prefix": "axe_head",
+    "material": "beryllium"
+  },
+  {
+    "id": "hoe_head_beryllium",
+    "prefix": "hoe_head",
+    "material": "beryllium"
+  },
+  {
+    "id": "saw_head_beryllium",
+    "prefix": "saw_head",
+    "material": "beryllium"
+  },
+  {
+    "id": "sword_head_bronze",
+    "prefix": "sword_head",
+    "material": "bronze"
+  },
+  {
+    "id": "pickaxe_head_bronze",
+    "prefix": "pickaxe_head",
+    "material": "bronze"
+  },
+  {
+    "id": "shovel_head_bronze",
+    "prefix": "shovel_head",
+    "material": "bronze"
+  },
+  {
+    "id": "axe_head_bronze",
+    "prefix": "axe_head",
+    "material": "bronze"
+  },
+  {
+    "id": "hoe_head_bronze",
+    "prefix": "hoe_head",
+    "material": "bronze"
+  },
+  {
+    "id": "saw_head_bronze",
+    "prefix": "saw_head",
+    "material": "bronze"
+  },
+  {
+    "id": "sword_head_certus_quartz",
+    "prefix": "sword_head",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "pickaxe_head_certus_quartz",
+    "prefix": "pickaxe_head",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "shovel_head_certus_quartz",
+    "prefix": "shovel_head",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "axe_head_certus_quartz",
+    "prefix": "axe_head",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "hoe_head_certus_quartz",
+    "prefix": "hoe_head",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "saw_head_certus_quartz",
+    "prefix": "saw_head",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "sword_head_cobalt",
+    "prefix": "sword_head",
+    "material": "cobalt"
+  },
+  {
+    "id": "pickaxe_head_cobalt",
+    "prefix": "pickaxe_head",
+    "material": "cobalt"
+  },
+  {
+    "id": "shovel_head_cobalt",
+    "prefix": "shovel_head",
+    "material": "cobalt"
+  },
+  {
+    "id": "axe_head_cobalt",
+    "prefix": "axe_head",
+    "material": "cobalt"
+  },
+  {
+    "id": "hoe_head_cobalt",
+    "prefix": "hoe_head",
+    "material": "cobalt"
+  },
+  {
+    "id": "saw_head_cobalt",
+    "prefix": "saw_head",
+    "material": "cobalt"
+  },
+  {
+    "id": "sword_head_diamond",
+    "prefix": "sword_head",
+    "material": "diamond"
+  },
+  {
+    "id": "pickaxe_head_diamond",
+    "prefix": "pickaxe_head",
+    "material": "diamond"
+  },
+  {
+    "id": "shovel_head_diamond",
+    "prefix": "shovel_head",
+    "material": "diamond"
+  },
+  {
+    "id": "axe_head_diamond",
+    "prefix": "axe_head",
+    "material": "diamond"
+  },
+  {
+    "id": "hoe_head_diamond",
+    "prefix": "hoe_head",
+    "material": "diamond"
+  },
+  {
+    "id": "saw_head_diamond",
+    "prefix": "saw_head",
+    "material": "diamond"
+  },
+  {
+    "id": "sword_head_emerald",
+    "prefix": "sword_head",
+    "material": "emerald"
+  },
+  {
+    "id": "pickaxe_head_emerald",
+    "prefix": "pickaxe_head",
+    "material": "emerald"
+  },
+  {
+    "id": "shovel_head_emerald",
+    "prefix": "shovel_head",
+    "material": "emerald"
+  },
+  {
+    "id": "axe_head_emerald",
+    "prefix": "axe_head",
+    "material": "emerald"
+  },
+  {
+    "id": "hoe_head_emerald",
+    "prefix": "hoe_head",
+    "material": "emerald"
+  },
+  {
+    "id": "saw_head_emerald",
+    "prefix": "saw_head",
+    "material": "emerald"
+  },
+  {
+    "id": "sword_head_green_sapphire",
+    "prefix": "sword_head",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "pickaxe_head_green_sapphire",
+    "prefix": "pickaxe_head",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "shovel_head_green_sapphire",
+    "prefix": "shovel_head",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "axe_head_green_sapphire",
+    "prefix": "axe_head",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "hoe_head_green_sapphire",
+    "prefix": "hoe_head",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "saw_head_green_sapphire",
+    "prefix": "saw_head",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "sword_head_iron",
+    "prefix": "sword_head",
+    "material": "iron"
+  },
+  {
+    "id": "pickaxe_head_iron",
+    "prefix": "pickaxe_head",
+    "material": "iron"
+  },
+  {
+    "id": "shovel_head_iron",
+    "prefix": "shovel_head",
+    "material": "iron"
+  },
+  {
+    "id": "axe_head_iron",
+    "prefix": "axe_head",
+    "material": "iron"
+  },
+  {
+    "id": "hoe_head_iron",
+    "prefix": "hoe_head",
+    "material": "iron"
+  },
+  {
+    "id": "saw_head_iron",
+    "prefix": "saw_head",
+    "material": "iron"
+  },
+  {
+    "id": "sword_head_manganese",
+    "prefix": "sword_head",
+    "material": "manganese"
+  },
+  {
+    "id": "pickaxe_head_manganese",
+    "prefix": "pickaxe_head",
+    "material": "manganese"
+  },
+  {
+    "id": "shovel_head_manganese",
+    "prefix": "shovel_head",
+    "material": "manganese"
+  },
+  {
+    "id": "axe_head_manganese",
+    "prefix": "axe_head",
+    "material": "manganese"
+  },
+  {
+    "id": "hoe_head_manganese",
+    "prefix": "hoe_head",
+    "material": "manganese"
+  },
+  {
+    "id": "saw_head_manganese",
+    "prefix": "saw_head",
+    "material": "manganese"
+  },
+  {
+    "id": "sword_head_molybdenum",
+    "prefix": "sword_head",
+    "material": "molybdenum"
+  },
+  {
+    "id": "pickaxe_head_molybdenum",
+    "prefix": "pickaxe_head",
+    "material": "molybdenum"
+  },
+  {
+    "id": "shovel_head_molybdenum",
+    "prefix": "shovel_head",
+    "material": "molybdenum"
+  },
+  {
+    "id": "axe_head_molybdenum",
+    "prefix": "axe_head",
+    "material": "molybdenum"
+  },
+  {
+    "id": "hoe_head_molybdenum",
+    "prefix": "hoe_head",
+    "material": "molybdenum"
+  },
+  {
+    "id": "saw_head_molybdenum",
+    "prefix": "saw_head",
+    "material": "molybdenum"
+  },
+  {
+    "id": "sword_head_nether_quartz",
+    "prefix": "sword_head",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "pickaxe_head_nether_quartz",
+    "prefix": "pickaxe_head",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "shovel_head_nether_quartz",
+    "prefix": "shovel_head",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "axe_head_nether_quartz",
+    "prefix": "axe_head",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "hoe_head_nether_quartz",
+    "prefix": "hoe_head",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "saw_head_nether_quartz",
+    "prefix": "saw_head",
+    "material": "nether_quartz"
+  },
+  {
+    "id": "sword_head_nickel",
+    "prefix": "sword_head",
+    "material": "nickel"
+  },
+  {
+    "id": "pickaxe_head_nickel",
+    "prefix": "pickaxe_head",
+    "material": "nickel"
+  },
+  {
+    "id": "shovel_head_nickel",
+    "prefix": "shovel_head",
+    "material": "nickel"
+  },
+  {
+    "id": "axe_head_nickel",
+    "prefix": "axe_head",
+    "material": "nickel"
+  },
+  {
+    "id": "hoe_head_nickel",
+    "prefix": "hoe_head",
+    "material": "nickel"
+  },
+  {
+    "id": "saw_head_nickel",
+    "prefix": "saw_head",
+    "material": "nickel"
+  },
+  {
+    "id": "sword_head_olivine",
+    "prefix": "sword_head",
+    "material": "olivine"
+  },
+  {
+    "id": "pickaxe_head_olivine",
+    "prefix": "pickaxe_head",
+    "material": "olivine"
+  },
+  {
+    "id": "shovel_head_olivine",
+    "prefix": "shovel_head",
+    "material": "olivine"
+  },
+  {
+    "id": "axe_head_olivine",
+    "prefix": "axe_head",
+    "material": "olivine"
+  },
+  {
+    "id": "hoe_head_olivine",
+    "prefix": "hoe_head",
+    "material": "olivine"
+  },
+  {
+    "id": "saw_head_olivine",
+    "prefix": "saw_head",
+    "material": "olivine"
+  },
+  {
+    "id": "sword_head_ruby",
+    "prefix": "sword_head",
+    "material": "ruby"
+  },
+  {
+    "id": "pickaxe_head_ruby",
+    "prefix": "pickaxe_head",
+    "material": "ruby"
+  },
+  {
+    "id": "shovel_head_ruby",
+    "prefix": "shovel_head",
+    "material": "ruby"
+  },
+  {
+    "id": "axe_head_ruby",
+    "prefix": "axe_head",
+    "material": "ruby"
+  },
+  {
+    "id": "hoe_head_ruby",
+    "prefix": "hoe_head",
+    "material": "ruby"
+  },
+  {
+    "id": "saw_head_ruby",
+    "prefix": "saw_head",
+    "material": "ruby"
+  },
+  {
+    "id": "sword_head_sapphire",
+    "prefix": "sword_head",
+    "material": "sapphire"
+  },
+  {
+    "id": "pickaxe_head_sapphire",
+    "prefix": "pickaxe_head",
+    "material": "sapphire"
+  },
+  {
+    "id": "shovel_head_sapphire",
+    "prefix": "shovel_head",
+    "material": "sapphire"
+  },
+  {
+    "id": "axe_head_sapphire",
+    "prefix": "axe_head",
+    "material": "sapphire"
+  },
+  {
+    "id": "hoe_head_sapphire",
+    "prefix": "hoe_head",
+    "material": "sapphire"
+  },
+  {
+    "id": "saw_head_sapphire",
+    "prefix": "saw_head",
+    "material": "sapphire"
+  }
+]

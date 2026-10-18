@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_tetrahedrite",
+    "iis:deepslate_ore_tetrahedrite",
+    "iis:nether_ore_tetrahedrite"
+  ]
+}

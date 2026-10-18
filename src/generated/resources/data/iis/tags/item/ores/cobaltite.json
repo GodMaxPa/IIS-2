@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_cobaltite",
+    "iis:deepslate_ore_cobaltite",
+    "iis:nether_ore_cobaltite",
+    "iis:end_ore_cobaltite"
+  ]
+}

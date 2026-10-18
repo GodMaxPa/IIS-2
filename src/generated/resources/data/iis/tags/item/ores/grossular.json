@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_grossular",
+    "iis:deepslate_ore_grossular",
+    "iis:end_ore_grossular"
+  ]
+}

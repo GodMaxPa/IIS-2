@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/manganese",
+    "#iis:small_dusts/manganese",
+    "#iis:small_dusts/manganese",
+    "#iis:small_dusts/manganese"
+  ],
+  "result": {
+    "id": "iis:dust_manganese"
+  }
+}

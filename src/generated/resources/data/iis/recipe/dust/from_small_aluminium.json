@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/aluminium",
+    "#iis:small_dusts/aluminium",
+    "#iis:small_dusts/aluminium",
+    "#iis:small_dusts/aluminium"
+  ],
+  "result": {
+    "id": "iis:dust_aluminium"
+  }
+}

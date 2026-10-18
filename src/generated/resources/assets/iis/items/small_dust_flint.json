@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/small_dust_flint",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 8256
+      }
+    ]
+  }
+}

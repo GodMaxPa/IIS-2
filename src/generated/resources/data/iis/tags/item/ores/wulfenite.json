@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_wulfenite",
+    "iis:deepslate_ore_wulfenite",
+    "iis:end_ore_wulfenite"
+  ]
+}

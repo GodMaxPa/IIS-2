@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:nether_ore_pentlandite",
+  "result": {
+    "id": "iis:ingot_nickel",
+    "count": 2
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

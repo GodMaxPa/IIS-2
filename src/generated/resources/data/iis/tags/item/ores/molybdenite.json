@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_molybdenite",
+    "iis:deepslate_ore_molybdenite",
+    "iis:end_ore_molybdenite"
+  ]
+}

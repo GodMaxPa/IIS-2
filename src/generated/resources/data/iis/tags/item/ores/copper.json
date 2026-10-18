@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_copper",
+    "iis:deepslate_ore_copper",
+    "iis:nether_ore_copper"
+  ]
+}

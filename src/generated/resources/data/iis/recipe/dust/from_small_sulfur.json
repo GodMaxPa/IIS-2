@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/sulfur",
+    "#iis:small_dusts/sulfur",
+    "#iis:small_dusts/sulfur",
+    "#iis:small_dusts/sulfur"
+  ],
+  "result": {
+    "id": "iis:dust_sulfur"
+  }
+}

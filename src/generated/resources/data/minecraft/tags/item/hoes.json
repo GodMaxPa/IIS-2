@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "iis:hoe_aluminium",
+    "iis:hoe_beryllium",
+    "iis:hoe_bronze",
+    "iis:hoe_certus_quartz",
+    "iis:hoe_cobalt",
+    "iis:hoe_diamond",
+    "iis:hoe_emerald",
+    "iis:hoe_green_sapphire",
+    "iis:hoe_iron",
+    "iis:hoe_manganese",
+    "iis:hoe_molybdenum",
+    "iis:hoe_nether_quartz",
+    "iis:hoe_nickel",
+    "iis:hoe_olivine",
+    "iis:hoe_ruby",
+    "iis:hoe_sapphire"
+  ]
+}

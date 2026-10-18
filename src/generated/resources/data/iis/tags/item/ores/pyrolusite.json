@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_pyrolusite",
+    "iis:deepslate_ore_pyrolusite",
+    "iis:end_ore_pyrolusite"
+  ]
+}

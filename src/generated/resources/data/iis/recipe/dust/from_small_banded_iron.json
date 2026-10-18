@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/banded_iron",
+    "#iis:small_dusts/banded_iron",
+    "#iis:small_dusts/banded_iron",
+    "#iis:small_dusts/banded_iron"
+  ],
+  "result": {
+    "id": "iis:dust_banded_iron"
+  }
+}

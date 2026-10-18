@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/calcite",
+    "#iis:small_dusts/calcite",
+    "#iis:small_dusts/calcite",
+    "#iis:small_dusts/calcite"
+  ],
+  "result": {
+    "id": "iis:dust_calcite"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GG ",
+    "G  ",
+    "f  "
+  ],
+  "key": {
+    "G": "#c:gems/emerald",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:axe_head_emerald"
+  }
+}

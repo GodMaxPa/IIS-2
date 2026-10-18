@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_sodalite",
+    "iis:deepslate_ore_sodalite",
+    "iis:end_ore_sodalite"
+  ]
+}

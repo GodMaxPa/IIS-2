@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/stibnite",
+    "#iis:small_dusts/stibnite",
+    "#iis:small_dusts/stibnite",
+    "#iis:small_dusts/stibnite"
+  ],
+  "result": {
+    "id": "iis:dust_stibnite"
+  }
+}

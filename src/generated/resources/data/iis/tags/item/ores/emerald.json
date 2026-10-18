@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_emerald",
+    "iis:deepslate_ore_emerald",
+    "iis:end_ore_emerald"
+  ]
+}

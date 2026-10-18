@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/axe/certus_quartz",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:axe_certus_quartz"
+  }
+}

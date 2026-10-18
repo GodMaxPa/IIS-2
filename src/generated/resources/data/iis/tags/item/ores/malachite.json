@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_malachite",
+    "iis:deepslate_ore_malachite",
+    "iis:nether_ore_malachite"
+  ]
+}

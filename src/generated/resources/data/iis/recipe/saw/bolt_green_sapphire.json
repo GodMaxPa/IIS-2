@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:rods/green_sapphire",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:bolt_green_sapphire",
+    "count": 2
+  }
+}

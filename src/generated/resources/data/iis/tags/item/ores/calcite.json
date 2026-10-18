@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_calcite",
+    "iis:deepslate_ore_calcite",
+    "iis:end_ore_calcite"
+  ]
+}

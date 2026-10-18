@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/powellite",
+    "#iis:small_dusts/powellite",
+    "#iis:small_dusts/powellite",
+    "#iis:small_dusts/powellite"
+  ],
+  "result": {
+    "id": "iis:dust_powellite"
+  }
+}

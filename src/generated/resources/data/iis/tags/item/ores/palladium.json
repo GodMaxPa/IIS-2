@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_palladium",
+    "iis:deepslate_ore_palladium",
+    "iis:end_ore_palladium"
+  ]
+}

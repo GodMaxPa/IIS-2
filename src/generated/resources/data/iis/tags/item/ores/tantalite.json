@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_tantalite",
+    "iis:deepslate_ore_tantalite",
+    "iis:end_ore_tantalite"
+  ]
+}

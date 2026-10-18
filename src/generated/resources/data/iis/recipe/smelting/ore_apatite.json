@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:ore_apatite",
+  "result": {
+    "id": "iis:gem_apatite",
+    "count": 2
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

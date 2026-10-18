@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "#iis:crushed_ores/garnierite",
+  "result": {
+    "id": "iis:nugget_nickel",
+    "count": 6
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

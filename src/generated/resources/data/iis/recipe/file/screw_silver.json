@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "fX",
+    "X "
+  ],
+  "key": {
+    "X": "#iis:bolts/silver",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:screw_silver"
+  }
+}

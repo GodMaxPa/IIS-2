@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_chalcopyrite",
+    "iis:deepslate_ore_chalcopyrite",
+    "iis:nether_ore_chalcopyrite"
+  ]
+}

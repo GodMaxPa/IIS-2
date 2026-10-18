@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/ruby",
+    "#iis:tiny_dusts/ruby",
+    "#iis:tiny_dusts/ruby",
+    "#iis:tiny_dusts/ruby",
+    "#iis:tiny_dusts/ruby",
+    "#iis:tiny_dusts/ruby",
+    "#iis:tiny_dusts/ruby",
+    "#iis:tiny_dusts/ruby",
+    "#iis:tiny_dusts/ruby"
+  ],
+  "result": {
+    "id": "iis:dust_ruby"
+  }
+}

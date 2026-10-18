@@ -12,7 +12,24 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Al2Fe3Si3O12",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "almandine",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "garnet_red",
+      "aluminium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "aluminium",
@@ -27,7 +44,58 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Al",
+    "types": 235,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "aluminium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 1700,
+    "byProducts": [
+      "bauxite"
+    ],
+    "toolDurability": 128,
+    "toolSpeed": 10.0,
+    "toolQuality": 2
+  },
+  {
+    "id": "antimony",
+    "gtName": "Antimony",
+    "gtId": 58,
+    "en": "Antimony",
+    "ru": "Сурьма",
+    "ruOre": null,
+    "color": 14474480,
+    "iconSet": "SHINY",
+    "harvestLevel": 2,
+    "hosts": [],
+    "formula": "Sb",
+    "types": 35,
+    "subTags": [
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR",
+      "METAL",
+      "MORTAR_GRINDABLE",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "antimony",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "zinc",
+      "iron"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "apatite",
@@ -42,7 +110,29 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Ca5(PO4)3Cl",
+    "types": 13,
+    "subTags": [
+      "CRYSTAL",
+      "CRYSTALLISABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING"
+    ],
+    "directSmelting": "apatite",
+    "oreMultiplier": 4,
+    "smeltingMultiplier": 4,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "tricalcium_phosphate",
+      "phosphate",
+      "pyrochlore"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "banded_iron",
@@ -58,7 +148,22 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "Fe2O3",
+    "types": 9,
+    "subTags": [
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR"
+    ],
+    "directSmelting": "iron",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "barite",
@@ -73,7 +178,21 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "BaSO4",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "barite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "bastnasite",
@@ -88,7 +207,25 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "CeCFO3",
+    "types": 9,
+    "subTags": [
+      "ELECTROMAGNETIC_SEPERATION_NEODYMIUM",
+      "HAS_COLOR"
+    ],
+    "directSmelting": "bastnasite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "neodymium",
+      "rare_earth"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "bauxite",
@@ -103,7 +240,25 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "(TiO2)2Al16H10O11",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "bauxite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "grossular",
+      "rutile",
+      "gallium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "bentonite",
@@ -119,7 +274,25 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "NaMg6Si12H6(H2O)5O36",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "bentonite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "aluminium",
+      "calcium",
+      "magnesium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "beryllium",
@@ -135,7 +308,57 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Be",
+    "types": 107,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "beryllium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "emerald"
+    ],
+    "toolDurability": 64,
+    "toolSpeed": 14.0,
+    "toolQuality": 2
+  },
+  {
+    "id": "bronze",
+    "gtName": "Bronze",
+    "gtId": 300,
+    "en": "Bronze",
+    "ru": "Бронза",
+    "ruOre": "Бронзовая руда",
+    "color": 16744448,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [],
+    "formula": "SnCu3",
+    "types": 195,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "MORTAR_GRINDABLE",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "bronze",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "copper",
+      "tin"
+    ],
+    "toolDurability": 192,
+    "toolSpeed": 6.0,
+    "toolQuality": 2
   },
   {
     "id": "brown_limonite",
@@ -151,7 +374,26 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "FeHO2",
+    "types": 9,
+    "subTags": [
+      "BLASTFURNACE_CALCITE_DOUBLE",
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR"
+    ],
+    "directSmelting": "iron",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "malachite",
+      "yellow_limonite"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "calcite",
@@ -167,7 +409,24 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "CaCO3",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "calcite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "andradite",
+      "malachite"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "cassiterite",
@@ -182,7 +441,23 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "SnO2",
+    "types": 8,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "tin",
+    "oreMultiplier": 2,
+    "smeltingMultiplier": 2,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "tin"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "certus_quartz",
@@ -197,7 +472,29 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "CRYSTALLISABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "QUARTZ"
+    ],
+    "directSmelting": "certus_quartz",
+    "oreMultiplier": 2,
+    "smeltingMultiplier": 2,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "quartzite",
+      "barite"
+    ],
+    "toolDurability": 32,
+    "toolSpeed": 5.0,
+    "toolQuality": 1
   },
   {
     "id": "chalcopyrite",
@@ -213,7 +510,28 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "CuFeS2",
+    "types": 9,
+    "subTags": [
+      "DONT_ADD_DEFAULT_BBF_RECIPE",
+      "HAS_COLOR",
+      "INDUCTIONSMELTING_LOW_OUTPUT"
+    ],
+    "directSmelting": "copper",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "pyrite",
+      "cobalt",
+      "cadmium",
+      "gold"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "cinnabar",
@@ -229,7 +547,27 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "HgS",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR",
+      "INDUCTIONSMELTING_LOW_OUTPUT",
+      "SMELTING_TO_GEM"
+    ],
+    "directSmelting": "mercury",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "redstone",
+      "sulfur",
+      "glowstone"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "coal",
@@ -244,7 +582,59 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "C",
+    "types": 13,
+    "subTags": [
+      "FLAMMABLE",
+      "HAS_COLOR",
+      "MORTAR_GRINDABLE",
+      "NO_SMASHING",
+      "NO_SMELTING"
+    ],
+    "directSmelting": "coal",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "lignite",
+      "thorium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
+  },
+  {
+    "id": "cobalt",
+    "gtName": "Cobalt",
+    "gtId": 33,
+    "en": "Cobalt",
+    "ru": "Кобальт",
+    "ruOre": null,
+    "color": 5263610,
+    "iconSet": "METALLIC",
+    "harvestLevel": 3,
+    "hosts": [],
+    "formula": "Co",
+    "types": 99,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID",
+      "WASHING_SODIUMPERSULFATE"
+    ],
+    "directSmelting": "cobalt",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "cobaltite"
+    ],
+    "toolDurability": 512,
+    "toolSpeed": 8.0,
+    "toolQuality": 3
   },
   {
     "id": "cobaltite",
@@ -261,7 +651,24 @@
       "deepslate",
       "netherrack",
       "end_stone"
-    ]
+    ],
+    "formula": "CoAsS",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR",
+      "WASHING_SODIUMPERSULFATE"
+    ],
+    "directSmelting": "cobalt",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "cobalt"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "cooperite",
@@ -277,7 +684,27 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Pt3NiSPd",
+    "types": 9,
+    "subTags": [
+      "DONT_ADD_DEFAULT_BBF_RECIPE",
+      "HAS_COLOR",
+      "WASHING_MERCURY"
+    ],
+    "directSmelting": "platinum",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "palladium",
+      "nickel",
+      "iridium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "copper",
@@ -293,7 +720,29 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "Cu",
+    "types": 171,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "MORTAR_GRINDABLE",
+      "SMELTING_TO_FLUID",
+      "WASHING_SODIUMPERSULFATE"
+    ],
+    "directSmelting": "copper",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "cobalt",
+      "gold",
+      "nickel"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "diamond",
@@ -308,7 +757,28 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "C",
+    "types": 205,
+    "subTags": [
+      "CRYSTAL",
+      "FLAMMABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "diamond",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "graphite"
+    ],
+    "toolDurability": 1280,
+    "toolSpeed": 8.0,
+    "toolQuality": 3
   },
   {
     "id": "emerald",
@@ -324,7 +794,59 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Be3Al2Si6O18",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "emerald",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "beryllium",
+      "aluminium"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
+  },
+  {
+    "id": "flint",
+    "gtName": "Flint",
+    "gtId": 802,
+    "en": "Flint",
+    "ru": "Кремень",
+    "ruOre": null,
+    "color": 8256,
+    "iconSet": "FLINT",
+    "harvestLevel": 1,
+    "hosts": [],
+    "formula": "SiO2",
+    "types": 65,
+    "subTags": [
+      "HAS_COLOR",
+      "MORTAR_GRINDABLE",
+      "NO_SMASHING",
+      "STONE"
+    ],
+    "directSmelting": "flint",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "obsidian"
+    ],
+    "toolDurability": 64,
+    "toolSpeed": 2.5,
+    "toolQuality": 1
   },
   {
     "id": "galena",
@@ -339,7 +861,26 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Pb3Ag3S2",
+    "types": 9,
+    "subTags": [
+      "DONT_ADD_DEFAULT_BBF_RECIPE",
+      "HAS_COLOR"
+    ],
+    "directSmelting": "lead",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "sulfur",
+      "silver",
+      "lead"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 3
   },
   {
     "id": "garnierite",
@@ -356,7 +897,23 @@
       "deepslate",
       "netherrack",
       "end_stone"
-    ]
+    ],
+    "formula": "NiO",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "nickel",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "nickel"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 3
   },
   {
     "id": "glauconite",
@@ -372,7 +929,26 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "KMg2Al4H2O12",
+    "types": 9,
+    "subTags": [
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR"
+    ],
+    "directSmelting": "glauconite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "sodium",
+      "aluminium",
+      "iron"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "gold",
@@ -387,7 +963,28 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Au",
+    "types": 235,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "MORTAR_GRINDABLE",
+      "SMELTING_TO_FLUID",
+      "WASHING_MERCURY"
+    ],
+    "directSmelting": "gold",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "copper",
+      "nickel"
+    ],
+    "toolDurability": 64,
+    "toolSpeed": 12.0,
+    "toolQuality": 2
   },
   {
     "id": "graphite",
@@ -402,7 +999,26 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "",
+    "types": 89,
+    "subTags": [
+      "FLAMMABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING"
+    ],
+    "directSmelting": "graphite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "carbon"
+    ],
+    "toolDurability": 32,
+    "toolSpeed": 5.0,
+    "toolQuality": 2
   },
   {
     "id": "green_sapphire",
@@ -417,7 +1033,28 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Al2O3",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "green_sapphire",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "aluminium",
+      "sapphire"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
   },
   {
     "id": "grossular",
@@ -433,7 +1070,24 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Ca3Al2Si3O12",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "grossular",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "garnet_yellow",
+      "calcium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "ilmenite",
@@ -448,7 +1102,25 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "FeTiO3",
+    "types": 9,
+    "subTags": [
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR"
+    ],
+    "directSmelting": "ilmenite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "iron",
+      "rutile"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 3
   },
   {
     "id": "iridium",
@@ -457,14 +1129,33 @@
     "en": "Iridium",
     "ru": "Иридий",
     "ruOre": "Иридиевая руда",
-    "color": 11862015,
+    "color": 15790325,
     "iconSet": "DULL",
     "harvestLevel": 3,
     "hosts": [
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Ir",
+    "types": 235,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "iridium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 2719,
+    "byProducts": [
+      "platinum",
+      "osmium"
+    ],
+    "toolDurability": 2560,
+    "toolSpeed": 6.0,
+    "toolQuality": 3
   },
   {
     "id": "iron",
@@ -480,7 +1171,28 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "Fe",
+    "types": 235,
+    "subTags": [
+      "BLASTFURNACE_CALCITE_TRIPLE",
+      "HAS_COLOR",
+      "METAL",
+      "MORTAR_GRINDABLE",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "iron",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "nickel",
+      "tin"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 6.0,
+    "toolQuality": 2
   },
   {
     "id": "lapis",
@@ -496,7 +1208,29 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "(Al6Si6Ca8Na8)12(Al3Si3Na4Cl)2FeS2CaCO3",
+    "types": 13,
+    "subTags": [
+      "CRYSTAL",
+      "CRYSTALLISABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING"
+    ],
+    "directSmelting": "lapis",
+    "oreMultiplier": 6,
+    "smeltingMultiplier": 6,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "lazurite",
+      "sodalite",
+      "pyrite"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "lazurite",
@@ -512,7 +1246,28 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Al6Si6Ca8Na8",
+    "types": 13,
+    "subTags": [
+      "CRYSTAL",
+      "CRYSTALLISABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING"
+    ],
+    "directSmelting": "lazurite",
+    "oreMultiplier": 6,
+    "smeltingMultiplier": 6,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "sodalite",
+      "lapis"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "lead",
@@ -527,7 +1282,29 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Pb",
+    "types": 235,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "MORTAR_GRINDABLE",
+      "SMELTING_TO_FLUID",
+      "SOLDERING_MATERIAL",
+      "SOLDERING_MATERIAL_BAD"
+    ],
+    "directSmelting": "lead",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "silver",
+      "bismuth"
+    ],
+    "toolDurability": 64,
+    "toolSpeed": 8.0,
+    "toolQuality": 1
   },
   {
     "id": "lepidolite",
@@ -542,7 +1319,25 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "KLi3Al4F2O10",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "lepidolite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "lithium",
+      "caesium",
+      "boron"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "lignite",
@@ -557,7 +1352,27 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "C3H2O",
+    "types": 13,
+    "subTags": [
+      "FLAMMABLE",
+      "HAS_COLOR",
+      "MORTAR_GRINDABLE",
+      "NO_SMASHING",
+      "NO_SMELTING"
+    ],
+    "directSmelting": "lignite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "coal"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 0
   },
   {
     "id": "lithium",
@@ -573,7 +1388,24 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Li",
+    "types": 43,
+    "subTags": [
+      "HAS_COLOR",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "lithium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "lithium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "magnesite",
@@ -589,7 +1421,54 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "MgCO3",
+    "types": 9,
+    "subTags": [
+      "DONT_ADD_DEFAULT_BBF_RECIPE",
+      "HAS_COLOR"
+    ],
+    "directSmelting": "magnesium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "magnesium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
+    "id": "magnesium",
+    "gtName": "Magnesium",
+    "gtId": 18,
+    "en": "Magnesium",
+    "ru": "Магний",
+    "ruOre": null,
+    "color": 16763080,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [],
+    "formula": "Mg",
+    "types": 35,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "magnesium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "olivine"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "magnetite",
@@ -605,7 +1484,26 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "Fe3O4",
+    "types": 9,
+    "subTags": [
+      "BLASTFURNACE_CALCITE_DOUBLE",
+      "ELECTROMAGNETIC_SEPERATION_GOLD",
+      "HAS_COLOR"
+    ],
+    "directSmelting": "iron",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "iron",
+      "gold"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "malachite",
@@ -621,7 +1519,86 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "Cu2CH2O5",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR",
+      "INDUCTIONSMELTING_LOW_OUTPUT"
+    ],
+    "directSmelting": "copper",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "copper",
+      "brown_limonite",
+      "calcite"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
+    "id": "manganese",
+    "gtName": "Manganese",
+    "gtId": 31,
+    "en": "Manganese",
+    "ru": "Марганец",
+    "ruOre": "Марганцевая руда",
+    "color": 16448250,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [],
+    "formula": "Mn",
+    "types": 107,
+    "subTags": [
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "manganese",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "chrome",
+      "iron"
+    ],
+    "toolDurability": 512,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
+  },
+  {
+    "id": "mercury",
+    "gtName": "Mercury",
+    "gtId": 87,
+    "en": "Mercury",
+    "ru": "Ртуть",
+    "ruOre": null,
+    "color": 16768220,
+    "iconSet": "SHINY",
+    "harvestLevel": 0,
+    "hosts": [],
+    "formula": null,
+    "types": 48,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_GEM"
+    ],
+    "directSmelting": "mercury",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 0
   },
   {
     "id": "molybdenite",
@@ -637,7 +1614,24 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "MoS2",
+    "types": 9,
+    "subTags": [
+      "DONT_ADD_DEFAULT_BBF_RECIPE",
+      "HAS_COLOR"
+    ],
+    "directSmelting": "molybdenum",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "molybdenum"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "molybdenum",
@@ -653,7 +1647,23 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Mo",
+    "types": 107,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "molybdenum",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 512,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
   },
   {
     "id": "monazite",
@@ -668,7 +1678,30 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "(Nd,Y,La,Ce,Cd,Cs)PO4",
+    "types": 13,
+    "subTags": [
+      "CRYSTAL",
+      "CRYSTALLISABLE",
+      "ELECTROMAGNETIC_SEPERATION_NEODYMIUM",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING"
+    ],
+    "directSmelting": "monazite",
+    "oreMultiplier": 8,
+    "smeltingMultiplier": 8,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "thorium",
+      "neodymium",
+      "rare_earth"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "neodymium",
@@ -683,7 +1716,26 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Nd",
+    "types": 235,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "neodymium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 1297,
+    "byProducts": [
+      "monazite",
+      "rare_earth"
+    ],
+    "toolDurability": 512,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
   },
   {
     "id": "nether_quartz",
@@ -697,7 +1749,28 @@
     "harvestLevel": 1,
     "hosts": [
       "netherrack"
-    ]
+    ],
+    "formula": "",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "CRYSTALLISABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "QUARTZ"
+    ],
+    "directSmelting": "nether_quartz",
+    "oreMultiplier": 2,
+    "smeltingMultiplier": 2,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "netherrack"
+    ],
+    "toolDurability": 32,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "nickel",
@@ -714,7 +1787,30 @@
       "deepslate",
       "netherrack",
       "end_stone"
-    ]
+    ],
+    "formula": "Ni",
+    "types": 235,
+    "subTags": [
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR",
+      "METAL",
+      "MORTAR_GRINDABLE",
+      "SMELTING_TO_FLUID",
+      "WASHING_SODIUMPERSULFATE"
+    ],
+    "directSmelting": "nickel",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "cobalt",
+      "platinum",
+      "iron"
+    ],
+    "toolDurability": 64,
+    "toolSpeed": 6.0,
+    "toolQuality": 2
   },
   {
     "id": "oilsands",
@@ -729,7 +1825,21 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "oilsands",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "olivine",
@@ -745,7 +1855,28 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Mg2Fe(SiO2)2",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "olivine",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "pyrope",
+      "magnesium"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
   },
   {
     "id": "palladium",
@@ -761,7 +1892,23 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Pd",
+    "types": 235,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "palladium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 1828,
+    "byProducts": [],
+    "toolDurability": 512,
+    "toolSpeed": 8.0,
+    "toolQuality": 2
   },
   {
     "id": "pentlandite",
@@ -778,7 +1925,27 @@
       "deepslate",
       "netherrack",
       "end_stone"
-    ]
+    ],
+    "formula": "Ni9S8",
+    "types": 9,
+    "subTags": [
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR",
+      "INDUCTIONSMELTING_LOW_OUTPUT"
+    ],
+    "directSmelting": "nickel",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "iron",
+      "sulfur",
+      "cobalt"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "pitchblende",
@@ -793,7 +1960,25 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "(UO2)3ThPb",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "pitchblende",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "thorium",
+      "uranium",
+      "lead"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 3
   },
   {
     "id": "platinum",
@@ -809,7 +1994,27 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Pt",
+    "types": 235,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID",
+      "WASHING_MERCURY"
+    ],
+    "directSmelting": "platinum",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "nickel",
+      "iridium"
+    ],
+    "toolDurability": 64,
+    "toolSpeed": 12.0,
+    "toolQuality": 2
   },
   {
     "id": "powellite",
@@ -825,7 +2030,21 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "CaMoO4",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "powellite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "pyrite",
@@ -841,7 +2060,28 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "FeS2",
+    "types": 9,
+    "subTags": [
+      "BLASTFURNACE_CALCITE_DOUBLE",
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR",
+      "INDUCTIONSMELTING_LOW_OUTPUT"
+    ],
+    "directSmelting": "iron",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "sulfur",
+      "tricalcium_phosphate",
+      "iron"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "pyrochlore",
@@ -852,11 +2092,29 @@
     "ruOre": "Пирохлор",
     "color": 2822400,
     "iconSet": "METALLIC",
-    "harvestLevel": 1,
+    "harvestLevel": 0,
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Ca2Nb2O7",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "pyrochlore",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "apatite",
+      "calcite",
+      "niobium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 0
   },
   {
     "id": "pyrolusite",
@@ -872,7 +2130,25 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "MnO2",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "manganese",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "manganese",
+      "tantalite",
+      "niobium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "pyrope",
@@ -887,7 +2163,24 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Al2Mg3Si3O12",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "pyrope",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "garnet_red",
+      "magnesium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "quartzite",
@@ -902,7 +2195,29 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "SiO2",
+    "types": 13,
+    "subTags": [
+      "CRYSTAL",
+      "CRYSTALLISABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "QUARTZ"
+    ],
+    "directSmelting": "quartzite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "certus_quartz",
+      "barite"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "redstone",
@@ -918,7 +2233,30 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": null,
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "PULVERIZING_CINNABAR",
+      "SMELTING_TO_FLUID",
+      "STONE",
+      "UNBURNABLE"
+    ],
+    "directSmelting": "redstone",
+    "oreMultiplier": 5,
+    "smeltingMultiplier": 5,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "cinnabar",
+      "rare_earth",
+      "glowstone"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "rock_salt",
@@ -933,7 +2271,26 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "KCl",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "STONE"
+    ],
+    "directSmelting": "rock_salt",
+    "oreMultiplier": 2,
+    "smeltingMultiplier": 2,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "salt",
+      "borax"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "ruby",
@@ -949,7 +2306,28 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "CrAl2O3",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "ruby",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "chrome",
+      "garnet_red"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
   },
   {
     "id": "salt",
@@ -964,7 +2342,27 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "NaCl",
+    "types": 9,
+    "subTags": [
+      "FOOD",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "STONE"
+    ],
+    "directSmelting": "salt",
+    "oreMultiplier": 2,
+    "smeltingMultiplier": 2,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "rock_salt",
+      "borax"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "sapphire",
@@ -979,7 +2377,28 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Al2O3",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "sapphire",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "aluminium",
+      "green_sapphire"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
   },
   {
     "id": "scheelite",
@@ -995,7 +2414,25 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "CaWO4",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "scheelite",
+    "oreMultiplier": 2,
+    "smeltingMultiplier": 2,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 2500,
+    "byProducts": [
+      "manganese",
+      "molybdenum",
+      "calcium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 3
   },
   {
     "id": "silver",
@@ -1010,7 +2447,28 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Ag",
+    "types": 235,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "MORTAR_GRINDABLE",
+      "SMELTING_TO_FLUID",
+      "WASHING_MERCURY"
+    ],
+    "directSmelting": "silver",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "lead",
+      "sulfur"
+    ],
+    "toolDurability": 64,
+    "toolSpeed": 10.0,
+    "toolQuality": 2
   },
   {
     "id": "soapstone",
@@ -1025,7 +2483,21 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Mg3Si4H2O12",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "soapstone",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "sodalite",
@@ -1041,7 +2513,28 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Al3Si3Na4Cl",
+    "types": 13,
+    "subTags": [
+      "CRYSTAL",
+      "CRYSTALLISABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING"
+    ],
+    "directSmelting": "sodalite",
+    "oreMultiplier": 6,
+    "smeltingMultiplier": 6,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "lazurite",
+      "lapis"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "spessartine",
@@ -1057,7 +2550,24 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Al2Mn3Si3O12",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "spessartine",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "garnet_red",
+      "manganese"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "sphalerite",
@@ -1071,7 +2581,27 @@
     "harvestLevel": 1,
     "hosts": [
       "netherrack"
-    ]
+    ],
+    "formula": "ZnS",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR",
+      "INDUCTIONSMELTING_LOW_OUTPUT"
+    ],
+    "directSmelting": "zinc",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "garnet_yellow",
+      "cadmium",
+      "gallium",
+      "zinc"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "spodumene",
@@ -1086,7 +2616,24 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "LiAlSi2O6",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "spodumene",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "aluminium",
+      "lithium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "stibnite",
@@ -1102,7 +2649,23 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "Sb2S3",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "antimony",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "antimony"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "sulfur",
@@ -1116,7 +2679,26 @@
     "harvestLevel": 2,
     "hosts": [
       "netherrack"
-    ]
+    ],
+    "formula": "S",
+    "types": 41,
+    "subTags": [
+      "FLAMMABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING"
+    ],
+    "directSmelting": "sulfur",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "sulfur"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "talc",
@@ -1131,7 +2713,21 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Mg3Si4H2O12",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "talc",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "tantalite",
@@ -1147,7 +2743,25 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "MnTa2O6",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "tantalite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "manganese",
+      "niobium",
+      "tantalum"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 3
   },
   {
     "id": "tetrahedrite",
@@ -1163,7 +2777,27 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "Cu3SbS3Fe",
+    "types": 9,
+    "subTags": [
+      "DONT_ADD_DEFAULT_BBF_RECIPE",
+      "HAS_COLOR",
+      "INDUCTIONSMELTING_LOW_OUTPUT",
+      "WASHING_SODIUMPERSULFATE"
+    ],
+    "directSmelting": "copper",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "antimony",
+      "zinc"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "thorium",
@@ -1179,7 +2813,26 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "Th",
+    "types": 107,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "thorium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "uranium",
+      "lead"
+    ],
+    "toolDurability": 512,
+    "toolSpeed": 6.0,
+    "toolQuality": 2
   },
   {
     "id": "tin",
@@ -1194,7 +2847,29 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Sn",
+    "types": 171,
+    "subTags": [
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR",
+      "METAL",
+      "MORTAR_GRINDABLE",
+      "SMELTING_TO_FLUID",
+      "SOLDERING_MATERIAL"
+    ],
+    "directSmelting": "tin",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 505,
+    "byProducts": [
+      "iron",
+      "zinc"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   },
   {
     "id": "tricalcium_phosphate",
@@ -1209,7 +2884,30 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "Ca3(PO4)2",
+    "types": 29,
+    "subTags": [
+      "CRYSTAL",
+      "EXPLOSIVE",
+      "FLAMMABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING"
+    ],
+    "directSmelting": "tricalcium_phosphate",
+    "oreMultiplier": 3,
+    "smeltingMultiplier": 3,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "apatite",
+      "phosphate",
+      "pyrochlore"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "tungstate",
@@ -1225,7 +2923,25 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "WLi2O4",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "tungstate",
+    "oreMultiplier": 2,
+    "smeltingMultiplier": 2,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 2500,
+    "byProducts": [
+      "manganese",
+      "silver",
+      "lithium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 3
   },
   {
     "id": "uraninite",
@@ -1240,7 +2956,25 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "UO2",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "uraninite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "uranium",
+      "thorium",
+      "uranium235"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 3
   },
   {
     "id": "uranium",
@@ -1255,7 +2989,27 @@
     "hosts": [
       "stone",
       "deepslate"
-    ]
+    ],
+    "formula": "U",
+    "types": 107,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "uranium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "lead",
+      "uranium235",
+      "thorium"
+    ],
+    "toolDurability": 512,
+    "toolSpeed": 6.0,
+    "toolQuality": 3
   },
   {
     "id": "vanadium_magnetite",
@@ -1271,7 +3025,56 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "Fe3O4V",
+    "types": 9,
+    "subTags": [
+      "ELECTROMAGNETIC_SEPERATION_GOLD",
+      "HAS_COLOR"
+    ],
+    "directSmelting": "vanadium_magnetite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "magnetite",
+      "vanadium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
+    "id": "wood",
+    "gtName": "Wood",
+    "gtId": 809,
+    "en": "Wood",
+    "ru": "Дерево",
+    "ruOre": null,
+    "color": 6566400,
+    "iconSet": "WOOD",
+    "harvestLevel": 0,
+    "hosts": [],
+    "formula": "",
+    "types": 195,
+    "subTags": [
+      "FLAMMABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "SMELTING_TO_FLUID",
+      "WOOD"
+    ],
+    "directSmelting": "wood",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 16,
+    "toolSpeed": 2.0,
+    "toolQuality": 0
   },
   {
     "id": "wulfenite",
@@ -1287,7 +3090,21 @@
       "stone",
       "deepslate",
       "end_stone"
-    ]
+    ],
+    "formula": "PbMoO4",
+    "types": 9,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "wulfenite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 3
   },
   {
     "id": "yellow_limonite",
@@ -1303,6 +3120,60 @@
       "stone",
       "deepslate",
       "netherrack"
-    ]
+    ],
+    "formula": "FeHO2",
+    "types": 9,
+    "subTags": [
+      "BLASTFURNACE_CALCITE_DOUBLE",
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR",
+      "INDUCTIONSMELTING_LOW_OUTPUT"
+    ],
+    "directSmelting": "iron",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "nickel",
+      "brown_limonite",
+      "cobalt"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
+    "id": "zinc",
+    "gtName": "Zinc",
+    "gtId": 36,
+    "en": "Zinc",
+    "ru": "Цинк",
+    "ruOre": "Цинковая руда",
+    "color": 16445680,
+    "iconSet": "METALLIC",
+    "harvestLevel": 1,
+    "hosts": [],
+    "formula": "Zn",
+    "types": 43,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "MORTAR_GRINDABLE",
+      "SMELTING_TO_FLUID",
+      "WASHING_SODIUMPERSULFATE"
+    ],
+    "directSmelting": "zinc",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "tin",
+      "gallium"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
   }
 ]

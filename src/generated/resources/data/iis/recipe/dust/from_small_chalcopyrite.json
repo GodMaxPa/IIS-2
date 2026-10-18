@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/chalcopyrite",
+    "#iis:small_dusts/chalcopyrite",
+    "#iis:small_dusts/chalcopyrite",
+    "#iis:small_dusts/chalcopyrite"
+  ],
+  "result": {
+    "id": "iis:dust_chalcopyrite"
+  }
+}

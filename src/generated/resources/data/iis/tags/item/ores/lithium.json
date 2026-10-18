@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_lithium",
+    "iis:deepslate_ore_lithium",
+    "iis:end_ore_lithium"
+  ]
+}

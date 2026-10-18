@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/tungstate",
+    "#iis:small_dusts/tungstate",
+    "#iis:small_dusts/tungstate",
+    "#iis:small_dusts/tungstate"
+  ],
+  "result": {
+    "id": "iis:dust_tungstate"
+  }
+}

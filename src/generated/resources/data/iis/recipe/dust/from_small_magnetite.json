@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/magnetite",
+    "#iis:small_dusts/magnetite",
+    "#iis:small_dusts/magnetite",
+    "#iis:small_dusts/magnetite"
+  ],
+  "result": {
+    "id": "iis:dust_magnetite"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_lapis",
+    "iis:deepslate_ore_lapis",
+    "iis:end_ore_lapis"
+  ]
+}

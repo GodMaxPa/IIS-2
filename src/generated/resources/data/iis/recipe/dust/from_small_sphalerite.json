@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/sphalerite",
+    "#iis:small_dusts/sphalerite",
+    "#iis:small_dusts/sphalerite",
+    "#iis:small_dusts/sphalerite"
+  ],
+  "result": {
+    "id": "iis:dust_sphalerite"
+  }
+}

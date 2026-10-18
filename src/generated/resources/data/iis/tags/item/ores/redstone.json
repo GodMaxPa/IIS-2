@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_redstone",
+    "iis:deepslate_ore_redstone",
+    "iis:nether_ore_redstone"
+  ]
+}

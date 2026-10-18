@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "iis:ore_pentlandite",
+    "iis:deepslate_ore_pentlandite",
+    "iis:nether_ore_pentlandite",
+    "iis:end_ore_pentlandite"
+  ]
+}

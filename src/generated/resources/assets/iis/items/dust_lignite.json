@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/dust_lignite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6571590
+      }
+    ]
+  }
+}

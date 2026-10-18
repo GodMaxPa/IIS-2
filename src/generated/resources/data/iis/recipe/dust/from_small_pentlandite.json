@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/pentlandite",
+    "#iis:small_dusts/pentlandite",
+    "#iis:small_dusts/pentlandite",
+    "#iis:small_dusts/pentlandite"
+  ],
+  "result": {
+    "id": "iis:dust_pentlandite"
+  }
+}

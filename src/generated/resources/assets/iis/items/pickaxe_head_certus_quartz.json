@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/pickaxe_head_certus_quartz",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13816550
+      }
+    ]
+  }
+}

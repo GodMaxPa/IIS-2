@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/pure_dust_green_sapphire",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6604930
+      }
+    ]
+  }
+}
