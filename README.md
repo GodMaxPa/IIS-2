@@ -17,7 +17,7 @@
 
 ## Состояние
 
-См. [`docs/PROGRESS.md`](docs/PROGRESS.md). Сейчас: **Срез 2 «Камень и бронза»** — руды и жилы GT в мире готовы, дальше переработка и бронза.
+См. [`docs/PROGRESS.md`](docs/PROGRESS.md). Сейчас: **Срез 2 «Камень и бронза»** — руды, малые руды, формы предметов, инструменты GT и ручная переработка до бронзы готовы.
 
 ## Команды
 
@@ -25,8 +25,8 @@
 ./gradlew build              # сборка + unit-тесты -> build/libs/iis-<версия>.jar
 ./gradlew test               # только unit-тесты
 scripts/smoke-server.sh      # выделенный сервер: мод грузится, /iis, жилы есть, ванильных руд нет
-scripts/showcase.sh wall|vein # скриншоты клиента под виртуальным дисплеем -> build/showcase/
-python3 -I tools/gen/gen_ores.py  # пересоздать руды/жилы/переводы из reference/
+scripts/showcase.sh wall|vein|items # скриншоты клиента под виртуальным дисплеем -> build/showcase/
+python3 -I tools/gen/gen_content.py  # пересоздать контент (руды, предметы, инструменты, рецепты) из reference/
 ./gradlew runClient          # клиент для разработки (нужен графический компьютер)
 ```
 
@@ -36,7 +36,7 @@ python3 -I tools/gen/gen_ores.py  # пересоздать руды/жилы/п�
 
 1. Установить NeoForge **26.1.2.122** для Minecraft 26.1.2 (установщик с neoforged.net или через лаунчер).
 2. Положить `iis-<версия>.jar` в папку `mods` этой версии.
-3. В игре: `/iis`, `/iis voltages`, вкладка творческого режима «ИИС 2.0: Руды». Отладка: `/iis scan [радиус]`, `/iis vein <жила> <x y z>`.
+3. В игре: `/iis`, `/iis voltages`, вкладка творческого режима «ИИС 2.0: Руды». Отладка: `/iis scan [радиус]`, `/iis vein <жила> <x y z>`, `/iis selftest`.
 
 ## Документация
 

@@ -10,11 +10,13 @@
 | `ru.iis.energy` | Напряжения, EU, кабели, сети | 🟡 только `VoltageTier` |
 | `ru.iis.machine` | Машины, обработка рецептов, разгон | 🟡 только `Overclock` |
 | `ru.iis.command` | Служебные команды (`/iis`) | ✅ есть |
-| `ru.iis.core.material` | Материалы из `/iis/materials.json` | 🟡 рудные материалы (84) |
+| `ru.iis.core.material` | Материалы, жилы, малые руды, формы из `/iis/*.json` | ✅ 108 материалов |
+| `ru.iis.core.item` | Предметы-формы (пыль, слитки, пластины...), промывка в котле | ✅ |
+| `ru.iis.tool` | Инструменты GT, урон при крафте, дробление руды молотом | ✅ |
 | `ru.iis.world.ore` | Блоки руд по породам | ✅ |
 | `ru.iis.recipe` | Типы рецептов GT как данные | ⏳ |
 | `ru.iis.world.vein` | Рудные жилы: логика GT5 + `VeinFeature` в генерации мира | ✅ проверено на сервере |
-| `ru.iis.world` (прочее) | Малые руды, геологоразведка | ⏳ |
+| `ru.iis.world` (прочее) | Геологоразведка | ⏳ |
 | `ru.iis.multiblock` | Многоблочные структуры | ⏳ срез 5 |
 | `ru.iis.rail` | Железная дорога | ⏳ |
 | `ru.iis.space` | Космос | ⏳ |
@@ -23,7 +25,7 @@
 | `ru.iis.datagen` | Генерация JSON: рецепты, модели, теги, переводы | ⏳ |
 
 ## Генерируемые файлы
-`python3 -I tools/gen/gen_ores.py` пересоздаёт `src/generated/resources/` и `src/main/resources/iis/{materials,veins}.json` из `reference/original/`. Руками эти файлы не править.
+`python3 -I tools/gen/gen_content.py` пересоздаёт `src/generated/resources/` (включая датапак `packs/iis_overrides`) и `src/main/resources/iis/*.json` из `reference/original/`. Руками эти файлы не править.
 
 ## Принципы
 1. **Логика отдельно от Minecraft.** Расчёты (энергия, разгон, рецепты, структуры) — обычные Java-классы с unit-тестами.

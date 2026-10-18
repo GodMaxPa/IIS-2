@@ -31,3 +31,26 @@
 - **Отличие:** выбор жилы делается только среди жил своего измерения (в GT5 — повторные попытки по общему списку). Распределение по весам то же.
 - Ванильные руды убраны biome modifier'ами; большие жилы нового генератора — `ore_veins_enabled=false` в noise_settings overworld/large_biomes/amplified.
 - Малые руды (`ore.small.*`) — ещё не сделаны.
+
+## Материалы и предметы (`ru.iis.core`)
+- Источник свойств — `MaterialProperties.cfg` сборки (D20), форм — `OrePrefixes` GT5 (биты `MaterialTypes`: 1 пыль, 2 металл, 4 кристалл, 8 руда, 64 инструменты).
+- Названия — из `GregTech.lang.ru` сборки по ключам `gt.metaitem.01/02.<индекс формы*1000+ID>`.
+- **Не перенесено пока:** gemChipped/Flawed/Flawless/Exquisite, ingotDouble+, plateDouble+, foil, gear, spring, wireFine, crushedCentrifuged, ingotHot.
+
+## Инструменты (`ru.iis.tool`)
+- Типы и урон — `GT_Tool_*` (block/craft damage), прочность — `100 × ToolDurability` GT, переведено в единицы по 50 (D25).
+- Рецепты — `ProcessingToolHead/ToolOther`, ступки — `GT_MetaGenerated_Tool_01` (кремень/бронза/железо).
+- **Отличие:** в GT5 инструмент — один мета-предмет с NBT материалов; у нас отдельный предмет на пару (инструмент, материал).
+- **Отличие:** молот при добыче превращает только блоки руд (в GT5 — всё, у чего есть рецепт кузнечного молота: камень, булыжник, гравий).
+- **Не перенесено пока:** киянка, кусачки, монтировка, лом, ножницы, электроинструменты.
+
+## Ручная переработка
+- Печь — `ProcessingOre` (руда: множитель плавки, «богатые» руды незерака/эндерняка ×2) и `ProcessingOreSmelting` (дроблёная руда: 10 самородков, смешанная — 6, ИИС `MixedOreOnlyYieldsTwoThirdsOfPureOre=true`).
+- Ступка, молот, напильник, пила, пыли — `ProcessingIngot/Plate/Stick/Bolt/Screw/Dust`; ИИС `NuggetsFix.zs`: самородок + ступка → крошечная пыль.
+- Котёл — `GT_MetaGenerated_Item_01#onEntityItemUpdate`.
+- Бронза — `GT_CraftingRecipeLoader` с `NerfDustCrafting=true` (3 медных + 1 оловянная → 3 бронзовые).
+
+## Малые руды
+- `GT_Worldgen_GT_Ore_SmallPieces` + конфиг ИИС (34 вида), высоты по D11 с обрезкой до −64..319.
+- Выпадение — `GT_TileEntity_Ores#getDrops` (мета ≥ 16000): кристалл/дроблёная руда/грязная пыль по весам GT, 1/3 — пыль породы.
+- **Отличие:** удача (Fortune) не увеличивает выпадение; вместо пыли глубинного сланца выпадает каменная.
