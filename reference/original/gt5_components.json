@@ -1,0 +1,359 @@
+{
+ "arrowGtWood": {
+  "toolBypass": false,
+  "whitelist": [
+   "DamascusSteel",
+   "SterlingSilver"
+  ]
+ },
+ "bolt": {
+  "toolBypass": true,
+  "whitelist": [
+   "Bronze",
+   "Chrome",
+   "HSSE",
+   "HSSG",
+   "Iridium",
+   "Iron",
+   "Neutronium",
+   "Osmium",
+   "PigIron",
+   "StainlessSteel",
+   "Steel",
+   "Tin",
+   "Titanium",
+   "Tungsten",
+   "TungstenSteel",
+   "WroughtIron"
+  ]
+ },
+ "crateGtIngot": {
+  "toolBypass": false,
+  "whitelist": [
+   "Bronze",
+   "DamascusSteel",
+   "Manganese",
+   "Steel"
+  ]
+ },
+ "foil": {
+  "toolBypass": false,
+  "whitelist": [
+   "Aluminium",
+   "AnnealedCopper",
+   "BlackSteel",
+   "Bronze",
+   "Copper",
+   "Duranium",
+   "Electrum",
+   "Europium",
+   "Gold",
+   "HSSG",
+   "Iron",
+   "Manganese",
+   "Naquadah",
+   "NaquadahAlloy",
+   "Nichrome",
+   "NiobiumTitanium",
+   "Osmiridium",
+   "Osmium",
+   "Plastic",
+   "Platinum",
+   "PolyphenyleneSulfide",
+   "PolyvinylChloride",
+   "Silicon",
+   "Silicone",
+   "Steel",
+   "Tantalum",
+   "Titanium",
+   "Tungsten",
+   "TungstenSteel",
+   "VanadiumGallium",
+   "YttriumBariumCuprate",
+   "Zinc"
+  ]
+ },
+ "gearGt": {
+  "toolBypass": false,
+  "whitelist": [
+   "Aluminium",
+   "Bronze",
+   "CobaltBrass",
+   "Copper",
+   "Diamond",
+   "Gold",
+   "HSSE",
+   "HSSG",
+   "Iron",
+   "Neutronium",
+   "StainlessSteel",
+   "Steel",
+   "Stone",
+   "Tin",
+   "Titanium",
+   "TungstenSteel",
+   "Wood"
+  ]
+ },
+ "gearGtSmall": {
+  "toolBypass": false,
+  "whitelist": [
+   "Aluminium",
+   "HSSE",
+   "HSSG",
+   "Neutronium",
+   "StainlessSteel",
+   "Steel",
+   "Titanium",
+   "TungstenSteel"
+  ]
+ },
+ "ingotDouble": {
+  "toolBypass": false,
+  "whitelist": []
+ },
+ "ingotQuadruple": {
+  "toolBypass": false,
+  "whitelist": []
+ },
+ "ingotQuintuple": {
+  "toolBypass": false,
+  "whitelist": []
+ },
+ "ingotTriple": {
+  "toolBypass": false,
+  "whitelist": []
+ },
+ "plate": {
+  "toolBypass": true,
+  "whitelist": [
+   "Americium",
+   "AnnealedCopper",
+   "Apatite",
+   "BatteryAlloy",
+   "Blaze",
+   "CertusQuartz",
+   "Copper",
+   "Dilithium",
+   "Emerald",
+   "EnderEye",
+   "EnderPearl",
+   "Europium",
+   "Firestone",
+   "Forcicium",
+   "Forcillium",
+   "Gallium",
+   "GalliumArsenide",
+   "Glass",
+   "IndiumGalliumPhosphide",
+   "Jasper",
+   "Lapis",
+   "Lazurite",
+   "NetherQuartz",
+   "NiobiumTitanium",
+   "Obsidian",
+   "Paper",
+   "RedAlloy",
+   "Redstone",
+   "RedstoneAlloy",
+   "Silicon",
+   "Sodalite",
+   "SolderingAlloy",
+   "Tantalum",
+   "Tin",
+   "VanadiumGallium",
+   "YttriumBariumCuprate",
+   "Zinc"
+  ]
+ },
+ "plateDouble": {
+  "toolBypass": true,
+  "whitelist": [
+   "Aluminium",
+   "Paper",
+   "Steel",
+   "TungstenSteel"
+  ]
+ },
+ "plateQuadruple": {
+  "toolBypass": false,
+  "whitelist": [
+   "Paper"
+  ]
+ },
+ "plateQuintuple": {
+  "toolBypass": false,
+  "whitelist": [
+   "Paper"
+  ]
+ },
+ "plateTriple": {
+  "toolBypass": false,
+  "whitelist": [
+   "Paper"
+  ]
+ },
+ "ring": {
+  "toolBypass": false,
+  "whitelist": [
+   "Aluminium",
+   "Brass",
+   "Bronze",
+   "Chrome",
+   "HSSE",
+   "HSSG",
+   "Invar",
+   "Iridium",
+   "Iron",
+   "Neutronium",
+   "Osmium",
+   "Paper",
+   "PigIron",
+   "Rubber",
+   "Silicone",
+   "StainlessSteel",
+   "Steel",
+   "StyreneButadieneRubber",
+   "Tin",
+   "Titanium",
+   "TungstenSteel",
+   "WroughtIron"
+  ]
+ },
+ "rotor": {
+  "toolBypass": false,
+  "whitelist": [
+   "Bronze",
+   "Chrome",
+   "HSSE",
+   "HSSG",
+   "Iridium",
+   "Neutronium",
+   "Osmium",
+   "StainlessSteel",
+   "Steel",
+   "Tin",
+   "Titanium",
+   "TungstenSteel"
+  ]
+ },
+ "round": {
+  "toolBypass": false,
+  "whitelist": [
+   "HSSE",
+   "HSSG",
+   "Neutronium"
+  ]
+ },
+ "screw": {
+  "toolBypass": true,
+  "whitelist": [
+   "Bronze",
+   "Chrome",
+   "HSSE",
+   "HSSG",
+   "Iridium",
+   "Iron",
+   "Neutronium",
+   "Osmium",
+   "PigIron",
+   "StainlessSteel",
+   "Steel",
+   "Tin",
+   "Titanium",
+   "TungstenSteel",
+   "WroughtIron"
+  ]
+ },
+ "spring": {
+  "toolBypass": false,
+  "whitelist": [
+   "Titanium"
+  ]
+ },
+ "springSmall": {
+  "toolBypass": false,
+  "whitelist": []
+ },
+ "stick": {
+  "toolBypass": true,
+  "whitelist": [
+   "Aluminium",
+   "Americium",
+   "Brass",
+   "Bronze",
+   "Chrome",
+   "CobaltBrass",
+   "Copper",
+   "Diamond",
+   "Electrum",
+   "Europium",
+   "Gold",
+   "HSSE",
+   "HSSG",
+   "Iridium",
+   "Iron",
+   "IronMagnetic",
+   "Lapis",
+   "Lazurite",
+   "Lead",
+   "NaquadahEnriched",
+   "Neodymium",
+   "NeodymiumMagnetic",
+   "Neutronium",
+   "Osmium",
+   "PigIron",
+   "Plastic",
+   "Platinum",
+   "Plutonium241",
+   "PolyvinylChloride",
+   "Sodalite",
+   "SolderingAlloy",
+   "StainlessSteel",
+   "Steel",
+   "SteelMagnetic",
+   "Tin",
+   "Titanium",
+   "TungstenSteel",
+   "Uranium235",
+   "VanadiumGallium",
+   "Wood",
+   "WroughtIron"
+  ]
+ },
+ "stickLong": {
+  "toolBypass": true,
+  "whitelist": [
+   "Americium",
+   "HSSE",
+   "HSSG",
+   "Magnalium",
+   "NeodymiumMagnetic",
+   "Neutronium",
+   "Titanium",
+   "TungstenSteel",
+   "WroughtIron"
+  ]
+ },
+ "wireFine": {
+  "toolBypass": false,
+  "whitelist": [
+   "AnnealedCopper",
+   "Bronze",
+   "Copper",
+   "Electrum",
+   "Gold",
+   "Graphene",
+   "Iron",
+   "Lead",
+   "NiobiumTitanium",
+   "Osmium",
+   "Platinum",
+   "RedAlloy",
+   "SolderingAlloy",
+   "Steel",
+   "Tin",
+   "YttriumBariumCuprate"
+  ]
+ }
+}

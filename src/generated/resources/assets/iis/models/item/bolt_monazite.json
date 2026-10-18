@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "iis:item/materialicons/diamond/bolt",
-    "layer1": "iis:item/materialicons/diamond/bolt_overlay"
-  }
-}

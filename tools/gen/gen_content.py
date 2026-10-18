@@ -189,10 +189,24 @@ MORTAR_MATERIALS = ('Flint', 'Bronze', 'Iron')  # GT_MetaGenerated_Tool_01: flin
 TOOL_CHARS = {'h': 'hammer', 'f': 'file', 's': 'saw', 'm': 'mortar', 'w': 'wrench', 'd': 'screwdriver', 'k': 'knife'}
 
 
+# GT5 OrePrefixes component whitelists (IIS MaterialComponents.cfg: all enableUnused* = false), extracted by tools/extract/gt5_components.py
+COMPONENTS = json.load(open(os.path.join(REF, 'gt5_components.json'), encoding='utf-8'))
+GT_PREFIX = {p[0]: p[1] for p in PREFIXES}  # our prefix id -> GT prefix
+
+
+def component_allowed(prefix, name):
+    rule = COMPONENTS.get(GT_PREFIX.get(prefix, prefix))
+    if rule is None:
+        return True
+    if rule['toolBypass'] and (prop(name, 'MaterialTypes', 0) & B_TOOL):
+        return True
+    return name in rule['whitelist']
+
+
 def has_form(prefix, name):
     """Does material have this form (GT OrePrefixes.doGenerateItem), regardless of whether it is vanilla."""
     bits = next((p[2] for p in PREFIXES if p[0] == prefix), 0)
-    return (prop(name, 'MaterialTypes', 0) & bits) != 0
+    return (prop(name, 'MaterialTypes', 0) & bits) != 0 and component_allowed(prefix, name)
 
 
 def tool_capable(name):

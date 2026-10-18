@@ -250,31 +250,6 @@
     "material": "antimony"
   },
   {
-    "id": "plate_antimony",
-    "prefix": "plate",
-    "material": "antimony"
-  },
-  {
-    "id": "rod_antimony",
-    "prefix": "rod",
-    "material": "antimony"
-  },
-  {
-    "id": "bolt_antimony",
-    "prefix": "bolt",
-    "material": "antimony"
-  },
-  {
-    "id": "screw_antimony",
-    "prefix": "screw",
-    "material": "antimony"
-  },
-  {
-    "id": "ring_antimony",
-    "prefix": "ring",
-    "material": "antimony"
-  },
-  {
     "id": "crushed_apatite",
     "prefix": "crushed",
     "material": "apatite"
@@ -317,21 +292,6 @@
   {
     "id": "plate_apatite",
     "prefix": "plate",
-    "material": "apatite"
-  },
-  {
-    "id": "rod_apatite",
-    "prefix": "rod",
-    "material": "apatite"
-  },
-  {
-    "id": "bolt_apatite",
-    "prefix": "bolt",
-    "material": "apatite"
-  },
-  {
-    "id": "screw_apatite",
-    "prefix": "screw",
     "material": "apatite"
   },
   {
@@ -590,11 +550,6 @@
     "material": "beryllium"
   },
   {
-    "id": "ring_beryllium",
-    "prefix": "ring",
-    "material": "beryllium"
-  },
-  {
     "id": "crushed_bismuth",
     "prefix": "crushed",
     "material": "bismuth"
@@ -657,11 +612,6 @@
   {
     "id": "screw_bismuth",
     "prefix": "screw",
-    "material": "bismuth"
-  },
-  {
-    "id": "ring_bismuth",
-    "prefix": "ring",
     "material": "bismuth"
   },
   {
@@ -1055,26 +1005,6 @@
     "material": "charcoal"
   },
   {
-    "id": "plate_charcoal",
-    "prefix": "plate",
-    "material": "charcoal"
-  },
-  {
-    "id": "rod_charcoal",
-    "prefix": "rod",
-    "material": "charcoal"
-  },
-  {
-    "id": "bolt_charcoal",
-    "prefix": "bolt",
-    "material": "charcoal"
-  },
-  {
-    "id": "screw_charcoal",
-    "prefix": "screw",
-    "material": "charcoal"
-  },
-  {
     "id": "crushed_cinnabar",
     "prefix": "crushed",
     "material": "cinnabar"
@@ -1160,26 +1090,6 @@
     "material": "coal"
   },
   {
-    "id": "plate_coal",
-    "prefix": "plate",
-    "material": "coal"
-  },
-  {
-    "id": "rod_coal",
-    "prefix": "rod",
-    "material": "coal"
-  },
-  {
-    "id": "bolt_coal",
-    "prefix": "bolt",
-    "material": "coal"
-  },
-  {
-    "id": "screw_coal",
-    "prefix": "screw",
-    "material": "coal"
-  },
-  {
     "id": "dust_cobalt",
     "prefix": "dust",
     "material": "cobalt"
@@ -1222,11 +1132,6 @@
   {
     "id": "screw_cobalt",
     "prefix": "screw",
-    "material": "cobalt"
-  },
-  {
-    "id": "ring_cobalt",
-    "prefix": "ring",
     "material": "cobalt"
   },
   {
@@ -1345,21 +1250,6 @@
     "material": "copper"
   },
   {
-    "id": "bolt_copper",
-    "prefix": "bolt",
-    "material": "copper"
-  },
-  {
-    "id": "screw_copper",
-    "prefix": "screw",
-    "material": "copper"
-  },
-  {
-    "id": "ring_copper",
-    "prefix": "ring",
-    "material": "copper"
-  },
-  {
     "id": "dust_cupronickel",
     "prefix": "dust",
     "material": "cupronickel"
@@ -1402,11 +1292,6 @@
   {
     "id": "screw_cupronickel",
     "prefix": "screw",
-    "material": "cupronickel"
-  },
-  {
-    "id": "ring_cupronickel",
-    "prefix": "ring",
     "material": "cupronickel"
   },
   {
@@ -1522,11 +1407,6 @@
   {
     "id": "screw_electrum",
     "prefix": "screw",
-    "material": "electrum"
-  },
-  {
-    "id": "ring_electrum",
-    "prefix": "ring",
     "material": "electrum"
   },
   {
@@ -1682,26 +1562,6 @@
   {
     "id": "gem_fools_ruby",
     "prefix": "gem",
-    "material": "fools_ruby"
-  },
-  {
-    "id": "plate_fools_ruby",
-    "prefix": "plate",
-    "material": "fools_ruby"
-  },
-  {
-    "id": "rod_fools_ruby",
-    "prefix": "rod",
-    "material": "fools_ruby"
-  },
-  {
-    "id": "bolt_fools_ruby",
-    "prefix": "bolt",
-    "material": "fools_ruby"
-  },
-  {
-    "id": "screw_fools_ruby",
-    "prefix": "screw",
     "material": "fools_ruby"
   },
   {
@@ -1982,11 +1842,6 @@
   {
     "id": "screw_gold",
     "prefix": "screw",
-    "material": "gold"
-  },
-  {
-    "id": "ring_gold",
-    "prefix": "ring",
     "material": "gold"
   },
   {
@@ -2380,21 +2235,6 @@
     "material": "jasper"
   },
   {
-    "id": "rod_jasper",
-    "prefix": "rod",
-    "material": "jasper"
-  },
-  {
-    "id": "bolt_jasper",
-    "prefix": "bolt",
-    "material": "jasper"
-  },
-  {
-    "id": "screw_jasper",
-    "prefix": "screw",
-    "material": "jasper"
-  },
-  {
     "id": "crushed_lapis",
     "prefix": "crushed",
     "material": "lapis"
@@ -2437,16 +2277,6 @@
   {
     "id": "rod_lapis",
     "prefix": "rod",
-    "material": "lapis"
-  },
-  {
-    "id": "bolt_lapis",
-    "prefix": "bolt",
-    "material": "lapis"
-  },
-  {
-    "id": "screw_lapis",
-    "prefix": "screw",
     "material": "lapis"
   },
   {
@@ -2497,16 +2327,6 @@
   {
     "id": "rod_lazurite",
     "prefix": "rod",
-    "material": "lazurite"
-  },
-  {
-    "id": "bolt_lazurite",
-    "prefix": "bolt",
-    "material": "lazurite"
-  },
-  {
-    "id": "screw_lazurite",
-    "prefix": "screw",
     "material": "lazurite"
   },
   {
@@ -2572,11 +2392,6 @@
   {
     "id": "screw_lead",
     "prefix": "screw",
-    "material": "lead"
-  },
-  {
-    "id": "ring_lead",
-    "prefix": "ring",
     "material": "lead"
   },
   {
@@ -2655,26 +2470,6 @@
     "material": "lignite"
   },
   {
-    "id": "plate_lignite",
-    "prefix": "plate",
-    "material": "lignite"
-  },
-  {
-    "id": "rod_lignite",
-    "prefix": "rod",
-    "material": "lignite"
-  },
-  {
-    "id": "bolt_lignite",
-    "prefix": "bolt",
-    "material": "lignite"
-  },
-  {
-    "id": "screw_lignite",
-    "prefix": "screw",
-    "material": "lignite"
-  },
-  {
     "id": "crushed_lithium",
     "prefix": "crushed",
     "material": "lithium"
@@ -2717,31 +2512,6 @@
   {
     "id": "nugget_lithium",
     "prefix": "nugget",
-    "material": "lithium"
-  },
-  {
-    "id": "plate_lithium",
-    "prefix": "plate",
-    "material": "lithium"
-  },
-  {
-    "id": "rod_lithium",
-    "prefix": "rod",
-    "material": "lithium"
-  },
-  {
-    "id": "bolt_lithium",
-    "prefix": "bolt",
-    "material": "lithium"
-  },
-  {
-    "id": "screw_lithium",
-    "prefix": "screw",
-    "material": "lithium"
-  },
-  {
-    "id": "ring_lithium",
-    "prefix": "ring",
     "material": "lithium"
   },
   {
@@ -2802,31 +2572,6 @@
   {
     "id": "nugget_magnesium",
     "prefix": "nugget",
-    "material": "magnesium"
-  },
-  {
-    "id": "plate_magnesium",
-    "prefix": "plate",
-    "material": "magnesium"
-  },
-  {
-    "id": "rod_magnesium",
-    "prefix": "rod",
-    "material": "magnesium"
-  },
-  {
-    "id": "bolt_magnesium",
-    "prefix": "bolt",
-    "material": "magnesium"
-  },
-  {
-    "id": "screw_magnesium",
-    "prefix": "screw",
-    "material": "magnesium"
-  },
-  {
-    "id": "ring_magnesium",
-    "prefix": "ring",
     "material": "magnesium"
   },
   {
@@ -2965,11 +2710,6 @@
     "material": "manganese"
   },
   {
-    "id": "ring_manganese",
-    "prefix": "ring",
-    "material": "manganese"
-  },
-  {
     "id": "crushed_molybdenite",
     "prefix": "crushed",
     "material": "molybdenite"
@@ -3070,11 +2810,6 @@
     "material": "molybdenum"
   },
   {
-    "id": "ring_molybdenum",
-    "prefix": "ring",
-    "material": "molybdenum"
-  },
-  {
     "id": "crushed_monazite",
     "prefix": "crushed",
     "material": "monazite"
@@ -3112,26 +2847,6 @@
   {
     "id": "gem_monazite",
     "prefix": "gem",
-    "material": "monazite"
-  },
-  {
-    "id": "plate_monazite",
-    "prefix": "plate",
-    "material": "monazite"
-  },
-  {
-    "id": "rod_monazite",
-    "prefix": "rod",
-    "material": "monazite"
-  },
-  {
-    "id": "bolt_monazite",
-    "prefix": "bolt",
-    "material": "monazite"
-  },
-  {
-    "id": "screw_monazite",
-    "prefix": "screw",
     "material": "monazite"
   },
   {
@@ -3197,11 +2912,6 @@
   {
     "id": "screw_neodymium",
     "prefix": "screw",
-    "material": "neodymium"
-  },
-  {
-    "id": "ring_neodymium",
-    "prefix": "ring",
     "material": "neodymium"
   },
   {
@@ -3337,11 +3047,6 @@
   {
     "id": "screw_nickel",
     "prefix": "screw",
-    "material": "nickel"
-  },
-  {
-    "id": "ring_nickel",
-    "prefix": "ring",
     "material": "nickel"
   },
   {
@@ -3565,11 +3270,6 @@
     "material": "palladium"
   },
   {
-    "id": "ring_palladium",
-    "prefix": "ring",
-    "material": "palladium"
-  },
-  {
     "id": "crushed_pentlandite",
     "prefix": "crushed",
     "material": "pentlandite"
@@ -3702,11 +3402,6 @@
   {
     "id": "screw_platinum",
     "prefix": "screw",
-    "material": "platinum"
-  },
-  {
-    "id": "ring_platinum",
-    "prefix": "ring",
     "material": "platinum"
   },
   {
@@ -3925,26 +3620,6 @@
     "material": "quartzite"
   },
   {
-    "id": "plate_quartzite",
-    "prefix": "plate",
-    "material": "quartzite"
-  },
-  {
-    "id": "rod_quartzite",
-    "prefix": "rod",
-    "material": "quartzite"
-  },
-  {
-    "id": "bolt_quartzite",
-    "prefix": "bolt",
-    "material": "quartzite"
-  },
-  {
-    "id": "screw_quartzite",
-    "prefix": "screw",
-    "material": "quartzite"
-  },
-  {
     "id": "dust_raw_rubber",
     "prefix": "dust",
     "material": "raw_rubber"
@@ -3987,26 +3662,6 @@
   {
     "id": "plate_red_alloy",
     "prefix": "plate",
-    "material": "red_alloy"
-  },
-  {
-    "id": "rod_red_alloy",
-    "prefix": "rod",
-    "material": "red_alloy"
-  },
-  {
-    "id": "bolt_red_alloy",
-    "prefix": "bolt",
-    "material": "red_alloy"
-  },
-  {
-    "id": "screw_red_alloy",
-    "prefix": "screw",
-    "material": "red_alloy"
-  },
-  {
-    "id": "ring_red_alloy",
-    "prefix": "ring",
     "material": "red_alloy"
   },
   {
@@ -4365,11 +4020,6 @@
     "material": "silver"
   },
   {
-    "id": "ring_silver",
-    "prefix": "ring",
-    "material": "silver"
-  },
-  {
     "id": "crushed_soapstone",
     "prefix": "crushed",
     "material": "soapstone"
@@ -4452,16 +4102,6 @@
   {
     "id": "rod_sodalite",
     "prefix": "rod",
-    "material": "sodalite"
-  },
-  {
-    "id": "bolt_sodalite",
-    "prefix": "bolt",
-    "material": "sodalite"
-  },
-  {
-    "id": "screw_sodalite",
-    "prefix": "screw",
     "material": "sodalite"
   },
   {
@@ -4935,11 +4575,6 @@
     "material": "thorium"
   },
   {
-    "id": "ring_thorium",
-    "prefix": "ring",
-    "material": "thorium"
-  },
-  {
     "id": "crushed_tin",
     "prefix": "crushed",
     "material": "tin"
@@ -5055,11 +4690,6 @@
     "material": "tin_alloy"
   },
   {
-    "id": "ring_tin_alloy",
-    "prefix": "ring",
-    "material": "tin_alloy"
-  },
-  {
     "id": "crushed_topaz",
     "prefix": "crushed",
     "material": "topaz"
@@ -5157,26 +4787,6 @@
   {
     "id": "gem_tricalcium_phosphate",
     "prefix": "gem",
-    "material": "tricalcium_phosphate"
-  },
-  {
-    "id": "plate_tricalcium_phosphate",
-    "prefix": "plate",
-    "material": "tricalcium_phosphate"
-  },
-  {
-    "id": "rod_tricalcium_phosphate",
-    "prefix": "rod",
-    "material": "tricalcium_phosphate"
-  },
-  {
-    "id": "bolt_tricalcium_phosphate",
-    "prefix": "bolt",
-    "material": "tricalcium_phosphate"
-  },
-  {
-    "id": "screw_tricalcium_phosphate",
-    "prefix": "screw",
     "material": "tricalcium_phosphate"
   },
   {
@@ -5312,11 +4922,6 @@
   {
     "id": "screw_uranium",
     "prefix": "screw",
-    "material": "uranium"
-  },
-  {
-    "id": "ring_uranium",
-    "prefix": "ring",
     "material": "uranium"
   },
   {
@@ -5472,26 +5077,6 @@
   {
     "id": "plate_zinc",
     "prefix": "plate",
-    "material": "zinc"
-  },
-  {
-    "id": "rod_zinc",
-    "prefix": "rod",
-    "material": "zinc"
-  },
-  {
-    "id": "bolt_zinc",
-    "prefix": "bolt",
-    "material": "zinc"
-  },
-  {
-    "id": "screw_zinc",
-    "prefix": "screw",
-    "material": "zinc"
-  },
-  {
-    "id": "ring_zinc",
-    "prefix": "ring",
     "material": "zinc"
   },
   {
