@@ -21,6 +21,8 @@ import net.minecraft.commands.CommandSourceStack;
 import net.neoforged.neoforge.common.util.FakePlayer;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import ru.iis.IIS;
+import ru.iis.machine.recipe.GtRecipeMap;
+import ru.iis.machine.recipe.GtRecipes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +31,7 @@ import java.util.List;
  * /iis selftest — проверка механик среза прямо на сервере (рецепты, инструменты, молот, котёл).
  * Нужна автотесту scripts/smoke-server.sh: в конце печатает "SELFTEST PASSED" или "SELFTEST FAILED".
  */
-final class SelfTest {
+public final class SelfTest {
     private SelfTest() {}
 
     private record Ctx(CommandSourceStack src, ServerLevel level, List<String> failures) {
@@ -46,6 +48,7 @@ final class SelfTest {
             recipes(c);
             hammerMining(c);
             cauldron(c);
+            steam(c);
         } catch (Exception e) {
             IIS.LOGGER.error("selftest crashed", e);
             c.check("no exceptions", false, e.toString());
@@ -55,7 +58,14 @@ final class SelfTest {
         return ok ? 1 : 0;
     }
 
-    static Item item(String id) {
+    /** Для GameTest: тот же набор проверок, вывод в лог сервера. */
+    public static boolean runSilently(ServerLevel level) {
+        CommandSourceStack src = level.getServer().createCommandSourceStack().withLevel(level)
+                .withPosition(net.minecraft.world.phys.Vec3.atCenterOf(level.getRespawnData().pos()));
+        return run(src) == 1;
+    }
+
+    public static Item item(String id) {
         return BuiltInRegistries.ITEM.getValue(Identifier.parse(id.contains(":") ? id : IIS.MODID + ":" + id));
     }
 
@@ -173,6 +183,34 @@ final class SelfTest {
         }) && drops.stream().anyMatch(d -> d.getItem().getItem() != item("dust_stone"));
         c.check("small copper ore drops crushed/impure dust (+ stone dust)", ok, drops.stream().map(d -> show(d.getItem())).toList().toString());
         drops.forEach(ItemEntity::discard);
+    }
+
+    /** Срез 3: рецепты машин эпохи пара загружены и дают числа GT5. */
+    static void steam(Ctx c) {
+        var map = c.level.recipeAccess().recipeMap();
+        for (GtRecipeMap m : GtRecipeMap.values()) {
+            int n = GtRecipes.all(map, m).size();
+            c.check("recipes loaded: " + m.id, n > 0, "count=" + n);
+        }
+        var mac = GtRecipes.find(c.level, GtRecipeMap.MACERATOR, List.of(stack("ore_chalcopyrite")), e -> true);
+        c.check("macerator: chalcopyrite ore -> 2 crushed + pyrite 10% + stone 50%", mac.isPresent()
+                && mac.get().recipe().outputs().get(0).stack().count() == 2 && mac.get().recipe().outputs().get(1).chance() == 1000
+                && mac.get().recipe().duration() == 400 && mac.get().recipe().eut() == 2, mac.map(x -> x.holder().id().toString()).orElse("none"));
+        var bbf = GtRecipes.find(c.level, GtRecipeMap.PRIMITIVE_BLAST, List.of(new ItemStack(Items.IRON_INGOT), new ItemStack(Items.COAL, 4), ItemStack.EMPTY), e -> true);
+        c.check("bricked blast furnace: iron + 4 coal -> steel in 7200 ticks", bbf.isPresent()
+                && bbf.get().recipe().outputs().get(0).stack().item().value() == item("ingot_steel") && bbf.get().recipe().duration() == 7200,
+                bbf.map(x -> x.holder().id().toString()).orElse("none"));
+        var alloy = GtRecipes.find(c.level, GtRecipeMap.ALLOY_SMELTER, List.of(new ItemStack(Items.COPPER_INGOT, 3), stack("ingot_tin")), e -> true);
+        c.check("alloy smelter: 3 copper + tin -> 4 bronze", alloy.isPresent() && alloy.get().recipe().outputs().get(0).stack().count() == 4,
+                alloy.map(x -> x.holder().id().toString()).orElse("none"));
+        var comp = GtRecipes.find(c.level, GtRecipeMap.COMPRESSOR, List.of(stack("dust_fireclay")), e -> true);
+        c.check("compressor: fireclay dust -> compressed fireclay", comp.isPresent()
+                && comp.get().recipe().outputs().get(0).stack().item().value() == item("compressed_fireclay"), "none");
+        ItemStack fb = smelt(c, stack("compressed_fireclay"));
+        c.check("furnace: compressed fireclay -> firebrick", is(fb, "firebrick", 1), show(fb));
+        ItemStack P = stack("plate_bronze"), B = stack("minecraft:bricks"), F = stack("minecraft:furnace"), E = ItemStack.EMPTY;
+        List<ItemStack> res = craft(c, 3, 3, P, P, P, P, E, P, B, F, B);
+        c.check("crafting: small coal boiler", is(res.get(0), "boiler_coal_bronze", 1), show(res.get(0)));
     }
 
     static void cauldron(Ctx c) {

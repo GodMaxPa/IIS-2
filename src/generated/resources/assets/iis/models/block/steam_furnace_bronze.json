@@ -3,7 +3,7 @@
   "textures": {
     "particle": "iis:block/machine/steam_furnace_bronze_side",
     "north": "iis:block/machine/steam_furnace_bronze_front",
-    "south": "iis:block/machine/steam_furnace_bronze_side",
+    "south": "iis:block/machine/steam_furnace_bronze_back",
     "east": "iis:block/machine/steam_furnace_bronze_side",
     "west": "iis:block/machine/steam_furnace_bronze_side",
     "up": "iis:block/machine/steam_furnace_bronze_top",

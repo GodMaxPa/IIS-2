@@ -184,7 +184,9 @@ def generate(g):
                 composite(f'block/machine/{bid}_side{fs}', f'MACHINE_{base}_SIDE', f'OVERLAY_SIDE_STEAM_{ov}{suf}')
                 composite(f'block/machine/{bid}_top{fs}', f'MACHINE_{base}_TOP', f'OVERLAY_TOP_STEAM_{ov}{suf}')
                 composite(f'block/machine/{bid}_bottom{fs}', f'MACHINE_{base}_BOTTOM', f'OVERLAY_BOTTOM_STEAM_{ov}{suf}')
-                cube_model(bid + fs, {'front': f'{NS}:block/machine/{bid}_front{fs}', 'back': f'{NS}:block/machine/{bid}_side{fs}',
+                # GT5: after placement the output/vent facing is the back side; it shows OVERLAY_PIPE_OUT
+                composite(f'block/machine/{bid}_back', f'MACHINE_{base}_SIDE', 'OVERLAY_PIPE_OUT')
+                cube_model(bid + fs, {'front': f'{NS}:block/machine/{bid}_front{fs}', 'back': f'{NS}:block/machine/{bid}_back',
                                       'side': f'{NS}:block/machine/{bid}_side{fs}', 'top': f'{NS}:block/machine/{bid}_top{fs}',
                                       'bottom': f'{NS}:block/machine/{bid}_bottom{fs}'})
             facing_blockstate(bid, True)

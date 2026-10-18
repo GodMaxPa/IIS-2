@@ -13,6 +13,9 @@ import ru.iis.world.ore.OreBlocks;
 import ru.iis.core.item.MaterialItems;
 import ru.iis.tool.GtTools;
 import ru.iis.tool.HammerDrops;
+import ru.iis.fluid.IISFluids;
+import ru.iis.machine.IISMachines;
+import ru.iis.machine.recipe.GtRecipes;
 
 /**
  * Точка входа мода Ideal Industrial 2.0.
@@ -30,6 +33,10 @@ public final class IIS {
         MaterialItems.register(modEventBus);
         modEventBus.addListener(IISPacks::addPacks);
         GtTools.register(modEventBus);
+        IISFluids.register(modEventBus);
+        IISMachines.register(modEventBus);
+        GtRecipes.register(modEventBus, NeoForge.EVENT_BUS);
+        ru.iis.gametest.IISGameTests.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(HammerDrops::onBlockDrops);
         NeoForge.EVENT_BUS.addListener(IISCommand::register);
     }
