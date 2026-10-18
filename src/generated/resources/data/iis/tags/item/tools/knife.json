@@ -2,12 +2,17 @@
   "replace": false,
   "values": [
     "iis:knife_aluminium",
+    "iis:knife_amber",
+    "iis:knife_amethyst",
     "iis:knife_beryllium",
+    "iis:knife_blue_topaz",
     "iis:knife_bronze",
     "iis:knife_certus_quartz",
     "iis:knife_cobalt",
     "iis:knife_diamond",
     "iis:knife_emerald",
+    "iis:knife_garnet_red",
+    "iis:knife_garnet_yellow",
     "iis:knife_green_sapphire",
     "iis:knife_iron",
     "iis:knife_manganese",
@@ -15,7 +20,10 @@
     "iis:knife_nether_quartz",
     "iis:knife_nickel",
     "iis:knife_olivine",
+    "iis:knife_opal",
     "iis:knife_ruby",
-    "iis:knife_sapphire"
+    "iis:knife_sapphire",
+    "iis:knife_tanzanite",
+    "iis:knife_topaz"
   ]
 }

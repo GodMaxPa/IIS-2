@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/screwdriver_garnet_yellow",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6566400
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 13158480
+      }
+    ]
+  }
+}

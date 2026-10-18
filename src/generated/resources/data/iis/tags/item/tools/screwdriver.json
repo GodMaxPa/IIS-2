@@ -2,12 +2,17 @@
   "replace": false,
   "values": [
     "iis:screwdriver_aluminium",
+    "iis:screwdriver_amber",
+    "iis:screwdriver_amethyst",
     "iis:screwdriver_beryllium",
+    "iis:screwdriver_blue_topaz",
     "iis:screwdriver_bronze",
     "iis:screwdriver_certus_quartz",
     "iis:screwdriver_cobalt",
     "iis:screwdriver_diamond",
     "iis:screwdriver_emerald",
+    "iis:screwdriver_garnet_red",
+    "iis:screwdriver_garnet_yellow",
     "iis:screwdriver_green_sapphire",
     "iis:screwdriver_iron",
     "iis:screwdriver_manganese",
@@ -15,7 +20,10 @@
     "iis:screwdriver_nether_quartz",
     "iis:screwdriver_nickel",
     "iis:screwdriver_olivine",
+    "iis:screwdriver_opal",
     "iis:screwdriver_ruby",
-    "iis:screwdriver_sapphire"
+    "iis:screwdriver_sapphire",
+    "iis:screwdriver_tanzanite",
+    "iis:screwdriver_topaz"
   ]
 }

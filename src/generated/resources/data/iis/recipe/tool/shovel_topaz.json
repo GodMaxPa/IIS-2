@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/shovel/topaz",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:shovel_topaz"
+  }
+}

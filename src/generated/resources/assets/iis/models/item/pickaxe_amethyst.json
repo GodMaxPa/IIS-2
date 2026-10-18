@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "iis:item/materialicons/wood/stick",
+    "layer1": "iis:item/materialicons/flint/toolheadpickaxe",
+    "layer2": "iis:item/materialicons/flint/toolheadpickaxe_overlay"
+  }
+}

@@ -2,12 +2,17 @@
   "replace": false,
   "values": [
     "iis:shovel_aluminium",
+    "iis:shovel_amber",
+    "iis:shovel_amethyst",
     "iis:shovel_beryllium",
+    "iis:shovel_blue_topaz",
     "iis:shovel_bronze",
     "iis:shovel_certus_quartz",
     "iis:shovel_cobalt",
     "iis:shovel_diamond",
     "iis:shovel_emerald",
+    "iis:shovel_garnet_red",
+    "iis:shovel_garnet_yellow",
     "iis:shovel_green_sapphire",
     "iis:shovel_iron",
     "iis:shovel_manganese",
@@ -15,7 +20,10 @@
     "iis:shovel_nether_quartz",
     "iis:shovel_nickel",
     "iis:shovel_olivine",
+    "iis:shovel_opal",
     "iis:shovel_ruby",
-    "iis:shovel_sapphire"
+    "iis:shovel_sapphire",
+    "iis:shovel_tanzanite",
+    "iis:shovel_topaz"
   ]
 }

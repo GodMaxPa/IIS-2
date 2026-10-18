@@ -13,6 +13,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление альмандина",
     "formula": "Al2Fe3Si3O12",
     "types": 9,
     "subTags": [
@@ -45,6 +47,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление алюминиевой руды",
     "formula": "Al",
     "types": 235,
     "subTags": [
@@ -65,6 +69,82 @@
     "toolQuality": 2
   },
   {
+    "id": "amber",
+    "gtName": "Amber",
+    "gtId": 514,
+    "en": "Amber",
+    "ru": "Янтарь",
+    "ruOre": "Янтарная руда",
+    "color": 16744448,
+    "iconSet": "RUBY",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление янтарной руды",
+    "formula": "",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "amber",
+    "oreMultiplier": 2,
+    "smeltingMultiplier": 2,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "amber"
+    ],
+    "toolDurability": 128,
+    "toolSpeed": 4.0,
+    "toolQuality": 2
+  },
+  {
+    "id": "amethyst",
+    "gtName": "Amethyst",
+    "gtId": 509,
+    "en": "Amethyst",
+    "ru": "Аметист",
+    "ruOre": "Аметистовая руда",
+    "color": 13775570,
+    "iconSet": "FLINT",
+    "harvestLevel": 3,
+    "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление аметистовой руды",
+    "formula": "(SiO2)4Fe",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "amethyst",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "amethyst"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 7.0,
+    "toolQuality": 3
+  },
+  {
     "id": "antimony",
     "gtName": "Antimony",
     "gtId": 58,
@@ -75,6 +155,8 @@
     "iconSet": "SHINY",
     "harvestLevel": 2,
     "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление сурьмы",
     "formula": "Sb",
     "types": 35,
     "subTags": [
@@ -111,6 +193,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление апатита",
     "formula": "Ca5(PO4)3Cl",
     "types": 13,
     "subTags": [
@@ -149,6 +233,8 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление руды полосчатого железа",
     "formula": "Fe2O3",
     "types": 9,
     "subTags": [
@@ -179,6 +265,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление барита",
     "formula": "BaSO4",
     "types": 9,
     "subTags": [
@@ -208,6 +296,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление бастнезита",
     "formula": "CeCFO3",
     "types": 9,
     "subTags": [
@@ -241,6 +331,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление боксита",
     "formula": "(TiO2)2Al16H10O11",
     "types": 9,
     "subTags": [
@@ -275,6 +367,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Маленький бентонит",
     "formula": "NaMg6Si12H6(H2O)5O36",
     "types": 9,
     "subTags": [
@@ -309,6 +403,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление бериллиевой руды",
     "formula": "Be",
     "types": 107,
     "subTags": [
@@ -329,6 +425,78 @@
     "toolQuality": 2
   },
   {
+    "id": "bismuth",
+    "gtName": "Bismuth",
+    "gtId": 90,
+    "en": "Bismuth",
+    "ru": "Висмут",
+    "ruOre": "Висмутовая руда",
+    "color": 6594720,
+    "iconSet": "METALLIC",
+    "harvestLevel": 1,
+    "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление висмутовой руды",
+    "formula": "Bi",
+    "types": 235,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "bismuth",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 64,
+    "toolSpeed": 6.0,
+    "toolQuality": 1
+  },
+  {
+    "id": "blue_topaz",
+    "gtName": "BlueTopaz",
+    "gtId": 513,
+    "en": "Blue Topaz",
+    "ru": "Синий топаз",
+    "ruOre": "Руда синего топаза",
+    "color": 255,
+    "iconSet": "GEM_HORIZONTAL",
+    "harvestLevel": 3,
+    "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление руды синего топаза",
+    "formula": "Al2SiF2H2O6",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "blue_topaz",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "topaz"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 7.0,
+    "toolQuality": 3
+  },
+  {
     "id": "bronze",
     "gtName": "Bronze",
     "gtId": 300,
@@ -339,6 +507,8 @@
     "iconSet": "METALLIC",
     "harvestLevel": 2,
     "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление бронзовой руды",
     "formula": "SnCu3",
     "types": 195,
     "subTags": [
@@ -375,6 +545,8 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление коричневого лимонита",
     "formula": "FeHO2",
     "types": 9,
     "subTags": [
@@ -410,6 +582,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление кальцита",
     "formula": "CaCO3",
     "types": 9,
     "subTags": [
@@ -442,6 +616,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление касситерита",
     "formula": "SnO2",
     "types": 8,
     "subTags": [
@@ -473,6 +649,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление истинного кварца",
     "formula": "",
     "types": 77,
     "subTags": [
@@ -511,6 +689,8 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление халькопирита",
     "formula": "CuFeS2",
     "types": 9,
     "subTags": [
@@ -548,6 +728,8 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление киновари",
     "formula": "HgS",
     "types": 9,
     "subTags": [
@@ -583,6 +765,11 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate"
+    ],
+    "ruSmallOre": "Вкрапление угля",
     "formula": "C",
     "types": 13,
     "subTags": [
@@ -616,6 +803,8 @@
     "iconSet": "METALLIC",
     "harvestLevel": 3,
     "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
     "formula": "Co",
     "types": 99,
     "subTags": [
@@ -652,6 +841,8 @@
       "netherrack",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление кобальтина",
     "formula": "CoAsS",
     "types": 9,
     "subTags": [
@@ -685,6 +876,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление шелдонита",
     "formula": "Pt3NiSPd",
     "types": 9,
     "subTags": [
@@ -721,6 +914,13 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ],
+    "ruSmallOre": "Вкрапление медной руды",
     "formula": "Cu",
     "types": 171,
     "subTags": [
@@ -758,6 +958,12 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление алмазной руды",
     "formula": "C",
     "types": 205,
     "subTags": [
@@ -795,6 +1001,12 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление изумрудной руды",
     "formula": "Be3Al2Si6O18",
     "types": 77,
     "subTags": [
@@ -818,6 +1030,38 @@
     "toolQuality": 2
   },
   {
+    "id": "endstone",
+    "gtName": "Endstone",
+    "gtId": 808,
+    "en": "Endstone",
+    "ru": "Эндерняк",
+    "ruOre": null,
+    "color": 16777215,
+    "iconSet": "DULL",
+    "harvestLevel": 1,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "",
+    "types": 1,
+    "subTags": [
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "STONE"
+    ],
+    "directSmelting": "endstone",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "helium_3"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
+  },
+  {
     "id": "flint",
     "gtName": "Flint",
     "gtId": 802,
@@ -828,6 +1072,8 @@
     "iconSet": "FLINT",
     "harvestLevel": 1,
     "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
     "formula": "SiO2",
     "types": 65,
     "subTags": [
@@ -849,6 +1095,44 @@
     "toolQuality": 1
   },
   {
+    "id": "fools_ruby",
+    "gtName": "FoolsRuby",
+    "gtId": 512,
+    "en": "Ruby",
+    "ru": "Рубин",
+    "ruOre": "Рубиновая руда",
+    "color": 16737380,
+    "iconSet": "RUBY",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление рубиновой руды",
+    "formula": "CrAl2O3",
+    "types": 13,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "fools_ruby",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "jasper"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
     "id": "galena",
     "gtName": "Galena",
     "gtId": 830,
@@ -862,6 +1146,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление галенита",
     "formula": "Pb3Ag3S2",
     "types": 9,
     "subTags": [
@@ -883,6 +1169,86 @@
     "toolQuality": 3
   },
   {
+    "id": "garnet_red",
+    "gtName": "GarnetRed",
+    "gtId": 527,
+    "en": "Red Garnet",
+    "ru": "Красный гранат",
+    "ruOre": "Руда красного граната",
+    "color": 13127760,
+    "iconSet": "RUBY",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление руды красного граната",
+    "formula": "(Al2Mg3Si3O12)3(Al2Fe3Si3O12)5(Al2Mn3Si3O12)8",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "garnet_red",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "spessartine",
+      "pyrope",
+      "almandine"
+    ],
+    "toolDurability": 128,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
+  },
+  {
+    "id": "garnet_yellow",
+    "gtName": "GarnetYellow",
+    "gtId": 528,
+    "en": "Yellow Garnet",
+    "ru": "Жёлтый гранат",
+    "ruOre": "Руда жёлтого граната",
+    "color": 13158480,
+    "iconSet": "RUBY",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление руды жёлтого граната",
+    "formula": "(Ca3Fe2Si3O12)5(Ca3Al2Si3O12)8(Ca3Cr2Si3O12)3",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "garnet_yellow",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "andradite",
+      "grossular",
+      "uvarovite"
+    ],
+    "toolDurability": 128,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
+  },
+  {
     "id": "garnierite",
     "gtName": "Garnierite",
     "gtId": 906,
@@ -898,6 +1264,8 @@
       "netherrack",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление гарниерита",
     "formula": "NiO",
     "types": 9,
     "subTags": [
@@ -930,6 +1298,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление глауконита",
     "formula": "KMg2Al4H2O12",
     "types": 9,
     "subTags": [
@@ -964,6 +1334,13 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ],
+    "ruSmallOre": "Вкрапление золотой руды",
     "formula": "Au",
     "types": 235,
     "subTags": [
@@ -1000,6 +1377,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление графита",
     "formula": "",
     "types": 89,
     "subTags": [
@@ -1034,6 +1413,12 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление руды зелёного сапфира",
     "formula": "Al2O3",
     "types": 77,
     "subTags": [
@@ -1071,6 +1456,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление гроссуляра",
     "formula": "Ca3Al2Si3O12",
     "types": 9,
     "subTags": [
@@ -1103,6 +1490,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление ильменита",
     "formula": "FeTiO3",
     "types": 9,
     "subTags": [
@@ -1137,6 +1526,10 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [
+      "end_stone"
+    ],
+    "ruSmallOre": "Вкрапление иридиевой руды",
     "formula": "Ir",
     "types": 235,
     "subTags": [
@@ -1172,6 +1565,13 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ],
+    "ruSmallOre": "Вкрапление железной руды",
     "formula": "Fe",
     "types": 235,
     "subTags": [
@@ -1195,6 +1595,42 @@
     "toolQuality": 2
   },
   {
+    "id": "jasper",
+    "gtName": "Jasper",
+    "gtId": 511,
+    "en": "Jasper",
+    "ru": "Яшма",
+    "ruOre": "Яшмовая руда",
+    "color": 13127760,
+    "iconSet": "EMERALD",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление яшмовой руды",
+    "formula": "",
+    "types": 13,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "jasper",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
     "id": "lapis",
     "gtName": "Lapis",
     "gtId": 526,
@@ -1209,6 +1645,11 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate"
+    ],
+    "ruSmallOre": "Вкрапление ляпис-лазури",
     "formula": "(Al6Si6Ca8Na8)12(Al3Si3Na4Cl)2FeS2CaCO3",
     "types": 13,
     "subTags": [
@@ -1247,6 +1688,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление лазурита",
     "formula": "Al6Si6Ca8Na8",
     "types": 13,
     "subTags": [
@@ -1283,6 +1726,13 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ],
+    "ruSmallOre": "Вкрапление свинцовой руды",
     "formula": "Pb",
     "types": 235,
     "subTags": [
@@ -1320,6 +1770,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление лепидолита",
     "formula": "KLi3Al4F2O10",
     "types": 9,
     "subTags": [
@@ -1353,6 +1805,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление бурого угля",
     "formula": "C3H2O",
     "types": 13,
     "subTags": [
@@ -1389,6 +1843,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление литиевой руда",
     "formula": "Li",
     "types": 43,
     "subTags": [
@@ -1422,6 +1878,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление магнезита",
     "formula": "MgCO3",
     "types": 9,
     "subTags": [
@@ -1451,6 +1909,8 @@
     "iconSet": "METALLIC",
     "harvestLevel": 2,
     "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление магниевой руды",
     "formula": "Mg",
     "types": 35,
     "subTags": [
@@ -1485,6 +1945,8 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление магнетита",
     "formula": "Fe3O4",
     "types": 9,
     "subTags": [
@@ -1520,6 +1982,8 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление малахита",
     "formula": "Cu2CH2O5",
     "types": 9,
     "subTags": [
@@ -1551,6 +2015,8 @@
     "iconSet": "DULL",
     "harvestLevel": 2,
     "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление марганцевой руды",
     "formula": "Mn",
     "types": 107,
     "subTags": [
@@ -1583,6 +2049,8 @@
     "iconSet": "SHINY",
     "harvestLevel": 0,
     "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление ртути",
     "formula": null,
     "types": 48,
     "subTags": [
@@ -1615,6 +2083,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление молибденита",
     "formula": "MoS2",
     "types": 9,
     "subTags": [
@@ -1648,6 +2118,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление молибденовой руды",
     "formula": "Mo",
     "types": 107,
     "subTags": [
@@ -1679,6 +2151,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление монацита",
     "formula": "(Nd,Y,La,Ce,Cd,Cs)PO4",
     "types": 13,
     "subTags": [
@@ -1717,6 +2191,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление неодимовой руды",
     "formula": "Nd",
     "types": 235,
     "subTags": [
@@ -1750,6 +2226,10 @@
     "hosts": [
       "netherrack"
     ],
+    "smallHosts": [
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление кварца Нижнего мира",
     "formula": "",
     "types": 77,
     "subTags": [
@@ -1773,6 +2253,40 @@
     "toolQuality": 1
   },
   {
+    "id": "netherrack",
+    "gtName": "Netherrack",
+    "gtId": 807,
+    "en": "Netherrack",
+    "ru": "Незеррак",
+    "ruOre": null,
+    "color": 13107200,
+    "iconSet": "DULL",
+    "harvestLevel": 0,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "",
+    "types": 1,
+    "subTags": [
+      "FLAMMABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "STONE",
+      "UNBURNABLE"
+    ],
+    "directSmelting": "netherrack",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "sulfur"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 0
+  },
+  {
     "id": "nickel",
     "gtName": "Nickel",
     "gtId": 34,
@@ -1788,6 +2302,13 @@
       "netherrack",
       "end_stone"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ],
+    "ruSmallOre": "Вкрапление никелевой руды",
     "formula": "Ni",
     "types": 235,
     "subTags": [
@@ -1826,6 +2347,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Нефтеносные пески",
     "formula": "",
     "types": 9,
     "subTags": [
@@ -1856,6 +2379,12 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление оливиновой руды",
     "formula": "Mg2Fe(SiO2)2",
     "types": 77,
     "subTags": [
@@ -1879,6 +2408,44 @@
     "toolQuality": 2
   },
   {
+    "id": "opal",
+    "gtName": "Opal",
+    "gtId": 510,
+    "en": "Opal",
+    "ru": "Опал",
+    "ruOre": "Опаловая руда",
+    "color": 255,
+    "iconSet": "OPAL",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление опаловой руды",
+    "formula": "SiO2",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "opal",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "tanzanite"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
+  },
+  {
     "id": "palladium",
     "gtName": "Palladium",
     "gtId": 52,
@@ -1893,6 +2460,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление палладиевой руды",
     "formula": "Pd",
     "types": 235,
     "subTags": [
@@ -1926,6 +2495,8 @@
       "netherrack",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление пентландита",
     "formula": "Ni9S8",
     "types": 9,
     "subTags": [
@@ -1961,6 +2532,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление настурана",
     "formula": "(UO2)3ThPb",
     "types": 9,
     "subTags": [
@@ -1995,6 +2568,10 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [
+      "end_stone"
+    ],
+    "ruSmallOre": "Вкрапление платиновой руды",
     "formula": "Pt",
     "types": 235,
     "subTags": [
@@ -2031,6 +2608,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление поввеллита",
     "formula": "CaMoO4",
     "types": 9,
     "subTags": [
@@ -2061,6 +2640,8 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление пирита",
     "formula": "FeS2",
     "types": 9,
     "subTags": [
@@ -2097,6 +2678,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление пирохлора",
     "formula": "Ca2Nb2O7",
     "types": 9,
     "subTags": [
@@ -2131,6 +2714,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление пиролюзита",
     "formula": "MnO2",
     "types": 9,
     "subTags": [
@@ -2164,6 +2749,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление пиропа",
     "formula": "Al2Mg3Si3O12",
     "types": 9,
     "subTags": [
@@ -2196,6 +2783,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление кварцита",
     "formula": "SiO2",
     "types": 13,
     "subTags": [
@@ -2234,6 +2823,12 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление красной пыли",
     "formula": null,
     "types": 9,
     "subTags": [
@@ -2272,6 +2867,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление каменной соли",
     "formula": "KCl",
     "types": 9,
     "subTags": [
@@ -2307,6 +2904,12 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление рубиновой руды",
     "formula": "CrAl2O3",
     "types": 77,
     "subTags": [
@@ -2343,6 +2946,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление соли",
     "formula": "NaCl",
     "types": 9,
     "subTags": [
@@ -2365,6 +2970,41 @@
     "toolQuality": 1
   },
   {
+    "id": "saltpeter",
+    "gtName": "Saltpeter",
+    "gtId": 836,
+    "en": "Saltpeter",
+    "ru": "Селитра",
+    "ruOre": "Селитра",
+    "color": 15132390,
+    "iconSet": "FINE",
+    "harvestLevel": 1,
+    "hosts": [],
+    "smallHosts": [
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление селитры",
+    "formula": "KNO3",
+    "types": 9,
+    "subTags": [
+      "FLAMMABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING"
+    ],
+    "directSmelting": "saltpeter",
+    "oreMultiplier": 4,
+    "smeltingMultiplier": 4,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "saltpeter"
+    ],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 1
+  },
+  {
     "id": "sapphire",
     "gtName": "Sapphire",
     "gtId": 503,
@@ -2378,6 +3018,12 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление сапфировой руды",
     "formula": "Al2O3",
     "types": 77,
     "subTags": [
@@ -2415,6 +3061,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление шеелита",
     "formula": "CaWO4",
     "types": 9,
     "subTags": [
@@ -2448,6 +3096,13 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ],
+    "ruSmallOre": "Вкрапление серебряной руды",
     "formula": "Ag",
     "types": 235,
     "subTags": [
@@ -2484,6 +3139,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление талькохлорита",
     "formula": "Mg3Si4H2O12",
     "types": 9,
     "subTags": [
@@ -2514,6 +3171,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление содалита",
     "formula": "Al3Si3Na4Cl",
     "types": 13,
     "subTags": [
@@ -2551,6 +3210,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление спессартина",
     "formula": "Al2Mn3Si3O12",
     "types": 9,
     "subTags": [
@@ -2582,6 +3243,8 @@
     "hosts": [
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление сфалерита",
     "formula": "ZnS",
     "types": 9,
     "subTags": [
@@ -2617,6 +3280,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление сподумена",
     "formula": "LiAlSi2O6",
     "types": 9,
     "subTags": [
@@ -2650,6 +3315,8 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление антимонита",
     "formula": "Sb2S3",
     "types": 9,
     "subTags": [
@@ -2668,6 +3335,37 @@
     "toolQuality": 2
   },
   {
+    "id": "stone",
+    "gtName": "Stone",
+    "gtId": 299,
+    "en": "Stone",
+    "ru": "Камень",
+    "ruOre": "Каменная руда",
+    "color": 13487565,
+    "iconSet": "ROUGH",
+    "harvestLevel": 1,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление каменной руды",
+    "formula": "",
+    "types": 193,
+    "subTags": [
+      "HAS_COLOR",
+      "NO_RECYCLING",
+      "NO_SMASHING",
+      "STONE"
+    ],
+    "directSmelting": "stone",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 32,
+    "toolSpeed": 4.0,
+    "toolQuality": 1
+  },
+  {
     "id": "sulfur",
     "gtName": "Sulfur",
     "gtId": 22,
@@ -2680,6 +3378,12 @@
     "hosts": [
       "netherrack"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление серы",
     "formula": "S",
     "types": 41,
     "subTags": [
@@ -2714,6 +3418,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление талька",
     "formula": "Mg3Si4H2O12",
     "types": 9,
     "subTags": [
@@ -2744,6 +3450,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление танталита",
     "formula": "MnTa2O6",
     "types": 9,
     "subTags": [
@@ -2764,6 +3472,44 @@
     "toolQuality": 3
   },
   {
+    "id": "tanzanite",
+    "gtName": "Tanzanite",
+    "gtId": 508,
+    "en": "Tanzanite",
+    "ru": "Танзанит",
+    "ruOre": "Танзанитовая руда",
+    "color": 4194504,
+    "iconSet": "GEM_VERTICAL",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление танзанитовой руды",
+    "formula": "Ca2Al3Si3HO13",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "tanzanite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "opal"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 7.0,
+    "toolQuality": 2
+  },
+  {
     "id": "tetrahedrite",
     "gtName": "Tetrahedrite",
     "gtId": 840,
@@ -2778,6 +3524,8 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление тетраэдрита",
     "formula": "Cu3SbS3Fe",
     "types": 9,
     "subTags": [
@@ -2814,6 +3562,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление ториевой руды",
     "formula": "Th",
     "types": 107,
     "subTags": [
@@ -2848,6 +3598,13 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ],
+    "ruSmallOre": "Вкрапление оловянной руды",
     "formula": "Sn",
     "types": 171,
     "subTags": [
@@ -2872,6 +3629,44 @@
     "toolQuality": 1
   },
   {
+    "id": "topaz",
+    "gtName": "Topaz",
+    "gtId": 507,
+    "en": "Topaz",
+    "ru": "Топаз",
+    "ruOre": "Топазная руда",
+    "color": 16744448,
+    "iconSet": "GEM_HORIZONTAL",
+    "harvestLevel": 3,
+    "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack"
+    ],
+    "ruSmallOre": "Вкрапление топазной руды",
+    "formula": "Al2SiF2H2O6",
+    "types": 77,
+    "subTags": [
+      "CRYSTAL",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "NO_SMELTING",
+      "TRANSPARENT"
+    ],
+    "directSmelting": "topaz",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "blue_topaz"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 7.0,
+    "toolQuality": 3
+  },
+  {
     "id": "tricalcium_phosphate",
     "gtName": "TricalciumPhosphate",
     "gtId": 534,
@@ -2885,6 +3680,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление трикальцийфосфата",
     "formula": "Ca3(PO4)2",
     "types": 29,
     "subTags": [
@@ -2924,6 +3721,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление вольфрамата",
     "formula": "WLi2O4",
     "types": 9,
     "subTags": [
@@ -2957,6 +3756,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление уранинита",
     "formula": "UO2",
     "types": 9,
     "subTags": [
@@ -2990,6 +3791,8 @@
       "stone",
       "deepslate"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление руды урана-238",
     "formula": "U",
     "types": 107,
     "subTags": [
@@ -3026,6 +3829,8 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление ванадий-магнетита",
     "formula": "Fe3O4V",
     "types": 9,
     "subTags": [
@@ -3056,6 +3861,8 @@
     "iconSet": "WOOD",
     "harvestLevel": 0,
     "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
     "formula": "",
     "types": 195,
     "subTags": [
@@ -3091,6 +3898,8 @@
       "deepslate",
       "end_stone"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление вульфенита",
     "formula": "PbMoO4",
     "types": 9,
     "subTags": [
@@ -3121,6 +3930,8 @@
       "deepslate",
       "netherrack"
     ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление лимонита",
     "formula": "FeHO2",
     "types": 9,
     "subTags": [
@@ -3154,6 +3965,13 @@
     "iconSet": "METALLIC",
     "harvestLevel": 1,
     "hosts": [],
+    "smallHosts": [
+      "stone",
+      "deepslate",
+      "netherrack",
+      "end_stone"
+    ],
+    "ruSmallOre": "Вкрапление цинковой руды",
     "formula": "Zn",
     "types": 43,
     "subTags": [

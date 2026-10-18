@@ -35,6 +35,9 @@ public enum OreHost {
     /** ID блока руды: ore_iron, deepslate_ore_iron, nether_ore_iron, end_ore_iron. */
     public String blockId(String materialId) { return prefix + "ore_" + materialId; }
 
+    /** ID блока малой руды: small_ore_iron, deepslate_small_ore_iron, ... */
+    public String smallBlockId(String materialId) { return prefix + "small_ore_" + materialId; }
+
     public static OreHost byId(String id) {
         for (OreHost h : values()) if (h.id.equals(id)) return h;
         throw new IllegalArgumentException("Unknown ore host " + id);

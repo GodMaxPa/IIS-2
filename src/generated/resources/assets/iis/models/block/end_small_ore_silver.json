@@ -1,0 +1,7 @@
+{
+  "parent": "iis:block/ore_template",
+  "textures": {
+    "base": "minecraft:block/end_stone",
+    "overlay": "iis:block/ore_small/shiny"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/screw_tanzanite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 4194504
+      }
+    ]
+  }
+}

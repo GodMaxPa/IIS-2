@@ -25,6 +25,25 @@ public final class MaterialData {
     private static List<FormItem> items;
     private static List<ToolDef> tools;
     private static Map<String, String> forms;
+    private static List<SmallOre> smallOres;
+
+    /** Малая руда GT5 (GT_Worldgen_GT_Ore_SmallPieces): сколько вкраплений на чанк и на каких высотах. */
+    public record SmallOre(String name, int minY, int maxY, int amount, String material, Set<String> dimensions) {}
+
+    public static synchronized List<SmallOre> smallOres() {
+        if (smallOres == null) {
+            List<SmallOre> out = new ArrayList<>();
+            for (JsonElement e : read("/iis/small_ores.json")) {
+                JsonObject o = e.getAsJsonObject();
+                Set<String> dims = new HashSet<>();
+                o.getAsJsonArray("dimensions").forEach(d -> dims.add(d.getAsString()));
+                out.add(new SmallOre(o.get("name").getAsString(), o.get("minY").getAsInt(), o.get("maxY").getAsInt(),
+                        o.get("amount").getAsInt(), o.get("material").getAsString(), Set.copyOf(dims)));
+            }
+            smallOres = List.copyOf(out);
+        }
+        return smallOres;
+    }
 
     /** Предмет-форма материала (дроблёная руда, пыль, слиток...), который регистрирует мод. */
     public record FormItem(String id, String prefix, String material) {}
@@ -108,11 +127,13 @@ public final class MaterialData {
             JsonObject o = e.getAsJsonObject();
             List<String> hosts = new ArrayList<>();
             o.getAsJsonArray("hosts").forEach(h -> hosts.add(h.getAsString()));
+            List<String> smallHosts = new ArrayList<>();
+            o.getAsJsonArray("smallHosts").forEach(h -> smallHosts.add(h.getAsString()));
             List<String> subTags = new ArrayList<>();
             o.getAsJsonArray("subTags").forEach(h -> subTags.add(h.getAsString()));
             IISMaterial m = new IISMaterial(o.get("id").getAsString(), o.get("gtName").getAsString(),
                     o.get("en").getAsString(), o.get("ru").getAsString(), o.get("color").getAsInt(),
-                    o.get("iconSet").getAsString(), o.get("harvestLevel").getAsInt(), hosts, str(o, "formula"),
+                    o.get("iconSet").getAsString(), o.get("harvestLevel").getAsInt(), hosts, smallHosts, str(o, "formula"),
                     o.get("directSmelting").getAsString(), o.get("oreMultiplier").getAsInt(), subTags);
             if (!ids.add(m.id())) throw new IllegalStateException("Duplicate material " + m.id());
             out.add(m);

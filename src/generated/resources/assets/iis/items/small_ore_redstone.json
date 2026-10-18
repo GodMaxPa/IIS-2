@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/small_ore_redstone",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13107200
+      }
+    ]
+  }
+}

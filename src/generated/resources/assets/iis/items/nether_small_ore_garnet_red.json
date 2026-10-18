@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/nether_small_ore_garnet_red",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13127760
+      }
+    ]
+  }
+}

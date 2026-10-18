@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/topaz",
+    "#iis:tiny_dusts/topaz",
+    "#iis:tiny_dusts/topaz",
+    "#iis:tiny_dusts/topaz",
+    "#iis:tiny_dusts/topaz",
+    "#iis:tiny_dusts/topaz",
+    "#iis:tiny_dusts/topaz",
+    "#iis:tiny_dusts/topaz",
+    "#iis:tiny_dusts/topaz"
+  ],
+  "result": {
+    "id": "iis:dust_topaz"
+  }
+}

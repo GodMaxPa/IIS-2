@@ -18,10 +18,12 @@ public final class IISClient {
     }
 
     private static void registerBlockTints(RegisterColorHandlersEvent.BlockTintSources event) {
-        OreBlocks.all().forEach((materialId, byHost) -> {
+        java.util.function.BiConsumer<String, java.util.EnumMap<ru.iis.world.ore.OreHost, net.neoforged.neoforge.registries.DeferredBlock<net.minecraft.world.level.block.Block>>> tint = (materialId, byHost) -> {
             IISMaterial m = OreBlocks.material(materialId);
             int argb = 0xFF000000 | m.color();
             byHost.values().forEach(b -> event.register(List.of(BlockTintSources.constant(argb)), b.get()));
-        });
+        };
+        OreBlocks.all().forEach(tint);
+        OreBlocks.allSmall().forEach(tint);
     }
 }

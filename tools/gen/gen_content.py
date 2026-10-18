@@ -45,6 +45,7 @@ def snake(name):
 code = {m['name']: m for m in json.load(open(os.path.join(REF, 'gt5_materials.json'), encoding='utf-8'))}
 props = json.load(open(os.path.join(REF, 'iis_material_properties.json'), encoding='utf-8'))
 veins_src = json.load(open(os.path.join(REF, 'iis_ore_veins.json'), encoding='utf-8'))
+small_src = json.load(open(os.path.join(REF, 'iis_small_ores.json'), encoding='utf-8'))
 ru = json.load(open(os.path.join(REF, 'gt5_lang_ru_materials.json'), encoding='utf-8'))
 ru_ore = ru.pop('__ore_names__', {})
 ru_meta = ru.pop('__metaitems__', {})
@@ -102,10 +103,22 @@ for v in veins_src:
                   'legacyMinY': v['minY'], 'legacyMaxY': v['maxY'], 'weight': v['weight'], 'density': v['density'],
                   'size': v['size'], **{k: (f'{NS}:{snake(v[k])}' if v[k] else None) for k in LAYERS}, 'dimensions': dims})
 
+# Small ores (GT_Worldgen_GT_Ore_SmallPieces): same height stretch; heights clamped to the modern world
+small_ores, small_dims = [], {}
+for so in small_src:
+    dims = sorted({DIM_MAP[d] for d in so['dimensions'] if d in DIM_MAP})
+    if not dims or not so['material']:
+        continue
+    for d in dims:
+        small_dims.setdefault(so['material'], set()).add(d)
+    small_ores.append({'name': so['name'], 'minY': max(-64, round(so['minY'] * 1.6) - 64),
+                       'maxY': min(319, round(so['maxY'] * 1.6) - 64), 'amount': so['amount'],
+                       'material': f"{NS}:{snake(so['material'])}", 'dimensions': dims})
+
 # ----------------------------------------------------------------------------------------------------------------
 # Material set of this slice: ore materials, what they smelt into, bronze (alloy) and flint (mortar)
 # ----------------------------------------------------------------------------------------------------------------
-names = set(ore_dims)
+names = set(ore_dims) | set(small_dims) | {'Stone', 'Netherrack', 'Endstone'}  # host rock dusts drop from small ores
 for n in list(names):
     ds = prop(n, 'MaterialDirectSmeltInto')
     if ds and ds in code:
@@ -265,13 +278,17 @@ for n in sorted(names):
     dims = ore_dims.get(n, set())
     hosts = (['stone', 'deepslate'] if 'overworld' in dims else []) + (['netherrack'] if 'nether' in dims else []) \
         + (['end_stone'] if 'end' in dims else [])
+    sdims = small_dims.get(n, set())
+    small_hosts = (['stone', 'deepslate'] if 'overworld' in sdims else []) + (['netherrack'] if 'nether' in sdims else []) \
+        + (['end_stone'] if 'end' in sdims else [])
     formula = ru_meta.get(f"01.{2000 + m['id']}", {}).get('tooltip')
     ds = prop(n, 'MaterialDirectSmeltInto', n)
     materials.append({
         'id': mat_id(n), 'gtName': n, 'gtId': m['id'], 'en': m.get('localName') or n,
         'ru': ru.get(n.lower()) or m.get('localName') or n, 'ruOre': ru_ore.get(str(m['id'])),
         'color': (rgba[0] << 16) | (rgba[1] << 8) | rgba[2], 'iconSet': iset,
-        'harvestLevel': max(0, min(7, int(prop(n, 'ToolQuality', 1)))), 'hosts': hosts, 'formula': formula,
+        'harvestLevel': max(0, min(7, int(prop(n, 'ToolQuality', 1)))), 'hosts': hosts, 'smallHosts': small_hosts,
+        'ruSmallOre': ru_ore.get(str(16000 + m['id'])), 'formula': formula,
         'types': prop(n, 'MaterialTypes', 0), 'subTags': sorted(subtags(n)),
         'directSmelting': mat_id(ds) if ds in code else mat_id(n),
         'oreMultiplier': prop(n, 'OreMultiplier', 1), 'smeltingMultiplier': prop(n, 'OreSmeltingMultiplier', 1),
@@ -282,6 +299,7 @@ for n in sorted(names):
 mat_by_name = {m['gtName']: m for m in materials}
 write(os.path.join(RES, NS, 'materials.json'), materials)
 write(os.path.join(RES, NS, 'veins.json'), veins)
+write(os.path.join(RES, NS, 'small_ores.json'), small_ores)
 write(os.path.join(RES, NS, 'items.json'), items)
 write(os.path.join(RES, NS, 'tools.json'), tools)
 # every (form, material) -> item id, including vanilla items that take GT's place (used by code: hammer drops, cauldron)
@@ -357,6 +375,56 @@ for m in materials:
         block_tags['iis:ores'].append(f'{NS}:{bid}')
         add_item_tag(f'iis:ores/{m["id"]}', f'{NS}:{bid}')
         lvl = m['harvestLevel']
+        if lvl == 1:
+            block_tags['minecraft:needs_stone_tool'].append(f'{NS}:{bid}')
+        elif lvl == 2:
+            block_tags['minecraft:needs_iron_tool'].append(f'{NS}:{bid}')
+        elif lvl >= 3:
+            block_tags['minecraft:needs_diamond_tool'].append(f'{NS}:{bid}')
+
+# --- small ores (GT_TileEntity_Ores meta >= 16000): random gems/crushed/impure dust, sometimes host rock dust ---
+TEX_SMALL = os.path.join(TEX, 'ore_small')
+small_sets = {f[:-4] for f in os.listdir(TEX_SMALL) if f.endswith('.png')}
+for s_ in small_sets:
+    copy_tex(os.path.join(TEX_SMALL, s_ + '.png'), f'block/ore_small/{s_.lower()}.png')
+HOST_DUST = {'stone': 'Stone', 'deepslate': 'Stone', 'netherrack': 'Netherrack', 'end_stone': 'Endstone'}
+block_tags['iis:small_ores'] = []
+small_blocks = []
+for m in materials:
+    n = m['gtName']
+    for h in m['smallHosts']:
+        host = HOSTS[h]
+        bid = f"{host['prefix']}small_ore_{m['id']}"
+        small_blocks.append((bid, n, h))
+        iset = m['iconSet'] if m['iconSet'] in small_sets else 'DULL'
+        write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': {'': {'model': f'{NS}:block/{bid}'}}})
+        write(os.path.join(A, 'models', 'block', bid + '.json'), {'parent': f'{NS}:block/ore_template',
+              'textures': {'base': host['tex'], 'overlay': f"{NS}:block/ore_small/{iset.lower()}"}})
+        write(os.path.join(A, 'items', bid + '.json'), {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/{bid}',
+              'tints': [{'type': 'minecraft:constant', 'value': m['color']}]}})
+        lang['en_us'][f'block.{NS}.{bid}'] = f"Small {host['en']}{m['en']} Ore"
+        lang['ru_ru'][f'block.{NS}.{bid}'] = f"{m['ruSmallOre'] or 'Вкрапление: ' + m['ru']}{host['ru']}"
+        # GT selector: exquisite(1)/flawless(2)/gem(12) -> gem; flawed(5) -> crushed; crushed(10); chipped(5) -> impure; impure(10)
+        weights = {}
+        gem = item_ref.get(('gem', n))
+        crushed = item_ref.get(('crushed', n))
+        impure = item_ref.get(('impure_dust', n))
+        if gem: weights[gem] = weights.get(gem, 0) + 15
+        if crushed: weights[crushed] = weights.get(crushed, 0) + 15
+        elif gem: weights[gem] += 5
+        if impure: weights[impure] = weights.get(impure, 0) + 15
+        elif gem: weights[gem] += 5
+        pools = [{'rolls': max(1, prop(n, 'OreMultiplier', 1)), 'bonus_rolls': 0.0,
+                  'entries': [{'type': 'minecraft:item', 'name': i, 'weight': w} for i, w in weights.items()]}]
+        host_dust = item_ref.get(('dust', HOST_DUST[h]))
+        if host_dust:
+            pools.append({'rolls': 1.0, 'bonus_rolls': 0.0, 'conditions': [{'condition': 'minecraft:random_chance', 'chance': 0.3333}],
+                          'entries': [{'type': 'minecraft:item', 'name': host_dust}]})
+        write(os.path.join(D, NS, 'loot_table', 'blocks', bid + '.json'), {'type': 'minecraft:block', 'random_sequence': f'{NS}:blocks/{bid}',
+              'pools': [dict(p, conditions=p.get('conditions', []) + [{'condition': 'minecraft:survives_explosion'}]) for p in pools]})
+        block_tags['minecraft:mineable/pickaxe'].append(f'{NS}:{bid}')
+        block_tags['iis:small_ores'].append(f'{NS}:{bid}')
+        lvl = max(0, m['harvestLevel'] - 1)  # GT: small ores are one harvest level lower
         if lvl == 1:
             block_tags['minecraft:needs_stone_tool'].append(f'{NS}:{bid}')
         elif lvl == 2:
@@ -691,5 +759,5 @@ for n in ('overworld', 'large_biomes', 'amplified'):  # large noise-based iron/c
     s['ore_veins_enabled'] = False
     write(os.path.join(OVR, 'data', 'minecraft', 'worldgen', 'noise_settings', n + '.json'), s)
 
-print(f'{len(materials)} materials, {len(ore_blocks)} ore blocks, {len(veins)} veins, {len(items)} items, '
+print(f'{len(materials)} materials, {len(ore_blocks)} ore blocks, {len(small_blocks)} small ore blocks, {len(veins)} veins, {len(items)} items, '
       f'{len(tools)} tools ({", ".join(tool_mats)} + mortars), {len(recipes)} recipes')

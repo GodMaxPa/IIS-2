@@ -12,6 +12,30 @@
     "kind": "sword"
   },
   {
+    "id": "sword_amber",
+    "tool": "sword",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 4.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_amethyst",
+    "tool": "sword",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "sword"
+  },
+  {
     "id": "sword_beryllium",
     "tool": "sword",
     "material": "beryllium",
@@ -21,6 +45,18 @@
     "craftDamage": 2,
     "speed": 14.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_blue_topaz",
+    "tool": "sword",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "sword"
   },
   {
@@ -77,6 +113,30 @@
     "material": "emerald",
     "handle": "wood",
     "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_garnet_red",
+    "tool": "sword",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_garnet_yellow",
+    "tool": "sword",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
     "blockDamage": 4,
     "craftDamage": 2,
     "speed": 7.0,
@@ -168,6 +228,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_opal",
+    "tool": "sword",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "sword_ruby",
     "tool": "sword",
     "material": "ruby",
@@ -192,6 +264,30 @@
     "kind": "sword"
   },
   {
+    "id": "sword_tanzanite",
+    "tool": "sword",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_topaz",
+    "tool": "sword",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "sword"
+  },
+  {
     "id": "pickaxe_aluminium",
     "tool": "pickaxe",
     "material": "aluminium",
@@ -204,6 +300,30 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_amber",
+    "tool": "pickaxe",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 4.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_amethyst",
+    "tool": "pickaxe",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_beryllium",
     "tool": "pickaxe",
     "material": "beryllium",
@@ -213,6 +333,18 @@
     "craftDamage": 2,
     "speed": 14.0,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_blue_topaz",
+    "tool": "pickaxe",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "pickaxe"
   },
   {
@@ -269,6 +401,30 @@
     "material": "emerald",
     "handle": "wood",
     "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_garnet_red",
+    "tool": "pickaxe",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_garnet_yellow",
+    "tool": "pickaxe",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 7.0,
@@ -360,6 +516,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_opal",
+    "tool": "pickaxe",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_ruby",
     "tool": "pickaxe",
     "material": "ruby",
@@ -384,6 +552,30 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_tanzanite",
+    "tool": "pickaxe",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_topaz",
+    "tool": "pickaxe",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
     "id": "shovel_aluminium",
     "tool": "shovel",
     "material": "aluminium",
@@ -396,6 +588,30 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_amber",
+    "tool": "shovel",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 4.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_amethyst",
+    "tool": "shovel",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_beryllium",
     "tool": "shovel",
     "material": "beryllium",
@@ -405,6 +621,18 @@
     "craftDamage": 2,
     "speed": 14.0,
     "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_blue_topaz",
+    "tool": "shovel",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "shovel"
   },
   {
@@ -461,6 +689,30 @@
     "material": "emerald",
     "handle": "wood",
     "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_garnet_red",
+    "tool": "shovel",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_garnet_yellow",
+    "tool": "shovel",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 7.0,
@@ -552,6 +804,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_opal",
+    "tool": "shovel",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_ruby",
     "tool": "shovel",
     "material": "ruby",
@@ -576,6 +840,30 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_tanzanite",
+    "tool": "shovel",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_topaz",
+    "tool": "shovel",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "shovel"
+  },
+  {
     "id": "axe_aluminium",
     "tool": "axe",
     "material": "aluminium",
@@ -588,6 +876,30 @@
     "kind": "axe"
   },
   {
+    "id": "axe_amber",
+    "tool": "axe",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 4.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_amethyst",
+    "tool": "axe",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "axe"
+  },
+  {
     "id": "axe_beryllium",
     "tool": "axe",
     "material": "beryllium",
@@ -597,6 +909,18 @@
     "craftDamage": 2,
     "speed": 14.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_blue_topaz",
+    "tool": "axe",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "axe"
   },
   {
@@ -653,6 +977,30 @@
     "material": "emerald",
     "handle": "wood",
     "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_garnet_red",
+    "tool": "axe",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_garnet_yellow",
+    "tool": "axe",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 7.0,
@@ -744,6 +1092,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_opal",
+    "tool": "axe",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "axe_ruby",
     "tool": "axe",
     "material": "ruby",
@@ -768,6 +1128,30 @@
     "kind": "axe"
   },
   {
+    "id": "axe_tanzanite",
+    "tool": "axe",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_topaz",
+    "tool": "axe",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "axe"
+  },
+  {
     "id": "hoe_aluminium",
     "tool": "hoe",
     "material": "aluminium",
@@ -780,6 +1164,30 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_amber",
+    "tool": "hoe",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 4.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_amethyst",
+    "tool": "hoe",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_beryllium",
     "tool": "hoe",
     "material": "beryllium",
@@ -789,6 +1197,18 @@
     "craftDamage": 2,
     "speed": 14.0,
     "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_blue_topaz",
+    "tool": "hoe",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "hoe"
   },
   {
@@ -845,6 +1265,30 @@
     "material": "emerald",
     "handle": "wood",
     "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_garnet_red",
+    "tool": "hoe",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_garnet_yellow",
+    "tool": "hoe",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 7.0,
@@ -936,6 +1380,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_opal",
+    "tool": "hoe",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_ruby",
     "tool": "hoe",
     "material": "ruby",
@@ -960,6 +1416,30 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_tanzanite",
+    "tool": "hoe",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_topaz",
+    "tool": "hoe",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "hoe"
+  },
+  {
     "id": "saw_aluminium",
     "tool": "saw",
     "material": "aluminium",
@@ -972,6 +1452,30 @@
     "kind": "axe"
   },
   {
+    "id": "saw_amber",
+    "tool": "saw",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 4.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_amethyst",
+    "tool": "saw",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "axe"
+  },
+  {
     "id": "saw_beryllium",
     "tool": "saw",
     "material": "beryllium",
@@ -981,6 +1485,18 @@
     "craftDamage": 4,
     "speed": 14.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_blue_topaz",
+    "tool": "saw",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "axe"
   },
   {
@@ -1037,6 +1553,30 @@
     "material": "emerald",
     "handle": "wood",
     "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_garnet_red",
+    "tool": "saw",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_garnet_yellow",
+    "tool": "saw",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
     "blockDamage": 1,
     "craftDamage": 4,
     "speed": 7.0,
@@ -1128,6 +1668,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_opal",
+    "tool": "saw",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "saw_ruby",
     "tool": "saw",
     "material": "ruby",
@@ -1152,6 +1704,30 @@
     "kind": "axe"
   },
   {
+    "id": "saw_tanzanite",
+    "tool": "saw",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_topaz",
+    "tool": "saw",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "axe"
+  },
+  {
     "id": "hammer_aluminium",
     "tool": "hammer",
     "material": "aluminium",
@@ -1164,6 +1740,30 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_amber",
+    "tool": "hammer",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_amethyst",
+    "tool": "hammer",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_beryllium",
     "tool": "hammer",
     "material": "beryllium",
@@ -1173,6 +1773,18 @@
     "craftDamage": 8,
     "speed": 10.5,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_blue_topaz",
+    "tool": "hammer",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 3,
     "kind": "pickaxe"
   },
   {
@@ -1229,6 +1841,30 @@
     "material": "emerald",
     "handle": "wood",
     "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_garnet_red",
+    "tool": "hammer",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_garnet_yellow",
+    "tool": "hammer",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 5.25,
@@ -1320,6 +1956,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_opal",
+    "tool": "hammer",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_ruby",
     "tool": "hammer",
     "material": "ruby",
@@ -1344,6 +1992,30 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_tanzanite",
+    "tool": "hammer",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_topaz",
+    "tool": "hammer",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
     "id": "wrench_aluminium",
     "tool": "wrench",
     "material": "aluminium",
@@ -1356,6 +2028,30 @@
     "kind": "pickaxe"
   },
   {
+    "id": "wrench_amber",
+    "tool": "wrench",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 4.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "wrench_amethyst",
+    "tool": "wrench",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
     "id": "wrench_beryllium",
     "tool": "wrench",
     "material": "beryllium",
@@ -1365,6 +2061,18 @@
     "craftDamage": 16,
     "speed": 14.0,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "wrench_blue_topaz",
+    "tool": "wrench",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "pickaxe"
   },
   {
@@ -1421,6 +2129,30 @@
     "material": "emerald",
     "handle": "wood",
     "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "wrench_garnet_red",
+    "tool": "wrench",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "wrench_garnet_yellow",
+    "tool": "wrench",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 7.0,
@@ -1512,6 +2244,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "wrench_opal",
+    "tool": "wrench",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "wrench_ruby",
     "tool": "wrench",
     "material": "ruby",
@@ -1536,6 +2280,30 @@
     "kind": "pickaxe"
   },
   {
+    "id": "wrench_tanzanite",
+    "tool": "wrench",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "wrench_topaz",
+    "tool": "wrench",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
     "id": "file_aluminium",
     "tool": "file",
     "material": "aluminium",
@@ -1548,6 +2316,30 @@
     "kind": null
   },
   {
+    "id": "file_amber",
+    "tool": "file",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 4.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_amethyst",
+    "tool": "file",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
     "id": "file_beryllium",
     "tool": "file",
     "material": "beryllium",
@@ -1557,6 +2349,18 @@
     "craftDamage": 8,
     "speed": 14.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_blue_topaz",
+    "tool": "file",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
     "kind": null
   },
   {
@@ -1613,6 +2417,30 @@
     "material": "emerald",
     "handle": "wood",
     "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_garnet_red",
+    "tool": "file",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_garnet_yellow",
+    "tool": "file",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 7.0,
@@ -1704,6 +2532,18 @@
     "kind": null
   },
   {
+    "id": "file_opal",
+    "tool": "file",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "file_ruby",
     "tool": "file",
     "material": "ruby",
@@ -1728,6 +2568,30 @@
     "kind": null
   },
   {
+    "id": "file_tanzanite",
+    "tool": "file",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_topaz",
+    "tool": "file",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
     "id": "screwdriver_aluminium",
     "tool": "screwdriver",
     "material": "aluminium",
@@ -1740,6 +2604,30 @@
     "kind": null
   },
   {
+    "id": "screwdriver_amber",
+    "tool": "screwdriver",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 4.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_amethyst",
+    "tool": "screwdriver",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
     "id": "screwdriver_beryllium",
     "tool": "screwdriver",
     "material": "beryllium",
@@ -1749,6 +2637,18 @@
     "craftDamage": 8,
     "speed": 14.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_blue_topaz",
+    "tool": "screwdriver",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
     "kind": null
   },
   {
@@ -1805,6 +2705,30 @@
     "material": "emerald",
     "handle": "wood",
     "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_garnet_red",
+    "tool": "screwdriver",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_garnet_yellow",
+    "tool": "screwdriver",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
     "blockDamage": 4,
     "craftDamage": 8,
     "speed": 7.0,
@@ -1896,6 +2820,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_opal",
+    "tool": "screwdriver",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "screwdriver_ruby",
     "tool": "screwdriver",
     "material": "ruby",
@@ -1917,6 +2853,30 @@
     "craftDamage": 8,
     "speed": 7.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_tanzanite",
+    "tool": "screwdriver",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_topaz",
+    "tool": "screwdriver",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
     "kind": null
   },
   {
@@ -1968,6 +2928,30 @@
     "kind": "sword"
   },
   {
+    "id": "knife_amber",
+    "tool": "knife",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 4.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_amethyst",
+    "tool": "knife",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "sword"
+  },
+  {
     "id": "knife_beryllium",
     "tool": "knife",
     "material": "beryllium",
@@ -1977,6 +2961,18 @@
     "craftDamage": 2,
     "speed": 14.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_blue_topaz",
+    "tool": "knife",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "sword"
   },
   {
@@ -2033,6 +3029,30 @@
     "material": "emerald",
     "handle": "wood",
     "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_garnet_red",
+    "tool": "knife",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_garnet_yellow",
+    "tool": "knife",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
     "blockDamage": 2,
     "craftDamage": 2,
     "speed": 7.0,
@@ -2124,6 +3144,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_opal",
+    "tool": "knife",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "knife_ruby",
     "tool": "knife",
     "material": "ruby",
@@ -2145,6 +3177,30 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_tanzanite",
+    "tool": "knife",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_topaz",
+    "tool": "knife",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "sword"
   }
 ]

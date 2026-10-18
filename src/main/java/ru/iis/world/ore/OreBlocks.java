@@ -30,6 +30,7 @@ public final class OreBlocks {
     /** materialId -> порода -> блок */
     private static final Map<String, EnumMap<OreHost, DeferredBlock<Block>>> ORES = new LinkedHashMap<>();
     private static final Map<String, IISMaterial> MATERIALS = new HashMap<>();
+    private static final Map<String, EnumMap<OreHost, DeferredBlock<Block>>> SMALL = new LinkedHashMap<>();
 
     static {
         for (IISMaterial m : MaterialData.materials()) {
@@ -47,13 +48,29 @@ public final class OreBlocks {
                 byHost.put(host, block);
             }
             ORES.put(m.id(), byHost);
+            EnumMap<OreHost, DeferredBlock<Block>> smallByHost = new EnumMap<>(OreHost.class);
+            for (String hostId : m.smallHosts()) {
+                OreHost host = OreHost.byId(hostId);
+                // GT5: малая руда на один уровень добычи ниже обычной
+                float hardness = 1.0f + Math.max(0, m.harvestLevel() - 1) + host.extraHardness();
+                String id = host.smallBlockId(m.id());
+                DeferredBlock<Block> block = BLOCKS.registerSimpleBlock(id, p -> p
+                        .mapColor(host.mapColor()).sound(host.sound())
+                        .strength(hardness, hardness).requiresCorrectToolForDrops());
+                ITEMS.registerSimpleBlockItem(id, block);
+                smallByHost.put(host, block);
+            }
+            if (!smallByHost.isEmpty()) SMALL.put(m.id(), smallByHost);
         }
     }
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = TABS.register("ores", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.iis.ores"))
             .icon(() -> new ItemStack(get("chalcopyrite", OreHost.STONE).getBlock().asItem()))
-            .displayItems((params, out) -> ORES.values().forEach(m -> m.values().forEach(b -> out.accept(b.get()))))
+            .displayItems((params, out) -> {
+                ORES.values().forEach(m -> m.values().forEach(b -> out.accept(b.get())));
+                SMALL.values().forEach(m -> m.values().forEach(b -> out.accept(b.get())));
+            })
             .build());
 
     public static void register(IEventBus modBus) {
@@ -68,6 +85,18 @@ public final class OreBlocks {
         if (byHost == null) return null;
         DeferredBlock<Block> b = byHost.get(host);
         return b == null ? null : b.get().defaultBlockState();
+    }
+
+    /** Состояние блока малой руды или null. */
+    public static BlockState getSmall(String materialId, OreHost host) {
+        EnumMap<OreHost, DeferredBlock<Block>> byHost = SMALL.get(materialId);
+        if (byHost == null) return null;
+        DeferredBlock<Block> b = byHost.get(host);
+        return b == null ? null : b.get().defaultBlockState();
+    }
+
+    public static Map<String, EnumMap<OreHost, DeferredBlock<Block>>> allSmall() {
+        return Collections.unmodifiableMap(SMALL);
     }
 
     public static Map<String, EnumMap<OreHost, DeferredBlock<Block>>> all() {

@@ -42,6 +42,7 @@ grep -q 'ZPM — 131072 EU/t' "$LOG" && echo "OK: /iis voltages works" || { echo
 grep -E '\]:   (PASS|FAIL) ' "$LOG" | sed 's/.*]:  /   /'
 if grep -q 'SELFTEST PASSED' "$LOG"; then echo "OK: selftest"; else echo "FAIL: selftest"; ok=0; fi
 if grep -qE 'IIS scan: .*IIS ore blocks=[1-9]' "$LOG"; then echo "OK: GT ore veins generated"; else echo "FAIL: no IIS ores found by /iis scan"; ok=0; fi
+if grep -qE 'IIS scan: .*small ore blocks=[1-9]' "$LOG"; then echo "OK: small ores generated"; else echo "FAIL: no small ores"; ok=0; fi
 if grep -qE 'IIS scan: .*vanilla ore blocks=0$' "$LOG"; then echo "OK: no vanilla ores"; else echo "FAIL: vanilla ores present"; grep 'IIS scan:' "$LOG"; ok=0; fi
 grep -A100 'IIS scan:' "$LOG" | grep -E '^\[.*\]:   ' | sed 's/.*]:  /   /' | head -40
 ERRS=$(grep -iE 'Exception|ERROR' "$LOG" | grep -vE 'yggdrasil|minecraftservices|server.properties|NoSuchFileException' || true)

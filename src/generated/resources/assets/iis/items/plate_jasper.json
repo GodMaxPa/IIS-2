@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/plate_jasper",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13127760
+      }
+    ]
+  }
+}

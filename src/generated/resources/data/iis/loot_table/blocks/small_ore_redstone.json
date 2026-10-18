@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "iis:blocks/small_ore_redstone",
+  "pools": [
+    {
+      "rolls": 5,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "iis:crushed_redstone",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "iis:impure_dust_redstone",
+          "weight": 15
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3333
+        },
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "iis:dust_stone"
+        }
+      ]
+    }
+  ]
+}

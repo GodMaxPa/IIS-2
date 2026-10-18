@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/garnet_red",
+    "#iis:small_dusts/garnet_red",
+    "#iis:small_dusts/garnet_red",
+    "#iis:small_dusts/garnet_red"
+  ],
+  "result": {
+    "id": "iis:dust_garnet_red"
+  }
+}

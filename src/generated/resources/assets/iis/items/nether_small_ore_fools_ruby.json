@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/nether_small_ore_fools_ruby",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 16737380
+      }
+    ]
+  }
+}

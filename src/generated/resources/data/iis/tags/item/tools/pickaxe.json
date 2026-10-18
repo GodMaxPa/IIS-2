@@ -2,12 +2,17 @@
   "replace": false,
   "values": [
     "iis:pickaxe_aluminium",
+    "iis:pickaxe_amber",
+    "iis:pickaxe_amethyst",
     "iis:pickaxe_beryllium",
+    "iis:pickaxe_blue_topaz",
     "iis:pickaxe_bronze",
     "iis:pickaxe_certus_quartz",
     "iis:pickaxe_cobalt",
     "iis:pickaxe_diamond",
     "iis:pickaxe_emerald",
+    "iis:pickaxe_garnet_red",
+    "iis:pickaxe_garnet_yellow",
     "iis:pickaxe_green_sapphire",
     "iis:pickaxe_iron",
     "iis:pickaxe_manganese",
@@ -15,7 +20,10 @@
     "iis:pickaxe_nether_quartz",
     "iis:pickaxe_nickel",
     "iis:pickaxe_olivine",
+    "iis:pickaxe_opal",
     "iis:pickaxe_ruby",
-    "iis:pickaxe_sapphire"
+    "iis:pickaxe_sapphire",
+    "iis:pickaxe_tanzanite",
+    "iis:pickaxe_topaz"
   ]
 }

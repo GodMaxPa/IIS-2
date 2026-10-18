@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "iis:item/materialicons/flint/crushedpurified",
+    "layer1": "iis:item/materialicons/flint/crushedpurified_overlay"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:rods/opal",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:bolt_opal",
+    "count": 2
+  }
+}

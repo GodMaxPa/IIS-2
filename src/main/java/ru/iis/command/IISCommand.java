@@ -73,7 +73,7 @@ public final class IISCommand {
         Map<String, Integer> iis = new TreeMap<>();
         Map<String, int[]> heights = new TreeMap<>();
         Map<String, long[]> centroid = new TreeMap<>();
-        int vanilla = 0, total = 0;
+        int vanilla = 0, total = 0, small = 0;
         BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
         for (int cx = center.x() - radius; cx <= center.x() + radius; cx++) {
             for (int cz = center.z() - radius; cz <= center.z() + radius; cz++) {
@@ -86,6 +86,7 @@ public final class IISCommand {
                         Identifier id = BuiltInRegistries.BLOCK.getKey(st.getBlock());
                         if (id.getNamespace().equals(IIS.MODID) && id.getPath().contains("ore_")) {
                             String mat = id.getPath().substring(id.getPath().indexOf("ore_") + 4);
+                            if (id.getPath().contains("small_ore_")) { small++; continue; }
                             iis.merge(mat, 1, Integer::sum);
                             int[] h = heights.computeIfAbsent(mat, k -> new int[]{Integer.MAX_VALUE, Integer.MIN_VALUE});
                             h[0] = Math.min(h[0], y); h[1] = Math.max(h[1], y);
@@ -101,9 +102,9 @@ public final class IISCommand {
             }
         }
         int chunks = (2 * radius + 1) * (2 * radius + 1);
-        final int fTotal = total, fVanilla = vanilla;
+        final int fTotal = total, fVanilla = vanilla, fSmall = small;
         src.sendSuccess(() -> Component.literal("IIS scan: " + chunks + " chunks, IIS ore blocks=" + fTotal
-                + ", materials=" + iis.size() + ", vanilla ore blocks=" + fVanilla), false);
+                + ", materials=" + iis.size() + ", small ore blocks=" + fSmall + ", vanilla ore blocks=" + fVanilla), false);
         iis.forEach((mat, n) -> src.sendSuccess(() -> Component.literal("  " + mat + ": " + n
                 + " (y " + heights.get(mat)[0] + ".." + heights.get(mat)[1] + ", center "
                 + centroid.get(mat)[0] / n + " " + centroid.get(mat)[1] / n + " " + centroid.get(mat)[2] / n + ")"), false));

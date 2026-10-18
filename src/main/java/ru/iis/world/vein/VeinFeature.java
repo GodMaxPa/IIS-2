@@ -29,6 +29,7 @@ public final class VeinFeature extends Feature<NoneFeatureConfiguration> {
     private static final int CACHE_SIZE = 512;
 
     private final Map<String, List<VeinDefinition>> veinsByDimension = new HashMap<>();
+    private final Map<String, List<MaterialData.SmallOre>> smallByDimension = new HashMap<>();
     private final Map<CacheKey, int[]> cache = Collections.synchronizedMap(new LinkedHashMap<>(CACHE_SIZE, 0.75f, true) {
         @Override
         protected boolean removeEldestEntry(Map.Entry<CacheKey, int[]> e) { return size() > CACHE_SIZE; }
@@ -42,6 +43,9 @@ public final class VeinFeature extends Feature<NoneFeatureConfiguration> {
     public VeinFeature(Codec<NoneFeatureConfiguration> codec) {
         super(codec);
         MaterialData.materials().forEach(m -> { materialIds.put(m.id(), materialIndex.size()); materialIndex.add(m.id()); });
+        for (MaterialData.SmallOre so : MaterialData.smallOres()) {
+            for (String d : so.dimensions()) smallByDimension.computeIfAbsent(d, k -> new ArrayList<>()).add(so);
+        }
         for (VeinDefinition v : MaterialData.veins()) {
             for (String d : v.dimensions()) veinsByDimension.computeIfAbsent(d, k -> new ArrayList<>()).add(v);
         }
@@ -51,12 +55,13 @@ public final class VeinFeature extends Feature<NoneFeatureConfiguration> {
     public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> ctx) {
         WorldGenLevel level = ctx.level();
         String dim = dimensionName(level.getLevel().dimension());
-        List<VeinDefinition> candidates = veinsByDimension.get(dim);
-        if (candidates == null || candidates.isEmpty()) return false;
-
+        List<VeinDefinition> candidates = veinsByDimension.getOrDefault(dim, List.of());
         ChunkPos chunk = ChunkPos.containing(ctx.origin());
-        int minX = chunk.getMinBlockX(), minZ = chunk.getMinBlockZ();
         long seed = level.getSeed();
+        boolean placedAny = placeSmallOres(level, dim, chunk, seed);
+        if (candidates.isEmpty()) return placedAny;
+
+        int minX = chunk.getMinBlockX(), minZ = chunk.getMinBlockZ();
         Set<Long> centers = new HashSet<>();
         for (int dx = -REACH_CHUNKS; dx <= REACH_CHUNKS; dx++) {
             for (int dz = -REACH_CHUNKS; dz <= REACH_CHUNKS; dz++) {
@@ -64,7 +69,6 @@ public final class VeinFeature extends Feature<NoneFeatureConfiguration> {
             }
         }
 
-        boolean placedAny = false;
         BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
         for (long packed : centers) {
             ChunkPos center = ChunkPos.unpack(packed);
@@ -84,6 +88,36 @@ public final class VeinFeature extends Feature<NoneFeatureConfiguration> {
             }
         }
         return placedAny;
+    }
+
+    /**
+     * Малые руды (GT_Worldgen_GT_Ore_SmallPieces#executeWorldgen): в каждом чанке для каждой малой руды измерения
+     * max(1, amount/2 + rand(amount)/2) вкраплений в случайных точках чанка на высотах [minY, maxY).
+     */
+    private boolean placeSmallOres(WorldGenLevel level, String dim, ChunkPos chunk, long seed) {
+        List<MaterialData.SmallOre> list = smallByDimension.get(dim);
+        if (list == null) return false;
+        Random r = new Random(seed ^ (chunk.x() * 341873128712L + chunk.z() * 132897987541L) ^ 0x5A11_0E5L);
+        BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
+        boolean placed = false;
+        for (MaterialData.SmallOre so : list) {
+            String mat = so.material().substring(so.material().indexOf(':') + 1);
+            int count = Math.max(1, so.amount() / 2 + r.nextInt(so.amount()) / 2);
+            for (int i = 0; i < count; i++) {
+                int x = chunk.getMinBlockX() + r.nextInt(16);
+                int z = chunk.getMinBlockZ() + r.nextInt(16);
+                int y = so.minY() + r.nextInt(Math.max(1, so.maxY() - so.minY()));
+                if (level.isOutsideBuildHeight(y)) continue;
+                pos.set(x, y, z);
+                OreHost host = OreHost.forReplacing(level.getBlockState(pos));
+                if (host == null) continue;
+                BlockState ore = OreBlocks.getSmall(mat, host);
+                if (ore == null) continue;
+                level.setBlock(pos, ore, 2);
+                placed = true;
+            }
+        }
+        return placed;
     }
 
     /** Строит жилу квадрата как плоский массив [x, y, z, индексМатериала] * N. */

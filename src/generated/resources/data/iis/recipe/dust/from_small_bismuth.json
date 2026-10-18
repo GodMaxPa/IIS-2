@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/bismuth",
+    "#iis:small_dusts/bismuth",
+    "#iis:small_dusts/bismuth",
+    "#iis:small_dusts/bismuth"
+  ],
+  "result": {
+    "id": "iis:dust_bismuth"
+  }
+}

@@ -38,6 +38,19 @@ class MaterialDataTest {
     }
 
     @Test
+    void smallOresHaveBlocksForTheirDimensions() {
+        Map<String, IISMaterial> byId = MaterialData.materials().stream().collect(Collectors.toMap(IISMaterial::id, m -> m));
+        assertFalse(MaterialData.smallOres().isEmpty());
+        for (MaterialData.SmallOre so : MaterialData.smallOres()) {
+            IISMaterial m = byId.get(so.material().substring(so.material().indexOf(':') + 1));
+            assertNotNull(m, so.name());
+            if (so.dimensions().contains("overworld")) assertTrue(m.smallHosts().contains("stone"), so.name());
+            if (so.dimensions().contains("nether")) assertTrue(m.smallHosts().contains("netherrack"), so.name());
+            assertTrue(so.minY() >= -64 && so.maxY() <= 319 && so.minY() < so.maxY(), so.name());
+        }
+    }
+
+    @Test
     void veinHeightsAreStretchedIntoModernWorld() {
         VeinDefinition copper = MaterialData.veins().stream().filter(v -> v.name().equals("copper")).findFirst().orElseThrow();
         assertEquals(-48, copper.minY()); // 10 * 1.6 - 64

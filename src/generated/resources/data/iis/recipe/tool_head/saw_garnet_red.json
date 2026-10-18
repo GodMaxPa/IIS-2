@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GGf"
+  ],
+  "key": {
+    "G": "#c:gems/garnet_red",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:saw_head_garnet_red"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/fools_ruby",
+    "#iis:small_dusts/fools_ruby",
+    "#iis:small_dusts/fools_ruby",
+    "#iis:small_dusts/fools_ruby"
+  ],
+  "result": {
+    "id": "iis:dust_fools_ruby"
+  }
+}

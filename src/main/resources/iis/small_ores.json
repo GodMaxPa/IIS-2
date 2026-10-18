@@ -1,0 +1,376 @@
+[
+  {
+    "name": "amber",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:amber",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "amethyst",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:amethyst",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "bismuth",
+    "minY": 64,
+    "maxY": 128,
+    "amount": 8,
+    "material": "iis:bismuth",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "bluetopaz",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:blue_topaz",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "coal",
+    "minY": 32,
+    "maxY": 96,
+    "amount": 24,
+    "material": "iis:coal",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "copper",
+    "minY": 32,
+    "maxY": 128,
+    "amount": 32,
+    "material": "iis:copper",
+    "dimensions": [
+      "end",
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "diamond",
+    "minY": -56,
+    "maxY": -48,
+    "amount": 2,
+    "material": "iis:diamond",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "emerald",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:emerald",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "foolsruby",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:fools_ruby",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "garnetred",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:garnet_red",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "garnetyellow",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:garnet_yellow",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "gold",
+    "minY": -32,
+    "maxY": 0,
+    "amount": 8,
+    "material": "iis:gold",
+    "dimensions": [
+      "end",
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "greensapphire",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:green_sapphire",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "iridium",
+    "minY": -32,
+    "maxY": 0,
+    "amount": 8,
+    "material": "iis:iridium",
+    "dimensions": [
+      "end"
+    ]
+  },
+  {
+    "name": "iron",
+    "minY": 0,
+    "maxY": 64,
+    "amount": 16,
+    "material": "iis:iron",
+    "dimensions": [
+      "end",
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "jasper",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:jasper",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "lapis",
+    "minY": -32,
+    "maxY": 0,
+    "amount": 4,
+    "material": "iis:lapis",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "lead",
+    "minY": 0,
+    "maxY": 64,
+    "amount": 16,
+    "material": "iis:lead",
+    "dimensions": [
+      "end",
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "netherquartz",
+    "minY": -16,
+    "maxY": 128,
+    "amount": 64,
+    "material": "iis:nether_quartz",
+    "dimensions": [
+      "nether"
+    ]
+  },
+  {
+    "name": "nickel",
+    "minY": -32,
+    "maxY": 0,
+    "amount": 8,
+    "material": "iis:nickel",
+    "dimensions": [
+      "end",
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "olivine",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:olivine",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "opal",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:opal",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "platinum",
+    "minY": -32,
+    "maxY": 0,
+    "amount": 8,
+    "material": "iis:platinum",
+    "dimensions": [
+      "end"
+    ]
+  },
+  {
+    "name": "redstone",
+    "minY": -56,
+    "maxY": -32,
+    "amount": 8,
+    "material": "iis:redstone",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "ruby",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:ruby",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "saltpeter",
+    "minY": -48,
+    "maxY": 32,
+    "amount": 8,
+    "material": "iis:saltpeter",
+    "dimensions": [
+      "nether"
+    ]
+  },
+  {
+    "name": "sapphire",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:sapphire",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "silver",
+    "minY": -32,
+    "maxY": 0,
+    "amount": 8,
+    "material": "iis:silver",
+    "dimensions": [
+      "end",
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "sulfur_n",
+    "minY": -48,
+    "maxY": 32,
+    "amount": 32,
+    "material": "iis:sulfur",
+    "dimensions": [
+      "nether"
+    ]
+  },
+  {
+    "name": "sulfur_o",
+    "minY": -56,
+    "maxY": -40,
+    "amount": 8,
+    "material": "iis:sulfur",
+    "dimensions": [
+      "overworld"
+    ]
+  },
+  {
+    "name": "tanzanite",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:tanzanite",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "tin",
+    "minY": 32,
+    "maxY": 128,
+    "amount": 32,
+    "material": "iis:tin",
+    "dimensions": [
+      "end",
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "topaz",
+    "minY": -56,
+    "maxY": 319,
+    "amount": 1,
+    "material": "iis:topaz",
+    "dimensions": [
+      "nether",
+      "overworld"
+    ]
+  },
+  {
+    "name": "zinc",
+    "minY": -16,
+    "maxY": 32,
+    "amount": 12,
+    "material": "iis:zinc",
+    "dimensions": [
+      "end",
+      "nether",
+      "overworld"
+    ]
+  }
+]

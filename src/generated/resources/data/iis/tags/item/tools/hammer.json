@@ -2,12 +2,17 @@
   "replace": false,
   "values": [
     "iis:hammer_aluminium",
+    "iis:hammer_amber",
+    "iis:hammer_amethyst",
     "iis:hammer_beryllium",
+    "iis:hammer_blue_topaz",
     "iis:hammer_bronze",
     "iis:hammer_certus_quartz",
     "iis:hammer_cobalt",
     "iis:hammer_diamond",
     "iis:hammer_emerald",
+    "iis:hammer_garnet_red",
+    "iis:hammer_garnet_yellow",
     "iis:hammer_green_sapphire",
     "iis:hammer_iron",
     "iis:hammer_manganese",
@@ -15,7 +20,10 @@
     "iis:hammer_nether_quartz",
     "iis:hammer_nickel",
     "iis:hammer_olivine",
+    "iis:hammer_opal",
     "iis:hammer_ruby",
-    "iis:hammer_sapphire"
+    "iis:hammer_sapphire",
+    "iis:hammer_tanzanite",
+    "iis:hammer_topaz"
   ]
 }

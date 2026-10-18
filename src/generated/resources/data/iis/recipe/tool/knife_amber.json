@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "fPh",
+    " S "
+  ],
+  "key": {
+    "P": "#c:plates/amber",
+    "S": "#c:rods/amber",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:knife_amber"
+  }
+}

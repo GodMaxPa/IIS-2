@@ -161,6 +161,18 @@ final class SelfTest {
         int dmg = player.getMainHandItem().getOrDefault(DataComponents.DAMAGE, 0);
         c.check("hammer lost durability (1 block + 4 conversion)", dmg == 5, "damage=" + dmg);
         drops.forEach(ItemEntity::discard);
+
+        // Малая руда меди: выпадает дроблёная руда или грязная пыль (GT5 GT_TileEntity_Ores#getDrops, мета >= 16000)
+        player.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND, stack("pickaxe_bronze"));
+        level.setBlock(pos, BuiltInRegistries.BLOCK.getValue(Identifier.parse("iis:small_ore_copper")).defaultBlockState(), 3);
+        player.gameMode.destroyBlock(pos);
+        drops = level.getEntitiesOfClass(ItemEntity.class, new AABB(pos).inflate(2));
+        boolean ok = !drops.isEmpty() && drops.stream().allMatch(d -> {
+            Item i = d.getItem().getItem();
+            return i == item("crushed_copper") || i == item("impure_dust_copper") || i == item("dust_stone");
+        }) && drops.stream().anyMatch(d -> d.getItem().getItem() != item("dust_stone"));
+        c.check("small copper ore drops crushed/impure dust (+ stone dust)", ok, drops.stream().map(d -> show(d.getItem())).toList().toString());
+        drops.forEach(ItemEntity::discard);
     }
 
     static void cauldron(Ctx c) {

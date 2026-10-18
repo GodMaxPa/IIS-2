@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:rods/blue_topaz",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:bolt_blue_topaz",
+    "count": 2
+  }
+}

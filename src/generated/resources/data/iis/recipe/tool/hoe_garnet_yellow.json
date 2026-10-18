@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/hoe/garnet_yellow",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:hoe_garnet_yellow"
+  }
+}

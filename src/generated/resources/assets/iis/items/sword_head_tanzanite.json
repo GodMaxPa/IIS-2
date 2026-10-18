@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/sword_head_tanzanite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 4194504
+      }
+    ]
+  }
+}

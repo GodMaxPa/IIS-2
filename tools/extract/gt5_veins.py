@@ -2,7 +2,7 @@
 """Extract ore vein definitions from the IIS pack config (config/GregTech/WorldGeneration.cfg)
 and resolve material IDs to names using the output of gt5_materials.py.
 
-Usage: gt5_veins.py <WorldGeneration.cfg> <materials.json> <out.json>
+Usage: gt5_veins.py <WorldGeneration.cfg> <materials.json> <out_veins.json> [out_small_ores.json]
 Values are the ones actually used by the IIS 1.19.1 pack (not GT5 defaults).
 """
 import json, sys
@@ -45,3 +45,23 @@ for path, d in sections.items():
 veins.sort(key=lambda v: v['name'])
 json.dump(veins, open(sys.argv[3], 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(f'{len(veins)} enabled veins')
+
+# Small ores (GT_Worldgen_GT_Ore_SmallPieces): ore.small.<name> {MinHeight, MaxHeight, Amount, Ore, dims}
+small_enabled = {}
+for path, d in sections.items():
+    if path == 'worldgen':
+        for k, v in d.items():
+            if k.startswith('ore.small.'):
+                small_enabled[k[len('ore.small.'):]] = (v == 'true')
+small = []
+for path, d in sections.items():
+    if not path.startswith('worldgen/ore/small/'): continue
+    name = path[len('worldgen/ore/small/'):].replace('/', '.')
+    if not small_enabled.get(name, False) or 'Ore' not in d: continue
+    small.append({'name': name, 'minY': int(d['MinHeight']), 'maxY': int(d['MaxHeight']), 'amount': int(d['Amount']),
+                  'material': mat(d['Ore']),
+                  'dimensions': [k for k in ('Overworld', 'Nether', 'TheEnd', 'Moon', 'Mars', 'Asteroid') if d.get(k) == 'true']})
+small.sort(key=lambda v: v['name'])
+if len(sys.argv) > 4:
+    json.dump(small, open(sys.argv[4], 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+print(f'{len(small)} enabled small ores')

@@ -1,0 +1,7 @@
+{
+  "parent": "iis:block/ore_template",
+  "textures": {
+    "base": "minecraft:block/deepslate",
+    "overlay": "iis:block/ore_small/gem_vertical"
+  }
+}

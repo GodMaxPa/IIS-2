@@ -2,12 +2,17 @@
   "replace": false,
   "values": [
     "iis:file_aluminium",
+    "iis:file_amber",
+    "iis:file_amethyst",
     "iis:file_beryllium",
+    "iis:file_blue_topaz",
     "iis:file_bronze",
     "iis:file_certus_quartz",
     "iis:file_cobalt",
     "iis:file_diamond",
     "iis:file_emerald",
+    "iis:file_garnet_red",
+    "iis:file_garnet_yellow",
     "iis:file_green_sapphire",
     "iis:file_iron",
     "iis:file_manganese",
@@ -15,7 +20,10 @@
     "iis:file_nether_quartz",
     "iis:file_nickel",
     "iis:file_olivine",
+    "iis:file_opal",
     "iis:file_ruby",
-    "iis:file_sapphire"
+    "iis:file_sapphire",
+    "iis:file_tanzanite",
+    "iis:file_topaz"
   ]
 }

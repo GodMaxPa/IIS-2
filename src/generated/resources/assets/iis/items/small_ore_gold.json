@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/small_ore_gold",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 16776990
+      }
+    ]
+  }
+}

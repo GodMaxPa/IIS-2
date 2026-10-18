@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "fPh",
+    " S "
+  ],
+  "key": {
+    "P": "#c:plates/tanzanite",
+    "S": "#c:rods/tanzanite",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:knife_tanzanite"
+  }
+}

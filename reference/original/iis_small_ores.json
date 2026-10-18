@@ -1,0 +1,441 @@
+[
+ {
+  "name": "amber",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "Amber",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "amethyst",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "Amethyst",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "bismuth",
+  "minY": 80,
+  "maxY": 120,
+  "amount": 8,
+  "material": "Bismuth",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Moon",
+   "Mars"
+  ]
+ },
+ {
+  "name": "bluetopaz",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "BlueTopaz",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "coal",
+  "minY": 60,
+  "maxY": 100,
+  "amount": 24,
+  "material": "Coal",
+  "dimensions": [
+   "Overworld"
+  ]
+ },
+ {
+  "name": "copper",
+  "minY": 60,
+  "maxY": 120,
+  "amount": 32,
+  "material": "Copper",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "TheEnd",
+   "Moon",
+   "Mars"
+  ]
+ },
+ {
+  "name": "diamond",
+  "minY": 5,
+  "maxY": 10,
+  "amount": 2,
+  "material": "Diamond",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Moon",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "emerald",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "Emerald",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "foolsruby",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "FoolsRuby",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "garnetred",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "GarnetRed",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "garnetyellow",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "GarnetYellow",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "gold",
+  "minY": 20,
+  "maxY": 40,
+  "amount": 8,
+  "material": "Gold",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "TheEnd",
+   "Moon",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "greensapphire",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "GreenSapphire",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "iridium",
+  "minY": 20,
+  "maxY": 40,
+  "amount": 8,
+  "material": "Iridium",
+  "dimensions": [
+   "TheEnd",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "iron",
+  "minY": 40,
+  "maxY": 80,
+  "amount": 16,
+  "material": "Iron",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "TheEnd",
+   "Moon",
+   "Mars"
+  ]
+ },
+ {
+  "name": "jasper",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "Jasper",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "lapis",
+  "minY": 20,
+  "maxY": 40,
+  "amount": 4,
+  "material": "Lapis",
+  "dimensions": [
+   "Overworld",
+   "Moon",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "lead",
+  "minY": 40,
+  "maxY": 80,
+  "amount": 16,
+  "material": "Lead",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "TheEnd",
+   "Moon",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "netherquartz",
+  "minY": 30,
+  "maxY": 120,
+  "amount": 64,
+  "material": "NetherQuartz",
+  "dimensions": [
+   "Nether"
+  ]
+ },
+ {
+  "name": "nickel",
+  "minY": 20,
+  "maxY": 40,
+  "amount": 8,
+  "material": "Nickel",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "TheEnd",
+   "Moon",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "olivine",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "Olivine",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "opal",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "Opal",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "platinum",
+  "minY": 20,
+  "maxY": 40,
+  "amount": 8,
+  "material": "Platinum",
+  "dimensions": [
+   "TheEnd",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "redstone",
+  "minY": 5,
+  "maxY": 20,
+  "amount": 8,
+  "material": "Redstone",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Moon",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "ruby",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "Ruby",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "saltpeter",
+  "minY": 10,
+  "maxY": 60,
+  "amount": 8,
+  "material": "Saltpeter",
+  "dimensions": [
+   "Nether"
+  ]
+ },
+ {
+  "name": "sapphire",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "Sapphire",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "silver",
+  "minY": 20,
+  "maxY": 40,
+  "amount": 8,
+  "material": "Silver",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "TheEnd",
+   "Moon",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "sulfur_n",
+  "minY": 10,
+  "maxY": 60,
+  "amount": 32,
+  "material": "Sulfur",
+  "dimensions": [
+   "Nether"
+  ]
+ },
+ {
+  "name": "sulfur_o",
+  "minY": 5,
+  "maxY": 15,
+  "amount": 8,
+  "material": "Sulfur",
+  "dimensions": [
+   "Overworld"
+  ]
+ },
+ {
+  "name": "tanzanite",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "Tanzanite",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "tin",
+  "minY": 60,
+  "maxY": 120,
+  "amount": 32,
+  "material": "Tin",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "TheEnd",
+   "Moon",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "topaz",
+  "minY": 5,
+  "maxY": 250,
+  "amount": 1,
+  "material": "Topaz",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "Mars",
+   "Asteroid"
+  ]
+ },
+ {
+  "name": "zinc",
+  "minY": 30,
+  "maxY": 60,
+  "amount": 12,
+  "material": "Zinc",
+  "dimensions": [
+   "Overworld",
+   "Nether",
+   "TheEnd",
+   "Moon",
+   "Mars"
+  ]
+ }
+]

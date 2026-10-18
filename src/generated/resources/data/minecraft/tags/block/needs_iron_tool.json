@@ -112,6 +112,19 @@
     "iis:nether_ore_vanadium_magnetite",
     "iis:ore_yellow_limonite",
     "iis:deepslate_ore_yellow_limonite",
-    "iis:nether_ore_yellow_limonite"
+    "iis:nether_ore_yellow_limonite",
+    "iis:small_ore_amethyst",
+    "iis:deepslate_small_ore_amethyst",
+    "iis:nether_small_ore_amethyst",
+    "iis:small_ore_blue_topaz",
+    "iis:deepslate_small_ore_blue_topaz",
+    "iis:nether_small_ore_blue_topaz",
+    "iis:small_ore_diamond",
+    "iis:deepslate_small_ore_diamond",
+    "iis:nether_small_ore_diamond",
+    "iis:end_small_ore_iridium",
+    "iis:small_ore_topaz",
+    "iis:deepslate_small_ore_topaz",
+    "iis:nether_small_ore_topaz"
   ]
 }
