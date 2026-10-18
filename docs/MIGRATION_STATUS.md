@@ -1,0 +1,25 @@
+# Статус переноса (матрица адаптации)
+
+Эталон: GT5-II `IdealIndustrial/GT5Unofficial` @ `00021e3` + конфиги и скрипты сборки ИИС 1.19.1 (см. AGENTS.md).
+Уровни доказательств: **T** — unit-тесты, **G** — GameTest (машины в мире), **S** — `/iis selftest` на сервере,
+**C** — скриншот клиента в облаке, **O** — проверено владельцем в игре, **—** — не проверено.
+
+| Подсистема | Оригинал | Наш код | Статус | Доказательства |
+|---|---|---|---|---|
+| Уровни напряжения, разгон | `GT_Values.V`, `BasicMachine#calculateOverclockedNess` | `energy.VoltageTier`, `machine.Overclock` | перенесено (машин на EU ещё нет) | T |
+| Материалы и формы | `Materials`, `OrePrefixes`, `MaterialProperties.cfg` | `core.material`, `tools/gen/gen_content.py` | частично (без gemFlawed.., foil, gear, wireFine…) | T, S, C |
+| Жилы и руды | `GT_Worldgen_GT_Ore_Layer`, `WorldGeneration.cfg` | `world.vein`, `world.ore` | перенесено (без космоса) | T, S, C, O (загрузка) |
+| Малые руды | `GT_Worldgen_GT_Ore_SmallPieces` | `VeinFeature`, `OreBlocks` | перенесено (без удачи) | S |
+| Инструменты GT | `GT_Tool_*`, `GT_MetaGenerated_Tool_01` | `tool.*` | частично (без электроинструментов, киянки, лома…) | S, C |
+| Ручная переработка | `ProcessingOre/Ingot/...`, котёл | рецепты + `MaterialItem` | перенесено | S |
+| Пар: жидкость | `GT_ModHandler.getSteam` | `fluid.IISFluids` | перенесено | G |
+| Малые котлы (4) | `GT_MetaTileEntity_Boiler_*` | `machine.logic.BoilerLogic`, `BoilerBlockEntity` | перенесено | T, G, C |
+| Паровые машины (6×2) | `machines/steam/*`, `BasicMachine_Bronze` | `SteamMachineLogic`, `SteamMachineBlockEntity` | перенесено (выход всегда сзади) | T, G, C |
+| Карты рецептов GT | `GT_Recipe_Map` | `machine.recipe.*`, `tools/gen/steam.py` | 6 карт, 1382 рецепта | S, G |
+| Жидкостные трубы | `GT_MetaPipeEntity_Fluid` | `PipeBlock`, `PipeBlockEntity` | бронза/сталь S/M/L | G, C |
+| Кирпичная доменная печь | `GT_MetaTileEntity_PrimitiveBlastFurnace` | `BbfStructure`, `BbfBlockEntity` | перенесено | T, G, C |
+| Огнеупорная цепочка | `GT_CraftingRecipeLoader`, `GT_MachineRecipeLoader` | `tools/gen/steam.py` | перенесено | S |
+| Просмотр рецептов | NEI | JEI-плагин `machine.compat.jei` | 6 категорий + паровые печи как станции плавки | C |
+| Загрязнение | `GT_Pollution` | — | **не переносим** (D27) | — |
+| Коксовая печь | Railcraft + `RailCraft.zs` | — | срез LV (D29) | — |
+| EU, кабели, LV-машины | `GT_MetaPipeEntity_Cable`, `BasicMachine` | — | срез 4 | — |

@@ -4,6 +4,8 @@
 #   scripts/showcase.sh wall   — стена из всех блоков руд IIS в небе
 #   scripts/showcase.sh items  — рамки с предметами: цепочка руда -> бронза, инструменты GT
 #   scripts/showcase.sh vein   — жилы, построенные алгоритмом GT5 в небе (форма слоёв видна целиком)
+#   scripts/showcase.sh steam  — все машины эпохи пара в работе: котлы, паровые машины, трубы, доменная печь
+#   scripts/showcase.sh steamgui — GUI парового дробителя и JEI (нужен xdotool)
 # Результат: build/showcase/<режим>.png. Нужен JDK 25 в JAVA_HOME.
 set -u
 MODE=${1:-wall}
@@ -66,6 +68,51 @@ print('save-all flush')
 PY
   } >&3
   sleep 8
+elif [ "$MODE" = steam ] || [ "$MODE" = steamgui ]; then
+  { common; python3 -I - "$MODE" <<'PY'
+import sys
+mode = sys.argv[1]
+Y = 200
+print('forceload add -32 -32 32 32')
+print(f'fill -12 {Y-1} -14 10 {Y-1} 6 minecraft:smooth_stone')
+water = '{id:"minecraft:water",amount:16000}'
+steam = 'steam:{stacks:[{id:"iis:steam",amount:32000}]}'
+def boiler(x, bid, extra):
+    print(f'setblock {x} {Y} 0 iis:{bid}[facing=north]')
+    print(f'data merge block {x} {Y} 0 {{water:{{stacks:[{water}]}},temperature:500{extra}}}')
+boiler(6, 'boiler_coal_bronze', ',Items:[{Slot:2b,id:"minecraft:coal",count:64}]')
+boiler(5, 'boiler_coal_steel', ',Items:[{Slot:2b,id:"minecraft:coal",count:64}]')
+boiler(4, 'boiler_lava_steel', ',Items:[{Slot:2b,id:"minecraft:lava_bucket",count:1}]')
+boiler(3, 'boiler_solar_bronze', '')
+for x, size in ((6, 'small'), (5, 'medium'), (4, 'large')):
+    mat = 'bronze' if x == 6 else 'steel'
+    print(f'setblock {x} {Y+1} 0 iis:pipe_{size}_{mat}[down=true]')
+inputs = {
+    'macerator': '{Slot:0b,id:"iis:ore_chalcopyrite",count:64}',
+    'forge_hammer': '{Slot:0b,id:"minecraft:stone",count:64}',
+    'compressor': '{Slot:0b,id:"minecraft:ice",count:64}',
+    'extractor': '{Slot:0b,id:"minecraft:slime_ball",count:64}',
+    'alloy_smelter': '{Slot:0b,id:"minecraft:copper_ingot",count:63},{Slot:1b,id:"iis:ingot_tin",count:21}',
+    'furnace': '{Slot:0b,id:"minecraft:sand",count:64}',
+}
+for i, (m, items) in enumerate(inputs.items()):
+    x = 1 - i
+    for y, tier in ((Y, 'bronze'), (Y + 1, 'steel')):
+        print(f'setblock {x} {y} 0 iis:steam_{m}_{tier}[facing=north]')
+        print(f'data merge block {x} {y} 0 {{Items:[{items}],{steam}}}')
+# Кирпичная доменная печь: куб 3x4x3 из огнеупорных кирпичей, полая шахта, контроллер в передней стенке
+print(f'fill -9 {Y-1} 0 -7 {Y+2} 2 iis:firebrick_casing')
+print(f'fill -8 {Y} 1 -8 {Y+2} 1 minecraft:air')
+print(f'setblock -8 {Y} 0 iis:bricked_blast_furnace[facing=north]')
+print(f'data merge block -8 {Y} 0 {{Items:[{{Slot:0b,id:"minecraft:iron_ingot",count:10}},{{Slot:1b,id:"minecraft:coal",count:40}}]}}')
+if mode == 'steam':
+    print(f'setworldspawn -1 {Y} -11 0 12')
+else:
+    print(f'setworldspawn 1 {Y} -1 0 60')
+print('save-all flush')
+PY
+  } >&3
+  sleep 12
 else
   # Жила медного типа ИИС, построенная алгоритмом GT5 в небе (команда /iis vein), вид сбоку и сверху
   { common
@@ -82,6 +129,7 @@ echo stop >&3; wait $PID; exec 3>&-; rm -f "$FIFO"
 mkdir -p run/saves && cp -r run/world run/saves/showcase
 
 cat > run/options.txt <<'OPT'
+version:4790
 onboardAccessibility:false
 tutorialStep:none
 skipMultiplayerWarning:true
@@ -91,12 +139,20 @@ fov:0.25
 guiScale:2
 renderDistance:8
 lang:ru_ru
+key_key.use:key.keyboard.v
 OPT
 export LIBGL_ALWAYS_SOFTWARE=1
 xvfb-run -a -s "-screen 0 1600x900x24" bash -c '
   ./gradlew runClient -Pshowcase --no-daemon --console=plain > '"$OUT"'/client-'"$MODE"'.log 2>&1 &
   for i in $(seq 1 120); do grep -qE "Changing view distance|joined the game|Loaded [0-9]+ advancements" '"$OUT"'/client-'"$MODE"'.log && break; sleep 5; done
   sleep 45
+  if [ "'"$MODE"'" = steamgui ]; then
+    xdotool key v; sleep 4  # «использовать» на V: щелчок мыши под Xvfb не доходит до игры
+    import -window root '"$OUT"'/steamgui.png
+    xdotool mousemove 746 350; sleep 1; xdotool key u; sleep 4
+    import -window root '"$OUT"'/steamjei.png
+    xdotool key Escape; sleep 1; xdotool key Escape; sleep 1
+  fi
   import -window root '"$OUT"'/'"$MODE"'.png
   pkill -f "net.neoforged.devlaunch"; sleep 5
 '
