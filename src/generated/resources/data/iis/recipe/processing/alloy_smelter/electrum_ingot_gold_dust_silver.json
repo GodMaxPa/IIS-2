@@ -1,0 +1,21 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/gold",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/silver",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_electrum",
+      "count": 2
+    }
+  ],
+  "duration": 100,
+  "eut": 16
+}

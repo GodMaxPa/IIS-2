@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:end_ore_calcite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_calcite",
+      "count": 2
+    }
+  ],
+  "duration": 16,
+  "eut": 10
+}

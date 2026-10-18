@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#iis:screws/neodymium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_neodymium",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

@@ -1,0 +1,25 @@
+{
+  "type": "iis:primitive_blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/magnetite",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:dusts/charcoal",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:iron_ingot",
+      "count": 2
+    },
+    {
+      "id": "iis:tiny_dust_dark_ash",
+      "count": 2
+    }
+  ],
+  "duration": 2400,
+  "eut": 0
+}

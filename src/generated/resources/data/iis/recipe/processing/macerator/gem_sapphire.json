@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#c:gems/sapphire",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_sapphire",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/shovel_steel",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6566400
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 8421504
+      }
+    ]
+  }
+}

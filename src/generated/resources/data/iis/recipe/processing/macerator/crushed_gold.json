@@ -1,0 +1,22 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:impure_dust_gold",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_copper",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

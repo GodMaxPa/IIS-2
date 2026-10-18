@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#iis:rings/invar",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_invar",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

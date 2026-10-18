@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/shovel/invar",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:shovel_invar"
+  }
+}

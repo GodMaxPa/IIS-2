@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/machine/steam_furnace_steel_side",
+    "north": "iis:block/machine/steam_furnace_steel_front",
+    "south": "iis:block/machine/steam_furnace_steel_side",
+    "east": "iis:block/machine/steam_furnace_steel_side",
+    "west": "iis:block/machine/steam_furnace_steel_side",
+    "up": "iis:block/machine/steam_furnace_steel_top",
+    "down": "iis:block/machine/steam_furnace_steel_bottom"
+  }
+}

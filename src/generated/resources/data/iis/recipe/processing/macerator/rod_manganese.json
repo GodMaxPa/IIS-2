@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/manganese",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_manganese",
+      "count": 2
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

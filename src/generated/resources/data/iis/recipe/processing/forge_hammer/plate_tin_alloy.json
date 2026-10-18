@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tin_alloy",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_tin_alloy",
+      "count": 2
+    }
+  ],
+  "duration": 87,
+  "eut": 16
+}

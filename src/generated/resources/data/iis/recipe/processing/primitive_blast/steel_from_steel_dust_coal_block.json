@@ -1,0 +1,25 @@
+{
+  "type": "iis:primitive_blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/steel",
+      "count": 10
+    },
+    {
+      "ingredient": "minecraft:coal_block",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_steel",
+      "count": 10
+    },
+    {
+      "id": "iis:dust_dark_ash",
+      "count": 2
+    }
+  ],
+  "duration": 72000,
+  "eut": 0
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "P P",
+    "BFB"
+  ],
+  "key": {
+    "P": "#c:plates/bronze",
+    "B": "minecraft:bricks",
+    "F": "minecraft:furnace"
+  },
+  "result": {
+    "id": "iis:boiler_coal_bronze"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/pickaxe/tin_alloy",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:pickaxe_tin_alloy"
+  }
+}

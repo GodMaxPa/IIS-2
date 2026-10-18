@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:deepslate_ore_tricalcium_phosphate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_tricalcium_phosphate",
+      "count": 3
+    }
+  ],
+  "duration": 16,
+  "eut": 10
+}

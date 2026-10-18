@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/cupronickel",
+    "#iis:small_dusts/cupronickel",
+    "#iis:small_dusts/cupronickel",
+    "#iis:small_dusts/cupronickel"
+  ],
+  "result": {
+    "id": "iis:dust_cupronickel"
+  }
+}

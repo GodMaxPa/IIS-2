@@ -1,0 +1,17 @@
+{
+  "type": "iis:extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:bookshelf",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:book",
+      "count": 3
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

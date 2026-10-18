@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XXX",
+    "FMF",
+    "XXX"
+  ],
+  "key": {
+    "M": "iis:hull_bronze_bricked",
+    "X": "#iis:pipes/small/bronze",
+    "F": "minecraft:furnace"
+  },
+  "result": {
+    "id": "iis:steam_alloy_smelter_bronze"
+  }
+}

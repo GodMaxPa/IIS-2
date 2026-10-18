@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "iis:item/materialicons/metallic/toolheadsword",
+    "layer1": "iis:item/materialicons/metallic/toolheadsword_overlay"
+  }
+}

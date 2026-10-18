@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:ore_certus_quartz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_certus_quartz",
+      "count": 2
+    }
+  ],
+  "duration": 16,
+  "eut": 10
+}

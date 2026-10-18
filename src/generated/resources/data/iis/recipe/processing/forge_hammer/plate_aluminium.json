@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/aluminium",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_aluminium",
+      "count": 2
+    }
+  ],
+  "duration": 26,
+  "eut": 16
+}

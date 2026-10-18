@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/beryllium",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_beryllium",
+      "count": 2
+    }
+  ],
+  "duration": 9,
+  "eut": 16
+}

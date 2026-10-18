@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/saw/neodymium",
+    "#c:rods/steel"
+  ],
+  "result": {
+    "id": "iis:saw_neodymium"
+  }
+}

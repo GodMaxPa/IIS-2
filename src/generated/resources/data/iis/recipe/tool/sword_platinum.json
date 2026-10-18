@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/sword/platinum",
+    "#c:rods/steel"
+  ],
+  "result": {
+    "id": "iis:sword_platinum"
+  }
+}

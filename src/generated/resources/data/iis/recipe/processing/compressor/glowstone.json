@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:glowstone_dust",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:glowstone",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

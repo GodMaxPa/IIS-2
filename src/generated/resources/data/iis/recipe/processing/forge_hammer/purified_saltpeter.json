@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/saltpeter",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pure_dust_saltpeter",
+      "count": 1
+    }
+  ],
+  "duration": 10,
+  "eut": 16
+}

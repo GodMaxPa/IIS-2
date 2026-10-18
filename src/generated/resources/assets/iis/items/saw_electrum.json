@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/saw_electrum",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 8421504
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 16777060
+      }
+    ]
+  }
+}

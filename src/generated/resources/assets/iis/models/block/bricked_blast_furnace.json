@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/machine/firebrick_casing",
+    "north": "iis:block/machine/bricked_blast_furnace_front",
+    "south": "iis:block/machine/firebrick_casing",
+    "east": "iis:block/machine/firebrick_casing",
+    "west": "iis:block/machine/firebrick_casing",
+    "up": "iis:block/machine/firebrick_casing",
+    "down": "iis:block/machine/firebrick_casing"
+  }
+}

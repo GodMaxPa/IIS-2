@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/olivine",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_olivine",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

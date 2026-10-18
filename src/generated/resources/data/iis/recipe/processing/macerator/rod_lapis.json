@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/lapis",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_lapis",
+      "count": 2
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

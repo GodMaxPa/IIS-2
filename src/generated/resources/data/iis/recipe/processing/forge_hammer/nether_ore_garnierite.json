@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:nether_ore_garnierite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_garnierite",
+      "count": 2
+    }
+  ],
+  "duration": 16,
+  "eut": 10
+}

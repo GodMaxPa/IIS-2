@@ -1,0 +1,27 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:ore_lapis",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_lapis",
+      "count": 12
+    },
+    {
+      "id": "iis:dust_lazurite",
+      "count": 1,
+      "chance": 4000
+    },
+    {
+      "id": "iis:dust_stone",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

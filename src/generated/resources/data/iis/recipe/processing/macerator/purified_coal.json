@@ -1,0 +1,22 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/coal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pure_dust_coal",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_thorium",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

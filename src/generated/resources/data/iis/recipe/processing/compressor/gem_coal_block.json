@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:gems/coal",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:coal_block",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

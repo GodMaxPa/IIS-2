@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:end_ore_palladium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_palladium",
+      "count": 2
+    }
+  ],
+  "duration": 16,
+  "eut": 10
+}

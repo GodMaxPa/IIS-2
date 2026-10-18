@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "PhP",
+    "BBB"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "B": "minecraft:bricks",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:hull_steel_bricked"
+  }
+}

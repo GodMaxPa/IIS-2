@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/machine/hull_steel_bricked_side",
+    "north": "iis:block/machine/hull_steel_bricked_side",
+    "south": "iis:block/machine/hull_steel_bricked_side",
+    "east": "iis:block/machine/hull_steel_bricked_side",
+    "west": "iis:block/machine/hull_steel_bricked_side",
+    "up": "iis:block/machine/hull_steel_bricked_top",
+    "down": "iis:block/machine/hull_steel_bricked_bottom"
+  }
+}

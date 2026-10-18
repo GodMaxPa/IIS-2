@@ -1,0 +1,27 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:end_ore_palladium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_palladium",
+      "count": 4
+    },
+    {
+      "id": "iis:dust_palladium",
+      "count": 1,
+      "chance": 2000
+    },
+    {
+      "id": "iis:dust_endstone",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

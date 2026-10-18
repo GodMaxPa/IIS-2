@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PIh",
+    "f  "
+  ],
+  "key": {
+    "P": "#c:plates/cupronickel",
+    "I": "#c:ingots/cupronickel",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:hoe_head_cupronickel"
+  }
+}

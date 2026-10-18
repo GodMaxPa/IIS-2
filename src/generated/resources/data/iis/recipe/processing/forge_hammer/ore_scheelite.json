@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:ore_scheelite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_scheelite",
+      "count": 2
+    }
+  ],
+  "duration": 16,
+  "eut": 10
+}

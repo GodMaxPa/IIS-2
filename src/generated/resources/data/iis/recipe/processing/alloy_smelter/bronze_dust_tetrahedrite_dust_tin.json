@@ -1,0 +1,21 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/tetrahedrite",
+      "count": 3
+    },
+    {
+      "ingredient": "#c:dusts/tin",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_bronze",
+      "count": 3
+    }
+  ],
+  "duration": 150,
+  "eut": 16
+}

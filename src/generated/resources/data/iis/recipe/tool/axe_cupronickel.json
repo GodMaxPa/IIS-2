@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/axe/cupronickel",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:axe_cupronickel"
+  }
+}

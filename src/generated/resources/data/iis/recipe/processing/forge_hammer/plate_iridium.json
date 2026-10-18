@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/iridium",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_iridium",
+      "count": 2
+    }
+  ],
+  "duration": 192,
+  "eut": 16
+}

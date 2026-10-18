@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "h",
+    "X",
+    "X"
+  ],
+  "key": {
+    "X": "#c:ingots/tin_alloy",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:plate_tin_alloy"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/invar",
+    "#iis:small_dusts/invar",
+    "#iis:small_dusts/invar",
+    "#iis:small_dusts/invar"
+  ],
+  "result": {
+    "id": "iis:dust_invar"
+  }
+}

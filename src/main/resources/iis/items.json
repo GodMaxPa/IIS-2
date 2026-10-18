@@ -335,6 +335,21 @@
     "material": "apatite"
   },
   {
+    "id": "dust_ash",
+    "prefix": "dust",
+    "material": "ash"
+  },
+  {
+    "id": "small_dust_ash",
+    "prefix": "small_dust",
+    "material": "ash"
+  },
+  {
+    "id": "tiny_dust_ash",
+    "prefix": "tiny_dust",
+    "material": "ash"
+  },
+  {
     "id": "crushed_banded_iron",
     "prefix": "crushed",
     "material": "banded_iron"
@@ -710,6 +725,71 @@
     "material": "blue_topaz"
   },
   {
+    "id": "dust_brass",
+    "prefix": "dust",
+    "material": "brass"
+  },
+  {
+    "id": "small_dust_brass",
+    "prefix": "small_dust",
+    "material": "brass"
+  },
+  {
+    "id": "tiny_dust_brass",
+    "prefix": "tiny_dust",
+    "material": "brass"
+  },
+  {
+    "id": "ingot_brass",
+    "prefix": "ingot",
+    "material": "brass"
+  },
+  {
+    "id": "nugget_brass",
+    "prefix": "nugget",
+    "material": "brass"
+  },
+  {
+    "id": "plate_brass",
+    "prefix": "plate",
+    "material": "brass"
+  },
+  {
+    "id": "rod_brass",
+    "prefix": "rod",
+    "material": "brass"
+  },
+  {
+    "id": "bolt_brass",
+    "prefix": "bolt",
+    "material": "brass"
+  },
+  {
+    "id": "screw_brass",
+    "prefix": "screw",
+    "material": "brass"
+  },
+  {
+    "id": "ring_brass",
+    "prefix": "ring",
+    "material": "brass"
+  },
+  {
+    "id": "dust_brick",
+    "prefix": "dust",
+    "material": "brick"
+  },
+  {
+    "id": "small_dust_brick",
+    "prefix": "small_dust",
+    "material": "brick"
+  },
+  {
+    "id": "tiny_dust_brick",
+    "prefix": "tiny_dust",
+    "material": "brick"
+  },
+  {
     "id": "dust_bronze",
     "prefix": "dust",
     "material": "bronze"
@@ -960,6 +1040,41 @@
     "material": "chalcopyrite"
   },
   {
+    "id": "dust_charcoal",
+    "prefix": "dust",
+    "material": "charcoal"
+  },
+  {
+    "id": "small_dust_charcoal",
+    "prefix": "small_dust",
+    "material": "charcoal"
+  },
+  {
+    "id": "tiny_dust_charcoal",
+    "prefix": "tiny_dust",
+    "material": "charcoal"
+  },
+  {
+    "id": "plate_charcoal",
+    "prefix": "plate",
+    "material": "charcoal"
+  },
+  {
+    "id": "rod_charcoal",
+    "prefix": "rod",
+    "material": "charcoal"
+  },
+  {
+    "id": "bolt_charcoal",
+    "prefix": "bolt",
+    "material": "charcoal"
+  },
+  {
+    "id": "screw_charcoal",
+    "prefix": "screw",
+    "material": "charcoal"
+  },
+  {
     "id": "crushed_cinnabar",
     "prefix": "crushed",
     "material": "cinnabar"
@@ -993,6 +1108,21 @@
     "id": "tiny_dust_cinnabar",
     "prefix": "tiny_dust",
     "material": "cinnabar"
+  },
+  {
+    "id": "dust_clay",
+    "prefix": "dust",
+    "material": "clay"
+  },
+  {
+    "id": "small_dust_clay",
+    "prefix": "small_dust",
+    "material": "clay"
+  },
+  {
+    "id": "tiny_dust_clay",
+    "prefix": "tiny_dust",
+    "material": "clay"
   },
   {
     "id": "crushed_coal",
@@ -1230,6 +1360,71 @@
     "material": "copper"
   },
   {
+    "id": "dust_cupronickel",
+    "prefix": "dust",
+    "material": "cupronickel"
+  },
+  {
+    "id": "small_dust_cupronickel",
+    "prefix": "small_dust",
+    "material": "cupronickel"
+  },
+  {
+    "id": "tiny_dust_cupronickel",
+    "prefix": "tiny_dust",
+    "material": "cupronickel"
+  },
+  {
+    "id": "ingot_cupronickel",
+    "prefix": "ingot",
+    "material": "cupronickel"
+  },
+  {
+    "id": "nugget_cupronickel",
+    "prefix": "nugget",
+    "material": "cupronickel"
+  },
+  {
+    "id": "plate_cupronickel",
+    "prefix": "plate",
+    "material": "cupronickel"
+  },
+  {
+    "id": "rod_cupronickel",
+    "prefix": "rod",
+    "material": "cupronickel"
+  },
+  {
+    "id": "bolt_cupronickel",
+    "prefix": "bolt",
+    "material": "cupronickel"
+  },
+  {
+    "id": "screw_cupronickel",
+    "prefix": "screw",
+    "material": "cupronickel"
+  },
+  {
+    "id": "ring_cupronickel",
+    "prefix": "ring",
+    "material": "cupronickel"
+  },
+  {
+    "id": "dust_dark_ash",
+    "prefix": "dust",
+    "material": "dark_ash"
+  },
+  {
+    "id": "small_dust_dark_ash",
+    "prefix": "small_dust",
+    "material": "dark_ash"
+  },
+  {
+    "id": "tiny_dust_dark_ash",
+    "prefix": "tiny_dust",
+    "material": "dark_ash"
+  },
+  {
     "id": "crushed_diamond",
     "prefix": "crushed",
     "material": "diamond"
@@ -1283,6 +1478,56 @@
     "id": "screw_diamond",
     "prefix": "screw",
     "material": "diamond"
+  },
+  {
+    "id": "dust_electrum",
+    "prefix": "dust",
+    "material": "electrum"
+  },
+  {
+    "id": "small_dust_electrum",
+    "prefix": "small_dust",
+    "material": "electrum"
+  },
+  {
+    "id": "tiny_dust_electrum",
+    "prefix": "tiny_dust",
+    "material": "electrum"
+  },
+  {
+    "id": "ingot_electrum",
+    "prefix": "ingot",
+    "material": "electrum"
+  },
+  {
+    "id": "nugget_electrum",
+    "prefix": "nugget",
+    "material": "electrum"
+  },
+  {
+    "id": "plate_electrum",
+    "prefix": "plate",
+    "material": "electrum"
+  },
+  {
+    "id": "rod_electrum",
+    "prefix": "rod",
+    "material": "electrum"
+  },
+  {
+    "id": "bolt_electrum",
+    "prefix": "bolt",
+    "material": "electrum"
+  },
+  {
+    "id": "screw_electrum",
+    "prefix": "screw",
+    "material": "electrum"
+  },
+  {
+    "id": "ring_electrum",
+    "prefix": "ring",
+    "material": "electrum"
   },
   {
     "id": "crushed_emerald",
@@ -1353,6 +1598,36 @@
     "id": "tiny_dust_endstone",
     "prefix": "tiny_dust",
     "material": "endstone"
+  },
+  {
+    "id": "dust_ferrosilite",
+    "prefix": "dust",
+    "material": "ferrosilite"
+  },
+  {
+    "id": "small_dust_ferrosilite",
+    "prefix": "small_dust",
+    "material": "ferrosilite"
+  },
+  {
+    "id": "tiny_dust_ferrosilite",
+    "prefix": "tiny_dust",
+    "material": "ferrosilite"
+  },
+  {
+    "id": "dust_fireclay",
+    "prefix": "dust",
+    "material": "fireclay"
+  },
+  {
+    "id": "small_dust_fireclay",
+    "prefix": "small_dust",
+    "material": "fireclay"
+  },
+  {
+    "id": "tiny_dust_fireclay",
+    "prefix": "tiny_dust",
+    "material": "fireclay"
   },
   {
     "id": "dust_flint",
@@ -1878,6 +2153,56 @@
     "id": "tiny_dust_ilmenite",
     "prefix": "tiny_dust",
     "material": "ilmenite"
+  },
+  {
+    "id": "dust_invar",
+    "prefix": "dust",
+    "material": "invar"
+  },
+  {
+    "id": "small_dust_invar",
+    "prefix": "small_dust",
+    "material": "invar"
+  },
+  {
+    "id": "tiny_dust_invar",
+    "prefix": "tiny_dust",
+    "material": "invar"
+  },
+  {
+    "id": "ingot_invar",
+    "prefix": "ingot",
+    "material": "invar"
+  },
+  {
+    "id": "nugget_invar",
+    "prefix": "nugget",
+    "material": "invar"
+  },
+  {
+    "id": "plate_invar",
+    "prefix": "plate",
+    "material": "invar"
+  },
+  {
+    "id": "rod_invar",
+    "prefix": "rod",
+    "material": "invar"
+  },
+  {
+    "id": "bolt_invar",
+    "prefix": "bolt",
+    "material": "invar"
+  },
+  {
+    "id": "screw_invar",
+    "prefix": "screw",
+    "material": "invar"
+  },
+  {
+    "id": "ring_invar",
+    "prefix": "ring",
+    "material": "invar"
   },
   {
     "id": "crushed_iridium",
@@ -3620,6 +3945,71 @@
     "material": "quartzite"
   },
   {
+    "id": "dust_raw_rubber",
+    "prefix": "dust",
+    "material": "raw_rubber"
+  },
+  {
+    "id": "small_dust_raw_rubber",
+    "prefix": "small_dust",
+    "material": "raw_rubber"
+  },
+  {
+    "id": "tiny_dust_raw_rubber",
+    "prefix": "tiny_dust",
+    "material": "raw_rubber"
+  },
+  {
+    "id": "dust_red_alloy",
+    "prefix": "dust",
+    "material": "red_alloy"
+  },
+  {
+    "id": "small_dust_red_alloy",
+    "prefix": "small_dust",
+    "material": "red_alloy"
+  },
+  {
+    "id": "tiny_dust_red_alloy",
+    "prefix": "tiny_dust",
+    "material": "red_alloy"
+  },
+  {
+    "id": "ingot_red_alloy",
+    "prefix": "ingot",
+    "material": "red_alloy"
+  },
+  {
+    "id": "nugget_red_alloy",
+    "prefix": "nugget",
+    "material": "red_alloy"
+  },
+  {
+    "id": "plate_red_alloy",
+    "prefix": "plate",
+    "material": "red_alloy"
+  },
+  {
+    "id": "rod_red_alloy",
+    "prefix": "rod",
+    "material": "red_alloy"
+  },
+  {
+    "id": "bolt_red_alloy",
+    "prefix": "bolt",
+    "material": "red_alloy"
+  },
+  {
+    "id": "screw_red_alloy",
+    "prefix": "screw",
+    "material": "red_alloy"
+  },
+  {
+    "id": "ring_red_alloy",
+    "prefix": "ring",
+    "material": "red_alloy"
+  },
+  {
     "id": "crushed_redstone",
     "prefix": "crushed",
     "material": "redstone"
@@ -4180,6 +4570,56 @@
     "material": "spodumene"
   },
   {
+    "id": "dust_steel",
+    "prefix": "dust",
+    "material": "steel"
+  },
+  {
+    "id": "small_dust_steel",
+    "prefix": "small_dust",
+    "material": "steel"
+  },
+  {
+    "id": "tiny_dust_steel",
+    "prefix": "tiny_dust",
+    "material": "steel"
+  },
+  {
+    "id": "ingot_steel",
+    "prefix": "ingot",
+    "material": "steel"
+  },
+  {
+    "id": "nugget_steel",
+    "prefix": "nugget",
+    "material": "steel"
+  },
+  {
+    "id": "plate_steel",
+    "prefix": "plate",
+    "material": "steel"
+  },
+  {
+    "id": "rod_steel",
+    "prefix": "rod",
+    "material": "steel"
+  },
+  {
+    "id": "bolt_steel",
+    "prefix": "bolt",
+    "material": "steel"
+  },
+  {
+    "id": "screw_steel",
+    "prefix": "screw",
+    "material": "steel"
+  },
+  {
+    "id": "ring_steel",
+    "prefix": "ring",
+    "material": "steel"
+  },
+  {
     "id": "crushed_stibnite",
     "prefix": "crushed",
     "material": "stibnite"
@@ -4568,6 +5008,56 @@
     "id": "ring_tin",
     "prefix": "ring",
     "material": "tin"
+  },
+  {
+    "id": "dust_tin_alloy",
+    "prefix": "dust",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "small_dust_tin_alloy",
+    "prefix": "small_dust",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "tiny_dust_tin_alloy",
+    "prefix": "tiny_dust",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "ingot_tin_alloy",
+    "prefix": "ingot",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "nugget_tin_alloy",
+    "prefix": "nugget",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "plate_tin_alloy",
+    "prefix": "plate",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "rod_tin_alloy",
+    "prefix": "rod",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "bolt_tin_alloy",
+    "prefix": "bolt",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "screw_tin_alloy",
+    "prefix": "screw",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "ring_tin_alloy",
+    "prefix": "ring",
+    "material": "tin_alloy"
   },
   {
     "id": "crushed_topaz",
@@ -5155,6 +5645,36 @@
     "material": "blue_topaz"
   },
   {
+    "id": "sword_head_brass",
+    "prefix": "sword_head",
+    "material": "brass"
+  },
+  {
+    "id": "pickaxe_head_brass",
+    "prefix": "pickaxe_head",
+    "material": "brass"
+  },
+  {
+    "id": "shovel_head_brass",
+    "prefix": "shovel_head",
+    "material": "brass"
+  },
+  {
+    "id": "axe_head_brass",
+    "prefix": "axe_head",
+    "material": "brass"
+  },
+  {
+    "id": "hoe_head_brass",
+    "prefix": "hoe_head",
+    "material": "brass"
+  },
+  {
+    "id": "saw_head_brass",
+    "prefix": "saw_head",
+    "material": "brass"
+  },
+  {
     "id": "sword_head_bronze",
     "prefix": "sword_head",
     "material": "bronze"
@@ -5245,6 +5765,36 @@
     "material": "cobalt"
   },
   {
+    "id": "sword_head_cupronickel",
+    "prefix": "sword_head",
+    "material": "cupronickel"
+  },
+  {
+    "id": "pickaxe_head_cupronickel",
+    "prefix": "pickaxe_head",
+    "material": "cupronickel"
+  },
+  {
+    "id": "shovel_head_cupronickel",
+    "prefix": "shovel_head",
+    "material": "cupronickel"
+  },
+  {
+    "id": "axe_head_cupronickel",
+    "prefix": "axe_head",
+    "material": "cupronickel"
+  },
+  {
+    "id": "hoe_head_cupronickel",
+    "prefix": "hoe_head",
+    "material": "cupronickel"
+  },
+  {
+    "id": "saw_head_cupronickel",
+    "prefix": "saw_head",
+    "material": "cupronickel"
+  },
+  {
     "id": "sword_head_diamond",
     "prefix": "sword_head",
     "material": "diamond"
@@ -5273,6 +5823,36 @@
     "id": "saw_head_diamond",
     "prefix": "saw_head",
     "material": "diamond"
+  },
+  {
+    "id": "sword_head_electrum",
+    "prefix": "sword_head",
+    "material": "electrum"
+  },
+  {
+    "id": "pickaxe_head_electrum",
+    "prefix": "pickaxe_head",
+    "material": "electrum"
+  },
+  {
+    "id": "shovel_head_electrum",
+    "prefix": "shovel_head",
+    "material": "electrum"
+  },
+  {
+    "id": "axe_head_electrum",
+    "prefix": "axe_head",
+    "material": "electrum"
+  },
+  {
+    "id": "hoe_head_electrum",
+    "prefix": "hoe_head",
+    "material": "electrum"
+  },
+  {
+    "id": "saw_head_electrum",
+    "prefix": "saw_head",
+    "material": "electrum"
   },
   {
     "id": "sword_head_emerald",
@@ -5365,6 +5945,36 @@
     "material": "garnet_yellow"
   },
   {
+    "id": "sword_head_gold",
+    "prefix": "sword_head",
+    "material": "gold"
+  },
+  {
+    "id": "pickaxe_head_gold",
+    "prefix": "pickaxe_head",
+    "material": "gold"
+  },
+  {
+    "id": "shovel_head_gold",
+    "prefix": "shovel_head",
+    "material": "gold"
+  },
+  {
+    "id": "axe_head_gold",
+    "prefix": "axe_head",
+    "material": "gold"
+  },
+  {
+    "id": "hoe_head_gold",
+    "prefix": "hoe_head",
+    "material": "gold"
+  },
+  {
+    "id": "saw_head_gold",
+    "prefix": "saw_head",
+    "material": "gold"
+  },
+  {
     "id": "sword_head_green_sapphire",
     "prefix": "sword_head",
     "material": "green_sapphire"
@@ -5393,6 +6003,66 @@
     "id": "saw_head_green_sapphire",
     "prefix": "saw_head",
     "material": "green_sapphire"
+  },
+  {
+    "id": "sword_head_invar",
+    "prefix": "sword_head",
+    "material": "invar"
+  },
+  {
+    "id": "pickaxe_head_invar",
+    "prefix": "pickaxe_head",
+    "material": "invar"
+  },
+  {
+    "id": "shovel_head_invar",
+    "prefix": "shovel_head",
+    "material": "invar"
+  },
+  {
+    "id": "axe_head_invar",
+    "prefix": "axe_head",
+    "material": "invar"
+  },
+  {
+    "id": "hoe_head_invar",
+    "prefix": "hoe_head",
+    "material": "invar"
+  },
+  {
+    "id": "saw_head_invar",
+    "prefix": "saw_head",
+    "material": "invar"
+  },
+  {
+    "id": "sword_head_iridium",
+    "prefix": "sword_head",
+    "material": "iridium"
+  },
+  {
+    "id": "pickaxe_head_iridium",
+    "prefix": "pickaxe_head",
+    "material": "iridium"
+  },
+  {
+    "id": "shovel_head_iridium",
+    "prefix": "shovel_head",
+    "material": "iridium"
+  },
+  {
+    "id": "axe_head_iridium",
+    "prefix": "axe_head",
+    "material": "iridium"
+  },
+  {
+    "id": "hoe_head_iridium",
+    "prefix": "hoe_head",
+    "material": "iridium"
+  },
+  {
+    "id": "saw_head_iridium",
+    "prefix": "saw_head",
+    "material": "iridium"
   },
   {
     "id": "sword_head_iron",
@@ -5483,6 +6153,36 @@
     "id": "saw_head_molybdenum",
     "prefix": "saw_head",
     "material": "molybdenum"
+  },
+  {
+    "id": "sword_head_neodymium",
+    "prefix": "sword_head",
+    "material": "neodymium"
+  },
+  {
+    "id": "pickaxe_head_neodymium",
+    "prefix": "pickaxe_head",
+    "material": "neodymium"
+  },
+  {
+    "id": "shovel_head_neodymium",
+    "prefix": "shovel_head",
+    "material": "neodymium"
+  },
+  {
+    "id": "axe_head_neodymium",
+    "prefix": "axe_head",
+    "material": "neodymium"
+  },
+  {
+    "id": "hoe_head_neodymium",
+    "prefix": "hoe_head",
+    "material": "neodymium"
+  },
+  {
+    "id": "saw_head_neodymium",
+    "prefix": "saw_head",
+    "material": "neodymium"
   },
   {
     "id": "sword_head_nether_quartz",
@@ -5605,6 +6305,66 @@
     "material": "opal"
   },
   {
+    "id": "sword_head_palladium",
+    "prefix": "sword_head",
+    "material": "palladium"
+  },
+  {
+    "id": "pickaxe_head_palladium",
+    "prefix": "pickaxe_head",
+    "material": "palladium"
+  },
+  {
+    "id": "shovel_head_palladium",
+    "prefix": "shovel_head",
+    "material": "palladium"
+  },
+  {
+    "id": "axe_head_palladium",
+    "prefix": "axe_head",
+    "material": "palladium"
+  },
+  {
+    "id": "hoe_head_palladium",
+    "prefix": "hoe_head",
+    "material": "palladium"
+  },
+  {
+    "id": "saw_head_palladium",
+    "prefix": "saw_head",
+    "material": "palladium"
+  },
+  {
+    "id": "sword_head_platinum",
+    "prefix": "sword_head",
+    "material": "platinum"
+  },
+  {
+    "id": "pickaxe_head_platinum",
+    "prefix": "pickaxe_head",
+    "material": "platinum"
+  },
+  {
+    "id": "shovel_head_platinum",
+    "prefix": "shovel_head",
+    "material": "platinum"
+  },
+  {
+    "id": "axe_head_platinum",
+    "prefix": "axe_head",
+    "material": "platinum"
+  },
+  {
+    "id": "hoe_head_platinum",
+    "prefix": "hoe_head",
+    "material": "platinum"
+  },
+  {
+    "id": "saw_head_platinum",
+    "prefix": "saw_head",
+    "material": "platinum"
+  },
+  {
     "id": "sword_head_ruby",
     "prefix": "sword_head",
     "material": "ruby"
@@ -5665,6 +6425,66 @@
     "material": "sapphire"
   },
   {
+    "id": "sword_head_silver",
+    "prefix": "sword_head",
+    "material": "silver"
+  },
+  {
+    "id": "pickaxe_head_silver",
+    "prefix": "pickaxe_head",
+    "material": "silver"
+  },
+  {
+    "id": "shovel_head_silver",
+    "prefix": "shovel_head",
+    "material": "silver"
+  },
+  {
+    "id": "axe_head_silver",
+    "prefix": "axe_head",
+    "material": "silver"
+  },
+  {
+    "id": "hoe_head_silver",
+    "prefix": "hoe_head",
+    "material": "silver"
+  },
+  {
+    "id": "saw_head_silver",
+    "prefix": "saw_head",
+    "material": "silver"
+  },
+  {
+    "id": "sword_head_steel",
+    "prefix": "sword_head",
+    "material": "steel"
+  },
+  {
+    "id": "pickaxe_head_steel",
+    "prefix": "pickaxe_head",
+    "material": "steel"
+  },
+  {
+    "id": "shovel_head_steel",
+    "prefix": "shovel_head",
+    "material": "steel"
+  },
+  {
+    "id": "axe_head_steel",
+    "prefix": "axe_head",
+    "material": "steel"
+  },
+  {
+    "id": "hoe_head_steel",
+    "prefix": "hoe_head",
+    "material": "steel"
+  },
+  {
+    "id": "saw_head_steel",
+    "prefix": "saw_head",
+    "material": "steel"
+  },
+  {
     "id": "sword_head_tanzanite",
     "prefix": "sword_head",
     "material": "tanzanite"
@@ -5693,6 +6513,36 @@
     "id": "saw_head_tanzanite",
     "prefix": "saw_head",
     "material": "tanzanite"
+  },
+  {
+    "id": "sword_head_tin_alloy",
+    "prefix": "sword_head",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "pickaxe_head_tin_alloy",
+    "prefix": "pickaxe_head",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "shovel_head_tin_alloy",
+    "prefix": "shovel_head",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "axe_head_tin_alloy",
+    "prefix": "axe_head",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "hoe_head_tin_alloy",
+    "prefix": "hoe_head",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "saw_head_tin_alloy",
+    "prefix": "saw_head",
+    "material": "tin_alloy"
   },
   {
     "id": "sword_head_topaz",

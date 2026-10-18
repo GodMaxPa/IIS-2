@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "fPh",
+    " S "
+  ],
+  "key": {
+    "P": "#c:plates/iridium",
+    "S": "#c:rods/iridium",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:knife_iridium"
+  }
+}

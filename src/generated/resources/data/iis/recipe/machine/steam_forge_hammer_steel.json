@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XPX",
+    "XMX",
+    "XAX"
+  ],
+  "key": {
+    "M": "iis:hull_steel",
+    "X": "#iis:pipes/small/steel",
+    "P": "minecraft:piston",
+    "A": "minecraft:anvil"
+  },
+  "result": {
+    "id": "iis:steam_forge_hammer_steel"
+  }
+}

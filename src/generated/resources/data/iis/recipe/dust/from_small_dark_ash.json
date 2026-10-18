@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/dark_ash",
+    "#iis:small_dusts/dark_ash",
+    "#iis:small_dusts/dark_ash",
+    "#iis:small_dusts/dark_ash"
+  ],
+  "result": {
+    "id": "iis:dust_dark_ash"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/axe_neodymium",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 8421504
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 6579300
+      }
+    ]
+  }
+}

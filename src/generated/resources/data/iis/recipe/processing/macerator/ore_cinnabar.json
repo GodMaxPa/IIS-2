@@ -1,0 +1,27 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:ore_cinnabar",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_cinnabar",
+      "count": 2
+    },
+    {
+      "id": "minecraft:redstone",
+      "count": 1,
+      "chance": 1000
+    },
+    {
+      "id": "iis:dust_stone",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

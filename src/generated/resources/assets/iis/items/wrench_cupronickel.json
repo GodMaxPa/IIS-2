@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/wrench_cupronickel",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 14915200
+      }
+    ]
+  }
+}

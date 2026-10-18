@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/axe/gold",
+    "#c:rods/steel"
+  ],
+  "result": {
+    "id": "iis:axe_gold"
+  }
+}

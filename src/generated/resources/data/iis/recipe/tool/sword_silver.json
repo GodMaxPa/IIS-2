@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/sword/silver",
+    "#c:rods/steel"
+  ],
+  "result": {
+    "id": "iis:sword_silver"
+  }
+}

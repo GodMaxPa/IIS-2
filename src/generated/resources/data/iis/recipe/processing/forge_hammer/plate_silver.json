@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/silver",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_silver",
+      "count": 2
+    }
+  ],
+  "duration": 107,
+  "eut": 16
+}

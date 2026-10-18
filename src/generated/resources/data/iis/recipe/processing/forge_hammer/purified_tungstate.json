@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/tungstate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pure_dust_tungstate",
+      "count": 1
+    }
+  ],
+  "duration": 10,
+  "eut": 16
+}

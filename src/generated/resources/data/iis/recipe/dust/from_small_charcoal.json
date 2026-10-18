@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/charcoal",
+    "#iis:small_dusts/charcoal",
+    "#iis:small_dusts/charcoal",
+    "#iis:small_dusts/charcoal"
+  ],
+  "result": {
+    "id": "iis:dust_charcoal"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "w h",
+    "PPP"
+  ],
+  "key": {
+    "P": "#c:plates/bronze",
+    "w": "#iis:tools/wrench",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:pipe_medium_bronze",
+    "count": 2
+  }
+}

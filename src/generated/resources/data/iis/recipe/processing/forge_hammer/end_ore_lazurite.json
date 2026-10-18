@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:end_ore_lazurite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_lazurite",
+      "count": 12
+    }
+  ],
+  "duration": 16,
+  "eut": 10
+}

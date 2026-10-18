@@ -1,0 +1,22 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/rock_salt",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:impure_dust_rock_salt",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_salt",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

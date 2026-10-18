@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/olivine",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_olivine",
+      "count": 2
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

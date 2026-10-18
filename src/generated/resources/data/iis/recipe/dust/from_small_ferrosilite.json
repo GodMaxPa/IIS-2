@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/ferrosilite",
+    "#iis:small_dusts/ferrosilite",
+    "#iis:small_dusts/ferrosilite",
+    "#iis:small_dusts/ferrosilite"
+  ],
+  "result": {
+    "id": "iis:dust_ferrosilite"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/pitchblende",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:impure_dust_pitchblende",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_thorium",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/hoe/platinum",
+    "#c:rods/steel"
+  ],
+  "result": {
+    "id": "iis:hoe_platinum"
+  }
+}

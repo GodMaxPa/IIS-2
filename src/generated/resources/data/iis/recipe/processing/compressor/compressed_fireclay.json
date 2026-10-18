@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/fireclay",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:compressed_fireclay",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

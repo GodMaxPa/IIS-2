@@ -124,6 +124,9 @@ for n in list(names):
     if ds and ds in code:
         names.add(ds)
 names |= {'Bronze', 'Flint', 'Wood'}
+# Steam age (slice 3): steel, alloy-smelter alloys and their inputs, boiler/blast-furnace byproducts, firebrick chain
+names |= {'Steel', 'DarkAsh', 'Ash', 'Brick', 'Clay', 'Fireclay', 'RawRubber', 'Brass', 'Cupronickel', 'Invar',
+          'TinAlloy', 'Electrum', 'RedAlloy', 'Charcoal', 'Ferrosilite'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64
@@ -161,7 +164,7 @@ VANILLA = {
     ('ingot', 'Copper'): 'minecraft:copper_ingot', ('nugget', 'Copper'): 'minecraft:copper_nugget',
     ('gem', 'Coal'): 'minecraft:coal', ('gem', 'Diamond'): 'minecraft:diamond', ('gem', 'Emerald'): 'minecraft:emerald',
     ('gem', 'Lapis'): 'minecraft:lapis_lazuli', ('gem', 'NetherQuartz'): 'minecraft:quartz',
-    ('gem', 'Flint'): 'minecraft:flint', ('dust', 'Redstone'): 'minecraft:redstone', ('rod', 'Wood'): 'minecraft:stick',
+    ('gem', 'Flint'): 'minecraft:flint', ('gem', 'Charcoal'): 'minecraft:charcoal', ('dust', 'Redstone'): 'minecraft:redstone', ('rod', 'Wood'): 'minecraft:stick',
 }
 NOT_GENERATED_MATERIALS = {'Wood'}  # wood forms (planks, sticks) are vanilla
 
@@ -204,8 +207,8 @@ def mat_id(name):
     return snake(name)
 
 
-# Tool materials of this slice: tool-capable materials with a wooden handle (steel/tungstensteel rods come later)
-tool_mats = sorted(n for n in names if tool_capable(n) and handle_material(n) == 'Wood'
+# Tool materials: tool-capable materials whose GT handle is available (wood; steel since the steam age, D24 revised)
+tool_mats = sorted(n for n in names if tool_capable(n) and handle_material(n) in ('Wood', 'Steel')
                    and n not in NOT_GENERATED_MATERIALS and (has_form('ingot', n) or has_form('gem', n)))
 
 # ----------------------------------------------------------------------------------------------------------------
@@ -676,9 +679,9 @@ if ref('dust', 'Tetrahedrite'):
     shapeless('dust/bronze_from_tetrahedrite', ref('small_dust', 'Bronze'), 9, [tag_of('dust', 'Tetrahedrite')] * 3 + [tag_of('dust', 'Tin')])
 
 # Tool heads and tools (GT5 ProcessingToolHead / ProcessingToolOther)
-STICK = 'minecraft:stick'
 for n in tool_mats:
     mid = mat_id(n)
+    STICK = 'minecraft:stick' if handle_material(n) == 'Wood' else tag_of('rod', handle_material(n))
     metal = ref('ingot', n) is not None
     P, I, G = tag_of('plate', n), (tag_of('ingot', n) if metal else None), (tag_of('gem', n) if ref('gem', n) else None)
     X = I or G
@@ -711,6 +714,13 @@ for n in tool_mats:
 for n in MORTAR_MATERIALS:
     I = 'minecraft:flint' if n == 'Flint' else tag_of('ingot', n)
     shaped(f'tool/mortar_{mat_id(n)}', f'{NS}:mortar_{mat_id(n)}', 1, [' I ', 'SIS', 'SSS'], {'I': I, 'S': '#c:stones'}, 'equipment')
+
+# Steam age content (slice 3): machines, boilers, pipes, bricked blast furnace, machine recipes
+import importlib.util as _ilu
+_spec = _ilu.spec_from_file_location('iis_gen_steam', os.path.join(ROOT, 'tools', 'gen', 'steam.py'))
+_steam = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_steam)
+steam_stats = _steam.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)
@@ -760,4 +770,4 @@ for n in ('overworld', 'large_biomes', 'amplified'):  # large noise-based iron/c
     write(os.path.join(OVR, 'data', 'minecraft', 'worldgen', 'noise_settings', n + '.json'), s)
 
 print(f'{len(materials)} materials, {len(ore_blocks)} ore blocks, {len(small_blocks)} small ore blocks, {len(veins)} veins, {len(items)} items, '
-      f'{len(tools)} tools ({", ".join(tool_mats)} + mortars), {len(recipes)} recipes')
+      f'{len(tools)} tools ({", ".join(tool_mats)} + mortars), {len(recipes)} recipes; steam: {steam_stats}')

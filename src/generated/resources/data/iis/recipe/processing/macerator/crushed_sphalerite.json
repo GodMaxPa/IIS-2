@@ -1,0 +1,22 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/sphalerite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:impure_dust_sphalerite",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_garnet_yellow",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

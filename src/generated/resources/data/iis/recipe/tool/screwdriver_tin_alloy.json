@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " fS",
+    " Sh",
+    "W  "
+  ],
+  "key": {
+    "S": "#c:rods/tin_alloy",
+    "W": "minecraft:stick",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:screwdriver_tin_alloy"
+  }
+}

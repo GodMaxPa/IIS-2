@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:compressed_fireclay",
+  "result": {
+    "id": "iis:firebrick"
+  },
+  "experience": 0.0,
+  "cookingtime": 200
+}

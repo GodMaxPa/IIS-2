@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XXX",
+    "PMP",
+    "XXX"
+  ],
+  "key": {
+    "M": "iis:hull_bronze",
+    "X": "#iis:pipes/small/bronze",
+    "P": "minecraft:piston"
+  },
+  "result": {
+    "id": "iis:steam_compressor_bronze"
+  }
+}

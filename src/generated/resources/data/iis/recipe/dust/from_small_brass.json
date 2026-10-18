@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/brass",
+    "#iis:small_dusts/brass",
+    "#iis:small_dusts/brass",
+    "#iis:small_dusts/brass"
+  ],
+  "result": {
+    "id": "iis:dust_brass"
+  }
+}

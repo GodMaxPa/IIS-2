@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PwP",
+    "P P",
+    "PhP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "w": "#iis:tools/wrench",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:pipe_small_steel",
+    "count": 6
+  }
+}

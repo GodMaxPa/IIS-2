@@ -1,0 +1,27 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:deepslate_ore_aluminium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_aluminium",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_bauxite",
+      "count": 1,
+      "chance": 1000
+    },
+    {
+      "id": "iis:dust_stone",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

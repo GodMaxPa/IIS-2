@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XXX",
+    "PMG",
+    "XXX"
+  ],
+  "key": {
+    "M": "iis:hull_steel",
+    "X": "#iis:pipes/small/steel",
+    "P": "minecraft:piston",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:steam_extractor_steel"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/manganese",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pure_dust_manganese",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_iron",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

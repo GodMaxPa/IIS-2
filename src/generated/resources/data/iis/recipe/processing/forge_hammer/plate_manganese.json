@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/manganese",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_manganese",
+      "count": 2
+    }
+  ],
+  "duration": 55,
+  "eut": 16
+}

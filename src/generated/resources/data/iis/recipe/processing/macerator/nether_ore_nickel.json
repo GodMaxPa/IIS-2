@@ -1,0 +1,27 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:nether_ore_nickel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_nickel",
+      "count": 4
+    },
+    {
+      "id": "iis:dust_cobalt",
+      "count": 1,
+      "chance": 2000
+    },
+    {
+      "id": "iis:dust_netherrack",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

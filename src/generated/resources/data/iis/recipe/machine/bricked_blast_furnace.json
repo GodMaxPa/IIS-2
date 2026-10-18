@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBB",
+    "BPB",
+    "BBB"
+  ],
+  "key": {
+    "B": "iis:firebrick",
+    "P": "#c:plates/iron"
+  },
+  "result": {
+    "id": "iis:bricked_blast_furnace"
+  }
+}

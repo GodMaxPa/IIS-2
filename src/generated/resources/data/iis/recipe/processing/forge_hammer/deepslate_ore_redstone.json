@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:deepslate_ore_redstone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_redstone",
+      "count": 5
+    }
+  ],
+  "duration": 16,
+  "eut": 10
+}

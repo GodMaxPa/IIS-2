@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#iis:bolts/cobalt",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_cobalt",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

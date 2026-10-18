@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:gems/diamond",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:diamond_block",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

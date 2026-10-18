@@ -1,0 +1,25 @@
+{
+  "type": "iis:primitive_blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/pentlandite",
+      "count": 20
+    },
+    {
+      "ingredient": "minecraft:coal_block",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_nickel",
+      "count": 20
+    },
+    {
+      "id": "iis:dust_dark_ash",
+      "count": 2
+    }
+  ],
+  "duration": 24000,
+  "eut": 0
+}

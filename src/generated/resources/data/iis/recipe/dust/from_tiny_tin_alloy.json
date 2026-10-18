@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/tin_alloy",
+    "#iis:tiny_dusts/tin_alloy",
+    "#iis:tiny_dusts/tin_alloy",
+    "#iis:tiny_dusts/tin_alloy",
+    "#iis:tiny_dusts/tin_alloy",
+    "#iis:tiny_dusts/tin_alloy",
+    "#iis:tiny_dusts/tin_alloy",
+    "#iis:tiny_dusts/tin_alloy",
+    "#iis:tiny_dusts/tin_alloy"
+  ],
+  "result": {
+    "id": "iis:dust_tin_alloy"
+  }
+}

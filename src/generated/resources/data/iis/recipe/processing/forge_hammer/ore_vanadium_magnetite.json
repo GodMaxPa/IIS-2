@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:ore_vanadium_magnetite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_vanadium_magnetite",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 10
+}

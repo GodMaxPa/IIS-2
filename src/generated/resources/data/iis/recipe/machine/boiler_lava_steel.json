@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "GGG",
+    "PMP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "G": "minecraft:glass",
+    "M": "iis:hull_steel_bricked"
+  },
+  "result": {
+    "id": "iis:boiler_lava_steel"
+  }
+}

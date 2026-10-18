@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GGG",
+    "SSS",
+    "PMP"
+  ],
+  "key": {
+    "G": "minecraft:glass",
+    "S": "#c:plates/silver",
+    "P": "#iis:pipes/small/bronze",
+    "M": "iis:hull_bronze_bricked"
+  },
+  "result": {
+    "id": "iis:boiler_solar_bronze"
+  }
+}

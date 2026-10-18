@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:brick",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_brick",
+      "count": 1
+    }
+  ],
+  "duration": 10,
+  "eut": 16
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:nether_ore_nether_quartz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:quartz",
+      "count": 4
+    }
+  ],
+  "duration": 16,
+  "eut": 10
+}

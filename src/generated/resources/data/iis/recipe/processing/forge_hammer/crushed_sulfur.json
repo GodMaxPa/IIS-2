@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/sulfur",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:impure_dust_sulfur",
+      "count": 1
+    }
+  ],
+  "duration": 10,
+  "eut": 16
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/lead",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_lead",
+      "count": 2
+    }
+  ],
+  "duration": 207,
+  "eut": 16
+}

@@ -1,0 +1,27 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:deepslate_ore_monazite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_monazite",
+      "count": 16
+    },
+    {
+      "id": "iis:dust_thorium",
+      "count": 1,
+      "chance": 2000
+    },
+    {
+      "id": "iis:dust_stone",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

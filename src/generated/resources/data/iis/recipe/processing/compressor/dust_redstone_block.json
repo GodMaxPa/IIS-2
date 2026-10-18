@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/redstone",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:redstone_block",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

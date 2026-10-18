@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/lignite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_lignite",
+      "count": 2
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

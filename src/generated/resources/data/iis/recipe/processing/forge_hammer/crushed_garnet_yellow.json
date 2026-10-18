@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/garnet_yellow",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:impure_dust_garnet_yellow",
+      "count": 1
+    }
+  ],
+  "duration": 10,
+  "eut": 16
+}

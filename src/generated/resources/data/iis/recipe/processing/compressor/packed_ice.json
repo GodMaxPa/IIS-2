@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:ice",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:packed_ice",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

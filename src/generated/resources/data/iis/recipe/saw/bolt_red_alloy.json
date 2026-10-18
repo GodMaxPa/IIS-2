@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:rods/red_alloy",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:bolt_red_alloy",
+    "count": 2
+  }
+}

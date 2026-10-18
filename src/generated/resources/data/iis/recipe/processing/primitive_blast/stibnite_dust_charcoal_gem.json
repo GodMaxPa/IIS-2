@@ -1,0 +1,25 @@
+{
+  "type": "iis:primitive_blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/stibnite",
+      "count": 2
+    },
+    {
+      "ingredient": "minecraft:charcoal",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_antimony",
+      "count": 2
+    },
+    {
+      "id": "iis:tiny_dust_dark_ash",
+      "count": 2
+    }
+  ],
+  "duration": 2400,
+  "eut": 0
+}

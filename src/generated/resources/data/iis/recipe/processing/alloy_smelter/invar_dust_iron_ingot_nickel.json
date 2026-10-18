@@ -1,0 +1,21 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/iron",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:ingots/nickel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_invar",
+      "count": 3
+    }
+  ],
+  "duration": 150,
+  "eut": 16
+}

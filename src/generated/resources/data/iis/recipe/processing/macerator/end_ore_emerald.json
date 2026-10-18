@@ -1,0 +1,27 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:end_ore_emerald",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_emerald",
+      "count": 4
+    },
+    {
+      "id": "iis:dust_beryllium",
+      "count": 1,
+      "chance": 2000
+    },
+    {
+      "id": "iis:dust_endstone",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

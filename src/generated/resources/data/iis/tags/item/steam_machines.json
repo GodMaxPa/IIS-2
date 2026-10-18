@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "iis:steam_macerator_bronze",
+    "iis:steam_macerator_steel",
+    "iis:steam_forge_hammer_bronze",
+    "iis:steam_forge_hammer_steel",
+    "iis:steam_compressor_bronze",
+    "iis:steam_compressor_steel",
+    "iis:steam_extractor_bronze",
+    "iis:steam_extractor_steel",
+    "iis:steam_alloy_smelter_bronze",
+    "iis:steam_alloy_smelter_steel",
+    "iis:steam_furnace_bronze",
+    "iis:steam_furnace_steel"
+  ]
+}

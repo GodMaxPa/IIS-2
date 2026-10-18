@@ -1,0 +1,25 @@
+{
+  "type": "iis:primitive_blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sphalerite",
+      "count": 2
+    },
+    {
+      "ingredient": "minecraft:coal",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_zinc",
+      "count": 2
+    },
+    {
+      "id": "iis:tiny_dust_dark_ash",
+      "count": 2
+    }
+  ],
+  "duration": 2400,
+  "eut": 0
+}

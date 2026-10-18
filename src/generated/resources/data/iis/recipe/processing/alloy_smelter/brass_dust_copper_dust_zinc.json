@@ -1,0 +1,21 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/copper",
+      "count": 3
+    },
+    {
+      "ingredient": "#c:dusts/zinc",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_brass",
+      "count": 4
+    }
+  ],
+  "duration": 200,
+  "eut": 16
+}

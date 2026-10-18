@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/neodymium",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_neodymium",
+      "count": 2
+    }
+  ],
+  "duration": 144,
+  "eut": 16
+}

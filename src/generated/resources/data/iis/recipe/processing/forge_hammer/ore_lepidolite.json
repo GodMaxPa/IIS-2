@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:ore_lepidolite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crushed_lepidolite",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 10
+}

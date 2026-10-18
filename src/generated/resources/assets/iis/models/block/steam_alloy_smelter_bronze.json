@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/machine/steam_alloy_smelter_bronze_side",
+    "north": "iis:block/machine/steam_alloy_smelter_bronze_front",
+    "south": "iis:block/machine/steam_alloy_smelter_bronze_side",
+    "east": "iis:block/machine/steam_alloy_smelter_bronze_side",
+    "west": "iis:block/machine/steam_alloy_smelter_bronze_side",
+    "up": "iis:block/machine/steam_alloy_smelter_bronze_top",
+    "down": "iis:block/machine/steam_alloy_smelter_bronze_bottom"
+  }
+}
