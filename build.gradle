@@ -33,6 +33,18 @@ repositories {
         url = 'https://maven.blamejared.com'
         content { includeGroup 'mezz.jei'; includeGroup 'net.mezzdev.config' }
     }
+    // JourneyMap API (карта; наш слой — сетка рудных чанков GT), см. DECISIONS D59
+    maven {
+        name = 'JourneyMap'
+        url = 'https://jm.gserv.me/repository/maven-public/'
+        content { includeGroup 'info.journeymap' }
+    }
+    // Сам JourneyMap для клиента витрины (scripts/showcase.sh)
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content { includeGroup 'maven.modrinth' }
+    }
 }
 
 base {
@@ -131,6 +143,12 @@ dependencies {
     compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
     compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
     localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+
+    // JourneyMap: optional. API для плагина; сам мод — только в клиенте витрины (-Pshowcase)
+    compileOnly "info.journeymap:journeymap-api-neoforge:2.0.0-26.1-SNAPSHOT"
+    if (project.hasProperty('showcase')) {
+        localRuntime "maven.modrinth:journeymap:26.1.2-6.0.10+neoforge"
+    }
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

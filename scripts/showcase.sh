@@ -10,6 +10,7 @@
 #   scripts/showcase.sh lvgui  — GUI дробителя LV и JEI (нужен xdotool)
 #   scripts/showcase.sh ebf    — электрическая доменная печь в работе; ebfgui — её экран и JEI
 #   scripts/showcase.sh wrench — сетка гаечного ключа на грани машины
+#   scripts/showcase.sh map    — JourneyMap: миникарта и полная карта с сеткой рудных чанков
 # Результат: build/showcase/<режим>.png. Нужен JDK 25 в JAVA_HOME.
 set -u
 MODE=${1:-wall}
@@ -215,6 +216,13 @@ print('save-all flush')
 PY
   } >&3
   sleep 12
+elif [ "$MODE" = map ]; then
+  # Карта JourneyMap со слоем «сетка рудных чанков» (спавн на поверхности)
+  { common
+    echo 'setworldspawn 8 100 8'
+    echo 'save-all flush'
+  } >&3
+  sleep 8
 elif [ "$MODE" = wrench ]; then
   # Сетка ключа GT на грани буфера (ключ в руку кладёт повторяющийся командный блок)
   { common
@@ -268,6 +276,12 @@ xvfb-run -a -s "-screen 0 1600x900x24" bash -c '
     xdotool mousemove 746 350; sleep 2; xdotool key u; sleep 8
     import -window root '"$OUT"'/'"$MODE"'-jei.png
     xdotool key Escape; sleep 1; xdotool key Escape; sleep 1
+  fi
+  if [ "'"$MODE"'" = map ]; then
+    sleep 40; import -window root '"$OUT"'/map-minimap.png
+    xdotool key j; sleep 6; xdotool key Escape; sleep 3; xdotool key j; sleep 10
+    import -window root '"$OUT"'/map-full.png
+    xdotool key Escape; sleep 2
   fi
   import -window root '"$OUT"'/'"$MODE"'.png
   pkill -f "net.neoforged.devlaunch"; sleep 5
