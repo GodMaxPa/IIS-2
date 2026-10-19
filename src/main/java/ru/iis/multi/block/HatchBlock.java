@@ -70,7 +70,7 @@ public class HatchBlock extends Block implements EntityBlock, EnergyConnectable 
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         // ключ поворачивает люк; у люка обслуживания ключ — ещё и ремонтный инструмент, там поворот с Shift
         if (ru.iis.machine.block.Wrench.is(stack) && (type != HatchType.MAINTENANCE || player.isShiftKeyDown())) {
-            if (!level.isClientSide()) ru.iis.machine.block.Wrench.rotate(level, pos, state, FACING, hit.getDirection(), player, hand, stack);
+            if (!level.isClientSide()) ru.iis.machine.block.Wrench.rotate(level, pos, state, FACING, ru.iis.machine.block.Wrench.wrenchingSide(pos, hit), player, hand, stack);
             return InteractionResult.SUCCESS;
         }
         if (type != HatchType.MAINTENANCE) return InteractionResult.TRY_WITH_EMPTY_HAND;

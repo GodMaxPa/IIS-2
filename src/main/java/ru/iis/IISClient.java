@@ -36,6 +36,7 @@ public final class IISClient {
         modBus.addListener(IISClient::registerScreens);
         modBus.addListener(IISClient::registerFluidModels);
         NeoForge.EVENT_BUS.addListener(IISClient::machineTooltips);
+        NeoForge.EVENT_BUS.addListener(ru.iis.client.WrenchGrid::onExtract);
         // раньше JEI: он читает рецепты в том же событии
         NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.HIGHEST, ru.iis.machine.client.ClientRecipes::onReceived);
     }

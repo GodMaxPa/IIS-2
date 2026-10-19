@@ -9,6 +9,7 @@
 #   scripts/showcase.sh lv     — эпоха LV: 13 машин на оловянном кабеле от паровой турбины, генераторы, буферы, коксовая печь
 #   scripts/showcase.sh lvgui  — GUI дробителя LV и JEI (нужен xdotool)
 #   scripts/showcase.sh ebf    — электрическая доменная печь в работе; ebfgui — её экран и JEI
+#   scripts/showcase.sh wrench — сетка гаечного ключа на грани машины
 # Результат: build/showcase/<режим>.png. Нужен JDK 25 в JAVA_HOME.
 set -u
 MODE=${1:-wall}
@@ -214,6 +215,20 @@ print('save-all flush')
 PY
   } >&3
   sleep 12
+elif [ "$MODE" = wrench ]; then
+  # Сетка ключа GT на грани буфера (ключ в руку кладёт повторяющийся командный блок)
+  { common
+    echo 'forceload add -16 -16 16 16'
+    echo 'fill -6 199 -6 6 199 6 minecraft:smooth_stone'
+    echo 'setblock 0 200 0 minecraft:smooth_stone'
+    echo 'setblock 0 201 0 iis:battery_buffer_2x2_lv[facing=north]'
+    echo 'setblock 1 201 0 iis:transformer_lv[facing=north]'
+    echo 'setblock -1 201 0 iis:macerator_lv[facing=north]'
+    echo 'setblock 0 198 0 minecraft:repeating_command_block{auto:1b,Command:"item replace entity @a weapon.mainhand with iis:wrench_steel"}'
+    echo 'setworldspawn 0 200 -2 0 0'
+    echo 'save-all flush'
+  } >&3
+  sleep 10
 else
   # Жила медного типа ИИС, построенная алгоритмом GT5 в небе (команда /iis vein), вид сбоку и сверху
   { common

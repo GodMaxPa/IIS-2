@@ -62,7 +62,7 @@ public abstract class MachineBlock extends Block implements EntityBlock {
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (!Wrench.is(stack) || player.isShiftKeyDown()) return InteractionResult.TRY_WITH_EMPTY_HAND;
-        if (!level.isClientSide()) Wrench.rotate(level, pos, state, FACING, hit.getDirection(), player, hand, stack);
+        if (!level.isClientSide()) Wrench.rotate(level, pos, state, FACING, ru.iis.machine.block.Wrench.wrenchingSide(pos, hit), player, hand, stack);
         return InteractionResult.SUCCESS;
     }
 

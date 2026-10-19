@@ -74,7 +74,7 @@ public class TransformerBlock extends Block implements EntityBlock, EnergyConnec
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (!stack.is(PipeBlock.WRENCH)) return InteractionResult.TRY_WITH_EMPTY_HAND;
         if (!player.isShiftKeyDown()) {
-            if (!level.isClientSide()) ru.iis.machine.block.Wrench.rotate(level, pos, state, FACING, hit.getDirection(), player, hand, stack);
+            if (!level.isClientSide()) ru.iis.machine.block.Wrench.rotate(level, pos, state, FACING, ru.iis.machine.block.Wrench.wrenchingSide(pos, hit), player, hand, stack);
             return InteractionResult.SUCCESS;
         }
         if (!level.isClientSide()) {

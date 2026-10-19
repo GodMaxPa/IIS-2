@@ -31,26 +31,34 @@ final class FixGameTests {
         return net.minecraft.core.registries.BuiltInRegistries.BLOCK.getValue(net.minecraft.resources.Identifier.fromNamespaceAndPath("iis", id));
     }
 
-    private static InteractionHand use(GameTestHelper h, BlockPos rel, Direction face, ItemStack stack, boolean sneak) {
+    /** ПКМ ключом по грани face в точке (hx,hy,hz) внутри блока. */
+    private static void use(GameTestHelper h, BlockPos rel, Direction face, double hx, double hy, double hz, ItemStack stack) {
         var player = h.makeMockPlayer(GameType.SURVIVAL);
         player.setItemInHand(InteractionHand.MAIN_HAND, stack);
-        player.setShiftKeyDown(sneak);
         BlockPos abs = h.absolutePos(rel);
         BlockState st = h.getLevel().getBlockState(abs);
-        st.useItemOn(stack, h.getLevel(), player, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(abs), face, abs, false));
-        return InteractionHand.MAIN_HAND;
+        st.useItemOn(stack, h.getLevel(), player, InteractionHand.MAIN_HAND,
+                new BlockHitResult(new Vec3(abs.getX() + hx, abs.getY() + hy, abs.getZ() + hz), face, abs, false));
     }
 
-    /** Ключ по восточной грани буфера разворачивает его лицом на восток; ключ изнашивается на 20. */
+    /** Сетка GT на грани: центр — сама грань, край — в сторону края, угол — назад; ключ изнашивается на 20. */
     static void wrenchRotates(GameTestHelper h) {
         BlockPos p = new BlockPos(4, 1, 4);
         h.setBlock(p, LvContent.BATTERY_BUFFER_1X1.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
         ItemStack wrench = new ItemStack(SelfTest.item("wrench_steel"));
-        use(h, p, Direction.EAST, wrench, false);
-        h.assertTrue(h.getBlockState(p).getValue(MachineBlock.FACING) == Direction.EAST, "facing " + h.getBlockState(p).getValue(MachineBlock.FACING));
+        java.util.function.Supplier<Direction> f = () -> h.getBlockState(p).getValue(MachineBlock.FACING);
+        use(h, p, Direction.NORTH, 0.1, 0.5, 0.0, wrench);   // левая (западная) клетка северной грани
+        h.assertTrue(f.get() == Direction.WEST, "edge -> " + f.get());
         h.assertTrue(wrench.getDamageValue() == 20, "wrench damage " + wrench.getDamageValue());
-        use(h, p, Direction.UP, wrench, false); // сверху — по часовой
-        h.assertTrue(h.getBlockState(p).getValue(MachineBlock.FACING) == Direction.SOUTH, "after top click " + h.getBlockState(p).getValue(MachineBlock.FACING));
+        use(h, p, Direction.NORTH, 0.1, 0.9, 0.0, wrench);   // угол — противоположная сторона
+        h.assertTrue(f.get() == Direction.SOUTH, "corner -> " + f.get());
+        use(h, p, Direction.UP, 0.9, 1.0, 0.5, wrench);      // восточная клетка верхней грани
+        h.assertTrue(f.get() == Direction.EAST, "top edge -> " + f.get());
+        use(h, p, Direction.UP, 0.5, 1.0, 0.5, wrench);      // центр верха — вверх нельзя, без изменений
+        h.assertTrue(f.get() == Direction.EAST, "top center -> " + f.get());
+        use(h, p, Direction.WEST, 0.0, 0.5, 0.5, wrench);    // центр западной грани
+        h.assertTrue(f.get() == Direction.WEST, "center -> " + f.get());
+        h.assertTrue(wrench.getDamageValue() == 80, "wrench damage " + wrench.getDamageValue());
         h.succeed();
     }
 
