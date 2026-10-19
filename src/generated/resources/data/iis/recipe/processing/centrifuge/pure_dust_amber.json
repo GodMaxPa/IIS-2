@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/amber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_amber",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_amber",
+      "count": 1
+    }
+  ],
+  "duration": 40,
+  "eut": 5
+}

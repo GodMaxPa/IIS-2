@@ -185,6 +185,26 @@
     "material": "amber"
   },
   {
+    "id": "gem_chipped_amber",
+    "prefix": "gem_chipped",
+    "material": "amber"
+  },
+  {
+    "id": "gem_flawed_amber",
+    "prefix": "gem_flawed",
+    "material": "amber"
+  },
+  {
+    "id": "gem_flawless_amber",
+    "prefix": "gem_flawless",
+    "material": "amber"
+  },
+  {
+    "id": "gem_exquisite_amber",
+    "prefix": "gem_exquisite",
+    "material": "amber"
+  },
+  {
     "id": "crushed_amethyst",
     "prefix": "crushed",
     "material": "amethyst"
@@ -242,6 +262,26 @@
   {
     "id": "screw_amethyst",
     "prefix": "screw",
+    "material": "amethyst"
+  },
+  {
+    "id": "gem_chipped_amethyst",
+    "prefix": "gem_chipped",
+    "material": "amethyst"
+  },
+  {
+    "id": "gem_flawed_amethyst",
+    "prefix": "gem_flawed",
+    "material": "amethyst"
+  },
+  {
+    "id": "gem_flawless_amethyst",
+    "prefix": "gem_flawless",
+    "material": "amethyst"
+  },
+  {
+    "id": "gem_exquisite_amethyst",
+    "prefix": "gem_exquisite",
     "material": "amethyst"
   },
   {
@@ -775,6 +815,26 @@
     "material": "blue_topaz"
   },
   {
+    "id": "gem_chipped_blue_topaz",
+    "prefix": "gem_chipped",
+    "material": "blue_topaz"
+  },
+  {
+    "id": "gem_flawed_blue_topaz",
+    "prefix": "gem_flawed",
+    "material": "blue_topaz"
+  },
+  {
+    "id": "gem_flawless_blue_topaz",
+    "prefix": "gem_flawless",
+    "material": "blue_topaz"
+  },
+  {
+    "id": "gem_exquisite_blue_topaz",
+    "prefix": "gem_exquisite",
+    "material": "blue_topaz"
+  },
+  {
     "id": "dust_brass",
     "prefix": "dust",
     "material": "brass"
@@ -1270,6 +1330,61 @@
     "material": "cobalt"
   },
   {
+    "id": "dust_cobalt_brass",
+    "prefix": "dust",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "small_dust_cobalt_brass",
+    "prefix": "small_dust",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "tiny_dust_cobalt_brass",
+    "prefix": "tiny_dust",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "ingot_cobalt_brass",
+    "prefix": "ingot",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "nugget_cobalt_brass",
+    "prefix": "nugget",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "plate_cobalt_brass",
+    "prefix": "plate",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "rod_cobalt_brass",
+    "prefix": "rod",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "bolt_cobalt_brass",
+    "prefix": "bolt",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "screw_cobalt_brass",
+    "prefix": "screw",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "long_rod_cobalt_brass",
+    "prefix": "long_rod",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "gear_cobalt_brass",
+    "prefix": "gear",
+    "material": "cobalt_brass"
+  },
+  {
     "id": "crushed_cobaltite",
     "prefix": "crushed",
     "material": "cobaltite"
@@ -1525,6 +1640,26 @@
     "material": "diamond"
   },
   {
+    "id": "gem_chipped_diamond",
+    "prefix": "gem_chipped",
+    "material": "diamond"
+  },
+  {
+    "id": "gem_flawed_diamond",
+    "prefix": "gem_flawed",
+    "material": "diamond"
+  },
+  {
+    "id": "gem_flawless_diamond",
+    "prefix": "gem_flawless",
+    "material": "diamond"
+  },
+  {
+    "id": "gem_exquisite_diamond",
+    "prefix": "gem_exquisite",
+    "material": "diamond"
+  },
+  {
     "id": "dust_electrum",
     "prefix": "dust",
     "material": "electrum"
@@ -1640,6 +1775,26 @@
     "material": "emerald"
   },
   {
+    "id": "gem_chipped_emerald",
+    "prefix": "gem_chipped",
+    "material": "emerald"
+  },
+  {
+    "id": "gem_flawed_emerald",
+    "prefix": "gem_flawed",
+    "material": "emerald"
+  },
+  {
+    "id": "gem_flawless_emerald",
+    "prefix": "gem_flawless",
+    "material": "emerald"
+  },
+  {
+    "id": "gem_exquisite_emerald",
+    "prefix": "gem_exquisite",
+    "material": "emerald"
+  },
+  {
     "id": "dust_endstone",
     "prefix": "dust",
     "material": "endstone"
@@ -1740,6 +1895,26 @@
     "material": "fools_ruby"
   },
   {
+    "id": "gem_chipped_fools_ruby",
+    "prefix": "gem_chipped",
+    "material": "fools_ruby"
+  },
+  {
+    "id": "gem_flawed_fools_ruby",
+    "prefix": "gem_flawed",
+    "material": "fools_ruby"
+  },
+  {
+    "id": "gem_flawless_fools_ruby",
+    "prefix": "gem_flawless",
+    "material": "fools_ruby"
+  },
+  {
+    "id": "gem_exquisite_fools_ruby",
+    "prefix": "gem_exquisite",
+    "material": "fools_ruby"
+  },
+  {
     "id": "crushed_galena",
     "prefix": "crushed",
     "material": "galena"
@@ -1835,6 +2010,26 @@
     "material": "garnet_red"
   },
   {
+    "id": "gem_chipped_garnet_red",
+    "prefix": "gem_chipped",
+    "material": "garnet_red"
+  },
+  {
+    "id": "gem_flawed_garnet_red",
+    "prefix": "gem_flawed",
+    "material": "garnet_red"
+  },
+  {
+    "id": "gem_flawless_garnet_red",
+    "prefix": "gem_flawless",
+    "material": "garnet_red"
+  },
+  {
+    "id": "gem_exquisite_garnet_red",
+    "prefix": "gem_exquisite",
+    "material": "garnet_red"
+  },
+  {
     "id": "crushed_garnet_yellow",
     "prefix": "crushed",
     "material": "garnet_yellow"
@@ -1895,6 +2090,26 @@
     "material": "garnet_yellow"
   },
   {
+    "id": "gem_chipped_garnet_yellow",
+    "prefix": "gem_chipped",
+    "material": "garnet_yellow"
+  },
+  {
+    "id": "gem_flawed_garnet_yellow",
+    "prefix": "gem_flawed",
+    "material": "garnet_yellow"
+  },
+  {
+    "id": "gem_flawless_garnet_yellow",
+    "prefix": "gem_flawless",
+    "material": "garnet_yellow"
+  },
+  {
+    "id": "gem_exquisite_garnet_yellow",
+    "prefix": "gem_exquisite",
+    "material": "garnet_yellow"
+  },
+  {
     "id": "crushed_garnierite",
     "prefix": "crushed",
     "material": "garnierite"
@@ -1952,6 +2167,26 @@
   {
     "id": "plate_glass",
     "prefix": "plate",
+    "material": "glass"
+  },
+  {
+    "id": "gem_chipped_glass",
+    "prefix": "gem_chipped",
+    "material": "glass"
+  },
+  {
+    "id": "gem_flawed_glass",
+    "prefix": "gem_flawed",
+    "material": "glass"
+  },
+  {
+    "id": "gem_flawless_glass",
+    "prefix": "gem_flawless",
+    "material": "glass"
+  },
+  {
+    "id": "gem_exquisite_glass",
+    "prefix": "gem_exquisite",
     "material": "glass"
   },
   {
@@ -2157,6 +2392,26 @@
   {
     "id": "screw_green_sapphire",
     "prefix": "screw",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "gem_chipped_green_sapphire",
+    "prefix": "gem_chipped",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "gem_flawed_green_sapphire",
+    "prefix": "gem_flawed",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "gem_flawless_green_sapphire",
+    "prefix": "gem_flawless",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "gem_exquisite_green_sapphire",
+    "prefix": "gem_exquisite",
     "material": "green_sapphire"
   },
   {
@@ -2537,6 +2792,26 @@
   {
     "id": "plate_jasper",
     "prefix": "plate",
+    "material": "jasper"
+  },
+  {
+    "id": "gem_chipped_jasper",
+    "prefix": "gem_chipped",
+    "material": "jasper"
+  },
+  {
+    "id": "gem_flawed_jasper",
+    "prefix": "gem_flawed",
+    "material": "jasper"
+  },
+  {
+    "id": "gem_flawless_jasper",
+    "prefix": "gem_flawless",
+    "material": "jasper"
+  },
+  {
+    "id": "gem_exquisite_jasper",
+    "prefix": "gem_exquisite",
     "material": "jasper"
   },
   {
@@ -3485,6 +3760,26 @@
     "material": "olivine"
   },
   {
+    "id": "gem_chipped_olivine",
+    "prefix": "gem_chipped",
+    "material": "olivine"
+  },
+  {
+    "id": "gem_flawed_olivine",
+    "prefix": "gem_flawed",
+    "material": "olivine"
+  },
+  {
+    "id": "gem_flawless_olivine",
+    "prefix": "gem_flawless",
+    "material": "olivine"
+  },
+  {
+    "id": "gem_exquisite_olivine",
+    "prefix": "gem_exquisite",
+    "material": "olivine"
+  },
+  {
     "id": "crushed_opal",
     "prefix": "crushed",
     "material": "opal"
@@ -3542,6 +3837,26 @@
   {
     "id": "screw_opal",
     "prefix": "screw",
+    "material": "opal"
+  },
+  {
+    "id": "gem_chipped_opal",
+    "prefix": "gem_chipped",
+    "material": "opal"
+  },
+  {
+    "id": "gem_flawed_opal",
+    "prefix": "gem_flawed",
+    "material": "opal"
+  },
+  {
+    "id": "gem_flawless_opal",
+    "prefix": "gem_flawless",
+    "material": "opal"
+  },
+  {
+    "id": "gem_exquisite_opal",
+    "prefix": "gem_exquisite",
     "material": "opal"
   },
   {
@@ -4225,6 +4540,26 @@
     "material": "ruby"
   },
   {
+    "id": "gem_chipped_ruby",
+    "prefix": "gem_chipped",
+    "material": "ruby"
+  },
+  {
+    "id": "gem_flawed_ruby",
+    "prefix": "gem_flawed",
+    "material": "ruby"
+  },
+  {
+    "id": "gem_flawless_ruby",
+    "prefix": "gem_flawless",
+    "material": "ruby"
+  },
+  {
+    "id": "gem_exquisite_ruby",
+    "prefix": "gem_exquisite",
+    "material": "ruby"
+  },
+  {
     "id": "crushed_salt",
     "prefix": "crushed",
     "material": "salt"
@@ -4352,6 +4687,26 @@
   {
     "id": "screw_sapphire",
     "prefix": "screw",
+    "material": "sapphire"
+  },
+  {
+    "id": "gem_chipped_sapphire",
+    "prefix": "gem_chipped",
+    "material": "sapphire"
+  },
+  {
+    "id": "gem_flawed_sapphire",
+    "prefix": "gem_flawed",
+    "material": "sapphire"
+  },
+  {
+    "id": "gem_flawless_sapphire",
+    "prefix": "gem_flawless",
+    "material": "sapphire"
+  },
+  {
+    "id": "gem_exquisite_sapphire",
+    "prefix": "gem_exquisite",
     "material": "sapphire"
   },
   {
@@ -5035,6 +5390,26 @@
     "material": "tanzanite"
   },
   {
+    "id": "gem_chipped_tanzanite",
+    "prefix": "gem_chipped",
+    "material": "tanzanite"
+  },
+  {
+    "id": "gem_flawed_tanzanite",
+    "prefix": "gem_flawed",
+    "material": "tanzanite"
+  },
+  {
+    "id": "gem_flawless_tanzanite",
+    "prefix": "gem_flawless",
+    "material": "tanzanite"
+  },
+  {
+    "id": "gem_exquisite_tanzanite",
+    "prefix": "gem_exquisite",
+    "material": "tanzanite"
+  },
+  {
     "id": "crushed_tetrahedrite",
     "prefix": "crushed",
     "material": "tetrahedrite"
@@ -5332,6 +5707,26 @@
   {
     "id": "screw_topaz",
     "prefix": "screw",
+    "material": "topaz"
+  },
+  {
+    "id": "gem_chipped_topaz",
+    "prefix": "gem_chipped",
+    "material": "topaz"
+  },
+  {
+    "id": "gem_flawed_topaz",
+    "prefix": "gem_flawed",
+    "material": "topaz"
+  },
+  {
+    "id": "gem_flawless_topaz",
+    "prefix": "gem_flawless",
+    "material": "topaz"
+  },
+  {
+    "id": "gem_exquisite_topaz",
+    "prefix": "gem_exquisite",
     "material": "topaz"
   },
   {
@@ -5998,6 +6393,36 @@
     "id": "saw_head_cobalt",
     "prefix": "saw_head",
     "material": "cobalt"
+  },
+  {
+    "id": "sword_head_cobalt_brass",
+    "prefix": "sword_head",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "pickaxe_head_cobalt_brass",
+    "prefix": "pickaxe_head",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "shovel_head_cobalt_brass",
+    "prefix": "shovel_head",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "axe_head_cobalt_brass",
+    "prefix": "axe_head",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "hoe_head_cobalt_brass",
+    "prefix": "hoe_head",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "saw_head_cobalt_brass",
+    "prefix": "saw_head",
+    "material": "cobalt_brass"
   },
   {
     "id": "sword_head_cupronickel",

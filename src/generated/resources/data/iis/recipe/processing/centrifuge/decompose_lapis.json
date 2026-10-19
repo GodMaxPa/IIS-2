@@ -1,0 +1,29 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/lapis",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_lazurite",
+      "count": 12
+    },
+    {
+      "id": "iis:dust_sodalite",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_pyrite",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_calcite",
+      "count": 1
+    }
+  ],
+  "duration": 1792,
+  "eut": 20
+}

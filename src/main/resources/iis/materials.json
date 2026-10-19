@@ -1045,6 +1045,36 @@
     "toolQuality": 3
   },
   {
+    "id": "cobalt_brass",
+    "gtName": "CobaltBrass",
+    "gtId": 343,
+    "en": "Cobalt Brass",
+    "ru": "Кобальтовая латунь",
+    "ruOre": "Руда кобальтовой латуни",
+    "color": 11842720,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "(ZnCu3)7AlCo",
+    "types": 195,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "cobalt_brass",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 256,
+    "toolSpeed": 8.0,
+    "toolQuality": 2
+  },
+  {
     "id": "cobaltite",
     "gtName": "Cobaltite",
     "gtId": 827,

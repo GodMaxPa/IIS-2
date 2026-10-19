@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/lazurite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_lazurite",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_lapis",
+      "count": 1
+    }
+  ],
+  "duration": 232,
+  "eut": 5
+}

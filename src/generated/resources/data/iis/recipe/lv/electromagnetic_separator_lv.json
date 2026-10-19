@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "VWZ",
+    "WMS",
+    "CWZ"
+  ],
+  "key": {
+    "V": "iis:conveyor_module_lv",
+    "W": "#iis:cables/1x/tin",
+    "Z": "#iis:wires/2x/tin",
+    "M": "iis:hull_lv",
+    "S": "#c:rods/iron",
+    "C": "#c:circuits/basic"
+  },
+  "result": {
+    "id": "iis:electromagnetic_separator_lv"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/cooperite",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_platinum",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_nickel",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_sulfur",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_palladium",
+      "count": 1
+    }
+  ],
+  "duration": 3120,
+  "eut": 20
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/fools_ruby",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_fools_ruby",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_jasper",
+      "count": 1
+    }
+  ],
+  "duration": 784,
+  "eut": 5
+}

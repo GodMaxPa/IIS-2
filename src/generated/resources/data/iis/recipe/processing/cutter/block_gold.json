@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:gold_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_gold",
+      "count": 9
+    }
+  ],
+  "duration": 3920,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 183
+    }
+  ]
+}

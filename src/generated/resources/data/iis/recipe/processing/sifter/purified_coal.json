@@ -1,0 +1,43 @@
+{
+  "type": "iis:sifter",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/coal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:coal",
+      "count": 1,
+      "chance": 100
+    },
+    {
+      "id": "minecraft:coal",
+      "count": 1,
+      "chance": 400
+    },
+    {
+      "id": "minecraft:coal",
+      "count": 1,
+      "chance": 1500
+    },
+    {
+      "id": "minecraft:coal",
+      "count": 1,
+      "chance": 2000
+    },
+    {
+      "id": "minecraft:coal",
+      "count": 1,
+      "chance": 4000
+    },
+    {
+      "id": "iis:dust_coal",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 800,
+  "eut": 16
+}

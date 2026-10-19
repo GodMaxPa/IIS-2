@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/redstone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:redstone",
+      "count": 1
+    }
+  ],
+  "duration": 85,
+  "eut": 5
+}

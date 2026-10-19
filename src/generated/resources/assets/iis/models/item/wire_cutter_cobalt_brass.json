@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "iis:item/tools/wire_cutter",
+    "layer1": "iis:item/tools/wire_cutter_overlay"
+  }
+}

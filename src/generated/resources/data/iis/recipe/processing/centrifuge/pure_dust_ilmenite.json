@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/ilmenite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_ilmenite",
+      "count": 1
+    }
+  ],
+  "duration": 30,
+  "eut": 5
+}

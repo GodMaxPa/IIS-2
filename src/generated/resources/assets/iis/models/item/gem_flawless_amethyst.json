@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "iis:item/materialicons/flint/gemflawless",
+    "layer1": "iis:item/materialicons/flint/gemflawless_overlay"
+  }
+}

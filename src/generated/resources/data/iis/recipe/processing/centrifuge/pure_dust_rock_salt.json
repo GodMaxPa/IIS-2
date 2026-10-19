@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/rock_salt",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_rock_salt",
+      "count": 1
+    }
+  ],
+  "duration": 37,
+  "eut": 5
+}

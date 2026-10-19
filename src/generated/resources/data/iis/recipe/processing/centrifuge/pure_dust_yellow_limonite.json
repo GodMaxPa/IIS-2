@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/yellow_limonite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_yellow_limonite",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_brown_limonite",
+      "count": 1
+    }
+  ],
+  "duration": 176,
+  "eut": 5
+}

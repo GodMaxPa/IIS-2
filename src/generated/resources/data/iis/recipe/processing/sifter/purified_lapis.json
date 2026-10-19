@@ -1,0 +1,43 @@
+{
+  "type": "iis:sifter",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/lapis",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:lapis_lazuli",
+      "count": 1,
+      "chance": 100
+    },
+    {
+      "id": "minecraft:lapis_lazuli",
+      "count": 1,
+      "chance": 400
+    },
+    {
+      "id": "minecraft:lapis_lazuli",
+      "count": 1,
+      "chance": 1500
+    },
+    {
+      "id": "minecraft:lapis_lazuli",
+      "count": 1,
+      "chance": 2000
+    },
+    {
+      "id": "minecraft:lapis_lazuli",
+      "count": 1,
+      "chance": 4000
+    },
+    {
+      "id": "iis:dust_lapis",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 800,
+  "eut": 16
+}

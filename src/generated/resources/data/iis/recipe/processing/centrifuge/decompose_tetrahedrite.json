@@ -1,0 +1,29 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/tetrahedrite",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_copper",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_antimony",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_sulfur",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_iron",
+      "count": 1
+    }
+  ],
+  "duration": 1824,
+  "eut": 20
+}

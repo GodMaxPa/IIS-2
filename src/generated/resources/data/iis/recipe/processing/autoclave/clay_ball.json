@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/clay",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:clay_ball",
+      "count": 1
+    }
+  ],
+  "duration": 20,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 250
+    }
+  ]
+}

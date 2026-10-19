@@ -1,0 +1,27 @@
+{
+  "type": "iis:electromagnetic_separator",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/bastnasite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_bastnasite",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_neodymium",
+      "count": 1,
+      "chance": 4000
+    },
+    {
+      "id": "iis:nugget_neodymium",
+      "count": 1,
+      "chance": 2000
+    }
+  ],
+  "duration": 400,
+  "eut": 24
+}

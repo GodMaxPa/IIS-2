@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/thorium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_thorium",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_uranium",
+      "count": 1
+    }
+  ],
+  "duration": 1840,
+  "eut": 5
+}

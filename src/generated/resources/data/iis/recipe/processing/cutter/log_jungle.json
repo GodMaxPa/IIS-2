@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#minecraft:jungle_logs",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:jungle_planks",
+      "count": 4
+    }
+  ],
+  "duration": 400,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 5
+    }
+  ]
+}

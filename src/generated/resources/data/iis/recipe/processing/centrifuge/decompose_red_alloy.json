@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/red_alloy",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_copper",
+      "count": 5
+    },
+    {
+      "id": "minecraft:redstone",
+      "count": 20
+    }
+  ],
+  "duration": 1600,
+  "eut": 10
+}

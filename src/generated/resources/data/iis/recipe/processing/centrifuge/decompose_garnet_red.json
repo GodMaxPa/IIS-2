@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/garnet_red",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_pyrope",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_almandine",
+      "count": 5
+    },
+    {
+      "id": "iis:dust_spessartine",
+      "count": 8
+    }
+  ],
+  "duration": 1472,
+  "eut": 15
+}

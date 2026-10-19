@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/stibnite",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_antimony",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_sulfur",
+      "count": 3
+    }
+  ],
+  "duration": 1340,
+  "eut": 10
+}

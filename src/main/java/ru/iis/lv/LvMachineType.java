@@ -19,7 +19,14 @@ public enum LvMachineType {
     ASSEMBLER("assembler", GtRecipeMap.ASSEMBLER, 6, 1, 16000, "assembler"),
     MIXER("mixer", GtRecipeMap.MIXER, 6, 1, 8000, "mixer"),
     POLARIZER("polarizer", GtRecipeMap.POLARIZER, 1, 1, 0, "polarizer"),
-    ORE_WASHER("ore_washer", GtRecipeMap.ORE_WASHER, 2, 3, 16000, "orewasher");
+    ORE_WASHER("ore_washer", GtRecipeMap.ORE_WASHER, 2, 3, 16000, "orewasher"),
+    // GT_Loader_MetaTileEntities: Machine_LV_Centrifuge (2, 6, 64000), Sifter (1, 9), ElectromagneticSeparator (1, 3),
+    // Autoclave (1, 1, 8000), Cutter (1, 2, 8000)
+    CENTRIFUGE("centrifuge", GtRecipeMap.CENTRIFUGE, 2, 6, 64000, "centrifuge"),
+    SIFTER("sifter", GtRecipeMap.SIFTER, 1, 9, 0, "sifter"),
+    ELECTROMAGNETIC_SEPARATOR("electromagnetic_separator", GtRecipeMap.ELECTROMAGNETIC_SEPARATOR, 1, 3, 0, "electromagneticseparator"),
+    AUTOCLAVE("autoclave", GtRecipeMap.AUTOCLAVE, 1, 1, 8000, "autoclave"),
+    CUTTER("cutter", GtRecipeMap.CUTTER, 1, 2, 8000, "cutter");
 
     public final String id;
     public final GtRecipeMap recipeMap;
@@ -39,19 +46,32 @@ public enum LvMachineType {
         return id + "_lv";
     }
 
-    /** GT_Container_BasicMachine: координаты входных слотов. */
+    /** GT_Container_BasicMachine: координаты входных слотов (1..9). */
     public int[][] inputSlots() {
         return switch (inputs) {
             case 1 -> new int[][]{{53, 25}};
             case 2 -> new int[][]{{35, 25}, {53, 25}};
-            default -> new int[][]{{17, 16}, {35, 16}, {53, 16}, {17, 34}, {35, 34}, {53, 34}};
+            case 3 -> new int[][]{{17, 25}, {35, 25}, {53, 25}};
+            case 4 -> new int[][]{{35, 16}, {53, 16}, {35, 34}, {53, 34}};
+            case 5 -> new int[][]{{17, 16}, {35, 16}, {53, 16}, {35, 34}, {53, 34}};
+            case 6 -> new int[][]{{17, 16}, {35, 16}, {53, 16}, {17, 34}, {35, 34}, {53, 34}};
+            default -> first(inputs, new int[][]{{17, 7}, {35, 7}, {53, 7}, {17, 25}, {35, 25}, {53, 25}, {17, 43}, {35, 43}, {53, 43}});
         };
     }
 
+    /** GT_Container_BasicMachine: координаты выходных слотов (1..9). */
     public int[][] outputSlots() {
-        int[][] all = {{107, 25}, {125, 25}, {143, 25}};
-        int[][] r = new int[outputs][];
-        System.arraycopy(all, 0, r, 0, outputs);
+        return switch (outputs) {
+            case 1, 2, 3 -> first(outputs, new int[][]{{107, 25}, {125, 25}, {143, 25}});
+            case 4 -> new int[][]{{107, 16}, {125, 16}, {107, 34}, {125, 34}};
+            case 5, 6 -> first(outputs, new int[][]{{107, 16}, {125, 16}, {143, 16}, {107, 34}, {125, 34}, {143, 34}});
+            default -> first(outputs, new int[][]{{107, 7}, {125, 7}, {143, 7}, {107, 25}, {125, 25}, {143, 25}, {107, 43}, {125, 43}, {143, 43}});
+        };
+    }
+
+    private static int[][] first(int n, int[][] all) {
+        int[][] r = new int[n][];
+        System.arraycopy(all, 0, r, 0, n);
         return r;
     }
 }

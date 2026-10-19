@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/calcite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_calcite",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_malachite",
+      "count": 1
+    }
+  ],
+  "duration": 160,
+  "eut": 5
+}

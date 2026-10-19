@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/electrum",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_silver",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_gold",
+      "count": 1
+    }
+  ],
+  "duration": 1208,
+  "eut": 10
+}

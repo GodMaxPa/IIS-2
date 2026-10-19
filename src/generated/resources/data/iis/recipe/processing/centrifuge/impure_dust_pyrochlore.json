@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/pyrochlore",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_pyrochlore",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_apatite",
+      "count": 1
+    }
+  ],
+  "duration": 272,
+  "eut": 5
+}

@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/gem_flawed_opal",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 255
+      }
+    ]
+  }
+}

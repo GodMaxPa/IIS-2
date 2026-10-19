@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/magnesite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_magnesite",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_magnesium",
+      "count": 1
+    }
+  ],
+  "duration": 128,
+  "eut": 5
+}

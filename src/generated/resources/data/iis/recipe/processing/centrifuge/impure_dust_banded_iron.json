@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/banded_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_banded_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_banded_iron",
+      "count": 1
+    }
+  ],
+  "duration": 256,
+  "eut": 5
+}

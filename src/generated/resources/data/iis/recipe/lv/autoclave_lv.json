@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IGI",
+    "IMI",
+    "CUC"
+  ],
+  "key": {
+    "I": "#c:plates/steel",
+    "G": "minecraft:glass",
+    "M": "iis:hull_lv",
+    "C": "#c:circuits/basic",
+    "U": "iis:electric_pump_lv"
+  },
+  "result": {
+    "id": "iis:autoclave_lv"
+  }
+}

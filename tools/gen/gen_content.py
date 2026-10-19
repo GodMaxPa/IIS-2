@@ -130,6 +130,8 @@ names |= {'Steel', 'DarkAsh', 'Ash', 'Brick', 'Clay', 'Fireclay', 'RawRubber', '
 # LV (slice 4): wire and cable metals, magnetic rods, rubber, circuit and battery materials
 names |= {'Tin', 'Lead', 'Copper', 'AnnealedCopper', 'WroughtIron', 'Rubber', 'IronMagnetic', 'SteelMagnetic', 'Glass',
           'Sulfur', 'Paper', 'SolderingAlloy', 'Antimony', 'BatteryAlloy'}
+# LV II: diamond sawblade (cobalt brass gear, diamond dust), item filter (zinc foil, steel fine wire)
+names |= {'CobaltBrass', 'Cobalt', 'Aluminium', 'Brass', 'Zinc', 'Diamond'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64
@@ -157,7 +159,13 @@ PREFIXES = [
     ('rotor',         'rotor',            B_METAL,                 '02', 21, '{} Rotor',                'iis:rotors'),
     ('long_rod',      'stickLong',        B_METAL,                 '02', 22, 'Long {} Rod',             'iis:long_rods'),
     ('gear',          'gearGt',           B_METAL | B_GEM,         '02', 31, '{} Gear',                 'c:gears'),
+    # gem qualities (sifter outputs; OrePrefixes condition: TRANSPARENT & CRYSTAL & !QUARTZ & !PEARL & !MAGICAL)
+    ('gem_chipped',   'gemChipped',       B_GEM,                   '02', 27, 'Chipped {}',              'iis:chipped_gems'),
+    ('gem_flawed',    'gemFlawed',        B_GEM,                   '02', 28, 'Flawed {}',               'iis:flawed_gems'),
+    ('gem_flawless',  'gemFlawless',      B_GEM,                   '02', 29, 'Flawless {}',             'iis:flawless_gems'),
+    ('gem_exquisite', 'gemExquisite',     B_GEM,                   '02', 30, 'Exquisite {}',            'iis:exquisite_gems'),
 ]
+GEM_QUALITIES = ('gem_chipped', 'gem_flawed', 'gem_flawless', 'gem_exquisite')
 HEADS = [
     # id prefix        gt prefix            meta index, en template
     ('sword_head',     'toolHeadSword',     0, '{} Sword Blade'),
@@ -223,6 +231,10 @@ def component_allowed(prefix, name):
 def has_form(prefix, name):
     """Does material have this form (GT OrePrefixes.doGenerateItem), regardless of whether it is vanilla."""
     bits = next((p[2] for p in PREFIXES if p[0] == prefix), 0)
+    if prefix in GEM_QUALITIES:
+        st = set(prop(name, 'ListSubTags', []) or [])
+        if not ({'TRANSPARENT', 'CRYSTAL'} <= st) or st & {'QUARTZ', 'PEARL', 'MAGICAL'}:
+            return False
     return (prop(name, 'MaterialTypes', 0) & bits) != 0 and component_allowed(prefix, name)
 
 

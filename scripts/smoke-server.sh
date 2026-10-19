@@ -47,4 +47,8 @@ if grep -qE 'IIS scan: .*vanilla ore blocks=0$' "$LOG"; then echo "OK: no vanill
 grep -A100 'IIS scan:' "$LOG" | grep -E '^\[.*\]:   ' | sed 's/.*]:  /   /' | head -40
 ERRS=$(grep -iE 'Exception|ERROR' "$LOG" | grep -vE 'yggdrasil|minecraftservices|server.properties|NoSuchFileException' || true)
 [ -n "$ERRS" ] && { echo "WARN: errors in log:"; echo "$ERRS" | head -20; }
+# битые рецепты/данные мода — провал (раньше проходили как предупреждение)
+if grep -E "Couldn't parse data file 'iis:|Parsing error loading recipe iis:" "$LOG" >/dev/null; then
+  echo "FAIL: broken iis data files:"; grep -E "Couldn't parse data file 'iis:|Parsing error loading recipe iis:" "$LOG" | head -20; ok=0
+fi
 [ $ok = 1 ] && echo "SMOKE TEST PASSED" || { echo "SMOKE TEST FAILED"; exit 1; }

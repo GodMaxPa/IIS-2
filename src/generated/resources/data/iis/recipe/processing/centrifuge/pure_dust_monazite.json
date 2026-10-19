@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/monazite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_monazite",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_neodymium",
+      "count": 1
+    }
+  ],
+  "duration": 464,
+  "eut": 5
+}

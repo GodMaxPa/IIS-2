@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/chalcopyrite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_chalcopyrite",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_cobalt",
+      "count": 1
+    }
+  ],
+  "duration": 360,
+  "eut": 5
+}

@@ -53,7 +53,10 @@ public class GtRecipeCategory extends AbstractRecipeCategory<RecipeHolder<GtReci
         List<ChanceOutput> out = r.outputs();
         for (int i = 0; i < out.size(); i++) {
             ChanceOutput o = out.get(i);
-            IRecipeSlotBuilder slot = builder.addOutputSlot(90 + 18 * i, 19).setOutputSlotBackground().add(o.stack());
+            // больше трёх выходов (центрифуга 6, просеиватель 9) — сетка 3 в ряд
+            int ox = out.size() > 3 ? 90 + 18 * (i % 3) : 90 + 18 * i;
+            int oy = out.size() > 6 ? 1 + 18 * (i / 3) : out.size() > 3 ? 10 + 18 * (i / 3) : 19;
+            IRecipeSlotBuilder slot = builder.addOutputSlot(ox, oy).setOutputSlotBackground().add(o.stack());
             if (o.chance() < ChanceOutput.ALWAYS) {
                 String pct = String.format(java.util.Locale.ROOT, "%.2f", o.chance() / 100.0);
                 slot.addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("jei.iis.chance", pct).withStyle(ChatFormatting.GOLD)));

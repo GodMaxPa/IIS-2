@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/gem_exquisite_amber",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 16744448
+      }
+    ]
+  }
+}

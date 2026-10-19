@@ -1,0 +1,27 @@
+{
+  "type": "iis:electromagnetic_separator",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/vanadium_magnetite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_vanadium_magnetite",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_gold",
+      "count": 1,
+      "chance": 4000
+    },
+    {
+      "id": "minecraft:gold_nugget",
+      "count": 1,
+      "chance": 2000
+    }
+  ],
+  "duration": 400,
+  "eut": 24
+}

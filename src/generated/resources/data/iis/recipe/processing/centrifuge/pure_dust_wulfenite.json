@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/wulfenite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_wulfenite",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_wulfenite",
+      "count": 1
+    }
+  ],
+  "duration": 488,
+  "eut": 5
+}

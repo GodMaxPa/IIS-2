@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/sapphire",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_sapphire",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_green_sapphire",
+      "count": 1
+    }
+  ],
+  "duration": 160,
+  "eut": 5
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/cobalt_brass",
+    "#iis:small_dusts/cobalt_brass",
+    "#iis:small_dusts/cobalt_brass",
+    "#iis:small_dusts/cobalt_brass"
+  ],
+  "result": {
+    "id": "iis:dust_cobalt_brass"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/ruby",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_ruby",
+      "count": 1
+    }
+  ],
+  "duration": 25,
+  "eut": 5
+}

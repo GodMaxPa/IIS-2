@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:cherry_planks",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:cherry_slab",
+      "count": 2
+    }
+  ],
+  "duration": 50,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 4
+    }
+  ]
+}

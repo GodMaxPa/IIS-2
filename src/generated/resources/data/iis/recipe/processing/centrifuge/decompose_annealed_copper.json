@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/annealed_copper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_copper",
+      "count": 1
+    }
+  ],
+  "duration": 252,
+  "eut": 5
+}

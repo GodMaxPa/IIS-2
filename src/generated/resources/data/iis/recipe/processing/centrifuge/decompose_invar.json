@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/invar",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_nickel",
+      "count": 1
+    }
+  ],
+  "duration": 672,
+  "eut": 10
+}

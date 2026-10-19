@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:glass",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:glass_pane",
+      "count": 8
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 4
+    }
+  ]
+}

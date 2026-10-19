@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:nether_bricks",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:nether_brick_slab",
+      "count": 2
+    }
+  ],
+  "duration": 50,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 4
+    }
+  ]
+}

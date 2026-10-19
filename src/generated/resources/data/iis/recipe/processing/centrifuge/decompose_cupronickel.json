@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/cupronickel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_copper",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_nickel",
+      "count": 1
+    }
+  ],
+  "duration": 480,
+  "eut": 10
+}

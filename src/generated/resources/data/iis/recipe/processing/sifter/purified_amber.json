@@ -1,0 +1,43 @@
+{
+  "type": "iis:sifter",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/amber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_exquisite_amber",
+      "count": 1,
+      "chance": 300
+    },
+    {
+      "id": "iis:gem_flawless_amber",
+      "count": 1,
+      "chance": 1200
+    },
+    {
+      "id": "iis:gem_amber",
+      "count": 1,
+      "chance": 4500
+    },
+    {
+      "id": "iis:gem_flawed_amber",
+      "count": 1,
+      "chance": 1400
+    },
+    {
+      "id": "iis:gem_chipped_amber",
+      "count": 1,
+      "chance": 2800
+    },
+    {
+      "id": "iis:dust_amber",
+      "count": 1,
+      "chance": 3500
+    }
+  ],
+  "duration": 800,
+  "eut": 16
+}

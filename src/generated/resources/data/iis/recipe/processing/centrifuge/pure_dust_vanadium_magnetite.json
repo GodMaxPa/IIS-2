@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/vanadium_magnetite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_vanadium_magnetite",
+      "count": 1
+    }
+  ],
+  "duration": 42,
+  "eut": 5
+}

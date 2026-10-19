@@ -1,0 +1,43 @@
+{
+  "type": "iis:sifter",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/sodalite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_sodalite",
+      "count": 1,
+      "chance": 100
+    },
+    {
+      "id": "iis:gem_sodalite",
+      "count": 1,
+      "chance": 400
+    },
+    {
+      "id": "iis:gem_sodalite",
+      "count": 1,
+      "chance": 1500
+    },
+    {
+      "id": "iis:gem_sodalite",
+      "count": 1,
+      "chance": 2000
+    },
+    {
+      "id": "iis:gem_sodalite",
+      "count": 1,
+      "chance": 4000
+    },
+    {
+      "id": "iis:dust_sodalite",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 800,
+  "eut": 16
+}

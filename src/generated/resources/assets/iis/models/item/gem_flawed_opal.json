@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "iis:item/materialicons/opal/gemflawed",
+    "layer1": "iis:item/materialicons/opal/gemflawed_overlay"
+  }
+}

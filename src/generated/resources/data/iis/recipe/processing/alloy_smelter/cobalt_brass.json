@@ -1,0 +1,25 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/brass",
+      "count": 7
+    },
+    {
+      "ingredient": "#c:dusts/aluminium",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/cobalt",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_cobalt_brass",
+      "count": 9
+    }
+  ],
+  "duration": 450,
+  "eut": 16
+}

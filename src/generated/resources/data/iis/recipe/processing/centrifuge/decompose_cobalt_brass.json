@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/cobalt_brass",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_brass",
+      "count": 7
+    },
+    {
+      "id": "iis:dust_aluminium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_cobalt",
+      "count": 1
+    }
+  ],
+  "duration": 2088,
+  "eut": 15
+}

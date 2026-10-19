@@ -139,6 +139,8 @@ public final class LvContent {
     public static final DeferredItem<Item> COATED_CIRCUIT_BOARD = item("coated_circuit_board");
     public static final DeferredItem<Item> RESISTOR = item("resistor");
     public static final DeferredItem<Item> GLASS_TUBE = item("glass_tube");
+    public static final DeferredItem<Item> DIAMOND_SAWBLADE = item("diamond_sawblade");
+    public static final DeferredItem<Item> ITEM_FILTER = item("item_filter");
     public static final DeferredItem<Item> STEEL_ITEM_CASING = item("steel_item_casing");
     public static final DeferredItem<Item> PLATE_WOOD = item("plate_wood");
     public static final DeferredItem<Item> STICKY_RESIN = item("sticky_resin");

@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/soldering_alloy",
+      "count": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_tin",
+      "count": 9
+    },
+    {
+      "id": "iis:dust_antimony",
+      "count": 1
+    }
+  ],
+  "duration": 4720,
+  "eut": 10
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/silver",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_silver",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_sulfur",
+      "count": 1
+    }
+  ],
+  "duration": 856,
+  "eut": 5
+}

@@ -115,5 +115,50 @@
     "outputs": 3,
     "tank": 16000,
     "gui": "lv/orewasher"
+  },
+  {
+    "id": "centrifuge_lv",
+    "type": "centrifuge",
+    "recipeMap": "centrifuge",
+    "inputs": 2,
+    "outputs": 6,
+    "tank": 64000,
+    "gui": "lv/centrifuge"
+  },
+  {
+    "id": "sifter_lv",
+    "type": "sifter",
+    "recipeMap": "sifter",
+    "inputs": 1,
+    "outputs": 9,
+    "tank": 0,
+    "gui": "lv/sifter"
+  },
+  {
+    "id": "electromagnetic_separator_lv",
+    "type": "electromagnetic_separator",
+    "recipeMap": "electromagnetic_separator",
+    "inputs": 1,
+    "outputs": 3,
+    "tank": 0,
+    "gui": "lv/electromagneticseparator"
+  },
+  {
+    "id": "autoclave_lv",
+    "type": "autoclave",
+    "recipeMap": "autoclave",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 8000,
+    "gui": "lv/autoclave"
+  },
+  {
+    "id": "cutter_lv",
+    "type": "cutter",
+    "recipeMap": "cutter",
+    "inputs": 1,
+    "outputs": 2,
+    "tank": 8000,
+    "gui": "lv/cutter"
   }
 ]

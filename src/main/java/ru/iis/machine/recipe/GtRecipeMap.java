@@ -17,6 +17,12 @@ public enum GtRecipeMap {
     POLARIZER("polarizer", 1, 1),
     ORE_WASHER("ore_washer", 2, 3),
     COKE_OVEN("coke_oven", 1, 1),
+    // LV II: доводка руды и резка
+    CENTRIFUGE("centrifuge", 2, 6),
+    SIFTER("sifter", 1, 9),
+    ELECTROMAGNETIC_SEPARATOR("electromagnetic_separator", 1, 3),
+    AUTOCLAVE("autoclave", 1, 1),
+    CUTTER("cutter", 1, 2),
     // EBF slice: sBlastRecipes (2 входа, 2 выхода, по жидкости на вход и выход; temp — нагрев катушек)
     BLAST("blast", 2, 2);
 

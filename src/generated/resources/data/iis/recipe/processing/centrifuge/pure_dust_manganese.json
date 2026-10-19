@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/manganese",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_manganese",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_iron",
+      "count": 1
+    }
+  ],
+  "duration": 440,
+  "eut": 5
+}

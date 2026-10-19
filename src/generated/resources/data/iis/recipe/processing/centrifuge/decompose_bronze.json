@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/bronze",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_tin",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_copper",
+      "count": 3
+    }
+  ],
+  "duration": 1216,
+  "eut": 10
+}

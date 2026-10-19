@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/gem_chipped_amethyst",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13775570
+      }
+    ]
+  }
+}

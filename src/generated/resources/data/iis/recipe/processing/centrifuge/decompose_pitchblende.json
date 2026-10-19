@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/pitchblende",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_uraninite",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_thorium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_lead",
+      "count": 1
+    }
+  ],
+  "duration": 2820,
+  "eut": 15
+}

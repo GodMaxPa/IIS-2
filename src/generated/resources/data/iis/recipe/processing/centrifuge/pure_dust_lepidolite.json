@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/lepidolite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_lepidolite",
+      "count": 1
+    }
+  ],
+  "duration": 18,
+  "eut": 5
+}

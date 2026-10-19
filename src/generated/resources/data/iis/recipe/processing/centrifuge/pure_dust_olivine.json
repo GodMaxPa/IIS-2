@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/olivine",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_olivine",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_magnesium",
+      "count": 1
+    }
+  ],
+  "duration": 224,
+  "eut": 5
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_nickel",
+      "count": 1
+    }
+  ],
+  "duration": 448,
+  "eut": 5
+}

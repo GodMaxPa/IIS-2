@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/spodumene",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_spodumene",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_lithium",
+      "count": 1
+    }
+  ],
+  "duration": 144,
+  "eut": 5
+}

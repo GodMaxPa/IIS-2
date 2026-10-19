@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/certus_quartz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_certus_quartz",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_quartzite",
+      "count": 1
+    }
+  ],
+  "duration": 784,
+  "eut": 5
+}

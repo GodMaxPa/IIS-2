@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/jasper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_jasper",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_jasper",
+      "count": 1
+    }
+  ],
+  "duration": 168,
+  "eut": 5
+}

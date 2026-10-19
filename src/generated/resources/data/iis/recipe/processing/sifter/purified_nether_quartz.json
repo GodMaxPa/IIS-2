@@ -1,0 +1,43 @@
+{
+  "type": "iis:sifter",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/nether_quartz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:quartz",
+      "count": 1,
+      "chance": 100
+    },
+    {
+      "id": "minecraft:quartz",
+      "count": 1,
+      "chance": 400
+    },
+    {
+      "id": "minecraft:quartz",
+      "count": 1,
+      "chance": 1500
+    },
+    {
+      "id": "minecraft:quartz",
+      "count": 1,
+      "chance": 2000
+    },
+    {
+      "id": "minecraft:quartz",
+      "count": 1,
+      "chance": 4000
+    },
+    {
+      "id": "iis:dust_nether_quartz",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 800,
+  "eut": 16
+}

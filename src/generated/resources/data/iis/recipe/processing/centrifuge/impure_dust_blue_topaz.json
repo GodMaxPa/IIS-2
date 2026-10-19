@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/blue_topaz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_blue_topaz",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_topaz",
+      "count": 1
+    }
+  ],
+  "duration": 128,
+  "eut": 5
+}

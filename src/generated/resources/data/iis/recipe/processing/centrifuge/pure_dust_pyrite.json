@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/pyrite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_pyrite",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_tricalcium_phosphate",
+      "count": 1
+    }
+  ],
+  "duration": 320,
+  "eut": 5
+}

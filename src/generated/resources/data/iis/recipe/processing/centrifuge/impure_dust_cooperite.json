@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/cooperite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_cooperite",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_palladium",
+      "count": 1
+    }
+  ],
+  "duration": 1040,
+  "eut": 5
+}

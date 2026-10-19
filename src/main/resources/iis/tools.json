@@ -108,6 +108,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_cobalt_brass",
+    "tool": "sword",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "sword_cupronickel",
     "tool": "sword",
     "material": "cupronickel",
@@ -585,6 +597,18 @@
     "craftDamage": 2,
     "speed": 8.0,
     "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_cobalt_brass",
+    "tool": "pickaxe",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 2,
     "kind": "pickaxe"
   },
   {
@@ -1068,6 +1092,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_cobalt_brass",
+    "tool": "shovel",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_cupronickel",
     "tool": "shovel",
     "material": "cupronickel",
@@ -1545,6 +1581,18 @@
     "craftDamage": 2,
     "speed": 8.0,
     "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_cobalt_brass",
+    "tool": "axe",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 2,
     "kind": "axe"
   },
   {
@@ -2028,6 +2076,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_cobalt_brass",
+    "tool": "hoe",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_cupronickel",
     "tool": "hoe",
     "material": "cupronickel",
@@ -2505,6 +2565,18 @@
     "craftDamage": 4,
     "speed": 8.0,
     "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_cobalt_brass",
+    "tool": "saw",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 8.0,
+    "quality": 2,
     "kind": "axe"
   },
   {
@@ -2988,6 +3060,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_cobalt_brass",
+    "tool": "hammer",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_cupronickel",
     "tool": "hammer",
     "material": "cupronickel",
@@ -3453,6 +3537,18 @@
     "craftDamage": 16,
     "speed": 8.0,
     "quality": 3,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_cobalt_brass",
+    "tool": "wrench",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 8.0,
+    "quality": 2,
     "kind": "wrench"
   },
   {
@@ -3936,6 +4032,18 @@
     "kind": null
   },
   {
+    "id": "file_cobalt_brass",
+    "tool": "file",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 8.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "file_cupronickel",
     "tool": "file",
     "material": "cupronickel",
@@ -4413,6 +4521,18 @@
     "craftDamage": 8,
     "speed": 8.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_cobalt_brass",
+    "tool": "screwdriver",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 8.0,
+    "quality": 2,
     "kind": null
   },
   {
@@ -4932,6 +5052,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_cobalt_brass",
+    "tool": "knife",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "knife_cupronickel",
     "tool": "knife",
     "material": "cupronickel",
@@ -5409,6 +5541,18 @@
     "craftDamage": 8,
     "speed": 10.0,
     "quality": 3,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_cobalt_brass",
+    "tool": "wire_cutter",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 10.0,
+    "quality": 2,
     "kind": "wire_cutter"
   },
   {
@@ -5913,6 +6057,18 @@
     "craftDamage": 2,
     "speed": 8.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "crowbar_cobalt_brass",
+    "tool": "crowbar",
+    "material": "cobalt_brass",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 2,
     "kind": null
   },
   {

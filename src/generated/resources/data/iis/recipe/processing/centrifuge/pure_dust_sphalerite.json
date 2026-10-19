@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/sphalerite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_sphalerite",
+      "count": 1
+    }
+  ],
+  "duration": 48,
+  "eut": 5
+}

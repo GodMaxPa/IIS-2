@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/bastnasite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_bastnasite",
+      "count": 1
+    }
+  ],
+  "duration": 36,
+  "eut": 5
+}

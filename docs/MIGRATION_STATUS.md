@@ -37,4 +37,6 @@
 | Люки LV, шины, обслуживание, выхлоп | `GT_MetaTileEntity_Hatch_*` | `multi.block.*` | перенесено | G |
 | Техобслуживание | `MultiBlockBase`, `Hatch_Maintenance` | `multi.logic.Maintenance` | перенесено (инструмент по люку) | T, G |
 | Киянка, монтировка, паяльник LV | `GT_Tool_SoftHammer/Crowbar`, `SOLDERING_IRON_LV` | инструменты GT, `multi.SolderingIronItem` | перенесено | S |
-| Остальные LV-машины (центрифуга, электролизёр, химреактор, резчик, …), провода 8x+ | `GT_Loader_MetaTileEntities` | — | следующие блоки LV (D42) | — |
+| LV II: центрифуга, просеиватель, электромагнитный сепаратор, автоклав, пильный станок | `GT_Loader_MetaTileEntities`, `ProcessingDust`, `ProcessingCrushedOre`, `ProcessingStick*`, `ProcessingLog`, `GT_MachineRecipeLoader` | `LvMachineType`, `tools/gen/lv.py` (`lv2_recipes`) | перенесено без ячеек: рецепты с газами/жидкостями в ячейках ждут ячеек | T, G, C |
+| Алмазный пильный диск, фильтр, кобальтовая латунь, огранки камней (осколки…изысканный) | `GT_MetaGenerated_Item_01/02`, `OrePrefixes` | `tools/gen` | перенесено | S |
+| Остальные LV-машины (электролизёр, химреактор, хим. ванна, экстрактор/отвердитель жидкостей, консервирование, …), ячейки, провода 8x+ | `GT_Loader_MetaTileEntities` | — | следующий блок: ячейки GT + электролизёр | — |

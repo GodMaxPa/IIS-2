@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/brass",
+      "count": 7
+    },
+    {
+      "ingredient": "#c:dusts/aluminium",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/cobalt",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_cobalt_brass",
+      "count": 9
+    }
+  ],
+  "duration": 900,
+  "eut": 8
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/tricalcium_phosphate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_tricalcium_phosphate",
+      "count": 1
+    }
+  ],
+  "duration": 31,
+  "eut": 5
+}

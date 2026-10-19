@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:gears/cobalt_brass",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/diamond",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:diamond_sawblade",
+      "count": 1
+    }
+  ],
+  "duration": 1600,
+  "eut": 2
+}

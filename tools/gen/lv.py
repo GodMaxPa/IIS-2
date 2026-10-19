@@ -38,6 +38,13 @@ MACHINES = [
     ('mixer',         'mixer',         'MIXER',            'Mixer',        'mixer',         6, 1, 8000,  'Mixer'),
     ('polarizer',     'polarizer',     'POLARIZER',        'Polarizer',    'polarizer',     1, 1, 0,     'Polarizer'),
     ('ore_washer',    'orewasher',     'ORE_WASHER',       'OreWasher',    'ore_washer',    2, 3, 16000, 'Ore Washing Plant'),
+    # LV II: ore refinement and cutting (GT_Loader_MetaTileEntities:766, 1075, 1003, 1012, 658)
+    ('centrifuge',    'centrifuge',    'CENTRIFUGE',       'Centrifuge',   'centrifuge',    2, 6, 64000, 'Centrifuge'),
+    ('sifter',        'sifter',        'SIFTER',           'Sifter',       'sifter',        1, 9, 0,     'Sifting Machine'),
+    ('electromagnetic_separator', 'electromagneticseparator', 'ELECTROMAGNETIC_SEPARATOR', 'ElectromagneticSeparator',
+                      'electromagnetic_separator', 1, 3, 0, 'Electromagnetic Separator'),
+    ('autoclave',     'autoclave',     'AUTOCLAVE',        'Autoclave',    'autoclave',     1, 1, 8000,  'Autoclave'),
+    ('cutter',        'cutter',        'CUTTER',           'Cutter',       'cutter',        1, 2, 8000,  'Cutting Machine'),
 ]
 GENERATORS = [
     # id, GT lang, texture prefix, EN
@@ -58,6 +65,8 @@ ITEMS = [
     ('coated_circuit_board', 'gt:710', 'gt.metaitem.01.32710.name', 'Coated Circuit Board', 'Покрытая печатная плата'),
     ('resistor', 'gt:716', 'gt.metaitem.01.32716.name', 'Resistor', 'Резистор'),
     ('glass_tube', 'gt:glass_tube', 'gt.metaitem.03.32012.name', 'Glass Tube', 'Стеклянная трубочка'),
+    ('diamond_sawblade', 'gt:721', 'gt.metaitem.01.32721.name', 'Diamond Sawblade', 'Алмазный пильный диск'),
+    ('item_filter', 'gt:729', 'gt.metaitem.01.32729.name', 'Item Filter', 'Фильтр'),
     ('battery_lv', 'gt:519', 'gt.metaitem.01.32519.name', 'Small Battery (LV)', 'Малая батарейка (LV)'),
     ('steel_item_casing', 'gen:casing', None, 'Steel Item Casing', 'Стальная оболочка'),
     ('sticky_resin', 'gen:resin', None, 'Sticky Resin', 'Липкая смола'),
@@ -740,7 +749,8 @@ def generate(g):
     # LV machines (GT_Loader_MetaTileEntities, X.* placeholders resolved for LV)
     X = {'M': HULL, 'E': MOTOR, 'P': PISTON, 'C': CIRC, 'W': C('Tin'), 'V': CONV, 'A': ARM, 'U': PUMP,
          'H': W('Copper', 2), 'O': W('Copper', 4), 'R': tag_of('rotor', 'Tin'), 'G': 'minecraft:glass', 'Z': W('Tin', 2), 'S': R('Iron'),
-         'D': 'minecraft:diamond', 'N': 'minecraft:anvil'}
+         'D': 'minecraft:diamond', 'N': 'minecraft:anvil',
+         'B': f'{NS}:diamond_sawblade', 'F': f'{NS}:item_filter', 'I': P('Steel'), 'Y': W('Tin', 2)}
 
     def mcraft(bid, pattern, letters):
         shaped(f'lv/{bid}', f'{NS}:{bid}', 1, pattern, {k: X[k] for k in letters})
@@ -757,6 +767,17 @@ def generate(g):
     mcraft('mixer_lv', ['GRG', 'GEG', 'CMC'], 'GRECM')
     mcraft('polarizer_lv', ['ZSZ', 'WMW', 'ZSZ'], 'ZSWM')
     mcraft('ore_washer_lv', ['RGR', 'CEC', 'WMW'], 'RGCEWM')
+    # LV II: GT_Loader_MetaTileEntities:766 centrifuge, 1075 sifter (P = piston), 1003 separator (S = iron rod, Z = 2x tin wire),
+    # 1012 autoclave (I = steel plate), 658 cutter (B = diamond sawblade)
+    mcraft('centrifuge_lv', ['CEC', 'WMW', 'CEC'], 'CEWM')
+    mcraft('sifter_lv', ['WFW', 'PMP', 'CFC'], 'WFPMC')
+    shaped('lv/electromagnetic_separator_lv', f'{NS}:electromagnetic_separator_lv', 1, ['VWZ', 'WMS', 'CWZ'],
+           {'V': CONV, 'W': C('Tin'), 'Z': W('Tin', 2), 'M': HULL, 'S': R('Iron'), 'C': CIRC})
+    mcraft('autoclave_lv', ['IGI', 'IMI', 'CUC'], 'IGMCU')
+    mcraft('cutter_lv', ['WCG', 'VMB', 'CWE'], 'WCGVMBE')
+    # GT_MetaGenerated_Item_01:731 diamond sawblade " D /DGD/ D " (small diamond dust, cobalt brass gear); :1472 assembler variant
+    shaped('lv/diamond_sawblade', f'{NS}:diamond_sawblade', 1, [' D ', 'DGD', ' D '],
+           {'D': tag_of('small_dust', 'Diamond'), 'G': tag_of('gear', 'CobaltBrass')})
     # generators: GT_Loader_MetaTileEntities:1167/1177/1185
     shaped('lv/diesel_generator_lv', f'{NS}:diesel_generator_lv', 1, ['PCP', 'EME', 'GWG'],
            {'M': HULL, 'P': PISTON, 'E': MOTOR, 'C': CIRC, 'W': C('Tin'), 'G': tag_of('gear', 'Steel')})
@@ -906,6 +927,7 @@ def generate(g):
     mrec('coke_oven', 'coal', [ing('minecraft:coal')], [out(f'{NS}:coal_coke')], 1800, 0, None, {'id': f'{NS}:creosote', 'amount': 500})
     mrec('coke_oven', 'coal_block', [ing('minecraft:coal_block')], [], 1800 * 9, 0, None, {'id': f'{NS}:creosote', 'amount': 4500})
     machine_recipes.pop('coke_oven/coal_block', None)  # needs a coke block; coal only for now
+    lv2_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER)
     for key, r in machine_recipes.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     by_type = {}
@@ -936,7 +958,10 @@ def generate(g):
                        ('jei.iis.bender', 'Bending Machine', 'Гибочный станок'), ('jei.iis.lathe', 'Lathe', 'Токарный станок'),
                        ('jei.iis.assembler', 'Assembler', 'Сборщик'), ('jei.iis.mixer', 'Mixer', 'Миксер'),
                        ('jei.iis.polarizer', 'Polarizer', 'Поляризатор'), ('jei.iis.ore_washer', 'Ore Washing Plant', 'Рудопромывочная установка'),
-                       ('jei.iis.coke_oven', 'Coke Oven', 'Коксовая печь'), ('message.iis.transformer.down', 'Step down: MV -> LV', 'Понижение: MV -> LV'),
+                       ('jei.iis.coke_oven', 'Coke Oven', 'Коксовая печь'),
+                       ('jei.iis.centrifuge', 'Centrifuge', 'Центрифуга'), ('jei.iis.sifter', 'Sifter', 'Просеиватель'),
+                       ('jei.iis.electromagnetic_separator', 'Electromagnetic Separator', 'Электромагнитный сепаратор'),
+                       ('jei.iis.autoclave', 'Autoclave', 'Автоклав'), ('jei.iis.cutter', 'Cutting Saw', 'Пильный станок'), ('message.iis.transformer.down', 'Step down: MV -> LV', 'Понижение: MV -> LV'),
                        ('message.iis.transformer.up', 'Step up: LV -> MV', 'Повышение: LV -> MV'),
                        ('item.iis.multimeter.tooltip.0', 'Right-click a wire or machine: detailed reading', 'ПКМ по проводу или машине — подробный замер'),
                        ('item.iis.multimeter.tooltip.1', 'In hand: live reading of what you look at', 'В руке — живые показания того, на что смотришь'),
@@ -963,3 +988,141 @@ def generate(g):
         name(k, en, ruu)
     stats['items'] = len(ITEMS)
     return stats
+
+
+# ----------------------------------------------------------------------------------------------------------------
+# LV II: centrifuge, sifter, electromagnetic separator, autoclave, cutting machine
+# ----------------------------------------------------------------------------------------------------------------
+SIFTER_RICH = {'Tanzanite', 'Sapphire', 'Olivine', 'GreenSapphire', 'Opal', 'Amethyst', 'Emerald', 'Ruby', 'Amber', 'Diamond',
+               'FoolsRuby', 'BlueTopaz', 'GarnetRed', 'Topaz', 'Jasper', 'GarnetYellow'}   # ProcessingCrushedOre:46
+WOODS = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'cherry', 'pale_oak']
+M = 3628800
+
+
+def lv2_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
+    NS = 'iis'
+    code = g['code']
+
+    def byproduct(n, idx):
+        """GT_Utility.selectItemInList(idx, material, mOreByProducts)."""
+        bys = prop(n, 'ListMaterialByProducts', []) or []
+        if not bys:
+            return n
+        return bys[min(idx, len(bys) - 1)]
+
+    def cutter(rid, inp, outs, dur, eut):
+        """GT_RecipeAdder.addCutterRecipe: water variant (duration x2, water max(4, min(1000, d*e/320))).
+        Distilled water and lubricant variants come with chemistry (PORTING_NOTES)."""
+        water = max(4, min(1000, dur * eut // 320))
+        mrec('cutter', rid, inp, outs, dur * 2, eut, WATER(water))
+
+    def extra_data(n):
+        raw = (code.get(n) or {}).get('rawArgs') or []
+        try:
+            return int(raw[22])
+        except (IndexError, ValueError):
+            return 0
+
+    def decomposition(n):
+        """ProcessingDust:57: dust -> component dusts. None when a component has no dust (GT would put it in a cell)."""
+        comp = (code.get(n) or {}).get('composition') or []
+        if not comp:
+            return None
+        dens = float(prop(n, 'Density', M) or M)
+        mult = int(dens // M) if dens > M else 1
+        outs, amount = [], 0
+        for c, a in comp:
+            if c == 'Air' or not ref('dust', c):
+                return None
+            if amount + a * M > 64 * dens:
+                continue
+            amount += a * M
+            outs.append((ref('dust', c), a * mult))
+        if not outs or len(outs) > 6:
+            return None
+        count = (1 if (amount * mult) % dens > 0 else 0) + int(amount * mult // dens)
+        return count, outs
+
+    for n in sorted(names):
+        if n in g['NOT_GENERATED_MATERIALS']:
+            continue
+        mid, st, mass = mat_id(n), g['subtags'](n), max(1, g['mass'](n))
+        dust = ref('dust', n)
+        # --- centrifuge: impure / pure dust -> dust + byproduct (ProcessingDust:189) ---
+        for pre, idx in (('impure_dust', 0), ('pure_dust', 1)):
+            if not (ref(pre, n) and dust):
+                continue
+            by = byproduct(n, idx)
+            tiny = ref('tiny_dust', by) or ref('nugget', by)
+            if tiny:
+                mrec('centrifuge', f'{pre}_{mid}', [ing(tag_of(pre, n))], [out(dust), out(tiny)], mass * 8, 5)
+            elif ref('small_dust', by):
+                mrec('centrifuge', f'{pre}_{mid}', [ing(tag_of(pre, n), 2)], [out(dust, 2), out(ref('small_dust', by))], mass * 16, 5)
+            elif ref('dust', by) or ref('gem', by):
+                mrec('centrifuge', f'{pre}_{mid}', [ing(tag_of(pre, n), 9)], [out(dust, 9), out(ref('dust', by) or ref('gem', by))], mass * 72, 5)
+            else:
+                mrec('centrifuge', f'{pre}_{mid}', [ing(tag_of(pre, n))], [out(dust)], mass, 5)
+        # --- centrifuge / electrolyzer decomposition without cells (ProcessingDust:57-110) ---
+        if dust and extra_data(n) & 2:
+            d = decomposition(n)
+            if d:
+                count, outs = d
+                mrec('centrifuge', f'decompose_{mid}', [ing(tag_of('dust', n), count)], [out(i, c) for i, c in outs],
+                     max(1, mass * 4 * count), min(4, len(outs)) * 5)
+        # --- electromagnetic separator: pure dust (ProcessingDust:192) ---
+        if ref('pure_dust', n) and dust:
+            for tag, m in (('ELECTROMAGNETIC_SEPERATION_GOLD', 'Gold'), ('ELECTROMAGNETIC_SEPERATION_IRON', 'Iron'),
+                           ('ELECTROMAGNETIC_SEPERATION_NEODYMIUM', 'Neodymium')):
+                if tag in st:
+                    mrec('electromagnetic_separator', f'pure_{mid}', [ing(tag_of('pure_dust', n))],
+                         [out(dust), out(ref('small_dust', m), 1, 4000), out(ref('nugget', m), 1, 2000)], 400, 24)
+        # --- autoclave: CRYSTALLISABLE dusts + 200 L water -> gem (ProcessingDust:122, :202) ---
+        if 'CRYSTALLISABLE' in st and ref('gem', n):
+            for pre, chance in (('dust', 7000), ('impure_dust', 9000), ('pure_dust', 9000)):
+                if ref(pre, n):
+                    mrec('autoclave', f'{pre}_{mid}', [ing(tag_of(pre, n))], [out(ref('gem', n), 1, chance)], 2000, 24, WATER(200))
+        # --- sifter: purified crushed gem ore (ProcessingCrushedOre:44) ---
+        gem = ref('gem', n)
+        if gem and ref('purified', n):
+            ch = [300, 1200, 4500, 1400, 2800, 3500] if n in SIFTER_RICH else [100, 400, 1500, 2000, 4000, 5000]
+            forms = [ref('gem_exquisite', n) or gem, ref('gem_flawless', n) or gem, gem, ref('gem_flawed', n) or gem,
+                     ref('gem_chipped', n) or gem, dust or gem]
+            mrec('sifter', f'purified_{mid}', [ing(tag_of('purified', n))], [out(f, 1, c) for f, c in zip(forms, ch)], 800, 16)
+        # --- cutter: rod -> 4 bolts, long rod -> 2 rods (ProcessingStick:21, ProcessingStickLong:20) ---
+        if 'NO_WORKING' not in st:
+            if ref('rod', n) and ref('bolt', n):
+                cutter(f'bolt_{mid}', [ing(tag_of('rod', n))], [out(ref('bolt', n), 4)], max(mass * 2, 1), 4)
+            if ref('long_rod', n) and ref('rod', n):
+                cutter(f'rod_{mid}', [ing(tag_of('long_rod', n))], [out(ref('rod', n), 2)], max(mass, 1), 4)
+    # ProcessingBlock:17 block -> 9 plates (mass*10, 30 EU/t): vanilla storage blocks of our metals
+    for blk, n in (('minecraft:iron_block', 'Iron'), ('minecraft:gold_block', 'Gold'), ('minecraft:copper_block', 'Copper')):
+        if ref('plate', n):
+            cutter(f'block_{mat_id(n)}', [ing(blk)], [out(ref('plate', n), 9)], max(g['mass'](n) * 10, 1), 30)
+    # ProcessingLog:80 log -> planks (vanilla count) + 2 wood dust (200, 8); ProcessingPlank:50 plank -> 2 slabs (25, 4)
+    for w in WOODS:
+        cutter(f'log_{w}', [ing(f'#minecraft:{w}_logs')], [out(f'minecraft:{w}_planks', 4), out(ref('dust', 'Wood'), 2)], 200, 8)
+        cutter(f'planks_{w}', [ing(f'minecraft:{w}_planks')], [out(f'minecraft:{w}_slab', 2)], 25, 4)
+    for w in ('crimson', 'warped'):
+        cutter(f'stem_{w}', [ing(f'#minecraft:{w}_stems')], [out(f'minecraft:{w}_planks', 4), out(ref('dust', 'Wood'), 2)], 200, 8)
+        cutter(f'planks_{w}', [ing(f'minecraft:{w}_planks')], [out(f'minecraft:{w}_slab', 2)], 25, 4)
+    cutter('log_rubber', [ing(f'{NS}:rubber_log')], [out('minecraft:jungle_planks', 3), out(ref('dust', 'Wood'), 2)], 200, 8)
+    # GT_MachineRecipeLoader:1239-1248 glass panes and stone slabs
+    cutter('glass_pane', [ing('minecraft:glass', 3)], [out('minecraft:glass_pane', 8)], 50, 8)
+    for b, slab in (('stone', 'stone_slab'), ('sandstone', 'sandstone_slab'), ('cobblestone', 'cobblestone_slab'),
+                    ('bricks', 'brick_slab'), ('stone_bricks', 'stone_brick_slab'), ('nether_bricks', 'nether_brick_slab'),
+                    ('quartz_block', 'quartz_slab')):
+        cutter(f'slab_{b}', [ing(f'minecraft:{b}')], [out(f'minecraft:{slab}', 2)], 25, 8)
+    # IIS GT_IC2.zs:747 autoclave: clay dust + 250 L water -> clay ball (20 t, 2 EU/t)
+    if ref('dust', 'Clay'):
+        mrec('autoclave', 'clay_ball', [ing(tag_of('dust', 'Clay'))], [out('minecraft:clay_ball')], 20, 2, WATER(250))
+    # GT_MachineRecipeLoader:1784 mixer / :1786 alloy smelter cobalt brass; GT_MachineRecipeLoader:414 item filter
+    if all(ref('dust', m) for m in ('Brass', 'Aluminium', 'Cobalt', 'CobaltBrass')):
+        mrec('mixer', 'cobalt_brass_dust', [ing(tag_of('dust', 'Brass'), 7), ing(tag_of('dust', 'Aluminium')), ing(tag_of('dust', 'Cobalt'))],
+             [out(ref('dust', 'CobaltBrass'), 9)], 900, 8)
+    if ref('ingot', 'CobaltBrass'):
+        mrec('alloy_smelter', 'cobalt_brass', [ing(tag_of('dust', 'Brass'), 7), ing(tag_of('dust', 'Aluminium')), ing(tag_of('dust', 'Cobalt'))],
+             [out(ref('ingot', 'CobaltBrass'), 9)], 450, 16)
+    if ref('gear', 'CobaltBrass') and ref('dust', 'Diamond'):
+        mrec('assembler', 'diamond_sawblade', [ing(tag_of('gear', 'CobaltBrass')), ing(tag_of('dust', 'Diamond'))], [out(f'{NS}:diamond_sawblade')], 1600, 2)
+    if ref('wire_fine', 'Steel') and ref('foil', 'Zinc'):
+        mrec('assembler', 'item_filter', [ing(tag_of('wire_fine', 'Steel'), 64), ing(tag_of('foil', 'Zinc'), 16)], [out(f'{NS}:item_filter')], 1600, 16)

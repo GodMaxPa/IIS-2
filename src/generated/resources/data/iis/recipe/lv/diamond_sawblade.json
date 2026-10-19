@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " D ",
+    "DGD",
+    " D "
+  ],
+  "key": {
+    "D": "#iis:small_dusts/diamond",
+    "G": "#c:gears/cobalt_brass"
+  },
+  "result": {
+    "id": "iis:diamond_sawblade"
+  }
+}

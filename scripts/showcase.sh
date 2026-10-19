@@ -216,6 +216,20 @@ print('save-all flush')
 PY
   } >&3
   sleep 12
+elif [ "$MODE" = centrifugegui ] || [ "$MODE" = siftergui ]; then
+  # GUI центрифуги (6 выходов) / просеивателя (9 выходов) в работе
+  if [ "$MODE" = centrifugegui ]; then M=centrifuge; ITEM='{Slot:0b,id:"iis:impure_dust_chalcopyrite",count:64}'
+  else M=sifter; ITEM='{Slot:0b,id:"iis:purified_ruby",count:64}'; fi
+  { common
+    echo 'forceload add -16 -16 16 16'
+    echo 'fill -6 199 -6 6 199 6 minecraft:smooth_stone'
+    echo "setblock 0 200 0 iis:${M}_lv[facing=north]"
+    echo "data merge block 0 200 0 {Items:[$ITEM],eu:2048L}"
+    echo 'setblock 0 200 1 iis:battery_buffer_2x2_lv[facing=north]'
+    echo 'setworldspawn 0 200 -2 0 37'
+    echo 'save-all flush'
+  } >&3
+  sleep 10
 elif [ "$MODE" = map ]; then
   # Карта JourneyMap со слоем «сетка рудных чанков» (спавн на поверхности)
   { common
@@ -270,7 +284,7 @@ xvfb-run -a -s "-screen 0 1600x900x24" bash -c '
   ./gradlew runClient -Pshowcase --no-daemon --console=plain > '"$OUT"'/client-'"$MODE"'.log 2>&1 &
   for i in $(seq 1 120); do grep -qE "Changing view distance|joined the game|Loaded [0-9]+ advancements" '"$OUT"'/client-'"$MODE"'.log && break; sleep 5; done
   sleep 45
-  if [ "'"$MODE"'" = steamgui ] || [ "'"$MODE"'" = lvgui ] || [ "'"$MODE"'" = ebfgui ]; then
+  if [ "'"$MODE"'" = steamgui ] || [ "'"$MODE"'" = lvgui ] || [ "'"$MODE"'" = ebfgui ] || [ "'"$MODE"'" = centrifugegui ] || [ "'"$MODE"'" = siftergui ]; then
     xdotool key v; sleep 12  # «использовать» на V: щелчок мыши под Xvfb не доходит до игры
     import -window root '"$OUT"'/'"$MODE"'-screen.png
     xdotool mousemove 746 350; sleep 2; xdotool key u; sleep 8

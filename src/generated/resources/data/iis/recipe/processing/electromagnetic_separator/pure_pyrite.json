@@ -1,0 +1,27 @@
+{
+  "type": "iis:electromagnetic_separator",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/pyrite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_pyrite",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_iron",
+      "count": 1,
+      "chance": 4000
+    },
+    {
+      "id": "minecraft:iron_nugget",
+      "count": 1,
+      "chance": 2000
+    }
+  ],
+  "duration": 400,
+  "eut": 24
+}

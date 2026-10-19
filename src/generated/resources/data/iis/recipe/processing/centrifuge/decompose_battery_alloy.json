@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/battery_alloy",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_lead",
+      "count": 4
+    },
+    {
+      "id": "iis:dust_antimony",
+      "count": 1
+    }
+  ],
+  "duration": 3780,
+  "eut": 10
+}
