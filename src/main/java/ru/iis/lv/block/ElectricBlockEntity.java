@@ -41,7 +41,7 @@ import java.util.List;
  *  - взорвавшаяся машина выпускает свой запас пакетом 8192 EU/t во все стороны (wirefire): провода перегреваются,
  *    подключённые машины взрываются от перенапряжения.
  */
-public abstract class ElectricBlockEntity extends BaseContainerBlockEntity implements EuNode, WorldlyContainer, MachineBlock.TickingMachine {
+public abstract class ElectricBlockEntity extends BaseContainerBlockEntity implements EuNode, WorldlyContainer, MachineBlock.TickingMachine, ru.iis.cover.CoverHost {
     /** GT V[5] (IV): напряжение выброса при взрыве. */
     public static final long RELEASE_VOLTAGE = 8192;
 
@@ -52,6 +52,8 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
     /** Учёт для мультиметра (GT mAverageEUInput/Output): EU за текущие и прошлые 20 тиков, максимум принятого напряжения. */
     private long euInWindow, euOutWindow, voltageInWindow;
     public long avgEuIn, avgEuOut, lastVoltageIn;
+    /** Покрытия GT на сторонах. */
+    protected final ru.iis.cover.CoverSet covers = new ru.iis.cover.CoverSet();
 
     protected ElectricBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state, int slots, long capacity, long inputVoltage) {
         super(type, pos, state);
@@ -96,6 +98,7 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
         }
         work(sl);
         if (exploded) return;
+        if (covers.any() && covers.tick(this, sl, tickTimer)) sl.updateNeighborsAt(worldPosition, getBlockState().getBlock());
         emitEnergy(sl);
         if (exploded) return;
         hazards(sl);
@@ -108,7 +111,7 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
         long cost = EnergyNet.emissionCost(v);
         long usable = Math.min(outputAmperes(), (energy.stored - minimumStored()) / cost);
         if (usable <= 0) return;
-        List<Direction> sides = Arrays.stream(Direction.values()).filter(this::outputsEnergyTo).toList();
+        List<Direction> sides = Arrays.stream(Direction.values()).filter(d -> outputsEnergyTo(d) && covers.letsEnergyOut(this, d)).toList();
         long used = WorldEnergy.emit(sl, worldPosition, sides, v, usable);
         if (used > 0) {
             euOutWindow += used * v;
@@ -163,7 +166,7 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
     // --- приём энергии -----------------------------------------------------------------------------------------
     @Override
     public long injectEnergy(Direction from, long voltage, long amperes) {
-        if (exploded || !(level instanceof ServerLevel sl) || !inputsEnergyFrom(from)) return 0;
+        if (exploded || !(level instanceof ServerLevel sl) || !inputsEnergyFrom(from) || !covers.letsEnergyIn(this, from)) return 0;
         EnergyStorage.Inject r = energy.inject(sl.getGameTime(), voltage, amperes);
         if (r.overvoltage()) {
             if (ru.iis.IISConfig.on(ru.iis.IISConfig.OVERVOLTAGE_EXPLOSIONS)) doExplosion(voltage);
@@ -244,11 +247,100 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
                 : s.hasProperty(TransformerBlock.FACING) ? s.getValue(TransformerBlock.FACING) : Direction.NORTH;
     }
 
+    // --- покрытия (CoverHost) ------------------------------------------------------------------------------------
+    @Override
+    public ru.iis.cover.CoverSet covers() {
+        return covers;
+    }
+
+    @Override
+    public net.minecraft.world.level.@org.jspecify.annotations.Nullable Level coverLevel() {
+        return level;
+    }
+
+    @Override
+    public BlockPos coverPos() {
+        return worldPosition;
+    }
+
+    @Override
+    public net.neoforged.neoforge.transfer.@org.jspecify.annotations.Nullable ResourceHandler<net.neoforged.neoforge.transfer.item.ItemResource> rawItems(Direction side) {
+        return new net.neoforged.neoforge.transfer.item.WorldlyContainerWrapper(this, side);
+    }
+
+    @Override
+    public int slotCount() {
+        return items.size();
+    }
+
+    @Override
+    public ItemStack slot(int i) {
+        return items.get(i);
+    }
+
+    @Override
+    public long euStored() {
+        return energy.stored;
+    }
+
+    @Override
+    public long euCapacity() {
+        return energy.capacity;
+    }
+
+    @Override
+    public void useEu(long eu) {
+        energy.stored = Math.max(0, energy.stored - eu);
+        setChanged();
+    }
+
+    @Override
+    public long avgEuIn() {
+        return avgEuIn;
+    }
+
+    @Override
+    public long avgEuOut() {
+        return avgEuOut;
+    }
+
+    @Override
+    public long inputVoltage() {
+        return energy.inputVoltage;
+    }
+
+    @Override
+    public void coversChanged() {
+        setChanged();
+        invalidateCapabilities();
+        if (level != null) {
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+            level.updateNeighborsAt(worldPosition, getBlockState().getBlock());
+        }
+    }
+
+    @Override
+    public net.minecraft.network.protocol.@org.jspecify.annotations.Nullable Packet<net.minecraft.network.protocol.game.ClientGamePacketListener> getUpdatePacket() {
+        return net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public net.minecraft.nbt.CompoundTag getUpdateTag(net.minecraft.core.HolderLookup.Provider registries) {
+        return saveWithoutMetadata(registries);
+    }
+
+    @Override
+    public void preRemoveSideEffects(BlockPos pos, BlockState state) {
+        super.preRemoveSideEffects(pos, state);
+        if (level != null) ru.iis.cover.Covers.dropAll(this, level, pos);
+    }
+
     @Override
     protected void saveAdditional(ValueOutput out) {
         super.saveAdditional(out);
         ContainerHelper.saveAllItems(out, items);
         out.putLong("eu", energy.stored);
+        covers.save(out);
     }
 
     @Override
@@ -257,5 +349,6 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
         items = NonNullList.withSize(items.size(), ItemStack.EMPTY);
         ContainerHelper.loadAllItems(in, items);
         energy.stored = in.getLongOr("eu", 0L);
+        covers.load(in);
     }
 }

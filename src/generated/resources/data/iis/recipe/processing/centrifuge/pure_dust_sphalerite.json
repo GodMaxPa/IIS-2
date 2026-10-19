@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_sphalerite",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_cadmium",
+      "count": 1
     }
   ],
-  "duration": 48,
+  "duration": 384,
   "eut": 5
 }

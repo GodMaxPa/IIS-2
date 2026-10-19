@@ -64,6 +64,19 @@ public class BatteryBufferBlockEntity extends ElectricBlockEntity {
         return VOLTAGE * 16 * items.size();
     }
 
+    /** Детектор энергии «с батареями»: заряд и ёмкость батарей в слотах. */
+    @Override
+    public long[] batteryCharge() {
+        long c = 0, cap = 0;
+        for (ItemStack s : items) {
+            if (s.getItem() instanceof ru.iis.lv.item.BatteryItem b && b.isBattery()) {
+                c += ru.iis.lv.item.BatteryItem.charge(s);
+                cap += b.capacity;
+            }
+        }
+        return new long[]{c, cap};
+    }
+
     public @Nullable ResourceHandler<ItemResource> itemHandler(@Nullable Direction side) {
         return side == null ? null : new WorldlyContainerWrapper(this, side);
     }

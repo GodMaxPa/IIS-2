@@ -146,7 +146,20 @@ public final class LvContent {
     public static final DeferredItem<Item> STICKY_RESIN = item("sticky_resin");
     public static final DeferredItem<Item> COAL_COKE = item("coal_coke");
     public static final DeferredItem<Item> WET_COKE_OVEN_BRICK = item("wet_coke_oven_brick");
+    // GT_MetaGenerated_Item_01:416-420 Battery_RE_LV_Sodium/Cadmium/Lithium: 50000 / 75000 / 100000 EU, 32 V
     public static final DeferredItem<BatteryItem> BATTERY_LV = ITEMS.registerItem("battery_lv", p -> new BatteryItem(50000, 32, 1, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_CADMIUM_LV = ITEMS.registerItem("battery_cadmium_lv", p -> new BatteryItem(75000, 32, 1, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_LITHIUM_LV = ITEMS.registerItem("battery_lithium_lv", p -> new BatteryItem(100000, 32, 1, p), p -> p.stacksTo(1));
+    public static final DeferredItem<Item> BATTERY_HULL_LV = item("battery_hull_lv");
+    // покрытия GT (ru.iis.cover.Covers.ITEMS); конвейер, помпа и манипулятор — сами детали LV
+    public static final DeferredItem<Item> COVER_CONTROLLER = item("cover_controller");
+    public static final DeferredItem<Item> COVER_ACTIVITY_DETECTOR = item("cover_activity_detector");
+    public static final DeferredItem<Item> COVER_FLUID_DETECTOR = item("cover_fluid_detector");
+    public static final DeferredItem<Item> COVER_ITEM_DETECTOR = item("cover_item_detector");
+    public static final DeferredItem<Item> COVER_ENERGY_DETECTOR = item("cover_energy_detector");
+    public static final DeferredItem<Item> COVER_CRAFTING = item("cover_crafting");
+    public static final DeferredItem<Item> COVER_DRAIN = item("cover_drain");
+    public static final DeferredItem<Item> COVER_SHUTTER = item("cover_shutter");
     public static final DeferredItem<ru.iis.lv.item.MultimeterItem> MULTIMETER = ITEMS.registerItem("multimeter", ru.iis.lv.item.MultimeterItem::new, p -> p.stacksTo(1));
     public static final DeferredItem<TreetapItem> TREETAP = ITEMS.registerItem("treetap", TreetapItem::new, p -> p.durability(16));
     static {
@@ -204,11 +217,11 @@ public final class LvContent {
     }
 
     private static void registerCapabilities(RegisterCapabilitiesEvent event) {
-        event.registerBlockEntity(Capabilities.Fluid.BLOCK, ELECTRIC_MACHINE_BE.get(), ElectricMachineBlockEntity::fluidHandler);
-        event.registerBlockEntity(Capabilities.Item.BLOCK, ELECTRIC_MACHINE_BE.get(), ElectricMachineBlockEntity::itemHandler);
-        event.registerBlockEntity(Capabilities.Fluid.BLOCK, GENERATOR_BE.get(), GeneratorBlockEntity::fluidHandler);
-        event.registerBlockEntity(Capabilities.Item.BLOCK, GENERATOR_BE.get(), GeneratorBlockEntity::itemHandler);
-        event.registerBlockEntity(Capabilities.Item.BLOCK, BATTERY_BUFFER_BE.get(), BatteryBufferBlockEntity::itemHandler);
+        event.registerBlockEntity(Capabilities.Fluid.BLOCK, ELECTRIC_MACHINE_BE.get(), (be, side) -> ru.iis.cover.Covers.fluids(be, side, be.fluidHandler(side)));
+        event.registerBlockEntity(Capabilities.Item.BLOCK, ELECTRIC_MACHINE_BE.get(), (be, side) -> ru.iis.cover.Covers.items(be, side, be.itemHandler(side)));
+        event.registerBlockEntity(Capabilities.Fluid.BLOCK, GENERATOR_BE.get(), (be, side) -> ru.iis.cover.Covers.fluids(be, side, be.fluidHandler(side)));
+        event.registerBlockEntity(Capabilities.Item.BLOCK, GENERATOR_BE.get(), (be, side) -> ru.iis.cover.Covers.items(be, side, be.itemHandler(side)));
+        event.registerBlockEntity(Capabilities.Item.BLOCK, BATTERY_BUFFER_BE.get(), (be, side) -> ru.iis.cover.Covers.items(be, side, be.itemHandler(side)));
         event.registerBlockEntity(Capabilities.Fluid.BLOCK, COKE_OVEN_BE.get(), CokeOvenBlockEntity::fluidHandler);
         event.registerBlockEntity(Capabilities.Item.BLOCK, COKE_OVEN_BE.get(), CokeOvenBlockEntity::itemHandler);
     }

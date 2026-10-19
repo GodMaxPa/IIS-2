@@ -61,6 +61,19 @@ public abstract class MachineBlock extends Block implements EntityBlock {
     /** Гаечный ключ поворачивает машину (лицевая сторона — на кликнутую грань). */
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (level.getBlockEntity(pos) instanceof ru.iis.cover.CoverHost host) {
+            InteractionResult r = ru.iis.cover.Covers.use(host, stack, player, hand, hit, state.getValue(FACING));
+            if (r != null) return r;
+            // GT: киянка включает/выключает машину
+            if (host.isMachine() && ru.iis.multi.block.MaintenanceHatchBlockEntity.problemFor(stack) == ru.iis.multi.logic.Maintenance.Problem.SOFT_HAMMER) {
+                if (!level.isClientSide()) {
+                    host.setAllowedToWork(!host.allowedToWork());
+                    player.sendOverlayMessage(net.minecraft.network.chat.Component.translatable(host.allowedToWork() ? "message.iis.machine.enabled" : "message.iis.machine.disabled"));
+                    if (!player.getAbilities().instabuild) stack.hurtAndBreak(20, player, hand);
+                }
+                return InteractionResult.SUCCESS;
+            }
+        }
         if (!Wrench.is(stack) || player.isShiftKeyDown()) return InteractionResult.TRY_WITH_EMPTY_HAND;
         if (!level.isClientSide()) Wrench.rotate(level, pos, state, FACING, ru.iis.machine.block.Wrench.wrenchingSide(pos, hit), player, hand, stack);
         return InteractionResult.SUCCESS;
@@ -68,10 +81,25 @@ public abstract class MachineBlock extends Block implements EntityBlock {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (level.getBlockEntity(pos) instanceof ru.iis.cover.CoverHost host) {
+            InteractionResult r = ru.iis.cover.Covers.use(host, ItemStack.EMPTY, player, InteractionHand.MAIN_HAND, hit, state.getValue(FACING));
+            if (r != null) return r;
+        }
         if (!level.isClientSide() && level.getBlockEntity(pos) instanceof MenuProvider provider) {
             player.openMenu(provider, pos);
         }
         return InteractionResult.SUCCESS;
+    }
+
+    // --- красный сигнал покрытий (детекторы) -----------------------------------------------------------------------
+    @Override
+    protected boolean isSignalSource(BlockState state) {
+        return true;
+    }
+
+    @Override
+    protected int getSignal(BlockState state, net.minecraft.world.level.BlockGetter level, BlockPos pos, Direction direction) {
+        return level.getBlockEntity(pos) instanceof ru.iis.cover.CoverHost h ? h.covers().redstoneOut(direction.getOpposite()) : 0;
     }
 
     @Override

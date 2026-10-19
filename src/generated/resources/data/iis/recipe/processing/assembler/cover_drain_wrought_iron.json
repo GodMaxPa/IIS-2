@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/wrought_iron",
+      "count": 2
+    },
+    {
+      "ingredient": "minecraft:iron_bars",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cover_drain",
+      "count": 1
+    }
+  ],
+  "duration": 800,
+  "eut": 16
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:battery_cadmium_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:battery_hull_lv",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

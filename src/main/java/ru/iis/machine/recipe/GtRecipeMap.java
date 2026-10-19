@@ -23,6 +23,7 @@ public enum GtRecipeMap {
     ELECTROMAGNETIC_SEPARATOR("electromagnetic_separator", 1, 3),
     AUTOCLAVE("autoclave", 1, 1),
     CUTTER("cutter", 1, 2),
+    CANNER("canner", 2, 2),
     // EBF slice: sBlastRecipes (2 входа, 2 выхода, по жидкости на вход и выход; temp — нагрев катушек)
     BLAST("blast", 2, 2);
 

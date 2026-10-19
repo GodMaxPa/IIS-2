@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/aluminium",
+      "count": 2
+    },
+    {
+      "ingredient": "minecraft:iron_door",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cover_shutter",
+      "count": 2
+    }
+  ],
+  "duration": 800,
+  "eut": 16
+}

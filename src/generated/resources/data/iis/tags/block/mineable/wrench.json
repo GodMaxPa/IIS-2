@@ -46,6 +46,7 @@
     "iis:electromagnetic_separator_lv",
     "iis:autoclave_lv",
     "iis:cutter_lv",
+    "iis:canner_lv",
     "iis:steam_turbine_lv",
     "iis:diesel_generator_lv",
     "iis:gas_turbine_lv",

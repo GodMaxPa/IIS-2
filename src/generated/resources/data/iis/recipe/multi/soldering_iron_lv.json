@@ -7,7 +7,7 @@
     "P  "
   ],
   "key": {
-    "L": "iis:battery_lv",
+    "L": "iis:battery_lithium_lv",
     "B": "#iis:bolts/iron",
     "S": "#c:rods/iron",
     "P": "#c:plates/rubber",

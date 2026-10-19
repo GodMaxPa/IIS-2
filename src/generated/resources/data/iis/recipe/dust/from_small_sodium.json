@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/sodium",
+    "#iis:small_dusts/sodium",
+    "#iis:small_dusts/sodium",
+    "#iis:small_dusts/sodium"
+  ],
+  "result": {
+    "id": "iis:dust_sodium"
+  }
+}

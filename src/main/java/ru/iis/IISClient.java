@@ -35,6 +35,7 @@ public final class IISClient {
         modBus.addListener(IISClient::registerBlockTints);
         modBus.addListener(IISClient::registerScreens);
         modBus.addListener(IISClient::registerFluidModels);
+        modBus.addListener(IISClient::registerCoverRenderers);
         NeoForge.EVENT_BUS.addListener(IISClient::machineTooltips);
         NeoForge.EVENT_BUS.addListener(ru.iis.client.WrenchGrid::onExtract);
         // раньше JEI: он читает рецепты в том же событии
@@ -55,6 +56,14 @@ public final class IISClient {
             event.register(List.of(BlockTintSources.constant(0xFF000000 | rgb)), b.get());
         });
         event.register(List.of(BlockTintSources.constant(0xFF5F8F3F)), ru.iis.lv.LvContent.RUBBER_LEAVES.get());
+    }
+
+    /** Покрытия GT на гранях электроблоков. */
+    private static void registerCoverRenderers(net.neoforged.neoforge.client.event.EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ru.iis.lv.LvContent.ELECTRIC_MACHINE_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
+        event.registerBlockEntityRenderer(ru.iis.lv.LvContent.GENERATOR_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
+        event.registerBlockEntityRenderer(ru.iis.lv.LvContent.BATTERY_BUFFER_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
+        event.registerBlockEntityRenderer(ru.iis.lv.LvContent.TRANSFORMER_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
     }
 
     private static void registerScreens(RegisterMenuScreensEvent event) {
@@ -79,6 +88,9 @@ public final class IISClient {
 
     /** Строки описания из перевода: block.iis.<id>.tooltip.0, .1, ... (генерирует tools/gen/steam.py из GregTech.lang.ru). */
     private static void machineTooltips(ItemTooltipEvent event) {
+        if (ru.iis.cover.Covers.kindOf(event.getItemStack()) != null) {
+            for (int i = 0; i < 3; i++) event.getToolTip().add(Component.translatable("cover.iis.tooltip." + i).withStyle(net.minecraft.ChatFormatting.DARK_AQUA));
+        }
         if (!(event.getItemStack().getItem() instanceof BlockItem bi)) return;
         Identifier id = BuiltInRegistries.BLOCK.getKey(bi.getBlock());
         if (!IIS.MODID.equals(id.getNamespace())) return;

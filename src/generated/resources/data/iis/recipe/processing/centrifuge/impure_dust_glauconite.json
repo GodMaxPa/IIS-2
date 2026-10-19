@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_glauconite",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_sodium",
+      "count": 1
     }
   ],
-  "duration": 18,
+  "duration": 144,
   "eut": 5
 }

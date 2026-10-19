@@ -51,6 +51,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
     private boolean inventoryChanged = true;
     /** GT mItemTransfer / mFluidTransfer: кнопки автовыгрузки (8,63) жидкость и (26,63) предметы. */
     public boolean itemTransfer = false, fluidTransfer = false;
+    /** GT isAllowedToWork: выключается контроллером-покрытием или киянкой. */
+    public boolean allowedToWork = true;
 
     public ElectricMachineBlockEntity(BlockPos pos, BlockState state) {
         super(LvContent.ELECTRIC_MACHINE_BE.get(), pos, state, slotCount(state), VOLTAGE * 64, VOLTAGE);
@@ -111,7 +113,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         boolean check = inventoryChanged || sl.getGameTime() % 20 == 0;
         inventoryChanged = false;
         boolean[] succeeded = {false};
-        logic.tick(check, energy, new ElectricMachineLogic.Env() {
+        logic.tick(check && allowedToWork, energy, new ElectricMachineLogic.Env() {
             @Override
             public int[] tryStart() {
                 return start(sl);
@@ -163,6 +165,40 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
                 super.setChanged();
             }
         }
+    }
+
+    // --- покрытия ----------------------------------------------------------------------------------------------------
+    @Override
+    public @Nullable ResourceHandler<FluidResource> rawFluids(@Nullable Direction side) {
+        return type().tank > 0 ? tank : null;
+    }
+
+    @Override
+    public boolean isMachine() {
+        return true;
+    }
+
+    @Override
+    public boolean allowedToWork() {
+        return allowedToWork;
+    }
+
+    @Override
+    public void setAllowedToWork(boolean allowed) {
+        if (allowedToWork != allowed) {
+            allowedToWork = allowed;
+            setChanged();
+        }
+    }
+
+    @Override
+    public int progress() {
+        return Math.max(0, logic.progress);
+    }
+
+    @Override
+    public int maxProgress() {
+        return logic.maxProgress;
     }
 
     /** Кнопки GUI: 0 — автовыгрузка жидкости, 1 — автовыгрузка предметов. */
@@ -292,6 +328,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         out.putBoolean("stuttering", logic.stuttering);
         out.putBoolean("itemTransfer", itemTransfer);
         out.putBoolean("fluidTransfer", fluidTransfer);
+        out.putBoolean("allowedToWork", allowedToWork);
         if (!pending.isEmpty()) out.store("pending", ItemStack.OPTIONAL_CODEC.listOf(), pending);
     }
 
@@ -306,6 +343,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         logic.stuttering = in.getBooleanOr("stuttering", false);
         itemTransfer = in.getBooleanOr("itemTransfer", false);
         fluidTransfer = in.getBooleanOr("fluidTransfer", false);
+        allowedToWork = in.getBooleanOr("allowedToWork", true);
         pending = in.read("pending", ItemStack.OPTIONAL_CODEC.listOf()).orElse(List.of());
     }
 }

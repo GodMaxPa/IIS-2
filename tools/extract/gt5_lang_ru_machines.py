@@ -3,7 +3,7 @@
 Usage: gt5_lang_ru_machines.py <GregTech.lang.ru> <out.json>"""
 import json, re, sys
 KEEP = re.compile(r'^(gt\.blockmachines\.[^=]*\.name|gt\.blockcasings[0-9]*\.\d+\.name'
-                  r'|TileEntity_DESCRIPTION_\d+_Index_\d+|gt\.metaitem\.0[13]\.3?\d+\.(name|tooltip)|fluid\.[a-z._]+)$')
+                  r'|TileEntity_DESCRIPTION_\d+_Index_\d+|Interaction_DESCRIPTION_Index_\d+|gt\.metaitem\.0[13]\.3?\d+\.(name|tooltip)|fluid\.[a-z._]+)$')
 out = {}
 for line in open(sys.argv[1], encoding='utf-8', errors='replace'):
     m = re.match(r'\s*S:"?([^"=]+)"?=(.*)$', line.rstrip('\r\n'))

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/wrought_iron",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:crafting_table",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cover_crafting",
+      "count": 1
+    }
+  ],
+  "duration": 800,
+  "eut": 16
+}

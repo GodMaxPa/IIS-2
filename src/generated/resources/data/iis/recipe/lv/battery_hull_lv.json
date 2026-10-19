@@ -2,16 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    " C ",
-    "TRT",
-    "TRT"
+    "C",
+    "P",
+    "P"
   ],
   "key": {
     "C": "#iis:cables/1x/tin",
-    "T": "#c:plates/tin",
-    "R": "minecraft:redstone"
+    "P": "#c:plates/battery_alloy"
   },
   "result": {
-    "id": "iis:battery_lv"
+    "id": "iis:battery_hull_lv"
   }
 }

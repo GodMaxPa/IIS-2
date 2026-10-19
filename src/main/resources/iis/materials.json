@@ -724,6 +724,34 @@
     "toolQuality": 1
   },
   {
+    "id": "cadmium",
+    "gtName": "Cadmium",
+    "gtId": 55,
+    "en": "Cadmium",
+    "ru": "Кадмий",
+    "ruOre": null,
+    "color": 3289660,
+    "iconSet": "SHINY",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление кадмиевой руды",
+    "formula": "Cd",
+    "types": 33,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "cadmium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
     "id": "calcite",
     "gtName": "Calcite",
     "gtId": 823,
@@ -3812,6 +3840,34 @@
     "toolDurability": 0,
     "toolSpeed": 1.0,
     "toolQuality": 1
+  },
+  {
+    "id": "sodium",
+    "gtName": "Sodium",
+    "gtId": 17,
+    "en": "Sodium",
+    "ru": "Натрий",
+    "ruOre": null,
+    "color": 150,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление натриевой руды",
+    "formula": "Na",
+    "types": 33,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "sodium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
   },
   {
     "id": "soldering_alloy",

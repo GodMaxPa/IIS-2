@@ -65,4 +65,12 @@ final class Lv2GameTests {
             h.assertTrue(m.tank().amount() < 1000, "no water used");
         });
     }
+
+    /** Консервирующий станок: 2 пыли лития + корпус → литиевая батарейка. */
+    static void canner(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.CANNER);
+        m.setItem(0, new ItemStack(SelfTest.item("dust_lithium"), 2));
+        m.setItem(1, new ItemStack(SelfTest.item("battery_hull_lv")));
+        h.succeedWhen(() -> h.assertTrue(m.getItem(2).is(SelfTest.item("battery_lithium_lv")), "out " + m.getItem(2)));
+    }
 }

@@ -230,6 +230,22 @@ elif [ "$MODE" = centrifugegui ] || [ "$MODE" = siftergui ]; then
     echo 'save-all flush'
   } >&3
   sleep 10
+elif [ "$MODE" = covers ]; then
+  # Покрытия GT на северных гранях машин (камера смотрит на север)
+  { common
+    echo 'forceload add -16 -16 16 16'
+    echo 'fill -8 199 -6 8 199 6 minecraft:smooth_stone'
+    X=-5
+    for K in conveyor pump arm shutter controller activity_detector item_detector fluid_detector energy_detector drain crafting; do
+      echo "setblock $X 200 0 iis:macerator_lv[facing=south]"
+      echo "data merge block $X 200 0 {covers:{north:{kind:\"$K\",data:0,rs:0}}}"
+      X=$((X+1))
+    done
+    echo 'setblock -6 200 0 iis:macerator_lv[facing=north]'
+    echo 'setworldspawn 0 200 -4 0 15'
+    echo 'save-all flush'
+  } >&3
+  sleep 10
 elif [ "$MODE" = map ]; then
   # Карта JourneyMap со слоем «сетка рудных чанков» (спавн на поверхности)
   { common

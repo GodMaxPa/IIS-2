@@ -12,6 +12,11 @@
       "count": 2
     },
     {
+      "id": "iis:dust_sodium",
+      "count": 1,
+      "chance": 1000
+    },
+    {
       "id": "iis:dust_stone",
       "count": 1,
       "chance": 5000

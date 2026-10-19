@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:heavy_weighted_pressure_plate",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/iron",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:solder",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cover_fluid_detector",
+      "count": 1
+    }
+  ],
+  "duration": 800,
+  "eut": 16
+}

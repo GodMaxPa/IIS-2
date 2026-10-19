@@ -208,7 +208,7 @@ def generate(g):
     name(f'item.{NS}.soldering_iron_lv.tooltip', 'Needs solder (tin, lead or soldering alloy: ingot, rod or fine wire) and 10000 EU per use',
          'Нужен припой (олово, свинец или паяльный сплав: слиток, стержень или тонкая проволока) и 10000 EU за использование')
     shaped('multi/soldering_iron_lv', f'{NS}:soldering_iron_lv', 1, ['LBf', 'Sd ', 'P  '],
-           {'L': f'{NS}:battery_lv', 'B': tag_of('bolt', 'Iron'), 'S': tag_of('rod', 'Iron'), 'P': tag_of('plate', 'Rubber')})
+           {'L': f'{NS}:battery_lithium_lv', 'B': tag_of('bolt', 'Iron'), 'S': tag_of('rod', 'Iron'), 'P': tag_of('plate', 'Rubber')})
     for n in ('Tin', 'Lead', 'SolderingAlloy'):
         for p in ('ingot', 'rod', 'wire_fine'):
             if ref(p, n):

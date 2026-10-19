@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:lever",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/wrought_iron",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:solder",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cover_controller",
+      "count": 1
+    }
+  ],
+  "duration": 800,
+  "eut": 16
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:canner",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/lithium",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:battery_hull_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:battery_lithium_lv",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 2
+}

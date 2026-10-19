@@ -45,6 +45,7 @@ MACHINES = [
                       'electromagnetic_separator', 1, 3, 0, 'Electromagnetic Separator'),
     ('autoclave',     'autoclave',     'AUTOCLAVE',        'Autoclave',    'autoclave',     1, 1, 8000,  'Autoclave'),
     ('cutter',        'cutter',        'CUTTER',           'Cutter',       'cutter',        1, 2, 8000,  'Cutting Machine'),
+    ('canner',        'canner',        'CANNER',           'Canner',       'canner',        2, 2, 0,     'Canning Machine'),
 ]
 GENERATORS = [
     # id, GT lang, texture prefix, EN
@@ -67,7 +68,19 @@ ITEMS = [
     ('glass_tube', 'gt:glass_tube', 'gt.metaitem.03.32012.name', 'Glass Tube', 'Стеклянная трубочка'),
     ('diamond_sawblade', 'gt:721', 'gt.metaitem.01.32721.name', 'Diamond Sawblade', 'Алмазный пильный диск'),
     ('item_filter', 'gt:729', 'gt.metaitem.01.32729.name', 'Item Filter', 'Фильтр'),
-    ('battery_lv', 'gt:519', 'gt.metaitem.01.32519.name', 'Small Battery (LV)', 'Малая батарейка (LV)'),
+    ('battery_lv', 'gt:519', 'gt.metaitem.01.32519.name', 'Small Sodium Battery', 'Малая натриевая батарея'),
+    ('battery_cadmium_lv', 'gt:517', 'gt.metaitem.01.32517.name', 'Small Cadmium Battery', 'Малая кадмиевая батарея'),
+    ('battery_lithium_lv', 'gt:518', 'gt.metaitem.01.32518.name', 'Small Lithium Battery', 'Малая литиевая батарея'),
+    ('battery_hull_lv', 'gt:500', 'gt.metaitem.01.32500.name', 'Small Battery Hull', 'Малый корпус батареи'),
+    # covers (GT_MetaGenerated_Item_01:752-783)
+    ('cover_controller', 'gt:730', 'gt.metaitem.01.32730.name', 'Machine Controller', 'Контроллер машины'),
+    ('cover_activity_detector', 'gt:731', 'gt.metaitem.01.32731.name', 'Activity Detector', 'Детектор активности'),
+    ('cover_fluid_detector', 'gt:732', 'gt.metaitem.01.32732.name', 'Fluid Detector', 'Детектор жидкости'),
+    ('cover_item_detector', 'gt:733', 'gt.metaitem.01.32733.name', 'Item Detector', 'Детектор предметов'),
+    ('cover_energy_detector', 'gt:734', 'gt.metaitem.01.32734.name', 'Energy Detector', 'Детектор энергии'),
+    ('cover_crafting', 'gt:744', 'gt.metaitem.01.32744.name', 'Crafting Table Cover', 'Покрытие-верстак'),
+    ('cover_drain', 'gt:745', 'gt.metaitem.01.32745.name', 'Drain', 'Сток'),
+    ('cover_shutter', 'gt:749', 'gt.metaitem.01.32749.name', 'Shutter Module', 'Модуль заслонки'),
     ('steel_item_casing', 'gen:casing', None, 'Steel Item Casing', 'Стальная оболочка'),
     ('sticky_resin', 'gen:resin', None, 'Sticky Resin', 'Липкая смола'),
     ('coal_coke', 'gen:coke', None, 'Coal Coke', 'Коксовый уголь'),
@@ -253,6 +266,27 @@ def generate(g):
             gen_item(val).save(tex_out(f'item/{iid}.png'))
         item_model(iid, f'{NS}:item/{iid}')
         name(f'item.{NS}.{iid}', en, ru(key, ruf))
+    # cover faces (GT registerCover textures: casing + overlay, first animation frame)
+    for cid, casing, ov in (('conveyor', 'LV', 'CONVEYOR'), ('pump', 'LV', 'PUMP'), ('arm', 'LV', 'ARM'), ('shutter', 'LV', 'SHUTTER'),
+                            ('controller', 'MV', 'CONTROLLER'), ('activity_detector', 'MV', 'ACTIVITYDETECTOR'),
+                            ('item_detector', 'MV', 'ITEMDETECTOR'), ('fluid_detector', 'MV', 'FLUIDDETECTOR'),
+                            ('energy_detector', 'MV', 'ENERGYDETECTOR'), ('drain', 'LV', 'DRAIN'), ('crafting', 'LV', 'CRAFTING')):
+        icd = os.path.join(LV, 'iconsets')
+        im, _ = layer(os.path.join(icd, f'MACHINE_{casing}_SIDE.png'), os.path.join(icd, f'OVERLAY_{ov}.png'))
+        im.crop((0, 0, 16, 16)).save(tex_out(f'block/cover/{cid}.png'))
+    en_int = {}
+    for line in open(os.path.join(g['ROOT'], 'tools', 'gen', 'lang', 'gt5_interaction_en.txt'), encoding='utf-8'):
+        k, _, v = line.rstrip('\n').partition('=')
+        en_int[k] = v
+    for i in list(range(1, 56)) + list(range(82, 86)):
+        k = f'Interaction_DESCRIPTION_Index_{i:03d}'
+        name(f'cover.{NS}.mode.{i:03d}', en_int.get(k, k), ru(k, en_int.get(k, k)))
+    name(f'cover.{NS}.all_slots', 'all', 'все')
+    for i, (en, ruu) in enumerate((('Cover: right-click a side of an electric machine (not the front)', 'Покрытие: ПКМ по стороне электромашины (не по лицевой)'),
+                                   ('Screwdriver: change mode (Shift: back)', 'Отвёртка: сменить режим (Shift — назад)'),
+                                   ('Crowbar: remove the cover', 'Монтировка: снять покрытие'))):
+        name(f'cover.{NS}.tooltip.{i}', en, ruu)
+    name(f'message.{NS}.cover.attached', 'Cover attached: %s', 'Покрытие установлено: %s')
     item_ref[('plate', 'Wood')] = f'{NS}:plate_wood'
     add_item_tag('c:plates/wood', f'{NS}:plate_wood')
     add_item_tag('c:circuits/basic', f'{NS}:circuit_basic')   # GT OrePrefixes.circuit Basic
@@ -744,7 +778,7 @@ def generate(g):
     shaped('lv/plate_wood', f'{NS}:plate_wood', 1, ['s', 'P'], {'P': '#minecraft:planks'})
     # multimeter (D51): own LV recipe — GT5 Portable Scanner was HV only
     shaped('lv/multimeter', f'{NS}:multimeter', 1, ['PGP', 'CEC', 'PCP'], {'P': P('Steel'), 'G': 'minecraft:glass_pane', 'C': C('Tin'), 'E': CIRC})
-    shaped('lv/battery_lv', f'{NS}:battery_lv', 1, [' C ', 'TRT', 'TRT'], {'C': C('Tin'), 'T': P('Tin'), 'R': 'minecraft:redstone'})
+    # battery: GT canning (hull + 2 dust); the old own crafting recipe was removed when sodium/lithium/cadmium became available
 
     # LV machines (GT_Loader_MetaTileEntities, X.* placeholders resolved for LV)
     X = {'M': HULL, 'E': MOTOR, 'P': PISTON, 'C': CIRC, 'W': C('Tin'), 'V': CONV, 'A': ARM, 'U': PUMP,
@@ -775,6 +809,9 @@ def generate(g):
            {'V': CONV, 'W': C('Tin'), 'Z': W('Tin', 2), 'M': HULL, 'S': R('Iron'), 'C': CIRC})
     mcraft('autoclave_lv', ['IGI', 'IMI', 'CUC'], 'IGMCU')
     mcraft('cutter_lv', ['WCG', 'VMB', 'CWE'], 'WCGVMBE')
+    mcraft('canner_lv', ['WUW', 'CMC', 'GGG'], 'WUCMG')   # GT_Loader_MetaTileEntities:640 aTextWirePump/aTextCableHull/GGG
+    # GT_MetaGenerated_Item_01:405 small battery hull "C/P/P" (tin cable, battery alloy plates)
+    shaped('lv/battery_hull_lv', f'{NS}:battery_hull_lv', 1, ['C', 'P', 'P'], {'C': C('Tin'), 'P': P('BatteryAlloy')})
     # GT_MetaGenerated_Item_01:731 diamond sawblade " D /DGD/ D " (small diamond dust, cobalt brass gear); :1472 assembler variant
     shaped('lv/diamond_sawblade', f'{NS}:diamond_sawblade', 1, [' D ', 'DGD', ' D '],
            {'D': tag_of('small_dust', 'Diamond'), 'G': tag_of('gear', 'CobaltBrass')})
@@ -928,6 +965,23 @@ def generate(g):
     mrec('coke_oven', 'coal_block', [ing('minecraft:coal_block')], [], 1800 * 9, 0, None, {'id': f'{NS}:creosote', 'amount': 4500})
     machine_recipes.pop('coke_oven/coal_block', None)  # needs a coke block; coal only for now
     lv2_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER)
+    # --- covers: GT_MachineRecipeLoader:610-615 (lever/torch/pressure plates + plate + molten solder), :671 shutter, items :783 drain/crafting ---
+    cover_plates = [tag_of('plate', m) for m in ('Iron', 'WroughtIron', 'Aluminium') if ref('plate', m)]
+    for pl in cover_plates:
+        pm = pl.split('/')[-1]
+        for item, cover in (('minecraft:lever', 'cover_controller'), ('minecraft:redstone_torch', 'cover_activity_detector'),
+                            ('minecraft:heavy_weighted_pressure_plate', 'cover_fluid_detector'),
+                            ('minecraft:light_weighted_pressure_plate', 'cover_item_detector'), (f'{NS}:multimeter', 'cover_energy_detector')):
+            # molten solder (72-144 L) -> one solder item until molten metals exist (PORTING_NOTES); IC2 EU-meter -> our multimeter
+            mrec('assembler', f'{cover}_{pm}', [ing(item), ing(pl), ing('#iis:solder')], [out(f'{NS}:{cover}')], 800, 16)
+        mrec('assembler', f'cover_shutter_{pm}', [ing(pl, 2), ing('minecraft:iron_door')], [out(f'{NS}:cover_shutter', 2)], 800, 16)
+        mrec('assembler', f'cover_drain_{pm}', [ing(pl, 2), ing('minecraft:iron_bars', 2)], [out(f'{NS}:cover_drain')], 800, 16)
+        mrec('assembler', f'cover_crafting_{pm}', [ing(pl), ing('minecraft:crafting_table')], [out(f'{NS}:cover_crafting')], 800, 16)
+    # GT_MetaGenerated_Item_01:463-465 canner: 2 dust + hull -> battery (100 t, 2 EU/t); :453-455 extractor: battery -> hull
+    for m, bid in (('Cadmium', 'battery_cadmium_lv'), ('Lithium', 'battery_lithium_lv'), ('Sodium', 'battery_lv')):
+        if ref('dust', m):
+            mrec('canner', bid, [ing(tag_of('dust', m), 2), ing(f'{NS}:battery_hull_lv')], [out(f'{NS}:{bid}')], 100, 2)
+        mrec('extractor', f'hull_from_{bid}', [ing(f'{NS}:{bid}')], [out(f'{NS}:battery_hull_lv')], 300, 2)
     for key, r in machine_recipes.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     by_type = {}
@@ -961,7 +1015,7 @@ def generate(g):
                        ('jei.iis.coke_oven', 'Coke Oven', 'Коксовая печь'),
                        ('jei.iis.centrifuge', 'Centrifuge', 'Центрифуга'), ('jei.iis.sifter', 'Sifter', 'Просеиватель'),
                        ('jei.iis.electromagnetic_separator', 'Electromagnetic Separator', 'Электромагнитный сепаратор'),
-                       ('jei.iis.autoclave', 'Autoclave', 'Автоклав'), ('jei.iis.cutter', 'Cutting Saw', 'Пильный станок'), ('message.iis.transformer.down', 'Step down: MV -> LV', 'Понижение: MV -> LV'),
+                       ('jei.iis.autoclave', 'Autoclave', 'Автоклав'), ('jei.iis.cutter', 'Cutting Saw', 'Пильный станок'), ('jei.iis.canner', 'Canning Machine', 'Консервирующий станок'), ('message.iis.transformer.down', 'Step down: MV -> LV', 'Понижение: MV -> LV'),
                        ('message.iis.transformer.up', 'Step up: LV -> MV', 'Повышение: LV -> MV'),
                        ('item.iis.multimeter.tooltip.0', 'Right-click a wire or machine: detailed reading', 'ПКМ по проводу или машине — подробный замер'),
                        ('item.iis.multimeter.tooltip.1', 'In hand: live reading of what you look at', 'В руке — живые показания того, на что смотришь'),

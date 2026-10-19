@@ -10,6 +10,11 @@
     {
       "id": "iis:impure_dust_glauconite",
       "count": 1
+    },
+    {
+      "id": "iis:dust_sodium",
+      "count": 1,
+      "chance": 1000
     }
   ],
   "duration": 400,

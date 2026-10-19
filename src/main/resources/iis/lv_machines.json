@@ -160,5 +160,14 @@
     "outputs": 2,
     "tank": 8000,
     "gui": "lv/cutter"
+  },
+  {
+    "id": "canner_lv",
+    "type": "canner",
+    "recipeMap": "canner",
+    "inputs": 2,
+    "outputs": 2,
+    "tank": 0,
+    "gui": "lv/canner"
   }
 ]

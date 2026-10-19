@@ -89,6 +89,11 @@ public class GeneratorBlockEntity extends ElectricBlockEntity {
         return side == front() ? null : tank;
     }
 
+    @Override
+    public @Nullable ResourceHandler<FluidResource> rawFluids(@Nullable Direction side) {
+        return tank;
+    }
+
     public @Nullable ResourceHandler<ItemResource> itemHandler(@Nullable Direction side) {
         return side == null ? null : new WorldlyContainerWrapper(this, side);
     }

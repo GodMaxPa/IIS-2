@@ -10,6 +10,11 @@
     {
       "id": "iis:pure_dust_sphalerite",
       "count": 1
+    },
+    {
+      "id": "iis:dust_cadmium",
+      "count": 1,
+      "chance": 1000
     }
   ],
   "duration": 400,

@@ -1015,6 +1015,21 @@
     "material": "brown_limonite"
   },
   {
+    "id": "dust_cadmium",
+    "prefix": "dust",
+    "material": "cadmium"
+  },
+  {
+    "id": "small_dust_cadmium",
+    "prefix": "small_dust",
+    "material": "cadmium"
+  },
+  {
+    "id": "tiny_dust_cadmium",
+    "prefix": "tiny_dust",
+    "material": "cadmium"
+  },
+  {
     "id": "crushed_calcite",
     "prefix": "crushed",
     "material": "calcite"
@@ -4898,6 +4913,21 @@
     "id": "rod_sodalite",
     "prefix": "rod",
     "material": "sodalite"
+  },
+  {
+    "id": "dust_sodium",
+    "prefix": "dust",
+    "material": "sodium"
+  },
+  {
+    "id": "small_dust_sodium",
+    "prefix": "small_dust",
+    "material": "sodium"
+  },
+  {
+    "id": "tiny_dust_sodium",
+    "prefix": "tiny_dust",
+    "material": "sodium"
   },
   {
     "id": "dust_soldering_alloy",

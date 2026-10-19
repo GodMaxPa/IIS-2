@@ -132,6 +132,8 @@ names |= {'Tin', 'Lead', 'Copper', 'AnnealedCopper', 'WroughtIron', 'Rubber', 'I
           'Sulfur', 'Paper', 'SolderingAlloy', 'Antimony', 'BatteryAlloy'}
 # LV II: diamond sawblade (cobalt brass gear, diamond dust), item filter (zinc foil, steel fine wire)
 names |= {'CobaltBrass', 'Cobalt', 'Aluminium', 'Brass', 'Zinc', 'Diamond'}
+# batteries: cadmium, lithium, sodium dusts
+names |= {'Cadmium', 'Lithium', 'Sodium'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64

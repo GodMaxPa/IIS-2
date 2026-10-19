@@ -26,7 +26,8 @@ public enum LvMachineType {
     SIFTER("sifter", GtRecipeMap.SIFTER, 1, 9, 0, "sifter"),
     ELECTROMAGNETIC_SEPARATOR("electromagnetic_separator", GtRecipeMap.ELECTROMAGNETIC_SEPARATOR, 1, 3, 0, "electromagneticseparator"),
     AUTOCLAVE("autoclave", GtRecipeMap.AUTOCLAVE, 1, 1, 8000, "autoclave"),
-    CUTTER("cutter", GtRecipeMap.CUTTER, 1, 2, 8000, "cutter");
+    CUTTER("cutter", GtRecipeMap.CUTTER, 1, 2, 8000, "cutter"),
+    CANNER("canner", GtRecipeMap.CANNER, 2, 2, 0, "canner");
 
     public final String id;
     public final GtRecipeMap recipeMap;
