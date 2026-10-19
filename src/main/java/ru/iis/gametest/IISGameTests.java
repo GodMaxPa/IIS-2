@@ -69,6 +69,11 @@ public final class IISGameTests {
             new Test("ebf_maintenance", 200, MultiGameTests::ebfMaintenance),
             new Test("ebf_gui_opens", 20, MultiGameTests::ebfGuiOpens),
             new Test("boiler_pollutes", 200, MultiGameTests::boilerPollutes),
+            new Test("fix_wrench_rotates", 20, FixGameTests::wrenchRotates),
+            new Test("fix_wrench_only_harvest", 20, FixGameTests::wrenchOnlyHarvest),
+            new Test("fix_creosote_movable", 100, FixGameTests::creosoteMovable),
+            new Test("fix_auto_output", 100, FixGameTests::autoOutput),
+            new Test("fix_tree_feller", 20, FixGameTests::treeFeller),
             new Test("lv_rubber_tree", 20, LvGameTests::rubberTree, true), // дереву нужен открытый верх (без потолка теста)
             new Test("selftest", 20, h -> {
                 h.assertTrue(SelfTest.runSilently(h.getLevel()), "selftest failed, see log");

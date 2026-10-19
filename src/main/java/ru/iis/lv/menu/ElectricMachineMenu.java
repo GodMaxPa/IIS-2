@@ -37,7 +37,7 @@ public class ElectricMachineMenu extends MachineMenu {
     public static ElectricMachineMenu client(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
         BlockPos pos = buf.readBlockPos();
         LvMachineType type = inventory.player.level().getBlockState(pos).getBlock() instanceof ElectricMachineBlock b ? b.type : LvMachineType.MACERATOR;
-        return new ElectricMachineMenu(id, inventory, new SimpleContainer(type.inputs + type.outputs + 1), new SimpleContainerData(8), type);
+        return new ElectricMachineMenu(id, inventory, new SimpleContainer(type.inputs + type.outputs + 1), new SimpleContainerData(10), type);
     }
 
     @Override
@@ -54,4 +54,14 @@ public class ElectricMachineMenu extends MachineMenu {
     public int fluidAmount() { return data(5); }
     public int fluidId() { return data(6); }
     public int eut() { return data(7); }
+    public boolean itemTransfer() { return data(8) != 0; }
+    public boolean fluidTransfer() { return data(9) != 0; }
+
+    /** Кнопки автовыгрузки (GT_Container_BasicMachine.slotClick 0/1). */
+    @Override
+    public boolean clickMenuButton(net.minecraft.world.entity.player.Player player, int id) {
+        if (id != 0 && id != 1) return false;
+        if (container instanceof ru.iis.lv.block.ElectricMachineBlockEntity be) be.toggleTransfer(id);
+        return true;
+    }
 }

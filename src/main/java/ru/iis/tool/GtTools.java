@@ -67,6 +67,9 @@ public final class GtTools {
             case "shovel" -> p.shovel(mat, 1.5f, -3.0f);
             case "hoe" -> p.hoe(mat, -1.0f, -1.0f);
             case "sword" -> d.tool().equals("knife") ? p.sword(mat, 1.0f, -2.0f) : p.sword(mat, 3.0f, -2.4f);
+            // GT5: машины, корпуса, люки и трубы снимаются только ключом; провода — кусачками
+            case "wrench" -> p.tool(mat, TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(IIS.MODID, "mineable/wrench")), 1.0f, -2.8f, 0f);
+            case "wire_cutter" -> p.tool(mat, TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(IIS.MODID, "mineable/wire_cutter")), 1.0f, -2.8f, 0f);
             default -> throw new IllegalArgumentException("Unknown tool kind " + d.kind());
         };
         return out;

@@ -49,6 +49,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
     private final FluidTank tank;
     private List<ItemStack> pending = List.of();
     private boolean inventoryChanged = true;
+    /** GT mItemTransfer / mFluidTransfer: кнопки автовыгрузки (8,63) жидкость и (26,63) предметы. */
+    public boolean itemTransfer = false, fluidTransfer = false;
 
     public ElectricMachineBlockEntity(BlockPos pos, BlockState state) {
         super(LvContent.ELECTRIC_MACHINE_BE.get(), pos, state, slotCount(state), VOLTAGE * 64, VOLTAGE);
@@ -108,6 +110,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         }
         boolean check = inventoryChanged || sl.getGameTime() % 20 == 0;
         inventoryChanged = false;
+        boolean[] succeeded = {false};
         logic.tick(check, energy, new ElectricMachineLogic.Env() {
             @Override
             public int[] tryStart() {
@@ -127,11 +130,46 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
                 }
                 pending = List.of();
                 inventoryChanged = true;
+                succeeded[0] = true;
                 setChanged();
             }
         });
+        if (itemTransfer && (check || succeeded[0])) autoOutput(sl);
         BlockState st = getBlockState();
         if (st.getValue(MachineBlock.ACTIVE) != logic.active) sl.setBlock(worldPosition, st.setValue(MachineBlock.ACTIVE, logic.active), 3);
+    }
+
+    /**
+     * GT BasicMachine.doesAutoOutput: выходные слоты выгружаются в инвентарь со стороны выхода (задняя сторона),
+     * 1 EU за предмет; нужна энергия не меньше 128 EU.
+     */
+    private void autoOutput(ServerLevel sl) {
+        if (energy.stored < 128) return;
+        Direction side = outputSide();
+        ResourceHandler<ItemResource> target = sl.getCapability(net.neoforged.neoforge.capabilities.Capabilities.Item.BLOCK, worldPosition.relative(side), side.getOpposite());
+        if (target == null) return;
+        LvMachineType t = type();
+        for (int s = t.inputs; s < t.inputs + t.outputs; s++) {
+            ItemStack st = items.get(s);
+            if (st.isEmpty()) continue;
+            int moved;
+            try (var tx = net.neoforged.neoforge.transfer.transaction.Transaction.openRoot()) {
+                moved = net.neoforged.neoforge.transfer.ResourceHandlerUtil.insertStacking(target, ItemResource.of(st), st.getCount(), tx);
+                tx.commit();
+            }
+            if (moved > 0) {
+                st.shrink(moved);
+                energy.stored = Math.max(0, energy.stored - moved);
+                super.setChanged();
+            }
+        }
+    }
+
+    /** Кнопки GUI: 0 — автовыгрузка жидкости, 1 — автовыгрузка предметов. */
+    public void toggleTransfer(int button) {
+        if (button == 0) fluidTransfer = !fluidTransfer;
+        else if (button == 1) itemTransfer = !itemTransfer;
+        setChanged();
     }
 
     private int @Nullable [] start(ServerLevel sl) {
@@ -224,6 +262,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
                 case 5 -> tank.amount();
                 case 6 -> tank.amount() > 0 ? BuiltInRegistries.FLUID.getId(tank.resource().getFluid()) : -1;
                 case 7 -> logic.eut;
+                case 8 -> itemTransfer ? 1 : 0;
+                case 9 -> fluidTransfer ? 1 : 0;
                 default -> 0;
             };
         }
@@ -233,7 +273,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
 
         @Override
         public int getCount() {
-            return 8;
+            return 10;
         }
     };
 
@@ -250,6 +290,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         out.putInt("maxProgress", logic.maxProgress);
         out.putInt("eut", logic.eut);
         out.putBoolean("stuttering", logic.stuttering);
+        out.putBoolean("itemTransfer", itemTransfer);
+        out.putBoolean("fluidTransfer", fluidTransfer);
         if (!pending.isEmpty()) out.store("pending", ItemStack.OPTIONAL_CODEC.listOf(), pending);
     }
 
@@ -262,6 +304,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         logic.maxProgress = in.getIntOr("maxProgress", 0);
         logic.eut = in.getIntOr("eut", 0);
         logic.stuttering = in.getBooleanOr("stuttering", false);
+        itemTransfer = in.getBooleanOr("itemTransfer", false);
+        fluidTransfer = in.getBooleanOr("fluidTransfer", false);
         pending = in.read("pending", ItemStack.OPTIONAL_CODEC.listOf()).orElse(List.of());
     }
 }

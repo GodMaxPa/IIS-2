@@ -20,7 +20,7 @@ public class EbfBlock extends MachineBlock {
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (MaintenanceHatchBlockEntity.problemFor(stack) != ru.iis.multi.logic.Maintenance.Problem.SOFT_HAMMER) return InteractionResult.TRY_WITH_EMPTY_HAND;
+        if (MaintenanceHatchBlockEntity.problemFor(stack) != ru.iis.multi.logic.Maintenance.Problem.SOFT_HAMMER) return super.useItemOn(stack, state, level, pos, player, hand, hit);
         if (!level.isClientSide() && level.getBlockEntity(pos) instanceof EbfBlockEntity e) {
             e.allowedToWork = !e.allowedToWork;
             e.setChanged();

@@ -61,7 +61,7 @@ ITEMS = [
     ('battery_lv', 'gt:519', 'gt.metaitem.01.32519.name', 'Small Battery (LV)', 'Малая батарейка (LV)'),
     ('steel_item_casing', 'gen:casing', None, 'Steel Item Casing', 'Стальная оболочка'),
     ('sticky_resin', 'gen:resin', None, 'Sticky Resin', 'Липкая смола'),
-    ('coal_coke', 'gen:coke', None, 'Coal Coke', 'Коксующийся уголь'),
+    ('coal_coke', 'gen:coke', None, 'Coal Coke', 'Коксовый уголь'),
     ('wet_coke_oven_brick', 'gen:wet_brick', None, 'Wet Coke Oven Brick', 'Сырой кирпич коксовой печи'),
     ('treetap', 'gen:treetap', None, 'Treetap', 'Краник'),
     ('multimeter', 'gen:multimeter', None, 'Multimeter', 'Мультиметр'),
@@ -580,7 +580,7 @@ def generate(g):
     block_item('coke_oven')
     simple_loot('coke_oven')
     pickaxe('coke_oven')
-    name(f'block.{NS}.coke_oven_bricks', 'Coke Oven Bricks', 'Кирпичи коксовой печи')
+    name(f'block.{NS}.coke_oven_bricks', 'Coke Oven Bricks', 'Кирпич коксовой печи')
     name(f'block.{NS}.coke_oven', 'Coke Oven', 'Коксовая печь')
     tooltip_lines('coke_oven', [('Controller of a 3x3x3 coke oven, hollow inside', 'Контроллер коксовой печи 3x3x3, пустой внутри'),
                                 ('Built from 25 Coke Oven Bricks, controller in the middle of a side', 'Строится из 25 кирпичей коксовой печи, контроллер — в центре стенки'),
@@ -925,7 +925,11 @@ def generate(g):
     for k, en, ruu in (('itemGroup.iis.lv', 'IIS 2.0: LV', 'ИИС 2.0: LV'),
                        ('gui.iis.energy', 'Energy', 'Энергия'), ('gui.iis.eu', '%s / %s EU', '%s / %s EU'),
                        ('gui.iis.fluid', '%s: %s / %s L', '%s: %s / %s л'), ('gui.iis.no_energy', 'Not enough energy', 'Недостаточно энергии'),
-                       ('gui.iis.empty', 'Empty', 'Пусто'), ('jei.iis.wiremill', 'Wiremill', 'Волочильный станок'),
+                       ('gui.iis.empty', 'Empty', 'Пусто'),
+                       ('gui.iis.item_transfer.on', 'Item auto-output to the back: ON', 'Автовыгрузка предметов назад: ВКЛ'),
+                       ('gui.iis.item_transfer.off', 'Item auto-output to the back: OFF (click)', 'Автовыгрузка предметов назад: ВЫКЛ (клик)'),
+                       ('gui.iis.fluid_transfer.on', 'Fluid auto-output: ON', 'Автовыгрузка жидкости: ВКЛ'),
+                       ('gui.iis.fluid_transfer.off', 'Fluid auto-output: OFF (click; LV machines have no fluid outputs yet)', 'Автовыгрузка жидкости: ВЫКЛ (клик; у LV машин пока нет жидких выходов)'),
                        ('jei.iis.bender', 'Bending Machine', 'Гибочный станок'), ('jei.iis.lathe', 'Lathe', 'Токарный станок'),
                        ('jei.iis.assembler', 'Assembler', 'Сборщик'), ('jei.iis.mixer', 'Mixer', 'Миксер'),
                        ('jei.iis.polarizer', 'Polarizer', 'Поляризатор'), ('jei.iis.ore_washer', 'Ore Washing Plant', 'Рудопромывочная установка'),

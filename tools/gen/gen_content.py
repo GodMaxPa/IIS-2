@@ -188,12 +188,12 @@ TOOLS = {
     'hoe':         dict(gt=8,  block=50,  craft=100, mult=1.0, speed=1.0,  head='hoe_head',     kind='hoe'),
     'saw':         dict(gt=10, block=50,  craft=200, mult=1.0, speed=1.0,  head='saw_head',     kind='axe'),
     'hammer':      dict(gt=12, block=50,  craft=400, mult=1.0, speed=0.75, head=None,           kind='pickaxe'),
-    'wrench':      dict(gt=16, block=50,  craft=800, mult=1.0, speed=1.0,  head=None,           kind='pickaxe'),
+    'wrench':      dict(gt=16, block=50,  craft=800, mult=1.0, speed=1.0,  head=None,           kind='wrench'),
     'file':        dict(gt=18, block=50,  craft=400, mult=1.0, speed=1.0,  head=None,           kind=None),
     'screwdriver': dict(gt=22, block=200, craft=400, mult=1.0, speed=1.0,  head=None,           kind=None),
     'mortar':      dict(gt=24, block=50,  craft=400, mult=1.0, speed=1.0,  head=None,           kind=None),
     'knife':       dict(gt=34, block=100, craft=100, mult=1.0, speed=1.0,  head=None,           kind='sword'),
-    'wire_cutter': dict(gt=26, block=100, craft=400, mult=1.0, speed=1.25, head=None,           kind=None),
+    'wire_cutter': dict(gt=26, block=100, craft=400, mult=1.0, speed=1.25, head=None,           kind='wire_cutter'),
     # maintenance tools (EBF slice): GT_Tool_SoftHammer (mult 8, speed 0.1), GT_Tool_Crowbar
     'soft_hammer': dict(gt=14, block=50,  craft=800, mult=8.0, speed=0.1,  head=None,           kind=None),
     'crowbar':     dict(gt=20, block=50,  craft=100, mult=1.0, speed=1.0,  head=None,           kind=None),
@@ -798,6 +798,26 @@ for r in DISABLED:
 # ----------------------------------------------------------------------------------------------------------------
 # Tags, lang
 # ----------------------------------------------------------------------------------------------------------------
+# GT5 GT_Block_Machines / GT_Block_Casings: machines, casings, hulls, hatches and pipes are harvested only with a wrench
+# (iis:mineable/wrench); wires and cables — with a wire cutter (iis:mineable/wire_cutter, hand still drops them)
+import re as _re
+_WRENCH = _re.compile(r'^iis:(hull_.*|boiler_.*|steam_.*|pipe_.*|casing_lv|.*_lv|battery_buffer_.*|transformer_lv|frame_.*|heat_proof_casing|coil_.*|hatch_.*|electric_blast_furnace)$')
+_CUTTER = _re.compile(r'^iis:(wire|cable)_.*$')
+block_tags.setdefault('iis:mineable/wrench', [])
+block_tags.setdefault('iis:mineable/wire_cutter', [])
+for _t in ('minecraft:mineable/pickaxe', 'minecraft:needs_stone_tool', 'minecraft:needs_iron_tool'):
+    _keep = []
+    for _b in block_tags.get(_t, []):
+        if _WRENCH.match(_b) and not _b.startswith('iis:ore'):
+            if _t == 'minecraft:mineable/pickaxe' and _b not in block_tags['iis:mineable/wrench']:
+                block_tags['iis:mineable/wrench'].append(_b)
+        elif _CUTTER.match(_b):
+            if _t == 'minecraft:mineable/pickaxe' and _b not in block_tags['iis:mineable/wire_cutter']:
+                block_tags['iis:mineable/wire_cutter'].append(_b)
+        else:
+            _keep.append(_b)
+    block_tags[_t] = _keep
+
 for t, vals in block_tags.items():
     ns, path = t.split(':')
     write(os.path.join(D, ns, 'tags', 'block', path + '.json'), {'replace': False, 'values': vals})

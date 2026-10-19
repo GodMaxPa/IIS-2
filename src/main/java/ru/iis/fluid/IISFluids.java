@@ -36,8 +36,9 @@ public final class IISFluids {
     public static final net.neoforged.neoforge.registries.DeferredRegister.Blocks BLOCKS = net.neoforged.neoforge.registries.DeferredRegister.createBlocks(IIS.MODID);
     public static final net.neoforged.neoforge.registries.DeferredRegister.Items ITEMS = net.neoforged.neoforge.registries.DeferredRegister.createItems(IIS.MODID);
 
-    public static final DeferredHolder<FluidType, FluidType> CREOSOTE_TYPE = TYPES.register("creosote", () -> new FluidType(FluidType.Properties.create()
-            .descriptionId("fluid_type.iis.creosote").density(1100).viscosity(1500).canConvertToSource(false)));
+    public static final DeferredHolder<FluidType, FluidType> CREOSOTE_TYPE = TYPES.register("creosote", () -> new ViscousFluidType(FluidType.Properties.create()
+            .descriptionId("fluid_type.iis.creosote").density(1100).viscosity(1500).canConvertToSource(false)
+            .canSwim(true).canDrown(true).fallDistanceModifier(0.0f), 0.6));
     public static final DeferredHolder<Fluid, BaseFlowingFluid.Source> CREOSOTE = FLUIDS.register("creosote", () -> new BaseFlowingFluid.Source(creosoteProps()));
     public static final DeferredHolder<Fluid, BaseFlowingFluid.Flowing> CREOSOTE_FLOWING = FLUIDS.register("creosote_flowing", () -> new BaseFlowingFluid.Flowing(creosoteProps()));
     public static final net.neoforged.neoforge.registries.DeferredBlock<net.minecraft.world.level.block.LiquidBlock> CREOSOTE_BLOCK = BLOCKS.registerBlock("creosote",
