@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " C ",
+    "TRT",
+    "TRT"
+  ],
+  "key": {
+    "C": "#iis:cables/1x/tin",
+    "T": "#c:plates/tin",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "id": "iis:battery_lv"
+  }
+}

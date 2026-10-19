@@ -6,6 +6,8 @@
 #   scripts/showcase.sh vein   — жилы, построенные алгоритмом GT5 в небе (форма слоёв видна целиком)
 #   scripts/showcase.sh steam  — все машины эпохи пара в работе: котлы, паровые машины, трубы, доменная печь
 #   scripts/showcase.sh steamgui — GUI парового дробителя и JEI (нужен xdotool)
+#   scripts/showcase.sh lv     — эпоха LV: 13 машин на оловянном кабеле от паровой турбины, генераторы, буферы, коксовая печь
+#   scripts/showcase.sh lvgui  — GUI дробителя LV и JEI (нужен xdotool)
 # Результат: build/showcase/<режим>.png. Нужен JDK 25 в JAVA_HOME.
 set -u
 MODE=${1:-wall}
@@ -19,6 +21,7 @@ FIFO=$(mktemp -u); mkfifo "$FIFO"
 ( ./gradlew runServer --no-daemon --console=plain < "$FIFO" > "$LOG" 2>&1 ) & PID=$!
 exec 3>"$FIFO"
 until grep -q 'Done (' "$LOG"; do kill -0 $PID 2>/dev/null || { echo "server failed"; tail -30 "$LOG"; exit 1; }; sleep 3; done
+sleep 5  # консоль сервера иногда не готова сразу после «Done»
 
 common() {
   echo 'gamerule advance_time false'; echo 'gamerule advance_weather false'; echo 'gamerule respawn_radius 0'
@@ -113,6 +116,67 @@ print('save-all flush')
 PY
   } >&3
   sleep 12
+elif [ "$MODE" = lv ] || [ "$MODE" = lvgui ]; then
+  { common; python3 -I - "$MODE" <<'PY'
+import sys
+mode = sys.argv[1]
+Y = 200
+print('forceload add -32 -32 32 32')
+print(f'fill -16 {Y-1} -14 12 {Y-1} 8 minecraft:smooth_stone')
+water = '{id:"minecraft:water",amount:16000}'
+machines = [  # (машина, предметы), макератор стоит на x=1 (на него смотрит режим lvgui)
+    ('ore_washer', '{Slot:0b,id:"iis:crushed_chalcopyrite",count:64}'),
+    ('mixer', '{Slot:0b,id:"iis:dust_copper",count:48},{Slot:1b,id:"iis:dust_tin",count:16}'),
+    ('assembler', '{Slot:0b,id:"iis:wire_tin_1x",count:64}'),
+    ('polarizer', '{Slot:0b,id:"iis:rod_iron",count:64}'),
+    ('lathe', '{Slot:0b,id:"minecraft:iron_ingot",count:64}'),
+    ('bender', '{Slot:0b,id:"minecraft:iron_ingot",count:64}'),
+    ('wiremill', '{Slot:0b,id:"iis:ingot_tin",count:64}'),
+    ('macerator', '{Slot:0b,id:"iis:ore_chalcopyrite",count:64}'),
+    ('electric_furnace', '{Slot:0b,id:"minecraft:sand",count:64}'),
+    ('alloy_smelter', '{Slot:0b,id:"minecraft:copper_ingot",count:63},{Slot:1b,id:"iis:ingot_tin",count:21}'),
+    ('compressor', '{Slot:0b,id:"minecraft:ice",count:64}'),
+    ('extractor', '{Slot:0b,id:"minecraft:slime_ball",count:64}'),
+    ('forge_hammer', '{Slot:0b,id:"minecraft:stone",count:64}'),
+]
+x0 = -6
+for i, (m, items) in enumerate(machines):
+    x = x0 + i
+    print(f'setblock {x} {Y} 0 iis:{m}_lv[facing=north]')
+    tank = f',tank:{{stacks:[{water}]}}' if m in ('ore_washer', 'mixer') else ''
+    print(f'data merge block {x} {Y} 0 {{Items:[{items}],eu:2048L{tank}}}')
+# кабель за машинами (z=1): все соединены с соседями и с машиной спереди (север)
+xe = x0 + len(machines)
+for x in range(x0, xe + 1):
+    west = 'true' if x > x0 else 'false'
+    north = 'true' if x < xe else 'false'
+    print(f'setblock {x} {Y} 1 iis:cable_tin_1x[west={west},east=true,north={north}]')
+print(f'setblock {xe + 1} {Y} 1 iis:steam_turbine_lv[facing=west]')
+print(f'data merge block {xe + 1} {Y} 1 {{tank:{{stacks:[{{id:"iis:steam",amount:24000}}]}}}}')
+# витрина: генераторы, буферы, трансформатор, провода разных материалов
+for j, b in enumerate(['diesel_generator_lv[facing=north]', 'gas_turbine_lv[facing=north]', 'battery_buffer_1x1_lv[facing=north]',
+                       'battery_buffer_2x2_lv[facing=north]', 'transformer_lv[facing=north]', 'transformer_lv[facing=north,step_up=true]',
+                       'casing_lv', 'hull_lv']):
+    print(f'setblock {x0 + j} {Y} -3 iis:{b}')
+for j, w in enumerate(['wire_red_alloy_1x', 'wire_tin_2x', 'wire_lead_4x', 'wire_copper_1x', 'cable_tin_1x', 'cable_lead_2x',
+                       'cable_copper_4x', 'cable_annealed_copper_1x']):
+    print(f'setblock {x0 + 9 + j} {Y} -3 iis:{w}[east=true,west=true]')
+# коксовая печь 3x3x3 с пустой серединой и контроллером спереди
+print(f'fill -12 {Y} -1 -10 {Y+2} 1 iis:coke_oven_bricks')
+print(f'setblock -11 {Y+1} 0 minecraft:air')
+print(f'setblock -11 {Y+1} -1 iis:coke_oven[facing=north]')
+print(f'data merge block -11 {Y+1} -1 {{Items:[{{Slot:0b,id:"minecraft:coal",count:64}}]}}')
+# каучуковое дерево
+print(f'setblock 9 {Y-1} -4 minecraft:dirt')
+print(f'place feature iis:rubber_tree 9 {Y} -4')
+if mode == 'lv':
+    print(f'setworldspawn -1 {Y+1} -8 0 20')
+else:
+    print(f'setworldspawn 1 {Y} -1 0 60')
+print('save-all flush')
+PY
+  } >&3
+  sleep 12
 else
   # Жила медного типа ИИС, построенная алгоритмом GT5 в небе (команда /iis vein), вид сбоку и сверху
   { common
@@ -146,11 +210,11 @@ xvfb-run -a -s "-screen 0 1600x900x24" bash -c '
   ./gradlew runClient -Pshowcase --no-daemon --console=plain > '"$OUT"'/client-'"$MODE"'.log 2>&1 &
   for i in $(seq 1 120); do grep -qE "Changing view distance|joined the game|Loaded [0-9]+ advancements" '"$OUT"'/client-'"$MODE"'.log && break; sleep 5; done
   sleep 45
-  if [ "'"$MODE"'" = steamgui ]; then
+  if [ "'"$MODE"'" = steamgui ] || [ "'"$MODE"'" = lvgui ]; then
     xdotool key v; sleep 4  # «использовать» на V: щелчок мыши под Xvfb не доходит до игры
-    import -window root '"$OUT"'/steamgui.png
+    import -window root '"$OUT"'/'"$MODE"'-screen.png
     xdotool mousemove 746 350; sleep 1; xdotool key u; sleep 4
-    import -window root '"$OUT"'/steamjei.png
+    import -window root '"$OUT"'/'"$MODE"'-jei.png
     xdotool key Escape; sleep 1; xdotool key Escape; sleep 1
   fi
   import -window root '"$OUT"'/'"$MODE"'.png

@@ -105,6 +105,26 @@
     "material": "aluminium"
   },
   {
+    "id": "foil_aluminium",
+    "prefix": "foil",
+    "material": "aluminium"
+  },
+  {
+    "id": "small_gear_aluminium",
+    "prefix": "small_gear",
+    "material": "aluminium"
+  },
+  {
+    "id": "long_rod_aluminium",
+    "prefix": "long_rod",
+    "material": "aluminium"
+  },
+  {
+    "id": "gear_aluminium",
+    "prefix": "gear",
+    "material": "aluminium"
+  },
+  {
     "id": "crushed_amber",
     "prefix": "crushed",
     "material": "amber"
@@ -223,6 +243,46 @@
     "id": "screw_amethyst",
     "prefix": "screw",
     "material": "amethyst"
+  },
+  {
+    "id": "dust_annealed_copper",
+    "prefix": "dust",
+    "material": "annealed_copper"
+  },
+  {
+    "id": "small_dust_annealed_copper",
+    "prefix": "small_dust",
+    "material": "annealed_copper"
+  },
+  {
+    "id": "tiny_dust_annealed_copper",
+    "prefix": "tiny_dust",
+    "material": "annealed_copper"
+  },
+  {
+    "id": "ingot_annealed_copper",
+    "prefix": "ingot",
+    "material": "annealed_copper"
+  },
+  {
+    "id": "nugget_annealed_copper",
+    "prefix": "nugget",
+    "material": "annealed_copper"
+  },
+  {
+    "id": "plate_annealed_copper",
+    "prefix": "plate",
+    "material": "annealed_copper"
+  },
+  {
+    "id": "foil_annealed_copper",
+    "prefix": "foil",
+    "material": "annealed_copper"
+  },
+  {
+    "id": "wire_fine_annealed_copper",
+    "prefix": "wire_fine",
+    "material": "annealed_copper"
   },
   {
     "id": "dust_antimony",
@@ -415,6 +475,36 @@
     "material": "bastnasite"
   },
   {
+    "id": "dust_battery_alloy",
+    "prefix": "dust",
+    "material": "battery_alloy"
+  },
+  {
+    "id": "small_dust_battery_alloy",
+    "prefix": "small_dust",
+    "material": "battery_alloy"
+  },
+  {
+    "id": "tiny_dust_battery_alloy",
+    "prefix": "tiny_dust",
+    "material": "battery_alloy"
+  },
+  {
+    "id": "ingot_battery_alloy",
+    "prefix": "ingot",
+    "material": "battery_alloy"
+  },
+  {
+    "id": "nugget_battery_alloy",
+    "prefix": "nugget",
+    "material": "battery_alloy"
+  },
+  {
+    "id": "plate_battery_alloy",
+    "prefix": "plate",
+    "material": "battery_alloy"
+  },
+  {
     "id": "crushed_bauxite",
     "prefix": "crushed",
     "material": "bauxite"
@@ -550,6 +640,11 @@
     "material": "beryllium"
   },
   {
+    "id": "long_rod_beryllium",
+    "prefix": "long_rod",
+    "material": "beryllium"
+  },
+  {
     "id": "crushed_bismuth",
     "prefix": "crushed",
     "material": "bismuth"
@@ -612,6 +707,11 @@
   {
     "id": "screw_bismuth",
     "prefix": "screw",
+    "material": "bismuth"
+  },
+  {
+    "id": "long_rod_bismuth",
+    "prefix": "long_rod",
     "material": "bismuth"
   },
   {
@@ -725,6 +825,11 @@
     "material": "brass"
   },
   {
+    "id": "long_rod_brass",
+    "prefix": "long_rod",
+    "material": "brass"
+  },
+  {
     "id": "dust_brick",
     "prefix": "dust",
     "material": "brick"
@@ -787,6 +892,31 @@
   {
     "id": "ring_bronze",
     "prefix": "ring",
+    "material": "bronze"
+  },
+  {
+    "id": "foil_bronze",
+    "prefix": "foil",
+    "material": "bronze"
+  },
+  {
+    "id": "wire_fine_bronze",
+    "prefix": "wire_fine",
+    "material": "bronze"
+  },
+  {
+    "id": "rotor_bronze",
+    "prefix": "rotor",
+    "material": "bronze"
+  },
+  {
+    "id": "long_rod_bronze",
+    "prefix": "long_rod",
+    "material": "bronze"
+  },
+  {
+    "id": "gear_bronze",
+    "prefix": "gear",
     "material": "bronze"
   },
   {
@@ -1135,6 +1265,11 @@
     "material": "cobalt"
   },
   {
+    "id": "long_rod_cobalt",
+    "prefix": "long_rod",
+    "material": "cobalt"
+  },
+  {
     "id": "crushed_cobaltite",
     "prefix": "crushed",
     "material": "cobaltite"
@@ -1250,6 +1385,21 @@
     "material": "copper"
   },
   {
+    "id": "foil_copper",
+    "prefix": "foil",
+    "material": "copper"
+  },
+  {
+    "id": "wire_fine_copper",
+    "prefix": "wire_fine",
+    "material": "copper"
+  },
+  {
+    "id": "gear_copper",
+    "prefix": "gear",
+    "material": "copper"
+  },
+  {
     "id": "dust_cupronickel",
     "prefix": "dust",
     "material": "cupronickel"
@@ -1292,6 +1442,11 @@
   {
     "id": "screw_cupronickel",
     "prefix": "screw",
+    "material": "cupronickel"
+  },
+  {
+    "id": "long_rod_cupronickel",
+    "prefix": "long_rod",
     "material": "cupronickel"
   },
   {
@@ -1365,6 +1520,11 @@
     "material": "diamond"
   },
   {
+    "id": "gear_diamond",
+    "prefix": "gear",
+    "material": "diamond"
+  },
+  {
     "id": "dust_electrum",
     "prefix": "dust",
     "material": "electrum"
@@ -1407,6 +1567,21 @@
   {
     "id": "screw_electrum",
     "prefix": "screw",
+    "material": "electrum"
+  },
+  {
+    "id": "foil_electrum",
+    "prefix": "foil",
+    "material": "electrum"
+  },
+  {
+    "id": "wire_fine_electrum",
+    "prefix": "wire_fine",
+    "material": "electrum"
+  },
+  {
+    "id": "long_rod_electrum",
+    "prefix": "long_rod",
     "material": "electrum"
   },
   {
@@ -1755,6 +1930,31 @@
     "material": "garnierite"
   },
   {
+    "id": "dust_glass",
+    "prefix": "dust",
+    "material": "glass"
+  },
+  {
+    "id": "small_dust_glass",
+    "prefix": "small_dust",
+    "material": "glass"
+  },
+  {
+    "id": "tiny_dust_glass",
+    "prefix": "tiny_dust",
+    "material": "glass"
+  },
+  {
+    "id": "gem_glass",
+    "prefix": "gem",
+    "material": "glass"
+  },
+  {
+    "id": "plate_glass",
+    "prefix": "plate",
+    "material": "glass"
+  },
+  {
     "id": "crushed_glauconite",
     "prefix": "crushed",
     "material": "glauconite"
@@ -1842,6 +2042,26 @@
   {
     "id": "screw_gold",
     "prefix": "screw",
+    "material": "gold"
+  },
+  {
+    "id": "foil_gold",
+    "prefix": "foil",
+    "material": "gold"
+  },
+  {
+    "id": "wire_fine_gold",
+    "prefix": "wire_fine",
+    "material": "gold"
+  },
+  {
+    "id": "long_rod_gold",
+    "prefix": "long_rod",
+    "material": "gold"
+  },
+  {
+    "id": "gear_gold",
+    "prefix": "gear",
     "material": "gold"
   },
   {
@@ -2060,6 +2280,11 @@
     "material": "invar"
   },
   {
+    "id": "long_rod_invar",
+    "prefix": "long_rod",
+    "material": "invar"
+  },
+  {
     "id": "crushed_iridium",
     "prefix": "crushed",
     "material": "iridium"
@@ -2130,6 +2355,16 @@
     "material": "iridium"
   },
   {
+    "id": "rotor_iridium",
+    "prefix": "rotor",
+    "material": "iridium"
+  },
+  {
+    "id": "long_rod_iridium",
+    "prefix": "long_rod",
+    "material": "iridium"
+  },
+  {
     "id": "crushed_iron",
     "prefix": "crushed",
     "material": "iron"
@@ -2188,6 +2423,76 @@
     "id": "ring_iron",
     "prefix": "ring",
     "material": "iron"
+  },
+  {
+    "id": "foil_iron",
+    "prefix": "foil",
+    "material": "iron"
+  },
+  {
+    "id": "wire_fine_iron",
+    "prefix": "wire_fine",
+    "material": "iron"
+  },
+  {
+    "id": "long_rod_iron",
+    "prefix": "long_rod",
+    "material": "iron"
+  },
+  {
+    "id": "gear_iron",
+    "prefix": "gear",
+    "material": "iron"
+  },
+  {
+    "id": "dust_iron_magnetic",
+    "prefix": "dust",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "small_dust_iron_magnetic",
+    "prefix": "small_dust",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "tiny_dust_iron_magnetic",
+    "prefix": "tiny_dust",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "ingot_iron_magnetic",
+    "prefix": "ingot",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "nugget_iron_magnetic",
+    "prefix": "nugget",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "plate_iron_magnetic",
+    "prefix": "plate",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "rod_iron_magnetic",
+    "prefix": "rod",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "bolt_iron_magnetic",
+    "prefix": "bolt",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "screw_iron_magnetic",
+    "prefix": "screw",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "long_rod_iron_magnetic",
+    "prefix": "long_rod",
+    "material": "iron_magnetic"
   },
   {
     "id": "crushed_jasper",
@@ -2392,6 +2697,16 @@
   {
     "id": "screw_lead",
     "prefix": "screw",
+    "material": "lead"
+  },
+  {
+    "id": "wire_fine_lead",
+    "prefix": "wire_fine",
+    "material": "lead"
+  },
+  {
+    "id": "long_rod_lead",
+    "prefix": "long_rod",
     "material": "lead"
   },
   {
@@ -2710,6 +3025,16 @@
     "material": "manganese"
   },
   {
+    "id": "foil_manganese",
+    "prefix": "foil",
+    "material": "manganese"
+  },
+  {
+    "id": "long_rod_manganese",
+    "prefix": "long_rod",
+    "material": "manganese"
+  },
+  {
     "id": "crushed_molybdenite",
     "prefix": "crushed",
     "material": "molybdenite"
@@ -2807,6 +3132,11 @@
   {
     "id": "screw_molybdenum",
     "prefix": "screw",
+    "material": "molybdenum"
+  },
+  {
+    "id": "long_rod_molybdenum",
+    "prefix": "long_rod",
     "material": "molybdenum"
   },
   {
@@ -2912,6 +3242,11 @@
   {
     "id": "screw_neodymium",
     "prefix": "screw",
+    "material": "neodymium"
+  },
+  {
+    "id": "long_rod_neodymium",
+    "prefix": "long_rod",
     "material": "neodymium"
   },
   {
@@ -3047,6 +3382,11 @@
   {
     "id": "screw_nickel",
     "prefix": "screw",
+    "material": "nickel"
+  },
+  {
+    "id": "long_rod_nickel",
+    "prefix": "long_rod",
     "material": "nickel"
   },
   {
@@ -3270,6 +3610,26 @@
     "material": "palladium"
   },
   {
+    "id": "long_rod_palladium",
+    "prefix": "long_rod",
+    "material": "palladium"
+  },
+  {
+    "id": "dust_paper",
+    "prefix": "dust",
+    "material": "paper"
+  },
+  {
+    "id": "small_dust_paper",
+    "prefix": "small_dust",
+    "material": "paper"
+  },
+  {
+    "id": "tiny_dust_paper",
+    "prefix": "tiny_dust",
+    "material": "paper"
+  },
+  {
     "id": "crushed_pentlandite",
     "prefix": "crushed",
     "material": "pentlandite"
@@ -3402,6 +3762,21 @@
   {
     "id": "screw_platinum",
     "prefix": "screw",
+    "material": "platinum"
+  },
+  {
+    "id": "foil_platinum",
+    "prefix": "foil",
+    "material": "platinum"
+  },
+  {
+    "id": "wire_fine_platinum",
+    "prefix": "wire_fine",
+    "material": "platinum"
+  },
+  {
+    "id": "long_rod_platinum",
+    "prefix": "long_rod",
     "material": "platinum"
   },
   {
@@ -3665,6 +4040,11 @@
     "material": "red_alloy"
   },
   {
+    "id": "wire_fine_red_alloy",
+    "prefix": "wire_fine",
+    "material": "red_alloy"
+  },
+  {
     "id": "crushed_redstone",
     "prefix": "crushed",
     "material": "redstone"
@@ -3728,6 +4108,61 @@
     "id": "tiny_dust_rock_salt",
     "prefix": "tiny_dust",
     "material": "rock_salt"
+  },
+  {
+    "id": "dust_rubber",
+    "prefix": "dust",
+    "material": "rubber"
+  },
+  {
+    "id": "small_dust_rubber",
+    "prefix": "small_dust",
+    "material": "rubber"
+  },
+  {
+    "id": "tiny_dust_rubber",
+    "prefix": "tiny_dust",
+    "material": "rubber"
+  },
+  {
+    "id": "ingot_rubber",
+    "prefix": "ingot",
+    "material": "rubber"
+  },
+  {
+    "id": "nugget_rubber",
+    "prefix": "nugget",
+    "material": "rubber"
+  },
+  {
+    "id": "plate_rubber",
+    "prefix": "plate",
+    "material": "rubber"
+  },
+  {
+    "id": "rod_rubber",
+    "prefix": "rod",
+    "material": "rubber"
+  },
+  {
+    "id": "bolt_rubber",
+    "prefix": "bolt",
+    "material": "rubber"
+  },
+  {
+    "id": "screw_rubber",
+    "prefix": "screw",
+    "material": "rubber"
+  },
+  {
+    "id": "ring_rubber",
+    "prefix": "ring",
+    "material": "rubber"
+  },
+  {
+    "id": "long_rod_rubber",
+    "prefix": "long_rod",
+    "material": "rubber"
   },
   {
     "id": "crushed_ruby",
@@ -4020,6 +4455,11 @@
     "material": "silver"
   },
   {
+    "id": "long_rod_silver",
+    "prefix": "long_rod",
+    "material": "silver"
+  },
+  {
     "id": "crushed_soapstone",
     "prefix": "crushed",
     "material": "soapstone"
@@ -4103,6 +4543,46 @@
     "id": "rod_sodalite",
     "prefix": "rod",
     "material": "sodalite"
+  },
+  {
+    "id": "dust_soldering_alloy",
+    "prefix": "dust",
+    "material": "soldering_alloy"
+  },
+  {
+    "id": "small_dust_soldering_alloy",
+    "prefix": "small_dust",
+    "material": "soldering_alloy"
+  },
+  {
+    "id": "tiny_dust_soldering_alloy",
+    "prefix": "tiny_dust",
+    "material": "soldering_alloy"
+  },
+  {
+    "id": "ingot_soldering_alloy",
+    "prefix": "ingot",
+    "material": "soldering_alloy"
+  },
+  {
+    "id": "nugget_soldering_alloy",
+    "prefix": "nugget",
+    "material": "soldering_alloy"
+  },
+  {
+    "id": "plate_soldering_alloy",
+    "prefix": "plate",
+    "material": "soldering_alloy"
+  },
+  {
+    "id": "rod_soldering_alloy",
+    "prefix": "rod",
+    "material": "soldering_alloy"
+  },
+  {
+    "id": "wire_fine_soldering_alloy",
+    "prefix": "wire_fine",
+    "material": "soldering_alloy"
   },
   {
     "id": "crushed_spessartine",
@@ -4258,6 +4738,86 @@
     "id": "ring_steel",
     "prefix": "ring",
     "material": "steel"
+  },
+  {
+    "id": "foil_steel",
+    "prefix": "foil",
+    "material": "steel"
+  },
+  {
+    "id": "wire_fine_steel",
+    "prefix": "wire_fine",
+    "material": "steel"
+  },
+  {
+    "id": "small_gear_steel",
+    "prefix": "small_gear",
+    "material": "steel"
+  },
+  {
+    "id": "rotor_steel",
+    "prefix": "rotor",
+    "material": "steel"
+  },
+  {
+    "id": "long_rod_steel",
+    "prefix": "long_rod",
+    "material": "steel"
+  },
+  {
+    "id": "gear_steel",
+    "prefix": "gear",
+    "material": "steel"
+  },
+  {
+    "id": "dust_steel_magnetic",
+    "prefix": "dust",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "small_dust_steel_magnetic",
+    "prefix": "small_dust",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "tiny_dust_steel_magnetic",
+    "prefix": "tiny_dust",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "ingot_steel_magnetic",
+    "prefix": "ingot",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "nugget_steel_magnetic",
+    "prefix": "nugget",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "plate_steel_magnetic",
+    "prefix": "plate",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "rod_steel_magnetic",
+    "prefix": "rod",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "bolt_steel_magnetic",
+    "prefix": "bolt",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "screw_steel_magnetic",
+    "prefix": "screw",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "long_rod_steel_magnetic",
+    "prefix": "long_rod",
+    "material": "steel_magnetic"
   },
   {
     "id": "crushed_stibnite",
@@ -4575,6 +5135,11 @@
     "material": "thorium"
   },
   {
+    "id": "long_rod_thorium",
+    "prefix": "long_rod",
+    "material": "thorium"
+  },
+  {
     "id": "crushed_tin",
     "prefix": "crushed",
     "material": "tin"
@@ -4645,6 +5210,21 @@
     "material": "tin"
   },
   {
+    "id": "wire_fine_tin",
+    "prefix": "wire_fine",
+    "material": "tin"
+  },
+  {
+    "id": "rotor_tin",
+    "prefix": "rotor",
+    "material": "tin"
+  },
+  {
+    "id": "gear_tin",
+    "prefix": "gear",
+    "material": "tin"
+  },
+  {
     "id": "dust_tin_alloy",
     "prefix": "dust",
     "material": "tin_alloy"
@@ -4687,6 +5267,11 @@
   {
     "id": "screw_tin_alloy",
     "prefix": "screw",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "long_rod_tin_alloy",
+    "prefix": "long_rod",
     "material": "tin_alloy"
   },
   {
@@ -4925,6 +5510,11 @@
     "material": "uranium"
   },
   {
+    "id": "long_rod_uranium",
+    "prefix": "long_rod",
+    "material": "uranium"
+  },
+  {
     "id": "crushed_vanadium_magnetite",
     "prefix": "crushed",
     "material": "vanadium_magnetite"
@@ -4958,6 +5548,61 @@
     "id": "tiny_dust_vanadium_magnetite",
     "prefix": "tiny_dust",
     "material": "vanadium_magnetite"
+  },
+  {
+    "id": "dust_wrought_iron",
+    "prefix": "dust",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "small_dust_wrought_iron",
+    "prefix": "small_dust",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "tiny_dust_wrought_iron",
+    "prefix": "tiny_dust",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "ingot_wrought_iron",
+    "prefix": "ingot",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "nugget_wrought_iron",
+    "prefix": "nugget",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "plate_wrought_iron",
+    "prefix": "plate",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "rod_wrought_iron",
+    "prefix": "rod",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "bolt_wrought_iron",
+    "prefix": "bolt",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "screw_wrought_iron",
+    "prefix": "screw",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "ring_wrought_iron",
+    "prefix": "ring",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "long_rod_wrought_iron",
+    "prefix": "long_rod",
+    "material": "wrought_iron"
   },
   {
     "id": "crushed_wulfenite",
@@ -5077,6 +5722,11 @@
   {
     "id": "plate_zinc",
     "prefix": "plate",
+    "material": "zinc"
+  },
+  {
+    "id": "foil_zinc",
+    "prefix": "foil",
     "material": "zinc"
   },
   {
@@ -5680,6 +6330,36 @@
     "material": "iron"
   },
   {
+    "id": "sword_head_iron_magnetic",
+    "prefix": "sword_head",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "pickaxe_head_iron_magnetic",
+    "prefix": "pickaxe_head",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "shovel_head_iron_magnetic",
+    "prefix": "shovel_head",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "axe_head_iron_magnetic",
+    "prefix": "axe_head",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "hoe_head_iron_magnetic",
+    "prefix": "hoe_head",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "saw_head_iron_magnetic",
+    "prefix": "saw_head",
+    "material": "iron_magnetic"
+  },
+  {
     "id": "sword_head_manganese",
     "prefix": "sword_head",
     "material": "manganese"
@@ -5950,6 +6630,36 @@
     "material": "platinum"
   },
   {
+    "id": "sword_head_rubber",
+    "prefix": "sword_head",
+    "material": "rubber"
+  },
+  {
+    "id": "pickaxe_head_rubber",
+    "prefix": "pickaxe_head",
+    "material": "rubber"
+  },
+  {
+    "id": "shovel_head_rubber",
+    "prefix": "shovel_head",
+    "material": "rubber"
+  },
+  {
+    "id": "axe_head_rubber",
+    "prefix": "axe_head",
+    "material": "rubber"
+  },
+  {
+    "id": "hoe_head_rubber",
+    "prefix": "hoe_head",
+    "material": "rubber"
+  },
+  {
+    "id": "saw_head_rubber",
+    "prefix": "saw_head",
+    "material": "rubber"
+  },
+  {
     "id": "sword_head_ruby",
     "prefix": "sword_head",
     "material": "ruby"
@@ -6070,6 +6780,36 @@
     "material": "steel"
   },
   {
+    "id": "sword_head_steel_magnetic",
+    "prefix": "sword_head",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "pickaxe_head_steel_magnetic",
+    "prefix": "pickaxe_head",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "shovel_head_steel_magnetic",
+    "prefix": "shovel_head",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "axe_head_steel_magnetic",
+    "prefix": "axe_head",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "hoe_head_steel_magnetic",
+    "prefix": "hoe_head",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "saw_head_steel_magnetic",
+    "prefix": "saw_head",
+    "material": "steel_magnetic"
+  },
+  {
     "id": "sword_head_tanzanite",
     "prefix": "sword_head",
     "material": "tanzanite"
@@ -6158,5 +6898,35 @@
     "id": "saw_head_topaz",
     "prefix": "saw_head",
     "material": "topaz"
+  },
+  {
+    "id": "sword_head_wrought_iron",
+    "prefix": "sword_head",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "pickaxe_head_wrought_iron",
+    "prefix": "pickaxe_head",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "shovel_head_wrought_iron",
+    "prefix": "shovel_head",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "axe_head_wrought_iron",
+    "prefix": "axe_head",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "hoe_head_wrought_iron",
+    "prefix": "hoe_head",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "saw_head_wrought_iron",
+    "prefix": "saw_head",
+    "material": "wrought_iron"
   }
 ]

@@ -21,6 +21,7 @@
     "iis:wrench_invar",
     "iis:wrench_iridium",
     "iis:wrench_iron",
+    "iis:wrench_iron_magnetic",
     "iis:wrench_manganese",
     "iis:wrench_molybdenum",
     "iis:wrench_neodymium",
@@ -30,12 +31,15 @@
     "iis:wrench_opal",
     "iis:wrench_palladium",
     "iis:wrench_platinum",
+    "iis:wrench_rubber",
     "iis:wrench_ruby",
     "iis:wrench_sapphire",
     "iis:wrench_silver",
     "iis:wrench_steel",
+    "iis:wrench_steel_magnetic",
     "iis:wrench_tanzanite",
     "iis:wrench_tin_alloy",
-    "iis:wrench_topaz"
+    "iis:wrench_topaz",
+    "iis:wrench_wrought_iron"
   ]
 }

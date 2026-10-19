@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PfP",
+    "hPd",
+    "STS"
+  ],
+  "key": {
+    "P": "#c:plates/gold",
+    "S": "#c:rods/gold",
+    "T": "#iis:screws/gold",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:wire_cutter_gold"
+  }
+}

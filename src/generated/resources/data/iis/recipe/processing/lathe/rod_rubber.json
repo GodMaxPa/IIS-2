@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/rubber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_rubber",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_rubber",
+      "count": 2
+    }
+  ],
+  "duration": 25,
+  "eut": 16
+}

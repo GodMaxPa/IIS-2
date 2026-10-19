@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/coal",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:fine_wires/copper",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:resistor",
+      "count": 12
+    }
+  ],
+  "duration": 160,
+  "eut": 6
+}

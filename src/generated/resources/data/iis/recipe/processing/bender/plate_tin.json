@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tin",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_tin",
+      "count": 1
+    }
+  ],
+  "duration": 118,
+  "eut": 24
+}

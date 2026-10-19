@@ -1,0 +1,50 @@
+{
+  "variants": {
+    "facing=north,step_up=false": {
+      "model": "iis:block/transformer_lv"
+    },
+    "facing=north,step_up=true": {
+      "model": "iis:block/transformer_lv_up"
+    },
+    "facing=east,step_up=false": {
+      "model": "iis:block/transformer_lv",
+      "y": 90
+    },
+    "facing=east,step_up=true": {
+      "model": "iis:block/transformer_lv_up",
+      "y": 90
+    },
+    "facing=south,step_up=false": {
+      "model": "iis:block/transformer_lv",
+      "y": 180
+    },
+    "facing=south,step_up=true": {
+      "model": "iis:block/transformer_lv_up",
+      "y": 180
+    },
+    "facing=west,step_up=false": {
+      "model": "iis:block/transformer_lv",
+      "y": 270
+    },
+    "facing=west,step_up=true": {
+      "model": "iis:block/transformer_lv_up",
+      "y": 270
+    },
+    "facing=down,step_up=false": {
+      "model": "iis:block/transformer_lv",
+      "x": 90
+    },
+    "facing=down,step_up=true": {
+      "model": "iis:block/transformer_lv_up",
+      "x": 90
+    },
+    "facing=up,step_up=false": {
+      "model": "iis:block/transformer_lv",
+      "x": 270
+    },
+    "facing=up,step_up=true": {
+      "model": "iis:block/transformer_lv_up",
+      "x": 270
+    }
+  }
+}

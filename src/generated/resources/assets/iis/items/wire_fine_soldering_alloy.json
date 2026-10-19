@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/wire_fine_soldering_alloy",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 14474470
+      }
+    ]
+  }
+}

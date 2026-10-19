@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/bronze",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_bronze",
+      "count": 1
+    }
+  ],
+  "duration": 76,
+  "eut": 24
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tin",
+      "count": 9
+    },
+    {
+      "ingredient": "#c:ingots/antimony",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_soldering_alloy",
+      "count": 10
+    }
+  ],
+  "duration": 500,
+  "eut": 16
+}

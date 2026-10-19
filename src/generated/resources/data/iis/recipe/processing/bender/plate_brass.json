@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/brass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_brass",
+      "count": 1
+    }
+  ],
+  "duration": 63,
+  "eut": 24
+}

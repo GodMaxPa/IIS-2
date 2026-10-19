@@ -1,0 +1,31 @@
+{
+  "type": "iis:ore_washer",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/lepidolite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_lepidolite",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_lithium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_stone",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

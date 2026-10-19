@@ -21,6 +21,7 @@
     "iis:saw_invar",
     "iis:saw_iridium",
     "iis:saw_iron",
+    "iis:saw_iron_magnetic",
     "iis:saw_manganese",
     "iis:saw_molybdenum",
     "iis:saw_neodymium",
@@ -30,12 +31,15 @@
     "iis:saw_opal",
     "iis:saw_palladium",
     "iis:saw_platinum",
+    "iis:saw_rubber",
     "iis:saw_ruby",
     "iis:saw_sapphire",
     "iis:saw_silver",
     "iis:saw_steel",
+    "iis:saw_steel_magnetic",
     "iis:saw_tanzanite",
     "iis:saw_tin_alloy",
-    "iis:saw_topaz"
+    "iis:saw_topaz",
+    "iis:saw_wrought_iron"
   ]
 }

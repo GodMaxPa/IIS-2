@@ -6,8 +6,17 @@ public enum GtRecipeMap {
     FORGE_HAMMER("forge_hammer", 1, 1),
     COMPRESSOR("compressor", 1, 1),
     EXTRACTOR("extractor", 1, 1),
-    ALLOY_SMELTER("alloy_smelter", 2, 1),
-    PRIMITIVE_BLAST("primitive_blast", 3, 3);
+    ALLOY_SMELTER("alloy_smelter", 6, 1),
+    PRIMITIVE_BLAST("primitive_blast", 3, 3),
+    // LV (slice 4)
+    WIREMILL("wiremill", 1, 2),
+    BENDER("bender", 2, 1),
+    LATHE("lathe", 1, 2),
+    ASSEMBLER("assembler", 6, 1),
+    MIXER("mixer", 6, 1),
+    POLARIZER("polarizer", 1, 1),
+    ORE_WASHER("ore_washer", 2, 3),
+    COKE_OVEN("coke_oven", 1, 1);
 
     public final String id;
     public final int maxInputs, maxOutputs;

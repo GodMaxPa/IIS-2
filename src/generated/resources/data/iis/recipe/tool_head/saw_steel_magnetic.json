@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PP ",
+    "fh "
+  ],
+  "key": {
+    "P": "#c:plates/steel_magnetic",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:saw_head_steel_magnetic"
+  }
+}

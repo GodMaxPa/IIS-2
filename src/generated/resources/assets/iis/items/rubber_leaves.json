@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/rubber_leaves",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6262591
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/red_alloy",
+    "#iis:wires/1x/red_alloy"
+  ],
+  "result": {
+    "id": "iis:wire_red_alloy_2x"
+  }
+}

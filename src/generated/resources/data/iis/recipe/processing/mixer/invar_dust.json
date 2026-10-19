@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/iron",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:dusts/nickel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_invar",
+      "count": 3
+    }
+  ],
+  "duration": 300,
+  "eut": 8
+}

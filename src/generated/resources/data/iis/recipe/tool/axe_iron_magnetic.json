@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/axe/iron_magnetic",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:axe_iron_magnetic"
+  }
+}

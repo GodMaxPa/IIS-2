@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/gold",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/silver",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_electrum",
+      "count": 2
+    }
+  ],
+  "duration": 200,
+  "eut": 8
+}

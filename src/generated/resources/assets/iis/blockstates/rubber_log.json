@@ -1,0 +1,46 @@
+{
+  "variants": {
+    "facing=north,resin=none": {
+      "model": "iis:block/rubber_log"
+    },
+    "facing=east,resin=none": {
+      "model": "iis:block/rubber_log"
+    },
+    "facing=south,resin=none": {
+      "model": "iis:block/rubber_log"
+    },
+    "facing=west,resin=none": {
+      "model": "iis:block/rubber_log"
+    },
+    "facing=north,resin=wet": {
+      "model": "iis:block/rubber_log_wet"
+    },
+    "facing=east,resin=wet": {
+      "model": "iis:block/rubber_log_wet",
+      "y": 90
+    },
+    "facing=south,resin=wet": {
+      "model": "iis:block/rubber_log_wet",
+      "y": 180
+    },
+    "facing=west,resin=wet": {
+      "model": "iis:block/rubber_log_wet",
+      "y": 270
+    },
+    "facing=north,resin=dry": {
+      "model": "iis:block/rubber_log_dry"
+    },
+    "facing=east,resin=dry": {
+      "model": "iis:block/rubber_log_dry",
+      "y": 90
+    },
+    "facing=south,resin=dry": {
+      "model": "iis:block/rubber_log_dry",
+      "y": 180
+    },
+    "facing=west,resin=dry": {
+      "model": "iis:block/rubber_log_dry",
+      "y": 270
+    }
+  }
+}

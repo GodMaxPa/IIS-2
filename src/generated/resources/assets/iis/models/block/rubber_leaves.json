@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "iis:block/lv/rubber_leaves"
+  }
+}

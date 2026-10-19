@@ -1,0 +1,17 @@
+{
+  "type": "iis:extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:rubber_log",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_raw_rubber",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

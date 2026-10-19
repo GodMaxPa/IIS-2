@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "iis:blocks/wire_lead_4x",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "iis:wire_lead_4x"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CRC",
+    "RMR",
+    "EWE"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "E": "iis:electric_motor_lv",
+    "R": "#iis:rotors/tin",
+    "C": "#c:circuits/basic",
+    "W": "#iis:cables/1x/tin"
+  },
+  "result": {
+    "id": "iis:gas_turbine_lv"
+  }
+}

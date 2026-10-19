@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/red_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_red_alloy",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 24
+}

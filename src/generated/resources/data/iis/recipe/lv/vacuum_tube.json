@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PGP",
+    "FFF"
+  ],
+  "key": {
+    "G": "iis:glass_tube",
+    "P": "minecraft:paper",
+    "F": "#iis:fine_wires/copper"
+  },
+  "result": {
+    "id": "iis:vacuum_tube"
+  }
+}

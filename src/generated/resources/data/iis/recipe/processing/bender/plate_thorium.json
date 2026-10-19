@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/thorium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_thorium",
+      "count": 1
+    }
+  ],
+  "duration": 230,
+  "eut": 24
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    "PPP",
+    "P  "
+  ],
+  "key": {
+    "P": "#minecraft:planks"
+  },
+  "result": {
+    "id": "iis:treetap"
+  }
+}

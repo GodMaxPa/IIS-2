@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/knife_steel_magnetic",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 8421504
+      }
+    ]
+  }
+}

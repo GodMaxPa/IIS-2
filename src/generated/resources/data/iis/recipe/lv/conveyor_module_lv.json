@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RRR",
+    "MCM",
+    "RRR"
+  ],
+  "key": {
+    "M": "iis:electric_motor_lv",
+    "C": "#iis:cables/1x/tin",
+    "R": "#c:plates/rubber"
+  },
+  "result": {
+    "id": "iis:conveyor_module_lv"
+  }
+}

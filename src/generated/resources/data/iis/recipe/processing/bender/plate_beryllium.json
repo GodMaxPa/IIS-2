@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/beryllium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_beryllium",
+      "count": 1
+    }
+  ],
+  "duration": 9,
+  "eut": 24
+}

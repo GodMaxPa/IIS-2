@@ -240,6 +240,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_iron_magnetic",
+    "tool": "sword",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "sword_manganese",
     "tool": "sword",
     "material": "manganese",
@@ -348,6 +360,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_rubber",
+    "tool": "sword",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 1.5,
+    "quality": 0,
+    "kind": "sword"
+  },
+  {
     "id": "sword_ruby",
     "tool": "sword",
     "material": "ruby",
@@ -396,6 +420,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_steel_magnetic",
+    "tool": "sword",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "sword_tanzanite",
     "tool": "sword",
     "material": "tanzanite",
@@ -429,6 +465,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_wrought_iron",
+    "tool": "sword",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "sword"
   },
   {
@@ -672,6 +720,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_iron_magnetic",
+    "tool": "pickaxe",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_manganese",
     "tool": "pickaxe",
     "material": "manganese",
@@ -780,6 +840,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_rubber",
+    "tool": "pickaxe",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.5,
+    "quality": 0,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_ruby",
     "tool": "pickaxe",
     "material": "ruby",
@@ -828,6 +900,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_steel_magnetic",
+    "tool": "pickaxe",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_tanzanite",
     "tool": "pickaxe",
     "material": "tanzanite",
@@ -861,6 +945,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_wrought_iron",
+    "tool": "pickaxe",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "pickaxe"
   },
   {
@@ -1104,6 +1200,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_iron_magnetic",
+    "tool": "shovel",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_manganese",
     "tool": "shovel",
     "material": "manganese",
@@ -1212,6 +1320,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_rubber",
+    "tool": "shovel",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.5,
+    "quality": 0,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_ruby",
     "tool": "shovel",
     "material": "ruby",
@@ -1260,6 +1380,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_steel_magnetic",
+    "tool": "shovel",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_tanzanite",
     "tool": "shovel",
     "material": "tanzanite",
@@ -1293,6 +1425,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_wrought_iron",
+    "tool": "shovel",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "shovel"
   },
   {
@@ -1536,6 +1680,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_iron_magnetic",
+    "tool": "axe",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "axe_manganese",
     "tool": "axe",
     "material": "manganese",
@@ -1644,6 +1800,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_rubber",
+    "tool": "axe",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.5,
+    "quality": 0,
+    "kind": "axe"
+  },
+  {
     "id": "axe_ruby",
     "tool": "axe",
     "material": "ruby",
@@ -1692,6 +1860,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_steel_magnetic",
+    "tool": "axe",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "axe_tanzanite",
     "tool": "axe",
     "material": "tanzanite",
@@ -1725,6 +1905,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_wrought_iron",
+    "tool": "axe",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "axe"
   },
   {
@@ -1968,6 +2160,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_iron_magnetic",
+    "tool": "hoe",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_manganese",
     "tool": "hoe",
     "material": "manganese",
@@ -2076,6 +2280,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_rubber",
+    "tool": "hoe",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.5,
+    "quality": 0,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_ruby",
     "tool": "hoe",
     "material": "ruby",
@@ -2124,6 +2340,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_steel_magnetic",
+    "tool": "hoe",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_tanzanite",
     "tool": "hoe",
     "material": "tanzanite",
@@ -2157,6 +2385,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_wrought_iron",
+    "tool": "hoe",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "hoe"
   },
   {
@@ -2400,6 +2640,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_iron_magnetic",
+    "tool": "saw",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "saw_manganese",
     "tool": "saw",
     "material": "manganese",
@@ -2508,6 +2760,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_rubber",
+    "tool": "saw",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 1.5,
+    "quality": 0,
+    "kind": "axe"
+  },
+  {
     "id": "saw_ruby",
     "tool": "saw",
     "material": "ruby",
@@ -2556,6 +2820,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_steel_magnetic",
+    "tool": "saw",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "saw_tanzanite",
     "tool": "saw",
     "material": "tanzanite",
@@ -2589,6 +2865,18 @@
     "craftDamage": 4,
     "speed": 7.0,
     "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_wrought_iron",
+    "tool": "saw",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "axe"
   },
   {
@@ -2832,6 +3120,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_iron_magnetic",
+    "tool": "hammer",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 4.5,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_manganese",
     "tool": "hammer",
     "material": "manganese",
@@ -2940,6 +3240,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_rubber",
+    "tool": "hammer",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 1.125,
+    "quality": 0,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_ruby",
     "tool": "hammer",
     "material": "ruby",
@@ -2988,6 +3300,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_steel_magnetic",
+    "tool": "hammer",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 4.5,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_tanzanite",
     "tool": "hammer",
     "material": "tanzanite",
@@ -3021,6 +3345,18 @@
     "craftDamage": 8,
     "speed": 5.25,
     "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_wrought_iron",
+    "tool": "hammer",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 4.5,
+    "quality": 2,
     "kind": "pickaxe"
   },
   {
@@ -3264,6 +3600,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "wrench_iron_magnetic",
+    "tool": "wrench",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "wrench_manganese",
     "tool": "wrench",
     "material": "manganese",
@@ -3372,6 +3720,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "wrench_rubber",
+    "tool": "wrench",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 1.5,
+    "quality": 0,
+    "kind": "pickaxe"
+  },
+  {
     "id": "wrench_ruby",
     "tool": "wrench",
     "material": "ruby",
@@ -3420,6 +3780,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "wrench_steel_magnetic",
+    "tool": "wrench",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "wrench_tanzanite",
     "tool": "wrench",
     "material": "tanzanite",
@@ -3453,6 +3825,18 @@
     "craftDamage": 16,
     "speed": 7.0,
     "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "wrench_wrought_iron",
+    "tool": "wrench",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "pickaxe"
   },
   {
@@ -3696,6 +4080,18 @@
     "kind": null
   },
   {
+    "id": "file_iron_magnetic",
+    "tool": "file",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "file_manganese",
     "tool": "file",
     "material": "manganese",
@@ -3804,6 +4200,18 @@
     "kind": null
   },
   {
+    "id": "file_rubber",
+    "tool": "file",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 1.5,
+    "quality": 0,
+    "kind": null
+  },
+  {
     "id": "file_ruby",
     "tool": "file",
     "material": "ruby",
@@ -3852,6 +4260,18 @@
     "kind": null
   },
   {
+    "id": "file_steel_magnetic",
+    "tool": "file",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "file_tanzanite",
     "tool": "file",
     "material": "tanzanite",
@@ -3885,6 +4305,18 @@
     "craftDamage": 8,
     "speed": 7.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "file_wrought_iron",
+    "tool": "file",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
     "kind": null
   },
   {
@@ -4128,6 +4560,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_iron_magnetic",
+    "tool": "screwdriver",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "screwdriver_manganese",
     "tool": "screwdriver",
     "material": "manganese",
@@ -4236,6 +4680,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_rubber",
+    "tool": "screwdriver",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 1.5,
+    "quality": 0,
+    "kind": null
+  },
+  {
     "id": "screwdriver_ruby",
     "tool": "screwdriver",
     "material": "ruby",
@@ -4284,6 +4740,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_steel_magnetic",
+    "tool": "screwdriver",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "screwdriver_tanzanite",
     "tool": "screwdriver",
     "material": "tanzanite",
@@ -4317,6 +4785,18 @@
     "craftDamage": 8,
     "speed": 7.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_wrought_iron",
+    "tool": "screwdriver",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
     "kind": null
   },
   {
@@ -4596,6 +5076,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_iron_magnetic",
+    "tool": "knife",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "knife_manganese",
     "tool": "knife",
     "material": "manganese",
@@ -4704,6 +5196,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_rubber",
+    "tool": "knife",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 1.5,
+    "quality": 0,
+    "kind": "sword"
+  },
+  {
     "id": "knife_ruby",
     "tool": "knife",
     "material": "ruby",
@@ -4752,6 +5256,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_steel_magnetic",
+    "tool": "knife",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "knife_tanzanite",
     "tool": "knife",
     "material": "tanzanite",
@@ -4786,5 +5302,497 @@
     "speed": 7.0,
     "quality": 3,
     "kind": "sword"
+  },
+  {
+    "id": "knife_wrought_iron",
+    "tool": "knife",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "wire_cutter_aluminium",
+    "tool": "wire_cutter",
+    "material": "aluminium",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 12.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_amber",
+    "tool": "wire_cutter",
+    "material": "amber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 5.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_amethyst",
+    "tool": "wire_cutter",
+    "material": "amethyst",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_beryllium",
+    "tool": "wire_cutter",
+    "material": "beryllium",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 17.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_blue_topaz",
+    "tool": "wire_cutter",
+    "material": "blue_topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_brass",
+    "tool": "wire_cutter",
+    "material": "brass",
+    "handle": "wood",
+    "maxDamage": 192,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 1,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_bronze",
+    "tool": "wire_cutter",
+    "material": "bronze",
+    "handle": "wood",
+    "maxDamage": 384,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_certus_quartz",
+    "tool": "wire_cutter",
+    "material": "certus_quartz",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 6.25,
+    "quality": 1,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_cobalt",
+    "tool": "wire_cutter",
+    "material": "cobalt",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 10.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_cupronickel",
+    "tool": "wire_cutter",
+    "material": "cupronickel",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 1,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_diamond",
+    "tool": "wire_cutter",
+    "material": "diamond",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 10.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_electrum",
+    "tool": "wire_cutter",
+    "material": "electrum",
+    "handle": "steel",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 15.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_emerald",
+    "tool": "wire_cutter",
+    "material": "emerald",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_garnet_red",
+    "tool": "wire_cutter",
+    "material": "garnet_red",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_garnet_yellow",
+    "tool": "wire_cutter",
+    "material": "garnet_yellow",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_gold",
+    "tool": "wire_cutter",
+    "material": "gold",
+    "handle": "steel",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 15.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_green_sapphire",
+    "tool": "wire_cutter",
+    "material": "green_sapphire",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_invar",
+    "tool": "wire_cutter",
+    "material": "invar",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_iridium",
+    "tool": "wire_cutter",
+    "material": "iridium",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_iron",
+    "tool": "wire_cutter",
+    "material": "iron",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_iron_magnetic",
+    "tool": "wire_cutter",
+    "material": "iron_magnetic",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_manganese",
+    "tool": "wire_cutter",
+    "material": "manganese",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_molybdenum",
+    "tool": "wire_cutter",
+    "material": "molybdenum",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_neodymium",
+    "tool": "wire_cutter",
+    "material": "neodymium",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_nether_quartz",
+    "tool": "wire_cutter",
+    "material": "nether_quartz",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 1.25,
+    "quality": 1,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_nickel",
+    "tool": "wire_cutter",
+    "material": "nickel",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_olivine",
+    "tool": "wire_cutter",
+    "material": "olivine",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_opal",
+    "tool": "wire_cutter",
+    "material": "opal",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_palladium",
+    "tool": "wire_cutter",
+    "material": "palladium",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 10.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_platinum",
+    "tool": "wire_cutter",
+    "material": "platinum",
+    "handle": "steel",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 15.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_rubber",
+    "tool": "wire_cutter",
+    "material": "rubber",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 1.875,
+    "quality": 0,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_ruby",
+    "tool": "wire_cutter",
+    "material": "ruby",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_sapphire",
+    "tool": "wire_cutter",
+    "material": "sapphire",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_silver",
+    "tool": "wire_cutter",
+    "material": "silver",
+    "handle": "steel",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 12.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_steel",
+    "tool": "wire_cutter",
+    "material": "steel",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_steel_magnetic",
+    "tool": "wire_cutter",
+    "material": "steel_magnetic",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_tanzanite",
+    "tool": "wire_cutter",
+    "material": "tanzanite",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_tin_alloy",
+    "tool": "wire_cutter",
+    "material": "tin_alloy",
+    "handle": "wood",
+    "maxDamage": 192,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.125,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_topaz",
+    "tool": "wire_cutter",
+    "material": "topaz",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "wire_cutter_wrought_iron",
+    "tool": "wire_cutter",
+    "material": "wrought_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 2,
+    "kind": null
   }
 ]

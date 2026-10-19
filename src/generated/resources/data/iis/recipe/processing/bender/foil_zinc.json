@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/zinc",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_zinc",
+      "count": 4
+    }
+  ],
+  "duration": 65,
+  "eut": 24
+}

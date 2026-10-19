@@ -1,0 +1,17 @@
+{
+  "type": "iis:polarizer",
+  "inputs": [
+    {
+      "ingredient": "#iis:long_rods/iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:long_rod_iron_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 128,
+  "eut": 16
+}

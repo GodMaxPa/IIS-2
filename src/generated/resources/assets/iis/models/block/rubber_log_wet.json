@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/rubber_log",
+    "north": "iis:block/lv/rubber_log_wet",
+    "south": "iis:block/lv/rubber_log",
+    "east": "iis:block/lv/rubber_log",
+    "west": "iis:block/lv/rubber_log",
+    "up": "iis:block/lv/rubber_log_top",
+    "down": "iis:block/lv/rubber_log_top"
+  }
+}

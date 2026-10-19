@@ -1,0 +1,119 @@
+[
+  {
+    "id": "macerator_lv",
+    "type": "macerator",
+    "recipeMap": "macerator",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/macerator1"
+  },
+  {
+    "id": "electric_furnace_lv",
+    "type": "electric_furnace",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/e_furnace"
+  },
+  {
+    "id": "alloy_smelter_lv",
+    "type": "alloy_smelter",
+    "recipeMap": "alloy_smelter",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/alloysmelter"
+  },
+  {
+    "id": "compressor_lv",
+    "type": "compressor",
+    "recipeMap": "compressor",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/compressor"
+  },
+  {
+    "id": "extractor_lv",
+    "type": "extractor",
+    "recipeMap": "extractor",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/extractor"
+  },
+  {
+    "id": "forge_hammer_lv",
+    "type": "forge_hammer",
+    "recipeMap": "forge_hammer",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/hammer"
+  },
+  {
+    "id": "wiremill_lv",
+    "type": "wiremill",
+    "recipeMap": "wiremill",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/wiremill"
+  },
+  {
+    "id": "bender_lv",
+    "type": "bender",
+    "recipeMap": "bender",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/bender"
+  },
+  {
+    "id": "lathe_lv",
+    "type": "lathe",
+    "recipeMap": "lathe",
+    "inputs": 1,
+    "outputs": 2,
+    "tank": 0,
+    "gui": "lv/lathe"
+  },
+  {
+    "id": "assembler_lv",
+    "type": "assembler",
+    "recipeMap": "assembler",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/assembler"
+  },
+  {
+    "id": "mixer_lv",
+    "type": "mixer",
+    "recipeMap": "mixer",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 8000,
+    "gui": "lv/mixer"
+  },
+  {
+    "id": "polarizer_lv",
+    "type": "polarizer",
+    "recipeMap": "polarizer",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/polarizer"
+  },
+  {
+    "id": "ore_washer_lv",
+    "type": "ore_washer",
+    "recipeMap": "ore_washer",
+    "inputs": 2,
+    "outputs": 3,
+    "tank": 16000,
+    "gui": "lv/orewasher"
+  }
+]

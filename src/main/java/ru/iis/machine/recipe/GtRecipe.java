@@ -11,6 +11,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.crafting.SizedIngredient;
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
+import org.jspecify.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,13 +28,22 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
     private final List<ChanceOutput> outputs;
     private final int duration;
     private final int eut;
+    private final List<SizedFluidIngredient> fluidInputs;
+    private final List<FluidOutput> fluidOutputs;
 
-    public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut) {
+    public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut,
+                    List<SizedFluidIngredient> fluidInputs, List<FluidOutput> fluidOutputs) {
         this.map = map;
         this.inputs = List.copyOf(inputs);
         this.outputs = List.copyOf(outputs);
         this.duration = duration;
         this.eut = eut;
+        this.fluidInputs = List.copyOf(fluidInputs);
+        this.fluidOutputs = List.copyOf(fluidOutputs);
+    }
+
+    public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut) {
+        this(map, inputs, outputs, duration, eut, List.of(), List.of());
     }
 
     public GtRecipeMap map() { return map; }
@@ -39,14 +51,26 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
     public List<ChanceOutput> outputs() { return outputs; }
     public int duration() { return duration; }
     public int eut() { return eut; }
+    public List<SizedFluidIngredient> fluidInputs() { return fluidInputs; }
+    public List<FluidOutput> fluidOutputs() { return fluidOutputs; }
+
+    /** Хватает ли жидкости во входном баке (GT: одна входная жидкость на машину). */
+    public boolean fluidMatches(@Nullable FluidStack tank) {
+        for (SizedFluidIngredient f : fluidInputs) {
+            if (tank == null || tank.isEmpty() || !f.ingredient().test(tank) || tank.getAmount() < f.amount()) return false;
+        }
+        return true;
+    }
 
     static MapCodec<GtRecipe> codec(GtRecipeMap map) {
         return RecordCodecBuilder.mapCodec(i -> i.group(
-                SizedIngredient.NESTED_CODEC.listOf(1, map.maxInputs).fieldOf("inputs").forGetter(GtRecipe::inputs),
-                ChanceOutput.CODEC.listOf(1, map.maxOutputs).fieldOf("outputs").forGetter(GtRecipe::outputs),
+                SizedIngredient.NESTED_CODEC.listOf(0, map.maxInputs).optionalFieldOf("inputs", List.of()).forGetter(GtRecipe::inputs),
+                ChanceOutput.CODEC.listOf(0, map.maxOutputs).optionalFieldOf("outputs", List.of()).forGetter(GtRecipe::outputs),
                 Codec.intRange(1, Integer.MAX_VALUE).fieldOf("duration").forGetter(GtRecipe::duration),
-                Codec.intRange(0, Integer.MAX_VALUE).optionalFieldOf("eut", 0).forGetter(GtRecipe::eut)
-        ).apply(i, (in, out, d, e) -> new GtRecipe(map, in, out, d, e)));
+                Codec.intRange(0, Integer.MAX_VALUE).optionalFieldOf("eut", 0).forGetter(GtRecipe::eut),
+                SizedFluidIngredient.CODEC.listOf(0, 1).optionalFieldOf("fluid_inputs", List.of()).forGetter(GtRecipe::fluidInputs),
+                FluidOutput.CODEC.listOf(0, 1).optionalFieldOf("fluid_outputs", List.of()).forGetter(GtRecipe::fluidOutputs)
+        ).apply(i, (in, out, d, e, fi, fo) -> new GtRecipe(map, in, out, d, e, fi, fo)));
     }
 
     static StreamCodec<RegistryFriendlyByteBuf, GtRecipe> streamCodec(GtRecipeMap map) {
@@ -55,7 +79,9 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
                 ChanceOutput.STREAM_CODEC.apply(ByteBufCodecs.list()), GtRecipe::outputs,
                 ByteBufCodecs.VAR_INT, GtRecipe::duration,
                 ByteBufCodecs.VAR_INT, GtRecipe::eut,
-                (in, out, d, e) -> new GtRecipe(map, in, out, d, e));
+                SizedFluidIngredient.STREAM_CODEC.apply(ByteBufCodecs.list()), GtRecipe::fluidInputs,
+                FluidOutput.STREAM_CODEC.apply(ByteBufCodecs.list()), GtRecipe::fluidOutputs,
+                (in, out, d, e, fi, fo) -> new GtRecipe(map, in, out, d, e, fi, fo));
     }
 
     /**
@@ -96,7 +122,7 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
 
     @Override
     public ItemStack assemble(GtRecipeInput input) {
-        return outputs.getFirst().create();
+        return outputs.isEmpty() ? ItemStack.EMPTY : outputs.getFirst().create();
     }
 
     @Override

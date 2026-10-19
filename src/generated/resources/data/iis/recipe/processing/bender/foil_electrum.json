@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/electrum",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_electrum",
+      "count": 4
+    }
+  ],
+  "duration": 151,
+  "eut": 24
+}

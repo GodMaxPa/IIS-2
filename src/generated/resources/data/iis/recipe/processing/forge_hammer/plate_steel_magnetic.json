@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/steel_magnetic",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_steel_magnetic",
+      "count": 2
+    }
+  ],
+  "duration": 55,
+  "eut": 16
+}

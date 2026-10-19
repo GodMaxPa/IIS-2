@@ -1,0 +1,23 @@
+{
+  "type": "iis:ore_washer",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/zinc",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_zinc",
+      "count": 1
+    }
+  ],
+  "duration": 8,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 100
+    }
+  ]
+}

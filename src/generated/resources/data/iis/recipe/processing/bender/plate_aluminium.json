@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/aluminium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_aluminium",
+      "count": 1
+    }
+  ],
+  "duration": 26,
+  "eut": 24
+}

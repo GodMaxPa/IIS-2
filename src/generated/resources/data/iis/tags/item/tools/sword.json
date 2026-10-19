@@ -21,6 +21,7 @@
     "iis:sword_invar",
     "iis:sword_iridium",
     "iis:sword_iron",
+    "iis:sword_iron_magnetic",
     "iis:sword_manganese",
     "iis:sword_molybdenum",
     "iis:sword_neodymium",
@@ -30,12 +31,15 @@
     "iis:sword_opal",
     "iis:sword_palladium",
     "iis:sword_platinum",
+    "iis:sword_rubber",
     "iis:sword_ruby",
     "iis:sword_sapphire",
     "iis:sword_silver",
     "iis:sword_steel",
+    "iis:sword_steel_magnetic",
     "iis:sword_tanzanite",
     "iis:sword_tin_alloy",
-    "iis:sword_topaz"
+    "iis:sword_topaz",
+    "iis:sword_wrought_iron"
   ]
 }

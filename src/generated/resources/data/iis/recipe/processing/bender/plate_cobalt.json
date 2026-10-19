@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/cobalt",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_cobalt",
+      "count": 1
+    }
+  ],
+  "duration": 59,
+  "eut": 24
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/tin",
+      "count": 9
+    },
+    {
+      "ingredient": "#c:dusts/antimony",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_soldering_alloy",
+      "count": 10
+    }
+  ],
+  "duration": 500,
+  "eut": 8
+}

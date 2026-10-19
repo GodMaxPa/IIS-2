@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/iron",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_iron",
+      "count": 4
+    }
+  ],
+  "duration": 56,
+  "eut": 24
+}

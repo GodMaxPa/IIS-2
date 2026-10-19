@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EWE",
+    "CMC",
+    "EWE"
+  ],
+  "key": {
+    "E": "iis:electric_motor_lv",
+    "W": "#iis:cables/1x/tin",
+    "C": "#c:circuits/basic",
+    "M": "iis:hull_lv"
+  },
+  "result": {
+    "id": "iis:wiremill_lv"
+  }
+}

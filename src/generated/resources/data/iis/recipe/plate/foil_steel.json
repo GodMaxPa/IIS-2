@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "hP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:foil_steel",
+    "count": 2
+  }
+}

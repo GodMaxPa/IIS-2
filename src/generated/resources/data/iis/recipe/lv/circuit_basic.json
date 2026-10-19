@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RIR",
+    "VBV",
+    "CCC"
+  ],
+  "key": {
+    "R": "iis:resistor",
+    "I": "iis:steel_item_casing",
+    "V": "iis:vacuum_tube",
+    "B": "iis:coated_circuit_board",
+    "C": "#iis:cables/1x/red_alloy"
+  },
+  "result": {
+    "id": "iis:circuit_basic"
+  }
+}

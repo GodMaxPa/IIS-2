@@ -1,0 +1,17 @@
+{
+  "type": "iis:wiremill",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/lead",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_fine_lead",
+      "count": 4
+    }
+  ],
+  "duration": 200,
+  "eut": 8
+}

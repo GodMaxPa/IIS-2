@@ -21,6 +21,7 @@
     "iis:hoe_invar",
     "iis:hoe_iridium",
     "iis:hoe_iron",
+    "iis:hoe_iron_magnetic",
     "iis:hoe_manganese",
     "iis:hoe_molybdenum",
     "iis:hoe_neodymium",
@@ -30,12 +31,15 @@
     "iis:hoe_opal",
     "iis:hoe_palladium",
     "iis:hoe_platinum",
+    "iis:hoe_rubber",
     "iis:hoe_ruby",
     "iis:hoe_sapphire",
     "iis:hoe_silver",
     "iis:hoe_steel",
+    "iis:hoe_steel_magnetic",
     "iis:hoe_tanzanite",
     "iis:hoe_tin_alloy",
-    "iis:hoe_topaz"
+    "iis:hoe_topaz",
+    "iis:hoe_wrought_iron"
   ]
 }

@@ -1,0 +1,23 @@
+{
+  "type": "iis:coke_oven",
+  "inputs": [
+    {
+      "ingredient": "minecraft:coal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:coal_coke",
+      "count": 1
+    }
+  ],
+  "duration": 1800,
+  "eut": 0,
+  "fluid_outputs": [
+    {
+      "id": "iis:creosote",
+      "amount": 500
+    }
+  ]
+}

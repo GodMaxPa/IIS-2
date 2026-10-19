@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/gold",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_gold",
+      "count": 4
+    }
+  ],
+  "duration": 196,
+  "eut": 24
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:rods/iron",
+    "minecraft:redstone",
+    "minecraft:redstone",
+    "minecraft:redstone",
+    "minecraft:redstone"
+  ],
+  "result": {
+    "id": "iis:rod_iron_magnetic"
+  }
+}

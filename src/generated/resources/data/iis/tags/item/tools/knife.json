@@ -21,6 +21,7 @@
     "iis:knife_invar",
     "iis:knife_iridium",
     "iis:knife_iron",
+    "iis:knife_iron_magnetic",
     "iis:knife_manganese",
     "iis:knife_molybdenum",
     "iis:knife_neodymium",
@@ -30,12 +31,15 @@
     "iis:knife_opal",
     "iis:knife_palladium",
     "iis:knife_platinum",
+    "iis:knife_rubber",
     "iis:knife_ruby",
     "iis:knife_sapphire",
     "iis:knife_silver",
     "iis:knife_steel",
+    "iis:knife_steel_magnetic",
     "iis:knife_tanzanite",
     "iis:knife_tin_alloy",
-    "iis:knife_topaz"
+    "iis:knife_topaz",
+    "iis:knife_wrought_iron"
   ]
 }

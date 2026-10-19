@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/soldering_alloy",
+    "#iis:small_dusts/soldering_alloy",
+    "#iis:small_dusts/soldering_alloy",
+    "#iis:small_dusts/soldering_alloy"
+  ],
+  "result": {
+    "id": "iis:dust_soldering_alloy"
+  }
+}

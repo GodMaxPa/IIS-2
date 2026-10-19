@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/4x/lead",
+    "minecraft:black_carpet",
+    "minecraft:black_carpet",
+    "minecraft:string"
+  ],
+  "result": {
+    "id": "iis:cable_lead_4x"
+  }
+}

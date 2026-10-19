@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/coke_oven_bricks",
+    "north": "iis:block/lv/coke_oven_front_active",
+    "south": "iis:block/lv/coke_oven_bricks",
+    "east": "iis:block/lv/coke_oven_bricks",
+    "west": "iis:block/lv/coke_oven_bricks",
+    "up": "iis:block/lv/coke_oven_bricks",
+    "down": "iis:block/lv/coke_oven_bricks"
+  }
+}

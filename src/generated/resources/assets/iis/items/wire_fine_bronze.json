@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/wire_fine_bronze",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 16744448
+      }
+    ]
+  }
+}

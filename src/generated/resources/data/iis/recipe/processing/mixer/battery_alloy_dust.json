@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/lead",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:dusts/antimony",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_battery_alloy",
+      "count": 5
+    }
+  ],
+  "duration": 250,
+  "eut": 8
+}

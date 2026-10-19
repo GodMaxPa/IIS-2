@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/cupronickel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_cupronickel",
+      "count": 1
+    }
+  ],
+  "duration": 60,
+  "eut": 24
+}

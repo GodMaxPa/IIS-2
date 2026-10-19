@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/iron_magnetic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

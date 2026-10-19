@@ -21,6 +21,7 @@
     "iis:hammer_invar",
     "iis:hammer_iridium",
     "iis:hammer_iron",
+    "iis:hammer_iron_magnetic",
     "iis:hammer_manganese",
     "iis:hammer_molybdenum",
     "iis:hammer_neodymium",
@@ -30,12 +31,15 @@
     "iis:hammer_opal",
     "iis:hammer_palladium",
     "iis:hammer_platinum",
+    "iis:hammer_rubber",
     "iis:hammer_ruby",
     "iis:hammer_sapphire",
     "iis:hammer_silver",
     "iis:hammer_steel",
+    "iis:hammer_steel_magnetic",
     "iis:hammer_tanzanite",
     "iis:hammer_tin_alloy",
-    "iis:hammer_topaz"
+    "iis:hammer_topaz",
+    "iis:hammer_wrought_iron"
   ]
 }

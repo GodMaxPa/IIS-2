@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/saw/wrought_iron",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:saw_wrought_iron"
+  }
+}

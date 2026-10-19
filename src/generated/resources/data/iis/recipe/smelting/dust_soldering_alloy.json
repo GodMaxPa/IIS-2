@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "#c:dusts/soldering_alloy",
+  "result": {
+    "id": "iis:ingot_soldering_alloy"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/molybdenum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_molybdenum",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_molybdenum",
+      "count": 2
+    }
+  ],
+  "duration": 475,
+  "eut": 16
+}

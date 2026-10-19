@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/steel_magnetic",
+    "#iis:tiny_dusts/steel_magnetic",
+    "#iis:tiny_dusts/steel_magnetic",
+    "#iis:tiny_dusts/steel_magnetic",
+    "#iis:tiny_dusts/steel_magnetic",
+    "#iis:tiny_dusts/steel_magnetic",
+    "#iis:tiny_dusts/steel_magnetic",
+    "#iis:tiny_dusts/steel_magnetic",
+    "#iis:tiny_dusts/steel_magnetic"
+  ],
+  "result": {
+    "id": "iis:dust_steel_magnetic"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:sticky_resin",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_raw_rubber",
+      "count": 3
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

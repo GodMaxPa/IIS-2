@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tin_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_tin_alloy",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_tin_alloy",
+      "count": 2
+    }
+  ],
+  "duration": 435,
+  "eut": 16
+}

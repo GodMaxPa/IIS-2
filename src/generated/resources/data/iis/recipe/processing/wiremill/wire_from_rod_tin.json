@@ -1,0 +1,17 @@
+{
+  "type": "iis:wiremill",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/tin",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_tin_1x",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 4
+}

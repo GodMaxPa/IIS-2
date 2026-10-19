@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SPS",
+    "PwP",
+    "SPS"
+  ],
+  "key": {
+    "P": "#c:plates/iron",
+    "S": "#c:rods/iron",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:gear_iron"
+  }
+}

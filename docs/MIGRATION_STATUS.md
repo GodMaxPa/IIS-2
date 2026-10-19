@@ -6,7 +6,7 @@
 
 | Подсистема | Оригинал | Наш код | Статус | Доказательства |
 |---|---|---|---|---|
-| Уровни напряжения, разгон | `GT_Values.V`, `BasicMachine#calculateOverclockedNess` | `energy.VoltageTier`, `machine.Overclock` | перенесено (машин на EU ещё нет) | T |
+| Уровни напряжения, разгон | `GT_Values.V`, `BasicMachine#calculateOverclockedNess` | `energy.VoltageTier`, `machine.Overclock` | перенесено | T, G |
 | Материалы и формы | `Materials`, `OrePrefixes`, `MaterialProperties.cfg` | `core.material`, `tools/gen/gen_content.py` | частично (без gemFlawed.., foil, gear, wireFine…) | T, S, C |
 | Жилы и руды | `GT_Worldgen_GT_Ore_Layer`, `WorldGeneration.cfg` | `world.vein`, `world.ore` | перенесено (без космоса) | T, S, C, O (загрузка) |
 | Малые руды | `GT_Worldgen_GT_Ore_SmallPieces` | `VeinFeature`, `OreBlocks` | перенесено (без удачи) | S |
@@ -19,7 +19,18 @@
 | Жидкостные трубы | `GT_MetaPipeEntity_Fluid` | `PipeBlock`, `PipeBlockEntity` | бронза/сталь S/M/L | G, C |
 | Кирпичная доменная печь | `GT_MetaTileEntity_PrimitiveBlastFurnace` | `BbfStructure`, `BbfBlockEntity` | перенесено | T, G, C |
 | Огнеупорная цепочка | `GT_CraftingRecipeLoader`, `GT_MachineRecipeLoader` | `tools/gen/steam.py` | перенесено | S |
-| Просмотр рецептов | NEI | JEI-плагин `machine.compat.jei` | 6 категорий + паровые печи как станции плавки | C |
+| Просмотр рецептов | NEI | JEI-плагин `machine.compat.jei` | 14 категорий (с жидкостями) + печи как станции плавки | C |
 | Загрязнение | `GT_Pollution` | — | **не переносим** (D27) | — |
-| Коксовая печь | Railcraft + `RailCraft.zs` | — | срез LV (D29) | — |
-| EU, кабели, LV-машины | `GT_MetaPipeEntity_Cable`, `BasicMachine` | — | срез 4 | — |
+| EU: запас, приём, выдача, взрывы | `BaseMetaTileEntity` | `energy.logic.EnergyStorage`, `lv.block.ElectricBlockEntity` | перенесено (взрыв в конце тика, D48) | T, G |
+| Провода и кабели | `GT_MetaPipeEntity_Cable`, `makeWires` | `energy.logic.EnergyNet`, `WorldEnergy`, `lv.block.CableBlock` | 5 материалов × 1x/2x/4x, провод и кабель | T, G, C |
+| Опасности (дождь, вода, огонь, гроза, удар током, сгорание, wirefire) | `BaseMetaTileEntity#updateEntity`, `GT_Utility#applyElectricityDamage` | `ElectricBlockEntity`, `CableBlock` | перенесено; переключатели в serverconfig (D47) | G (вода, перенапряжение, сгорание, удар) |
+| LV-машины (13) | `BasicMachine_GT_Recipe`, `GT_Loader_MetaTileEntities` | `machine.logic.ElectricMachineLogic`, `lv.block.ElectricMachineBlockEntity` | дробитель, печь, печь сплавов, компрессор, экстрактор, молот, волочильный, гибочный, токарный, сборщик, смеситель, поляризатор, рудопромывка | T, G, C |
+| Генераторы LV (3) | `BasicGenerator`, `SteamTurbine`, `DieselGenerator`, `GasTurbine` | `energy.logic.GeneratorLogic`, `lv.block.GeneratorBlockEntity` | перенесено; жидкого топлива для дизеля/газа ещё нет | T, G (паровая турбина) |
+| Аккумуляторный буфер 1x1/2x2, батарейка LV | `BasicBatteryBuffer`, `Battery_RE_LV_Sodium` | `BatteryBufferBlockEntity`, `lv.item.BatteryItem` | перенесено (рецепт батарейки — отличие) | G |
+| Трансформатор LV | `GT_MetaTileEntity_Transformer` | `TransformerBlockEntity` | перенесено (переключение ключом — отличие) | G |
+| Детали LV, схема, корпус | `GT_MetaGenerated_Item_01`, `ProcessingCircuit` | `tools/gen/lv.py` | мотор, поршень, насос, конвейер, манипулятор, схема, резистор, вакуумная трубка, плата | S |
+| Новые карты рецептов (8) | `GT_Recipe_Map` | `GtRecipeMap`, `tools/gen/lv.py` | волочильный, гибочный, токарный, сборщик, смеситель, поляризатор, рудопромывка, коксовая печь (~350 рецептов) | S, G |
+| Каучук | IC2 (закрытый) → своя механика | `RubberLogBlock`, `TreetapItem`, worldgen | дерево, смола, краник, слизь | G (рост дерева) |
+| Коксовая печь | Railcraft + `RailCraft.zs` | `CokeOvenBlockEntity` | перенесено (числа Railcraft по памяти) | G, C |
+| Жидкость «креозот» | Railcraft / `Materials.Creosote` | `IISFluids.CREOSOTE` | с блоком и ведром | G |
+| Остальные LV-машины (центрифуга, электролизёр, химреактор, резчик, …), провода 8x+ | `GT_Loader_MetaTileEntities` | — | следующие блоки LV (D42) | — |

@@ -1,0 +1,17 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/lead",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_lead_2x",
+      "count": 1
+    }
+  ],
+  "duration": 150,
+  "eut": 8
+}

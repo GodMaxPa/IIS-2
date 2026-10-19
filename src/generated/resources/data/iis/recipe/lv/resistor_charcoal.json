@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    "FCF",
+    " P "
+  ],
+  "key": {
+    "P": "minecraft:paper",
+    "F": "#iis:fine_wires/copper",
+    "C": "#c:dusts/charcoal"
+  },
+  "result": {
+    "id": "iis:resistor",
+    "count": 3
+  }
+}

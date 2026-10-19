@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/platinum",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_platinum",
+      "count": 4
+    }
+  ],
+  "duration": 195,
+  "eut": 24
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCC",
+    "MSM",
+    "PES"
+  ],
+  "key": {
+    "S": "#c:rods/steel",
+    "M": "iis:electric_motor_lv",
+    "P": "iis:electric_piston_lv",
+    "E": "#c:circuits/basic",
+    "C": "#iis:cables/1x/tin"
+  },
+  "result": {
+    "id": "iis:robot_arm_lv"
+  }
+}

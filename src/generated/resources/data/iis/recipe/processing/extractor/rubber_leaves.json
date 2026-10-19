@@ -1,0 +1,17 @@
+{
+  "type": "iis:extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:rubber_leaves",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_raw_rubber",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

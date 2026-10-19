@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "Px"
+  ],
+  "key": {
+    "P": "#c:plates/lead",
+    "x": "#iis:tools/wire_cutter"
+  },
+  "result": {
+    "id": "iis:wire_lead_1x"
+  }
+}

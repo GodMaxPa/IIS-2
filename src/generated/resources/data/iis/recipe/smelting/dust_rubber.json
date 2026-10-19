@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "#c:dusts/rubber",
+  "result": {
+    "id": "iis:ingot_rubber"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

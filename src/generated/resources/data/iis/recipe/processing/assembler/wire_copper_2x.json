@@ -1,0 +1,17 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/copper",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_copper_2x",
+      "count": 1
+    }
+  ],
+  "duration": 150,
+  "eut": 8
+}

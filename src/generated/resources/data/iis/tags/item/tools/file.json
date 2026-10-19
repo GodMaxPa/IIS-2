@@ -21,6 +21,7 @@
     "iis:file_invar",
     "iis:file_iridium",
     "iis:file_iron",
+    "iis:file_iron_magnetic",
     "iis:file_manganese",
     "iis:file_molybdenum",
     "iis:file_neodymium",
@@ -30,12 +31,15 @@
     "iis:file_opal",
     "iis:file_palladium",
     "iis:file_platinum",
+    "iis:file_rubber",
     "iis:file_ruby",
     "iis:file_sapphire",
     "iis:file_silver",
     "iis:file_steel",
+    "iis:file_steel_magnetic",
     "iis:file_tanzanite",
     "iis:file_tin_alloy",
-    "iis:file_topaz"
+    "iis:file_topaz",
+    "iis:file_wrought_iron"
   ]
 }

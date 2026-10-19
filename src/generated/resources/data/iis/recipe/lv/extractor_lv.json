@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GCG",
+    "PMU",
+    "WCW"
+  ],
+  "key": {
+    "G": "minecraft:glass",
+    "C": "#c:circuits/basic",
+    "P": "iis:electric_piston_lv",
+    "M": "iis:hull_lv",
+    "U": "iis:electric_pump_lv",
+    "W": "#iis:cables/1x/tin"
+  },
+  "result": {
+    "id": "iis:extractor_lv"
+  }
+}

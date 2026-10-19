@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/rubber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_rubber",
+      "count": 1
+    }
+  ],
+  "duration": 5,
+  "eut": 24
+}

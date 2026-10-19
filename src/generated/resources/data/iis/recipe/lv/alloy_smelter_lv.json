@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "COC",
+    "OMO",
+    "WOW"
+  ],
+  "key": {
+    "C": "#c:circuits/basic",
+    "O": "#iis:wires/4x/copper",
+    "W": "#iis:cables/1x/tin",
+    "M": "iis:hull_lv"
+  },
+  "result": {
+    "id": "iis:alloy_smelter_lv"
+  }
+}

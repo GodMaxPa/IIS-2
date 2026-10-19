@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SXO",
+    "dPw",
+    "OMW"
+  ],
+  "key": {
+    "M": "iis:electric_motor_lv",
+    "O": "#iis:rings/rubber",
+    "X": "#iis:rotors/tin",
+    "S": "#iis:screws/tin",
+    "W": "#iis:cables/1x/tin",
+    "P": "iis:pipe_medium_bronze",
+    "d": "#iis:tools/screwdriver",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:electric_pump_lv"
+  }
+}

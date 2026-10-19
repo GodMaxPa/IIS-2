@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "iis:block/cable/insulation",
+    "side": "iis:block/cable/insulation",
+    "end": "iis:block/cable/cable_red_alloy_2x_end"
+  },
+  "elements": [
+    {
+      "from": [
+        5.0,
+        5.0,
+        5.0
+      ],
+      "to": [
+        11.0,
+        11.0,
+        11.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#end"
+        },
+        "south": {
+          "texture": "#end"
+        },
+        "east": {
+          "texture": "#end"
+        },
+        "west": {
+          "texture": "#end"
+        },
+        "up": {
+          "texture": "#end"
+        },
+        "down": {
+          "texture": "#end"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "iis:cable_red_alloy_1x",
+    "iis:cable_red_alloy_2x",
+    "iis:cable_red_alloy_4x",
+    "iis:cable_lead_1x",
+    "iis:cable_lead_2x",
+    "iis:cable_lead_4x",
+    "iis:cable_tin_1x",
+    "iis:cable_tin_2x",
+    "iis:cable_tin_4x",
+    "iis:cable_copper_1x",
+    "iis:cable_copper_2x",
+    "iis:cable_copper_4x",
+    "iis:cable_annealed_copper_1x",
+    "iis:cable_annealed_copper_2x",
+    "iis:cable_annealed_copper_4x"
+  ]
+}

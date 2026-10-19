@@ -1,6 +1,6 @@
 # Передача дел (для следующей сессии ИИ)
 
-Обновлено: 2026-10-18, конец среза 3 «Пар».
+Обновлено: 2026-10-19, срез 4 «LV» (ядро + первые машины).
 
 ## Где мы
 - Срезы 1–3 сделаны в облаке. Владелец проверил в игре только загрузку мода (срез 2). Срез 3 он ещё не видел.
@@ -23,11 +23,20 @@ scripts/showcase.sh steam                # скриншот всех паров�
 - Рецепты отправляются клиенту (`OnDatapackSyncEvent.sendRecipes`) — для JEI.
 - GameTest: `ru.iis.gametest.IISGameTests`, площадка `data/iis/structure/floor9.nbt` (создаёт `tools/gen/gametest_structures.py`).
 
+## Устройство среза 4 (LV)
+- Чистая логика: `ru.iis.energy.logic` (`EnergyNet`, `EnergyStorage`, `CableState`, `GeneratorLogic`), `machine.logic.ElectricMachineLogic`; связь с миром — `energy.WorldEnergy`.
+- Блоки: `ru.iis.lv.block` (провода `CableBlock`, база `ElectricBlockEntity` с опасностями и взрывами, машины, генераторы, буфер, трансформатор, коксовая печь, каучуковое бревно), регистрация — `ru.iis.lv.LvContent`.
+- Подключение проводов: блок реализует `EnergyConnectable`, блок-сущность — `EuNode` (D46).
+- Взрывы — в конце тика (`lv.Deferred`, D48). Опасности выключаются в `serverconfig/iis-server.toml` (`IISConfig`, D47).
+- Данные — `tools/gen/lv.py` (вызывается из `gen_content.py`), каталоги в Java сверяет `LvDataTest`.
+
 ## Ловушки
+- Не запускать gradle (даже compileJava), пока идёт `scripts/showcase.sh`: клиент берёт классы из build и падает (`ClassNotFoundException`).
+- `FluidStack.CODEC` нельзя использовать в рецептах — жидкие выходы через `FluidOutput` (D49).
 - Пакет данных GUI — short: не передавать в `ContainerData` числа больше 32767 (прогресс доменной печи — в тысячных).
 - `register_repo_root` в облаке падает из-за пути — не мешает.
 - Папка mods у владельца общая для ИИС 1.7.10 и NeoForge 26.1.2 — jar кладём в `forServerClient\mods` и в `Downloads\IIS2`.
 - JEI нужен в клиенте владельца отдельно (jar JEI 29.47.0.111 для 26.1.2) — мод без него работает.
 
 ## Следующее
-Срез 4 «LV»: EU-сеть и кабели с потерями, генераторы, LV-машины, схемы и резина, коксовая печь (D29). Перед началом — вопросы владельцу.
+Остальные LV-машины и провода, мультиметр (наглядность), коксовые варианты доменной печи; затем первый срез биопути (D39). Ждём отзыв владельца по LV в игре.

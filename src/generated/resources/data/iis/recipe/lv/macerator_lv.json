@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PED",
+    "WWM",
+    "CCW"
+  ],
+  "key": {
+    "P": "iis:electric_piston_lv",
+    "E": "iis:electric_motor_lv",
+    "D": "minecraft:diamond",
+    "W": "#iis:cables/1x/tin",
+    "M": "iis:hull_lv",
+    "C": "#c:circuits/basic"
+  },
+  "result": {
+    "id": "iis:macerator_lv"
+  }
+}

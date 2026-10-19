@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/lead",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_lead",
+      "count": 1
+    }
+  ],
+  "duration": 207,
+  "eut": 24
+}

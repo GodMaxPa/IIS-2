@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "Px"
+  ],
+  "key": {
+    "P": "#c:plates/annealed_copper",
+    "x": "#iis:tools/wire_cutter"
+  },
+  "result": {
+    "id": "iis:wire_annealed_copper_1x"
+  }
+}

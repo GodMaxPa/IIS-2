@@ -1,0 +1,33 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_lv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:electric_piston_lv",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:rods/steel",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:circuits/basic",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:cables/1x/tin",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:robot_arm_lv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 30
+}

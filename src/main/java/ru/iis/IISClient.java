@@ -53,17 +53,24 @@ public final class IISClient {
             int rgb = m != null ? m.color() : b.get().spec.color();
             event.register(List.of(BlockTintSources.constant(0xFF000000 | rgb)), b.get());
         });
+        event.register(List.of(BlockTintSources.constant(0xFF5F8F3F)), ru.iis.lv.LvContent.RUBBER_LEAVES.get());
     }
 
     private static void registerScreens(RegisterMenuScreensEvent event) {
         event.register(IISMachines.BOILER_MENU.get(), BoilerScreen::new);
         event.register(IISMachines.STEAM_MACHINE_MENU.get(), SteamMachineScreen::new);
         event.register(IISMachines.BBF_MENU.get(), BbfScreen::new);
+        event.register(ru.iis.lv.LvContent.ELECTRIC_MACHINE_MENU.get(), ru.iis.lv.client.ElectricMachineScreen::new);
+        event.register(ru.iis.lv.LvContent.GENERATOR_MENU.get(), ru.iis.lv.client.GeneratorScreen::new);
+        event.register(ru.iis.lv.LvContent.BATTERY_BUFFER_MENU.get(), ru.iis.lv.client.BatteryBufferScreen::new);
+        event.register(ru.iis.lv.LvContent.COKE_OVEN_MENU.get(), ru.iis.lv.client.CokeOvenScreen::new);
     }
 
     private static void registerFluidModels(RegisterFluidModelsEvent event) {
         Material steam = new Material(Identifier.fromNamespaceAndPath(IIS.MODID, "block/fluid/steam"));
         event.register(new FluidModel.Unbaked(steam, steam, null, (FluidTintSource) null), IISFluids.STEAM, IISFluids.STEAM_FLOWING);
+        Material creosote = new Material(Identifier.fromNamespaceAndPath(IIS.MODID, "block/fluid/creosote"));
+        event.register(new FluidModel.Unbaked(creosote, creosote, null, (FluidTintSource) null), IISFluids.CREOSOTE, IISFluids.CREOSOTE_FLOWING);
     }
 
     /** Строки описания из перевода: block.iis.<id>.tooltip.0, .1, ... (генерирует tools/gen/steam.py из GregTech.lang.ru). */

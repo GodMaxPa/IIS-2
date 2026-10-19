@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PhP",
+    "SRf",
+    "PdP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "R": "#iis:rings/steel",
+    "S": "#iis:screws/steel",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:rotor_steel"
+  }
+}

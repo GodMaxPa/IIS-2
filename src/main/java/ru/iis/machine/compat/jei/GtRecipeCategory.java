@@ -26,7 +26,7 @@ public class GtRecipeCategory extends AbstractRecipeCategory<RecipeHolder<GtReci
     private final GtRecipeMap map;
 
     public GtRecipeCategory(IRecipeHolderType<GtRecipe> type, GtRecipeMap map, IGuiHelper gui, ItemLike icon) {
-        super(type, Component.translatable("jei.iis." + map.id), gui.createDrawableItemLike(icon), 150, 64);
+        super(type, Component.translatable("jei.iis." + map.id), gui.createDrawableItemLike(icon), 150, 78);
         this.map = map;
     }
 
@@ -36,9 +36,19 @@ public class GtRecipeCategory extends AbstractRecipeCategory<RecipeHolder<GtReci
         List<SizedIngredient> in = r.inputs();
         for (int i = 0; i < in.size(); i++) {
             SizedIngredient s = in.get(i);
-            int x = map == GtRecipeMap.PRIMITIVE_BLAST ? 4 : 4 + 18 * i, y = map == GtRecipeMap.PRIMITIVE_BLAST ? 1 + 18 * i : 19;
+            boolean grid = in.size() > 3;
+            int x = map == GtRecipeMap.PRIMITIVE_BLAST ? 4 : grid ? 4 + 18 * (i % 3) : 4 + 18 * i;
+            int y = map == GtRecipeMap.PRIMITIVE_BLAST ? 1 + 18 * i : grid ? 10 + 18 * (i / 3) : 19;
             builder.addInputSlot(x, y).setStandardSlotBackground()
                     .addItemStacks(s.ingredient().items().map((Holder<Item> h) -> new ItemStack(h, s.count())).toList());
+        }
+        // жидкости: вход под стрелкой, выход под выходами
+        for (var f : r.fluidInputs()) {
+            var slot = builder.addInputSlot(62, 41).setStandardSlotBackground();
+            for (var h : f.ingredient().fluids()) slot.add(h.value(), (long) f.amount());
+        }
+        for (var f : r.fluidOutputs()) {
+            builder.addOutputSlot(90, 41).setOutputSlotBackground().add(f.fluid(), (long) f.amount());
         }
         List<ChanceOutput> out = r.outputs();
         for (int i = 0; i < out.size(); i++) {
@@ -56,11 +66,11 @@ public class GtRecipeCategory extends AbstractRecipeCategory<RecipeHolder<GtReci
         GtRecipe r = holder.value();
         builder.addAnimatedRecipeArrowWidget(Math.max(20, r.duration() / 4)).setPosition(62, 19);
         String seconds = String.format(java.util.Locale.ROOT, "%.1f", r.duration() / 20.0);
-        if (map == GtRecipeMap.PRIMITIVE_BLAST) {
+        if (map == GtRecipeMap.PRIMITIVE_BLAST || map == GtRecipeMap.COKE_OVEN) {
             builder.addText(Component.translatable("jei.iis.duration", seconds), 90, 10).setPosition(62, 46);
         } else {
             builder.addText(List.of(Component.translatable("jei.iis.eut", r.eut(), 2 * r.eut()),
-                    Component.translatable("jei.iis.duration", seconds)), 150, 20).setPosition(0, 42);
+                    Component.translatable("jei.iis.duration", seconds)), 150, 20).setPosition(0, 58);
         }
     }
 }

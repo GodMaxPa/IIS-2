@@ -125,7 +125,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     // Minecraft's own libraries are not on the plain unit-test runtime classpath
-    testRuntimeOnly 'com.google.code.gson:gson:2.13.2'
+    testImplementation 'com.google.code.gson:gson:2.13.2'
 
     // JEI: optional. API at compile time, full mod only in the dev runs (not a dependency of the jar)
     compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"

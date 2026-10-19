@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/wire_cutter_tin_alloy",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13158600
+      }
+    ]
+  }
+}

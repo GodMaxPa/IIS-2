@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PCP",
+    "RMR",
+    "EWE"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "E": "iis:electric_motor_lv",
+    "R": "#iis:rotors/tin",
+    "C": "#c:circuits/basic",
+    "W": "#iis:cables/1x/tin",
+    "P": "iis:pipe_medium_bronze"
+  },
+  "result": {
+    "id": "iis:steam_turbine_lv"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PwP",
+    "CMC",
+    "EWE"
+  ],
+  "key": {
+    "P": "iis:electric_piston_lv",
+    "C": "#c:circuits/basic",
+    "M": "iis:hull_lv",
+    "E": "iis:electric_motor_lv",
+    "W": "#iis:cables/1x/tin",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:bender_lv"
+  }
+}

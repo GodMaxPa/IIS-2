@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "PwP",
+    "PPP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:casing_lv"
+  }
+}

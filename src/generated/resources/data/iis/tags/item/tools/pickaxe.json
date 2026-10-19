@@ -21,6 +21,7 @@
     "iis:pickaxe_invar",
     "iis:pickaxe_iridium",
     "iis:pickaxe_iron",
+    "iis:pickaxe_iron_magnetic",
     "iis:pickaxe_manganese",
     "iis:pickaxe_molybdenum",
     "iis:pickaxe_neodymium",
@@ -30,12 +31,15 @@
     "iis:pickaxe_opal",
     "iis:pickaxe_palladium",
     "iis:pickaxe_platinum",
+    "iis:pickaxe_rubber",
     "iis:pickaxe_ruby",
     "iis:pickaxe_sapphire",
     "iis:pickaxe_silver",
     "iis:pickaxe_steel",
+    "iis:pickaxe_steel_magnetic",
     "iis:pickaxe_tanzanite",
     "iis:pickaxe_tin_alloy",
-    "iis:pickaxe_topaz"
+    "iis:pickaxe_topaz",
+    "iis:pickaxe_wrought_iron"
   ]
 }

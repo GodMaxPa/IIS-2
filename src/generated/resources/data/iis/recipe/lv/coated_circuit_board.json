@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " R ",
+    "PPP",
+    " R "
+  ],
+  "key": {
+    "P": "#c:plates/wood",
+    "R": "iis:sticky_resin"
+  },
+  "result": {
+    "id": "iis:coated_circuit_board",
+    "count": 3
+  }
+}

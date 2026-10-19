@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ShS"
+  ],
+  "key": {
+    "S": "#c:rods/molybdenum",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:long_rod_molybdenum"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/annealed_copper",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/rubber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_annealed_copper_1x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

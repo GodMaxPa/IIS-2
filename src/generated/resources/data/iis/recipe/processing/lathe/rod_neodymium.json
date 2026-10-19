@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/neodymium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_neodymium",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_neodymium",
+      "count": 2
+    }
+  ],
+  "duration": 720,
+  "eut": 16
+}

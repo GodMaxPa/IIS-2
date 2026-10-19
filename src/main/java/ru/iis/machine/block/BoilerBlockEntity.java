@@ -223,6 +223,9 @@ public class BoilerBlockEntity extends BaseContainerBlockEntity implements Machi
 
     private record Fuel(int energy, int ashChance, boolean darkAsh) {}
 
+    private static final net.minecraft.tags.TagKey<net.minecraft.world.item.Item> COKE = net.minecraft.tags.TagKey.create(
+            net.minecraft.core.registries.Registries.ITEM, net.minecraft.resources.Identifier.fromNamespaceAndPath(ru.iis.IIS.MODID, "fuels/coke"));
+
     private static @Nullable Fuel fuelOf(ItemStack s) {
         for (String form : new String[]{"gem/coal", "dust/coal", "impure_dust/coal", "crushed/coal"}) {
             if (is(s, form)) return new Fuel(160, 3, true);
@@ -230,6 +233,8 @@ public class BoilerBlockEntity extends BaseContainerBlockEntity implements Machi
         for (String form : new String[]{"gem/charcoal", "dust/charcoal", "impure_dust/charcoal", "crushed/charcoal"}) {
             if (is(s, form)) return new Fuel(160, 3, false);
         }
+        // GT_MetaTileEntity_Boiler_Bronze: "fuelCoke" — 640, пепел 1/2 (кокс коксовой печи, тег iis:fuels/coke)
+        if (s.is(COKE)) return new Fuel(640, 2, false);
         for (String form : new String[]{"gem/lignite", "dust/lignite", "impure_dust/lignite", "crushed/lignite"}) {
             if (is(s, form)) return new Fuel(120, 8, true);
         }

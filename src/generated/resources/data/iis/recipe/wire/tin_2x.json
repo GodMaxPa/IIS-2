@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/tin",
+    "#iis:wires/1x/tin"
+  ],
+  "result": {
+    "id": "iis:wire_tin_2x"
+  }
+}

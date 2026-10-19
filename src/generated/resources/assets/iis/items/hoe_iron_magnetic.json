@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/hoe_iron_magnetic",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6566400
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 13158600
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "iis:blocks/battery_buffer_2x2_lv",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "iis:battery_buffer_2x2_lv"
+        }
+      ]
+    }
+  ]
+}

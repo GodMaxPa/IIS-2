@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/copper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_copper",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_copper",
+      "count": 2
+    }
+  ],
+  "duration": 315,
+  "eut": 16
+}

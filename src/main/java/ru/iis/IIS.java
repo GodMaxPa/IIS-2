@@ -28,6 +28,7 @@ public final class IIS {
 
     public IIS(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
+        modContainer.registerConfig(net.neoforged.fml.config.ModConfig.Type.SERVER, IISConfig.SPEC);
         OreBlocks.register(modEventBus);
         IISWorldgen.register(modEventBus);
         MaterialItems.register(modEventBus);
@@ -35,6 +36,7 @@ public final class IIS {
         GtTools.register(modEventBus);
         IISFluids.register(modEventBus);
         IISMachines.register(modEventBus);
+        ru.iis.lv.LvContent.register(modEventBus);
         GtRecipes.register(modEventBus, NeoForge.EVENT_BUS);
         ru.iis.gametest.IISGameTests.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(HammerDrops::onBlockDrops);

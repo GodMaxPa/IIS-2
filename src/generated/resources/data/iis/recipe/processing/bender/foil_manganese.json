@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/manganese",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_manganese",
+      "count": 4
+    }
+  ],
+  "duration": 55,
+  "eut": 24
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/annealed_copper",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_annealed_copper",
+      "count": 2
+    }
+  ],
+  "duration": 63,
+  "eut": 16
+}

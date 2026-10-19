@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PhP",
+    "SRf",
+    "PdP"
+  ],
+  "key": {
+    "P": "#c:plates/iridium",
+    "R": "#iis:rings/iridium",
+    "S": "#iis:screws/iridium",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:rotor_iridium"
+  }
+}

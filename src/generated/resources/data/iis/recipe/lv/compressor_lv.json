@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " C ",
+    "PMP",
+    "WCW"
+  ],
+  "key": {
+    "C": "#c:circuits/basic",
+    "P": "iis:electric_piston_lv",
+    "M": "iis:hull_lv",
+    "W": "#iis:cables/1x/tin"
+  },
+  "result": {
+    "id": "iis:compressor_lv"
+  }
+}

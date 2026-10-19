@@ -1,0 +1,27 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/clay",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:sands",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wet_coke_oven_brick",
+      "count": 1
+    }
+  ],
+  "duration": 20,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 100
+    }
+  ]
+}

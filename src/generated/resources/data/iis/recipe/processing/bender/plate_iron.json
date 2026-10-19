@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_iron",
+      "count": 1
+    }
+  ],
+  "duration": 56,
+  "eut": 24
+}

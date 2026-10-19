@@ -1,0 +1,34 @@
+{
+  "diesel": {
+    "biodiesel": 192,
+    "biofuel": 6,
+    "coalfuel": 16,
+    "ethanol": 148,
+    "fuel": 256,
+    "gasoline": 384,
+    "highoctanegasoline": 768,
+    "lightfuel": 256,
+    "methanol": 32,
+    "nitrocoalfuel": 48,
+    "nitrofuel": 512,
+    "sulfuriclightfuel": 32
+  },
+  "gas": {
+    "benzene": 288,
+    "butane": 296,
+    "carbonmonoxide": 24,
+    "ethane": 168,
+    "gas": 128,
+    "hydrogen": 20,
+    "lpg": 256,
+    "methane": 104,
+    "naphtha": 256,
+    "natruralgas": 15,
+    "phenol": 288,
+    "propane": 232,
+    "sulfuricgas": 20,
+    "sulfuricnaphtha": 32,
+    "toluene": 328,
+    "woodgas": 24
+  }
+}

@@ -21,6 +21,7 @@
     "iis:screwdriver_invar",
     "iis:screwdriver_iridium",
     "iis:screwdriver_iron",
+    "iis:screwdriver_iron_magnetic",
     "iis:screwdriver_manganese",
     "iis:screwdriver_molybdenum",
     "iis:screwdriver_neodymium",
@@ -30,12 +31,15 @@
     "iis:screwdriver_opal",
     "iis:screwdriver_palladium",
     "iis:screwdriver_platinum",
+    "iis:screwdriver_rubber",
     "iis:screwdriver_ruby",
     "iis:screwdriver_sapphire",
     "iis:screwdriver_silver",
     "iis:screwdriver_steel",
+    "iis:screwdriver_steel_magnetic",
     "iis:screwdriver_tanzanite",
     "iis:screwdriver_tin_alloy",
-    "iis:screwdriver_topaz"
+    "iis:screwdriver_topaz",
+    "iis:screwdriver_wrought_iron"
   ]
 }

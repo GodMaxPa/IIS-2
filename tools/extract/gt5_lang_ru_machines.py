@@ -2,8 +2,8 @@
 """Extract Russian names of steam-age machines, pipes, casings and machine descriptions from the IIS pack's GregTech.lang.ru.
 Usage: gt5_lang_ru_machines.py <GregTech.lang.ru> <out.json>"""
 import json, re, sys
-KEEP = re.compile(r'^(gt\.blockmachines\.(boiler|bronzemachine|steelmachine|hull|gt_pipe|multimachine\.brickedblastfurnace)[^=]*'
-                  r'|TileEntity_DESCRIPTION_1[0-3][0-9]_Index_\d+|gt\.blockcasings4\.15\.name|gt\.metaitem\.01\.3211[01]\.name|fluid\.steam)$')
+KEEP = re.compile(r'^(gt\.blockmachines\.[^=]*\.name|gt\.blockcasings[0-9]*\.\d+\.name'
+                  r'|TileEntity_DESCRIPTION_\d+_Index_\d+|gt\.metaitem\.0[13]\.3?\d+\.(name|tooltip)|fluid\.[a-z._]+)$')
 out = {}
 for line in open(sys.argv[1], encoding='utf-8', errors='replace'):
     m = re.match(r'\s*S:"?([^"=]+)"?=(.*)$', line.rstrip('\r\n'))

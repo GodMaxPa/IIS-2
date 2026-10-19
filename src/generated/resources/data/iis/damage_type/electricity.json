@@ -1,0 +1,5 @@
+{
+  "message_id": "iis.electricity",
+  "exhaustion": 0.1,
+  "scaling": "never"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/bronze",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_bronze",
+      "count": 4
+    }
+  ],
+  "duration": 76,
+  "eut": 24
+}

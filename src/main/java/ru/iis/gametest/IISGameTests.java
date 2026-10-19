@@ -41,7 +41,11 @@ public final class IISGameTests {
     public static final DeferredRegister<Consumer<GameTestHelper>> FUNCTIONS = DeferredRegister.create(Registries.TEST_FUNCTION, IIS.MODID);
     private static final Identifier FLOOR = Identifier.fromNamespaceAndPath(IIS.MODID, "floor9");
 
-    private record Test(String name, int maxTicks, Consumer<GameTestHelper> fn) {}
+    private record Test(String name, int maxTicks, Consumer<GameTestHelper> fn, boolean sky) {
+        Test(String name, int maxTicks, Consumer<GameTestHelper> fn) {
+            this(name, maxTicks, fn, false);
+        }
+    }
 
     private static final List<Test> TESTS = List.of(
             new Test("boiler_feeds_macerator", 1600, IISGameTests::boilerFeedsMacerator),
@@ -51,6 +55,15 @@ public final class IISGameTests {
             new Test("steam_furnace", 400, IISGameTests::steamFurnace),
             new Test("bricked_blast_furnace_starts", 100, IISGameTests::bbfStarts),
             new Test("dry_boiler_explodes", 200, IISGameTests::dryBoilerExplodes),
+            new Test("lv_turbine_powers_macerator", 1400, LvGameTests::turbinePowersMacerator),
+            new Test("lv_overvoltage_explodes", 100, LvGameTests::overvoltageExplodes),
+            new Test("lv_cable_burns", 200, LvGameTests::cableBurns),
+            new Test("lv_water_explodes", 1100, LvGameTests::waterExplodes),
+            new Test("lv_bare_wire_shocks", 200, LvGameTests::bareWireShocks),
+            new Test("lv_buffer_charges_battery", 200, LvGameTests::bufferChargesBattery),
+            new Test("lv_coke_oven", 2000, LvGameTests::cokeOven),
+            new Test("lv_ore_washer", 700, LvGameTests::oreWasher),
+            new Test("lv_rubber_tree", 20, LvGameTests::rubberTree, true), // дереву нужен открытый верх (без потолка теста)
             new Test("selftest", 20, h -> {
                 h.assertTrue(SelfTest.runSilently(h.getLevel()), "selftest failed, see log");
                 h.succeed();
@@ -71,7 +84,7 @@ public final class IISGameTests {
         for (Test t : TESTS) {
             Identifier id = Identifier.fromNamespaceAndPath(IIS.MODID, t.name);
             event.registerTest(id, new FunctionGameTestInstance(ResourceKey.create(Registries.TEST_FUNCTION, id),
-                    new TestData<>(env, FLOOR, t.maxTicks, 0, true)));
+                    new TestData<>(env, FLOOR, t.maxTicks, 0, true, net.minecraft.world.level.block.Rotation.NONE, false, 1, 1, t.sky, 0)));
         }
     }
 

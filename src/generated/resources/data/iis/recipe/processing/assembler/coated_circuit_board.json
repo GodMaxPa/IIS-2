@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/wood",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:sticky_resin",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:coated_circuit_board",
+      "count": 8
+    }
+  ],
+  "duration": 160,
+  "eut": 8
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PII",
+    "f h"
+  ],
+  "key": {
+    "P": "#c:plates/wrought_iron",
+    "I": "#c:ingots/wrought_iron",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:pickaxe_head_wrought_iron"
+  }
+}

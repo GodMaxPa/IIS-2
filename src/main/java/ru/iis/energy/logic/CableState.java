@@ -16,6 +16,11 @@ public final class CableState {
     /** Провод перегрелся — его нужно сжечь. */
     public boolean burnt;
 
+    /** Тик последнего пакета через провод. */
+    public long lastTick() {
+        return lastTick;
+    }
+
     public void touch(long tick) {
         if (tick == lastTick) return;
         if (lastTick != Long.MIN_VALUE) overheat = (int) Math.max(0, overheat - Math.min(Integer.MAX_VALUE, tick - lastTick));

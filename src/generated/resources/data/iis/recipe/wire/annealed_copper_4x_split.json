@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/4x/annealed_copper"
+  ],
+  "result": {
+    "id": "iis:wire_annealed_copper_1x",
+    "count": 4
+  }
+}

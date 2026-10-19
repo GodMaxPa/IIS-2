@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_gold",
+      "count": 1
+    }
+  ],
+  "duration": 196,
+  "eut": 24
+}

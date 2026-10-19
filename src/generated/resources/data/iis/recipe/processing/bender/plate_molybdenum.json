@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/molybdenum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_molybdenum",
+      "count": 1
+    }
+  ],
+  "duration": 95,
+  "eut": 24
+}

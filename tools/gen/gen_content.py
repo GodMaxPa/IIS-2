@@ -127,6 +127,9 @@ names |= {'Bronze', 'Flint', 'Wood'}
 # Steam age (slice 3): steel, alloy-smelter alloys and their inputs, boiler/blast-furnace byproducts, firebrick chain
 names |= {'Steel', 'DarkAsh', 'Ash', 'Brick', 'Clay', 'Fireclay', 'RawRubber', 'Brass', 'Cupronickel', 'Invar',
           'TinAlloy', 'Electrum', 'RedAlloy', 'Charcoal', 'Ferrosilite'}
+# LV (slice 4): wire and cable metals, magnetic rods, rubber, circuit and battery materials
+names |= {'Tin', 'Lead', 'Copper', 'AnnealedCopper', 'WroughtIron', 'Rubber', 'IronMagnetic', 'SteelMagnetic', 'Glass',
+          'Sulfur', 'Paper', 'SolderingAlloy', 'Antimony', 'BatteryAlloy'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64
@@ -147,6 +150,13 @@ PREFIXES = [
     ('bolt',          'bolt',             B_METAL | B_GEM,         '01', 26, '{} Bolt',                 'iis:bolts'),
     ('screw',         'screw',            B_METAL | B_GEM,         '01', 27, '{} Screw',                'iis:screws'),
     ('ring',          'ring',             B_METAL,                 '01', 28, '{} Ring',                 'iis:rings'),
+    # LV components (GT5 GT_MetaGenerated_Item_01/02 prefix lists)
+    ('foil',          'foil',             B_METAL,                 '01', 29, '{} Foil',                 'iis:foils'),
+    ('wire_fine',     'wireFine',         B_METAL,                 '02', 19, 'Fine {} Wire',            'iis:fine_wires'),
+    ('small_gear',    'gearGtSmall',      B_METAL,                 '02', 20, 'Small {} Gear',           'iis:small_gears'),
+    ('rotor',         'rotor',            B_METAL,                 '02', 21, '{} Rotor',                'iis:rotors'),
+    ('long_rod',      'stickLong',        B_METAL,                 '02', 22, 'Long {} Rod',             'iis:long_rods'),
+    ('gear',          'gearGt',           B_METAL | B_GEM,         '02', 31, '{} Gear',                 'c:gears'),
 ]
 HEADS = [
     # id prefix        gt prefix            meta index, en template
@@ -164,7 +174,7 @@ VANILLA = {
     ('ingot', 'Copper'): 'minecraft:copper_ingot', ('nugget', 'Copper'): 'minecraft:copper_nugget',
     ('gem', 'Coal'): 'minecraft:coal', ('gem', 'Diamond'): 'minecraft:diamond', ('gem', 'Emerald'): 'minecraft:emerald',
     ('gem', 'Lapis'): 'minecraft:lapis_lazuli', ('gem', 'NetherQuartz'): 'minecraft:quartz',
-    ('gem', 'Flint'): 'minecraft:flint', ('gem', 'Charcoal'): 'minecraft:charcoal', ('dust', 'Redstone'): 'minecraft:redstone', ('rod', 'Wood'): 'minecraft:stick',
+    ('gem', 'Flint'): 'minecraft:flint', ('gem', 'Charcoal'): 'minecraft:charcoal', ('plate', 'Paper'): 'minecraft:paper', ('dust', 'Redstone'): 'minecraft:redstone', ('rod', 'Wood'): 'minecraft:stick',
 }
 NOT_GENERATED_MATERIALS = {'Wood'}  # wood forms (planks, sticks) are vanilla
 
@@ -183,10 +193,11 @@ TOOLS = {
     'screwdriver': dict(gt=22, block=200, craft=400, mult=1.0, speed=1.0,  head=None,           kind=None),
     'mortar':      dict(gt=24, block=50,  craft=400, mult=1.0, speed=1.0,  head=None,           kind=None),
     'knife':       dict(gt=34, block=100, craft=100, mult=1.0, speed=1.0,  head=None,           kind='sword'),
+    'wire_cutter': dict(gt=26, block=100, craft=400, mult=1.0, speed=1.25, head=None,           kind=None),
 }
 MORTAR_MATERIALS = ('Flint', 'Bronze', 'Iron')  # GT_MetaGenerated_Tool_01: flint/bronze/iron mortars (+steel later)
 # Crafting characters of GT tools
-TOOL_CHARS = {'h': 'hammer', 'f': 'file', 's': 'saw', 'm': 'mortar', 'w': 'wrench', 'd': 'screwdriver', 'k': 'knife'}
+TOOL_CHARS = {'h': 'hammer', 'f': 'file', 's': 'saw', 'm': 'mortar', 'w': 'wrench', 'd': 'screwdriver', 'k': 'knife', 'x': 'wire_cutter'}
 
 
 # GT5 OrePrefixes component whitelists (IIS MaterialComponents.cfg: all enableUnused* = false), extracted by tools/extract/gt5_components.py
@@ -512,6 +523,7 @@ TOOL_LAYERS = {
     'file': ('set:toolHeadFile', 'icon:HANDLE_FILE'), 'saw': ('set:toolHeadSaw', 'icon:HANDLE_SAW'),
     'screwdriver': ('set:toolHeadScrewdriver', 'icon:HANDLE_SCREWDRIVER'),
     'wrench': ('icon:WRENCH', None), 'mortar': ('icon:MORTAR', None), 'knife': ('icon:KNIFE', None),
+    'wire_cutter': ('icon:WIRE_CUTTER', None),
 }
 
 
@@ -723,6 +735,9 @@ for n in tool_mats:
         shaped(f'tool/wrench_{mid}', f'{NS}:wrench_{mid}', 1, ['IhI', 'III', ' I '], {'I': I}, 'equipment')
     if ref('rod', n):
         shaped(f'tool/screwdriver_{mid}', f'{NS}:screwdriver_{mid}', 1, [' fS', ' Sh', 'W  '], {'S': tag_of('rod', n), 'W': STICK}, 'equipment')
+    if has_plate and ref('rod', n) and ref('screw', n):  # ProcessingToolOther: wire cutter "PfP/hPd/STS"
+        shaped(f'tool/wire_cutter_{mid}', f'{NS}:wire_cutter_{mid}', 1, ['PfP', 'hPd', 'STS'],
+               {'P': P, 'S': tag_of('rod', n), 'T': tag_of('screw', n)}, 'equipment')
     if has_plate and ref('rod', n):
         shaped(f'tool/knife_{mid}', f'{NS}:knife_{mid}', 1, ['fPh', ' S '], {'P': P, 'S': tag_of('rod', n)}, 'equipment')
 for n in MORTAR_MATERIALS:
@@ -735,6 +750,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_steam', os.path.join(ROOT, 'tools'
 _steam = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_steam)
 steam_stats = _steam.generate(globals())
+# LV age content (slice 4)
+_spec = _ilu.spec_from_file_location('iis_gen_lv', os.path.join(ROOT, 'tools', 'gen', 'lv.py'))
+_lv = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_lv)
+lv_stats = _lv.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)
@@ -784,4 +804,4 @@ for n in ('overworld', 'large_biomes', 'amplified'):  # large noise-based iron/c
     write(os.path.join(OVR, 'data', 'minecraft', 'worldgen', 'noise_settings', n + '.json'), s)
 
 print(f'{len(materials)} materials, {len(ore_blocks)} ore blocks, {len(small_blocks)} small ore blocks, {len(veins)} veins, {len(items)} items, '
-      f'{len(tools)} tools ({", ".join(tool_mats)} + mortars), {len(recipes)} recipes; steam: {steam_stats}')
+      f'{len(tools)} tools ({", ".join(tool_mats)} + mortars), {len(recipes)} recipes; steam: {steam_stats}; lv: {lv_stats}')

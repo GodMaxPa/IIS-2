@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/bronze",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_bronze",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_bronze",
+      "count": 2
+    }
+  ],
+  "duration": 380,
+  "eut": 16
+}

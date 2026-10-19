@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GRG",
+    "GEG",
+    "CMC"
+  ],
+  "key": {
+    "G": "minecraft:glass",
+    "R": "#iis:rotors/tin",
+    "E": "iis:electric_motor_lv",
+    "C": "#c:circuits/basic",
+    "M": "iis:hull_lv"
+  },
+  "result": {
+    "id": "iis:mixer_lv"
+  }
+}

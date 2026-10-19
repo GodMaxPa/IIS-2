@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/electrum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_electrum",
+      "count": 1
+    }
+  ],
+  "duration": 151,
+  "eut": 24
+}

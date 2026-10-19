@@ -1,0 +1,17 @@
+{
+  "type": "iis:wiremill",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/red_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_red_alloy_1x",
+      "count": 2
+    }
+  ],
+  "duration": 100,
+  "eut": 4
+}

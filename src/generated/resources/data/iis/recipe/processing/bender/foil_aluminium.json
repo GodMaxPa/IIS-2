@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/aluminium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_aluminium",
+      "count": 4
+    }
+  ],
+  "duration": 26,
+  "eut": 24
+}

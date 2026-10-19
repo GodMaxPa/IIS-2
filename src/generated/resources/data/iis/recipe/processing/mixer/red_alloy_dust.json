@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/copper",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/redstone",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_red_alloy",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

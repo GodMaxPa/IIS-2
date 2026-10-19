@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/extractor_lv_side_active",
+    "north": "iis:block/lv/extractor_lv_front_active",
+    "south": "iis:block/lv/extractor_lv_back_active",
+    "east": "iis:block/lv/extractor_lv_side_active",
+    "west": "iis:block/lv/extractor_lv_side_active",
+    "up": "iis:block/lv/extractor_lv_top_active",
+    "down": "iis:block/lv/extractor_lv_bottom_active"
+  }
+}

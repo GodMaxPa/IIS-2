@@ -53,6 +53,15 @@ public final class GtRecipes {
         return recipes.byType(type(map));
     }
 
+    /** Используется ли жидкость во входах рецептов карты (GT: машина принимает только такие жидкости). */
+    public static boolean acceptsFluid(ServerLevel level, GtRecipeMap map, net.minecraft.world.level.material.Fluid fluid) {
+        net.neoforged.neoforge.fluids.FluidStack probe = new net.neoforged.neoforge.fluids.FluidStack(fluid, 1);
+        for (RecipeHolder<GtRecipe> h : all(level.recipeAccess().recipeMap(), map)) {
+            for (var f : h.value().fluidInputs()) if (f.ingredient().test(probe)) return true;
+        }
+        return false;
+    }
+
     /** Найденный рецепт и сколько забрать из каждого входного слота. */
     public record Match(RecipeHolder<GtRecipe> holder, int[] take) {
         public GtRecipe recipe() {
@@ -62,10 +71,19 @@ public final class GtRecipes {
 
     /** Первый подходящий рецепт карты (GT5: первый зарегистрированный подходящий), с ограничением по EU/t. */
     public static Optional<Match> find(ServerLevel level, GtRecipeMap map, List<ItemStack> inputs, IntPredicate eutAllowed) {
-        if (inputs.stream().allMatch(ItemStack::isEmpty)) return Optional.empty();
+        return find(level, map, inputs, null, eutAllowed);
+    }
+
+    /** То же с входным баком жидкости (миксер, промывка, сборщик). */
+    public static Optional<Match> find(ServerLevel level, GtRecipeMap map, List<ItemStack> inputs,
+                                       net.neoforged.neoforge.fluids.@org.jspecify.annotations.Nullable FluidStack tank, IntPredicate eutAllowed) {
+        boolean noItems = inputs.stream().allMatch(ItemStack::isEmpty);
+        if (noItems && (tank == null || tank.isEmpty())) return Optional.empty();
         for (RecipeHolder<GtRecipe> h : all(level.recipeAccess().recipeMap(), map)) {
             GtRecipe r = h.value();
             if (!eutAllowed.test(r.eut())) continue;
+            if (!r.fluidMatches(tank)) continue;
+            if (r.inputs().isEmpty() && noItems && r.fluidInputs().isEmpty()) continue;
             int[] take = r.allocate(inputs);
             if (take != null) return Optional.of(new Match(h, take));
         }

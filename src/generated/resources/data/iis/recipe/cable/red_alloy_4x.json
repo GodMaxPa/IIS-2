@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/4x/red_alloy",
+    "minecraft:paper",
+    "minecraft:paper"
+  ],
+  "result": {
+    "id": "iis:cable_red_alloy_4x"
+  }
+}

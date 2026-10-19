@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:rods/steel_magnetic",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:bolt_steel_magnetic",
+    "count": 2
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/annealed_copper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_annealed_copper",
+      "count": 1
+    }
+  ],
+  "duration": 63,
+  "eut": 24
+}

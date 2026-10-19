@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "Fx"
+  ],
+  "key": {
+    "F": "#iis:foils/annealed_copper",
+    "x": "#iis:tools/wire_cutter"
+  },
+  "result": {
+    "id": "iis:wire_fine_annealed_copper"
+  }
+}

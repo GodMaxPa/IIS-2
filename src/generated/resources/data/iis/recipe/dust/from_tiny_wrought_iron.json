@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/wrought_iron",
+    "#iis:tiny_dusts/wrought_iron",
+    "#iis:tiny_dusts/wrought_iron",
+    "#iis:tiny_dusts/wrought_iron",
+    "#iis:tiny_dusts/wrought_iron",
+    "#iis:tiny_dusts/wrought_iron",
+    "#iis:tiny_dusts/wrought_iron",
+    "#iis:tiny_dusts/wrought_iron",
+    "#iis:tiny_dusts/wrought_iron"
+  ],
+  "result": {
+    "id": "iis:dust_wrought_iron"
+  }
+}

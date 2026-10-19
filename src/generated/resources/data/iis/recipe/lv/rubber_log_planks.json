@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:rubber_log"
+  ],
+  "result": {
+    "id": "minecraft:jungle_planks",
+    "count": 3
+  }
+}

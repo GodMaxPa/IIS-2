@@ -43,9 +43,16 @@ public final class IISJeiPlugin implements IModPlugin {
             r.add(IISMachines.BRICKED_BLAST_FURNACE.get());
             return r;
         }
+        if (m == GtRecipeMap.COKE_OVEN) {
+            r.add(ru.iis.lv.LvContent.COKE_OVEN.get());
+            return r;
+        }
         for (SteamMachineType t : SteamMachineType.values()) {
             if (t.recipeMap != m) continue;
             for (SteamMachineType.Tier tier : SteamMachineType.Tier.values()) r.add(IISMachines.STEAM_MACHINES.get(t.blockId(tier)).get());
+        }
+        for (ru.iis.lv.LvMachineType t : ru.iis.lv.LvMachineType.values()) {
+            if (t.recipeMap == m) r.add(ru.iis.lv.LvContent.MACHINES.get(t).get());
         }
         return r;
     }
@@ -72,5 +79,6 @@ public final class IISJeiPlugin implements IModPlugin {
         for (SteamMachineType.Tier tier : SteamMachineType.Tier.values()) {
             registration.addCraftingStation(RecipeTypes.SMELTING, IISMachines.STEAM_MACHINES.get(SteamMachineType.FURNACE.blockId(tier)).get());
         }
+        registration.addCraftingStation(RecipeTypes.SMELTING, ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_FURNACE).get());
     }
 }

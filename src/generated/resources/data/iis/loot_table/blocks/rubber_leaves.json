@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "iis:blocks/rubber_leaves",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "iis:rubber_leaves",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": "minecraft:shears"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "iis:rubber_sapling",
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                },
+                {
+                  "condition": "minecraft:table_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "chances": [
+                    0.05,
+                    0.0625,
+                    0.083333336,
+                    0.1
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/neodymium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_neodymium",
+      "count": 1
+    }
+  ],
+  "duration": 144,
+  "eut": 24
+}

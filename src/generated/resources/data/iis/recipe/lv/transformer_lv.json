@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " BB",
+    "CM ",
+    " BB"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "C": "#iis:cables/1x/copper",
+    "B": "#iis:cables/1x/tin"
+  },
+  "result": {
+    "id": "iis:transformer_lv"
+  }
+}

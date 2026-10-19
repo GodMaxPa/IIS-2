@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/copper",
+      "count": 3
+    },
+    {
+      "ingredient": "#c:dusts/tin",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_bronze",
+      "count": 4
+    }
+  ],
+  "duration": 400,
+  "eut": 8
+}

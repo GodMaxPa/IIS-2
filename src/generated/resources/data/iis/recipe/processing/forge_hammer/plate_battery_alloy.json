@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/battery_alloy",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_battery_alloy",
+      "count": 2
+    }
+  ],
+  "duration": 189,
+  "eut": 16
+}
