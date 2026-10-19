@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "M",
+    "G"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:hatch_output_lv"
+  }
+}

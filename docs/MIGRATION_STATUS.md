@@ -20,7 +20,7 @@
 | Кирпичная доменная печь | `GT_MetaTileEntity_PrimitiveBlastFurnace` | `BbfStructure`, `BbfBlockEntity` | перенесено | T, G, C |
 | Огнеупорная цепочка | `GT_CraftingRecipeLoader`, `GT_MachineRecipeLoader` | `tools/gen/steam.py` | перенесено | S |
 | Просмотр рецептов | NEI | JEI-плагин `machine.compat.jei` | 14 категорий (с жидкостями) + печи как станции плавки | C |
-| Загрязнение | `GT_Pollution` | — | **не переносим** (D27) | — |
+| Загрязнение | `GT_Pollution` | `ru.iis.pollution` | перенесено (D53) | T, G (котёл) |
 | EU: запас, приём, выдача, взрывы | `BaseMetaTileEntity` | `energy.logic.EnergyStorage`, `lv.block.ElectricBlockEntity` | перенесено (взрыв в конце тика, D48) | T, G |
 | Провода и кабели | `GT_MetaPipeEntity_Cable`, `makeWires` | `energy.logic.EnergyNet`, `WorldEnergy`, `lv.block.CableBlock` | 5 материалов × 1x/2x/4x, провод и кабель | T, G, C |
 | Опасности (дождь, вода, огонь, гроза, удар током, сгорание, wirefire) | `BaseMetaTileEntity#updateEntity`, `GT_Utility#applyElectricityDamage` | `ElectricBlockEntity`, `CableBlock` | перенесено; переключатели в serverconfig (D47) | G (вода, перенапряжение, сгорание, удар) |
@@ -33,4 +33,8 @@
 | Каучук | IC2 (закрытый) → своя механика | `RubberLogBlock`, `TreetapItem`, worldgen | дерево, смола, краник, слизь | G (рост дерева) |
 | Коксовая печь | Railcraft + `RailCraft.zs` | `CokeOvenBlockEntity` | перенесено (числа Railcraft по памяти) | G, C |
 | Жидкость «креозот» | Railcraft / `Materials.Creosote` | `IISFluids.CREOSOTE` | с блоком и ведром | G |
+| Электрическая доменная печь | `GT_MetaTileEntity_ElectricBlastFurnace` | `multi.block.EbfBlockEntity`, `multi.logic.BlastLogic` | перенесено (константановые катушки) | T, G |
+| Люки LV, шины, обслуживание, выхлоп | `GT_MetaTileEntity_Hatch_*` | `multi.block.*` | перенесено | G |
+| Техобслуживание | `MultiBlockBase`, `Hatch_Maintenance` | `multi.logic.Maintenance` | перенесено (инструмент по люку) | T, G |
+| Киянка, монтировка, паяльник LV | `GT_Tool_SoftHammer/Crowbar`, `SOLDERING_IRON_LV` | инструменты GT, `multi.SolderingIronItem` | перенесено | S |
 | Остальные LV-машины (центрифуга, электролизёр, химреактор, резчик, …), провода 8x+ | `GT_Loader_MetaTileEntities` | — | следующие блоки LV (D42) | — |

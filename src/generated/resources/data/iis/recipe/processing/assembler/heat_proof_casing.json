@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/invar",
+      "count": 6
+    },
+    {
+      "ingredient": "#c:frames/invar",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:heat_proof_casing",
+      "count": 2
+    }
+  ],
+  "duration": 50,
+  "eut": 16
+}

@@ -75,11 +75,11 @@ public class BatteryBufferBlockEntity extends ElectricBlockEntity {
         batteries = 0;
         for (ItemStack s : items) {
             if (!(s.getItem() instanceof BatteryItem b) || b.tier > 1) continue;
-            batteries++;
+            if (b.isBattery()) batteries++;
             if (charge) {
                 long d = b.charge(s, energy.stored);
                 energy.stored -= d;
-            } else if (discharge && energy.stored < energy.capacity) {
+            } else if (discharge && b.isBattery() && energy.stored < energy.capacity) {
                 long d = b.discharge(s, Math.min(VOLTAGE, energy.capacity - energy.stored));
                 energy.stored += d;
             }

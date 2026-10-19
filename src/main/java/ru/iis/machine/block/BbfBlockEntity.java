@@ -97,6 +97,10 @@ public class BbfBlockEntity extends BaseContainerBlockEntity implements WorldlyC
             }
         }
         boolean active = formed && maxProgress > 0;
+        // GT_MetaTileEntity_PrimitiveBlastFurnace: 50 загрязнения в секунду, пока идёт плавка
+        if (maxProgress > 0 && sl.getGameTime() % 20 == 0) {
+            ru.iis.pollution.Pollution.add(sl, worldPosition, ru.iis.pollution.PollutionLogic.BRICKED_BLAST_FURNACE);
+        }
         BlockState st = getBlockState();
         if (st.getValue(MachineBlock.ACTIVE) != active) {
             sl.setBlock(worldPosition, st.setValue(MachineBlock.ACTIVE, active), 3);

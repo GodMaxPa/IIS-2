@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/4x/cupronickel",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/rubber",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_cupronickel_4x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

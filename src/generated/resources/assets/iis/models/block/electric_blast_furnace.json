@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/heat_proof_casing",
+    "north": "iis:block/multi/electric_blast_furnace_front",
+    "south": "iis:block/multi/heat_proof_casing",
+    "east": "iis:block/multi/heat_proof_casing",
+    "west": "iis:block/multi/heat_proof_casing",
+    "up": "iis:block/multi/heat_proof_casing",
+    "down": "iis:block/multi/heat_proof_casing"
+  }
+}

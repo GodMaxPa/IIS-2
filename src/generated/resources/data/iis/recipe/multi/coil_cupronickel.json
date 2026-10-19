@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "PwP",
+    "PPP"
+  ],
+  "key": {
+    "P": "#iis:wires/2x/cupronickel",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:coil_cupronickel"
+  }
+}

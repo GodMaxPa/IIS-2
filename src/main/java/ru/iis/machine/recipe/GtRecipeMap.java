@@ -16,7 +16,9 @@ public enum GtRecipeMap {
     MIXER("mixer", 6, 1),
     POLARIZER("polarizer", 1, 1),
     ORE_WASHER("ore_washer", 2, 3),
-    COKE_OVEN("coke_oven", 1, 1);
+    COKE_OVEN("coke_oven", 1, 1),
+    // EBF slice: sBlastRecipes (2 входа, 2 выхода, по жидкости на вход и выход; temp — нагрев катушек)
+    BLAST("blast", 2, 2);
 
     public final String id;
     public final int maxInputs, maxOutputs;

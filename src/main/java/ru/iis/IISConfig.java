@@ -33,6 +33,19 @@ public final class IISConfig {
 
     static {
         B.pop();
+        B.comment("GT5 pollution (IIS GregTech.cfg [pollution] EnablePollution=true). Загрязнение.").push("pollution");
+    }
+
+    public static final ModConfigSpec.BooleanValue POLLUTION = B
+            .comment("Chunk pollution from boilers, furnaces, generators, multiblocks, explosions. Загрязнение чанков.")
+            .define("enabled", true);
+    public static final ModConfigSpec.IntValue SMOG_LIMIT = B.defineInRange("smogLimit", 500000, 0, Integer.MAX_VALUE);
+    public static final ModConfigSpec.IntValue POISON_LIMIT = B.defineInRange("poisonLimit", 750000, 0, Integer.MAX_VALUE);
+    public static final ModConfigSpec.IntValue VEGETATION_LIMIT = B.defineInRange("vegetationLimit", 1000000, 0, Integer.MAX_VALUE);
+    public static final ModConfigSpec.IntValue SOUR_RAIN_LIMIT = B.defineInRange("sourRainLimit", 2000000, 0, Integer.MAX_VALUE);
+
+    static {
+        B.pop();
     }
 
     public static final ModConfigSpec SPEC = B.build();

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "C",
+    "M"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "C": "#c:chests/wooden"
+  },
+  "result": {
+    "id": "iis:hatch_input_bus_lv"
+  }
+}

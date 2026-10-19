@@ -1,0 +1,17 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/aluminium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:frame_aluminium",
+      "count": 1
+    }
+  ],
+  "duration": 64,
+  "eut": 8
+}

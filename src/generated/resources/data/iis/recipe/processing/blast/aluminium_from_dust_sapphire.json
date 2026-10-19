@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sapphire",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_aluminium",
+      "count": 3
+    }
+  ],
+  "duration": 400,
+  "eut": 100,
+  "temp": 1200
+}

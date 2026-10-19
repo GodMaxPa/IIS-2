@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "SwS",
+    "SSS"
+  ],
+  "key": {
+    "S": "#c:rods/steel",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:frame_steel",
+    "count": 2
+  }
+}

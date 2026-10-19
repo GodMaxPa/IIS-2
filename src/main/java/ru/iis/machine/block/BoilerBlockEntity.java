@@ -94,6 +94,11 @@ public class BoilerBlockEntity extends BaseContainerBlockEntity implements Machi
         if (r == BoilerLogic.Result.OVERFLOW) {
             level.playSound(null, worldPosition, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 0.5f, 1.0f);
         }
+        // GT5-II: горящий котёл загрязняет раз в секунду (бронзовый и лавовый 20, стальной 30), солнечный — нет
+        if (logic.energy > 0 && time % 20 == 0 && level instanceof net.minecraft.server.level.ServerLevel sl && type() != BoilerType.SOLAR_BRONZE) {
+            ru.iis.pollution.Pollution.add(sl, worldPosition, type() == BoilerType.COAL_STEEL
+                    ? ru.iis.pollution.PollutionLogic.BOILER_STEEL : ru.iis.pollution.PollutionLogic.BOILER_BRONZE);
+        }
         water.setAmount(Fluids.WATER, logic.water);
         steam.setAmount(IISFluids.STEAM.get(), logic.steam);
         BlockState st = getBlockState();
@@ -106,6 +111,9 @@ public class BoilerBlockEntity extends BaseContainerBlockEntity implements Machi
     private void explode(Level level) {
         // GT5 doExplosion(2048): сила 6, блок котла пропадает; IIS ExplosionItemDrops=false — содержимое не выпадает
         items.clear();
+        if (level instanceof net.minecraft.server.level.ServerLevel sl) {
+            ru.iis.pollution.Pollution.add(sl, worldPosition, ru.iis.pollution.PollutionLogic.MACHINE_EXPLOSION);
+        }
         level.setBlock(worldPosition, Blocks.AIR.defaultBlockState(), 3);
         level.explode(null, worldPosition.getX() + 0.5, worldPosition.getY() + 0.5, worldPosition.getZ() + 0.5, 6.0f, Level.ExplosionInteraction.BLOCK);
     }

@@ -113,6 +113,12 @@ public class GeneratorBlockEntity extends ElectricBlockEntity {
                 if (f != null) {
                     long used = logic.burn(energy, tank.amount(), f[0], f[1]);
                     if (used > 0) {
+                        // GT_MetaTileEntity_BasicGenerator: 10 × getPollution() за сжигание (дизель LV 2, газовая турбина LV 1)
+                        GeneratorType t = type();
+                        if (t != GeneratorType.STEAM_TURBINE) {
+                            ru.iis.pollution.Pollution.add(sl, worldPosition, 10 * (t == GeneratorType.DIESEL
+                                    ? ru.iis.pollution.PollutionLogic.DIESEL_BASE : ru.iis.pollution.PollutionLogic.GAS_TURBINE_BASE));
+                        }
                         tank.drainInternal((int) used);
                         setChanged();
                     }

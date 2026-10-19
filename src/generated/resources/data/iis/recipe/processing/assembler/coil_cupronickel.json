@@ -1,0 +1,17 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/2x/cupronickel",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:coil_cupronickel",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 16
+}

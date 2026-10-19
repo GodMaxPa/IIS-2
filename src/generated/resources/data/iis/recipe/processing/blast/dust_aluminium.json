@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/aluminium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_aluminium",
+      "count": 1
+    }
+  ],
+  "duration": 1700,
+  "eut": 120,
+  "temp": 1700
+}

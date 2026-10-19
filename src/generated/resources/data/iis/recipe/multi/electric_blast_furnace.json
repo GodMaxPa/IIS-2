@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FFF",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "F": "minecraft:furnace",
+    "C": "#c:circuits/basic",
+    "M": "iis:heat_proof_casing",
+    "W": "#iis:cables/1x/tin"
+  },
+  "result": {
+    "id": "iis:electric_blast_furnace"
+  }
+}

@@ -8,6 +8,7 @@
 #   scripts/showcase.sh steamgui — GUI парового дробителя и JEI (нужен xdotool)
 #   scripts/showcase.sh lv     — эпоха LV: 13 машин на оловянном кабеле от паровой турбины, генераторы, буферы, коксовая печь
 #   scripts/showcase.sh lvgui  — GUI дробителя LV и JEI (нужен xdotool)
+#   scripts/showcase.sh ebf    — электрическая доменная печь в работе; ebfgui — её экран и JEI
 # Результат: build/showcase/<режим>.png. Нужен JDK 25 в JAVA_HOME.
 set -u
 MODE=${1:-wall}
@@ -177,6 +178,42 @@ print('save-all flush')
 PY
   } >&3
   sleep 12
+elif [ "$MODE" = ebf ] || [ "$MODE" = ebfgui ]; then
+  { common; python3 -I - "$MODE" <<'PY'
+import sys
+mode = sys.argv[1]
+Y = 200
+print('forceload add -32 -32 32 32')
+print(f'fill -8 {Y-1} -8 8 {Y-1} 8 minecraft:smooth_stone')
+# печь: середина (0,·,1), контроллер (0,Y,0) лицом на север
+print(f'fill -1 {Y} 0 1 {Y} 2 iis:heat_proof_casing')
+print(f'fill -1 {Y+1} 0 1 {Y+2} 2 iis:coil_cupronickel')
+print(f'fill 0 {Y+1} 1 0 {Y+2} 1 minecraft:air')
+print(f'fill -1 {Y+3} 0 1 {Y+3} 2 iis:heat_proof_casing')
+print(f'setblock 0 {Y+3} 1 iis:hatch_muffler_lv[facing=up]')
+print(f'setblock -1 {Y} 1 iis:hatch_energy_lv[facing=west]')
+print(f'setblock 0 {Y} 2 iis:hatch_energy_lv[facing=south]')
+print(f'setblock 1 {Y} 1 iis:hatch_input_bus_lv[facing=east]')
+print(f'setblock -1 {Y} 2 iis:hatch_output_bus_lv[facing=west]')
+print(f'setblock 1 {Y} 0 iis:hatch_maintenance[facing=north]')
+print(f'setblock 0 {Y} 0 iis:electric_blast_furnace[facing=north]')
+print(f'data merge block 0 {Y} 0 {{maintenance:63}}')
+print(f'data merge block 1 {Y} 1 {{Items:[{{Slot:0b,id:"iis:gem_ruby",count:64}}]}}')
+print(f'data merge block -1 {Y} 1 {{eu:768L}}')
+print(f'data merge block 0 {Y} 2 {{eu:768L}}')
+# питание: две паровые турбины прямо к люкам
+print(f'setblock -2 {Y} 1 iis:steam_turbine_lv[facing=east]')
+print(f'data merge block -2 {Y} 1 {{tank:{{stacks:[{{id:"iis:steam",amount:24000}}]}}}}')
+print(f'setblock 0 {Y} 3 iis:steam_turbine_lv[facing=north]')
+print(f'data merge block 0 {Y} 3 {{tank:{{stacks:[{{id:"iis:steam",amount:24000}}]}}}}')
+if mode == 'ebf':
+    print(f'setworldspawn 3 {Y+1} -5 25 15')
+else:
+    print(f'setworldspawn 0 {Y} -2 0 37')
+print('save-all flush')
+PY
+  } >&3
+  sleep 12
 else
   # Жила медного типа ИИС, построенная алгоритмом GT5 в небе (команда /iis vein), вид сбоку и сверху
   { common
@@ -210,10 +247,10 @@ xvfb-run -a -s "-screen 0 1600x900x24" bash -c '
   ./gradlew runClient -Pshowcase --no-daemon --console=plain > '"$OUT"'/client-'"$MODE"'.log 2>&1 &
   for i in $(seq 1 120); do grep -qE "Changing view distance|joined the game|Loaded [0-9]+ advancements" '"$OUT"'/client-'"$MODE"'.log && break; sleep 5; done
   sleep 45
-  if [ "'"$MODE"'" = steamgui ] || [ "'"$MODE"'" = lvgui ]; then
-    xdotool key v; sleep 4  # «использовать» на V: щелчок мыши под Xvfb не доходит до игры
+  if [ "'"$MODE"'" = steamgui ] || [ "'"$MODE"'" = lvgui ] || [ "'"$MODE"'" = ebfgui ]; then
+    xdotool key v; sleep 12  # «использовать» на V: щелчок мыши под Xvfb не доходит до игры
     import -window root '"$OUT"'/'"$MODE"'-screen.png
-    xdotool mousemove 746 350; sleep 1; xdotool key u; sleep 4
+    xdotool mousemove 746 350; sleep 2; xdotool key u; sleep 8
     import -window root '"$OUT"'/'"$MODE"'-jei.png
     xdotool key Escape; sleep 1; xdotool key Escape; sleep 1
   fi

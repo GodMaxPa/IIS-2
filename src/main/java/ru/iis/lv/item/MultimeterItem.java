@@ -28,6 +28,11 @@ public class MultimeterItem extends Item {
     public InteractionResult useOn(UseOnContext ctx) {
         if (ctx.getLevel() instanceof ServerLevel sl && ctx.getPlayer() != null) {
             for (var line : EnergyReadout.report(sl, ctx.getClickedPos())) ctx.getPlayer().sendSystemMessage(line);
+            // GT Portable Scanner тоже показывал загрязнение чанка
+            if (ru.iis.pollution.Pollution.enabled()) {
+                ctx.getPlayer().sendSystemMessage(net.minecraft.network.chat.Component.translatable("meter.iis.pollution",
+                        ru.iis.pollution.Pollution.get(sl, ctx.getClickedPos())).withStyle(net.minecraft.ChatFormatting.DARK_GREEN));
+            }
         }
         return InteractionResult.SUCCESS;
     }

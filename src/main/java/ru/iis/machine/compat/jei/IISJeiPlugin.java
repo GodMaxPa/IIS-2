@@ -43,6 +43,10 @@ public final class IISJeiPlugin implements IModPlugin {
             r.add(IISMachines.BRICKED_BLAST_FURNACE.get());
             return r;
         }
+        if (m == GtRecipeMap.BLAST) {
+            r.add(ru.iis.multi.MultiContent.EBF.get());
+            return r;
+        }
         if (m == GtRecipeMap.COKE_OVEN) {
             r.add(ru.iis.lv.LvContent.COKE_OVEN.get());
             return r;

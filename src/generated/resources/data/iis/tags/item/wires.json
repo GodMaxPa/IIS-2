@@ -15,6 +15,9 @@
     "iis:wire_copper_4x",
     "iis:wire_annealed_copper_1x",
     "iis:wire_annealed_copper_2x",
-    "iis:wire_annealed_copper_4x"
+    "iis:wire_annealed_copper_4x",
+    "iis:wire_cupronickel_1x",
+    "iis:wire_cupronickel_2x",
+    "iis:wire_cupronickel_4x"
   ]
 }

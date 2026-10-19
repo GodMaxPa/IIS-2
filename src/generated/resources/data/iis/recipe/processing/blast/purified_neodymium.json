@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/neodymium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_neodymium",
+      "count": 1
+    }
+  ],
+  "duration": 46692,
+  "eut": 120,
+  "temp": 1297
+}

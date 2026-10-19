@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "dwx",
+    "hMc",
+    "fsr"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "d": "#iis:tools/screwdriver",
+    "w": "#iis:tools/wrench",
+    "x": "#iis:tools/wire_cutter",
+    "h": "#iis:tools/hammer",
+    "c": "#iis:tools/crowbar",
+    "f": "#iis:tools/file",
+    "s": "#iis:tools/saw",
+    "r": "#iis:tools/soft_hammer"
+  },
+  "result": {
+    "id": "iis:hatch_maintenance"
+  }
+}

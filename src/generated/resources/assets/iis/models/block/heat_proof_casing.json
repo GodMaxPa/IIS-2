@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "iis:block/multi/heat_proof_casing"
+  }
+}

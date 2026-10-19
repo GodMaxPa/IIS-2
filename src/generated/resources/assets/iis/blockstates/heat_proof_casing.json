@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "iis:block/heat_proof_casing"
+    }
+  }
+}

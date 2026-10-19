@@ -103,7 +103,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
     @Override
     protected void work(ServerLevel sl) {
         ItemStack bat = items.get(batterySlot());
-        if (bat.getItem() instanceof ru.iis.lv.item.BatteryItem b && energy.stored < energy.capacity) {
+        if (bat.getItem() instanceof ru.iis.lv.item.BatteryItem b && b.isBattery() && energy.stored < energy.capacity) {
             energy.stored += b.discharge(bat, Math.min(VOLTAGE, energy.capacity - energy.stored));
         }
         boolean check = inventoryChanged || sl.getGameTime() % 20 == 0;

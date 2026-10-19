@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "hDS",
+    "DSD",
+    "SDf"
+  ],
+  "key": {
+    "S": "#c:rods/garnet_red",
+    "D": "#c:dyes/blue",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:crowbar_garnet_red"
+  }
+}

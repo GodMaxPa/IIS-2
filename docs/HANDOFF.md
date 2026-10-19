@@ -30,7 +30,13 @@ scripts/showcase.sh steam                # скриншот всех паров�
 - Взрывы — в конце тика (`lv.Deferred`, D48). Опасности выключаются в `serverconfig/iis-server.toml` (`IISConfig`, D47).
 - Данные — `tools/gen/lv.py` (вызывается из `gen_content.py`), каталоги в Java сверяет `LvDataTest`.
 
+## Многоблочные машины и загрязнение
+- `ru.iis.multi`: логика без Minecraft — `logic.BlastLogic` (уровень, разгон, нагрев), `logic.Maintenance`; блоки — `HatchBlock` (7 видов люков), `EbfBlockEntity` (форма, рецепт, энергия, выхлоп); регистрация — `MultiContent`; данные — `tools/gen/ebf.py`.
+- `ru.iis.pollution`: `PollutionLogic` (числа GT), `PollutionData` (SavedData по чанкам), `Pollution` (обход раз в 1200 тиков, эффекты, `add/get`).
+- Концепция владельца — `docs/CONCEPT.md`, сверка с проектом — `docs/CONCEPT_RECONCILE.md`.
+
 ## Ловушки
+- Скриншот-сервер иногда сохраняет мир без `world_gen_settings.dat` — клиент пишет «Ошибки в наборах данных». Просто перезапустить `scripts/showcase.sh`.
 - Не запускать gradle (даже compileJava), пока идёт `scripts/showcase.sh`: клиент берёт классы из build и падает (`ClassNotFoundException`).
 - `FluidStack.CODEC` нельзя использовать в рецептах — жидкие выходы через `FluidOutput` (D49).
 - Пакет данных GUI — short: не передавать в `ContainerData` числа больше 32767 (прогресс доменной печи — в тысячных).

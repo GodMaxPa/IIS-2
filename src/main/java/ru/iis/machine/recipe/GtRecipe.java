@@ -30,9 +30,17 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
     private final int eut;
     private final List<SizedFluidIngredient> fluidInputs;
     private final List<FluidOutput> fluidOutputs;
+    /** GT mSpecialValue: температура доменной печи (K), 0 — не нужна. */
+    private final int temperature;
 
     public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut,
                     List<SizedFluidIngredient> fluidInputs, List<FluidOutput> fluidOutputs) {
+        this(map, inputs, outputs, duration, eut, fluidInputs, fluidOutputs, 0);
+    }
+
+    public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut,
+                    List<SizedFluidIngredient> fluidInputs, List<FluidOutput> fluidOutputs, int temperature) {
+        this.temperature = temperature;
         this.map = map;
         this.inputs = List.copyOf(inputs);
         this.outputs = List.copyOf(outputs);
@@ -53,6 +61,7 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
     public int eut() { return eut; }
     public List<SizedFluidIngredient> fluidInputs() { return fluidInputs; }
     public List<FluidOutput> fluidOutputs() { return fluidOutputs; }
+    public int temperature() { return temperature; }
 
     /** Хватает ли жидкости во входном баке (GT: одна входная жидкость на машину). */
     public boolean fluidMatches(@Nullable FluidStack tank) {
@@ -69,8 +78,9 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
                 Codec.intRange(1, Integer.MAX_VALUE).fieldOf("duration").forGetter(GtRecipe::duration),
                 Codec.intRange(0, Integer.MAX_VALUE).optionalFieldOf("eut", 0).forGetter(GtRecipe::eut),
                 SizedFluidIngredient.CODEC.listOf(0, 1).optionalFieldOf("fluid_inputs", List.of()).forGetter(GtRecipe::fluidInputs),
-                FluidOutput.CODEC.listOf(0, 1).optionalFieldOf("fluid_outputs", List.of()).forGetter(GtRecipe::fluidOutputs)
-        ).apply(i, (in, out, d, e, fi, fo) -> new GtRecipe(map, in, out, d, e, fi, fo)));
+                FluidOutput.CODEC.listOf(0, 1).optionalFieldOf("fluid_outputs", List.of()).forGetter(GtRecipe::fluidOutputs),
+                Codec.intRange(0, Integer.MAX_VALUE).optionalFieldOf("temp", 0).forGetter(GtRecipe::temperature)
+        ).apply(i, (in, out, d, e, fi, fo, t) -> new GtRecipe(map, in, out, d, e, fi, fo, t)));
     }
 
     static StreamCodec<RegistryFriendlyByteBuf, GtRecipe> streamCodec(GtRecipeMap map) {
@@ -81,7 +91,8 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
                 ByteBufCodecs.VAR_INT, GtRecipe::eut,
                 SizedFluidIngredient.STREAM_CODEC.apply(ByteBufCodecs.list()), GtRecipe::fluidInputs,
                 FluidOutput.STREAM_CODEC.apply(ByteBufCodecs.list()), GtRecipe::fluidOutputs,
-                (in, out, d, e, fi, fo) -> new GtRecipe(map, in, out, d, e, fi, fo));
+                ByteBufCodecs.VAR_INT, GtRecipe::temperature,
+                (in, out, d, e, fi, fo, t) -> new GtRecipe(map, in, out, d, e, fi, fo, t));
     }
 
     /**

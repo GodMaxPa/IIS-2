@@ -194,10 +194,16 @@ TOOLS = {
     'mortar':      dict(gt=24, block=50,  craft=400, mult=1.0, speed=1.0,  head=None,           kind=None),
     'knife':       dict(gt=34, block=100, craft=100, mult=1.0, speed=1.0,  head=None,           kind='sword'),
     'wire_cutter': dict(gt=26, block=100, craft=400, mult=1.0, speed=1.25, head=None,           kind=None),
+    # maintenance tools (EBF slice): GT_Tool_SoftHammer (mult 8, speed 0.1), GT_Tool_Crowbar
+    'soft_hammer': dict(gt=14, block=50,  craft=800, mult=8.0, speed=0.1,  head=None,           kind=None),
+    'crowbar':     dict(gt=20, block=50,  craft=100, mult=1.0, speed=1.0,  head=None,           kind=None),
 }
+# ProcessingToolHead: a hammer of BOUNCY or WOOD material is a soft hammer (mallet), not a hard hammer
+SOFT_HAMMER_MATERIALS = ('Rubber', 'Wood')
 MORTAR_MATERIALS = ('Flint', 'Bronze', 'Iron')  # GT_MetaGenerated_Tool_01: flint/bronze/iron mortars (+steel later)
 # Crafting characters of GT tools
-TOOL_CHARS = {'h': 'hammer', 'f': 'file', 's': 'saw', 'm': 'mortar', 'w': 'wrench', 'd': 'screwdriver', 'k': 'knife', 'x': 'wire_cutter'}
+TOOL_CHARS = {'h': 'hammer', 'f': 'file', 's': 'saw', 'm': 'mortar', 'w': 'wrench', 'd': 'screwdriver', 'k': 'knife', 'x': 'wire_cutter',
+              'r': 'soft_hammer', 'c': 'crowbar'}
 
 
 # GT5 OrePrefixes component whitelists (IIS MaterialComponents.cfg: all enableUnused* = false), extracted by tools/extract/gt5_components.py
@@ -279,6 +285,12 @@ def tag_of(prefix, name):
 tools = []
 for tool, t in TOOLS.items():
     mats = MORTAR_MATERIALS if tool == 'mortar' else tool_mats
+    if tool == 'soft_hammer':
+        mats = [n for n in SOFT_HAMMER_MATERIALS if n in names]
+    elif tool == 'hammer':
+        mats = [n for n in tool_mats if n not in SOFT_HAMMER_MATERIALS]
+    elif tool == 'crowbar':
+        mats = [n for n in tool_mats if n not in SOFT_HAMMER_MATERIALS]
     for n in mats:
         if tool != 'mortar' and n == 'Flint':
             continue
@@ -524,6 +536,7 @@ TOOL_LAYERS = {
     'screwdriver': ('set:toolHeadScrewdriver', 'icon:HANDLE_SCREWDRIVER'),
     'wrench': ('icon:WRENCH', None), 'mortar': ('icon:MORTAR', None), 'knife': ('icon:KNIFE', None),
     'wire_cutter': ('icon:WIRE_CUTTER', None),
+    'soft_hammer': ('set:toolHeadHammer', 'set:stick'), 'crowbar': ('icon:CROWBAR', None),
 }
 
 
@@ -728,7 +741,12 @@ for n in tool_mats:
         shaped(f'tool_head/saw_{mid}', ref('saw_head', n), 1, ['GGf'], {'G': G})
     for tool in ('pickaxe', 'axe', 'shovel', 'sword', 'hoe', 'saw'):
         shapeless(f'tool/{tool}_{mid}', f'{NS}:{tool}_{mid}', 1, [tag_of(f'{tool}_head', n), STICK], 'equipment')
-    shaped(f'tool/hammer_{mid}', f'{NS}:hammer_{mid}', 1, ['XX ', 'XXS', 'XX '], {'X': X, 'S': STICK}, 'equipment')
+    if n in SOFT_HAMMER_MATERIALS:
+        shaped(f'tool/soft_hammer_{mid}', f'{NS}:soft_hammer_{mid}', 1, ['XX ', 'XXS', 'XX '], {'X': X, 'S': STICK}, 'equipment')
+    else:
+        shaped(f'tool/hammer_{mid}', f'{NS}:hammer_{mid}', 1, ['XX ', 'XXS', 'XX '], {'X': X, 'S': STICK}, 'equipment')
+    if ref('rod', n) and n not in SOFT_HAMMER_MATERIALS:  # ProcessingToolOther: crowbar "hDS/DSD/SDf", D = blue dye
+        shaped(f'tool/crowbar_{mid}', f'{NS}:crowbar_{mid}', 1, ['hDS', 'DSD', 'SDf'], {'S': tag_of('rod', n), 'D': '#c:dyes/blue'}, 'equipment')
     if has_plate:
         shaped(f'tool/file_{mid}', f'{NS}:file_{mid}', 1, ['P', 'P', 'S'], {'P': P, 'S': STICK}, 'equipment')
     if I:
@@ -740,6 +758,8 @@ for n in tool_mats:
                {'P': P, 'S': tag_of('rod', n), 'T': tag_of('screw', n)}, 'equipment')
     if has_plate and ref('rod', n):
         shaped(f'tool/knife_{mid}', f'{NS}:knife_{mid}', 1, ['fPh', ' S '], {'P': P, 'S': tag_of('rod', n)}, 'equipment')
+# ProcessingToolHead: wooden soft hammer (mallet) from planks
+shaped('tool/soft_hammer_wood', f'{NS}:soft_hammer_wood', 1, ['XX ', 'XXS', 'XX '], {'X': '#minecraft:planks', 'S': 'minecraft:stick'}, 'equipment')
 for n in MORTAR_MATERIALS:
     I = 'minecraft:flint' if n == 'Flint' else tag_of('ingot', n)
     shaped(f'tool/mortar_{mat_id(n)}', f'{NS}:mortar_{mat_id(n)}', 1, [' I ', 'SIS', 'SSS'], {'I': I, 'S': '#c:stones'}, 'equipment')
@@ -755,6 +775,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_lv', os.path.join(ROOT, 'tools', '
 _lv = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_lv)
 lv_stats = _lv.generate(globals())
+# Electric blast furnace and multiblock parts
+_spec = _ilu.spec_from_file_location('iis_gen_ebf', os.path.join(ROOT, 'tools', 'gen', 'ebf.py'))
+_ebf = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_ebf)
+lv_stats['ebf'] = _ebf.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

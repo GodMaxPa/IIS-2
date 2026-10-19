@@ -26,6 +26,11 @@ public class BatteryItem extends Item {
         this.tier = tier;
     }
 
+    /** Батарейка (отдаёт энергию буферу и машинам). Электроинструменты — нет, их только заряжают. */
+    public boolean isBattery() {
+        return true;
+    }
+
     public static long charge(ItemStack stack) {
         return stack.getOrDefault(LvContent.CHARGE.get(), 0L);
     }

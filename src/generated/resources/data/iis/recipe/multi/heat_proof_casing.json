@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PhP",
+    "PFP",
+    "PwP"
+  ],
+  "key": {
+    "P": "#c:plates/invar",
+    "F": "#c:frames/invar",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:heat_proof_casing",
+    "count": 2
+  }
+}

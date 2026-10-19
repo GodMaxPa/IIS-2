@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/cupronickel",
+    "#iis:wires/1x/cupronickel"
+  ],
+  "result": {
+    "id": "iis:wire_cupronickel_2x"
+  }
+}

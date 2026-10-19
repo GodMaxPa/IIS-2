@@ -19,7 +19,7 @@ public final class CableSpecs {
     /** GT_Loader_MetaTileEntities#makeWires (HardCoreCableLoss=false): материал, потеря изол./голый, ампер на 1x, напряжение. */
     private static final Object[][] WIRES = {
             {"red_alloy", 0, 1, 1, 8L}, {"lead", 2, 4, 2, 32L}, {"tin", 1, 2, 1, 32L},
-            {"copper", 2, 4, 1, 128L}, {"annealed_copper", 1, 2, 1, 128L}};
+            {"copper", 2, 4, 1, 128L}, {"annealed_copper", 1, 2, 1, 128L}, {"cupronickel", 3, 6, 2, 128L}};
     /** Ширина GT: провод 1x/2x/4x = 0.125/0.25/0.375 блока, кабель 0.25/0.375/0.5 (в пикселях ×16). */
     private static final double[][] THICK = {{2, 4}, {4, 6}, {6, 8}};
 

@@ -19,6 +19,7 @@ WIRES = [
     ('Tin', 1, 2, 1, 32),
     ('Copper', 2, 4, 1, 128),
     ('AnnealedCopper', 1, 2, 1, 128),
+    ('Cupronickel', 3, 6, 2, 128),   # makeWires(Cupronickel, …, 3/6 (bEC), 2 A, V[2]) — for heating coils
 ]
 WIRE_SIZES = [(1, 0.125, 0.25), (2, 0.25, 0.375), (4, 0.375, 0.5)]   # size, bare thickness, insulated thickness (GT)
 
@@ -895,7 +896,7 @@ def generate(g):
         mid = mat_id(mat)
         mrec('assembler', f'wire_{mid}_2x', [ing(W(mat), 2)], [out(f'{NS}:wire_{mid}_2x')], 150, 8)
         mrec('assembler', f'wire_{mid}_4x', [ing(W(mat), 4)], [out(f'{NS}:wire_{mid}_4x')], 200, 8)
-        if mat in ('Copper', 'AnnealedCopper') and ref('plate', 'Rubber'):
+        if mat in ('Copper', 'AnnealedCopper', 'Cupronickel') and ref('plate', 'Rubber'):
             # ProcessingWire: molten rubber 144*cost in the assembler; until fluids of chemistry exist, rubber plates (D45)
             for size, *_ in WIRE_SIZES:
                 mrec('assembler', f'cable_{mid}_{size}x', [ing(W(mat, size)), ing(P('Rubber'), size // 4 + 1)], [out(f'{NS}:cable_{mid}_{size}x')], 100, 8)
@@ -947,6 +948,7 @@ def generate(g):
                        ('meter.iis.danger', 'Charged: can explode from rain, water or fire', 'Заряжена: может взорваться от дождя, воды или огня'),
                        ('meter.iis.formed', 'Structure complete', 'Печь собрана'),
                        ('meter.iis.not_formed', 'Structure incomplete', 'Печь не достроена'),
+                       ('meter.iis.pollution', 'Chunk pollution: %s', 'Загрязнение чанка: %s'),
                        ('meter.iis.nothing', 'Nothing to measure', 'Нечего измерять'),
                        ('meter.iis.line.cable', '%s V  %s A   (limit %s V / %s A, heat %s)', '%s В  %s А   (предел %s В / %s А, нагрев %s)'),
                        ('meter.iis.line.machine', '%s / %s EU   in %s EU/t   out %s EU/t', '%s / %s EU   приход %s EU/t   расход %s EU/t'),

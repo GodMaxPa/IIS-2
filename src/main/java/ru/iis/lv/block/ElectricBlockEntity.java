@@ -211,6 +211,7 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
                 WorldEnergy.emit(sl, pos, List.of(Direction.values()), RELEASE_VOLTAGE, Math.max(1, release / RELEASE_VOLTAGE));
             }
             energy.stored = 0;
+            ru.iis.pollution.Pollution.add(sl, pos, ru.iis.pollution.PollutionLogic.MACHINE_EXPLOSION); // BaseMetaTileEntity#doExplosion
             if (present) sl.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
             sl.explode(null, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, explosionStrength(power), Level.ExplosionInteraction.BLOCK);
         });

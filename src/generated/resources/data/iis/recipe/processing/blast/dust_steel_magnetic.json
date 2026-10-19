@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/steel_magnetic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_steel",
+      "count": 1
+    }
+  ],
+  "duration": 1000,
+  "eut": 120,
+  "temp": 1000
+}

@@ -1,7 +1,7 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "iis:item/hammer_rubber",
+    "model": "iis:item/soft_hammer_wood",
     "tints": [
       {
         "type": "minecraft:constant",
@@ -9,7 +9,7 @@
       },
       {
         "type": "minecraft:constant",
-        "value": 0
+        "value": 6566400
       }
     ]
   }

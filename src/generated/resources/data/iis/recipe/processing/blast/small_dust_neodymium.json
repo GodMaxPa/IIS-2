@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#iis:small_dusts/neodymium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_neodymium",
+      "count": 1
+    }
+  ],
+  "duration": 3891,
+  "eut": 120,
+  "temp": 1297
+}

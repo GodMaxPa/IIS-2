@@ -64,6 +64,9 @@ public final class IISClient {
         event.register(ru.iis.lv.LvContent.GENERATOR_MENU.get(), ru.iis.lv.client.GeneratorScreen::new);
         event.register(ru.iis.lv.LvContent.BATTERY_BUFFER_MENU.get(), ru.iis.lv.client.BatteryBufferScreen::new);
         event.register(ru.iis.lv.LvContent.COKE_OVEN_MENU.get(), ru.iis.lv.client.CokeOvenScreen::new);
+        event.register(ru.iis.multi.MultiContent.ITEM_BUS_MENU.get(), ru.iis.multi.client.MultiScreens.Bus::new);
+        event.register(ru.iis.multi.MultiContent.FLUID_HATCH_MENU.get(), ru.iis.multi.client.MultiScreens.FluidHatch::new);
+        event.register(ru.iis.multi.MultiContent.EBF_MENU.get(), ru.iis.multi.client.MultiScreens.Ebf::new);
     }
 
     private static void registerFluidModels(RegisterFluidModelsEvent event) {

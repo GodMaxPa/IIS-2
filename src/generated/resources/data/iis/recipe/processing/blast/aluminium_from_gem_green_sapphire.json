@@ -1,0 +1,22 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:gems/green_sapphire",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_aluminium",
+      "count": 3
+    },
+    {
+      "id": "iis:tiny_dust_dark_ash",
+      "count": 1
+    }
+  ],
+  "duration": 320,
+  "eut": 100,
+  "temp": 1200
+}

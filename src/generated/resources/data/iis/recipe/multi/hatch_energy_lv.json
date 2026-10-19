@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CM"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "C": "#iis:cables/1x/tin"
+  },
+  "result": {
+    "id": "iis:hatch_energy_lv"
+  }
+}

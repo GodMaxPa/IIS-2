@@ -37,9 +37,11 @@ public final class IIS {
         IISFluids.register(modEventBus);
         IISMachines.register(modEventBus);
         ru.iis.lv.LvContent.register(modEventBus);
+        ru.iis.multi.MultiContent.register(modEventBus);
         GtRecipes.register(modEventBus, NeoForge.EVENT_BUS);
         ru.iis.gametest.IISGameTests.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(HammerDrops::onBlockDrops);
+        NeoForge.EVENT_BUS.addListener(ru.iis.pollution.Pollution::onLevelTick);
         NeoForge.EVENT_BUS.addListener(IISCommand::register);
     }
 

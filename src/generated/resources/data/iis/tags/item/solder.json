@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#c:ingots/tin",
+    "#c:rods/tin",
+    "#iis:fine_wires/tin",
+    "#c:ingots/lead",
+    "#c:rods/lead",
+    "#iis:fine_wires/lead",
+    "#c:ingots/soldering_alloy",
+    "#c:rods/soldering_alloy",
+    "#iis:fine_wires/soldering_alloy"
+  ]
+}

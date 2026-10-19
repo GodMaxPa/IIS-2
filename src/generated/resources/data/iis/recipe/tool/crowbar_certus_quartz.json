@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "hDS",
+    "DSD",
+    "SDf"
+  ],
+  "key": {
+    "S": "#c:rods/certus_quartz",
+    "D": "#c:dyes/blue",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:crowbar_certus_quartz"
+  }
+}

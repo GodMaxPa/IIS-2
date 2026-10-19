@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "M",
+    "P"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "P": "iis:pipe_medium_steel"
+  },
+  "result": {
+    "id": "iis:hatch_muffler_lv"
+  }
+}
