@@ -49,6 +49,9 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
     public final EnergyStorage energy;
     protected int tickTimer;
     private boolean exploded;
+    /** Учёт для мультиметра (GT mAverageEUInput/Output): EU за текущие и прошлые 20 тиков, максимум принятого напряжения. */
+    private long euInWindow, euOutWindow, voltageInWindow;
+    public long avgEuIn, avgEuOut, lastVoltageIn;
 
     protected ElectricBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state, int slots, long capacity, long inputVoltage) {
         super(type, pos, state);
@@ -85,6 +88,12 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
     public final void serverTick() {
         if (!(level instanceof ServerLevel sl) || exploded) return;
         tickTimer++;
+        if (tickTimer % 20 == 0) {
+            avgEuIn = euInWindow / 20;
+            avgEuOut = euOutWindow / 20;
+            lastVoltageIn = voltageInWindow;
+            euInWindow = euOutWindow = voltageInWindow = 0;
+        }
         work(sl);
         if (exploded) return;
         emitEnergy(sl);
@@ -102,6 +111,7 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
         List<Direction> sides = Arrays.stream(Direction.values()).filter(this::outputsEnergyTo).toList();
         long used = WorldEnergy.emit(sl, worldPosition, sides, v, usable);
         if (used > 0) {
+            euOutWindow += used * v;
             energy.stored = Math.max(0, energy.stored - used * cost);
             setChanged();
         }
@@ -159,7 +169,11 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
             if (ru.iis.IISConfig.on(ru.iis.IISConfig.OVERVOLTAGE_EXPLOSIONS)) doExplosion(voltage);
             return 0;
         }
-        if (r.amperes() > 0) setChanged();
+        if (r.amperes() > 0) {
+            euInWindow += voltage * r.amperes();
+            voltageInWindow = Math.max(voltageInWindow, voltage);
+            setChanged();
+        }
         return r.amperes();
     }
 

@@ -63,6 +63,7 @@ ITEMS = [
     ('coal_coke', 'gen:coke', None, 'Coal Coke', 'Коксующийся уголь'),
     ('wet_coke_oven_brick', 'gen:wet_brick', None, 'Wet Coke Oven Brick', 'Сырой кирпич коксовой печи'),
     ('treetap', 'gen:treetap', None, 'Treetap', 'Краник'),
+    ('multimeter', 'gen:multimeter', None, 'Multimeter', 'Мультиметр'),
     ('plate_wood', 'gen:wood_plate', 'gt.metaitem.01.17809.name', 'Wood Plate', 'Деревянная пластина'),
 ]
 
@@ -209,6 +210,18 @@ def generate(g):
                 for x in range(3, 13):
                     c = 150 + rnd.randint(-15, 15) - (10 if y % 3 == 0 else 0)
                     im.putpixel((x, y), (c, int(c * 0.72), int(c * 0.45), 255))
+        elif kind == 'multimeter':
+            for y in range(2, 15):
+                for x in range(4, 12):
+                    edge = x in (4, 11) or y in (2, 14)
+                    im.putpixel((x, y), (60, 60, 60, 255) if edge else (230, 190, 40, 255))
+            for y in range(4, 8):
+                for x in range(6, 10):
+                    im.putpixel((x, y), (90, 200, 120, 255))
+            for (x, y) in ((7, 10), (8, 10), (7, 11), (8, 11)):
+                im.putpixel((x, y), (40, 40, 40, 255))
+            for y in range(12, 16):
+                im.putpixel((5, y), (200, 30, 30, 255)); im.putpixel((10, y), (30, 30, 30, 255))
         elif kind == 'treetap':
             for y in range(6, 11):
                 for x in range(2, 12):
@@ -719,6 +732,8 @@ def generate(g):
     shaped('lv/glass_tube', f'{NS}:glass_tube', 2, ['G G', 'G G', ' G '], {'G': 'minecraft:glass_pane'})
     shaped('lv/steel_item_casing', f'{NS}:steel_item_casing', 2, ['hP'], {'P': P('Steel')})
     shaped('lv/plate_wood', f'{NS}:plate_wood', 1, ['s', 'P'], {'P': '#minecraft:planks'})
+    # multimeter (D51): own LV recipe — GT5 Portable Scanner was HV only
+    shaped('lv/multimeter', f'{NS}:multimeter', 1, ['PGP', 'CEC', 'PCP'], {'P': P('Steel'), 'G': 'minecraft:glass_pane', 'C': C('Tin'), 'E': CIRC})
     shaped('lv/battery_lv', f'{NS}:battery_lv', 1, [' C ', 'TRT', 'TRT'], {'C': C('Tin'), 'T': P('Tin'), 'R': 'minecraft:redstone'})
 
     # LV machines (GT_Loader_MetaTileEntities, X.* placeholders resolved for LV)
@@ -915,6 +930,26 @@ def generate(g):
                        ('jei.iis.polarizer', 'Polarizer', 'Поляризатор'), ('jei.iis.ore_washer', 'Ore Washing Plant', 'Рудопромывочная установка'),
                        ('jei.iis.coke_oven', 'Coke Oven', 'Коксовая печь'), ('message.iis.transformer.down', 'Step down: MV -> LV', 'Понижение: MV -> LV'),
                        ('message.iis.transformer.up', 'Step up: LV -> MV', 'Повышение: LV -> MV'),
+                       ('item.iis.multimeter.tooltip.0', 'Right-click a wire or machine: detailed reading', 'ПКМ по проводу или машине — подробный замер'),
+                       ('item.iis.multimeter.tooltip.1', 'In hand: live reading of what you look at', 'В руке — живые показания того, на что смотришь'),
+                       ('meter.iis.cable.limits', 'Limit: %s V, %s A, loss %s V per block', 'Предел: %s В, %s А, потеря %s В на блок'),
+                       ('meter.iis.cable.now', 'Last second: %s V, %s A', 'За последнюю секунду: %s В, %s А'),
+                       ('meter.iis.cable.heat', 'Overheat: %s / %s', 'Перегрев: %s / %s'),
+                       ('meter.iis.cable.shock', 'Bare wire under current: shock %s damage', 'Голый провод под током: удар %s урона'),
+                       ('meter.iis.stored', 'Stored: %s / %s EU', 'Запас: %s / %s EU'),
+                       ('meter.iis.input', 'Input: up to %s V, %s A per tick', 'Вход: до %s В, %s А за тик'),
+                       ('meter.iis.output', 'Output: %s V, up to %s A', 'Выход: %s В, до %s А'),
+                       ('meter.iis.flow', 'Average: in %s EU/t, out %s EU/t (max input %s V)', 'В среднем: приход %s EU/t, расход %s EU/t (наибольшее входное %s В)'),
+                       ('meter.iis.progress', 'Working: %s / %s ticks, %s EU/t', 'Работает: %s / %s тиков, %s EU/t'),
+                       ('meter.iis.idle', 'Idle', 'Простаивает'),
+                       ('meter.iis.stutter', 'Not enough energy: stuttering', 'Не хватает энергии: заикается'),
+                       ('meter.iis.tank', 'Tank: %s / %s L', 'Бак: %s / %s л'),
+                       ('meter.iis.danger', 'Charged: can explode from rain, water or fire', 'Заряжена: может взорваться от дождя, воды или огня'),
+                       ('meter.iis.formed', 'Structure complete', 'Печь собрана'),
+                       ('meter.iis.not_formed', 'Structure incomplete', 'Печь не достроена'),
+                       ('meter.iis.nothing', 'Nothing to measure', 'Нечего измерять'),
+                       ('meter.iis.line.cable', '%s V  %s A   (limit %s V / %s A, heat %s)', '%s В  %s А   (предел %s В / %s А, нагрев %s)'),
+                       ('meter.iis.line.machine', '%s / %s EU   in %s EU/t   out %s EU/t', '%s / %s EU   приход %s EU/t   расход %s EU/t'),
                        ('message.iis.resin', 'No resin yet', 'Смолы пока нет'), ('gui.iis.coke_oven.incomplete', 'Incomplete structure', 'Печь не достроена'), ('death.attack.iis.electricity', '%1$s was electrocuted', '%1$s убило током')):
         name(k, en, ruu)
     stats['items'] = len(ITEMS)

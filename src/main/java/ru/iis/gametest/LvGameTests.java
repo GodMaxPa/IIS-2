@@ -171,4 +171,21 @@ final class LvGameTests {
         h.assertTrue(h.getBlockState(p).is(LvContent.RUBBER_LOG.get()), "no rubber log at the sapling");
         h.succeed();
     }
+
+    /** Мультиметр видит ток в кабеле (31 В после потери 1 В, 1 А) и средний приход EU в машину. */
+    static void multimeter(GameTestHelper h) {
+        GeneratorBlockEntity gen = generator(h, new BlockPos(1, 1, 4), GeneratorType.STEAM_TURBINE, Direction.EAST);
+        gen.tank().setAmount(IISFluids.STEAM.get(), 24000);
+        ElectricMachineBlockEntity m = machine(h, new BlockPos(3, 1, 4), LvMachineType.MACERATOR, Direction.NORTH);
+        BlockPos c = new BlockPos(2, 1, 4);
+        cable(h, c, "cable_tin_1x");
+        h.succeedWhen(() -> {
+            CableBlockEntity be = h.getBlockEntity(c, CableBlockEntity.class);
+            h.assertTrue(be.state.voltageLast20 == 31 && be.state.amperageLast20 >= 1, "cable reading " + be.state.voltageLast20 + " V " + be.state.amperageLast20 + " A");
+            h.assertTrue(m.avgEuIn > 0 && m.lastVoltageIn == 31, "machine flow " + m.avgEuIn + " EU/t at " + m.lastVoltageIn + " V");
+            var report = ru.iis.lv.EnergyReadout.report(h.getLevel(), h.absolutePos(c));
+            h.assertTrue(report.size() >= 3, "short report");
+            IIS.LOGGER.info("[IIS gametest] multimeter: {}", report.stream().map(net.minecraft.network.chat.Component::getString).toList());
+        });
+    }
 }

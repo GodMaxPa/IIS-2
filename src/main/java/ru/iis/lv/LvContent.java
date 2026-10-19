@@ -145,10 +145,12 @@ public final class LvContent {
     public static final DeferredItem<Item> COAL_COKE = item("coal_coke");
     public static final DeferredItem<Item> WET_COKE_OVEN_BRICK = item("wet_coke_oven_brick");
     public static final DeferredItem<BatteryItem> BATTERY_LV = ITEMS.registerItem("battery_lv", p -> new BatteryItem(50000, 32, 1, p), p -> p.stacksTo(1));
+    public static final DeferredItem<ru.iis.lv.item.MultimeterItem> MULTIMETER = ITEMS.registerItem("multimeter", ru.iis.lv.item.MultimeterItem::new, p -> p.stacksTo(1));
     public static final DeferredItem<TreetapItem> TREETAP = ITEMS.registerItem("treetap", TreetapItem::new, p -> p.durability(16));
     static {
         TAB_ORDER.add(BATTERY_LV);
         TAB_ORDER.add(TREETAP);
+        TAB_ORDER.add(MULTIMETER);
         TAB_ORDER.add(IISFluids.CREOSOTE_BUCKET);
     }
 

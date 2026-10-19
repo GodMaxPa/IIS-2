@@ -63,6 +63,7 @@ public final class IISGameTests {
             new Test("lv_buffer_charges_battery", 200, LvGameTests::bufferChargesBattery),
             new Test("lv_coke_oven", 2000, LvGameTests::cokeOven),
             new Test("lv_ore_washer", 700, LvGameTests::oreWasher),
+            new Test("lv_multimeter", 200, LvGameTests::multimeter),
             new Test("lv_rubber_tree", 20, LvGameTests::rubberTree, true), // дереву нужен открытый верх (без потолка теста)
             new Test("selftest", 20, h -> {
                 h.assertTrue(SelfTest.runSilently(h.getLevel()), "selftest failed, see log");
