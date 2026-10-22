@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/silver",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 12,
+  "eut": 49,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_silver",
+      "amount": 72
+    }
+  ]
+}

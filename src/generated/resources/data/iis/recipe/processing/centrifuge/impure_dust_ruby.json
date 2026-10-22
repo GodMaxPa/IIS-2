@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_ruby",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_chrome",
+      "count": 1
     }
   ],
-  "duration": 25,
+  "duration": 200,
   "eut": 5
 }

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/uranium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 53,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_uranium",
+      "amount": 16
+    }
+  ]
+}

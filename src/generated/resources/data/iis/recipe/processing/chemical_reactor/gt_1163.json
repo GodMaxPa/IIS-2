@@ -1,0 +1,21 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/uraninite",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/magnesium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_uranium",
+      "count": 1
+    }
+  ],
+  "duration": 1000,
+  "eut": 30
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sphalerite",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_zinc",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_sulfur",
+      "count": 1
+    }
+  ],
+  "duration": 92,
+  "eut": 60
+}

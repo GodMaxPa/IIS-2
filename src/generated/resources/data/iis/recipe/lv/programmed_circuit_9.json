@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P d",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "P": "iis:programmed_circuit",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:programmed_circuit",
+    "count": 1,
+    "components": {
+      "iis:circuit_config": 9
+    }
+  }
+}

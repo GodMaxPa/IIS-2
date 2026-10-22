@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:ingot_silver",
+      "count": 1
+    }
+  ],
+  "duration": 32,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silver",
+      "amount": 144
+    }
+  ],
+  "keep": [
+    "iis:mold_ingot"
+  ]
+}

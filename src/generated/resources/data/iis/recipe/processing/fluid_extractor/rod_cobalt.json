@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/cobalt",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 12,
+  "eut": 59,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_cobalt",
+      "amount": 72
+    }
+  ]
+}

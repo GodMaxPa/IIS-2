@@ -1,0 +1,43 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/yellow_limonite",
+      "count": 4
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:capsule",
+      "count": 2,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:oxygen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 352,
+  "eut": 10,
+  "fluid_outputs": [
+    {
+      "id": "iis:hydrogen",
+      "amount": 1000
+    }
+  ]
+}

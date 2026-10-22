@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "minecraft:obsidian",
+      "count": 1
+    }
+  ],
+  "duration": 1024,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:lava",
+      "amount": 1000
+    }
+  ],
+  "keep": [
+    "iis:mold_block"
+  ]
+}

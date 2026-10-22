@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "mood=dormant": {
+      "model": "iis:block/bio/core_dormant"
+    },
+    "mood=hungry": {
+      "model": "iis:block/bio/core_hungry"
+    },
+    "mood=content": {
+      "model": "iis:block/bio/core_content"
+    },
+    "mood=growing": {
+      "model": "iis:block/bio/core_growing"
+    },
+    "mood=alarmed": {
+      "model": "iis:block/bio/core_alarmed"
+    }
+  }
+}

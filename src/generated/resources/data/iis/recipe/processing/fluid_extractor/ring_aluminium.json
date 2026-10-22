@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:rings/aluminium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 6,
+  "eut": 43,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_aluminium",
+      "amount": 36
+    }
+  ]
+}

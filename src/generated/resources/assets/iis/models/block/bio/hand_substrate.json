@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "iis:block/bio/substrate_top",
+    "butcher_block_top": "iis:block/bio/butcher_block_top",
+    "butcher_block_side": "iis:block/bio/butcher_block_side",
+    "stone_bio": "iis:block/bio/stone_bio",
+    "stone_inner": "iis:block/bio/stone_inner",
+    "stone_hearth_front": "iis:block/bio/stone_hearth_front",
+    "stone_hearth_front_lit": "iis:block/bio/stone_hearth_front_lit",
+    "substrate_top": "iis:block/bio/substrate_top",
+    "bed_top": "iis:block/bio/bed_top",
+    "bed_side": "iis:block/bio/bed_side",
+    "filter_top": "iis:block/bio/filter_top",
+    "nest_top": "iis:block/bio/nest_top",
+    "gland": "iis:block/bio/gland",
+    "gland_top": "iis:block/bio/gland_top",
+    "membrane": "iis:block/bio/membrane",
+    "sac": "iis:block/bio/sac",
+    "pump_side": "iis:block/bio/pump_side",
+    "pump_front": "iis:block/bio/pump_front"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        4,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#butcher_block_side"
+        },
+        "south": {
+          "texture": "#butcher_block_side"
+        },
+        "east": {
+          "texture": "#butcher_block_side"
+        },
+        "west": {
+          "texture": "#butcher_block_side"
+        },
+        "up": {
+          "texture": "#substrate_top"
+        },
+        "down": {
+          "texture": "#butcher_block_side"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "iis:primitive_culture",
+    "iis:base_seed"
+  ]
+}

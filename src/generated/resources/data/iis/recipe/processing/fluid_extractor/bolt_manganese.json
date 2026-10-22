@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:bolts/manganese",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 3,
+  "eut": 55,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_manganese",
+      "amount": 18
+    }
+  ]
+}

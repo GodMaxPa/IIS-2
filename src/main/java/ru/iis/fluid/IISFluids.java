@@ -54,6 +54,7 @@ public final class IISFluids {
     }
 
     public static void register(IEventBus modBus) {
+        GtFluids.init();
         TYPES.register(modBus);
         FLUIDS.register(modBus);
         BLOCKS.register(modBus);

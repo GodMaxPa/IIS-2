@@ -1,0 +1,132 @@
+{
+  "bio.heartbeat": {
+    "subtitle": "subtitles.iis.bio.heartbeat",
+    "sounds": [
+      {
+        "name": "entity.warden.heartbeat",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "bio.growl": {
+    "subtitle": "subtitles.iis.bio.growl",
+    "sounds": [
+      {
+        "name": "entity.ravager.ambient",
+        "type": "event",
+        "volume": 0.9,
+        "pitch": 0.55
+      },
+      {
+        "name": "entity.hoglin.ambient",
+        "type": "event",
+        "volume": 0.9,
+        "pitch": 0.5
+      }
+    ]
+  },
+  "bio.squelch": {
+    "subtitle": "subtitles.iis.bio.squelch",
+    "sounds": [
+      {
+        "name": "entity.slime.squish_small",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 0.8
+      },
+      {
+        "name": "block.mud.step",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.9
+      }
+    ]
+  },
+  "bio.tear": {
+    "subtitle": "subtitles.iis.bio.tear",
+    "sounds": [
+      {
+        "name": "block.honey_block.break",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.8
+      },
+      {
+        "name": "block.mud.break",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.8
+      },
+      {
+        "name": "block.sculk.break",
+        "type": "event",
+        "volume": 0.9,
+        "pitch": 0.9
+      }
+    ]
+  },
+  "bio.gulp": {
+    "subtitle": "subtitles.iis.bio.gulp",
+    "sounds": [
+      {
+        "name": "entity.generic.drink",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ]
+  },
+  "bio.chew": {
+    "subtitle": "subtitles.iis.bio.chew",
+    "sounds": [
+      {
+        "name": "entity.generic.eat",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.6
+      },
+      {
+        "name": "entity.strider.eat",
+        "type": "event",
+        "volume": 0.9,
+        "pitch": 0.8
+      }
+    ]
+  },
+  "bio.grow": {
+    "subtitle": "subtitles.iis.bio.grow",
+    "sounds": [
+      {
+        "name": "block.sculk_catalyst.bloom",
+        "type": "event",
+        "volume": 0.9,
+        "pitch": 1.0
+      },
+      {
+        "name": "block.sculk.charge",
+        "type": "event",
+        "volume": 0.7,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "bio.hiss": {
+    "subtitle": "subtitles.iis.bio.hiss",
+    "sounds": [
+      {
+        "name": "block.fire.extinguish",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 1.3
+      },
+      {
+        "name": "entity.generic.extinguish_fire",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 1.4
+      }
+    ]
+  }
+}

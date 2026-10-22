@@ -1,0 +1,48 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:sulfurtrioxide",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 4
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 7,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:sulfuricacid",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 320,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 3000
+    }
+  ]
+}

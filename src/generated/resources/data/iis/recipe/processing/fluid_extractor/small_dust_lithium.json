@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:small_dusts/lithium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 6,
+  "eut": 30,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_lithium",
+      "amount": 36
+    }
+  ]
+}

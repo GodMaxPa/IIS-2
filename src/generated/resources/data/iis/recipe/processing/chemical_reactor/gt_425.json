@@ -1,0 +1,28 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/galena",
+      "count": 3
+    },
+    {
+      "ingredient": "#iis:purified_ores/sphalerite",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 60,
+  "eut": 150,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:sulfuricacid",
+      "amount": 4000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:indiumconcentrate",
+      "amount": 8000
+    }
+  ]
+}

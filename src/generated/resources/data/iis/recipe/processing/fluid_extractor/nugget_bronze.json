@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/bronze",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_bronze",
+      "amount": 16
+    }
+  ]
+}

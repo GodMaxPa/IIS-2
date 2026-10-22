@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PII",
+    "f h"
+  ],
+  "key": {
+    "P": "#c:plates/stainless_steel",
+    "I": "#c:ingots/stainless_steel",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:pickaxe_head_stainless_steel"
+  }
+}

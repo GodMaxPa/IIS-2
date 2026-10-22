@@ -316,6 +316,16 @@
     "iis:bricked_blast_furnace",
     "iis:ore_washer_lv",
     "iis:coke_oven_bricks",
-    "iis:coke_oven"
+    "iis:coke_oven",
+    "iis:shuttle_hull",
+    "iis:shuttle_window",
+    "iis:shuttle_engine",
+    "iis:stone_mortar",
+    "iis:stone_pot",
+    "iis:stone_hearth",
+    "iis:measuring_vessel",
+    "iis:filter_vessel",
+    "iis:universal_tank_bronze",
+    "iis:universal_tank_steel"
   ]
 }

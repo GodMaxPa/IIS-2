@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:circuits/basic"
+  ],
+  "result": {
+    "id": "iis:programmed_circuit",
+    "count": 1
+  }
+}

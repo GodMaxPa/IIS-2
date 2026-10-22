@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:bolts/iridium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 3,
+  "eut": 73,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_iridium",
+      "amount": 18
+    }
+  ]
+}

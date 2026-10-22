@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "iis:block/universal_tank_steel_side",
+    "top": "iis:block/universal_tank_steel_top",
+    "bottom": "iis:block/universal_tank_steel_top"
+  }
+}

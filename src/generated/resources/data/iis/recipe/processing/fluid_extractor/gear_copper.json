@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:gears/copper",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 96,
+  "eut": 52,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_copper",
+      "amount": 576
+    }
+  ]
+}

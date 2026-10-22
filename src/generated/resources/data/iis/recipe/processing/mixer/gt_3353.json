@@ -1,0 +1,24 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/salt",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 40,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1500
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:saltwater",
+      "amount": 2500
+    }
+  ]
+}

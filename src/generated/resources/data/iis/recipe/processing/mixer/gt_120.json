@@ -1,0 +1,42 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "minecraft:water",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "ingredient": "#c:dusts/stone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 5
+    }
+  ],
+  "duration": 64,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 20
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_drillingfluid",
+      "amount": 5000
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:bolts/invar",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 3,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_invar",
+      "amount": 18
+    }
+  ]
+}

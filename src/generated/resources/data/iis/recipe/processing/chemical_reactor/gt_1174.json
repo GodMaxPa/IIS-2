@@ -1,0 +1,39 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:carbonmonoxide",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 1
+    }
+  ],
+  "duration": 11200,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrogen",
+      "amount": 3000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:methane",
+      "amount": 4000
+    }
+  ],
+  "circuit": 1
+}

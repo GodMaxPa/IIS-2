@@ -27,7 +27,13 @@ public enum LvMachineType {
     ELECTROMAGNETIC_SEPARATOR("electromagnetic_separator", GtRecipeMap.ELECTROMAGNETIC_SEPARATOR, 1, 3, 0, "electromagneticseparator"),
     AUTOCLAVE("autoclave", GtRecipeMap.AUTOCLAVE, 1, 1, 8000, "autoclave"),
     CUTTER("cutter", GtRecipeMap.CUTTER, 1, 2, 8000, "cutter"),
-    CANNER("canner", GtRecipeMap.CANNER, 2, 2, 0, "canner");
+    CANNER("canner", GtRecipeMap.CANNER, 2, 2, 0, "canner"),
+    // LV III (D76): GT_Loader_MetaTileEntities:775 Electrolyzer (2, 6, 64000), :830 ChemicalReactor (3, 3, 16000),
+    // :958 FluidExtractor (1, 1, 16000), :967 FluidSolidifier (1, 1, 16000)
+    ELECTROLYZER("electrolyzer", GtRecipeMap.ELECTROLYZER, 2, 6, 64000, "electrolyzer"),
+    CHEMICAL_REACTOR("chemical_reactor", GtRecipeMap.CHEMICAL_REACTOR, 3, 3, 16000, "chemicalreactor"),
+    FLUID_EXTRACTOR("fluid_extractor", GtRecipeMap.FLUID_EXTRACTOR, 1, 1, 16000, "fluidextractor"),
+    FLUID_SOLIDIFIER("fluid_solidifier", GtRecipeMap.FLUID_SOLIDIFIER, 1, 1, 16000, "fluidsolidifier");
 
     public final String id;
     public final GtRecipeMap recipeMap;

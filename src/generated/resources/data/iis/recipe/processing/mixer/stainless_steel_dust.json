@@ -1,0 +1,29 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/iron",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:dusts/invar",
+      "count": 3
+    },
+    {
+      "ingredient": "#c:dusts/manganese",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/chrome",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_stainless_steel",
+      "count": 9
+    }
+  ],
+  "duration": 900,
+  "eut": 8
+}

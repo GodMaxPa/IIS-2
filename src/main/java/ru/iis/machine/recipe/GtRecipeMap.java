@@ -25,7 +25,12 @@ public enum GtRecipeMap {
     CUTTER("cutter", 1, 2),
     CANNER("canner", 2, 2),
     // EBF slice: sBlastRecipes (2 входа, 2 выхода, по жидкости на вход и выход; temp — нагрев катушек)
-    BLAST("blast", 2, 2);
+    BLAST("blast", 2, 2),
+    // LV III: химия и расплавы (D76): sElectrolyzerRecipes, sChemicalRecipes, sFluidExtractionRecipes, sFluidSolidficationRecipes
+    ELECTROLYZER("electrolyzer", 2, 6),
+    CHEMICAL_REACTOR("chemical_reactor", 3, 3),
+    FLUID_EXTRACTOR("fluid_extractor", 1, 1),
+    FLUID_SOLIDIFIER("fluid_solidifier", 1, 1);
 
     public final String id;
     public final int maxInputs, maxOutputs;

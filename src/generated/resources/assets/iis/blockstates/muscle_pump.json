@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iis:block/bio/muscle_pump"
+    },
+    "facing=east": {
+      "model": "iis:block/bio/muscle_pump",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iis:block/bio/muscle_pump",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iis:block/bio/muscle_pump",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "iis:block/bio/muscle_pump",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "iis:block/bio/muscle_pump",
+      "x": 90
+    }
+  }
+}

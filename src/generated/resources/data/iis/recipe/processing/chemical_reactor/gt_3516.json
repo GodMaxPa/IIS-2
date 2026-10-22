@@ -1,0 +1,55 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:liquid_nitrationmixture",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 18
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:glycerol",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 7
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 10,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:glyceryl",
+          "amount": 1000
+        }
+      }
+    },
+    {
+      "id": "iis:capsule",
+      "count": 15
+    }
+  ],
+  "duration": 1200,
+  "eut": 30,
+  "fluid_outputs": [
+    {
+      "id": "iis:dilutedsulfuricacid",
+      "amount": 15000
+    }
+  ]
+}

@@ -18,7 +18,8 @@ public class ElectricMachineScreen extends MachineScreen<ElectricMachineMenu> {
         if (menu.itemTransfer()) blit(g, 25, 62, 176, 36, 18, 18);
         if (menu.stuttering()) blit(g, 79, 44, 176, 54, 18, 18);
         if (menu.working()) blit(g, 78, 24, 176, 0, Math.min(20, menu.progressPermille() * 20 / 1000), 18);
-        if (menu.type.tank > 0) LvScreens.fluidIcon(g, leftPos + 53, topPos + 63, LvScreens.fluid(menu.fluidId()));
+        // GT getDisplayedFluid: выходная жидкость, если есть, иначе входная
+        if (menu.type.tank > 0) LvScreens.fluidIcon(g, leftPos + 53, topPos + 63, LvScreens.fluid(menu.outFluidAmount() > 0 ? menu.outFluidId() : menu.fluidId()));
     }
 
     @Override
@@ -47,7 +48,10 @@ public class ElectricMachineScreen extends MachineScreen<ElectricMachineMenu> {
         } else if (menu.stuttering() && hovering(79, 44, 18, 18, mouseX, mouseY)) {
             g.setTooltipForNextFrame(Component.translatable("gui.iis.no_energy"), mouseX, mouseY);
         } else if (menu.type.tank > 0 && hovering(53, 63, 16, 16, mouseX, mouseY)) {
-            g.setTooltipForNextFrame(LvScreens.fluidLine(LvScreens.fluid(menu.fluidId()), menu.fluidAmount(), menu.type.tank), mouseX, mouseY);
+            Component in = LvScreens.fluidLine(LvScreens.fluid(menu.fluidId()), menu.fluidAmount(), menu.type.tank);
+            Component tip = menu.outFluidAmount() <= 0 ? in : Component.translatable("gui.iis.fluid_in_out", in,
+                    LvScreens.fluidLine(LvScreens.fluid(menu.outFluidId()), menu.outFluidAmount(), menu.type.tank));
+            g.setTooltipForNextFrame(tip, mouseX, mouseY);
         }
     }
 }

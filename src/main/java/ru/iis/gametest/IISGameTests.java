@@ -40,10 +40,16 @@ public final class IISGameTests {
 
     public static final DeferredRegister<Consumer<GameTestHelper>> FUNCTIONS = DeferredRegister.create(Registries.TEST_FUNCTION, IIS.MODID);
     private static final Identifier FLOOR = Identifier.fromNamespaceAndPath(IIS.MODID, "floor9");
+    /** Пол 16×16 для больших построек (личный челнок Био). */
+    private static final Identifier FLOOR16 = Identifier.fromNamespaceAndPath(IIS.MODID, "floor16");
 
-    private record Test(String name, int maxTicks, Consumer<GameTestHelper> fn, boolean sky) {
+    private record Test(String name, int maxTicks, Consumer<GameTestHelper> fn, boolean sky, Identifier structure) {
         Test(String name, int maxTicks, Consumer<GameTestHelper> fn) {
-            this(name, maxTicks, fn, false);
+            this(name, maxTicks, fn, false, FLOOR);
+        }
+
+        Test(String name, int maxTicks, Consumer<GameTestHelper> fn, boolean sky) {
+            this(name, maxTicks, fn, sky, FLOOR);
         }
     }
 
@@ -86,8 +92,53 @@ public final class IISGameTests {
             new Test("fix_auto_output", 100, FixGameTests::autoOutput),
             new Test("fix_tree_feller", 20, FixGameTests::treeFeller),
             new Test("lv_rubber_tree", 20, LvGameTests::rubberTree, true), // дереву нужен открытый верх (без потолка теста)
+            new Test("bio_shuttle_feed_grow", 1600, BioGameTests::shuttleFeedAndGrow, false, FLOOR16),
+            new Test("bio_starvation_retreat", 900, BioGameTests::starvationRetreat),
+            new Test("bio_core_removed_kills_tissue", 20, BioGameTests::coreRemovedKillsTissue),
+            new Test("bio_maw_needs_colony", 20, BioGameTests::mawNeedsColony),
+            new Test("bio_damage_alarms", 300, BioGameTests::damageAlarms),
+            new Test("bio_torn_tissue_dies", 300, BioGameTests::tornTissueDies),
+            new Test("bio_tissue_melts_snow", 900, BioGameTests::tissueMeltsSnow),
+            new Test("bio_b1_pocket_l01", 1600, BioGameTests::pocketL01),
+            new Test("bio_b1_knife_carcass", 40, BioGameTests::knifeCarcass),
+            new Test("bio_b1_butcher_carcass", 900, BioGameTests::butcherCarcass),
+            new Test("bio_b1_pot_gel", 3000, BioGameTests::potGel),
+            new Test("bio_b1_mixer_g0", 1000, BioGameTests::mixerG0),
+            new Test("bio_b1_substrate_tissue", 2800, BioGameTests::substrateTissue),
+            new Test("bio_b1_substrate_needs_colony", 100, BioGameTests::substrateNeedsColony),
+            new Test("bio_b1_bed_grows_maw", 4000, BioGameTests::bedGrowsMaw),
+            new Test("bio_b1_scrape_culture", 20, BioGameTests::scrapeCulture),
+            new Test("fluid_gt_registered", 20, FluidGameTests::gtFluidsRegistered),
+            new Test("fluid_capsules_tank", 20, FluidGameTests::capsulesAndTank),
+            new Test("fluid_tank_drains_down", 200, FluidGameTests::tankDrainsDown),
+            new Test("fluid_tank_pipe_tank", 400, FluidGameTests::tankPipeTank),
+            new Test("fluid_hot_fluid_burns_pipe", 600, FluidGameTests::hotFluidBurnsPipe),
+            new Test("bio_net_core_pumps", 600, FluidGameTests::corePumpsNetwork),
+            new Test("bio_net_flat_no_pump", 100, FluidGameTests::flatNetworkWithoutPump),
+            new Test("bio_net_gravity_drain", 300, FluidGameTests::gravityDrain),
+            new Test("bio_net_tall_ulv_bursts", 100, FluidGameTests::tallUlvColumnBursts),
+            new Test("bio_net_check_valve_forward", 400, FluidGameTests::checkValveForward),
+            new Test("bio_net_check_valve_backward", 140, FluidGameTests::checkValveBackward),
+            new Test("bio_net_clamp", 400, FluidGameTests::clampClosesAndOpens),
+            new Test("bio_net_living_tank", 800, FluidGameTests::livingTankReceiveAndSupply),
+            new Test("bio_net_muscle_pump", 400, FluidGameTests::musclePumpMovesFluid),
+            new Test("bio_net_lv_pump_bursts_ulv", 100, FluidGameTests::lvPumpBurstsUlvVessel),
+            new Test("bio_lv_gland_e1", 900, FluidGameTests::glandMakesE1),
+            new Test("bio_lv_nest_needs_buffers", 60, FluidGameTests::nestNeedsBuffers),
+            new Test("stand_world_works", 1800, FluidGameTests::standWorks),
+            new Test("lv_circuit_selects_recipe", 20, CircuitGameTests::circuitSelectsRecipe),
+            new Test("lv_bender_steel_capsules", 1500, CircuitGameTests::benderSteelCapsules),
+            new Test("lv3_electrolyzer_pyrolusite", 600, ChemGameTests::electrolyzerPyrolusite),
+            new Test("lv3_electrolyzer_water", 2600, ChemGameTests::electrolyzerWater),
+            new Test("lv3_chemical_rubber", 1000, ChemGameTests::chemicalRubber),
+            new Test("lv3_fluid_extractor_tin", 400, ChemGameTests::fluidExtractorTin),
+            new Test("lv3_solidifier_ingot", 400, ChemGameTests::solidifierIngot),
+            new Test("lv3_mixer_stainless", 1200, ChemGameTests::mixerStainless),
+            new Test("bio_hearth_fuel_slot", 20, FluidGameTests::hearthFuelSlot),
+            new Test("bio_press_extract", 2000, FluidGameTests::pressExtract),
+            new Test("bio_filter_w0", 1100, FluidGameTests::filterW0),
             new Test("selftest", 20, h -> {
-                h.assertTrue(SelfTest.runSilently(h.getLevel()), "selftest failed, see log");
+                h.assertTrue(SelfTest.runSilently(h.getLevel(), h.absolutePos(new BlockPos(4, 1, 4))), "selftest failed, see log");
                 h.succeed();
             }));
 
@@ -106,7 +157,7 @@ public final class IISGameTests {
         for (Test t : TESTS) {
             Identifier id = Identifier.fromNamespaceAndPath(IIS.MODID, t.name);
             event.registerTest(id, new FunctionGameTestInstance(ResourceKey.create(Registries.TEST_FUNCTION, id),
-                    new TestData<>(env, FLOOR, t.maxTicks, 0, true, net.minecraft.world.level.block.Rotation.NONE, false, 1, 1, t.sky, 0)));
+                    new TestData<>(env, t.structure, t.maxTicks, 0, true, net.minecraft.world.level.block.Rotation.NONE, false, 1, 1, t.sky, 0)));
         }
     }
 

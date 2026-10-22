@@ -1,0 +1,23 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/magnetite",
+      "count": 7
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron",
+      "count": 3
+    }
+  ],
+  "duration": 210,
+  "eut": 30,
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 4000
+    }
+  ]
+}

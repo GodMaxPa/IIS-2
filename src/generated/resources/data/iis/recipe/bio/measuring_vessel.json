@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "S",
+    "P"
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "P": "iis:stone_pot"
+  },
+  "result": {
+    "id": "iis:measuring_vessel",
+    "count": 1
+  }
+}

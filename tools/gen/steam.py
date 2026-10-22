@@ -81,7 +81,7 @@ def generate(g):
             out.paste(frame, (0, 16 * f))
         out.save(tex_out(rel + '.png'))
         if meta and frames > 1:
-            with open(tex_out(rel + '.png.mcmeta'), 'w') as fh:
+            with open(tex_out(rel + '.png.mcmeta'), 'w', newline=chr(10)) as fh:
                 fh.write(meta)
 
     def cube_model(model_id, faces):

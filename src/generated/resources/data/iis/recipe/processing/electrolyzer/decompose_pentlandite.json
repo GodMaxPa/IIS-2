@@ -1,0 +1,21 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/pentlandite",
+      "count": 17
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_nickel",
+      "count": 9
+    },
+    {
+      "id": "iis:dust_sulfur",
+      "count": 8
+    }
+  ],
+  "duration": 748,
+  "eut": 60
+}

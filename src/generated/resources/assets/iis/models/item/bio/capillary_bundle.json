@@ -1,0 +1,55 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "iis:block/bio/capillary_bundle",
+    "v": "iis:block/bio/capillary_bundle"
+  },
+  "elements": [
+    {
+      "from": [
+        5.0,
+        5.0,
+        0
+      ],
+      "to": [
+        11.0,
+        11.0,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#v"
+        },
+        "south": {
+          "texture": "#v"
+        },
+        "east": {
+          "texture": "#v"
+        },
+        "west": {
+          "texture": "#v"
+        },
+        "up": {
+          "texture": "#v"
+        },
+        "down": {
+          "texture": "#v"
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        45,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/magnesium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 42,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_magnesium",
+      "amount": 16
+    }
+  ]
+}

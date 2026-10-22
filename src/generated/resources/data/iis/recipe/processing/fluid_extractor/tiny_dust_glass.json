@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/glass",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 54,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_glass",
+      "amount": 16
+    }
+  ]
+}

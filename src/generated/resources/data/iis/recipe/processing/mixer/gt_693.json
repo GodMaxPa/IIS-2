@@ -1,0 +1,38 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:sulfuricacid",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 7
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 7
+    }
+  ],
+  "duration": 480,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:nitricacid",
+      "amount": 5000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_nitrationmixture",
+      "amount": 12000
+    }
+  ]
+}

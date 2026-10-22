@@ -34,6 +34,8 @@ public final class IISClient {
     public IISClient(IEventBus modBus) {
         modBus.addListener(IISClient::registerBlockTints);
         modBus.addListener(IISClient::registerScreens);
+        modBus.addListener((net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.ItemTintSources e) ->
+                e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "fluid_content"), ru.iis.fluid.client.FluidContentTint.CODEC));
         modBus.addListener(IISClient::registerFluidModels);
         modBus.addListener(IISClient::registerCoverRenderers);
         NeoForge.EVENT_BUS.addListener(IISClient::machineTooltips);
@@ -77,6 +79,8 @@ public final class IISClient {
         event.register(ru.iis.multi.MultiContent.ITEM_BUS_MENU.get(), ru.iis.multi.client.MultiScreens.Bus::new);
         event.register(ru.iis.multi.MultiContent.FLUID_HATCH_MENU.get(), ru.iis.multi.client.MultiScreens.FluidHatch::new);
         event.register(ru.iis.multi.MultiContent.EBF_MENU.get(), ru.iis.multi.client.MultiScreens.Ebf::new);
+        event.register(ru.iis.bio.BioContent.STATION_MENU.get(), ru.iis.bio.client.BioStationScreen::new);
+        event.register(ru.iis.bio.BioContent.HEARTH_MENU.get(), ru.iis.bio.client.HearthScreen::new);
     }
 
     private static void registerFluidModels(RegisterFluidModelsEvent event) {
@@ -84,6 +88,16 @@ public final class IISClient {
         event.register(new FluidModel.Unbaked(steam, steam, null, (FluidTintSource) null), IISFluids.STEAM, IISFluids.STEAM_FLOWING);
         Material creosote = new Material(Identifier.fromNamespaceAndPath(IIS.MODID, "block/fluid/creosote"));
         event.register(new FluidModel.Unbaked(creosote, creosote, null, (FluidTintSource) null), IISFluids.CREOSOTE, IISFluids.CREOSOTE_FLOWING);
+        // жидкости GT5 (D72): общая текстура по состоянию, окраска цветом материала
+        String[] byState = {"gt_solid", "gt_liquid", "gt_gas", "gt_plasma", "gt_molten"};
+        for (ru.iis.fluid.GtFluids.Def d : ru.iis.fluid.GtFluids.all().values()) {
+            Material m = new Material(Identifier.fromNamespaceAndPath(IIS.MODID, "block/fluid/" + byState[Math.max(0, Math.min(4, d.state()))]));
+            event.register(new FluidModel.Unbaked(m, m, null, net.neoforged.neoforge.client.fluid.FluidTintSources.constant(0xFF000000 | d.color())), d.source(), d.flowing());
+        }
+        for (ru.iis.bio.fluid.BioFluids.Def d : ru.iis.bio.fluid.BioFluids.ALL.values()) {
+            Material m = new Material(ru.iis.bio.fluid.BioFluids.still(d));
+            event.register(new FluidModel.Unbaked(m, m, null, (FluidTintSource) null), d.source(), d.flowing());
+        }
     }
 
     /** Строки описания из перевода: block.iis.<id>.tooltip.0, .1, ... (генерирует tools/gen/steam.py из GregTech.lang.ru). */
@@ -91,7 +105,14 @@ public final class IISClient {
         if (ru.iis.cover.Covers.kindOf(event.getItemStack()) != null) {
             for (int i = 0; i < 3; i++) event.getToolTip().add(Component.translatable("cover.iis.tooltip." + i).withStyle(net.minecraft.ChatFormatting.DARK_AQUA));
         }
-        if (!(event.getItemStack().getItem() instanceof BlockItem bi)) return;
+        if (!(event.getItemStack().getItem() instanceof BlockItem bi)) {
+            // предметы Био: item.iis.<id>.tooltip.0, .1, ... (tools/gen/bio_b1.py)
+            Identifier iid = BuiltInRegistries.ITEM.getKey(event.getItemStack().getItem());
+            if (!IIS.MODID.equals(iid.getNamespace())) return;
+            String ibase = "item.iis." + iid.getPath() + ".tooltip.";
+            for (int i = 0; I18n.exists(ibase + i); i++) event.getToolTip().add(1 + i, Component.translatable(ibase + i).withStyle(ChatFormatting.GRAY));
+            return;
+        }
         Identifier id = BuiltInRegistries.BLOCK.getKey(bi.getBlock());
         if (!IIS.MODID.equals(id.getNamespace())) return;
         String base = "block.iis." + id.getPath() + ".tooltip.";

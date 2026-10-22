@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_manganese",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_chrome",
+      "count": 1
     }
   ],
-  "duration": 55,
+  "duration": 440,
   "eut": 5
 }

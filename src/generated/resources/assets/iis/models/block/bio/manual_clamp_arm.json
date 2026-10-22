@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "iis:block/bio/capillary_bundle",
+    "v": "iis:block/bio/capillary_bundle"
+  },
+  "elements": [
+    {
+      "from": [
+        5.5,
+        5.5,
+        0
+      ],
+      "to": [
+        10.5,
+        10.5,
+        5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#v"
+        },
+        "east": {
+          "texture": "#v"
+        },
+        "west": {
+          "texture": "#v"
+        },
+        "up": {
+          "texture": "#v"
+        },
+        "down": {
+          "texture": "#v"
+        }
+      }
+    }
+  ]
+}

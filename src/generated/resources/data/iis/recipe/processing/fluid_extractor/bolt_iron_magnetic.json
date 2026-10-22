@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:bolts/iron_magnetic",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 3,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_iron",
+      "amount": 18
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "hf",
+    "PP",
+    "PP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:shape_empty"
+  }
+}

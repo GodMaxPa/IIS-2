@@ -169,5 +169,41 @@
     "outputs": 2,
     "tank": 0,
     "gui": "lv/canner"
+  },
+  {
+    "id": "electrolyzer_lv",
+    "type": "electrolyzer",
+    "recipeMap": "electrolyzer",
+    "inputs": 2,
+    "outputs": 6,
+    "tank": 64000,
+    "gui": "lv/electrolyzer"
+  },
+  {
+    "id": "chemical_reactor_lv",
+    "type": "chemical_reactor",
+    "recipeMap": "chemical_reactor",
+    "inputs": 3,
+    "outputs": 3,
+    "tank": 16000,
+    "gui": "lv/chemicalreactor"
+  },
+  {
+    "id": "fluid_extractor_lv",
+    "type": "fluid_extractor",
+    "recipeMap": "fluid_extractor",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/fluidextractor"
+  },
+  {
+    "id": "fluid_solidifier_lv",
+    "type": "fluid_solidifier",
+    "recipeMap": "fluid_solidifier",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/fluidsolidifier"
   }
 ]

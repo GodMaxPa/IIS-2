@@ -1,0 +1,21 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/pyrite",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_sulfur",
+      "count": 2
+    }
+  ],
+  "duration": 114,
+  "eut": 60
+}

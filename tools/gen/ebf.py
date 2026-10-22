@@ -9,7 +9,8 @@ import shutil
 
 from PIL import Image
 
-GT = '/home/claude/ref/gt5/src/main/resources/assets/gregtech/textures'
+# GT5 textures: the cloud checkout, or locally a checkout of IdealIndustrial/GT5Unofficial@00021e3 given by IIS_GT5_TEXTURES
+GT = os.environ.get('IIS_GT5_TEXTURES', '/home/claude/ref/gt5/src/main/resources/assets/gregtech/textures')
 FRAMES = ['Invar', 'Steel', 'Iron', 'Bronze', 'Aluminium']
 HATCHES = [
     # id, overlay, GT lang key, EN

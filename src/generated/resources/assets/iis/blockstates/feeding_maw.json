@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,connected=true,chewing=true": {
+      "model": "iis:block/bio/maw_open"
+    },
+    "facing=north,connected=true,chewing=false": {
+      "model": "iis:block/bio/maw_closed"
+    },
+    "facing=north,connected=false,chewing=true": {
+      "model": "iis:block/bio/maw_dull"
+    },
+    "facing=north,connected=false,chewing=false": {
+      "model": "iis:block/bio/maw_dull"
+    },
+    "facing=east,connected=true,chewing=true": {
+      "model": "iis:block/bio/maw_open",
+      "y": 90
+    },
+    "facing=east,connected=true,chewing=false": {
+      "model": "iis:block/bio/maw_closed",
+      "y": 90
+    },
+    "facing=east,connected=false,chewing=true": {
+      "model": "iis:block/bio/maw_dull",
+      "y": 90
+    },
+    "facing=east,connected=false,chewing=false": {
+      "model": "iis:block/bio/maw_dull",
+      "y": 90
+    },
+    "facing=south,connected=true,chewing=true": {
+      "model": "iis:block/bio/maw_open",
+      "y": 180
+    },
+    "facing=south,connected=true,chewing=false": {
+      "model": "iis:block/bio/maw_closed",
+      "y": 180
+    },
+    "facing=south,connected=false,chewing=true": {
+      "model": "iis:block/bio/maw_dull",
+      "y": 180
+    },
+    "facing=south,connected=false,chewing=false": {
+      "model": "iis:block/bio/maw_dull",
+      "y": 180
+    },
+    "facing=west,connected=true,chewing=true": {
+      "model": "iis:block/bio/maw_open",
+      "y": 270
+    },
+    "facing=west,connected=true,chewing=false": {
+      "model": "iis:block/bio/maw_closed",
+      "y": 270
+    },
+    "facing=west,connected=false,chewing=true": {
+      "model": "iis:block/bio/maw_dull",
+      "y": 270
+    },
+    "facing=west,connected=false,chewing=false": {
+      "model": "iis:block/bio/maw_dull",
+      "y": 270
+    }
+  }
+}

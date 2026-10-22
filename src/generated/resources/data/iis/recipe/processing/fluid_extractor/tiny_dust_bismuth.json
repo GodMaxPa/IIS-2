@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/bismuth",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 32,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_bismuth",
+      "amount": 16
+    }
+  ]
+}

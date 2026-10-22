@@ -42,4 +42,5 @@ def structure(path, sx, sy, sz, floor='minecraft:smooth_stone'):
 
 
 structure('src/main/resources/data/iis/structure/floor9.nbt', 9, 7, 9)
+structure('src/main/resources/data/iis/structure/floor16.nbt', 16, 12, 16)
 print('ok')

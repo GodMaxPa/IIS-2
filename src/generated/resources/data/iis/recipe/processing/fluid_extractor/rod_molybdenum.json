@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/molybdenum",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 12,
+  "eut": 76,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_molybdenum",
+      "amount": 72
+    }
+  ]
+}

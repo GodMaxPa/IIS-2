@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/beryllium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 55,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_beryllium",
+      "amount": 16
+    }
+  ]
+}

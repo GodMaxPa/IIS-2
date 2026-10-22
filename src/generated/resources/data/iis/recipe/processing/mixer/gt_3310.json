@@ -1,0 +1,38 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:biodiesel",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 4
+    }
+  ],
+  "duration": 320,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:tetranitromethane",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:nitrofuel",
+      "amount": 3000
+    }
+  ]
+}

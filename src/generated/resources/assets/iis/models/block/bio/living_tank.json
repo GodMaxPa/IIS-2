@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "iis:block/bio/sac",
+    "top": "iis:block/bio/gland_top",
+    "bottom": "iis:block/bio/bed_side"
+  }
+}

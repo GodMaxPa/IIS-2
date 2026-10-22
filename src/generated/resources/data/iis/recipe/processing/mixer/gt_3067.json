@@ -1,0 +1,38 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:methylacetate",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 3
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:polyvinylacetate",
+      "amount": 2000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:glue",
+      "amount": 5000
+    }
+  ]
+}

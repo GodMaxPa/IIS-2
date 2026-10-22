@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "iis:block/bio/tissue_microchannel",
+    "v": "iis:block/bio/tissue_microchannel"
+  },
+  "elements": [
+    {
+      "from": [
+        6.5,
+        6.5,
+        0
+      ],
+      "to": [
+        9.5,
+        9.5,
+        6.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#v",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "#v"
+        },
+        "west": {
+          "texture": "#v"
+        },
+        "up": {
+          "texture": "#v"
+        },
+        "down": {
+          "texture": "#v"
+        }
+      }
+    }
+  ]
+}

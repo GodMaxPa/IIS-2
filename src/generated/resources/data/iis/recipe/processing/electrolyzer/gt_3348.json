@@ -1,0 +1,25 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:dust_sulfur",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:sulfurdioxide",
+      "amount": 3000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 2000
+    }
+  ],
+  "circuit": 1
+}

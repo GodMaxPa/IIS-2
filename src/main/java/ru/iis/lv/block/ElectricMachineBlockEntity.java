@@ -28,6 +28,7 @@ import ru.iis.lv.LvMachineType;
 import ru.iis.lv.menu.ElectricMachineMenu;
 import ru.iis.machine.Overclock;
 import ru.iis.machine.block.FluidTank;
+import ru.iis.machine.recipe.FluidOutput;
 import ru.iis.machine.block.MachineBlock;
 import ru.iis.machine.logic.ElectricMachineLogic;
 import ru.iis.machine.recipe.GtRecipes;
@@ -47,7 +48,11 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
 
     private final ElectricMachineLogic logic = new ElectricMachineLogic(VOLTAGE);
     private final FluidTank tank;
+    /** GT mOutputFluid: выходной бак той же ёмкости, снаружи только слив (LV III, D76). */
+    private final FluidTank outTank;
+    private final net.neoforged.neoforge.transfer.CombinedResourceHandler<FluidResource> fluids;
     private List<ItemStack> pending = List.of();
+    private FluidStack pendingFluid = FluidStack.EMPTY;
     private boolean inventoryChanged = true;
     /** GT mItemTransfer / mFluidTransfer: кнопки автовыгрузки (8,63) жидкость и (26,63) предметы. */
     public boolean itemTransfer = false, fluidTransfer = false;
@@ -59,6 +64,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         LvMachineType t = type(state);
         this.tank = new FluidTank(Math.max(1, t.tank), f -> t.tank > 0 && t.recipeMap != null
                 && level instanceof ServerLevel sl && GtRecipes.acceptsFluid(sl, t.recipeMap, f), true, this::markDirty);
+        this.outTank = new FluidTank(Math.max(1, t.tank), f -> false, true, this::markDirty);
+        this.fluids = new net.neoforged.neoforge.transfer.CombinedResourceHandler<>(tank, outTank);
     }
 
     private static LvMachineType type(BlockState state) {
@@ -91,13 +98,17 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         return tank;
     }
 
+    public FluidTank outTank() {
+        return outTank;
+    }
+
     @Override
     public boolean inputsEnergyFrom(Direction side) {
         return side != front();
     }
 
     public @Nullable ResourceHandler<FluidResource> fluidHandler(@Nullable Direction side) {
-        return type().tank > 0 && side != front() ? tank : null;
+        return type().tank > 0 && side != front() ? fluids : null;
     }
 
     public @Nullable ResourceHandler<ItemResource> itemHandler(@Nullable Direction side) {
@@ -131,12 +142,17 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
                     else cur.grow(o.getCount());
                 }
                 pending = List.of();
+                if (!pendingFluid.isEmpty()) {
+                    outTank.setAmount(pendingFluid.getFluid(), outTank.amount() + pendingFluid.getAmount());
+                    pendingFluid = FluidStack.EMPTY;
+                }
                 inventoryChanged = true;
                 succeeded[0] = true;
                 setChanged();
             }
         });
         if (itemTransfer && (check || succeeded[0])) autoOutput(sl);
+        if (fluidTransfer && outTank.amount() > 0 && (check || succeeded[0])) autoOutputFluid(sl);
         BlockState st = getBlockState();
         if (st.getValue(MachineBlock.ACTIVE) != logic.active) sl.setBlock(worldPosition, st.setValue(MachineBlock.ACTIVE, logic.active), 3);
     }
@@ -167,10 +183,24 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         }
     }
 
+    /** GT mFluidTransfer: выходная жидкость сливается в бак со стороны выхода. */
+    private void autoOutputFluid(ServerLevel sl) {
+        Direction side = outputSide();
+        ResourceHandler<FluidResource> target = sl.getCapability(net.neoforged.neoforge.capabilities.Capabilities.Fluid.BLOCK, worldPosition.relative(side), side.getOpposite());
+        if (target == null) return;
+        FluidResource r = outTank.resource();
+        int moved;
+        try (var tx = net.neoforged.neoforge.transfer.transaction.Transaction.openRoot()) {
+            moved = target.insert(r, outTank.amount(), tx);
+            tx.commit();
+        }
+        if (moved > 0) outTank.drainInternal(moved);
+    }
+
     // --- покрытия ----------------------------------------------------------------------------------------------------
     @Override
     public @Nullable ResourceHandler<FluidResource> rawFluids(@Nullable Direction side) {
-        return type().tank > 0 ? tank : null;
+        return type().tank > 0 ? fluids : null;
     }
 
     @Override
@@ -234,11 +264,16 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         for (int i = 0; i < outs.size() && i < t.outputs; i++) {
             if (!fits(i, outs.get(i).create())) return null;
         }
+        for (var fo : m.recipe().fluidOutputs()) {
+            if (outTank.amount() > 0 && outTank.resource().getFluid() != fo.fluid()) return null;
+            if (outTank.amount() + fo.amount() > outTank.capacity()) return null;
+        }
         for (int s = 0; s < m.take().length; s++) {
             if (m.take()[s] > 0) items.get(s).shrink(m.take()[s]);
         }
         for (var f : m.recipe().fluidInputs()) tank.drainInternal(f.amount());
         pending = m.recipe().rollOutputs(sl.getRandom());
+        pendingFluid = m.recipe().fluidOutputs().isEmpty() ? FluidStack.EMPTY : m.recipe().fluidOutputs().getFirst().create();
         setChanged();
         Overclock.Result oc = Overclock.basicMachine(Math.max(1, m.recipe().eut()), m.recipe().duration(), VoltageTier.LV, 1);
         return new int[]{(int) oc.euPerTick(), oc.durationTicks()};
@@ -300,6 +335,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
                 case 7 -> logic.eut;
                 case 8 -> itemTransfer ? 1 : 0;
                 case 9 -> fluidTransfer ? 1 : 0;
+                case 10 -> outTank.amount();
+                case 11 -> outTank.amount() > 0 ? BuiltInRegistries.FLUID.getId(outTank.resource().getFluid()) : -1;
                 default -> 0;
             };
         }
@@ -309,7 +346,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
 
         @Override
         public int getCount() {
-            return 10;
+            return 12;
         }
     };
 
@@ -322,6 +359,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
     protected void saveAdditional(ValueOutput out) {
         super.saveAdditional(out);
         tank.serialize(out.child("tank"));
+        outTank.serialize(out.child("outTank"));
+        if (!pendingFluid.isEmpty()) out.store("pendingFluid", FluidOutput.CODEC, new FluidOutput(pendingFluid.getFluid(), pendingFluid.getAmount()));
         out.putInt("progress", logic.progress);
         out.putInt("maxProgress", logic.maxProgress);
         out.putInt("eut", logic.eut);
@@ -337,6 +376,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         items = NonNullList.withSize(slotCount(getBlockState()), ItemStack.EMPTY);
         super.loadAdditional(in);
         tank.deserialize(in.childOrEmpty("tank"));
+        outTank.deserialize(in.childOrEmpty("outTank"));
+        pendingFluid = in.read("pendingFluid", FluidOutput.CODEC).map(FluidOutput::create).orElse(FluidStack.EMPTY);
         logic.progress = in.getIntOr("progress", 0);
         logic.maxProgress = in.getIntOr("maxProgress", 0);
         logic.eut = in.getIntOr("eut", 0);

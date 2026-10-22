@@ -1,0 +1,304 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "AND": [
+          {
+            "north": "true"
+          },
+          {
+            "vitality": "fresh"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_fresh"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "east": "true"
+          },
+          {
+            "vitality": "fresh"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_fresh",
+        "uvlock": true,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "south": "true"
+          },
+          {
+            "vitality": "fresh"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_fresh",
+        "uvlock": true,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "west": "true"
+          },
+          {
+            "vitality": "fresh"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_fresh",
+        "uvlock": true,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "up": "true"
+          },
+          {
+            "vitality": "fresh"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_fresh",
+        "uvlock": true,
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "down": "true"
+          },
+          {
+            "vitality": "fresh"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_fresh",
+        "uvlock": true,
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "north": "true"
+          },
+          {
+            "vitality": "alive"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_alive"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "east": "true"
+          },
+          {
+            "vitality": "alive"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_alive",
+        "uvlock": true,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "south": "true"
+          },
+          {
+            "vitality": "alive"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_alive",
+        "uvlock": true,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "west": "true"
+          },
+          {
+            "vitality": "alive"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_alive",
+        "uvlock": true,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "up": "true"
+          },
+          {
+            "vitality": "alive"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_alive",
+        "uvlock": true,
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "down": "true"
+          },
+          {
+            "vitality": "alive"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_alive",
+        "uvlock": true,
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "north": "true"
+          },
+          {
+            "vitality": "starving"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_starving"
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "east": "true"
+          },
+          {
+            "vitality": "starving"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_starving",
+        "uvlock": true,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "south": "true"
+          },
+          {
+            "vitality": "starving"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_starving",
+        "uvlock": true,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "west": "true"
+          },
+          {
+            "vitality": "starving"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_starving",
+        "uvlock": true,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "up": "true"
+          },
+          {
+            "vitality": "starving"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_starving",
+        "uvlock": true,
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "AND": [
+          {
+            "down": "true"
+          },
+          {
+            "vitality": "starving"
+          }
+        ]
+      },
+      "apply": {
+        "model": "iis:block/bio/tissue_starving",
+        "uvlock": true,
+        "x": 90
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/calcite",
+      "count": 5
+    }
+  ],
+  "outputs": [],
+  "duration": 240,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:aceticacid",
+      "amount": 16000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:calciumacetatesolution",
+      "amount": 18000
+    }
+  ],
+  "circuit": 1
+}

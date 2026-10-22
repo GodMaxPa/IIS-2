@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SS",
+    "PP",
+    "PP"
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "P": "#minecraft:planks"
+  },
+  "result": {
+    "id": "iis:butcher_block",
+    "count": 1
+  }
+}

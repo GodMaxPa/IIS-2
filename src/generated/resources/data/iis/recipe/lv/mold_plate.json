@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " h ",
+    " P ",
+    "   "
+  ],
+  "key": {
+    "P": "iis:shape_empty",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:mold_plate"
+  }
+}

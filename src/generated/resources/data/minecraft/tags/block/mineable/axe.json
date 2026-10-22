@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "iis:rubber_log"
+    "iis:rubber_log",
+    "iis:butcher_block",
+    "iis:stone_press"
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:screws/lead",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 34,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_lead",
+      "amount": 16
+    }
+  ]
+}

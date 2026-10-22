@@ -36,6 +36,12 @@
     "iis:wire_cupronickel_2x",
     "iis:cable_cupronickel_2x",
     "iis:wire_cupronickel_4x",
-    "iis:cable_cupronickel_4x"
+    "iis:cable_cupronickel_4x",
+    "iis:wire_gold_1x",
+    "iis:cable_gold_1x",
+    "iis:wire_gold_2x",
+    "iis:cable_gold_2x",
+    "iis:wire_gold_4x",
+    "iis:cable_gold_4x"
   ]
 }

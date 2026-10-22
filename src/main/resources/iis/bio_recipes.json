@@ -1,0 +1,2569 @@
+[
+ {
+  "id": "hand_substrate",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 20,
+  "items": [
+   {
+    "key": "iis:growth_substrate",
+    "count": 1
+   },
+   {
+    "key": "#minecraft:planks",
+    "count": 2
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:hand_substrate",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "D70"
+ },
+ {
+  "id": "b11_substrate",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 20,
+  "items": [
+   {
+    "key": "iis:plant_mass",
+    "count": 1
+   },
+   {
+    "key": "iis:plant_fiber",
+    "count": 2
+   },
+   {
+    "key": "iis:binding_gel",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:growth_substrate",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "B11"
+ },
+ {
+  "id": "b10_frame",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 20,
+  "items": [
+   {
+    "key": "iis:plant_fiber",
+    "count": 4
+   },
+   {
+    "key": "iis:sinew_cord",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:woven_frame",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "B10"
+ },
+ {
+  "id": "carcass_large",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:carcass_large",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:meat_mass",
+    "count": 5
+   },
+   {
+    "item": "iis:connective_fiber",
+    "count": 3
+   },
+   {
+    "item": "iis:bone_fragment",
+    "count": 3
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:bio_knife",
+  "spec": "§22.4 корова"
+ },
+ {
+  "id": "carcass_medium",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:carcass_medium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:meat_mass",
+    "count": 4
+   },
+   {
+    "item": "iis:connective_fiber",
+    "count": 2
+   },
+   {
+    "item": "iis:bone_fragment",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:bio_knife",
+  "spec": "§22.4 свинья"
+ },
+ {
+  "id": "carcass_small",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 20,
+  "items": [
+   {
+    "key": "iis:carcass_small",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:meat_mass",
+    "count": 2
+   },
+   {
+    "item": "iis:connective_fiber",
+    "count": 1
+   },
+   {
+    "item": "iis:bone_fragment",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:bio_knife",
+  "spec": "§22.4 курица"
+ },
+ {
+  "id": "carcass_rotten",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 20,
+  "items": [
+   {
+    "key": "iis:carcass_rotten",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:rotten_mass",
+    "count": 3
+   },
+   {
+    "item": "iis:bone_fragment",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:bio_knife",
+  "spec": "D70 гнилая туша"
+ },
+ {
+  "id": "b03_wheat",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 20,
+  "items": [
+   {
+    "key": "minecraft:wheat",
+    "count": 2
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:plant_fiber",
+    "count": 2
+   },
+   {
+    "item": "iis:plant_mass",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:bio_knife",
+  "spec": "B03"
+ },
+ {
+  "id": "b18_ring",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 80,
+  "items": [
+   {
+    "key": "iis:bone_rib",
+    "count": 2
+   },
+   {
+    "key": "iis:binding_gel",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:bone_ring",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "spec": "B18 вручную (W07, 80 с)"
+ },
+ {
+  "id": "b27_pad",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 80,
+  "items": [
+   {
+    "key": "iis:plant_fiber",
+    "count": 4
+   },
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:fine_filter_pad",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "spec": "B27 вручную 80 с"
+ },
+ {
+  "id": "b27_pad_animal",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 80,
+  "items": [
+   {
+    "key": "iis:connective_fiber",
+    "count": 4
+   },
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:fine_filter_pad",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "spec": "B27 вручную 80 с"
+ },
+ {
+  "id": "clamp",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "minecraft:stick",
+    "count": 2
+   },
+   {
+    "key": "iis:sinew_cord",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:manual_clamp",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§22.7 ручной зажим ULV"
+ },
+ {
+  "id": "b05_cord",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "iis:connective_fiber",
+    "count": 2
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:sinew_cord",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "B05"
+ },
+ {
+  "id": "b07_bone",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "minecraft:bone",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:bone_fragment",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:bio_knife",
+  "spec": "B07"
+ },
+ {
+  "id": "b08_rib",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "iis:bone_fragment",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:bone_rib",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:bio_knife",
+  "spec": "B08"
+ },
+ {
+  "id": "b01_meat",
+  "station": "mortar",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "#iis:bio/raw_meat",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:meat_mass",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "B01"
+ },
+ {
+  "id": "b02_plant",
+  "station": "mortar",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "#iis:bio/vegetables",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:plant_mass",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "B02"
+ },
+ {
+  "id": "b09_powder",
+  "station": "mortar",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "iis:bone_fragment",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:bone_powder",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "B09"
+ },
+ {
+  "id": "rotten_mass",
+  "station": "mortar",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "minecraft:rotten_flesh",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:rotten_mass",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "D70"
+ },
+ {
+  "id": "l05_binder",
+  "station": "pot",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:binding_gel",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 1000
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "binder",
+    "amount": 1000
+   }
+  ],
+  "heat": true,
+  "spec": "L05"
+ },
+ {
+  "id": "b06_gel",
+  "station": "pot",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:connective_fiber",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:binding_gel",
+    "count": 1
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "runoff",
+    "amount": 250
+   }
+  ],
+  "heat": true,
+  "spec": "B06"
+ },
+ {
+  "id": "l02_extract",
+  "station": "press",
+  "mode": 0,
+  "seconds": 80,
+  "items": [
+   {
+    "key": "iis:plant_mass",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 1000
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:plant_residue",
+    "count": 1
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "extract",
+    "amount": 800
+   },
+   {
+    "fluid": "runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "L02"
+ },
+ {
+  "id": "l08_w0",
+  "station": "filter",
+  "mode": 0,
+  "seconds": 40,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 1000
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "w0",
+    "amount": 950
+   },
+   {
+    "fluid": "runoff",
+    "amount": 50
+   }
+  ],
+  "tool": "iis:filter_pad",
+  "spec": "L08 (W10)"
+ },
+ {
+  "id": "l13_g1",
+  "station": "mixer",
+  "mode": 0,
+  "seconds": 80,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "n1",
+    "amount": 500
+   },
+   {
+    "fluid": "hydrolysate",
+    "amount": 200
+   },
+   {
+    "fluid": "binder",
+    "amount": 150
+   },
+   {
+    "fluid": "extract",
+    "amount": 100
+   },
+   {
+    "fluid": "suspension",
+    "amount": 50
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "g1",
+    "amount": 1000
+   }
+  ],
+  "spec": "L13 вручную ×2"
+ },
+ {
+  "id": "l11_n1",
+  "station": "mixer",
+  "mode": 0,
+  "seconds": 40,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "w0",
+    "amount": 800
+   },
+   {
+    "fluid": "hydrolysate",
+    "amount": 100
+   },
+   {
+    "fluid": "extract",
+    "amount": 70
+   },
+   {
+    "fluid": "suspension",
+    "amount": 20
+   },
+   {
+    "fluid": "emulsion",
+    "amount": 10
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "n1",
+    "amount": 1000
+   }
+  ],
+  "spec": "L11 вручную ×2"
+ },
+ {
+  "id": "l12_e1",
+  "station": "mixer",
+  "mode": 0,
+  "seconds": 60,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "n1",
+    "amount": 600
+   },
+   {
+    "fluid": "concentrate",
+    "amount": 300
+   },
+   {
+    "fluid": "emulsion",
+    "amount": 100
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "e1",
+    "amount": 1000
+   }
+  ],
+  "spec": "L12 вручную ×2"
+ },
+ {
+  "id": "l06_emulsion",
+  "station": "mixer",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:energy_paste",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "hydrolysate",
+    "amount": 500
+   },
+   {
+    "fluid": "extract",
+    "amount": 500
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "emulsion",
+    "amount": 800
+   },
+   {
+    "fluid": "runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "L06"
+ },
+ {
+  "id": "l09_n0",
+  "station": "mixer",
+  "mode": 0,
+  "seconds": 20,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 900
+   },
+   {
+    "fluid": "extract",
+    "amount": 60
+   },
+   {
+    "fluid": "hydrolysate",
+    "amount": 30
+   },
+   {
+    "fluid": "suspension",
+    "amount": 10
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "n0",
+    "amount": 1000
+   }
+  ],
+  "spec": "L09"
+ },
+ {
+  "id": "l10_g0",
+  "station": "mixer",
+  "mode": 0,
+  "seconds": 40,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "n0",
+    "amount": 600
+   },
+   {
+    "fluid": "hydrolysate",
+    "amount": 200
+   },
+   {
+    "fluid": "binder",
+    "amount": 150
+   },
+   {
+    "fluid": "suspension",
+    "amount": 50
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "g0",
+    "amount": 1000
+   }
+  ],
+  "spec": "L10"
+ },
+ {
+  "id": "l04_suspension",
+  "station": "mixer",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:bone_powder",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 1000
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "suspension",
+    "amount": 1000
+   }
+  ],
+  "spec": "L04"
+ },
+ {
+  "id": "p_l01",
+  "station": "pocket",
+  "mode": 0,
+  "seconds": 60,
+  "items": [
+   {
+    "key": "iis:plant_mass",
+    "count": 1
+   },
+   {
+    "key": "iis:meat_mass",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "n0",
+    "amount": 350
+   },
+   {
+    "fluid": "primary_fraction",
+    "amount": 50
+   },
+   {
+    "fluid": "runoff",
+    "amount": 100
+   }
+  ],
+  "spec": "L01"
+ },
+ {
+  "id": "p_meat",
+  "station": "pocket",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:meat_mass",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 250
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "n0",
+    "amount": 150
+   },
+   {
+    "fluid": "primary_fraction",
+    "amount": 20
+   },
+   {
+    "fluid": "runoff",
+    "amount": 50
+   }
+  ],
+  "spec": "D70 одна масса"
+ },
+ {
+  "id": "p_plant",
+  "station": "pocket",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:plant_mass",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 250
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "n0",
+    "amount": 150
+   },
+   {
+    "fluid": "primary_fraction",
+    "amount": 20
+   },
+   {
+    "fluid": "runoff",
+    "amount": 50
+   }
+  ],
+  "spec": "D70 одна масса"
+ },
+ {
+  "id": "p_rotten",
+  "station": "pocket",
+  "mode": 0,
+  "seconds": 20,
+  "items": [
+   {
+    "key": "iis:rotten_mass",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "n0",
+    "amount": 40
+   },
+   {
+    "fluid": "runoff",
+    "amount": 60
+   }
+  ],
+  "spec": "D70 гниль"
+ },
+ {
+  "id": "p_raw",
+  "station": "pocket",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "food",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "n0",
+    "per_nutrition": 10
+   },
+   {
+    "fluid": "runoff",
+    "amount": 20
+   }
+  ],
+  "spec": "D70 сырая пища"
+ },
+ {
+  "id": "p_b28_paste",
+  "station": "pocket",
+  "mode": 1,
+  "seconds": 60,
+  "items": [
+   {
+    "key": "iis:plant_mass",
+    "count": 2
+   },
+   {
+    "key": "iis:meat_mass",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:energy_paste",
+    "count": 1
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "B28"
+ },
+ {
+  "id": "p_l07",
+  "station": "pocket",
+  "mode": 1,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:energy_paste",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "extract",
+    "amount": 1000
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "concentrate",
+    "amount": 800
+   },
+   {
+    "fluid": "runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "L07"
+ },
+ {
+  "id": "p_l03",
+  "station": "pocket",
+  "mode": 1,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:meat_mass",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 1000
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:organic_residue",
+    "count": 1
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "hydrolysate",
+    "amount": 800
+   },
+   {
+    "fluid": "runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "L03"
+ },
+ {
+  "id": "p_muscle_seed",
+  "station": "pocket",
+  "mode": 2,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   },
+   {
+    "key": "iis:meat_mass",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:muscle_seed",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "D73 ВРЕМЕННО: мышечный посев в v0.7 не задан"
+ },
+ {
+  "id": "p_renew",
+  "station": "pocket",
+  "mode": 2,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:meat_mass",
+    "count": 1
+   },
+   {
+    "key": "iis:plant_mass",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "primary_fraction",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§22.4 возобновление посева"
+ },
+ {
+  "id": "p_b29",
+  "station": "pocket",
+  "mode": 2,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "B29"
+ },
+ {
+  "id": "a01_bed",
+  "station": "substrate",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 1
+   },
+   {
+    "key": "iis:growth_substrate",
+    "count": 1
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   },
+   {
+    "key": "iis:bone_rib",
+    "count": 2
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:growth_bed",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "A01"
+ },
+ {
+  "id": "b12_tissue",
+  "station": "substrate",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:growth_substrate",
+    "count": 1
+   },
+   {
+    "key": "#iis:bio/seeds",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "primary_fraction",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:soft_tissue",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "B12"
+ },
+ {
+  "id": "b14_membrane",
+  "station": "substrate",
+  "mode": 0,
+  "seconds": 180,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 75
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:living_membrane",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "B14"
+ },
+ {
+  "id": "a02_maw",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 180,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 1
+   },
+   {
+    "key": "iis:soft_tissue",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   },
+   {
+    "key": "iis:bone_rib",
+    "count": 2
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 75
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:feeding_maw",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "A02"
+ },
+ {
+  "id": "v_capillary",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 180,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 2
+   },
+   {
+    "key": "iis:woven_frame",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 75
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:capillary_bundle",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "§22.7 капиллярный пучок"
+ },
+ {
+  "id": "v_microchannel",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   },
+   {
+    "key": "iis:sinew_cord",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:tissue_microchannel",
+    "count": 4
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "§22.7 микроканал"
+ },
+ {
+  "id": "a03_bed",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 600,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 2
+   },
+   {
+    "key": "iis:bone_rib",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 2
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:forming_nest",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "A03 первый в ложе (§21.8)"
+ },
+ {
+  "id": "a07_bed",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 480,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 1
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 1
+   },
+   {
+    "key": "iis:valve_petal",
+    "count": 2
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 1
+   },
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 2
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 300
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:muscle_pump",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "A07 первый в ложе"
+ },
+ {
+  "id": "f06_bed",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 480,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 3
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 2
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:nutrient_gland",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "F06 первый в ложе"
+ },
+ {
+  "id": "f09_bed",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 240,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 1
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 1
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   },
+   {
+    "key": "iis:fine_filter_pad",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 150
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:membrane_filter",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "F09 первый в ложе"
+ },
+ {
+  "id": "b16_bed",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 480,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:meat_mass",
+    "count": 1
+   },
+   {
+    "key": "iis:muscle_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 200
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:muscle_bundle",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "B16 особый режим"
+ },
+ {
+  "id": "b17_bed",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 240,
+  "items": [
+   {
+    "key": "iis:muscle_bundle",
+    "count": 1
+   },
+   {
+    "key": "iis:sinew_cord",
+    "count": 1
+   },
+   {
+    "key": "iis:bone_rib",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:muscle_node",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "B17 переходный"
+ },
+ {
+  "id": "b20_bed",
+  "station": "bed",
+  "mode": 1,
+  "seconds": 180,
+  "items": [
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   },
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:valve_petal",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "B20 переходный (режим «лепестки»)"
+ },
+ {
+  "id": "b19_lining",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 240,
+  "items": [
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   },
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:tissue_lining",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "B19 переходный"
+ },
+ {
+  "id": "b15_plant",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 240,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:plant_fiber",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 150
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:fibrous_tissue",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "B15 переходный"
+ },
+ {
+  "id": "b15_animal",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 240,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:connective_fiber",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 150
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:fibrous_tissue",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "B15 переходный"
+ },
+ {
+  "id": "a03_nest",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 300,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 2
+   },
+   {
+    "key": "iis:bone_rib",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 2
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:forming_nest",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "A03"
+ },
+ {
+  "id": "a07_nest",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 240,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 1
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 1
+   },
+   {
+    "key": "iis:valve_petal",
+    "count": 2
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 1
+   },
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 2
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 150
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:muscle_pump",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "A07"
+ },
+ {
+  "id": "f06_nest",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 240,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 3
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 2
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:nutrient_gland",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "F06"
+ },
+ {
+  "id": "f09_nest",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 1
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 1
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   },
+   {
+    "key": "iis:fine_filter_pad",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 75
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:membrane_filter",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "F09"
+ },
+ {
+  "id": "living_tank",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 240,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 4
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 2
+   },
+   {
+    "key": "iis:bone_rib",
+    "count": 4
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 200
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:living_tank",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§22.7 живой бак"
+ },
+ {
+  "id": "v_working",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:tissue_lining",
+    "count": 2
+   },
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 2
+   },
+   {
+    "key": "iis:bone_ring",
+    "count": 2
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:working_fibrous_vessel",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§22.7 рабочий волокнистый"
+ },
+ {
+  "id": "v_narrow",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 60,
+  "items": [
+   {
+    "key": "iis:tissue_lining",
+    "count": 1
+   },
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:bone_ring",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:narrow_fibrous_vessel",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§22.7 узкий волокнистый"
+ },
+ {
+  "id": "check_valve",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 60,
+  "items": [
+   {
+    "key": "iis:tissue_lining",
+    "count": 1
+   },
+   {
+    "key": "iis:valve_petal",
+    "count": 1
+   },
+   {
+    "key": "iis:bone_ring",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 25
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:check_valve",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§22.7 обратный клапан"
+ },
+ {
+  "id": "b16_nest",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 180,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:meat_mass",
+    "count": 1
+   },
+   {
+    "key": "iis:muscle_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:muscle_bundle",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "B16"
+ },
+ {
+  "id": "b17_nest",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:muscle_bundle",
+    "count": 1
+   },
+   {
+    "key": "iis:sinew_cord",
+    "count": 1
+   },
+   {
+    "key": "iis:bone_rib",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:muscle_node",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "B17"
+ },
+ {
+  "id": "b19_nest",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   },
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:tissue_lining",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "lineage": true,
+  "spec": "B19"
+ },
+ {
+  "id": "b20_nest",
+  "station": "nest",
+  "mode": 1,
+  "seconds": 90,
+  "items": [
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   },
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 25
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:valve_petal",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "lineage": true,
+  "spec": "B20 (режим «лепестки»)"
+ },
+ {
+  "id": "b15_nest",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:plant_fiber",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 75
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:fibrous_tissue",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "B15"
+ },
+ {
+  "id": "b15_nest_animal",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:connective_fiber",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 75
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:fibrous_tissue",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "B15"
+ },
+ {
+  "id": "g_g1",
+  "station": "gland",
+  "mode": 0,
+  "seconds": 40,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "n1",
+    "amount": 500
+   },
+   {
+    "fluid": "hydrolysate",
+    "amount": 200
+   },
+   {
+    "fluid": "binder",
+    "amount": 150
+   },
+   {
+    "fluid": "extract",
+    "amount": 100
+   },
+   {
+    "fluid": "suspension",
+    "amount": 50
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "g1",
+    "amount": 1000
+   }
+  ],
+  "spec": "L13 F06"
+ },
+ {
+  "id": "g_n1",
+  "station": "gland",
+  "mode": 0,
+  "seconds": 20,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "w0",
+    "amount": 800
+   },
+   {
+    "fluid": "hydrolysate",
+    "amount": 100
+   },
+   {
+    "fluid": "extract",
+    "amount": 70
+   },
+   {
+    "fluid": "suspension",
+    "amount": 20
+   },
+   {
+    "fluid": "emulsion",
+    "amount": 10
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "n1",
+    "amount": 1000
+   }
+  ],
+  "spec": "L11 F06"
+ },
+ {
+  "id": "g_e1",
+  "station": "gland",
+  "mode": 0,
+  "seconds": 30,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "n1",
+    "amount": 600
+   },
+   {
+    "fluid": "concentrate",
+    "amount": 300
+   },
+   {
+    "fluid": "emulsion",
+    "amount": 100
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "e1",
+    "amount": 1000
+   }
+  ],
+  "spec": "L12 F06"
+ },
+ {
+  "id": "g_g0",
+  "station": "gland",
+  "mode": 0,
+  "seconds": 40,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "n0",
+    "amount": 600
+   },
+   {
+    "fluid": "hydrolysate",
+    "amount": 200
+   },
+   {
+    "fluid": "binder",
+    "amount": 150
+   },
+   {
+    "fluid": "suspension",
+    "amount": 50
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "g0",
+    "amount": 1000
+   }
+  ],
+  "spec": "L10 F06"
+ },
+ {
+  "id": "g_n0",
+  "station": "gland",
+  "mode": 0,
+  "seconds": 20,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 900
+   },
+   {
+    "fluid": "extract",
+    "amount": 60
+   },
+   {
+    "fluid": "hydrolysate",
+    "amount": 30
+   },
+   {
+    "fluid": "suspension",
+    "amount": 10
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "n0",
+    "amount": 1000
+   }
+  ],
+  "spec": "L09 F06"
+ },
+ {
+  "id": "f09_w0",
+  "station": "membrane_filter",
+  "mode": 0,
+  "seconds": 20,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 1000
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "w0",
+    "amount": 950
+   },
+   {
+    "fluid": "runoff",
+    "amount": 50
+   }
+  ],
+  "tool": "iis:fine_filter_pad",
+  "spec": "L08 F09"
+ },
+ {
+  "id": "b13_tissue",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:growth_substrate",
+    "count": 1
+   },
+   {
+    "key": "#iis:bio/seeds",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:soft_tissue",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "B13"
+ },
+ {
+  "id": "b14_bed",
+  "station": "bed",
+  "mode": 0,
+  "seconds": 180,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g0",
+    "amount": 75
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:living_membrane",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "upkeep": 0.01,
+  "lineage": true,
+  "spec": "B14"
+ }
+]

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PGP",
+    "GhG",
+    "PGP"
+  ],
+  "key": {
+    "P": "#c:plates/bronze",
+    "G": "minecraft:glass",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:universal_tank_bronze",
+    "count": 1
+  }
+}

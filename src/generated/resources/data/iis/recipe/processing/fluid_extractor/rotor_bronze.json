@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:rotors/bronze",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 102,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_bronze",
+      "amount": 612
+    }
+  ]
+}

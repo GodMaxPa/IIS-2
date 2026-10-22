@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "C C",
+    "CCC"
+  ],
+  "key": {
+    "C": "minecraft:cobblestone"
+  },
+  "result": {
+    "id": "iis:stone_pot",
+    "count": 1
+  }
+}

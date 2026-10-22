@@ -96,6 +96,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_chrome",
+    "tool": "sword",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 11.0,
+    "quality": 3,
+    "kind": "sword"
+  },
+  {
     "id": "sword_cobalt",
     "tool": "sword",
     "material": "cobalt",
@@ -420,6 +432,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_stainless_steel",
+    "tool": "sword",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "sword_steel",
     "tool": "sword",
     "material": "steel",
@@ -585,6 +609,18 @@
     "craftDamage": 2,
     "speed": 5.0,
     "quality": 1,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_chrome",
+    "tool": "pickaxe",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 11.0,
+    "quality": 3,
     "kind": "pickaxe"
   },
   {
@@ -912,6 +948,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_stainless_steel",
+    "tool": "pickaxe",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_steel",
     "tool": "pickaxe",
     "material": "steel",
@@ -1077,6 +1125,18 @@
     "craftDamage": 2,
     "speed": 5.0,
     "quality": 1,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_chrome",
+    "tool": "shovel",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 11.0,
+    "quality": 3,
     "kind": "shovel"
   },
   {
@@ -1404,6 +1464,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_stainless_steel",
+    "tool": "shovel",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_steel",
     "tool": "shovel",
     "material": "steel",
@@ -1569,6 +1641,18 @@
     "craftDamage": 2,
     "speed": 5.0,
     "quality": 1,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_chrome",
+    "tool": "axe",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 11.0,
+    "quality": 3,
     "kind": "axe"
   },
   {
@@ -1896,6 +1980,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_stainless_steel",
+    "tool": "axe",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "axe_steel",
     "tool": "axe",
     "material": "steel",
@@ -2061,6 +2157,18 @@
     "craftDamage": 2,
     "speed": 5.0,
     "quality": 1,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_chrome",
+    "tool": "hoe",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 11.0,
+    "quality": 3,
     "kind": "hoe"
   },
   {
@@ -2388,6 +2496,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_stainless_steel",
+    "tool": "hoe",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_steel",
     "tool": "hoe",
     "material": "steel",
@@ -2553,6 +2673,18 @@
     "craftDamage": 4,
     "speed": 5.0,
     "quality": 1,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_chrome",
+    "tool": "saw",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 11.0,
+    "quality": 3,
     "kind": "axe"
   },
   {
@@ -2880,6 +3012,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_stainless_steel",
+    "tool": "saw",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "saw_steel",
     "tool": "saw",
     "material": "steel",
@@ -3045,6 +3189,18 @@
     "craftDamage": 8,
     "speed": 3.75,
     "quality": 1,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_chrome",
+    "tool": "hammer",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 8.25,
+    "quality": 3,
     "kind": "pickaxe"
   },
   {
@@ -3360,6 +3516,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_stainless_steel",
+    "tool": "hammer",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_steel",
     "tool": "hammer",
     "material": "steel",
@@ -3525,6 +3693,18 @@
     "craftDamage": 16,
     "speed": 5.0,
     "quality": 1,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_chrome",
+    "tool": "wrench",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 11.0,
+    "quality": 3,
     "kind": "wrench"
   },
   {
@@ -3852,6 +4032,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_stainless_steel",
+    "tool": "wrench",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_steel",
     "tool": "wrench",
     "material": "steel",
@@ -4017,6 +4209,18 @@
     "craftDamage": 8,
     "speed": 5.0,
     "quality": 1,
+    "kind": null
+  },
+  {
+    "id": "file_chrome",
+    "tool": "file",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 11.0,
+    "quality": 3,
     "kind": null
   },
   {
@@ -4344,6 +4548,18 @@
     "kind": null
   },
   {
+    "id": "file_stainless_steel",
+    "tool": "file",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "file_steel",
     "tool": "file",
     "material": "steel",
@@ -4509,6 +4725,18 @@
     "craftDamage": 8,
     "speed": 5.0,
     "quality": 1,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_chrome",
+    "tool": "screwdriver",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 11.0,
+    "quality": 3,
     "kind": null
   },
   {
@@ -4836,6 +5064,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_stainless_steel",
+    "tool": "screwdriver",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "screwdriver_steel",
     "tool": "screwdriver",
     "material": "steel",
@@ -5037,6 +5277,18 @@
     "craftDamage": 2,
     "speed": 5.0,
     "quality": 1,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_chrome",
+    "tool": "knife",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 11.0,
+    "quality": 3,
     "kind": "sword"
   },
   {
@@ -5364,6 +5616,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_stainless_steel",
+    "tool": "knife",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "knife_steel",
     "tool": "knife",
     "material": "steel",
@@ -5529,6 +5793,18 @@
     "craftDamage": 8,
     "speed": 6.25,
     "quality": 1,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_chrome",
+    "tool": "wire_cutter",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 13.75,
+    "quality": 3,
     "kind": "wire_cutter"
   },
   {
@@ -5856,6 +6132,18 @@
     "kind": "wire_cutter"
   },
   {
+    "id": "wire_cutter_stainless_steel",
+    "tool": "wire_cutter",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
     "id": "wire_cutter_steel",
     "tool": "wire_cutter",
     "material": "steel",
@@ -6045,6 +6333,18 @@
     "craftDamage": 2,
     "speed": 5.0,
     "quality": 1,
+    "kind": null
+  },
+  {
+    "id": "crowbar_chrome",
+    "tool": "crowbar",
+    "material": "chrome",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 11.0,
+    "quality": 3,
     "kind": null
   },
   {
@@ -6356,6 +6656,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 10.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "crowbar_stainless_steel",
+    "tool": "crowbar",
+    "material": "stainless_steel",
+    "handle": "wood",
+    "maxDamage": 960,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
     "quality": 2,
     "kind": null
   },

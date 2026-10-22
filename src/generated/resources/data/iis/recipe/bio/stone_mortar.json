@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "C C",
+    " C "
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "C": "minecraft:cobblestone"
+  },
+  "result": {
+    "id": "iis:stone_mortar",
+    "count": 1
+  }
+}

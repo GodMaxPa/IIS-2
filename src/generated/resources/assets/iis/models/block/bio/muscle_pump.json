@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "iis:block/bio/pump_front",
+    "side": "iis:block/bio/pump_side",
+    "top": "iis:block/bio/pump_side",
+    "bottom": "iis:block/bio/pump_side"
+  }
+}

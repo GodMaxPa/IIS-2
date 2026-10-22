@@ -1,0 +1,55 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:methanol",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 6
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:ammonia",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 5,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:dimethylamine",
+          "amount": 1000
+        }
+      }
+    },
+    {
+      "id": "iis:capsule",
+      "count": 3,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "minecraft:water",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 240,
+  "eut": 120
+}

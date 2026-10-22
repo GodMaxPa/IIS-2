@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/cupronickel",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 12,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_cupronickel",
+      "amount": 72
+    }
+  ]
+}

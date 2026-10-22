@@ -125,6 +125,8 @@
     "iis:end_small_ore_iridium",
     "iis:small_ore_topaz",
     "iis:deepslate_small_ore_topaz",
-    "iis:nether_small_ore_topaz"
+    "iis:nether_small_ore_topaz",
+    "iis:shuttle_hull",
+    "iis:shuttle_engine"
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SDS",
+    " P "
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "D": "iis:filter_pad",
+    "P": "iis:stone_pot"
+  },
+  "result": {
+    "id": "iis:filter_vessel",
+    "count": 1
+  }
+}

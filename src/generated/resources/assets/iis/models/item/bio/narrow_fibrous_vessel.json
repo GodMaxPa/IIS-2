@@ -1,0 +1,55 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "iis:block/bio/narrow_fibrous_vessel",
+    "v": "iis:block/bio/narrow_fibrous_vessel"
+  },
+  "elements": [
+    {
+      "from": [
+        4.0,
+        4.0,
+        0
+      ],
+      "to": [
+        12.0,
+        12.0,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#v"
+        },
+        "south": {
+          "texture": "#v"
+        },
+        "east": {
+          "texture": "#v"
+        },
+        "west": {
+          "texture": "#v"
+        },
+        "up": {
+          "texture": "#v"
+        },
+        "down": {
+          "texture": "#v"
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        45,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    }
+  }
+}

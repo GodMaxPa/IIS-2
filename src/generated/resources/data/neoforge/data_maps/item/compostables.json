@@ -1,0 +1,13 @@
+{
+  "values": {
+    "iis:organic_residue": {
+      "chance": 0.5
+    },
+    "iis:rotten_mass": {
+      "chance": 0.3
+    },
+    "iis:plant_residue": {
+      "chance": 0.5
+    }
+  }
+}

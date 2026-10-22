@@ -1,0 +1,217 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "iis:block/bio/gland",
+    "butcher_block_top": "iis:block/bio/butcher_block_top",
+    "butcher_block_side": "iis:block/bio/butcher_block_side",
+    "stone_bio": "iis:block/bio/stone_bio",
+    "stone_inner": "iis:block/bio/stone_inner",
+    "stone_hearth_front": "iis:block/bio/stone_hearth_front",
+    "stone_hearth_front_lit": "iis:block/bio/stone_hearth_front_lit",
+    "substrate_top": "iis:block/bio/substrate_top",
+    "bed_top": "iis:block/bio/bed_top",
+    "bed_side": "iis:block/bio/bed_side",
+    "filter_top": "iis:block/bio/filter_top",
+    "nest_top": "iis:block/bio/nest_top",
+    "gland": "iis:block/bio/gland",
+    "gland_top": "iis:block/bio/gland_top",
+    "membrane": "iis:block/bio/membrane",
+    "sac": "iis:block/bio/sac",
+    "pump_side": "iis:block/bio/pump_side",
+    "pump_front": "iis:block/bio/pump_front"
+  },
+  "elements": [
+    {
+      "from": [
+        2,
+        0,
+        2
+      ],
+      "to": [
+        14,
+        10,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#gland"
+        },
+        "south": {
+          "texture": "#gland"
+        },
+        "east": {
+          "texture": "#gland"
+        },
+        "west": {
+          "texture": "#gland"
+        },
+        "up": {
+          "texture": "#gland_top"
+        },
+        "down": {
+          "texture": "#gland"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        1,
+        4
+      ],
+      "to": [
+        3,
+        7,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#gland"
+        },
+        "south": {
+          "texture": "#gland"
+        },
+        "east": {
+          "texture": "#gland"
+        },
+        "west": {
+          "texture": "#gland"
+        },
+        "up": {
+          "texture": "#gland"
+        },
+        "down": {
+          "texture": "#gland"
+        }
+      }
+    },
+    {
+      "from": [
+        13,
+        1,
+        4
+      ],
+      "to": [
+        16,
+        7,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#gland"
+        },
+        "south": {
+          "texture": "#gland"
+        },
+        "east": {
+          "texture": "#gland"
+        },
+        "west": {
+          "texture": "#gland"
+        },
+        "up": {
+          "texture": "#gland"
+        },
+        "down": {
+          "texture": "#gland"
+        }
+      }
+    },
+    {
+      "from": [
+        4,
+        1,
+        0
+      ],
+      "to": [
+        12,
+        7,
+        3
+      ],
+      "faces": {
+        "north": {
+          "texture": "#gland"
+        },
+        "south": {
+          "texture": "#gland"
+        },
+        "east": {
+          "texture": "#gland"
+        },
+        "west": {
+          "texture": "#gland"
+        },
+        "up": {
+          "texture": "#gland"
+        },
+        "down": {
+          "texture": "#gland"
+        }
+      }
+    },
+    {
+      "from": [
+        4,
+        1,
+        13
+      ],
+      "to": [
+        12,
+        7,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#gland"
+        },
+        "south": {
+          "texture": "#gland"
+        },
+        "east": {
+          "texture": "#gland"
+        },
+        "west": {
+          "texture": "#gland"
+        },
+        "up": {
+          "texture": "#gland"
+        },
+        "down": {
+          "texture": "#gland"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        10,
+        5
+      ],
+      "to": [
+        11,
+        13,
+        11
+      ],
+      "faces": {
+        "north": {
+          "texture": "#gland_top"
+        },
+        "south": {
+          "texture": "#gland_top"
+        },
+        "east": {
+          "texture": "#gland_top"
+        },
+        "west": {
+          "texture": "#gland_top"
+        },
+        "up": {
+          "texture": "#gland_top"
+        },
+        "down": {
+          "texture": "#gland_top"
+        }
+      }
+    }
+  ]
+}

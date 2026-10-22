@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PIh",
+    "P  ",
+    "f  "
+  ],
+  "key": {
+    "P": "#c:plates/chrome",
+    "I": "#c:ingots/chrome",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:axe_head_chrome"
+  }
+}

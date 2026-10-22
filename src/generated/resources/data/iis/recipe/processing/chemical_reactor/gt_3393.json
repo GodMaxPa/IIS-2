@@ -1,0 +1,48 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:oxygen",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 8,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:aceticacid",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 100,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:ethylene",
+      "amount": 6000
+    }
+  ]
+}

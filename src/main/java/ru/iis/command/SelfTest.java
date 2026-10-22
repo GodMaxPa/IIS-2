@@ -60,8 +60,13 @@ public final class SelfTest {
 
     /** Для GameTest: тот же набор проверок, вывод в лог сервера. */
     public static boolean runSilently(ServerLevel level) {
+        return runSilently(level, level.getRespawnData().pos());
+    }
+
+    /** Проверка в заданной (загруженной) колонке — GameTest передаёт свою площадку: точка спавна мира может быть не загружена. */
+    public static boolean runSilently(ServerLevel level, net.minecraft.core.BlockPos at) {
         CommandSourceStack src = level.getServer().createCommandSourceStack().withLevel(level)
-                .withPosition(net.minecraft.world.phys.Vec3.atCenterOf(level.getRespawnData().pos()));
+                .withPosition(net.minecraft.world.phys.Vec3.atCenterOf(at));
         return run(src) == 1;
     }
 

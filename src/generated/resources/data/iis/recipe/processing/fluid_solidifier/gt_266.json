@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "minecraft:snowball",
+      "count": 1
+    }
+  ],
+  "duration": 128,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 250
+    }
+  ],
+  "keep": [
+    "iis:mold_ball"
+  ]
+}

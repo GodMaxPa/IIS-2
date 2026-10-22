@@ -1,0 +1,19 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [],
+  "outputs": [],
+  "duration": 160,
+  "eut": 80,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:deuterium",
+      "amount": 160
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:tritium",
+      "amount": 40
+    }
+  ]
+}

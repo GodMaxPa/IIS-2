@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/lithium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 30,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_lithium",
+      "amount": 144
+    }
+  ]
+}

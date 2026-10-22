@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "iis:block/bio/stone_hearth_front",
+    "side": "iis:block/bio/stone_bio",
+    "top": "iis:block/bio/stone_inner"
+  }
+}

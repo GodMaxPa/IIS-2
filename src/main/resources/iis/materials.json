@@ -930,6 +930,40 @@
     "toolQuality": 1
   },
   {
+    "id": "chrome",
+    "gtName": "Chrome",
+    "gtId": 30,
+    "en": "Chrome",
+    "ru": "Хром",
+    "ruOre": "Хромовая руда",
+    "color": 16770790,
+    "iconSet": "SHINY",
+    "harvestLevel": 3,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление хромовой руды",
+    "formula": "Cr",
+    "types": 235,
+    "subTags": [
+      "ELECTROMAGNETIC_SEPERATION_IRON",
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "chrome",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 1700,
+    "byProducts": [
+      "iron",
+      "magnesium"
+    ],
+    "toolDurability": 256,
+    "toolSpeed": 11.0,
+    "toolQuality": 3
+  },
+  {
     "id": "cinnabar",
     "gtName": "Cinnabar",
     "gtId": 826,
@@ -4005,6 +4039,36 @@
     ],
     "toolDurability": 0,
     "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
+    "id": "stainless_steel",
+    "gtName": "StainlessSteel",
+    "gtId": 306,
+    "en": "Stainless Steel",
+    "ru": "Нержавеющая сталь",
+    "ruOre": "Руда нержавеющей стали",
+    "color": 13158620,
+    "iconSet": "SHINY",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление нержавеющей стали",
+    "formula": "Fe6CrMnNi",
+    "types": 195,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "stainless_steel",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 1700,
+    "byProducts": [],
+    "toolDurability": 480,
+    "toolSpeed": 7.0,
     "toolQuality": 2
   },
   {

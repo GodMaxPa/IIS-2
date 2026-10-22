@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/neodymium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 50,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_neodymium",
+      "amount": 144
+    }
+  ]
+}

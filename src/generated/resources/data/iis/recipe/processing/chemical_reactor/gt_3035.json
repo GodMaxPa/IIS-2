@@ -1,0 +1,36 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sulfur",
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:benzene",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 1
+    }
+  ],
+  "duration": 320,
+  "eut": 30,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_polyphenylenesulfide",
+      "amount": 2000
+    }
+  ]
+}

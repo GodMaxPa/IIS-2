@@ -1,0 +1,20 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [],
+  "outputs": [],
+  "duration": 720,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:ethylene",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:propene",
+      "amount": 1000
+    }
+  ],
+  "circuit": 3
+}

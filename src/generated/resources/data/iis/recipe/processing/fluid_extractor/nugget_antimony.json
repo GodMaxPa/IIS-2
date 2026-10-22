@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/antimony",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 42,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_antimony",
+      "amount": 16
+    }
+  ]
+}

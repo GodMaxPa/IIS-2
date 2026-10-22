@@ -1,0 +1,42 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sulfur",
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:hydrogen",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 2
+    }
+  ],
+  "duration": 240,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 4000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:sulfuricacid",
+      "amount": 7000
+    }
+  ]
+}

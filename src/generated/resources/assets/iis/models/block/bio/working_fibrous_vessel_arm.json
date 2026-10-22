@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "iis:block/bio/working_fibrous_vessel",
+    "v": "iis:block/bio/working_fibrous_vessel"
+  },
+  "elements": [
+    {
+      "from": [
+        2.5,
+        2.5,
+        0
+      ],
+      "to": [
+        13.5,
+        13.5,
+        2.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#v",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "#v"
+        },
+        "west": {
+          "texture": "#v"
+        },
+        "up": {
+          "texture": "#v"
+        },
+        "down": {
+          "texture": "#v"
+        }
+      }
+    }
+  ]
+}

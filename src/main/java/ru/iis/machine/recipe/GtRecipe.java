@@ -32,6 +32,10 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
     private final List<FluidOutput> fluidOutputs;
     /** GT mSpecialValue: температура доменной печи (K), 0 — не нужна. */
     private final int temperature;
+    /** Конфигурация программной схемы во входах (GT getIntegratedCircuit), −1 — не нужна. Схема не расходуется (D75). */
+    private final int circuit;
+    /** Неизрасходуемые входы — формы отвердителя (GT Shape_Mold_*.get(0)): должны лежать во входе (D76). */
+    private final List<Ingredient> keep;
 
     public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut,
                     List<SizedFluidIngredient> fluidInputs, List<FluidOutput> fluidOutputs) {
@@ -40,6 +44,18 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
 
     public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut,
                     List<SizedFluidIngredient> fluidInputs, List<FluidOutput> fluidOutputs, int temperature) {
+        this(map, inputs, outputs, duration, eut, fluidInputs, fluidOutputs, temperature, -1);
+    }
+
+    public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut,
+                    List<SizedFluidIngredient> fluidInputs, List<FluidOutput> fluidOutputs, int temperature, int circuit) {
+        this(map, inputs, outputs, duration, eut, fluidInputs, fluidOutputs, temperature, circuit, List.of());
+    }
+
+    public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut,
+                    List<SizedFluidIngredient> fluidInputs, List<FluidOutput> fluidOutputs, int temperature, int circuit, List<Ingredient> keep) {
+        this.keep = List.copyOf(keep);
+        this.circuit = circuit;
         this.temperature = temperature;
         this.map = map;
         this.inputs = List.copyOf(inputs);
@@ -62,6 +78,8 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
     public List<SizedFluidIngredient> fluidInputs() { return fluidInputs; }
     public List<FluidOutput> fluidOutputs() { return fluidOutputs; }
     public int temperature() { return temperature; }
+    public int circuit() { return circuit; }
+    public List<Ingredient> keep() { return keep; }
 
     /** Хватает ли жидкости во входном баке (GT: одна входная жидкость на машину). */
     public boolean fluidMatches(@Nullable FluidStack tank) {
@@ -79,8 +97,10 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
                 Codec.intRange(0, Integer.MAX_VALUE).optionalFieldOf("eut", 0).forGetter(GtRecipe::eut),
                 SizedFluidIngredient.CODEC.listOf(0, 1).optionalFieldOf("fluid_inputs", List.of()).forGetter(GtRecipe::fluidInputs),
                 FluidOutput.CODEC.listOf(0, 1).optionalFieldOf("fluid_outputs", List.of()).forGetter(GtRecipe::fluidOutputs),
-                Codec.intRange(0, Integer.MAX_VALUE).optionalFieldOf("temp", 0).forGetter(GtRecipe::temperature)
-        ).apply(i, (in, out, d, e, fi, fo, t) -> new GtRecipe(map, in, out, d, e, fi, fo, t)));
+                Codec.intRange(0, Integer.MAX_VALUE).optionalFieldOf("temp", 0).forGetter(GtRecipe::temperature),
+                Codec.intRange(-1, ru.iis.lv.item.ProgrammedCircuitItem.MAX).optionalFieldOf("circuit", -1).forGetter(GtRecipe::circuit),
+                Ingredient.CODEC.listOf().optionalFieldOf("keep", List.of()).forGetter(GtRecipe::keep)
+        ).apply(i, (in, out, d, e, fi, fo, t, c, k) -> new GtRecipe(map, in, out, d, e, fi, fo, t, c, k)));
     }
 
     static StreamCodec<RegistryFriendlyByteBuf, GtRecipe> streamCodec(GtRecipeMap map) {
@@ -92,13 +112,18 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
                 SizedFluidIngredient.STREAM_CODEC.apply(ByteBufCodecs.list()), GtRecipe::fluidInputs,
                 FluidOutput.STREAM_CODEC.apply(ByteBufCodecs.list()), GtRecipe::fluidOutputs,
                 ByteBufCodecs.VAR_INT, GtRecipe::temperature,
-                (in, out, d, e, fi, fo, t) -> new GtRecipe(map, in, out, d, e, fi, fo, t));
+                ByteBufCodecs.VAR_INT.map(v -> v - 1, v -> v + 1), GtRecipe::circuit,
+                Ingredient.CONTENTS_STREAM_CODEC.apply(ByteBufCodecs.list()), GtRecipe::keep,
+                (in, out, d, e, fi, fo, t, c, k) -> new GtRecipe(map, in, out, d, e, fi, fo, t, c, k));
     }
 
     /**
      * Распределить ингредиенты по слотам. Возвращает, сколько забрать из каждого слота, или null, если не хватает.
      */
     public int[] allocate(List<ItemStack> slots) {
+        if (circuit >= 0 && slots.stream().noneMatch(s -> s.getItem() instanceof ru.iis.lv.item.ProgrammedCircuitItem
+                && ru.iis.lv.item.ProgrammedCircuitItem.config(s) == circuit)) return null;
+        for (Ingredient k : keep) if (slots.stream().noneMatch(k::test)) return null;
         int[] left = new int[slots.size()];
         for (int s = 0; s < slots.size(); s++) left[s] = slots.get(s).getCount();
         int[] take = new int[slots.size()];

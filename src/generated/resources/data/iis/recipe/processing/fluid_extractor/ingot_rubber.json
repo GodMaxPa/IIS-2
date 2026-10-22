@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/rubber",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 28,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_rubber",
+      "amount": 144
+    }
+  ]
+}

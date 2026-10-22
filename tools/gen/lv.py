@@ -20,6 +20,7 @@ WIRES = [
     ('Copper', 2, 4, 1, 128),
     ('AnnealedCopper', 1, 2, 1, 128),
     ('Cupronickel', 3, 6, 2, 128),   # makeWires(Cupronickel, …, 3/6 (bEC), 2 A, V[2]) — for heating coils
+    ('Gold', 6, 12, 3, 512),         # makeWires(Gold, 1420, 6/12, 3 A, V[3]) — electrolyzer (LV III, D76)
 ]
 WIRE_SIZES = [(1, 0.125, 0.25), (2, 0.25, 0.375), (4, 0.375, 0.5)]   # size, bare thickness, insulated thickness (GT)
 
@@ -46,6 +47,11 @@ MACHINES = [
     ('autoclave',     'autoclave',     'AUTOCLAVE',        'Autoclave',    'autoclave',     1, 1, 8000,  'Autoclave'),
     ('cutter',        'cutter',        'CUTTER',           'Cutter',       'cutter',        1, 2, 8000,  'Cutting Machine'),
     ('canner',        'canner',        'CANNER',           'Canner',       'canner',        2, 2, 0,     'Canning Machine'),
+    # LV III: chemistry and melts (GT_Loader_MetaTileEntities:775, 830, 958, 967; D76)
+    ('electrolyzer',  'electrolyzer',  'ELECTROLYZER',     'Electrolyzer', 'electrolyzer',  2, 6, 64000, 'Electrolyzer'),
+    ('chemical_reactor', 'chemicalreactor', 'CHEMICAL_REACTOR', 'ChemicalReactor', 'chemical_reactor', 3, 3, 16000, 'Chemical Reactor'),
+    ('fluid_extractor', 'fluidextractor', 'FLUID_EXTRACTOR', 'FluidExtractor', 'fluid_extractor', 1, 1, 16000, 'Fluid Extractor'),
+    ('fluid_solidifier', 'fluidsolidifier', 'FLUID_SOLIDIFIER', 'FluidSolidifier', 'fluid_solidifier', 1, 1, 16000, 'Fluid Solidifier'),
 ]
 GENERATORS = [
     # id, GT lang, texture prefix, EN
@@ -88,6 +94,14 @@ ITEMS = [
     ('treetap', 'gen:treetap', None, 'Treetap', 'Краник'),
     ('multimeter', 'gen:multimeter', None, 'Multimeter', 'Мультиметр'),
     ('plate_wood', 'gen:wood_plate', 'gt.metaitem.01.17809.name', 'Wood Plate', 'Деревянная пластина'),
+    # LV III: molds of the fluid solidifier (GT_MetaGenerated_Item_01:179-212, D76)
+    ('shape_empty', 'gt:300', 'gt.metaitem.01.32300.name', 'Empty Shape Plate', 'Пустая заготовка формы'),
+    ('mold_plate', 'gt:301', 'gt.metaitem.01.32301.name', 'Mold (Plate)', 'Форма (пластина)'),
+    ('mold_gear', 'gt:303', 'gt.metaitem.01.32303.name', 'Mold (Gear)', 'Форма (шестерня)'),
+    ('mold_ingot', 'gt:306', 'gt.metaitem.01.32306.name', 'Mold (Ingot)', 'Форма (слиток)'),
+    ('mold_ball', 'gt:307', 'gt.metaitem.01.32307.name', 'Mold (Ball)', 'Форма (шар)'),
+    ('mold_block', 'gt:308', 'gt.metaitem.01.32308.name', 'Mold (Block)', 'Форма (блок)'),
+    ('mold_nugget', 'gt:309', 'gt.metaitem.01.32309.name', 'Mold (Nuggets)', 'Форма (самородки)'),
 ]
 
 # Generator fuels (GT_Recipe_Map sDieselFuels / sTurbineFuels from Materials FuelPower/FuelType, IIS MaterialProperties.cfg):
@@ -300,7 +314,7 @@ def generate(g):
     for f in range(8):
         frames.paste(noise_tex((90, 60, 20), 10, f'creosote{f}'), (0, 16 * f))
     frames.save(tex_out('block/fluid/creosote.png'))
-    with open(tex_out('block/fluid/creosote.png.mcmeta'), 'w') as fh:
+    with open(tex_out('block/fluid/creosote.png.mcmeta'), 'w', newline=chr(10)) as fh:
         json.dump({'animation': {'frametime': 4}}, fh)
     bucket = img(os.path.join(TEX, 'vanilla_bucket.png')) if os.path.exists(os.path.join(TEX, 'vanilla_bucket.png')) else None
     if bucket is None:
@@ -810,6 +824,19 @@ def generate(g):
     mcraft('autoclave_lv', ['IGI', 'IMI', 'CUC'], 'IGMCU')
     mcraft('cutter_lv', ['WCG', 'VMB', 'CWE'], 'WCGVMBE')
     mcraft('canner_lv', ['WUW', 'CMC', 'GGG'], 'WUCMG')   # GT_Loader_MetaTileEntities:640 aTextWirePump/aTextCableHull/GGG
+    # LV III (D76): :775 electrolyzer "IGI/IMI/CWC" (I = 1x gold wire), :830 chemical reactor "GRG/WEW/CMC",
+    # :958 fluid extractor "GCG/PME/WCW", :967 fluid solidifier "PGP/WMW/CBC" (P = pump, B = chest)
+    shaped('lv/electrolyzer_lv', f'{NS}:electrolyzer_lv', 1, ['IGI', 'IMI', 'CWC'], {'I': W('Gold'), 'G': 'minecraft:glass', 'M': HULL, 'C': CIRC, 'W': C('Tin')})
+    mcraft('chemical_reactor_lv', ['GRG', 'WEW', 'CMC'], 'GRWECM')
+    # GT_MetaGenerated_Item_01:181 empty shape "hf/PP/PP" (steel plates), :204-212 molds: empty shape + hammer in a position
+    shaped('lv/shape_empty', f'{NS}:shape_empty', 1, ['hf', 'PP', 'PP'], {'P': P('Steel'), 'h': '#iis:tools/hammer', 'f': '#iis:tools/file'})
+    for mold, pat in (('mold_plate', [' h ', ' P ', '   ']), ('mold_gear', ['   ', ' Ph', '   ']), ('mold_ingot', ['   ', ' P ', ' h ']),
+                      ('mold_ball', ['   ', ' P ', 'h  ']), ('mold_block', ['   ', 'hP ', '   ']), ('mold_nugget', ['P h', '   ', '   '])):
+        shaped(f'lv/{mold}', f'{NS}:{mold}', 1, pat, {'P': f'{NS}:shape_empty', 'h': '#iis:tools/hammer'})
+    shaped('lv/fluid_extractor_lv', f'{NS}:fluid_extractor_lv', 1, ['GCG', 'PME', 'WCW'], {'G': 'minecraft:glass', 'C': CIRC, 'P': PUMP, 'M': HULL,
+                                                                                        'E': PISTON, 'W': C('Tin')})
+    shaped('lv/fluid_solidifier_lv', f'{NS}:fluid_solidifier_lv', 1, ['PGP', 'WMW', 'CBC'], {'P': PUMP, 'G': 'minecraft:glass', 'W': C('Tin'), 'M': HULL,
+                                                                                         'C': CIRC, 'B': '#c:chests/wooden'})
     # GT_MetaGenerated_Item_01:405 small battery hull "C/P/P" (tin cable, battery alloy plates)
     shaped('lv/battery_hull_lv', f'{NS}:battery_hull_lv', 1, ['C', 'P', 'P'], {'C': C('Tin'), 'P': P('BatteryAlloy')})
     # GT_MetaGenerated_Item_01:731 diamond sawblade " D /DGD/ D " (small diamond dust, cobalt brass gear); :1472 assembler variant
@@ -841,7 +868,7 @@ def generate(g):
             o['chance'] = chance
         return o
 
-    def mrec(rtype, rid, inputs, outputs, duration, eut, fin=None, fout=None):
+    def mrec(rtype, rid, inputs, outputs, duration, eut, fin=None, fout=None, circuit=None, keep=None):
         outputs = [o for o in outputs if o['id']]
         if any(i['ingredient'] is None for i in inputs) or (not outputs and not fout):
             return
@@ -853,6 +880,10 @@ def generate(g):
             r['fluid_inputs'] = [fin]
         if fout:
             r['fluid_outputs'] = [fout]
+        if circuit is not None:
+            r['circuit'] = circuit
+        if keep:
+            r['keep'] = keep
         machine_recipes[key] = r
 
     WATER = lambda n: {'ingredient': 'minecraft:water', 'amount': n}
@@ -920,7 +951,9 @@ def generate(g):
                                ('battery_alloy', [('Lead', 4), ('Antimony', 1)], 'BatteryAlloy', 5, 250),
                                ('soldering_alloy', [('Tin', 9), ('Antimony', 1)], 'SolderingAlloy', 10, 500),
                                ('invar', [('Iron', 2), ('Nickel', 1)], 'Invar', 3, 300), ('electrum', [('Gold', 1), ('Silver', 1)], 'Electrum', 2, 200),
-                               ('cupronickel', [('Copper', 1), ('Nickel', 1)], 'Cupronickel', 2, 200)):
+                               ('cupronickel', [('Copper', 1), ('Nickel', 1)], 'Cupronickel', 2, 200),
+                               # GT_MachineRecipeLoader:1770 (LV III, D76)
+                               ('stainless_steel', [('Iron', 4), ('Invar', 3), ('Manganese', 1), ('Chrome', 1)], 'StainlessSteel', 9, 900)):
         if all(ref('dust', m) for m, _ in ins) and ref('dust', o):
             mrec('mixer', f'{rid}_dust', [ing(tag_of('dust', m), c) for m, c in ins], [out(ref('dust', o), oc)], t, 8)
     # alloy smelter (LV has 6 slots): battery alloy, soldering alloy; rubber (GT_MachineRecipeLoader:1235, restored, D45)
@@ -965,6 +998,12 @@ def generate(g):
     mrec('coke_oven', 'coal_block', [ing('minecraft:coal_block')], [], 1800 * 9, 0, None, {'id': f'{NS}:creosote', 'amount': 4500})
     machine_recipes.pop('coke_oven/coal_block', None)  # needs a coke block; coal only for now
     lv2_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER)
+    # LV III: chemistry and melts (D76)
+    import importlib.util as _ilu
+    _spec = _ilu.spec_from_file_location('iis_gen_chem', os.path.join(g['ROOT'], 'tools', 'gen', 'chem.py'))
+    _chem = _ilu.module_from_spec(_spec)
+    _spec.loader.exec_module(_chem)
+    stats['chem'] = _chem.chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER)
     # --- covers: GT_MachineRecipeLoader:610-615 (lever/torch/pressure plates + plate + molten solder), :671 shutter, items :783 drain/crafting ---
     cover_plates = [tag_of('plate', m) for m in ('Iron', 'WroughtIron', 'Aluminium') if ref('plate', m)]
     for pl in cover_plates:
@@ -1008,7 +1047,11 @@ def generate(g):
                        ('gui.iis.item_transfer.on', 'Item auto-output to the back: ON', 'Автовыгрузка предметов назад: ВКЛ'),
                        ('gui.iis.item_transfer.off', 'Item auto-output to the back: OFF (click)', 'Автовыгрузка предметов назад: ВЫКЛ (клик)'),
                        ('gui.iis.fluid_transfer.on', 'Fluid auto-output: ON', 'Автовыгрузка жидкости: ВКЛ'),
-                       ('gui.iis.fluid_transfer.off', 'Fluid auto-output: OFF (click; LV machines have no fluid outputs yet)', 'Автовыгрузка жидкости: ВЫКЛ (клик; у LV машин пока нет жидких выходов)'),
+                       ('gui.iis.fluid_transfer.off', 'Fluid auto-output to the back: OFF (click)', 'Автовыгрузка жидкости назад: ВЫКЛ (клик)'),
+                       ('gui.iis.fluid_in_out', 'In: %s; out: %s', 'Вход: %s; выход: %s'),
+                       ('jei.iis.electrolyzer', 'Electrolyzer', 'Электролизёр'), ('jei.iis.chemical_reactor', 'Chemical Reactor', 'Химический реактор'),
+                       ('jei.iis.fluid_extractor', 'Fluid Extractor', 'Экстрактор жидкостей'),
+                       ('jei.iis.fluid_solidifier', 'Fluid Solidifier', 'Отвердитель жидкостей'),
                        ('jei.iis.bender', 'Bending Machine', 'Гибочный станок'), ('jei.iis.lathe', 'Lathe', 'Токарный станок'),
                        ('jei.iis.assembler', 'Assembler', 'Сборщик'), ('jei.iis.mixer', 'Mixer', 'Миксер'),
                        ('jei.iis.polarizer', 'Polarizer', 'Поляризатор'), ('jei.iis.ore_washer', 'Ore Washing Plant', 'Рудопромывочная установка'),

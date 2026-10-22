@@ -18,6 +18,9 @@
     "iis:cable_annealed_copper_4x",
     "iis:cable_cupronickel_1x",
     "iis:cable_cupronickel_2x",
-    "iis:cable_cupronickel_4x"
+    "iis:cable_cupronickel_4x",
+    "iis:cable_gold_1x",
+    "iis:cable_gold_2x",
+    "iis:cable_gold_4x"
   ]
 }

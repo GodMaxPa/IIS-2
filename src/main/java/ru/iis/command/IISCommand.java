@@ -46,6 +46,13 @@ public final class IISCommand {
                                 .then(Commands.argument("pos", BlockPosArgument.blockPos())
                                         .executes(ctx -> placeVein(ctx.getSource(), StringArgumentType.getString(ctx, "name"),
                                                 BlockPosArgument.getLoadedBlockPos(ctx, "pos"))))))
+                .then(Commands.literal("shuttle")
+                        .requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
+                        .executes(ctx -> ru.iis.bio.world.ShuttleSpawner.whereIs(ctx.getSource()))
+                        .then(Commands.literal("new").executes(ctx -> ru.iis.bio.world.ShuttleSpawner.renew(ctx.getSource()))))
+                .then(Commands.literal("stand")
+                        .requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
+                        .executes(ctx -> ru.iis.stand.StandHooks.command(ctx.getSource())))
                 .then(Commands.literal("selftest")
                         .requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
                         .executes(ctx -> SelfTest.run(ctx.getSource())))

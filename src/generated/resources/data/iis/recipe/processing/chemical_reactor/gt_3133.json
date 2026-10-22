@@ -1,0 +1,54 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:oxygen",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 6,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:acetone",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 160,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:cumene",
+      "amount": 11000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:phenol",
+      "amount": 6000
+    }
+  ]
+}

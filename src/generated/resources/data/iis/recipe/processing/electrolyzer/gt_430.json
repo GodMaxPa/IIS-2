@@ -1,0 +1,45 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_copper",
+      "count": 1
+    },
+    {
+      "id": "iis:capsule",
+      "count": 1,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:oxygen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 900,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:solution_bluevitriol",
+      "amount": 9000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:sulfuricacid",
+      "amount": 8000
+    }
+  ]
+}

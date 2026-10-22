@@ -54,12 +54,53 @@ public class PipeBlockEntity extends BlockEntity {
         if (level == null || level.getGameTime() % 5 != 0) return;
         receivedFrom &= 63;
         if (receivedFrom == 63) receivedFrom = 0;
+        if (tank.amount() > 0 && checkEnvironment()) return;
         boolean distribute = receivedFrom == lastReceivedFrom;
         if (tank.amount() > 0 && distribute) {
             distributeFluid();
             receivedFrom = 0;
         }
         lastReceivedFrom = receivedFrom;
+    }
+
+    /**
+     * GT_MetaPipeEntity_Fluid#checkEnvironment: жидкость горячее предела трубы поджигает её (1 шанс из 100 — труба сгорает),
+     * газ уходит через негерметичную трубу (−5 л за проверку) и обжигает/морозит существ рядом. true — трубы больше нет.
+     */
+    private boolean checkEnvironment() {
+        if (!(level instanceof net.minecraft.server.level.ServerLevel sl) || !ru.iis.IISConfig.on(ru.iis.IISConfig.PIPE_HAZARDS)) return false;
+        PipeBlock.Spec spec = spec(getBlockState());
+        var type = tank.resource().getFluid().getFluidType();
+        int temp = type.getTemperature();
+        if (temp > spec.heatResistance()) {
+            if (sl.getRandom().nextInt(100) == 0) {
+                sl.setBlock(worldPosition, net.minecraft.world.level.block.Blocks.FIRE.defaultBlockState(), 3);
+                return true;
+            }
+            Direction d = Direction.getRandom(sl.getRandom());
+            BlockPos n = worldPosition.relative(d);
+            if (sl.getBlockState(n).isAir()) sl.setBlock(n, net.minecraft.world.level.block.BaseFireBlock.getState(sl, n), 3);
+        }
+        if (!spec.gasProof() && type.isLighterThanAir()) {
+            tank.drainInternal(5);
+            sl.playSound(null, worldPosition, net.minecraft.sounds.SoundEvents.FIRE_EXTINGUISH, net.minecraft.sounds.SoundSource.BLOCKS, 0.2f, 1.6f);
+            if (temp > 320 || temp < 260) {
+                float dmg = temp > 320 ? (temp - 300) / 25.0f : (270 - temp) / 12.5f;
+                var box = new net.minecraft.world.phys.AABB(worldPosition).inflate(2);
+                for (var living : sl.getEntitiesOfClass(net.minecraft.world.entity.LivingEntity.class, box)) {
+                    living.hurtServer(sl, temp > 320 ? sl.damageSources().inFire() : sl.damageSources().freeze(), dmg);
+                }
+            }
+        }
+        return false;
+    }
+
+    /** Существо касается трубы: горячая жидкость (&gt;320 K) обжигает ((T−300)/50), холодная (&lt;260 K) морозит ((270−T)/25). */
+    void touch(net.minecraft.world.entity.LivingEntity living) {
+        if (tank.amount() <= 0 || !(level instanceof net.minecraft.server.level.ServerLevel sl) || !ru.iis.IISConfig.on(ru.iis.IISConfig.PIPE_HAZARDS)) return;
+        int temp = tank.resource().getFluid().getFluidType().getTemperature();
+        if (temp > 320) living.hurtServer(sl, sl.damageSources().hotFloor(), (temp - 300) / 50.0f);
+        else if (temp < 260) living.hurtServer(sl, sl.damageSources().freeze(), (270 - temp) / 25.0f);
     }
 
     private void distributeFluid() {

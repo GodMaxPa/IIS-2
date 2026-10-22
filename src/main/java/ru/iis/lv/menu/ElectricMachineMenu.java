@@ -37,7 +37,7 @@ public class ElectricMachineMenu extends MachineMenu {
     public static ElectricMachineMenu client(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
         BlockPos pos = buf.readBlockPos();
         LvMachineType type = inventory.player.level().getBlockState(pos).getBlock() instanceof ElectricMachineBlock b ? b.type : LvMachineType.MACERATOR;
-        return new ElectricMachineMenu(id, inventory, new SimpleContainer(type.inputs + type.outputs + 1), new SimpleContainerData(10), type);
+        return new ElectricMachineMenu(id, inventory, new SimpleContainer(type.inputs + type.outputs + 1), new SimpleContainerData(12), type);
     }
 
     @Override
@@ -56,6 +56,8 @@ public class ElectricMachineMenu extends MachineMenu {
     public int eut() { return data(7); }
     public boolean itemTransfer() { return data(8) != 0; }
     public boolean fluidTransfer() { return data(9) != 0; }
+    public int outFluidAmount() { return data(10); }
+    public int outFluidId() { return data(11); }
 
     /** Кнопки автовыгрузки (GT_Container_BasicMachine.slotClick 0/1). */
     @Override

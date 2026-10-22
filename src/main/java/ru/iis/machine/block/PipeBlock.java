@@ -33,6 +33,7 @@ import org.jspecify.annotations.Nullable;
 import ru.iis.IIS;
 
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -42,16 +43,41 @@ import java.util.Map;
  * дальше соединения переключаются гаечным ключом по стороне, на которую кликнули.
  */
 public class PipeBlock extends Block implements EntityBlock {
-    /** Размер и материал: пропускная способность mCapacity (л за 1/20 с — GT хранит cap×20, отдаёт до cap×10 раз в 5 тиков). */
-    public record Spec(String id, String material, int capacity, int heatResistance, int thickness, int color) {}
+    /**
+     * Размер и материал: пропускная способность mCapacity (л за 1/20 с — GT хранит cap×20, отдаёт до cap×10 раз в 5 тиков),
+     * предел температуры (K) и газонепроницаемость (GT_Loader_MetaTileEntities#generateFluidPipes, D72).
+     */
+    public record Spec(String id, String material, int capacity, int heatResistance, int thickness, int color, boolean gasProof) {
+        public Spec(String id, String material, int capacity, int heatResistance, int thickness, int color) {
+            this(id, material, capacity, heatResistance, thickness, color, true);
+        }
+    }
 
-    public static final List<Spec> SPECS = List.of(
-            new Spec("pipe_small_bronze", "bronze", 40, 2000, 6, 0xFF8000),
-            new Spec("pipe_medium_bronze", "bronze", 120, 2000, 8, 0xFF8000),
-            new Spec("pipe_large_bronze", "bronze", 240, 2000, 12, 0xFF8000),
-            new Spec("pipe_small_steel", "steel", 80, 2500, 6, 0x808080),
-            new Spec("pipe_medium_steel", "steel", 240, 2500, 8, 0x808080),
-            new Spec("pipe_large_steel", "steel", 480, 2500, 12, 0x808080));
+    /** GT_Loader_MetaTileEntities: (материал, базовая способность, предел K, газонепроницаемость, цвет); tiny ÷6, small ÷3, large ×2, huge ×4. */
+    private static final Object[][] GT_PIPES = {
+            {"copper", 60, 1000, true, 0xFF6400}, {"bronze", 120, 2000, true, 0xFF8000}, {"steel", 240, 2500, true, 0x808080},
+            {"stainless_steel", 360, 3000, true, 0xC8C8DC}, {"titanium", 480, 5000, true, 0xDCA0F0}, {"tungsten_steel", 600, 7500, true, 0x6464A0},
+            {"plastic", 360, 350, true, 0xC8C8C8}, {"polytetrafluoroethylene", 480, 600, true, 0x646464}};
+
+    public static final List<Spec> SPECS = buildSpecs();
+
+    private static List<Spec> buildSpecs() {
+        List<Spec> l = new java.util.ArrayList<>();
+        // деревянные — отдельно (GT_Loader_MetaTileEntities:1529–1531): 10 / 30 / 60, 350 K, пропускают газ
+        l.add(new Spec("pipe_small_wood", "wood", 10, 350, 6, 0x643200, false));
+        l.add(new Spec("pipe_medium_wood", "wood", 30, 350, 8, 0x643200, false));
+        l.add(new Spec("pipe_large_wood", "wood", 60, 350, 12, 0x643200, false));
+        String[] sizes = {"tiny", "small", "medium", "large", "huge"};
+        int[] thick = {4, 6, 8, 12, 14};
+        for (Object[] m : GT_PIPES) {
+            int base = (Integer) m[1];
+            int[] cap = {base / 6, base / 3, base, base * 2, base * 4};
+            for (int i = 0; i < sizes.length; i++) {
+                l.add(new Spec("pipe_" + sizes[i] + "_" + m[0], (String) m[0], cap[i], (Integer) m[2], thick[i], (Integer) m[4], (Boolean) m[3]));
+            }
+        }
+        return List.copyOf(l);
+    }
 
     public static final Map<Direction, BooleanProperty> PROPS = net.minecraft.world.level.block.PipeBlock.PROPERTY_BY_DIRECTION;
     public static final TagKey<Item> WRENCH = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(IIS.MODID, "tools/wrench"));
@@ -140,6 +166,14 @@ public class PipeBlock extends Block implements EntityBlock {
             player.sendOverlayMessage(Component.translatable(on ? "message.iis.pipe.connected" : "message.iis.pipe.disconnected"));
         }
         return InteractionResult.SUCCESS;
+    }
+
+    /** GT_MetaPipeEntity_Fluid#onEntityCollidedWithBlock: горячая (&gt;320 K) или холодная (&lt;260 K) жидкость обжигает. */
+    @Override
+    public void stepOn(Level level, BlockPos pos, BlockState state, net.minecraft.world.entity.Entity entity) {
+        super.stepOn(level, pos, state, entity);
+        if (!level.isClientSide() && entity instanceof net.minecraft.world.entity.LivingEntity living
+                && level.getBlockEntity(pos) instanceof PipeBlockEntity pipe) pipe.touch(living);
     }
 
     @Override

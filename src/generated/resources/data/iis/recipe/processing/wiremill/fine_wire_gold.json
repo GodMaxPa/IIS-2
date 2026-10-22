@@ -1,0 +1,17 @@
+{
+  "type": "iis:wiremill",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_fine_gold",
+      "count": 4
+    }
+  ],
+  "duration": 200,
+  "eut": 8
+}

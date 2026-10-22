@@ -1210,6 +1210,86 @@
     "material": "charcoal"
   },
   {
+    "id": "crushed_chrome",
+    "prefix": "crushed",
+    "material": "chrome"
+  },
+  {
+    "id": "purified_chrome",
+    "prefix": "purified",
+    "material": "chrome"
+  },
+  {
+    "id": "impure_dust_chrome",
+    "prefix": "impure_dust",
+    "material": "chrome"
+  },
+  {
+    "id": "pure_dust_chrome",
+    "prefix": "pure_dust",
+    "material": "chrome"
+  },
+  {
+    "id": "dust_chrome",
+    "prefix": "dust",
+    "material": "chrome"
+  },
+  {
+    "id": "small_dust_chrome",
+    "prefix": "small_dust",
+    "material": "chrome"
+  },
+  {
+    "id": "tiny_dust_chrome",
+    "prefix": "tiny_dust",
+    "material": "chrome"
+  },
+  {
+    "id": "ingot_chrome",
+    "prefix": "ingot",
+    "material": "chrome"
+  },
+  {
+    "id": "nugget_chrome",
+    "prefix": "nugget",
+    "material": "chrome"
+  },
+  {
+    "id": "plate_chrome",
+    "prefix": "plate",
+    "material": "chrome"
+  },
+  {
+    "id": "rod_chrome",
+    "prefix": "rod",
+    "material": "chrome"
+  },
+  {
+    "id": "bolt_chrome",
+    "prefix": "bolt",
+    "material": "chrome"
+  },
+  {
+    "id": "screw_chrome",
+    "prefix": "screw",
+    "material": "chrome"
+  },
+  {
+    "id": "ring_chrome",
+    "prefix": "ring",
+    "material": "chrome"
+  },
+  {
+    "id": "rotor_chrome",
+    "prefix": "rotor",
+    "material": "chrome"
+  },
+  {
+    "id": "long_rod_chrome",
+    "prefix": "long_rod",
+    "material": "chrome"
+  },
+  {
     "id": "crushed_cinnabar",
     "prefix": "crushed",
     "material": "cinnabar"
@@ -5075,6 +5155,76 @@
     "material": "spodumene"
   },
   {
+    "id": "dust_stainless_steel",
+    "prefix": "dust",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "small_dust_stainless_steel",
+    "prefix": "small_dust",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "tiny_dust_stainless_steel",
+    "prefix": "tiny_dust",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "ingot_stainless_steel",
+    "prefix": "ingot",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "nugget_stainless_steel",
+    "prefix": "nugget",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "plate_stainless_steel",
+    "prefix": "plate",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "rod_stainless_steel",
+    "prefix": "rod",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "bolt_stainless_steel",
+    "prefix": "bolt",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "screw_stainless_steel",
+    "prefix": "screw",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "ring_stainless_steel",
+    "prefix": "ring",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "small_gear_stainless_steel",
+    "prefix": "small_gear",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "rotor_stainless_steel",
+    "prefix": "rotor",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "long_rod_stainless_steel",
+    "prefix": "long_rod",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "gear_stainless_steel",
+    "prefix": "gear",
+    "material": "stainless_steel"
+  },
+  {
     "id": "dust_steel",
     "prefix": "dust",
     "material": "steel"
@@ -6395,6 +6545,36 @@
     "material": "certus_quartz"
   },
   {
+    "id": "sword_head_chrome",
+    "prefix": "sword_head",
+    "material": "chrome"
+  },
+  {
+    "id": "pickaxe_head_chrome",
+    "prefix": "pickaxe_head",
+    "material": "chrome"
+  },
+  {
+    "id": "shovel_head_chrome",
+    "prefix": "shovel_head",
+    "material": "chrome"
+  },
+  {
+    "id": "axe_head_chrome",
+    "prefix": "axe_head",
+    "material": "chrome"
+  },
+  {
+    "id": "hoe_head_chrome",
+    "prefix": "hoe_head",
+    "material": "chrome"
+  },
+  {
+    "id": "saw_head_chrome",
+    "prefix": "saw_head",
+    "material": "chrome"
+  },
+  {
     "id": "sword_head_cobalt",
     "prefix": "sword_head",
     "material": "cobalt"
@@ -7203,6 +7383,36 @@
     "id": "saw_head_silver",
     "prefix": "saw_head",
     "material": "silver"
+  },
+  {
+    "id": "sword_head_stainless_steel",
+    "prefix": "sword_head",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "pickaxe_head_stainless_steel",
+    "prefix": "pickaxe_head",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "shovel_head_stainless_steel",
+    "prefix": "shovel_head",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "axe_head_stainless_steel",
+    "prefix": "axe_head",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "hoe_head_stainless_steel",
+    "prefix": "hoe_head",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "saw_head_stainless_steel",
+    "prefix": "saw_head",
+    "material": "stainless_steel"
   },
   {
     "id": "sword_head_steel",

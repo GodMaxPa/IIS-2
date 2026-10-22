@@ -1,0 +1,34 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "minecraft:soul_sand",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_saltpeter",
+      "count": 1,
+      "chance": 8000
+    },
+    {
+      "id": "iis:tiny_dust_coal",
+      "count": 1,
+      "chance": 2000
+    },
+    {
+      "id": "minecraft:sand",
+      "count": 1,
+      "chance": 9000
+    }
+  ],
+  "duration": 200,
+  "eut": 80,
+  "fluid_outputs": [
+    {
+      "id": "iis:oil",
+      "amount": 80
+    }
+  ]
+}

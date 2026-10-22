@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FSF",
+    "FSF"
+  ],
+  "key": {
+    "F": "iis:plant_fiber",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "iis:woven_mandrel",
+    "count": 1
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:methanol",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 6
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 11,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:methylacetate",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 240,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:aceticacid",
+      "amount": 8000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 3000
+    }
+  ]
+}

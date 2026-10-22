@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SS",
+    "CC",
+    "CC"
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "C": "minecraft:cobblestone"
+  },
+  "result": {
+    "id": "iis:stone_hearth",
+    "count": 1
+  }
+}

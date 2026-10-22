@@ -1,0 +1,23 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/uraninite",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_uranium",
+      "count": 1
+    }
+  ],
+  "duration": 1080,
+  "eut": 5,
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 2000
+    }
+  ]
+}

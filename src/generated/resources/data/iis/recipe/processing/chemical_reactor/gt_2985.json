@@ -1,0 +1,51 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:benzene",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:chlorine",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 3
+    }
+  ],
+  "duration": 240,
+  "eut": 240,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:propene",
+      "amount": 2000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_epoxid",
+      "amount": 4000
+    }
+  ]
+}

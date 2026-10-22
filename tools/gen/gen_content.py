@@ -28,7 +28,7 @@ NS = 'iis'
 
 def write(path, obj):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, 'w', encoding='utf-8', newline='\n') as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
         f.write('\n')
 
@@ -134,6 +134,8 @@ names |= {'Tin', 'Lead', 'Copper', 'AnnealedCopper', 'WroughtIron', 'Rubber', 'I
 names |= {'CobaltBrass', 'Cobalt', 'Aluminium', 'Brass', 'Zinc', 'Diamond'}
 # batteries: cadmium, lithium, sodium dusts
 names |= {'Cadmium', 'Lithium', 'Sodium'}
+# LV III (D76): chrome (ruby electrolysis), stainless steel and its pipes
+names |= {'Chrome', 'StainlessSteel'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64
@@ -794,6 +796,21 @@ _spec = _ilu.spec_from_file_location('iis_gen_ebf', os.path.join(ROOT, 'tools', 
 _ebf = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_ebf)
 lv_stats['ebf'] = _ebf.generate(globals())
+# Bio path, first prototype (D61)
+_spec = _ilu.spec_from_file_location('iis_gen_bio', os.path.join(ROOT, 'tools', 'gen', 'bio.py'))
+_bio = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_bio)
+lv_stats['bio'] = _bio.generate(globals())
+# Fluids for all of IIS 2 (D72): GT fluids, pipes, capsules, universal tanks
+_spec = _ilu.spec_from_file_location('iis_gen_fluids', os.path.join(ROOT, 'tools', 'gen', 'fluids.py'))
+_fluids = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_fluids)
+lv_stats['fluids'] = _fluids.generate(dict(globals(), RES=os.path.join(ROOT, 'src', 'main', 'resources')))
+# Programmed circuit of GT (D75)
+_spec = _ilu.spec_from_file_location('iis_gen_circuits', os.path.join(ROOT, 'tools', 'gen', 'circuits.py'))
+_circ = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_circ)
+lv_stats['circuits'] = _circ.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

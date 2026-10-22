@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PSP",
+    "F F",
+    "PSP"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "S": "minecraft:stick",
+    "F": "iis:plant_fiber"
+  },
+  "result": {
+    "id": "iis:stone_press",
+    "count": 1
+  }
+}

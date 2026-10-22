@@ -63,6 +63,10 @@ public final class LvContent {
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Long>> CHARGE = COMPONENTS.registerComponentType("charge",
             b -> b.persistent(Codec.LONG).networkSynchronized(ByteBufCodecs.VAR_LONG));
 
+    /** Конфигурация программной схемы GT, 0…24 (D75). */
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> CIRCUIT_CONFIG = COMPONENTS.registerComponentType("circuit_config",
+            b -> b.persistent(Codec.intRange(0, ru.iis.lv.item.ProgrammedCircuitItem.MAX)).networkSynchronized(ByteBufCodecs.VAR_INT));
+
     private static final List<Supplier<? extends Item>> TAB_ORDER = new ArrayList<>();
 
     private static Block.Properties metal(Block.Properties p) {
@@ -79,6 +83,12 @@ public final class LvContent {
         DeferredItem<Item> i = ITEMS.registerSimpleItem(id);
         TAB_ORDER.add(i);
         return i;
+    }
+
+    /** Программная схема GT (gt.integrated_circuit): выбирает рецепт машины, не расходуется. */
+    public static final DeferredItem<Item> PROGRAMMED_CIRCUIT = ITEMS.registerItem("programmed_circuit", ru.iis.lv.item.ProgrammedCircuitItem::new);
+    static {
+        TAB_ORDER.add(PROGRAMMED_CIRCUIT);
     }
 
     // --- провода и кабели --------------------------------------------------------------------------------------
@@ -143,6 +153,14 @@ public final class LvContent {
     public static final DeferredItem<Item> ITEM_FILTER = item("item_filter");
     public static final DeferredItem<Item> STEEL_ITEM_CASING = item("steel_item_casing");
     public static final DeferredItem<Item> PLATE_WOOD = item("plate_wood");
+    // формы отвердителя жидкостей GT (LV III, D76): лежат во входе и не расходуются
+    public static final DeferredItem<Item> SHAPE_EMPTY = item("shape_empty");
+    public static final DeferredItem<Item> MOLD_PLATE = item("mold_plate");
+    public static final DeferredItem<Item> MOLD_GEAR = item("mold_gear");
+    public static final DeferredItem<Item> MOLD_INGOT = item("mold_ingot");
+    public static final DeferredItem<Item> MOLD_BALL = item("mold_ball");
+    public static final DeferredItem<Item> MOLD_BLOCK = item("mold_block");
+    public static final DeferredItem<Item> MOLD_NUGGET = item("mold_nugget");
     public static final DeferredItem<Item> STICKY_RESIN = item("sticky_resin");
     public static final DeferredItem<Item> COAL_COKE = item("coal_coke");
     public static final DeferredItem<Item> WET_COKE_OVEN_BRICK = item("wet_coke_oven_brick");

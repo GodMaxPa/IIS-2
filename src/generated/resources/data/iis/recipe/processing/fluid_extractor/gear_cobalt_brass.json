@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:gears/cobalt_brass",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 96,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_cobaltbrass",
+      "amount": 576
+    }
+  ]
+}

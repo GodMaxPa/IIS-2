@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:fine_wires/copper",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 3,
+  "eut": 52,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_copper",
+      "amount": 18
+    }
+  ]
+}

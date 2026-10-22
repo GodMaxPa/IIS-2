@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/silver",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 49,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_silver",
+      "amount": 16
+    }
+  ]
+}

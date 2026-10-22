@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "w h",
+    "PPP"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "h": "#iis:tools/soft_hammer",
+    "w": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:pipe_medium_wood",
+    "count": 2
+  }
+}

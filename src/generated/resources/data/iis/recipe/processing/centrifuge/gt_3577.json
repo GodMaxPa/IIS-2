@@ -1,0 +1,19 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [],
+  "outputs": [],
+  "duration": 20,
+  "eut": 5,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:butane",
+      "amount": 320
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_lpg",
+      "amount": 370
+    }
+  ]
+}

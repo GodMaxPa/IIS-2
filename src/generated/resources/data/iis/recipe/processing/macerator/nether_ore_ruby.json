@@ -12,6 +12,11 @@
       "count": 4
     },
     {
+      "id": "iis:dust_chrome",
+      "count": 1,
+      "chance": 2000
+    },
+    {
       "id": "iis:dust_netherrack",
       "count": 1,
       "chance": 5000

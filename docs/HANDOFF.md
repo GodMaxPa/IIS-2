@@ -35,6 +35,10 @@ gradlew.bat runClient                     :: клиент разработки �
 - Эталон GT5-II (исходники) в репозиторий не входит: https://github.com/IdealIndustrial/GT5Unofficial, коммит `00021e3` — склонировать рядом, если нужно сверять код. Конфиги и скрипты сборки ИИС 1.19.1 (`GregTech.lang.ru`, `config/GregTech/*.cfg`, `scripts/*.zs`) — у владельца (папка «ИИС v1.19.1»); выжимки уже лежат в `reference/original`.
 - В облаке JDK подключался через `source /home/claude/tools/env.sh` — локально это не нужно (JAVA_HOME на JDK 25).
 
+Полный генератор контента локально (D76): нужен выборочный клон текстур GT5 (`git clone --filter=blob:none --no-checkout https://github.com/IdealIndustrial/GT5Unofficial.git`, `git sparse-checkout set src/main/resources/assets/gregtech/textures`, `git checkout 00021e3`), затем `IIS_GT5_TEXTURES=<клон>/src/main/resources/assets/gregtech/textures python -I tools/gen/gen_content.py`. Результат совпадает с облачным; файлы пишутся с LF.
+
+Стендовый мир-эталон (D74): `powershell -ExecutionPolicy Bypass -File scripts\stand.ps1` — строит мир сервером разработки и кладёт его в `forServerClient\saves\IIS2_Stand` (прежний — в `iis-backups`). Игра при этом может быть закрыта или открыта на другом мире.
+
 ## Как проверить, что всё живо (≈10 минут)
 ```bash
 source /home/claude/tools/env.sh        # JDK 25 (в облаке Claude)

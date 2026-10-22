@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/tin",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 12,
+  "eut": 31,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_tin",
+      "amount": 72
+    }
+  ]
+}

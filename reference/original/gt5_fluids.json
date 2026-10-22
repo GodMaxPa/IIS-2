@@ -1,0 +1,5606 @@
+[
+ {
+  "id": "aceticacid",
+  "en": "aceticacid",
+  "ru": "Уксусная кислота",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "acetone",
+  "en": "acetone",
+  "ru": "Ацетон",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   175,
+   175,
+   175
+  ]
+ },
+ {
+  "id": "air",
+  "en": "Air",
+  "ru": "Воздух",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   169,
+   208,
+   245
+  ]
+ },
+ {
+  "id": "allylchloride",
+  "en": "allylchloride",
+  "ru": "Аллилхлорид",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "ammonia",
+  "en": "ammonia",
+  "ru": "Аммиак",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   63,
+   52,
+   128
+  ]
+ },
+ {
+  "id": "argon",
+  "en": "Argon",
+  "ru": "Аргон",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   0,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "benzene",
+  "en": "benzene",
+  "ru": "Бензол",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   26,
+   26,
+   26
+  ]
+ },
+ {
+  "id": "biodiesel",
+  "en": "biodiesel",
+  "ru": "Биодизель",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "bioethanol",
+  "en": "Bio Ethanol",
+  "ru": "Биоэтанол",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "biomass",
+  "en": "Biomass",
+  "ru": "Биомасса",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   0,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "butadiene",
+  "en": "butadiene",
+  "ru": "Бутадиен",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   232,
+   105,
+   0
+  ]
+ },
+ {
+  "id": "butane",
+  "en": "butane",
+  "ru": "Бутан",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   182,
+   55,
+   30
+  ]
+ },
+ {
+  "id": "butene",
+  "en": "butene",
+  "ru": "Бутилен-1",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   207,
+   80,
+   5
+  ]
+ },
+ {
+  "id": "calciumacetatesolution",
+  "en": "calciumacetatesolution",
+  "ru": "Раствор ацетата кальция",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "carbondioxide",
+  "en": "Carbon Dioxide",
+  "ru": "Углекислый газ",
+  "state": 1,
+  "temperature": 25,
+  "rgb": [
+   169,
+   208,
+   245
+  ]
+ },
+ {
+  "id": "carbonmonoxide",
+  "en": "carbonmonoxide",
+  "ru": "Угарный газ",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "charcoal_byproducts",
+  "en": "charcoal_byproducts",
+  "ru": "Субпродукты из древесного угля",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "chloramine",
+  "en": "chloramine",
+  "ru": "Хлорамин",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   63,
+   159,
+   128
+  ]
+ },
+ {
+  "id": "chlorine",
+  "en": "Chlorine",
+  "ru": "Хлор",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "chlorobenzene",
+  "en": "chlorobenzene",
+  "ru": "Хлорбензол",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   0,
+   50,
+   65
+  ]
+ },
+ {
+  "id": "chloroform",
+  "en": "chloroform",
+  "ru": "Хлороформ",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   137,
+   44,
+   160
+  ]
+ },
+ {
+  "id": "chloromethane",
+  "en": "chloromethane",
+  "ru": "Хлорметан",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   44,
+   160
+  ]
+ },
+ {
+  "id": "creosote",
+  "en": "Creosote Oil",
+  "ru": "Креозотовое масло",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   128,
+   64,
+   0
+  ]
+ },
+ {
+  "id": "cumene",
+  "en": "cumene",
+  "ru": "Кумол",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   85,
+   34,
+   0
+  ]
+ },
+ {
+  "id": "deuterium",
+  "en": "Deuterium",
+  "ru": "Дейтерий",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "dichlorobenzene",
+  "en": "dichlorobenzene",
+  "ru": "1,2-дихлорбензол",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   0,
+   68,
+   85
+  ]
+ },
+ {
+  "id": "dilutedsulfuricacid",
+  "en": "dilutedsulfuricacid",
+  "ru": "Разбавленная серная кислота",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dimethylamine",
+  "en": "dimethylamine",
+  "ru": "Диметиламин",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   85,
+   68,
+   105
+  ]
+ },
+ {
+  "id": "dimethyldichlorosilane",
+  "en": "dimethyldichlorosilane",
+  "ru": "Диметилдихлорсилан",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   68,
+   22,
+   80
+  ]
+ },
+ {
+  "id": "dinitrogentetroxide",
+  "en": "dinitrogentetroxide",
+  "ru": "Тетраоксид диазота",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dirtywater",
+  "en": "dirtywater",
+  "ru": "Грязная вода",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyeblack",
+  "en": "dye.chemical.dyeblack",
+  "ru": "Химическая чёрная краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyeblue",
+  "en": "dye.chemical.dyeblue",
+  "ru": "Химическая синяя краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyebrown",
+  "en": "dye.chemical.dyebrown",
+  "ru": "Химическая коричневая краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyecyan",
+  "en": "dye.chemical.dyecyan",
+  "ru": "Химическая бирюзовая краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyegray",
+  "en": "dye.chemical.dyegray",
+  "ru": "Химическая серая краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyegreen",
+  "en": "dye.chemical.dyegreen",
+  "ru": "Химическая зелёная краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyelightblue",
+  "en": "dye.chemical.dyelightblue",
+  "ru": "Химическая светло-синяя краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyelightgray",
+  "en": "dye.chemical.dyelightgray",
+  "ru": "Химическая светло-серая краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyelime",
+  "en": "dye.chemical.dyelime",
+  "ru": "Химическая лаймовая краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyemagenta",
+  "en": "dye.chemical.dyemagenta",
+  "ru": "Химическая пурпурная краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyeorange",
+  "en": "dye.chemical.dyeorange",
+  "ru": "Химическая оранжевая краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyepink",
+  "en": "dye.chemical.dyepink",
+  "ru": "Химическая розовая краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyepurple",
+  "en": "dye.chemical.dyepurple",
+  "ru": "Химическая Фиолетовая краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyered",
+  "en": "dye.chemical.dyered",
+  "ru": "Химическая красная краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyewhite",
+  "en": "dye.chemical.dyewhite",
+  "ru": "Химическая белая краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.chemical.dyeyellow",
+  "en": "dye.chemical.dyeyellow",
+  "ru": "Химическая жёлтая краска",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyeblack",
+  "en": "dye.watermixed.dyeblack",
+  "ru": "Чёрный краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyeblue",
+  "en": "dye.watermixed.dyeblue",
+  "ru": "Синий краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyebrown",
+  "en": "dye.watermixed.dyebrown",
+  "ru": "Коричневый краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyecyan",
+  "en": "dye.watermixed.dyecyan",
+  "ru": "Бирюзовый краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyegray",
+  "en": "dye.watermixed.dyegray",
+  "ru": "Серый краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyegreen",
+  "en": "dye.watermixed.dyegreen",
+  "ru": "Зелёный краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyelightblue",
+  "en": "dye.watermixed.dyelightblue",
+  "ru": "Светло-синий краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyelightgray",
+  "en": "dye.watermixed.dyelightgray",
+  "ru": "Светло-серый краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyelime",
+  "en": "dye.watermixed.dyelime",
+  "ru": "Лаймовый краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyemagenta",
+  "en": "dye.watermixed.dyemagenta",
+  "ru": "Пурпурный краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyeorange",
+  "en": "dye.watermixed.dyeorange",
+  "ru": "Оранжевый краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyepink",
+  "en": "dye.watermixed.dyepink",
+  "ru": "Розовый краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyepurple",
+  "en": "dye.watermixed.dyepurple",
+  "ru": "Фиолетовый краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyered",
+  "en": "dye.watermixed.dyered",
+  "ru": "Красный краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyewhite",
+  "en": "dye.watermixed.dyewhite",
+  "ru": "Белый краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "dye.watermixed.dyeyellow",
+  "en": "dye.watermixed.dyeyellow",
+  "ru": "Жёлтый краситель, смешанный с водой",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "ethane",
+  "en": "ethane",
+  "ru": "Этан",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   255
+  ]
+ },
+ {
+  "id": "ethenone",
+  "en": "ethenone",
+  "ru": "Кетен",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   20,
+   20,
+   70
+  ]
+ },
+ {
+  "id": "ethylene",
+  "en": "ethylene",
+  "ru": "Этилен",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   225,
+   225,
+   225
+  ]
+ },
+ {
+  "id": "ethyltertbutylether",
+  "en": "ethyltertbutylether",
+  "ru": "трет-Бутилэтиловый эфир",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "fermentedbiomass",
+  "en": "fermentedbiomass",
+  "ru": "Ферментированная биомасса",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "fieryblood",
+  "en": "Fiery Blood",
+  "ru": "Огненная кровь",
+  "state": 1,
+  "temperature": 6400,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "fishoil",
+  "en": "Fish Oil",
+  "ru": "Рыбий жир",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   255,
+   196,
+   0
+  ]
+ },
+ {
+  "id": "fluorine",
+  "en": "Fluorine",
+  "ru": "Фтор",
+  "state": 2,
+  "temperature": 53,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "for.honey",
+  "en": "Honey",
+  "ru": "Мёд",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "fuel",
+  "en": "Diesel",
+  "ru": "Дизель",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "gas_gas",
+  "en": "Refinery Gas",
+  "ru": "Нефтезаводской газ",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "gas_natural_gas",
+  "en": "Natural Gas",
+  "ru": "Природный газ",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "gas_sulfuricgas",
+  "en": "Sulfuric Gas",
+  "ru": "Сернистый газ",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "gasoline",
+  "en": "gasoline",
+  "ru": "Бензин",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   255,
+   165,
+   0
+  ]
+ },
+ {
+  "id": "glue",
+  "en": "Glue",
+  "ru": "Клей",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   196,
+   0
+  ]
+ },
+ {
+  "id": "glycerol",
+  "en": "glycerol",
+  "ru": "Глицерин",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   135,
+   222,
+   135
+  ]
+ },
+ {
+  "id": "glyceryl",
+  "en": "Glyceryl Trinitrate",
+  "ru": "Нитроглицерин",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   0,
+   150,
+   150
+  ]
+ },
+ {
+  "id": "growthmediumraw",
+  "en": "growthmediumraw",
+  "ru": "Субстрат",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "growthmediumsterilized",
+  "en": "growthmediumsterilized",
+  "ru": "Стерилизованный субстрат",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "helium",
+  "en": "Helium",
+  "ru": "Гелий",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "highoctanegasoline",
+  "en": "highoctanegasoline",
+  "ru": "Высокооктановый бензин",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "holywater",
+  "en": "Holy Water",
+  "ru": "Святая вода",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   0,
+   0,
+   255
+  ]
+ },
+ {
+  "id": "hotfryingoil",
+  "en": "Hot Frying Oil",
+  "ru": "Горячий фритюр",
+  "state": 1,
+  "temperature": 400,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "hydrocracked.butane",
+  "en": "Hydro-Cracked butane",
+  "ru": "Бутан после гидрокрекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   182,
+   55,
+   30
+  ]
+ },
+ {
+  "id": "hydrocracked.ethane",
+  "en": "Hydro-Cracked ethane",
+  "ru": "Этан после гидрокрекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   200,
+   200,
+   255
+  ]
+ },
+ {
+  "id": "hydrocracked.gas",
+  "en": "Hydro-Cracked Refinery Gas",
+  "ru": "Нефтезаводской газ после гидрокрекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "hydrocracked.heavyfuel",
+  "en": "Hydro-Cracked Heavy Fuel",
+  "ru": "Тяжёлое топливо после гидрокрекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "hydrocracked.lightfuel",
+  "en": "Hydro-Cracked Light Fuel",
+  "ru": "Лёгкое топливо после гидрокрекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "hydrocracked.naphtha",
+  "en": "Hydro-Cracked Naphtha",
+  "ru": "Нафта после гидрокрекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "hydrocracked.propane",
+  "en": "Hydro-Cracked propane",
+  "ru": "Пропан после гидрокрекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   250,
+   226,
+   80
+  ]
+ },
+ {
+  "id": "hydrogen",
+  "en": "Hydrogen",
+  "ru": "Водород",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   0,
+   0,
+   255
+  ]
+ },
+ {
+  "id": "hypochlorousacid",
+  "en": "hypochlorousacid",
+  "ru": "Хлорноватистая кислота",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "ice",
+  "en": "Crushed Ice",
+  "ru": "Дроблёный лёд",
+  "state": 0,
+  "temperature": 270,
+  "rgb": [
+   200,
+   200,
+   255
+  ]
+ },
+ {
+  "id": "indigo",
+  "en": "Indigo Dye",
+  "ru": "Краска индиго",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "indiumconcentrate",
+  "en": "indiumconcentrate",
+  "ru": "Индиевый концентрат",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "isoprene",
+  "en": "isoprene",
+  "ru": "Изопрен",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   20,
+   20,
+   20
+  ]
+ },
+ {
+  "id": "leadzincsolution",
+  "en": "leadzincsolution",
+  "ru": "Свинцово-цинковый раствор",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_drillingfluid",
+  "en": "Drilling Fluid",
+  "ru": "Буровой раствор",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_epichlorhydrin",
+  "en": "Epichlorohydrin",
+  "ru": "Эпихлоргидрин",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_extra_heavy_oil",
+  "en": "Very Heavy Oil",
+  "ru": "Сверхтяжёлая нефть",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_heavy_fuel",
+  "en": "Heavy Fuel",
+  "ru": "Тяжёлое топливо",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_heavy_oil",
+  "en": "Heavy Oil",
+  "ru": "Тяжёлая нефть",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_hydricsulfur",
+  "en": "Hydrogen Sulfide",
+  "ru": "Сероводород",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_light_fuel",
+  "en": "Light Fuel",
+  "ru": "Лёгкое топливо",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_light_oil",
+  "en": "Light Oil",
+  "ru": "Лёгкая нефть",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_lpg",
+  "en": "LPG",
+  "ru": "СУГ",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_medium_oil",
+  "en": "Raw Oil",
+  "ru": "Сырая нефть",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_naphtha",
+  "en": "Naphtha",
+  "ru": "Нафта",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_nitrationmixture",
+  "en": "Nitration Mixture",
+  "ru": "Нитратная смесь",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_sufluriclight_fuel",
+  "en": "Sulfuric Light Fuel",
+  "ru": "Сернистое лёгкое топливо",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_sulfuricheavy_fuel",
+  "en": "Sulfuric Heavy Fuel",
+  "ru": "Сернистое тяжёлое топливо",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_sulfuricnaphtha",
+  "en": "Sulfuric Naphtha",
+  "ru": "Сернистая нафта",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquid_toluene",
+  "en": "Toluene",
+  "ru": "Толуол",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "liquidair",
+  "en": "Liquid Air",
+  "ru": "Сжиженный воздух",
+  "state": 1,
+  "temperature": 4,
+  "rgb": [
+   169,
+   208,
+   245
+  ]
+ },
+ {
+  "id": "lubricant",
+  "en": "Lubricant",
+  "ru": "Смазка",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   255,
+   196,
+   0
+  ]
+ },
+ {
+  "id": "mcguffium",
+  "en": "Mc Guffium 239",
+  "ru": "Mc Гуффий 239",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "mercury",
+  "en": "Mercury",
+  "ru": "Ртуть",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   255,
+   220,
+   220
+  ]
+ },
+ {
+  "id": "methane",
+  "en": "Methane",
+  "ru": "Метан",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "methanol",
+  "en": "methanol",
+  "ru": "Метанол",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   170,
+   136,
+   0
+  ]
+ },
+ {
+  "id": "methylacetate",
+  "en": "methylacetate",
+  "ru": "Метилацетат",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "milk",
+  "en": "Milk",
+  "ru": "Молоко",
+  "state": 1,
+  "temperature": 290,
+  "rgb": [
+   254,
+   254,
+   254
+  ]
+ },
+ {
+  "id": "molten.adamantium",
+  "en": "Molten Adamantium",
+  "ru": "Расплавленный адамантий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.aluminium",
+  "en": "Molten Aluminium",
+  "ru": "Расплавленный алюминий",
+  "state": 4,
+  "temperature": 933,
+  "rgb": [
+   128,
+   200,
+   240
+  ]
+ },
+ {
+  "id": "molten.aluminiumbrass",
+  "en": "Molten Aluminium Brass",
+  "ru": "Расплавленная алюминиевая латунь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.alumite",
+  "en": "Molten Alumite",
+  "ru": "Расплавленный алюмит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.americium",
+  "en": "Molten Americium",
+  "ru": "Расплавленный америций",
+  "state": 4,
+  "temperature": 1449,
+  "rgb": [
+   240,
+   100,
+   255
+  ]
+ },
+ {
+  "id": "molten.amordrine",
+  "en": "Molten Amordrine",
+  "ru": "Расплавленный амордрин",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.angmallen",
+  "en": "Molten Angmallen",
+  "ru": "Расплавленны ангмаллен",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   215,
+   225,
+   138
+  ]
+ },
+ {
+  "id": "molten.annealedcopper",
+  "en": "Molten Annealed Copper",
+  "ru": "Расплавленная отожжённая медь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   120,
+   20
+  ]
+ },
+ {
+  "id": "molten.antimony",
+  "en": "Molten Antimony",
+  "ru": "Расплавленная сурьма",
+  "state": 4,
+  "temperature": 903,
+  "rgb": [
+   220,
+   220,
+   240
+  ]
+ },
+ {
+  "id": "molten.ardite",
+  "en": "Molten Ardite",
+  "ru": "Расплавленный ардит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "molten.aredrite",
+  "en": "Molten Aredrite",
+  "ru": "Расплавленный аредрит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "molten.arsenic",
+  "en": "Molten Arsenic",
+  "ru": "Расплавленный мышьяк",
+  "state": 4,
+  "temperature": 1090,
+  "rgb": [
+   240,
+   220,
+   100
+  ]
+ },
+ {
+  "id": "molten.astralsilver",
+  "en": "Molten Astral Silver",
+  "ru": "Расплавленное астральное серебро",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   230,
+   230,
+   255
+  ]
+ },
+ {
+  "id": "molten.atlarus",
+  "en": "Molten Atlarus",
+  "ru": "Расплавленный атларус",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.batteryalloy",
+  "en": "Molten Battery Alloy",
+  "ru": "Расплавленный батарейный сплав",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   156,
+   124,
+   160
+  ]
+ },
+ {
+  "id": "molten.beryllium",
+  "en": "Molten Beryllium",
+  "ru": "Расплавленный бериллий",
+  "state": 4,
+  "temperature": 1560,
+  "rgb": [
+   100,
+   180,
+   100
+  ]
+ },
+ {
+  "id": "molten.bismuth",
+  "en": "Molten Bismuth",
+  "ru": "Расплавленный висмут",
+  "state": 4,
+  "temperature": 544,
+  "rgb": [
+   100,
+   160,
+   160
+  ]
+ },
+ {
+  "id": "molten.bismuthbronze",
+  "en": "Molten Bismuth Bronze",
+  "ru": "Расплавленная висмутовая бронза",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   100,
+   125,
+   125
+  ]
+ },
+ {
+  "id": "molten.bisphenol_a",
+  "en": "Molten bisphenol_a",
+  "ru": "Бисфенол А",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.blackbronze",
+  "en": "Molten Black Bronze",
+  "ru": "Расплавленная чёрная бронза",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   100,
+   50,
+   125
+  ]
+ },
+ {
+  "id": "molten.blacksteel",
+  "en": "Molten Black Steel",
+  "ru": "Расплавленная чёрная сталь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   100,
+   100,
+   100
+  ]
+ },
+ {
+  "id": "molten.blaze",
+  "en": "Molten Blaze",
+  "ru": "Расплавленный ифритий",
+  "state": 4,
+  "temperature": 6400,
+  "rgb": [
+   255,
+   200,
+   0
+  ]
+ },
+ {
+  "id": "molten.bluealloy",
+  "en": "Molten Blue Alloy",
+  "ru": "Расплавленный синий сплав",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   100,
+   180,
+   255
+  ]
+ },
+ {
+  "id": "molten.bluesteel",
+  "en": "Molten Blue Steel",
+  "ru": "Расплавленная синяя сталь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   100,
+   100,
+   140
+  ]
+ },
+ {
+  "id": "molten.blutonium",
+  "en": "Molten Blutonium",
+  "ru": "Расплавленный блутоний",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   0,
+   0,
+   255
+  ]
+ },
+ {
+  "id": "molten.borosilicateglass",
+  "en": "Molten borosilicateglass",
+  "ru": "Расплавленное боросиликатное стекло",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.brass",
+  "en": "Molten Brass",
+  "ru": "Расплавленная латунь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   180,
+   0
+  ]
+ },
+ {
+  "id": "molten.bronze",
+  "en": "Molten Bronze",
+  "ru": "Расплавленная бронза",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   128,
+   0
+  ]
+ },
+ {
+  "id": "molten.caesium",
+  "en": "Molten Caesium",
+  "ru": "Расплавленный цезий",
+  "state": 4,
+  "temperature": 301,
+  "rgb": [
+   200,
+   170,
+   75
+  ]
+ },
+ {
+  "id": "molten.carbon",
+  "en": "Molten Carbon",
+  "ru": "Расплавленный углерод",
+  "state": 4,
+  "temperature": 3800,
+  "rgb": [
+   20,
+   20,
+   20
+  ]
+ },
+ {
+  "id": "molten.carmot",
+  "en": "Molten Carmot",
+  "ru": "Расплавленный кармот",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   217,
+   205,
+   140
+  ]
+ },
+ {
+  "id": "molten.celenegil",
+  "en": "Molten Celenegil",
+  "ru": "Molten Celenegil",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   148,
+   204,
+   72
+  ]
+ },
+ {
+  "id": "molten.cerium",
+  "en": "Molten Cerium",
+  "ru": "Расплавленный церий",
+  "state": 4,
+  "temperature": 1068,
+  "rgb": [
+   135,
+   145,
+   125
+  ]
+ },
+ {
+  "id": "molten.ceruclase",
+  "en": "Molten Ceruclase",
+  "ru": "Molten Ceruclase",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   140,
+   189,
+   208
+  ]
+ },
+ {
+  "id": "molten.cheese",
+  "en": "Molten Cheese",
+  "ru": "Расплавленный сыр",
+  "state": 4,
+  "temperature": 320,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "molten.chrome",
+  "en": "Molten Chrome",
+  "ru": "Расплавленный хром",
+  "state": 4,
+  "temperature": 2180,
+  "rgb": [
+   255,
+   210,
+   210
+  ]
+ },
+ {
+  "id": "molten.chromiumdioxide",
+  "en": "Molten Chromium Dioxide",
+  "ru": "Расплавленный диоксид хрома",
+  "state": 4,
+  "temperature": 650,
+  "rgb": [
+   230,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.cobalt",
+  "en": "Molten Cobalt",
+  "ru": "Расплавленный кобальт",
+  "state": 4,
+  "temperature": 1768,
+  "rgb": [
+   80,
+   80,
+   250
+  ]
+ },
+ {
+  "id": "molten.cobaltbrass",
+  "en": "Molten Cobalt Brass",
+  "ru": "Расплавленная кобальтовая латунь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   180,
+   180,
+   160
+  ]
+ },
+ {
+  "id": "molten.concrete",
+  "en": "Wet Concrete",
+  "ru": "Сырой цемент",
+  "state": 4,
+  "temperature": 300,
+  "rgb": [
+   100,
+   100,
+   100
+  ]
+ },
+ {
+  "id": "molten.conductiveiron",
+  "en": "Molten Conductive Iron",
+  "ru": "Расплавленное проводящее железо",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   217,
+   178,
+   171
+  ]
+ },
+ {
+  "id": "molten.copper",
+  "en": "Molten Copper",
+  "ru": "Расплавленная медь",
+  "state": 4,
+  "temperature": 1357,
+  "rgb": [
+   255,
+   100,
+   0
+  ]
+ },
+ {
+  "id": "molten.cupronickel",
+  "en": "Molten Cupronickel",
+  "ru": "Расплавленный константан",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   227,
+   150,
+   128
+  ]
+ },
+ {
+  "id": "molten.damascussteel",
+  "en": "Molten Damascus Steel",
+  "ru": "Расплавленная дамасская сталь",
+  "state": 4,
+  "temperature": 2000,
+  "rgb": [
+   110,
+   110,
+   110
+  ]
+ },
+ {
+  "id": "molten.darkiron",
+  "en": "Molten Dark Iron",
+  "ru": "Расплавленное тёмное железо",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   55,
+   40,
+   60
+  ]
+ },
+ {
+  "id": "molten.darksteel",
+  "en": "Molten Dark Steel",
+  "ru": "Расплавленная тёмная сталь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   80,
+   70,
+   80
+  ]
+ },
+ {
+  "id": "molten.darkthaumium",
+  "en": "Molten Dark Thaumium",
+  "ru": "Расплавленный тёмный таумий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.deepiron",
+  "en": "Molten Deep Iron",
+  "ru": "Расплавленное глубинное железо",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   150,
+   140,
+   140
+  ]
+ },
+ {
+  "id": "molten.desh",
+  "en": "Molten Desh",
+  "ru": "Расплавленный дэш",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   40,
+   40,
+   40
+  ]
+ },
+ {
+  "id": "molten.desichalkos",
+  "en": "Molten Desichalkos",
+  "ru": "Расплавленный дезихалкос",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.diamondcopper",
+  "en": "Molten Diamond Copper",
+  "ru": "Расплавленная алмазная медь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.draconium",
+  "en": "Molten Draconium",
+  "ru": "Расплавленный драконий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.draconiumawakened",
+  "en": "Molten Awakened Draconium",
+  "ru": "Расплавленный пробуждённый драконий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.duranium",
+  "en": "Molten Duranium",
+  "ru": "Расплавленный дюраний",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   0,
+   110,
+   170
+  ]
+ },
+ {
+  "id": "molten.dysprosium",
+  "en": "Molten Dysprosium",
+  "ru": "Расплавленный диспрозий",
+  "state": 4,
+  "temperature": 1680,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.electricalsteel",
+  "en": "Molten Electrical Steel",
+  "ru": "Расплавленная электрическая сталь",
+  "state": 4,
+  "temperature": 1811,
+  "rgb": [
+   185,
+   185,
+   185
+  ]
+ },
+ {
+  "id": "molten.electrum",
+  "en": "Molten Electrum",
+  "ru": "Расплавленный электрум",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   100
+  ]
+ },
+ {
+  "id": "molten.electrumflux",
+  "en": "Molten Fluxed Electrum",
+  "ru": "Расплавленный усиленный электрум",
+  "state": 4,
+  "temperature": 9000,
+  "rgb": [
+   255,
+   255,
+   120
+  ]
+ },
+ {
+  "id": "molten.elvenelementium",
+  "en": "Molten Elven Elementium",
+  "ru": "Расплавленный элвен элементарий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.enderium",
+  "en": "Molten Enderium",
+  "ru": "Расплавленный эндерий",
+  "state": 4,
+  "temperature": 3000,
+  "rgb": [
+   89,
+   145,
+   135
+  ]
+ },
+ {
+  "id": "molten.enderiumbase",
+  "en": "Molten Enderium Base",
+  "ru": "Расплавленная основа для эндерия",
+  "state": 4,
+  "temperature": 3000,
+  "rgb": [
+   72,
+   119,
+   153
+  ]
+ },
+ {
+  "id": "molten.endium",
+  "en": "Molten Endium",
+  "ru": "Расплавленный эндий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   165,
+   220,
+   250
+  ]
+ },
+ {
+  "id": "molten.endsteel",
+  "en": "Molten End Steel",
+  "ru": "Расплавленная эндсталь",
+  "state": 4,
+  "temperature": 940,
+  "rgb": [
+   223,
+   217,
+   165
+  ]
+ },
+ {
+  "id": "molten.energeticalloy",
+  "en": "Molten Energetic Alloy",
+  "ru": "Расплавленный энергетический сплав",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   170,
+   81
+  ]
+ },
+ {
+  "id": "molten.enrichedcopper",
+  "en": "Molten Enriched Copper",
+  "ru": "Расплавленная обогащенная медь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.epoxid",
+  "en": "Molten Epoxy Resin",
+  "ru": "Расплавленная эпоксидная смола",
+  "state": 4,
+  "temperature": 400,
+  "rgb": [
+   200,
+   140,
+   20
+  ]
+ },
+ {
+  "id": "molten.epoxidfiberreinforced",
+  "en": "Molten Fiber-Reinforced Epoxy Resin",
+  "ru": "Жидкий текстолит",
+  "state": 4,
+  "temperature": 400,
+  "rgb": [
+   160,
+   112,
+   16
+  ]
+ },
+ {
+  "id": "molten.erbium",
+  "en": "Molten Erbium",
+  "ru": "Расплавленный эрбий",
+  "state": 4,
+  "temperature": 1802,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.europium",
+  "en": "Molten Europium",
+  "ru": "Расплавленный европий",
+  "state": 4,
+  "temperature": 1099,
+  "rgb": [
+   120,
+   150,
+   240
+  ]
+ },
+ {
+  "id": "molten.eximite",
+  "en": "Molten Eximite",
+  "ru": "Расплавленныйый экзимит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   124,
+   90,
+   150
+  ]
+ },
+ {
+  "id": "molten.fairy",
+  "en": "Molten Fairy",
+  "ru": "Molten Fairy",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.fierysteel",
+  "en": "Molten Fiery Steel",
+  "ru": "Расплавленная огненная сталь",
+  "state": 4,
+  "temperature": 1811,
+  "rgb": [
+   64,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "molten.force",
+  "en": "Molten Force",
+  "ru": "Molten Force",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "molten.gadolinium",
+  "en": "Molten Gadolinium",
+  "ru": "Расплавленный гадолиний",
+  "state": 4,
+  "temperature": 1585,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.gallium",
+  "en": "Molten Gallium",
+  "ru": "Расплавленный галлий",
+  "state": 4,
+  "temperature": 302,
+  "rgb": [
+   220,
+   220,
+   255
+  ]
+ },
+ {
+  "id": "molten.galliumarsenide",
+  "en": "Molten Gallium Arsenide",
+  "ru": "Расплавленный арсенид галлия",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   230,
+   220,
+   175
+  ]
+ },
+ {
+  "id": "molten.glass",
+  "en": "Molten Glass",
+  "ru": "Расплавленное стекло",
+  "state": 4,
+  "temperature": 1500,
+  "rgb": [
+   250,
+   250,
+   250
+  ]
+ },
+ {
+  "id": "molten.glowstone",
+  "en": "Molten Glowstone",
+  "ru": "Расплавленный светокамень",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "molten.gold",
+  "en": "Molten Gold",
+  "ru": "Расплавленное золото",
+  "state": 4,
+  "temperature": 1337,
+  "rgb": [
+   255,
+   255,
+   30
+  ]
+ },
+ {
+  "id": "molten.haderoth",
+  "en": "Molten Haderoth",
+  "ru": "Расплавленный хадероф",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   119,
+   52,
+   30
+  ]
+ },
+ {
+  "id": "molten.hematite",
+  "en": "Molten Hematite",
+  "ru": "Расплавленный гематит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.hepatizon",
+  "en": "Molten Hepatizon",
+  "ru": "Расплавленный гепатизон",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   117,
+   94,
+   117
+  ]
+ },
+ {
+  "id": "molten.holmium",
+  "en": "Molten Holmium",
+  "ru": "Расплавленный гольмий",
+  "state": 4,
+  "temperature": 1734,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.hsla",
+  "en": "Molten HSLA Steel",
+  "ru": "Расплавленная HSLA сталь",
+  "state": 4,
+  "temperature": 1811,
+  "rgb": [
+   128,
+   128,
+   128
+  ]
+ },
+ {
+  "id": "molten.hsse",
+  "en": "Molten HSS-E",
+  "ru": "Расплавленный HSS-E",
+  "state": 4,
+  "temperature": 5400,
+  "rgb": [
+   51,
+   102,
+   0
+  ]
+ },
+ {
+  "id": "molten.hssg",
+  "en": "Molten HSS-G",
+  "ru": "Расплавленный HSS-G",
+  "state": 4,
+  "temperature": 4500,
+  "rgb": [
+   153,
+   153,
+   0
+  ]
+ },
+ {
+  "id": "molten.hsss",
+  "en": "Molten HSS-S",
+  "ru": "Расплавленный HSS-S",
+  "state": 4,
+  "temperature": 5400,
+  "rgb": [
+   102,
+   0,
+   51
+  ]
+ },
+ {
+  "id": "molten.ignatius",
+  "en": "Molten Ignatius",
+  "ru": "Molten Ignatius",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   169,
+   83
+  ]
+ },
+ {
+  "id": "molten.indium",
+  "en": "Molten Indium",
+  "ru": "Расплавленный индий",
+  "state": 4,
+  "temperature": 429,
+  "rgb": [
+   64,
+   0,
+   128
+  ]
+ },
+ {
+  "id": "molten.indiumgalliumphosphide",
+  "en": "Molten Indium Gallium Phosphide",
+  "ru": "Расплавленный фосфид индия-галлия",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   160,
+   140,
+   190
+  ]
+ },
+ {
+  "id": "molten.infuscolium",
+  "en": "Molten Infuscolium",
+  "ru": "Расплавленный инфусколий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   146,
+   33,
+   86
+  ]
+ },
+ {
+  "id": "molten.infusedgold",
+  "en": "Molten Infused Gold",
+  "ru": "Расплавленный вибрирующий сплав",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   200,
+   60
+  ]
+ },
+ {
+  "id": "molten.inolashite",
+  "en": "Molten Inolashite",
+  "ru": "Molten Inolashite",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   148,
+   216,
+   187
+  ]
+ },
+ {
+  "id": "molten.invar",
+  "en": "Molten Invar",
+  "ru": "Расплавленный инвар",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   180,
+   180,
+   120
+  ]
+ },
+ {
+  "id": "molten.iridium",
+  "en": "Molten Iridium",
+  "ru": "Расплавленный иридий",
+  "state": 4,
+  "temperature": 2719,
+  "rgb": [
+   180,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.iron",
+  "en": "Molten Iron",
+  "ru": "Расплавленное железо",
+  "state": 4,
+  "temperature": 1811,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.ironcompressed",
+  "en": "Molten Compressed Iron",
+  "ru": "Molten Compressed Iron",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   128,
+   128,
+   128
+  ]
+ },
+ {
+  "id": "molten.ironmagnetic",
+  "en": "Molten Magnetic Iron",
+  "ru": "Расплавленное магнитное железо",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.ironwood",
+  "en": "Molten Ironwood",
+  "ru": "Расплавленное железодерево",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   150,
+   140,
+   110
+  ]
+ },
+ {
+  "id": "molten.kalendrite",
+  "en": "Molten Kalendrite",
+  "ru": "Расплавленный календрит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   170,
+   91,
+   189
+  ]
+ },
+ {
+  "id": "molten.kanthal",
+  "en": "Molten Kanthal",
+  "ru": "Расплавленный кантал",
+  "state": 4,
+  "temperature": 1800,
+  "rgb": [
+   194,
+   210,
+   223
+  ]
+ },
+ {
+  "id": "molten.knightmetal",
+  "en": "Molten Knightmetal",
+  "ru": "Molten Knightmetal",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   210,
+   240,
+   200
+  ]
+ },
+ {
+  "id": "molten.lanthanum",
+  "en": "Molten Lanthanum",
+  "ru": "Расплавленный лантан",
+  "state": 4,
+  "temperature": 1193,
+  "rgb": [
+   40,
+   180,
+   138
+  ]
+ },
+ {
+  "id": "molten.lead",
+  "en": "Molten Lead",
+  "ru": "Расплавленный свинец",
+  "state": 4,
+  "temperature": 600,
+  "rgb": [
+   140,
+   100,
+   140
+  ]
+ },
+ {
+  "id": "molten.lithium",
+  "en": "Molten Lithium",
+  "ru": "Расплавленный литий",
+  "state": 4,
+  "temperature": 454,
+  "rgb": [
+   225,
+   220,
+   255
+  ]
+ },
+ {
+  "id": "molten.ludicrite",
+  "en": "Molten Ludicrite",
+  "ru": "Расплавленный лудикрит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.lumium",
+  "en": "Molten Lumium",
+  "ru": "Расплавленный люмиум",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.lutetium",
+  "en": "Molten Lutetium",
+  "ru": "Расплавленный лютеций",
+  "state": 4,
+  "temperature": 1925,
+  "rgb": [
+   0,
+   170,
+   255
+  ]
+ },
+ {
+  "id": "molten.magic",
+  "en": "Molten Magic",
+  "ru": "Расплавленная магия",
+  "state": 4,
+  "temperature": 5000,
+  "rgb": [
+   100,
+   0,
+   200
+  ]
+ },
+ {
+  "id": "molten.magnalium",
+  "en": "Molten Magnalium",
+  "ru": "Расплавленный магналий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   200,
+   190,
+   255
+  ]
+ },
+ {
+  "id": "molten.magnesium",
+  "en": "Molten Magnesium",
+  "ru": "Расплавленный магний",
+  "state": 4,
+  "temperature": 923,
+  "rgb": [
+   255,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.manasteel",
+  "en": "Molten Manasteel",
+  "ru": "Расплавленная манасталь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.manganese",
+  "en": "Molten Manganese",
+  "ru": "Расплавленный марганец",
+  "state": 4,
+  "temperature": 1519,
+  "rgb": [
+   205,
+   225,
+   185
+  ]
+ },
+ {
+  "id": "molten.manyullyn",
+  "en": "Molten Manyullyn",
+  "ru": "Расплавленный маниллин",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.mercassium",
+  "en": "Molten Mercassium",
+  "ru": "Расплавленный меркассий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.meteoriciron",
+  "en": "Molten Meteoric Iron",
+  "ru": "Расплавленное метеоритное железо",
+  "state": 4,
+  "temperature": 1811,
+  "rgb": [
+   100,
+   50,
+   80
+  ]
+ },
+ {
+  "id": "molten.meteoricsteel",
+  "en": "Molten Meteoric Steel",
+  "ru": "Расплавленная метеоритная сталь",
+  "state": 4,
+  "temperature": 1811,
+  "rgb": [
+   50,
+   25,
+   40
+  ]
+ },
+ {
+  "id": "molten.midasium",
+  "en": "Molten Midasium",
+  "ru": "Расплавленный мидасий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   200,
+   40
+  ]
+ },
+ {
+  "id": "molten.mithril",
+  "en": "Molten Mithril",
+  "ru": "Расплавленный мифрил",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   210
+  ]
+ },
+ {
+  "id": "molten.molybdenum",
+  "en": "Molten Molybdenum",
+  "ru": "Расплавленный молибден",
+  "state": 4,
+  "temperature": 2896,
+  "rgb": [
+   180,
+   180,
+   220
+  ]
+ },
+ {
+  "id": "molten.naquadah",
+  "en": "Molten Naquadah",
+  "ru": "Расплавленный наквадах",
+  "state": 4,
+  "temperature": 5400,
+  "rgb": [
+   50,
+   50,
+   50
+  ]
+ },
+ {
+  "id": "molten.naquadahalloy",
+  "en": "Molten Naquadah Alloy",
+  "ru": "Расплавленный сплав наквадаха",
+  "state": 4,
+  "temperature": 7200,
+  "rgb": [
+   40,
+   40,
+   40
+  ]
+ },
+ {
+  "id": "molten.naquadahenriched",
+  "en": "Molten Enriched Naquadah",
+  "ru": "Расплавленный обогащённый наквадах",
+  "state": 4,
+  "temperature": 4500,
+  "rgb": [
+   50,
+   50,
+   50
+  ]
+ },
+ {
+  "id": "molten.naquadria",
+  "en": "Molten Naquadria",
+  "ru": "Расплавленная наквадрия",
+  "state": 4,
+  "temperature": 9000,
+  "rgb": [
+   30,
+   30,
+   30
+  ]
+ },
+ {
+  "id": "molten.neodymium",
+  "en": "Molten Neodymium",
+  "ru": "Расплавленный неодим",
+  "state": 4,
+  "temperature": 1297,
+  "rgb": [
+   100,
+   100,
+   100
+  ]
+ },
+ {
+  "id": "molten.neodymiummagnetic",
+  "en": "Molten Magnetic Neodymium",
+  "ru": "Расплавленный магнитный неодим",
+  "state": 4,
+  "temperature": 1297,
+  "rgb": [
+   100,
+   100,
+   100
+  ]
+ },
+ {
+  "id": "molten.neutronium",
+  "en": "Molten Neutronium",
+  "ru": "Расплавленный нейтроний",
+  "state": 4,
+  "temperature": 10000,
+  "rgb": [
+   160,
+   250,
+   150
+  ]
+ },
+ {
+  "id": "molten.nichrome",
+  "en": "Molten Nichrome",
+  "ru": "Расплавленный нихром",
+  "state": 4,
+  "temperature": 2700,
+  "rgb": [
+   205,
+   206,
+   246
+  ]
+ },
+ {
+  "id": "molten.nickel",
+  "en": "Molten Nickel",
+  "ru": "Расплавленный никель",
+  "state": 4,
+  "temperature": 1728,
+  "rgb": [
+   200,
+   200,
+   250
+  ]
+ },
+ {
+  "id": "molten.nickelzincferrite",
+  "en": "Molten nickelzincferrite",
+  "ru": "Расплавленный никель-цинковый феррит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.nikolite",
+  "en": "Molten Nikolite",
+  "ru": "Расплавленный николит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   60,
+   180,
+   200
+  ]
+ },
+ {
+  "id": "molten.niobium",
+  "en": "Molten Niobium",
+  "ru": "Расплавленный ниобий",
+  "state": 4,
+  "temperature": 2750,
+  "rgb": [
+   190,
+   180,
+   200
+  ]
+ },
+ {
+  "id": "molten.niobiumnitride",
+  "en": "Molten Niobium Nitride",
+  "ru": "Расплавленный нитрид ниобия",
+  "state": 4,
+  "temperature": 2573,
+  "rgb": [
+   29,
+   41,
+   29
+  ]
+ },
+ {
+  "id": "molten.niobiumtitanium",
+  "en": "Molten Niobium-Titanium",
+  "ru": "Расплавленный ниобий-титан",
+  "state": 4,
+  "temperature": 4500,
+  "rgb": [
+   29,
+   29,
+   41
+  ]
+ },
+ {
+  "id": "molten.obsidianflux",
+  "en": "Molten Fluxed Obsidian",
+  "ru": "Расплавленный чистый обсидиан",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   80,
+   50,
+   100
+  ]
+ },
+ {
+  "id": "molten.orichalcum",
+  "en": "Molten Orichalcum",
+  "ru": "Расплавленный орихалк",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   84,
+   122,
+   56
+  ]
+ },
+ {
+  "id": "molten.osmiridium",
+  "en": "Molten Osmiridium",
+  "ru": "Расплавленный осмиридий",
+  "state": 4,
+  "temperature": 3333,
+  "rgb": [
+   100,
+   100,
+   255
+  ]
+ },
+ {
+  "id": "molten.osmium",
+  "en": "Molten Osmium",
+  "ru": "Расплавленный осмий",
+  "state": 4,
+  "temperature": 3306,
+  "rgb": [
+   50,
+   50,
+   255
+  ]
+ },
+ {
+  "id": "molten.osmonium",
+  "en": "Molten Osmonium",
+  "ru": "Расплавленный осмоний",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.oureclase",
+  "en": "Molten Oureclase",
+  "ru": "Расплавленный ореклас",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   183,
+   98,
+   21
+  ]
+ },
+ {
+  "id": "molten.palladium",
+  "en": "Molten Palladium",
+  "ru": "Расплавленный палладий",
+  "state": 4,
+  "temperature": 1828,
+  "rgb": [
+   128,
+   128,
+   128
+  ]
+ },
+ {
+  "id": "molten.phasedgold",
+  "en": "Molten Phased Gold",
+  "ru": "Расплавленный вибрирующий сплав",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.phasediron",
+  "en": "Molten Phased Iron",
+  "ru": "Расплавленный пульсирующий сплав",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.phoenixite",
+  "en": "Molten Phoenixite",
+  "ru": "Расплавленный фоениксит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.pigiron",
+  "en": "Molten Pig Iron",
+  "ru": "Расплавленная свиносталь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   200,
+   180,
+   180
+  ]
+ },
+ {
+  "id": "molten.plastic",
+  "en": "Molten Polyethylene",
+  "ru": "Расплавленный полиэтилен",
+  "state": 4,
+  "temperature": 400,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.platinum",
+  "en": "Molten Platinum",
+  "ru": "Расплавленная платина",
+  "state": 4,
+  "temperature": 2041,
+  "rgb": [
+   255,
+   255,
+   200
+  ]
+ },
+ {
+  "id": "molten.plutonium",
+  "en": "Molten Plutonium 239",
+  "ru": "Расплавленный плутоний-239",
+  "state": 4,
+  "temperature": 912,
+  "rgb": [
+   240,
+   50,
+   50
+  ]
+ },
+ {
+  "id": "molten.pokefennium",
+  "en": "Molten Pokefennium",
+  "ru": "Расплавленный покефенний",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.polycaprolactam",
+  "en": "Molten Polycaprolactam",
+  "ru": "Жидкий капрон",
+  "state": 4,
+  "temperature": 500,
+  "rgb": [
+   50,
+   50,
+   50
+  ]
+ },
+ {
+  "id": "molten.polyphenylenesulfide",
+  "en": "Molten polyphenylenesulfide",
+  "ru": "Жидкий полифениленсульфид",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.polystyrene",
+  "en": "Molten polystyrene",
+  "ru": "Жидкий полистирол",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   190,
+   180,
+   170
+  ]
+ },
+ {
+  "id": "molten.polytetrafluoroethylene",
+  "en": "Molten Polytetrafluoroethylene",
+  "ru": "Жидкий политетрафторэтилен",
+  "state": 4,
+  "temperature": 1400,
+  "rgb": [
+   109,
+   177,
+   177
+  ]
+ },
+ {
+  "id": "molten.polyvinylchloride",
+  "en": "Molten polyvinylchloride",
+  "ru": "Жидкий поливинилхлорид",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.potassium",
+  "en": "Molten Potassium",
+  "ru": "Расплавленный калий",
+  "state": 4,
+  "temperature": 336,
+  "rgb": [
+   190,
+   220,
+   255
+  ]
+ },
+ {
+  "id": "molten.praseodymium",
+  "en": "Molten Praseodymium",
+  "ru": "Расплавленный празеодим",
+  "state": 4,
+  "temperature": 1208,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.prometheum",
+  "en": "Molten Prometheum",
+  "ru": "Расплавленный прометеий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   90,
+   129,
+   86
+  ]
+ },
+ {
+  "id": "molten.promethium",
+  "en": "Molten Promethium",
+  "ru": "Расплавленный прометий",
+  "state": 4,
+  "temperature": 1315,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.pulsatingiron",
+  "en": "Molten Pulsating Iron",
+  "ru": "Расплавленное пульсирующее железо",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   128,
+   246,
+   155
+  ]
+ },
+ {
+  "id": "molten.redalloy",
+  "en": "Molten Red Alloy",
+  "ru": "Расплавленный красный сплав",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   200,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "molten.redsteel",
+  "en": "Molten Red Steel",
+  "ru": "Расплавленная красная сталь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   140,
+   100,
+   100
+  ]
+ },
+ {
+  "id": "molten.redstone",
+  "en": "Molten Redstone",
+  "ru": "Расплавленная красная пыль",
+  "state": 4,
+  "temperature": 500,
+  "rgb": [
+   200,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "molten.redstonealloy",
+  "en": "Molten Redstone Alloy",
+  "ru": "Расплавленный сплав из красного камня",
+  "state": 4,
+  "temperature": 671,
+  "rgb": [
+   181,
+   51,
+   51
+  ]
+ },
+ {
+  "id": "molten.rosegold",
+  "en": "Molten Rose Gold",
+  "ru": "Расплавленное розовое золото",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   230,
+   30
+  ]
+ },
+ {
+  "id": "molten.rubber",
+  "en": "Molten Rubber",
+  "ru": "Жидкая резина",
+  "state": 4,
+  "temperature": 400,
+  "rgb": [
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "molten.rubidium",
+  "en": "Molten Rubidium",
+  "ru": "Расплавленный рубидий",
+  "state": 4,
+  "temperature": 312,
+  "rgb": [
+   240,
+   30,
+   30
+  ]
+ },
+ {
+  "id": "molten.samarium",
+  "en": "Molten Samarium",
+  "ru": "Расплавленный самарий",
+  "state": 4,
+  "temperature": 1345,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.sanguinite",
+  "en": "Molten Sanguinite",
+  "ru": "Расплавленный сангуит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   185,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "molten.scandium",
+  "en": "Molten Scandium",
+  "ru": "Расплавленный скандий",
+  "state": 4,
+  "temperature": 1814,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.serpentine",
+  "en": "Molten Serpentine",
+  "ru": "Расплавленный серпентин",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.shadowiron",
+  "en": "Molten Shadowiron",
+  "ru": "Расплавленное тенежелезо",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   120,
+   120,
+   120
+  ]
+ },
+ {
+  "id": "molten.shadowsteel",
+  "en": "Molten Shadowsteel",
+  "ru": "Расплавленная тенесталь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   90,
+   90,
+   90
+  ]
+ },
+ {
+  "id": "molten.signalum",
+  "en": "Molten Signalum",
+  "ru": "Расплавленный сигналий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.silicon",
+  "en": "Molten Silicon",
+  "ru": "Расплавленный кремний",
+  "state": 4,
+  "temperature": 1687,
+  "rgb": [
+   60,
+   60,
+   80
+  ]
+ },
+ {
+  "id": "molten.silicone",
+  "en": "Molten Silicone Rubber",
+  "ru": "Расплавленная силиконовая резина",
+  "state": 4,
+  "temperature": 900,
+  "rgb": [
+   220,
+   220,
+   220
+  ]
+ },
+ {
+  "id": "molten.silver",
+  "en": "Molten Silver",
+  "ru": "Расплавленное серебро",
+  "state": 4,
+  "temperature": 1234,
+  "rgb": [
+   220,
+   220,
+   255
+  ]
+ },
+ {
+  "id": "molten.solderingalloy",
+  "en": "Molten Soldering Alloy",
+  "ru": "Расплавленный паяльный сплав",
+  "state": 4,
+  "temperature": 400,
+  "rgb": [
+   220,
+   220,
+   230
+  ]
+ },
+ {
+  "id": "molten.soularium",
+  "en": "Molten Soularium",
+  "ru": "Расплавленный соулярий",
+  "state": 4,
+  "temperature": 800,
+  "rgb": [
+   137,
+   100,
+   66
+  ]
+ },
+ {
+  "id": "molten.stainlesssteel",
+  "en": "Molten Stainless Steel",
+  "ru": "Расплавленная нержавеющая сталь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   120,
+   147,
+   167
+  ]
+ },
+ {
+  "id": "molten.starconium",
+  "en": "Molten Starconium",
+  "ru": "Расплавленный старконий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.steel",
+  "en": "Molten Steel",
+  "ru": "Расплавленная сталь",
+  "state": 4,
+  "temperature": 1811,
+  "rgb": [
+   128,
+   128,
+   128
+  ]
+ },
+ {
+  "id": "molten.steelmagnetic",
+  "en": "Molten Magnetic Steel",
+  "ru": "Расплавленная магнитная сталь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   128,
+   128,
+   128
+  ]
+ },
+ {
+  "id": "molten.sterlingsilver",
+  "en": "Molten Sterling Silver",
+  "ru": "Расплавленное стерлинг-серебро",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   250,
+   220,
+   225
+  ]
+ },
+ {
+  "id": "molten.styrenebutadienerubber",
+  "en": "Molten styrenebutadienerubber",
+  "ru": "Жидкий бутадиен-стирольный каучук",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.sugar",
+  "en": "Molten Sugar",
+  "ru": "Карамель",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   250,
+   250,
+   250
+  ]
+ },
+ {
+  "id": "molten.sunnarium",
+  "en": "Molten Sunnarium",
+  "ru": "Расплавленный саннарий",
+  "state": 4,
+  "temperature": 4200,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "molten.tantalum",
+  "en": "Molten Tantalum",
+  "ru": "Расплавленный тантал",
+  "state": 4,
+  "temperature": 3290,
+  "rgb": [
+   230,
+   110,
+   77
+  ]
+ },
+ {
+  "id": "molten.tarpitch",
+  "en": "Molten Tar Pitch",
+  "ru": "Расплавленный каменноугольный пек",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.tartarite",
+  "en": "Molten Tartarite",
+  "ru": "Расплавленный тартарит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   118,
+   60
+  ]
+ },
+ {
+  "id": "molten.tellurium",
+  "en": "Molten Tellurium",
+  "ru": "Расплавленный теллур",
+  "state": 4,
+  "temperature": 722,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.terbium",
+  "en": "Molten Terbium",
+  "ru": "Расплавленный тербий",
+  "state": 4,
+  "temperature": 1629,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.terrasteel",
+  "en": "Molten Terrasteel",
+  "ru": "Расплавленная террасталь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.teslatite",
+  "en": "Molten Teslatite",
+  "ru": "Расплавленный теслатит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   60,
+   180,
+   200
+  ]
+ },
+ {
+  "id": "molten.thaumium",
+  "en": "Molten Thaumium",
+  "ru": "Расплавленный таумий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   150,
+   100,
+   200
+  ]
+ },
+ {
+  "id": "molten.thorium",
+  "en": "Molten Thorium",
+  "ru": "Расплавленный торий",
+  "state": 4,
+  "temperature": 2115,
+  "rgb": [
+   0,
+   30,
+   0
+  ]
+ },
+ {
+  "id": "molten.thulium",
+  "en": "Molten Thulium",
+  "ru": "Расплавленный тулий",
+  "state": 4,
+  "temperature": 1818,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.thyrium",
+  "en": "Molten Thyrium",
+  "ru": "Расплавленный турий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.tin",
+  "en": "Molten Tin",
+  "ru": "Расплавленное олово",
+  "state": 4,
+  "temperature": 505,
+  "rgb": [
+   220,
+   220,
+   220
+  ]
+ },
+ {
+  "id": "molten.tinalloy",
+  "en": "Molten Tin Alloy",
+  "ru": "Расплавленный оловянный сплав",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "molten.titanium",
+  "en": "Molten Titanium",
+  "ru": "Расплавленный титан",
+  "state": 4,
+  "temperature": 1941,
+  "rgb": [
+   220,
+   160,
+   240
+  ]
+ },
+ {
+  "id": "molten.tritanium",
+  "en": "Molten Tritanium",
+  "ru": "Расплавленный тританий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   160,
+   40,
+   190
+  ]
+ },
+ {
+  "id": "molten.tungsten",
+  "en": "Molten Tungsten",
+  "ru": "Расплавленный вольфрам",
+  "state": 4,
+  "temperature": 3695,
+  "rgb": [
+   50,
+   50,
+   50
+  ]
+ },
+ {
+  "id": "molten.tungstencarbide",
+  "en": "Molten Tungstencarbide",
+  "ru": "Расплавленный карбид вольфрама",
+  "state": 4,
+  "temperature": 2460,
+  "rgb": [
+   51,
+   0,
+   102
+  ]
+ },
+ {
+  "id": "molten.tungstensteel",
+  "en": "Molten Tungstensteel",
+  "ru": "Расплавленная вольфрамовая сталь",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   100,
+   100,
+   160
+  ]
+ },
+ {
+  "id": "molten.ultimet",
+  "en": "Molten Ultimet",
+  "ru": "Расплавленный ультимет",
+  "state": 4,
+  "temperature": 2700,
+  "rgb": [
+   180,
+   180,
+   230
+  ]
+ },
+ {
+  "id": "molten.uranium",
+  "en": "Molten Uranium 238",
+  "ru": "Расплавленный уран-238",
+  "state": 4,
+  "temperature": 1405,
+  "rgb": [
+   50,
+   240,
+   50
+  ]
+ },
+ {
+  "id": "molten.vanadium",
+  "en": "Molten Vanadium",
+  "ru": "Расплавленный ванадий",
+  "state": 4,
+  "temperature": 2183,
+  "rgb": [
+   50,
+   50,
+   50
+  ]
+ },
+ {
+  "id": "molten.vanadiumgallium",
+  "en": "Molten Vanadium-Gallium",
+  "ru": "Расплавленный галлид ванадия",
+  "state": 4,
+  "temperature": 4500,
+  "rgb": [
+   128,
+   128,
+   140
+  ]
+ },
+ {
+  "id": "molten.vanadiumsteel",
+  "en": "Molten Vanadiumsteel",
+  "ru": "Расплавленная ванадиевая сталь",
+  "state": 4,
+  "temperature": 1453,
+  "rgb": [
+   192,
+   192,
+   192
+  ]
+ },
+ {
+  "id": "molten.vibrantalloy",
+  "en": "Molten Vibrant Alloy",
+  "ru": "Расплавленный вибрирующий сплав",
+  "state": 4,
+  "temperature": 3300,
+  "rgb": [
+   157,
+   188,
+   53
+  ]
+ },
+ {
+  "id": "molten.vulcanite",
+  "en": "Molten Vulcanite",
+  "ru": "Расплавленный вулканит",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   132,
+   72
+  ]
+ },
+ {
+  "id": "molten.vyroxeres",
+  "en": "Molten Vyroxeres",
+  "ru": "Расплавленный вироксерес",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   85,
+   224,
+   1
+  ]
+ },
+ {
+  "id": "molten.wroughtiron",
+  "en": "Molten Wrought Iron",
+  "ru": "Расплавленное кованое железо",
+  "state": 4,
+  "temperature": 1811,
+  "rgb": [
+   200,
+   180,
+   180
+  ]
+ },
+ {
+  "id": "molten.yellorium",
+  "en": "Molten Yellorium",
+  "ru": "Расплавленный йеллориум",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.ytterbium",
+  "en": "Molten Ytterbium",
+  "ru": "Расплавленный иттербий",
+  "state": 4,
+  "temperature": 1097,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.yttrium",
+  "en": "Molten Yttrium",
+  "ru": "Расплавленный иттрий",
+  "state": 4,
+  "temperature": 1799,
+  "rgb": [
+   220,
+   250,
+   220
+  ]
+ },
+ {
+  "id": "molten.yttriumbariumcuprate",
+  "en": "Molten Yttrium Barium Cuprate",
+  "ru": "Расплавленный иттрий-барий-медь",
+  "state": 4,
+  "temperature": 4500,
+  "rgb": [
+   80,
+   64,
+   70
+  ]
+ },
+ {
+  "id": "molten.zectium",
+  "en": "Molten Zectium",
+  "ru": "Расплавленный зектий",
+  "state": 4,
+  "temperature": 1000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "molten.zinc",
+  "en": "Molten Zinc",
+  "ru": "Расплавленный цинк",
+  "state": 4,
+  "temperature": 692,
+  "rgb": [
+   250,
+   240,
+   240
+  ]
+ },
+ {
+  "id": "muddywater",
+  "en": "muddywater",
+  "ru": "Мутная вода",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "nitricacid",
+  "en": "nitricacid",
+  "ru": "Азотная кислота",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "nitricoxide",
+  "en": "nitricoxide",
+  "ru": "Монооксид азота",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "nitrofuel",
+  "en": "Cetane-Boosted Diesel",
+  "ru": "Высокоцетановый дизель",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "nitrogen",
+  "en": "Nitrogen",
+  "ru": "Азот",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   0,
+   150,
+   200
+  ]
+ },
+ {
+  "id": "nitrogendioxide",
+  "en": "Nitrogen Dioxide",
+  "ru": "Диоксид азота",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   100,
+   175,
+   255
+  ]
+ },
+ {
+  "id": "nitrousoxide",
+  "en": "nitrousoxide",
+  "ru": "Закись азота",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "noblegases",
+  "en": "Noble Gases",
+  "ru": "Благородные газы",
+  "state": 1,
+  "temperature": 4,
+  "rgb": [
+   169,
+   208,
+   245
+  ]
+ },
+ {
+  "id": "oil",
+  "en": "Oil",
+  "ru": "Нефть",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   10,
+   10,
+   10
+  ]
+ },
+ {
+  "id": "oxygen",
+  "en": "Oxygen",
+  "ru": "Кислород",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   0,
+   100,
+   200
+  ]
+ },
+ {
+  "id": "phenol",
+  "en": "phenol",
+  "ru": "Фенол",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   120,
+   68,
+   33
+  ]
+ },
+ {
+  "id": "plasma.aluminium",
+  "en": "Aluminium Plasma",
+  "ru": "Алюминиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   128,
+   200,
+   240
+  ]
+ },
+ {
+  "id": "plasma.americium",
+  "en": "Americium Plasma",
+  "ru": "Америциевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   240,
+   100,
+   255
+  ]
+ },
+ {
+  "id": "plasma.antimony",
+  "en": "Antimony Plasma",
+  "ru": "Сурьмовая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   220,
+   220,
+   240
+  ]
+ },
+ {
+  "id": "plasma.argon",
+  "en": "Argon Plasma",
+  "ru": "Аргоновая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   0,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "plasma.arsenic",
+  "en": "Arsenic Plasma",
+  "ru": "Мышьяковая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   240,
+   220,
+   100
+  ]
+ },
+ {
+  "id": "plasma.barium",
+  "en": "Barium Plasma",
+  "ru": "Бариевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.beryllium",
+  "en": "Beryllium Plasma",
+  "ru": "Бериллиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   100,
+   180,
+   100
+  ]
+ },
+ {
+  "id": "plasma.bismuth",
+  "en": "Bismuth Plasma",
+  "ru": "Висмутовая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   100,
+   160,
+   160
+  ]
+ },
+ {
+  "id": "plasma.boron",
+  "en": "Boron Plasma",
+  "ru": "Бороновая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   210,
+   250,
+   210
+  ]
+ },
+ {
+  "id": "plasma.cadmium",
+  "en": "Cadmium Plasma",
+  "ru": "Кадмиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   50,
+   50,
+   60
+  ]
+ },
+ {
+  "id": "plasma.caesium",
+  "en": "Caesium Plasma",
+  "ru": "Цезиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   200,
+   170,
+   75
+  ]
+ },
+ {
+  "id": "plasma.calcium",
+  "en": "Calcium Plasma",
+  "ru": "Кальциевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   245,
+   245
+  ]
+ },
+ {
+  "id": "plasma.carbon",
+  "en": "Carbon Plasma",
+  "ru": "Углеродная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   20,
+   20,
+   20
+  ]
+ },
+ {
+  "id": "plasma.cerium",
+  "en": "Cerium Plasma",
+  "ru": "Цериевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   135,
+   145,
+   125
+  ]
+ },
+ {
+  "id": "plasma.chlorine",
+  "en": "Chlorine Plasma",
+  "ru": "Хлорная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.chrome",
+  "en": "Chrome Plasma",
+  "ru": "Хромовая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   210,
+   210
+  ]
+ },
+ {
+  "id": "plasma.cobalt",
+  "en": "Cobalt Plasma",
+  "ru": "Кобальтовая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   80,
+   80,
+   250
+  ]
+ },
+ {
+  "id": "plasma.copper",
+  "en": "Copper Plasma",
+  "ru": "Медная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   100,
+   0
+  ]
+ },
+ {
+  "id": "plasma.deuterium",
+  "en": "Deuterium Plasma",
+  "ru": "Дейтериевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "plasma.dysprosium",
+  "en": "Dysprosium Plasma",
+  "ru": "Диспрозиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.empty",
+  "en": "Empty Plasma",
+  "ru": "Пустая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.erbium",
+  "en": "Erbium Plasma",
+  "ru": "Эрбиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.europium",
+  "en": "Europium Plasma",
+  "ru": "Европиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   120,
+   150,
+   240
+  ]
+ },
+ {
+  "id": "plasma.fluorine",
+  "en": "Fluorine Plasma",
+  "ru": "Фторная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.gadolinium",
+  "en": "Gadolinium Plasma",
+  "ru": "Гадолиниевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.gallium",
+  "en": "Gallium Plasma",
+  "ru": "Галлиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   220,
+   220,
+   255
+  ]
+ },
+ {
+  "id": "plasma.gold",
+  "en": "Gold Plasma",
+  "ru": "Золотая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   30
+  ]
+ },
+ {
+  "id": "plasma.helium",
+  "en": "Helium Plasma",
+  "ru": "Гелиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "plasma.holmium",
+  "en": "Holmium Plasma",
+  "ru": "Гольмиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.hydrogen",
+  "en": "Hydrogen Plasma",
+  "ru": "Водородная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   0,
+   0,
+   255
+  ]
+ },
+ {
+  "id": "plasma.indium",
+  "en": "Indium Plasma",
+  "ru": "Индиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   64,
+   0,
+   128
+  ]
+ },
+ {
+  "id": "plasma.iridium",
+  "en": "Iridium Plasma",
+  "ru": "Иридиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   180,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.iron",
+  "en": "Iron Plasma",
+  "ru": "Железная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "plasma.lanthanum",
+  "en": "Lanthanum Plasma",
+  "ru": "Лантановая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   40,
+   180,
+   138
+  ]
+ },
+ {
+  "id": "plasma.lead",
+  "en": "Lead Plasma",
+  "ru": "Свинцовая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   140,
+   100,
+   140
+  ]
+ },
+ {
+  "id": "plasma.lithium",
+  "en": "Lithium Plasma",
+  "ru": "Литиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   225,
+   220,
+   255
+  ]
+ },
+ {
+  "id": "plasma.lutetium",
+  "en": "Lutetium Plasma",
+  "ru": "Лютециевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   0,
+   170,
+   255
+  ]
+ },
+ {
+  "id": "plasma.magic",
+  "en": "Magic Plasma",
+  "ru": "Магическая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   100,
+   0,
+   200
+  ]
+ },
+ {
+  "id": "plasma.magnesium",
+  "en": "Magnesium Plasma",
+  "ru": "Магниевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "plasma.manganese",
+  "en": "Manganese Plasma",
+  "ru": "Марганцевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   205,
+   225,
+   185
+  ]
+ },
+ {
+  "id": "plasma.mercury",
+  "en": "Mercury Plasma",
+  "ru": "Ртутная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   220,
+   220
+  ]
+ },
+ {
+  "id": "plasma.molybdenum",
+  "en": "Molybdenum Plasma",
+  "ru": "Молибденовая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   180,
+   180,
+   220
+  ]
+ },
+ {
+  "id": "plasma.neodymium",
+  "en": "Neodymium Plasma",
+  "ru": "Неодимовая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   100,
+   100,
+   100
+  ]
+ },
+ {
+  "id": "plasma.neutronium",
+  "en": "Neutronium Plasma",
+  "ru": "Нейтрониевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   160,
+   250,
+   150
+  ]
+ },
+ {
+  "id": "plasma.nickel",
+  "en": "Nickel Plasma",
+  "ru": "Никелевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   200,
+   200,
+   250
+  ]
+ },
+ {
+  "id": "plasma.niobium",
+  "en": "Niobium Plasma",
+  "ru": "Ниобиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   190,
+   180,
+   200
+  ]
+ },
+ {
+  "id": "plasma.nitrogen",
+  "en": "Nitrogen Plasma",
+  "ru": "Азотная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   0,
+   150,
+   200
+  ]
+ },
+ {
+  "id": "plasma.null",
+  "en": "NULL Plasma",
+  "ru": "NULL плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.osmium",
+  "en": "Osmium Plasma",
+  "ru": "Осмиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   50,
+   50,
+   255
+  ]
+ },
+ {
+  "id": "plasma.oxygen",
+  "en": "Oxygen Plasma",
+  "ru": "Кислородная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   0,
+   100,
+   200
+  ]
+ },
+ {
+  "id": "plasma.palladium",
+  "en": "Palladium Plasma",
+  "ru": "Палладиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   128,
+   128,
+   128
+  ]
+ },
+ {
+  "id": "plasma.phosphorus",
+  "en": "Phosphorus Plasma",
+  "ru": "Фосфорная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "plasma.platinum",
+  "en": "Platinum Plasma",
+  "ru": "Платиновая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   200
+  ]
+ },
+ {
+  "id": "plasma.plutonium",
+  "en": "Plutonium 239 Plasma",
+  "ru": "Плутоний-239 плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   240,
+   50,
+   50
+  ]
+ },
+ {
+  "id": "plasma.potassium",
+  "en": "Potassium Plasma",
+  "ru": "Калиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   190,
+   220,
+   255
+  ]
+ },
+ {
+  "id": "plasma.praseodymium",
+  "en": "Praseodymium Plasma",
+  "ru": "Празеодиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.promethium",
+  "en": "Promethium Plasma",
+  "ru": "Прометиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.radon",
+  "en": "Radon Plasma",
+  "ru": "Радоновая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   0,
+   255
+  ]
+ },
+ {
+  "id": "plasma.rubidium",
+  "en": "Rubidium Plasma",
+  "ru": "Рубидиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   240,
+   30,
+   30
+  ]
+ },
+ {
+  "id": "plasma.samarium",
+  "en": "Samarium Plasma",
+  "ru": "Самариевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.scandium",
+  "en": "Scandium Plasma",
+  "ru": "Скандиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.silicon",
+  "en": "Silicon Plasma",
+  "ru": "Кремниевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   60,
+   60,
+   80
+  ]
+ },
+ {
+  "id": "plasma.silver",
+  "en": "Silver Plasma",
+  "ru": "Серебряная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   220,
+   220,
+   255
+  ]
+ },
+ {
+  "id": "plasma.sodium",
+  "en": "Sodium Plasma",
+  "ru": "Натриевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   0,
+   0,
+   150
+  ]
+ },
+ {
+  "id": "plasma.strontium",
+  "en": "Strontium Plasma",
+  "ru": "Стронциевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "plasma.sulfur",
+  "en": "Sulfur Plasma",
+  "ru": "Серная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   200,
+   200,
+   0
+  ]
+ },
+ {
+  "id": "plasma.tantalum",
+  "en": "Tantalum Plasma",
+  "ru": "Танталовая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   230,
+   110,
+   77
+  ]
+ },
+ {
+  "id": "plasma.tellurium",
+  "en": "Tellurium Plasma",
+  "ru": "Теллуровая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.terbium",
+  "en": "Terbium Plasma",
+  "ru": "Тербиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.thorium",
+  "en": "Thorium Plasma",
+  "ru": "Ториевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   0,
+   30,
+   0
+  ]
+ },
+ {
+  "id": "plasma.thulium",
+  "en": "Thulium Plasma",
+  "ru": "Тулиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.tin",
+  "en": "Tin Plasma",
+  "ru": "Оловянная плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   220,
+   220,
+   220
+  ]
+ },
+ {
+  "id": "plasma.titanium",
+  "en": "Titanium Plasma",
+  "ru": "Титановая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   220,
+   160,
+   240
+  ]
+ },
+ {
+  "id": "plasma.tritium",
+  "en": "Tritium Plasma",
+  "ru": "Тритиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "plasma.tungsten",
+  "en": "Tungsten Plasma",
+  "ru": "Вольфрамовая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   50,
+   50,
+   50
+  ]
+ },
+ {
+  "id": "plasma.uranium",
+  "en": "Uranium 238 Plasma",
+  "ru": "Уран-238 плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   50,
+   240,
+   50
+  ]
+ },
+ {
+  "id": "plasma.vanadium",
+  "en": "Vanadium Plasma",
+  "ru": "Ванадиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   50,
+   50,
+   50
+  ]
+ },
+ {
+  "id": "plasma.ytterbium",
+  "en": "Ytterbium Plasma",
+  "ru": "Иттербиевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "plasma.yttrium",
+  "en": "Yttrium Plasma",
+  "ru": "Иттриевая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   220,
+   250,
+   220
+  ]
+ },
+ {
+  "id": "plasma.zinc",
+  "en": "Zinc Plasma",
+  "ru": "Цинковая плазма",
+  "state": 3,
+  "temperature": 10000,
+  "rgb": [
+   250,
+   240,
+   240
+  ]
+ },
+ {
+  "id": "polyvinylacetate",
+  "en": "polyvinylacetate",
+  "ru": "Поливинилацетат",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "propane",
+  "en": "propane",
+  "ru": "Пропан",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   250,
+   226,
+   80
+  ]
+ },
+ {
+  "id": "propene",
+  "en": "propene",
+  "ru": "Пропилен",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   255,
+   221,
+   85
+  ]
+ },
+ {
+  "id": "radon",
+  "en": "Radon",
+  "ru": "Радон",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   255,
+   0,
+   255
+  ]
+ },
+ {
+  "id": "rocket_fuel",
+  "en": "rocket_fuel",
+  "ru": "Ракетное топливо",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "saltwater",
+  "en": "saltwater",
+  "ru": "Солёная вода",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "seedoil",
+  "en": "Seed Oil",
+  "ru": "Растительное масло",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   196,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "sodiumpersulfate",
+  "en": "Sodium Persulfate",
+  "ru": "Пероксодисульфат натрия",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "solution.bluevitriol",
+  "en": "solution.bluevitriol",
+  "ru": "Раствор медного купороса",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "solution.nickelsulfate",
+  "en": "solution.nickelsulfate",
+  "ru": "Раствор никелевого купороса",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "squidink",
+  "en": "Squid Ink",
+  "ru": "Осьминожьи чернила",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "steam",
+  "en": "Steam",
+  "ru": "Пар",
+  "state": 2,
+  "temperature": 375,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "steamcracked.butane",
+  "en": "Steam-Cracked butane",
+  "ru": "Бутан после парового крекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   182,
+   55,
+   30
+  ]
+ },
+ {
+  "id": "steamcracked.ethane",
+  "en": "Steam-Cracked ethane",
+  "ru": "Этан после парового крекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   200,
+   200,
+   255
+  ]
+ },
+ {
+  "id": "steamcracked.gas",
+  "en": "Steam-Cracked Refinery Gas",
+  "ru": "Нефтезаводской газ после парового крекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "id": "steamcracked.heavyfuel",
+  "en": "Steam-Cracked Heavy Fuel",
+  "ru": "Тяжёлое топливо после парового крекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "steamcracked.lightfuel",
+  "en": "Steam-Cracked Light Fuel",
+  "ru": "Лёгкое топливо после парового крекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "steamcracked.naphtha",
+  "en": "Steam-Cracked Naphtha",
+  "ru": "Нафта после парового крекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   255,
+   255,
+   0
+  ]
+ },
+ {
+  "id": "steamcracked.propane",
+  "en": "Steam-Cracked propane",
+  "ru": "Пропан после парового крекинга",
+  "state": 2,
+  "temperature": 775,
+  "rgb": [
+   250,
+   226,
+   80
+  ]
+ },
+ {
+  "id": "styrene",
+  "en": "styrene",
+  "ru": "Стирол",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   210,
+   200,
+   190
+  ]
+ },
+ {
+  "id": "sulfurdioxide",
+  "en": "sulfurdioxide",
+  "ru": "Диоксид серы",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "sulfuricacid",
+  "en": "Sulfuric Acid",
+  "ru": "Серная кислота",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   255,
+   128,
+   0
+  ]
+ },
+ {
+  "id": "sulfurtrioxide",
+  "en": "sulfurtrioxide",
+  "ru": "Триоксид серы",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "tetrafluoroethylene",
+  "en": "tetrafluoroethylene",
+  "ru": "Тетрафторэтилен",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   125,
+   125,
+   125
+  ]
+ },
+ {
+  "id": "tetranitromethane",
+  "en": "tetranitromethane",
+  "ru": "Тетранитрометан",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   15,
+   40,
+   40
+  ]
+ },
+ {
+  "id": "titaniumtetrachloride",
+  "en": "Titaniumtetrachloride",
+  "ru": "Тетрахлорид титана",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   212,
+   13,
+   92
+  ]
+ },
+ {
+  "id": "tritium",
+  "en": "Tritium",
+  "ru": "Тритий",
+  "state": 2,
+  "temperature": 295,
+  "rgb": [
+   255,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "uuamplifier",
+  "en": "UU Amplifier",
+  "ru": "UU-усилитель",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   96,
+   0,
+   128
+  ]
+ },
+ {
+  "id": "vinylacetate",
+  "en": "vinylacetate",
+  "ru": "Винилацетат",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "vinylchloride",
+  "en": "vinylchloride",
+  "ru": "Винилхлорид",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "woodgas",
+  "en": "woodgas",
+  "ru": "Смешанный газ",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "woodtar",
+  "en": "woodtar",
+  "ru": "Дёготь",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ },
+ {
+  "id": "woodvinegar",
+  "en": "woodvinegar",
+  "ru": "Древесный уксус",
+  "state": 1,
+  "temperature": 295,
+  "rgb": [
+   200,
+   200,
+   200
+  ]
+ }
+]

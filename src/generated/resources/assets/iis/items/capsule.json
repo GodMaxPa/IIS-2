@@ -1,0 +1,20 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:has_component",
+    "component": "iis:fluid_content",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "iis:item/capsule_filled",
+      "tints": [
+        {
+          "type": "iis:fluid_content"
+        }
+      ]
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "iis:item/capsule"
+    }
+  }
+}

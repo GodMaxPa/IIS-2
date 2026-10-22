@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/platinum",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 63,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_platinum",
+      "amount": 16
+    }
+  ]
+}

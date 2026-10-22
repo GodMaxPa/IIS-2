@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "minecraft:copper_block",
+      "count": 1
+    }
+  ],
+  "duration": 288,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_copper",
+      "amount": 1296
+    }
+  ],
+  "keep": [
+    "iis:mold_block"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/axe/stainless_steel",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:axe_stainless_steel"
+  }
+}

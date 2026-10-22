@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/tin",
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 6
+    }
+  ],
+  "duration": 1200,
+  "eut": 8
+}

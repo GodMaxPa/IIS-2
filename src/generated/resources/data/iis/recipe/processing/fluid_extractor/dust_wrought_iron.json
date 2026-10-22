@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/wrought_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_iron",
+      "amount": 144
+    }
+  ]
+}

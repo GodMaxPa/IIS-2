@@ -35,15 +35,18 @@ public final class IIS {
         modEventBus.addListener(IISPacks::addPacks);
         GtTools.register(modEventBus);
         IISFluids.register(modEventBus);
+        ru.iis.fluid.FluidContainers.register(modEventBus);
         IISMachines.register(modEventBus);
         ru.iis.lv.LvContent.register(modEventBus);
         ru.iis.multi.MultiContent.register(modEventBus);
+        ru.iis.bio.BioContent.register(modEventBus);
         GtRecipes.register(modEventBus, NeoForge.EVENT_BUS);
         ru.iis.gametest.IISGameTests.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(HammerDrops::onBlockDrops);
         NeoForge.EVENT_BUS.addListener(ru.iis.pollution.Pollution::onLevelTick);
         NeoForge.EVENT_BUS.addListener(ru.iis.world.TreeFeller::onBreak);
         NeoForge.EVENT_BUS.addListener(IISCommand::register);
+        NeoForge.EVENT_BUS.addListener(ru.iis.stand.StandHooks::onServerStarted);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

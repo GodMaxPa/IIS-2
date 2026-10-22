@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:gears/steel",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 96,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_steel",
+      "amount": 576
+    }
+  ]
+}

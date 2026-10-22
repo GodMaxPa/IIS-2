@@ -1,0 +1,34 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/endstone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_tungstate",
+      "count": 1,
+      "chance": 1250
+    },
+    {
+      "id": "iis:tiny_dust_platinum",
+      "count": 1,
+      "chance": 625
+    },
+    {
+      "id": "minecraft:sand",
+      "count": 1,
+      "chance": 9000
+    }
+  ],
+  "duration": 320,
+  "eut": 20,
+  "fluid_outputs": [
+    {
+      "id": "iis:helium",
+      "amount": 120
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/banded_iron",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron",
+      "count": 2
+    }
+  ],
+  "duration": 150,
+  "eut": 30,
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 3000
+    }
+  ]
+}

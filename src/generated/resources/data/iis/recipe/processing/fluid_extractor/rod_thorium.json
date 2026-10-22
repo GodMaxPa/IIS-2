@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/thorium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 12,
+  "eut": 65,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_thorium",
+      "amount": 72
+    }
+  ]
+}
