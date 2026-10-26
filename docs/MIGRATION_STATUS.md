@@ -60,4 +60,5 @@
 | Экструдер LV/MV, 23 насадки, формы печи сплавов (оболочка, бутылка, наковальня) | `ProcessingShaping`, `GT_Loader_MetaTileEntities:685–686` | `lv.LvMachineType.EXTRUDER*`, `tools/gen/mv.py` | перенесено (D83) | T, G |
 | Формовочный пресс, нагреватель жидкостей, электродуховка LV/MV | `GT_Loader_MetaTileEntities:1039–1102` | `lv.LvMachineType`, `tools/gen/mv.py` | перенесено (D84) | T, G |
 | Дуговая печь LV/MV, переработка форм | `GT_RecipeRegistrator#registerReverseArcSmelting`, `GT_Loader_MetaTileEntities:1084–1085` | `lv.LvMachineType.ARC_FURNACE*`, `tools/gen/mv.py` | перенесено (D85); переработка машин и кабелей — нет | T, G |
-| Остальные LV- и MV-машины GT5 (гравёр и др.), генераторы, буферы, шины и люки MV, электроотвёртка LV | `GT_Loader_MetaTileEntities` | — | дальше по плану MV | — |
+| Лазерный гравёр LV/MV, излучатели LV/MV, линзы | `GT_Loader_MetaTileEntities:1030`, `ProcessingLens`, `ProcessingCrafting` | `lv.LvMachineType.LASER_ENGRAVER*`, `tools/gen/mv.py` | перенесено (D86); микросхемы — с кремниевыми пластинами | T, G |
+| Остальные LV- и MV-машины GT5 (микроволновка, принтер, ферментер, консервер жидкостей и др.), генераторы, буферы, шины и люки MV, электроотвёртка LV | `GT_Loader_MetaTileEntities` | — | дальше по плану MV | — |

@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/amber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:lens_amber",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_amber",
+      "count": 1
+    }
+  ],
+  "duration": 2,
+  "eut": 480
+}

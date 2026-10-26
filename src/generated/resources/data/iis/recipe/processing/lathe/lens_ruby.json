@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/ruby",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:lens_ruby",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_ruby",
+      "count": 1
+    }
+  ],
+  "duration": 12,
+  "eut": 480
+}

@@ -227,6 +227,17 @@ final class MvGameTests {
         });
     }
 
+    /** Лазерный гравёр LV (D86): камень + алмазная (белая) линза → резной каменный кирпич (50 тиков, 16 EU/t); линза остаётся. */
+    static void laserEngraverStone(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, new BlockPos(4, 1, 4), LvMachineType.LASER_ENGRAVER);
+        m.setItem(0, new ItemStack(net.minecraft.world.item.Items.STONE));
+        m.setItem(1, new ItemStack(SelfTest.item("lens_diamond")));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.getItem(2).is(net.minecraft.world.item.Items.CHISELED_STONE_BRICKS), "output " + m.getItem(2));
+            h.assertTrue(m.getItem(1).is(SelfTest.item("lens_diamond")), "lens consumed: " + m.getItem(1));
+        });
+    }
+
     /** Стопка горячих слитков в инвентаре выживающего игрока обжигает на 3 единицы. */
     static void hotIngotBurns(GameTestHelper h) {
         var player = h.makeMockPlayer(GameType.SURVIVAL);

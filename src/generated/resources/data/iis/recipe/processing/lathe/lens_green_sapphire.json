@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/green_sapphire",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:lens_green_sapphire",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_green_sapphire",
+      "count": 1
+    }
+  ],
+  "duration": 10,
+  "eut": 480
+}

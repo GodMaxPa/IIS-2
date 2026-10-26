@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "iis:lens_amber",
+    "iis:lens_topaz"
+  ]
+}

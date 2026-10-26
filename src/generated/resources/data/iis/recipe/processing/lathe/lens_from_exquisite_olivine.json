@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#iis:exquisite_gems/olivine",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:lens_olivine",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_olivine",
+      "count": 2
+    }
+  ],
+  "duration": 28,
+  "eut": 24
+}

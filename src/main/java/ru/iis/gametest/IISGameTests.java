@@ -93,6 +93,7 @@ public final class IISGameTests {
             new Test("electric_oven_mv_smelts", 150, MvGameTests::ovenMvSmelts),
             new Test("arc_furnace_mv_iron", 200, MvGameTests::arcFurnaceMvIron),
             new Test("arc_furnace_lv_idle", 100, MvGameTests::arcFurnaceLvIdle),
+            new Test("laser_engraver_stone", 150, MvGameTests::laserEngraverStone),
             new Test("cover_conveyor", 600, CoverGameTests::conveyor),
             new Test("cover_pump", 40, CoverGameTests::pump),
             new Test("cover_controller", 40, CoverGameTests::controller),

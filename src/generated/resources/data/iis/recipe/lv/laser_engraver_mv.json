@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PEP",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "E": "iis:emitter_mv",
+    "P": "iis:electric_piston_mv",
+    "C": "#c:circuits/good",
+    "W": "#iis:cables/1x/copper"
+  },
+  "result": {
+    "id": "iis:laser_engraver_mv"
+  }
+}

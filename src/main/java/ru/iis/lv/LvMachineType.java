@@ -48,6 +48,8 @@ public enum LvMachineType {
     ELECTRIC_OVEN("electric_oven", null, 1, 1, 0, "e_oven"),
     // :1084-1085 ArcFurnace (1, 6, 16000)
     ARC_FURNACE("arc_furnace", GtRecipeMap.ARC_FURNACE, 1, 6, 16000, "arcfurnace"),
+    // :1030 LaserEngraver (2, 1)
+    LASER_ENGRAVER("laser_engraver", GtRecipeMap.LASER_ENGRAVER, 2, 1, 0, "laserengraver"),
     THERMAL_CENTRIFUGE_MV("thermal_centrifuge", GtRecipeMap.THERMAL_CENTRIFUGE, 1, 3, 0, "thermalcentrifuge", VoltageTier.MV),
     // MV (D82): GT_Loader_MetaTileEntities Machine_MV_* — те же входы/выходы/баки, что у LV, кроме смесителя (бак 16000)
     MACERATOR_MV("macerator", GtRecipeMap.MACERATOR, 1, 1, 0, "macerator1", VoltageTier.MV),
@@ -79,7 +81,8 @@ public enum LvMachineType {
     FORMING_PRESS_MV("forming_press", GtRecipeMap.FORMING_PRESS, 2, 1, 0, "press", VoltageTier.MV),
     FLUID_HEATER_MV("fluid_heater", GtRecipeMap.FLUID_HEATER, 1, 0, 8000, "fluidheater", VoltageTier.MV),
     ELECTRIC_OVEN_MV("electric_oven", null, 1, 1, 0, "e_oven", VoltageTier.MV),
-    ARC_FURNACE_MV("arc_furnace", GtRecipeMap.ARC_FURNACE, 1, 6, 16000, "arcfurnace", VoltageTier.MV);
+    ARC_FURNACE_MV("arc_furnace", GtRecipeMap.ARC_FURNACE, 1, 6, 16000, "arcfurnace", VoltageTier.MV),
+    LASER_ENGRAVER_MV("laser_engraver", GtRecipeMap.LASER_ENGRAVER, 2, 1, 0, "laserengraver", VoltageTier.MV);
 
     public final String id;
     public final GtRecipeMap recipeMap;

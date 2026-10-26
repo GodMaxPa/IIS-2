@@ -1,0 +1,20 @@
+{
+  "type": "iis:laser_engraver",
+  "inputs": [
+    {
+      "ingredient": "minecraft:smooth_sandstone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:chiseled_sandstone",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 16,
+  "keep": [
+    "#iis:crafting_lens/white"
+  ]
+}

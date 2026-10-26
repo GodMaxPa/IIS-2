@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/amethyst",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:lens_amethyst",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_amethyst",
+      "count": 1
+    }
+  ],
+  "duration": 13,
+  "eut": 480
+}

@@ -85,6 +85,8 @@ MACHINES = [
     ('electric_oven', 'e_oven',        'ELECTRIC_OVEN',    'E_Oven',       None,            1, 1, 0,     'Electric Oven'),
     # :1084-1085 arc furnace (1, 6, 16000; oxygen in the tank)
     ('arc_furnace',   'arcfurnace',    'ARC_FURNACE',      'ArcFurnace',   'arc_furnace',   1, 6, 16000, 'Arc Furnace'),
+    # :1030 precision laser engraver (2, 1)
+    ('laser_engraver', 'laserengraver', 'LASER_ENGRAVER',  'LaserEngraver', 'laser_engraver', 2, 1, 0,    'Precision Laser Engraver'),
 ]
 # GT crafting of the D83 machines (both tiers, X.* resolved per tier like MV_CRAFT)
 NEW_CRAFT = {
@@ -93,6 +95,7 @@ NEW_CRAFT = {
     'fluid_heater': (['OGO', 'PMP', 'WCW'], {'M': 'HULL', 'P': 'PUMP', 'O': 'COIL_HEATING_DOUBLE', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
     'electric_oven': (['CEC', 'CMC', 'WEW'], {'M': 'HULL', 'E': 'CIRCUIT', 'W': 'WIRE', 'C': 'COIL_HEATING'}),
     'arc_furnace': (['WGW', 'CMC', 'PPP'], {'M': 'HULL', 'P': 'PLATE', 'C': 'CIRCUIT', 'W': 'WIRE4', 'G': '#c:dusts/graphite'}),
+    'laser_engraver': (['PEP', 'CMC', 'WCW'], {'M': 'HULL', 'E': 'EMITTER', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE'}),
 }
 # MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
 # outputs and tanks as LV except the mixer (16000 L, :1022); the compressor tank (LV 4000, MV 8000) stays 0 as at LV (D82)
@@ -151,6 +154,9 @@ ITEMS = [
     ('conveyor_module_mv', 'gt:631', 'gt.metaitem.01.32631.name', 'Conveyor Module (MV)', 'Конвейерный модуль (MV)'),
     ('electric_piston_mv', 'gt:641', 'gt.metaitem.01.32641.name', 'Electric Piston (MV)', 'Электропоршень (MV)'),
     ('robot_arm_mv', 'gt:651', 'gt.metaitem.01.32651.name', 'Robot Arm (MV)', 'Манипулятор (MV)'),
+    # D86: GT_MetaGenerated_Item_01:656-657 emitters
+    ('emitter_lv', 'gt:680', 'gt.metaitem.01.32680.name', 'Emitter (LV)', 'Излучатель (LV)'),
+    ('emitter_mv', 'gt:681', 'gt.metaitem.01.32681.name', 'Emitter (MV)', 'Излучатель (MV)'),
     ('circuit_good', 'gt:702', 'gt.metaitem.01.32702.name', 'Good Electronic Circuit', 'Хорошая электросхема'),
     ('diode', 'gt:715', 'gt.metaitem.01.32715.name', 'Diode', 'Диод'),
     ('circuit_basic', 'gt:701', 'gt.metaitem.01.32701.name', 'Integrated Logic Circuit', 'Логическая интегральная электросхема'),
@@ -1016,10 +1022,14 @@ def generate(g):
     MV_CRAFT.update(NEW_CRAFT)
     XMV['PIPE'] = f'{NS}:pipe_medium_steel'
     XMV['WIRE4'] = C('Copper', 4)
+    XMV['EMITTER'] = f'{NS}:emitter_mv'
+    # GT_MetaGenerated_Item_01:665, :668 emitters "SSC/WQS/CWS": quartzite / nether quartz, brass / electrum rods, circuit, cable
+    shaped('lv/emitter_lv', f'{NS}:emitter_lv', 1, ['SSC', 'WQS', 'CWS'], {'Q': tag_of('gem', 'Quartzite'), 'S': R('Brass'), 'C': CIRC, 'W': C('Tin')})
+    shaped('lv/emitter_mv', f'{NS}:emitter_mv', 1, ['SSC', 'WQS', 'CWS'], {'Q': 'minecraft:quartz', 'S': R('Electrum'), 'C': CIRC_MV, 'W': C('Copper')})
     # LV versions of the D83 machines: X.* for tier 1 (Tier.ELECTRIC[1], GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330)
     XLV = {'HULL': HULL, 'CIRCUIT': CIRC, 'WIRE': C('Tin'), 'GLASS': 'minecraft:glass', 'PLATE': P('Steel'), 'PIPE': f'{NS}:pipe_medium_bronze',
            'COIL_HEATING': W('Copper', 2), 'COIL_HEATING_DOUBLE': W('Copper', 4), 'MOTOR': MOTOR, 'PISTON': PISTON, 'PUMP': PUMP,
-           'CONVEYOR': CONV, 'ROBOT_ARM': ARM, 'WIRE4': C('Tin', 4)}
+           'CONVEYOR': CONV, 'ROBOT_ARM': ARM, 'WIRE4': C('Tin', 4), 'EMITTER': f'{NS}:emitter_lv'}
     for mid_, (pattern, letters) in NEW_CRAFT.items():
         shaped(f'lv/{mid_}_lv', f'{NS}:{mid_}_lv', 1, pattern, {k: XLV.get(v, v) for k, v in letters.items()})
     # GT_MetaGenerated_Item_01:204-254 extruder shapes (wire cutter) and molds (hammer) from the empty shape
@@ -1310,7 +1320,7 @@ def generate(g):
                        ('jei.iis.fluid_solidifier', 'Fluid Solidifier', 'Отвердитель жидкостей'),
                        ('jei.iis.distillery', 'Distillery', 'Дистиллятор'), ('jei.iis.extruder', 'Extruder', 'Экструдер'), ('jei.iis.forming_press', 'Forming Press', 'Формовочный пресс'),
                        ('jei.iis.fluid_heater', 'Fluid Heater', 'Нагреватель жидкостей'),
-                       ('jei.iis.arc_furnace', 'Arc Furnace', 'Дуговая печь'), ('jei.iis.chemical_bath', 'Chemical Bath', 'Химическая ванна'),
+                       ('jei.iis.arc_furnace', 'Arc Furnace', 'Дуговая печь'), ('jei.iis.laser_engraver', 'Precision Laser Engraver', 'Лазерный гравёр'), ('jei.iis.chemical_bath', 'Chemical Bath', 'Химическая ванна'),
                        ('jei.iis.bender', 'Bending Machine', 'Гибочный станок'), ('jei.iis.lathe', 'Lathe', 'Токарный станок'),
                        ('jei.iis.assembler', 'Assembler', 'Сборщик'), ('jei.iis.mixer', 'Mixer', 'Миксер'),
                        ('jei.iis.polarizer', 'Polarizer', 'Поляризатор'), ('jei.iis.ore_washer', 'Ore Washing Plant', 'Рудопромывочная установка'),

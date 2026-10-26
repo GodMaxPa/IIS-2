@@ -190,6 +190,11 @@
     "material": "amber"
   },
   {
+    "id": "lens_amber",
+    "prefix": "lens",
+    "material": "amber"
+  },
+  {
     "id": "bolt_amber",
     "prefix": "bolt",
     "material": "amber"
@@ -272,6 +277,11 @@
   {
     "id": "rod_amethyst",
     "prefix": "rod",
+    "material": "amethyst"
+  },
+  {
+    "id": "lens_amethyst",
+    "prefix": "lens",
     "material": "amethyst"
   },
   {
@@ -867,6 +877,11 @@
   {
     "id": "rod_blue_topaz",
     "prefix": "rod",
+    "material": "blue_topaz"
+  },
+  {
+    "id": "lens_blue_topaz",
+    "prefix": "lens",
     "material": "blue_topaz"
   },
   {
@@ -1845,6 +1860,11 @@
     "material": "diamond"
   },
   {
+    "id": "lens_diamond",
+    "prefix": "lens",
+    "material": "diamond"
+  },
+  {
     "id": "bolt_diamond",
     "prefix": "bolt",
     "material": "diamond"
@@ -1990,6 +2010,11 @@
     "material": "emerald"
   },
   {
+    "id": "lens_emerald",
+    "prefix": "lens",
+    "material": "emerald"
+  },
+  {
     "id": "bolt_emerald",
     "prefix": "bolt",
     "material": "emerald"
@@ -2122,6 +2147,11 @@
   {
     "id": "gem_fools_ruby",
     "prefix": "gem",
+    "material": "fools_ruby"
+  },
+  {
+    "id": "lens_fools_ruby",
+    "prefix": "lens",
     "material": "fools_ruby"
   },
   {
@@ -2295,6 +2325,11 @@
     "material": "garnet_red"
   },
   {
+    "id": "lens_garnet_red",
+    "prefix": "lens",
+    "material": "garnet_red"
+  },
+  {
     "id": "bolt_garnet_red",
     "prefix": "bolt",
     "material": "garnet_red"
@@ -2377,6 +2412,11 @@
   {
     "id": "rod_garnet_yellow",
     "prefix": "rod",
+    "material": "garnet_yellow"
+  },
+  {
+    "id": "lens_garnet_yellow",
+    "prefix": "lens",
     "material": "garnet_yellow"
   },
   {
@@ -2472,6 +2512,11 @@
   {
     "id": "plate_glass",
     "prefix": "plate",
+    "material": "glass"
+  },
+  {
+    "id": "lens_glass",
+    "prefix": "lens",
     "material": "glass"
   },
   {
@@ -2707,6 +2752,11 @@
   {
     "id": "rod_green_sapphire",
     "prefix": "rod",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "lens_green_sapphire",
+    "prefix": "lens",
     "material": "green_sapphire"
   },
   {
@@ -3147,6 +3197,11 @@
   {
     "id": "plate_jasper",
     "prefix": "plate",
+    "material": "jasper"
+  },
+  {
+    "id": "lens_jasper",
+    "prefix": "lens",
     "material": "jasper"
   },
   {
@@ -4195,6 +4250,11 @@
     "material": "olivine"
   },
   {
+    "id": "lens_olivine",
+    "prefix": "lens",
+    "material": "olivine"
+  },
+  {
     "id": "bolt_olivine",
     "prefix": "bolt",
     "material": "olivine"
@@ -4277,6 +4337,11 @@
   {
     "id": "rod_opal",
     "prefix": "rod",
+    "material": "opal"
+  },
+  {
+    "id": "lens_opal",
+    "prefix": "lens",
     "material": "opal"
   },
   {
@@ -5050,6 +5115,11 @@
     "material": "ruby"
   },
   {
+    "id": "lens_ruby",
+    "prefix": "lens",
+    "material": "ruby"
+  },
+  {
     "id": "bolt_ruby",
     "prefix": "bolt",
     "material": "ruby"
@@ -5212,6 +5282,11 @@
   {
     "id": "rod_sapphire",
     "prefix": "rod",
+    "material": "sapphire"
+  },
+  {
+    "id": "lens_sapphire",
+    "prefix": "lens",
     "material": "sapphire"
   },
   {
@@ -6060,6 +6135,11 @@
     "material": "tanzanite"
   },
   {
+    "id": "lens_tanzanite",
+    "prefix": "lens",
+    "material": "tanzanite"
+  },
+  {
     "id": "bolt_tanzanite",
     "prefix": "bolt",
     "material": "tanzanite"
@@ -6397,6 +6477,11 @@
   {
     "id": "rod_topaz",
     "prefix": "rod",
+    "material": "topaz"
+  },
+  {
+    "id": "lens_topaz",
+    "prefix": "lens",
     "material": "topaz"
   },
   {

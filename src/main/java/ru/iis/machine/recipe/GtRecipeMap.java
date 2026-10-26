@@ -43,7 +43,9 @@ public enum GtRecipeMap {
     FORMING_PRESS("forming_press", 2, 1),
     FLUID_HEATER("fluid_heater", 1, 0),
     // sArcFurnaceRecipes: 1 вход, до 6 выходов, кислород (литров — сколько тиков длится рецепт)
-    ARC_FURNACE("arc_furnace", 1, 6);
+    ARC_FURNACE("arc_furnace", 1, 6),
+    // D86: sLaserEngraverRecipes (заготовка + линза, линза не расходуется)
+    LASER_ENGRAVER("laser_engraver", 2, 1);
 
     public final String id;
     public final int maxInputs, maxOutputs;

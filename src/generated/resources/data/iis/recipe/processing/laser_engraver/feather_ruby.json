@@ -1,0 +1,20 @@
+{
+  "type": "iis:laser_engraver",
+  "inputs": [
+    {
+      "ingredient": "minecraft:paper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:feather",
+      "count": 4
+    }
+  ],
+  "duration": 32,
+  "eut": 8,
+  "keep": [
+    "iis:lens_ruby"
+  ]
+}

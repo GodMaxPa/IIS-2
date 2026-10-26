@@ -191,6 +191,9 @@ public final class LvContent {
     public static final DeferredItem<Item> MOLD_ARROW = item("mold_arrow");
     public static final DeferredItem<Item> COIN_DOGE = item("coin_doge");
     public static final DeferredItem<Item> ARROW_HEAD_GLASS_EMPTY = item("arrow_head_glass_empty");
+    // D86: излучатели GT (GT_MetaGenerated_Item_01:656-657) для лазерного гравёра
+    public static final DeferredItem<Item> EMITTER_LV = item("emitter_lv");
+    public static final DeferredItem<Item> EMITTER_MV = item("emitter_mv");
     public static final List<String> EXTRUDER_SHAPE_IDS = List.of("plate", "rod", "bolt", "ring", "cell", "ingot", "wire", "casing",
             "pipe_tiny", "pipe_small", "pipe_medium", "pipe_large", "pipe_huge", "block", "sword", "pickaxe", "shovel", "axe", "hoe", "saw",
             "gear", "bottle", "small_gear");

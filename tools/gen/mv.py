@@ -180,7 +180,48 @@ def generate(g):
                     if ref(pre, n):
                         arc(f'{pre}_{mid}', tag_of(pre, n), n, amount)
 
+    # --- lenses and the laser engraver (D86) -------------------------------------------------------------------------------
+    # ProcessingLens: lathe plate -> lens + small dust (max(mass / 2, 1), 480 EU/t); exquisite gem -> lens + 2 dust (mass, 24)
+    import json
+    dyes = {}
+    for x in json.load(open(os.path.join(g['REF'], 'gt5_materials.json'), encoding='utf-8')):
+        dyes[x['name']] = next((a[len('Dyes.dye'):] for a in x.get('rawArgs', []) if isinstance(a, str) and a.startswith('Dyes.dye')), None)
+    lenses = {}
+    for n in sorted(g['names']):
+        lens = ref('lens', n)
+        if not lens:
+            continue
+        lenses[n] = lens
+        mid = mat_id(n)
+        if ref('plate', n):
+            rec.setdefault(f'lathe/lens_{mid}', {'type': f'{NS}:lathe', 'inputs': [ing(tag_of('plate', n))],
+                                               'outputs': [out(lens)] + ([out(ref('small_dust', n))] if ref('small_dust', n) else []),
+                                               'duration': max(mass(n) // 2, 1), 'eut': 480})
+        if ref('gem_exquisite', n):
+            rec.setdefault(f'lathe/lens_from_exquisite_{mid}', {'type': f'{NS}:lathe', 'inputs': [ing(tag_of('gem_exquisite', n))],
+                                                              'outputs': [out(lens)] + ([out(ref('dust', n), 2)] if ref('dust', n) else []),
+                                                              'duration': max(mass(n), 1), 'eut': 24})
+        # GT_Proxy:1086 every lens is also craftingLens<colour of the material>
+        if dyes.get(n):
+            g['add_item_tag'](f'iis:crafting_lens/{dyes[n].lower()}', lens)
+    # ProcessingCrafting craftingLensWhite (:72-74): chiseled sandstone, stone bricks and quartz (50 t, 16 EU/t)
+    if any(dyes.get(n) == 'White' for n in lenses):
+        for rid, a, b in (('chiseled_sandstone', 'minecraft:smooth_sandstone', 'minecraft:chiseled_sandstone'),
+                          ('chiseled_stone_bricks', 'minecraft:stone', 'minecraft:chiseled_stone_bricks'),
+                          ('chiseled_quartz_block', 'minecraft:quartz_block', 'minecraft:chiseled_quartz_block')):
+            mrec('laser_engraver', rid, [ing(a)], [out(b)], 50, 16, '#iis:crafting_lens/white')
+    # GT_MachineRecipeLoader:499-501 paper + ruby / red garnet / jasper lens -> 4 feathers (32 t, 8 EU/t)
+    for n in ('Ruby', 'GarnetRed', 'Jasper'):
+        if n in lenses:
+            mrec('laser_engraver', f'feather_{mat_id(n)}', [ing('minecraft:paper')], [out('minecraft:feather', 4)], 32, 8, lenses[n])
+    # GT_MachineRecipeLoader:1981, :1983 emitters in the assembler (circuit 5, 80 t, 30 EU/t)
+    for tier, gem, rod, circ, cable in (('lv', tag_of('gem', 'Quartzite'), 'Brass', '#c:circuits/basic', 'Tin'),
+                                        ('mv', 'minecraft:quartz', 'Electrum', '#c:circuits/good', 'Copper')):
+        rec[f'assembler/emitter_{tier}'] = {'type': f'{NS}:assembler', 'inputs': [ing(gem), ing(tag_of('rod', rod), 4), ing(circ, 2),
+                                                                                ing(f'#iis:cables/1x/{mat_id(cable)}', 2)],
+                                            'outputs': [out(f'{NS}:emitter_{tier}')], 'duration': 80, 'eut': 30, 'circuit': 5}
+
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
-    return {'arc_furnace': sum(1 for k in rec if k.startswith('arc_furnace/')), 'forming_press': sum(1 for k in rec if k.startswith('forming_press/')), 'fluid_heater': sum(1 for k in rec if k.startswith('fluid_heater/')),
+    return {'lenses': len(lenses), 'laser_engraver': sum(1 for k in rec if k.startswith('laser_engraver/')), 'arc_furnace': sum(1 for k in rec if k.startswith('arc_furnace/')), 'forming_press': sum(1 for k in rec if k.startswith('forming_press/')), 'fluid_heater': sum(1 for k in rec if k.startswith('fluid_heater/')),
             'extruder': sum(1 for k in rec if k.startswith('extruder/')), 'alloy_smelter_molds': sum(1 for k in rec if k.startswith('alloy_smelter/'))}

@@ -106,6 +106,28 @@ class NewMvMachinesTest {
     }
 
     @Test
+    void laserEngraverLensesEmitters() throws IOException {
+        assertEquals(GtRecipeMap.LASER_ENGRAVER, LvMachineType.LASER_ENGRAVER_MV.recipeMap);
+        // ProcessingLens: пластина → линза + малая кучка пыли (масса / 2, 480 EU/t — HV); изысканный самоцвет → линза + 2 пыли (масса, 24)
+        JsonObject plate = recipe("processing/lathe/lens_ruby");
+        assertEquals(480, plate.get("eut").getAsInt());
+        assertEquals("iis:lens_ruby", plate.getAsJsonArray("outputs").get(0).getAsJsonObject().get("id").getAsString());
+        JsonObject exq = recipe("processing/lathe/lens_from_exquisite_ruby");
+        assertEquals(24, exq.get("eut").getAsInt());
+        assertEquals(2, exq.getAsJsonArray("outputs").get(1).getAsJsonObject().get("count").getAsInt());
+        // белые линзы (craftingLensWhite) — по цвету материала; рубин не белый
+        String white = Files.readString(RECIPES.getParent().resolve("tags/item/crafting_lens/white.json"));
+        assertTrue(white.contains("iis:lens_diamond") && !white.contains("iis:lens_ruby"), white);
+        assertRecipe("processing/laser_engraver/chiseled_stone_bricks", "minecraft:chiseled_stone_bricks", 1, 50, 16, "#iis:crafting_lens/white");
+        assertRecipe("processing/laser_engraver/feather_ruby", "minecraft:feather", 4, 32, 8, "iis:lens_ruby");
+        // излучатель: в сборщике схема 5, 80 тиков, 30 EU/t; на верстаке «SSC/WQS/CWS»
+        JsonObject em = recipe("processing/assembler/emitter_mv");
+        assertEquals(5, em.get("circuit").getAsInt());
+        assertEquals("minecraft:quartz", recipe("lv/emitter_mv").getAsJsonObject("key").get("Q").getAsString());
+        assertEquals("iis:emitter_lv", recipe("lv/laser_engraver_lv").getAsJsonObject("key").get("E").getAsString());
+    }
+
+    @Test
     void alloySmelterMolds() throws IOException {
         String p = "processing/alloy_smelter/";
         // 2 слитка → пластина за массу × 2 тиков, 2 × 16 = 32 EU/t

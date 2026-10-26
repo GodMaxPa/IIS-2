@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#iis:exquisite_gems/green_sapphire",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:lens_green_sapphire",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_green_sapphire",
+      "count": 2
+    }
+  ],
+  "duration": 20,
+  "eut": 24
+}

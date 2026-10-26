@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/glass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:lens_glass",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_glass",
+      "count": 1
+    }
+  ],
+  "duration": 10,
+  "eut": 480
+}

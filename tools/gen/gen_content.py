@@ -159,6 +159,8 @@ PREFIXES = [
     ('gem',           'gem',              B_GEM,                   '01', 8,  '{}',                      'c:gems'),
     ('plate',         'plate',            B_METAL | B_GEM,         '01', 17, '{} Plate',                'c:plates'),
     ('rod',           'stick',            B_METAL | B_GEM,         '01', 23, '{} Rod',                  'c:rods'),
+    # D86: OrePrefixes.lens (B[2], index 24), only MAGICAL or TRANSPARENT + HAS_COLOR materials (OrePrefixes:477)
+    ('lens',          'lens',             B_GEM,                   '01', 24, '{} Lens',                 'iis:lenses'),
     ('bolt',          'bolt',             B_METAL | B_GEM,         '01', 26, '{} Bolt',                 'iis:bolts'),
     ('screw',         'screw',            B_METAL | B_GEM,         '01', 27, '{} Screw',                'iis:screws'),
     ('ring',          'ring',             B_METAL,                 '01', 28, '{} Ring',                 'iis:rings'),
@@ -254,6 +256,10 @@ def has_form(prefix, name):
     bits = next((p[2] for p in PREFIXES if p[0] == prefix), 0)
     if prefix == 'hot_ingot' and prop(name, 'BlastFurnaceTemp', 0) <= 1750:
         return False
+    if prefix == 'lens':
+        st = set(prop(name, 'ListSubTags', []) or [])
+        if 'MAGICAL' not in st and not ({'TRANSPARENT', 'HAS_COLOR'} <= st):
+            return False
     if prefix in GEM_QUALITIES:
         st = set(prop(name, 'ListSubTags', []) or [])
         if not ({'TRANSPARENT', 'CRYSTAL'} <= st) or st & {'QUARTZ', 'PEARL', 'MAGICAL'}:
@@ -533,7 +539,7 @@ RU_FALLBACK = {'crushed': 'Измельчённая руда', 'purified': 'Пр
                'ingot': 'Слиток', 'nugget': 'Самородок', 'gem': 'Кристалл', 'plate': 'Пластина', 'rod': 'Стержень',
                'bolt': 'Болт', 'screw': 'Винт', 'ring': 'Кольцо', 'sword_head': 'Лезвие меча', 'pickaxe_head': 'Наконечник кирки',
                'shovel_head': 'Полотно лопаты', 'axe_head': 'Наконечник топора', 'hoe_head': 'Полотно мотыги', 'saw_head': 'Лезвие пилы',
-               'drill_head': 'Наконечник бура', 'chainsaw_head': 'Полотно цепной пилы', 'wrench_head': 'Головка ключа'}
+               'lens': 'Линза', 'drill_head': 'Наконечник бура', 'chainsaw_head': 'Полотно цепной пилы', 'wrench_head': 'Головка ключа'}
 for it in items:
     n = next(k for k, v in mat_by_name.items() if v['id'] == it['material'])
     m = mat_by_name[n]

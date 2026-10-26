@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:quartz",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:rods/electrum",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:circuits/good",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:cables/1x/copper",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:emitter_mv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 30,
+  "circuit": 5
+}

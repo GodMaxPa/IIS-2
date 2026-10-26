@@ -279,6 +279,15 @@
     "gui": "lv/arcfurnace"
   },
   {
+    "id": "laser_engraver_lv",
+    "type": "laser_engraver",
+    "recipeMap": "laser_engraver",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/laserengraver"
+  },
+  {
     "id": "macerator_mv",
     "type": "macerator_mv",
     "recipeMap": "macerator",
@@ -547,6 +556,15 @@
     "outputs": 6,
     "tank": 16000,
     "gui": "lv/arcfurnace"
+  },
+  {
+    "id": "laser_engraver_mv",
+    "type": "laser_engraver_mv",
+    "recipeMap": "laser_engraver",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/laserengraver"
   },
   {
     "id": "thermal_centrifuge_mv",

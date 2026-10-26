@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:gems/quartzite",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:rods/brass",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:circuits/basic",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:cables/1x/tin",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:emitter_lv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 30,
+  "circuit": 5
+}
