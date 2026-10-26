@@ -22,7 +22,6 @@ import net.neoforged.neoforge.transfer.fluid.FluidResource;
 import net.neoforged.neoforge.transfer.item.ItemResource;
 import net.neoforged.neoforge.transfer.item.WorldlyContainerWrapper;
 import org.jspecify.annotations.Nullable;
-import ru.iis.energy.VoltageTier;
 import ru.iis.lv.LvContent;
 import ru.iis.lv.LvMachineType;
 import ru.iis.lv.menu.ElectricMachineMenu;
@@ -44,9 +43,9 @@ import java.util.Optional;
  * Машина даёт все выходы рецепта, сколько у неё выходных слотов (LV дробитель — 1 слот, т. е. только основной выход).
  */
 public class ElectricMachineBlockEntity extends ElectricBlockEntity {
-    public static final long VOLTAGE = VoltageTier.LV.voltage();
-
-    private final ElectricMachineLogic logic = new ElectricMachineLogic(VOLTAGE);
+    /** GT V[mTier]: 32 у LV, 128 у MV (D81). */
+    private final long voltage;
+    private final ElectricMachineLogic logic;
     private final FluidTank tank;
     /** GT mOutputFluid: выходной бак той же ёмкости, снаружи только слив (LV III, D76). */
     private final FluidTank outTank;
@@ -60,8 +59,10 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
     public boolean allowedToWork = true;
 
     public ElectricMachineBlockEntity(BlockPos pos, BlockState state) {
-        super(LvContent.ELECTRIC_MACHINE_BE.get(), pos, state, slotCount(state), VOLTAGE * 64, VOLTAGE);
+        super(LvContent.ELECTRIC_MACHINE_BE.get(), pos, state, slotCount(state), type(state).voltage() * 64, type(state).voltage());
         LvMachineType t = type(state);
+        this.voltage = t.voltage();
+        this.logic = new ElectricMachineLogic(voltage);
         this.tank = new FluidTank(Math.max(1, t.tank), f -> t.tank > 0 && t.recipeMap != null
                 && level instanceof ServerLevel sl && GtRecipes.acceptsFluid(sl, t.recipeMap, f), true, this::markDirty);
         this.outTank = new FluidTank(Math.max(1, t.tank), f -> false, true, this::markDirty);
@@ -119,7 +120,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
     protected void work(ServerLevel sl) {
         ItemStack bat = items.get(batterySlot());
         if (bat.getItem() instanceof ru.iis.lv.item.BatteryItem b && b.isBattery() && energy.stored < energy.capacity) {
-            energy.stored += b.discharge(bat, Math.min(VOLTAGE, energy.capacity - energy.stored));
+            energy.stored += b.discharge(bat, Math.min(voltage, energy.capacity - energy.stored));
         }
         boolean check = inventoryChanged || sl.getGameTime() % 20 == 0;
         inventoryChanged = false;
@@ -253,11 +254,11 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
             pending = List.of(result);
             setChanged();
             // GT_Recipe_Map_Furnace: 4 EU/t, 128 тиков
-            Overclock.Result oc = Overclock.basicMachine(4, 128, VoltageTier.LV, 1);
+            Overclock.Result oc = Overclock.basicMachine(4, 128, t.tier, 1);
             return new int[]{(int) oc.euPerTick(), oc.durationTicks()};
         }
         FluidStack fluid = tank.amount() > 0 ? new FluidStack(tank.resource().getFluid(), tank.amount()) : FluidStack.EMPTY;
-        var match = GtRecipes.find(sl, t.recipeMap, inputs, fluid, eut -> eut <= VOLTAGE);
+        var match = GtRecipes.find(sl, t.recipeMap, inputs, fluid, eut -> eut <= voltage);
         if (match.isEmpty()) return null;
         var m = match.get();
         var outs = m.recipe().outputs();
@@ -275,7 +276,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         pending = m.recipe().rollOutputs(sl.getRandom());
         pendingFluid = m.recipe().fluidOutputs().isEmpty() ? FluidStack.EMPTY : m.recipe().fluidOutputs().getFirst().create();
         setChanged();
-        Overclock.Result oc = Overclock.basicMachine(Math.max(1, m.recipe().eut()), m.recipe().duration(), VoltageTier.LV, 1);
+        Overclock.Result oc = Overclock.basicMachine(Math.max(1, m.recipe().eut()), m.recipe().duration(), t.tier, 1);
         return new int[]{(int) oc.euPerTick(), oc.durationTicks()};
     }
 

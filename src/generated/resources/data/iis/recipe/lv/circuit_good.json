@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IVC",
+    "VDV",
+    "CVI"
+  ],
+  "key": {
+    "D": "iis:diode",
+    "C": "#iis:cables/1x/red_alloy",
+    "V": "#c:circuits/basic",
+    "I": "iis:steel_item_casing"
+  },
+  "result": {
+    "id": "iis:circuit_good"
+  }
+}

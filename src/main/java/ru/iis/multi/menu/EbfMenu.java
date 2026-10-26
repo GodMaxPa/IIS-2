@@ -12,8 +12,22 @@ import ru.iis.multi.MultiContent;
 /** Экран контроллера: только сведения (как GT_GUIContainer_MultiMachine). */
 public class EbfMenu extends MachineMenu {
     public EbfMenu(int id, Inventory inventory, ContainerData data) {
-        super(MultiContent.EBF_MENU.get(), id, new SimpleContainer(0), data);
+        this(MultiContent.EBF_MENU.get(), id, inventory, data);
+    }
+
+    public EbfMenu(net.minecraft.world.inventory.MenuType<?> type, int id, Inventory inventory, ContainerData data) {
+        super(type, id, new SimpleContainer(0), data);
         finish(inventory);
+    }
+
+    /** Экран вакуумного морозильника — те же сведения, без нагрева (D81). */
+    public static EbfMenu freezer(int id, Inventory inventory, ContainerData data) {
+        return new EbfMenu(MultiContent.VACUUM_FREEZER_MENU.get(), id, inventory, data);
+    }
+
+    public static EbfMenu freezerClient(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
+        buf.readBlockPos();
+        return freezer(id, inventory, new SimpleContainerData(10));
     }
 
     public static EbfMenu client(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {

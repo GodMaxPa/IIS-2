@@ -110,6 +110,9 @@ public final class LvContent {
     // --- корпуса -------------------------------------------------------------------------------------------------
     public static final DeferredBlock<Block> CASING_LV = block("casing_lv", Block::new, LvContent::metal);
     public static final DeferredBlock<Block> HULL_LV = block("hull_lv", Block::new, LvContent::metal);
+    // MV (D81): GT_Block_Casings1 meta 2, Hull_MV
+    public static final DeferredBlock<Block> CASING_MV = block("casing_mv", Block::new, LvContent::metal);
+    public static final DeferredBlock<Block> HULL_MV = block("hull_mv", Block::new, LvContent::metal);
 
     // --- машины, генераторы, буферы, трансформатор ----------------------------------------------------------------
     public static final Map<LvMachineType, DeferredBlock<ElectricMachineBlock>> MACHINES = new EnumMap<>(LvMachineType.class);
@@ -151,6 +154,14 @@ public final class LvContent {
     public static final DeferredItem<Item> CONVEYOR_MODULE = item("conveyor_module_lv");
     public static final DeferredItem<Item> ELECTRIC_PISTON = item("electric_piston_lv");
     public static final DeferredItem<Item> ROBOT_ARM = item("robot_arm_lv");
+    // MV (D81): GT_MetaGenerated_Item_01:483-629 детали MV, :695 Circuit_Good, :711 диод
+    public static final DeferredItem<Item> ELECTRIC_MOTOR_MV = item("electric_motor_mv");
+    public static final DeferredItem<Item> ELECTRIC_PUMP_MV = item("electric_pump_mv");
+    public static final DeferredItem<Item> CONVEYOR_MODULE_MV = item("conveyor_module_mv");
+    public static final DeferredItem<Item> ELECTRIC_PISTON_MV = item("electric_piston_mv");
+    public static final DeferredItem<Item> ROBOT_ARM_MV = item("robot_arm_mv");
+    public static final DeferredItem<Item> CIRCUIT_GOOD = item("circuit_good");
+    public static final DeferredItem<Item> DIODE = item("diode");
     public static final DeferredItem<Item> CIRCUIT_BASIC = item("circuit_basic");
     public static final DeferredItem<Item> VACUUM_TUBE = item("vacuum_tube");
     public static final DeferredItem<Item> COATED_CIRCUIT_BOARD = item("coated_circuit_board");

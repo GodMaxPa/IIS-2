@@ -383,6 +383,11 @@ def generate(g):
         if pur and pure:
             mrec('macerator', f'purified_{mid}', [ing(tag_of('purified', n))], [out(pure), out(by_dust(1), 1, 1000)], 400, 2)
             mrec('forge_hammer', f'purified_{mid}', [ing(tag_of('purified', n))], [out(pure)], 10, 16)
+        # ProcessingCrushedOre:34-36 (D81): centrifuged ore -> dust; macerator also byproduct #2 at 10 %
+        cen = ref('centrifuged', n)
+        if cen and dust:
+            mrec('macerator', f'centrifuged_{mid}', [ing(tag_of('centrifuged', n))], [out(dust), out(by_dust(2), 1, 1000)], 400, 2)
+            mrec('forge_hammer', f'centrifuged_{mid}', [ing(tag_of('centrifuged', n))], [out(dust)], 10, 16)
         # Recycling into dust (GT_RecipeRegistrator: macerating any material item gives its material amount as dust)
         if dust:
             for p, cnt_out in (('ingot', ('dust', 1)), ('plate', ('dust', 1)), ('gem', ('dust', 1)), ('nugget', ('tiny_dust', 1)),

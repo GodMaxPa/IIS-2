@@ -75,6 +75,12 @@ public final class IISGameTests {
             new Test("ebf_maintenance", 200, MultiGameTests::ebfMaintenance),
             new Test("ebf_gui_opens", 20, MultiGameTests::ebfGuiOpens),
             new Test("boiler_pollutes", 200, MultiGameTests::boilerPollutes),
+            // MV (D81)
+            new Test("mv_thermal_centrifuge", 700, MvGameTests::thermalCentrifugeMv),
+            new Test("lv_thermal_centrifuge_idle", 100, MvGameTests::thermalCentrifugeLvIdle),
+            new Test("vacuum_freezer_hot_ingot", 800, MvGameTests::freezerHotIngot),
+            new Test("vacuum_freezer_needs_hollow", 100, MvGameTests::freezerNeedsHollow),
+            new Test("hot_ingot_burns", 20, MvGameTests::hotIngotBurns),
             new Test("cover_conveyor", 600, CoverGameTests::conveyor),
             new Test("cover_pump", 40, CoverGameTests::pump),
             new Test("cover_controller", 40, CoverGameTests::controller),

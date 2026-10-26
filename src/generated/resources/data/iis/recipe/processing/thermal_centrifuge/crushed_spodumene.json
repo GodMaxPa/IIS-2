@@ -1,0 +1,25 @@
+{
+  "type": "iis:thermal_centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/spodumene",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:centrifuged_spodumene",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_lithium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_stone",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 48
+}

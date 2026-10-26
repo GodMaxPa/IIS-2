@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BG ",
+    "WDW",
+    "BG "
+  ],
+  "key": {
+    "B": "#c:dyes/black",
+    "G": "minecraft:glass_pane",
+    "D": "#iis:tiny_dusts/gallium",
+    "W": "#iis:wires/1x/tin"
+  },
+  "result": {
+    "id": "iis:diode",
+    "count": 4
+  }
+}

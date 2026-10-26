@@ -136,6 +136,8 @@ names |= {'CobaltBrass', 'Cobalt', 'Aluminium', 'Brass', 'Zinc', 'Diamond'}
 names |= {'Cadmium', 'Lithium', 'Sodium'}
 # LV III (D76): chrome (ruby electrolysis), stainless steel and its pipes
 names |= {'Chrome', 'StainlessSteel'}
+# MV (D81): gallium for diodes (GT_MachineRecipeLoader:477, tiny pile)
+names |= {'Gallium'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64
@@ -143,12 +145,16 @@ PREFIXES = [
     # id prefix      gt prefix            bits                     lang key          en template                tag
     ('crushed',       'crushed',          B_ORE,                   '01', 5,  'Crushed {} Ore',          'iis:crushed_ores'),
     ('purified',      'crushedPurified',  B_ORE,                   '01', 6,  'Purified {} Ore',         'iis:purified_ores'),
+    # MV (D81): thermal centrifuge output (OrePrefixes.crushedCentrifuged, B[3], index 7)
+    ('centrifuged',   'crushedCentrifuged', B_ORE,                 '01', 7,  'Centrifuged {} Ore',      'iis:centrifuged_ores'),
     ('impure_dust',   'dustImpure',       B_ORE,                   '01', 3,  'Impure Pile of {} Dust',  'iis:impure_dusts'),
     ('pure_dust',     'dustPure',         B_ORE,                   '01', 4,  'Purified Pile of {} Dust', 'iis:pure_dusts'),
     ('dust',          'dust',             B_DUST | B_METAL | B_GEM | B_ORE, '01', 2, '{} Dust',          'c:dusts'),
     ('small_dust',    'dustSmall',        B_DUST | B_METAL | B_GEM | B_ORE, '01', 1, 'Small Pile of {} Dust', 'iis:small_dusts'),
     ('tiny_dust',     'dustTiny',         B_DUST | B_METAL | B_GEM | B_ORE, '01', 0, 'Tiny Pile of {} Dust', 'iis:tiny_dusts'),
     ('ingot',         'ingot',            B_METAL,                 '01', 11, '{} Ingot',                'c:ingots'),
+    # MV (D81): OrePrefixes.ingotHot (B[1], index 12), only above 1750 K (OrePrefixes:647); vacuum freezer cools it
+    ('hot_ingot',     'ingotHot',         B_METAL,                 '01', 12, 'Hot {} Ingot',            'iis:hot_ingots'),
     ('nugget',        'nugget',           B_METAL,                 '01', 9,  '{} Nugget',               'c:nuggets'),
     ('gem',           'gem',              B_GEM,                   '01', 8,  '{}',                      'c:gems'),
     ('plate',         'plate',            B_METAL | B_GEM,         '01', 17, '{} Plate',                'c:plates'),
@@ -246,6 +252,8 @@ def component_allowed(prefix, name):
 def has_form(prefix, name):
     """Does material have this form (GT OrePrefixes.doGenerateItem), regardless of whether it is vanilla."""
     bits = next((p[2] for p in PREFIXES if p[0] == prefix), 0)
+    if prefix == 'hot_ingot' and prop(name, 'BlastFurnaceTemp', 0) <= 1750:
+        return False
     if prefix in GEM_QUALITIES:
         st = set(prop(name, 'ListSubTags', []) or [])
         if not ({'TRANSPARENT', 'CRYSTAL'} <= st) or st & {'QUARTZ', 'PEARL', 'MAGICAL'}:
@@ -519,7 +527,8 @@ def icon_for(iset, gtp):
 gtp_of = {p[0]: p[1] for p in PREFIXES} | {h[0]: h[1] for h in HEADS}
 meta_of = {p[0]: (p[3], p[4]) for p in PREFIXES} | {h[0]: ('02', h[2]) for h in HEADS}
 en_of = {p[0]: p[5] for p in PREFIXES} | {h[0]: h[3] for h in HEADS}
-RU_FALLBACK = {'crushed': 'Измельчённая руда', 'purified': 'Промытая измельчённая руда', 'impure_dust': 'Грязная пыль',
+RU_FALLBACK = {'crushed': 'Измельчённая руда', 'purified': 'Промытая измельчённая руда', 'centrifuged': 'Центрифугированная руда',
+               'hot_ingot': 'Горячий слиток', 'impure_dust': 'Грязная пыль',
                'pure_dust': 'Чистая пыль', 'dust': 'Пыль', 'small_dust': 'Маленькая кучка пыли', 'tiny_dust': 'Крошечная кучка пыли',
                'ingot': 'Слиток', 'nugget': 'Самородок', 'gem': 'Кристалл', 'plate': 'Пластина', 'rod': 'Стержень',
                'bolt': 'Болт', 'screw': 'Винт', 'ring': 'Кольцо', 'sword_head': 'Лезвие меча', 'pickaxe_head': 'Наконечник кирки',
@@ -557,6 +566,8 @@ for (prefix, n), iid in item_ref.items():
     if n in NOT_GENERATED_MATERIALS:
         continue
     add_item_tag(f'{t}/{mat_id(n)}', iid)
+    if prefix == 'hot_ingot':   # all hot ingots burn (ru.iis.multi.HotIngotHeat, D81)
+        add_item_tag(t, iid)
 
 # --- tools ---
 TOOL_ICON = os.path.join(TEX, 'tools')
@@ -714,7 +725,8 @@ for n in sorted(names):
                 smelting(f'smelting/{bid}', f'{NS}:{bid}', gem, max(1, mult * prop(n, 'OreSmeltingMultiplier', 1) // 2), xp=0.7)
 
     # 2. Crushed ores and dusts in a furnace (GT5 ProcessingOreSmelting)
-    for prefix, kind in (('crushed', 'crushed'), ('purified', 'crushed'), ('dust', 'dust'), ('impure_dust', 'dust'), ('pure_dust', 'dust')):
+    for prefix, kind in (('crushed', 'crushed'), ('purified', 'crushed'), ('centrifuged', 'crushed'), ('dust', 'dust'),
+                         ('impure_dust', 'dust'), ('pure_dust', 'dust')):
         src = ref(prefix, n)
         if src is None or not src.startswith(NS + ':'):
             continue

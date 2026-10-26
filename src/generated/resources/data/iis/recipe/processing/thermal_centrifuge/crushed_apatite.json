@@ -1,0 +1,21 @@
+{
+  "type": "iis:thermal_centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/apatite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:centrifuged_apatite",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_stone",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 48
+}

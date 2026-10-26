@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#iis:centrifuged_ores/cinnabar",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_cinnabar",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

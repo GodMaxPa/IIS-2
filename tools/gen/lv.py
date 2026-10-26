@@ -75,6 +75,12 @@ MACHINES = [
     # LV IV: distillery and chemical bath (GT_Loader_MetaTileEntities:976, 985)
     ('distillery',    'distillery',    'DISTILLERY',       'Distillery',   'distillery',    1, 1, 1000,  'Distillery'),
     ('chemical_bath', 'chemicalbath',  'CHEMICAL_BATH',    'ChemicalBath', 'chemical_bath', 1, 3, 8000,  'Chemical Bath'),
+    # MV (D81): GT_Loader_MetaTileEntities:784 LV thermal centrifuge (its ore recipes need 48 EU/t, i.e. the MV one)
+    ('thermal_centrifuge', 'thermalcentrifuge', 'THERMAL_CENTRIFUGE', 'ThermalCentrifuge', 'thermal_centrifuge', 1, 3, 0, 'Thermal Centrifuge'),
+]
+# MV basic machines (GT tier 2, "Advanced ..."): same columns
+MV_MACHINES = [
+    ('thermal_centrifuge', 'thermalcentrifuge', 'THERMAL_CENTRIFUGE', 'ThermalCentrifuge', 'thermal_centrifuge', 1, 3, 0, 'Thermal Centrifuge'),
 ]
 GENERATORS = [
     # id, GT lang, texture prefix, EN
@@ -90,6 +96,14 @@ ITEMS = [
     ('conveyor_module_lv', 'gt:630', 'gt.metaitem.01.32630.name', 'Conveyor Module (LV)', 'Конвейерный модуль (LV)'),
     ('electric_piston_lv', 'gt:640', 'gt.metaitem.01.32640.name', 'Electric Piston (LV)', 'Электропоршень (LV)'),
     ('robot_arm_lv', 'gt:650', 'gt.metaitem.01.32650.name', 'Robot Arm (LV)', 'Манипулятор (LV)'),
+    # MV (D81): GT_MetaGenerated_Item_01:483-629, :695, :711
+    ('electric_motor_mv', 'gt:601', 'gt.metaitem.01.32601.name', 'Electric Motor (MV)', 'Электродвигатель (MV)'),
+    ('electric_pump_mv', 'gt:611', 'gt.metaitem.01.32611.name', 'Electric Pump (MV)', 'Электрическая помпа (MV)'),
+    ('conveyor_module_mv', 'gt:631', 'gt.metaitem.01.32631.name', 'Conveyor Module (MV)', 'Конвейерный модуль (MV)'),
+    ('electric_piston_mv', 'gt:641', 'gt.metaitem.01.32641.name', 'Electric Piston (MV)', 'Электропоршень (MV)'),
+    ('robot_arm_mv', 'gt:651', 'gt.metaitem.01.32651.name', 'Robot Arm (MV)', 'Манипулятор (MV)'),
+    ('circuit_good', 'gt:702', 'gt.metaitem.01.32702.name', 'Good Electronic Circuit', 'Хорошая электросхема'),
+    ('diode', 'gt:715', 'gt.metaitem.01.32715.name', 'Diode', 'Диод'),
     ('circuit_basic', 'gt:701', 'gt.metaitem.01.32701.name', 'Integrated Logic Circuit', 'Логическая интегральная электросхема'),
     ('vacuum_tube', 'gt:700', 'gt.metaitem.01.32700.name', 'Vacuum Tube', 'Вакуумная трубка'),
     ('coated_circuit_board', 'gt:710', 'gt.metaitem.01.32710.name', 'Coated Circuit Board', 'Покрытая печатная плата'),
@@ -338,6 +352,7 @@ def generate(g):
     item_ref[('plate', 'Wood')] = f'{NS}:plate_wood'
     add_item_tag('c:plates/wood', f'{NS}:plate_wood')
     add_item_tag('c:circuits/basic', f'{NS}:circuit_basic')   # GT OrePrefixes.circuit Basic
+    add_item_tag('c:circuits/good', f'{NS}:circuit_good')     # GT OrePrefixes.circuit Good (D81)
     name(f'item.{NS}.battery_lv.tooltip', 'Stores %s / %s EU', 'Запас: %s / %s EU')
 
     # creosote (Railcraft coke oven byproduct; GT Materials.Creosote, FuelType 3 = semifluid generator)
@@ -480,10 +495,12 @@ def generate(g):
     # Machine casing, hull (GT_Loader_MetaTileEntities: Casing_LV "PPP/PwP/PPP", HardMachineCasings Hull_LV "PHP/CMC")
     # --------------------------------------------------------------------------------------------------------
     ic = os.path.join(LV, 'iconsets')
-    for f in ('MACHINE_LV_SIDE', 'MACHINE_LV_TOP', 'MACHINE_LV_BOTTOM'):
+    for f in ('MACHINE_LV_SIDE', 'MACHINE_LV_TOP', 'MACHINE_LV_BOTTOM', 'MACHINE_MV_SIDE', 'MACHINE_MV_TOP', 'MACHINE_MV_BOTTOM'):
         img(os.path.join(ic, f + '.png')).crop((0, 0, 16, 16)).save(tex_out(f'block/lv/{f.lower()}.png'))
-    side, top, bottom = (f'{NS}:block/lv/machine_lv_{x}' for x in ('side', 'top', 'bottom'))
-    for bid, en, key in (('casing_lv', 'LV Machine Casing', 'gt.blockcasings.1.name'), ('hull_lv', 'LV Machine Hull', 'gt.blockmachines.hull.tier.01.name')):
+    for bid, en, key in (('casing_lv', 'LV Machine Casing', 'gt.blockcasings.1.name'), ('hull_lv', 'LV Machine Hull', 'gt.blockmachines.hull.tier.01.name'),
+                         ('casing_mv', 'MV Machine Casing', 'gt.blockcasings.2.name'), ('hull_mv', 'MV Machine Hull', 'gt.blockmachines.hull.tier.02.name')):
+        tr = bid[-2:]
+        side, top, bottom = (f'{NS}:block/lv/machine_{tr}_{x}' for x in ('side', 'top', 'bottom'))
         cube_model(bid, {'front': side, 'back': side, 'side': side, 'top': top, 'bottom': bottom})
         write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': {'': {'model': f'{NS}:block/{bid}'}}})
         block_item(bid)
@@ -493,6 +510,10 @@ def generate(g):
     shaped('lv/casing_lv', f'{NS}:casing_lv', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'Steel')})
     shaped('lv/hull_lv', f'{NS}:hull_lv', 1, ['PHP', 'CMC'],
            {'P': tag_of('plate', 'WroughtIron'), 'H': tag_of('plate', 'Steel'), 'C': C('Tin'), 'M': f'{NS}:casing_lv'})
+    # GT_Loader_MetaTileEntities:53 Casing_MV (aluminium), :173 Hull_MV "PHP/CMC" (copper cable, aluminium + wrought iron plates)
+    shaped('lv/casing_mv', f'{NS}:casing_mv', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'Aluminium')})
+    shaped('lv/hull_mv', f'{NS}:hull_mv', 1, ['PHP', 'CMC'],
+           {'P': tag_of('plate', 'WroughtIron'), 'H': tag_of('plate', 'Aluminium'), 'C': C('Copper'), 'M': f'{NS}:casing_mv'})
 
     def machine_tex(bid, base_dir, faces_src):
         """faces_src: face -> (base iconset name, overlay path or None)."""
@@ -515,22 +536,24 @@ def generate(g):
     # LV basic machines
     # --------------------------------------------------------------------------------------------------------
     machine_list = []
-    for mid_, gtn, ov, gui, rmap, nin, nout, tank, en in MACHINES:
-        bid = f'{mid_}_lv'
+    for (mid_, gtn, ov, gui, rmap, nin, nout, tank, en), tr in [(m, 'lv') for m in MACHINES] + [(m, 'mv') for m in MV_MACHINES]:
+        bid = f'{mid_}_{tr}'
         odir = os.path.join(LV, 'basicmachines', ov.lower())
+        T = tr.upper()
 
         def ovf(part):
             return lambda active: os.path.join(odir, f'OVERLAY_{part}{"_ACTIVE" if active else ""}.png')
         machine_tex(bid, odir, {
-            'front': ('MACHINE_LV_SIDE', ovf('FRONT')), 'side': ('MACHINE_LV_SIDE', ovf('SIDE')),
-            'back': ('MACHINE_LV_SIDE', os.path.join(ic, 'OVERLAY_PIPE_OUT.png')),
-            'top': ('MACHINE_LV_TOP', ovf('TOP')), 'bottom': ('MACHINE_LV_BOTTOM', ovf('BOTTOM'))})
+            'front': (f'MACHINE_{T}_SIDE', ovf('FRONT')), 'side': (f'MACHINE_{T}_SIDE', ovf('SIDE')),
+            'back': (f'MACHINE_{T}_SIDE', os.path.join(ic, 'OVERLAY_PIPE_OUT.png')),
+            'top': (f'MACHINE_{T}_TOP', ovf('TOP')), 'bottom': (f'MACHINE_{T}_BOTTOM', ovf('BOTTOM'))})
         shutil.copy(os.path.join(LV, 'gui', gui + '.png'), tex_out(f'gui/lv/{gui.lower()}.png'))
-        name(f'block.{NS}.{bid}', f'Basic {en}', ru(f'gt.blockmachines.basicmachine.{gtn}.tier.01.name', f'Basic {en}'))
-        tooltip_lines(bid, [('Voltage IN: 32 EU/t (LV)', 'Входное напряжение: 32 EU/t (LV)'),
+        prefix, tier_n, volts = ('Basic', '01', 32) if tr == 'lv' else ('Advanced', '02', 128)
+        name(f'block.{NS}.{bid}', f'{prefix} {en}', ru(f'gt.blockmachines.basicmachine.{gtn}.tier.{tier_n}.name', f'{prefix} {en}'))
+        tooltip_lines(bid, [(f'Voltage IN: {volts} EU/t ({T})', f'Входное напряжение: {volts} EU/t ({T})'),
                             ('Output side: back', 'Выход: задняя сторона')])
-        machine_list.append({'id': bid, 'type': mid_, 'recipeMap': rmap, 'inputs': nin, 'outputs': nout, 'tank': tank,
-                             'gui': f'lv/{gui.lower()}'})
+        machine_list.append({'id': bid, 'type': mid_ if tr == 'lv' else f'{mid_}_{tr}', 'recipeMap': rmap, 'inputs': nin, 'outputs': nout,
+                             'tank': tank, 'gui': f'lv/{gui.lower()}'})
     write(os.path.join(g['RES'], NS, 'lv_machines.json'), machine_list)
     stats['machines'] = len(machine_list)
 
@@ -878,6 +901,32 @@ def generate(g):
                                                                             'M': HULL, 'W': C('Tin'), 'P': PUMP})
     shaped('lv/chemical_bath_lv', f'{NS}:chemical_bath_lv', 1, ['VGW', 'PGV', 'CMC'], {'V': CONV, 'G': 'minecraft:glass', 'W': C('Tin'), 'P': PUMP,
                                                                                   'C': CIRC, 'M': HULL})
+    # LV thermal centrifuge: GT_Loader_MetaTileEntities:784 "CEC/OMO/WEW" (O = X.COIL_HEATING_DOUBLE = 4x copper wire at LV)
+    mcraft('thermal_centrifuge_lv', ['CEC', 'OMO', 'WEW'], 'CEOMW')
+
+    # --- MV (D81) ------------------------------------------------------------------------------------------------
+    MOTOR_MV, PISTON_MV, PUMP_MV, CONV_MV, ARM_MV = (f'{NS}:{x}' for x in ('electric_motor_mv', 'electric_piston_mv', 'electric_pump_mv',
+                                                                           'conveyor_module_mv', 'robot_arm_mv'))
+    HULL_MV, CIRC_MV = f'{NS}:hull_mv', '#c:circuits/good'
+    # GT_MetaGenerated_Item_01:495 motor, :550 pump, :577 conveyor, :611 piston, :629 robot arm (MV columns)
+    shaped('lv/electric_motor_mv', MOTOR_MV, 1, ['CWR', 'WIW', 'RWC'], {'I': R('SteelMagnetic'), 'R': R('Aluminium'), 'W': W('Copper', 2), 'C': C('Copper')})
+    shaped('lv/electric_pump_mv', PUMP_MV, 1, ['SXO', 'dPw', 'OMW'], {'M': MOTOR_MV, 'O': tag_of('ring', 'Rubber'), 'X': tag_of('rotor', 'Bronze'),
+                                                                     'S': tag_of('screw', 'Bronze'), 'W': C('Copper'), 'P': f'{NS}:pipe_medium_steel'})
+    shaped('lv/conveyor_module_mv', CONV_MV, 1, ['RRR', 'MCM', 'RRR'], {'M': MOTOR_MV, 'C': C('Copper'), 'R': P('Rubber')})
+    shaped('lv/electric_piston_mv', PISTON_MV, 1, ['PPP', 'CSS', 'CMG'], {'P': P('Aluminium'), 'S': R('Aluminium'), 'G': tag_of('small_gear', 'Aluminium'),
+                                                                         'M': MOTOR_MV, 'C': C('Copper')})
+    shaped('lv/robot_arm_mv', ARM_MV, 1, ['CCC', 'MSM', 'PES'], {'S': R('Aluminium'), 'M': MOTOR_MV, 'P': PISTON_MV, 'E': CIRC_MV, 'C': C('Copper')})
+    # GT_MachineRecipeLoader:537 good circuit "IVC/VDV/CVI": V = IC2 electronic circuit (here the basic circuit, D81),
+    # I = IC2 steel item casing; :475-478 diode "BG /WDW/BG ": 4 diodes from a tiny pile of gallium (silicon wafer: later)
+    shaped('lv/circuit_good', f'{NS}:circuit_good', 1, ['IVC', 'VDV', 'CVI'], {'D': f'{NS}:diode', 'C': C('RedAlloy'), 'V': CIRC,
+                                                                              'I': f'{NS}:steel_item_casing'})
+    for wid, wire in (('wire', W('Tin')), ('fine_wire', tag_of('wire_fine', 'Tin'))):
+        shaped(f'lv/diode_{wid}', f'{NS}:diode', 4, ['BG ', 'WDW', 'BG '], {'B': '#c:dyes/black', 'G': 'minecraft:glass_pane',
+                                                                           'D': tag_of('tiny_dust', 'Gallium'), 'W': wire})
+    # MV thermal centrifuge: :785, X for tier 2 = good circuit, MV motor, copper cable, 4x cupronickel wire, MV hull
+    shaped('lv/thermal_centrifuge_mv', f'{NS}:thermal_centrifuge_mv', 1, ['CEC', 'OMO', 'WEW'],
+           {'C': CIRC_MV, 'E': MOTOR_MV, 'O': W('Cupronickel', 4), 'M': HULL_MV, 'W': C('Copper')})
+
     # GT_MetaGenerated_Item_01:181 empty shape "hf/PP/PP" (steel plates), :204-212 molds: empty shape + hammer in a position
     shaped('lv/shape_empty', f'{NS}:shape_empty', 1, ['hf', 'PP', 'PP'], {'P': P('Steel'), 'h': '#iis:tools/hammer', 'f': '#iis:tools/file'})
     for mold, pat in (('mold_plate', [' h ', ' P ', '   ']), ('mold_gear', ['   ', ' Ph', '   ']), ('mold_ingot', ['   ', ' P ', ' h ']),
@@ -984,6 +1033,18 @@ def generate(g):
             by = bys[0] if bys else n
             mrec('ore_washer', f'crushed_{mid}', [ing(tag_of('crushed', n))],
                  [out(ref('purified', n)), out(ref('tiny_dust', by)), out(ref('dust', 'Stone'))], 500, 16, WATER(1000))
+        # MV (D81): thermal centrifuge, GT_ModHandler.addThermalCentrifugeRecipe -> RA (500 t, 48 EU/t; the heat argument is
+        # used only for IC2): ProcessingDirty:24 crushed -> centrifuged + tiny byproduct #1 + stone dust,
+        # ProcessingCrushedOre:41 purified -> centrifuged + tiny byproduct #1
+        if ref('centrifuged', n):
+            bys = prop(n, 'ListMaterialByProducts', []) or []
+            by1 = (bys or [n])[min(1, len(bys or [n]) - 1)]
+            if ref('crushed', n):
+                mrec('thermal_centrifuge', f'crushed_{mid}', [ing(tag_of('crushed', n))],
+                     [out(ref('centrifuged', n)), out(ref('tiny_dust', by1)), out(ref('dust', 'Stone'))], 500, 48)
+            if ref('purified', n):
+                mrec('thermal_centrifuge', f'purified_{mid}', [ing(tag_of('purified', n))],
+                     [out(ref('centrifuged', n)), out(ref('tiny_dust', by1))], 500, 48)
         if ref('impure_dust', n) and ref('dust', n):
             # ProcessingDustImpure: washing in a cauldron/ore washer -> clean dust (GT_ModHandler.addOreWasherRecipe for dustImpure)
             mrec('ore_washer', f'impure_{mid}', [ing(tag_of('impure_dust', n))], [out(ref('dust', n))], 8, 4, WATER(100))
@@ -1059,6 +1120,10 @@ def generate(g):
     _chem = _ilu.module_from_spec(_spec)
     _spec.loader.exec_module(_chem)
     stats['chem'] = _chem.chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER)
+    # GT_MachineRecipeLoader:1371-1372: assembler 8 plates + programmed circuit 8 -> machine casing (50 t, 16 EU/t); the hull
+    # variant needs molten plastic (mHardMachineCasings) and waits for plastic
+    for tr, mat in (('lv', 'Steel'), ('mv', 'Aluminium')):
+        mrec('assembler', f'casing_{tr}', [ing(tag_of('plate', mat), 8)], [out(f'{NS}:casing_{tr}')], 50, 16, circuit=8)
     # --- covers: GT_MachineRecipeLoader:610-615 (lever/torch/pressure plates + plate + molten solder), :671 shutter, items :783 drain/crafting ---
     cover_plates = [tag_of('plate', m) for m in ('Iron', 'WroughtIron', 'Aluminium') if ref('plate', m)]
     for pl in cover_plates:

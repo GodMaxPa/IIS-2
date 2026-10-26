@@ -47,6 +47,10 @@ public final class IISJeiPlugin implements IModPlugin {
             r.add(ru.iis.multi.MultiContent.EBF.get());
             return r;
         }
+        if (m == GtRecipeMap.VACUUM_FREEZER) {
+            r.add(ru.iis.multi.MultiContent.VACUUM_FREEZER.get());
+            return r;
+        }
         if (m == GtRecipeMap.COKE_OVEN) {
             r.add(ru.iis.lv.LvContent.COKE_OVEN.get());
             return r;

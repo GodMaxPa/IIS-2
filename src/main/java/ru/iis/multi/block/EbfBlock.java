@@ -12,16 +12,23 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import ru.iis.machine.block.MachineBlock;
 
-/** Контроллер электрической доменной печи. Киянкой — включить/выключить (как в GT5). */
+/** Контроллер многоблочной машины (ЭДП, вакуумный морозильник). Киянкой — включить/выключить (как в GT5). */
 public class EbfBlock extends MachineBlock {
+    private final java.util.function.BiFunction<BlockPos, BlockState, BlockEntity> factory;
+
     public EbfBlock(Properties properties) {
+        this(properties, EbfBlockEntity::new);
+    }
+
+    public EbfBlock(Properties properties, java.util.function.BiFunction<BlockPos, BlockState, BlockEntity> factory) {
         super(properties);
+        this.factory = factory;
     }
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (MaintenanceHatchBlockEntity.problemFor(stack) != ru.iis.multi.logic.Maintenance.Problem.SOFT_HAMMER) return super.useItemOn(stack, state, level, pos, player, hand, hit);
-        if (!level.isClientSide() && level.getBlockEntity(pos) instanceof EbfBlockEntity e) {
+        if (!level.isClientSide() && level.getBlockEntity(pos) instanceof MultiblockControllerBlockEntity e) {
             e.allowedToWork = !e.allowedToWork;
             e.setChanged();
             player.sendOverlayMessage(Component.translatable(e.allowedToWork ? "message.iis.machine.enabled" : "message.iis.machine.disabled"));
@@ -31,6 +38,6 @@ public class EbfBlock extends MachineBlock {
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new EbfBlockEntity(pos, state);
+        return factory.apply(pos, state);
     }
 }

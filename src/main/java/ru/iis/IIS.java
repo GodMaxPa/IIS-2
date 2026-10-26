@@ -44,6 +44,7 @@ public final class IIS {
         ru.iis.gametest.IISGameTests.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(HammerDrops::onBlockDrops);
         NeoForge.EVENT_BUS.addListener(ru.iis.pollution.Pollution::onLevelTick);
+        NeoForge.EVENT_BUS.addListener(ru.iis.multi.HotIngotHeat::onPlayerTick);
         NeoForge.EVENT_BUS.addListener(ru.iis.world.TreeFeller::onBreak);
         NeoForge.EVENT_BUS.addListener(IISCommand::register);
         NeoForge.EVENT_BUS.addListener(ru.iis.stand.StandHooks::onServerStarted);

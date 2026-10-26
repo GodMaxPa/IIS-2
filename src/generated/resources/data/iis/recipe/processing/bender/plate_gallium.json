@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/gallium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_gallium",
+      "count": 1
+    }
+  ],
+  "duration": 70,
+  "eut": 24
+}

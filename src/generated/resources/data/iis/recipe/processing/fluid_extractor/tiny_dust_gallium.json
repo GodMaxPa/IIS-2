@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/gallium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 24,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_gallium",
+      "amount": 16
+    }
+  ]
+}

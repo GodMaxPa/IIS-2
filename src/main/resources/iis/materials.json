@@ -1630,6 +1630,36 @@
     "toolQuality": 3
   },
   {
+    "id": "gallium",
+    "gtName": "Gallium",
+    "gtId": 37,
+    "en": "Gallium",
+    "ru": "Галлий",
+    "ruOre": "Галлиевая руда",
+    "color": 14474495,
+    "iconSet": "SHINY",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление галлиевой руды",
+    "formula": "Ga",
+    "types": 43,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "gallium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 64,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
     "id": "garnet_red",
     "gtName": "GarnetRed",
     "gtId": 527,

@@ -1,0 +1,17 @@
+{
+  "type": "iis:vacuum_freezer",
+  "inputs": [
+    {
+      "ingredient": "#iis:hot_ingots/iridium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_iridium",
+      "count": 1
+    }
+  ],
+  "duration": 576,
+  "eut": 120
+}

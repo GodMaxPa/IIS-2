@@ -1,5 +1,6 @@
 package ru.iis.lv;
 
+import ru.iis.energy.VoltageTier;
 import ru.iis.machine.recipe.GtRecipeMap;
 
 /**
@@ -36,24 +37,38 @@ public enum LvMachineType {
     FLUID_SOLIDIFIER("fluid_solidifier", GtRecipeMap.FLUID_SOLIDIFIER, 1, 1, 16000, "fluidsolidifier"),
     // LV IV: GT_Loader_MetaTileEntities:976 Distillery (1, 1, 1000), :985 ChemicalBath (1, 3, 8000)
     DISTILLERY("distillery", GtRecipeMap.DISTILLERY, 1, 1, 1000, "distillery"),
-    CHEMICAL_BATH("chemical_bath", GtRecipeMap.CHEMICAL_BATH, 1, 3, 8000, "chemicalbath");
+    CHEMICAL_BATH("chemical_bath", GtRecipeMap.CHEMICAL_BATH, 1, 3, 8000, "chemicalbath"),
+    // MV (D81): GT_Loader_MetaTileEntities:784-785 ThermalCentrifuge LV/MV (1, 3); рецепты 48 EU/t — только с MV
+    THERMAL_CENTRIFUGE("thermal_centrifuge", GtRecipeMap.THERMAL_CENTRIFUGE, 1, 3, 0, "thermalcentrifuge"),
+    THERMAL_CENTRIFUGE_MV("thermal_centrifuge", GtRecipeMap.THERMAL_CENTRIFUGE, 1, 3, 0, "thermalcentrifuge", VoltageTier.MV);
 
     public final String id;
     public final GtRecipeMap recipeMap;
     public final int inputs, outputs, tank;
     public final String gui;
+    /** GT mTier: напряжение входа, ёмкость (V × 64) и разгон. */
+    public final VoltageTier tier;
 
     LvMachineType(String id, GtRecipeMap recipeMap, int inputs, int outputs, int tank, String gui) {
+        this(id, recipeMap, inputs, outputs, tank, gui, VoltageTier.LV);
+    }
+
+    LvMachineType(String id, GtRecipeMap recipeMap, int inputs, int outputs, int tank, String gui, VoltageTier tier) {
         this.id = id;
         this.recipeMap = recipeMap;
         this.inputs = inputs;
         this.outputs = outputs;
         this.tank = tank;
         this.gui = gui;
+        this.tier = tier;
     }
 
     public String blockId() {
-        return id + "_lv";
+        return id + "_" + tier.name().toLowerCase(java.util.Locale.ROOT);
+    }
+
+    public long voltage() {
+        return tier.voltage();
     }
 
     /** GT_Container_BasicMachine: координаты входных слотов (1..9). */

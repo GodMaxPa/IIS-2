@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "iis:block/frost_proof_casing"
+    }
+  }
+}

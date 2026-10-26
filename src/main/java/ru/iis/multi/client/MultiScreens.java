@@ -56,7 +56,11 @@ public final class MultiScreens {
 
     public static class Ebf extends MachineScreen<EbfMenu> {
         public Ebf(EbfMenu menu, Inventory inventory, Component title) {
-            super(menu, inventory, title, "multi/electric_blast_furnace");
+            this(menu, inventory, title, "multi/electric_blast_furnace");
+        }
+
+        protected Ebf(EbfMenu menu, Inventory inventory, Component title, String texture) {
+            super(menu, inventory, title, texture);
         }
 
         @Override
@@ -93,8 +97,10 @@ public final class MultiScreens {
                 y += 10;
             }
             if (y > 70) return;
-            g.text(font, Component.translatable("gui.iis.ebf.heat", menu.heat()), 10, y, white, false);
-            y += 10;
+            if (menu.heat() > 0) {
+                g.text(font, Component.translatable("gui.iis.ebf.heat", menu.heat()), 10, y, white, false);
+                y += 10;
+            }
             g.text(font, Component.translatable("gui.iis.ebf.voltage", menu.voltage()), 10, y, white, false);
             y += 10;
             if (menu.maxProgress() > 0 && y <= 70) {
@@ -102,6 +108,13 @@ public final class MultiScreens {
                 y += 10;
                 if (y <= 70) g.text(font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
             }
+        }
+    }
+
+    /** Вакуумный морозильник: экран GT VacuumFreezer.png, те же строки без нагрева (D81). */
+    public static class Freezer extends Ebf {
+        public Freezer(EbfMenu menu, Inventory inventory, Component title) {
+            super(menu, inventory, title, "multi/vacuum_freezer");
         }
     }
 }

@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_zinc",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_gallium",
+      "count": 1
     }
   ],
-  "duration": 65,
+  "duration": 520,
   "eut": 5
 }

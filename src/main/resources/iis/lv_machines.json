@@ -223,5 +223,23 @@
     "outputs": 3,
     "tank": 8000,
     "gui": "lv/chemicalbath"
+  },
+  {
+    "id": "thermal_centrifuge_lv",
+    "type": "thermal_centrifuge",
+    "recipeMap": "thermal_centrifuge",
+    "inputs": 1,
+    "outputs": 3,
+    "tank": 0,
+    "gui": "lv/thermalcentrifuge"
+  },
+  {
+    "id": "thermal_centrifuge_mv",
+    "type": "thermal_centrifuge_mv",
+    "recipeMap": "thermal_centrifuge",
+    "inputs": 1,
+    "outputs": 3,
+    "tank": 0,
+    "gui": "lv/thermalcentrifuge"
   }
 ]

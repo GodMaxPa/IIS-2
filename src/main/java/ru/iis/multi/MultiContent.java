@@ -63,12 +63,15 @@ public final class MultiContent {
     }
     public static final DeferredBlock<Block> HEAT_PROOF_CASING = block("heat_proof_casing", Block::new, MultiContent::metal);
     public static final DeferredBlock<Block> COIL_CUPRONICKEL = block("coil_cupronickel", Block::new, MultiContent::metal);
+    /** GT_Block_Casings2 meta 1: морозостойкий корпус вакуумного морозильника (D81). */
+    public static final DeferredBlock<Block> FROST_PROOF_CASING = block("frost_proof_casing", Block::new, MultiContent::metal);
     public static final Map<HatchType, DeferredBlock<HatchBlock>> HATCHES = new EnumMap<>(HatchType.class);
     static {
         for (HatchType t : HatchType.values()) HATCHES.put(t, block(t.id, p -> new HatchBlock(t, p), MultiContent::metal));
     }
     public static final DeferredBlock<EbfBlock> EBF = block("electric_blast_furnace", EbfBlock::new,
             p -> metal(p).lightLevel(s -> s.getValue(MachineBlock.ACTIVE) ? 13 : 0));
+    public static final DeferredBlock<EbfBlock> VACUUM_FREEZER = block("vacuum_freezer", p -> new EbfBlock(p, VacuumFreezerBlockEntity::new), MultiContent::metal);
 
     public static final DeferredItem<SolderingIronItem> SOLDERING_IRON = ITEMS.registerItem("soldering_iron_lv", SolderingIronItem::new, p -> p.stacksTo(1));
 
@@ -86,10 +89,13 @@ public final class MultiContent {
             () -> new BlockEntityType<>(MaintenanceHatchBlockEntity::new, hatches(HatchType.MAINTENANCE)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EbfBlockEntity>> EBF_BE = BLOCK_ENTITIES.register("electric_blast_furnace",
             () -> new BlockEntityType<>(EbfBlockEntity::new, EBF.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VacuumFreezerBlockEntity>> VACUUM_FREEZER_BE = BLOCK_ENTITIES.register("vacuum_freezer",
+            () -> new BlockEntityType<>(VacuumFreezerBlockEntity::new, VACUUM_FREEZER.get()));
 
     public static final DeferredHolder<MenuType<?>, MenuType<ItemBusMenu>> ITEM_BUS_MENU = MENUS.register("item_bus", () -> IMenuTypeExtension.create(ItemBusMenu::client));
     public static final DeferredHolder<MenuType<?>, MenuType<FluidHatchMenu>> FLUID_HATCH_MENU = MENUS.register("fluid_hatch", () -> IMenuTypeExtension.create(FluidHatchMenu::client));
     public static final DeferredHolder<MenuType<?>, MenuType<EbfMenu>> EBF_MENU = MENUS.register("electric_blast_furnace", () -> IMenuTypeExtension.create(EbfMenu::client));
+    public static final DeferredHolder<MenuType<?>, MenuType<EbfMenu>> VACUUM_FREEZER_MENU = MENUS.register("vacuum_freezer", () -> IMenuTypeExtension.create(EbfMenu::freezerClient));
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = TABS.register("multi", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.iis.multi"))

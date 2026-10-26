@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PhP",
+    "PFP",
+    "PwP"
+  ],
+  "key": {
+    "P": "#c:plates/aluminium",
+    "F": "#c:frames/aluminium",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:frost_proof_casing",
+    "count": 2
+  }
+}

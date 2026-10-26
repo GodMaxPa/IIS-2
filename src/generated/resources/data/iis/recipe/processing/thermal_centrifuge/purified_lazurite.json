@@ -1,0 +1,21 @@
+{
+  "type": "iis:thermal_centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/lazurite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:centrifuged_lazurite",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_lapis",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 48
+}

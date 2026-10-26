@@ -183,6 +183,49 @@ def generate(g):
     gui_src = os.path.join(GT, 'gui', 'multimachines', 'ElectricBlastFurnace.png')
     shutil.copy(gui_src, tex_out('gui/multi/electric_blast_furnace.png'))
 
+    # --- vacuum freezer (GT_MetaTileEntity_VacuumFreezer, D81): frost proof casing (gt.blockcasings2.1) + controller ----------
+    first(os.path.join(BI, 'MACHINE_CASING_FROST_PROOF.png')).save(tex_out('block/multi/frost_proof_casing.png'))
+    write(os.path.join(A, 'models', 'block', 'frost_proof_casing.json'), {'parent': 'minecraft:block/cube_all',
+                                                                         'textures': {'all': f'{NS}:block/multi/frost_proof_casing'}})
+    write(os.path.join(A, 'blockstates', 'frost_proof_casing.json'), {'variants': {'': {'model': f'{NS}:block/frost_proof_casing'}}})
+    simple('frost_proof_casing')
+    name(f'block.{NS}.frost_proof_casing', 'Frost Proof Machine Casing', ru('gt.blockcasings2.1.name', 'Frost Proof Machine Casing'))
+    # GT_Loader_MetaTileEntities:65 "PhP/PFP/PwP" aluminium plates + aluminium frame -> 2
+    shaped('multi/frost_proof_casing', f'{NS}:frost_proof_casing', 2, ['PhP', 'PFP', 'PwP'], {'P': tag_of('plate', 'Aluminium'), 'F': '#c:frames/aluminium'})
+    fp = first(os.path.join(BI, 'MACHINE_CASING_FROST_PROOF.png'))
+    for suf, ov in (('', 'OVERLAY_FRONT_VACUUM_FREEZER'), ('_active', 'OVERLAY_FRONT_VACUUM_FREEZER_ACTIVE')):
+        o = img(os.path.join(BI, ov + '.png'))
+        frames_n = max(1, o.height // 16)
+        out = Image.new('RGBA', (16, 16 * frames_n))
+        for f in range(frames_n):
+            out.paste(over(fp, o.crop((0, 16 * f, 16, 16 * f + 16))), (0, 16 * f))
+        out.save(tex_out(f'block/multi/vacuum_freezer_front{suf}.png'))
+        meta = os.path.join(BI, ov + '.png.mcmeta')
+        if frames_n > 1 and os.path.exists(meta):
+            shutil.copy(meta, tex_out(f'block/multi/vacuum_freezer_front{suf}.png.mcmeta'))
+        cube('vacuum_freezer' + suf, {'front': f'{NS}:block/multi/vacuum_freezer_front{suf}', 'side': f'{NS}:block/multi/frost_proof_casing'})
+    variants = {}
+    for facing, y in (('north', 0), ('east', 90), ('south', 180), ('west', 270)):
+        for active in (False, True):
+            v = {'model': f'{NS}:block/vacuum_freezer' + ('_active' if active else '')}
+            if y:
+                v['y'] = y
+            variants[f'facing={facing},active={str(active).lower()}'] = v
+    write(os.path.join(A, 'blockstates', 'vacuum_freezer.json'), {'variants': variants})
+    simple('vacuum_freezer')
+    name(f'block.{NS}.vacuum_freezer', 'Vacuum Freezer', ru('gt.blockmachines.multimachine.vacuumfreezer.name', 'Vacuum Freezer'))
+    tooltip('vacuum_freezer', [
+        ('Super cools hot ingots and cells', 'Охлаждает горячие слитки и капсулы'),
+        ('3x3x3 hollow, controller in the middle of a side', 'Куб 3×3×3, пустой внутри; контроллер — в середине стенки'),
+        ('Hatches anywhere: energy, input/output bus, maintenance', 'Люки где угодно: энергия, входная и выходная шины, обслуживание'),
+        ('Frost Proof Machine Casings for the rest (16 at least)', 'Остальное — морозостойкие корпуса (не меньше 16)'),
+        ('Recipes take 120 EU/t: two LV energy hatches or more', 'Рецепты — 120 EU/t: от двух энергетических люков LV'),
+        ('Crafting arrives with the HV pump and the Data circuit', 'Крафт появится вместе с помпой HV и схемой «Данные»')])
+    shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'VacuumFreezer.png'), tex_out('gui/multi/vacuum_freezer.png'))
+    # heat damage of hot ingots (GT_DamageSources DamageSourceHeat: "steam", difficulty scaled)
+    write(os.path.join(D, NS, 'damage_type', 'heat.json'), {'message_id': 'iis.heat', 'exhaustion': 0.1, 'scaling': 'always'})
+    name('death.attack.iis.heat', '%1$s was boiled alive', '%1$s сварился заживо')
+
     # --- soldering iron LV (GT_MetaGenerated_Tool_01.SOLDERING_IRON_LV: "LBf/Sd /P  ", 100000 EU, 32 EU/t) -------------
     II = os.path.join(GT, 'items')
     head = img(os.path.join(II, 'materialicons', 'METALLIC', 'toolHeadSoldering.png')) if os.path.exists(os.path.join(II, 'materialicons', 'METALLIC', 'toolHeadSoldering.png')) \
@@ -253,8 +296,12 @@ def generate(g):
         temp = prop(n, 'BlastFurnaceTemp', 0)
         into = prop(n, 'MaterialSmeltInto', n) or n
         ingot = ref('ingot', into)
-        if not ingot or temp > 1750 or 'NO_SMELTING' in g['subtags'](n):   # >1750 gives hot ingots (vacuum freezer, HV)
+        if not ingot or 'NO_SMELTING' in g['subtags'](n):
             continue
+        if temp > 1750:   # ProcessingDust:44 / ProcessingOreSmelting:25: above 1750 K the furnace gives a hot ingot (D81)
+            ingot = ref('hot_ingot', into)
+            if not ingot:
+                continue
         mid = mat_id(n)
         dm = max(mass(n) // 40, 1) * temp
         # ProcessingDust: dust 1 / small 4 / tiny 9 -> ingot, max(mass/40,1)*temp ticks, 120 EU/t
@@ -263,7 +310,7 @@ def generate(g):
                 mrec('blast', f'{p}_{mid}', [ing(tag_of(p, n), c)], [out(ingot)], dm, 120, temp)
         # ProcessingOreSmelting: crushed / purified / impure dust -> ingot, max(mass/4,1)*temp ticks
         om = max(mass(n) // 4, 1) * temp
-        for p in ('crushed', 'purified', 'impure_dust'):
+        for p in ('crushed', 'purified', 'centrifuged', 'impure_dust'):
             if ref(p, n):
                 mrec('blast', f'{p}_{mid}', [ing(tag_of(p, n))], [out(ingot)], om, 120, temp)
     # GT_MachineRecipeLoader:1034-1039: ruby / green sapphire / sapphire -> 3 aluminium nuggets (1200 K, 100 EU/t)
@@ -272,13 +319,29 @@ def generate(g):
             if ref(p, n) and ref('nugget', 'Aluminium'):
                 mrec('blast', f'aluminium_from_{p}_{mat_id(n)}', [ing(tag_of(p, n))],
                      [out(ref('nugget', 'Aluminium'), 3), out(ref('tiny_dust', 'DarkAsh')) if ash else None], t, 100, 1200)
+    # --- vacuum freezer recipes (D81) -----------------------------------------------------------------------------------
+    # GT_MachineRecipeLoader:1390 frost proof casing: 6 aluminium plates + aluminium frame -> 2 (50 t, 16 EU/t)
+    mrec('assembler', 'frost_proof_casing', [ing(tag_of('plate', 'Aluminium'), 6), ing('#c:frames/aluminium')], [out(f'{NS}:frost_proof_casing', 2)], 50, 16)
+    # ProcessingIngot:103 hot ingot -> ingot, max(mass * 3, 1) ticks; GT_Recipe(in, out, time) = 120 EU/t
+    for n in sorted(g['names']):
+        if ref('hot_ingot', n) and ref('ingot', n):
+            mrec('vacuum_freezer', f'hot_ingot_{mat_id(n)}', [ing(tag_of('hot_ingot', n))], [out(ref('ingot', n))], max(mass(n) * 3, 1), 120)
+    # GT_MachineRecipeLoader:1230 water cell -> ice cell (50 t); :1231 IC2 air cell -> liquid air: IC2 compressed air is not ported
+    capsule = lambda fid: {'neoforge:ingredient_type': 'neoforge:components', 'items': f'{NS}:capsule',
+                           'components': {f'{NS}:fluid_content': {'fluid': fid, 'amount': 1000}}}
+    rec['vacuum_freezer/ice_capsule'] = {'type': f'{NS}:vacuum_freezer', 'inputs': [ing(capsule('minecraft:water'))],
+                                         'outputs': [{'id': f'{NS}:capsule', 'count': 1, 'components': {f'{NS}:fluid_content': {'fluid': f'{NS}:ice', 'amount': 1000}}}],
+                                         'duration': 50, 'eut': 120}
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     stats['blast'] = sum(1 for k in rec if k.startswith('blast/'))
+    stats['vacuum_freezer'] = sum(1 for k in rec if k.startswith('vacuum_freezer/'))
 
     # --- misc lang -----------------------------------------------------------------------------------------------------
     for k, en, ruu in (
             ('jei.iis.blast', 'Electric Blast Furnace', 'Электрическая доменная печь'),
+            ('jei.iis.vacuum_freezer', 'Vacuum Freezer', 'Вакуумный морозильник'),
+            ('jei.iis.thermal_centrifuge', 'Thermal Centrifuge', 'Термальная центрифуга'),
             ('itemGroup.iis.multi', 'IIS 2.0: Multiblocks', 'ИИС 2.0: многоблочные машины'),
             ('message.iis.machine.enabled', 'Machine enabled', 'Машина включена'),
             ('message.iis.machine.disabled', 'Machine disabled (soft hammer to enable)', 'Машина выключена (включить киянкой)'),

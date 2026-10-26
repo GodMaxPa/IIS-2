@@ -52,4 +52,8 @@
 | Мультиметр | Portable Scanner (HV) | `lv.item.MultimeterItem`, `lv.EnergyReadout` | с LV и с живым режимом (отличие, D51) | G |
 | Геологоразведка | GT_Scanner_Mod | `compat.journeymap`, `/iis scan`, `/iis vein` | слой JourneyMap «сетка рудных чанков» (D60); прибора-сканера нет | T, C |
 | Валка деревьев | Treecapitator (отдельный мод) | `world.TreeFeller` | топор GT валит дерево целиком (D56) | G |
-| Остальные LV-машины GT5, электроотвёртка LV | `GT_Loader_MetaTileEntities` | — | следующий блок, затем MV | — |
+| Детали MV, корпус и оболочка MV, хорошая схема, диод | `GT_MetaGenerated_Item_01:483–711`, `GT_MachineRecipeLoader:475–537` | `lv.LvContent`, `tools/gen/lv.py` | перенесено (диод — из галлия; кремниевая пластина — позже) | S |
+| Термоцентрифуга LV/MV, центрифугированная руда | `GT_Loader_MetaTileEntities:784–785`, `ProcessingDirty:24`, `ProcessingCrushedOre:34–41` | `lv.LvMachineType` (уровень машины), `tools/gen/lv.py` | перенесено; LV не тянет рецепты 48 EU/t (как в GT) | T, G |
+| Горячие слитки | `OrePrefixes.ingotHot`, `ProcessingDust:44`, `GT_Proxy:1363` | `multi.HotIngotHeat`, `tools/gen/ebf.py` | иридий и палладий из ЭДП, урон жаром; до катушек выше 1800 K недостижимы | T, G |
+| Вакуумный морозильник | `GT_MetaTileEntity_VacuumFreezer` | `multi.block.VacuumFreezerBlockEntity`, `multi.logic.FreezerLogic` | перенесено; крафт контроллера — с помпой HV и схемой «Данные» | T, G |
+| Остальные LV- и MV-машины GT5, электроотвёртка LV | `GT_Loader_MetaTileEntities` | — | дальше по плану MV | — |

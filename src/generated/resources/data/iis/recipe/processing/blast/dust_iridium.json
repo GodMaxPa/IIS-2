@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/iridium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_iridium",
+      "count": 1
+    }
+  ],
+  "duration": 10876,
+  "eut": 120,
+  "temp": 2719
+}

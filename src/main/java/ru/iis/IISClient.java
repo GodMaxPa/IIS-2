@@ -85,6 +85,7 @@ public final class IISClient {
         event.register(ru.iis.multi.MultiContent.ITEM_BUS_MENU.get(), ru.iis.multi.client.MultiScreens.Bus::new);
         event.register(ru.iis.multi.MultiContent.FLUID_HATCH_MENU.get(), ru.iis.multi.client.MultiScreens.FluidHatch::new);
         event.register(ru.iis.multi.MultiContent.EBF_MENU.get(), ru.iis.multi.client.MultiScreens.Ebf::new);
+        event.register(ru.iis.multi.MultiContent.VACUUM_FREEZER_MENU.get(), ru.iis.multi.client.MultiScreens.Freezer::new);
         event.register(ru.iis.bio.BioContent.STATION_MENU.get(), ru.iis.bio.client.BioStationScreen::new);
         event.register(ru.iis.bio.BioContent.HEARTH_MENU.get(), ru.iis.bio.client.HearthScreen::new);
     }

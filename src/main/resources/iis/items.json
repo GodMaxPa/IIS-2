@@ -10,6 +10,11 @@
     "material": "almandine"
   },
   {
+    "id": "centrifuged_almandine",
+    "prefix": "centrifuged",
+    "material": "almandine"
+  },
+  {
     "id": "impure_dust_almandine",
     "prefix": "impure_dust",
     "material": "almandine"
@@ -42,6 +47,11 @@
   {
     "id": "purified_aluminium",
     "prefix": "purified",
+    "material": "aluminium"
+  },
+  {
+    "id": "centrifuged_aluminium",
+    "prefix": "centrifuged",
     "material": "aluminium"
   },
   {
@@ -135,6 +145,11 @@
     "material": "amber"
   },
   {
+    "id": "centrifuged_amber",
+    "prefix": "centrifuged",
+    "material": "amber"
+  },
+  {
     "id": "impure_dust_amber",
     "prefix": "impure_dust",
     "material": "amber"
@@ -212,6 +227,11 @@
   {
     "id": "purified_amethyst",
     "prefix": "purified",
+    "material": "amethyst"
+  },
+  {
+    "id": "centrifuged_amethyst",
+    "prefix": "centrifuged",
     "material": "amethyst"
   },
   {
@@ -360,6 +380,11 @@
     "material": "apatite"
   },
   {
+    "id": "centrifuged_apatite",
+    "prefix": "centrifuged",
+    "material": "apatite"
+  },
+  {
     "id": "impure_dust_apatite",
     "prefix": "impure_dust",
     "material": "apatite"
@@ -420,6 +445,11 @@
     "material": "banded_iron"
   },
   {
+    "id": "centrifuged_banded_iron",
+    "prefix": "centrifuged",
+    "material": "banded_iron"
+  },
+  {
     "id": "impure_dust_banded_iron",
     "prefix": "impure_dust",
     "material": "banded_iron"
@@ -455,6 +485,11 @@
     "material": "barite"
   },
   {
+    "id": "centrifuged_barite",
+    "prefix": "centrifuged",
+    "material": "barite"
+  },
+  {
     "id": "impure_dust_barite",
     "prefix": "impure_dust",
     "material": "barite"
@@ -487,6 +522,11 @@
   {
     "id": "purified_bastnasite",
     "prefix": "purified",
+    "material": "bastnasite"
+  },
+  {
+    "id": "centrifuged_bastnasite",
+    "prefix": "centrifuged",
     "material": "bastnasite"
   },
   {
@@ -555,6 +595,11 @@
     "material": "bauxite"
   },
   {
+    "id": "centrifuged_bauxite",
+    "prefix": "centrifuged",
+    "material": "bauxite"
+  },
+  {
     "id": "impure_dust_bauxite",
     "prefix": "impure_dust",
     "material": "bauxite"
@@ -590,6 +635,11 @@
     "material": "bentonite"
   },
   {
+    "id": "centrifuged_bentonite",
+    "prefix": "centrifuged",
+    "material": "bentonite"
+  },
+  {
     "id": "impure_dust_bentonite",
     "prefix": "impure_dust",
     "material": "bentonite"
@@ -622,6 +672,11 @@
   {
     "id": "purified_beryllium",
     "prefix": "purified",
+    "material": "beryllium"
+  },
+  {
+    "id": "centrifuged_beryllium",
+    "prefix": "centrifuged",
     "material": "beryllium"
   },
   {
@@ -695,6 +750,11 @@
     "material": "bismuth"
   },
   {
+    "id": "centrifuged_bismuth",
+    "prefix": "centrifuged",
+    "material": "bismuth"
+  },
+  {
     "id": "impure_dust_bismuth",
     "prefix": "impure_dust",
     "material": "bismuth"
@@ -762,6 +822,11 @@
   {
     "id": "purified_blue_topaz",
     "prefix": "purified",
+    "material": "blue_topaz"
+  },
+  {
+    "id": "centrifuged_blue_topaz",
+    "prefix": "centrifuged",
     "material": "blue_topaz"
   },
   {
@@ -990,6 +1055,11 @@
     "material": "brown_limonite"
   },
   {
+    "id": "centrifuged_brown_limonite",
+    "prefix": "centrifuged",
+    "material": "brown_limonite"
+  },
+  {
     "id": "impure_dust_brown_limonite",
     "prefix": "impure_dust",
     "material": "brown_limonite"
@@ -1040,6 +1110,11 @@
     "material": "calcite"
   },
   {
+    "id": "centrifuged_calcite",
+    "prefix": "centrifuged",
+    "material": "calcite"
+  },
+  {
     "id": "impure_dust_calcite",
     "prefix": "impure_dust",
     "material": "calcite"
@@ -1075,6 +1150,11 @@
     "material": "cassiterite"
   },
   {
+    "id": "centrifuged_cassiterite",
+    "prefix": "centrifuged",
+    "material": "cassiterite"
+  },
+  {
     "id": "impure_dust_cassiterite",
     "prefix": "impure_dust",
     "material": "cassiterite"
@@ -1107,6 +1187,11 @@
   {
     "id": "purified_certus_quartz",
     "prefix": "purified",
+    "material": "certus_quartz"
+  },
+  {
+    "id": "centrifuged_certus_quartz",
+    "prefix": "centrifuged",
     "material": "certus_quartz"
   },
   {
@@ -1170,6 +1255,11 @@
     "material": "chalcopyrite"
   },
   {
+    "id": "centrifuged_chalcopyrite",
+    "prefix": "centrifuged",
+    "material": "chalcopyrite"
+  },
+  {
     "id": "impure_dust_chalcopyrite",
     "prefix": "impure_dust",
     "material": "chalcopyrite"
@@ -1217,6 +1307,11 @@
   {
     "id": "purified_chrome",
     "prefix": "purified",
+    "material": "chrome"
+  },
+  {
+    "id": "centrifuged_chrome",
+    "prefix": "centrifuged",
     "material": "chrome"
   },
   {
@@ -1300,6 +1395,11 @@
     "material": "cinnabar"
   },
   {
+    "id": "centrifuged_cinnabar",
+    "prefix": "centrifuged",
+    "material": "cinnabar"
+  },
+  {
     "id": "impure_dust_cinnabar",
     "prefix": "impure_dust",
     "material": "cinnabar"
@@ -1347,6 +1447,11 @@
   {
     "id": "purified_coal",
     "prefix": "purified",
+    "material": "coal"
+  },
+  {
+    "id": "centrifuged_coal",
+    "prefix": "centrifuged",
     "material": "coal"
   },
   {
@@ -1490,6 +1595,11 @@
     "material": "cobaltite"
   },
   {
+    "id": "centrifuged_cobaltite",
+    "prefix": "centrifuged",
+    "material": "cobaltite"
+  },
+  {
     "id": "impure_dust_cobaltite",
     "prefix": "impure_dust",
     "material": "cobaltite"
@@ -1525,6 +1635,11 @@
     "material": "cooperite"
   },
   {
+    "id": "centrifuged_cooperite",
+    "prefix": "centrifuged",
+    "material": "cooperite"
+  },
+  {
     "id": "impure_dust_cooperite",
     "prefix": "impure_dust",
     "material": "cooperite"
@@ -1557,6 +1672,11 @@
   {
     "id": "purified_copper",
     "prefix": "purified",
+    "material": "copper"
+  },
+  {
+    "id": "centrifuged_copper",
+    "prefix": "centrifuged",
     "material": "copper"
   },
   {
@@ -1682,6 +1802,11 @@
   {
     "id": "purified_diamond",
     "prefix": "purified",
+    "material": "diamond"
+  },
+  {
+    "id": "centrifuged_diamond",
+    "prefix": "centrifuged",
     "material": "diamond"
   },
   {
@@ -1825,6 +1950,11 @@
     "material": "emerald"
   },
   {
+    "id": "centrifuged_emerald",
+    "prefix": "centrifuged",
+    "material": "emerald"
+  },
+  {
     "id": "impure_dust_emerald",
     "prefix": "impure_dust",
     "material": "emerald"
@@ -1960,6 +2090,11 @@
     "material": "fools_ruby"
   },
   {
+    "id": "centrifuged_fools_ruby",
+    "prefix": "centrifuged",
+    "material": "fools_ruby"
+  },
+  {
     "id": "impure_dust_fools_ruby",
     "prefix": "impure_dust",
     "material": "fools_ruby"
@@ -2020,6 +2155,11 @@
     "material": "galena"
   },
   {
+    "id": "centrifuged_galena",
+    "prefix": "centrifuged",
+    "material": "galena"
+  },
+  {
     "id": "impure_dust_galena",
     "prefix": "impure_dust",
     "material": "galena"
@@ -2045,6 +2185,61 @@
     "material": "galena"
   },
   {
+    "id": "crushed_gallium",
+    "prefix": "crushed",
+    "material": "gallium"
+  },
+  {
+    "id": "purified_gallium",
+    "prefix": "purified",
+    "material": "gallium"
+  },
+  {
+    "id": "centrifuged_gallium",
+    "prefix": "centrifuged",
+    "material": "gallium"
+  },
+  {
+    "id": "impure_dust_gallium",
+    "prefix": "impure_dust",
+    "material": "gallium"
+  },
+  {
+    "id": "pure_dust_gallium",
+    "prefix": "pure_dust",
+    "material": "gallium"
+  },
+  {
+    "id": "dust_gallium",
+    "prefix": "dust",
+    "material": "gallium"
+  },
+  {
+    "id": "small_dust_gallium",
+    "prefix": "small_dust",
+    "material": "gallium"
+  },
+  {
+    "id": "tiny_dust_gallium",
+    "prefix": "tiny_dust",
+    "material": "gallium"
+  },
+  {
+    "id": "ingot_gallium",
+    "prefix": "ingot",
+    "material": "gallium"
+  },
+  {
+    "id": "nugget_gallium",
+    "prefix": "nugget",
+    "material": "gallium"
+  },
+  {
+    "id": "plate_gallium",
+    "prefix": "plate",
+    "material": "gallium"
+  },
+  {
     "id": "crushed_garnet_red",
     "prefix": "crushed",
     "material": "garnet_red"
@@ -2052,6 +2247,11 @@
   {
     "id": "purified_garnet_red",
     "prefix": "purified",
+    "material": "garnet_red"
+  },
+  {
+    "id": "centrifuged_garnet_red",
+    "prefix": "centrifuged",
     "material": "garnet_red"
   },
   {
@@ -2135,6 +2335,11 @@
     "material": "garnet_yellow"
   },
   {
+    "id": "centrifuged_garnet_yellow",
+    "prefix": "centrifuged",
+    "material": "garnet_yellow"
+  },
+  {
     "id": "impure_dust_garnet_yellow",
     "prefix": "impure_dust",
     "material": "garnet_yellow"
@@ -2212,6 +2417,11 @@
   {
     "id": "purified_garnierite",
     "prefix": "purified",
+    "material": "garnierite"
+  },
+  {
+    "id": "centrifuged_garnierite",
+    "prefix": "centrifuged",
     "material": "garnierite"
   },
   {
@@ -2295,6 +2505,11 @@
     "material": "glauconite"
   },
   {
+    "id": "centrifuged_glauconite",
+    "prefix": "centrifuged",
+    "material": "glauconite"
+  },
+  {
     "id": "impure_dust_glauconite",
     "prefix": "impure_dust",
     "material": "glauconite"
@@ -2327,6 +2542,11 @@
   {
     "id": "purified_gold",
     "prefix": "purified",
+    "material": "gold"
+  },
+  {
+    "id": "centrifuged_gold",
+    "prefix": "centrifuged",
     "material": "gold"
   },
   {
@@ -2405,6 +2625,11 @@
     "material": "graphite"
   },
   {
+    "id": "centrifuged_graphite",
+    "prefix": "centrifuged",
+    "material": "graphite"
+  },
+  {
     "id": "impure_dust_graphite",
     "prefix": "impure_dust",
     "material": "graphite"
@@ -2437,6 +2662,11 @@
   {
     "id": "purified_green_sapphire",
     "prefix": "purified",
+    "material": "green_sapphire"
+  },
+  {
+    "id": "centrifuged_green_sapphire",
+    "prefix": "centrifuged",
     "material": "green_sapphire"
   },
   {
@@ -2520,6 +2750,11 @@
     "material": "grossular"
   },
   {
+    "id": "centrifuged_grossular",
+    "prefix": "centrifuged",
+    "material": "grossular"
+  },
+  {
     "id": "impure_dust_grossular",
     "prefix": "impure_dust",
     "material": "grossular"
@@ -2552,6 +2787,11 @@
   {
     "id": "purified_ilmenite",
     "prefix": "purified",
+    "material": "ilmenite"
+  },
+  {
+    "id": "centrifuged_ilmenite",
+    "prefix": "centrifuged",
     "material": "ilmenite"
   },
   {
@@ -2645,6 +2885,11 @@
     "material": "iridium"
   },
   {
+    "id": "centrifuged_iridium",
+    "prefix": "centrifuged",
+    "material": "iridium"
+  },
+  {
     "id": "impure_dust_iridium",
     "prefix": "impure_dust",
     "material": "iridium"
@@ -2672,6 +2917,11 @@
   {
     "id": "ingot_iridium",
     "prefix": "ingot",
+    "material": "iridium"
+  },
+  {
+    "id": "hot_ingot_iridium",
+    "prefix": "hot_ingot",
     "material": "iridium"
   },
   {
@@ -2722,6 +2972,11 @@
   {
     "id": "purified_iron",
     "prefix": "purified",
+    "material": "iron"
+  },
+  {
+    "id": "centrifuged_iron",
+    "prefix": "centrifuged",
     "material": "iron"
   },
   {
@@ -2855,6 +3110,11 @@
     "material": "jasper"
   },
   {
+    "id": "centrifuged_jasper",
+    "prefix": "centrifuged",
+    "material": "jasper"
+  },
+  {
     "id": "impure_dust_jasper",
     "prefix": "impure_dust",
     "material": "jasper"
@@ -2920,6 +3180,11 @@
     "material": "lapis"
   },
   {
+    "id": "centrifuged_lapis",
+    "prefix": "centrifuged",
+    "material": "lapis"
+  },
+  {
     "id": "impure_dust_lapis",
     "prefix": "impure_dust",
     "material": "lapis"
@@ -2962,6 +3227,11 @@
   {
     "id": "purified_lazurite",
     "prefix": "purified",
+    "material": "lazurite"
+  },
+  {
+    "id": "centrifuged_lazurite",
+    "prefix": "centrifuged",
     "material": "lazurite"
   },
   {
@@ -3012,6 +3282,11 @@
   {
     "id": "purified_lead",
     "prefix": "purified",
+    "material": "lead"
+  },
+  {
+    "id": "centrifuged_lead",
+    "prefix": "centrifuged",
     "material": "lead"
   },
   {
@@ -3090,6 +3365,11 @@
     "material": "lepidolite"
   },
   {
+    "id": "centrifuged_lepidolite",
+    "prefix": "centrifuged",
+    "material": "lepidolite"
+  },
+  {
     "id": "impure_dust_lepidolite",
     "prefix": "impure_dust",
     "material": "lepidolite"
@@ -3122,6 +3402,11 @@
   {
     "id": "purified_lignite",
     "prefix": "purified",
+    "material": "lignite"
+  },
+  {
+    "id": "centrifuged_lignite",
+    "prefix": "centrifuged",
     "material": "lignite"
   },
   {
@@ -3162,6 +3447,11 @@
   {
     "id": "purified_lithium",
     "prefix": "purified",
+    "material": "lithium"
+  },
+  {
+    "id": "centrifuged_lithium",
+    "prefix": "centrifuged",
     "material": "lithium"
   },
   {
@@ -3207,6 +3497,11 @@
   {
     "id": "purified_magnesite",
     "prefix": "purified",
+    "material": "magnesite"
+  },
+  {
+    "id": "centrifuged_magnesite",
+    "prefix": "centrifuged",
     "material": "magnesite"
   },
   {
@@ -3270,6 +3565,11 @@
     "material": "magnetite"
   },
   {
+    "id": "centrifuged_magnetite",
+    "prefix": "centrifuged",
+    "material": "magnetite"
+  },
+  {
     "id": "impure_dust_magnetite",
     "prefix": "impure_dust",
     "material": "magnetite"
@@ -3305,6 +3605,11 @@
     "material": "malachite"
   },
   {
+    "id": "centrifuged_malachite",
+    "prefix": "centrifuged",
+    "material": "malachite"
+  },
+  {
     "id": "impure_dust_malachite",
     "prefix": "impure_dust",
     "material": "malachite"
@@ -3337,6 +3642,11 @@
   {
     "id": "purified_manganese",
     "prefix": "purified",
+    "material": "manganese"
+  },
+  {
+    "id": "centrifuged_manganese",
+    "prefix": "centrifuged",
     "material": "manganese"
   },
   {
@@ -3415,6 +3725,11 @@
     "material": "molybdenite"
   },
   {
+    "id": "centrifuged_molybdenite",
+    "prefix": "centrifuged",
+    "material": "molybdenite"
+  },
+  {
     "id": "impure_dust_molybdenite",
     "prefix": "impure_dust",
     "material": "molybdenite"
@@ -3447,6 +3762,11 @@
   {
     "id": "purified_molybdenum",
     "prefix": "purified",
+    "material": "molybdenum"
+  },
+  {
+    "id": "centrifuged_molybdenum",
+    "prefix": "centrifuged",
     "material": "molybdenum"
   },
   {
@@ -3520,6 +3840,11 @@
     "material": "monazite"
   },
   {
+    "id": "centrifuged_monazite",
+    "prefix": "centrifuged",
+    "material": "monazite"
+  },
+  {
     "id": "impure_dust_monazite",
     "prefix": "impure_dust",
     "material": "monazite"
@@ -3557,6 +3882,11 @@
   {
     "id": "purified_neodymium",
     "prefix": "purified",
+    "material": "neodymium"
+  },
+  {
+    "id": "centrifuged_neodymium",
+    "prefix": "centrifuged",
     "material": "neodymium"
   },
   {
@@ -3630,6 +3960,11 @@
     "material": "nether_quartz"
   },
   {
+    "id": "centrifuged_nether_quartz",
+    "prefix": "centrifuged",
+    "material": "nether_quartz"
+  },
+  {
     "id": "impure_dust_nether_quartz",
     "prefix": "impure_dust",
     "material": "nether_quartz"
@@ -3697,6 +4032,11 @@
   {
     "id": "purified_nickel",
     "prefix": "purified",
+    "material": "nickel"
+  },
+  {
+    "id": "centrifuged_nickel",
+    "prefix": "centrifuged",
     "material": "nickel"
   },
   {
@@ -3770,6 +4110,11 @@
     "material": "oilsands"
   },
   {
+    "id": "centrifuged_oilsands",
+    "prefix": "centrifuged",
+    "material": "oilsands"
+  },
+  {
     "id": "impure_dust_oilsands",
     "prefix": "impure_dust",
     "material": "oilsands"
@@ -3802,6 +4147,11 @@
   {
     "id": "purified_olivine",
     "prefix": "purified",
+    "material": "olivine"
+  },
+  {
+    "id": "centrifuged_olivine",
+    "prefix": "centrifuged",
     "material": "olivine"
   },
   {
@@ -3885,6 +4235,11 @@
     "material": "opal"
   },
   {
+    "id": "centrifuged_opal",
+    "prefix": "centrifuged",
+    "material": "opal"
+  },
+  {
     "id": "impure_dust_opal",
     "prefix": "impure_dust",
     "material": "opal"
@@ -3965,6 +4320,11 @@
     "material": "palladium"
   },
   {
+    "id": "centrifuged_palladium",
+    "prefix": "centrifuged",
+    "material": "palladium"
+  },
+  {
     "id": "impure_dust_palladium",
     "prefix": "impure_dust",
     "material": "palladium"
@@ -3992,6 +4352,11 @@
   {
     "id": "ingot_palladium",
     "prefix": "ingot",
+    "material": "palladium"
+  },
+  {
+    "id": "hot_ingot_palladium",
+    "prefix": "hot_ingot",
     "material": "palladium"
   },
   {
@@ -4050,6 +4415,11 @@
     "material": "pentlandite"
   },
   {
+    "id": "centrifuged_pentlandite",
+    "prefix": "centrifuged",
+    "material": "pentlandite"
+  },
+  {
     "id": "impure_dust_pentlandite",
     "prefix": "impure_dust",
     "material": "pentlandite"
@@ -4085,6 +4455,11 @@
     "material": "pitchblende"
   },
   {
+    "id": "centrifuged_pitchblende",
+    "prefix": "centrifuged",
+    "material": "pitchblende"
+  },
+  {
     "id": "impure_dust_pitchblende",
     "prefix": "impure_dust",
     "material": "pitchblende"
@@ -4117,6 +4492,11 @@
   {
     "id": "purified_platinum",
     "prefix": "purified",
+    "material": "platinum"
+  },
+  {
+    "id": "centrifuged_platinum",
+    "prefix": "centrifuged",
     "material": "platinum"
   },
   {
@@ -4200,6 +4580,11 @@
     "material": "powellite"
   },
   {
+    "id": "centrifuged_powellite",
+    "prefix": "centrifuged",
+    "material": "powellite"
+  },
+  {
     "id": "impure_dust_powellite",
     "prefix": "impure_dust",
     "material": "powellite"
@@ -4232,6 +4617,11 @@
   {
     "id": "purified_pyrite",
     "prefix": "purified",
+    "material": "pyrite"
+  },
+  {
+    "id": "centrifuged_pyrite",
+    "prefix": "centrifuged",
     "material": "pyrite"
   },
   {
@@ -4270,6 +4660,11 @@
     "material": "pyrochlore"
   },
   {
+    "id": "centrifuged_pyrochlore",
+    "prefix": "centrifuged",
+    "material": "pyrochlore"
+  },
+  {
     "id": "impure_dust_pyrochlore",
     "prefix": "impure_dust",
     "material": "pyrochlore"
@@ -4302,6 +4697,11 @@
   {
     "id": "purified_pyrolusite",
     "prefix": "purified",
+    "material": "pyrolusite"
+  },
+  {
+    "id": "centrifuged_pyrolusite",
+    "prefix": "centrifuged",
     "material": "pyrolusite"
   },
   {
@@ -4340,6 +4740,11 @@
     "material": "pyrope"
   },
   {
+    "id": "centrifuged_pyrope",
+    "prefix": "centrifuged",
+    "material": "pyrope"
+  },
+  {
     "id": "impure_dust_pyrope",
     "prefix": "impure_dust",
     "material": "pyrope"
@@ -4372,6 +4777,11 @@
   {
     "id": "purified_quartzite",
     "prefix": "purified",
+    "material": "quartzite"
+  },
+  {
+    "id": "centrifuged_quartzite",
+    "prefix": "centrifuged",
     "material": "quartzite"
   },
   {
@@ -4465,6 +4875,11 @@
     "material": "redstone"
   },
   {
+    "id": "centrifuged_redstone",
+    "prefix": "centrifuged",
+    "material": "redstone"
+  },
+  {
     "id": "impure_dust_redstone",
     "prefix": "impure_dust",
     "material": "redstone"
@@ -4492,6 +4907,11 @@
   {
     "id": "purified_rock_salt",
     "prefix": "purified",
+    "material": "rock_salt"
+  },
+  {
+    "id": "centrifuged_rock_salt",
+    "prefix": "centrifuged",
     "material": "rock_salt"
   },
   {
@@ -4585,6 +5005,11 @@
     "material": "ruby"
   },
   {
+    "id": "centrifuged_ruby",
+    "prefix": "centrifuged",
+    "material": "ruby"
+  },
+  {
     "id": "impure_dust_ruby",
     "prefix": "impure_dust",
     "material": "ruby"
@@ -4665,6 +5090,11 @@
     "material": "salt"
   },
   {
+    "id": "centrifuged_salt",
+    "prefix": "centrifuged",
+    "material": "salt"
+  },
+  {
     "id": "impure_dust_salt",
     "prefix": "impure_dust",
     "material": "salt"
@@ -4700,6 +5130,11 @@
     "material": "saltpeter"
   },
   {
+    "id": "centrifuged_saltpeter",
+    "prefix": "centrifuged",
+    "material": "saltpeter"
+  },
+  {
     "id": "impure_dust_saltpeter",
     "prefix": "impure_dust",
     "material": "saltpeter"
@@ -4732,6 +5167,11 @@
   {
     "id": "purified_sapphire",
     "prefix": "purified",
+    "material": "sapphire"
+  },
+  {
+    "id": "centrifuged_sapphire",
+    "prefix": "centrifuged",
     "material": "sapphire"
   },
   {
@@ -4815,6 +5255,11 @@
     "material": "scheelite"
   },
   {
+    "id": "centrifuged_scheelite",
+    "prefix": "centrifuged",
+    "material": "scheelite"
+  },
+  {
     "id": "impure_dust_scheelite",
     "prefix": "impure_dust",
     "material": "scheelite"
@@ -4847,6 +5292,11 @@
   {
     "id": "purified_silver",
     "prefix": "purified",
+    "material": "silver"
+  },
+  {
+    "id": "centrifuged_silver",
+    "prefix": "centrifuged",
     "material": "silver"
   },
   {
@@ -4920,6 +5370,11 @@
     "material": "soapstone"
   },
   {
+    "id": "centrifuged_soapstone",
+    "prefix": "centrifuged",
+    "material": "soapstone"
+  },
+  {
     "id": "impure_dust_soapstone",
     "prefix": "impure_dust",
     "material": "soapstone"
@@ -4952,6 +5407,11 @@
   {
     "id": "purified_sodalite",
     "prefix": "purified",
+    "material": "sodalite"
+  },
+  {
+    "id": "centrifuged_sodalite",
+    "prefix": "centrifuged",
     "material": "sodalite"
   },
   {
@@ -5060,6 +5520,11 @@
     "material": "spessartine"
   },
   {
+    "id": "centrifuged_spessartine",
+    "prefix": "centrifuged",
+    "material": "spessartine"
+  },
+  {
     "id": "impure_dust_spessartine",
     "prefix": "impure_dust",
     "material": "spessartine"
@@ -5095,6 +5560,11 @@
     "material": "sphalerite"
   },
   {
+    "id": "centrifuged_sphalerite",
+    "prefix": "centrifuged",
+    "material": "sphalerite"
+  },
+  {
     "id": "impure_dust_sphalerite",
     "prefix": "impure_dust",
     "material": "sphalerite"
@@ -5127,6 +5597,11 @@
   {
     "id": "purified_spodumene",
     "prefix": "purified",
+    "material": "spodumene"
+  },
+  {
+    "id": "centrifuged_spodumene",
+    "prefix": "centrifuged",
     "material": "spodumene"
   },
   {
@@ -5365,6 +5840,11 @@
     "material": "stibnite"
   },
   {
+    "id": "centrifuged_stibnite",
+    "prefix": "centrifuged",
+    "material": "stibnite"
+  },
+  {
     "id": "impure_dust_stibnite",
     "prefix": "impure_dust",
     "material": "stibnite"
@@ -5415,6 +5895,11 @@
     "material": "sulfur"
   },
   {
+    "id": "centrifuged_sulfur",
+    "prefix": "centrifuged",
+    "material": "sulfur"
+  },
+  {
     "id": "impure_dust_sulfur",
     "prefix": "impure_dust",
     "material": "sulfur"
@@ -5447,6 +5932,11 @@
   {
     "id": "purified_talc",
     "prefix": "purified",
+    "material": "talc"
+  },
+  {
+    "id": "centrifuged_talc",
+    "prefix": "centrifuged",
     "material": "talc"
   },
   {
@@ -5485,6 +5975,11 @@
     "material": "tantalite"
   },
   {
+    "id": "centrifuged_tantalite",
+    "prefix": "centrifuged",
+    "material": "tantalite"
+  },
+  {
     "id": "impure_dust_tantalite",
     "prefix": "impure_dust",
     "material": "tantalite"
@@ -5517,6 +6012,11 @@
   {
     "id": "purified_tanzanite",
     "prefix": "purified",
+    "material": "tanzanite"
+  },
+  {
+    "id": "centrifuged_tanzanite",
+    "prefix": "centrifuged",
     "material": "tanzanite"
   },
   {
@@ -5600,6 +6100,11 @@
     "material": "tetrahedrite"
   },
   {
+    "id": "centrifuged_tetrahedrite",
+    "prefix": "centrifuged",
+    "material": "tetrahedrite"
+  },
+  {
     "id": "impure_dust_tetrahedrite",
     "prefix": "impure_dust",
     "material": "tetrahedrite"
@@ -5632,6 +6137,11 @@
   {
     "id": "purified_thorium",
     "prefix": "purified",
+    "material": "thorium"
+  },
+  {
+    "id": "centrifuged_thorium",
+    "prefix": "centrifuged",
     "material": "thorium"
   },
   {
@@ -5702,6 +6212,11 @@
   {
     "id": "purified_tin",
     "prefix": "purified",
+    "material": "tin"
+  },
+  {
+    "id": "centrifuged_tin",
+    "prefix": "centrifuged",
     "material": "tin"
   },
   {
@@ -5840,6 +6355,11 @@
     "material": "topaz"
   },
   {
+    "id": "centrifuged_topaz",
+    "prefix": "centrifuged",
+    "material": "topaz"
+  },
+  {
     "id": "impure_dust_topaz",
     "prefix": "impure_dust",
     "material": "topaz"
@@ -5920,6 +6440,11 @@
     "material": "tricalcium_phosphate"
   },
   {
+    "id": "centrifuged_tricalcium_phosphate",
+    "prefix": "centrifuged",
+    "material": "tricalcium_phosphate"
+  },
+  {
     "id": "impure_dust_tricalcium_phosphate",
     "prefix": "impure_dust",
     "material": "tricalcium_phosphate"
@@ -5960,6 +6485,11 @@
     "material": "tungstate"
   },
   {
+    "id": "centrifuged_tungstate",
+    "prefix": "centrifuged",
+    "material": "tungstate"
+  },
+  {
     "id": "impure_dust_tungstate",
     "prefix": "impure_dust",
     "material": "tungstate"
@@ -5995,6 +6525,11 @@
     "material": "uraninite"
   },
   {
+    "id": "centrifuged_uraninite",
+    "prefix": "centrifuged",
+    "material": "uraninite"
+  },
+  {
     "id": "impure_dust_uraninite",
     "prefix": "impure_dust",
     "material": "uraninite"
@@ -6027,6 +6562,11 @@
   {
     "id": "purified_uranium",
     "prefix": "purified",
+    "material": "uranium"
+  },
+  {
+    "id": "centrifuged_uranium",
+    "prefix": "centrifuged",
     "material": "uranium"
   },
   {
@@ -6097,6 +6637,11 @@
   {
     "id": "purified_vanadium_magnetite",
     "prefix": "purified",
+    "material": "vanadium_magnetite"
+  },
+  {
+    "id": "centrifuged_vanadium_magnetite",
+    "prefix": "centrifuged",
     "material": "vanadium_magnetite"
   },
   {
@@ -6190,6 +6735,11 @@
     "material": "wulfenite"
   },
   {
+    "id": "centrifuged_wulfenite",
+    "prefix": "centrifuged",
+    "material": "wulfenite"
+  },
+  {
     "id": "impure_dust_wulfenite",
     "prefix": "impure_dust",
     "material": "wulfenite"
@@ -6225,6 +6775,11 @@
     "material": "yellow_limonite"
   },
   {
+    "id": "centrifuged_yellow_limonite",
+    "prefix": "centrifuged",
+    "material": "yellow_limonite"
+  },
+  {
     "id": "impure_dust_yellow_limonite",
     "prefix": "impure_dust",
     "material": "yellow_limonite"
@@ -6257,6 +6812,11 @@
   {
     "id": "purified_zinc",
     "prefix": "purified",
+    "material": "zinc"
+  },
+  {
+    "id": "centrifuged_zinc",
+    "prefix": "centrifuged",
     "material": "zinc"
   },
   {
