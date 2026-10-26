@@ -1,0 +1,51 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:phosphoricacid_gt5u",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:benzene",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 9
+    }
+  ],
+  "duration": 360,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:propene",
+      "amount": 6000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:cumene",
+      "amount": 14000
+    }
+  ]
+}

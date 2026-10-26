@@ -1,0 +1,20 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [],
+  "duration": 120,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_naphtha",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:benzene",
+      "amount": 400
+    }
+  ],
+  "circuit": 4
+}

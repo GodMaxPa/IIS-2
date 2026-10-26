@@ -1,0 +1,39 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sulfur",
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 3,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:liquid_hydricsulfur",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 60,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrogen",
+      "amount": 2000
+    }
+  ]
+}

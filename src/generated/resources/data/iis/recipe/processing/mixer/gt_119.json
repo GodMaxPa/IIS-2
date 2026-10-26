@@ -1,0 +1,45 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:liquid_light_fuel",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:liquid_heavy_fuel",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 6,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:fuel",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 16,
+  "eut": 16
+}

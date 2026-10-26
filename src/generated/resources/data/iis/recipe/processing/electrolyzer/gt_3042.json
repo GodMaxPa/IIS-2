@@ -1,0 +1,42 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 1,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:hydrogen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 720,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrochloricacid_gt5u",
+      "amount": 2000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:chlorine",
+      "amount": 1000
+    }
+  ],
+  "circuit": 1
+}

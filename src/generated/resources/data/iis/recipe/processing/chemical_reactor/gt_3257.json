@@ -1,0 +1,45 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:oxygen",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 3,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:sulfurdioxide",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 120,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_hydricsulfur",
+      "amount": 3000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 3000
+    }
+  ],
+  "circuit": 11
+}

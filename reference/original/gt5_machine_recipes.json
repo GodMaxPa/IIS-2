@@ -1702,6 +1702,34 @@
    ]
   },
   {
+   "method": "addChemicalBathRecipe",
+   "line": 282,
+   "args": [
+    "ItemList.Food_Raw_Fries.get(1L, new Object[0])",
+    "Materials.FryingOilHot.getFluid(10L)",
+    "ItemList.Food_Fries.get(1L, new Object[0])",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "16",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 283,
+   "args": [
+    "GT_ModHandler.getIC2Item(\"dynamite\", 1L)",
+    "Materials.Glue.getFluid(10L)",
+    "GT_ModHandler.getIC2Item(\"stickyDynamite\", 1L)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "16",
+    "4"
+   ]
+  },
+  {
    "method": "addChemicalRecipe",
    "line": 284,
    "args": [
@@ -1712,6 +1740,930 @@
     "GT_ModHandler.getIC2Item(\"dynamite\", 1L)",
     "160",
     "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 285,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L)",
+    "Materials.Concrete.getMolten(144L)",
+    "GT_ModHandler.getIC2Item(\"reinforcedStone\", 1L)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 286,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Coal, 1L)",
+    "Materials.Water.getFluid(125L)",
+    "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.HydratedCoal, 1L)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "12",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 287,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Wood, 1L)",
+    "Materials.Water.getFluid(100L)",
+    "new ItemStack(Items.paper, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 288,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Paper, 1L)",
+    "Materials.Water.getFluid(100L)",
+    "new ItemStack(Items.paper, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "100",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 289,
+   "args": [
+    "new ItemStack(Items.reeds, 1, 32767)",
+    "Materials.Water.getFluid(100L)",
+    "new ItemStack(Items.paper, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "100",
+    "8"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 290,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Coal, 1L)",
+    "GT_ModHandler.getDistilledWater(125L)",
+    "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.HydratedCoal, 1L)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "12",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 291,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Wood, 1L)",
+    "GT_ModHandler.getDistilledWater(100L)",
+    "new ItemStack(Items.paper, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 292,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Paper, 1L)",
+    "GT_ModHandler.getDistilledWater(100L)",
+    "new ItemStack(Items.paper, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "100",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 293,
+   "args": [
+    "new ItemStack(Items.reeds, 1, 32767)",
+    "GT_ModHandler.getDistilledWater(100L)",
+    "new ItemStack(Items.paper, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "100",
+    "8"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 294,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 1)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 295,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 2)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 296,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 3)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 297,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 4)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 298,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 5)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 299,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 6)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 300,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 7)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 301,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 8)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 302,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 9)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 303,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 10)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 304,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 11)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 305,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 12)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 306,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 13)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 307,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 14)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 308,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 15)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 309,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 1)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 310,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 2)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 311,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 3)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 312,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 4)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 313,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 5)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 314,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 6)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 315,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 7)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 316,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 8)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 317,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 9)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 318,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 10)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 319,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 11)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 320,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 12)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 321,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 13)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 322,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 14)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 323,
+   "args": [
+    "new ItemStack(Blocks.carpet, 1, 15)",
+    "Materials.Chlorine.getGas(25L)",
+    "new ItemStack(Blocks.carpet, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 324,
+   "args": [
+    "new ItemStack(Blocks.stained_hardened_clay, 1, 32767)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.hardened_clay, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 325,
+   "args": [
+    "new ItemStack(Blocks.stained_glass, 1, 32767)",
+    "Materials.Chlorine.getGas(50L)",
+    "new ItemStack(Blocks.glass, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 326,
+   "args": [
+    "new ItemStack(Blocks.stained_glass_pane, 1, 32767)",
+    "Materials.Chlorine.getGas(20L)",
+    "new ItemStack(Blocks.glass_pane, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "400",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 327,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 8)",
+    "Materials.Water.getFluid(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 328,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 9)",
+    "Materials.Water.getFluid(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 1)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 329,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 10)",
+    "Materials.Water.getFluid(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 2)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 330,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 11)",
+    "Materials.Water.getFluid(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 3)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 331,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 12)",
+    "Materials.Water.getFluid(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 4)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 332,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 13)",
+    "Materials.Water.getFluid(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 5)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 333,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 14)",
+    "Materials.Water.getFluid(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 6)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 334,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 15)",
+    "Materials.Water.getFluid(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 7)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 335,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 8)",
+    "GT_ModHandler.getDistilledWater(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 336,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 9)",
+    "GT_ModHandler.getDistilledWater(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 1)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 337,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 10)",
+    "GT_ModHandler.getDistilledWater(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 2)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 338,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 11)",
+    "GT_ModHandler.getDistilledWater(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 3)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 339,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 12)",
+    "GT_ModHandler.getDistilledWater(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 4)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 340,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 13)",
+    "GT_ModHandler.getDistilledWater(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 5)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 341,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 14)",
+    "GT_ModHandler.getDistilledWater(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 6)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 342,
+   "args": [
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 15)",
+    "GT_ModHandler.getDistilledWater(250L)",
+    "new ItemStack(GregTech_API.sBlockConcretes, 1, 7)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 344,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 1L)",
+    "Materials.Concrete.getMolten(144L)",
+    "ItemList.Block_TungstenSteelReinforced.get(1L, new Object[0])",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "200",
+    "4"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 350,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 1L)",
+    "Dyes.dyeRed.getFluidDye(j, 72L)",
+    "GT_ModHandler.getModItem(\"BuildCraft|Transport\", \"pipeWire\", 4L, 0)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "32",
+    "16"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 353,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 1L)",
+    "Dyes.dyeBlue.getFluidDye(j, 72L)",
+    "GT_ModHandler.getModItem(\"BuildCraft|Transport\", \"pipeWire\", 4L, 1)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "32",
+    "16"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 356,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 1L)",
+    "Dyes.dyeGreen.getFluidDye(j, 72L)",
+    "GT_ModHandler.getModItem(\"BuildCraft|Transport\", \"pipeWire\", 4L, 2)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "32",
+    "16"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 359,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 1L)",
+    "Dyes.dyeYellow.getFluidDye(j, 72L)",
+    "GT_ModHandler.getModItem(\"BuildCraft|Transport\", \"pipeWire\", 4L, 3)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "32",
+    "16"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 364,
+   "args": [
+    "new ItemStack(Blocks.wool, 1, 0)",
+    "Dyes.VALUES[i].getFluidDye(j, 72L)",
+    "new ItemStack(Blocks.wool, 1, 15 - i)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "64",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 367,
+   "args": [
+    "new ItemStack(Blocks.glass, 1, 0)",
+    "Dyes.VALUES[i].getFluidDye(j, 18L)",
+    "new ItemStack(Blocks.stained_glass, 1, 15 - i)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "64",
+    "2"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 368,
+   "args": [
+    "new ItemStack(Blocks.hardened_clay, 1, 0)",
+    "Dyes.VALUES[i].getFluidDye(j, 18L)",
+    "new ItemStack(Blocks.stained_hardened_clay, 1, 15 - i)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "64",
+    "2"
    ]
   },
   {
@@ -2167,6 +3119,34 @@
    ]
   },
   {
+   "method": "addChemicalBathRecipe",
+   "line": 450,
+   "args": [
+    "ItemList.Circuit_Parts_GlassFiber.get(1, o)",
+    "Materials.Epoxid.getMolten(144)",
+    "Materials.EpoxidFiberReinforced.getPlates(1)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "240",
+    "16"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 451,
+   "args": [
+    "GT_ModHandler.getIC2Item(\"carbonFiber\", 1)",
+    "Materials.Epoxid.getMolten(144)",
+    "Materials.EpoxidFiberReinforced.getPlates(1)",
+    "GT_Values.NI",
+    "GT_Values.NI",
+    "null",
+    "240",
+    "16"
+   ]
+  },
+  {
    "method": "addChemicalRecipe",
    "line": 452,
    "args": [
@@ -2279,6 +3259,42 @@
     "ItemList.Circuit_Wafer_QuantumCPU.get(1, o)",
     "400",
     "1920"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 685,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 1L, new Object[0])",
+    "new FluidStack(ItemList.sOilExtraHeavy,10)",
+    "Materials.OilHeavy.getFluid(15)",
+    "16",
+    "24",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 686,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 1L, new Object[0])",
+    "Materials.HeavyFuel.getFluid(10L)",
+    "new FluidStack(ItemList.sToluene,4)",
+    "16",
+    "24",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 687,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 1L, new Object[0])",
+    "new FluidStack(ItemList.sToluene,30)",
+    "Materials.LightFuel.getFluid(30L)",
+    "16",
+    "24",
+    "false"
    ]
   },
   {
@@ -2476,6 +3492,138 @@
     "Materials.Polycaprolactam.getMolten(1296)",
     "GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.Potassium, 1)",
     "640"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 710,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 4L, new Object[0])",
+    "Materials.Creosote.getFluid(3L)",
+    "Materials.Lubricant.getFluid(1L)",
+    "16",
+    "24",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 711,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 4L, new Object[0])",
+    "Materials.SeedOil.getFluid(4L)",
+    "Materials.Lubricant.getFluid(1L)",
+    "16",
+    "24",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 712,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 4L, new Object[0])",
+    "Materials.FishOil.getFluid(3L)",
+    "Materials.Lubricant.getFluid(1L)",
+    "16",
+    "24",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 713,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 1L, new Object[0])",
+    "Materials.Biomass.getFluid(40L)",
+    "Materials.Ethanol.getFluid(12L)",
+    "16",
+    "24",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 714,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 5L, new Object[0])",
+    "Materials.Biomass.getFluid(40L)",
+    "Materials.Water.getFluid(12L)",
+    "16",
+    "24",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 715,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 5L, new Object[0])",
+    "Materials.Water.getFluid(5L)",
+    "GT_ModHandler.getDistilledWater(5L)",
+    "16",
+    "10",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 716,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 1L, new Object[0])",
+    "FluidRegistry.getFluidStack(\"potion.potatojuice\", 2)",
+    "FluidRegistry.getFluidStack(\"potion.vodka\", 1)",
+    "16",
+    "16",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 717,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 1L, new Object[0])",
+    "FluidRegistry.getFluidStack(\"potion.lemonade\", 2)",
+    "FluidRegistry.getFluidStack(\"potion.alcopops\", 1)",
+    "16",
+    "16",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 719,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 4L, new Object[0])",
+    "Materials.OilLight.getFluid(300L)",
+    "Materials.Oil.getFluid(100L)",
+    "16",
+    "24",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 720,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 4L, new Object[0])",
+    "Materials.OilMedium.getFluid(200L)",
+    "Materials.Oil.getFluid(100L)",
+    "16",
+    "24",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 721,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 4L, new Object[0])",
+    "Materials.OilHeavy.getFluid(100L)",
+    "Materials.Oil.getFluid(100L)",
+    "16",
+    "24",
+    "false"
    ]
   },
   {
@@ -2850,6 +3998,30 @@
     "10000",
     "600",
     "28"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 1123,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 1L, new Object[0])",
+    "new FluidStack(FluidRegistry.getFluid(\"ic2biomass\"), 12)",
+    "new FluidStack(FluidRegistry.getFluid(\"ic2biogas\"), 32)",
+    "40",
+    "16",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 1124,
+   "args": [
+    "ItemList.Circuit_Integrated.getWithDamage(0L, 2L, new Object[0])",
+    "new FluidStack(FluidRegistry.getFluid(\"ic2biomass\"), 4)",
+    "Materials.Water.getFluid(2)",
+    "80",
+    "30",
+    "false"
    ]
   },
   {
@@ -3302,6 +4474,34 @@
     "new ItemStack(Items.slime_ball, 1, 32767)",
     "new ItemStack(Items.magma_cream, 1, 0)",
     "50"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 1190,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.gem, Materials.EnderEye, 1)",
+    "Materials.Radon.getGas(250)",
+    "ItemList.QuantumEye.get(1L, new Object[0])",
+    "null",
+    "null",
+    "null",
+    "480",
+    "384"
+   ]
+  },
+  {
+   "method": "addChemicalBathRecipe",
+   "line": 1191,
+   "args": [
+    "GT_OreDictUnificator.get(OrePrefixes.gem, Materials.NetherStar, 1)",
+    "Materials.Radon.getGas(1250)",
+    "ItemList.QuantumStar.get(1L, new Object[0])",
+    "null",
+    "null",
+    "null",
+    "1920",
+    "384"
    ]
   },
   {
@@ -5839,6 +7039,18 @@
     "null",
     "720",
     "30"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3046,
+   "args": [
+    "3",
+    "Materials.HeavyFuel.getFluid(100)",
+    "Materials.Phenol.getFluid(25)",
+    "160",
+    "24",
+    "false"
    ]
   },
   {
@@ -8618,6 +9830,19 @@
    ]
   },
   {
+   "method": "addDistilleryRecipe",
+   "line": 3355,
+   "args": [
+    "1",
+    "Materials.SaltWater.getFluid(1000)",
+    "Materials.Water.getFluid(750)",
+    "Materials.Salt.getDustSmall(1)",
+    "30*20",
+    "64",
+    "false"
+   ]
+  },
+  {
    "method": "addElectrolyzerRecipe",
    "line": 3357,
    "args": [
@@ -9080,6 +10305,123 @@
    ]
   },
   {
+   "method": "addDistilleryRecipe",
+   "line": 3414,
+   "args": [
+    "1",
+    "Materials.FermentedBiomass.getFluid(1000)",
+    "Materials.AceticAcid.getFluid(25)",
+    "ItemList.IC2_Fertilizer.get(1, new Object[0])",
+    "1500",
+    "8",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3415,
+   "args": [
+    "2",
+    "Materials.FermentedBiomass.getFluid(1000)",
+    "Materials.Water.getFluid(375)",
+    "ItemList.IC2_Fertilizer.get(1, new Object[0])",
+    "1500",
+    "8",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3416,
+   "args": [
+    "3",
+    "Materials.FermentedBiomass.getFluid(1000)",
+    "Materials.Ethanol.getFluid(150)",
+    "ItemList.IC2_Fertilizer.get(1, new Object[0])",
+    "1500",
+    "8",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3417,
+   "args": [
+    "4",
+    "Materials.FermentedBiomass.getFluid(1000)",
+    "Materials.Methanol.getFluid(150)",
+    "ItemList.IC2_Fertilizer.get(1, new Object[0])",
+    "1500",
+    "8",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3418,
+   "args": [
+    "5",
+    "Materials.FermentedBiomass.getFluid(1000)",
+    "Materials.Ammonia.getGas(100)",
+    "ItemList.IC2_Fertilizer.get(1, new Object[0])",
+    "1500",
+    "8",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3419,
+   "args": [
+    "6",
+    "Materials.FermentedBiomass.getFluid(1000)",
+    "Materials.CarbonDioxide.getGas(400)",
+    "ItemList.IC2_Fertilizer.get(1, new Object[0])",
+    "1500",
+    "8",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3420,
+   "args": [
+    "7",
+    "Materials.FermentedBiomass.getFluid(1000)",
+    "Materials.Methane.getGas(600)",
+    "ItemList.IC2_Fertilizer.get(1, new Object[0])",
+    "1500",
+    "8",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3423,
+   "args": [
+    "17",
+    "Materials.FermentedBiomass.getFluid(1000)",
+    "new FluidStack(FluidRegistry.getFluid(\"ic2biogas\"), 1800)",
+    "ItemList.IC2_Fertilizer.get(1, new Object[0])",
+    "1600",
+    "8",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3424,
+   "args": [
+    "1",
+    "Materials.Methane.getGas(1000)",
+    "new FluidStack(FluidRegistry.getFluid(\"ic2biogas\"), 3000)",
+    "GT_Values.NI",
+    "160",
+    "8",
+    "false"
+   ]
+  },
+  {
    "method": "addChemicalRecipe",
    "line": 3437,
    "args": [
@@ -9174,6 +10516,18 @@
     "Materials.Hydrogen.getCells(1)",
     "600",
     "30"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3448,
+   "args": [
+    "2",
+    "Materials.HeavyFuel.getFluid(100)",
+    "Materials.Benzene.getFluid(40)",
+    "160",
+    "24",
+    "false"
    ]
   },
   {
@@ -10472,6 +11826,78 @@
     "Materials.Empty.getCells(2)",
     "640",
     "120"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3651,
+   "args": [
+    "3",
+    "Materials.Naphtha.getFluid(1000)",
+    "Materials.Toluene.getFluid(200)",
+    "120",
+    "120",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3652,
+   "args": [
+    "4",
+    "Materials.Naphtha.getFluid(1000)",
+    "Materials.Benzene.getFluid(400)",
+    "120",
+    "120",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3653,
+   "args": [
+    "5",
+    "Materials.Naphtha.getFluid(1000)",
+    "Materials.Butadiene.getGas(400)",
+    "120",
+    "120",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3654,
+   "args": [
+    "6",
+    "Materials.Naphtha.getFluid(1000)",
+    "Materials.Propene.getGas(600)",
+    "120",
+    "120",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3655,
+   "args": [
+    "7",
+    "Materials.Naphtha.getFluid(1000)",
+    "Materials.Ethylene.getGas(600)",
+    "120",
+    "120",
+    "false"
+   ]
+  },
+  {
+   "method": "addDistilleryRecipe",
+   "line": 3656,
+   "args": [
+    "8",
+    "Materials.Naphtha.getFluid(1000)",
+    "Materials.Methane.getGas(600)",
+    "120",
+    "120",
+    "false"
    ]
   },
   {

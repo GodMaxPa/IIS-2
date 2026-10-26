@@ -1,0 +1,45 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:liquid_sufluriclight_fuel",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 12,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:liquid_light_fuel",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 160,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrogen",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_hydricsulfur",
+      "amount": 1000
+    }
+  ],
+  "circuit": 4
+}

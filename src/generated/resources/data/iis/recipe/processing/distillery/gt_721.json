@@ -1,0 +1,20 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [],
+  "duration": 16,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_heavy_oil",
+      "amount": 100
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:oil",
+      "amount": 100
+    }
+  ],
+  "circuit": 4
+}

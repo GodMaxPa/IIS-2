@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/garnet_yellow",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_garnet_yellow",
+      "count": 4
+    }
+  ],
+  "duration": 46,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 1
+    }
+  ]
+}

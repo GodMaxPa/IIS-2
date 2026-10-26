@@ -1,0 +1,49 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:glycerol",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 14
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 6,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "minecraft:water",
+          "amount": 1000
+        }
+      }
+    },
+    {
+      "id": "iis:capsule",
+      "count": 8
+    }
+  ],
+  "duration": 480,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrochloricacid_gt5u",
+      "amount": 2000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_epichlorhydrin",
+      "amount": 10000
+    }
+  ],
+  "circuit": 1
+}

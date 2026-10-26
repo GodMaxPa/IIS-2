@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "minecraft:light_gray_wool",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:white_wool",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:chlorine",
+      "amount": 50
+    }
+  ]
+}

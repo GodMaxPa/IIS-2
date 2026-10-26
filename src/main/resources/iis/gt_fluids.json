@@ -9,13 +9,15 @@
 "id": "acetone",
 "state": 1,
 "temperature": 295,
-"color": 11513775
+"color": 11513775,
+"material": "Acetone"
 },
 {
 "id": "air",
 "state": 2,
 "temperature": 295,
-"color": 11129077
+"color": 11129077,
+"material": "Air"
 },
 {
 "id": "allylchloride",
@@ -27,19 +29,22 @@
 "id": "ammonia",
 "state": 1,
 "temperature": 295,
-"color": 4142208
+"color": 4142208,
+"material": "Ammonia"
 },
 {
 "id": "argon",
 "state": 2,
 "temperature": 295,
-"color": 65280
+"color": 65280,
+"material": "Argon"
 },
 {
 "id": "benzene",
 "state": 1,
 "temperature": 295,
-"color": 1710618
+"color": 1710618,
+"material": "Benzene"
 },
 {
 "id": "biodiesel",
@@ -51,31 +56,36 @@
 "id": "bioethanol",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "Ethanol"
 },
 {
 "id": "biomass",
 "state": 1,
 "temperature": 295,
-"color": 65280
+"color": 65280,
+"material": "Biomass"
 },
 {
 "id": "butadiene",
 "state": 1,
 "temperature": 295,
-"color": 15231232
+"color": 15231232,
+"material": "Butadiene"
 },
 {
 "id": "butane",
 "state": 1,
 "temperature": 295,
-"color": 11941662
+"color": 11941662,
+"material": "Butane"
 },
 {
 "id": "butene",
 "state": 1,
 "temperature": 295,
-"color": 13586437
+"color": 13586437,
+"material": "Butene"
 },
 {
 "id": "calciumacetatesolution",
@@ -87,7 +97,8 @@
 "id": "carbondioxide",
 "state": 1,
 "temperature": 25,
-"color": 11129077
+"color": 11129077,
+"material": "CarbonDioxide"
 },
 {
 "id": "carbonmonoxide",
@@ -105,49 +116,64 @@
 "id": "chloramine",
 "state": 1,
 "temperature": 295,
-"color": 4169600
+"color": 4169600,
+"material": "Chloramine"
 },
 {
 "id": "chlorine",
 "state": 2,
 "temperature": 295,
-"color": 16777215
+"color": 16777215,
+"material": "Chlorine"
 },
 {
 "id": "chlorobenzene",
 "state": 1,
 "temperature": 295,
-"color": 12865
+"color": 12865,
+"material": "Chlorobenzene"
 },
 {
 "id": "chloroform",
 "state": 1,
 "temperature": 295,
-"color": 8989856
+"color": 8989856,
+"material": "Chloroform"
 },
 {
 "id": "chloromethane",
 "state": 1,
 "temperature": 295,
-"color": 13118624
+"color": 13118624,
+"material": "Chloromethane"
 },
 {
 "id": "cumene",
 "state": 1,
 "temperature": 295,
-"color": 5579264
+"color": 5579264,
+"material": "Cumene"
 },
 {
 "id": "deuterium",
 "state": 2,
 "temperature": 295,
-"color": 16776960
+"color": 16776960,
+"material": "Deuterium"
 },
 {
 "id": "dichlorobenzene",
 "state": 1,
 "temperature": 295,
-"color": 17493
+"color": 17493,
+"material": "Dichlorobenzene"
+},
+{
+"id": "dilutedhydrochloricacid_gt5u",
+"state": 1,
+"temperature": 300,
+"color": 10069923,
+"material": "DilutedHydrochloricAcid"
 },
 {
 "id": "dilutedsulfuricacid",
@@ -159,13 +185,15 @@
 "id": "dimethylamine",
 "state": 1,
 "temperature": 295,
-"color": 5588073
+"color": 5588073,
+"material": "Dimethylamine"
 },
 {
 "id": "dimethyldichlorosilane",
 "state": 1,
 "temperature": 295,
-"color": 4462160
+"color": 4462160,
+"material": "Dimethyldichlorosilane"
 },
 {
 "id": "dinitrogentetroxide",
@@ -375,19 +403,22 @@
 "id": "ethane",
 "state": 1,
 "temperature": 295,
-"color": 13158655
+"color": 13158655,
+"material": "Ethane"
 },
 {
 "id": "ethenone",
 "state": 1,
 "temperature": 295,
-"color": 1315910
+"color": 1315910,
+"material": "Ethenone"
 },
 {
 "id": "ethylene",
 "state": 1,
 "temperature": 295,
-"color": 14803425
+"color": 14803425,
+"material": "Ethylene"
 },
 {
 "id": "ethyltertbutylether",
@@ -405,73 +436,85 @@
 "id": "fieryblood",
 "state": 1,
 "temperature": 6400,
-"color": 13158600
+"color": 13158600,
+"material": "FierySteel"
 },
 {
 "id": "fishoil",
 "state": 1,
 "temperature": 295,
-"color": 16761856
+"color": 16761856,
+"material": "FishOil"
 },
 {
 "id": "fluorine",
 "state": 2,
 "temperature": 53,
-"color": 16777215
+"color": 16777215,
+"material": "Fluorine"
 },
 {
 "id": "for_honey",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "Honey"
 },
 {
 "id": "fuel",
 "state": 1,
 "temperature": 295,
-"color": 16776960
+"color": 16776960,
+"material": "Fuel"
 },
 {
 "id": "gas_gas",
 "state": 2,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "Gas"
 },
 {
 "id": "gas_natural_gas",
 "state": 2,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "NatruralGas"
 },
 {
 "id": "gas_sulfuricgas",
 "state": 2,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "SulfuricGas"
 },
 {
 "id": "gasoline",
 "state": 1,
 "temperature": 295,
-"color": 16753920
+"color": 16753920,
+"material": "GasolineRegular"
 },
 {
 "id": "glue",
 "state": 1,
 "temperature": 295,
-"color": 13157376
+"color": 13157376,
+"material": "Glue"
 },
 {
 "id": "glycerol",
 "state": 1,
 "temperature": 295,
-"color": 8904327
+"color": 8904327,
+"material": "Glycerol"
 },
 {
 "id": "glyceryl",
 "state": 1,
 "temperature": 295,
-"color": 38550
+"color": 38550,
+"material": "Glyceryl"
 },
 {
 "id": "growthmediumraw",
@@ -489,7 +532,8 @@
 "id": "helium",
 "state": 2,
 "temperature": 295,
-"color": 16776960
+"color": 16776960,
+"material": "Helium"
 },
 {
 "id": "highoctanegasoline",
@@ -501,61 +545,85 @@
 "id": "holywater",
 "state": 1,
 "temperature": 295,
-"color": 255
+"color": 255,
+"material": "HolyWater"
 },
 {
 "id": "hotfryingoil",
 "state": 1,
 "temperature": 400,
-"color": 13158600
+"color": 13158600,
+"material": "FryingOilHot"
+},
+{
+"id": "hydrochloricacid_gt5u",
+"state": 1,
+"temperature": 300,
+"color": 12044484,
+"material": "HydrochloricAcid"
 },
 {
 "id": "hydrocracked_butane",
 "state": 2,
 "temperature": 775,
-"color": 11941662
+"color": 11941662,
+"material": "Butane"
 },
 {
 "id": "hydrocracked_ethane",
 "state": 2,
 "temperature": 775,
-"color": 13158655
+"color": 13158655,
+"material": "Ethane"
 },
 {
 "id": "hydrocracked_gas",
 "state": 2,
 "temperature": 775,
-"color": 16777215
+"color": 16777215,
+"material": "Gas"
 },
 {
 "id": "hydrocracked_heavyfuel",
 "state": 2,
 "temperature": 775,
-"color": 16776960
+"color": 16776960,
+"material": "HeavyFuel"
 },
 {
 "id": "hydrocracked_lightfuel",
 "state": 2,
 "temperature": 775,
-"color": 16776960
+"color": 16776960,
+"material": "LightFuel"
 },
 {
 "id": "hydrocracked_naphtha",
 "state": 2,
 "temperature": 775,
-"color": 16776960
+"color": 16776960,
+"material": "Naphtha"
 },
 {
 "id": "hydrocracked_propane",
 "state": 2,
 "temperature": 775,
-"color": 16441936
+"color": 16441936,
+"material": "Propane"
+},
+{
+"id": "hydrofluoricacid_gt5u",
+"state": 1,
+"temperature": 300,
+"color": 34986,
+"material": "HydrofluoricAcid"
 },
 {
 "id": "hydrogen",
 "state": 2,
 "temperature": 295,
-"color": 255
+"color": 255,
+"material": "Hydrogen"
 },
 {
 "id": "hypochlorousacid",
@@ -567,7 +635,8 @@
 "id": "ice",
 "state": 0,
 "temperature": 270,
-"color": 13158655
+"color": 13158655,
+"material": "Ice"
 },
 {
 "id": "indigo",
@@ -585,7 +654,8 @@
 "id": "isoprene",
 "state": 1,
 "temperature": 295,
-"color": 1315860
+"color": 1315860,
+"material": "Isoprene"
 },
 {
 "id": "leadzincsolution",
@@ -603,7 +673,8 @@
 "id": "liquid_epichlorhydrin",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "Epichlorohydrin"
 },
 {
 "id": "liquid_extra_heavy_oil",
@@ -615,115 +686,134 @@
 "id": "liquid_heavy_fuel",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "HeavyFuel"
 },
 {
 "id": "liquid_heavy_oil",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "OilHeavy"
 },
 {
 "id": "liquid_hydricsulfur",
 "state": 2,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "HydricSulfide"
 },
 {
 "id": "liquid_light_fuel",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "LightFuel"
 },
 {
 "id": "liquid_light_oil",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "OilLight"
 },
 {
 "id": "liquid_lpg",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "LPG"
 },
 {
 "id": "liquid_medium_oil",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "OilMedium"
 },
 {
 "id": "liquid_naphtha",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "Naphtha"
 },
 {
 "id": "liquid_nitrationmixture",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "NitrationMixture"
 },
 {
 "id": "liquid_sufluriclight_fuel",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "SulfuricLightFuel"
 },
 {
 "id": "liquid_sulfuricheavy_fuel",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "SulfuricHeavyFuel"
 },
 {
 "id": "liquid_sulfuricnaphtha",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "SulfuricNaphtha"
 },
 {
 "id": "liquid_toluene",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "Toluene"
 },
 {
 "id": "liquidair",
 "state": 1,
 "temperature": 4,
-"color": 11129077
+"color": 11129077,
+"material": "LiquidAir"
 },
 {
 "id": "lubricant",
 "state": 1,
 "temperature": 295,
-"color": 16761856
+"color": 16761856,
+"material": "Lubricant"
 },
 {
 "id": "mcguffium",
 "state": 1,
 "temperature": 295,
-"color": 13158600
+"color": 13158600,
+"material": "McGuffium239"
 },
 {
 "id": "mercury",
 "state": 1,
 "temperature": 295,
-"color": 16768220
+"color": 16768220,
+"material": "Mercury"
 },
 {
 "id": "methane",
 "state": 2,
 "temperature": 295,
-"color": 16777215
+"color": 16777215,
+"material": "Methane"
 },
 {
 "id": "methanol",
 "state": 1,
 "temperature": 295,
-"color": 11175936
+"color": 11175936,
+"material": "Methanol"
 },
 {
 "id": "methylacetate",
@@ -735,115 +825,134 @@
 "id": "milk",
 "state": 1,
 "temperature": 290,
-"color": 16711422
+"color": 16711422,
+"material": "Milk"
 },
 {
 "id": "molten_adamantium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Adamantium"
 },
 {
 "id": "molten_aluminium",
 "state": 4,
 "temperature": 933,
-"color": 8440048
+"color": 8440048,
+"material": "Aluminium"
 },
 {
 "id": "molten_aluminiumbrass",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "AluminiumBrass"
 },
 {
 "id": "molten_alumite",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Alumite"
 },
 {
 "id": "molten_americium",
 "state": 4,
 "temperature": 1449,
-"color": 15754495
+"color": 15754495,
+"material": "Americium"
 },
 {
 "id": "molten_amordrine",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Amordrine"
 },
 {
 "id": "molten_angmallen",
 "state": 4,
 "temperature": 1000,
-"color": 14147978
+"color": 14147978,
+"material": "Angmallen"
 },
 {
 "id": "molten_annealedcopper",
 "state": 4,
 "temperature": 1000,
-"color": 16742420
+"color": 16742420,
+"material": "AnnealedCopper"
 },
 {
 "id": "molten_antimony",
 "state": 4,
 "temperature": 903,
-"color": 14474480
+"color": 14474480,
+"material": "Antimony"
 },
 {
 "id": "molten_ardite",
 "state": 4,
 "temperature": 1000,
-"color": 16711680
+"color": 16711680,
+"material": "Ardite"
 },
 {
 "id": "molten_aredrite",
 "state": 4,
 "temperature": 1000,
-"color": 16711680
+"color": 16711680,
+"material": "Aredrite"
 },
 {
 "id": "molten_arsenic",
 "state": 4,
 "temperature": 1090,
-"color": 15785060
+"color": 15785060,
+"material": "Arsenic"
 },
 {
 "id": "molten_astralsilver",
 "state": 4,
 "temperature": 1000,
-"color": 15132415
+"color": 15132415,
+"material": "AstralSilver"
 },
 {
 "id": "molten_atlarus",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Atlarus"
 },
 {
 "id": "molten_batteryalloy",
 "state": 4,
 "temperature": 1000,
-"color": 10255520
+"color": 10255520,
+"material": "BatteryAlloy"
 },
 {
 "id": "molten_beryllium",
 "state": 4,
 "temperature": 1560,
-"color": 6599780
+"color": 6599780,
+"material": "Beryllium"
 },
 {
 "id": "molten_bismuth",
 "state": 4,
 "temperature": 544,
-"color": 6594720
+"color": 6594720,
+"material": "Bismuth"
 },
 {
 "id": "molten_bismuthbronze",
 "state": 4,
 "temperature": 1000,
-"color": 6585725
+"color": 6585725,
+"material": "BismuthBronze"
 },
 {
 "id": "molten_bisphenol_a",
@@ -855,37 +964,43 @@
 "id": "molten_blackbronze",
 "state": 4,
 "temperature": 1000,
-"color": 6566525
+"color": 6566525,
+"material": "BlackBronze"
 },
 {
 "id": "molten_blacksteel",
 "state": 4,
 "temperature": 1000,
-"color": 6579300
+"color": 6579300,
+"material": "BlackSteel"
 },
 {
 "id": "molten_blaze",
 "state": 4,
 "temperature": 6400,
-"color": 16762880
+"color": 16762880,
+"material": "Blaze"
 },
 {
 "id": "molten_bluealloy",
 "state": 4,
 "temperature": 1000,
-"color": 6599935
+"color": 6599935,
+"material": "BlueAlloy"
 },
 {
 "id": "molten_bluesteel",
 "state": 4,
 "temperature": 1000,
-"color": 6579340
+"color": 6579340,
+"material": "BlueSteel"
 },
 {
 "id": "molten_blutonium",
 "state": 4,
 "temperature": 1000,
-"color": 255
+"color": 255,
+"material": "Blutonium"
 },
 {
 "id": "molten_borosilicateglass",
@@ -897,619 +1012,722 @@
 "id": "molten_brass",
 "state": 4,
 "temperature": 1000,
-"color": 16757760
+"color": 16757760,
+"material": "Brass"
 },
 {
 "id": "molten_bronze",
 "state": 4,
 "temperature": 1000,
-"color": 16744448
+"color": 16744448,
+"material": "Bronze"
 },
 {
 "id": "molten_caesium",
 "state": 4,
 "temperature": 301,
-"color": 13150795
+"color": 13150795,
+"material": "Caesium"
 },
 {
 "id": "molten_carbon",
 "state": 4,
 "temperature": 3800,
-"color": 1315860
+"color": 1315860,
+"material": "Carbon"
 },
 {
 "id": "molten_carmot",
 "state": 4,
 "temperature": 1000,
-"color": 14273932
+"color": 14273932,
+"material": "Carmot"
 },
 {
 "id": "molten_celenegil",
 "state": 4,
 "temperature": 1000,
-"color": 9751624
+"color": 9751624,
+"material": "Celenegil"
 },
 {
 "id": "molten_cerium",
 "state": 4,
 "temperature": 1068,
-"color": 8884605
+"color": 8884605,
+"material": "Cerium"
 },
 {
 "id": "molten_ceruclase",
 "state": 4,
 "temperature": 1000,
-"color": 9223632
+"color": 9223632,
+"material": "Ceruclase"
 },
 {
 "id": "molten_cheese",
 "state": 4,
 "temperature": 320,
-"color": 16776960
+"color": 16776960,
+"material": "Cheese"
 },
 {
 "id": "molten_chrome",
 "state": 4,
 "temperature": 2180,
-"color": 16765650
+"color": 16765650,
+"material": "Chrome"
 },
 {
 "id": "molten_chromiumdioxide",
 "state": 4,
 "temperature": 650,
-"color": 15124680
+"color": 15124680,
+"material": "ChromiumDioxide"
 },
 {
 "id": "molten_cobalt",
 "state": 4,
 "temperature": 1768,
-"color": 5263610
+"color": 5263610,
+"material": "Cobalt"
 },
 {
 "id": "molten_cobaltbrass",
 "state": 4,
 "temperature": 1000,
-"color": 11842720
+"color": 11842720,
+"material": "CobaltBrass"
 },
 {
 "id": "molten_concrete",
 "state": 4,
 "temperature": 300,
-"color": 6579300
+"color": 6579300,
+"material": "Concrete"
 },
 {
 "id": "molten_conductiveiron",
 "state": 4,
 "temperature": 1000,
-"color": 14267051
+"color": 14267051,
+"material": "ConductiveIron"
 },
 {
 "id": "molten_copper",
 "state": 4,
 "temperature": 1357,
-"color": 16737280
+"color": 16737280,
+"material": "Copper"
 },
 {
 "id": "molten_cupronickel",
 "state": 4,
 "temperature": 1000,
-"color": 14915200
+"color": 14915200,
+"material": "Cupronickel"
 },
 {
 "id": "molten_damascussteel",
 "state": 4,
 "temperature": 2000,
-"color": 7237230
+"color": 7237230,
+"material": "DamascusSteel"
 },
 {
 "id": "molten_darkiron",
 "state": 4,
 "temperature": 1000,
-"color": 3614780
+"color": 3614780,
+"material": "DarkIron"
 },
 {
 "id": "molten_darksteel",
 "state": 4,
 "temperature": 1000,
-"color": 5260880
+"color": 5260880,
+"material": "DarkSteel"
 },
 {
 "id": "molten_darkthaumium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "DarkThaumium"
 },
 {
 "id": "molten_deepiron",
 "state": 4,
 "temperature": 1000,
-"color": 9866380
+"color": 9866380,
+"material": "DeepIron"
 },
 {
 "id": "molten_desh",
 "state": 4,
 "temperature": 1000,
-"color": 2631720
+"color": 2631720,
+"material": "Desh"
 },
 {
 "id": "molten_desichalkos",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Desichalkos"
 },
 {
 "id": "molten_diamondcopper",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "DiamondCopper"
 },
 {
 "id": "molten_draconium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Draconium"
 },
 {
 "id": "molten_draconiumawakened",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "DraconiumAwakened"
 },
 {
 "id": "molten_duranium",
 "state": 4,
 "temperature": 1000,
-"color": 28330
+"color": 28330,
+"material": "Duranium"
 },
 {
 "id": "molten_dysprosium",
 "state": 4,
 "temperature": 1680,
-"color": 16777215
+"color": 16777215,
+"material": "Dysprosium"
 },
 {
 "id": "molten_electricalsteel",
 "state": 4,
 "temperature": 1811,
-"color": 12171705
+"color": 12171705,
+"material": "ElectricalSteel"
 },
 {
 "id": "molten_electrum",
 "state": 4,
 "temperature": 1000,
-"color": 16777060
+"color": 16777060,
+"material": "Electrum"
 },
 {
 "id": "molten_electrumflux",
 "state": 4,
 "temperature": 9000,
-"color": 16777080
+"color": 16777080,
+"material": "ElectrumFlux"
 },
 {
 "id": "molten_elvenelementium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "ElvenElementium"
 },
 {
 "id": "molten_enderium",
 "state": 4,
 "temperature": 3000,
-"color": 5869959
+"color": 5869959,
+"material": "Enderium"
 },
 {
 "id": "molten_enderiumbase",
 "state": 4,
 "temperature": 3000,
-"color": 4749209
+"color": 4749209,
+"material": "EnderiumBase"
 },
 {
 "id": "molten_endium",
 "state": 4,
 "temperature": 1000,
-"color": 10870010
+"color": 10870010,
+"material": "Endium"
 },
 {
 "id": "molten_endsteel",
 "state": 4,
 "temperature": 940,
-"color": 14670245
+"color": 14670245,
+"material": "EndSteel"
 },
 {
 "id": "molten_energeticalloy",
 "state": 4,
 "temperature": 1000,
-"color": 16755281
+"color": 16755281,
+"material": "EnergeticAlloy"
 },
 {
 "id": "molten_enrichedcopper",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "EnrichedCopper"
 },
 {
 "id": "molten_epoxid",
 "state": 4,
 "temperature": 400,
-"color": 13143060
+"color": 13143060,
+"material": "Epoxid"
 },
 {
 "id": "molten_epoxidfiberreinforced",
 "state": 4,
 "temperature": 400,
-"color": 10514448
+"color": 10514448,
+"material": "EpoxidFiberReinforced"
 },
 {
 "id": "molten_erbium",
 "state": 4,
 "temperature": 1802,
-"color": 16777215
+"color": 16777215,
+"material": "Erbium"
 },
 {
 "id": "molten_europium",
 "state": 4,
 "temperature": 1099,
-"color": 7902960
+"color": 7902960,
+"material": "Europium"
 },
 {
 "id": "molten_eximite",
 "state": 4,
 "temperature": 1000,
-"color": 8149654
+"color": 8149654,
+"material": "Eximite"
 },
 {
 "id": "molten_fairy",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Fairy"
 },
 {
 "id": "molten_fierysteel",
 "state": 4,
 "temperature": 1811,
-"color": 4194304
+"color": 4194304,
+"material": "FierySteel"
 },
 {
 "id": "molten_force",
 "state": 4,
 "temperature": 1000,
-"color": 16776960
+"color": 16776960,
+"material": "Force"
 },
 {
 "id": "molten_gadolinium",
 "state": 4,
 "temperature": 1585,
-"color": 16777215
+"color": 16777215,
+"material": "Gadolinium"
 },
 {
 "id": "molten_gallium",
 "state": 4,
 "temperature": 302,
-"color": 14474495
+"color": 14474495,
+"material": "Gallium"
 },
 {
 "id": "molten_galliumarsenide",
 "state": 4,
 "temperature": 1000,
-"color": 15129775
+"color": 15129775,
+"material": "GalliumArsenide"
 },
 {
 "id": "molten_glass",
 "state": 4,
 "temperature": 1500,
-"color": 16448250
+"color": 16448250,
+"material": "Glass"
 },
 {
 "id": "molten_glowstone",
 "state": 4,
 "temperature": 1000,
-"color": 16776960
+"color": 16776960,
+"material": "Glowstone"
 },
 {
 "id": "molten_gold",
 "state": 4,
 "temperature": 1337,
-"color": 16776990
+"color": 16776990,
+"material": "Gold"
 },
 {
 "id": "molten_haderoth",
 "state": 4,
 "temperature": 1000,
-"color": 7812126
+"color": 7812126,
+"material": "Haderoth"
 },
 {
 "id": "molten_hematite",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Hematite"
 },
 {
 "id": "molten_hepatizon",
 "state": 4,
 "temperature": 1000,
-"color": 7691893
+"color": 7691893,
+"material": "Hepatizon"
 },
 {
 "id": "molten_holmium",
 "state": 4,
 "temperature": 1734,
-"color": 16777215
+"color": 16777215,
+"material": "Holmium"
 },
 {
 "id": "molten_hsla",
 "state": 4,
 "temperature": 1811,
-"color": 8421504
+"color": 8421504,
+"material": "HSLA"
 },
 {
 "id": "molten_hsse",
 "state": 4,
 "temperature": 5400,
-"color": 3368448
+"color": 3368448,
+"material": "HSSE"
 },
 {
 "id": "molten_hssg",
 "state": 4,
 "temperature": 4500,
-"color": 10066176
+"color": 10066176,
+"material": "HSSG"
 },
 {
 "id": "molten_hsss",
 "state": 4,
 "temperature": 5400,
-"color": 6684723
+"color": 6684723,
+"material": "HSSS"
 },
 {
 "id": "molten_ignatius",
 "state": 4,
 "temperature": 1000,
-"color": 16755027
+"color": 16755027,
+"material": "Ignatius"
 },
 {
 "id": "molten_indium",
 "state": 4,
 "temperature": 429,
-"color": 4194432
+"color": 4194432,
+"material": "Indium"
 },
 {
 "id": "molten_indiumgalliumphosphide",
 "state": 4,
 "temperature": 1000,
-"color": 10521790
+"color": 10521790,
+"material": "IndiumGalliumPhosphide"
 },
 {
 "id": "molten_infuscolium",
 "state": 4,
 "temperature": 1000,
-"color": 9576790
+"color": 9576790,
+"material": "Infuscolium"
 },
 {
 "id": "molten_infusedgold",
 "state": 4,
 "temperature": 1000,
-"color": 16762940
+"color": 16762940,
+"material": "InfusedGold"
 },
 {
 "id": "molten_inolashite",
 "state": 4,
 "temperature": 1000,
-"color": 9754811
+"color": 9754811,
+"material": "Inolashite"
 },
 {
 "id": "molten_invar",
 "state": 4,
 "temperature": 1000,
-"color": 11842680
+"color": 11842680,
+"material": "Invar"
 },
 {
 "id": "molten_iridium",
 "state": 4,
 "temperature": 2719,
-"color": 11862015
+"color": 11862015,
+"material": "Iridium"
 },
 {
 "id": "molten_iron",
 "state": 4,
 "temperature": 1811,
-"color": 13158600
+"color": 13158600,
+"material": "Iron"
 },
 {
 "id": "molten_ironcompressed",
 "state": 4,
 "temperature": 1000,
-"color": 8421504
+"color": 8421504,
+"material": "IronCompressed"
 },
 {
 "id": "molten_ironmagnetic",
 "state": 4,
 "temperature": 1000,
-"color": 13158600
+"color": 13158600,
+"material": "IronMagnetic"
 },
 {
 "id": "molten_ironwood",
 "state": 4,
 "temperature": 1000,
-"color": 9866350
+"color": 9866350,
+"material": "IronWood"
 },
 {
 "id": "molten_kalendrite",
 "state": 4,
 "temperature": 1000,
-"color": 11164605
+"color": 11164605,
+"material": "Kalendrite"
 },
 {
 "id": "molten_kanthal",
 "state": 4,
 "temperature": 1800,
-"color": 12767967
+"color": 12767967,
+"material": "Kanthal"
 },
 {
 "id": "molten_knightmetal",
 "state": 4,
 "temperature": 1000,
-"color": 13824200
+"color": 13824200,
+"material": "Knightmetal"
 },
 {
 "id": "molten_lanthanum",
 "state": 4,
 "temperature": 1193,
-"color": 2667658
+"color": 2667658,
+"material": "Lanthanum"
 },
 {
 "id": "molten_lead",
 "state": 4,
 "temperature": 600,
-"color": 9200780
+"color": 9200780,
+"material": "Lead"
 },
 {
 "id": "molten_lithium",
 "state": 4,
 "temperature": 454,
-"color": 14802175
+"color": 14802175,
+"material": "Lithium"
 },
 {
 "id": "molten_ludicrite",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Ludicrite"
 },
 {
 "id": "molten_lumium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Lumium"
 },
 {
 "id": "molten_lutetium",
 "state": 4,
 "temperature": 1925,
-"color": 43775
+"color": 43775,
+"material": "Lutetium"
 },
 {
 "id": "molten_magic",
 "state": 4,
 "temperature": 5000,
-"color": 6553800
+"color": 6553800,
+"material": "Magic"
 },
 {
 "id": "molten_magnalium",
 "state": 4,
 "temperature": 1000,
-"color": 13156095
+"color": 13156095,
+"material": "Magnalium"
 },
 {
 "id": "molten_magnesium",
 "state": 4,
 "temperature": 923,
-"color": 16763080
+"color": 16763080,
+"material": "Magnesium"
 },
 {
 "id": "molten_manasteel",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Manasteel"
 },
 {
 "id": "molten_manganese",
 "state": 4,
 "temperature": 1519,
-"color": 13492665
+"color": 13492665,
+"material": "Manganese"
 },
 {
 "id": "molten_manyullyn",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Manyullyn"
 },
 {
 "id": "molten_mercassium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Mercassium"
 },
 {
 "id": "molten_meteoriciron",
 "state": 4,
 "temperature": 1811,
-"color": 6566480
+"color": 6566480,
+"material": "MeteoricIron"
 },
 {
 "id": "molten_meteoricsteel",
 "state": 4,
 "temperature": 1811,
-"color": 3283240
+"color": 3283240,
+"material": "MeteoricSteel"
 },
 {
 "id": "molten_midasium",
 "state": 4,
 "temperature": 1000,
-"color": 16762920
+"color": 16762920,
+"material": "Midasium"
 },
 {
 "id": "molten_mithril",
 "state": 4,
 "temperature": 1000,
-"color": 16777170
+"color": 16777170,
+"material": "Mithril"
 },
 {
 "id": "molten_molybdenum",
 "state": 4,
 "temperature": 2896,
-"color": 11842780
+"color": 11842780,
+"material": "Molybdenum"
 },
 {
 "id": "molten_naquadah",
 "state": 4,
 "temperature": 5400,
-"color": 3289650
+"color": 3289650,
+"material": "Naquadah"
 },
 {
 "id": "molten_naquadahalloy",
 "state": 4,
 "temperature": 7200,
-"color": 2631720
+"color": 2631720,
+"material": "NaquadahAlloy"
 },
 {
 "id": "molten_naquadahenriched",
 "state": 4,
 "temperature": 4500,
-"color": 3289650
+"color": 3289650,
+"material": "NaquadahEnriched"
 },
 {
 "id": "molten_naquadria",
 "state": 4,
 "temperature": 9000,
-"color": 1973790
+"color": 1973790,
+"material": "Naquadria"
 },
 {
 "id": "molten_neodymium",
 "state": 4,
 "temperature": 1297,
-"color": 6579300
+"color": 6579300,
+"material": "Neodymium"
 },
 {
 "id": "molten_neodymiummagnetic",
 "state": 4,
 "temperature": 1297,
-"color": 6579300
+"color": 6579300,
+"material": "NeodymiumMagnetic"
 },
 {
 "id": "molten_neutronium",
 "state": 4,
 "temperature": 10000,
-"color": 10549910
+"color": 10549910,
+"material": "Neutronium"
 },
 {
 "id": "molten_nichrome",
 "state": 4,
 "temperature": 2700,
-"color": 13487862
+"color": 13487862,
+"material": "Nichrome"
 },
 {
 "id": "molten_nickel",
 "state": 4,
 "temperature": 1728,
-"color": 13158650
+"color": 13158650,
+"material": "Nickel"
 },
 {
 "id": "molten_nickelzincferrite",
@@ -1521,121 +1739,141 @@
 "id": "molten_nikolite",
 "state": 4,
 "temperature": 1000,
-"color": 3978440
+"color": 3978440,
+"material": "Nikolite"
 },
 {
 "id": "molten_niobium",
 "state": 4,
 "temperature": 2750,
-"color": 12498120
+"color": 12498120,
+"material": "Niobium"
 },
 {
 "id": "molten_niobiumnitride",
 "state": 4,
 "temperature": 2573,
-"color": 1911069
+"color": 1911069,
+"material": "NiobiumNitride"
 },
 {
 "id": "molten_niobiumtitanium",
 "state": 4,
 "temperature": 4500,
-"color": 1908009
+"color": 1908009,
+"material": "NiobiumTitanium"
 },
 {
 "id": "molten_obsidianflux",
 "state": 4,
 "temperature": 1000,
-"color": 5255780
+"color": 5255780,
+"material": "ObsidianFlux"
 },
 {
 "id": "molten_orichalcum",
 "state": 4,
 "temperature": 1000,
-"color": 5536312
+"color": 5536312,
+"material": "Orichalcum"
 },
 {
 "id": "molten_osmiridium",
 "state": 4,
 "temperature": 3333,
-"color": 6579455
+"color": 6579455,
+"material": "Osmiridium"
 },
 {
 "id": "molten_osmium",
 "state": 4,
 "temperature": 3306,
-"color": 3289855
+"color": 3289855,
+"material": "Osmium"
 },
 {
 "id": "molten_osmonium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Osmonium"
 },
 {
 "id": "molten_oureclase",
 "state": 4,
 "temperature": 1000,
-"color": 12018197
+"color": 12018197,
+"material": "Oureclase"
 },
 {
 "id": "molten_palladium",
 "state": 4,
 "temperature": 1828,
-"color": 8421504
+"color": 8421504,
+"material": "Palladium"
 },
 {
 "id": "molten_phasedgold",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "PhasedGold"
 },
 {
 "id": "molten_phasediron",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "PhasedIron"
 },
 {
 "id": "molten_phoenixite",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Phoenixite"
 },
 {
 "id": "molten_pigiron",
 "state": 4,
 "temperature": 1000,
-"color": 13153460
+"color": 13153460,
+"material": "PigIron"
 },
 {
 "id": "molten_plastic",
 "state": 4,
 "temperature": 400,
-"color": 13158600
+"color": 13158600,
+"material": "Plastic"
 },
 {
 "id": "molten_platinum",
 "state": 4,
 "temperature": 2041,
-"color": 16777160
+"color": 16777160,
+"material": "Platinum"
 },
 {
 "id": "molten_plutonium",
 "state": 4,
 "temperature": 912,
-"color": 15741490
+"color": 15741490,
+"material": "Plutonium"
 },
 {
 "id": "molten_pokefennium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Pokefennium"
 },
 {
 "id": "molten_polycaprolactam",
 "state": 4,
 "temperature": 500,
-"color": 3289650
+"color": 3289650,
+"material": "Polycaprolactam"
 },
 {
 "id": "molten_polyphenylenesulfide",
@@ -1647,13 +1885,15 @@
 "id": "molten_polystyrene",
 "state": 4,
 "temperature": 1000,
-"color": 12498090
+"color": 12498090,
+"material": "Polystyrene"
 },
 {
 "id": "molten_polytetrafluoroethylene",
 "state": 4,
 "temperature": 1400,
-"color": 7188913
+"color": 7188913,
+"material": "Polytetrafluoroethylene"
 },
 {
 "id": "molten_polyvinylchloride",
@@ -1665,175 +1905,204 @@
 "id": "molten_potassium",
 "state": 4,
 "temperature": 336,
-"color": 12508415
+"color": 12508415,
+"material": "Potassium"
 },
 {
 "id": "molten_praseodymium",
 "state": 4,
 "temperature": 1208,
-"color": 16777215
+"color": 16777215,
+"material": "Praseodymium"
 },
 {
 "id": "molten_prometheum",
 "state": 4,
 "temperature": 1000,
-"color": 5931350
+"color": 5931350,
+"material": "Prometheum"
 },
 {
 "id": "molten_promethium",
 "state": 4,
 "temperature": 1315,
-"color": 16777215
+"color": 16777215,
+"material": "Promethium"
 },
 {
 "id": "molten_pulsatingiron",
 "state": 4,
 "temperature": 1000,
-"color": 8451739
+"color": 8451739,
+"material": "PulsatingIron"
 },
 {
 "id": "molten_redalloy",
 "state": 4,
 "temperature": 1000,
-"color": 13107200
+"color": 13107200,
+"material": "RedAlloy"
 },
 {
 "id": "molten_redsteel",
 "state": 4,
 "temperature": 1000,
-"color": 9200740
+"color": 9200740,
+"material": "RedSteel"
 },
 {
 "id": "molten_redstone",
 "state": 4,
 "temperature": 500,
-"color": 13107200
+"color": 13107200,
+"material": "Redstone"
 },
 {
 "id": "molten_redstonealloy",
 "state": 4,
 "temperature": 671,
-"color": 11875123
+"color": 11875123,
+"material": "RedstoneAlloy"
 },
 {
 "id": "molten_rosegold",
 "state": 4,
 "temperature": 1000,
-"color": 16770590
+"color": 16770590,
+"material": "RoseGold"
 },
 {
 "id": "molten_rubber",
 "state": 4,
 "temperature": 400,
-"color": 0
+"color": 0,
+"material": "Rubber"
 },
 {
 "id": "molten_rubidium",
 "state": 4,
 "temperature": 312,
-"color": 15736350
+"color": 15736350,
+"material": "Rubidium"
 },
 {
 "id": "molten_samarium",
 "state": 4,
 "temperature": 1345,
-"color": 16777215
+"color": 16777215,
+"material": "Samarium"
 },
 {
 "id": "molten_sanguinite",
 "state": 4,
 "temperature": 1000,
-"color": 12124160
+"color": 12124160,
+"material": "Sanguinite"
 },
 {
 "id": "molten_scandium",
 "state": 4,
 "temperature": 1814,
-"color": 16777215
+"color": 16777215,
+"material": "Scandium"
 },
 {
 "id": "molten_serpentine",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Serpentine"
 },
 {
 "id": "molten_shadowiron",
 "state": 4,
 "temperature": 1000,
-"color": 7895160
+"color": 7895160,
+"material": "ShadowIron"
 },
 {
 "id": "molten_shadowsteel",
 "state": 4,
 "temperature": 1000,
-"color": 5921370
+"color": 5921370,
+"material": "ShadowSteel"
 },
 {
 "id": "molten_signalum",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Signalum"
 },
 {
 "id": "molten_silicon",
 "state": 4,
 "temperature": 1687,
-"color": 3947600
+"color": 3947600,
+"material": "Silicon"
 },
 {
 "id": "molten_silicone",
 "state": 4,
 "temperature": 900,
-"color": 14474460
+"color": 14474460,
+"material": "Silicone"
 },
 {
 "id": "molten_silver",
 "state": 4,
 "temperature": 1234,
-"color": 14474495
+"color": 14474495,
+"material": "Silver"
 },
 {
 "id": "molten_solderingalloy",
 "state": 4,
 "temperature": 400,
-"color": 14474470
+"color": 14474470,
+"material": "SolderingAlloy"
 },
 {
 "id": "molten_soularium",
 "state": 4,
 "temperature": 800,
-"color": 9004098
+"color": 9004098,
+"material": "Soularium"
 },
 {
 "id": "molten_stainlesssteel",
 "state": 4,
 "temperature": 1000,
-"color": 7902119
+"color": 7902119,
+"material": "StainlessSteel"
 },
 {
 "id": "molten_starconium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Starconium"
 },
 {
 "id": "molten_steel",
 "state": 4,
 "temperature": 1811,
-"color": 8421504
+"color": 8421504,
+"material": "Steel"
 },
 {
 "id": "molten_steelmagnetic",
 "state": 4,
 "temperature": 1000,
-"color": 8421504
+"color": 8421504,
+"material": "SteelMagnetic"
 },
 {
 "id": "molten_sterlingsilver",
 "state": 4,
 "temperature": 1000,
-"color": 16440545
+"color": 16440545,
+"material": "SterlingSilver"
 },
 {
 "id": "molten_styrenebutadienerubber",
@@ -1845,211 +2114,246 @@
 "id": "molten_sugar",
 "state": 4,
 "temperature": 1000,
-"color": 16448250
+"color": 16448250,
+"material": "Sugar"
 },
 {
 "id": "molten_sunnarium",
 "state": 4,
 "temperature": 4200,
-"color": 16776960
+"color": 16776960,
+"material": "Sunnarium"
 },
 {
 "id": "molten_tantalum",
 "state": 4,
 "temperature": 3290,
-"color": 15101517
+"color": 15101517,
+"material": "Tantalum"
 },
 {
 "id": "molten_tarpitch",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "TarPitch"
 },
 {
 "id": "molten_tartarite",
 "state": 4,
 "temperature": 1000,
-"color": 16741948
+"color": 16741948,
+"material": "Tartarite"
 },
 {
 "id": "molten_tellurium",
 "state": 4,
 "temperature": 722,
-"color": 16777215
+"color": 16777215,
+"material": "Tellurium"
 },
 {
 "id": "molten_terbium",
 "state": 4,
 "temperature": 1629,
-"color": 16777215
+"color": 16777215,
+"material": "Terbium"
 },
 {
 "id": "molten_terrasteel",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Terrasteel"
 },
 {
 "id": "molten_teslatite",
 "state": 4,
 "temperature": 1000,
-"color": 3978440
+"color": 3978440,
+"material": "Teslatite"
 },
 {
 "id": "molten_thaumium",
 "state": 4,
 "temperature": 1000,
-"color": 9856200
+"color": 9856200,
+"material": "Thaumium"
 },
 {
 "id": "molten_thorium",
 "state": 4,
 "temperature": 2115,
-"color": 7680
+"color": 7680,
+"material": "Thorium"
 },
 {
 "id": "molten_thulium",
 "state": 4,
 "temperature": 1818,
-"color": 16777215
+"color": 16777215,
+"material": "Thulium"
 },
 {
 "id": "molten_thyrium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Thyrium"
 },
 {
 "id": "molten_tin",
 "state": 4,
 "temperature": 505,
-"color": 14474460
+"color": 14474460,
+"material": "Tin"
 },
 {
 "id": "molten_tinalloy",
 "state": 4,
 "temperature": 1000,
-"color": 13158600
+"color": 13158600,
+"material": "TinAlloy"
 },
 {
 "id": "molten_titanium",
 "state": 4,
 "temperature": 1941,
-"color": 14459120
+"color": 14459120,
+"material": "Titanium"
 },
 {
 "id": "molten_tritanium",
 "state": 4,
 "temperature": 1000,
-"color": 10496190
+"color": 10496190,
+"material": "Tritanium"
 },
 {
 "id": "molten_tungsten",
 "state": 4,
 "temperature": 3695,
-"color": 3289650
+"color": 3289650,
+"material": "Tungsten"
 },
 {
 "id": "molten_tungstencarbide",
 "state": 4,
 "temperature": 2460,
-"color": 3342438
+"color": 3342438,
+"material": "TungstenCarbide"
 },
 {
 "id": "molten_tungstensteel",
 "state": 4,
 "temperature": 1000,
-"color": 6579360
+"color": 6579360,
+"material": "TungstenSteel"
 },
 {
 "id": "molten_ultimet",
 "state": 4,
 "temperature": 2700,
-"color": 11842790
+"color": 11842790,
+"material": "Ultimet"
 },
 {
 "id": "molten_uranium",
 "state": 4,
 "temperature": 1405,
-"color": 3338290
+"color": 3338290,
+"material": "Uranium"
 },
 {
 "id": "molten_vanadium",
 "state": 4,
 "temperature": 2183,
-"color": 3289650
+"color": 3289650,
+"material": "Vanadium"
 },
 {
 "id": "molten_vanadiumgallium",
 "state": 4,
 "temperature": 4500,
-"color": 8421516
+"color": 8421516,
+"material": "VanadiumGallium"
 },
 {
 "id": "molten_vanadiumsteel",
 "state": 4,
 "temperature": 1453,
-"color": 12632256
+"color": 12632256,
+"material": "VanadiumSteel"
 },
 {
 "id": "molten_vibrantalloy",
 "state": 4,
 "temperature": 3300,
-"color": 10337333
+"color": 10337333,
+"material": "VibrantAlloy"
 },
 {
 "id": "molten_vulcanite",
 "state": 4,
 "temperature": 1000,
-"color": 16745544
+"color": 16745544,
+"material": "Vulcanite"
 },
 {
 "id": "molten_vyroxeres",
 "state": 4,
 "temperature": 1000,
-"color": 5627905
+"color": 5627905,
+"material": "Vyroxeres"
 },
 {
 "id": "molten_wroughtiron",
 "state": 4,
 "temperature": 1811,
-"color": 13153460
+"color": 13153460,
+"material": "WroughtIron"
 },
 {
 "id": "molten_yellorium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Yellorium"
 },
 {
 "id": "molten_ytterbium",
 "state": 4,
 "temperature": 1097,
-"color": 16777215
+"color": 16777215,
+"material": "Ytterbium"
 },
 {
 "id": "molten_yttrium",
 "state": 4,
 "temperature": 1799,
-"color": 14482140
+"color": 14482140,
+"material": "Yttrium"
 },
 {
 "id": "molten_yttriumbariumcuprate",
 "state": 4,
 "temperature": 4500,
-"color": 5259334
+"color": 5259334,
+"material": "YttriumBariumCuprate"
 },
 {
 "id": "molten_zectium",
 "state": 4,
 "temperature": 1000,
-"color": 16777215
+"color": 16777215,
+"material": "Zectium"
 },
 {
 "id": "molten_zinc",
 "state": 4,
 "temperature": 692,
-"color": 16445680
+"color": 16445680,
+"material": "Zinc"
 },
 {
 "id": "muddywater",
@@ -2073,19 +2377,22 @@
 "id": "nitrofuel",
 "state": 1,
 "temperature": 295,
-"color": 13172480
+"color": 13172480,
+"material": "NitroFuel"
 },
 {
 "id": "nitrogen",
 "state": 2,
 "temperature": 295,
-"color": 38600
+"color": 38600,
+"material": "Nitrogen"
 },
 {
 "id": "nitrogendioxide",
 "state": 2,
 "temperature": 295,
-"color": 6598655
+"color": 6598655,
+"material": "NitrogenDioxide"
 },
 {
 "id": "nitrousoxide",
@@ -2097,505 +2404,596 @@
 "id": "noblegases",
 "state": 1,
 "temperature": 4,
-"color": 11129077
+"color": 11129077,
+"material": "NobleGases"
 },
 {
 "id": "oil",
 "state": 1,
 "temperature": 295,
-"color": 657930
+"color": 657930,
+"material": "Oil"
 },
 {
 "id": "oxygen",
 "state": 2,
 "temperature": 295,
-"color": 25800
+"color": 25800,
+"material": "Oxygen"
 },
 {
 "id": "phenol",
 "state": 1,
 "temperature": 295,
-"color": 7881761
+"color": 7881761,
+"material": "Phenol"
+},
+{
+"id": "phosphoricacid_gt5u",
+"state": 1,
+"temperature": 300,
+"color": 14474240,
+"material": "PhosphoricAcid"
 },
 {
 "id": "plasma_aluminium",
 "state": 3,
 "temperature": 10000,
-"color": 8440048
+"color": 8440048,
+"material": "Aluminium"
 },
 {
 "id": "plasma_americium",
 "state": 3,
 "temperature": 10000,
-"color": 15754495
+"color": 15754495,
+"material": "Americium"
 },
 {
 "id": "plasma_antimony",
 "state": 3,
 "temperature": 10000,
-"color": 14474480
+"color": 14474480,
+"material": "Antimony"
 },
 {
 "id": "plasma_argon",
 "state": 3,
 "temperature": 10000,
-"color": 65280
+"color": 65280,
+"material": "Argon"
 },
 {
 "id": "plasma_arsenic",
 "state": 3,
 "temperature": 10000,
-"color": 15785060
+"color": 15785060,
+"material": "Arsenic"
 },
 {
 "id": "plasma_barium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Barium"
 },
 {
 "id": "plasma_beryllium",
 "state": 3,
 "temperature": 10000,
-"color": 6599780
+"color": 6599780,
+"material": "Beryllium"
 },
 {
 "id": "plasma_bismuth",
 "state": 3,
 "temperature": 10000,
-"color": 6594720
+"color": 6594720,
+"material": "Bismuth"
 },
 {
 "id": "plasma_boron",
 "state": 3,
 "temperature": 10000,
-"color": 13826770
+"color": 13826770,
+"material": "Boron"
 },
 {
 "id": "plasma_cadmium",
 "state": 3,
 "temperature": 10000,
-"color": 3289660
+"color": 3289660,
+"material": "Cadmium"
 },
 {
 "id": "plasma_caesium",
 "state": 3,
 "temperature": 10000,
-"color": 13150795
+"color": 13150795,
+"material": "Caesium"
 },
 {
 "id": "plasma_calcium",
 "state": 3,
 "temperature": 10000,
-"color": 16774645
+"color": 16774645,
+"material": "Calcium"
 },
 {
 "id": "plasma_carbon",
 "state": 3,
 "temperature": 10000,
-"color": 1315860
+"color": 1315860,
+"material": "Carbon"
 },
 {
 "id": "plasma_cerium",
 "state": 3,
 "temperature": 10000,
-"color": 8884605
+"color": 8884605,
+"material": "Cerium"
 },
 {
 "id": "plasma_chlorine",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Chlorine"
 },
 {
 "id": "plasma_chrome",
 "state": 3,
 "temperature": 10000,
-"color": 16765650
+"color": 16765650,
+"material": "Chrome"
 },
 {
 "id": "plasma_cobalt",
 "state": 3,
 "temperature": 10000,
-"color": 5263610
+"color": 5263610,
+"material": "Cobalt"
 },
 {
 "id": "plasma_copper",
 "state": 3,
 "temperature": 10000,
-"color": 16737280
+"color": 16737280,
+"material": "Copper"
 },
 {
 "id": "plasma_deuterium",
 "state": 3,
 "temperature": 10000,
-"color": 16776960
+"color": 16776960,
+"material": "Deuterium"
 },
 {
 "id": "plasma_dysprosium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Dysprosium"
 },
 {
 "id": "plasma_empty",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Empty"
 },
 {
 "id": "plasma_erbium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Erbium"
 },
 {
 "id": "plasma_europium",
 "state": 3,
 "temperature": 10000,
-"color": 7902960
+"color": 7902960,
+"material": "Europium"
 },
 {
 "id": "plasma_fluorine",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Fluorine"
 },
 {
 "id": "plasma_gadolinium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Gadolinium"
 },
 {
 "id": "plasma_gallium",
 "state": 3,
 "temperature": 10000,
-"color": 14474495
+"color": 14474495,
+"material": "Gallium"
 },
 {
 "id": "plasma_gold",
 "state": 3,
 "temperature": 10000,
-"color": 16776990
+"color": 16776990,
+"material": "Gold"
 },
 {
 "id": "plasma_helium",
 "state": 3,
 "temperature": 10000,
-"color": 16776960
+"color": 16776960,
+"material": "Helium"
 },
 {
 "id": "plasma_holmium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Holmium"
 },
 {
 "id": "plasma_hydrogen",
 "state": 3,
 "temperature": 10000,
-"color": 255
+"color": 255,
+"material": "Hydrogen"
 },
 {
 "id": "plasma_indium",
 "state": 3,
 "temperature": 10000,
-"color": 4194432
+"color": 4194432,
+"material": "Indium"
 },
 {
 "id": "plasma_iridium",
 "state": 3,
 "temperature": 10000,
-"color": 11862015
+"color": 11862015,
+"material": "Iridium"
 },
 {
 "id": "plasma_iron",
 "state": 3,
 "temperature": 10000,
-"color": 13158600
+"color": 13158600,
+"material": "Iron"
 },
 {
 "id": "plasma_lanthanum",
 "state": 3,
 "temperature": 10000,
-"color": 2667658
+"color": 2667658,
+"material": "Lanthanum"
 },
 {
 "id": "plasma_lead",
 "state": 3,
 "temperature": 10000,
-"color": 9200780
+"color": 9200780,
+"material": "Lead"
 },
 {
 "id": "plasma_lithium",
 "state": 3,
 "temperature": 10000,
-"color": 14802175
+"color": 14802175,
+"material": "Lithium"
 },
 {
 "id": "plasma_lutetium",
 "state": 3,
 "temperature": 10000,
-"color": 43775
+"color": 43775,
+"material": "Lutetium"
 },
 {
 "id": "plasma_magic",
 "state": 3,
 "temperature": 10000,
-"color": 6553800
+"color": 6553800,
+"material": "Magic"
 },
 {
 "id": "plasma_magnesium",
 "state": 3,
 "temperature": 10000,
-"color": 16763080
+"color": 16763080,
+"material": "Magnesium"
 },
 {
 "id": "plasma_manganese",
 "state": 3,
 "temperature": 10000,
-"color": 13492665
+"color": 13492665,
+"material": "Manganese"
 },
 {
 "id": "plasma_mercury",
 "state": 3,
 "temperature": 10000,
-"color": 16768220
+"color": 16768220,
+"material": "Mercury"
 },
 {
 "id": "plasma_molybdenum",
 "state": 3,
 "temperature": 10000,
-"color": 11842780
+"color": 11842780,
+"material": "Molybdenum"
 },
 {
 "id": "plasma_neodymium",
 "state": 3,
 "temperature": 10000,
-"color": 6579300
+"color": 6579300,
+"material": "Neodymium"
 },
 {
 "id": "plasma_neutronium",
 "state": 3,
 "temperature": 10000,
-"color": 10549910
+"color": 10549910,
+"material": "Neutronium"
 },
 {
 "id": "plasma_nickel",
 "state": 3,
 "temperature": 10000,
-"color": 13158650
+"color": 13158650,
+"material": "Nickel"
 },
 {
 "id": "plasma_niobium",
 "state": 3,
 "temperature": 10000,
-"color": 12498120
+"color": 12498120,
+"material": "Niobium"
 },
 {
 "id": "plasma_nitrogen",
 "state": 3,
 "temperature": 10000,
-"color": 38600
+"color": 38600,
+"material": "Nitrogen"
 },
 {
 "id": "plasma_null",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "_NULL"
 },
 {
 "id": "plasma_osmium",
 "state": 3,
 "temperature": 10000,
-"color": 3289855
+"color": 3289855,
+"material": "Osmium"
 },
 {
 "id": "plasma_oxygen",
 "state": 3,
 "temperature": 10000,
-"color": 25800
+"color": 25800,
+"material": "Oxygen"
 },
 {
 "id": "plasma_palladium",
 "state": 3,
 "temperature": 10000,
-"color": 8421504
+"color": 8421504,
+"material": "Palladium"
 },
 {
 "id": "plasma_phosphorus",
 "state": 3,
 "temperature": 10000,
-"color": 16776960
+"color": 16776960,
+"material": "Phosphorus"
 },
 {
 "id": "plasma_platinum",
 "state": 3,
 "temperature": 10000,
-"color": 16777160
+"color": 16777160,
+"material": "Platinum"
 },
 {
 "id": "plasma_plutonium",
 "state": 3,
 "temperature": 10000,
-"color": 15741490
+"color": 15741490,
+"material": "Plutonium"
 },
 {
 "id": "plasma_potassium",
 "state": 3,
 "temperature": 10000,
-"color": 12508415
+"color": 12508415,
+"material": "Potassium"
 },
 {
 "id": "plasma_praseodymium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Praseodymium"
 },
 {
 "id": "plasma_promethium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Promethium"
 },
 {
 "id": "plasma_radon",
 "state": 3,
 "temperature": 10000,
-"color": 16711935
+"color": 16711935,
+"material": "Radon"
 },
 {
 "id": "plasma_rubidium",
 "state": 3,
 "temperature": 10000,
-"color": 15736350
+"color": 15736350,
+"material": "Rubidium"
 },
 {
 "id": "plasma_samarium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Samarium"
 },
 {
 "id": "plasma_scandium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Scandium"
 },
 {
 "id": "plasma_silicon",
 "state": 3,
 "temperature": 10000,
-"color": 3947600
+"color": 3947600,
+"material": "Silicon"
 },
 {
 "id": "plasma_silver",
 "state": 3,
 "temperature": 10000,
-"color": 14474495
+"color": 14474495,
+"material": "Silver"
 },
 {
 "id": "plasma_sodium",
 "state": 3,
 "temperature": 10000,
-"color": 150
+"color": 150,
+"material": "Sodium"
 },
 {
 "id": "plasma_strontium",
 "state": 3,
 "temperature": 10000,
-"color": 13158600
+"color": 13158600,
+"material": "Strontium"
 },
 {
 "id": "plasma_sulfur",
 "state": 3,
 "temperature": 10000,
-"color": 13158400
+"color": 13158400,
+"material": "Sulfur"
 },
 {
 "id": "plasma_tantalum",
 "state": 3,
 "temperature": 10000,
-"color": 15101517
+"color": 15101517,
+"material": "Tantalum"
 },
 {
 "id": "plasma_tellurium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Tellurium"
 },
 {
 "id": "plasma_terbium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Terbium"
 },
 {
 "id": "plasma_thorium",
 "state": 3,
 "temperature": 10000,
-"color": 7680
+"color": 7680,
+"material": "Thorium"
 },
 {
 "id": "plasma_thulium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Thulium"
 },
 {
 "id": "plasma_tin",
 "state": 3,
 "temperature": 10000,
-"color": 14474460
+"color": 14474460,
+"material": "Tin"
 },
 {
 "id": "plasma_titanium",
 "state": 3,
 "temperature": 10000,
-"color": 14459120
+"color": 14459120,
+"material": "Titanium"
 },
 {
 "id": "plasma_tritium",
 "state": 3,
 "temperature": 10000,
-"color": 16711680
+"color": 16711680,
+"material": "Tritium"
 },
 {
 "id": "plasma_tungsten",
 "state": 3,
 "temperature": 10000,
-"color": 3289650
+"color": 3289650,
+"material": "Tungsten"
 },
 {
 "id": "plasma_uranium",
 "state": 3,
 "temperature": 10000,
-"color": 3338290
+"color": 3338290,
+"material": "Uranium"
 },
 {
 "id": "plasma_vanadium",
 "state": 3,
 "temperature": 10000,
-"color": 3289650
+"color": 3289650,
+"material": "Vanadium"
 },
 {
 "id": "plasma_ytterbium",
 "state": 3,
 "temperature": 10000,
-"color": 16777215
+"color": 16777215,
+"material": "Ytterbium"
 },
 {
 "id": "plasma_yttrium",
 "state": 3,
 "temperature": 10000,
-"color": 14482140
+"color": 14482140,
+"material": "Yttrium"
 },
 {
 "id": "plasma_zinc",
 "state": 3,
 "temperature": 10000,
-"color": 16445680
+"color": 16445680,
+"material": "Zinc"
 },
 {
 "id": "polyvinylacetate",
@@ -2607,19 +3005,22 @@
 "id": "propane",
 "state": 1,
 "temperature": 295,
-"color": 16441936
+"color": 16441936,
+"material": "Propane"
 },
 {
 "id": "propene",
 "state": 1,
 "temperature": 295,
-"color": 16768341
+"color": 16768341,
+"material": "Propene"
 },
 {
 "id": "radon",
 "state": 2,
 "temperature": 295,
-"color": 16711935
+"color": 16711935,
+"material": "Radon"
 },
 {
 "id": "rocket_fuel",
@@ -2637,13 +3038,15 @@
 "id": "seedoil",
 "state": 1,
 "temperature": 295,
-"color": 12910336
+"color": 12910336,
+"material": "SeedOil"
 },
 {
 "id": "sodiumpersulfate",
 "state": 1,
 "temperature": 295,
-"color": 16777215
+"color": 16777215,
+"material": "SodiumPersulfate"
 },
 {
 "id": "solution_bluevitriol",
@@ -2667,49 +3070,57 @@
 "id": "steamcracked_butane",
 "state": 2,
 "temperature": 775,
-"color": 11941662
+"color": 11941662,
+"material": "Butane"
 },
 {
 "id": "steamcracked_ethane",
 "state": 2,
 "temperature": 775,
-"color": 13158655
+"color": 13158655,
+"material": "Ethane"
 },
 {
 "id": "steamcracked_gas",
 "state": 2,
 "temperature": 775,
-"color": 16777215
+"color": 16777215,
+"material": "Gas"
 },
 {
 "id": "steamcracked_heavyfuel",
 "state": 2,
 "temperature": 775,
-"color": 16776960
+"color": 16776960,
+"material": "HeavyFuel"
 },
 {
 "id": "steamcracked_lightfuel",
 "state": 2,
 "temperature": 775,
-"color": 16776960
+"color": 16776960,
+"material": "LightFuel"
 },
 {
 "id": "steamcracked_naphtha",
 "state": 2,
 "temperature": 775,
-"color": 16776960
+"color": 16776960,
+"material": "Naphtha"
 },
 {
 "id": "steamcracked_propane",
 "state": 2,
 "temperature": 775,
-"color": 16441936
+"color": 16441936,
+"material": "Propane"
 },
 {
 "id": "styrene",
 "state": 1,
 "temperature": 295,
-"color": 13813950
+"color": 13813950,
+"material": "Styrene"
 },
 {
 "id": "sulfurdioxide",
@@ -2721,7 +3132,8 @@
 "id": "sulfuricacid",
 "state": 1,
 "temperature": 295,
-"color": 16744448
+"color": 16744448,
+"material": "SulfuricAcid"
 },
 {
 "id": "sulfurtrioxide",
@@ -2733,31 +3145,36 @@
 "id": "tetrafluoroethylene",
 "state": 1,
 "temperature": 295,
-"color": 8224125
+"color": 8224125,
+"material": "Tetrafluoroethylene"
 },
 {
 "id": "tetranitromethane",
 "state": 1,
 "temperature": 295,
-"color": 993320
+"color": 993320,
+"material": "Tetranitromethane"
 },
 {
 "id": "titaniumtetrachloride",
 "state": 1,
 "temperature": 295,
-"color": 13897052
+"color": 13897052,
+"material": "Titaniumtetrachloride"
 },
 {
 "id": "tritium",
 "state": 2,
 "temperature": 295,
-"color": 16711680
+"color": 16711680,
+"material": "Tritium"
 },
 {
 "id": "uuamplifier",
 "state": 1,
 "temperature": 295,
-"color": 6291584
+"color": 6291584,
+"material": "UUAmplifier"
 },
 {
 "id": "vinylacetate",
@@ -2788,5 +3205,11 @@
 "state": 1,
 "temperature": 295,
 "color": 13158600
+},
+{
+"id": "distilled_water",
+"state": 1,
+"temperature": 295,
+"color": 5931750
 }
 ]

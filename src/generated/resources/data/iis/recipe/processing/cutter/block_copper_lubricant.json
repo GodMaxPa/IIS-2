@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:copper_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_copper",
+      "count": 9
+    }
+  ],
+  "duration": 630,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 14
+    }
+  ]
+}

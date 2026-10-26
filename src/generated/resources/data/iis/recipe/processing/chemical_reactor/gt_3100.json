@@ -1,0 +1,49 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "minecraft:water",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 5,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:dilutedhydrochloricacid_gt5u",
+          "amount": 1000
+        }
+      }
+    },
+    {
+      "id": "iis:capsule",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:chlorine",
+      "amount": 2000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:hypochlorousacid",
+      "amount": 3000
+    }
+  ],
+  "circuit": 1
+}

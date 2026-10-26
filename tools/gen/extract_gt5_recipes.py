@@ -13,7 +13,7 @@ import re
 import sys
 
 METHODS = ('addChemicalRecipe', 'addChemicalRecipeForBasicMachineOnly', 'addElectrolyzerRecipe', 'addCentrifugeRecipe', 'addMixerRecipe',
-           'addFluidExtractionRecipe', 'addFluidSolidifierRecipe', 'addFluidSmelterRecipe')
+           'addFluidExtractionRecipe', 'addFluidSolidifierRecipe', 'addFluidSmelterRecipe', 'addDistilleryRecipe', 'addChemicalBathRecipe')
 
 
 def strip_comments(src):

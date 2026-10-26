@@ -1,0 +1,20 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [],
+  "duration": 16,
+  "eut": 10,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 5
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:distilled_water",
+      "amount": 5
+    }
+  ],
+  "circuit": 5
+}

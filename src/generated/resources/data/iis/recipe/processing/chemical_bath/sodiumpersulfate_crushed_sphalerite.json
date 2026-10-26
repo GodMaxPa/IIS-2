@@ -1,0 +1,33 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/sphalerite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_sphalerite",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_zinc",
+      "count": 1,
+      "chance": 7000
+    },
+    {
+      "id": "iis:dust_stone",
+      "count": 1,
+      "chance": 4000
+    }
+  ],
+  "duration": 800,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:sodiumpersulfate",
+      "amount": 1000
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "minecraft:sugar_cane",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:paper",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 100
+    }
+  ]
+}

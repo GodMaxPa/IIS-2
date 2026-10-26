@@ -52,6 +52,9 @@ MACHINES = [
     ('chemical_reactor', 'chemicalreactor', 'CHEMICAL_REACTOR', 'ChemicalReactor', 'chemical_reactor', 3, 3, 16000, 'Chemical Reactor'),
     ('fluid_extractor', 'fluidextractor', 'FLUID_EXTRACTOR', 'FluidExtractor', 'fluid_extractor', 1, 1, 16000, 'Fluid Extractor'),
     ('fluid_solidifier', 'fluidsolidifier', 'FLUID_SOLIDIFIER', 'FluidSolidifier', 'fluid_solidifier', 1, 1, 16000, 'Fluid Solidifier'),
+    # LV IV: distillery and chemical bath (GT_Loader_MetaTileEntities:976, 985)
+    ('distillery',    'distillery',    'DISTILLERY',       'Distillery',   'distillery',    1, 1, 1000,  'Distillery'),
+    ('chemical_bath', 'chemicalbath',  'CHEMICAL_BATH',    'ChemicalBath', 'chemical_bath', 1, 3, 8000,  'Chemical Bath'),
 ]
 GENERATORS = [
     # id, GT lang, texture prefix, EN
@@ -828,6 +831,11 @@ def generate(g):
     # :958 fluid extractor "GCG/PME/WCW", :967 fluid solidifier "PGP/WMW/CBC" (P = pump, B = chest)
     shaped('lv/electrolyzer_lv', f'{NS}:electrolyzer_lv', 1, ['IGI', 'IMI', 'CWC'], {'I': W('Gold'), 'G': 'minecraft:glass', 'M': HULL, 'C': CIRC, 'W': C('Tin')})
     mcraft('chemical_reactor_lv', ['GRG', 'WEW', 'CMC'], 'GRWECM')
+    # LV IV: :976 distillery "GBG/CMC/WPW" (B = X.STICK_DISTILLATION = blaze rod), :985 chemical bath "VGW/PGV/CMC"
+    shaped('lv/distillery_lv', f'{NS}:distillery_lv', 1, ['GBG', 'CMC', 'WPW'], {'G': 'minecraft:glass', 'B': 'minecraft:blaze_rod', 'C': CIRC,
+                                                                            'M': HULL, 'W': C('Tin'), 'P': PUMP})
+    shaped('lv/chemical_bath_lv', f'{NS}:chemical_bath_lv', 1, ['VGW', 'PGV', 'CMC'], {'V': CONV, 'G': 'minecraft:glass', 'W': C('Tin'), 'P': PUMP,
+                                                                                  'C': CIRC, 'M': HULL})
     # GT_MetaGenerated_Item_01:181 empty shape "hf/PP/PP" (steel plates), :204-212 molds: empty shape + hammer in a position
     shaped('lv/shape_empty', f'{NS}:shape_empty', 1, ['hf', 'PP', 'PP'], {'P': P('Steel'), 'h': '#iis:tools/hammer', 'f': '#iis:tools/file'})
     for mold, pat in (('mold_plate', [' h ', ' P ', '   ']), ('mold_gear', ['   ', ' Ph', '   ']), ('mold_ingot', ['   ', ' P ', ' h ']),
@@ -1052,6 +1060,7 @@ def generate(g):
                        ('jei.iis.electrolyzer', 'Electrolyzer', 'Электролизёр'), ('jei.iis.chemical_reactor', 'Chemical Reactor', 'Химический реактор'),
                        ('jei.iis.fluid_extractor', 'Fluid Extractor', 'Экстрактор жидкостей'),
                        ('jei.iis.fluid_solidifier', 'Fluid Solidifier', 'Отвердитель жидкостей'),
+                       ('jei.iis.distillery', 'Distillery', 'Дистиллятор'), ('jei.iis.chemical_bath', 'Chemical Bath', 'Химическая ванна'),
                        ('jei.iis.bender', 'Bending Machine', 'Гибочный станок'), ('jei.iis.lathe', 'Lathe', 'Токарный станок'),
                        ('jei.iis.assembler', 'Assembler', 'Сборщик'), ('jei.iis.mixer', 'Mixer', 'Миксер'),
                        ('jei.iis.polarizer', 'Polarizer', 'Поляризатор'), ('jei.iis.ore_washer', 'Ore Washing Plant', 'Рудопромывочная установка'),
@@ -1098,6 +1107,7 @@ M = 3628800
 
 def lv2_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
     NS = 'iis'
+    DISTILLED = lambda n: {'ingredient': f'{NS}:distilled_water', 'amount': n}   # GT_ModHandler.getDistilledWater (IC2 replacement)
     code = g['code']
 
     def byproduct(n, idx):
@@ -1108,10 +1118,11 @@ def lv2_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
         return bys[min(idx, len(bys) - 1)]
 
     def cutter(rid, inp, outs, dur, eut):
-        """GT_RecipeAdder.addCutterRecipe: water variant (duration x2, water max(4, min(1000, d*e/320))).
-        Distilled water and lubricant variants come with chemistry (PORTING_NOTES)."""
-        water = max(4, min(1000, dur * eut // 320))
-        mrec('cutter', rid, inp, outs, dur * 2, eut, WATER(water))
+        """GT_RecipeAdder#addCutterRecipe:438-440: water (duration x2, max(4, min(1000, d*e/320))), distilled water (duration x2,
+        max(3, min(750, d*e/426))), lubricant (duration x1, max(1, min(250, d*e/1280)))."""
+        mrec('cutter', rid, inp, outs, dur * 2, eut, WATER(max(4, min(1000, dur * eut // 320))))
+        mrec('cutter', rid + '_distilled', inp, outs, dur * 2, eut, DISTILLED(max(3, min(750, dur * eut // 426))))
+        mrec('cutter', rid + '_lubricant', inp, outs, dur, eut, {'ingredient': f'{NS}:lubricant', 'amount': max(1, min(250, dur * eut // 1280))})
 
     def extra_data(n):
         raw = (code.get(n) or {}).get('rawArgs') or []
@@ -1173,11 +1184,13 @@ def lv2_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
                 if tag in st:
                     mrec('electromagnetic_separator', f'pure_{mid}', [ing(tag_of('pure_dust', n))],
                          [out(dust), out(ref('small_dust', m), 1, 4000), out(ref('nugget', m), 1, 2000)], 400, 24)
-        # --- autoclave: CRYSTALLISABLE dusts + 200 L water -> gem (ProcessingDust:122, :202) ---
+        # --- autoclave: CRYSTALLISABLE dusts + 200 L water -> gem (ProcessingDust:114-115, :204-205); distilled water: faster, higher chance ---
         if 'CRYSTALLISABLE' in st and ref('gem', n):
-            for pre, chance in (('dust', 7000), ('impure_dust', 9000), ('pure_dust', 9000)):
+            for pre, chance, dchance in (('dust', 7000, 9000), ('impure_dust', 9000, 9500), ('pure_dust', 9000, 9500)):
                 if ref(pre, n):
                     mrec('autoclave', f'{pre}_{mid}', [ing(tag_of(pre, n))], [out(ref('gem', n), 1, chance)], 2000, 24, WATER(200))
+                    mrec('autoclave', f'{pre}_{mid}_distilled', [ing(tag_of(pre, n))], [out(ref('gem', n), 1, dchance)], 1500, 24,
+                         DISTILLED(200))
         # --- sifter: purified crushed gem ore (ProcessingCrushedOre:44) ---
         gem = ref('gem', n)
         if gem and ref('purified', n):

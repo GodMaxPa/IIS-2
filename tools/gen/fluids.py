@@ -20,6 +20,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 TEX = os.path.join(HERE, 'textures')
 # registered elsewhere (IISFluids, vanilla) — not GT duplicates
 SKIP_FLUIDS = {'steam', 'creosote', 'water', 'lava', 'ic2steam', 'ic2distilledwater'}
+# IC2 fluids that GT5 recipes use (GT_ModHandler.getDistilledWater -> "ic2distilledwater"); IC2 is not ported (D5), so they
+# become our own GT-style fluids: id, en, ru, state, temperature K, rgb
+IC2_FLUIDS = [('distilled_water', 'Distilled Water', 'Дистиллированная вода', 1, 295, (90, 130, 230))]
 STATES = ['gt_solid', 'gt_liquid', 'gt_gas', 'gt_plasma', 'gt_molten']
 
 # GT_Loader_MetaTileEntities#generateFluidPipes: material, base capacity, heat limit K, gas proof, colour, iconSet, en, ru (adjective)
@@ -143,6 +146,28 @@ def pretty(fid):
     return ' '.join(w.capitalize() for w in fid.replace('.', ' ').replace('_', ' ').split())
 
 
+def gt_fluid_table():
+    """[(entry for iis/gt_fluids.json, en, ru)]: GT5 fluids + IC2 replacements. Also read by chem.py, which runs before generate()."""
+    src = json.load(open(os.path.join(HERE, '..', '..', 'reference', 'original', 'gt5_fluids.json'), encoding='utf-8'))
+    rows, seen = [], set()
+    for f in src:
+        if f['id'] in SKIP_FLUIDS:
+            continue
+        rid = f['id'].replace('.', '_').replace('-', '_').lower()
+        if rid in seen:
+            continue
+        seen.add(rid)
+        r, gg, b = f['rgb']
+        entry = {'id': rid, 'state': f['state'], 'temperature': f['temperature'], 'color': (r << 16) | (gg << 8) | b}
+        if f.get('material'):
+            entry['material'] = f['material']
+        en = f['en'] if f['en'] != f['id'] else pretty(f['id'])
+        rows.append((entry, en, f.get('ru') or en))
+    for rid, en, ru_, state, temp, (r, gg, b) in IC2_FLUIDS:
+        rows.append(({'id': rid, 'state': state, 'temperature': temp, 'color': (r << 16) | (gg << 8) | b}, en, ru_))
+    return rows
+
+
 def generate(g):
     write, A, D, lang, block_tags, RES = g['write'], g['A'], g['D'], g['lang'], g['block_tags'], g['RES']
     item_tags = g.get('item_tags')
@@ -179,19 +204,10 @@ def generate(g):
     stats = {}
 
     # --- GT fluids -------------------------------------------------------------------------------------------------
-    src = json.load(open(os.path.join(HERE, '..', '..', 'reference', 'original', 'gt5_fluids.json'), encoding='utf-8'))
-    table, seen = [], set()
-    for f in src:
-        if f['id'] in SKIP_FLUIDS:
-            continue
-        rid = f['id'].replace('.', '_').replace('-', '_').lower()
-        if rid in seen:
-            continue
-        seen.add(rid)
-        r, gg, b = f['rgb']
-        table.append({'id': rid, 'state': f['state'], 'temperature': f['temperature'], 'color': (r << 16) | (gg << 8) | b})
-        en = f['en'] if f['en'] != f['id'] else pretty(f['id'])
-        name(f'fluid_type.{NS}.{rid}', en, f.get('ru') or en)
+    table = []
+    for entry, en, ru_ in gt_fluid_table():
+        table.append(entry)
+        name(f'fluid_type.{NS}.{entry["id"]}', en, ru_)
     os.makedirs(os.path.join(RES, NS), exist_ok=True)
     with open(os.path.join(RES, NS, 'gt_fluids.json'), 'w', encoding='utf-8', newline=chr(10)) as fh:
         json.dump(table, fh, ensure_ascii=False, indent=0)

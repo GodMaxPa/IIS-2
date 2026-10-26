@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/tin_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_tin_alloy",
+      "count": 4
+    }
+  ],
+  "duration": 174,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 1
+    }
+  ]
+}

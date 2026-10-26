@@ -30,7 +30,10 @@ public enum GtRecipeMap {
     ELECTROLYZER("electrolyzer", 2, 6),
     CHEMICAL_REACTOR("chemical_reactor", 3, 3),
     FLUID_EXTRACTOR("fluid_extractor", 1, 1),
-    FLUID_SOLIDIFIER("fluid_solidifier", 1, 1);
+    FLUID_SOLIDIFIER("fluid_solidifier", 1, 1),
+    // LV IV: sDistilleryRecipes (схема — вход, 1 жидкость → 1 жидкость + предмет), sChemicalBathRecipes (1 вход, 3 выхода, жидкость)
+    DISTILLERY("distillery", 1, 1),
+    CHEMICAL_BATH("chemical_bath", 1, 3);
 
     public final String id;
     public final int maxInputs, maxOutputs;

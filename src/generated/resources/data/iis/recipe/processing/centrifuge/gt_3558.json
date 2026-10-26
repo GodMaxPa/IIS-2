@@ -1,0 +1,35 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 4,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:liquid_lpg",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 200,
+  "eut": 5,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:gas_gas",
+      "amount": 8000
+    }
+  ]
+}

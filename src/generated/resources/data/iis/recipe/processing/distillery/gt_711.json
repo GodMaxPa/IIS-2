@@ -1,0 +1,20 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [],
+  "duration": 16,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:seedoil",
+      "amount": 4
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:lubricant",
+      "amount": 1
+    }
+  ],
+  "circuit": 4
+}

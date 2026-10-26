@@ -33,7 +33,10 @@ public enum LvMachineType {
     ELECTROLYZER("electrolyzer", GtRecipeMap.ELECTROLYZER, 2, 6, 64000, "electrolyzer"),
     CHEMICAL_REACTOR("chemical_reactor", GtRecipeMap.CHEMICAL_REACTOR, 3, 3, 16000, "chemicalreactor"),
     FLUID_EXTRACTOR("fluid_extractor", GtRecipeMap.FLUID_EXTRACTOR, 1, 1, 16000, "fluidextractor"),
-    FLUID_SOLIDIFIER("fluid_solidifier", GtRecipeMap.FLUID_SOLIDIFIER, 1, 1, 16000, "fluidsolidifier");
+    FLUID_SOLIDIFIER("fluid_solidifier", GtRecipeMap.FLUID_SOLIDIFIER, 1, 1, 16000, "fluidsolidifier"),
+    // LV IV: GT_Loader_MetaTileEntities:976 Distillery (1, 1, 1000), :985 ChemicalBath (1, 3, 8000)
+    DISTILLERY("distillery", GtRecipeMap.DISTILLERY, 1, 1, 1000, "distillery"),
+    CHEMICAL_BATH("chemical_bath", GtRecipeMap.CHEMICAL_BATH, 1, 3, 8000, "chemicalbath");
 
     public final String id;
     public final GtRecipeMap recipeMap;

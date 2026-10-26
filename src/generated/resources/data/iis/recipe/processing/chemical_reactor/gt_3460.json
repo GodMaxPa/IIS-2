@@ -1,0 +1,25 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sulfur",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 60,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrogen",
+      "amount": 2000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_hydricsulfur",
+      "amount": 3000
+    }
+  ],
+  "circuit": 1
+}

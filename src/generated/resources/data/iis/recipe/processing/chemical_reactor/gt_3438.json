@@ -1,0 +1,49 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:sulfuricacid",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 7
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 6,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:ethylene",
+          "amount": 1000
+        }
+      }
+    },
+    {
+      "id": "iis:capsule",
+      "count": 1
+    }
+  ],
+  "duration": 1200,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:bioethanol",
+      "amount": 9000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dilutedsulfuricacid",
+      "amount": 10000
+    }
+  ],
+  "circuit": 1
+}

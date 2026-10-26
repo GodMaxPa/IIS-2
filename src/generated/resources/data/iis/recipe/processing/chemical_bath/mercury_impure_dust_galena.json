@@ -1,0 +1,33 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/galena",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pure_dust_galena",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_silver",
+      "count": 1,
+      "chance": 7000
+    },
+    {
+      "id": "iis:dust_stone",
+      "count": 1,
+      "chance": 4000
+    }
+  ],
+  "duration": 800,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:mercury",
+      "amount": 1000
+    }
+  ]
+}

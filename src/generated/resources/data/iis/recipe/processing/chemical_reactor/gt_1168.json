@@ -1,0 +1,38 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:hydrogen",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 1
+    }
+  ],
+  "duration": 5,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 500
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:distilled_water",
+      "amount": 1500
+    }
+  ]
+}

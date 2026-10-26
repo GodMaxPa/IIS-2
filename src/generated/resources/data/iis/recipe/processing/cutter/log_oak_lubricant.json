@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#minecraft:oak_logs",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:oak_planks",
+      "count": 4
+    }
+  ],
+  "duration": 200,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 1
+    }
+  ]
+}

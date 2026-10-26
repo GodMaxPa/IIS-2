@@ -15,6 +15,7 @@ import ru.iis.fluid.GtFluids;
 import ru.iis.lv.LvContent;
 import ru.iis.lv.LvMachineType;
 import ru.iis.lv.block.ElectricMachineBlockEntity;
+import ru.iis.lv.item.ProgrammedCircuitItem;
 
 /** Игровые тесты среза LV III «химия и расплавы» (D76): электролизёр, химреактор, экстрактор и отвердитель, нержавейка. */
 final class ChemGameTests {
@@ -82,6 +83,37 @@ final class ChemGameTests {
             h.assertTrue(out(m, 0).is(SelfTest.item("ingot_tin")) && out(m, 0).getCount() == 2, "ingots " + out(m, 0));
             h.assertTrue(m.getItem(0).is(LvContent.MOLD_INGOT.get()), "the mold must stay");
         });
+    }
+
+    /** Дистиллятор: схема 5 + вода → дистиллированная вода, 5 мБ за 16 тиков (GT_MachineRecipeLoader:715); схема остаётся. */
+    static void distilleryWater(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.DISTILLERY);
+        m.setItem(0, ProgrammedCircuitItem.withConfig(new ItemStack(LvContent.PROGRAMMED_CIRCUIT.get()), 5));
+        m.tank().setAmount(Fluids.WATER, 1000);
+        h.succeedWhen(() -> {
+            h.assertTrue(m.outTank().amount() >= 5 && m.outTank().resource().getFluid() == gt("distilled_water"),
+                    "distilled water " + m.outTank().amount());
+            h.assertTrue(ProgrammedCircuitItem.config(m.getItem(0)) == 5, "the circuit must stay");
+        });
+    }
+
+    /** Химванна: дроблёное золото в 1 000 мБ ртути → очищенная руда + золотая пыль 70 % + каменная 40 % (ProcessingDirty:27). */
+    static void bathMercuryGold(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.CHEMICAL_BATH);
+        m.setItem(0, new ItemStack(SelfTest.item("crushed_gold")));
+        m.tank().setAmount(gt("mercury"), 1000);
+        h.succeedWhen(() -> {
+            h.assertTrue(out(m, 0).is(SelfTest.item("purified_gold")), "purified gold: " + out(m, 0));
+            h.assertTrue(m.tank().amount() == 0, "mercury used: " + m.tank().amount());
+        });
+    }
+
+    /** Химванна: любое окрашенное стекло + 50 мБ хлора → обычное стекло (GT_MachineRecipeLoader:325, вход — список предметов). */
+    static void bathBleachGlass(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.CHEMICAL_BATH);
+        m.setItem(0, new ItemStack(Items.RED_STAINED_GLASS));
+        m.tank().setAmount(gt("chlorine"), 50);
+        h.succeedWhen(() -> h.assertTrue(out(m, 0).is(Items.GLASS), "glass: " + out(m, 0)));
     }
 
     /** Миксер: 4 железа + 3 инвара + марганец + хром → 9 нержавеющей пыли (GT_MachineRecipeLoader:1770). */

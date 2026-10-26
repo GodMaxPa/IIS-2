@@ -1,0 +1,24 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/certus_quartz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_certus_quartz",
+      "count": 1,
+      "chance": 9500
+    }
+  ],
+  "duration": 1500,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 200
+    }
+  ]
+}

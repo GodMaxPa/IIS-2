@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#minecraft:warped_stems",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:warped_planks",
+      "count": 4
+    }
+  ],
+  "duration": 200,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 1
+    }
+  ]
+}

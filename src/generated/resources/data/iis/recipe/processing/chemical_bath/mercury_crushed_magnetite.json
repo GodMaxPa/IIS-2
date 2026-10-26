@@ -1,0 +1,33 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/magnetite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_magnetite",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_gold",
+      "count": 1,
+      "chance": 7000
+    },
+    {
+      "id": "iis:dust_stone",
+      "count": 1,
+      "chance": 4000
+    }
+  ],
+  "duration": 800,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:mercury",
+      "amount": 1000
+    }
+  ]
+}

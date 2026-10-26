@@ -88,6 +88,8 @@
     "iis:chemical_reactor_lv",
     "iis:fluid_extractor_lv",
     "iis:fluid_solidifier_lv",
+    "iis:distillery_lv",
+    "iis:chemical_bath_lv",
     "iis:steam_turbine_lv",
     "iis:diesel_generator_lv",
     "iis:gas_turbine_lv",

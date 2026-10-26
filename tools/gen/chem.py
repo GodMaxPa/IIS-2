@@ -10,6 +10,7 @@
   when every item and fluid exists in IIS 2; expressions with loop variables are skipped.
 GT cells are IIS capsules (iis:capsule with the iis:fluid_content component), 1 cell = 1000 mB.
 """
+import importlib.util
 import json
 import math
 import os
@@ -40,6 +41,13 @@ VANILLA_ITEMS = {'paper': 'minecraft:paper', 'string': 'minecraft:string', 'sand
                  'pumpkin': 'minecraft:pumpkin', 'apple': 'minecraft:apple', 'carrot': 'minecraft:carrot', 'potato': 'minecraft:potato',
                  'reeds': 'minecraft:sugar_cane', 'egg': 'minecraft:egg', 'leather': 'minecraft:leather', 'feather': 'minecraft:feather'}
 
+# 1.7.10 dye metadata 0..15 -> 26.1 colour names; coloured blocks -> 26.1 id suffix (stained_hardened_clay is terracotta now)
+DYE_COLORS = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue',
+              'brown', 'green', 'red', 'black']
+COLORED = {'wool': 'wool', 'carpet': 'carpet', 'stained_hardened_clay': 'terracotta', 'stained_glass': 'stained_glass',
+           'stained_glass_pane': 'stained_glass_pane'}
+VANILLA_ITEMS.update({'hardened_clay': 'minecraft:terracotta', 'glass_pane': 'minecraft:glass_pane'})
+
 
 class Skip(Exception):
     pass
@@ -48,7 +56,18 @@ class Skip(Exception):
 def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
     ROOT = g['ROOT']
     code = g['code']
-    fluids = {f['id']: f for f in json.load(open(os.path.join(g['RES'], NS, 'gt_fluids.json'), encoding='utf-8'))}
+    # the fluid table itself (fluids.py writes iis/gt_fluids.json later in the same run, so the file may be stale here)
+    spec = importlib.util.spec_from_file_location('iis_gen_fluids_table', os.path.join(ROOT, 'tools', 'gen', 'fluids.py'))
+    fluids_mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(fluids_mod)
+    fluids = {e['id']: e for e, _, _ in fluids_mod.gt_fluid_table()}
+    # GT material variable -> fluid by kind (GT_Proxy#addFluid keeps the material; e.g. HydricSulfide -> liquid_hydricsulfur,
+    # HydrochloricAcid -> hydrochloricacid_gt5u)
+    by_mat = {}
+    for f in fluids.values():
+        if f.get('material'):
+            kind = {4: 'molten', 3: 'plasma', 2: 'gas'}.get(f['state'], 'fluid')
+            by_mat.setdefault((f['material'], kind), f['id'])
     elements = {}
     for line in open(os.path.join(ROOT, 'reference', 'original', 'gt5_elements.txt'), encoding='utf-8'):
         sym, protons, _ = line.split()
@@ -61,11 +80,15 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
             return 'minecraft:water'
         if material == 'Lava':
             return 'minecraft:lava'
+        if material == 'Creosote':
+            return f'{NS}:creosote'   # Railcraft creosote is our own IISFluids fluid (D58), not a GT duplicate
         low = material.lower()
         cand = {'fluid': [low, f'liquid_{low}', f'solution_{low}'], 'gas': [low], 'molten': [f'molten_{low}'], 'plasma': [f'plasma_{low}']}[kind]
         for c in cand:
             if c in fluids:
                 return f'{NS}:{c}'
+        if (material, kind) in by_mat:
+            return f"{NS}:{by_mat[(material, kind)]}"
         return None
 
     def named_fluid(name):
@@ -193,6 +216,35 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
             mrec('fluid_solidifier', f'block_{mat_id(n)}', [], [out(blk)], 288, 8, fin={'ingredient': fid, 'amount': 1296}, keep=[f'{NS}:mold_block'])
     stats['fluid_extractor'], stats['fluid_solidifier'] = n_fx, n_fs
 
+    # --- 2b. chemical bath of crushed ore / impure dust (ProcessingDirty:26-35) ------------------------------------------
+    # mercury or sodium persulfate, 1000 mB, 800 t, 8 EU/t; outputs purified (pure dust) 100 %, dust of the washed material
+    # (own material or a by-product that carries the subtag) 70 %, stone dust 40 %. GT checks recipe collisions, so for the
+    # same input and fluid the first recipe wins: own material first, then by-products in order.
+    baths = (('WASHING_MERCURY', 'Mercury'), ('WASHING_SODIUMPERSULFATE', 'SodiumPersulfate'))
+    n_bath, made_bath = 0, set()
+    for n in sorted(names):
+        bys = prop(n, 'ListMaterialByProducts', []) or []
+        mid = mat_id(n)
+        for src_p, dst_p in (('crushed', 'purified'), ('impure_dust', 'pure_dust')):
+            if not ref(src_p, n) or not ref(dst_p, n):
+                continue
+            for washed in [n] + list(bys):
+                st = g['subtags'](washed)
+                into = prop(washed, 'MaterialMacerateInto', washed) or washed
+                for tag, fluid in baths:
+                    fid = fluid_id(fluid)
+                    if tag not in st or not fid or not ref('dust', into):
+                        continue
+                    rid = f'{fluid.lower()}_{src_p}_{mid}'
+                    if rid in made_bath:
+                        continue
+                    made_bath.add(rid)
+                    mrec('chemical_bath', rid, [ing(tag_of(src_p, n))],
+                         [out(ref(dst_p, n)), out(ref('dust', into), 1, 7000), out(ref('dust', 'Stone'), 1, 4000)], 800, 8,
+                         fin={'ingredient': fid, 'amount': 1000})
+                    n_bath += 1
+    stats['chemical_bath_ore'] = n_bath
+
     # --- 3. hand-written GT recipes ---------------------------------------------------------------------------------------
     calls = json.load(open(os.path.join(ROOT, 'reference', 'original', 'gt5_machine_recipes.json'), encoding='utf-8'))['calls']
 
@@ -203,6 +255,8 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
         s = s.replace(',newObject[0])', ')')
         if s in ('GT_Values.NI', 'GT_Values.NF', 'null'):
             return ('none',)
+        if s in ('true', 'false'):
+            return ('bool', s == 'true')
         if re.fullmatch(r'-?\d+L?', s):
             return ('int', int(s.rstrip('L')))
         if re.fullmatch(r'[\d*+L()]+', s):
@@ -249,13 +303,24 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
         m = re.fullmatch(r'GT_ModHandler\.getWater\((\d+)L?\)', s)
         if m:
             return ('fluid', 'minecraft:water', int(m.group(1)))
+        m = re.fullmatch(r'GT_ModHandler\.getDistilledWater\((\d+)L?\)', s)
+        if m:
+            return ('fluid', f'{NS}:distilled_water', int(m.group(1)))
+        m = re.fullmatch(r'ItemList\.Circuit_Integrated\.getWithDamage\(0L?,(\d+)L?\)', s)
+        if m:
+            return ('circuit', int(m.group(1)))
+        m = re.fullmatch(r'newItemStack\(Blocks\.(wool|carpet|stained_hardened_clay|stained_glass|stained_glass_pane),(\d+),(\d+)\)', s)
+        if m:
+            base, cnt, meta = m.group(1), int(m.group(2)), int(m.group(3))
+            ids = [f'minecraft:{c}_{COLORED[base]}' for c in (DYE_COLORS if meta == 32767 else [DYE_COLORS[meta]])]
+            return ('item', ids[0], cnt) if len(ids) == 1 else ('items', ids, cnt)
         m = re.fullmatch(r'newFluidStack\((?:ItemList\.s(\w+)|FluidRegistry\.getFluid\("([\w.]+)"\)),(\d+)L?\)', s)
         if m:
             fid = named_fluid(m.group(1) or m.group(2))
             if not fid:
                 raise Skip(e)
             return ('fluid', fid, int(m.group(3)))
-        m = re.fullmatch(r'newItemStack\((?:Items|Blocks)\.(\w+),(\d+)(?:,0)?\)', s)
+        m = re.fullmatch(r'newItemStack\((?:Items|Blocks)\.(\w+),(\d+)(?:,0|,32767)?\)', s)
         if m and m.group(1) in VANILLA_ITEMS:
             return ('item', VANILLA_ITEMS[m.group(1)], int(m.group(2)))
         m = re.fullmatch(r'ItemList\.Shape_Mold_(Ingot|Plate|Nugget|Gear|Ball|Block)\.get\(0L?\)', s)
@@ -267,6 +332,8 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
         if x[0] == 'item':
             spec, cnt = x[1], x[2]
             return ing(tag_of(*spec) if isinstance(spec, tuple) else spec, cnt)
+        if x[0] == 'items':
+            return ing(list(x[1]), x[2])
         if x[0] == 'cells':
             return ing(capsule_in(x[1]), x[2])
         raise Skip(x)
@@ -299,11 +366,37 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
         ('addMixerRecipe', 11): ([0, 1, 2, 3, 4, 5], 6, 7, [8], None, 9, 10, 8),
         ('addFluidSolidifierRecipe', 5): ([0], 1, None, [2], None, 3, 4, 8),
         ('addFluidExtractionRecipe', 6): ([0], None, 2, [1], 3, 4, 5, 8),
+        # GT_RecipeAdder#addChemicalBathRecipe(in, bath fluid, out1, out2, out3, chances, duration, EU/t)
+        ('addChemicalBathRecipe', 8): ([0], 1, None, [2, 3, 4], 5, 6, 7, 8),
+        # addDistilleryRecipe(circuit, in, out, [solid out], duration, EU/t, hidden)
+        ('addDistilleryRecipe', 6): ([0], 1, 2, [], None, 3, 4, 8),
+        ('addDistilleryRecipe', 7): ([0], 1, 2, [3], None, 4, 5, 8),
     }
     machine = {'addChemicalRecipe': 'chemical_reactor', 'addChemicalRecipeForBasicMachineOnly': 'chemical_reactor', 'addElectrolyzerRecipe': 'electrolyzer',
                'addCentrifugeRecipe': 'centrifuge', 'addMixerRecipe': 'mixer', 'addFluidSolidifierRecipe': 'fluid_solidifier',
-               'addFluidExtractionRecipe': 'fluid_extractor'}
-    taken, skipped = {}, 0
+               'addFluidExtractionRecipe': 'fluid_extractor', 'addChemicalBathRecipe': 'chemical_bath', 'addDistilleryRecipe': 'distillery'}
+    taken, skipped, reasons = {}, 0, {}
+
+    def distillery_scale(fin, fout, outs, dur):
+        """GT_RecipeAdder#addDistilleryRecipe: batches over 1000 mB are scaled down; returns the new duration, edits amounts."""
+        a_in, a_out = fin['amount'], fout['amount']
+        t = max(1, (max(a_in, a_out) + 999) // 1000)
+        if t <= 1:
+            return dur
+        for i in range(t, 6):
+            if a_in % i == 0 and dur % i == 0:
+                t = i
+                break
+        for i in range(t, 6):
+            if a_in % i == 0 and dur % i == 0 and a_out % i == 0:
+                t = i
+                break
+        fin['amount'] = (a_in + t - 1) // t
+        fout['amount'] = a_out // t
+        for o in outs:
+            o['count'] = o['count'] // t
+        outs[:] = [o for o in outs if o['count'] > 0]
+        return (dur + t - 1) // t
     for c in calls:
         meth = c['method'].replace('ForBasicMachineOnly', '')
         args = c['args']
@@ -318,6 +411,8 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
         ins_i, fin_i, fout_i, outs_i, ch_i, dur_i, eut_i, def_eut = key_shape
         try:
             parsed = [expr(a) if i != ch_i else None for i, a in enumerate(args)]
+            if meth == 'addDistilleryRecipe' and parsed[0][0] == 'int':
+                parsed[0] = ('circuit', parsed[0][1])
             circuit, keep, inputs = None, [], []
             for i in ins_i:
                 x = parsed[i]
@@ -354,18 +449,22 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
             eut = parsed[eut_i] if eut_i is not None else ('int', def_eut)
             if dur[0] != 'int' or eut[0] != 'int':
                 raise Skip('time')
+            if meth == 'addDistilleryRecipe':
+                dur = ('int', distillery_scale(fin, fout, outs, dur[1]))
             # centrifuge and mixer: only recipes with fluids or cells (item-only ones come from lv.py)
             if meth in ('addCentrifugeRecipe', 'addMixerRecipe') and not (fin or fout or any('components' in o for o in outs)
                                                                           or any(isinstance(i['ingredient'], dict) for i in inputs)):
                 continue
             if not inputs and not fin:
                 continue
-        except Skip:
+        except Skip as ex:
             skipped += 1
+            reasons[re.sub(r'\s+', '', str(ex.args[0]) if ex.args else '?')[:90]] = reasons.get(re.sub(r'\s+', '', str(ex.args[0]) if ex.args else '?')[:90], 0) + 1
             continue
         rtype = machine[c['method']]
         mrec(rtype, f"gt_{c['line']}", inputs, outs, max(1, dur[1]), max(1, eut[1]), fin=fin, fout=fout, circuit=circuit, keep=keep or None)
         taken[rtype] = taken.get(rtype, 0) + 1
     stats['gt_recipes'] = taken
     stats['gt_skipped'] = skipped
+    stats['gt_skip_reasons'] = sorted(reasons.items(), key=lambda kv: -kv[1])[:40]
     return stats

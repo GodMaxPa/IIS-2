@@ -9,7 +9,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "acetone",
@@ -21,7 +22,8 @@
    175,
    175,
    175
-  ]
+  ],
+  "material": "Acetone"
  },
  {
   "id": "air",
@@ -33,7 +35,8 @@
    169,
    208,
    245
-  ]
+  ],
+  "material": "Air"
  },
  {
   "id": "allylchloride",
@@ -45,7 +48,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "ammonia",
@@ -57,7 +61,8 @@
    63,
    52,
    128
-  ]
+  ],
+  "material": "Ammonia"
  },
  {
   "id": "argon",
@@ -69,7 +74,8 @@
    0,
    255,
    0
-  ]
+  ],
+  "material": "Argon"
  },
  {
   "id": "benzene",
@@ -81,7 +87,8 @@
    26,
    26,
    26
-  ]
+  ],
+  "material": "Benzene"
  },
  {
   "id": "biodiesel",
@@ -93,7 +100,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "bioethanol",
@@ -105,7 +113,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "Ethanol"
  },
  {
   "id": "biomass",
@@ -117,7 +126,8 @@
    0,
    255,
    0
-  ]
+  ],
+  "material": "Biomass"
  },
  {
   "id": "butadiene",
@@ -129,7 +139,8 @@
    232,
    105,
    0
-  ]
+  ],
+  "material": "Butadiene"
  },
  {
   "id": "butane",
@@ -141,7 +152,8 @@
    182,
    55,
    30
-  ]
+  ],
+  "material": "Butane"
  },
  {
   "id": "butene",
@@ -153,7 +165,8 @@
    207,
    80,
    5
-  ]
+  ],
+  "material": "Butene"
  },
  {
   "id": "calciumacetatesolution",
@@ -165,7 +178,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "carbondioxide",
@@ -177,7 +191,8 @@
    169,
    208,
    245
-  ]
+  ],
+  "material": "CarbonDioxide"
  },
  {
   "id": "carbonmonoxide",
@@ -189,7 +204,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "charcoal_byproducts",
@@ -201,7 +217,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "chloramine",
@@ -213,7 +230,8 @@
    63,
    159,
    128
-  ]
+  ],
+  "material": "Chloramine"
  },
  {
   "id": "chlorine",
@@ -225,7 +243,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Chlorine"
  },
  {
   "id": "chlorobenzene",
@@ -237,7 +256,8 @@
    0,
    50,
    65
-  ]
+  ],
+  "material": "Chlorobenzene"
  },
  {
   "id": "chloroform",
@@ -249,7 +269,8 @@
    137,
    44,
    160
-  ]
+  ],
+  "material": "Chloroform"
  },
  {
   "id": "chloromethane",
@@ -261,7 +282,8 @@
    200,
    44,
    160
-  ]
+  ],
+  "material": "Chloromethane"
  },
  {
   "id": "creosote",
@@ -273,7 +295,8 @@
    128,
    64,
    0
-  ]
+  ],
+  "material": "Creosote"
  },
  {
   "id": "cumene",
@@ -285,7 +308,8 @@
    85,
    34,
    0
-  ]
+  ],
+  "material": "Cumene"
  },
  {
   "id": "deuterium",
@@ -297,7 +321,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Deuterium"
  },
  {
   "id": "dichlorobenzene",
@@ -309,7 +334,21 @@
    0,
    68,
    85
-  ]
+  ],
+  "material": "Dichlorobenzene"
+ },
+ {
+  "id": "dilutedhydrochloricacid_gt5u",
+  "en": "Diluted Hydrochloric Acid",
+  "ru": "Разбавленная соляная кислота",
+  "state": 1,
+  "temperature": 300,
+  "rgb": [
+   153,
+   167,
+   163
+  ],
+  "material": "DilutedHydrochloricAcid"
  },
  {
   "id": "dilutedsulfuricacid",
@@ -321,7 +360,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dimethylamine",
@@ -333,7 +373,8 @@
    85,
    68,
    105
-  ]
+  ],
+  "material": "Dimethylamine"
  },
  {
   "id": "dimethyldichlorosilane",
@@ -345,7 +386,8 @@
    68,
    22,
    80
-  ]
+  ],
+  "material": "Dimethyldichlorosilane"
  },
  {
   "id": "dinitrogentetroxide",
@@ -357,7 +399,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dirtywater",
@@ -369,7 +412,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyeblack",
@@ -381,7 +425,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyeblue",
@@ -393,7 +438,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyebrown",
@@ -405,7 +451,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyecyan",
@@ -417,7 +464,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyegray",
@@ -429,7 +477,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyegreen",
@@ -441,7 +490,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyelightblue",
@@ -453,7 +503,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyelightgray",
@@ -465,7 +516,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyelime",
@@ -477,7 +529,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyemagenta",
@@ -489,7 +542,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyeorange",
@@ -501,7 +555,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyepink",
@@ -513,7 +568,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyepurple",
@@ -525,7 +581,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyered",
@@ -537,7 +594,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyewhite",
@@ -549,7 +607,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.chemical.dyeyellow",
@@ -561,7 +620,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyeblack",
@@ -573,7 +633,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyeblue",
@@ -585,7 +646,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyebrown",
@@ -597,7 +659,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyecyan",
@@ -609,7 +672,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyegray",
@@ -621,7 +685,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyegreen",
@@ -633,7 +698,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyelightblue",
@@ -645,7 +711,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyelightgray",
@@ -657,7 +724,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyelime",
@@ -669,7 +737,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyemagenta",
@@ -681,7 +750,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyeorange",
@@ -693,7 +763,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyepink",
@@ -705,7 +776,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyepurple",
@@ -717,7 +789,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyered",
@@ -729,7 +802,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyewhite",
@@ -741,7 +815,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "dye.watermixed.dyeyellow",
@@ -753,7 +828,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "ethane",
@@ -765,7 +841,8 @@
    200,
    200,
    255
-  ]
+  ],
+  "material": "Ethane"
  },
  {
   "id": "ethenone",
@@ -777,7 +854,8 @@
    20,
    20,
    70
-  ]
+  ],
+  "material": "Ethenone"
  },
  {
   "id": "ethylene",
@@ -789,7 +867,8 @@
    225,
    225,
    225
-  ]
+  ],
+  "material": "Ethylene"
  },
  {
   "id": "ethyltertbutylether",
@@ -801,7 +880,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "fermentedbiomass",
@@ -813,7 +893,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "fieryblood",
@@ -825,7 +906,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "FierySteel"
  },
  {
   "id": "fishoil",
@@ -837,7 +919,8 @@
    255,
    196,
    0
-  ]
+  ],
+  "material": "FishOil"
  },
  {
   "id": "fluorine",
@@ -849,7 +932,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Fluorine"
  },
  {
   "id": "for.honey",
@@ -861,7 +945,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "Honey"
  },
  {
   "id": "fuel",
@@ -873,7 +958,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Fuel"
  },
  {
   "id": "gas_gas",
@@ -885,7 +971,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "Gas"
  },
  {
   "id": "gas_natural_gas",
@@ -897,7 +984,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "NatruralGas"
  },
  {
   "id": "gas_sulfuricgas",
@@ -909,7 +997,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "SulfuricGas"
  },
  {
   "id": "gasoline",
@@ -921,7 +1010,8 @@
    255,
    165,
    0
-  ]
+  ],
+  "material": "GasolineRegular"
  },
  {
   "id": "glue",
@@ -933,7 +1023,8 @@
    200,
    196,
    0
-  ]
+  ],
+  "material": "Glue"
  },
  {
   "id": "glycerol",
@@ -945,7 +1036,8 @@
    135,
    222,
    135
-  ]
+  ],
+  "material": "Glycerol"
  },
  {
   "id": "glyceryl",
@@ -957,7 +1049,8 @@
    0,
    150,
    150
-  ]
+  ],
+  "material": "Glyceryl"
  },
  {
   "id": "growthmediumraw",
@@ -969,7 +1062,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "growthmediumsterilized",
@@ -981,7 +1075,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "helium",
@@ -993,7 +1088,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Helium"
  },
  {
   "id": "highoctanegasoline",
@@ -1005,7 +1101,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "holywater",
@@ -1017,7 +1114,8 @@
    0,
    0,
    255
-  ]
+  ],
+  "material": "HolyWater"
  },
  {
   "id": "hotfryingoil",
@@ -1029,7 +1127,21 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "FryingOilHot"
+ },
+ {
+  "id": "hydrochloricacid_gt5u",
+  "en": "Hydrochloric Acid",
+  "ru": "Соляная кислота",
+  "state": 1,
+  "temperature": 300,
+  "rgb": [
+   183,
+   200,
+   196
+  ],
+  "material": "HydrochloricAcid"
  },
  {
   "id": "hydrocracked.butane",
@@ -1041,7 +1153,8 @@
    182,
    55,
    30
-  ]
+  ],
+  "material": "Butane"
  },
  {
   "id": "hydrocracked.ethane",
@@ -1053,7 +1166,8 @@
    200,
    200,
    255
-  ]
+  ],
+  "material": "Ethane"
  },
  {
   "id": "hydrocracked.gas",
@@ -1065,7 +1179,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Gas"
  },
  {
   "id": "hydrocracked.heavyfuel",
@@ -1077,7 +1192,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "HeavyFuel"
  },
  {
   "id": "hydrocracked.lightfuel",
@@ -1089,7 +1205,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "LightFuel"
  },
  {
   "id": "hydrocracked.naphtha",
@@ -1101,7 +1218,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Naphtha"
  },
  {
   "id": "hydrocracked.propane",
@@ -1113,7 +1231,21 @@
    250,
    226,
    80
-  ]
+  ],
+  "material": "Propane"
+ },
+ {
+  "id": "hydrofluoricacid_gt5u",
+  "en": "Hydrofluoric Acid",
+  "ru": "Плавиковая кислота",
+  "state": 1,
+  "temperature": 300,
+  "rgb": [
+   0,
+   136,
+   170
+  ],
+  "material": "HydrofluoricAcid"
  },
  {
   "id": "hydrogen",
@@ -1125,7 +1257,8 @@
    0,
    0,
    255
-  ]
+  ],
+  "material": "Hydrogen"
  },
  {
   "id": "hypochlorousacid",
@@ -1137,7 +1270,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "ice",
@@ -1149,7 +1283,8 @@
    200,
    200,
    255
-  ]
+  ],
+  "material": "Ice"
  },
  {
   "id": "indigo",
@@ -1161,7 +1296,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "indiumconcentrate",
@@ -1173,7 +1309,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "isoprene",
@@ -1185,7 +1322,8 @@
    20,
    20,
    20
-  ]
+  ],
+  "material": "Isoprene"
  },
  {
   "id": "leadzincsolution",
@@ -1197,7 +1335,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "liquid_drillingfluid",
@@ -1209,7 +1348,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "liquid_epichlorhydrin",
@@ -1221,7 +1361,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "Epichlorohydrin"
  },
  {
   "id": "liquid_extra_heavy_oil",
@@ -1233,7 +1374,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "liquid_heavy_fuel",
@@ -1245,7 +1387,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "HeavyFuel"
  },
  {
   "id": "liquid_heavy_oil",
@@ -1257,7 +1400,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "OilHeavy"
  },
  {
   "id": "liquid_hydricsulfur",
@@ -1269,7 +1413,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "HydricSulfide"
  },
  {
   "id": "liquid_light_fuel",
@@ -1281,7 +1426,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "LightFuel"
  },
  {
   "id": "liquid_light_oil",
@@ -1293,7 +1439,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "OilLight"
  },
  {
   "id": "liquid_lpg",
@@ -1305,7 +1452,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "LPG"
  },
  {
   "id": "liquid_medium_oil",
@@ -1317,7 +1465,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "OilMedium"
  },
  {
   "id": "liquid_naphtha",
@@ -1329,7 +1478,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "Naphtha"
  },
  {
   "id": "liquid_nitrationmixture",
@@ -1341,7 +1491,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "NitrationMixture"
  },
  {
   "id": "liquid_sufluriclight_fuel",
@@ -1353,7 +1504,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "SulfuricLightFuel"
  },
  {
   "id": "liquid_sulfuricheavy_fuel",
@@ -1365,7 +1517,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "SulfuricHeavyFuel"
  },
  {
   "id": "liquid_sulfuricnaphtha",
@@ -1377,7 +1530,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "SulfuricNaphtha"
  },
  {
   "id": "liquid_toluene",
@@ -1389,7 +1543,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "Toluene"
  },
  {
   "id": "liquidair",
@@ -1401,7 +1556,8 @@
    169,
    208,
    245
-  ]
+  ],
+  "material": "LiquidAir"
  },
  {
   "id": "lubricant",
@@ -1413,7 +1569,8 @@
    255,
    196,
    0
-  ]
+  ],
+  "material": "Lubricant"
  },
  {
   "id": "mcguffium",
@@ -1425,7 +1582,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "McGuffium239"
  },
  {
   "id": "mercury",
@@ -1437,7 +1595,8 @@
    255,
    220,
    220
-  ]
+  ],
+  "material": "Mercury"
  },
  {
   "id": "methane",
@@ -1449,7 +1608,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Methane"
  },
  {
   "id": "methanol",
@@ -1461,7 +1621,8 @@
    170,
    136,
    0
-  ]
+  ],
+  "material": "Methanol"
  },
  {
   "id": "methylacetate",
@@ -1473,7 +1634,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "milk",
@@ -1485,7 +1647,8 @@
    254,
    254,
    254
-  ]
+  ],
+  "material": "Milk"
  },
  {
   "id": "molten.adamantium",
@@ -1497,7 +1660,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Adamantium"
  },
  {
   "id": "molten.aluminium",
@@ -1509,7 +1673,8 @@
    128,
    200,
    240
-  ]
+  ],
+  "material": "Aluminium"
  },
  {
   "id": "molten.aluminiumbrass",
@@ -1521,7 +1686,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "AluminiumBrass"
  },
  {
   "id": "molten.alumite",
@@ -1533,7 +1699,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Alumite"
  },
  {
   "id": "molten.americium",
@@ -1545,7 +1712,8 @@
    240,
    100,
    255
-  ]
+  ],
+  "material": "Americium"
  },
  {
   "id": "molten.amordrine",
@@ -1557,7 +1725,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Amordrine"
  },
  {
   "id": "molten.angmallen",
@@ -1569,7 +1738,8 @@
    215,
    225,
    138
-  ]
+  ],
+  "material": "Angmallen"
  },
  {
   "id": "molten.annealedcopper",
@@ -1581,7 +1751,8 @@
    255,
    120,
    20
-  ]
+  ],
+  "material": "AnnealedCopper"
  },
  {
   "id": "molten.antimony",
@@ -1593,7 +1764,8 @@
    220,
    220,
    240
-  ]
+  ],
+  "material": "Antimony"
  },
  {
   "id": "molten.ardite",
@@ -1605,7 +1777,8 @@
    255,
    0,
    0
-  ]
+  ],
+  "material": "Ardite"
  },
  {
   "id": "molten.aredrite",
@@ -1617,7 +1790,8 @@
    255,
    0,
    0
-  ]
+  ],
+  "material": "Aredrite"
  },
  {
   "id": "molten.arsenic",
@@ -1629,7 +1803,8 @@
    240,
    220,
    100
-  ]
+  ],
+  "material": "Arsenic"
  },
  {
   "id": "molten.astralsilver",
@@ -1641,7 +1816,8 @@
    230,
    230,
    255
-  ]
+  ],
+  "material": "AstralSilver"
  },
  {
   "id": "molten.atlarus",
@@ -1653,7 +1829,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Atlarus"
  },
  {
   "id": "molten.batteryalloy",
@@ -1665,7 +1842,8 @@
    156,
    124,
    160
-  ]
+  ],
+  "material": "BatteryAlloy"
  },
  {
   "id": "molten.beryllium",
@@ -1677,7 +1855,8 @@
    100,
    180,
    100
-  ]
+  ],
+  "material": "Beryllium"
  },
  {
   "id": "molten.bismuth",
@@ -1689,7 +1868,8 @@
    100,
    160,
    160
-  ]
+  ],
+  "material": "Bismuth"
  },
  {
   "id": "molten.bismuthbronze",
@@ -1701,7 +1881,8 @@
    100,
    125,
    125
-  ]
+  ],
+  "material": "BismuthBronze"
  },
  {
   "id": "molten.bisphenol_a",
@@ -1713,7 +1894,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "molten.blackbronze",
@@ -1725,7 +1907,8 @@
    100,
    50,
    125
-  ]
+  ],
+  "material": "BlackBronze"
  },
  {
   "id": "molten.blacksteel",
@@ -1737,7 +1920,8 @@
    100,
    100,
    100
-  ]
+  ],
+  "material": "BlackSteel"
  },
  {
   "id": "molten.blaze",
@@ -1749,7 +1933,8 @@
    255,
    200,
    0
-  ]
+  ],
+  "material": "Blaze"
  },
  {
   "id": "molten.bluealloy",
@@ -1761,7 +1946,8 @@
    100,
    180,
    255
-  ]
+  ],
+  "material": "BlueAlloy"
  },
  {
   "id": "molten.bluesteel",
@@ -1773,7 +1959,8 @@
    100,
    100,
    140
-  ]
+  ],
+  "material": "BlueSteel"
  },
  {
   "id": "molten.blutonium",
@@ -1785,7 +1972,8 @@
    0,
    0,
    255
-  ]
+  ],
+  "material": "Blutonium"
  },
  {
   "id": "molten.borosilicateglass",
@@ -1797,7 +1985,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "molten.brass",
@@ -1809,7 +1998,8 @@
    255,
    180,
    0
-  ]
+  ],
+  "material": "Brass"
  },
  {
   "id": "molten.bronze",
@@ -1821,7 +2011,8 @@
    255,
    128,
    0
-  ]
+  ],
+  "material": "Bronze"
  },
  {
   "id": "molten.caesium",
@@ -1833,7 +2024,8 @@
    200,
    170,
    75
-  ]
+  ],
+  "material": "Caesium"
  },
  {
   "id": "molten.carbon",
@@ -1845,7 +2037,8 @@
    20,
    20,
    20
-  ]
+  ],
+  "material": "Carbon"
  },
  {
   "id": "molten.carmot",
@@ -1857,7 +2050,8 @@
    217,
    205,
    140
-  ]
+  ],
+  "material": "Carmot"
  },
  {
   "id": "molten.celenegil",
@@ -1869,7 +2063,8 @@
    148,
    204,
    72
-  ]
+  ],
+  "material": "Celenegil"
  },
  {
   "id": "molten.cerium",
@@ -1881,7 +2076,8 @@
    135,
    145,
    125
-  ]
+  ],
+  "material": "Cerium"
  },
  {
   "id": "molten.ceruclase",
@@ -1893,7 +2089,8 @@
    140,
    189,
    208
-  ]
+  ],
+  "material": "Ceruclase"
  },
  {
   "id": "molten.cheese",
@@ -1905,7 +2102,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Cheese"
  },
  {
   "id": "molten.chrome",
@@ -1917,7 +2115,8 @@
    255,
    210,
    210
-  ]
+  ],
+  "material": "Chrome"
  },
  {
   "id": "molten.chromiumdioxide",
@@ -1929,7 +2128,8 @@
    230,
    200,
    200
-  ]
+  ],
+  "material": "ChromiumDioxide"
  },
  {
   "id": "molten.cobalt",
@@ -1941,7 +2141,8 @@
    80,
    80,
    250
-  ]
+  ],
+  "material": "Cobalt"
  },
  {
   "id": "molten.cobaltbrass",
@@ -1953,7 +2154,8 @@
    180,
    180,
    160
-  ]
+  ],
+  "material": "CobaltBrass"
  },
  {
   "id": "molten.concrete",
@@ -1965,7 +2167,8 @@
    100,
    100,
    100
-  ]
+  ],
+  "material": "Concrete"
  },
  {
   "id": "molten.conductiveiron",
@@ -1977,7 +2180,8 @@
    217,
    178,
    171
-  ]
+  ],
+  "material": "ConductiveIron"
  },
  {
   "id": "molten.copper",
@@ -1989,7 +2193,8 @@
    255,
    100,
    0
-  ]
+  ],
+  "material": "Copper"
  },
  {
   "id": "molten.cupronickel",
@@ -2001,7 +2206,8 @@
    227,
    150,
    128
-  ]
+  ],
+  "material": "Cupronickel"
  },
  {
   "id": "molten.damascussteel",
@@ -2013,7 +2219,8 @@
    110,
    110,
    110
-  ]
+  ],
+  "material": "DamascusSteel"
  },
  {
   "id": "molten.darkiron",
@@ -2025,7 +2232,8 @@
    55,
    40,
    60
-  ]
+  ],
+  "material": "DarkIron"
  },
  {
   "id": "molten.darksteel",
@@ -2037,7 +2245,8 @@
    80,
    70,
    80
-  ]
+  ],
+  "material": "DarkSteel"
  },
  {
   "id": "molten.darkthaumium",
@@ -2049,7 +2258,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "DarkThaumium"
  },
  {
   "id": "molten.deepiron",
@@ -2061,7 +2271,8 @@
    150,
    140,
    140
-  ]
+  ],
+  "material": "DeepIron"
  },
  {
   "id": "molten.desh",
@@ -2073,7 +2284,8 @@
    40,
    40,
    40
-  ]
+  ],
+  "material": "Desh"
  },
  {
   "id": "molten.desichalkos",
@@ -2085,7 +2297,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Desichalkos"
  },
  {
   "id": "molten.diamondcopper",
@@ -2097,7 +2310,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "DiamondCopper"
  },
  {
   "id": "molten.draconium",
@@ -2109,7 +2323,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Draconium"
  },
  {
   "id": "molten.draconiumawakened",
@@ -2121,7 +2336,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "DraconiumAwakened"
  },
  {
   "id": "molten.duranium",
@@ -2133,7 +2349,8 @@
    0,
    110,
    170
-  ]
+  ],
+  "material": "Duranium"
  },
  {
   "id": "molten.dysprosium",
@@ -2145,7 +2362,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Dysprosium"
  },
  {
   "id": "molten.electricalsteel",
@@ -2157,7 +2375,8 @@
    185,
    185,
    185
-  ]
+  ],
+  "material": "ElectricalSteel"
  },
  {
   "id": "molten.electrum",
@@ -2169,7 +2388,8 @@
    255,
    255,
    100
-  ]
+  ],
+  "material": "Electrum"
  },
  {
   "id": "molten.electrumflux",
@@ -2181,7 +2401,8 @@
    255,
    255,
    120
-  ]
+  ],
+  "material": "ElectrumFlux"
  },
  {
   "id": "molten.elvenelementium",
@@ -2193,7 +2414,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "ElvenElementium"
  },
  {
   "id": "molten.enderium",
@@ -2205,7 +2427,8 @@
    89,
    145,
    135
-  ]
+  ],
+  "material": "Enderium"
  },
  {
   "id": "molten.enderiumbase",
@@ -2217,7 +2440,8 @@
    72,
    119,
    153
-  ]
+  ],
+  "material": "EnderiumBase"
  },
  {
   "id": "molten.endium",
@@ -2229,7 +2453,8 @@
    165,
    220,
    250
-  ]
+  ],
+  "material": "Endium"
  },
  {
   "id": "molten.endsteel",
@@ -2241,7 +2466,8 @@
    223,
    217,
    165
-  ]
+  ],
+  "material": "EndSteel"
  },
  {
   "id": "molten.energeticalloy",
@@ -2253,7 +2479,8 @@
    255,
    170,
    81
-  ]
+  ],
+  "material": "EnergeticAlloy"
  },
  {
   "id": "molten.enrichedcopper",
@@ -2265,7 +2492,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "EnrichedCopper"
  },
  {
   "id": "molten.epoxid",
@@ -2277,7 +2505,8 @@
    200,
    140,
    20
-  ]
+  ],
+  "material": "Epoxid"
  },
  {
   "id": "molten.epoxidfiberreinforced",
@@ -2289,7 +2518,8 @@
    160,
    112,
    16
-  ]
+  ],
+  "material": "EpoxidFiberReinforced"
  },
  {
   "id": "molten.erbium",
@@ -2301,7 +2531,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Erbium"
  },
  {
   "id": "molten.europium",
@@ -2313,7 +2544,8 @@
    120,
    150,
    240
-  ]
+  ],
+  "material": "Europium"
  },
  {
   "id": "molten.eximite",
@@ -2325,7 +2557,8 @@
    124,
    90,
    150
-  ]
+  ],
+  "material": "Eximite"
  },
  {
   "id": "molten.fairy",
@@ -2337,7 +2570,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Fairy"
  },
  {
   "id": "molten.fierysteel",
@@ -2349,7 +2583,8 @@
    64,
    0,
    0
-  ]
+  ],
+  "material": "FierySteel"
  },
  {
   "id": "molten.force",
@@ -2361,7 +2596,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Force"
  },
  {
   "id": "molten.gadolinium",
@@ -2373,7 +2609,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Gadolinium"
  },
  {
   "id": "molten.gallium",
@@ -2385,7 +2622,8 @@
    220,
    220,
    255
-  ]
+  ],
+  "material": "Gallium"
  },
  {
   "id": "molten.galliumarsenide",
@@ -2397,7 +2635,8 @@
    230,
    220,
    175
-  ]
+  ],
+  "material": "GalliumArsenide"
  },
  {
   "id": "molten.glass",
@@ -2409,7 +2648,8 @@
    250,
    250,
    250
-  ]
+  ],
+  "material": "Glass"
  },
  {
   "id": "molten.glowstone",
@@ -2421,7 +2661,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Glowstone"
  },
  {
   "id": "molten.gold",
@@ -2433,7 +2674,8 @@
    255,
    255,
    30
-  ]
+  ],
+  "material": "Gold"
  },
  {
   "id": "molten.haderoth",
@@ -2445,7 +2687,8 @@
    119,
    52,
    30
-  ]
+  ],
+  "material": "Haderoth"
  },
  {
   "id": "molten.hematite",
@@ -2457,7 +2700,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Hematite"
  },
  {
   "id": "molten.hepatizon",
@@ -2469,7 +2713,8 @@
    117,
    94,
    117
-  ]
+  ],
+  "material": "Hepatizon"
  },
  {
   "id": "molten.holmium",
@@ -2481,7 +2726,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Holmium"
  },
  {
   "id": "molten.hsla",
@@ -2493,7 +2739,8 @@
    128,
    128,
    128
-  ]
+  ],
+  "material": "HSLA"
  },
  {
   "id": "molten.hsse",
@@ -2505,7 +2752,8 @@
    51,
    102,
    0
-  ]
+  ],
+  "material": "HSSE"
  },
  {
   "id": "molten.hssg",
@@ -2517,7 +2765,8 @@
    153,
    153,
    0
-  ]
+  ],
+  "material": "HSSG"
  },
  {
   "id": "molten.hsss",
@@ -2529,7 +2778,8 @@
    102,
    0,
    51
-  ]
+  ],
+  "material": "HSSS"
  },
  {
   "id": "molten.ignatius",
@@ -2541,7 +2791,8 @@
    255,
    169,
    83
-  ]
+  ],
+  "material": "Ignatius"
  },
  {
   "id": "molten.indium",
@@ -2553,7 +2804,8 @@
    64,
    0,
    128
-  ]
+  ],
+  "material": "Indium"
  },
  {
   "id": "molten.indiumgalliumphosphide",
@@ -2565,7 +2817,8 @@
    160,
    140,
    190
-  ]
+  ],
+  "material": "IndiumGalliumPhosphide"
  },
  {
   "id": "molten.infuscolium",
@@ -2577,7 +2830,8 @@
    146,
    33,
    86
-  ]
+  ],
+  "material": "Infuscolium"
  },
  {
   "id": "molten.infusedgold",
@@ -2589,7 +2843,8 @@
    255,
    200,
    60
-  ]
+  ],
+  "material": "InfusedGold"
  },
  {
   "id": "molten.inolashite",
@@ -2601,7 +2856,8 @@
    148,
    216,
    187
-  ]
+  ],
+  "material": "Inolashite"
  },
  {
   "id": "molten.invar",
@@ -2613,7 +2869,8 @@
    180,
    180,
    120
-  ]
+  ],
+  "material": "Invar"
  },
  {
   "id": "molten.iridium",
@@ -2625,7 +2882,8 @@
    180,
    255,
    255
-  ]
+  ],
+  "material": "Iridium"
  },
  {
   "id": "molten.iron",
@@ -2637,7 +2895,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "Iron"
  },
  {
   "id": "molten.ironcompressed",
@@ -2649,7 +2908,8 @@
    128,
    128,
    128
-  ]
+  ],
+  "material": "IronCompressed"
  },
  {
   "id": "molten.ironmagnetic",
@@ -2661,7 +2921,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "IronMagnetic"
  },
  {
   "id": "molten.ironwood",
@@ -2673,7 +2934,8 @@
    150,
    140,
    110
-  ]
+  ],
+  "material": "IronWood"
  },
  {
   "id": "molten.kalendrite",
@@ -2685,7 +2947,8 @@
    170,
    91,
    189
-  ]
+  ],
+  "material": "Kalendrite"
  },
  {
   "id": "molten.kanthal",
@@ -2697,7 +2960,8 @@
    194,
    210,
    223
-  ]
+  ],
+  "material": "Kanthal"
  },
  {
   "id": "molten.knightmetal",
@@ -2709,7 +2973,8 @@
    210,
    240,
    200
-  ]
+  ],
+  "material": "Knightmetal"
  },
  {
   "id": "molten.lanthanum",
@@ -2721,7 +2986,8 @@
    40,
    180,
    138
-  ]
+  ],
+  "material": "Lanthanum"
  },
  {
   "id": "molten.lead",
@@ -2733,7 +2999,8 @@
    140,
    100,
    140
-  ]
+  ],
+  "material": "Lead"
  },
  {
   "id": "molten.lithium",
@@ -2745,7 +3012,8 @@
    225,
    220,
    255
-  ]
+  ],
+  "material": "Lithium"
  },
  {
   "id": "molten.ludicrite",
@@ -2757,7 +3025,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Ludicrite"
  },
  {
   "id": "molten.lumium",
@@ -2769,7 +3038,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Lumium"
  },
  {
   "id": "molten.lutetium",
@@ -2781,7 +3051,8 @@
    0,
    170,
    255
-  ]
+  ],
+  "material": "Lutetium"
  },
  {
   "id": "molten.magic",
@@ -2793,7 +3064,8 @@
    100,
    0,
    200
-  ]
+  ],
+  "material": "Magic"
  },
  {
   "id": "molten.magnalium",
@@ -2805,7 +3077,8 @@
    200,
    190,
    255
-  ]
+  ],
+  "material": "Magnalium"
  },
  {
   "id": "molten.magnesium",
@@ -2817,7 +3090,8 @@
    255,
    200,
    200
-  ]
+  ],
+  "material": "Magnesium"
  },
  {
   "id": "molten.manasteel",
@@ -2829,7 +3103,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Manasteel"
  },
  {
   "id": "molten.manganese",
@@ -2841,7 +3116,8 @@
    205,
    225,
    185
-  ]
+  ],
+  "material": "Manganese"
  },
  {
   "id": "molten.manyullyn",
@@ -2853,7 +3129,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Manyullyn"
  },
  {
   "id": "molten.mercassium",
@@ -2865,7 +3142,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Mercassium"
  },
  {
   "id": "molten.meteoriciron",
@@ -2877,7 +3155,8 @@
    100,
    50,
    80
-  ]
+  ],
+  "material": "MeteoricIron"
  },
  {
   "id": "molten.meteoricsteel",
@@ -2889,7 +3168,8 @@
    50,
    25,
    40
-  ]
+  ],
+  "material": "MeteoricSteel"
  },
  {
   "id": "molten.midasium",
@@ -2901,7 +3181,8 @@
    255,
    200,
    40
-  ]
+  ],
+  "material": "Midasium"
  },
  {
   "id": "molten.mithril",
@@ -2913,7 +3194,8 @@
    255,
    255,
    210
-  ]
+  ],
+  "material": "Mithril"
  },
  {
   "id": "molten.molybdenum",
@@ -2925,7 +3207,8 @@
    180,
    180,
    220
-  ]
+  ],
+  "material": "Molybdenum"
  },
  {
   "id": "molten.naquadah",
@@ -2937,7 +3220,8 @@
    50,
    50,
    50
-  ]
+  ],
+  "material": "Naquadah"
  },
  {
   "id": "molten.naquadahalloy",
@@ -2949,7 +3233,8 @@
    40,
    40,
    40
-  ]
+  ],
+  "material": "NaquadahAlloy"
  },
  {
   "id": "molten.naquadahenriched",
@@ -2961,7 +3246,8 @@
    50,
    50,
    50
-  ]
+  ],
+  "material": "NaquadahEnriched"
  },
  {
   "id": "molten.naquadria",
@@ -2973,7 +3259,8 @@
    30,
    30,
    30
-  ]
+  ],
+  "material": "Naquadria"
  },
  {
   "id": "molten.neodymium",
@@ -2985,7 +3272,8 @@
    100,
    100,
    100
-  ]
+  ],
+  "material": "Neodymium"
  },
  {
   "id": "molten.neodymiummagnetic",
@@ -2997,7 +3285,8 @@
    100,
    100,
    100
-  ]
+  ],
+  "material": "NeodymiumMagnetic"
  },
  {
   "id": "molten.neutronium",
@@ -3009,7 +3298,8 @@
    160,
    250,
    150
-  ]
+  ],
+  "material": "Neutronium"
  },
  {
   "id": "molten.nichrome",
@@ -3021,7 +3311,8 @@
    205,
    206,
    246
-  ]
+  ],
+  "material": "Nichrome"
  },
  {
   "id": "molten.nickel",
@@ -3033,7 +3324,8 @@
    200,
    200,
    250
-  ]
+  ],
+  "material": "Nickel"
  },
  {
   "id": "molten.nickelzincferrite",
@@ -3045,7 +3337,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "molten.nikolite",
@@ -3057,7 +3350,8 @@
    60,
    180,
    200
-  ]
+  ],
+  "material": "Nikolite"
  },
  {
   "id": "molten.niobium",
@@ -3069,7 +3363,8 @@
    190,
    180,
    200
-  ]
+  ],
+  "material": "Niobium"
  },
  {
   "id": "molten.niobiumnitride",
@@ -3081,7 +3376,8 @@
    29,
    41,
    29
-  ]
+  ],
+  "material": "NiobiumNitride"
  },
  {
   "id": "molten.niobiumtitanium",
@@ -3093,7 +3389,8 @@
    29,
    29,
    41
-  ]
+  ],
+  "material": "NiobiumTitanium"
  },
  {
   "id": "molten.obsidianflux",
@@ -3105,7 +3402,8 @@
    80,
    50,
    100
-  ]
+  ],
+  "material": "ObsidianFlux"
  },
  {
   "id": "molten.orichalcum",
@@ -3117,7 +3415,8 @@
    84,
    122,
    56
-  ]
+  ],
+  "material": "Orichalcum"
  },
  {
   "id": "molten.osmiridium",
@@ -3129,7 +3428,8 @@
    100,
    100,
    255
-  ]
+  ],
+  "material": "Osmiridium"
  },
  {
   "id": "molten.osmium",
@@ -3141,7 +3441,8 @@
    50,
    50,
    255
-  ]
+  ],
+  "material": "Osmium"
  },
  {
   "id": "molten.osmonium",
@@ -3153,7 +3454,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Osmonium"
  },
  {
   "id": "molten.oureclase",
@@ -3165,7 +3467,8 @@
    183,
    98,
    21
-  ]
+  ],
+  "material": "Oureclase"
  },
  {
   "id": "molten.palladium",
@@ -3177,7 +3480,8 @@
    128,
    128,
    128
-  ]
+  ],
+  "material": "Palladium"
  },
  {
   "id": "molten.phasedgold",
@@ -3189,7 +3493,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "PhasedGold"
  },
  {
   "id": "molten.phasediron",
@@ -3201,7 +3506,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "PhasedIron"
  },
  {
   "id": "molten.phoenixite",
@@ -3213,7 +3519,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Phoenixite"
  },
  {
   "id": "molten.pigiron",
@@ -3225,7 +3532,8 @@
    200,
    180,
    180
-  ]
+  ],
+  "material": "PigIron"
  },
  {
   "id": "molten.plastic",
@@ -3237,7 +3545,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "Plastic"
  },
  {
   "id": "molten.platinum",
@@ -3249,7 +3558,8 @@
    255,
    255,
    200
-  ]
+  ],
+  "material": "Platinum"
  },
  {
   "id": "molten.plutonium",
@@ -3261,7 +3571,8 @@
    240,
    50,
    50
-  ]
+  ],
+  "material": "Plutonium"
  },
  {
   "id": "molten.pokefennium",
@@ -3273,7 +3584,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Pokefennium"
  },
  {
   "id": "molten.polycaprolactam",
@@ -3285,7 +3597,8 @@
    50,
    50,
    50
-  ]
+  ],
+  "material": "Polycaprolactam"
  },
  {
   "id": "molten.polyphenylenesulfide",
@@ -3297,7 +3610,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "molten.polystyrene",
@@ -3309,7 +3623,8 @@
    190,
    180,
    170
-  ]
+  ],
+  "material": "Polystyrene"
  },
  {
   "id": "molten.polytetrafluoroethylene",
@@ -3321,7 +3636,8 @@
    109,
    177,
    177
-  ]
+  ],
+  "material": "Polytetrafluoroethylene"
  },
  {
   "id": "molten.polyvinylchloride",
@@ -3333,7 +3649,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "molten.potassium",
@@ -3345,7 +3662,8 @@
    190,
    220,
    255
-  ]
+  ],
+  "material": "Potassium"
  },
  {
   "id": "molten.praseodymium",
@@ -3357,7 +3675,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Praseodymium"
  },
  {
   "id": "molten.prometheum",
@@ -3369,7 +3688,8 @@
    90,
    129,
    86
-  ]
+  ],
+  "material": "Prometheum"
  },
  {
   "id": "molten.promethium",
@@ -3381,7 +3701,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Promethium"
  },
  {
   "id": "molten.pulsatingiron",
@@ -3393,7 +3714,8 @@
    128,
    246,
    155
-  ]
+  ],
+  "material": "PulsatingIron"
  },
  {
   "id": "molten.redalloy",
@@ -3405,7 +3727,8 @@
    200,
    0,
    0
-  ]
+  ],
+  "material": "RedAlloy"
  },
  {
   "id": "molten.redsteel",
@@ -3417,7 +3740,8 @@
    140,
    100,
    100
-  ]
+  ],
+  "material": "RedSteel"
  },
  {
   "id": "molten.redstone",
@@ -3429,7 +3753,8 @@
    200,
    0,
    0
-  ]
+  ],
+  "material": "Redstone"
  },
  {
   "id": "molten.redstonealloy",
@@ -3441,7 +3766,8 @@
    181,
    51,
    51
-  ]
+  ],
+  "material": "RedstoneAlloy"
  },
  {
   "id": "molten.rosegold",
@@ -3453,7 +3779,8 @@
    255,
    230,
    30
-  ]
+  ],
+  "material": "RoseGold"
  },
  {
   "id": "molten.rubber",
@@ -3465,7 +3792,8 @@
    0,
    0,
    0
-  ]
+  ],
+  "material": "Rubber"
  },
  {
   "id": "molten.rubidium",
@@ -3477,7 +3805,8 @@
    240,
    30,
    30
-  ]
+  ],
+  "material": "Rubidium"
  },
  {
   "id": "molten.samarium",
@@ -3489,7 +3818,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Samarium"
  },
  {
   "id": "molten.sanguinite",
@@ -3501,7 +3831,8 @@
    185,
    0,
    0
-  ]
+  ],
+  "material": "Sanguinite"
  },
  {
   "id": "molten.scandium",
@@ -3513,7 +3844,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Scandium"
  },
  {
   "id": "molten.serpentine",
@@ -3525,7 +3857,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Serpentine"
  },
  {
   "id": "molten.shadowiron",
@@ -3537,7 +3870,8 @@
    120,
    120,
    120
-  ]
+  ],
+  "material": "ShadowIron"
  },
  {
   "id": "molten.shadowsteel",
@@ -3549,7 +3883,8 @@
    90,
    90,
    90
-  ]
+  ],
+  "material": "ShadowSteel"
  },
  {
   "id": "molten.signalum",
@@ -3561,7 +3896,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Signalum"
  },
  {
   "id": "molten.silicon",
@@ -3573,7 +3909,8 @@
    60,
    60,
    80
-  ]
+  ],
+  "material": "Silicon"
  },
  {
   "id": "molten.silicone",
@@ -3585,7 +3922,8 @@
    220,
    220,
    220
-  ]
+  ],
+  "material": "Silicone"
  },
  {
   "id": "molten.silver",
@@ -3597,7 +3935,8 @@
    220,
    220,
    255
-  ]
+  ],
+  "material": "Silver"
  },
  {
   "id": "molten.solderingalloy",
@@ -3609,7 +3948,8 @@
    220,
    220,
    230
-  ]
+  ],
+  "material": "SolderingAlloy"
  },
  {
   "id": "molten.soularium",
@@ -3621,7 +3961,8 @@
    137,
    100,
    66
-  ]
+  ],
+  "material": "Soularium"
  },
  {
   "id": "molten.stainlesssteel",
@@ -3633,7 +3974,8 @@
    120,
    147,
    167
-  ]
+  ],
+  "material": "StainlessSteel"
  },
  {
   "id": "molten.starconium",
@@ -3645,7 +3987,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Starconium"
  },
  {
   "id": "molten.steel",
@@ -3657,7 +4000,8 @@
    128,
    128,
    128
-  ]
+  ],
+  "material": "Steel"
  },
  {
   "id": "molten.steelmagnetic",
@@ -3669,7 +4013,8 @@
    128,
    128,
    128
-  ]
+  ],
+  "material": "SteelMagnetic"
  },
  {
   "id": "molten.sterlingsilver",
@@ -3681,7 +4026,8 @@
    250,
    220,
    225
-  ]
+  ],
+  "material": "SterlingSilver"
  },
  {
   "id": "molten.styrenebutadienerubber",
@@ -3693,7 +4039,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "molten.sugar",
@@ -3705,7 +4052,8 @@
    250,
    250,
    250
-  ]
+  ],
+  "material": "Sugar"
  },
  {
   "id": "molten.sunnarium",
@@ -3717,7 +4065,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Sunnarium"
  },
  {
   "id": "molten.tantalum",
@@ -3729,7 +4078,8 @@
    230,
    110,
    77
-  ]
+  ],
+  "material": "Tantalum"
  },
  {
   "id": "molten.tarpitch",
@@ -3741,7 +4091,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "TarPitch"
  },
  {
   "id": "molten.tartarite",
@@ -3753,7 +4104,8 @@
    255,
    118,
    60
-  ]
+  ],
+  "material": "Tartarite"
  },
  {
   "id": "molten.tellurium",
@@ -3765,7 +4117,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Tellurium"
  },
  {
   "id": "molten.terbium",
@@ -3777,7 +4130,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Terbium"
  },
  {
   "id": "molten.terrasteel",
@@ -3789,7 +4143,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Terrasteel"
  },
  {
   "id": "molten.teslatite",
@@ -3801,7 +4156,8 @@
    60,
    180,
    200
-  ]
+  ],
+  "material": "Teslatite"
  },
  {
   "id": "molten.thaumium",
@@ -3813,7 +4169,8 @@
    150,
    100,
    200
-  ]
+  ],
+  "material": "Thaumium"
  },
  {
   "id": "molten.thorium",
@@ -3825,7 +4182,8 @@
    0,
    30,
    0
-  ]
+  ],
+  "material": "Thorium"
  },
  {
   "id": "molten.thulium",
@@ -3837,7 +4195,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Thulium"
  },
  {
   "id": "molten.thyrium",
@@ -3849,7 +4208,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Thyrium"
  },
  {
   "id": "molten.tin",
@@ -3861,7 +4221,8 @@
    220,
    220,
    220
-  ]
+  ],
+  "material": "Tin"
  },
  {
   "id": "molten.tinalloy",
@@ -3873,7 +4234,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "TinAlloy"
  },
  {
   "id": "molten.titanium",
@@ -3885,7 +4247,8 @@
    220,
    160,
    240
-  ]
+  ],
+  "material": "Titanium"
  },
  {
   "id": "molten.tritanium",
@@ -3897,7 +4260,8 @@
    160,
    40,
    190
-  ]
+  ],
+  "material": "Tritanium"
  },
  {
   "id": "molten.tungsten",
@@ -3909,7 +4273,8 @@
    50,
    50,
    50
-  ]
+  ],
+  "material": "Tungsten"
  },
  {
   "id": "molten.tungstencarbide",
@@ -3921,7 +4286,8 @@
    51,
    0,
    102
-  ]
+  ],
+  "material": "TungstenCarbide"
  },
  {
   "id": "molten.tungstensteel",
@@ -3933,7 +4299,8 @@
    100,
    100,
    160
-  ]
+  ],
+  "material": "TungstenSteel"
  },
  {
   "id": "molten.ultimet",
@@ -3945,7 +4312,8 @@
    180,
    180,
    230
-  ]
+  ],
+  "material": "Ultimet"
  },
  {
   "id": "molten.uranium",
@@ -3957,7 +4325,8 @@
    50,
    240,
    50
-  ]
+  ],
+  "material": "Uranium"
  },
  {
   "id": "molten.vanadium",
@@ -3969,7 +4338,8 @@
    50,
    50,
    50
-  ]
+  ],
+  "material": "Vanadium"
  },
  {
   "id": "molten.vanadiumgallium",
@@ -3981,7 +4351,8 @@
    128,
    128,
    140
-  ]
+  ],
+  "material": "VanadiumGallium"
  },
  {
   "id": "molten.vanadiumsteel",
@@ -3993,7 +4364,8 @@
    192,
    192,
    192
-  ]
+  ],
+  "material": "VanadiumSteel"
  },
  {
   "id": "molten.vibrantalloy",
@@ -4005,7 +4377,8 @@
    157,
    188,
    53
-  ]
+  ],
+  "material": "VibrantAlloy"
  },
  {
   "id": "molten.vulcanite",
@@ -4017,7 +4390,8 @@
    255,
    132,
    72
-  ]
+  ],
+  "material": "Vulcanite"
  },
  {
   "id": "molten.vyroxeres",
@@ -4029,7 +4403,8 @@
    85,
    224,
    1
-  ]
+  ],
+  "material": "Vyroxeres"
  },
  {
   "id": "molten.wroughtiron",
@@ -4041,7 +4416,8 @@
    200,
    180,
    180
-  ]
+  ],
+  "material": "WroughtIron"
  },
  {
   "id": "molten.yellorium",
@@ -4053,7 +4429,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Yellorium"
  },
  {
   "id": "molten.ytterbium",
@@ -4065,7 +4442,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Ytterbium"
  },
  {
   "id": "molten.yttrium",
@@ -4077,7 +4455,8 @@
    220,
    250,
    220
-  ]
+  ],
+  "material": "Yttrium"
  },
  {
   "id": "molten.yttriumbariumcuprate",
@@ -4089,7 +4468,8 @@
    80,
    64,
    70
-  ]
+  ],
+  "material": "YttriumBariumCuprate"
  },
  {
   "id": "molten.zectium",
@@ -4101,7 +4481,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Zectium"
  },
  {
   "id": "molten.zinc",
@@ -4113,7 +4494,8 @@
    250,
    240,
    240
-  ]
+  ],
+  "material": "Zinc"
  },
  {
   "id": "muddywater",
@@ -4125,7 +4507,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "nitricacid",
@@ -4137,7 +4520,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "nitricoxide",
@@ -4149,7 +4533,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "nitrofuel",
@@ -4161,7 +4546,8 @@
    200,
    255,
    0
-  ]
+  ],
+  "material": "NitroFuel"
  },
  {
   "id": "nitrogen",
@@ -4173,7 +4559,8 @@
    0,
    150,
    200
-  ]
+  ],
+  "material": "Nitrogen"
  },
  {
   "id": "nitrogendioxide",
@@ -4185,7 +4572,8 @@
    100,
    175,
    255
-  ]
+  ],
+  "material": "NitrogenDioxide"
  },
  {
   "id": "nitrousoxide",
@@ -4197,7 +4585,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "noblegases",
@@ -4209,7 +4598,8 @@
    169,
    208,
    245
-  ]
+  ],
+  "material": "NobleGases"
  },
  {
   "id": "oil",
@@ -4221,7 +4611,8 @@
    10,
    10,
    10
-  ]
+  ],
+  "material": "Oil"
  },
  {
   "id": "oxygen",
@@ -4233,7 +4624,8 @@
    0,
    100,
    200
-  ]
+  ],
+  "material": "Oxygen"
  },
  {
   "id": "phenol",
@@ -4245,7 +4637,21 @@
    120,
    68,
    33
-  ]
+  ],
+  "material": "Phenol"
+ },
+ {
+  "id": "phosphoricacid_gt5u",
+  "en": "Phosphoric Acid",
+  "ru": "Фосфорная кислота",
+  "state": 1,
+  "temperature": 300,
+  "rgb": [
+   220,
+   220,
+   0
+  ],
+  "material": "PhosphoricAcid"
  },
  {
   "id": "plasma.aluminium",
@@ -4257,7 +4663,8 @@
    128,
    200,
    240
-  ]
+  ],
+  "material": "Aluminium"
  },
  {
   "id": "plasma.americium",
@@ -4269,7 +4676,8 @@
    240,
    100,
    255
-  ]
+  ],
+  "material": "Americium"
  },
  {
   "id": "plasma.antimony",
@@ -4281,7 +4689,8 @@
    220,
    220,
    240
-  ]
+  ],
+  "material": "Antimony"
  },
  {
   "id": "plasma.argon",
@@ -4293,7 +4702,8 @@
    0,
    255,
    0
-  ]
+  ],
+  "material": "Argon"
  },
  {
   "id": "plasma.arsenic",
@@ -4305,7 +4715,8 @@
    240,
    220,
    100
-  ]
+  ],
+  "material": "Arsenic"
  },
  {
   "id": "plasma.barium",
@@ -4317,7 +4728,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Barium"
  },
  {
   "id": "plasma.beryllium",
@@ -4329,7 +4741,8 @@
    100,
    180,
    100
-  ]
+  ],
+  "material": "Beryllium"
  },
  {
   "id": "plasma.bismuth",
@@ -4341,7 +4754,8 @@
    100,
    160,
    160
-  ]
+  ],
+  "material": "Bismuth"
  },
  {
   "id": "plasma.boron",
@@ -4353,7 +4767,8 @@
    210,
    250,
    210
-  ]
+  ],
+  "material": "Boron"
  },
  {
   "id": "plasma.cadmium",
@@ -4365,7 +4780,8 @@
    50,
    50,
    60
-  ]
+  ],
+  "material": "Cadmium"
  },
  {
   "id": "plasma.caesium",
@@ -4377,7 +4793,8 @@
    200,
    170,
    75
-  ]
+  ],
+  "material": "Caesium"
  },
  {
   "id": "plasma.calcium",
@@ -4389,7 +4806,8 @@
    255,
    245,
    245
-  ]
+  ],
+  "material": "Calcium"
  },
  {
   "id": "plasma.carbon",
@@ -4401,7 +4819,8 @@
    20,
    20,
    20
-  ]
+  ],
+  "material": "Carbon"
  },
  {
   "id": "plasma.cerium",
@@ -4413,7 +4832,8 @@
    135,
    145,
    125
-  ]
+  ],
+  "material": "Cerium"
  },
  {
   "id": "plasma.chlorine",
@@ -4425,7 +4845,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Chlorine"
  },
  {
   "id": "plasma.chrome",
@@ -4437,7 +4858,8 @@
    255,
    210,
    210
-  ]
+  ],
+  "material": "Chrome"
  },
  {
   "id": "plasma.cobalt",
@@ -4449,7 +4871,8 @@
    80,
    80,
    250
-  ]
+  ],
+  "material": "Cobalt"
  },
  {
   "id": "plasma.copper",
@@ -4461,7 +4884,8 @@
    255,
    100,
    0
-  ]
+  ],
+  "material": "Copper"
  },
  {
   "id": "plasma.deuterium",
@@ -4473,7 +4897,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Deuterium"
  },
  {
   "id": "plasma.dysprosium",
@@ -4485,7 +4910,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Dysprosium"
  },
  {
   "id": "plasma.empty",
@@ -4497,7 +4923,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Empty"
  },
  {
   "id": "plasma.erbium",
@@ -4509,7 +4936,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Erbium"
  },
  {
   "id": "plasma.europium",
@@ -4521,7 +4949,8 @@
    120,
    150,
    240
-  ]
+  ],
+  "material": "Europium"
  },
  {
   "id": "plasma.fluorine",
@@ -4533,7 +4962,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Fluorine"
  },
  {
   "id": "plasma.gadolinium",
@@ -4545,7 +4975,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Gadolinium"
  },
  {
   "id": "plasma.gallium",
@@ -4557,7 +4988,8 @@
    220,
    220,
    255
-  ]
+  ],
+  "material": "Gallium"
  },
  {
   "id": "plasma.gold",
@@ -4569,7 +5001,8 @@
    255,
    255,
    30
-  ]
+  ],
+  "material": "Gold"
  },
  {
   "id": "plasma.helium",
@@ -4581,7 +5014,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Helium"
  },
  {
   "id": "plasma.holmium",
@@ -4593,7 +5027,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Holmium"
  },
  {
   "id": "plasma.hydrogen",
@@ -4605,7 +5040,8 @@
    0,
    0,
    255
-  ]
+  ],
+  "material": "Hydrogen"
  },
  {
   "id": "plasma.indium",
@@ -4617,7 +5053,8 @@
    64,
    0,
    128
-  ]
+  ],
+  "material": "Indium"
  },
  {
   "id": "plasma.iridium",
@@ -4629,7 +5066,8 @@
    180,
    255,
    255
-  ]
+  ],
+  "material": "Iridium"
  },
  {
   "id": "plasma.iron",
@@ -4641,7 +5079,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "Iron"
  },
  {
   "id": "plasma.lanthanum",
@@ -4653,7 +5092,8 @@
    40,
    180,
    138
-  ]
+  ],
+  "material": "Lanthanum"
  },
  {
   "id": "plasma.lead",
@@ -4665,7 +5105,8 @@
    140,
    100,
    140
-  ]
+  ],
+  "material": "Lead"
  },
  {
   "id": "plasma.lithium",
@@ -4677,7 +5118,8 @@
    225,
    220,
    255
-  ]
+  ],
+  "material": "Lithium"
  },
  {
   "id": "plasma.lutetium",
@@ -4689,7 +5131,8 @@
    0,
    170,
    255
-  ]
+  ],
+  "material": "Lutetium"
  },
  {
   "id": "plasma.magic",
@@ -4701,7 +5144,8 @@
    100,
    0,
    200
-  ]
+  ],
+  "material": "Magic"
  },
  {
   "id": "plasma.magnesium",
@@ -4713,7 +5157,8 @@
    255,
    200,
    200
-  ]
+  ],
+  "material": "Magnesium"
  },
  {
   "id": "plasma.manganese",
@@ -4725,7 +5170,8 @@
    205,
    225,
    185
-  ]
+  ],
+  "material": "Manganese"
  },
  {
   "id": "plasma.mercury",
@@ -4737,7 +5183,8 @@
    255,
    220,
    220
-  ]
+  ],
+  "material": "Mercury"
  },
  {
   "id": "plasma.molybdenum",
@@ -4749,7 +5196,8 @@
    180,
    180,
    220
-  ]
+  ],
+  "material": "Molybdenum"
  },
  {
   "id": "plasma.neodymium",
@@ -4761,7 +5209,8 @@
    100,
    100,
    100
-  ]
+  ],
+  "material": "Neodymium"
  },
  {
   "id": "plasma.neutronium",
@@ -4773,7 +5222,8 @@
    160,
    250,
    150
-  ]
+  ],
+  "material": "Neutronium"
  },
  {
   "id": "plasma.nickel",
@@ -4785,7 +5235,8 @@
    200,
    200,
    250
-  ]
+  ],
+  "material": "Nickel"
  },
  {
   "id": "plasma.niobium",
@@ -4797,7 +5248,8 @@
    190,
    180,
    200
-  ]
+  ],
+  "material": "Niobium"
  },
  {
   "id": "plasma.nitrogen",
@@ -4809,7 +5261,8 @@
    0,
    150,
    200
-  ]
+  ],
+  "material": "Nitrogen"
  },
  {
   "id": "plasma.null",
@@ -4821,7 +5274,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "_NULL"
  },
  {
   "id": "plasma.osmium",
@@ -4833,7 +5287,8 @@
    50,
    50,
    255
-  ]
+  ],
+  "material": "Osmium"
  },
  {
   "id": "plasma.oxygen",
@@ -4845,7 +5300,8 @@
    0,
    100,
    200
-  ]
+  ],
+  "material": "Oxygen"
  },
  {
   "id": "plasma.palladium",
@@ -4857,7 +5313,8 @@
    128,
    128,
    128
-  ]
+  ],
+  "material": "Palladium"
  },
  {
   "id": "plasma.phosphorus",
@@ -4869,7 +5326,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Phosphorus"
  },
  {
   "id": "plasma.platinum",
@@ -4881,7 +5339,8 @@
    255,
    255,
    200
-  ]
+  ],
+  "material": "Platinum"
  },
  {
   "id": "plasma.plutonium",
@@ -4893,7 +5352,8 @@
    240,
    50,
    50
-  ]
+  ],
+  "material": "Plutonium"
  },
  {
   "id": "plasma.potassium",
@@ -4905,7 +5365,8 @@
    190,
    220,
    255
-  ]
+  ],
+  "material": "Potassium"
  },
  {
   "id": "plasma.praseodymium",
@@ -4917,7 +5378,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Praseodymium"
  },
  {
   "id": "plasma.promethium",
@@ -4929,7 +5391,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Promethium"
  },
  {
   "id": "plasma.radon",
@@ -4941,7 +5404,8 @@
    255,
    0,
    255
-  ]
+  ],
+  "material": "Radon"
  },
  {
   "id": "plasma.rubidium",
@@ -4953,7 +5417,8 @@
    240,
    30,
    30
-  ]
+  ],
+  "material": "Rubidium"
  },
  {
   "id": "plasma.samarium",
@@ -4965,7 +5430,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Samarium"
  },
  {
   "id": "plasma.scandium",
@@ -4977,7 +5443,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Scandium"
  },
  {
   "id": "plasma.silicon",
@@ -4989,7 +5456,8 @@
    60,
    60,
    80
-  ]
+  ],
+  "material": "Silicon"
  },
  {
   "id": "plasma.silver",
@@ -5001,7 +5469,8 @@
    220,
    220,
    255
-  ]
+  ],
+  "material": "Silver"
  },
  {
   "id": "plasma.sodium",
@@ -5013,7 +5482,8 @@
    0,
    0,
    150
-  ]
+  ],
+  "material": "Sodium"
  },
  {
   "id": "plasma.strontium",
@@ -5025,7 +5495,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "Strontium"
  },
  {
   "id": "plasma.sulfur",
@@ -5037,7 +5508,8 @@
    200,
    200,
    0
-  ]
+  ],
+  "material": "Sulfur"
  },
  {
   "id": "plasma.tantalum",
@@ -5049,7 +5521,8 @@
    230,
    110,
    77
-  ]
+  ],
+  "material": "Tantalum"
  },
  {
   "id": "plasma.tellurium",
@@ -5061,7 +5534,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Tellurium"
  },
  {
   "id": "plasma.terbium",
@@ -5073,7 +5547,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Terbium"
  },
  {
   "id": "plasma.thorium",
@@ -5085,7 +5560,8 @@
    0,
    30,
    0
-  ]
+  ],
+  "material": "Thorium"
  },
  {
   "id": "plasma.thulium",
@@ -5097,7 +5573,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Thulium"
  },
  {
   "id": "plasma.tin",
@@ -5109,7 +5586,8 @@
    220,
    220,
    220
-  ]
+  ],
+  "material": "Tin"
  },
  {
   "id": "plasma.titanium",
@@ -5121,7 +5599,8 @@
    220,
    160,
    240
-  ]
+  ],
+  "material": "Titanium"
  },
  {
   "id": "plasma.tritium",
@@ -5133,7 +5612,8 @@
    255,
    0,
    0
-  ]
+  ],
+  "material": "Tritium"
  },
  {
   "id": "plasma.tungsten",
@@ -5145,7 +5625,8 @@
    50,
    50,
    50
-  ]
+  ],
+  "material": "Tungsten"
  },
  {
   "id": "plasma.uranium",
@@ -5157,7 +5638,8 @@
    50,
    240,
    50
-  ]
+  ],
+  "material": "Uranium"
  },
  {
   "id": "plasma.vanadium",
@@ -5169,7 +5651,8 @@
    50,
    50,
    50
-  ]
+  ],
+  "material": "Vanadium"
  },
  {
   "id": "plasma.ytterbium",
@@ -5181,7 +5664,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Ytterbium"
  },
  {
   "id": "plasma.yttrium",
@@ -5193,7 +5677,8 @@
    220,
    250,
    220
-  ]
+  ],
+  "material": "Yttrium"
  },
  {
   "id": "plasma.zinc",
@@ -5205,7 +5690,8 @@
    250,
    240,
    240
-  ]
+  ],
+  "material": "Zinc"
  },
  {
   "id": "polyvinylacetate",
@@ -5217,7 +5703,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "propane",
@@ -5229,7 +5716,8 @@
    250,
    226,
    80
-  ]
+  ],
+  "material": "Propane"
  },
  {
   "id": "propene",
@@ -5241,7 +5729,8 @@
    255,
    221,
    85
-  ]
+  ],
+  "material": "Propene"
  },
  {
   "id": "radon",
@@ -5253,7 +5742,8 @@
    255,
    0,
    255
-  ]
+  ],
+  "material": "Radon"
  },
  {
   "id": "rocket_fuel",
@@ -5265,7 +5755,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "saltwater",
@@ -5277,7 +5768,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "seedoil",
@@ -5289,7 +5781,8 @@
    196,
    255,
    0
-  ]
+  ],
+  "material": "SeedOil"
  },
  {
   "id": "sodiumpersulfate",
@@ -5301,7 +5794,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "SodiumPersulfate"
  },
  {
   "id": "solution.bluevitriol",
@@ -5313,7 +5807,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "solution.nickelsulfate",
@@ -5325,7 +5820,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "squidink",
@@ -5337,7 +5833,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "steam",
@@ -5349,7 +5846,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": "Water"
  },
  {
   "id": "steamcracked.butane",
@@ -5361,7 +5859,8 @@
    182,
    55,
    30
-  ]
+  ],
+  "material": "Butane"
  },
  {
   "id": "steamcracked.ethane",
@@ -5373,7 +5872,8 @@
    200,
    200,
    255
-  ]
+  ],
+  "material": "Ethane"
  },
  {
   "id": "steamcracked.gas",
@@ -5385,7 +5885,8 @@
    255,
    255,
    255
-  ]
+  ],
+  "material": "Gas"
  },
  {
   "id": "steamcracked.heavyfuel",
@@ -5397,7 +5898,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "HeavyFuel"
  },
  {
   "id": "steamcracked.lightfuel",
@@ -5409,7 +5911,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "LightFuel"
  },
  {
   "id": "steamcracked.naphtha",
@@ -5421,7 +5924,8 @@
    255,
    255,
    0
-  ]
+  ],
+  "material": "Naphtha"
  },
  {
   "id": "steamcracked.propane",
@@ -5433,7 +5937,8 @@
    250,
    226,
    80
-  ]
+  ],
+  "material": "Propane"
  },
  {
   "id": "styrene",
@@ -5445,7 +5950,8 @@
    210,
    200,
    190
-  ]
+  ],
+  "material": "Styrene"
  },
  {
   "id": "sulfurdioxide",
@@ -5457,7 +5963,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "sulfuricacid",
@@ -5469,7 +5976,8 @@
    255,
    128,
    0
-  ]
+  ],
+  "material": "SulfuricAcid"
  },
  {
   "id": "sulfurtrioxide",
@@ -5481,7 +5989,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "tetrafluoroethylene",
@@ -5493,7 +6002,8 @@
    125,
    125,
    125
-  ]
+  ],
+  "material": "Tetrafluoroethylene"
  },
  {
   "id": "tetranitromethane",
@@ -5505,7 +6015,8 @@
    15,
    40,
    40
-  ]
+  ],
+  "material": "Tetranitromethane"
  },
  {
   "id": "titaniumtetrachloride",
@@ -5517,7 +6028,8 @@
    212,
    13,
    92
-  ]
+  ],
+  "material": "Titaniumtetrachloride"
  },
  {
   "id": "tritium",
@@ -5529,7 +6041,8 @@
    255,
    0,
    0
-  ]
+  ],
+  "material": "Tritium"
  },
  {
   "id": "uuamplifier",
@@ -5541,7 +6054,8 @@
    96,
    0,
    128
-  ]
+  ],
+  "material": "UUAmplifier"
  },
  {
   "id": "vinylacetate",
@@ -5553,7 +6067,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "vinylchloride",
@@ -5565,7 +6080,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "woodgas",
@@ -5577,7 +6093,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "woodtar",
@@ -5589,7 +6106,8 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  },
  {
   "id": "woodvinegar",
@@ -5601,6 +6119,7 @@
    200,
    200,
    200
-  ]
+  ],
+  "material": null
  }
 ]

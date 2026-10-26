@@ -1,0 +1,20 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [],
+  "duration": 16,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:biomass",
+      "amount": 40
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:bioethanol",
+      "amount": 12
+    }
+  ],
+  "circuit": 1
+}

@@ -1,0 +1,54 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:chlorobenzene",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 12
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 13,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:phenol",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 240,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 6000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dilutedhydrochloricacid_gt5u",
+      "amount": 5000
+    }
+  ]
+}
