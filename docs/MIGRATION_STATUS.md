@@ -3,40 +3,51 @@
 Эталон: GT5-II `IdealIndustrial/GT5Unofficial` @ `00021e3` + конфиги и скрипты сборки ИИС 1.19.1 (см. AGENTS.md).
 Уровни доказательств: **T** — unit-тесты, **G** — GameTest (машины в мире), **S** — `/iis selftest` на сервере,
 **C** — скриншот клиента в облаке, **O** — проверено владельцем в игре, **—** — не проверено.
+Обновлено 2026-10-23 (после LV III, D76). Био и Дуо — не перенос, а новые пути: см. `docs/BIO_PATH.md`.
 
 | Подсистема | Оригинал | Наш код | Статус | Доказательства |
 |---|---|---|---|---|
 | Уровни напряжения, разгон | `GT_Values.V`, `BasicMachine#calculateOverclockedNess` | `energy.VoltageTier`, `machine.Overclock` | перенесено | T, G |
-| Материалы и формы | `Materials`, `OrePrefixes`, `MaterialProperties.cfg` | `core.material`, `tools/gen/gen_content.py` | частично (без gemFlawed.., foil, gear, wireFine…) | T, S, C |
+| Материалы и формы | `Materials`, `OrePrefixes`, `MaterialProperties.cfg` | `core.material`, `tools/gen/gen_content.py` | 137 материалов (с хромом и нержавейкой, D76); формы пыли, слитки, пластины, фольга, шестерни, тонкая проволока, кольца, роторы, огранки камней; нет ingotDouble+, plateDouble+, spring, crushedCentrifuged, ingotHot | T, S, C |
 | Жилы и руды | `GT_Worldgen_GT_Ore_Layer`, `WorldGeneration.cfg` | `world.vein`, `world.ore` | перенесено (без космоса) | T, S, C, O (загрузка) |
 | Малые руды | `GT_Worldgen_GT_Ore_SmallPieces` | `VeinFeature`, `OreBlocks` | перенесено (без удачи) | S |
-| Инструменты GT | `GT_Tool_*`, `GT_MetaGenerated_Tool_01` | `tool.*` | частично (без электроинструментов, киянки, лома…) | S, C |
+| Инструменты GT | `GT_Tool_*`, `GT_MetaGenerated_Tool_01` | `tool.*` | меч, кирка, лопата, топор, мотыга, пила, молот, киянка, ключ, напильник, монтировка, отвёртка, ступка, кусачки, нож; нет остальных инструментов GT5 и электроинструментов | S, C, O (ключ) |
 | Ручная переработка | `ProcessingOre/Ingot/...`, котёл | рецепты + `MaterialItem` | перенесено | S |
 | Пар: жидкость | `GT_ModHandler.getSteam` | `fluid.IISFluids` | перенесено | G |
 | Малые котлы (4) | `GT_MetaTileEntity_Boiler_*` | `machine.logic.BoilerLogic`, `BoilerBlockEntity` | перенесено | T, G, C |
 | Паровые машины (6×2) | `machines/steam/*`, `BasicMachine_Bronze` | `SteamMachineLogic`, `SteamMachineBlockEntity` | перенесено (выход всегда сзади) | T, G, C |
-| Карты рецептов GT | `GT_Recipe_Map` | `machine.recipe.*`, `tools/gen/steam.py` | 6 карт, 1382 рецепта | S, G |
-| Жидкостные трубы | `GT_MetaPipeEntity_Fluid` | `PipeBlock`, `PipeBlockEntity` | бронза/сталь S/M/L | G, C |
+| Карты рецептов GT | `GT_Recipe_Map` | `machine.recipe.*`, `tools/gen/*.py` | все карты пара, LV, LV II, LV III и доменных печей; всего в игре 6 391 рецепт (D76) | S, G |
+| Жидкостные трубы | `GT_MetaPipeEntity_Fluid`, `generateFluidPipes` | `PipeBlock`, `PipeBlockEntity` | 43 исполнения: дерево (3 размера) и 8 материалов × 5 размеров; опасности GT (огонь, утечка газа, ожог), D72. Крафт — только где есть пластина (дерево, медь, бронза, сталь, нержавейка) | G, C |
 | Кирпичная доменная печь | `GT_MetaTileEntity_PrimitiveBlastFurnace` | `BbfStructure`, `BbfBlockEntity` | перенесено | T, G, C |
 | Огнеупорная цепочка | `GT_CraftingRecipeLoader`, `GT_MachineRecipeLoader` | `tools/gen/steam.py` | перенесено | S |
-| Просмотр рецептов | NEI | JEI-плагин `machine.compat.jei` | 14 категорий (с жидкостями) + печи как станции плавки | C |
+| Просмотр рецептов | NEI | JEI-плагины `machine.compat.jei`, `bio.compat.jei` | категории всех машин с жидкостями, печи как станции плавки, программная схема над стрелкой | C |
 | Загрязнение | `GT_Pollution` | `ru.iis.pollution` | перенесено (D53) | T, G (котёл) |
 | EU: запас, приём, выдача, взрывы | `BaseMetaTileEntity` | `energy.logic.EnergyStorage`, `lv.block.ElectricBlockEntity` | перенесено (взрыв в конце тика, D48) | T, G |
-| Провода и кабели | `GT_MetaPipeEntity_Cable`, `makeWires` | `energy.logic.EnergyNet`, `WorldEnergy`, `lv.block.CableBlock` | 5 материалов × 1x/2x/4x, провод и кабель | T, G, C |
+| Провода и кабели | `GT_MetaPipeEntity_Cable`, `makeWires` | `energy.logic.EnergyNet`, `WorldEnergy`, `lv.block.CableBlock` | красный сплав, олово, свинец, медь, отожжённая медь, константан × 1x/2x/4x, провод и кабель; золотой провод (D76); нет 8x+ и остальных материалов | T, G, C |
 | Опасности (дождь, вода, огонь, гроза, удар током, сгорание, wirefire) | `BaseMetaTileEntity#updateEntity`, `GT_Utility#applyElectricityDamage` | `ElectricBlockEntity`, `CableBlock` | перенесено; переключатели в serverconfig (D47) | G (вода, перенапряжение, сгорание, удар) |
-| LV-машины (13) | `BasicMachine_GT_Recipe`, `GT_Loader_MetaTileEntities` | `machine.logic.ElectricMachineLogic`, `lv.block.ElectricMachineBlockEntity` | дробитель, печь, печь сплавов, компрессор, экстрактор, молот, волочильный, гибочный, токарный, сборщик, смеситель, поляризатор, рудопромывка | T, G, C |
-| Генераторы LV (3) | `BasicGenerator`, `SteamTurbine`, `DieselGenerator`, `GasTurbine` | `energy.logic.GeneratorLogic`, `lv.block.GeneratorBlockEntity` | перенесено; жидкого топлива для дизеля/газа ещё нет | T, G (паровая турбина) |
-| Аккумуляторный буфер 1x1/2x2, батарейка LV | `BasicBatteryBuffer`, `Battery_RE_LV_Sodium` | `BatteryBufferBlockEntity`, `lv.item.BatteryItem` | перенесено (рецепт батарейки — отличие) | G |
-| Трансформатор LV | `GT_MetaTileEntity_Transformer` | `TransformerBlockEntity` | перенесено (переключение ключом — отличие) | G |
+| LV-машины (23) | `BasicMachine_GT_Recipe`, `GT_Loader_MetaTileEntities` | `machine.logic.ElectricMachineLogic`, `lv.block.ElectricMachineBlockEntity`, `LvMachineType` | дробитель, печь, печь сплавов, компрессор, экстрактор, молот, волочильный, гибочный, токарный, сборщик, смеситель, поляризатор, рудопромывка; LV II — центрифуга, просеиватель, электромагнитный сепаратор, автоклав, пильный, консервирующий; LV III — электролизёр, химреактор, экстрактор и отвердитель жидкостей; нет химической ванны | T, G, C |
+| Выходной бак жидкости LV-машин | `BasicMachine#mOutputFluid` | `ElectricMachineBlockEntity` | перенесено, автовыгрузка жидкости кнопкой (D76) | G |
+| Кнопки автовыгрузки | `GT_MetaTileEntity_BasicMachine` (`mItemTransfer`/`mFluidTransfer`) | `ElectricMachineBlockEntity` | перенесено (D57) | G |
+| Генераторы LV (3) | `BasicGenerator`, `SteamTurbine`, `DieselGenerator`, `GasTurbine` | `energy.logic.GeneratorLogic`, `lv.block.GeneratorBlockEntity`, `lv.Fuels` | перенесено; топливо — таблица GT (`iis/fuels.json`), из неё зарегистрированы 6 дизельных и 9 газовых жидкостей GT, на LV добывается только водород (электролиз воды) | T, G (паровая турбина) |
+| Аккумуляторный буфер 1x1/2x2, батарейки LV | `BasicBatteryBuffer`, `GT_MetaGenerated_Item_01:401-465` | `BatteryBufferBlockEntity`, `lv.item.BatteryItem` | перенесено: корпус + консервирующий станок, натриевая/кадмиевая/литиевая (D63) | G |
+| Трансформатор LV | `GT_MetaTileEntity_Transformer` | `TransformerBlockEntity` | перенесено (режим — Shift+ключ, отличие) | G |
 | Детали LV, схема, корпус | `GT_MetaGenerated_Item_01`, `ProcessingCircuit` | `tools/gen/lv.py` | мотор, поршень, насос, конвейер, манипулятор, схема, резистор, вакуумная трубка, плата | S |
-| Новые карты рецептов (8) | `GT_Recipe_Map` | `GtRecipeMap`, `tools/gen/lv.py` | волочильный, гибочный, токарный, сборщик, смеситель, поляризатор, рудопромывка, коксовая печь (~350 рецептов) | S, G |
+| Программная схема | `GT_IntegratedCircuit_Item` | `lv.item.ProgrammedCircuitItem`, компонент `iis:circuit_config`, поле `circuit` рецепта | конфигурация 0…24, отвёртка, не расходуется (D75) | G |
 | Каучук | IC2 (закрытый) → своя механика | `RubberLogBlock`, `TreetapItem`, worldgen | дерево, смола, краник, слизь | G (рост дерева) |
-| Коксовая печь | Railcraft + `RailCraft.zs` | `CokeOvenBlockEntity` | перенесено (числа Railcraft по памяти) | G, C |
-| Жидкость «креозот» | Railcraft / `Materials.Creosote` | `IISFluids.CREOSOTE` | с блоком и ведром | G |
-| Электрическая доменная печь | `GT_MetaTileEntity_ElectricBlastFurnace` | `multi.block.EbfBlockEntity`, `multi.logic.BlastLogic` | перенесено (константановые катушки) | T, G |
+| Коксовая печь | Railcraft + `RailCraft.zs` | `CokeOvenBlockEntity` | перенесено (числа Railcraft по памяти) | G, C, O |
+| Жидкость «креозот» | Railcraft / `Materials.Creosote` | `IISFluids.CREOSOTE` | с блоком и ведром | G, O |
+| Жидкости GT | `GT_Loader_Item_Block_And_Fluid`, `GT_Proxy#addFluid` | `fluid.GtFluids`, `iis/gt_fluids.json` | 465 жидкостей (расплавы, плазма, газы) без блока и ведра; нет дистиллированной воды, соляной кислоты и ряда других (D72, D76) | G |
+| Капсулы | `Cell_Empty`, IC2 `Cell_Universal_Fluid`, стальные капсулы GT | `fluid.CapsuleItem` | обычная, универсальная (рецепт — отличие), стальная и из магнитной стали; ПТФЭ — позже | G |
+| Резервуары | — (своё по просьбе владельца) | `fluid.UniversalTankBlock` | бронзовый 32 000 и стальной 128 000 мБ, одноблочные; ёмкости временные | G |
+| Электрическая доменная печь | `GT_MetaTileEntity_ElectricBlastFurnace` | `multi.block.EbfBlockEntity`, `multi.logic.BlastLogic` | перенесено (константановые катушки, хром и нержавейка 1700 K) | T, G |
 | Люки LV, шины, обслуживание, выхлоп | `GT_MetaTileEntity_Hatch_*` | `multi.block.*` | перенесено | G |
 | Техобслуживание | `MultiBlockBase`, `Hatch_Maintenance` | `multi.logic.Maintenance` | перенесено (инструмент по люку) | T, G |
 | Киянка, монтировка, паяльник LV | `GT_Tool_SoftHammer/Crowbar`, `SOLDERING_IRON_LV` | инструменты GT, `multi.SolderingIronItem` | перенесено | S |
-| LV II: центрифуга, просеиватель, электромагнитный сепаратор, автоклав, пильный станок | `GT_Loader_MetaTileEntities`, `ProcessingDust`, `ProcessingCrushedOre`, `ProcessingStick*`, `ProcessingLog`, `GT_MachineRecipeLoader` | `LvMachineType`, `tools/gen/lv.py` (`lv2_recipes`) | перенесено без ячеек: рецепты с газами/жидкостями в ячейках ждут ячеек | T, G, C |
 | Алмазный пильный диск, фильтр, кобальтовая латунь, огранки камней (осколки…изысканный) | `GT_MetaGenerated_Item_01/02`, `OrePrefixes` | `tools/gen` | перенесено | S |
-| Остальные LV-машины (электролизёр, химреактор, хим. ванна, экстрактор/отвердитель жидкостей, консервирование, …), ячейки, провода 8x+ | `GT_Loader_MetaTileEntities` | — | следующий блок: ячейки GT + электролизёр | — |
+| Покрытия | `GT_Cover_*` | `ru.iis.cover` | 11 видов на электроблоках (D62); нет регулятора и фильтра жидкости, солнечных панелей, экрана, беспроводного сигнала; нет покрытий на паровых машинах, трубах, люках | G, C |
+| Химия LV III | `ProcessingDust:61–110`, `registerReverseFluidSmelting`, `GT_MachineRecipeLoader` | `tools/gen/extract_gt5_recipes.py`, `tools/gen/chem.py` | электролиз и центрифуга пылей с капсулами, плавка и литьё с формами, 201 рецепт химреактора; рецепт берётся, только если все его предметы и жидкости есть — 512 пропущено (D76) | G |
+| Формы отвердителя | `ItemList.Shape_Mold_*` | `tools/gen` | слиток, пластина, самородки, шестерня, блок; форма не расходуется (`keep`) | G |
+| Мультиметр | Portable Scanner (HV) | `lv.item.MultimeterItem`, `lv.EnergyReadout` | с LV и с живым режимом (отличие, D51) | G |
+| Геологоразведка | GT_Scanner_Mod | `compat.journeymap`, `/iis scan`, `/iis vein` | слой JourneyMap «сетка рудных чанков» (D60); прибора-сканера нет | T, C |
+| Валка деревьев | Treecapitator (отдельный мод) | `world.TreeFeller` | топор GT валит дерево целиком (D56) | G |
+| Остальные LV-машины (химическая ванна, …), провода 8x+, электроинструменты | `GT_Loader_MetaTileEntities` | — | следующий блок, затем MV | — |
