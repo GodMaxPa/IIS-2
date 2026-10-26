@@ -66,6 +66,12 @@ public final class IISClient {
         event.registerBlockEntityRenderer(ru.iis.lv.LvContent.GENERATOR_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
         event.registerBlockEntityRenderer(ru.iis.lv.LvContent.BATTERY_BUFFER_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
         event.registerBlockEntityRenderer(ru.iis.lv.LvContent.TRANSFORMER_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
+        // покрытия на паровых машинах, трубах и люках (D80)
+        event.registerBlockEntityRenderer(ru.iis.machine.IISMachines.STEAM_MACHINE_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
+        event.registerBlockEntityRenderer(ru.iis.machine.IISMachines.PIPE_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
+        event.registerBlockEntityRenderer(ru.iis.multi.MultiContent.ITEM_BUS_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
+        event.registerBlockEntityRenderer(ru.iis.multi.MultiContent.FLUID_HATCH_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
+        event.registerBlockEntityRenderer(ru.iis.multi.MultiContent.ENERGY_HATCH_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
     }
 
     private static void registerScreens(RegisterMenuScreensEvent event) {

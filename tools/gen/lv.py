@@ -110,6 +110,9 @@ ITEMS = [
     ('cover_crafting', 'gt:744', 'gt.metaitem.01.32744.name', 'Crafting Table Cover', 'Покрытие-верстак'),
     ('cover_drain', 'gt:745', 'gt.metaitem.01.32745.name', 'Drain', 'Сток'),
     ('cover_shutter', 'gt:749', 'gt.metaitem.01.32749.name', 'Shutter Module', 'Модуль заслонки'),
+    # GT_MetaGenerated_Item_01:519, :531 (D80)
+    ('fluid_regulator_lv', 'gt:615', 'gt.metaitem.01.32615.name', 'Fluid Regulator (LV)', 'Регулятор жидкости (LV)'),
+    ('cover_fluid_filter', 'gt:635', 'gt.metaitem.01.32635.name', 'Fluid Filter', 'Фильтр жидкости'),
     ('steel_item_casing', 'gen:casing', None, 'Steel Item Casing', 'Стальная оболочка'),
     ('sticky_resin', 'gen:resin', None, 'Sticky Resin', 'Липкая смола'),
     ('coal_coke', 'gen:coke', None, 'Coal Coke', 'Коксовый уголь'),
@@ -307,7 +310,9 @@ def generate(g):
     for cid, casing, ov in (('conveyor', 'LV', 'CONVEYOR'), ('pump', 'LV', 'PUMP'), ('arm', 'LV', 'ARM'), ('shutter', 'LV', 'SHUTTER'),
                             ('controller', 'MV', 'CONTROLLER'), ('activity_detector', 'MV', 'ACTIVITYDETECTOR'),
                             ('item_detector', 'MV', 'ITEMDETECTOR'), ('fluid_detector', 'MV', 'FLUIDDETECTOR'),
-                            ('energy_detector', 'MV', 'ENERGYDETECTOR'), ('drain', 'LV', 'DRAIN'), ('crafting', 'LV', 'CRAFTING')):
+                            ('energy_detector', 'MV', 'ENERGYDETECTOR'), ('drain', 'LV', 'DRAIN'), ('crafting', 'LV', 'CRAFTING'),
+                            # GT_MetaGenerated_Item_01:525, :532: LV casing + pump / shutter overlay
+                            ('fluid_regulator', 'LV', 'PUMP'), ('fluid_filter', 'LV', 'SHUTTER')):
         icd = os.path.join(LV, 'iconsets')
         im, _ = layer(os.path.join(icd, f'MACHINE_{casing}_SIDE.png'), os.path.join(icd, f'OVERLAY_{ov}.png'))
         im.crop((0, 0, 16, 16)).save(tex_out(f'block/cover/{cid}.png'))
@@ -319,7 +324,13 @@ def generate(g):
         k = f'Interaction_DESCRIPTION_Index_{i:03d}'
         name(f'cover.{NS}.mode.{i:03d}', en_int.get(k, k), ru(k, en_int.get(k, k)))
     name(f'cover.{NS}.all_slots', 'all', 'все')
-    for i, (en, ruu) in enumerate((('Cover: right-click a side of an electric machine (not the front)', 'Покрытие: ПКМ по стороне электромашины (не по лицевой)'),
+    # GT_Cover_Fluidfilter modes 4-7: in GT5-II @ 00021e3 their keys (Index_219-222) point to unrelated lines, so the text is ours
+    for mode, en, ruu in ((4, 'Deny input, filter output', 'Запрет входа, выход только выбранной'),
+                          (5, 'Deny input, invert output', 'Запрет входа, выход всех, кроме выбранной'),
+                          (6, 'Permit any input, filter output', 'Любой вход, выход только выбранной'),
+                          (7, 'Permit any input, invert output', 'Любой вход, выход всех, кроме выбранной')):
+        name(f'cover.{NS}.fluid_filter.mode.{mode}', en, ruu)
+    for i, (en, ruu) in enumerate((('Cover: right-click a side of a machine, pipe or hatch (not the front)', 'Покрытие: ПКМ по стороне машины, трубы или люка (не по лицевой)'),
                                    ('Screwdriver: change mode (Shift: back)', 'Отвёртка: сменить режим (Shift — назад)'),
                                    ('Crowbar: remove the cover', 'Монтировка: снять покрытие'))):
         name(f'cover.{NS}.tooltip.{i}', en, ruu)
@@ -1060,6 +1071,9 @@ def generate(g):
         mrec('assembler', f'cover_shutter_{pm}', [ing(pl, 2), ing('minecraft:iron_door')], [out(f'{NS}:cover_shutter', 2)], 800, 16)
         mrec('assembler', f'cover_drain_{pm}', [ing(pl, 2), ing('minecraft:iron_bars', 2)], [out(f'{NS}:cover_drain')], 800, 16)
         mrec('assembler', f'cover_crafting_{pm}', [ing(pl), ing('minecraft:crafting_table')], [out(f'{NS}:cover_crafting')], 800, 16)
+    # GT_MachineRecipeLoader:416 regulator: LV pump + 2 basic circuits; :422 fluid filter: shutter + 2 basic circuits (800 t, 4 EU/t)
+    mrec('assembler', 'fluid_regulator_lv', [ing(PUMP), ing('#c:circuits/basic', 2)], [out(f'{NS}:fluid_regulator_lv')], 800, 4)
+    mrec('assembler', 'cover_fluid_filter', [ing(f'{NS}:cover_shutter'), ing('#c:circuits/basic', 2)], [out(f'{NS}:cover_fluid_filter')], 800, 4)
     # GT_MetaGenerated_Item_01:463-465 canner: 2 dust + hull -> battery (100 t, 2 EU/t); :453-455 extractor: battery -> hull
     for m, bid in (('Cadmium', 'battery_cadmium_lv'), ('Lithium', 'battery_lithium_lv'), ('Sodium', 'battery_lv')):
         if ref('dust', m):

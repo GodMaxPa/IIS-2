@@ -36,13 +36,13 @@ import ru.iis.machine.block.PipeBlock;
 final class FluidGameTests {
     private FluidGameTests() {}
 
-    private static UniversalTankBlockEntity tank(GameTestHelper h, BlockPos rel, String id) {
+    static UniversalTankBlockEntity tank(GameTestHelper h, BlockPos rel, String id) {
         BlockPos abs = h.absolutePos(rel);
         h.getLevel().setBlock(abs, FluidContainers.TANKS.get(id).get().defaultBlockState(), 3);
         return (UniversalTankBlockEntity) h.getLevel().getBlockEntity(abs);
     }
 
-    private static int insert(ResourceHandler<FluidResource> handler, Fluid f, int amount) {
+    static int insert(ResourceHandler<FluidResource> handler, Fluid f, int amount) {
         try (Transaction tx = Transaction.openRoot()) {
             int moved = handler.insert(FluidResource.of(f), amount, tx);
             tx.commit();

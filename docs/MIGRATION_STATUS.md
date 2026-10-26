@@ -3,7 +3,7 @@
 Эталон: GT5-II `IdealIndustrial/GT5Unofficial` @ `00021e3` + конфиги и скрипты сборки ИИС 1.19.1 (см. AGENTS.md).
 Уровни доказательств: **T** — unit-тесты, **G** — GameTest (машины в мире), **S** — `/iis selftest` на сервере,
 **C** — скриншот клиента в облаке, **O** — проверено владельцем в игре, **—** — не проверено.
-Обновлено 2026-10-26 (после проводов, D79). Био и Дуо — не перенос, а новые пути: см. `docs/BIO_PATH.md`.
+Обновлено 2026-10-26 (после покрытий, D80). Био и Дуо — не перенос, а новые пути: см. `docs/BIO_PATH.md`.
 
 | Подсистема | Оригинал | Наш код | Статус | Доказательства |
 |---|---|---|---|---|
@@ -17,7 +17,7 @@
 | Пар: жидкость | `GT_ModHandler.getSteam` | `fluid.IISFluids` | перенесено | G |
 | Малые котлы (4) | `GT_MetaTileEntity_Boiler_*` | `machine.logic.BoilerLogic`, `BoilerBlockEntity` | перенесено | T, G, C |
 | Паровые машины (6×2) | `machines/steam/*`, `BasicMachine_Bronze` | `SteamMachineLogic`, `SteamMachineBlockEntity` | перенесено (выход всегда сзади) | T, G, C |
-| Карты рецептов GT | `GT_Recipe_Map` | `machine.recipe.*`, `tools/gen/*.py` | все карты пара, LV, LV II, LV III, LV IV и доменных печей; всего в игре 7 788 рецептов (D79) | S, G |
+| Карты рецептов GT | `GT_Recipe_Map` | `machine.recipe.*`, `tools/gen/*.py` | все карты пара, LV, LV II, LV III, LV IV и доменных печей; всего в игре 7 790 рецептов (D80) | S, G |
 | Жидкостные трубы | `GT_MetaPipeEntity_Fluid`, `generateFluidPipes` | `PipeBlock`, `PipeBlockEntity` | 43 исполнения: дерево (3 размера) и 8 материалов × 5 размеров; опасности GT (огонь, утечка газа, ожог), D72. Крафт — только где есть пластина (дерево, медь, бронза, сталь, нержавейка) | G, C |
 | Кирпичная доменная печь | `GT_MetaTileEntity_PrimitiveBlastFurnace` | `BbfStructure`, `BbfBlockEntity` | перенесено | T, G, C |
 | Огнеупорная цепочка | `GT_CraftingRecipeLoader`, `GT_MachineRecipeLoader` | `tools/gen/steam.py` | перенесено | S |
@@ -45,7 +45,7 @@
 | Техобслуживание | `MultiBlockBase`, `Hatch_Maintenance` | `multi.logic.Maintenance` | перенесено (инструмент по люку) | T, G |
 | Киянка, монтировка, паяльник LV | `GT_Tool_SoftHammer/Crowbar`, `SOLDERING_IRON_LV` | инструменты GT, `multi.SolderingIronItem` | перенесено | S |
 | Алмазный пильный диск, фильтр, кобальтовая латунь, огранки камней (осколки…изысканный) | `GT_MetaGenerated_Item_01/02`, `OrePrefixes` | `tools/gen` | перенесено | S |
-| Покрытия | `GT_Cover_*` | `ru.iis.cover` | 11 видов на электроблоках (D62); нет регулятора и фильтра жидкости, солнечных панелей, экрана, беспроводного сигнала; нет покрытий на паровых машинах, трубах, люках | G, C |
+| Покрытия | `GT_Cover_*` | `ru.iis.cover` | 13 видов, с регулятором и фильтром жидкости (D80), на электроблоках, паровых машинах, трубах, шинах и люках жидкости и энергии; нет солнечных панелей, экрана, беспроводного сигнала | T, G, C |
 | Химия LV III | `ProcessingDust:61–110`, `registerReverseFluidSmelting`, `GT_MachineRecipeLoader` | `tools/gen/extract_gt5_recipes.py`, `tools/gen/chem.py` | электролиз и центрифуга пылей с капсулами, плавка и литьё с формами, 311 рецептов химреактора; рецепт берётся, только если все его предметы и жидкости есть — из 869 вызовов пропущено 440 (D76, D77) | G |
 | Дистилляция и химванна (LV IV) | `GT_RecipeAdder#addDistilleryRecipe`, `#addChemicalBathRecipe`, `ProcessingDirty:26–35` | `tools/gen/chem.py` | 20 рецептов дистиллятора (вода → дистиллированная, нефть и топливо), 93 химванны: ртуть и персульфат натрия для руд, хлор для шерсти, ковров, стекла и терракоты, бумага; варианты пильного станка и автоклава на дистиллированной воде и смазке (D77) | G |
 | Формы отвердителя | `ItemList.Shape_Mold_*` | `tools/gen` | слиток, пластина, самородки, шестерня, блок; форма не расходуется (`keep`) | G |

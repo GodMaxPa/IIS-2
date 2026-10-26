@@ -34,10 +34,54 @@ import ru.iis.multi.menu.FluidHatchMenu;
  * Входной/выходной люк жидкости LV, 16000 л. Входной заливается трубами или ведром (верхний слот),
  * выходной отдаёт трубам или наливает в пустое ведро.
  */
-public class FluidHatchBlockEntity extends BaseContainerBlockEntity implements WorldlyContainer, MachineBlock.TickingMachine {
+public class FluidHatchBlockEntity extends BaseContainerBlockEntity implements WorldlyContainer, MachineBlock.TickingMachine, ru.iis.cover.CoverHost {
     public static final int SLOT_IN = 0, SLOT_OUT = 1;
     private NonNullList<ItemStack> items = NonNullList.withSize(2, ItemStack.EMPTY);
     private final FluidTank tank;
+    private final ru.iis.cover.CoverSet covers = new ru.iis.cover.CoverSet();
+
+    // --- покрытия (CoverHost, D80) ----------------------------------------------------------------------------------
+    @Override
+    public ru.iis.cover.CoverSet covers() {
+        return covers;
+    }
+
+    @Override
+    public @Nullable ResourceHandler<ItemResource> rawItems(Direction side) {
+        return new net.neoforged.neoforge.transfer.item.WorldlyContainerWrapper(this, side);
+    }
+
+    @Override
+    public @Nullable ResourceHandler<FluidResource> rawFluids(@Nullable Direction side) {
+        return tank;
+    }
+
+    @Override
+    public int slotCount() {
+        return items.size();
+    }
+
+    @Override
+    public ItemStack slot(int i) {
+        return items.get(i);
+    }
+
+    @Override
+    public net.minecraft.network.protocol.@Nullable Packet<net.minecraft.network.protocol.game.ClientGamePacketListener> getUpdatePacket() {
+        return net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public net.minecraft.nbt.CompoundTag getUpdateTag(net.minecraft.core.HolderLookup.Provider registries) {
+        return saveWithoutMetadata(registries);
+    }
+
+    @Override
+    public void preRemoveSideEffects(BlockPos pos, BlockState state) {
+        super.preRemoveSideEffects(pos, state);
+        if (level != null) ru.iis.cover.Covers.dropAll(this, level, pos);
+    }
+
 
     public FluidHatchBlockEntity(BlockPos pos, BlockState state) {
         super(MultiContent.FLUID_HATCH_BE.get(), pos, state);
@@ -70,15 +114,16 @@ public class FluidHatchBlockEntity extends BaseContainerBlockEntity implements W
     }
 
     public @Nullable ResourceHandler<FluidResource> fluidHandler(@Nullable Direction side) {
-        return tank;
+        return ru.iis.cover.Covers.fluids(this, side, tank);
     }
 
     public @Nullable ResourceHandler<ItemResource> itemHandler(@Nullable Direction side) {
-        return side == null ? null : new WorldlyContainerWrapper(this, side);
+        return side == null ? null : ru.iis.cover.Covers.items(this, side, new WorldlyContainerWrapper(this, side));
     }
 
     @Override
     public void serverTick() {
+        if (level instanceof net.minecraft.server.level.ServerLevel sl) tickCovers(sl);
         ItemStack in = items.get(SLOT_IN);
         ItemStack out = items.get(SLOT_OUT);
         if (in.isEmpty() || !out.isEmpty()) return;
@@ -170,6 +215,7 @@ public class FluidHatchBlockEntity extends BaseContainerBlockEntity implements W
         super.saveAdditional(out);
         ContainerHelper.saveAllItems(out, items);
         tank.serialize(out.child("tank"));
+        covers.save(out);
     }
 
     @Override
@@ -178,5 +224,6 @@ public class FluidHatchBlockEntity extends BaseContainerBlockEntity implements W
         items = NonNullList.withSize(2, ItemStack.EMPTY);
         ContainerHelper.loadAllItems(in, items);
         tank.deserialize(in.childOrEmpty("tank"));
+        covers.load(in);
     }
 }

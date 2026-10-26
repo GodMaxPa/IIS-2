@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.storage.ValueInput;
@@ -31,8 +32,12 @@ public final class CoverSet {
     /** GT_Cover_ItemMeter. */
     static final int METER_CONVERTED = 0x80000000, METER_INVERT = 0x40000000, METER_SLOT = 0x0FFFFFFF;
     public static final int CONVEYOR_RATE = 400, PUMP_RATE = 32, ARM_RATE = 400;
+    /** GT_MetaGenerated_Item_01:525 FluidRegulator_LV: new GT_Cover_FluidRegulator(32). */
+    public static final int REGULATOR_RATE = 32;
 
     private final @Nullable CoverKind[] kind = new CoverKind[6];
+    /** GT_Cover_Fluidfilter: жидкость фильтра (в GT — номер жидкости в старших битах данных). */
+    private final @Nullable Fluid[] filter = new Fluid[6];
     private final int[] data = new int[6];
     private final int[] redstone = new int[6];
 
@@ -58,6 +63,11 @@ public final class CoverSet {
         kind[i] = k;
         data[i] = k == CoverKind.ARM ? ARM_CONVERTED | (1 << 14) | ARM_EXPORT : k == CoverKind.ITEM_DETECTOR ? METER_CONVERTED : 0;
         redstone[i] = 0;
+        filter[i] = null;
+    }
+
+    public @Nullable Fluid filterFluid(Direction side) {
+        return filter[side.get3DDataValue()];
     }
 
     public @Nullable CoverKind remove(CoverHost host, Direction side) {
@@ -67,6 +77,7 @@ public final class CoverSet {
         kind[i] = null;
         data[i] = 0;
         redstone[i] = 0;
+        filter[i] = null;
         return k;
     }
 
@@ -106,6 +117,15 @@ public final class CoverSet {
     }
 
     public boolean letsFluidIn(CoverHost h, Direction side) {
+        return letsFluidIn(h, side, null);
+    }
+
+    public boolean letsFluidOut(CoverHost h, Direction side) {
+        return letsFluidOut(h, side, null);
+    }
+
+    /** fluid — что именно проходит (для фильтра жидкости); null — неизвестно. */
+    public boolean letsFluidIn(CoverHost h, Direction side, @Nullable Fluid fluid) {
         CoverKind k = get(side);
         if (k == null) return true;
         int v = data(side);
@@ -113,22 +133,29 @@ public final class CoverSet {
             case PUMP -> !(v > 1 && condBlocks(h, v)) && (v >= 6 || v % 2 != 0);
             case SHUTTER -> shutter(h, v, true);
             case DRAIN -> (!h.isMachine() || h.allowedToWork()) == (v < 2);
-            case CRAFTING -> false;
+            case CRAFTING, FLUID_REGULATOR -> false;
+            case FLUID_FILTER -> FluidFilterLogic.in(v & 7, fluid != null, matches(filterFluid(side), fluid));
             default -> true;
         };
     }
 
-    public boolean letsFluidOut(CoverHost h, Direction side) {
+    public boolean letsFluidOut(CoverHost h, Direction side, @Nullable Fluid fluid) {
         CoverKind k = get(side);
         if (k == null) return true;
         int v = data(side);
         return switch (k) {
             case PUMP -> !(v > 1 && condBlocks(h, v)) && (v >= 6 || v % 2 == 0);
             case SHUTTER -> shutter(h, v, false);
-            case DRAIN, CRAFTING -> false;
+            case DRAIN, CRAFTING, FLUID_REGULATOR -> false;
+            case FLUID_FILTER -> FluidFilterLogic.out(v & 7, fluid != null, matches(filterFluid(side), fluid));
             default -> true;
         };
     }
+
+    private static boolean matches(@Nullable Fluid filter, @Nullable Fluid fluid) {
+        return filter != null && fluid != null && fluid.isSame(filter);
+    }
+
 
     public boolean letsEnergyIn(CoverHost h, Direction side) {
         CoverKind k = get(side);
@@ -154,11 +181,11 @@ public final class CoverSet {
     private static int tickRate(CoverKind k, int v) {
         return switch (k) {
             case CONVEYOR, ARM -> CONVEYOR_RATE;
-            case PUMP, CONTROLLER -> 1;
+            case PUMP, CONTROLLER, FLUID_REGULATOR -> 1;
             case ACTIVITY_DETECTOR, ITEM_DETECTOR, FLUID_DETECTOR -> 5;
             case ENERGY_DETECTOR -> 20;
             case DRAIN -> v < 3 ? 50 : 1;
-            case SHUTTER, CRAFTING -> 0;
+            case SHUTTER, CRAFTING, FLUID_FILTER -> 0;
         };
     }
 
@@ -182,6 +209,7 @@ public final class CoverSet {
                 case FLUID_DETECTOR -> redstone[i] = fluidMeter(h, data[i]);
                 case ENERGY_DETECTOR -> redstone[i] = euMeter(h, data[i]);
                 case DRAIN -> drain(h, level, side, data[i]);
+                case FLUID_REGULATOR -> regulator(h, level, side, data[i]);
                 default -> {}
             }
             if (redstone[i] != before) redstoneChanged = true;
@@ -231,6 +259,31 @@ public final class CoverSet {
         if (can <= 0) return;
         long cost = Math.min(1, can / 10);
         if (exportsOrFreeSide(v, side) && h.euCapacity() >= cost) {
+            if (h.euStored() < cost) return;
+            h.useEu(cost);
+        }
+        try (Transaction tx = Transaction.openRoot()) {
+            ResourceHandlerUtil.move(from, to, r -> true, can, tx);
+            tx.commit();
+        }
+    }
+
+    /**
+     * GT_Cover_FluidRegulator.doCoverThings: |v| л/тик, v > 0 — из блока к соседу, v < 0 — от соседа в блок; 1 EU, если перекачано
+     * ≥ 10 л (у блока без энергии — бесплатно).
+     */
+    private static void regulator(CoverHost h, ServerLevel l, Direction side, int v) {
+        if (v == 0) return;
+        ResourceHandler<FluidResource> own = h.rawFluids(side), other = neighbourFluids(l, h.coverPos(), side);
+        if (own == null || other == null) return;
+        ResourceHandler<FluidResource> from = v > 0 ? own : other, to = v > 0 ? other : own;
+        int can;
+        try (Transaction tx = Transaction.openRoot()) {
+            can = ResourceHandlerUtil.move(from, to, r -> true, Math.abs(v), tx); // пробно, без фиксации
+        }
+        if (can <= 0) return;
+        long cost = Math.min(1, can / 10);
+        if (h.euCapacity() >= cost) {
             if (h.euStored() < cost) return;
             h.useEu(cost);
         }
@@ -437,10 +490,40 @@ public final class CoverSet {
                 }
             }
             case ARM -> { v = armStep(v, right ? (sneak ? 256 : 16) : (sneak ? -256 : -16)); msg = armMsg(v); }
+            case FLUID_REGULATOR -> { v = clampRate(v + (right ? 1 : -1) * (sneak ? 256 : 16)); msg = regulatorMsg(v); }
+            case FLUID_FILTER -> { v = (v & ~7) | cycle(v & 7, sneak, 8); msg = filterModeMsg(v & 7); }
             default -> { return Component.empty(); }
         }
         data[i] = v;
         return msg;
+    }
+
+    /** Пустая рука по регулятору: ±1 л/тик (GT_Cover_FluidRegulator.onCoverRightclick). */
+    public Component regulatorClick(Direction side, boolean right) {
+        int i = side.get3DDataValue();
+        data[i] = clampRate(data[i] + (right ? 1 : -1));
+        return regulatorMsg(data[i]);
+    }
+
+    /** ПКМ по фильтру ёмкостью с жидкостью: запомнить жидкость (GT_Cover_Fluidfilter.onCoverRightclick). */
+    public Component setFilterFluid(Direction side, Fluid fluid) {
+        filter[side.get3DDataValue()] = fluid;
+        return Component.translatable(CoverKind.msg(47)).append(" ").append(fluid.getFluidType().getDescription());
+    }
+
+    private static int clampRate(int v) {
+        return Math.max(-REGULATOR_RATE, Math.min(REGULATOR_RATE, v));
+    }
+
+    /** Interaction_DESCRIPTION_Index_048–050: «Скорость насоса: N л/тик, 20·N л/с». */
+    private static Component regulatorMsg(int v) {
+        return Component.translatable(CoverKind.msg(48)).append(" " + v).append(Component.translatable(CoverKind.msg(49)))
+                .append(", " + v * 20).append(Component.translatable(CoverKind.msg(50)));
+    }
+
+    /** GT_Cover_Fluidfilter#getFilterMode: 0–3 — Index_043–046; для 4–7 ключи 219–222 эталона указывают на чужие строки — свои тексты. */
+    private static Component filterModeMsg(int mode) {
+        return mode < 4 ? Component.translatable(CoverKind.msg(43 + mode)) : Component.translatable("cover.iis.fluid_filter.mode." + mode);
     }
 
     /** Пустая рука по манипулятору: шаг ±1 по слоту (GT_Cover_Arm.onCoverRightclick). */
@@ -491,6 +574,8 @@ public final class CoverSet {
             s.putString("kind", k.id);
             s.putInt("data", data(d));
             s.putInt("rs", redstone[d.get3DDataValue()]);
+            Fluid f = filter[d.get3DDataValue()];
+            if (f != null) s.putString("fluid", net.minecraft.core.registries.BuiltInRegistries.FLUID.getKey(f).toString());
         }
     }
 
@@ -500,6 +585,7 @@ public final class CoverSet {
             kind[i] = null;
             data[i] = 0;
             redstone[i] = 0;
+            filter[i] = null;
         }
         in.child("covers").ifPresent(c -> {
             for (Direction d : Direction.values()) {
@@ -511,6 +597,11 @@ public final class CoverSet {
                             kind[i] = k;
                             data[i] = s.getIntOr("data", 0);
                             redstone[i] = s.getIntOr("rs", 0);
+                            String f = s.getStringOr("fluid", "");
+                            if (!f.isEmpty()) {
+                                var fluidId = net.minecraft.resources.Identifier.tryParse(f);
+                                if (fluidId != null) filter[i] = net.minecraft.core.registries.BuiltInRegistries.FLUID.getOptional(fluidId).orElse(null);
+                            }
                         }
                     }
                 });

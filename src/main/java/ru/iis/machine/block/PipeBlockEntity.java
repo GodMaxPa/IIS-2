@@ -25,8 +25,9 @@ import java.util.Map;
  * бак вмещает cap×20; раз в 5 тиков, если за этот период не было новых поступлений с других сторон,
  * до cap×10 раздаётся соседям пропорционально их свободному месту (кроме сторон, откуда жидкость пришла).
  */
-public class PipeBlockEntity extends BlockEntity {
+public class PipeBlockEntity extends BlockEntity implements ru.iis.cover.CoverHost {
     private final FluidTank tank;
+    private final ru.iis.cover.CoverSet covers = new ru.iis.cover.CoverSet();
     private int receivedFrom, lastReceivedFrom;
     private final ReceivedJournal journal = new ReceivedJournal();
     private final Map<Direction, ResourceHandler<FluidResource>> sided = new EnumMap<>(Direction.class);
@@ -43,14 +44,43 @@ public class PipeBlockEntity extends BlockEntity {
 
     public @Nullable ResourceHandler<FluidResource> fluidHandler(@Nullable Direction side) {
         if (side == null) return tank;
-        return getBlockState().getValue(PipeBlock.PROPS.get(side)) ? sided.get(side) : null;
+        return getBlockState().getValue(PipeBlock.PROPS.get(side)) ? ru.iis.cover.Covers.fluids(this, side, sided.get(side)) : null;
     }
+
+    // --- покрытия (CoverHost, D80): у трубы нет энергии и инвентаря, бак — общий --------------------------------
+    @Override
+    public ru.iis.cover.CoverSet covers() {
+        return covers;
+    }
+
+    @Override
+    public @Nullable ResourceHandler<FluidResource> rawFluids(@Nullable Direction side) {
+        return side == null ? tank : sided.get(side);
+    }
+
+    @Override
+    public net.minecraft.network.protocol.@Nullable Packet<net.minecraft.network.protocol.game.ClientGamePacketListener> getUpdatePacket() {
+        return net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public net.minecraft.nbt.CompoundTag getUpdateTag(net.minecraft.core.HolderLookup.Provider registries) {
+        return saveWithoutMetadata(registries);
+    }
+
+    @Override
+    public void preRemoveSideEffects(BlockPos pos, BlockState state) {
+        super.preRemoveSideEffects(pos, state);
+        if (level != null) ru.iis.cover.Covers.dropAll(this, level, pos);
+    }
+
 
     public FluidTank tank() {
         return tank;
     }
 
     public void serverTick() {
+        if (level instanceof net.minecraft.server.level.ServerLevel sl) tickCovers(sl);
         if (level == null || level.getGameTime() % 5 != 0) return;
         receivedFrom &= 63;
         if (receivedFrom == 63) receivedFrom = 0;
@@ -114,6 +144,7 @@ public class PipeBlockEntity extends BlockEntity {
         for (int i = 0; i < 6; i++) {
             Direction d = dirs[(i + start) % 6];
             if (!getBlockState().getValue(PipeBlock.PROPS.get(d)) || (receivedFrom & (1 << d.get3DDataValue())) != 0) continue;
+            if (!covers.letsFluidOut(this, d, fluid.getFluid())) continue;   // покрытие на этой стороне не выпускает
             ResourceHandler<FluidResource> h = level.getCapability(Capabilities.Fluid.BLOCK, worldPosition.relative(d), d.getOpposite());
             if (h == null) continue;
             int room;
@@ -206,11 +237,13 @@ public class PipeBlockEntity extends BlockEntity {
     protected void saveAdditional(ValueOutput out) {
         super.saveAdditional(out);
         tank.serialize(out.child("tank"));
+        covers.save(out);
     }
 
     @Override
     protected void loadAdditional(ValueInput in) {
         super.loadAdditional(in);
         tank.deserialize(in.childOrEmpty("tank"));
+        covers.load(in);
     }
 }

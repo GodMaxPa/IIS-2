@@ -21,8 +21,52 @@ import ru.iis.multi.MultiContent;
 import ru.iis.multi.menu.ItemBusMenu;
 
 /** Входная/выходная шина LV (4 слота). Входная принимает предметы снаружи, выходная — только отдаёт. */
-public class ItemBusBlockEntity extends BaseContainerBlockEntity implements WorldlyContainer {
+public class ItemBusBlockEntity extends BaseContainerBlockEntity implements WorldlyContainer, ru.iis.cover.CoverHost, ru.iis.machine.block.MachineBlock.TickingMachine {
     private NonNullList<ItemStack> items = NonNullList.withSize(HatchType.BUS_SLOTS, ItemStack.EMPTY);
+    private final ru.iis.cover.CoverSet covers = new ru.iis.cover.CoverSet();
+
+    // --- покрытия (CoverHost, D80) ----------------------------------------------------------------------------------
+    @Override
+    public ru.iis.cover.CoverSet covers() {
+        return covers;
+    }
+
+    @Override
+    public @Nullable ResourceHandler<ItemResource> rawItems(Direction side) {
+        return new net.neoforged.neoforge.transfer.item.WorldlyContainerWrapper(this, side);
+    }
+
+    @Override
+    public int slotCount() {
+        return items.size();
+    }
+
+    @Override
+    public ItemStack slot(int i) {
+        return items.get(i);
+    }
+
+    @Override
+    public void serverTick() {
+        if (level instanceof net.minecraft.server.level.ServerLevel sl) tickCovers(sl);
+    }
+
+    @Override
+    public net.minecraft.network.protocol.@Nullable Packet<net.minecraft.network.protocol.game.ClientGamePacketListener> getUpdatePacket() {
+        return net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public net.minecraft.nbt.CompoundTag getUpdateTag(net.minecraft.core.HolderLookup.Provider registries) {
+        return saveWithoutMetadata(registries);
+    }
+
+    @Override
+    public void preRemoveSideEffects(BlockPos pos, BlockState state) {
+        super.preRemoveSideEffects(pos, state);
+        if (level != null) ru.iis.cover.Covers.dropAll(this, level, pos);
+    }
+
 
     public ItemBusBlockEntity(BlockPos pos, BlockState state) {
         super(MultiContent.ITEM_BUS_BE.get(), pos, state);
@@ -53,7 +97,7 @@ public class ItemBusBlockEntity extends BaseContainerBlockEntity implements Worl
     }
 
     public @Nullable ResourceHandler<ItemResource> itemHandler(@Nullable Direction side) {
-        return side == null ? null : new WorldlyContainerWrapper(this, side);
+        return side == null ? null : ru.iis.cover.Covers.items(this, side, new WorldlyContainerWrapper(this, side));
     }
 
     @Override
@@ -105,6 +149,7 @@ public class ItemBusBlockEntity extends BaseContainerBlockEntity implements Worl
     protected void saveAdditional(ValueOutput out) {
         super.saveAdditional(out);
         ContainerHelper.saveAllItems(out, items);
+        covers.save(out);
     }
 
     @Override
@@ -112,5 +157,6 @@ public class ItemBusBlockEntity extends BaseContainerBlockEntity implements Worl
         super.loadAdditional(in);
         items = NonNullList.withSize(HatchType.BUS_SLOTS, ItemStack.EMPTY);
         ContainerHelper.loadAllItems(in, items);
+        covers.load(in);
     }
 }

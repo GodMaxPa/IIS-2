@@ -68,6 +68,11 @@ public class HatchBlock extends Block implements EntityBlock, EnergyConnectable 
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        // покрытия GT на сторонах люка, кроме лицевой (D80)
+        if (level.getBlockEntity(pos) instanceof ru.iis.cover.CoverHost host) {
+            InteractionResult r = ru.iis.cover.Covers.use(host, stack, player, hand, hit, state.getValue(FACING));
+            if (r != null) return r;
+        }
         // ключ поворачивает люк; у люка обслуживания ключ — ещё и ремонтный инструмент, там поворот с Shift
         if (ru.iis.machine.block.Wrench.is(stack) && (type != HatchType.MAINTENANCE || player.isShiftKeyDown())) {
             if (!level.isClientSide()) ru.iis.machine.block.Wrench.rotate(level, pos, state, FACING, ru.iis.machine.block.Wrench.wrenchingSide(pos, hit), player, hand, stack);
@@ -80,6 +85,10 @@ public class HatchBlock extends Block implements EntityBlock, EnergyConnectable 
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (level.getBlockEntity(pos) instanceof ru.iis.cover.CoverHost host) {
+            InteractionResult r = ru.iis.cover.Covers.use(host, ItemStack.EMPTY, player, InteractionHand.MAIN_HAND, hit, state.getValue(FACING));
+            if (r != null) return r;
+        }
         if (level.isClientSide()) return InteractionResult.SUCCESS;
         BlockEntity be = level.getBlockEntity(pos);
         if (be instanceof MaintenanceHatchBlockEntity m) m.report(player);
@@ -91,6 +100,17 @@ public class HatchBlock extends Block implements EntityBlock, EnergyConnectable 
     protected void onExplosionHit(BlockState state, ServerLevel level, BlockPos pos, Explosion explosion, BiConsumer<ItemStack, BlockPos> onHit) {
         if (level.getBlockEntity(pos) instanceof ElectricBlockEntity be) be.doEnergyExplosion();
         super.onExplosionHit(state, level, pos, explosion, onHit);
+    }
+
+    // --- красный сигнал покрытий-детекторов (D80) -------------------------------------------------------------------
+    @Override
+    protected boolean isSignalSource(BlockState state) {
+        return true;
+    }
+
+    @Override
+    protected int getSignal(BlockState state, net.minecraft.world.level.BlockGetter level, BlockPos pos, Direction direction) {
+        return level.getBlockEntity(pos) instanceof ru.iis.cover.CoverHost h ? h.covers().redstoneOut(direction.getOpposite()) : 0;
     }
 
     @Override

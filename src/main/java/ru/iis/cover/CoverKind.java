@@ -15,7 +15,9 @@ public enum CoverKind {
     FLUID_DETECTOR("fluid_detector"),       // GT_Cover_LiquidMeter
     ENERGY_DETECTOR("energy_detector"),     // GT_Cover_EUMeter
     DRAIN("drain"),                // GT_Cover_Drain
-    CRAFTING("crafting");          // GT_Cover_Crafting
+    CRAFTING("crafting"),          // GT_Cover_Crafting
+    FLUID_REGULATOR("fluid_regulator"), // GT_Cover_FluidRegulator(32): ±32 л/тик, настраивается рукой и отвёрткой (D80)
+    FLUID_FILTER("fluid_filter");  // GT_Cover_Fluidfilter: одна жидкость, 8 режимов вход/выход (D80)
 
     public final String id;
 

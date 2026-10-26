@@ -45,8 +45,11 @@ import java.util.Optional;
  * Лицевая сторона — FACING; сторона выхода (выпуск пара, выдача предметов) — задняя, как после установки в GT5.
  * Пар принимается со всех сторон, кроме лицевой.
  */
-public class SteamMachineBlockEntity extends BaseContainerBlockEntity implements WorldlyContainer, MachineBlock.TickingMachine {
+public class SteamMachineBlockEntity extends BaseContainerBlockEntity implements WorldlyContainer, MachineBlock.TickingMachine, ru.iis.cover.CoverHost {
     private NonNullList<ItemStack> items;
+    private final ru.iis.cover.CoverSet covers = new ru.iis.cover.CoverSet();
+    /** GT isAllowedToWork: киянка и контроллер машины (D80). */
+    private boolean allowedToWork = true;
     private final SteamMachineLogic logic = new SteamMachineLogic();
     private final FluidTank steam;
     private ItemStack pendingOutput = ItemStack.EMPTY;
@@ -84,19 +87,105 @@ public class SteamMachineBlockEntity extends BaseContainerBlockEntity implements
     }
 
     public @Nullable ResourceHandler<FluidResource> fluidHandler(@Nullable Direction side) {
-        return side == front() ? null : steam;
+        return side == front() ? null : ru.iis.cover.Covers.fluids(this, side, steam);
     }
 
     public @Nullable ResourceHandler<ItemResource> itemHandler(@Nullable Direction side) {
-        return side == null ? null : new WorldlyContainerWrapper(this, side);
+        return side == null ? null : ru.iis.cover.Covers.items(this, side, new WorldlyContainerWrapper(this, side));
     }
+
+    // --- покрытия (CoverHost, D80): «энергия» покрытий — пар в единицах GT (2 л = 1) -----------------------------
+    @Override
+    public ru.iis.cover.CoverSet covers() {
+        return covers;
+    }
+
+    @Override
+    public @Nullable ResourceHandler<ItemResource> rawItems(Direction side) {
+        return new WorldlyContainerWrapper(this, side);
+    }
+
+    @Override
+    public @Nullable ResourceHandler<FluidResource> rawFluids(@Nullable Direction side) {
+        return steam;
+    }
+
+    @Override
+    public int slotCount() {
+        return items.size();
+    }
+
+    @Override
+    public ItemStack slot(int i) {
+        return items.get(i);
+    }
+
+    @Override
+    public long euStored() {
+        return steam.amount() / 2;
+    }
+
+    @Override
+    public long euCapacity() {
+        return SteamMachineLogic.MAX_STEAM_UNITS;
+    }
+
+    @Override
+    public void useEu(long eu) {
+        steam.setAmount(IISFluids.STEAM.get(), (int) Math.max(0, steam.amount() - 2 * eu));
+    }
+
+    @Override
+    public boolean isMachine() {
+        return true;
+    }
+
+    @Override
+    public boolean allowedToWork() {
+        return allowedToWork;
+    }
+
+    @Override
+    public void setAllowedToWork(boolean allowed) {
+        if (allowedToWork != allowed) {
+            allowedToWork = allowed;
+            super.setChanged();
+        }
+    }
+
+    @Override
+    public int progress() {
+        return Math.max(0, logic.progress);
+    }
+
+    @Override
+    public int maxProgress() {
+        return logic.maxProgress;
+    }
+
+    @Override
+    public net.minecraft.network.protocol.@Nullable Packet<net.minecraft.network.protocol.game.ClientGamePacketListener> getUpdatePacket() {
+        return net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public net.minecraft.nbt.CompoundTag getUpdateTag(net.minecraft.core.HolderLookup.Provider registries) {
+        return saveWithoutMetadata(registries);
+    }
+
+    @Override
+    public void preRemoveSideEffects(BlockPos pos, BlockState state) {
+        super.preRemoveSideEffects(pos, state);
+        if (level != null) ru.iis.cover.Covers.dropAll(this, level, pos);
+    }
+
 
     @Override
     public void serverTick() {
         if (!(level instanceof ServerLevel sl)) return;
         int liters = steam.amount();
         logic.steamUnits = liters / 2;
-        boolean check = inventoryChanged || sl.getGameTime() % 20 == 0;
+        boolean check = (inventoryChanged || sl.getGameTime() % 20 == 0) && allowedToWork;
         inventoryChanged = false;
         logic.tick(check, new SteamMachineLogic.Env() {
             @Override
@@ -130,6 +219,7 @@ public class SteamMachineBlockEntity extends BaseContainerBlockEntity implements
             }
         });
         steam.setAmount(IISFluids.STEAM.get(), logic.steamUnits * 2 + (liters % 2));
+        tickCovers(sl);
         BlockState st = getBlockState();
         if (st.getValue(MachineBlock.ACTIVE) != logic.active) {
             sl.setBlock(worldPosition, st.setValue(MachineBlock.ACTIVE, logic.active), 3);
@@ -267,6 +357,8 @@ public class SteamMachineBlockEntity extends BaseContainerBlockEntity implements
         out.putBoolean("needsVenting", logic.needsVenting);
         out.putBoolean("stuttering", logic.stuttering);
         if (!pendingOutput.isEmpty()) out.store("pending", ItemStack.CODEC, pendingOutput);
+        out.putBoolean("allowedToWork", allowedToWork);
+        covers.save(out);
     }
 
     @Override
@@ -281,6 +373,8 @@ public class SteamMachineBlockEntity extends BaseContainerBlockEntity implements
         logic.needsVenting = in.getBooleanOr("needsVenting", false);
         logic.stuttering = in.getBooleanOr("stuttering", false);
         pendingOutput = in.read("pending", ItemStack.CODEC).orElse(ItemStack.EMPTY);
+        allowedToWork = in.getBooleanOr("allowedToWork", true);
+        covers.load(in);
     }
 
     public SteamMachineLogic logic() {

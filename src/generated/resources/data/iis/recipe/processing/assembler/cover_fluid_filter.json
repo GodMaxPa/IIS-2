@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:cover_shutter",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/basic",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cover_fluid_filter",
+      "count": 1
+    }
+  ],
+  "duration": 800,
+  "eut": 4
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_pump_lv",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/basic",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:fluid_regulator_lv",
+      "count": 1
+    }
+  ],
+  "duration": 800,
+  "eut": 4
+}

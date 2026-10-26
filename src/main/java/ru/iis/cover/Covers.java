@@ -44,7 +44,9 @@ public final class Covers {
             Map.entry("cover_fluid_detector", CoverKind.FLUID_DETECTOR),
             Map.entry("cover_energy_detector", CoverKind.ENERGY_DETECTOR),
             Map.entry("cover_drain", CoverKind.DRAIN),
-            Map.entry("cover_crafting", CoverKind.CRAFTING));
+            Map.entry("cover_crafting", CoverKind.CRAFTING),
+            Map.entry("fluid_regulator_lv", CoverKind.FLUID_REGULATOR),
+            Map.entry("cover_fluid_filter", CoverKind.FLUID_FILTER));
 
     public static @Nullable CoverKind kindOf(ItemStack stack) {
         var id = BuiltInRegistries.ITEM.getKey(stack.getItem());
@@ -111,7 +113,24 @@ public final class Covers {
             }
             return InteractionResult.SUCCESS;
         }
+        if (present == CoverKind.FLUID_FILTER && tool == null) {
+            net.minecraft.world.level.material.Fluid fluid = containedFluid(stack);
+            if (fluid != null) {
+                if (!level.isClientSide()) {
+                    player.sendOverlayMessage(covers.setFilterFluid(side, fluid));
+                    host.coversChanged();
+                }
+                return InteractionResult.SUCCESS;
+            }
+        }
         if (stack.isEmpty()) {
+            if (present == CoverKind.FLUID_REGULATOR) {
+                if (!level.isClientSide()) {
+                    player.sendOverlayMessage(covers.regulatorClick(side, right));
+                    host.coversChanged();
+                }
+                return InteractionResult.SUCCESS;
+            }
             if (present == CoverKind.ARM) {
                 if (!level.isClientSide()) {
                     player.sendOverlayMessage(covers.armClick(side, right));
@@ -131,6 +150,19 @@ public final class Covers {
                 }
                 return InteractionResult.SUCCESS;
             }
+        }
+        return null;
+    }
+
+    /** Жидкость в ёмкости (капсула ИИС, ведро) — для фильтра жидкости. */
+    static net.minecraft.world.level.material.@Nullable Fluid containedFluid(ItemStack stack) {
+        if (stack.isEmpty()) return null;
+        if (stack.getItem() instanceof net.minecraft.world.item.BucketItem b && b.getContent() != net.minecraft.world.level.material.Fluids.EMPTY) {
+            return b.getContent();
+        }
+        if (stack.getItem() instanceof ru.iis.fluid.CapsuleItem) {
+            ru.iis.fluid.FluidContent c = ru.iis.fluid.CapsuleItem.content(stack);
+            if (c != null && c.amount() > 0) return c.fluidValue();
         }
         return null;
     }
@@ -174,22 +206,22 @@ public final class Covers {
         return new DelegatingResourceHandler<>(h) {
             @Override
             public int insert(int index, FluidResource resource, int amount, TransactionContext tx) {
-                return host.covers().letsFluidIn(host, side) ? super.insert(index, resource, amount, tx) : 0;
+                return host.covers().letsFluidIn(host, side, resource.getFluid()) ? super.insert(index, resource, amount, tx) : 0;
             }
 
             @Override
             public int insert(FluidResource resource, int amount, TransactionContext tx) {
-                return host.covers().letsFluidIn(host, side) ? super.insert(resource, amount, tx) : 0;
+                return host.covers().letsFluidIn(host, side, resource.getFluid()) ? super.insert(resource, amount, tx) : 0;
             }
 
             @Override
             public int extract(int index, FluidResource resource, int amount, TransactionContext tx) {
-                return host.covers().letsFluidOut(host, side) ? super.extract(index, resource, amount, tx) : 0;
+                return host.covers().letsFluidOut(host, side, resource.getFluid()) ? super.extract(index, resource, amount, tx) : 0;
             }
 
             @Override
             public int extract(FluidResource resource, int amount, TransactionContext tx) {
-                return host.covers().letsFluidOut(host, side) ? super.extract(resource, amount, tx) : 0;
+                return host.covers().letsFluidOut(host, side, resource.getFluid()) ? super.extract(resource, amount, tx) : 0;
             }
         };
     }

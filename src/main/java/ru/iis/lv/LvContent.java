@@ -185,6 +185,9 @@ public final class LvContent {
     public static final DeferredItem<Item> COVER_CRAFTING = item("cover_crafting");
     public static final DeferredItem<Item> COVER_DRAIN = item("cover_drain");
     public static final DeferredItem<Item> COVER_SHUTTER = item("cover_shutter");
+    // GT_MetaGenerated_Item_01:519, :531 — регулятор и фильтр жидкости (D80)
+    public static final DeferredItem<Item> FLUID_REGULATOR_LV = item("fluid_regulator_lv");
+    public static final DeferredItem<Item> COVER_FLUID_FILTER = item("cover_fluid_filter");
     public static final DeferredItem<ru.iis.lv.item.MultimeterItem> MULTIMETER = ITEMS.registerItem("multimeter", ru.iis.lv.item.MultimeterItem::new, p -> p.stacksTo(1));
     public static final DeferredItem<TreetapItem> TREETAP = ITEMS.registerItem("treetap", TreetapItem::new, p -> p.durability(16));
     /** Электроинструменты LV из /iis/tools.json: бур, цепная пила, электроключ по материалам головки (D78). */

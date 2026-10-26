@@ -2,22 +2,33 @@ package ru.iis.cover;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.transfer.fluid.FluidResource;
 import net.neoforged.neoforge.transfer.item.ItemResource;
 import org.jspecify.annotations.Nullable;
 
-/** Блок, на который ставятся покрытия (GT ICoverable + IMachineProgress). */
+/**
+ * Блок, на который ставятся покрытия (GT ICoverable + IMachineProgress). Методы по умолчанию годятся для блок-сущности
+ * без энергии и инвентаря (труба, люк): их переопределяет тот, у кого это есть.
+ */
 public interface CoverHost {
     CoverSet covers();
 
-    @Nullable Level coverLevel();
+    default @Nullable Level coverLevel() {
+        return this instanceof BlockEntity be ? be.getLevel() : null;
+    }
 
-    BlockPos coverPos();
+    default BlockPos coverPos() {
+        return this instanceof BlockEntity be ? be.getBlockPos() : BlockPos.ZERO;
+    }
 
     /** Собственный инвентарь со стороны side, без фильтра покрытий. */
-    @Nullable ResourceHandler<ItemResource> rawItems(Direction side);
+    default @Nullable ResourceHandler<ItemResource> rawItems(Direction side) {
+        return null;
+    }
 
     /** Собственный бак со стороны side (null — любой), без фильтра покрытий. */
     default @Nullable ResourceHandler<FluidResource> rawFluids(@Nullable Direction side) {
@@ -25,16 +36,20 @@ public interface CoverHost {
     }
 
     /** Число слотов (для детектора предметов и манипулятора). */
-    int slotCount();
+    default int slotCount() {
+        return 0;
+    }
 
-    net.minecraft.world.item.ItemStack slot(int i);
+    default ItemStack slot(int i) {
+        return ItemStack.EMPTY;
+    }
 
-    // --- энергия (GT getUniversalEnergyStored/Capacity) ---
-    long euStored();
+    // --- энергия (GT getUniversalEnergyStored/Capacity; у паровых машин — пар) ---
+    default long euStored() { return 0; }
 
-    long euCapacity();
+    default long euCapacity() { return 0; }
 
-    void useEu(long eu);
+    default void useEu(long eu) {}
 
     default long avgEuIn() { return 0; }
 
@@ -59,5 +74,20 @@ public interface CoverHost {
     default int maxProgress() { return 0; }
 
     /** Покрытия изменились: сохранить и разослать клиенту. */
-    void coversChanged();
+    default void coversChanged() {
+        if (!(this instanceof BlockEntity be)) return;
+        be.setChanged();
+        be.invalidateCapabilities();
+        Level level = be.getLevel();
+        if (level != null) {
+            level.sendBlockUpdated(be.getBlockPos(), be.getBlockState(), be.getBlockState(), 3);
+            level.updateNeighborsAt(be.getBlockPos(), be.getBlockState().getBlock());
+        }
+    }
+
+    /** Работа покрытий за тик хозяина; при смене красного сигнала — обновить соседей. */
+    default void tickCovers(net.minecraft.server.level.ServerLevel level) {
+        if (!covers().any() || !(this instanceof BlockEntity be)) return;
+        if (covers().tick(this, level, level.getGameTime())) level.updateNeighborsAt(be.getBlockPos(), be.getBlockState().getBlock());
+    }
 }

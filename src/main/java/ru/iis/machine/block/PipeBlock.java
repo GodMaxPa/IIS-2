@@ -154,6 +154,11 @@ public class PipeBlock extends Block implements EntityBlock {
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        // покрытия GT на сторонах трубы (D80)
+        if (level.getBlockEntity(pos) instanceof ru.iis.cover.CoverHost host) {
+            InteractionResult r = ru.iis.cover.Covers.use(host, stack, player, hand, hit, null);
+            if (r != null) return r;
+        }
         if (!Wrench.is(stack)) return InteractionResult.TRY_WITH_EMPTY_HAND;
         if (!level.isClientSide()) {
             Direction side = Wrench.wrenchingSide(pos, hit); // GT: сетка на грани трубы
@@ -166,6 +171,26 @@ public class PipeBlock extends Block implements EntityBlock {
             player.sendOverlayMessage(Component.translatable(on ? "message.iis.pipe.connected" : "message.iis.pipe.disconnected"));
         }
         return InteractionResult.SUCCESS;
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (level.getBlockEntity(pos) instanceof ru.iis.cover.CoverHost host) {
+            InteractionResult r = ru.iis.cover.Covers.use(host, ItemStack.EMPTY, player, InteractionHand.MAIN_HAND, hit, null);
+            if (r != null) return r;
+        }
+        return InteractionResult.PASS;
+    }
+
+    // --- красный сигнал покрытий-детекторов (D80) -------------------------------------------------------------------
+    @Override
+    protected boolean isSignalSource(BlockState state) {
+        return true;
+    }
+
+    @Override
+    protected int getSignal(BlockState state, net.minecraft.world.level.BlockGetter level, BlockPos pos, Direction direction) {
+        return level.getBlockEntity(pos) instanceof ru.iis.cover.CoverHost h ? h.covers().redstoneOut(direction.getOpposite()) : 0;
     }
 
     /** GT_MetaPipeEntity_Fluid#onEntityCollidedWithBlock: горячая (&gt;320 K) или холодная (&lt;260 K) жидкость обжигает. */
