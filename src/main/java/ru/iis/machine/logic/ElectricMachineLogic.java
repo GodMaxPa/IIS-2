@@ -31,6 +31,11 @@ public final class ElectricMachineLogic {
         this.voltage = voltage;
     }
 
+    /** GT_MetaTileEntity_BasicMachine#onPostTick: drain(1000 * (int) Math.pow(1.5, mTier)) — приведение к int до умножения. */
+    public static int fluidOutputPerOperation(ru.iis.energy.VoltageTier tier) {
+        return 1000 * (int) Math.pow(1.5, tier.tier());
+    }
+
     public long capacity() {
         return voltage * 64;
     }

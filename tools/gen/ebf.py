@@ -21,6 +21,8 @@ HATCHES = [
     ('hatch_output_lv', 'OVERLAY_PIPE_OUT', 'gt.blockmachines.hatch.output.tier.01.name', 'LV Output Hatch'),
     ('hatch_maintenance', 'OVERLAY_MAINTENANCE', 'gt.blockmachines.hatch.maintenance.name', 'Maintenance Hatch'),
     ('hatch_muffler_lv', 'OVERLAY_MUFFLER', 'gt.blockmachines.hatch.muffler.tier.01.name', 'LV Muffler Hatch'),
+    # D82: GT_Loader_MetaTileEntities:238 (MV casing)
+    ('hatch_energy_mv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.02.name', 'MV Energy Hatch'),
 ]
 
 
@@ -116,14 +118,17 @@ def generate(g):
     shaped('multi/coil_cupronickel', f'{NS}:coil_cupronickel', 1, ['PPP', 'PwP', 'PPP'], {'P': '#iis:wires/2x/cupronickel'})
 
     # --- hatches (front overlay over the LV casing; any of 6 facings) -----------------------------------------------
-    side = first(os.path.join(LVI, 'MACHINE_LV_SIDE.png'))
-    side.save(tex_out('block/multi/hatch_lv_side.png'))
+    sides = {}
+    for tr in ('lv', 'mv'):
+        sides[tr] = first(os.path.join(LVI, f'MACHINE_{tr.upper()}_SIDE.png'))
+        sides[tr].save(tex_out(f'block/multi/hatch_{tr}_side.png'))
     for bid, ov, key, en in HATCHES:
+        tr = 'mv' if bid.endswith('_mv') else 'lv'
         ovp = os.path.join(BI, ov + '.png')
         if not os.path.exists(ovp):
             ovp = os.path.join(LVI, ov + '.png')
-        over(side, first(ovp)).save(tex_out(f'block/multi/{bid}_front.png'))
-        s_ = f'{NS}:block/multi/hatch_lv_side'
+        over(sides[tr], first(ovp)).save(tex_out(f'block/multi/{bid}_front.png'))
+        s_ = f'{NS}:block/multi/hatch_{tr}_side'
         cube(bid, {'front': f'{NS}:block/multi/{bid}_front', 'side': s_})
         variants = {}
         for facing, rot in (('north', {}), ('east', {'y': 90}), ('south', {'y': 180}), ('west', {'y': 270}), ('down', {'x': 90}), ('up', {'x': 270})):
@@ -132,6 +137,7 @@ def generate(g):
         simple(bid)
         name(f'block.{NS}.{bid}', en, ru(key, en))
     tooltip('hatch_energy_lv', [('Energy input for multiblocks: 32 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 32 EU/t, до 2 А, спереди')])
+    tooltip('hatch_energy_mv', [('Energy input for multiblocks: 128 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 128 EU/t, до 2 А, спереди')])
     tooltip('hatch_input_bus_lv', [('Item input for multiblocks, 4 slots', 'Вход предметов многоблочной машины, 4 слота')])
     tooltip('hatch_output_bus_lv', [('Item output for multiblocks, 4 slots', 'Выход предметов многоблочной машины, 4 слота')])
     tooltip('hatch_input_lv', [('Fluid input for multiblocks, 16000 L', 'Вход жидкости многоблочной машины, 16000 л')])
@@ -141,6 +147,8 @@ def generate(g):
     tooltip('hatch_muffler_lv', [('Outputs the pollution, front must face air', 'Выпускает загрязнение; спереди должен быть воздух')])
     HULL = f'{NS}:hull_lv'
     shaped('multi/hatch_energy_lv', f'{NS}:hatch_energy_lv', 1, ['CM'], {'M': HULL, 'C': '#iis:cables/1x/tin'})
+    # GT_Loader_MetaTileEntities:270 "CM ": MV hull, copper cable
+    shaped('multi/hatch_energy_mv', f'{NS}:hatch_energy_mv', 1, ['CM'], {'M': f'{NS}:hull_mv', 'C': '#iis:cables/1x/copper'})
     shaped('multi/hatch_input_lv', f'{NS}:hatch_input_lv', 1, ['G', 'M'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_output_lv', f'{NS}:hatch_output_lv', 1, ['M', 'G'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_input_bus_lv', f'{NS}:hatch_input_bus_lv', 1, ['C', 'M'], {'M': HULL, 'C': '#c:chests/wooden'})

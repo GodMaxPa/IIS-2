@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ZSZ",
+    "WMW",
+    "ZSZ"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "S": "#c:rods/steel",
+    "Z": "#iis:wires/2x/copper",
+    "W": "#iis:cables/1x/copper"
+  },
+  "result": {
+    "id": "iis:polarizer_mv"
+  }
+}

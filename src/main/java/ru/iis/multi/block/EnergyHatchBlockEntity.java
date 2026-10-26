@@ -12,15 +12,22 @@ import ru.iis.lv.block.ElectricBlockEntity;
 import ru.iis.multi.MultiContent;
 
 /**
- * Энергетический люк LV (GT_MetaTileEntity_Hatch_Energy): вход 32 EU/t до 2 А только спереди,
- * запас 512 + 8 × 32 = 768 EU. Машина снимает с люка энергию целиком за тик (нужно, чтобы в одном люке хватало).
+ * Энергетический люк (GT_MetaTileEntity_Hatch_Energy): вход V[mTier] до 2 А только спереди, запас 512 + 8 × V
+ * (LV: 32 EU/t, 768 EU; MV: 128 EU/t, 1536 EU). Машина снимает с люка энергию целиком за тик (нужно, чтобы в одном люке хватало).
  */
 public class EnergyHatchBlockEntity extends ElectricBlockEntity {
-    public static final long VOLTAGE = 32;
-
     public EnergyHatchBlockEntity(BlockPos pos, BlockState state) {
-        super(MultiContent.ENERGY_HATCH_BE.get(), pos, state, 0, 512 + VOLTAGE * 8, VOLTAGE);
+        this(pos, state, state.getBlock() instanceof HatchBlock h && h.type.energy() ? h.type.voltage : HatchType.ENERGY.voltage);
+    }
+
+    private EnergyHatchBlockEntity(BlockPos pos, BlockState state, long voltage) {
+        super(MultiContent.ENERGY_HATCH_BE.get(), pos, state, 0, 512 + voltage * 8, voltage);
         energy.maxAmperesIn = 2;
+    }
+
+    /** GT maxEUInput: V[mTier]. */
+    public long voltage() {
+        return energy.inputVoltage;
     }
 
     @Override

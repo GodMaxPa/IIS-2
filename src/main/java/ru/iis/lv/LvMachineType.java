@@ -40,7 +40,33 @@ public enum LvMachineType {
     CHEMICAL_BATH("chemical_bath", GtRecipeMap.CHEMICAL_BATH, 1, 3, 8000, "chemicalbath"),
     // MV (D81): GT_Loader_MetaTileEntities:784-785 ThermalCentrifuge LV/MV (1, 3); рецепты 48 EU/t — только с MV
     THERMAL_CENTRIFUGE("thermal_centrifuge", GtRecipeMap.THERMAL_CENTRIFUGE, 1, 3, 0, "thermalcentrifuge"),
-    THERMAL_CENTRIFUGE_MV("thermal_centrifuge", GtRecipeMap.THERMAL_CENTRIFUGE, 1, 3, 0, "thermalcentrifuge", VoltageTier.MV);
+    THERMAL_CENTRIFUGE_MV("thermal_centrifuge", GtRecipeMap.THERMAL_CENTRIFUGE, 1, 3, 0, "thermalcentrifuge", VoltageTier.MV),
+    // MV (D82): GT_Loader_MetaTileEntities Machine_MV_* — те же входы/выходы/баки, что у LV, кроме смесителя (бак 16000)
+    MACERATOR_MV("macerator", GtRecipeMap.MACERATOR, 1, 1, 0, "macerator1", VoltageTier.MV),
+    ELECTRIC_FURNACE_MV("electric_furnace", null, 1, 1, 0, "e_furnace", VoltageTier.MV),
+    ALLOY_SMELTER_MV("alloy_smelter", GtRecipeMap.ALLOY_SMELTER, 6, 1, 0, "alloysmelter", VoltageTier.MV),
+    COMPRESSOR_MV("compressor", GtRecipeMap.COMPRESSOR, 1, 1, 0, "compressor", VoltageTier.MV),
+    EXTRACTOR_MV("extractor", GtRecipeMap.EXTRACTOR, 1, 1, 0, "extractor", VoltageTier.MV),
+    FORGE_HAMMER_MV("forge_hammer", GtRecipeMap.FORGE_HAMMER, 1, 1, 0, "hammer", VoltageTier.MV),
+    WIREMILL_MV("wiremill", GtRecipeMap.WIREMILL, 1, 1, 0, "wiremill", VoltageTier.MV),
+    BENDER_MV("bender", GtRecipeMap.BENDER, 2, 1, 0, "bender", VoltageTier.MV),
+    LATHE_MV("lathe", GtRecipeMap.LATHE, 1, 2, 0, "lathe", VoltageTier.MV),
+    ASSEMBLER_MV("assembler", GtRecipeMap.ASSEMBLER, 6, 1, 16000, "assembler", VoltageTier.MV),
+    MIXER_MV("mixer", GtRecipeMap.MIXER, 6, 1, 16000, "mixer", VoltageTier.MV),
+    POLARIZER_MV("polarizer", GtRecipeMap.POLARIZER, 1, 1, 0, "polarizer", VoltageTier.MV),
+    ORE_WASHER_MV("ore_washer", GtRecipeMap.ORE_WASHER, 2, 3, 16000, "orewasher", VoltageTier.MV),
+    CENTRIFUGE_MV("centrifuge", GtRecipeMap.CENTRIFUGE, 2, 6, 64000, "centrifuge", VoltageTier.MV),
+    SIFTER_MV("sifter", GtRecipeMap.SIFTER, 1, 9, 0, "sifter", VoltageTier.MV),
+    ELECTROMAGNETIC_SEPARATOR_MV("electromagnetic_separator", GtRecipeMap.ELECTROMAGNETIC_SEPARATOR, 1, 3, 0, "electromagneticseparator", VoltageTier.MV),
+    AUTOCLAVE_MV("autoclave", GtRecipeMap.AUTOCLAVE, 1, 1, 8000, "autoclave", VoltageTier.MV),
+    CUTTER_MV("cutter", GtRecipeMap.CUTTER, 1, 2, 8000, "cutter", VoltageTier.MV),
+    CANNER_MV("canner", GtRecipeMap.CANNER, 2, 2, 0, "canner", VoltageTier.MV),
+    ELECTROLYZER_MV("electrolyzer", GtRecipeMap.ELECTROLYZER, 2, 6, 64000, "electrolyzer", VoltageTier.MV),
+    CHEMICAL_REACTOR_MV("chemical_reactor", GtRecipeMap.CHEMICAL_REACTOR, 3, 3, 16000, "chemicalreactor", VoltageTier.MV),
+    FLUID_EXTRACTOR_MV("fluid_extractor", GtRecipeMap.FLUID_EXTRACTOR, 1, 1, 16000, "fluidextractor", VoltageTier.MV),
+    FLUID_SOLIDIFIER_MV("fluid_solidifier", GtRecipeMap.FLUID_SOLIDIFIER, 1, 1, 16000, "fluidsolidifier", VoltageTier.MV),
+    DISTILLERY_MV("distillery", GtRecipeMap.DISTILLERY, 1, 1, 1000, "distillery", VoltageTier.MV),
+    CHEMICAL_BATH_MV("chemical_bath", GtRecipeMap.CHEMICAL_BATH, 1, 3, 8000, "chemicalbath", VoltageTier.MV);
 
     public final String id;
     public final GtRecipeMap recipeMap;

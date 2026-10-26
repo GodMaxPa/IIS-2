@@ -7,14 +7,17 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.block.Blocks;
 import ru.iis.command.SelfTest;
+import ru.iis.lv.LvContent;
 import ru.iis.lv.LvMachineType;
+import ru.iis.lv.block.TransformerBlock;
+import ru.iis.lv.block.TransformerBlockEntity;
 import ru.iis.lv.block.ElectricMachineBlockEntity;
 import ru.iis.machine.block.MachineBlock;
 import ru.iis.multi.HotIngotHeat;
 import ru.iis.multi.MultiContent;
 import ru.iis.multi.block.*;
 
-/** Эпоха MV (D81): термоцентрифуга LV/MV, вакуумный морозильник, горячие слитки. */
+/** Эпоха MV (D81, D82): MV-машины, трансформатор и люк MV, термоцентрифуга LV/MV, вакуумный морозильник, горячие слитки. */
 final class MvGameTests {
     private MvGameTests() {}
 
@@ -47,13 +50,18 @@ final class MvGameTests {
 
     /** Куб 3×3×3: середина (4,2,3), контроллер (4,2,2) лицом на север; 4 люка LV, шины, обслуживание, 18 корпусов. */
     static VacuumFreezerBlockEntity freezer(GameTestHelper h) {
+        return freezer(h, HatchType.ENERGY, 4);
+    }
+
+    /** То же с {@code count} энергетическими люками типа {@code energyType} (снизу, сверху, слева, справа от середины). */
+    static VacuumFreezerBlockEntity freezer(GameTestHelper h, HatchType energyType, int count) {
         BlockPos center = new BlockPos(4, 2, 3);
         for (int dx = -1; dx <= 1; dx++)
             for (int dy = -1; dy <= 1; dy++)
                 for (int dz = -1; dz <= 1; dz++) h.setBlock(center.offset(dx, dy, dz), MultiContent.FROST_PROOF_CASING.get());
         h.setBlock(center, Blocks.AIR);
-        BlockPos[] energy = {center.below(), center.above(), center.west(), center.east()};
-        for (BlockPos p : energy) h.setBlock(p, MultiGameTests.hatch(HatchType.ENERGY, Direction.UP));
+        BlockPos[] energy = java.util.Arrays.copyOf(new BlockPos[]{center.below(), center.above(), center.west(), center.east()}, count);
+        for (BlockPos p : energy) h.setBlock(p, MultiGameTests.hatch(energyType, Direction.UP));
         h.setBlock(center.south(), MultiGameTests.hatch(HatchType.INPUT_BUS, Direction.SOUTH));
         h.setBlock(center.south().east(), MultiGameTests.hatch(HatchType.OUTPUT_BUS, Direction.SOUTH));
         h.setBlock(center.south().west(), MultiGameTests.hatch(HatchType.MAINTENANCE, Direction.SOUTH));
@@ -77,6 +85,24 @@ final class MvGameTests {
         h.succeedWhen(() -> h.assertTrue(out.stacks().stream().anyMatch(s -> s.is(SelfTest.item("ingot_iridium"))), "output " + out.stacks()));
     }
 
+    /** Один энергетический люк MV (128 В, D82) тянет рецепты 120 EU/t (палладий: масса 106 × 3 = 318 тиков); один люк LV (32 В) — нет. */
+    static void freezerOneMvHatch(GameTestHelper h) {
+        freezer(h, HatchType.ENERGY_MV, 1);
+        h.getBlockEntity(new BlockPos(4, 2, 4), ItemBusBlockEntity.class).setItem(0, new ItemStack(SelfTest.item("hot_ingot_palladium")));
+        ItemBusBlockEntity out = h.getBlockEntity(new BlockPos(5, 2, 4), ItemBusBlockEntity.class);
+        h.succeedWhen(() -> h.assertTrue(out.stacks().stream().anyMatch(s -> s.is(SelfTest.item("ingot_palladium"))), "output " + out.stacks()));
+    }
+
+    static void freezerOneLvHatchIdle(GameTestHelper h) {
+        VacuumFreezerBlockEntity f = freezer(h, HatchType.ENERGY, 1);
+        h.getBlockEntity(new BlockPos(4, 2, 4), ItemBusBlockEntity.class).setItem(0, new ItemStack(SelfTest.item("hot_ingot_palladium")));
+        h.runAtTickTime(60, () -> {
+            h.assertTrue(f.formed(), "freezer not formed");
+            h.assertTrue(f.maxProgress() == 0, "120 EU/t recipe started on one LV hatch");
+            h.succeed();
+        });
+    }
+
     /** Пустая середина обязательна: блок внутри — форма не собрана. */
     static void freezerNeedsHollow(GameTestHelper h) {
         VacuumFreezerBlockEntity f = freezer(h);
@@ -88,6 +114,40 @@ final class MvGameTests {
             h.assertFalse(f.formed(), "freezer formed with a filled middle");
             h.succeed();
         });
+    }
+
+    /** MV-дробитель: руда 2 EU/t × 400 тиков → 8 EU/t × 200 тиков (GT calculateOverclockedNess, D82). */
+    static void maceratorMvOverclock(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, new BlockPos(4, 1, 4), LvMachineType.MACERATOR_MV);
+        m.setItem(0, new ItemStack(SelfTest.item("ore_chalcopyrite")));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.logic().maxProgress == 200 && m.logic().eut == 8, "maxProgress " + m.logic().maxProgress + ", eut " + m.logic().eut);
+        });
+    }
+
+    /** Повышающий трансформатор LV → медный кабель → MV-дробитель: 128 В машина MV принимает и работает. */
+    static void lvStepUpPowersMvMachine(GameTestHelper h) {
+        TransformerBlockEntity t = LvGameTests.transformer(h, new BlockPos(2, 1, 4), Direction.EAST, true);
+        for (int x = 3; x <= 4; x++) LvGameTests.cable(h, new BlockPos(x, 1, 4), "cable_copper_1x");
+        ElectricMachineBlockEntity m = LvGameTests.machine(h, new BlockPos(5, 1, 4), LvMachineType.MACERATOR_MV, Direction.NORTH);
+        LvGameTests.cable(h, new BlockPos(4, 1, 4), "cable_copper_1x");
+        h.onEachTick(() -> t.energy.stored = t.energy.capacity);
+        m.setItem(0, new ItemStack(SelfTest.item("ore_chalcopyrite")));
+        h.succeedWhen(() -> h.assertTrue(m.getItem(1).is(SelfTest.item("crushed_chalcopyrite")), "output " + m.getItem(1)));
+    }
+
+    /** Трансформатор MV (D82): понижает 512 → 128 В, 4 А с пяти сторон; запас 512 + 2 × 512. */
+    static void transformerMvStepDown(GameTestHelper h) {
+        BlockPos tp = new BlockPos(2, 1, 4);
+        h.setBlock(tp, LvContent.TRANSFORMER_MV.get().defaultBlockState().setValue(TransformerBlock.FACING, Direction.WEST));
+        TransformerBlockEntity t = h.getBlockEntity(tp, TransformerBlockEntity.class);
+        h.assertTrue(t.outputVoltage() == 128 && t.outputAmperes() == 4, "step-down out " + t.outputVoltage() + " V " + t.outputAmperes() + " A");
+        h.assertTrue(t.energy.capacity == 512 + 2 * 512, "capacity " + t.energy.capacity);
+        LvGameTests.cable(h, new BlockPos(3, 1, 4), "cable_copper_4x");
+        ElectricMachineBlockEntity m = LvGameTests.machine(h, new BlockPos(4, 1, 4), LvMachineType.MACERATOR_MV, Direction.NORTH);
+        LvGameTests.cable(h, new BlockPos(3, 1, 4), "cable_copper_4x");
+        h.onEachTick(() -> t.energy.stored = t.energy.capacity);
+        h.succeedWhen(() -> h.assertTrue(m.energy.stored >= m.energy.capacity / 2 && !(h.getBlockState(tp).isAir()), "MV machine stored " + m.energy.stored));
     }
 
     /** Стопка горячих слитков в инвентаре выживающего игрока обжигает на 3 единицы. */

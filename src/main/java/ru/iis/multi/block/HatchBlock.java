@@ -63,7 +63,7 @@ public class HatchBlock extends Block implements EntityBlock, EnergyConnectable 
 
     @Override
     public boolean connectsEnergy(BlockState state, Direction side) {
-        return type == HatchType.ENERGY && side == state.getValue(FACING);
+        return type.energy() && side == state.getValue(FACING);
     }
 
     @Override
@@ -92,7 +92,7 @@ public class HatchBlock extends Block implements EntityBlock, EnergyConnectable 
         if (level.isClientSide()) return InteractionResult.SUCCESS;
         BlockEntity be = level.getBlockEntity(pos);
         if (be instanceof MaintenanceHatchBlockEntity m) m.report(player);
-        else if (be instanceof MenuProvider p && type != HatchType.ENERGY) player.openMenu(p, pos);
+        else if (be instanceof MenuProvider p && !type.energy()) player.openMenu(p, pos);
         return InteractionResult.SUCCESS;
     }
 
@@ -116,7 +116,7 @@ public class HatchBlock extends Block implements EntityBlock, EnergyConnectable 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return switch (type) {
-            case ENERGY -> new EnergyHatchBlockEntity(pos, state);
+            case ENERGY, ENERGY_MV -> new EnergyHatchBlockEntity(pos, state);
             case INPUT_BUS, OUTPUT_BUS -> new ItemBusBlockEntity(pos, state);
             case INPUT_HATCH, OUTPUT_HATCH -> new FluidHatchBlockEntity(pos, state);
             case MAINTENANCE -> new MaintenanceHatchBlockEntity(pos, state);

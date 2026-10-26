@@ -78,10 +78,43 @@ MACHINES = [
     # MV (D81): GT_Loader_MetaTileEntities:784 LV thermal centrifuge (its ore recipes need 48 EU/t, i.e. the MV one)
     ('thermal_centrifuge', 'thermalcentrifuge', 'THERMAL_CENTRIFUGE', 'ThermalCentrifuge', 'thermal_centrifuge', 1, 3, 0, 'Thermal Centrifuge'),
 ]
-# MV basic machines (GT tier 2, "Advanced ..."): same columns
-MV_MACHINES = [
+# MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
+# outputs and tanks as LV except the mixer (16000 L, :1022); the compressor tank (LV 4000, MV 8000) stays 0 as at LV (D82)
+MV_TANKS = {'mixer': 16000}
+MV_MACHINES = [m[:7] + (MV_TANKS.get(m[0], m[7]),) + m[8:] for m in MACHINES if m[0] != 'thermal_centrifuge'] + [
     ('thermal_centrifuge', 'thermalcentrifuge', 'THERMAL_CENTRIFUGE', 'ThermalCentrifuge', 'thermal_centrifuge', 1, 3, 0, 'Thermal Centrifuge'),
 ]
+# GT_Loader_MetaTileEntities Machine_MV_* crafting: GT pattern letters; X.* resolved for tier 2 in lv.generate
+# (GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330, Tier.ELECTRIC[2]); other values are literal ingredients
+MV_CRAFT = {
+    'macerator': (['PEG', 'WWM', 'CCW'], {'M': 'HULL', 'E': 'MOTOR', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'INDUSTRIAL_DIAMOND'}),
+    'electric_furnace': (['ECE', 'CMC', 'WCW'], {'M': 'HULL', 'E': 'CIRCUIT', 'W': 'WIRE', 'C': 'COIL_HEATING'}),
+    'alloy_smelter': (['ECE', 'CMC', 'WCW'], {'M': 'HULL', 'E': 'CIRCUIT', 'W': 'WIRE', 'C': 'COIL_HEATING_DOUBLE'}),
+    'compressor': ([' C ', 'PMP', 'WCW'], {'M': 'HULL', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE'}),
+    'extractor': (['GCG', 'EMP', 'WCW'], {'M': 'HULL', 'E': 'PISTON', 'P': 'PUMP', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
+    'forge_hammer': (['WPW', 'CMC', 'WAW'], {'M': 'HULL', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE', 'A': 'minecraft:anvil'}),
+    'wiremill': (['EWE', 'CMC', 'EWE'], {'M': 'HULL', 'E': 'MOTOR', 'C': 'CIRCUIT', 'W': 'WIRE'}),
+    'bender': (['PwP', 'CMC', 'EWE'], {'M': 'HULL', 'E': 'MOTOR', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE'}),
+    'lathe': (['WCW', 'EMD', 'CWP'], {'M': 'HULL', 'E': 'MOTOR', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE', 'D': 'INDUSTRIAL_DIAMOND'}),
+    'assembler': (['ACA', 'VMV', 'WCW'], {'M': 'HULL', 'V': 'CONVEYOR', 'A': 'ROBOT_ARM', 'C': 'CIRCUIT', 'W': 'WIRE'}),
+    'mixer': (['GRG', 'GEG', 'CMC'], {'M': 'HULL', 'E': 'MOTOR', 'R': 'ROTOR', 'C': 'CIRCUIT', 'G': 'GLASS'}),
+    'polarizer': (['ZSZ', 'WMW', 'ZSZ'], {'M': 'HULL', 'S': 'STICK_ELECTROMAGNETIC', 'Z': 'COIL_ELECTRIC', 'W': 'WIRE'}),
+    'ore_washer': (['RGR', 'CEC', 'WMW'], {'M': 'HULL', 'R': 'ROTOR', 'E': 'MOTOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
+    'centrifuge': (['CEC', 'WMW', 'CEC'], {'M': 'HULL', 'E': 'MOTOR', 'C': 'CIRCUIT', 'W': 'WIRE'}),
+    'sifter': (['WFW', 'PMP', 'CFC'], {'M': 'HULL', 'P': 'PISTON', 'F': 'iis:item_filter', 'C': 'CIRCUIT', 'W': 'WIRE'}),
+    'electromagnetic_separator': (['VWZ', 'WMS', 'CWZ'], {'M': 'HULL', 'S': 'STICK_ELECTROMAGNETIC', 'Z': 'COIL_ELECTRIC', 'V': 'CONVEYOR',
+                                                          'C': 'CIRCUIT', 'W': 'WIRE'}),
+    'autoclave': (['IGI', 'IMI', 'CPC'], {'M': 'HULL', 'P': 'PUMP', 'C': 'CIRCUIT', 'I': 'PLATE', 'G': 'GLASS'}),
+    'cutter': (['WCG', 'VMB', 'CWE'], {'M': 'HULL', 'E': 'MOTOR', 'V': 'CONVEYOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS',
+                                       'B': 'iis:diamond_sawblade'}),
+    'canner': (['WPW', 'CMC', 'GGG'], {'M': 'HULL', 'P': 'PUMP', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
+    'electrolyzer': (['IGI', 'IMI', 'CWC'], {'M': 'HULL', 'C': 'CIRCUIT', 'W': 'WIRE', 'I': 'SILVER_WIRE', 'G': 'GLASS'}),
+    'chemical_reactor': (['GRG', 'WEW', 'CMC'], {'M': 'HULL', 'R': 'ROTOR', 'E': 'MOTOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
+    'fluid_extractor': (['GCG', 'PME', 'WCW'], {'M': 'HULL', 'E': 'PISTON', 'P': 'PUMP', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
+    'fluid_solidifier': (['PGP', 'WMW', 'CBC'], {'M': 'HULL', 'P': 'PUMP', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS', 'B': '#c:chests/wooden'}),
+    'distillery': (['GBG', 'CMC', 'WPW'], {'M': 'HULL', 'P': 'PUMP', 'B': 'minecraft:blaze_rod', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
+    'chemical_bath': (['VGW', 'PGV', 'CMC'], {'M': 'HULL', 'P': 'PUMP', 'V': 'CONVEYOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
+}
 GENERATORS = [
     # id, GT lang, texture prefix, EN
     ('steam_turbine_lv', 'basicgenerator.steamturbine.tier.01', 'STEAM_TURBINE', 'Basic Steam Turbine'),
@@ -613,27 +646,29 @@ def generate(g):
         name(f'block.{NS}.{bid}', en, rut)
         tooltip_lines(bid, [('Charges batteries, outputs from the front', 'Заряжает батарейки, выдаёт энергию спереди'),
                             (f'Output: 32 EU/t, up to {n} A (one per battery)', f'Выход: 32 EU/t, до {n} А (по ампер на батарейку)')])
-    # GT_MetaTileEntity_Transformer: step-down (default) — front = MV in (IN_MULTI), other sides LV out (OUT);
-    # step-up — front = MV out (OUT_MULTI), other sides LV in (IN). Facing: any of 6 directions.
-    for mode, front_ov, side_ov in (('', 'OVERLAY_ENERGY_IN_MULTI', 'OVERLAY_ENERGY_OUT'), ('_up', 'OVERLAY_ENERGY_OUT_MULTI', 'OVERLAY_ENERGY_IN')):
-        for face, base, ov in (('front', 'MACHINE_LV_SIDE', front_ov), ('side', 'MACHINE_LV_SIDE', side_ov),
-                               ('top', 'MACHINE_LV_TOP', side_ov), ('bottom', 'MACHINE_LV_BOTTOM', side_ov)):
-            im, _ = layer(os.path.join(ic, base + '.png'), os.path.join(ic, ov + '.png'))
-            im.crop((0, 0, 16, 16)).save(tex_out(f'block/lv/transformer_lv{mode}_{face}.png'))
-        t = lambda f: f'{NS}:block/lv/transformer_lv{mode}_{f}'
-        cube_model('transformer_lv' + mode, {'front': t('front'), 'back': t('side'), 'side': t('side'), 'top': t('top'), 'bottom': t('bottom')})
-    variants = {}
-    for facing, rot in (('north', {}), ('east', {'y': 90}), ('south', {'y': 180}), ('west', {'y': 270}), ('down', {'x': 90}), ('up', {'x': 270})):
-        for up in (False, True):
-            variants[f'facing={facing},step_up={str(up).lower()}'] = dict({'model': f'{NS}:block/transformer_lv' + ('_up' if up else '')}, **rot)
-    write(os.path.join(A, 'blockstates', 'transformer_lv.json'), {'variants': variants})
-    block_item('transformer_lv')
-    simple_loot('transformer_lv')
-    pickaxe('transformer_lv')
-    name(f'block.{NS}.transformer_lv', 'LV Transformer', ru('gt.blockmachines.transformer.tier.01.name', 'LV Transformer'))
-    tooltip_lines('transformer_lv', [('MV -> LV: input 128 EU/t 1 A at the front, output 32 EU/t 4 A at the other sides',
-                                      'MV -> LV: вход 128 EU/t 1 А спереди, выход 32 EU/t 4 А с остальных сторон'),
-                                     ('Wrench + sneak: invert (LV -> MV)', 'Ключ с Shift: обратить (LV -> MV)')])
+    # GT_MetaTileEntity_Transformer: step-down (default) — front = higher tier in (IN_MULTI), other sides lower tier out (OUT);
+    # step-up — front = higher tier out (OUT_MULTI), other sides lower tier in (IN). Facing: any of 6 directions. Casing of mTier.
+    for tr, lo, hi, n_ in (('lv', 32, 128, '01'), ('mv', 128, 512, '02')):
+        bid, T, LO, HI = f'transformer_{tr}', tr.upper(), VOLTAGE_NAMES[lo], VOLTAGE_NAMES[hi]
+        for mode, front_ov, side_ov in (('', 'OVERLAY_ENERGY_IN_MULTI', 'OVERLAY_ENERGY_OUT'), ('_up', 'OVERLAY_ENERGY_OUT_MULTI', 'OVERLAY_ENERGY_IN')):
+            for face, base, ov in (('front', f'MACHINE_{T}_SIDE', front_ov), ('side', f'MACHINE_{T}_SIDE', side_ov),
+                                   ('top', f'MACHINE_{T}_TOP', side_ov), ('bottom', f'MACHINE_{T}_BOTTOM', side_ov)):
+                im, _ = layer(os.path.join(ic, base + '.png'), os.path.join(ic, ov + '.png'))
+                im.crop((0, 0, 16, 16)).save(tex_out(f'block/lv/{bid}{mode}_{face}.png'))
+            t = lambda f: f'{NS}:block/lv/{bid}{mode}_{f}'
+            cube_model(bid + mode, {'front': t('front'), 'back': t('side'), 'side': t('side'), 'top': t('top'), 'bottom': t('bottom')})
+        variants = {}
+        for facing, rot in (('north', {}), ('east', {'y': 90}), ('south', {'y': 180}), ('west', {'y': 270}), ('down', {'x': 90}), ('up', {'x': 270})):
+            for up in (False, True):
+                variants[f'facing={facing},step_up={str(up).lower()}'] = dict({'model': f'{NS}:block/{bid}' + ('_up' if up else '')}, **rot)
+        write(os.path.join(A, 'blockstates', f'{bid}.json'), {'variants': variants})
+        block_item(bid)
+        simple_loot(bid)
+        pickaxe(bid)
+        name(f'block.{NS}.{bid}', f'{LO} Transformer', ru(f'gt.blockmachines.transformer.tier.{n_}.name', f'{LO} Transformer'))
+        tooltip_lines(bid, [(f'{HI} -> {LO}: input {hi} EU/t 1 A at the front, output {lo} EU/t 4 A at the other sides',
+                             f'{HI} -> {LO}: вход {hi} EU/t 1 А спереди, выход {lo} EU/t 4 А с остальных сторон'),
+                            (f'Wrench + sneak: invert ({LO} -> {HI})', f'Ключ с Shift: обратить ({LO} -> {HI})')])
 
     # --------------------------------------------------------------------------------------------------------
     # Coke oven (Railcraft; IIS RailCraft.zs "Coke Oven to LV age")
@@ -923,9 +958,17 @@ def generate(g):
     for wid, wire in (('wire', W('Tin')), ('fine_wire', tag_of('wire_fine', 'Tin'))):
         shaped(f'lv/diode_{wid}', f'{NS}:diode', 4, ['BG ', 'WDW', 'BG '], {'B': '#c:dyes/black', 'G': 'minecraft:glass_pane',
                                                                            'D': tag_of('tiny_dust', 'Gallium'), 'W': wire})
-    # MV thermal centrifuge: :785, X for tier 2 = good circuit, MV motor, copper cable, 4x cupronickel wire, MV hull
-    shaped('lv/thermal_centrifuge_mv', f'{NS}:thermal_centrifuge_mv', 1, ['CEC', 'OMO', 'WEW'],
-           {'C': CIRC_MV, 'E': MOTOR_MV, 'O': W('Cupronickel', 4), 'M': HULL_MV, 'W': C('Copper')})
+    # MV machines (D82): GT X.* for tier 2. Industrial diamond = IC2 item, GT falls back to a diamond without IC2
+    # (GT_Proxy:393); the MV electrolyzer takes 1x silver wire instead of gold (GT_Loader_MetaTileEntities:776)
+    XMV = {'HULL': HULL_MV, 'CIRCUIT': CIRC_MV, 'WIRE': C('Copper'), 'GLASS': 'minecraft:glass', 'PLATE': P('Aluminium'),
+           'COIL_HEATING': W('Cupronickel', 2), 'COIL_HEATING_DOUBLE': W('Cupronickel', 4), 'STICK_ELECTROMAGNETIC': R('Steel'),
+           'COIL_ELECTRIC': W('Copper', 2), 'ROTOR': tag_of('rotor', 'Bronze'), 'MOTOR': MOTOR_MV, 'PISTON': PISTON_MV,
+           'PUMP': PUMP_MV, 'CONVEYOR': CONV_MV, 'ROBOT_ARM': ARM_MV, 'INDUSTRIAL_DIAMOND': 'minecraft:diamond', 'SILVER_WIRE': W('Silver')}
+    MV_CRAFT['thermal_centrifuge'] = (['CEC', 'OMO', 'WEW'], {'M': 'HULL', 'E': 'MOTOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'O': 'COIL_HEATING_DOUBLE'})
+    for mid_, (pattern, letters) in MV_CRAFT.items():
+        shaped(f'lv/{mid_}_mv', f'{NS}:{mid_}_mv', 1, pattern, {k: XMV.get(v, v) for k, v in letters.items()})
+    # GT_Loader_MetaTileEntities:206 MV transformer " BB/CM / BB": MV hull, gold cable, copper cables
+    shaped('lv/transformer_mv', f'{NS}:transformer_mv', 1, [' BB', 'CM ', ' BB'], {'M': HULL_MV, 'C': C('Gold'), 'B': C('Copper')})
 
     # GT_MetaGenerated_Item_01:181 empty shape "hf/PP/PP" (steel plates), :204-212 molds: empty shape + hammer in a position
     shaped('lv/shape_empty', f'{NS}:shape_empty', 1, ['hf', 'PP', 'PP'], {'P': P('Steel'), 'h': '#iis:tools/hammer', 'f': '#iis:tools/file'})
@@ -1182,8 +1225,8 @@ def generate(g):
                        ('jei.iis.coke_oven', 'Coke Oven', 'Коксовая печь'),
                        ('jei.iis.centrifuge', 'Centrifuge', 'Центрифуга'), ('jei.iis.sifter', 'Sifter', 'Просеиватель'),
                        ('jei.iis.electromagnetic_separator', 'Electromagnetic Separator', 'Электромагнитный сепаратор'),
-                       ('jei.iis.autoclave', 'Autoclave', 'Автоклав'), ('jei.iis.cutter', 'Cutting Saw', 'Пильный станок'), ('jei.iis.canner', 'Canning Machine', 'Консервирующий станок'), ('message.iis.transformer.down', 'Step down: MV -> LV', 'Понижение: MV -> LV'),
-                       ('message.iis.transformer.up', 'Step up: LV -> MV', 'Повышение: LV -> MV'),
+                       ('jei.iis.autoclave', 'Autoclave', 'Автоклав'), ('jei.iis.cutter', 'Cutting Saw', 'Пильный станок'), ('jei.iis.canner', 'Canning Machine', 'Консервирующий станок'), ('message.iis.transformer.down', 'Step down: %s -> %s', 'Понижение: %s -> %s'),
+                       ('message.iis.transformer.up', 'Step up: %s -> %s', 'Повышение: %s -> %s'),
                        ('item.iis.multimeter.tooltip.0', 'Right-click a wire or machine: detailed reading', 'ПКМ по проводу или машине — подробный замер'),
                        ('item.iis.multimeter.tooltip.1', 'In hand: live reading of what you look at', 'В руке — живые показания того, на что смотришь'),
                        ('meter.iis.cable.limits', 'Limit: %s V, %s A, loss %s V per block', 'Предел: %s В, %s А, потеря %s В на блок'),

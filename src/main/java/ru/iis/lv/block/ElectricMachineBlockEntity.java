@@ -184,7 +184,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         }
     }
 
-    /** GT mFluidTransfer: выходная жидкость сливается в бак со стороны выхода. */
+    /** GT mFluidTransfer: выходная жидкость сливается в бак со стороны выхода, не больше 1000 × (int) 1.5^mTier л за раз (LV 1000, MV 2000). */
     private void autoOutputFluid(ServerLevel sl) {
         Direction side = outputSide();
         ResourceHandler<FluidResource> target = sl.getCapability(net.neoforged.neoforge.capabilities.Capabilities.Fluid.BLOCK, worldPosition.relative(side), side.getOpposite());
@@ -192,7 +192,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         FluidResource r = outTank.resource();
         int moved;
         try (var tx = net.neoforged.neoforge.transfer.transaction.Transaction.openRoot()) {
-            moved = target.insert(r, outTank.amount(), tx);
+            moved = target.insert(r, Math.min(outTank.amount(), ElectricMachineLogic.fluidOutputPerOperation(type().tier)), tx);
             tx.commit();
         }
         if (moved > 0) outTank.drainInternal(moved);

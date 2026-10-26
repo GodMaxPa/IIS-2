@@ -889,7 +889,7 @@ for r in DISABLED:
 # GT5 GT_Block_Machines / GT_Block_Casings: machines, casings, hulls, hatches and pipes are harvested only with a wrench
 # (iis:mineable/wrench); wires and cables — with a wire cutter (iis:mineable/wire_cutter, hand still drops them)
 import re as _re
-_WRENCH = _re.compile(r'^iis:(hull_.*|boiler_.*|steam_.*|pipe_.*|casing_lv|.*_lv|battery_buffer_.*|transformer_lv|frame_.*|heat_proof_casing|coil_.*|hatch_.*|electric_blast_furnace)$')
+_WRENCH = _re.compile(r'^iis:(hull_.*|boiler_.*|steam_.*|pipe_.*|casing_lv|.*_lv|.*_mv|battery_buffer_.*|transformer_lv|frame_.*|heat_proof_casing|coil_.*|hatch_.*|electric_blast_furnace)$')
 _CUTTER = _re.compile(r'^iis:(wire|cable)_.*$')
 block_tags.setdefault('iis:mineable/wrench', [])
 block_tags.setdefault('iis:mineable/wire_cutter', [])
@@ -898,7 +898,7 @@ block_tags['iis:mineable/drill'] = ['#minecraft:mineable/pickaxe', '#minecraft:m
 for _t in ('minecraft:mineable/pickaxe', 'minecraft:needs_stone_tool', 'minecraft:needs_iron_tool'):
     _keep = []
     for _b in block_tags.get(_t, []):
-        if _WRENCH.match(_b) and not _b.startswith('iis:ore'):
+        if _WRENCH.match(_b) and not (_b.startswith('iis:ore') and not _b.startswith('iis:ore_washer')):   # ores stay pickaxe blocks
             if _t == 'minecraft:mineable/pickaxe' and _b not in block_tags['iis:mineable/wrench']:
                 block_tags['iis:mineable/wrench'].append(_b)
         elif _CUTTER.match(_b):

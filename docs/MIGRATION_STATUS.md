@@ -56,4 +56,5 @@
 | Термоцентрифуга LV/MV, центрифугированная руда | `GT_Loader_MetaTileEntities:784–785`, `ProcessingDirty:24`, `ProcessingCrushedOre:34–41` | `lv.LvMachineType` (уровень машины), `tools/gen/lv.py` | перенесено; LV не тянет рецепты 48 EU/t (как в GT) | T, G |
 | Горячие слитки | `OrePrefixes.ingotHot`, `ProcessingDust:44`, `GT_Proxy:1363` | `multi.HotIngotHeat`, `tools/gen/ebf.py` | иридий и палладий из ЭДП, урон жаром; до катушек выше 1800 K недостижимы | T, G |
 | Вакуумный морозильник | `GT_MetaTileEntity_VacuumFreezer` | `multi.block.VacuumFreezerBlockEntity`, `multi.logic.FreezerLogic` | перенесено; крафт контроллера — с помпой HV и схемой «Данные» | T, G |
-| Остальные LV- и MV-машины GT5, электроотвёртка LV | `GT_Loader_MetaTileEntities` | — | дальше по плану MV | — |
+| MV-версии 25 базовых машин, энергетический люк MV, трансформатор MV | `GT_Loader_MetaTileEntities` Machine_MV_*, `:196, 238` | `lv.LvMachineType` (`*_MV`), `multi.block.HatchType.ENERGY_MV`, `lv.block.TransformerBlock#low`, `tools/gen/lv.py` (`MV_CRAFT`) | перенесено (D82) | T, G |
+| Остальные LV- и MV-машины GT5 (экструдер, пресс, гравёр и др.), генераторы, буферы, шины и люки MV, электроотвёртка LV | `GT_Loader_MetaTileEntities` | — | дальше по плану MV | — |

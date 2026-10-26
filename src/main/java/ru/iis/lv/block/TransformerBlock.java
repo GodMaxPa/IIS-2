@@ -28,20 +28,25 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jspecify.annotations.Nullable;
 import ru.iis.energy.EnergyConnectable;
+import ru.iis.energy.VoltageTier;
 
 
 import java.util.function.BiConsumer;
 
 /**
- * Трансформатор: лицевая сторона в любом из шести направлений (к игроку при установке).
+ * Трансформатор: лицевая сторона в любом из шести направлений (к игроку при установке). {@link #low} — GT mTier
+ * (LV-трансформатор: MV ↔ LV, MV-трансформатор: HV ↔ MV).
  * Режим переключается гаечным ключом с Shift (в GT5 — мягким молотом; отступление, см. PORTING_NOTES).
  */
 public class TransformerBlock extends Block implements EntityBlock, EnergyConnectable {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
     public static final BooleanProperty STEP_UP = BooleanProperty.create("step_up");
 
-    public TransformerBlock(Properties properties) {
+    public final VoltageTier low;
+
+    public TransformerBlock(VoltageTier low, Properties properties) {
         super(properties);
+        this.low = low;
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(STEP_UP, false));
     }
 
@@ -85,7 +90,9 @@ public class TransformerBlock extends Block implements EntityBlock, EnergyConnec
             boolean up = !state.getValue(STEP_UP);
             level.setBlock(pos, state.setValue(STEP_UP, up), 3);
             level.playSound(null, pos, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundSource.BLOCKS, 0.6f, 1.4f);
-            player.sendOverlayMessage(Component.translatable(up ? "message.iis.transformer.up" : "message.iis.transformer.down"));
+            String lo = low.shortName(), hi = VoltageTier.byTier(low.tier() + 1).shortName();
+            player.sendOverlayMessage(up ? Component.translatable("message.iis.transformer.up", lo, hi)
+                    : Component.translatable("message.iis.transformer.down", hi, lo));
         }
         return InteractionResult.SUCCESS;
     }

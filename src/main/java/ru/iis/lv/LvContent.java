@@ -30,6 +30,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import ru.iis.IIS;
+import ru.iis.energy.VoltageTier;
 import ru.iis.fluid.IISFluids;
 import ru.iis.lv.block.*;
 import ru.iis.core.material.MaterialData;
@@ -125,7 +126,9 @@ public final class LvContent {
     }
     public static final DeferredBlock<BatteryBufferBlock> BATTERY_BUFFER_1X1 = block("battery_buffer_1x1_lv", p -> new BatteryBufferBlock(1, p), LvContent::metal);
     public static final DeferredBlock<BatteryBufferBlock> BATTERY_BUFFER_2X2 = block("battery_buffer_2x2_lv", p -> new BatteryBufferBlock(4, p), LvContent::metal);
-    public static final DeferredBlock<TransformerBlock> TRANSFORMER = block("transformer_lv", TransformerBlock::new, LvContent::metal);
+    public static final DeferredBlock<TransformerBlock> TRANSFORMER = block("transformer_lv", p -> new TransformerBlock(VoltageTier.LV, p), LvContent::metal);
+    /** GT_Loader_MetaTileEntities:196 Transformer_HV_MV (D82). */
+    public static final DeferredBlock<TransformerBlock> TRANSFORMER_MV = block("transformer_mv", p -> new TransformerBlock(VoltageTier.MV, p), LvContent::metal);
 
     // --- коксовая печь ---------------------------------------------------------------------------------------------
     public static final DeferredBlock<Block> COKE_OVEN_BRICKS = block("coke_oven_bricks", Block::new,
@@ -226,7 +229,7 @@ public final class LvContent {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BatteryBufferBlockEntity>> BATTERY_BUFFER_BE = BLOCK_ENTITIES.register("battery_buffer",
             () -> new BlockEntityType<>(BatteryBufferBlockEntity::new, BATTERY_BUFFER_1X1.get(), BATTERY_BUFFER_2X2.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TransformerBlockEntity>> TRANSFORMER_BE = BLOCK_ENTITIES.register("transformer",
-            () -> new BlockEntityType<>(TransformerBlockEntity::new, TRANSFORMER.get()));
+            () -> new BlockEntityType<>(TransformerBlockEntity::new, TRANSFORMER.get(), TRANSFORMER_MV.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CokeOvenBlockEntity>> COKE_OVEN_BE = BLOCK_ENTITIES.register("coke_oven",
             () -> new BlockEntityType<>(CokeOvenBlockEntity::new, COKE_OVEN.get()));
 

@@ -135,7 +135,7 @@ public abstract class MultiblockControllerBlockEntity extends BaseContainerBlock
     /** GT getMaxInputVoltage: сумма напряжений энергетических люков. */
     protected long maxInputVoltage(ServerLevel sl) {
         long v = 0;
-        for (BlockPos p : parts.energy) if (sl.getBlockEntity(p) instanceof EnergyHatchBlockEntity) v += EnergyHatchBlockEntity.VOLTAGE;
+        for (BlockPos p : parts.energy) if (sl.getBlockEntity(p) instanceof EnergyHatchBlockEntity e) v += e.voltage();
         return v;
     }
 

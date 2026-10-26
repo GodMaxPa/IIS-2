@@ -87,6 +87,7 @@ public final class IISJeiPlugin implements IModPlugin {
         for (SteamMachineType.Tier tier : SteamMachineType.Tier.values()) {
             registration.addCraftingStation(RecipeTypes.SMELTING, IISMachines.STEAM_MACHINES.get(SteamMachineType.FURNACE.blockId(tier)).get());
         }
-        registration.addCraftingStation(RecipeTypes.SMELTING, ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_FURNACE).get());
+        registration.addCraftingStation(RecipeTypes.SMELTING, ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_FURNACE).get(),
+                ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_FURNACE_MV).get());
     }
 }

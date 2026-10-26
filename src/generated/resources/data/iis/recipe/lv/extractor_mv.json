@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GCG",
+    "EMP",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "E": "iis:electric_piston_mv",
+    "P": "iis:electric_pump_mv",
+    "C": "#c:circuits/good",
+    "W": "#iis:cables/1x/copper",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:extractor_mv"
+  }
+}

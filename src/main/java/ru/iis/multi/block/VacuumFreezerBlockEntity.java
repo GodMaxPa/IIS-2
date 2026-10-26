@@ -54,7 +54,7 @@ public class VacuumFreezerBlockEntity extends MultiblockControllerBlockEntity {
                         case INPUT_HATCH -> parts.inputHatches.add(b);
                         case OUTPUT_BUS -> parts.outputBuses.add(b);
                         case OUTPUT_HATCH -> parts.outputHatches.add(b);
-                        case ENERGY -> parts.energy.add(b);
+                        case ENERGY, ENERGY_MV -> parts.energy.add(b);
                         default -> {
                             return false;
                         }

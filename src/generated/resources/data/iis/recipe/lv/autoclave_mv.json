@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IGI",
+    "IMI",
+    "CPC"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "P": "iis:electric_pump_mv",
+    "C": "#c:circuits/good",
+    "I": "#c:plates/aluminium",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:autoclave_mv"
+  }
+}

@@ -12,15 +12,22 @@ import ru.iis.energy.VoltageTier;
 import ru.iis.lv.LvContent;
 
 /**
- * Трансформатор LV (GT_MetaTileEntity_Transformer). Понижающий (по умолчанию): вход MV 128 EU/t 1 А через лицевую
- * сторону, выход LV 32 EU/t 4 А через остальные пять. Повышающий: вход LV 4 А через пять сторон, выход MV 1 А через лицевую.
- * Запас 512 + 2 × V(MV), минимальный запас 512. Без GUI.
+ * Трансформатор (GT_MetaTileEntity_Transformer, mTier = нижний уровень). Понижающий (по умолчанию): вход V[mTier + 1] 1 А
+ * через лицевую сторону, выход V[mTier] 4 А через остальные пять (LV: 128 → 32, MV: 512 → 128). Повышающий: вход V[mTier]
+ * 4 А через пять сторон, выход V[mTier + 1] 1 А через лицевую. Запас 512 + 2 × V[mTier + 1], минимальный запас 512. Без GUI.
  */
 public class TransformerBlockEntity extends ElectricBlockEntity {
-    public static final long LOW = VoltageTier.LV.voltage(), HIGH = VoltageTier.MV.voltage();
+    public final long low, high;
 
     public TransformerBlockEntity(BlockPos pos, BlockState state) {
-        super(LvContent.TRANSFORMER_BE.get(), pos, state, 0, 512 + HIGH * 2, HIGH);
+        this(pos, state, state.getBlock() instanceof TransformerBlock b ? b.low : VoltageTier.LV);
+    }
+
+    private TransformerBlockEntity(BlockPos pos, BlockState state, VoltageTier tier) {
+        super(LvContent.TRANSFORMER_BE.get(), pos, state, 0, 512 + VoltageTier.byTier(tier.tier() + 1).voltage() * 2,
+                VoltageTier.byTier(tier.tier() + 1).voltage());
+        this.low = tier.voltage();
+        this.high = VoltageTier.byTier(tier.tier() + 1).voltage();
     }
 
     public boolean stepUp() {
@@ -43,12 +50,12 @@ public class TransformerBlockEntity extends ElectricBlockEntity {
 
     @Override
     public long outputVoltage() {
-        return stepUp() ? HIGH : LOW;
+        return stepUp() ? high : low;
     }
 
     @Override
     public long outputAmperes() {
-        return stepUp() ? 1 : HIGH / LOW;
+        return stepUp() ? 1 : high / low;
     }
 
     @Override
@@ -62,8 +69,8 @@ public class TransformerBlockEntity extends ElectricBlockEntity {
     }
 
     private void configure() {
-        energy.inputVoltage = stepUp() ? LOW : HIGH;
-        energy.maxAmperesIn = stepUp() ? HIGH / LOW : 1;
+        energy.inputVoltage = stepUp() ? low : high;
+        energy.maxAmperesIn = stepUp() ? high / low : 1;
     }
 
     @Override

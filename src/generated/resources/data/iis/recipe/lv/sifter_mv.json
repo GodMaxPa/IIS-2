@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WFW",
+    "PMP",
+    "CFC"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "P": "iis:electric_piston_mv",
+    "F": "iis:item_filter",
+    "C": "#c:circuits/good",
+    "W": "#iis:cables/1x/copper"
+  },
+  "result": {
+    "id": "iis:sifter_mv"
+  }
+}
