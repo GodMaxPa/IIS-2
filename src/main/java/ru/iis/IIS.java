@@ -46,6 +46,8 @@ public final class IIS {
         NeoForge.EVENT_BUS.addListener(ru.iis.pollution.Pollution::onLevelTick);
         NeoForge.EVENT_BUS.addListener(ru.iis.multi.HotIngotHeat::onPlayerTick);
         NeoForge.EVENT_BUS.addListener(ru.iis.world.TreeFeller::onBreak);
+        NeoForge.EVENT_BUS.addListener(ru.iis.world.FastLeafDecay::onNeighborNotify);
+        NeoForge.EVENT_BUS.addListener(ru.iis.world.FastLeafDecay::onLevelTick);
         NeoForge.EVENT_BUS.addListener(IISCommand::register);
         NeoForge.EVENT_BUS.addListener(ru.iis.stand.StandHooks::onServerStarted);
     }

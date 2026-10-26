@@ -110,6 +110,7 @@ public final class IISGameTests {
             new Test("fix_creosote_movable", 100, FixGameTests::creosoteMovable),
             new Test("fix_auto_output", 100, FixGameTests::autoOutput),
             new Test("fix_tree_feller", 20, FixGameTests::treeFeller),
+            new Test("fast_leaf_decay", 100, FixGameTests::fastLeafDecay),
             new Test("lv_rubber_tree", 20, LvGameTests::rubberTree, true), // дереву нужен открытый верх (без потолка теста)
             new Test("bio_shuttle_feed_grow", 1600, BioGameTests::shuttleFeedAndGrow, false, FLOOR16),
             new Test("bio_starvation_retreat", 900, BioGameTests::starvationRetreat),

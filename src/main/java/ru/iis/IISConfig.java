@@ -68,6 +68,15 @@ public final class IISConfig {
 
     static {
         B.pop();
+        B.comment("World conveniences of the IIS 1.19.1 pack. Удобства мира из сборки ИИС 1.").push("world");
+    }
+
+    public static final ModConfigSpec.BooleanValue FAST_LEAF_DECAY = B
+            .comment("Leaves cut off from their tree fall in 4-11 ticks (FastLeafDecay of IIS 1.19.1, D87). Быстрое опадание листвы.")
+            .define("fastLeafDecay", true);
+
+    static {
+        B.pop();
     }
 
     public static final ModConfigSpec SPEC = B.build();
@@ -84,6 +93,10 @@ public final class IISConfig {
             retreat = BIO_RETREAT_AFTER.getDefault();
         }
         return ru.iis.bio.core.ColonyState.Params.DEFAULT.tuned(k, retreat);
+    }
+
+    public static boolean fastLeafDecay() {
+        return on(FAST_LEAF_DECAY);
     }
 
     public static boolean bioTestRecipes() {

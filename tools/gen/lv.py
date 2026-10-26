@@ -890,7 +890,9 @@ def generate(g):
     add_item_tag('minecraft:logs', f'{NS}:rubber_log')
     add_item_tag('minecraft:logs_that_burn', f'{NS}:rubber_log')
     add_item_tag('minecraft:saplings', f'{NS}:rubber_sapling')
-    shapeless('lv/rubber_log_planks', 'minecraft:jungle_planks', 3, [f'{NS}:rubber_log'])   # IC2: rubber wood -> 3 planks
+    # IC2: rubber wood -> 3 planks; GT ProcessingLog:84 with WoodNeedsSawForCrafting (D87): by hand 3 / 2 = 1, with a saw 3
+    shapeless('lv/rubber_log_planks', 'minecraft:jungle_planks', 1, [f'{NS}:rubber_log'])
+    shaped('lv/rubber_log_planks_saw', 'minecraft:jungle_planks', 3, ['s', 'L'], {'L': f'{NS}:rubber_log'})
     shaped('tool/treetap', f'{NS}:treetap', 1, [' P ', 'PPP', 'P  '], {'P': '#minecraft:planks'})   # IC2 treetap shape
     # worldgen: IC2 rubber trees in forests, swamps, jungles (own feature, D43)
     W_ = os.path.join(D, NS, 'worldgen')

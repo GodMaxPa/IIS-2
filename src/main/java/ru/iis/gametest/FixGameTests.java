@@ -117,4 +117,23 @@ final class FixGameTests {
         h.assertTrue(player.getMainHandItem().getDamageValue() == 4, "axe damage " + player.getMainHandItem().getDamageValue());
         h.succeed();
     }
+
+    /** Быстрое опадание листвы (D87): срубили бревна — оторванная листва опадает за секунды, поставленная игроком остаётся. */
+    static void fastLeafDecay(GameTestHelper h) {
+        for (int y = 1; y <= 3; y++) h.setBlock(new BlockPos(3, y, 3), Blocks.OAK_LOG);
+        BlockState leaf = Blocks.OAK_LEAVES.defaultBlockState();
+        h.setBlock(new BlockPos(4, 3, 3), leaf.setValue(LeavesBlock.DISTANCE, 1));
+        h.setBlock(new BlockPos(5, 3, 3), leaf.setValue(LeavesBlock.DISTANCE, 2));
+        h.setBlock(new BlockPos(3, 4, 3), leaf.setValue(LeavesBlock.DISTANCE, 1));
+        h.setBlock(new BlockPos(4, 4, 3), leaf.setValue(LeavesBlock.DISTANCE, 2));
+        h.setBlock(new BlockPos(2, 3, 3), leaf.setValue(LeavesBlock.DISTANCE, 1).setValue(LeavesBlock.PERSISTENT, true));
+        h.runAfterDelay(2, () -> {
+            for (int y = 1; y <= 3; y++) h.getLevel().removeBlock(h.absolutePos(new BlockPos(3, y, 3)), false);
+        });
+        h.succeedWhen(() -> {
+            for (BlockPos p : new BlockPos[]{new BlockPos(4, 3, 3), new BlockPos(5, 3, 3), new BlockPos(3, 4, 3), new BlockPos(4, 4, 3)})
+                h.assertBlockNotPresent(Blocks.OAK_LEAVES, p);
+            h.assertBlockPresent(Blocks.OAK_LEAVES, new BlockPos(2, 3, 3));
+        });
+    }
 }

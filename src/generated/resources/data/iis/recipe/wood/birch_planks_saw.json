@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "s",
+    "L"
+  ],
+  "key": {
+    "s": "#iis:tools/saw",
+    "L": "#minecraft:birch_logs"
+  },
+  "result": {
+    "id": "minecraft:birch_planks",
+    "count": 4
+  }
+}

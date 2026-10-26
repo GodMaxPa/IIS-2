@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s",
+    "L"
+  ],
+  "key": {
+    "L": "iis:rubber_log",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "minecraft:jungle_planks",
+    "count": 3
+  }
+}

@@ -894,6 +894,17 @@ write(os.path.join(OVR, 'pack.mcmeta'), {'pack': {'description': 'IIS 2.0: overr
 for r in DISABLED:
     write(os.path.join(OVR, 'data', 'minecraft', 'recipe', r + '.json'), {'neoforge:conditions': [{'type': 'neoforge:never'}]})
 
+# D87: ProcessingLog:65, :84 with IIS GregTech.cfg WoodNeedsSawForCrafting=true (mNerfedWoodPlank):
+# a log by hand gives half the planks (4 -> 2), with a saw "s/L" the full 4. Bamboo blocks are not logs (vanilla 2 planks).
+for w in ('oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'cherry', 'pale_oak', 'crimson', 'warped'):
+    logs = f'#minecraft:{w}_stems' if w in ('crimson', 'warped') else f'#minecraft:{w}_logs'
+    write(os.path.join(OVR, 'data', 'minecraft', 'recipe', f'{w}_planks.json'),
+          {'type': 'minecraft:crafting_shapeless', 'category': 'building', 'group': 'planks', 'ingredients': [logs],
+           'result': result(f'minecraft:{w}_planks', 2)})
+    write(os.path.join(D, NS, 'recipe', 'wood', f'{w}_planks_saw.json'),
+          {'type': 'minecraft:crafting_shaped', 'category': 'building', 'pattern': ['s', 'L'],
+           'key': {'s': '#iis:tools/saw', 'L': logs}, 'result': result(f'minecraft:{w}_planks', 4)})
+
 # ----------------------------------------------------------------------------------------------------------------
 # Tags, lang
 # ----------------------------------------------------------------------------------------------------------------

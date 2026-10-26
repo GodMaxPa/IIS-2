@@ -19,7 +19,7 @@
 | SGCraft | 1.9.5 | Звёздные врата | C — может стать частью космоса |
 | appliedenergistics2 (II), ExtraCells (II), NotEnoughEnergistics | rv3 | Цифровое хранение | B 🟡 AE2 |
 | NotEnoughItems (II), NEIIntegration, neiaddons | — | Просмотр рецептов | B — JEI или EMI 🟡 |
-| Waila, WailaHarvestability, WAILAPlugins | — | Подсказка о блоке | B — Jade 🟡 |
+| Waila, WailaHarvestability, WAILAPlugins | — | Подсказка о блоке | B — Jade 26.1.12 (D87) |
 | MapWriter (II) | 2.1.21 | Карта | B — JourneyMap / Xaero 🟡 |
 | BetterQuesting | 3.0.320 | Квесты | B — FTB Quests или аналог 🟡; контент из Ideal-Industrial-Quests |
 | forestry (II), gendustry | 4.2.26 | Пчёлы, деревья | C — владелец: не интересно |
@@ -31,16 +31,17 @@
 | CustomOreGen | 1.2.24 | Генерация руд | C — заменяется рудными жилами GT |
 | undergroundBiomes | 0.8 | Каменные породы | C |
 | RTG | 1.1.1.7 | Ландшафт | C — современный ландшафт лучше |
-| Chisel, Carpenter's Blocks, BiblioCraft, malisisdoors | — | Строительство, декор | B — современные аналоги 🟡 |
+| Chisel, Carpenter's Blocks, BiblioCraft, malisisdoors | — | Строительство, декор | B — двери: MalisisDoorsReborn 1.0.5 (D87); остальное — аналоги 🟡 |
 | betterbuilderswands | 0.8.0 | Строительный жезл | B 🟡 |
 | ironchest, Jabba | — | Хранение | B 🟡 |
 | ChickenChunks | 1.3.4 | Чанклоадеры | B 🟡 |
 | InventoryTweaks, Stackie | — | Удобства | B 🟡 |
-| Treecapitator, FastLeafDecay | — | Удобства | B 🟡 |
+| Treecapitator, FastLeafDecay | — | Удобства | **A** — своя валка (D56) и опадание листвы (D87) |
 | LootBags | 2.0.17 | Мешки с лутом (награды квестов) | B/C |
 | InGameInfoXML | 2.8.1 | HUD | C |
 | AromaBackup, Aroma1997Core | — | Бэкапы мира | C — делается средствами сервера |
-| keepinginventory | 2.1 | Сохранение инвентаря | C — есть ванильное правило |
+| keepinginventory | 2.1 | Сохранение инвентаря | C — есть ванильное правило; могилы — GraveStone Mod 1.0.40 (D87) |
+| — (нет в ИИС 1) | — | Сбор урожая ПКМ | B — RightClickHarvest 4.6.2 + JamLib 2.3.1 (D87, просьба тестера) |
 | CustomMainMenu, betterloadingscreen, ResourceLoader | — | Оформление | C |
 | fastcraft, l4j_jndi_fix, galacticraft_fuel_fix, ctbupdater, AppleCore, bdlib, CodeChickenCore, LunatriusCore, INpureCore, malisiscore, StandardExpansion | — | Технические / библиотеки | C — не нужны на 26.1 |
 
