@@ -1,0 +1,20 @@
+{
+  "type": "iis:forming_press",
+  "inputs": [
+    {
+      "ingredient": "minecraft:glass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:arrow_head_glass_empty",
+      "count": 1
+    }
+  ],
+  "duration": 64,
+  "eut": 4,
+  "keep": [
+    "iis:mold_arrow"
+  ]
+}

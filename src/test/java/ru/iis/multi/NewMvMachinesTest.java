@@ -60,6 +60,22 @@ class NewMvMachinesTest {
     }
 
     @Test
+    void pressHeaterOven() throws IOException {
+        assertRecipe("processing/forming_press/coin_doge", "iis:coin_doge", 4, 100, 16, "iis:mold_credit");
+        assertRecipe("processing/forming_press/arrow_head_glass_empty", "iis:arrow_head_glass_empty", 1, 64, 4, "iis:mold_arrow");
+        JsonObject heat = recipe("processing/fluid_heater/steam_from_water");
+        assertEquals(6, heat.getAsJsonArray("fluid_inputs").get(0).getAsJsonObject().get("amount").getAsInt());
+        assertEquals(960, heat.getAsJsonArray("fluid_outputs").get(0).getAsJsonObject().get("amount").getAsInt());
+        assertEquals(1, heat.get("circuit").getAsInt());
+        assertEquals(32, heat.get("eut").getAsInt());
+        assertEquals(0, LvMachineType.FLUID_HEATER.outputs);
+        assertEquals(8000, LvMachineType.FLUID_HEATER_MV.tank);
+        // духовка GT — та же печь на ванильной плавке, что и электропечь
+        assertNull(LvMachineType.ELECTRIC_OVEN.recipeMap);
+        assertEquals("#iis:wires/2x/cupronickel", recipe("lv/electric_oven_mv").getAsJsonObject("key").get("C").getAsString());
+    }
+
+    @Test
     void alloySmelterMolds() throws IOException {
         String p = "processing/alloy_smelter/";
         // 2 слитка → пластина за массу × 2 тиков, 2 × 16 = 32 EU/t

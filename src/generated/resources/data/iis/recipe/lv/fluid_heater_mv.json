@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OGO",
+    "PMP",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "P": "iis:electric_pump_mv",
+    "O": "#iis:wires/4x/cupronickel",
+    "C": "#c:circuits/good",
+    "W": "#iis:cables/1x/copper",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:fluid_heater_mv"
+  }
+}

@@ -175,6 +175,36 @@ final class MvGameTests {
         });
     }
 
+    /** Формовочный пресс LV (D83): латунная пластина + форма чеканки → 4 монеты Doge (100 тиков, 16 EU/t); форма остаётся. */
+    static void pressDogeCoin(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, new BlockPos(4, 1, 4), LvMachineType.FORMING_PRESS);
+        m.setItem(0, new ItemStack(SelfTest.item("plate_brass")));
+        m.setItem(1, new ItemStack(SelfTest.item("mold_credit")));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.getItem(2).is(SelfTest.item("coin_doge")) && m.getItem(2).getCount() == 4, "output " + m.getItem(2));
+            h.assertTrue(m.getItem(1).is(SelfTest.item("mold_credit")), "mold consumed: " + m.getItem(1));
+        });
+    }
+
+    /** Нагреватель жидкостей LV: схема 1 + 6 л воды → 960 л пара (30 тиков, 32 EU/t); схема остаётся. */
+    static void fluidHeaterSteam(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, new BlockPos(4, 1, 4), LvMachineType.FLUID_HEATER);
+        m.setItem(0, ru.iis.lv.item.ProgrammedCircuitItem.withConfig(new ItemStack(LvContent.PROGRAMMED_CIRCUIT.get()), 1));
+        m.tank().setAmount(net.minecraft.world.level.material.Fluids.WATER, 1000);
+        h.succeedWhen(() -> {
+            h.assertTrue(m.outTank().amount() >= 960 && m.outTank().resource().getFluid() == ru.iis.fluid.IISFluids.STEAM.get(),
+                    "steam " + m.outTank().amount());
+            h.assertTrue(ru.iis.lv.item.ProgrammedCircuitItem.config(m.getItem(0)) == 1, "the circuit must stay");
+        });
+    }
+
+    /** Электродуховка MV: ванильная плавка с разгоном MV (4 EU/t × 128 → 16 EU/t × 64). */
+    static void ovenMvSmelts(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, new BlockPos(4, 1, 4), LvMachineType.ELECTRIC_OVEN_MV);
+        m.setItem(0, new ItemStack(net.minecraft.world.item.Items.RAW_IRON));
+        h.succeedWhen(() -> h.assertTrue(m.getItem(1).is(net.minecraft.world.item.Items.IRON_INGOT), "output " + m.getItem(1)));
+    }
+
     /** Стопка горячих слитков в инвентаре выживающего игрока обжигает на 3 единицы. */
     static void hotIngotBurns(GameTestHelper h) {
         var player = h.makeMockPlayer(GameType.SURVIVAL);

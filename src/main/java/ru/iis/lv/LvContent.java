@@ -186,6 +186,11 @@ public final class LvContent {
     public static final DeferredItem<Item> MOLD_CASING = item("mold_casing");
     public static final DeferredItem<Item> MOLD_BOTTLE = item("mold_bottle");
     public static final DeferredItem<Item> MOLD_ANVIL = item("mold_anvil");
+    // формовочный пресс (D83): формы чеканки и наконечника стрелы, монета Doge, пустой стеклянный наконечник
+    public static final DeferredItem<Item> MOLD_CREDIT = item("mold_credit");
+    public static final DeferredItem<Item> MOLD_ARROW = item("mold_arrow");
+    public static final DeferredItem<Item> COIN_DOGE = item("coin_doge");
+    public static final DeferredItem<Item> ARROW_HEAD_GLASS_EMPTY = item("arrow_head_glass_empty");
     public static final List<String> EXTRUDER_SHAPE_IDS = List.of("plate", "rod", "bolt", "ring", "cell", "ingot", "wire", "casing",
             "pipe_tiny", "pipe_small", "pipe_medium", "pipe_large", "pipe_huge", "block", "sword", "pickaxe", "shovel", "axe", "hoe", "saw",
             "gear", "bottle", "small_gear");

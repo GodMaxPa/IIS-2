@@ -1,0 +1,20 @@
+{
+  "type": "iis:forming_press",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/brass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:coin_doge",
+      "count": 4
+    }
+  ],
+  "duration": 100,
+  "eut": 16,
+  "keep": [
+    "iis:mold_credit"
+  ]
+}

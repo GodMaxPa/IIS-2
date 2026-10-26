@@ -79,10 +79,17 @@ MACHINES = [
     ('thermal_centrifuge', 'thermalcentrifuge', 'THERMAL_CENTRIFUGE', 'ThermalCentrifuge', 'thermal_centrifuge', 1, 3, 0, 'Thermal Centrifuge'),
     # D83: machines IIS 2 had no LV version of; GT_Loader_MetaTileEntities:685-686 extruder (2 in, 1 out)
     ('extruder',      'extruder',      'EXTRUDER',         'Extruder',     'extruder',      2, 1, 0,     'Extruder'),
+    # :1039 forming press (2, 1), :1057 fluid heater (1, 0, 8000), :1102 electric oven (furnace recipes)
+    ('forming_press', 'press',         'PRESS',            'Press',        'forming_press', 2, 1, 0,     'Forming Press'),
+    ('fluid_heater',  'fluidheater',   'FLUID_HEATER',     'FluidHeater',  'fluid_heater',  1, 0, 8000,  'Fluid Heater'),
+    ('electric_oven', 'e_oven',        'ELECTRIC_OVEN',    'E_Oven',       None,            1, 1, 0,     'Electric Oven'),
 ]
 # GT crafting of the D83 machines (both tiers, X.* resolved per tier like MV_CRAFT)
 NEW_CRAFT = {
     'extruder': (['CCE', 'XMP', 'CCE'], {'M': 'HULL', 'X': 'PISTON', 'E': 'CIRCUIT', 'P': 'PIPE', 'C': 'COIL_HEATING_DOUBLE'}),
+    'forming_press': (['WPW', 'CMC', 'WPW'], {'M': 'HULL', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE'}),
+    'fluid_heater': (['OGO', 'PMP', 'WCW'], {'M': 'HULL', 'P': 'PUMP', 'O': 'COIL_HEATING_DOUBLE', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
+    'electric_oven': (['CEC', 'CMC', 'WEW'], {'M': 'HULL', 'E': 'CIRCUIT', 'W': 'WIRE', 'C': 'COIL_HEATING'}),
 }
 # MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
 # outputs and tanks as LV except the mixer (16000 L, :1022); the compressor tank (LV 4000, MV 8000) stays 0 as at LV (D82)
@@ -209,6 +216,11 @@ ITEMS = [
     ('mold_casing', 'gt:302', 'gt.metaitem.01.32302.name', 'Mold (Casing)', 'Форма (оболочка)'),
     ('mold_bottle', 'gt:305', 'gt.metaitem.01.32305.name', 'Mold (Bottle)', 'Форма (бутылка)'),
     ('mold_anvil', 'gt:314', 'gt.metaitem.01.32314.name', 'Mold (Anvil)', 'Форма (наковальня)'),
+    # forming press (D83): GT_MetaGenerated_Item_01:186, :198 molds, :66 doge coin, :129 empty glass arrow head
+    ('mold_credit', 'gt:304', 'gt.metaitem.01.32304.name', 'Mold (Coinage)', 'Форма (чеканка)'),
+    ('mold_arrow', 'gt:316', 'gt.metaitem.01.32316.name', 'Mold (Arrow Head)', 'Форма (наконечник стрелы)'),
+    ('coin_doge', 'gt:9', 'gt.metaitem.01.32009.name', 'Doge Coin', 'Монета Doge'),
+    ('arrow_head_glass_empty', 'gt:200', 'gt.metaitem.01.32200.name', 'Empty Glass Arrow Head', 'Пустой стеклянный наконечник стрелы'),
 ]
 
 # Generator fuels (GT_Recipe_Map sDieselFuels / sTurbineFuels from Materials FuelPower/FuelType, IIS MaterialProperties.cfg):
@@ -1034,6 +1046,8 @@ def generate(g):
         ('mold_casing', ['  h', ' P ', '   ']),
         ('mold_bottle', ['   ', ' P ', '  h']),
         ('mold_anvil', ['  P', '   ', ' h ']),
+        ('mold_credit', ['h  ', ' P ', '   ']),
+        ('mold_arrow', ['  P', 'h  ', '   ']),
     ):
         shaped(f'lv/{sid}', f'{NS}:{sid}', 1, pat, {'P': f'{NS}:shape_empty'})
     MV_CRAFT['thermal_centrifuge'] = (['CEC', 'OMO', 'WEW'], {'M': 'HULL', 'E': 'MOTOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'O': 'COIL_HEATING_DOUBLE'})
@@ -1290,7 +1304,8 @@ def generate(g):
                        ('jei.iis.electrolyzer', 'Electrolyzer', 'Электролизёр'), ('jei.iis.chemical_reactor', 'Chemical Reactor', 'Химический реактор'),
                        ('jei.iis.fluid_extractor', 'Fluid Extractor', 'Экстрактор жидкостей'),
                        ('jei.iis.fluid_solidifier', 'Fluid Solidifier', 'Отвердитель жидкостей'),
-                       ('jei.iis.distillery', 'Distillery', 'Дистиллятор'), ('jei.iis.extruder', 'Extruder', 'Экструдер'), ('jei.iis.chemical_bath', 'Chemical Bath', 'Химическая ванна'),
+                       ('jei.iis.distillery', 'Distillery', 'Дистиллятор'), ('jei.iis.extruder', 'Extruder', 'Экструдер'), ('jei.iis.forming_press', 'Forming Press', 'Формовочный пресс'),
+                       ('jei.iis.fluid_heater', 'Fluid Heater', 'Нагреватель жидкостей'), ('jei.iis.chemical_bath', 'Chemical Bath', 'Химическая ванна'),
                        ('jei.iis.bender', 'Bending Machine', 'Гибочный станок'), ('jei.iis.lathe', 'Lathe', 'Токарный станок'),
                        ('jei.iis.assembler', 'Assembler', 'Сборщик'), ('jei.iis.mixer', 'Mixer', 'Миксер'),
                        ('jei.iis.polarizer', 'Polarizer', 'Поляризатор'), ('jei.iis.ore_washer', 'Ore Washing Plant', 'Рудопромывочная установка'),

@@ -58,4 +58,5 @@
 | Вакуумный морозильник | `GT_MetaTileEntity_VacuumFreezer` | `multi.block.VacuumFreezerBlockEntity`, `multi.logic.FreezerLogic` | перенесено; крафт контроллера — с помпой HV и схемой «Данные» | T, G |
 | MV-версии 25 базовых машин, энергетический люк MV, трансформатор MV | `GT_Loader_MetaTileEntities` Machine_MV_*, `:196, 238` | `lv.LvMachineType` (`*_MV`), `multi.block.HatchType.ENERGY_MV`, `lv.block.TransformerBlock#low`, `tools/gen/lv.py` (`MV_CRAFT`) | перенесено (D82) | T, G |
 | Экструдер LV/MV, 23 насадки, формы печи сплавов (оболочка, бутылка, наковальня) | `ProcessingShaping`, `GT_Loader_MetaTileEntities:685–686` | `lv.LvMachineType.EXTRUDER*`, `tools/gen/mv.py` | перенесено (D83) | T, G |
-| Остальные LV- и MV-машины GT5 (пресс, гравёр, дуговая печь и др.), генераторы, буферы, шины и люки MV, электроотвёртка LV | `GT_Loader_MetaTileEntities` | — | дальше по плану MV | — |
+| Формовочный пресс, нагреватель жидкостей, электродуховка LV/MV | `GT_Loader_MetaTileEntities:1039–1102` | `lv.LvMachineType`, `tools/gen/mv.py` | перенесено (D84) | T, G |
+| Остальные LV- и MV-машины GT5 (гравёр, дуговая печь и др.), генераторы, буферы, шины и люки MV, электроотвёртка LV | `GT_Loader_MetaTileEntities` | — | дальше по плану MV | — |

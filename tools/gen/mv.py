@@ -108,6 +108,16 @@ def generate(g):
                 mrec('alloy_smelter', f'casing_from_{pre}', [ing(tin, 2)], [out(f'{NS}:steel_item_casing', 3)], 128, mult, f'{NS}:mold_casing')
             if into in ('Iron', 'WroughtIron'):
                 mrec('alloy_smelter', f'anvil_from_{pre}', [ing(tin, 31)], [out('minecraft:anvil')], 512, 4 * mult, f'{NS}:mold_anvil')
+    # forming press: GT_MachineRecipeLoader:1322 brass plate + coinage mold -> 4 doge coins (100 t, 16 EU/t),
+    # :551 glass + arrow head mold -> empty glass arrow head (64 t, 4 EU/t); IC2 coins, AE2/BuildCraft and food are not ported
+    mrec('forming_press', 'coin_doge', [ing(tag_of('plate', 'Brass'))], [out(f'{NS}:coin_doge', 4)], 100, 16, f'{NS}:mold_credit')
+    mrec('forming_press', 'arrow_head_glass_empty', [ing('minecraft:glass')], [out(f'{NS}:arrow_head_glass_empty')], 64, 4, f'{NS}:mold_arrow')
+    # fluid heater: GT_MachineRecipeLoader:723-724 circuit 1, 6 L water / distilled water -> 960 L steam (30 t, 32 EU/t)
+    for fid, rid in (('minecraft:water', 'steam_from_water'), (f'{NS}:distilled_water', 'steam_from_distilled_water')):
+        rec[f'fluid_heater/{rid}'] = {'type': f'{NS}:fluid_heater', 'inputs': [], 'outputs': [], 'duration': 30, 'eut': 32,
+                                      'fluid_inputs': [{'ingredient': fid, 'amount': 6}], 'fluid_outputs': [{'id': f'{NS}:steam', 'amount': 960}],
+                                      'circuit': 1}
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
-    return {'extruder': sum(1 for k in rec if k.startswith('extruder/')), 'alloy_smelter_molds': sum(1 for k in rec if k.startswith('alloy_smelter/'))}
+    return {'forming_press': sum(1 for k in rec if k.startswith('forming_press/')), 'fluid_heater': sum(1 for k in rec if k.startswith('fluid_heater/')),
+            'extruder': sum(1 for k in rec if k.startswith('extruder/')), 'alloy_smelter_molds': sum(1 for k in rec if k.startswith('alloy_smelter/'))}

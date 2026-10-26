@@ -243,6 +243,33 @@
     "gui": "lv/extruder"
   },
   {
+    "id": "forming_press_lv",
+    "type": "forming_press",
+    "recipeMap": "forming_press",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/press"
+  },
+  {
+    "id": "fluid_heater_lv",
+    "type": "fluid_heater",
+    "recipeMap": "fluid_heater",
+    "inputs": 1,
+    "outputs": 0,
+    "tank": 8000,
+    "gui": "lv/fluidheater"
+  },
+  {
+    "id": "electric_oven_lv",
+    "type": "electric_oven",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/e_oven"
+  },
+  {
     "id": "macerator_mv",
     "type": "macerator_mv",
     "recipeMap": "macerator",
@@ -475,6 +502,33 @@
     "outputs": 1,
     "tank": 0,
     "gui": "lv/extruder"
+  },
+  {
+    "id": "forming_press_mv",
+    "type": "forming_press_mv",
+    "recipeMap": "forming_press",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/press"
+  },
+  {
+    "id": "fluid_heater_mv",
+    "type": "fluid_heater_mv",
+    "recipeMap": "fluid_heater",
+    "inputs": 1,
+    "outputs": 0,
+    "tank": 8000,
+    "gui": "lv/fluidheater"
+  },
+  {
+    "id": "electric_oven_mv",
+    "type": "electric_oven_mv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/e_oven"
   },
   {
     "id": "thermal_centrifuge_mv",
