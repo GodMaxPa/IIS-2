@@ -39,10 +39,15 @@ public class BatteryItem extends Item {
         stack.set(LvContent.CHARGE.get(), Math.max(0, eu));
     }
 
+    /** Ёмкость этого предмета; у электроинструмента зависит от батареи, с которой его собрали (GT MaxCharge). */
+    public long capacity(ItemStack stack) {
+        return capacity;
+    }
+
     /** Зарядить до amount EU (не больше предела передачи); вернуть принятое. */
     public long charge(ItemStack stack, long amount) {
         long c = charge(stack);
-        long d = Math.min(Math.min(amount, transferLimit), capacity - c);
+        long d = Math.min(Math.min(amount, transferLimit), capacity(stack) - c);
         if (d <= 0) return 0;
         setCharge(stack, c + d);
         return d;
@@ -64,7 +69,7 @@ public class BatteryItem extends Item {
 
     @Override
     public int getBarWidth(ItemStack stack) {
-        return (int) Math.round(13.0 * charge(stack) / capacity);
+        return (int) Math.round(13.0 * charge(stack) / Math.max(1, capacity(stack)));
     }
 
     @Override
@@ -74,6 +79,6 @@ public class BatteryItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag flag) {
-        builder.accept(Component.translatable("item.iis.battery_lv.tooltip", charge(stack), capacity).withStyle(net.minecraft.ChatFormatting.GRAY));
+        builder.accept(Component.translatable("item.iis.battery_lv.tooltip", charge(stack), capacity(stack)).withStyle(net.minecraft.ChatFormatting.GRAY));
     }
 }

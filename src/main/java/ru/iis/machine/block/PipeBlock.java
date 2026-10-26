@@ -154,7 +154,7 @@ public class PipeBlock extends Block implements EntityBlock {
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (!stack.is(WRENCH)) return InteractionResult.TRY_WITH_EMPTY_HAND;
+        if (!Wrench.is(stack)) return InteractionResult.TRY_WITH_EMPTY_HAND;
         if (!level.isClientSide()) {
             Direction side = Wrench.wrenchingSide(pos, hit); // GT: сетка на грани трубы
             boolean on = !state.getValue(PROPS.get(side));

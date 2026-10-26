@@ -27,6 +27,8 @@ public final class TreeFeller {
     private TreeFeller() {}
 
     public static final int MAX_LOGS = 256;
+    public static final net.minecraft.tags.TagKey<net.minecraft.world.item.Item> FELLERS = net.minecraft.tags.TagKey.create(
+            net.minecraft.core.registries.Registries.ITEM, net.minecraft.resources.Identifier.fromNamespaceAndPath(ru.iis.IIS.MODID, "tree_fellers"));
     private static boolean busy;
 
     public static void onBreak(BreakBlockEvent e) {
@@ -35,7 +37,8 @@ public final class TreeFeller {
         BlockState state = e.getState();
         if (player.isShiftKeyDown() || player.getAbilities().instabuild || !state.is(BlockTags.LOGS)) return;
         ItemStack tool = player.getMainHandItem();
-        if (!tool.is(ItemTags.AXES)) return;
+        // топоры и цепные пилы LV (тег iis:tree_fellers, D78); разряженная пила не валит
+        if (!(tool.is(ItemTags.AXES) || tool.is(FELLERS)) || !tool.isCorrectToolForDrops(state)) return;
         List<BlockPos> logs = findTree(level, e.getPos());
         if (logs.isEmpty()) return;
         busy = true;

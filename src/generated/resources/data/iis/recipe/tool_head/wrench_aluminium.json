@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "hXW",
+    "XRX",
+    "WXd"
+  ],
+  "key": {
+    "X": "#c:plates/aluminium",
+    "R": "#iis:rings/steel",
+    "W": "#iis:screws/steel",
+    "h": "#iis:tools/hammer",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:wrench_head_aluminium"
+  }
+}

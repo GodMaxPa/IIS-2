@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/wrench_lv_wrought_iron",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13158620
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 13153460
+      }
+    ]
+  }
+}

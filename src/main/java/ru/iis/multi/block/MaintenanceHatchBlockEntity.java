@@ -43,6 +43,7 @@ public class MaintenanceHatchBlockEntity extends BlockEntity {
 
     public static Maintenance.@Nullable Problem problemFor(ItemStack stack) {
         if (stack.getItem() instanceof SolderingIronItem) return Maintenance.Problem.SOLDERING;
+        if (!ru.iis.lv.item.ElectricToolItem.usable(stack)) return null;   // разряженный электроинструмент
         if (stack.is(tool("wrench"))) return Maintenance.Problem.WRENCH;
         if (stack.is(tool("screwdriver"))) return Maintenance.Problem.SCREWDRIVER;
         if (stack.is(tool("soft_hammer"))) return Maintenance.Problem.SOFT_HAMMER;

@@ -20,8 +20,9 @@ public final class Wrench {
 
     public static final int DAMAGE = 20;
 
+    /** Гаечный ключ, которым можно работать: обычный или заряженный электроключ LV (D78). */
     public static boolean is(ItemStack stack) {
-        return stack.is(PipeBlock.WRENCH);
+        return stack.is(PipeBlock.WRENCH) && ru.iis.lv.item.ElectricToolItem.usable(stack);
     }
 
     /**

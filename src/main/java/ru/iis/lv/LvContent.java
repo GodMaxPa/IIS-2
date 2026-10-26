@@ -32,8 +32,11 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import ru.iis.IIS;
 import ru.iis.fluid.IISFluids;
 import ru.iis.lv.block.*;
+import ru.iis.core.material.MaterialData;
 import ru.iis.lv.item.BatteryItem;
+import ru.iis.lv.item.ElectricToolItem;
 import ru.iis.lv.item.TreetapItem;
+import ru.iis.tool.GtTools;
 import ru.iis.lv.menu.BatteryBufferMenu;
 import ru.iis.lv.menu.CokeOvenMenu;
 import ru.iis.lv.menu.ElectricMachineMenu;
@@ -61,6 +64,10 @@ public final class LvContent {
 
     /** Заряд батарейки, EU. */
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Long>> CHARGE = COMPONENTS.registerComponentType("charge",
+            b -> b.persistent(Codec.LONG).networkSynchronized(ByteBufCodecs.VAR_LONG));
+
+    /** Ёмкость электроинструмента, EU: от батареи, с которой он собран (GT MaxCharge, D78). */
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Long>> MAX_CHARGE = COMPONENTS.registerComponentType("max_charge",
             b -> b.persistent(Codec.LONG).networkSynchronized(ByteBufCodecs.VAR_LONG));
 
     /** Конфигурация программной схемы GT, 0…24 (D75). */
@@ -180,6 +187,14 @@ public final class LvContent {
     public static final DeferredItem<Item> COVER_SHUTTER = item("cover_shutter");
     public static final DeferredItem<ru.iis.lv.item.MultimeterItem> MULTIMETER = ITEMS.registerItem("multimeter", ru.iis.lv.item.MultimeterItem::new, p -> p.stacksTo(1));
     public static final DeferredItem<TreetapItem> TREETAP = ITEMS.registerItem("treetap", TreetapItem::new, p -> p.durability(16));
+    /** Электроинструменты LV из /iis/tools.json: бур, цепная пила, электроключ по материалам головки (D78). */
+    public static final Map<String, DeferredItem<ElectricToolItem>> ELECTRIC_TOOLS = new LinkedHashMap<>();
+    static {
+        for (MaterialData.ToolDef d : MaterialData.tools()) {
+            if (!GtTools.ELECTRIC.contains(d.tool())) continue;
+            ELECTRIC_TOOLS.put(d.id(), ITEMS.registerItem(d.id(), p -> new ElectricToolItem(GtTools.properties(p, d), d)));
+        }
+    }
     static {
         TAB_ORDER.add(BATTERY_LV);
         TAB_ORDER.add(TREETAP);
@@ -223,6 +238,18 @@ public final class LvContent {
             }))
             .build());
 
+    /** Вкладка «Инструменты» LV: электроинструменты заряженными до 100 000 EU (литиевая батарея). */
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB = TABS.register("electric_tools", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup.iis.electric_tools"))
+            .icon(() -> ELECTRIC_TOOLS.values().stream().findFirst().map(t -> new ItemStack(t.get())).orElse(new ItemStack(BATTERY_LV.get())))
+            .displayItems((params, out) -> ELECTRIC_TOOLS.values().forEach(t -> {
+                ItemStack s = new ItemStack(t.get());
+                s.set(MAX_CHARGE.get(), 100000L);
+                BatteryItem.setCharge(s, 100000L);
+                out.accept(s);
+            }))
+            .build());
+
     public static void register(IEventBus modBus) {
         BLOCKS.register(modBus);
         ITEMS.register(modBus);
@@ -232,6 +259,7 @@ public final class LvContent {
         COMPONENTS.register(modBus);
         modBus.addListener(LvContent::registerCapabilities);
         NeoForge.EVENT_BUS.addListener(Deferred::onLevelTick);
+        NeoForge.EVENT_BUS.addListener(ElectricToolItem::onCrafted);
     }
 
     private static void registerCapabilities(RegisterCapabilitiesEvent event) {

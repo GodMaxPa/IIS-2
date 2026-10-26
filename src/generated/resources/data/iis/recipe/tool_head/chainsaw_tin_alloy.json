@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SRS",
+    "XhX",
+    "SRS"
+  ],
+  "key": {
+    "X": "#c:plates/tin_alloy",
+    "S": "#c:plates/steel",
+    "R": "#iis:rings/steel",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:chainsaw_head_tin_alloy"
+  }
+}

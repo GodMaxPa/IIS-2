@@ -3,7 +3,7 @@
 Эталон: GT5-II `IdealIndustrial/GT5Unofficial` @ `00021e3` + конфиги и скрипты сборки ИИС 1.19.1 (см. AGENTS.md).
 Уровни доказательств: **T** — unit-тесты, **G** — GameTest (машины в мире), **S** — `/iis selftest` на сервере,
 **C** — скриншот клиента в облаке, **O** — проверено владельцем в игре, **—** — не проверено.
-Обновлено 2026-10-26 (после LV IV, D77). Био и Дуо — не перенос, а новые пути: см. `docs/BIO_PATH.md`.
+Обновлено 2026-10-26 (после электроинструментов LV, D78). Био и Дуо — не перенос, а новые пути: см. `docs/BIO_PATH.md`.
 
 | Подсистема | Оригинал | Наш код | Статус | Доказательства |
 |---|---|---|---|---|
@@ -11,12 +11,13 @@
 | Материалы и формы | `Materials`, `OrePrefixes`, `MaterialProperties.cfg` | `core.material`, `tools/gen/gen_content.py` | 137 материалов (с хромом и нержавейкой, D76); формы пыли, слитки, пластины, фольга, шестерни, тонкая проволока, кольца, роторы, огранки камней; нет ingotDouble+, plateDouble+, spring, crushedCentrifuged, ingotHot | T, S, C |
 | Жилы и руды | `GT_Worldgen_GT_Ore_Layer`, `WorldGeneration.cfg` | `world.vein`, `world.ore` | перенесено (без космоса) | T, S, C, O (загрузка) |
 | Малые руды | `GT_Worldgen_GT_Ore_SmallPieces` | `VeinFeature`, `OreBlocks` | перенесено (без удачи) | S |
-| Инструменты GT | `GT_Tool_*`, `GT_MetaGenerated_Tool_01` | `tool.*` | меч, кирка, лопата, топор, мотыга, пила, молот, киянка, ключ, напильник, монтировка, отвёртка, ступка, кусачки, нож; нет остальных инструментов GT5 и электроинструментов | S, C, O (ключ) |
+| Инструменты GT | `GT_Tool_*`, `GT_MetaGenerated_Tool_01` | `tool.*` | меч, кирка, лопата, топор, мотыга, пила, молот, киянка, ключ, напильник, монтировка, отвёртка, ступка, кусачки, нож; электроинструменты LV — отдельной строкой; нет остальных инструментов GT5 | S, C, O (ключ) |
+| Электроинструменты LV | `GT_MetaGenerated_Tool_01` (DRILL_LV, CHAINSAW_LV, WRENCH_LV), `GT_Tool_*_LV`, `ProcessingToolHead` | `lv.item.ElectricToolItem`, `lv.ElectricToolLogic` | бур, цепная пила, электроключ из 43 материалов; наконечники; заряд от батареи сборки, EU вместо прочности, износ 1/25, зарядка в буфере (D78) | T, G |
 | Ручная переработка | `ProcessingOre/Ingot/...`, котёл | рецепты + `MaterialItem` | перенесено | S |
 | Пар: жидкость | `GT_ModHandler.getSteam` | `fluid.IISFluids` | перенесено | G |
 | Малые котлы (4) | `GT_MetaTileEntity_Boiler_*` | `machine.logic.BoilerLogic`, `BoilerBlockEntity` | перенесено | T, G, C |
 | Паровые машины (6×2) | `machines/steam/*`, `BasicMachine_Bronze` | `SteamMachineLogic`, `SteamMachineBlockEntity` | перенесено (выход всегда сзади) | T, G, C |
-| Карты рецептов GT | `GT_Recipe_Map` | `machine.recipe.*`, `tools/gen/*.py` | все карты пара, LV, LV II, LV III, LV IV и доменных печей; всего в игре 6 877 рецептов (D77) | S, G |
+| Карты рецептов GT | `GT_Recipe_Map` | `machine.recipe.*`, `tools/gen/*.py` | все карты пара, LV, LV II, LV III, LV IV и доменных печей; всего в игре 7 393 рецепта (D78) | S, G |
 | Жидкостные трубы | `GT_MetaPipeEntity_Fluid`, `generateFluidPipes` | `PipeBlock`, `PipeBlockEntity` | 43 исполнения: дерево (3 размера) и 8 материалов × 5 размеров; опасности GT (огонь, утечка газа, ожог), D72. Крафт — только где есть пластина (дерево, медь, бронза, сталь, нержавейка) | G, C |
 | Кирпичная доменная печь | `GT_MetaTileEntity_PrimitiveBlastFurnace` | `BbfStructure`, `BbfBlockEntity` | перенесено | T, G, C |
 | Огнеупорная цепочка | `GT_CraftingRecipeLoader`, `GT_MachineRecipeLoader` | `tools/gen/steam.py` | перенесено | S |
@@ -51,4 +52,4 @@
 | Мультиметр | Portable Scanner (HV) | `lv.item.MultimeterItem`, `lv.EnergyReadout` | с LV и с живым режимом (отличие, D51) | G |
 | Геологоразведка | GT_Scanner_Mod | `compat.journeymap`, `/iis scan`, `/iis vein` | слой JourneyMap «сетка рудных чанков» (D60); прибора-сканера нет | T, C |
 | Валка деревьев | Treecapitator (отдельный мод) | `world.TreeFeller` | топор GT валит дерево целиком (D56) | G |
-| Остальные LV-машины GT5, провода 8x+, электроинструменты | `GT_Loader_MetaTileEntities` | — | следующий блок, затем MV | — |
+| Остальные LV-машины GT5, провода 8x+, электроотвёртка LV | `GT_Loader_MetaTileEntities` | — | следующий блок, затем MV | — |
