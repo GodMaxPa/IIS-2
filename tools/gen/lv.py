@@ -12,17 +12,37 @@ from PIL import Image
 # ----------------------------------------------------------------------------------------------------------------
 # Catalogue
 # ----------------------------------------------------------------------------------------------------------------
-# GT_Loader_MetaTileEntities#makeWires (HardCoreCableLoss=false): material, loss insulated, loss bare, amps per 1x, voltage
+# GT_Loader_MetaTileEntities#makeWires:1468-1496 with HardCoreCableLoss=false (bEC = true): material, loss insulated,
+# loss bare, amps per 1x, voltage. Only materials that exist in IIS 2 (titanium, tungsten, osmium… come with their materials).
 WIRES = [
     ('RedAlloy', 0, 1, 1, 8),
+    ('Cobalt', 2, 4, 2, 32),
     ('Lead', 2, 4, 2, 32),
     ('Tin', 1, 2, 1, 32),
+    ('Zinc', 1, 2, 1, 32),
+    ('SolderingAlloy', 1, 2, 1, 32),
+    ('Iron', 3, 6, 2, 128),
+    ('Nickel', 3, 6, 3, 128),
+    ('Cupronickel', 3, 6, 2, 128),   # heating coils
     ('Copper', 2, 4, 1, 128),
     ('AnnealedCopper', 1, 2, 1, 128),
-    ('Cupronickel', 3, 6, 2, 128),   # makeWires(Cupronickel, …, 3/6 (bEC), 2 A, V[2]) — for heating coils
-    ('Gold', 6, 12, 3, 512),         # makeWires(Gold, 1420, 6/12, 3 A, V[3]) — electrolyzer (LV III, D76)
+    ('Gold', 2, 4, 3, 512),          # electrolyzer (LV III); D76 used the hardcore 6/12 by mistake, fixed in D79
+    ('Electrum', 2, 4, 2, 512),
+    ('Silver', 1, 2, 1, 512),
+    ('Steel', 2, 4, 2, 2048),
+    ('Aluminium', 1, 2, 1, 2048),
+    ('Platinum', 1, 2, 2, 8192),
 ]
-WIRE_SIZES = [(1, 0.125, 0.25), (2, 0.25, 0.375), (4, 0.375, 0.5)]   # size, bare thickness, insulated thickness (GT)
+# size, bare thickness, insulated thickness (GT makeWires; there is no 16x cable — commented out in GT), insulation ring
+# (GT_MetaPipeEntity_Cable#getTexture by thickness: <0.374 TINY, <0.499 SMALL, <0.624 MEDIUM, <0.749 MEDIUM_PLUS, <0.874 LARGE)
+WIRE_SIZES = [(1, 0.125, 0.25, 'INSULATION_TINY'), (2, 0.25, 0.375, 'INSULATION_SMALL'), (4, 0.375, 0.5, 'INSULATION_MEDIUM'),
+              (8, 0.5, 0.625, 'INSULATION_MEDIUM_PLUS'), (12, 0.625, 0.75, 'INSULATION_LARGE'), (16, 0.75, None, None)]
+VOLTAGE_NAMES = {8: 'ULV', 32: 'LV', 128: 'MV', 512: 'HV', 2048: 'EV', 8192: 'IV'}
+# ProcessingWire: insulation by material (the GT switch falls through: red alloy also takes the carpet and rubber recipes,
+# the carpet group also takes rubber)
+WIRE_PAPER = ('RedAlloy',)
+WIRE_CARPET = ('RedAlloy', 'Cobalt', 'Lead', 'Tin', 'Zinc', 'SolderingAlloy')
+WIRE_RUBBER = WIRE_CARPET + ('Iron', 'Nickel', 'Cupronickel', 'Copper', 'AnnealedCopper', 'Gold', 'Electrum', 'Silver', 'Steel', 'Aluminium')
 
 # LV basic machines: id, GT name (lang/overlay), GT GUI, recipe map (None = vanilla smelting), inputs, outputs, tank, EN
 MACHINES = [
@@ -360,15 +380,17 @@ def generate(g):
                 tinted.putpixel((x, y), (r * rgb[0] // 255, gg * rgb[1] // 255, b * rgb[2] // 255, a))
         mid = mat_id(mat)
         tinted.save(tex_out(f'block/cable/wire_{mid}.png'))
-        for size, bare, ins in WIRE_SIZES:
+        for size, bare, ins, ring_name in WIRE_SIZES:
             for insulated in (False, True):
+                if insulated and ins is None:
+                    continue
                 bid = f'{"cable" if insulated else "wire"}_{mid}_{size}x'
                 thick = (ins if insulated else bare) * 16
                 lo, hi = (16 - thick) / 2, (16 + thick) / 2
                 side = f'{NS}:block/cable/insulation' if insulated else f'{NS}:block/cable/wire_{mid}'
                 end = f'{NS}:block/cable/{"cable" if insulated else "wire"}_{mid}_{size}x_end' if insulated else side
                 if insulated:
-                    ring = os.path.join(LV, 'iconsets', {1: 'INSULATION_SMALL', 2: 'INSULATION_MEDIUM', 4: 'INSULATION_MEDIUM_PLUS'}[size] + '.png')
+                    ring = os.path.join(LV, 'iconsets', ring_name + '.png')
                     endimg = Image.alpha_composite(tinted, img(ring).crop((0, 0, 16, 16)))
                     endimg.save(tex_out(f'block/cable/cable_{mid}_{size}x_end.png'))
                 allf = ('north', 'south', 'east', 'west', 'up', 'down')
@@ -398,8 +420,8 @@ def generate(g):
                 en = f'{size}x {m["en"]} {"Cable" if insulated else "Wire"}'
                 name(f'block.{NS}.{bid}', en, ru(gt_key, en))
                 v_loss = loss_ins if insulated else loss
-                tooltip_lines(bid, [(f'Max Voltage: {volts} EU/t ({["ULV", "LV", "MV", "HV"][[8, 32, 128, 512].index(volts)]})',
-                                     f'Макс. напряжение: {volts} EU/t ({["ULV", "LV", "MV", "HV"][[8, 32, 128, 512].index(volts)]})'),
+                tooltip_lines(bid, [(f'Max Voltage: {volts} EU/t ({VOLTAGE_NAMES[volts]})',
+                                     f'Макс. напряжение: {volts} EU/t ({VOLTAGE_NAMES[volts]})'),
                                     (f'Max Amperage: {amps * size}', f'Макс. ампераж: {amps * size}'),
                                     (f'Loss/Meter/Ampere: {v_loss} EU-Volt', f'Потери на блок: {v_loss} В')]
                               + ([] if insulated else [('Not insulated: shocks on touch', 'Без изоляции: бьёт током')]))
@@ -417,22 +439,31 @@ def generate(g):
     def C(mat, size=1):
         return f'#iis:cables/{size}x/{mat_id(mat)}'
 
-    # wire recipes: ProcessingWire (plate + wire cutter -> 1x; 2x <-> 1x; insulation) and wiremill
+    # wire recipes: ProcessingWire:42-89 (plate + wire cutter -> 1x; joining and splitting by hand; insulation) and wiremill
     for mat, *_ in WIRES:
         mid = mat_id(mat)
         if ref('plate', mat):
             shaped(f'wire/{mid}_1x', f'{NS}:wire_{mid}_1x', 1, ['Px'], {'P': tag_of('plate', mat)})
         shapeless(f'wire/{mid}_2x', f'{NS}:wire_{mid}_2x', 1, [W(mat), W(mat)])
         shapeless(f'wire/{mid}_4x', f'{NS}:wire_{mid}_4x', 1, [W(mat, 2), W(mat, 2)])
-        shapeless(f'wire/{mid}_2x_split', f'{NS}:wire_{mid}_1x', 2, [W(mat, 2)])
-        shapeless(f'wire/{mid}_4x_split', f'{NS}:wire_{mid}_1x', 4, [W(mat, 4)])
-        for size, *_ in WIRE_SIZES:
-            cost = size // 4 + 1
-            if mat == 'RedAlloy':      # ProcessingWire: red alloy is insulated with paper
+        shapeless(f'wire/{mid}_4x_from_1x', f'{NS}:wire_{mid}_4x', 1, [W(mat)] * 4)
+        shapeless(f'wire/{mid}_8x', f'{NS}:wire_{mid}_8x', 1, [W(mat, 4), W(mat, 4)])
+        shapeless(f'wire/{mid}_8x_from_1x', f'{NS}:wire_{mid}_8x', 1, [W(mat)] * 8)
+        shapeless(f'wire/{mid}_12x', f'{NS}:wire_{mid}_12x', 1, [W(mat, 8), W(mat, 4)])
+        shapeless(f'wire/{mid}_16x', f'{NS}:wire_{mid}_16x', 1, [W(mat, 8), W(mat, 8)])
+        shapeless(f'wire/{mid}_16x_from_12x', f'{NS}:wire_{mid}_16x', 1, [W(mat, 12), W(mat, 4)])
+        for size in (2, 4, 8, 12, 16):
+            shapeless(f'wire/{mid}_{size}x_split', f'{NS}:wire_{mid}_1x', size, [W(mat, size)])
+        for size, _b, ins, _r in WIRE_SIZES:
+            if ins is None:
+                continue
+            cost = size // 4 + 1   # ProcessingWire: costMultiplier = cableWidth / 4 + 1
+            if mat in WIRE_PAPER:
                 shapeless(f'cable/{mid}_{size}x', f'{NS}:cable_{mid}_{size}x', 1, [W(mat, size)] + ['minecraft:paper'] * cost)
-            elif mat in ('Lead', 'Tin'):  # black carpet + string
-                shapeless(f'cable/{mid}_{size}x', f'{NS}:cable_{mid}_{size}x', 1, [W(mat, size)] + ['minecraft:black_carpet'] * cost + ['minecraft:string'])
-            # copper and annealed copper: assembler with molten rubber (fluids of the chemistry slice) -> below via rubber plates
+            if mat in WIRE_CARPET:   # black carpet + string
+                shapeless(f'cable/{mid}_{size}x' + ('_carpet' if mat in WIRE_PAPER else ''), f'{NS}:cable_{mid}_{size}x', 1,
+                          [W(mat, size)] + ['minecraft:black_carpet'] * cost + ['minecraft:string'])
+            # rubber group: assembler with molten rubber (below, with the machine recipes)
 
     # --------------------------------------------------------------------------------------------------------
     # Machine casing, hull (GT_Loader_MetaTileEntities: Casing_LV "PPP/PwP/PPP", HardMachineCasings Hull_LV "PHP/CMC")
@@ -911,7 +942,7 @@ def generate(g):
         if ingot and rod and 'NO_WORKING' not in st:
             mrec('lathe', f'rod_{mid}', [ing(tag_of('ingot', n))], [out(rod), out(ref('small_dust', prop(n, 'MaterialMacerateInto', n)) or ref('small_dust', n), 2)], mass * 5, 16)
         # ProcessingWire / ProcessingFineWire wiremill: ingot -> 2 wire (100, 4); rod -> wire (50, 4); wire -> 4 fine (200, 8)
-        if any(w[0] == n for w in WIRES):
+        if any(w[0] == n for w in WIRES):   # ProcessingWire:28-30
             w1 = f'{NS}:wire_{mid}_1x'
             if ingot:
                 mrec('wiremill', f'wire_{mid}', [ing(tag_of('ingot', n))], [out(w1, 2)], 100, 4)
@@ -993,12 +1024,17 @@ def generate(g):
     mrec('assembler', 'coated_circuit_board', [ing('#c:plates/wood', 8), ing(f'{NS}:sticky_resin')], [out(f'{NS}:coated_circuit_board', 8)], 160, 8)
     for mat, *_ in WIRES:
         mid = mat_id(mat)
-        mrec('assembler', f'wire_{mid}_2x', [ing(W(mat), 2)], [out(f'{NS}:wire_{mid}_2x')], 150, 8)
-        mrec('assembler', f'wire_{mid}_4x', [ing(W(mat), 4)], [out(f'{NS}:wire_{mid}_4x')], 200, 8)
-        if mat in ('Copper', 'AnnealedCopper', 'Cupronickel') and ref('plate', 'Rubber'):
-            # ProcessingWire: molten rubber 144*cost in the assembler; until fluids of chemistry exist, rubber plates (D45)
-            for size, *_ in WIRE_SIZES:
-                mrec('assembler', f'cable_{mid}_{size}x', [ing(W(mat, size)), ing(P('Rubber'), size // 4 + 1)], [out(f'{NS}:cable_{mid}_{size}x')], 100, 8)
+        # ProcessingWire:52-56: N x 1x wire + programmed circuit N -> Nx wire
+        for size, dur in ((2, 150), (4, 200), (8, 300), (12, 400), (16, 500)):
+            mrec('assembler', f'wire_{mid}_{size}x', [ing(W(mat), size)], [out(f'{NS}:wire_{mid}_{size}x')], dur, 8, circuit=size)
+        if mat in WIRE_RUBBER:
+            # ProcessingWire:113-115: wire + circuit 24 + 144 mB molten rubber per cost -> cable (100 t, 8 EU/t); styrene-butadiene
+            # rubber and silicone variants come with those materials
+            for size, _b, ins, _r in WIRE_SIZES:
+                if ins is None:
+                    continue
+                mrec('assembler', f'cable_{mid}_{size}x', [ing(W(mat, size))], [out(f'{NS}:cable_{mid}_{size}x')], 100, 8,
+                     fin={'ingredient': f'{NS}:molten_rubber', 'amount': 144 * (size // 4 + 1)}, circuit=24)
     # GT_MachineRecipeLoader:1963 robot arm etc. (assembler variants, 80 t, 30 EU/t)
     mrec('assembler', 'robot_arm_lv', [ing(MOTOR, 2), ing(PISTON), ing(R('Steel'), 2), ing(CIRC), ing(C('Tin'), 3)], [out(ARM)], 80, 30)
     # coke oven (Railcraft defaults COKE_COOK_TIME=1800, creosote 500 L; not in the reference — see PORTING_NOTES)

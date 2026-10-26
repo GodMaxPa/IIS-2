@@ -4,10 +4,6 @@
     {
       "ingredient": "#iis:wires/1x/cupronickel",
       "count": 1
-    },
-    {
-      "ingredient": "#c:plates/rubber",
-      "count": 1
     }
   ],
   "outputs": [
@@ -17,5 +13,12 @@
     }
   ],
   "duration": 100,
-  "eut": 8
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_rubber",
+      "amount": 144
+    }
+  ],
+  "circuit": 24
 }

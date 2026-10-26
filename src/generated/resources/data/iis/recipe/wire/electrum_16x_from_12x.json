@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/12x/electrum",
+    "#iis:wires/4x/electrum"
+  ],
+  "result": {
+    "id": "iis:wire_electrum_16x"
+  }
+}

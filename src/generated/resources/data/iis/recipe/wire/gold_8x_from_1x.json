@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/gold",
+    "#iis:wires/1x/gold",
+    "#iis:wires/1x/gold",
+    "#iis:wires/1x/gold",
+    "#iis:wires/1x/gold",
+    "#iis:wires/1x/gold",
+    "#iis:wires/1x/gold",
+    "#iis:wires/1x/gold"
+  ],
+  "result": {
+    "id": "iis:wire_gold_8x"
+  }
+}

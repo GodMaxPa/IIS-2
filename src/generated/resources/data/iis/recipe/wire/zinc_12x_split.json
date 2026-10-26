@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/12x/zinc"
+  ],
+  "result": {
+    "id": "iis:wire_zinc_1x",
+    "count": 12
+  }
+}

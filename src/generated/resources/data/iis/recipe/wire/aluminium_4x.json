@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/2x/aluminium",
+    "#iis:wires/2x/aluminium"
+  ],
+  "result": {
+    "id": "iis:wire_aluminium_4x"
+  }
+}

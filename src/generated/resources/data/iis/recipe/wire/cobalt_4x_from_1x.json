@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/cobalt",
+    "#iis:wires/1x/cobalt",
+    "#iis:wires/1x/cobalt",
+    "#iis:wires/1x/cobalt"
+  ],
+  "result": {
+    "id": "iis:wire_cobalt_4x"
+  }
+}

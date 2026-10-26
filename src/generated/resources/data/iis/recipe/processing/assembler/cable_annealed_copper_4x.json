@@ -4,10 +4,6 @@
     {
       "ingredient": "#iis:wires/4x/annealed_copper",
       "count": 1
-    },
-    {
-      "ingredient": "#c:plates/rubber",
-      "count": 2
     }
   ],
   "outputs": [
@@ -17,5 +13,12 @@
     }
   ],
   "duration": 100,
-  "eut": 8
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_rubber",
+      "amount": 288
+    }
+  ],
+  "circuit": 24
 }

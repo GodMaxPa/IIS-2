@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/platinum",
+    "#iis:wires/1x/platinum",
+    "#iis:wires/1x/platinum",
+    "#iis:wires/1x/platinum"
+  ],
+  "result": {
+    "id": "iis:wire_platinum_4x"
+  }
+}

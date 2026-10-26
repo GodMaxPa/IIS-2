@@ -1,0 +1,18 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/silver",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_silver_16x",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 8,
+  "circuit": 16
+}

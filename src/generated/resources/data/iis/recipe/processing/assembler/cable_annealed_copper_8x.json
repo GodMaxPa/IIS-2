@@ -1,0 +1,24 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/8x/annealed_copper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_annealed_copper_8x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_rubber",
+      "amount": 432
+    }
+  ],
+  "circuit": 24
+}

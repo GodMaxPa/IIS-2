@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/soldering_alloy",
+    "#iis:wires/1x/soldering_alloy",
+    "#iis:wires/1x/soldering_alloy",
+    "#iis:wires/1x/soldering_alloy",
+    "#iis:wires/1x/soldering_alloy",
+    "#iis:wires/1x/soldering_alloy",
+    "#iis:wires/1x/soldering_alloy",
+    "#iis:wires/1x/soldering_alloy"
+  ],
+  "result": {
+    "id": "iis:wire_soldering_alloy_8x"
+  }
+}

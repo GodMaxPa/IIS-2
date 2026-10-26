@@ -60,6 +60,166 @@
     "thickness": 8.0
   },
   {
+    "id": "wire_red_alloy_8x",
+    "material": "red_alloy",
+    "size": 8,
+    "insulated": false,
+    "voltage": 8,
+    "amperage": 8,
+    "loss": 1,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_red_alloy_8x",
+    "material": "red_alloy",
+    "size": 8,
+    "insulated": true,
+    "voltage": 8,
+    "amperage": 8,
+    "loss": 0,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_red_alloy_12x",
+    "material": "red_alloy",
+    "size": 12,
+    "insulated": false,
+    "voltage": 8,
+    "amperage": 12,
+    "loss": 1,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_red_alloy_12x",
+    "material": "red_alloy",
+    "size": 12,
+    "insulated": true,
+    "voltage": 8,
+    "amperage": 12,
+    "loss": 0,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_red_alloy_16x",
+    "material": "red_alloy",
+    "size": 16,
+    "insulated": false,
+    "voltage": 8,
+    "amperage": 16,
+    "loss": 1,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_cobalt_1x",
+    "material": "cobalt",
+    "size": 1,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 2,
+    "loss": 4,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_cobalt_1x",
+    "material": "cobalt",
+    "size": 1,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_cobalt_2x",
+    "material": "cobalt",
+    "size": 2,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 4,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_cobalt_2x",
+    "material": "cobalt",
+    "size": 2,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_cobalt_4x",
+    "material": "cobalt",
+    "size": 4,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 8,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_cobalt_4x",
+    "material": "cobalt",
+    "size": 4,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_cobalt_8x",
+    "material": "cobalt",
+    "size": 8,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_cobalt_8x",
+    "material": "cobalt",
+    "size": 8,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_cobalt_12x",
+    "material": "cobalt",
+    "size": 12,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 24,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_cobalt_12x",
+    "material": "cobalt",
+    "size": 12,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 24,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_cobalt_16x",
+    "material": "cobalt",
+    "size": 16,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 32,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
     "id": "wire_lead_1x",
     "material": "lead",
     "size": 1,
@@ -118,6 +278,56 @@
     "amperage": 8,
     "loss": 2,
     "thickness": 8.0
+  },
+  {
+    "id": "wire_lead_8x",
+    "material": "lead",
+    "size": 8,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_lead_8x",
+    "material": "lead",
+    "size": 8,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_lead_12x",
+    "material": "lead",
+    "size": 12,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 24,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_lead_12x",
+    "material": "lead",
+    "size": 12,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 24,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_lead_16x",
+    "material": "lead",
+    "size": 16,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 32,
+    "loss": 4,
+    "thickness": 12.0
   },
   {
     "id": "wire_tin_1x",
@@ -180,124 +390,494 @@
     "thickness": 8.0
   },
   {
-    "id": "wire_copper_1x",
-    "material": "copper",
-    "size": 1,
+    "id": "wire_tin_8x",
+    "material": "tin",
+    "size": 8,
     "insulated": false,
-    "voltage": 128,
-    "amperage": 1,
-    "loss": 4,
-    "thickness": 2.0
-  },
-  {
-    "id": "cable_copper_1x",
-    "material": "copper",
-    "size": 1,
-    "insulated": true,
-    "voltage": 128,
-    "amperage": 1,
-    "loss": 2,
-    "thickness": 4.0
-  },
-  {
-    "id": "wire_copper_2x",
-    "material": "copper",
-    "size": 2,
-    "insulated": false,
-    "voltage": 128,
-    "amperage": 2,
-    "loss": 4,
-    "thickness": 4.0
-  },
-  {
-    "id": "cable_copper_2x",
-    "material": "copper",
-    "size": 2,
-    "insulated": true,
-    "voltage": 128,
-    "amperage": 2,
-    "loss": 2,
-    "thickness": 6.0
-  },
-  {
-    "id": "wire_copper_4x",
-    "material": "copper",
-    "size": 4,
-    "insulated": false,
-    "voltage": 128,
-    "amperage": 4,
-    "loss": 4,
-    "thickness": 6.0
-  },
-  {
-    "id": "cable_copper_4x",
-    "material": "copper",
-    "size": 4,
-    "insulated": true,
-    "voltage": 128,
-    "amperage": 4,
+    "voltage": 32,
+    "amperage": 8,
     "loss": 2,
     "thickness": 8.0
   },
   {
-    "id": "wire_annealed_copper_1x",
-    "material": "annealed_copper",
+    "id": "cable_tin_8x",
+    "material": "tin",
+    "size": 8,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 8,
+    "loss": 1,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_tin_12x",
+    "material": "tin",
+    "size": 12,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 12,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_tin_12x",
+    "material": "tin",
+    "size": 12,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 12,
+    "loss": 1,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_tin_16x",
+    "material": "tin",
+    "size": 16,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_zinc_1x",
+    "material": "zinc",
     "size": 1,
     "insulated": false,
-    "voltage": 128,
+    "voltage": 32,
     "amperage": 1,
     "loss": 2,
     "thickness": 2.0
   },
   {
-    "id": "cable_annealed_copper_1x",
-    "material": "annealed_copper",
+    "id": "cable_zinc_1x",
+    "material": "zinc",
     "size": 1,
     "insulated": true,
-    "voltage": 128,
+    "voltage": 32,
     "amperage": 1,
     "loss": 1,
     "thickness": 4.0
   },
   {
-    "id": "wire_annealed_copper_2x",
-    "material": "annealed_copper",
+    "id": "wire_zinc_2x",
+    "material": "zinc",
     "size": 2,
     "insulated": false,
-    "voltage": 128,
+    "voltage": 32,
     "amperage": 2,
     "loss": 2,
     "thickness": 4.0
   },
   {
-    "id": "cable_annealed_copper_2x",
-    "material": "annealed_copper",
+    "id": "cable_zinc_2x",
+    "material": "zinc",
     "size": 2,
     "insulated": true,
-    "voltage": 128,
+    "voltage": 32,
     "amperage": 2,
     "loss": 1,
     "thickness": 6.0
   },
   {
-    "id": "wire_annealed_copper_4x",
-    "material": "annealed_copper",
+    "id": "wire_zinc_4x",
+    "material": "zinc",
     "size": 4,
     "insulated": false,
-    "voltage": 128,
+    "voltage": 32,
     "amperage": 4,
     "loss": 2,
     "thickness": 6.0
   },
   {
-    "id": "cable_annealed_copper_4x",
-    "material": "annealed_copper",
+    "id": "cable_zinc_4x",
+    "material": "zinc",
     "size": 4,
     "insulated": true,
-    "voltage": 128,
+    "voltage": 32,
     "amperage": 4,
     "loss": 1,
     "thickness": 8.0
+  },
+  {
+    "id": "wire_zinc_8x",
+    "material": "zinc",
+    "size": 8,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_zinc_8x",
+    "material": "zinc",
+    "size": 8,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 8,
+    "loss": 1,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_zinc_12x",
+    "material": "zinc",
+    "size": 12,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 12,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_zinc_12x",
+    "material": "zinc",
+    "size": 12,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 12,
+    "loss": 1,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_zinc_16x",
+    "material": "zinc",
+    "size": 16,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_soldering_alloy_1x",
+    "material": "soldering_alloy",
+    "size": 1,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 1,
+    "loss": 2,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_soldering_alloy_1x",
+    "material": "soldering_alloy",
+    "size": 1,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 1,
+    "loss": 1,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_soldering_alloy_2x",
+    "material": "soldering_alloy",
+    "size": 2,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_soldering_alloy_2x",
+    "material": "soldering_alloy",
+    "size": 2,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 2,
+    "loss": 1,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_soldering_alloy_4x",
+    "material": "soldering_alloy",
+    "size": 4,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_soldering_alloy_4x",
+    "material": "soldering_alloy",
+    "size": 4,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 4,
+    "loss": 1,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_soldering_alloy_8x",
+    "material": "soldering_alloy",
+    "size": 8,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_soldering_alloy_8x",
+    "material": "soldering_alloy",
+    "size": 8,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 8,
+    "loss": 1,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_soldering_alloy_12x",
+    "material": "soldering_alloy",
+    "size": 12,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 12,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_soldering_alloy_12x",
+    "material": "soldering_alloy",
+    "size": 12,
+    "insulated": true,
+    "voltage": 32,
+    "amperage": 12,
+    "loss": 1,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_soldering_alloy_16x",
+    "material": "soldering_alloy",
+    "size": 16,
+    "insulated": false,
+    "voltage": 32,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_iron_1x",
+    "material": "iron",
+    "size": 1,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 2,
+    "loss": 6,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_iron_1x",
+    "material": "iron",
+    "size": 1,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 2,
+    "loss": 3,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_iron_2x",
+    "material": "iron",
+    "size": 2,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 4,
+    "loss": 6,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_iron_2x",
+    "material": "iron",
+    "size": 2,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 4,
+    "loss": 3,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_iron_4x",
+    "material": "iron",
+    "size": 4,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 8,
+    "loss": 6,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_iron_4x",
+    "material": "iron",
+    "size": 4,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 8,
+    "loss": 3,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_iron_8x",
+    "material": "iron",
+    "size": 8,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 16,
+    "loss": 6,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_iron_8x",
+    "material": "iron",
+    "size": 8,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 16,
+    "loss": 3,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_iron_12x",
+    "material": "iron",
+    "size": 12,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 24,
+    "loss": 6,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_iron_12x",
+    "material": "iron",
+    "size": 12,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 24,
+    "loss": 3,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_iron_16x",
+    "material": "iron",
+    "size": 16,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 32,
+    "loss": 6,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_nickel_1x",
+    "material": "nickel",
+    "size": 1,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 3,
+    "loss": 6,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_nickel_1x",
+    "material": "nickel",
+    "size": 1,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 3,
+    "loss": 3,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_nickel_2x",
+    "material": "nickel",
+    "size": 2,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 6,
+    "loss": 6,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_nickel_2x",
+    "material": "nickel",
+    "size": 2,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 6,
+    "loss": 3,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_nickel_4x",
+    "material": "nickel",
+    "size": 4,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 12,
+    "loss": 6,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_nickel_4x",
+    "material": "nickel",
+    "size": 4,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 12,
+    "loss": 3,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_nickel_8x",
+    "material": "nickel",
+    "size": 8,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 24,
+    "loss": 6,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_nickel_8x",
+    "material": "nickel",
+    "size": 8,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 24,
+    "loss": 3,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_nickel_12x",
+    "material": "nickel",
+    "size": 12,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 36,
+    "loss": 6,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_nickel_12x",
+    "material": "nickel",
+    "size": 12,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 36,
+    "loss": 3,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_nickel_16x",
+    "material": "nickel",
+    "size": 16,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 48,
+    "loss": 6,
+    "thickness": 12.0
   },
   {
     "id": "wire_cupronickel_1x",
@@ -360,13 +940,283 @@
     "thickness": 8.0
   },
   {
+    "id": "wire_cupronickel_8x",
+    "material": "cupronickel",
+    "size": 8,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 16,
+    "loss": 6,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_cupronickel_8x",
+    "material": "cupronickel",
+    "size": 8,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 16,
+    "loss": 3,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_cupronickel_12x",
+    "material": "cupronickel",
+    "size": 12,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 24,
+    "loss": 6,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_cupronickel_12x",
+    "material": "cupronickel",
+    "size": 12,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 24,
+    "loss": 3,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_cupronickel_16x",
+    "material": "cupronickel",
+    "size": 16,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 32,
+    "loss": 6,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_copper_1x",
+    "material": "copper",
+    "size": 1,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 1,
+    "loss": 4,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_copper_1x",
+    "material": "copper",
+    "size": 1,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 1,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_copper_2x",
+    "material": "copper",
+    "size": 2,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 2,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_copper_2x",
+    "material": "copper",
+    "size": 2,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_copper_4x",
+    "material": "copper",
+    "size": 4,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 4,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_copper_4x",
+    "material": "copper",
+    "size": 4,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_copper_8x",
+    "material": "copper",
+    "size": 8,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 8,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_copper_8x",
+    "material": "copper",
+    "size": 8,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_copper_12x",
+    "material": "copper",
+    "size": 12,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 12,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_copper_12x",
+    "material": "copper",
+    "size": 12,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 12,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_copper_16x",
+    "material": "copper",
+    "size": 16,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_annealed_copper_1x",
+    "material": "annealed_copper",
+    "size": 1,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 1,
+    "loss": 2,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_annealed_copper_1x",
+    "material": "annealed_copper",
+    "size": 1,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 1,
+    "loss": 1,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_annealed_copper_2x",
+    "material": "annealed_copper",
+    "size": 2,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_annealed_copper_2x",
+    "material": "annealed_copper",
+    "size": 2,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 2,
+    "loss": 1,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_annealed_copper_4x",
+    "material": "annealed_copper",
+    "size": 4,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_annealed_copper_4x",
+    "material": "annealed_copper",
+    "size": 4,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 4,
+    "loss": 1,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_annealed_copper_8x",
+    "material": "annealed_copper",
+    "size": 8,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_annealed_copper_8x",
+    "material": "annealed_copper",
+    "size": 8,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 8,
+    "loss": 1,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_annealed_copper_12x",
+    "material": "annealed_copper",
+    "size": 12,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 12,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_annealed_copper_12x",
+    "material": "annealed_copper",
+    "size": 12,
+    "insulated": true,
+    "voltage": 128,
+    "amperage": 12,
+    "loss": 1,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_annealed_copper_16x",
+    "material": "annealed_copper",
+    "size": 16,
+    "insulated": false,
+    "voltage": 128,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
     "id": "wire_gold_1x",
     "material": "gold",
     "size": 1,
     "insulated": false,
     "voltage": 512,
     "amperage": 3,
-    "loss": 12,
+    "loss": 4,
     "thickness": 2.0
   },
   {
@@ -376,7 +1226,7 @@
     "insulated": true,
     "voltage": 512,
     "amperage": 3,
-    "loss": 6,
+    "loss": 2,
     "thickness": 4.0
   },
   {
@@ -386,7 +1236,7 @@
     "insulated": false,
     "voltage": 512,
     "amperage": 6,
-    "loss": 12,
+    "loss": 4,
     "thickness": 4.0
   },
   {
@@ -396,7 +1246,7 @@
     "insulated": true,
     "voltage": 512,
     "amperage": 6,
-    "loss": 6,
+    "loss": 2,
     "thickness": 6.0
   },
   {
@@ -406,7 +1256,7 @@
     "insulated": false,
     "voltage": 512,
     "amperage": 12,
-    "loss": 12,
+    "loss": 4,
     "thickness": 6.0
   },
   {
@@ -416,7 +1266,607 @@
     "insulated": true,
     "voltage": 512,
     "amperage": 12,
-    "loss": 6,
+    "loss": 2,
     "thickness": 8.0
+  },
+  {
+    "id": "wire_gold_8x",
+    "material": "gold",
+    "size": 8,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 24,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_gold_8x",
+    "material": "gold",
+    "size": 8,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 24,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_gold_12x",
+    "material": "gold",
+    "size": 12,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 36,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_gold_12x",
+    "material": "gold",
+    "size": 12,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 36,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_gold_16x",
+    "material": "gold",
+    "size": 16,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 48,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_electrum_1x",
+    "material": "electrum",
+    "size": 1,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 2,
+    "loss": 4,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_electrum_1x",
+    "material": "electrum",
+    "size": 1,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_electrum_2x",
+    "material": "electrum",
+    "size": 2,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 4,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_electrum_2x",
+    "material": "electrum",
+    "size": 2,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_electrum_4x",
+    "material": "electrum",
+    "size": 4,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 8,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_electrum_4x",
+    "material": "electrum",
+    "size": 4,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_electrum_8x",
+    "material": "electrum",
+    "size": 8,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_electrum_8x",
+    "material": "electrum",
+    "size": 8,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_electrum_12x",
+    "material": "electrum",
+    "size": 12,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 24,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_electrum_12x",
+    "material": "electrum",
+    "size": 12,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 24,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_electrum_16x",
+    "material": "electrum",
+    "size": 16,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 32,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_silver_1x",
+    "material": "silver",
+    "size": 1,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 1,
+    "loss": 2,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_silver_1x",
+    "material": "silver",
+    "size": 1,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 1,
+    "loss": 1,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_silver_2x",
+    "material": "silver",
+    "size": 2,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_silver_2x",
+    "material": "silver",
+    "size": 2,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 2,
+    "loss": 1,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_silver_4x",
+    "material": "silver",
+    "size": 4,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_silver_4x",
+    "material": "silver",
+    "size": 4,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 4,
+    "loss": 1,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_silver_8x",
+    "material": "silver",
+    "size": 8,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_silver_8x",
+    "material": "silver",
+    "size": 8,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 8,
+    "loss": 1,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_silver_12x",
+    "material": "silver",
+    "size": 12,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 12,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_silver_12x",
+    "material": "silver",
+    "size": 12,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 12,
+    "loss": 1,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_silver_16x",
+    "material": "silver",
+    "size": 16,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_steel_1x",
+    "material": "steel",
+    "size": 1,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 2,
+    "loss": 4,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_steel_1x",
+    "material": "steel",
+    "size": 1,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_steel_2x",
+    "material": "steel",
+    "size": 2,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 4,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_steel_2x",
+    "material": "steel",
+    "size": 2,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_steel_4x",
+    "material": "steel",
+    "size": 4,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 8,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_steel_4x",
+    "material": "steel",
+    "size": 4,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_steel_8x",
+    "material": "steel",
+    "size": 8,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_steel_8x",
+    "material": "steel",
+    "size": 8,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_steel_12x",
+    "material": "steel",
+    "size": 12,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 24,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_steel_12x",
+    "material": "steel",
+    "size": 12,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 24,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_steel_16x",
+    "material": "steel",
+    "size": 16,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 32,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_aluminium_1x",
+    "material": "aluminium",
+    "size": 1,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 1,
+    "loss": 2,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_aluminium_1x",
+    "material": "aluminium",
+    "size": 1,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 1,
+    "loss": 1,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_aluminium_2x",
+    "material": "aluminium",
+    "size": 2,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_aluminium_2x",
+    "material": "aluminium",
+    "size": 2,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 2,
+    "loss": 1,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_aluminium_4x",
+    "material": "aluminium",
+    "size": 4,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_aluminium_4x",
+    "material": "aluminium",
+    "size": 4,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 4,
+    "loss": 1,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_aluminium_8x",
+    "material": "aluminium",
+    "size": 8,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_aluminium_8x",
+    "material": "aluminium",
+    "size": 8,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 8,
+    "loss": 1,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_aluminium_12x",
+    "material": "aluminium",
+    "size": 12,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 12,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_aluminium_12x",
+    "material": "aluminium",
+    "size": 12,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 12,
+    "loss": 1,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_aluminium_16x",
+    "material": "aluminium",
+    "size": 16,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_platinum_1x",
+    "material": "platinum",
+    "size": 1,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_platinum_1x",
+    "material": "platinum",
+    "size": 1,
+    "insulated": true,
+    "voltage": 8192,
+    "amperage": 2,
+    "loss": 1,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_platinum_2x",
+    "material": "platinum",
+    "size": 2,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_platinum_2x",
+    "material": "platinum",
+    "size": 2,
+    "insulated": true,
+    "voltage": 8192,
+    "amperage": 4,
+    "loss": 1,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_platinum_4x",
+    "material": "platinum",
+    "size": 4,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_platinum_4x",
+    "material": "platinum",
+    "size": 4,
+    "insulated": true,
+    "voltage": 8192,
+    "amperage": 8,
+    "loss": 1,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_platinum_8x",
+    "material": "platinum",
+    "size": 8,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_platinum_8x",
+    "material": "platinum",
+    "size": 8,
+    "insulated": true,
+    "voltage": 8192,
+    "amperage": 16,
+    "loss": 1,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_platinum_12x",
+    "material": "platinum",
+    "size": 12,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 24,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_platinum_12x",
+    "material": "platinum",
+    "size": 12,
+    "insulated": true,
+    "voltage": 8192,
+    "amperage": 24,
+    "loss": 1,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_platinum_16x",
+    "material": "platinum",
+    "size": 16,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 32,
+    "loss": 2,
+    "thickness": 12.0
   }
 ]

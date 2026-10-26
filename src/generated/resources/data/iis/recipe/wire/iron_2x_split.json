@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/2x/iron"
+  ],
+  "result": {
+    "id": "iis:wire_iron_1x",
+    "count": 2
+  }
+}

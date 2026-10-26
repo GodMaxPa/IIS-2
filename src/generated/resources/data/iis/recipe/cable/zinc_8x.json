@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/8x/zinc",
+    "minecraft:black_carpet",
+    "minecraft:black_carpet",
+    "minecraft:black_carpet",
+    "minecraft:string"
+  ],
+  "result": {
+    "id": "iis:cable_zinc_8x"
+  }
+}

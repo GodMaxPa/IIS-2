@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/12x/tin",
+    "minecraft:black_carpet",
+    "minecraft:black_carpet",
+    "minecraft:black_carpet",
+    "minecraft:black_carpet",
+    "minecraft:string"
+  ],
+  "result": {
+    "id": "iis:cable_tin_12x"
+  }
+}

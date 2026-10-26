@@ -1,0 +1,18 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/aluminium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_aluminium_4x",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 8,
+  "circuit": 4
+}

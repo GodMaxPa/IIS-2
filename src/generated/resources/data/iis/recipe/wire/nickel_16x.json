@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/8x/nickel",
+    "#iis:wires/8x/nickel"
+  ],
+  "result": {
+    "id": "iis:wire_nickel_16x"
+  }
+}

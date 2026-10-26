@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/2x/soldering_alloy"
+  ],
+  "result": {
+    "id": "iis:wire_soldering_alloy_1x",
+    "count": 2
+  }
+}

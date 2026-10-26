@@ -1,0 +1,17 @@
+{
+  "type": "iis:wiremill",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/electrum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_fine_electrum",
+      "count": 4
+    }
+  ],
+  "duration": 200,
+  "eut": 8
+}
