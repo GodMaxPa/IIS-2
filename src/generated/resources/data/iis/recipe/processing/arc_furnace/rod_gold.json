@@ -1,0 +1,23 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:gold_nugget",
+      "count": 4
+    }
+  ],
+  "duration": 98,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 98
+    }
+  ]
+}

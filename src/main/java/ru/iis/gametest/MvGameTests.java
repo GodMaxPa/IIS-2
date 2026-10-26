@@ -205,6 +205,28 @@ final class MvGameTests {
         h.succeedWhen(() -> h.assertTrue(m.getItem(1).is(net.minecraft.world.item.Items.IRON_INGOT), "output " + m.getItem(1)));
     }
 
+    /** MV-дуговая печь (D85): железная пластина + 56 л кислорода → слиток кованого железа (56 тиков, 96 EU/t). */
+    static void arcFurnaceMvIron(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, new BlockPos(4, 1, 4), LvMachineType.ARC_FURNACE_MV);
+        m.setItem(0, new ItemStack(SelfTest.item("plate_iron")));
+        m.tank().setAmount(ru.iis.fluid.GtFluids.get("oxygen").source().get(), 1000);
+        h.succeedWhen(() -> {
+            h.assertTrue(m.getItem(1).is(SelfTest.item("ingot_wrought_iron")), "output " + m.getItem(1));
+            h.assertTrue(m.tank().amount() == 1000 - 56, "oxygen left " + m.tank().amount());
+        });
+    }
+
+    /** LV-дуговая печь: все рецепты 96 EU/t — на 32 В печь стоит, как в GT. */
+    static void arcFurnaceLvIdle(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, new BlockPos(4, 1, 4), LvMachineType.ARC_FURNACE);
+        m.setItem(0, new ItemStack(SelfTest.item("plate_iron")));
+        m.tank().setAmount(ru.iis.fluid.GtFluids.get("oxygen").source().get(), 1000);
+        h.runAtTickTime(60, () -> {
+            h.assertTrue(m.logic().maxProgress == 0, "LV arc furnace started a 96 EU/t recipe");
+            h.succeed();
+        });
+    }
+
     /** Стопка горячих слитков в инвентаре выживающего игрока обжигает на 3 единицы. */
     static void hotIngotBurns(GameTestHelper h) {
         var player = h.makeMockPlayer(GameType.SURVIVAL);

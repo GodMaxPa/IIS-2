@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WGW",
+    "CMC",
+    "PPP"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "P": "#c:plates/steel",
+    "C": "#c:circuits/basic",
+    "W": "#iis:cables/4x/tin",
+    "G": "#c:dusts/graphite"
+  },
+  "result": {
+    "id": "iis:arc_furnace_lv"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/12x/gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:gold_ingot",
+      "count": 6
+    }
+  ],
+  "duration": 1176,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 1176
+    }
+  ]
+}

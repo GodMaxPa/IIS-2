@@ -75,6 +75,36 @@ class NewMvMachinesTest {
         assertEquals("#iis:wires/2x/cupronickel", recipe("lv/electric_oven_mv").getAsJsonObject("key").get("C").getAsString());
     }
 
+    private static void assertArc(String form, String out, int count, int duration) throws IOException {
+        JsonObject r = recipe("processing/arc_furnace/" + form);
+        JsonObject o = r.getAsJsonArray("outputs").get(0).getAsJsonObject();
+        assertEquals(out, o.get("id").getAsString(), form);
+        assertEquals(count, o.get("count").getAsInt(), form);
+        assertEquals(duration, r.get("duration").getAsInt(), form);
+        assertEquals(96, r.get("eut").getAsInt(), form);
+        JsonObject ox = r.getAsJsonArray("fluid_inputs").get(0).getAsJsonObject();
+        assertEquals("iis:oxygen", ox.get("ingredient").getAsString(), form);
+        assertEquals(duration, ox.get("amount").getAsInt(), form);
+    }
+
+    @Test
+    void arcFurnaceFollowsReverseArcSmelting() throws IOException {
+        assertEquals(6, LvMachineType.ARC_FURNACE_MV.outputs);
+        assertEquals(16000, LvMachineType.ARC_FURNACE.tank);
+        // железо и медь в дуге — кованое железо и отожжённая медь; время = масса × количество, не меньше 16
+        assertArc("plate_iron", "iis:ingot_wrought_iron", 1, 56);
+        assertArc("ingot_iron", "iis:ingot_wrought_iron", 1, 56);
+        assertArc("dust_copper", "iis:ingot_annealed_copper", 1, 63);
+        // полслитка — 4 самородка (4,5 вниз), ротор 4¼ — 38 самородков, огромная труба — 12 слитков
+        assertArc("rod_steel", "iis:nugget_steel", 4, 27);
+        assertArc("rotor_tin", "iis:nugget_tin", 38, 501);
+        assertArc("pipe_huge_steel", "iis:ingot_steel", 12, 660);
+        // горючее — в золу (⅛), не металлы (рубин) — без рецепта; слиток стали в дуге не меняется — без рецепта
+        assertArc("plate_wood", "iis:tiny_dust_ash", 1, 16);
+        assertFalse(Files.exists(RECIPES.resolve("processing/arc_furnace/gem_ruby.json")));
+        assertFalse(Files.exists(RECIPES.resolve("processing/arc_furnace/ingot_steel.json")));
+    }
+
     @Test
     void alloySmelterMolds() throws IOException {
         String p = "processing/alloy_smelter/";

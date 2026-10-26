@@ -270,6 +270,15 @@
     "gui": "lv/e_oven"
   },
   {
+    "id": "arc_furnace_lv",
+    "type": "arc_furnace",
+    "recipeMap": "arc_furnace",
+    "inputs": 1,
+    "outputs": 6,
+    "tank": 16000,
+    "gui": "lv/arcfurnace"
+  },
+  {
     "id": "macerator_mv",
     "type": "macerator_mv",
     "recipeMap": "macerator",
@@ -529,6 +538,15 @@
     "outputs": 1,
     "tank": 0,
     "gui": "lv/e_oven"
+  },
+  {
+    "id": "arc_furnace_mv",
+    "type": "arc_furnace_mv",
+    "recipeMap": "arc_furnace",
+    "inputs": 1,
+    "outputs": 6,
+    "tank": 16000,
+    "gui": "lv/arcfurnace"
   },
   {
     "id": "thermal_centrifuge_mv",

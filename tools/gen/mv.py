@@ -30,6 +30,14 @@ SHAPES = [
     ('small_gear', 'small_gear', 1, 1, ('mass', 0.2), 8),
 ]
 BLOCKS = {'Iron': 'minecraft:iron_block', 'Gold': 'minecraft:gold_block', 'Copper': 'minecraft:copper_block'}
+M = 3628800   # GT material unit
+# Forms GT recycles (OrePrefixes.mAllowNormalRecycling) with their material amount (GT_RecipeRegistrator#registerMaterialRecycling)
+RECYCLED = {'plate': M, 'foil': M // 4, 'long_rod': M, 'rod': M // 2, 'bolt': M // 8, 'screw': M // 9, 'ring': M // 4, 'wire_fine': M // 8,
+            'rotor': M * 4 + M // 4, 'small_gear': M, 'gear': M * 4, 'gem': M, 'gem_chipped': M // 4, 'gem_flawed': M // 2,
+            'gem_flawless': M * 2, 'gem_exquisite': M * 4, 'sword_head': M * 2, 'pickaxe_head': M * 3, 'shovel_head': M, 'axe_head': M * 3,
+            'hoe_head': M * 2, 'saw_head': M * 2, 'drill_head': M * 4, 'chainsaw_head': M * 2, 'wrench_head': M * 4}
+PIPE_AMOUNTS = {'tiny': M // 2, 'small': M, 'medium': M * 3, 'large': M * 6, 'huge': M * 12}
+WIRE_AMOUNTS = {1: M // 2, 2: M, 4: M * 2, 8: M * 4, 12: M * 6, 16: M * 8}
 
 
 def generate(g):
@@ -117,7 +125,62 @@ def generate(g):
         rec[f'fluid_heater/{rid}'] = {'type': f'{NS}:fluid_heater', 'inputs': [], 'outputs': [], 'duration': 30, 'eut': 32,
                                       'fluid_inputs': [{'ingredient': fid, 'amount': 6}], 'fluid_outputs': [{'id': f'{NS}:steam', 'amount': 960}],
                                       'circuit': 1}
+    # --- arc furnace: GT_RecipeRegistrator#registerReverseArcSmelting (ArcSmeltIntoAnnealedWrought = true) -------------------
+    # metal -> its smelt-into's arc-smelt-into (iron -> wrought iron, copper -> annealed copper), flammable -> ash / 8,
+    # explosive -> ash / 16, other non-metals -> nothing; output getIngotOrDust; max(16, amount * mass / M) ticks, 96 EU/t,
+    # oxygen = duration in L (GT_RecipeAdder#addArcFurnaceRecipe:1124)
+    def ingot_or_dust(mat, amt):
+        if mat in BLOCKS and ((amt % (9 * M) == 0 and amt // (9 * M) > 1) or amt >= 72 * M):
+            return BLOCKS[mat], amt // (9 * M)
+        for pre, ok, cnt in (('ingot', amt % M == 0 or amt >= 8 * M, amt // M), ('nugget', amt * 9 >= M, amt * 9 // M),
+                             ('dust', amt % M == 0 or amt >= 16 * M, amt // M), ('small_dust', (amt * 4) % M == 0 or amt >= 8 * M, amt * 4 // M),
+                             ('tiny_dust', amt * 9 >= M, amt * 9 // M)):
+            if ok and cnt > 0 and ref(pre, mat):
+                return ref(pre, mat), cnt
+        return None
+
+    def arc(rid, ingredient, n, amount):
+        st = subtags(n)
+        target = lambda: prop(prop(n, 'MaterialSmeltInto', n) or n, 'MaterialArcSmeltInto', n) or n
+        if 'UNBURNABLE' in st:
+            mat, amt = target(), amount
+        elif 'EXPLOSIVE' in st:
+            mat, amt = 'Ash', amount // 16
+        elif 'FLAMMABLE' in st:
+            mat, amt = 'Ash', amount // 8
+        elif 'NO_SMELTING' in st or 'METAL' not in st:
+            return
+        else:
+            mat, amt = target(), amount
+        res = ingot_or_dust(mat, amt) if amt > 0 else None
+        if not res or res[1] > 64:
+            return
+        dur = max(16, amt * mass(mat) // M)
+        rec.setdefault(f'arc_furnace/{rid}', {'type': f'{NS}:arc_furnace', 'inputs': [ing(ingredient)], 'outputs': [out(res[0], res[1])],
+                                             'duration': dur, 'eut': 96, 'fluid_inputs': [{'ingredient': f'{NS}:oxygen', 'amount': dur}]})
+
+    for n in sorted(g['names']):
+        mid = mat_id(n)
+        for pre, amount in RECYCLED.items():
+            if ref(pre, n):
+                arc(f'{pre}_{mid}', tag_of(pre, n), n, amount)
+        for size, amount in PIPE_AMOUNTS.items():
+            if f'pipe_{size}_{mid}' in pipes:
+                arc(f'pipe_{size}_{mid}', f'{NS}:pipe_{size}_{mid}', n, amount)
+        if n in wires:
+            for k, amount in WIRE_AMOUNTS.items():
+                arc(f'wire_{k}x_{mid}', f'#iis:wires/{k}x/{mid}', n, amount)
+        # ProcessingIngot:38, ProcessingDust:34/240/256: ingots and dusts only when the arc changes the material
+        into = prop(n, 'MaterialSmeltInto', n) or n
+        if (prop(into, 'MaterialArcSmeltInto', into) or into) != n:
+            if ref('ingot', n):
+                arc(f'ingot_{mid}', tag_of('ingot', n), n, M)
+            if not prop(n, 'BlastFurnaceRequired', False):
+                for pre, amount in (('dust', M), ('small_dust', M // 4), ('tiny_dust', M // 9)):
+                    if ref(pre, n):
+                        arc(f'{pre}_{mid}', tag_of(pre, n), n, amount)
+
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
-    return {'forming_press': sum(1 for k in rec if k.startswith('forming_press/')), 'fluid_heater': sum(1 for k in rec if k.startswith('fluid_heater/')),
+    return {'arc_furnace': sum(1 for k in rec if k.startswith('arc_furnace/')), 'forming_press': sum(1 for k in rec if k.startswith('forming_press/')), 'fluid_heater': sum(1 for k in rec if k.startswith('fluid_heater/')),
             'extruder': sum(1 for k in rec if k.startswith('extruder/')), 'alloy_smelter_molds': sum(1 for k in rec if k.startswith('alloy_smelter/'))}

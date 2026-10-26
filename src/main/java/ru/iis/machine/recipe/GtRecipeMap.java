@@ -41,7 +41,9 @@ public enum GtRecipeMap {
     EXTRUDER("extruder", 2, 1),
     // sPressRecipes (вход + форма, форма не расходуется), sFluidHeaterRecipes (схема, жидкость → жидкость)
     FORMING_PRESS("forming_press", 2, 1),
-    FLUID_HEATER("fluid_heater", 1, 0);
+    FLUID_HEATER("fluid_heater", 1, 0),
+    // sArcFurnaceRecipes: 1 вход, до 6 выходов, кислород (литров — сколько тиков длится рецепт)
+    ARC_FURNACE("arc_furnace", 1, 6);
 
     public final String id;
     public final int maxInputs, maxOutputs;
