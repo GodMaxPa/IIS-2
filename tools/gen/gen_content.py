@@ -868,6 +868,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_circuits', os.path.join(ROOT, 'too
 _circ = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_circ)
 lv_stats['circuits'] = _circ.generate(globals())
+# MV machines without an LV counterpart in IIS 2 (D83): extruder and alloy smelter mold recipes
+_spec = _ilu.spec_from_file_location('iis_gen_mv', os.path.join(ROOT, 'tools', 'gen', 'mv.py'))
+_mv = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_mv)
+lv_stats['mv'] = _mv.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

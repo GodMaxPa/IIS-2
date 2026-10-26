@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/nickel",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pickaxe_head_nickel",
+      "count": 1
+    }
+  ],
+  "duration": 174,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_pickaxe"
+  ]
+}

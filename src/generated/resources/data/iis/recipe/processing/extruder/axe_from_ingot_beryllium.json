@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/beryllium",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:axe_head_beryllium",
+      "count": 1
+    }
+  ],
+  "duration": 27,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_axe"
+  ]
+}

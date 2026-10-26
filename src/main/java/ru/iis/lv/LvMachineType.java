@@ -40,6 +40,8 @@ public enum LvMachineType {
     CHEMICAL_BATH("chemical_bath", GtRecipeMap.CHEMICAL_BATH, 1, 3, 8000, "chemicalbath"),
     // MV (D81): GT_Loader_MetaTileEntities:784-785 ThermalCentrifuge LV/MV (1, 3); рецепты 48 EU/t — только с MV
     THERMAL_CENTRIFUGE("thermal_centrifuge", GtRecipeMap.THERMAL_CENTRIFUGE, 1, 3, 0, "thermalcentrifuge"),
+    // D83: машины, которых у ИИС 2 не было в LV; GT_Loader_MetaTileEntities:685-686 Extruder (2, 1)
+    EXTRUDER("extruder", GtRecipeMap.EXTRUDER, 2, 1, 0, "extruder"),
     THERMAL_CENTRIFUGE_MV("thermal_centrifuge", GtRecipeMap.THERMAL_CENTRIFUGE, 1, 3, 0, "thermalcentrifuge", VoltageTier.MV),
     // MV (D82): GT_Loader_MetaTileEntities Machine_MV_* — те же входы/выходы/баки, что у LV, кроме смесителя (бак 16000)
     MACERATOR_MV("macerator", GtRecipeMap.MACERATOR, 1, 1, 0, "macerator1", VoltageTier.MV),
@@ -66,7 +68,8 @@ public enum LvMachineType {
     FLUID_EXTRACTOR_MV("fluid_extractor", GtRecipeMap.FLUID_EXTRACTOR, 1, 1, 16000, "fluidextractor", VoltageTier.MV),
     FLUID_SOLIDIFIER_MV("fluid_solidifier", GtRecipeMap.FLUID_SOLIDIFIER, 1, 1, 16000, "fluidsolidifier", VoltageTier.MV),
     DISTILLERY_MV("distillery", GtRecipeMap.DISTILLERY, 1, 1, 1000, "distillery", VoltageTier.MV),
-    CHEMICAL_BATH_MV("chemical_bath", GtRecipeMap.CHEMICAL_BATH, 1, 3, 8000, "chemicalbath", VoltageTier.MV);
+    CHEMICAL_BATH_MV("chemical_bath", GtRecipeMap.CHEMICAL_BATH, 1, 3, 8000, "chemicalbath", VoltageTier.MV),
+    EXTRUDER_MV("extruder", GtRecipeMap.EXTRUDER, 2, 1, 0, "extruder", VoltageTier.MV);
 
     public final String id;
     public final GtRecipeMap recipeMap;

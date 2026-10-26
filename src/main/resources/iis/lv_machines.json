@@ -234,6 +234,15 @@
     "gui": "lv/thermalcentrifuge"
   },
   {
+    "id": "extruder_lv",
+    "type": "extruder",
+    "recipeMap": "extruder",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/extruder"
+  },
+  {
     "id": "macerator_mv",
     "type": "macerator_mv",
     "recipeMap": "macerator",
@@ -457,6 +466,15 @@
     "outputs": 3,
     "tank": 8000,
     "gui": "lv/chemicalbath"
+  },
+  {
+    "id": "extruder_mv",
+    "type": "extruder_mv",
+    "recipeMap": "extruder",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/extruder"
   },
   {
     "id": "thermal_centrifuge_mv",

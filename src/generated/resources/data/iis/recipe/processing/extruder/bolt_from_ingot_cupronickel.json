@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/cupronickel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_cupronickel",
+      "count": 8
+    }
+  ],
+  "duration": 120,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_bolt"
+  ]
+}

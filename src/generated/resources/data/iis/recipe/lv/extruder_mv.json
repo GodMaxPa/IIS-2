@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCE",
+    "XMP",
+    "CCE"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "X": "iis:electric_piston_mv",
+    "E": "#c:circuits/good",
+    "P": "iis:pipe_medium_steel",
+    "C": "#iis:wires/4x/cupronickel"
+  },
+  "result": {
+    "id": "iis:extruder_mv"
+  }
+}

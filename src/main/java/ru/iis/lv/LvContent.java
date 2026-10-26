@@ -182,6 +182,17 @@ public final class LvContent {
     public static final DeferredItem<Item> MOLD_BALL = item("mold_ball");
     public static final DeferredItem<Item> MOLD_BLOCK = item("mold_block");
     public static final DeferredItem<Item> MOLD_NUGGET = item("mold_nugget");
+    // D83: формы печи сплавов из ProcessingShaping и насадки экструдера GT (GT_MetaGenerated_Item_01:222-246); не расходуются
+    public static final DeferredItem<Item> MOLD_CASING = item("mold_casing");
+    public static final DeferredItem<Item> MOLD_BOTTLE = item("mold_bottle");
+    public static final DeferredItem<Item> MOLD_ANVIL = item("mold_anvil");
+    public static final List<String> EXTRUDER_SHAPE_IDS = List.of("plate", "rod", "bolt", "ring", "cell", "ingot", "wire", "casing",
+            "pipe_tiny", "pipe_small", "pipe_medium", "pipe_large", "pipe_huge", "block", "sword", "pickaxe", "shovel", "axe", "hoe", "saw",
+            "gear", "bottle", "small_gear");
+    public static final Map<String, DeferredItem<Item>> EXTRUDER_SHAPES = new java.util.LinkedHashMap<>();
+    static {
+        for (String s : EXTRUDER_SHAPE_IDS) EXTRUDER_SHAPES.put(s, item("shape_extruder_" + s));
+    }
     public static final DeferredItem<Item> STICKY_RESIN = item("sticky_resin");
     public static final DeferredItem<Item> COAL_COKE = item("coal_coke");
     public static final DeferredItem<Item> WET_COKE_OVEN_BRICK = item("wet_coke_oven_brick");

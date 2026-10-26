@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/steel_magnetic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:steel_item_casing",
+      "count": 2
+    }
+  ],
+  "duration": 32,
+  "eut": 48,
+  "keep": [
+    "iis:shape_extruder_casing"
+  ]
+}

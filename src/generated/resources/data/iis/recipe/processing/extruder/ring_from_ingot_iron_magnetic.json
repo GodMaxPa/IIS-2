@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/iron_magnetic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ring_iron",
+      "count": 4
+    }
+  ],
+  "duration": 112,
+  "eut": 96,
+  "keep": [
+    "iis:shape_extruder_ring"
+  ]
+}

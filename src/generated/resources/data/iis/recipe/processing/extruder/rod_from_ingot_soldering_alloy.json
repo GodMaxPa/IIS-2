@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/soldering_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_soldering_alloy",
+      "count": 2
+    }
+  ],
+  "duration": 236,
+  "eut": 96,
+  "keep": [
+    "iis:shape_extruder_rod"
+  ]
+}

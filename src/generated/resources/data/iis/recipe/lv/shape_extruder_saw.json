@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " x ",
+    "   ",
+    "  P"
+  ],
+  "key": {
+    "P": "iis:shape_empty",
+    "x": "#iis:tools/wire_cutter"
+  },
+  "result": {
+    "id": "iis:shape_extruder_saw"
+  }
+}

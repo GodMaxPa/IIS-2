@@ -86,6 +86,8 @@ public final class IISGameTests {
             new Test("transformer_mv_step_down", 100, MvGameTests::transformerMvStepDown),
             new Test("vacuum_freezer_one_mv_hatch", 500, MvGameTests::freezerOneMvHatch),
             new Test("vacuum_freezer_one_lv_hatch_idle", 100, MvGameTests::freezerOneLvHatchIdle),
+            new Test("extruder_mv_plate", 200, MvGameTests::extruderMvPlate),
+            new Test("extruder_lv_cell_only", 300, MvGameTests::extruderLvCellOnly),
             new Test("cover_conveyor", 600, CoverGameTests::conveyor),
             new Test("cover_pump", 40, CoverGameTests::pump),
             new Test("cover_controller", 40, CoverGameTests::controller),

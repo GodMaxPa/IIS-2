@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/steel_magnetic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:shovel_head_steel",
+      "count": 1
+    }
+  ],
+  "duration": 55,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_shovel"
+  ]
+}

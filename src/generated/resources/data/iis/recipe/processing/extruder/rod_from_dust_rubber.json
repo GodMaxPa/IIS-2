@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/rubber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_rubber",
+      "count": 2
+    }
+  ],
+  "duration": 10,
+  "eut": 24,
+  "keep": [
+    "iis:shape_extruder_rod"
+  ]
+}

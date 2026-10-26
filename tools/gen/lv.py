@@ -77,7 +77,13 @@ MACHINES = [
     ('chemical_bath', 'chemicalbath',  'CHEMICAL_BATH',    'ChemicalBath', 'chemical_bath', 1, 3, 8000,  'Chemical Bath'),
     # MV (D81): GT_Loader_MetaTileEntities:784 LV thermal centrifuge (its ore recipes need 48 EU/t, i.e. the MV one)
     ('thermal_centrifuge', 'thermalcentrifuge', 'THERMAL_CENTRIFUGE', 'ThermalCentrifuge', 'thermal_centrifuge', 1, 3, 0, 'Thermal Centrifuge'),
+    # D83: machines IIS 2 had no LV version of; GT_Loader_MetaTileEntities:685-686 extruder (2 in, 1 out)
+    ('extruder',      'extruder',      'EXTRUDER',         'Extruder',     'extruder',      2, 1, 0,     'Extruder'),
 ]
+# GT crafting of the D83 machines (both tiers, X.* resolved per tier like MV_CRAFT)
+NEW_CRAFT = {
+    'extruder': (['CCE', 'XMP', 'CCE'], {'M': 'HULL', 'X': 'PISTON', 'E': 'CIRCUIT', 'P': 'PIPE', 'C': 'COIL_HEATING_DOUBLE'}),
+}
 # MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
 # outputs and tanks as LV except the mixer (16000 L, :1022); the compressor tank (LV 4000, MV 8000) stays 0 as at LV (D82)
 MV_TANKS = {'mixer': 16000}
@@ -175,6 +181,34 @@ ITEMS = [
     ('mold_ball', 'gt:307', 'gt.metaitem.01.32307.name', 'Mold (Ball)', 'Форма (шар)'),
     ('mold_block', 'gt:308', 'gt.metaitem.01.32308.name', 'Mold (Block)', 'Форма (блок)'),
     ('mold_nugget', 'gt:309', 'gt.metaitem.01.32309.name', 'Mold (Nuggets)', 'Форма (самородки)'),
+    # D83: extruder shapes (GT_MetaGenerated_Item_01:222-246; hammer and file heads are not items here) and the
+    # alloy smelter molds of ProcessingShaping
+    ('shape_extruder_plate', 'gt:350', 'gt.metaitem.01.32350.name', 'Extruder Shape (Plate)', 'Насадка экструдера (пластина)'),
+    ('shape_extruder_rod', 'gt:351', 'gt.metaitem.01.32351.name', 'Extruder Shape (Rod)', 'Насадка экструдера (стержень)'),
+    ('shape_extruder_bolt', 'gt:352', 'gt.metaitem.01.32352.name', 'Extruder Shape (Bolt)', 'Насадка экструдера (болт)'),
+    ('shape_extruder_ring', 'gt:353', 'gt.metaitem.01.32353.name', 'Extruder Shape (Ring)', 'Насадка экструдера (кольцо)'),
+    ('shape_extruder_cell', 'gt:354', 'gt.metaitem.01.32354.name', 'Extruder Shape (Cell)', 'Насадка экструдера (капсула)'),
+    ('shape_extruder_ingot', 'gt:355', 'gt.metaitem.01.32355.name', 'Extruder Shape (Ingot)', 'Насадка экструдера (слиток)'),
+    ('shape_extruder_wire', 'gt:356', 'gt.metaitem.01.32356.name', 'Extruder Shape (Wire)', 'Насадка экструдера (провод)'),
+    ('shape_extruder_casing', 'gt:357', 'gt.metaitem.01.32357.name', 'Extruder Shape (Casing)', 'Насадка экструдера (оболочка)'),
+    ('shape_extruder_pipe_tiny', 'gt:358', 'gt.metaitem.01.32358.name', 'Extruder Shape (Tiny Pipe)', 'Насадка экструдера (крошечная труба)'),
+    ('shape_extruder_pipe_small', 'gt:359', 'gt.metaitem.01.32359.name', 'Extruder Shape (Small Pipe)', 'Насадка экструдера (малая труба)'),
+    ('shape_extruder_pipe_medium', 'gt:360', 'gt.metaitem.01.32360.name', 'Extruder Shape (Normal Pipe)', 'Насадка экструдера (труба)'),
+    ('shape_extruder_pipe_large', 'gt:361', 'gt.metaitem.01.32361.name', 'Extruder Shape (Large Pipe)', 'Насадка экструдера (большая труба)'),
+    ('shape_extruder_pipe_huge', 'gt:362', 'gt.metaitem.01.32362.name', 'Extruder Shape (Huge Pipe)', 'Насадка экструдера (огромная труба)'),
+    ('shape_extruder_block', 'gt:363', 'gt.metaitem.01.32363.name', 'Extruder Shape (Block)', 'Насадка экструдера (блок)'),
+    ('shape_extruder_sword', 'gt:364', 'gt.metaitem.01.32364.name', 'Extruder Shape (Sword Blade)', 'Насадка экструдера (клинок меча)'),
+    ('shape_extruder_pickaxe', 'gt:365', 'gt.metaitem.01.32365.name', 'Extruder Shape (Pickaxe Head)', 'Насадка экструдера (оголовье кирки)'),
+    ('shape_extruder_shovel', 'gt:366', 'gt.metaitem.01.32366.name', 'Extruder Shape (Shovel Head)', 'Насадка экструдера (оголовье лопаты)'),
+    ('shape_extruder_axe', 'gt:367', 'gt.metaitem.01.32367.name', 'Extruder Shape (Axe Head)', 'Насадка экструдера (оголовье топора)'),
+    ('shape_extruder_hoe', 'gt:368', 'gt.metaitem.01.32368.name', 'Extruder Shape (Hoe Head)', 'Насадка экструдера (оголовье мотыги)'),
+    ('shape_extruder_saw', 'gt:371', 'gt.metaitem.01.32371.name', 'Extruder Shape (Saw Blade)', 'Насадка экструдера (полотно пилы)'),
+    ('shape_extruder_gear', 'gt:372', 'gt.metaitem.01.32372.name', 'Extruder Shape (Gear)', 'Насадка экструдера (шестерня)'),
+    ('shape_extruder_bottle', 'gt:373', 'gt.metaitem.01.32373.name', 'Extruder Shape (Bottle)', 'Насадка экструдера (бутылка)'),
+    ('shape_extruder_small_gear', 'gt:374', 'gt.metaitem.01.32374.name', 'Extruder Shape (Small Gear)', 'Насадка экструдера (малая шестерня)'),
+    ('mold_casing', 'gt:302', 'gt.metaitem.01.32302.name', 'Mold (Casing)', 'Форма (оболочка)'),
+    ('mold_bottle', 'gt:305', 'gt.metaitem.01.32305.name', 'Mold (Bottle)', 'Форма (бутылка)'),
+    ('mold_anvil', 'gt:314', 'gt.metaitem.01.32314.name', 'Mold (Anvil)', 'Форма (наковальня)'),
 ]
 
 # Generator fuels (GT_Recipe_Map sDieselFuels / sTurbineFuels from Materials FuelPower/FuelType, IIS MaterialProperties.cfg):
@@ -964,6 +998,44 @@ def generate(g):
            'COIL_HEATING': W('Cupronickel', 2), 'COIL_HEATING_DOUBLE': W('Cupronickel', 4), 'STICK_ELECTROMAGNETIC': R('Steel'),
            'COIL_ELECTRIC': W('Copper', 2), 'ROTOR': tag_of('rotor', 'Bronze'), 'MOTOR': MOTOR_MV, 'PISTON': PISTON_MV,
            'PUMP': PUMP_MV, 'CONVEYOR': CONV_MV, 'ROBOT_ARM': ARM_MV, 'INDUSTRIAL_DIAMOND': 'minecraft:diamond', 'SILVER_WIRE': W('Silver')}
+    MV_CRAFT.update(NEW_CRAFT)
+    XMV['PIPE'] = f'{NS}:pipe_medium_steel'
+    # LV versions of the D83 machines: X.* for tier 1 (Tier.ELECTRIC[1], GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330)
+    XLV = {'HULL': HULL, 'CIRCUIT': CIRC, 'WIRE': C('Tin'), 'GLASS': 'minecraft:glass', 'PLATE': P('Steel'), 'PIPE': f'{NS}:pipe_medium_bronze',
+           'COIL_HEATING': W('Copper', 2), 'COIL_HEATING_DOUBLE': W('Copper', 4), 'MOTOR': MOTOR, 'PISTON': PISTON, 'PUMP': PUMP,
+           'CONVEYOR': CONV, 'ROBOT_ARM': ARM}
+    for mid_, (pattern, letters) in NEW_CRAFT.items():
+        shaped(f'lv/{mid_}_lv', f'{NS}:{mid_}_lv', 1, pattern, {k: XLV.get(v, v) for k, v in letters.items()})
+    # GT_MetaGenerated_Item_01:204-254 extruder shapes (wire cutter) and molds (hammer) from the empty shape
+    for sid, pat in (
+        ('shape_extruder_plate', ['   ', 'xP ', '   ']),
+        ('shape_extruder_rod', ['   ', ' P ', '  x']),
+        ('shape_extruder_bolt', ['x  ', ' P ', '   ']),
+        ('shape_extruder_ring', ['   ', ' Px', '   ']),
+        ('shape_extruder_cell', [' x ', ' P ', '   ']),
+        ('shape_extruder_ingot', ['  x', ' P ', '   ']),
+        ('shape_extruder_wire', ['   ', ' P ', ' x ']),
+        ('shape_extruder_casing', ['   ', ' P ', 'x  ']),
+        ('shape_extruder_pipe_tiny', [' x ', '   ', 'P  ']),
+        ('shape_extruder_pipe_small', ['P  ', '  x', '   ']),
+        ('shape_extruder_pipe_medium', ['P  ', '   ', ' x ']),
+        ('shape_extruder_pipe_large', ['P  ', '   ', '  x']),
+        ('shape_extruder_pipe_huge', ['  x', '   ', 'P  ']),
+        ('shape_extruder_block', ['P x', '   ', '   ']),
+        ('shape_extruder_sword', ['  P', '   ', '  x']),
+        ('shape_extruder_pickaxe', ['  P', '   ', ' x ']),
+        ('shape_extruder_shovel', ['  P', '   ', 'x  ']),
+        ('shape_extruder_axe', ['  P', 'x  ', '   ']),
+        ('shape_extruder_hoe', ['   ', '   ', 'x P']),
+        ('shape_extruder_saw', [' x ', '   ', '  P']),
+        ('shape_extruder_gear', ['x  ', '   ', 'P  ']),
+        ('shape_extruder_bottle', ['   ', '  x', 'P  ']),
+        ('shape_extruder_small_gear', ['   ', 'x  ', 'P  ']),
+        ('mold_casing', ['  h', ' P ', '   ']),
+        ('mold_bottle', ['   ', ' P ', '  h']),
+        ('mold_anvil', ['  P', '   ', ' h ']),
+    ):
+        shaped(f'lv/{sid}', f'{NS}:{sid}', 1, pat, {'P': f'{NS}:shape_empty'})
     MV_CRAFT['thermal_centrifuge'] = (['CEC', 'OMO', 'WEW'], {'M': 'HULL', 'E': 'MOTOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'O': 'COIL_HEATING_DOUBLE'})
     for mid_, (pattern, letters) in MV_CRAFT.items():
         shaped(f'lv/{mid_}_mv', f'{NS}:{mid_}_mv', 1, pattern, {k: XMV.get(v, v) for k, v in letters.items()})
@@ -1218,7 +1290,7 @@ def generate(g):
                        ('jei.iis.electrolyzer', 'Electrolyzer', 'Электролизёр'), ('jei.iis.chemical_reactor', 'Chemical Reactor', 'Химический реактор'),
                        ('jei.iis.fluid_extractor', 'Fluid Extractor', 'Экстрактор жидкостей'),
                        ('jei.iis.fluid_solidifier', 'Fluid Solidifier', 'Отвердитель жидкостей'),
-                       ('jei.iis.distillery', 'Distillery', 'Дистиллятор'), ('jei.iis.chemical_bath', 'Chemical Bath', 'Химическая ванна'),
+                       ('jei.iis.distillery', 'Distillery', 'Дистиллятор'), ('jei.iis.extruder', 'Extruder', 'Экструдер'), ('jei.iis.chemical_bath', 'Chemical Bath', 'Химическая ванна'),
                        ('jei.iis.bender', 'Bending Machine', 'Гибочный станок'), ('jei.iis.lathe', 'Lathe', 'Токарный станок'),
                        ('jei.iis.assembler', 'Assembler', 'Сборщик'), ('jei.iis.mixer', 'Mixer', 'Миксер'),
                        ('jei.iis.polarizer', 'Polarizer', 'Поляризатор'), ('jei.iis.ore_washer', 'Ore Washing Plant', 'Рудопромывочная установка'),

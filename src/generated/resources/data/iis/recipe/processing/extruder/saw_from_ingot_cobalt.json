@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/cobalt",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:saw_head_cobalt",
+      "count": 1
+    }
+  ],
+  "duration": 118,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_saw"
+  ]
+}

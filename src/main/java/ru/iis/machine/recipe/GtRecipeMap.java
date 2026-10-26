@@ -36,7 +36,9 @@ public enum GtRecipeMap {
     CHEMICAL_BATH("chemical_bath", 1, 3),
     // MV (D81): sThermalCentrifugeRecipes (1 вход, 3 выхода), sVacuumRecipes (1 → 1)
     THERMAL_CENTRIFUGE("thermal_centrifuge", 1, 3),
-    VACUUM_FREEZER("vacuum_freezer", 1, 1);
+    VACUUM_FREEZER("vacuum_freezer", 1, 1),
+    // D83: sExtruderRecipes (материал + насадка, насадка не расходуется — поле keep)
+    EXTRUDER("extruder", 2, 1);
 
     public final String id;
     public final int maxInputs, maxOutputs;

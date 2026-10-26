@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/cupronickel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hoe_head_cupronickel",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_hoe"
+  ]
+}

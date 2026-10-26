@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/glass",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_glass",
+      "count": 1
+    }
+  ],
+  "duration": 40,
+  "eut": 8,
+  "keep": [
+    "iis:mold_plate"
+  ]
+}

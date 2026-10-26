@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/rubber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:shovel_head_rubber",
+      "count": 1
+    }
+  ],
+  "duration": 5,
+  "eut": 32,
+  "keep": [
+    "iis:shape_extruder_shovel"
+  ]
+}

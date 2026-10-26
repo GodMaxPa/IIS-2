@@ -150,6 +150,31 @@ final class MvGameTests {
         h.succeedWhen(() -> h.assertTrue(m.energy.stored >= m.energy.capacity / 2 && !(h.getBlockState(tp).isAir()), "MV machine stored " + m.energy.stored));
     }
 
+    /** MV-экструдер (D83): стальной слиток + насадка «пластина» → пластина за 55 тиков при 128 EU/t; насадка остаётся. */
+    static void extruderMvPlate(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, new BlockPos(4, 1, 4), LvMachineType.EXTRUDER_MV);
+        m.setItem(0, new ItemStack(SelfTest.item("ingot_steel")));
+        m.setItem(1, new ItemStack(SelfTest.item("shape_extruder_plate")));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.getItem(2).is(SelfTest.item("plate_steel")), "output " + m.getItem(2));
+            h.assertTrue(m.getItem(1).is(SelfTest.item("shape_extruder_plate")), "shape consumed: " + m.getItem(1));
+        });
+    }
+
+    /** LV-экструдер: стальная пластина (128 EU/t) недоступна, а капсула из олова (32 EU/t) делается, как в GT. */
+    static void extruderLvCellOnly(GameTestHelper h) {
+        ElectricMachineBlockEntity plate = powered(h, new BlockPos(2, 1, 4), LvMachineType.EXTRUDER);
+        plate.setItem(0, new ItemStack(SelfTest.item("ingot_steel")));
+        plate.setItem(1, new ItemStack(SelfTest.item("shape_extruder_plate")));
+        ElectricMachineBlockEntity cell = powered(h, new BlockPos(6, 1, 4), LvMachineType.EXTRUDER);
+        cell.setItem(0, new ItemStack(SelfTest.item("ingot_tin"), 2));
+        cell.setItem(1, new ItemStack(SelfTest.item("shape_extruder_cell")));
+        h.succeedWhen(() -> {
+            h.assertTrue(cell.getItem(2).is(SelfTest.item("capsule")), "cell output " + cell.getItem(2));
+            h.assertTrue(plate.logic().maxProgress == 0 && plate.getItem(2).isEmpty(), "LV extruder ran a 128 EU/t recipe");
+        });
+    }
+
     /** Стопка горячих слитков в инвентаре выживающего игрока обжигает на 3 единицы. */
     static void hotIngotBurns(GameTestHelper h) {
         var player = h.makeMockPlayer(GameType.SURVIVAL);

@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/uranium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_uranium",
+      "count": 1
+    }
+  ],
+  "duration": 476,
+  "eut": 32,
+  "keep": [
+    "iis:mold_plate"
+  ]
+}

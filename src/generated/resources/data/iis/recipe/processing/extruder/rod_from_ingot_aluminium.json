@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/aluminium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_aluminium",
+      "count": 2
+    }
+  ],
+  "duration": 52,
+  "eut": 96,
+  "keep": [
+    "iis:shape_extruder_rod"
+  ]
+}

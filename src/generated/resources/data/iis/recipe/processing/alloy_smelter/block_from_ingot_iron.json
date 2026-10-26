@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/iron",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:iron_block",
+      "count": 1
+    }
+  ],
+  "duration": 5,
+  "eut": 64,
+  "keep": [
+    "iis:mold_block"
+  ]
+}

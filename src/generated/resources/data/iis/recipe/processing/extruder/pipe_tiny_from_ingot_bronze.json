@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/bronze",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pipe_tiny_bronze",
+      "count": 2
+    }
+  ],
+  "duration": 4,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_pipe_tiny"
+  ]
+}

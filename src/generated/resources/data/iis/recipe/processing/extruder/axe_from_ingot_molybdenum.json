@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/molybdenum",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:axe_head_molybdenum",
+      "count": 1
+    }
+  ],
+  "duration": 285,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_axe"
+  ]
+}

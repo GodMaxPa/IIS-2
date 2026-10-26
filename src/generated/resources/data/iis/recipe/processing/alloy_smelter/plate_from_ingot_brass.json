@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/brass",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_brass",
+      "count": 1
+    }
+  ],
+  "duration": 126,
+  "eut": 32,
+  "keep": [
+    "iis:mold_plate"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_gold",
+      "count": 1
+    }
+  ],
+  "duration": 196,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_plate"
+  ]
+}

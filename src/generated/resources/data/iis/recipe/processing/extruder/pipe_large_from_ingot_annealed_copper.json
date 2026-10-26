@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/annealed_copper",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pipe_large_copper",
+      "count": 1
+    }
+  ],
+  "duration": 48,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_pipe_large"
+  ]
+}

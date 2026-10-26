@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/beryllium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:shovel_head_beryllium",
+      "count": 1
+    }
+  ],
+  "duration": 9,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_shovel"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/iridium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_iridium",
+      "count": 2
+    }
+  ],
+  "duration": 384,
+  "eut": 96,
+  "keep": [
+    "iis:shape_extruder_rod"
+  ]
+}

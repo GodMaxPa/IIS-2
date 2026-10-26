@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tin_alloy",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hoe_head_tin_alloy",
+      "count": 1
+    }
+  ],
+  "duration": 174,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_hoe"
+  ]
+}
