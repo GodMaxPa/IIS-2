@@ -1,0 +1,31 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/pyrope",
+      "count": 20
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_aluminium",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_magnesium",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 3
+    }
+  ],
+  "duration": 400,
+  "eut": 90,
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 12000
+    }
+  ]
+}

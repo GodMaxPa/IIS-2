@@ -196,6 +196,13 @@ public final class LvContent {
     // D86: излучатели GT (GT_MetaGenerated_Item_01:656-657) для лазерного гравёра
     public static final DeferredItem<Item> EMITTER_LV = item("emitter_lv");
     public static final DeferredItem<Item> EMITTER_MV = item("emitter_mv");
+    // D91: кремниевая буля, пластины и микросхемы GT (GT_MetaGenerated_Item_03:82-94)
+    public static final DeferredItem<Item> SILICON_BOULE = item("silicon_boule");
+    public static final DeferredItem<Item> SILICON_WAFER = item("silicon_wafer");
+    public static final DeferredItem<Item> WAFER_ILC = item("wafer_ilc");
+    public static final DeferredItem<Item> CHIP_ILC = item("chip_ilc");
+    public static final DeferredItem<Item> WAFER_RAM = item("wafer_ram");
+    public static final DeferredItem<Item> CHIP_RAM = item("chip_ram");
     public static final List<String> EXTRUDER_SHAPE_IDS = List.of("plate", "rod", "bolt", "ring", "cell", "ingot", "wire", "casing",
             "pipe_tiny", "pipe_small", "pipe_medium", "pipe_large", "pipe_huge", "block", "sword", "pickaxe", "shovel", "axe", "hoe", "saw",
             "gear", "bottle", "small_gear");

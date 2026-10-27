@@ -1,0 +1,24 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/silicon",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 240,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_epichlorhydrin",
+      "amount": 144
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_silicone",
+      "amount": 144
+    }
+  ]
+}

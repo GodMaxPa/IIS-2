@@ -164,6 +164,13 @@ ITEMS = [
     ('coated_circuit_board', 'gt:710', 'gt.metaitem.01.32710.name', 'Coated Circuit Board', 'Покрытая печатная плата'),
     ('resistor', 'gt:716', 'gt.metaitem.01.32716.name', 'Resistor', 'Резистор'),
     ('glass_tube', 'gt:glass_tube', 'gt.metaitem.03.32012.name', 'Glass Tube', 'Стеклянная трубочка'),
+    # D91: GT_MetaGenerated_Item_03:82-94 silicon boule, wafer, ILC and RAM wafers and chips
+    ('silicon_boule', 'gt:silicon_boule', 'gt.metaitem.03.32030.name', 'Monocrystalline Silicon Boule', 'Монокристаллическая кремниевая буля'),
+    ('silicon_wafer', 'gt:silicon_wafer', 'gt.metaitem.03.32033.name', 'Wafer', 'Кремниевая пластина'),
+    ('wafer_ilc', 'gt:wafer_ilc', 'gt.metaitem.03.32036.name', 'Integrated Logic Circuit (Wafer)', 'Пластина логических микросхем'),
+    ('chip_ilc', 'gt:chip_ilc', 'gt.metaitem.03.32037.name', 'Integrated Logic Circuit', 'Логическая микросхема'),
+    ('wafer_ram', 'gt:wafer_ram', 'gt.metaitem.03.32038.name', 'Random Access Memory Chip (Wafer)', 'Пластина микросхем ОЗУ'),
+    ('chip_ram', 'gt:chip_ram', 'gt.metaitem.03.32039.name', 'Random Access Memory Chip', 'Микросхема ОЗУ'),
     ('diamond_sawblade', 'gt:721', 'gt.metaitem.01.32721.name', 'Diamond Sawblade', 'Алмазный пильный диск'),
     ('item_filter', 'gt:729', 'gt.metaitem.01.32729.name', 'Item Filter', 'Фильтр'),
     ('battery_lv', 'gt:519', 'gt.metaitem.01.32519.name', 'Small Sodium Battery', 'Малая натриевая батарея'),

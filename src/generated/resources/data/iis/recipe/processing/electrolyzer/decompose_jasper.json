@@ -1,0 +1,31 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/jasper",
+      "count": 20
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_aluminium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 5
+    }
+  ],
+  "duration": 400,
+  "eut": 90,
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 13000
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/plate_silicon",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 3947600
+      }
+    ]
+  }
+}

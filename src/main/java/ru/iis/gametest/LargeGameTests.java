@@ -215,4 +215,16 @@ final class LargeGameTests {
             h.assertTrue(o.getMaxDamage() == 51200, "rotor durability " + o.getMaxDamage());
         });
     }
+
+    /** Гравёр MV: кремниевая пластина + рубиновая линза (красная) → пластина логических микросхем; линза остаётся (D91). */
+    static void engraverMakesIlcWafer(GameTestHelper h) {
+        ru.iis.lv.block.ElectricMachineBlockEntity m = LvGameTests.machine(h, new BlockPos(4, 1, 4), ru.iis.lv.LvMachineType.LASER_ENGRAVER_MV, Direction.NORTH);
+        h.onEachTick(() -> m.energy.stored = m.energy.capacity);
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("silicon_wafer")));
+        m.setItem(1, new ItemStack(ru.iis.command.SelfTest.item("lens_ruby")));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.getItem(2).is(ru.iis.command.SelfTest.item("wafer_ilc")), "output " + m.getItem(2));
+            h.assertTrue(m.getItem(1).is(ru.iis.command.SelfTest.item("lens_ruby")), "lens consumed: " + m.getItem(1));
+        });
+    }
 }

@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/silicon",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_silicon",
+      "count": 4
+    }
+  ],
+  "duration": 28,
+  "eut": 24
+}

@@ -93,6 +93,7 @@ public final class IISGameTests {
             new Test("large_turbine_power", 600, LargeGameTests::turbineMakesPower),
             new Test("large_turbine_structure", 300, LargeGameTests::turbineStructureRules),
             new Test("hv_small_rotor_assembler", 400, LargeGameTests::assemblerMakesSmallRotor),
+            new Test("hv_engraver_ilc_wafer", 1100, LargeGameTests::engraverMakesIlcWafer),
             new Test("extruder_mv_plate", 200, MvGameTests::extruderMvPlate),
             new Test("extruder_lv_cell_only", 300, MvGameTests::extruderLvCellOnly),
             new Test("forming_press_doge_coin", 200, MvGameTests::pressDogeCoin),

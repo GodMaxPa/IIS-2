@@ -1,0 +1,31 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/spodumene",
+      "count": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_lithium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_aluminium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 2
+    }
+  ],
+  "duration": 180,
+  "eut": 90,
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 6000
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/silicon",
+      "count": 32
+    },
+    {
+      "ingredient": "#iis:tiny_dusts/gallium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:silicon_boule",
+      "count": 1
+    }
+  ],
+  "duration": 9000,
+  "eut": 120,
+  "temp": 1784
+}

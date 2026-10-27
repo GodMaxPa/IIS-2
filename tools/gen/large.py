@@ -36,11 +36,23 @@ def generate(g):
     ref, mat_id, mat_by_name = g['ref'], g['mat_id'], g['mat_by_name']
     rec = {}
 
-    def mrec(rtype, rid, inputs, outputs, duration, eut):
+    def mrec(rtype, rid, inputs, outputs, duration, eut, fin=None, keep=None, temp=0):
         if any(i['ingredient'] is None for i in inputs) or any(o['id'] is None for o in outputs):
             return
-        rec.setdefault(f'{rtype}/{rid}', {'type': f'{NS}:{rtype}', 'inputs': inputs, 'outputs': outputs,
-                                          'duration': max(1, int(duration)), 'eut': int(eut)})
+        r = {'type': f'{NS}:{rtype}', 'inputs': inputs, 'outputs': outputs, 'duration': max(1, int(duration)), 'eut': int(eut)}
+        if fin:
+            r['fluid_inputs'] = [fin]
+        if keep:
+            r['keep'] = [keep]
+        if temp:
+            r['temp'] = temp
+        rec.setdefault(f'{rtype}/{rid}', r)
+
+    def cutter(rid, inp, outs, dur, eut):
+        """GT_RecipeAdder#addCutterRecipe:438-440, like lv.py: water, distilled water (both duration x2), lubricant."""
+        mrec('cutter', rid, inp, outs, dur * 2, eut, {'ingredient': 'minecraft:water', 'amount': max(4, min(1000, dur * eut // 320))})
+        mrec('cutter', rid + '_distilled', inp, outs, dur * 2, eut, {'ingredient': f'{NS}:distilled_water', 'amount': max(3, min(750, dur * eut // 426))})
+        mrec('cutter', rid + '_lubricant', inp, outs, dur, eut, {'ingredient': f'{NS}:lubricant', 'amount': max(1, min(250, dur * eut // 1280))})
 
     def ing(i, c=1):
         return {'ingredient': i, 'count': c}
@@ -262,6 +274,20 @@ def generate(g):
                 'outputs': [{'id': f'{NS}:turbine_small', 'count': 1, 'components': {
                     f'{NS}:rotor_material': mid, 'minecraft:max_damage': 100 * int(m['toolDurability'] * 1.0)}}],
                 'duration': 160, 'eut': 100}
+    # --- D91: silicon wafers and chips (GT_MachineRecipeLoader:475-476, 507-508, 620-621, 1149; ProcessingCrafting:51, 58) ---
+    mrec('electrolyzer', 'sand_silicon_dioxide', [ing('minecraft:sand', 8)], [rout(ref('dust', 'SiliconDioxide'))], 500, 25)
+    mrec('blast', 'silicon_boule', [ing(tag_of('dust', 'Silicon'), 32), ing(tag_of('tiny_dust', 'Gallium'))], [rout(f'{NS}:silicon_boule')],
+         9000, 120, temp=1784)
+    cutter('silicon_wafer', [ing(f'{NS}:silicon_boule')], [rout(f'{NS}:silicon_wafer', 16)], 200, 8)
+    # craftingLensRed -> integrated logic circuit wafer, craftingLensCyan -> RAM wafer (900 t, 120 EU/t, no cleanroom)
+    mrec('laser_engraver', 'wafer_ilc', [ing(f'{NS}:silicon_wafer')], [rout(f'{NS}:wafer_ilc')], 900, 120, keep='#iis:crafting_lens/red')
+    mrec('laser_engraver', 'wafer_ram', [ing(f'{NS}:silicon_wafer')], [rout(f'{NS}:wafer_ram')], 900, 120, keep='#iis:crafting_lens/cyan')
+    cutter('chip_ilc', [ing(f'{NS}:wafer_ilc')], [rout(f'{NS}:chip_ilc', 8)], 600, 48)
+    cutter('chip_ram', [ing(f'{NS}:wafer_ram')], [rout(f'{NS}:chip_ram', 32)], 600, 48)
+    # diode from a silicon wafer: 1 diode (the tiny gallium variant gives 4, lv.py)
+    for wid, wire in (('wire', '#iis:wires/1x/tin'), ('fine_wire', tag_of('wire_fine', 'Tin'))):
+        shaped(f'lv/diode_wafer_{wid}', f'{NS}:diode', 1, ['BG ', 'WDW', 'BG '], {'B': '#c:dyes/black', 'G': 'minecraft:glass_pane',
+                                                                             'D': f'{NS}:silicon_wafer', 'W': wire})
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     stats['d90_machine_recipes'] = len(rec)

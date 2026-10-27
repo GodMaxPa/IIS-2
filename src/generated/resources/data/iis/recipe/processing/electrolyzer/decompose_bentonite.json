@@ -1,0 +1,51 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/bentonite",
+      "count": 30
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_sodium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_magnesium",
+      "count": 6
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 12
+    },
+    {
+      "id": "iis:capsule",
+      "count": 5,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "minecraft:water",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 480,
+  "eut": 120,
+  "fluid_outputs": [
+    {
+      "id": "iis:hydrogen",
+      "amount": 6000
+    }
+  ]
+}

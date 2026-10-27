@@ -1,0 +1,25 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/olivine",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_magnesium",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_silicon_dioxide",
+      "count": 2
+    }
+  ],
+  "duration": 140,
+  "eut": 90
+}

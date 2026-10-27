@@ -1,0 +1,25 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/silicon",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 240,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:chloromethane",
+      "amount": 10000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dimethyldichlorosilane",
+      "amount": 11000
+    }
+  ],
+  "circuit": 1
+}

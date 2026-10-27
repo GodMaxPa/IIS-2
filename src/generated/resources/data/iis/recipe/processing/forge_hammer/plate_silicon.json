@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/silicon",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_silicon",
+      "count": 2
+    }
+  ],
+  "duration": 28,
+  "eut": 16
+}

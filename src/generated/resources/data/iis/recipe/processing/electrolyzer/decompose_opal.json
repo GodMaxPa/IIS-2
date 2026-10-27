@@ -1,0 +1,17 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/opal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_silicon_dioxide",
+      "count": 1
+    }
+  ],
+  "duration": 20,
+  "eut": 30
+}

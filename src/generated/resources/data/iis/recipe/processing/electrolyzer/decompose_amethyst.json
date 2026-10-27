@@ -1,0 +1,21 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/amethyst",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_silicon_dioxide",
+      "count": 4
+    },
+    {
+      "id": "iis:dust_iron",
+      "count": 1
+    }
+  ],
+  "duration": 130,
+  "eut": 60
+}

@@ -5890,6 +5890,56 @@
     "material": "scheelite"
   },
   {
+    "id": "dust_silicon",
+    "prefix": "dust",
+    "material": "silicon"
+  },
+  {
+    "id": "small_dust_silicon",
+    "prefix": "small_dust",
+    "material": "silicon"
+  },
+  {
+    "id": "tiny_dust_silicon",
+    "prefix": "tiny_dust",
+    "material": "silicon"
+  },
+  {
+    "id": "ingot_silicon",
+    "prefix": "ingot",
+    "material": "silicon"
+  },
+  {
+    "id": "nugget_silicon",
+    "prefix": "nugget",
+    "material": "silicon"
+  },
+  {
+    "id": "plate_silicon",
+    "prefix": "plate",
+    "material": "silicon"
+  },
+  {
+    "id": "foil_silicon",
+    "prefix": "foil",
+    "material": "silicon"
+  },
+  {
+    "id": "dust_silicon_dioxide",
+    "prefix": "dust",
+    "material": "silicon_dioxide"
+  },
+  {
+    "id": "small_dust_silicon_dioxide",
+    "prefix": "small_dust",
+    "material": "silicon_dioxide"
+  },
+  {
+    "id": "tiny_dust_silicon_dioxide",
+    "prefix": "tiny_dust",
+    "material": "silicon_dioxide"
+  },
+  {
     "id": "crushed_silver",
     "prefix": "crushed",
     "material": "silver"

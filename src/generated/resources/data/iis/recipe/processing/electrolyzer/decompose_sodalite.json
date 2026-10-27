@@ -1,0 +1,31 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sodalite",
+      "count": 11
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_aluminium",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_sodium",
+      "count": 4
+    }
+  ],
+  "duration": 264,
+  "eut": 90,
+  "fluid_outputs": [
+    {
+      "id": "iis:chlorine",
+      "amount": 1000
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "iis:silicon_boule",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:silicon_wafer",
+      "count": 16
+    }
+  ],
+  "duration": 200,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 1
+    }
+  ]
+}

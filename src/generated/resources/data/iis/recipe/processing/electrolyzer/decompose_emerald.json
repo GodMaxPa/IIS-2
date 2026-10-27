@@ -1,0 +1,31 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/emerald",
+      "count": 29
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_beryllium",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_aluminium",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 6
+    }
+  ],
+  "duration": 522,
+  "eut": 90,
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 18000
+    }
+  ]
+}

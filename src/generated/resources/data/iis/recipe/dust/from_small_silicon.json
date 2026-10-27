@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/silicon",
+    "#iis:small_dusts/silicon",
+    "#iis:small_dusts/silicon",
+    "#iis:small_dusts/silicon"
+  ],
+  "result": {
+    "id": "iis:dust_silicon"
+  }
+}

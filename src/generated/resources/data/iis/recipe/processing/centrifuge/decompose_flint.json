@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/flint",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_silicon_dioxide",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 5
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:foils/silicon",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 6,
+  "eut": 58,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_silicon",
+      "amount": 36
+    }
+  ]
+}

@@ -140,6 +140,8 @@ names |= {'Chrome', 'StainlessSteel'}
 names |= {'Gallium'}
 # D90: turbine parts — magnalium (rotor rods, turbine casing plates) and the blue steel chain (turbine casing frame)
 names |= {'Magnalium', 'RoseGold', 'BlackBronze', 'BlackSteel', 'BlueSteel'}
+# D91: silicon for wafers and chips (GT_MachineRecipeLoader:620; sand electrolysis :1149)
+names |= {'SiliconDioxide', 'Silicon'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64

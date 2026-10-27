@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/silicon",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 58,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_silicon",
+      "amount": 144
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/topaz",
+      "count": 13
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_aluminium",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 1
+    },
+    {
+      "id": "iis:capsule",
+      "count": 2,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:hydrogen",
+          "amount": 1000
+        }
+      }
+    },
+    {
+      "id": "iis:capsule",
+      "count": 6,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:oxygen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 208,
+  "eut": 120,
+  "fluid_outputs": [
+    {
+      "id": "iis:fluorine",
+      "amount": 2000
+    }
+  ]
+}
