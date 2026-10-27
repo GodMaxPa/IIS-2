@@ -28,20 +28,29 @@ final class MultiGameTests {
 
     /** Печь 3×3×4: контроллер (4,1,1) лицом на север, середина (4,·,2). energyHatches — 1 или 2. */
     static EbfBlockEntity build(GameTestHelper h, int energyHatches) {
+        return build(h, energyHatches, HatchType.ENERGY, MultiContent.COIL_CUPRONICKEL.get(), false);
+    }
+
+    /** Входной люк жидкости печи с fluidHatch = true: нижний слой, юго-запад от середины. */
+    static final BlockPos FLUID_HATCH = new BlockPos(3, 1, 3);
+
+    /** То же, с люками energy и катушками coil; fluidHatch — входной люк жидкости на {@link #FLUID_HATCH} (D101). */
+    static EbfBlockEntity build(GameTestHelper h, int energyHatches, HatchType energy, net.minecraft.world.level.block.Block coil, boolean fluidHatch) {
         BlockPos center = new BlockPos(4, 1, 2);
         for (int dx = -1; dx <= 1; dx++)
             for (int dz = -1; dz <= 1; dz++) {
                 BlockPos c = center.offset(dx, 0, dz);
                 h.setBlock(c, MultiContent.HEAT_PROOF_CASING.get());
                 if (dx != 0 || dz != 0) {
-                    h.setBlock(c.above(1), MultiContent.COIL_CUPRONICKEL.get());
-                    h.setBlock(c.above(2), MultiContent.COIL_CUPRONICKEL.get());
+                    h.setBlock(c.above(1), coil);
+                    h.setBlock(c.above(2), coil);
                 }
                 h.setBlock(c.above(3), MultiContent.HEAT_PROOF_CASING.get());
             }
         h.setBlock(center.above(3), hatch(HatchType.MUFFLER, Direction.UP));
-        h.setBlock(center, hatch(HatchType.ENERGY, Direction.DOWN));
-        if (energyHatches > 1) h.setBlock(center.west(), hatch(HatchType.ENERGY, Direction.WEST));
+        h.setBlock(center, hatch(energy, Direction.DOWN));
+        if (energyHatches > 1) h.setBlock(center.west(), hatch(energy, Direction.WEST));
+        if (fluidHatch) h.setBlock(FLUID_HATCH, hatch(HatchType.INPUT_HATCH, Direction.SOUTH));
         h.setBlock(center.east(), hatch(HatchType.INPUT_BUS, Direction.EAST));
         h.setBlock(center.south(), hatch(HatchType.OUTPUT_BUS, Direction.SOUTH));
         h.setBlock(center.south().east(), hatch(HatchType.MAINTENANCE, Direction.EAST));

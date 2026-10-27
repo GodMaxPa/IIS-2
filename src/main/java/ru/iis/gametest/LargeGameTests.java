@@ -519,6 +519,69 @@ final class LargeGameTests {
         h.succeed();
     }
 
+    // --- D101: плавка в ЭДП (люк EV, чтобы разгон сократил время) ---------------------------------------------------------
+    private static int count(ItemBusBlockEntity bus, String id) {
+        int n = 0;
+        for (ItemStack s : bus.stacks()) if (s.is(ru.iis.command.SelfTest.item(id))) n += s.getCount();
+        return n;
+    }
+
+    private static EbfBlockEntity smeltingEbf(GameTestHelper h, net.minecraft.world.level.block.Block coil) {
+        EbfBlockEntity e = MultiGameTests.build(h, 1, HatchType.ENERGY_EV, coil, true);
+        e.maintenance().setMask(63);
+        return e;
+    }
+
+    /** Титан на кантале (GT_MachineRecipeLoader:1043): 2 магния + 1000 л TiCl4 → горячий титан + 2 MgCl2; 2140 K, 480 EU/t → на EV
+     *  1920 EU/t × 400 тиков. На константане (1800 K) — не идёт. */
+    static void ebfSmeltsTitanium(GameTestHelper h) {
+        smeltingEbf(h, MultiContent.COIL_KANTHAL.get());
+        ItemBusBlockEntity in = h.getBlockEntity(new BlockPos(5, 1, 2), ItemBusBlockEntity.class);
+        ItemBusBlockEntity out = h.getBlockEntity(new BlockPos(4, 1, 3), ItemBusBlockEntity.class);
+        FluidHatchBlockEntity fluid = h.getBlockEntity(MultiGameTests.FLUID_HATCH, FluidHatchBlockEntity.class);
+        in.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("dust_magnesium"), 2));
+        fluid.tank().setAmount(gt("titaniumtetrachloride"), 1000);
+        h.succeedWhen(() -> {
+            h.assertTrue(count(out, "hot_ingot_titanium") == 1 && count(out, "dust_magnesiumchloride") == 2, "output bus " + out.stacks());
+            h.assertTrue(fluid.tank().amount() == 0, "TiCl4 left " + fluid.tank().amount());
+        });
+    }
+
+    /** На константане (1800 K) титан (2140 K) не плавится — магний остаётся в шине. */
+    static void ebfTitaniumNeedsKanthal(GameTestHelper h) {
+        smeltingEbf(h, MultiContent.COIL_CUPRONICKEL.get());
+        ItemBusBlockEntity in = h.getBlockEntity(new BlockPos(5, 1, 2), ItemBusBlockEntity.class);
+        FluidHatchBlockEntity fluid = h.getBlockEntity(MultiGameTests.FLUID_HATCH, FluidHatchBlockEntity.class);
+        in.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("dust_magnesium"), 2));
+        fluid.tank().setAmount(gt("titaniumtetrachloride"), 1000);
+        h.runAtTickTime(200, () -> {
+            h.assertTrue(in.getItem(0).getCount() == 2 && fluid.tank().amount() == 1000, "smelted on cupronickel: " + in.getItem(0));
+            h.succeed();
+        });
+    }
+
+    /** Вольфрам (GT_MachineRecipeLoader2:50): 4 оксида + 6000 л водорода → горячий вольфрам; 3000 K — нихром; 120 EU/t × 12000 →
+     *  на EV 1920 × 3000. */
+    static void ebfSmeltsTungsten(GameTestHelper h) {
+        smeltingEbf(h, MultiContent.COIL_NICHROME.get());
+        ItemBusBlockEntity in = h.getBlockEntity(new BlockPos(5, 1, 2), ItemBusBlockEntity.class);
+        ItemBusBlockEntity out = h.getBlockEntity(new BlockPos(4, 1, 3), ItemBusBlockEntity.class);
+        FluidHatchBlockEntity fluid = h.getBlockEntity(MultiGameTests.FLUID_HATCH, FluidHatchBlockEntity.class);
+        in.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("dust_tungsten_trioxide"), 4));
+        fluid.tank().setAmount(gt("hydrogen"), 6000);
+        h.succeedWhen(() -> h.assertTrue(count(out, "hot_ingot_tungsten") == 1, "output bus " + out.stacks()));
+    }
+
+    /** Вольфрамосталь (GT_MachineRecipeLoader:1029): вольфрам + сталь → 2 горячих слитка; 3000 K — нихром, 480 EU/t. */
+    static void ebfSmeltsTungstensteel(GameTestHelper h) {
+        smeltingEbf(h, MultiContent.COIL_NICHROME.get());
+        ItemBusBlockEntity in = h.getBlockEntity(new BlockPos(5, 1, 2), ItemBusBlockEntity.class);
+        ItemBusBlockEntity out = h.getBlockEntity(new BlockPos(4, 1, 3), ItemBusBlockEntity.class);
+        in.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("ingot_tungsten")));
+        in.setItem(1, new ItemStack(ru.iis.command.SelfTest.item("ingot_steel")));
+        h.succeedWhen(() -> h.assertTrue(count(out, "hot_ingot_tungsten_steel") == 2, "output bus " + out.stacks()));
+    }
+
     /** Измельчитель EV (D100): 2048 В; руда халькопирита → 2 дроблёной. */
     static void evMaceratorOre(GameTestHelper h) {
         var m = poweredMachine(h, ru.iis.lv.LvMachineType.MACERATOR_EV);
