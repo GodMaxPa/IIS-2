@@ -23,6 +23,9 @@ HATCHES = [
     ('hatch_muffler_lv', 'OVERLAY_MUFFLER', 'gt.blockmachines.hatch.muffler.tier.01.name', 'LV Muffler Hatch'),
     # D82: GT_Loader_MetaTileEntities:238 (MV casing)
     ('hatch_energy_mv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.02.name', 'MV Energy Hatch'),
+    # D89: GT_Loader_MetaTileEntities:215-216 dynamo hatches (energy out of multiblock generators)
+    ('hatch_dynamo_lv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.01.name', 'LV Dynamo Hatch'),
+    ('hatch_dynamo_mv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.02.name', 'MV Dynamo Hatch'),
 ]
 
 
@@ -138,6 +141,10 @@ def generate(g):
         name(f'block.{NS}.{bid}', en, ru(key, en))
     tooltip('hatch_energy_lv', [('Energy input for multiblocks: 32 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 32 EU/t, до 2 А, спереди')])
     tooltip('hatch_energy_mv', [('Energy input for multiblocks: 128 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 128 EU/t, до 2 А, спереди')])
+    tooltip('hatch_dynamo_lv', [('Energy output for multiblock generators: 32 EU/t, 1 A, from the front', 'Выход энергии многоблочного генератора: 32 EU/t, 1 А, спереди'),
+                                ('More than 32 EU/t from the generator - the whole machine explodes', 'Больше 32 EU/t от генератора — вся машина взрывается')])
+    tooltip('hatch_dynamo_mv', [('Energy output for multiblock generators: 128 EU/t, 1 A, from the front', 'Выход энергии многоблочного генератора: 128 EU/t, 1 А, спереди'),
+                                ('More than 128 EU/t from the generator - the whole machine explodes', 'Больше 128 EU/t от генератора — вся машина взрывается')])
     tooltip('hatch_input_bus_lv', [('Item input for multiblocks, 4 slots', 'Вход предметов многоблочной машины, 4 слота')])
     tooltip('hatch_output_bus_lv', [('Item output for multiblocks, 4 slots', 'Выход предметов многоблочной машины, 4 слота')])
     tooltip('hatch_input_lv', [('Fluid input for multiblocks, 16000 L', 'Вход жидкости многоблочной машины, 16000 л')])
@@ -149,6 +156,9 @@ def generate(g):
     shaped('multi/hatch_energy_lv', f'{NS}:hatch_energy_lv', 1, ['CM'], {'M': HULL, 'C': '#iis:cables/1x/tin'})
     # GT_Loader_MetaTileEntities:270 "CM ": MV hull, copper cable
     shaped('multi/hatch_energy_mv', f'{NS}:hatch_energy_mv', 1, ['CM'], {'M': f'{NS}:hull_mv', 'C': '#iis:cables/1x/copper'})
+    # GT_Loader_MetaTileEntities:226-227 " MC": hull, cable (tin for LV, copper for MV)
+    shaped('multi/hatch_dynamo_lv', f'{NS}:hatch_dynamo_lv', 1, ['MC'], {'M': HULL, 'C': '#iis:cables/1x/tin'})
+    shaped('multi/hatch_dynamo_mv', f'{NS}:hatch_dynamo_mv', 1, ['MC'], {'M': f'{NS}:hull_mv', 'C': '#iis:cables/1x/copper'})
     shaped('multi/hatch_input_lv', f'{NS}:hatch_input_lv', 1, ['G', 'M'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_output_lv', f'{NS}:hatch_output_lv', 1, ['M', 'G'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_input_bus_lv', f'{NS}:hatch_input_bus_lv', 1, ['C', 'M'], {'M': HULL, 'C': '#c:chests/wooden'})

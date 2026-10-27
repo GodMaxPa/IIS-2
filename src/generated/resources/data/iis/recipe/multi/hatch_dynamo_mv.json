@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MC"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "C": "#iis:cables/1x/copper"
+  },
+  "result": {
+    "id": "iis:hatch_dynamo_mv"
+  }
+}

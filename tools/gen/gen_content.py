@@ -916,7 +916,7 @@ for w in ('oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 
 # GT5 GT_Block_Machines / GT_Block_Casings: machines, casings, hulls, hatches and pipes are harvested only with a wrench
 # (iis:mineable/wrench); wires and cables — with a wire cutter (iis:mineable/wire_cutter, hand still drops them)
 import re as _re
-_WRENCH = _re.compile(r'^iis:(hull_.*|boiler_.*|steam_.*|pipe_.*|casing_lv|.*_lv|.*_mv|battery_buffer_.*|transformer_lv|frame_.*|heat_proof_casing|coil_.*|hatch_.*|electric_blast_furnace|large_boiler_.*|bronze_plated_bricks|solid_steel_casing|(bronze|steel)_(pipe|firebox)_casing)$')
+_WRENCH = _re.compile(r'^iis:(hull_.*|boiler_.*|steam_.*|pipe_.*|casing_lv|.*_lv|.*_mv|battery_buffer_.*|transformer_lv|frame_.*|heat_proof_casing|coil_.*|hatch_.*|electric_blast_furnace|large_boiler_.*|large_steam_turbine|turbine_casing|bronze_plated_bricks|solid_steel_casing|(bronze|steel)_(pipe|firebox)_casing)$')
 _CUTTER = _re.compile(r'^iis:(wire|cable)_.*$')
 block_tags.setdefault('iis:mineable/wrench', [])
 block_tags.setdefault('iis:mineable/wire_cutter', [])

@@ -1,4 +1,5 @@
-"""Large multiblock generators (D88): large boilers (GT_MetaTileEntity_LargeBoiler_*), called from gen_content.py.
+"""Large multiblock generators: large boilers (GT_MetaTileEntity_LargeBoiler_*, D88) and the large steam turbine with
+dynamo hatches and rotors (GT_MetaTileEntity_LargeTurbine_Steam, D89), called from gen_content.py.
 
 Blocks: boiler casings (GT_Block_Casings1:10, Casings2:0/12/13, Casings3:13/14) and controllers; recipes:
 GT_Loader_MetaTileEntities:61-62, 75-76, 87-88, 1157-1158 and GT_MachineRecipeLoader:1389. Java lists the same ids
@@ -137,4 +138,79 @@ def generate(g):
         'type': f'{NS}:assembler', 'inputs': [{'ingredient': tag_of('plate', 'Steel'), 'count': 6}, {'ingredient': '#c:frames/steel', 'count': 1}],
         'outputs': [{'id': f'{NS}:solid_steel_casing', 'count': 2}], 'duration': 50, 'eut': 16})
     stats['large_boilers'] = len(BOILERS)
+
+    # --- large steam turbine (GT_MetaTileEntity_LargeTurbine_Steam, D89) ------------------------------------------------
+    # Casing GT_Block_Casings4:9 ("PhP/PFP/PwP" magnalium plates + blue steel frame) and controller (:1247 HV hull, Advanced
+    # circuits) need HV materials: both come from the creative tab until then, like the steel boiler.
+    first(os.path.join(BI, 'MACHINE_CASING_TURBINE.png')).save(tex_out('block/multi/turbine_casing.png'))
+    write(os.path.join(A, 'models', 'block', 'turbine_casing.json'), {'parent': 'minecraft:block/cube_all', 'textures': {'all': f'{NS}:block/multi/turbine_casing'}})
+    write(os.path.join(A, 'blockstates', 'turbine_casing.json'), {'variants': {'': {'model': f'{NS}:block/turbine_casing'}}})
+    simple('turbine_casing')
+    name(f'block.{NS}.turbine_casing', 'Turbine Casing', ru('gt.blockcasings4.9.name', 'Turbine Casing'))
+    tooltip('turbine_casing', [('Walls of the Large Steam Turbine', 'Стенки большой паровой турбины'),
+                               ('Crafting arrives with Magnalium and Blue Steel', 'Крафт появится вместе с магналием и синей сталью')])
+    tc = first(os.path.join(BI, 'MACHINE_CASING_TURBINE.png'))
+    for suf, ov in (('', 'LARGETURBINE_ST5'), ('_active', 'LARGETURBINE_ST_ACTIVE5')):
+        o = Image.open(os.path.join(BI, ov + '.png')).convert('RGBA')
+        frames_n = max(1, o.height // 16)
+        out = Image.new('RGBA', (16, 16 * frames_n))
+        for f in range(frames_n):
+            out.paste(Image.alpha_composite(tc, o.crop((0, 16 * f, 16, 16 * f + 16))), (0, 16 * f))
+        out.save(tex_out(f'block/multi/large_steam_turbine_front{suf}.png'))
+        meta = os.path.join(BI, ov + '.png.mcmeta')
+        if frames_n > 1 and os.path.exists(meta):
+            shutil.copy(meta, tex_out(f'block/multi/large_steam_turbine_front{suf}.png.mcmeta'))
+        side = f'{NS}:block/multi/turbine_casing'
+        write(os.path.join(A, 'models', 'block', 'large_steam_turbine' + suf + '.json'), {
+            'parent': 'minecraft:block/cube',
+            'textures': {'particle': side, 'north': f'{NS}:block/multi/large_steam_turbine_front{suf}', 'south': side, 'east': side,
+                         'west': side, 'up': side, 'down': side}})
+    variants = {}
+    for facing, y in (('north', 0), ('east', 90), ('south', 180), ('west', 270)):
+        for active in (False, True):
+            v = {'model': f'{NS}:block/large_steam_turbine' + ('_active' if active else '')}
+            if y:
+                v['y'] = y
+            variants[f'facing={facing},active={str(active).lower()}'] = v
+    write(os.path.join(A, 'blockstates', 'large_steam_turbine.json'), {'variants': variants})
+    simple('large_steam_turbine')
+    name(f'block.{NS}.large_steam_turbine', 'Large Steam Turbine', ru('gt.blockmachines.multimachine.largeturbine.name', 'Large Steam Turbine'))
+    tooltip('large_steam_turbine', [
+        ('3x3x4 hollow, controller in the middle of the front; 3x3 of air in front of it', 'Форма 3×3×4, пустая внутри; контроллер — в середине передней стороны, перед ним 3×3 воздуха'),
+        ('Side centres of layers 2-3: steam input hatch, distilled water output hatch, maintenance', 'Середины сторон 2-го и 3-го слоёв: вход пара, выход дистиллированной воды, обслуживание'),
+        ('Back centre: Dynamo Hatch; Turbine Casings for the rest (24 at least)', 'Середина задней стороны — динамо-люк; остальное — турбинные корпуса (не меньше 24)'),
+        ('Needs a turbine rotor in the controller; output 60-3360 EU/t by rotor', 'Нужен ротор в контроллере; выход 60–3360 EU/t в зависимости от ротора'),
+        ('More EU/t than the dynamo hatch takes - the whole machine explodes', 'Выход больше, чем принимает динамо-люк, — вся машина взрывается'),
+        ('Crafting arrives with the HV hull and the Advanced (HV) circuit', 'Крафт появится вместе с корпусом HV и схемой HV')])
+    shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'LargeTurbine.png'), tex_out('gui/multi/large_turbine.png'))
+    for k, en, ruu in (('gui.iis.turbine.no_rotor', 'Insert a turbine rotor', 'Вставьте ротор турбины'),
+                       ('gui.iis.turbine.output', 'Output: %s EU/t', 'Выход: %s EU/t'),
+                       ('gui.iis.turbine.flow', 'Optimal flow: %s L/t', 'Оптимальный поток: %s л/т'),
+                       ('gui.iis.turbine.speed', 'Speed: %s%%, steam: %s L', 'Скорость: %s%%, пар: %s л'),
+                       ('gui.iis.turbine.damage', 'Rotor wear: %s%%', 'Износ ротора: %s%%')):
+        name(k, en, ruu)
+
+    # --- rotors (GT_MetaGenerated_Tool_01 170-176): material in iis:rotor_material, tinted head + overlay --------------------
+    II = os.path.join(GT, 'items', 'iconsets')
+    for size, en, ruu in (('small', 'Small Turbine', 'Малая турбина'), ('normal', 'Turbine', 'Турбина'),
+                          ('large', 'Large Turbine', 'Большая турбина'), ('huge', 'Huge Turbine', 'Огромная турбина')):
+        iid = f'turbine_{size}'
+        src = 'TURBINE' if size == 'normal' else f'TURBINE_{size.upper()}'
+        first(os.path.join(II, src + '.png')).save(tex_out(f'item/turbine/{iid}.png'))
+        first(os.path.join(II, src + '_OVERLAY.png')).save(tex_out(f'item/turbine/{iid}_overlay.png'))
+        write(os.path.join(A, 'models', 'item', iid + '.json'), {'parent': 'minecraft:item/handheld', 'textures': {
+            'layer0': f'{NS}:item/turbine/{iid}', 'layer1': f'{NS}:item/turbine/{iid}_overlay'}})
+        write(os.path.join(A, 'items', iid + '.json'), {'model': {'type': 'minecraft:model', 'model': f'{NS}:item/{iid}',
+                                                                  'tints': [{'type': f'{NS}:rotor_material'}]}})
+        name(f'item.{NS}.{iid}', en, ruu)
+        name(f'item.{NS}.{iid}.named', f'%s {en}', f'{ruu} (%s)')
+    for k, en, ruu in (('item.iis.turbine.efficiency', 'Turbine Efficiency: %s%%', 'КПД турбины: %s%%'),
+                       ('item.iis.turbine.flow', 'Optimal Steam flow: %s L/t (%s L/s)', 'Оптимальный поток пара: %s л/т (%s л/с)'),
+                       ('item.iis.turbine.durability', 'Durability: %s / %s', 'Прочность: %s / %s')):
+        name(k, en, ruu)
+    turbine_mats = [m for m in g['materials'] if m['types'] & 64 and m['toolDurability'] > 0
+                    and 'NO_SMASHING' not in m['subTags'] and 'BOUNCY' not in m['subTags']]
+    for m in turbine_mats:
+        name(f'material.{NS}.{m["id"]}', m['en'], m['ru'])
+    stats['rotor_materials'] = len(turbine_mats)
     return stats

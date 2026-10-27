@@ -173,6 +173,34 @@ public final class MultiScreens {
         }
     }
 
+    /** Большая турбина (D89): экран GT LargeTurbine.png со слотом ротора; строки GT getInfoData. */
+    public static class LargeTurbine extends MachineScreen<ControllerMenu> {
+        public LargeTurbine(ControllerMenu menu, Inventory inventory, Component title) {
+            super(menu, inventory, title, "multi/large_turbine");
+        }
+
+        @Override
+        protected void extractGauges(GuiGraphicsExtractor g) {}
+
+        @Override
+        protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
+            int y = statusLines(g, font, title, menu.formed(), menu.okMask(), menu.works(), menu.mufflerBlocked());
+            if (y < 0) return;
+            int white = 0xFFFAFAFF, red = 0xFFFF5555;
+            if (menu.extra(4) == 0) {
+                g.text(font, Component.translatable("gui.iis.turbine.no_rotor"), 10, y, red, false);
+                return;
+            }
+            g.text(font, Component.translatable("gui.iis.turbine.output", menu.extra(0)), 10, y, white, false);
+            y += 10;
+            g.text(font, Component.translatable("gui.iis.turbine.flow", menu.extra(1)), 10, y, white, false);
+            y += 10;
+            if (y <= 70) g.text(font, Component.translatable("gui.iis.turbine.speed", menu.efficiency(), menu.extra(2)), 10, y, white, false);
+            y += 10;
+            if (y <= 70) g.text(font, Component.translatable("gui.iis.turbine.damage", menu.extra(3)), 10, y, white, false);
+        }
+    }
+
     /** Вакуумный морозильник: экран GT VacuumFreezer.png, те же строки без нагрева (D81). */
     public static class Freezer extends Ebf {
         public Freezer(EbfMenu menu, Inventory inventory, Component title) {

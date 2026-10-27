@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/turbine_normal",
+    "tints": [
+      {
+        "type": "iis:rotor_material"
+      }
+    ]
+  }
+}

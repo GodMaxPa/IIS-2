@@ -14,12 +14,15 @@ import ru.iis.machine.menu.MachineMenu;
 import ru.iis.multi.MultiContent;
 
 /**
- * Экран контроллера со слотом (GT_Container_MultiMachine: слот 1 в (152, 5)): программная схема большого котла (D88).
+ * Экран контроллера со слотом (GT_Container_MultiMachine: слот 1 в (152, 5)): программная схема большого котла (D88),
+ * ротор большой турбины (D89).
  * Сведения 0–9 — общие (как у {@link EbfMenu}), дальше — свои у каждой машины.
  */
 public class ControllerMenu extends MachineMenu {
     /** Котёл: 10 — пар л/т, 11 — запас горения, 12 — настройка схемы, 13 — кислород. */
     public static final int BOILER_DATA = 14;
+    /** Турбина: 10 — отдача EU/t, 11 — оптимальный поток, 12 — пар в люке, 13 — износ ротора %, 14 — ротор на месте. */
+    public static final int TURBINE_DATA = 15;
 
     public ControllerMenu(MenuType<?> type, int id, Inventory inventory, Container container, ContainerData data) {
         super(type, id, container, data);
@@ -36,14 +39,24 @@ public class ControllerMenu extends MachineMenu {
         return boiler(id, inventory, new SimpleContainer(1), new SimpleContainerData(BOILER_DATA));
     }
 
+    public static ControllerMenu turbine(int id, Inventory inventory, Container container, ContainerData data) {
+        return new ControllerMenu(MultiContent.LARGE_TURBINE_MENU.get(), id, inventory, container, data);
+    }
+
+    public static ControllerMenu turbineClient(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
+        buf.readBlockPos();
+        return turbine(id, inventory, new SimpleContainer(1), new SimpleContainerData(TURBINE_DATA));
+    }
+
     @Override
     protected boolean acceptsShiftClick(int slot, ItemStack stack) {
-        return stack.getItem() instanceof ProgrammedCircuitItem;
+        return stack.getItem() instanceof ProgrammedCircuitItem || stack.getItem() instanceof ru.iis.multi.TurbineRotorItem;
     }
 
     public boolean formed() { return data(0) != 0; }
     public int okMask() { return data(1); }
     public int efficiency() { return data(2); }
+    public int eut() { return data(5); }
     public boolean works() { return data(8) != 0; }
     public boolean mufflerBlocked() { return data(9) != 0; }
     public int extra(int i) { return data(10 + i); }

@@ -117,6 +117,7 @@ public class HatchBlock extends Block implements EntityBlock, EnergyConnectable 
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return switch (type) {
             case ENERGY, ENERGY_MV -> new EnergyHatchBlockEntity(pos, state);
+            case DYNAMO, DYNAMO_MV -> new DynamoHatchBlockEntity(pos, state);
             case INPUT_BUS, OUTPUT_BUS -> new ItemBusBlockEntity(pos, state);
             case INPUT_HATCH, OUTPUT_HATCH -> new FluidHatchBlockEntity(pos, state);
             case MAINTENANCE -> new MaintenanceHatchBlockEntity(pos, state);

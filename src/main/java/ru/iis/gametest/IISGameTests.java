@@ -90,6 +90,8 @@ public final class IISGameTests {
             new Test("large_boiler_creosote", 300, LargeGameTests::bronzeBoilerCreosote),
             new Test("large_boiler_circuit_throttle", 1200, LargeGameTests::boilerCircuitThrottle),
             new Test("large_boiler_structure", 200, LargeGameTests::boilerStructureRules),
+            new Test("large_turbine_power", 600, LargeGameTests::turbineMakesPower),
+            new Test("large_turbine_structure", 300, LargeGameTests::turbineStructureRules),
             new Test("extruder_mv_plate", 200, MvGameTests::extruderMvPlate),
             new Test("extruder_lv_cell_only", 300, MvGameTests::extruderLvCellOnly),
             new Test("forming_press_doge_coin", 200, MvGameTests::pressDogeCoin),

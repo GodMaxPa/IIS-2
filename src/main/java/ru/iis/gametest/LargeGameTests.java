@@ -14,8 +14,9 @@ import ru.iis.machine.block.MachineBlock;
 import ru.iis.multi.MultiContent;
 import ru.iis.multi.block.*;
 import ru.iis.multi.logic.LargeBoilerLogic;
+import ru.iis.multi.logic.LargeTurbineLogic;
 
-/** Большие котлы (D88). */
+/** Большие котлы (D88) и большая паровая турбина (D89). */
 final class LargeGameTests {
     private LargeGameTests() {}
 
@@ -129,6 +130,73 @@ final class LargeGameTests {
         });
         h.runAtTickTime(125, () -> {
             h.assertFalse(b.formed(), "formed with stone in the casing");
+            h.succeed();
+        });
+    }
+
+    // --- турбина ----------------------------------------------------------------------------------------------------
+    static final BlockPos T_CTRL = new BlockPos(4, 2, 1), T_STEAM = new BlockPos(4, 3, 2), T_WATER = new BlockPos(3, 2, 2),
+            T_DYNAMO = new BlockPos(4, 2, 4);
+
+    /**
+     * Турбина 3×3×4: контроллер (4,2,1) лицом на север (перед ним 3×3 воздуха), тело — z = 1…4. Вход пара сверху, выход воды
+     * слева, обслуживание снизу (второй слой), динамо-люк dynamo в середине задней стороны. Пар доливается каждый тик.
+     */
+    static LargeTurbineBlockEntity turbine(GameTestHelper h, HatchType dynamo) {
+        for (int x = 3; x <= 5; x++)
+            for (int y = 1; y <= 3; y++)
+                for (int z = 1; z <= 4; z++) h.setBlock(new BlockPos(x, y, z), MultiContent.TURBINE_CASING.get());
+        h.setBlock(new BlockPos(4, 2, 2), Blocks.AIR);
+        h.setBlock(new BlockPos(4, 2, 3), Blocks.AIR);
+        h.setBlock(T_STEAM, MultiGameTests.hatch(HatchType.INPUT_HATCH, Direction.UP));
+        h.setBlock(T_WATER, MultiGameTests.hatch(HatchType.OUTPUT_HATCH, Direction.WEST));
+        h.setBlock(new BlockPos(4, 1, 3), MultiGameTests.hatch(HatchType.MAINTENANCE, Direction.DOWN));
+        h.setBlock(T_DYNAMO, MultiGameTests.hatch(dynamo, Direction.SOUTH));
+        h.setBlock(T_CTRL, MultiContent.LARGE_STEAM_TURBINE.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
+        LargeTurbineBlockEntity t = h.getBlockEntity(T_CTRL, LargeTurbineBlockEntity.class);
+        t.maintenance().setMask(63);
+        t.setItem(0, MultiContent.ROTORS.get(LargeTurbineLogic.Size.SMALL).get().create("steel"));
+        FluidHatchBlockEntity steam = h.getBlockEntity(T_STEAM, FluidHatchBlockEntity.class);
+        h.onEachTick(() -> steam.tank().setAmount(IISFluids.STEAM.get(), HatchType.TANK));
+        return t;
+    }
+
+    /** Стальной малый ротор, люк MV: выход растёт к 105 EU/t, энергия идёт в динамо-люк, из пара — дистиллированная вода. */
+    static void turbineMakesPower(GameTestHelper h) {
+        LargeTurbineBlockEntity t = turbine(h, HatchType.DYNAMO_MV);
+        DynamoHatchBlockEntity dyn = h.getBlockEntity(T_DYNAMO, DynamoHatchBlockEntity.class);
+        FluidHatchBlockEntity water = h.getBlockEntity(T_WATER, FluidHatchBlockEntity.class);
+        h.succeedWhen(() -> {
+            h.assertTrue(t.formed(), "turbine not formed");
+            h.assertTrue(t.eut() == 105, "turbine EU/t " + t.eut());
+            h.assertTrue(dyn.energy.stored > DynamoHatchBlockEntity.MIN_STORED, "dynamo got " + dyn.energy.stored);
+            h.assertTrue(water.tank().amount() > 0, "no distilled water");
+        });
+    }
+
+    /** Без воздуха перед лицом, без динамо-люка или без ротора турбина не работает. */
+    static void turbineStructureRules(GameTestHelper h) {
+        LargeTurbineLogic.Size small = LargeTurbineLogic.Size.SMALL;
+        LargeTurbineBlockEntity t = turbine(h, HatchType.DYNAMO_MV);
+        BlockPos front = new BlockPos(3, 3, 0);
+        h.runAtTickTime(25, () -> {
+            h.assertTrue(t.formed(), "turbine not formed");
+            h.setBlock(front, Blocks.STONE);
+        });
+        h.runAtTickTime(50, () -> {
+            h.assertFalse(t.formed(), "formed with a block in front of the rotor");
+            h.setBlock(front, Blocks.AIR);
+            h.setBlock(T_DYNAMO, MultiContent.TURBINE_CASING.get());
+        });
+        h.runAtTickTime(75, () -> {
+            h.assertFalse(t.formed(), "formed without a dynamo hatch");
+            h.setBlock(T_DYNAMO, MultiGameTests.hatch(HatchType.DYNAMO, Direction.SOUTH));
+            t.setItem(0, ItemStack.EMPTY);
+        });
+        h.runAtTickTime(200, () -> {
+            h.assertTrue(t.formed(), "turbine with an LV dynamo not formed");
+            h.assertTrue(t.maxProgress() == 0 && t.eut() == 0, "turbine runs without a rotor");
+            h.assertTrue(MultiContent.ROTORS.get(small).get().create("steel").getMaxDamage() == 51200, "steel small rotor durability");
             h.succeed();
         });
     }

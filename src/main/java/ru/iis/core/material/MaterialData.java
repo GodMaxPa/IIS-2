@@ -26,6 +26,31 @@ public final class MaterialData {
     private static List<ToolDef> tools;
     private static Map<String, String> forms;
     private static List<SmallOre> smallOres;
+    private static Map<String, ToolStats> toolStats;
+
+    /**
+     * Свойства материала для инструментов и роторов турбин (GT Materials: mDurability, mToolSpeed, mToolQuality, D89);
+     * turbine — у материала есть лопасти турбины (OrePrefixes.turbineBlade: инструментальный, не NO_SMASHING/BOUNCY).
+     */
+    public record ToolStats(String id, int durability, float speed, int quality, int color, boolean turbine) {}
+
+    public static synchronized Map<String, ToolStats> toolStats() {
+        if (toolStats == null) {
+            Map<String, ToolStats> m = new LinkedHashMap<>();
+            for (JsonElement e : read("/iis/materials.json")) {
+                JsonObject o = e.getAsJsonObject();
+                Set<String> tags = new HashSet<>();
+                o.getAsJsonArray("subTags").forEach(h -> tags.add(h.getAsString()));
+                int durability = o.has("toolDurability") ? o.get("toolDurability").getAsInt() : 0;
+                boolean turbine = (o.get("types").getAsInt() & 64) != 0 && durability > 0 && !tags.contains("NO_SMASHING") && !tags.contains("BOUNCY");
+                String id = o.get("id").getAsString();
+                m.put(id, new ToolStats(id, durability, o.has("toolSpeed") ? o.get("toolSpeed").getAsFloat() : 1.0f,
+                        o.has("toolQuality") ? o.get("toolQuality").getAsInt() : 0, o.get("color").getAsInt(), turbine));
+            }
+            toolStats = Collections.unmodifiableMap(m);
+        }
+        return toolStats;
+    }
 
     /** Малая руда GT5 (GT_Worldgen_GT_Ore_SmallPieces): сколько вкраплений на чанк и на каких высотах. */
     public record SmallOre(String name, int minY, int maxY, int amount, String material, Set<String> dimensions) {}

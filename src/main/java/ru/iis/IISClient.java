@@ -34,8 +34,10 @@ public final class IISClient {
     public IISClient(IEventBus modBus) {
         modBus.addListener(IISClient::registerBlockTints);
         modBus.addListener(IISClient::registerScreens);
-        modBus.addListener((net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.ItemTintSources e) ->
-                e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "fluid_content"), ru.iis.fluid.client.FluidContentTint.CODEC));
+        modBus.addListener((net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.ItemTintSources e) -> {
+            e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "fluid_content"), ru.iis.fluid.client.FluidContentTint.CODEC);
+            e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "rotor_material"), ru.iis.multi.client.RotorTint.CODEC);
+        });
         modBus.addListener(IISClient::registerFluidModels);
         modBus.addListener(IISClient::registerCoverRenderers);
         NeoForge.EVENT_BUS.addListener(IISClient::machineTooltips);
@@ -87,6 +89,7 @@ public final class IISClient {
         event.register(ru.iis.multi.MultiContent.EBF_MENU.get(), ru.iis.multi.client.MultiScreens.Ebf::new);
         event.register(ru.iis.multi.MultiContent.VACUUM_FREEZER_MENU.get(), ru.iis.multi.client.MultiScreens.Freezer::new);
         event.register(ru.iis.multi.MultiContent.LARGE_BOILER_MENU.get(), ru.iis.multi.client.MultiScreens.LargeBoiler::new);
+        event.register(ru.iis.multi.MultiContent.LARGE_TURBINE_MENU.get(), ru.iis.multi.client.MultiScreens.LargeTurbine::new);
         event.register(ru.iis.bio.BioContent.STATION_MENU.get(), ru.iis.bio.client.BioStationScreen::new);
         event.register(ru.iis.bio.BioContent.HEARTH_MENU.get(), ru.iis.bio.client.HearthScreen::new);
     }

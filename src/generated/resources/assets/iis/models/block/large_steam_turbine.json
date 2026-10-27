@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/turbine_casing",
+    "north": "iis:block/multi/large_steam_turbine_front",
+    "south": "iis:block/multi/turbine_casing",
+    "east": "iis:block/multi/turbine_casing",
+    "west": "iis:block/multi/turbine_casing",
+    "up": "iis:block/multi/turbine_casing",
+    "down": "iis:block/multi/turbine_casing"
+  }
+}

@@ -154,6 +154,8 @@
     "iis:hatch_maintenance",
     "iis:hatch_muffler_lv",
     "iis:hatch_energy_mv",
+    "iis:hatch_dynamo_lv",
+    "iis:hatch_dynamo_mv",
     "iis:electric_blast_furnace",
     "iis:bronze_plated_bricks",
     "iis:bronze_pipe_casing",
@@ -162,6 +164,8 @@
     "iis:steel_pipe_casing",
     "iis:steel_firebox_casing",
     "iis:large_boiler_bronze",
-    "iis:large_boiler_steel"
+    "iis:large_boiler_steel",
+    "iis:turbine_casing",
+    "iis:large_steam_turbine"
   ]
 }
