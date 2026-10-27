@@ -48,10 +48,16 @@ public final class Maintenance {
 
     /** GT doRandomMaintenanceDamage: возвращает false, если машина работать не может. */
     public boolean randomDamage(IntUnaryOperator nextInt) {
+        return randomDamage(nextInt, () -> {});
+    }
+
+    /** То же; wear — износ детали в слоте контроллера (ротор турбины), раз в 1000 тиков работы после броска поломки. */
+    public boolean randomDamage(IntUnaryOperator nextInt, Runnable wear) {
         if (repairStatus() == 0) return false;
         if (runtime++ > 1000) {
             runtime = 0;
             if (nextInt.applyAsInt(6000) == 0) ok[nextInt.applyAsInt(6)] = false;
+            wear.run();
         }
         return true;
     }

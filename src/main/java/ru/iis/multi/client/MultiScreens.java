@@ -13,6 +13,7 @@ import ru.iis.machine.client.MachineScreen;
 import ru.iis.multi.block.HatchType;
 import ru.iis.multi.block.MaintenanceHatchBlockEntity;
 import ru.iis.multi.logic.Maintenance;
+import ru.iis.multi.menu.ControllerMenu;
 import ru.iis.multi.menu.EbfMenu;
 import ru.iis.multi.menu.FluidHatchMenu;
 import ru.iis.multi.menu.ItemBusMenu;
@@ -108,6 +109,67 @@ public final class MultiScreens {
                 y += 10;
                 if (y <= 70) g.text(font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
             }
+        }
+    }
+
+    /**
+     * Строки состояния, общие для экранов контроллеров: форма, неисправности, выключение, выхлоп (GT_GUIContainer_MultiMachine).
+     * Возвращает следующую строку или -1, если дальше писать не нужно.
+     */
+    static int statusLines(GuiGraphicsExtractor g, net.minecraft.client.gui.Font font, Component title, boolean formed, int okMask,
+                           boolean works, boolean mufflerBlocked) {
+        int y = 8, white = 0xFFFAFAFF, red = 0xFFFF5555;
+        g.text(font, font.plainSubstrByWidth(title.getString(), 136), 10, y, white, false);
+        y += 10;
+        if (!formed) {
+            g.text(font, Component.translatable("gui.iis.ebf.structure_bad"), 10, y, red, false);
+            return -1;
+        }
+        int problems = Maintenance.IDEAL - Integer.bitCount(okMask);
+        g.text(font, Component.translatable("gui.iis.ebf.problems", problems), 10, y, problems > 0 ? red : white, false);
+        y += 10;
+        if (problems > 0) {
+            for (Maintenance.Problem p : Maintenance.Problem.values()) {
+                if ((okMask & (1 << p.ordinal())) != 0) continue;
+                g.text(font, Component.literal("- ").append(MaintenanceHatchBlockEntity.problemName(p)).withStyle(ChatFormatting.RED), 10, y, red, false);
+                y += 9;
+                if (y > 70) return -1;
+            }
+        }
+        if (!works) {
+            g.text(font, Component.translatable("gui.iis.ebf.disabled"), 10, y, red, false);
+            y += 10;
+            g.text(font, Component.translatable("gui.iis.ebf.disabled_hint"), 10, y, red, false);
+            y += 10;
+        }
+        if (mufflerBlocked) {
+            g.text(font, Component.translatable("gui.iis.ebf.muffler"), 10, y, red, false);
+            y += 10;
+        }
+        return y > 70 ? -1 : y;
+    }
+
+    /** Большой котёл (D88): экран GT LargeBoiler.png со слотом схемы; строки GT getInfoData — пар, КПД, запас топлива. */
+    public static class LargeBoiler extends MachineScreen<ControllerMenu> {
+        public LargeBoiler(ControllerMenu menu, Inventory inventory, Component title) {
+            super(menu, inventory, title, "multi/large_boiler");
+        }
+
+        @Override
+        protected void extractGauges(GuiGraphicsExtractor g) {}
+
+        @Override
+        protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
+            int y = statusLines(g, font, title, menu.formed(), menu.okMask(), menu.works(), menu.mufflerBlocked());
+            if (y < 0) return;
+            int white = 0xFFFAFAFF;
+            g.text(font, Component.translatable(menu.extra(3) != 0 ? "gui.iis.boiler.sh_steam" : "gui.iis.boiler.steam", menu.extra(0)), 10, y, white, false);
+            y += 10;
+            g.text(font, Component.translatable("gui.iis.boiler.efficiency", menu.efficiency()), 10, y, white, false);
+            y += 10;
+            if (y <= 70) g.text(font, Component.translatable("gui.iis.boiler.fuel", menu.extra(1)), 10, y, white, false);
+            y += 10;
+            if (y <= 70 && menu.extra(2) > 0) g.text(font, Component.translatable("gui.iis.boiler.circuit", menu.extra(2)), 10, y, white, false);
         }
     }
 

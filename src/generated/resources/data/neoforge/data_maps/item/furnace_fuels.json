@@ -2,6 +2,75 @@
   "values": {
     "iis:coal_coke": {
       "burn_time": 3200
+    },
+    "iis:crushed_coal": {
+      "burn_time": 1600
+    },
+    "iis:crushed_lignite": {
+      "burn_time": 1200
+    },
+    "iis:crushed_lithium": {
+      "burn_time": 6000
+    },
+    "iis:dust_charcoal": {
+      "burn_time": 1600
+    },
+    "iis:dust_coal": {
+      "burn_time": 1600
+    },
+    "iis:dust_lignite": {
+      "burn_time": 1200
+    },
+    "iis:dust_lithium": {
+      "burn_time": 6000
+    },
+    "iis:dust_sodium": {
+      "burn_time": 400
+    },
+    "iis:dust_sulfur": {
+      "burn_time": 1600
+    },
+    "iis:gem_lignite": {
+      "burn_time": 1200
+    },
+    "iis:impure_dust_coal": {
+      "burn_time": 1600
+    },
+    "iis:impure_dust_lignite": {
+      "burn_time": 1200
+    },
+    "iis:impure_dust_lithium": {
+      "burn_time": 6000
+    },
+    "iis:small_dust_charcoal": {
+      "burn_time": 400
+    },
+    "iis:small_dust_coal": {
+      "burn_time": 400
+    },
+    "iis:small_dust_lignite": {
+      "burn_time": 375
+    },
+    "iis:small_dust_lithium": {
+      "burn_time": 2000
+    },
+    "iis:small_dust_sodium": {
+      "burn_time": 100
+    },
+    "iis:tiny_dust_charcoal": {
+      "burn_time": 177
+    },
+    "iis:tiny_dust_coal": {
+      "burn_time": 177
+    },
+    "iis:tiny_dust_lignite": {
+      "burn_time": 166
+    },
+    "iis:tiny_dust_lithium": {
+      "burn_time": 888
+    },
+    "iis:tiny_dust_sodium": {
+      "burn_time": 44
     }
   }
 }

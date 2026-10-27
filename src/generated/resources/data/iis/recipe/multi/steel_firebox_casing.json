@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PSP",
+    "SFS",
+    "PSP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "F": "#c:frames/steel",
+    "S": "#c:rods/steel"
+  },
+  "result": {
+    "id": "iis:steel_firebox_casing",
+    "count": 2
+  }
+}

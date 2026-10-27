@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PIP",
+    "IFI",
+    "PIP"
+  ],
+  "key": {
+    "P": "#c:plates/bronze",
+    "F": "#c:frames/bronze",
+    "I": "iis:pipe_medium_bronze"
+  },
+  "result": {
+    "id": "iis:bronze_pipe_casing",
+    "count": 2
+  }
+}

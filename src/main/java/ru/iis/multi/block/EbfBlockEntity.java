@@ -2,15 +2,12 @@ package ru.iis.multi.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.storage.ValueInput;
-import net.minecraft.world.level.storage.ValueOutput;
 import net.neoforged.neoforge.fluids.FluidStack;
 import org.jspecify.annotations.Nullable;
 import ru.iis.machine.block.MachineBlock;
@@ -20,8 +17,6 @@ import ru.iis.machine.recipe.GtRecipes;
 import ru.iis.multi.MultiContent;
 import ru.iis.multi.logic.BlastLogic;
 import ru.iis.multi.menu.EbfMenu;
-import ru.iis.pollution.Pollution;
-import ru.iis.pollution.PollutionLogic;
 
 import java.util.List;
 
@@ -36,9 +31,7 @@ import java.util.List;
 public class EbfBlockEntity extends MultiblockControllerBlockEntity {
     public static final int CUPRONICKEL_HEAT = 1800;
 
-    private boolean mufflerBlocked;
     private int heat;
-    private int pollution;
 
     public EbfBlockEntity(BlockPos pos, BlockState state) {
         super(MultiContent.EBF_BE.get(), pos, state);
@@ -47,11 +40,6 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
     @Override
     public int heat() {
         return heat;
-    }
-
-    @Override
-    public boolean mufflerBlocked() {
-        return mufflerBlocked;
     }
 
     // --- форма ----------------------------------------------------------------------------------------------------
@@ -69,7 +57,7 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
         if (!sl.getBlockState(center.above(1)).isAir() || !sl.getBlockState(center.above(2)).isAir()) return false;
         BlockPos muffler = center.above(3);
         if (hatchAt(sl, muffler) != HatchType.MUFFLER) return false;
-        parts.muffler = muffler;
+        parts.mufflers.add(muffler);
         if (!sl.getBlockState(center.above(2).east()).is(MultiContent.COIL_CUPRONICKEL.get())) return false;
         heat = CUPRONICKEL_HEAT;
         for (int dx = -1; dx <= 1; dx++) {
@@ -109,30 +97,11 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
     }
 
     // --- работа ------------------------------------------------------------------------------------------------------
-    @Override
-    protected void afterTick(ServerLevel sl, boolean active) {
-        if (active && parts.muffler != null && sl.getGameTime() % 10 == 0) {
-            BlockPos m = parts.muffler.above();
-            sl.sendParticles(ParticleTypes.LARGE_SMOKE, m.getX() + 0.5, m.getY() + 0.2, m.getZ() + 0.5, 2, 0.2, 0.1, 0.2, 0.01);
-        }
-    }
-
     /** GT onRunningTick + polluteEnvironment. */
     @Override
     protected boolean runningTick(ServerLevel sl) {
         if (!super.runningTick(sl)) return false;
-        pollution += BlastLogic.POLLUTION_PER_TICK;
-        mufflerBlocked = false;
-        if (pollution >= PollutionLogic.MUFFLER_PORTION && parts.muffler != null) {
-            BlockState ms = sl.getBlockState(parts.muffler);
-            Direction mf = ms.getValue(HatchBlock.FACING);
-            if (sl.getBlockState(parts.muffler.relative(mf)).isAir()) {
-                Pollution.add(sl, parts.muffler, PollutionLogic.mufflerOutput(PollutionLogic.MUFFLER_PORTION, 1));
-                pollution -= PollutionLogic.MUFFLER_PORTION;
-            }
-        }
-        if (pollution >= PollutionLogic.MUFFLER_PORTION) {
-            mufflerBlocked = true;
+        if (!polluteEnvironment(sl, BlastLogic.POLLUTION_PER_TICK)) {
             stop(true);
             return false;
         }
@@ -180,17 +149,5 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
     @Override
     protected @Nullable AbstractContainerMenu createMenu(int id, Inventory inventory) {
         return new EbfMenu(id, inventory, data);
-    }
-
-    @Override
-    protected void saveAdditional(ValueOutput out) {
-        super.saveAdditional(out);
-        out.putInt("pollution", pollution);
-    }
-
-    @Override
-    protected void loadAdditional(ValueInput in) {
-        super.loadAdditional(in);
-        pollution = in.getIntOr("pollution", 0);
     }
 }

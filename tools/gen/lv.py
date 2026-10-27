@@ -234,7 +234,7 @@ ITEMS = [
 
 # Generator fuels (GT_Recipe_Map sDieselFuels / sTurbineFuels from Materials FuelPower/FuelType, IIS MaterialProperties.cfg):
 # only fluids that exist in this slice are registered; the rest arrive with chemistry.
-FUEL_TYPES = {0: 'diesel', 1: 'gas'}
+FUEL_TYPES = {0: 'diesel', 1: 'gas', 3: 'dense'}  # 3: semi-fluid (sDenseLiquidFuels), burnt by large boilers (D88)
 
 
 def generate(g):
@@ -470,8 +470,19 @@ def generate(g):
     # electricity damage (GT_DamageSources#getElectricDamage: bypasses armour)
     write(os.path.join(D, NS, 'damage_type', 'electricity.json'), {'message_id': 'iis.electricity', 'exhaustion': 0.1, 'scaling': 'never'})
     write(os.path.join(D, 'minecraft', 'tags', 'damage_type', 'bypasses_armor.json'), {'replace': False, 'values': [f'{NS}:electricity']})
-    # coke as furnace fuel (Railcraft coal coke: 3200 ticks)
-    write(os.path.join(D, 'neoforge', 'data_maps', 'item', 'furnace_fuels.json'), {'values': {f'{NS}:coal_coke': {'burn_time': 3200}}})
+    # coke as furnace fuel (Railcraft coal coke: 3200 ticks); GT_Proxy#getBurnTime (a global fuel handler in GT5, D88):
+    # dusts and ores of coal, charcoal, lignite, wood, sodium, lithium, sulfur
+    burn = {f'{NS}:coal_coke': 3200}
+    for n, vals in (('Coal', (1600, 1600, 1600, 1600, 400, 177)), ('Charcoal', (1600, 1600, 1600, 1600, 400, 177)),
+                    ('Lignite', (1200, 1200, 1200, 1200, 375, 166)), ('Sodium', (4000, 4000, 4000, 400, 100, 44)),
+                    ('Lithium', (6000, 6000, 6000, 6000, 2000, 888)), ('Wood', (None, None, None, 100, 25, 11))):
+        for p, v in zip(('gem', 'crushed', 'impure_dust', 'dust', 'small_dust', 'tiny_dust'), vals):
+            i = ref(p, n)
+            if v and i and i.startswith(f'{NS}:'):
+                burn[i] = v
+    if ref('dust', 'Sulfur'):
+        burn[ref('dust', 'Sulfur')] = 1600
+    write(os.path.join(D, 'neoforge', 'data_maps', 'item', 'furnace_fuels.json'), {'values': {k: {'burn_time': v} for k, v in sorted(burn.items())}})
 
     # --------------------------------------------------------------------------------------------------------
     # Wires and cables (GT_MetaPipeEntity_Cable)
@@ -1296,8 +1307,8 @@ def generate(g):
         by_type[r['type']] = by_type.get(r['type'], 0) + 1
     stats['machine_recipes'] = by_type
 
-    # generator fuels from material properties (FuelPower EU per litre, FuelType 0 diesel / 1 gas)
-    fuels = {'diesel': {}, 'gas': {}}
+    # generator fuels from material properties (FuelPower EU per litre, FuelType 0 diesel / 1 gas / 3 dense)
+    fuels = {'diesel': {}, 'gas': {}, 'dense': {}}
     for n, v in g['props'].items():
         fp, ft = v.get('FuelPower', 0), v.get('FuelType', 0)
         if fp and ft in FUEL_TYPES:

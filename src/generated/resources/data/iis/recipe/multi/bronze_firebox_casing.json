@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PSP",
+    "SFS",
+    "PSP"
+  ],
+  "key": {
+    "P": "#c:plates/bronze",
+    "F": "#c:frames/bronze",
+    "S": "#c:rods/bronze"
+  },
+  "result": {
+    "id": "iis:bronze_firebox_casing",
+    "count": 2
+  }
+}

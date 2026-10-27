@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PhP",
+    "PBP",
+    "PwP"
+  ],
+  "key": {
+    "P": "#c:plates/bronze",
+    "B": "minecraft:bricks",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:bronze_plated_bricks",
+    "count": 2
+  }
+}

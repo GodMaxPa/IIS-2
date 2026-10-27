@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Топливо генераторов: энергия на литр (GT Materials FuelPower; FuelType 0 — дизель, 1 — газ; ИИС MaterialProperties.cfg).
+ * Топливо генераторов: энергия на литр (GT Materials FuelPower; FuelType 0 — дизель, 1 — газ, 3 — полужидкое; ИИС MaterialProperties.cfg).
  * Список из iis/fuels.json (tools/gen/lv.py). Жидкость iis:<имя> учитывается, только когда она уже есть в моде:
  * в эпоху LV таких жидкостей ещё нет — они придут с химией и нефтью.
  */
@@ -47,8 +47,14 @@ public final class Fuels {
     public static int fuelPower(GeneratorType type, Fluid fluid) {
         if (fluid == Fluids.EMPTY) return 0;
         if (type == GeneratorType.STEAM_TURBINE) return fluid.isSame(IISFluids.STEAM.get()) ? 1 : 0;
+        return power(type.fuelKind, fluid);
+    }
+
+    /** GT mSpecialValue топлива раздела kind ("diesel", "gas", "dense" — полужидкое, D88); 0 — не топливо. */
+    public static int power(String kind, Fluid fluid) {
+        if (fluid == Fluids.EMPTY) return 0;
         Identifier id = BuiltInRegistries.FLUID.getKey(fluid);
         if (!IIS.MODID.equals(id.getNamespace())) return 0;
-        return table().getOrDefault(type.fuelKind, Map.of()).getOrDefault(id.getPath(), 0);
+        return table().getOrDefault(kind, Map.of()).getOrDefault(id.getPath(), 0);
     }
 }

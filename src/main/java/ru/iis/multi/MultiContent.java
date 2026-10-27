@@ -22,6 +22,8 @@ import ru.iis.IIS;
 import ru.iis.lv.item.BatteryItem;
 import ru.iis.machine.block.MachineBlock;
 import ru.iis.multi.block.*;
+import ru.iis.multi.logic.LargeBoilerLogic;
+import ru.iis.multi.menu.ControllerMenu;
 import ru.iis.multi.menu.EbfMenu;
 import ru.iis.multi.menu.FluidHatchMenu;
 import ru.iis.multi.menu.ItemBusMenu;
@@ -30,8 +32,8 @@ import java.util.*;
 import java.util.function.Supplier;
 
 /**
- * Многоблочные машины: электрическая доменная печь, люки, корпуса, катушки, каркасы, паяльник.
- * Модели, переводы и рецепты — tools/gen/ebf.py.
+ * Многоблочные машины: электрическая доменная печь, вакуумный морозильник, большие котлы, люки, корпуса, катушки,
+ * каркасы, паяльник. Модели, переводы и рецепты — tools/gen/ebf.py и tools/gen/large.py (котлы, D88).
  */
 public final class MultiContent {
     private MultiContent() {}
@@ -73,6 +75,28 @@ public final class MultiContent {
             p -> metal(p).lightLevel(s -> s.getValue(MachineBlock.ACTIVE) ? 13 : 0));
     public static final DeferredBlock<EbfBlock> VACUUM_FREEZER = block("vacuum_freezer", p -> new EbfBlock(p, VacuumFreezerBlockEntity::new), MultiContent::metal);
 
+    /** Корпуса больших котлов (D88): GT_Block_Casings1:10, Casings2:0, 12, 13, Casings3:13, 14. */
+    public static final DeferredBlock<Block> BRONZE_PLATED_BRICKS = block("bronze_plated_bricks", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> BRONZE_PIPE_CASING = block("bronze_pipe_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> BRONZE_FIREBOX_CASING = block("bronze_firebox_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> SOLID_STEEL_CASING = block("solid_steel_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> STEEL_PIPE_CASING = block("steel_pipe_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> STEEL_FIREBOX_CASING = block("steel_firebox_casing", Block::new, MultiContent::metal);
+    /** Большие котлы GT (GT_Loader_MetaTileEntities:1152–1153); титановый и вольфрамостальной придут с их материалами. */
+    public static final Map<LargeBoilerLogic.Tier, DeferredBlock<LargeBoilerBlock>> LARGE_BOILERS = new EnumMap<>(LargeBoilerLogic.Tier.class);
+    static {
+        for (LargeBoilerLogic.Tier t : List.of(LargeBoilerLogic.Tier.BRONZE, LargeBoilerLogic.Tier.STEEL)) {
+            LARGE_BOILERS.put(t, block("large_boiler_" + t.name().toLowerCase(Locale.ROOT), p -> new LargeBoilerBlock(p, t),
+                    p -> metal(p).lightLevel(s -> s.getValue(MachineBlock.ACTIVE) ? 13 : 0)));
+        }
+    }
+
+    public static LargeBoilerBlockEntity.Casings boilerCasings(LargeBoilerLogic.Tier t) {
+        return t == LargeBoilerLogic.Tier.STEEL
+                ? new LargeBoilerBlockEntity.Casings(SOLID_STEEL_CASING.get(), STEEL_PIPE_CASING.get(), STEEL_FIREBOX_CASING.get())
+                : new LargeBoilerBlockEntity.Casings(BRONZE_PLATED_BRICKS.get(), BRONZE_PIPE_CASING.get(), BRONZE_FIREBOX_CASING.get());
+    }
+
     public static final DeferredItem<SolderingIronItem> SOLDERING_IRON = ITEMS.registerItem("soldering_iron_lv", SolderingIronItem::new, p -> p.stacksTo(1));
 
     private static Block[] hatches(HatchType... types) {
@@ -91,11 +115,14 @@ public final class MultiContent {
             () -> new BlockEntityType<>(EbfBlockEntity::new, EBF.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VacuumFreezerBlockEntity>> VACUUM_FREEZER_BE = BLOCK_ENTITIES.register("vacuum_freezer",
             () -> new BlockEntityType<>(VacuumFreezerBlockEntity::new, VACUUM_FREEZER.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeBoilerBlockEntity>> LARGE_BOILER_BE = BLOCK_ENTITIES.register("large_boiler",
+            () -> new BlockEntityType<>(LargeBoilerBlockEntity::new, LARGE_BOILERS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
 
     public static final DeferredHolder<MenuType<?>, MenuType<ItemBusMenu>> ITEM_BUS_MENU = MENUS.register("item_bus", () -> IMenuTypeExtension.create(ItemBusMenu::client));
     public static final DeferredHolder<MenuType<?>, MenuType<FluidHatchMenu>> FLUID_HATCH_MENU = MENUS.register("fluid_hatch", () -> IMenuTypeExtension.create(FluidHatchMenu::client));
     public static final DeferredHolder<MenuType<?>, MenuType<EbfMenu>> EBF_MENU = MENUS.register("electric_blast_furnace", () -> IMenuTypeExtension.create(EbfMenu::client));
     public static final DeferredHolder<MenuType<?>, MenuType<EbfMenu>> VACUUM_FREEZER_MENU = MENUS.register("vacuum_freezer", () -> IMenuTypeExtension.create(EbfMenu::freezerClient));
+    public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> LARGE_BOILER_MENU = MENUS.register("large_boiler", () -> IMenuTypeExtension.create(ControllerMenu::boilerClient));
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = TABS.register("multi", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.iis.multi"))

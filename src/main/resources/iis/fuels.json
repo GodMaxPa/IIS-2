@@ -30,5 +30,19 @@
     "sulfuricnaphtha": 32,
     "toluene": 328,
     "woodgas": 24
+  },
+  "dense": {
+    "biomass": 8,
+    "creosote": 8,
+    "fishoil": 2,
+    "heavyfuel": 192,
+    "oil": 16,
+    "oilheavy": 32,
+    "oillight": 16,
+    "oilmedium": 24,
+    "seedoil": 2,
+    "seedoilhemp": 2,
+    "seedoillin": 2,
+    "sulfuricheavyfuel": 32
   }
 }
