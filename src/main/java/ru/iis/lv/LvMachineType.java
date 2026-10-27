@@ -125,7 +125,40 @@ public enum LvMachineType {
     CIRCUIT_ASSEMBLER_HV("circuit_assembler", GtRecipeMap.CIRCUIT_ASSEMBLER, 6, 1, 16000, "circuitassembler", VoltageTier.HV),
     // EV (D98): пока только сборщик (большой ротор, 1600 EU/t) и химреактор (переработка вольфрама, 1920 EU/t)
     ASSEMBLER_EV("assembler", GtRecipeMap.ASSEMBLER, 6, 1, 16000, "assembler", VoltageTier.EV),
-    CHEMICAL_REACTOR_EV("chemical_reactor", GtRecipeMap.CHEMICAL_REACTOR, 3, 3, 16000, "chemicalreactor", VoltageTier.EV);
+    CHEMICAL_REACTOR_EV("chemical_reactor", GtRecipeMap.CHEMICAL_REACTOR, 3, 3, 16000, "chemicalreactor", VoltageTier.EV),
+    // EV (D100): остальные Machine_EV_* — как HV, кроме измельчителя (3 выхода) и смесителя (бак 32000)
+    THERMAL_CENTRIFUGE_EV("thermal_centrifuge", GtRecipeMap.THERMAL_CENTRIFUGE, 1, 3, 0, "thermalcentrifuge", VoltageTier.EV),
+    MACERATOR_EV("macerator", GtRecipeMap.MACERATOR, 1, 3, 0, "macerator1", VoltageTier.EV),
+    ELECTRIC_FURNACE_EV("electric_furnace", null, 1, 1, 0, "e_furnace", VoltageTier.EV),
+    ALLOY_SMELTER_EV("alloy_smelter", GtRecipeMap.ALLOY_SMELTER, 6, 1, 0, "alloysmelter", VoltageTier.EV),
+    COMPRESSOR_EV("compressor", GtRecipeMap.COMPRESSOR, 1, 1, 0, "compressor", VoltageTier.EV),
+    EXTRACTOR_EV("extractor", GtRecipeMap.EXTRACTOR, 1, 1, 0, "extractor", VoltageTier.EV),
+    FORGE_HAMMER_EV("forge_hammer", GtRecipeMap.FORGE_HAMMER, 1, 1, 0, "hammer", VoltageTier.EV),
+    WIREMILL_EV("wiremill", GtRecipeMap.WIREMILL, 1, 1, 0, "wiremill", VoltageTier.EV),
+    BENDER_EV("bender", GtRecipeMap.BENDER, 2, 1, 0, "bender", VoltageTier.EV),
+    LATHE_EV("lathe", GtRecipeMap.LATHE, 1, 2, 0, "lathe", VoltageTier.EV),
+    MIXER_EV("mixer", GtRecipeMap.MIXER, 6, 1, 32000, "mixer", VoltageTier.EV),
+    POLARIZER_EV("polarizer", GtRecipeMap.POLARIZER, 1, 1, 0, "polarizer", VoltageTier.EV),
+    ORE_WASHER_EV("ore_washer", GtRecipeMap.ORE_WASHER, 2, 3, 16000, "orewasher", VoltageTier.EV),
+    CENTRIFUGE_EV("centrifuge", GtRecipeMap.CENTRIFUGE, 2, 6, 64000, "centrifuge", VoltageTier.EV),
+    SIFTER_EV("sifter", GtRecipeMap.SIFTER, 1, 9, 0, "sifter", VoltageTier.EV),
+    ELECTROMAGNETIC_SEPARATOR_EV("electromagnetic_separator", GtRecipeMap.ELECTROMAGNETIC_SEPARATOR, 1, 3, 0, "electromagneticseparator", VoltageTier.EV),
+    AUTOCLAVE_EV("autoclave", GtRecipeMap.AUTOCLAVE, 1, 1, 8000, "autoclave", VoltageTier.EV),
+    CUTTER_EV("cutter", GtRecipeMap.CUTTER, 1, 2, 8000, "cutter", VoltageTier.EV),
+    CANNER_EV("canner", GtRecipeMap.CANNER, 2, 2, 0, "canner", VoltageTier.EV),
+    ELECTROLYZER_EV("electrolyzer", GtRecipeMap.ELECTROLYZER, 2, 6, 64000, "electrolyzer", VoltageTier.EV),
+    FLUID_EXTRACTOR_EV("fluid_extractor", GtRecipeMap.FLUID_EXTRACTOR, 1, 1, 16000, "fluidextractor", VoltageTier.EV),
+    FLUID_SOLIDIFIER_EV("fluid_solidifier", GtRecipeMap.FLUID_SOLIDIFIER, 1, 1, 16000, "fluidsolidifier", VoltageTier.EV),
+    DISTILLERY_EV("distillery", GtRecipeMap.DISTILLERY, 1, 1, 1000, "distillery", VoltageTier.EV),
+    CHEMICAL_BATH_EV("chemical_bath", GtRecipeMap.CHEMICAL_BATH, 1, 3, 8000, "chemicalbath", VoltageTier.EV),
+    EXTRUDER_EV("extruder", GtRecipeMap.EXTRUDER, 2, 1, 0, "extruder", VoltageTier.EV),
+    FORMING_PRESS_EV("forming_press", GtRecipeMap.FORMING_PRESS, 2, 1, 0, "press", VoltageTier.EV),
+    FLUID_HEATER_EV("fluid_heater", GtRecipeMap.FLUID_HEATER, 1, 0, 8000, "fluidheater", VoltageTier.EV),
+    ELECTRIC_OVEN_EV("electric_oven", null, 1, 1, 0, "e_oven", VoltageTier.EV),
+    ARC_FURNACE_EV("arc_furnace", GtRecipeMap.ARC_FURNACE, 1, 6, 16000, "arcfurnace", VoltageTier.EV),
+    LASER_ENGRAVER_EV("laser_engraver", GtRecipeMap.LASER_ENGRAVER, 2, 1, 0, "laserengraver", VoltageTier.EV),
+    BREWERY_EV("brewery", GtRecipeMap.BREWERY, 1, 0, 750, "potionbrewer", VoltageTier.EV),
+    CIRCUIT_ASSEMBLER_EV("circuit_assembler", GtRecipeMap.CIRCUIT_ASSEMBLER, 6, 1, 16000, "circuitassembler", VoltageTier.EV);
 
     public final String id;
     public final GtRecipeMap recipeMap;

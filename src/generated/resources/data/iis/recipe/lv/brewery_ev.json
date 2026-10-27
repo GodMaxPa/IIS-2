@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GPG",
+    "WMW",
+    "CBC"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "P": "iis:electric_pump_ev",
+    "B": "minecraft:blaze_rod",
+    "C": "#c:circuits/data",
+    "W": "#iis:cables/1x/aluminium",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:brewery_ev"
+  }
+}

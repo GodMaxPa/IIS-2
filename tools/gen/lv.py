@@ -119,9 +119,11 @@ MV_MACHINES = [m[:7] + (MV_TANKS.get(m[0], m[7]),) + m[8:] for m in MACHINES if 
 HV_TANKS = {'mixer': 24000}
 HV_OUTPUTS = {'macerator': 2}
 HV_MACHINES = [m[:6] + (HV_OUTPUTS.get(m[0], m[6]), HV_TANKS.get(m[0], m[7])) + m[8:] for m in MV_MACHINES]
-# EV (D98): the assembler (large turbine rotor, 1600 EU/t) and the chemical reactor (tungsten processing, 1920 EU/t —
-# GT_MachineRecipeLoader2:37-42) only (GT_Loader_MetaTileEntities Machine_EV_Assembler, :833 Machine_EV_ChemicalReactor)
-EV_MACHINES = [m for m in HV_MACHINES if m[0] in ('assembler', 'chemical_reactor')]
+# EV basic machines (GT tier 4; assembler and chemical reactor D98, the rest D100): Machine_EV_* — as HV except the macerator
+# (3 outputs) and the mixer (32000 L); the compressor tank (16000) stays 0 like at LV-HV (D82)
+EV_TANKS = {'mixer': 32000}
+EV_OUTPUTS = {'macerator': 3}
+EV_MACHINES = [m[:6] + (EV_OUTPUTS.get(m[0], m[6]), EV_TANKS.get(m[0], m[7])) + m[8:] for m in HV_MACHINES]
 # GT_Loader_MetaTileEntities Machine_MV_* crafting: GT pattern letters; X.* resolved for tier 2 in lv.generate
 # (GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330, Tier.ELECTRIC[2]); other values are literal ingredients
 MV_CRAFT = {
@@ -196,6 +198,9 @@ ITEMS = [
     ('electric_piston_ev', 'gt:643', 'gt.metaitem.01.32643.name', 'Electric Piston (EV)', 'Электропоршень (EV)'),
     ('conveyor_module_ev', 'gt:633', 'gt.metaitem.01.32633.name', 'Conveyor Module (EV)', 'Конвейерный модуль (EV)'),
     ('robot_arm_ev', 'gt:653', 'gt.metaitem.01.32653.name', 'Robot Arm (EV)', 'Манипулятор (EV)'),
+    # D100: GT_MetaGenerated_Item_01:504 EV pump, :658 EV emitter
+    ('electric_pump_ev', 'gt:613', 'gt.metaitem.01.32613.name', 'Electric Pump (EV)', 'Электрическая помпа (EV)'),
+    ('emitter_ev', 'gt:683', 'gt.metaitem.01.32683.name', 'Emitter (EV)', 'Излучатель (EV)'),
     ('capacitor', 'gt:718', 'gt.metaitem.01.32718.name', 'Capacitor', 'Конденсатор'),
     ('circuit_elite', 'gt:705', 'gt.metaitem.01.32705.name', 'Mainframe', 'Мейнфрейм'),
     # D94: GT_MetaGenerated_Item_03:50 small coil (HV transformer)
@@ -1250,9 +1255,22 @@ def generate(g):
     shaped('lv/electric_piston_ev', PISTON_EV, 1, ['PPP', 'CSS', 'CMG'], {'P': P('Titanium'), 'S': R('Titanium'),
                                                                          'G': tag_of('small_gear', 'Titanium'), 'M': MOTOR_EV, 'C': C('Aluminium')})
     shaped('lv/robot_arm_ev', ARM_EV, 1, ['CCC', 'MSM', 'PES'], {'S': R('Titanium'), 'M': MOTOR_EV, 'P': PISTON_EV, 'E': CIRC_EV, 'C': C('Aluminium')})
-    XEV = {'HULL': f'{NS}:hull_ev', 'CIRCUIT': CIRC_EV, 'WIRE': C('Aluminium'), 'CONVEYOR': CONV_EV, 'ROBOT_ARM': ARM_EV, 'MOTOR': MOTOR_EV,
-           'ROTOR': tag_of('rotor', 'StainlessSteel')}
-    EV_CRAFT = {m[0]: (MV_CRAFT[m[0]][0], dict(MV_CRAFT[m[0]][1])) for m in EV_MACHINES}
+    # D100: :556 pump (stainless steel rotor and screws, titanium pipe), :670 emitter (ender pearl, platinum rods, Data circuit)
+    PUMP_EV = f'{NS}:electric_pump_ev'
+    shaped('lv/electric_pump_ev', PUMP_EV, 1, ['SXO', 'dPw', 'OMW'], {'M': MOTOR_EV, 'O': tag_of('ring', 'Rubber'), 'X': tag_of('rotor', 'StainlessSteel'),
+                                                                     'S': tag_of('screw', 'StainlessSteel'), 'W': C('Aluminium'),
+                                                                     'P': f'{NS}:pipe_medium_titanium'})
+    shaped('lv/emitter_ev', f'{NS}:emitter_ev', 1, ['SSC', 'WQS', 'CWS'], {'Q': 'minecraft:ender_pearl', 'S': R('Platinum'), 'C': CIRC_EV,
+                                                                          'W': C('Aluminium')})
+    # Tier.ELECTRIC[4] and GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330 for mTier 4: titanium, nichrome heating coils,
+    # neodymium rods, 8x annealed copper, stainless steel rotor; better circuit = Elite
+    XEV = {'HULL': f'{NS}:hull_ev', 'CIRCUIT': CIRC_EV, 'BETTER_CIRCUIT': '#c:circuits/elite', 'WIRE': C('Aluminium'), 'WIRE4': C('Aluminium', 4),
+           'GLASS': 'minecraft:glass', 'PLATE': P('Titanium'), 'PIPE': f'{NS}:pipe_medium_titanium', 'COIL_HEATING': W('Nichrome', 2),
+           'COIL_HEATING_DOUBLE': W('Nichrome', 4), 'STICK_ELECTROMAGNETIC': R('Neodymium'), 'COIL_ELECTRIC': W('AnnealedCopper', 8),
+           'ROTOR': tag_of('rotor', 'StainlessSteel'), 'MOTOR': MOTOR_EV, 'PISTON': PISTON_EV, 'PUMP': PUMP_EV, 'CONVEYOR': CONV_EV,
+           'ROBOT_ARM': ARM_EV, 'EMITTER': f'{NS}:emitter_ev', 'INDUSTRIAL_DIAMOND': 'minecraft:diamond',
+           'SILVER_WIRE': W('Platinum')}   # the EV electrolyzer takes 1x platinum wire
+    EV_CRAFT = {k: (pat, dict(let)) for k, (pat, let) in HV_CRAFT.items()}   # grinder head in the macerator as at HV
     EV_CRAFT['chemical_reactor'][1]['G'] = f'{NS}:pipe_large_plastic'   # :833 large plastic pipe
     for mid_, (pattern, letters) in EV_CRAFT.items():
         shaped(f'lv/{mid_}_ev', f'{NS}:{mid_}_ev', 1, pattern, {k: XEV.get(v, v) for k, v in letters.items()})

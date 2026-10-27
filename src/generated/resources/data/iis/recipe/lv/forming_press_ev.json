@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "CMC",
+    "WPW"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "P": "iis:electric_piston_ev",
+    "C": "#c:circuits/data",
+    "W": "#iis:cables/1x/aluminium"
+  },
+  "result": {
+    "id": "iis:forming_press_ev"
+  }
+}

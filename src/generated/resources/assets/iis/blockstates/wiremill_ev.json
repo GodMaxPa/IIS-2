@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,active=false": {
+      "model": "iis:block/wiremill_ev"
+    },
+    "facing=north,active=true": {
+      "model": "iis:block/wiremill_ev_active"
+    },
+    "facing=east,active=false": {
+      "model": "iis:block/wiremill_ev",
+      "y": 90
+    },
+    "facing=east,active=true": {
+      "model": "iis:block/wiremill_ev_active",
+      "y": 90
+    },
+    "facing=south,active=false": {
+      "model": "iis:block/wiremill_ev",
+      "y": 180
+    },
+    "facing=south,active=true": {
+      "model": "iis:block/wiremill_ev_active",
+      "y": 180
+    },
+    "facing=west,active=false": {
+      "model": "iis:block/wiremill_ev",
+      "y": 270
+    },
+    "facing=west,active=true": {
+      "model": "iis:block/wiremill_ev_active",
+      "y": 270
+    }
+  }
+}

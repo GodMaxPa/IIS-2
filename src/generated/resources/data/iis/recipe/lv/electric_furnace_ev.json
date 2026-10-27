@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ECE",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "E": "#c:circuits/data",
+    "W": "#iis:cables/1x/aluminium",
+    "C": "#iis:wires/2x/nichrome"
+  },
+  "result": {
+    "id": "iis:electric_furnace_ev"
+  }
+}

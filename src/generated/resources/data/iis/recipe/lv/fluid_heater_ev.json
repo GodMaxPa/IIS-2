@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OGO",
+    "PMP",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "P": "iis:electric_pump_ev",
+    "O": "#iis:wires/4x/nichrome",
+    "C": "#c:circuits/data",
+    "W": "#iis:cables/1x/aluminium",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:fluid_heater_ev"
+  }
+}

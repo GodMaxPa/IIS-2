@@ -519,6 +519,15 @@ final class LargeGameTests {
         h.succeed();
     }
 
+    /** Измельчитель EV (D100): 2048 В; руда халькопирита → 2 дроблёной. */
+    static void evMaceratorOre(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.MACERATOR_EV);
+        h.assertTrue(m.type().voltage() == 2048 && m.type().outputs == 3, "EV macerator " + m.type().voltage() + " / " + m.type().outputs);
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("ore_chalcopyrite")));
+        h.succeedWhen(() -> h.assertTrue(m.getItem(1).is(ru.iis.command.SelfTest.item("crushed_chalcopyrite")) && m.getItem(1).getCount() == 2,
+                "output " + m.getItem(1)));
+    }
+
     /** Химреактор EV (D98): 7 тунгстата + 4000 л соляной кислоты → 4 хлорида лития + 7 вольфрамовой кислоты (1920 EU/t). */
     static void evReactorTungsticAcid(GameTestHelper h) {
         var m = poweredMachine(h, ru.iis.lv.LvMachineType.CHEMICAL_REACTOR_EV);

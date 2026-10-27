@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GCG",
+    "PME",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "E": "iis:electric_piston_ev",
+    "P": "iis:electric_pump_ev",
+    "C": "#c:circuits/data",
+    "W": "#iis:cables/1x/aluminium",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:fluid_extractor_ev"
+  }
+}

@@ -115,6 +115,7 @@ public final class IISGameTests {
             new Test("ev_reactor_tungstic_acid", 300, LargeGameTests::evReactorTungsticAcid),
             new Test("ev_large_rotor_dynamo", 400, LargeGameTests::largeRotorEvDynamo),
             new Test("ev_transformer_and_buffer", 20, LargeGameTests::evTransformerAndBuffer),
+            new Test("ev_macerator_ore", 200, LargeGameTests::evMaceratorOre),
             new Test("extruder_mv_plate", 200, MvGameTests::extruderMvPlate),
             new Test("extruder_lv_cell_only", 300, MvGameTests::extruderLvCellOnly),
             new Test("forming_press_doge_coin", 200, MvGameTests::pressDogeCoin),

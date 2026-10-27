@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCE",
+    "XMP",
+    "CCE"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "X": "iis:electric_piston_ev",
+    "E": "#c:circuits/data",
+    "P": "iis:pipe_medium_titanium",
+    "C": "#iis:wires/4x/nichrome"
+  },
+  "result": {
+    "id": "iis:extruder_ev"
+  }
+}

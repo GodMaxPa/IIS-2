@@ -233,6 +233,9 @@ public final class LvContent {
     public static final DeferredItem<Item> ELECTRIC_PISTON_EV = item("electric_piston_ev");
     public static final DeferredItem<Item> CONVEYOR_MODULE_EV = item("conveyor_module_ev");
     public static final DeferredItem<Item> ROBOT_ARM_EV = item("robot_arm_ev");
+    // D100: помпа и излучатель EV (GT_MetaGenerated_Item_01:504, :658)
+    public static final DeferredItem<Item> ELECTRIC_PUMP_EV = item("electric_pump_ev");
+    public static final DeferredItem<Item> EMITTER_EV = item("emitter_ev");
     public static final DeferredItem<Item> CAPACITOR = item("capacitor");
     public static final DeferredItem<Item> CIRCUIT_ELITE = item("circuit_elite");
     // D94: малая катушка GT (GT_MetaGenerated_Item_03:50) — трансформатор HV

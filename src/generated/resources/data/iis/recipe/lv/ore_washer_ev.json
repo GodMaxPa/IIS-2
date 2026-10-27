@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RGR",
+    "CEC",
+    "WMW"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "R": "#iis:rotors/stainless_steel",
+    "E": "iis:electric_motor_ev",
+    "C": "#c:circuits/data",
+    "W": "#iis:cables/1x/aluminium",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:ore_washer_ev"
+  }
+}

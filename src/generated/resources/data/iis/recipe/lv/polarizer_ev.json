@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ZSZ",
+    "WMW",
+    "ZSZ"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "S": "#c:rods/neodymium",
+    "Z": "#iis:wires/8x/annealed_copper",
+    "W": "#iis:cables/1x/aluminium"
+  },
+  "result": {
+    "id": "iis:polarizer_ev"
+  }
+}
