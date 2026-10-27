@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PCP",
+    "EME",
+    "GWG"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "P": "iis:electric_piston_mv",
+    "E": "iis:electric_motor_mv",
+    "C": "#c:circuits/good",
+    "W": "#iis:cables/1x/copper",
+    "G": "#c:gears/aluminium"
+  },
+  "result": {
+    "id": "iis:diesel_generator_mv"
+  }
+}

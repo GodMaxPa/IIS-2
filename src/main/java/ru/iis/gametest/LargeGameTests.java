@@ -359,4 +359,36 @@ final class LargeGameTests {
             h.assertTrue(shown == b.energy.stored, "gui energy " + shown + " vs " + b.energy.stored);
         });
     }
+
+    /** Паровая турбина MV (D95) → медный кабель → измельчитель MV: 128 В, бак 48 000 л. */
+    static void mvSteamTurbinePowersMacerator(GameTestHelper h) {
+        var gen = LvGameTests.generator(h, new BlockPos(1, 1, 4), ru.iis.lv.GeneratorType.STEAM_TURBINE_MV, Direction.EAST);
+        h.assertTrue(gen.tank().capacity() == 48000 && gen.outputVoltage() == 128, "tank " + gen.tank().capacity() + " V " + gen.outputVoltage());
+        gen.tank().setAmount(IISFluids.STEAM.get(), 48000);
+        var m = LvGameTests.machine(h, new BlockPos(4, 1, 4), ru.iis.lv.LvMachineType.MACERATOR_MV, Direction.NORTH);
+        for (int x = 2; x <= 3; x++) LvGameTests.cable(h, new BlockPos(x, 1, 4), "cable_copper_1x");
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("ore_chalcopyrite")));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.getItem(1).is(ru.iis.command.SelfTest.item("crushed_chalcopyrite")), "output " + m.getItem(1));
+            h.assertTrue(gen.tank().amount() < 48000, "turbine used no steam");
+        });
+    }
+
+    /** Буфер LV 4×4 (D95): 16 слотов, запас 32 × 64 × 16 = 32 768 (больше short — проверка передачи в интерфейс), 32 В. */
+    static void lvBatteryBuffer4x4(GameTestHelper h) {
+        BlockPos bp = new BlockPos(2, 1, 4);
+        h.setBlock(bp, LvContent.BATTERY_BUFFER_4X4.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.EAST));
+        var b = h.getBlockEntity(bp, ru.iis.lv.block.BatteryBufferBlockEntity.class);
+        h.assertTrue(b.slots() == 16 && b.energy.capacity == 32L * 64 * 16 && b.outputVoltage() == 32, "buffer " + b.slots() + " " + b.energy.capacity);
+        var m = LvGameTests.machine(h, new BlockPos(4, 1, 4), ru.iis.lv.LvMachineType.MACERATOR, Direction.NORTH);
+        LvGameTests.cable(h, new BlockPos(3, 1, 4), "cable_tin_1x");
+        b.setItem(15, new ItemStack(LvContent.BATTERY_LV.get()));
+        h.onEachTick(() -> b.energy.stored = b.energy.capacity);
+        h.succeedWhen(() -> {
+            h.assertTrue(ru.iis.lv.item.BatteryItem.charge(b.getItem(15)) > 0, "battery not charged");
+            h.assertTrue(m.energy.stored > 0, "machine got no energy");
+            long cap = (b.data.get(2) & 0xFFFF) | ((long) (b.data.get(3) & 0xFFFF) << 16);
+            h.assertTrue(cap == 32768, "gui capacity " + cap);
+        });
+    }
 }

@@ -103,6 +103,8 @@ public final class IISGameTests {
             new Test("hv_steam_turbine_powers_macerator", 400, LargeGameTests::hvSteamTurbinePowersMacerator),
             new Test("hv_transformer_step_down", 200, LargeGameTests::hvTransformerStepDown),
             new Test("hv_battery_buffer_4x4", 200, LargeGameTests::hvBatteryBuffer4x4),
+            new Test("mv_steam_turbine_powers_macerator", 400, LargeGameTests::mvSteamTurbinePowersMacerator),
+            new Test("lv_battery_buffer_4x4", 200, LargeGameTests::lvBatteryBuffer4x4),
             new Test("extruder_mv_plate", 200, MvGameTests::extruderMvPlate),
             new Test("extruder_lv_cell_only", 300, MvGameTests::extruderLvCellOnly),
             new Test("forming_press_doge_coin", 200, MvGameTests::pressDogeCoin),

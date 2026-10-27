@@ -153,6 +153,10 @@ GENERATORS = [
     ('steam_turbine_lv', 'basicgenerator.steamturbine.tier.01', 'STEAM_TURBINE', 'Basic Steam Turbine'),
     ('diesel_generator_lv', 'basicgenerator.diesel.tier.01', 'DIESEL_GENERATOR', 'Basic Combustion Generator'),
     ('gas_turbine_lv', 'basicgenerator.gasturbine.tier.01', 'GAS_TURBINE', 'Basic Gas Turbine'),
+    # D95: GT_Loader_MetaTileEntities:1164, 1174, 1182 (mTier 2, MV casing)
+    ('steam_turbine_mv', 'basicgenerator.steamturbine.tier.02', 'STEAM_TURBINE', 'Advanced Steam Turbine'),
+    ('diesel_generator_mv', 'basicgenerator.diesel.tier.02', 'DIESEL_GENERATOR', 'Advanced Combustion Generator'),
+    ('gas_turbine_mv', 'basicgenerator.gasturbine.tier.02', 'GAS_TURBINE', 'Advanced Gas Turbine'),
     # D94: GT_Loader_MetaTileEntities:1165, 1175, 1183 (mTier 3, HV casing)
     ('steam_turbine_hv', 'basicgenerator.steamturbine.tier.03', 'STEAM_TURBINE', 'Turbo Steam Turbine'),
     ('diesel_generator_hv', 'basicgenerator.diesel.tier.03', 'DIESEL_GENERATOR', 'Turbo Combustion Generator'),
@@ -769,16 +773,22 @@ def generate(g):
     name(f'block.{NS}.gas_turbine_hv.tooltip.0', 'Burns gaseous fuels (efficiency 85%)', 'Сжигает газообразное топливо (КПД 85%)')
     for bid in ('steam_turbine_hv', 'diesel_generator_hv', 'gas_turbine_hv'):
         name(f'block.{NS}.{bid}.tooltip.1', 'Output: 512 EU/t, 1 A from the front', 'Выход: 512 EU/t, 1 А спереди')
+    # MV (D95): steam 3 EU per 8 L (600 / 8 = 75 %), combustion 90 %, tank 48000 / 16000 L
+    name(f'block.{NS}.steam_turbine_mv.tooltip.0', 'Converts Steam into EU: 3 EU per 8 L (75%)', 'Превращает пар в EU: 3 EU за 8 л (75%)')
+    name(f'block.{NS}.diesel_generator_mv.tooltip.0', 'Burns liquid fuels (efficiency 90%)', 'Сжигает жидкое топливо (КПД 90%)')
+    name(f'block.{NS}.gas_turbine_mv.tooltip.0', 'Burns gaseous fuels (efficiency 90%)', 'Сжигает газообразное топливо (КПД 90%)')
+    for bid in ('steam_turbine_mv', 'diesel_generator_mv', 'gas_turbine_mv'):
+        name(f'block.{NS}.{bid}.tooltip.1', 'Output: 128 EU/t, 1 A from the front', 'Выход: 128 EU/t, 1 А спереди')
     shutil.copy(os.path.join(LV, 'gui', 'BasicTank.png'), tex_out('gui/lv/basictank.png'))
 
     # GT_MetaTileEntity_BasicBatteryBuffer: front = energy out, other sides plain casing
-    buffers = [('battery_buffer_1x1_lv', 1, 'batterybuffer.01.tier.01', '1by1'), ('battery_buffer_2x2_lv', 4, 'batterybuffer.04.tier.01', '2by2')]
-    # D94: GT_Loader_MetaTileEntities:490, 512, 534, 556 HV 1x1, 2x2, 3x3, 4x4
-    buffers += [(f'battery_buffer_{k}x{k}_hv', k * k, f'batterybuffer.{k * k:02d}.tier.03', f'{k}by{k}') for k in (1, 2, 3, 4)]
+    # GT_Loader_MetaTileEntities:488-556: 1x1, 2x2, 3x3, 4x4 for LV (3x3/4x4 — D95), MV (D95), HV (D94)
+    buffers = [(f'battery_buffer_{k}x{k}_{tr}', k * k, f'batterybuffer.{k * k:02d}.tier.{tn}', f'{k}by{k}')
+               for tr, tn in (('lv', '01'), ('mv', '02'), ('hv', '03')) for k in (1, 2, 3, 4)]
     for bid, n, gtl, gui in buffers:
         BT = bid[-2:].upper()
         side_k = {1: '1x1', 4: '2x2', 9: '3x3', 16: '4x4'}[n]
-        volts = {'LV': 32, 'HV': 512}[BT]
+        volts = {'LV': 32, 'MV': 128, 'HV': 512}[BT]
         for face, base, ov in (('front', f'MACHINE_{BT}_SIDE', os.path.join(ic, 'OVERLAY_ENERGY_OUT.png')), ('side', f'MACHINE_{BT}_SIDE', None),
                                ('top', f'MACHINE_{BT}_TOP', None), ('bottom', f'MACHINE_{BT}_BOTTOM', None)):
             im, _ = layer(os.path.join(ic, base + '.png'), ov)
@@ -1223,6 +1233,19 @@ def generate(g):
     shaped('lv/transformer_lv', f'{NS}:transformer_lv', 1, [' BB', 'CM ', ' BB'], {'M': HULL, 'C': C('Copper'), 'B': C('Tin')})
     shaped('lv/battery_buffer_1x1_lv', f'{NS}:battery_buffer_1x1_lv', 1, ['WTW', 'WMW'], {'M': HULL, 'W': W('Tin'), 'T': '#c:chests/wooden'})
     shaped('lv/battery_buffer_2x2_lv', f'{NS}:battery_buffer_2x2_lv', 1, ['WTW', 'WMW'], {'M': HULL, 'W': W('Tin', 4), 'T': '#c:chests/wooden'})
+    # --- D95: LV 3x3/4x4 (:543, :565 tin wires 8x/16x), MV buffers (:500-566 copper wires 1x-16x), MV generators ---
+    for k, wsize in ((3, 8), (4, 16)):
+        shaped(f'lv/battery_buffer_{k}x{k}_lv', f'{NS}:battery_buffer_{k}x{k}_lv', 1, ['WTW', 'WMW'], {'M': HULL, 'W': W('Tin', wsize), 'T': '#c:chests/wooden'})
+    for k, wsize in ((1, 1), (2, 4), (3, 8), (4, 16)):
+        shaped(f'lv/battery_buffer_{k}x{k}_mv', f'{NS}:battery_buffer_{k}x{k}_mv', 1, ['WTW', 'WMW'],
+               {'M': HULL_MV, 'W': W('Copper', wsize), 'T': '#c:chests/wooden'})
+    # :1168 "PCP/EME/GWG" aluminium gears; :1178 "CRC/RMR/EWE" bronze rotors; :1186 "PCP/RMR/EWE" steel pipes
+    shaped('lv/diesel_generator_mv', f'{NS}:diesel_generator_mv', 1, ['PCP', 'EME', 'GWG'],
+           {'M': HULL_MV, 'P': PISTON_MV, 'E': MOTOR_MV, 'C': CIRC_MV, 'W': C('Copper'), 'G': tag_of('gear', 'Aluminium')})
+    shaped('lv/gas_turbine_mv', f'{NS}:gas_turbine_mv', 1, ['CRC', 'RMR', 'EWE'],
+           {'M': HULL_MV, 'E': MOTOR_MV, 'R': tag_of('rotor', 'Bronze'), 'C': CIRC_MV, 'W': C('Copper')})
+    shaped('lv/steam_turbine_mv', f'{NS}:steam_turbine_mv', 1, ['PCP', 'RMR', 'EWE'],
+           {'M': HULL_MV, 'E': MOTOR_MV, 'R': tag_of('rotor', 'Bronze'), 'C': CIRC_MV, 'W': C('Copper'), 'P': f'{NS}:pipe_medium_steel'})
     # --- D94: HV generators, battery buffers, EV <-> HV transformer (GT_Loader_MetaTileEntities) ---
     HULL_HV = f'{NS}:hull_hv'
     # :1169 "PCP/EME/GWG" stainless steel gears; :1179 "CRC/RMR/EWE" steel rotors; :1187 "PCP/RMR/EWE" stainless steel pipes

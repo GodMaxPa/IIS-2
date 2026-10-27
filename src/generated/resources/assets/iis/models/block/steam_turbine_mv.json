@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/steam_turbine_mv_side",
+    "north": "iis:block/lv/steam_turbine_mv_front",
+    "south": "iis:block/lv/steam_turbine_mv_back",
+    "east": "iis:block/lv/steam_turbine_mv_side",
+    "west": "iis:block/lv/steam_turbine_mv_side",
+    "up": "iis:block/lv/steam_turbine_mv_top",
+    "down": "iis:block/lv/steam_turbine_mv_bottom"
+  }
+}
