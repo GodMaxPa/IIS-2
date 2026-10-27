@@ -57,8 +57,8 @@ class HvMachinesTest {
         assertEquals("iis:pipe_medium_plastic", key("lv/chemical_reactor_hv", "G"));
         assertEquals("#iis:wires/4x/copper", key("lv/polarizer_hv", "Z"));            // X.COIL_ELECTRIC
         assertEquals("iis:emitter_hv", key("lv/laser_engraver_hv", "E"));
-        // улучшенная схема уровня HV — Data (EV), её ещё нет: сборщик схем HV без крафта
-        assertFalse(Files.exists(RECIPES.resolve("lv/circuit_assembler_hv.json")));
+        // улучшенная схема уровня HV — Data (D97)
+        assertEquals("#c:circuits/data", key("lv/circuit_assembler_hv", "C"));
         assertEquals("iis:electric_piston_hv", key("lv/robot_arm_hv", "P"));
         assertEquals("minecraft:emerald", key("lv/emitter_hv", "Q"));
         assertEquals("iis:pipe_medium_stainless_steel", key("lv/electric_pump_hv", "P"));

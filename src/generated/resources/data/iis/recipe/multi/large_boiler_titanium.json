@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCW",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:titanium_firebox_casing",
+    "C": "#c:circuits/data",
+    "W": "#iis:cables/1x/gold"
+  },
+  "result": {
+    "id": "iis:large_boiler_titanium"
+  }
+}

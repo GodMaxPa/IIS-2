@@ -1,0 +1,40 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_carbon",
+      "count": 1
+    },
+    {
+      "id": "iis:capsule",
+      "count": 2,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:oxygen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 300,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:carbondioxide",
+      "amount": 3000
+    }
+  ],
+  "circuit": 11
+}

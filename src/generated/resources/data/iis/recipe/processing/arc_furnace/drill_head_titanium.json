@@ -1,0 +1,23 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#iis:tool_heads/drill/titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_titanium",
+      "count": 4
+    }
+  ],
+  "duration": 192,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 192
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 62,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_titanium",
+      "amount": 144
+    }
+  ]
+}

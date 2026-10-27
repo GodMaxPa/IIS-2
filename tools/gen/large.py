@@ -20,12 +20,18 @@ CASINGS = [
     ('solid_steel_casing', 'MACHINE_CASING_SOLID_STEEL', 'gt.blockcasings2.0.name', 'Solid Steel Machine Casing'),
     ('steel_pipe_casing', 'MACHINE_CASING_PIPE_STEEL', 'gt.blockcasings2.13.name', 'Steel Pipe Casing'),
     ('steel_firebox_casing', 'MACHINE_CASING_FIREBOX_STEEL', 'gt.blockcasings3.14.name', 'Steel Firebox Casing'),
+    # D97: GT_Block_Casings4:2, Casings2:14, Casings4:3
+    ('stable_titanium_casing', 'MACHINE_CASING_STABLE_TITANIUM', 'gt.blockcasings4.2.name', 'Stable Titanium Machine Casing'),
+    ('titanium_pipe_casing', 'MACHINE_CASING_PIPE_TITANIUM', 'gt.blockcasings2.14.name', 'Titanium Pipe Casing'),
+    ('titanium_firebox_casing', 'MACHINE_CASING_FIREBOX_TITANIUM', 'gt.blockcasings4.3.name', 'Titanium Firebox Casing'),
 ]
 # tier, casing, pipe, firebox, steam L/t, steam per coal (L), heat-up seconds (32 portions of 40 ticks for bronze, 42 of 30 for
 # steel; GT's description says 500 / increase = 31.25 and 41.67 s, forgetting the boost), EN, material
 BOILERS = [
     ('bronze', 'bronze_plated_bricks', 'bronze_pipe_casing', 'bronze_firebox_casing', 800, 32000, 64, 'Large Bronze Boiler', 'Bronze'),
     ('steel', 'solid_steel_casing', 'steel_pipe_casing', 'steel_firebox_casing', 1200, 36000, 63, 'Large Steel Boiler', 'Steel'),
+    # D97: 800 EU/t, boost 130 %: 63 portions of 26 ticks = 82 s (GT says 500 / 8 = 62.5 s)
+    ('titanium', 'stable_titanium_casing', 'titanium_pipe_casing', 'titanium_firebox_casing', 1600, 41600, 82, 'Large Titanium Boiler', 'Titanium'),
 ]
 
 
@@ -105,7 +111,10 @@ def generate(g):
     # GT_Loader_MetaTileEntities:61 "PhP/PBP/PwP": bronze plates + brick block -> 2; :62 steel plates + steel frame -> 2
     shaped('multi/bronze_plated_bricks', f'{NS}:bronze_plated_bricks', 2, ['PhP', 'PBP', 'PwP'], {'P': tag_of('plate', 'Bronze'), 'B': 'minecraft:bricks'})
     shaped('multi/solid_steel_casing', f'{NS}:solid_steel_casing', 2, ['PhP', 'PFP', 'PwP'], {'P': tag_of('plate', 'Steel'), 'F': '#c:frames/steel'})
-    for m in ('Bronze', 'Steel'):
+    # :63 stable titanium casing "PhP/PFP/PwP" (titanium plates + frame); assembler :1393
+    shaped('multi/stable_titanium_casing', f'{NS}:stable_titanium_casing', 2, ['PhP', 'PFP', 'PwP'],
+           {'P': tag_of('plate', 'Titanium'), 'F': '#c:frames/titanium'})
+    for m in ('Bronze', 'Steel', 'Titanium'):   # :75-77, :87-89
         mid = m.lower()
         # :75-76 pipe casings "PIP/IFI/PIP" (I — medium pipe), :87-88 fireboxes "PSP/SFS/PSP" (S — rod)
         shaped(f'multi/{mid}_pipe_casing', f'{NS}:{mid}_pipe_casing', 2, ['PIP', 'IFI', 'PIP'],
@@ -116,6 +125,8 @@ def generate(g):
     tooltip('steel_firebox_casing', [('Bottom layer of the Large Steel Boiler', 'Нижний слой большого стального котла')])
     tooltip('bronze_pipe_casing', [('Middle column of the Large Bronze Boiler', 'Середина большого бронзового котла')])
     tooltip('steel_pipe_casing', [('Middle column of the Large Steel Boiler', 'Середина большого стального котла')])
+    tooltip('titanium_firebox_casing', [('Bottom layer of the Large Titanium Boiler', 'Нижний слой большого титанового котла')])
+    tooltip('titanium_pipe_casing', [('Middle column of the Large Titanium Boiler', 'Середина большого титанового котла')])
 
     # --- controllers -----------------------------------------------------------------------------------------------------
     for tier, casing, pipe, firebox, steam, per_coal, heat_s, en, mat in BOILERS:
@@ -138,8 +149,10 @@ def generate(g):
         write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': variants})
         simple(bid)
         name(f'block.{NS}.{bid}', en, ru(f'gt.blockmachines.multimachine.boiler.{tier}.name', en))
-        m_ru = 'бронзовые' if tier == 'bronze' else 'стальные'
-        c_en, c_ru = ('Bronze Plated Bricks', 'кирпичи, обшитые бронзой') if tier == 'bronze' else ('Solid Steel Machine Casings', 'стальные корпуса механизма')
+        m_ru = {'bronze': 'бронзовые', 'steel': 'стальные', 'titanium': 'титановые'}[tier]
+        c_en, c_ru = {'bronze': ('Bronze Plated Bricks', 'кирпичи, обшитые бронзой'),
+                      'steel': ('Solid Steel Machine Casings', 'стальные корпуса механизма'),
+                      'titanium': ('Stable Titanium Machine Casings', 'стабильные титановые корпуса')}[tier]
         tooltip(bid, [
             (f'Produces {per_coal} L of Steam with 1 Coal at {steam} L/t', f'{per_coal} л пара с 1 угля, {steam} л/т'),
             ('A programmed circuit in the controller throttles it (-50 L/t per config)', 'Программная схема в контроллере снижает выход (−50 л/т за единицу)'),
@@ -149,13 +162,18 @@ def generate(g):
             (f'Inside: 3 {mat} Pipe Casings', f'Внутри: 3 {m_ru} блока обсадных труб'),
             ('Distilled Water first, then Water; runs dry - explodes', 'Сначала дистиллированная вода, потом обычная; без воды — взрыв'),
             (f'Diesel fuels have 1/4 efficiency; heats up in {heat_s} s', f'Дизельное топливо — с 1/4 отдачи; разогрев {heat_s} с'),
-            ('Causes up to 240 Pollution per second', 'Загрязнение: до 240 в секунду')])
+            ('Causes up to 240 Pollution per second', 'Загрязнение: до 240 в секунду')]
+            + ([('32 L of Oxygen per portion and solid fuel give a boost (x3)', '32 л кислорода за порцию с твёрдым топливом — разгон ×3')]
+               if tier == 'titanium' else []))
     # GT_Loader_MetaTileEntities:1157 "WCW/CMC/WCW": bronze firebox, basic circuit, tin cable.
     shaped('multi/large_boiler_bronze', f'{NS}:large_boiler_bronze', 1, ['WCW', 'CMC', 'WCW'],
            {'M': f'{NS}:bronze_firebox_casing', 'C': '#c:circuits/basic', 'W': '#iis:cables/1x/tin'})
     # :1158 steel: steel firebox, Advanced (HV) circuits, copper cables (D92)
     shaped('multi/large_boiler_steel', f'{NS}:large_boiler_steel', 1, ['WCW', 'CMC', 'WCW'],
            {'M': f'{NS}:steel_firebox_casing', 'C': '#c:circuits/advanced', 'W': '#iis:cables/1x/copper'})
+    # :1159 titanium: titanium firebox, Data circuits, gold cables (D97)
+    shaped('multi/large_boiler_titanium', f'{NS}:large_boiler_titanium', 1, ['WCW', 'CMC', 'WCW'],
+           {'M': f'{NS}:titanium_firebox_casing', 'C': '#c:circuits/data', 'W': '#iis:cables/1x/gold'})
     shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'LargeBoiler.png'), tex_out('gui/multi/large_boiler.png'))
     for k, en, ruu in (('gui.iis.boiler.steam', 'Steam: %s L/t', 'Пар: %s л/т'),
                        ('gui.iis.boiler.sh_steam', 'Superheated steam: %s L/t', 'Перегретый пар: %s л/т'),
@@ -295,6 +313,34 @@ def generate(g):
         shaped(f'lv/diode_wafer_{wid}', f'{NS}:diode', 1, ['BG ', 'WDW', 'BG '], {'B': '#c:dyes/black', 'G': 'minecraft:glass_pane',
                                                                              'D': f'{NS}:silicon_wafer', 'W': wire})
     stats['d92_machine_recipes'] = d92(g, mrec, ing, rout, shaped, tag_of, ref, NS)
+    # --- D97: titanium ---------------------------------------------------------------------------------------------------
+    # :1393 assembler 6 titanium plates + frame -> 2 stable titanium casings (50 t, 16 EU/t)
+    mrec('assembler', 'stable_titanium_casing', [ing(tag_of('plate', 'Titanium'), 6), ing('#c:frames/titanium')],
+         [rout(f'{NS}:stable_titanium_casing', 2)], 50, 16)
+    # :1043 EBF: 2 magnesium dust + 1000 L TiCl4 -> hot titanium ingot + 2 MgCl2 dust (800 t, 480 EU/t, 1940 + 200 K)
+    mrec('blast', 'titanium_tetrachloride', [ing(tag_of('dust', 'Magnesium'), 2)],
+         [rout(ref('hot_ingot', 'Titanium')), rout(ref('dust', 'Magnesiumchloride'), 2)], 800, 480,
+         fin={'ingredient': f'{NS}:titaniumtetrachloride', 'amount': 1000}, temp=2140)
+    # ProcessingToolHead:156 normal turbine: 8 blades + long titanium rod (320 t, 400 EU/t — HV assembler); durability x2.
+    # Large (12 blades + tungstensteel, 1600 EU/t) and huge (16 + americium, 6400 EU/t) wait for those materials
+    if ref('long_rod', 'Titanium'):
+        for n in sorted(g['names']):
+            mid = mat_id(n)
+            if ref('turbine_blade', n) and any(m['id'] == mid for m in turbine_mats):
+                m = mat_by_name[n]
+                rec[f'assembler/turbine_normal_{mid}'] = {
+                    'type': f'{NS}:assembler', 'inputs': [ing(tag_of('turbine_blade', n), 8), ing(tag_of('long_rod', 'Titanium'))],
+                    'outputs': [{'id': f'{NS}:turbine_normal', 'count': 1, 'components': {
+                        f'{NS}:rotor_material': mid, 'minecraft:max_damage': 100 * int(m['toolDurability'] * 2.0)}}],
+                    'duration': 320, 'eut': 400}
+    # GT_MachineRecipeLoader:446 chemical reactor: plastic plate + copper foil + 125 L sulfuric acid -> plastic board (500 t, 10)
+    mrec('chemical_reactor', 'circuit_board_plastic', [ing(tag_of('plate', 'Plastic')), ing(tag_of('foil', 'Copper'))],
+         [rout(f'{NS}:circuit_board_plastic')], 500, 10, fin={'ingredient': f'{NS}:sulfuricacid', 'amount': 125})
+    # :571 circuit assembler: 2 plastic boards + 3 Advanced circuits + 4 diodes + 4 RAM + 6 fine electrum + 144 L soldering
+    # alloy -> Data circuit (400 t, 90 EU/t — MV)
+    mrec('circuit_assembler', 'circuit_data', [ing(f'{NS}:circuit_board_plastic', 2), ing(f'{NS}:circuit_advanced', 3), ing(f'{NS}:diode', 4),
+                                               ing(f'{NS}:chip_ram', 4), ing(tag_of('wire_fine', 'Electrum'), 6)],
+         [rout(f'{NS}:circuit_data')], 400, 90, fin={'ingredient': f'{NS}:molten_solderingalloy', 'amount': 144})
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     stats['d90_machine_recipes'] = len(rec)

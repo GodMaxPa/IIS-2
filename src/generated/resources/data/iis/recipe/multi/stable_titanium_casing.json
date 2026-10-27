@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PhP",
+    "PFP",
+    "PwP"
+  ],
+  "key": {
+    "P": "#c:plates/titanium",
+    "F": "#c:frames/titanium",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:stable_titanium_casing",
+    "count": 2
+  }
+}

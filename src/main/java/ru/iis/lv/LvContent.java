@@ -233,6 +233,9 @@ public final class LvContent {
     public static final DeferredItem<Item> CIRCUIT_BOARD_PHENOLIC = item("circuit_board_phenolic");
     public static final DeferredItem<Item> CIRCUIT_INTEGRATED_GOOD = item("circuit_integrated_good");
     public static final DeferredItem<Item> CIRCUIT_ADVANCED = item("circuit_advanced");
+    // D97: схема Data (GT_MetaGenerated_Item_01:698, уровень EV) и пластиковая печатная плата (Item_03:34)
+    public static final DeferredItem<Item> CIRCUIT_DATA = item("circuit_data");
+    public static final DeferredItem<Item> CIRCUIT_BOARD_PLASTIC = item("circuit_board_plastic");
     public static final DeferredItem<Item> PLANT_BALL = item("plant_ball");
     public static final DeferredItem<Item> BIO_CHAFF = item("bio_chaff");
     public static final List<String> EXTRUDER_SHAPE_IDS = List.of("plate", "rod", "bolt", "ring", "cell", "ingot", "wire", "casing",

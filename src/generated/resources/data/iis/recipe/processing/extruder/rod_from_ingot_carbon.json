@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/carbon",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_carbon",
+      "count": 2
+    }
+  ],
+  "duration": 24,
+  "eut": 96,
+  "keep": [
+    "iis:shape_extruder_rod"
+  ]
+}

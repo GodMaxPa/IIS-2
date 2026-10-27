@@ -427,4 +427,29 @@ final class LargeGameTests {
         m.setItem(1, new ItemStack(LvContent.BATTERY_HULL_MV.get()));
         h.succeedWhen(() -> h.assertTrue(m.getItem(2).is(LvContent.BATTERY_LITHIUM_MV.get()), "output " + m.getItem(2)));
     }
+
+    /** Большой титановый котёл (D97): формируется из титановых корпусов, жжёт уголь и даёт пар. */
+    static void titaniumBoilerCoal(GameTestHelper h) {
+        LargeBoilerBlockEntity b = build(h, LargeBoilerLogic.Tier.TITANIUM);
+        ItemBusBlockEntity bus = h.getBlockEntity(BUS, ItemBusBlockEntity.class);
+        bus.setItem(0, new ItemStack(Items.COAL, 64));
+        h.succeedWhen(() -> {
+            h.assertTrue(b.formed(), "boiler not formed");
+            h.assertTrue(bus.getItem(0).getCount() < 64, "coal not used");
+            h.assertTrue(steam(h) > 0, "no steam in the output hatch");
+        });
+    }
+
+    /** Сборщик HV (D97): 8 стальных лопастей + длинный титановый стержень → обычный ротор, прочность 100 × 2 × прочность стали. */
+    static void assemblerMakesNormalRotor(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.ASSEMBLER_HV);
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("turbine_blade_steel"), 8));
+        m.setItem(1, new ItemStack(ru.iis.command.SelfTest.item("long_rod_titanium")));
+        h.succeedWhen(() -> {
+            ItemStack o = m.getItem(m.type().inputs);
+            h.assertTrue(o.getItem() instanceof ru.iis.multi.TurbineRotorItem r && r.size == LargeTurbineLogic.Size.NORMAL, "rotor: " + o);
+            h.assertTrue("steel".equals(o.get(MultiContent.ROTOR_MATERIAL.get())), "rotor material");
+            h.assertTrue(o.getMaxDamage() == 102400, "rotor durability " + o.getMaxDamage());
+        });
+    }
 }

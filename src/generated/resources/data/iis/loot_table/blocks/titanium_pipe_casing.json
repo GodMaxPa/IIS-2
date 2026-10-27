@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "iis:blocks/titanium_pipe_casing",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "iis:titanium_pipe_casing"
+        }
+      ]
+    }
+  ]
+}

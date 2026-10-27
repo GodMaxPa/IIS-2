@@ -1,0 +1,17 @@
+{
+  "type": "iis:vacuum_freezer",
+  "inputs": [
+    {
+      "ingredient": "#iis:hot_ingots/titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_titanium",
+      "count": 1
+    }
+  ],
+  "duration": 144,
+  "eut": 120
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/carbon",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 87,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_carbon",
+      "amount": 144
+    }
+  ]
+}

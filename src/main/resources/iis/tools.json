@@ -120,6 +120,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_carbon",
+    "tool": "sword",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 1.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "sword_certus_quartz",
     "tool": "sword",
     "material": "certus_quartz",
@@ -576,6 +588,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_titanium",
+    "tool": "sword",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "sword"
+  },
+  {
     "id": "sword_topaz",
     "tool": "sword",
     "material": "topaz",
@@ -716,6 +740,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_carbon",
+    "tool": "pickaxe",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.0,
     "quality": 2,
     "kind": "pickaxe"
   },
@@ -1176,6 +1212,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_titanium",
+    "tool": "pickaxe",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_topaz",
     "tool": "pickaxe",
     "material": "topaz",
@@ -1316,6 +1364,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_carbon",
+    "tool": "shovel",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.0,
     "quality": 2,
     "kind": "shovel"
   },
@@ -1776,6 +1836,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_titanium",
+    "tool": "shovel",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_topaz",
     "tool": "shovel",
     "material": "topaz",
@@ -1916,6 +1988,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_carbon",
+    "tool": "axe",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.0,
     "quality": 2,
     "kind": "axe"
   },
@@ -2376,6 +2460,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_titanium",
+    "tool": "axe",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "axe"
+  },
+  {
     "id": "axe_topaz",
     "tool": "axe",
     "material": "topaz",
@@ -2516,6 +2612,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_carbon",
+    "tool": "hoe",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.0,
     "quality": 2,
     "kind": "hoe"
   },
@@ -2976,6 +3084,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_titanium",
+    "tool": "hoe",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_topaz",
     "tool": "hoe",
     "material": "topaz",
@@ -3116,6 +3236,18 @@
     "blockDamage": 1,
     "craftDamage": 4,
     "speed": 6.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_carbon",
+    "tool": "saw",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 1.0,
     "quality": 2,
     "kind": "axe"
   },
@@ -3576,6 +3708,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_titanium",
+    "tool": "saw",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "axe"
+  },
+  {
     "id": "saw_topaz",
     "tool": "saw",
     "material": "topaz",
@@ -3716,6 +3860,18 @@
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 4.5,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_carbon",
+    "tool": "hammer",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 0.75,
     "quality": 2,
     "kind": "pickaxe"
   },
@@ -4164,6 +4320,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_titanium",
+    "tool": "hammer",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_topaz",
     "tool": "hammer",
     "material": "topaz",
@@ -4304,6 +4472,18 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 6.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_carbon",
+    "tool": "wrench",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 1.0,
     "quality": 2,
     "kind": "wrench"
   },
@@ -4764,6 +4944,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_titanium",
+    "tool": "wrench",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_topaz",
     "tool": "wrench",
     "material": "topaz",
@@ -4904,6 +5096,18 @@
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_carbon",
+    "tool": "file",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 1.0,
     "quality": 2,
     "kind": null
   },
@@ -5364,6 +5568,18 @@
     "kind": null
   },
   {
+    "id": "file_titanium",
+    "tool": "file",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
     "id": "file_topaz",
     "tool": "file",
     "material": "topaz",
@@ -5504,6 +5720,18 @@
     "blockDamage": 4,
     "craftDamage": 8,
     "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_carbon",
+    "tool": "screwdriver",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 1.0,
     "quality": 2,
     "kind": null
   },
@@ -5964,6 +6192,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_titanium",
+    "tool": "screwdriver",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
     "id": "screwdriver_topaz",
     "tool": "screwdriver",
     "material": "topaz",
@@ -6140,6 +6380,18 @@
     "blockDamage": 2,
     "craftDamage": 2,
     "speed": 6.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_carbon",
+    "tool": "knife",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 1.0,
     "quality": 2,
     "kind": "sword"
   },
@@ -6600,6 +6852,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_titanium",
+    "tool": "knife",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "sword"
+  },
+  {
     "id": "knife_topaz",
     "tool": "knife",
     "material": "topaz",
@@ -6740,6 +7004,18 @@
     "blockDamage": 2,
     "craftDamage": 8,
     "speed": 7.5,
+    "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_carbon",
+    "tool": "wire_cutter",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 1.25,
     "quality": 2,
     "kind": "wire_cutter"
   },
@@ -7200,6 +7476,18 @@
     "kind": "wire_cutter"
   },
   {
+    "id": "wire_cutter_titanium",
+    "tool": "wire_cutter",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 3,
+    "kind": "wire_cutter"
+  },
+  {
     "id": "wire_cutter_topaz",
     "tool": "wire_cutter",
     "material": "topaz",
@@ -7364,6 +7652,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "crowbar_carbon",
+    "tool": "crowbar",
+    "material": "carbon",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.0,
     "quality": 2,
     "kind": null
   },
@@ -7812,6 +8112,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_titanium",
+    "tool": "crowbar",
+    "material": "titanium",
+    "handle": "wood",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
     "id": "crowbar_topaz",
     "tool": "crowbar",
     "material": "topaz",
@@ -7952,6 +8264,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 18.0,
+    "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_carbon",
+    "tool": "drill_lv",
+    "material": "carbon",
+    "handle": "stainless_steel",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
     "quality": 2,
     "kind": "drill"
   },
@@ -8412,6 +8736,18 @@
     "kind": "drill"
   },
   {
+    "id": "drill_lv_titanium",
+    "tool": "drill_lv",
+    "material": "titanium",
+    "handle": "stainless_steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 21.0,
+    "quality": 3,
+    "kind": "drill"
+  },
+  {
     "id": "drill_lv_topaz",
     "tool": "drill_lv",
     "material": "topaz",
@@ -8552,6 +8888,18 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 12.0,
+    "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_carbon",
+    "tool": "chainsaw_lv",
+    "material": "carbon",
+    "handle": "stainless_steel",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 2.0,
     "quality": 2,
     "kind": "chainsaw"
   },
@@ -9012,6 +9360,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_titanium",
+    "tool": "chainsaw_lv",
+    "material": "titanium",
+    "handle": "stainless_steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 14.0,
+    "quality": 3,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_topaz",
     "tool": "chainsaw_lv",
     "material": "topaz",
@@ -9152,6 +9512,18 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 12.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_carbon",
+    "tool": "wrench_lv",
+    "material": "carbon",
+    "handle": "stainless_steel",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 2.0,
     "quality": 2,
     "kind": "wrench"
   },
@@ -9609,6 +9981,18 @@
     "craftDamage": 16,
     "speed": 13.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_titanium",
+    "tool": "wrench_lv",
+    "material": "titanium",
+    "handle": "stainless_steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 14.0,
+    "quality": 3,
     "kind": "wrench"
   },
   {

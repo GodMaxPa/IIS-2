@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/carbon",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_carbon",
+      "count": 1
+    }
+  ],
+  "duration": 24,
+  "eut": 32,
+  "keep": [
+    "iis:mold_plate"
+  ]
+}

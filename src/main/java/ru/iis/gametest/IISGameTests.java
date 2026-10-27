@@ -107,6 +107,8 @@ public final class IISGameTests {
             new Test("lv_battery_buffer_4x4", 200, LargeGameTests::lvBatteryBuffer4x4),
             new Test("hv_battery_charging_tiers", 200, LargeGameTests::batteryChargingTiers),
             new Test("mv_battery_canning", 600, LargeGameTests::mvBatteryCanning),
+            new Test("titanium_boiler_coal", 400, LargeGameTests::titaniumBoilerCoal),
+            new Test("hv_normal_rotor_assembler", 500, LargeGameTests::assemblerMakesNormalRotor),
             new Test("extruder_mv_plate", 200, MvGameTests::extruderMvPlate),
             new Test("extruder_lv_cell_only", 300, MvGameTests::extruderLvCellOnly),
             new Test("forming_press_doge_coin", 200, MvGameTests::pressDogeCoin),

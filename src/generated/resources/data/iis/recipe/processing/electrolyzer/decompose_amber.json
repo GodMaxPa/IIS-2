@@ -1,0 +1,43 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/amber",
+      "count": 27
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_carbon",
+      "count": 10
+    },
+    {
+      "id": "iis:capsule",
+      "count": 1,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:oxygen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 162,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:hydrogen",
+      "amount": 16000
+    }
+  ]
+}

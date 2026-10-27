@@ -1,0 +1,25 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/carbon",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 14000,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrogen",
+      "amount": 4000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:methane",
+      "amount": 5000
+    }
+  ],
+  "circuit": 1
+}

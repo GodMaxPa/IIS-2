@@ -1,0 +1,42 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/carbon",
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:chlorine",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 1
+    }
+  ],
+  "duration": 480,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_lpg",
+      "amount": 432
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_epichlorhydrin",
+      "amount": 432
+    }
+  ]
+}

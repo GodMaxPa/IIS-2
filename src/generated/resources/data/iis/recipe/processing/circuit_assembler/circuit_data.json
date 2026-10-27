@@ -1,0 +1,39 @@
+{
+  "type": "iis:circuit_assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_board_plastic",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:circuit_advanced",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:diode",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:chip_ram",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:fine_wires/electrum",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 90,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 144
+    }
+  ]
+}

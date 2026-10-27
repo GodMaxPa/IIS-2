@@ -1,0 +1,17 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/diamond",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_carbon",
+      "count": 64
+    }
+  ],
+  "duration": 12,
+  "eut": 30
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:bolts/carbon",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 3,
+  "eut": 87,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_carbon",
+      "amount": 18
+    }
+  ]
+}

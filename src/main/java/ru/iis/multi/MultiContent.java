@@ -62,7 +62,7 @@ public final class MultiContent {
         return b;
     }
 
-    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel");
+    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel", "titanium");
     public static final Map<String, DeferredBlock<Block>> FRAMES = new LinkedHashMap<>();
     static {
         for (String m : FRAME_MATERIALS) {
@@ -90,10 +90,14 @@ public final class MultiContent {
     public static final DeferredBlock<Block> SOLID_STEEL_CASING = block("solid_steel_casing", Block::new, MultiContent::metal);
     public static final DeferredBlock<Block> STEEL_PIPE_CASING = block("steel_pipe_casing", Block::new, MultiContent::metal);
     public static final DeferredBlock<Block> STEEL_FIREBOX_CASING = block("steel_firebox_casing", Block::new, MultiContent::metal);
-    /** Большие котлы GT (GT_Loader_MetaTileEntities:1152–1153); титановый и вольфрамостальной придут с их материалами. */
+    /** D97: GT_Block_Casings4:2 стабильный титановый корпус, Casings2:14 титановые трубы, Casings4:3 титановая топка. */
+    public static final DeferredBlock<Block> STABLE_TITANIUM_CASING = block("stable_titanium_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> TITANIUM_PIPE_CASING = block("titanium_pipe_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> TITANIUM_FIREBOX_CASING = block("titanium_firebox_casing", Block::new, MultiContent::metal);
+    /** Большие котлы GT (GT_Loader_MetaTileEntities:1152–1154); вольфрамостальной придёт с вольфрамосталью. */
     public static final Map<LargeBoilerLogic.Tier, DeferredBlock<LargeBoilerBlock>> LARGE_BOILERS = new EnumMap<>(LargeBoilerLogic.Tier.class);
     static {
-        for (LargeBoilerLogic.Tier t : List.of(LargeBoilerLogic.Tier.BRONZE, LargeBoilerLogic.Tier.STEEL)) {
+        for (LargeBoilerLogic.Tier t : List.of(LargeBoilerLogic.Tier.BRONZE, LargeBoilerLogic.Tier.STEEL, LargeBoilerLogic.Tier.TITANIUM)) {
             LARGE_BOILERS.put(t, block("large_boiler_" + t.name().toLowerCase(Locale.ROOT), p -> new LargeBoilerBlock(p, t),
                     p -> metal(p).lightLevel(s -> s.getValue(MachineBlock.ACTIVE) ? 13 : 0)));
         }
@@ -115,9 +119,11 @@ public final class MultiContent {
     }
 
     public static LargeBoilerBlockEntity.Casings boilerCasings(LargeBoilerLogic.Tier t) {
-        return t == LargeBoilerLogic.Tier.STEEL
-                ? new LargeBoilerBlockEntity.Casings(SOLID_STEEL_CASING.get(), STEEL_PIPE_CASING.get(), STEEL_FIREBOX_CASING.get())
-                : new LargeBoilerBlockEntity.Casings(BRONZE_PLATED_BRICKS.get(), BRONZE_PIPE_CASING.get(), BRONZE_FIREBOX_CASING.get());
+        return switch (t) {
+            case STEEL -> new LargeBoilerBlockEntity.Casings(SOLID_STEEL_CASING.get(), STEEL_PIPE_CASING.get(), STEEL_FIREBOX_CASING.get());
+            case TITANIUM -> new LargeBoilerBlockEntity.Casings(STABLE_TITANIUM_CASING.get(), TITANIUM_PIPE_CASING.get(), TITANIUM_FIREBOX_CASING.get());
+            default -> new LargeBoilerBlockEntity.Casings(BRONZE_PLATED_BRICKS.get(), BRONZE_PIPE_CASING.get(), BRONZE_FIREBOX_CASING.get());
+        };
     }
 
     public static final DeferredItem<SolderingIronItem> SOLDERING_IRON = ITEMS.registerItem("soldering_iron_lv", SolderingIronItem::new, p -> p.stacksTo(1));

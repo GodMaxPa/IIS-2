@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/titanium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_titanium",
+      "count": 1
+    }
+  ],
+  "duration": 96,
+  "eut": 96
+}

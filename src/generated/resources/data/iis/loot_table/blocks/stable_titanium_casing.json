@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "iis:blocks/stable_titanium_casing",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "iis:stable_titanium_casing"
+        }
+      ]
+    }
+  ]
+}

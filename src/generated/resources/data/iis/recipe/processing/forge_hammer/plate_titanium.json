@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/titanium",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_titanium",
+      "count": 2
+    }
+  ],
+  "duration": 48,
+  "eut": 16
+}

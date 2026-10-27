@@ -1,0 +1,23 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "iis:pipe_huge_titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_titanium",
+      "count": 12
+    }
+  ],
+  "duration": 576,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 576
+    }
+  ]
+}

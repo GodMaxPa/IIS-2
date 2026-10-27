@@ -1,0 +1,17 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/coal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_carbon",
+      "count": 2
+    }
+  ],
+  "duration": 12,
+  "eut": 30
+}

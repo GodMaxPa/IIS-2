@@ -146,6 +146,8 @@ names |= {'SiliconDioxide', 'Silicon'}
 names |= {'Plastic', 'Wheat'}
 # D93: kanthal for HV heating coils and the kanthal EBF coil (GT_Loader_MetaTileEntities:92, 1482)
 names |= {'Kanthal'}
+# D97: titanium (GT_MachineRecipeLoader:1043, 1179): rutile + carbon + chlorine -> TiCl4, magnesium reduction in the EBF
+names |= {'Titanium', 'Rutile', 'Carbon', 'Magnesiumchloride'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64

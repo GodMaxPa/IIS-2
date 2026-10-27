@@ -209,6 +209,9 @@ ITEMS = [
     ('circuit_board_phenolic', 'gt:719', 'gt.metaitem.01.32719.name', 'Phenolic Circuit Board', 'Текстолитовая печатная плата'),
     ('circuit_integrated_good', 'gt:integrated_good', 'gt.metaitem.03.32079.name', 'Good Integrated Circuit', 'Хорошая интегральная схема'),
     ('circuit_advanced', 'gt:703', None, 'Advanced Circuit', 'Улучшенная электросхема'),
+    # D97: GT_MetaGenerated_Item_01:698 Workstation (circuit Data), Item_03:34 plastic circuit board
+    ('circuit_data', 'gt:704', 'gt.metaitem.01.32704.name', 'Workstation', 'Рабочая станция'),
+    ('circuit_board_plastic', 'gt:board_plastic', 'gt.metaitem.03.32007.name', 'Plastic Circuit Board', 'Пластиковая печатная плата'),
     # IC2 plant ball and bio chaff (IIS 1 config/ic2/macerator.ini, GT compressor recipes): own art, IC2 is not ported (D5)
     ('plant_ball', 'gen:plant_ball', None, 'Plantball', 'Растительный шарик'),
     ('bio_chaff', 'gen:bio_chaff', None, 'Bio Chaff', 'Биоотходы'),
@@ -517,6 +520,7 @@ def generate(g):
     add_item_tag('c:circuits/good', f'{NS}:circuit_good')     # GT OrePrefixes.circuit Good (D81)
     add_item_tag('c:circuits/good', f'{NS}:circuit_integrated_good')   # Item_03:141, circuit Good (D92)
     add_item_tag('c:circuits/advanced', f'{NS}:circuit_advanced')      # IC2 advancedCircuit = circuit Advanced (D92)
+    add_item_tag('c:circuits/data', f'{NS}:circuit_data')              # GT circuit Data (D97)
     name(f'item.{NS}.battery_lv.tooltip', 'Stores %s / %s EU', 'Запас: %s / %s EU')
 
     # creosote (Railcraft coke oven byproduct; GT Materials.Creosote, FuelType 3 = semifluid generator)
@@ -1201,15 +1205,16 @@ def generate(g):
     # :732 diamond grinding head "DSD/SIS/DSD" (industrial diamond -> diamond, as for the MV macerator)
     shaped('lv/grinder_diamond', f'{NS}:grinder_diamond', 1, ['DSD', 'SIS', 'DSD'], {'D': tag_of('dust', 'Diamond'), 'S': P('Steel'),
                                                                                      'I': 'minecraft:diamond'})
-    # HV machines: Tier.ELECTRIC[3] (stainless steel, HV hull, gold cables, Advanced circuit; better circuit = Data, EV — the HV
-    # circuit assembler gets no crafting yet), GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330 for mTier 3
+    # HV machines: Tier.ELECTRIC[3] (stainless steel, HV hull, gold cables, Advanced circuit; better circuit = Data, D97),
+    # GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330 for mTier 3
     XHV = {'HULL': f'{NS}:hull_hv', 'CIRCUIT': CIRC_HV, 'WIRE': C('Gold'), 'WIRE4': C('Gold', 4), 'GLASS': 'minecraft:glass',
            'PLATE': P('StainlessSteel'), 'PIPE': f'{NS}:pipe_medium_stainless_steel', 'COIL_HEATING': W('Kanthal', 2),
            'COIL_HEATING_DOUBLE': W('Kanthal', 4), 'STICK_ELECTROMAGNETIC': R('Steel'), 'COIL_ELECTRIC': W('Copper', 4),
            'ROTOR': tag_of('rotor', 'Steel'), 'MOTOR': MOTOR_HV, 'PISTON': PISTON_HV, 'PUMP': PUMP_HV, 'CONVEYOR': CONV_HV, 'ROBOT_ARM': ARM_HV,
            'EMITTER': f'{NS}:emitter_hv', 'INDUSTRIAL_DIAMOND': 'minecraft:diamond',
-           'SILVER_WIRE': W('Electrum')}   # the HV electrolyzer takes 1x electrum wire (:777)
-    HV_CRAFT = {k: (pat, dict(let)) for k, (pat, let) in MV_CRAFT.items() if k != 'circuit_assembler'}
+           'SILVER_WIRE': W('Electrum'),   # the HV electrolyzer takes 1x electrum wire (:777)
+           'BETTER_CIRCUIT': '#c:circuits/data'}
+    HV_CRAFT = {k: (pat, dict(let)) for k, (pat, let) in MV_CRAFT.items()}
     HV_CRAFT['macerator'][1]['G'] = f'{NS}:grinder_diamond'                 # :705 craftingGrinder
     HV_CRAFT['chemical_reactor'][1]['G'] = f'{NS}:pipe_medium_plastic'      # :832 plastic pipe instead of glass
     for mid_, (pattern, letters) in HV_CRAFT.items():

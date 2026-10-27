@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PIP",
+    "IFI",
+    "PIP"
+  ],
+  "key": {
+    "P": "#c:plates/titanium",
+    "F": "#c:frames/titanium",
+    "I": "iis:pipe_medium_titanium"
+  },
+  "result": {
+    "id": "iis:titanium_pipe_casing",
+    "count": 2
+  }
+}

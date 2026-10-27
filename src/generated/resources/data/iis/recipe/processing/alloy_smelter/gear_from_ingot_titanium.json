@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/titanium",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gear_titanium",
+      "count": 1
+    }
+  ],
+  "duration": 480,
+  "eut": 32,
+  "keep": [
+    "iis:mold_gear"
+  ]
+}

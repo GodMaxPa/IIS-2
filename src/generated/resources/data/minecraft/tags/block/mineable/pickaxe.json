@@ -327,6 +327,9 @@
     "iis:measuring_vessel",
     "iis:filter_vessel",
     "iis:universal_tank_bronze",
-    "iis:universal_tank_steel"
+    "iis:universal_tank_steel",
+    "iis:stable_titanium_casing",
+    "iis:titanium_pipe_casing",
+    "iis:titanium_firebox_casing"
   ]
 }

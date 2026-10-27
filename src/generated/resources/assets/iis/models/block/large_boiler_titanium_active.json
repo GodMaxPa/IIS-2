@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/stable_titanium_casing",
+    "north": "iis:block/multi/large_boiler_titanium_front_active",
+    "south": "iis:block/multi/stable_titanium_casing",
+    "east": "iis:block/multi/stable_titanium_casing",
+    "west": "iis:block/multi/stable_titanium_casing",
+    "up": "iis:block/multi/stable_titanium_casing",
+    "down": "iis:block/multi/stable_titanium_casing"
+  }
+}

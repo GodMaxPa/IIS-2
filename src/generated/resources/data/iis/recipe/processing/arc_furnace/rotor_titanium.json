@@ -1,0 +1,23 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#iis:rotors/titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_titanium",
+      "count": 38
+    }
+  ],
+  "duration": 204,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 204
+    }
+  ]
+}

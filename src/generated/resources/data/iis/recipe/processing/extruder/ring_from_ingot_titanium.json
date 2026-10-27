@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ring_titanium",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 96,
+  "keep": [
+    "iis:shape_extruder_ring"
+  ]
+}

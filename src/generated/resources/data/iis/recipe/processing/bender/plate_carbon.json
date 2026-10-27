@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/carbon",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_carbon",
+      "count": 1
+    }
+  ],
+  "duration": 12,
+  "eut": 24
+}

@@ -877,6 +877,35 @@
     "toolQuality": 1
   },
   {
+    "id": "carbon",
+    "gtName": "Carbon",
+    "gtId": 10,
+    "en": "Carbon",
+    "ru": "Углерод",
+    "ruOre": "Углеродная руда",
+    "color": 1315860,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление углерода",
+    "formula": "C",
+    "types": 243,
+    "subTags": [
+      "HAS_COLOR",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "carbon",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 64,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
     "id": "cassiterite",
     "gtName": "Cassiterite",
     "gtId": 824,
@@ -2667,6 +2696,34 @@
     "toolQuality": 2
   },
   {
+    "id": "magnesiumchloride",
+    "gtName": "Magnesiumchloride",
+    "gtId": 377,
+    "en": "Magnesiumchloride",
+    "ru": "Хлорид магния",
+    "ruOre": "Руда хлорида магния",
+    "color": 13897052,
+    "iconSet": "DULL",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "MgCl2",
+    "types": 17,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "magnesiumchloride",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
     "id": "magnetite",
     "gtName": "Magnetite",
     "gtId": 870,
@@ -3855,6 +3912,34 @@
     "toolQuality": 2
   },
   {
+    "id": "rutile",
+    "gtName": "Rutile",
+    "gtId": 375,
+    "en": "Rutile",
+    "ru": "Рутил",
+    "ruOre": "Рутил",
+    "color": 13897052,
+    "iconSet": "GEM_HORIZONTAL",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "TiO2",
+    "types": 1,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "rutile",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 2
+  },
+  {
     "id": "salt",
     "gtName": "Salt",
     "gtId": 817,
@@ -4799,6 +4884,38 @@
     "toolDurability": 96,
     "toolSpeed": 6.5,
     "toolQuality": 2
+  },
+  {
+    "id": "titanium",
+    "gtName": "Titanium",
+    "gtId": 28,
+    "en": "Titanium",
+    "ru": "Титан",
+    "ruOre": "Титановая руда",
+    "color": 14459120,
+    "iconSet": "METALLIC",
+    "harvestLevel": 3,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление титановой руды",
+    "formula": "Ti",
+    "types": 235,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "titanium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 1940,
+    "byProducts": [
+      "almandine"
+    ],
+    "toolDurability": 1600,
+    "toolSpeed": 7.0,
+    "toolQuality": 3
   },
   {
     "id": "topaz",

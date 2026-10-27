@@ -202,6 +202,7 @@
     "iis:frame_bronze",
     "iis:frame_aluminium",
     "iis:frame_blue_steel",
+    "iis:frame_titanium",
     "iis:heat_proof_casing",
     "iis:coil_cupronickel",
     "iis:coil_kanthal",
@@ -226,6 +227,7 @@
     "iis:steel_firebox_casing",
     "iis:large_boiler_bronze",
     "iis:large_boiler_steel",
+    "iis:large_boiler_titanium",
     "iis:turbine_casing",
     "iis:large_steam_turbine"
   ]

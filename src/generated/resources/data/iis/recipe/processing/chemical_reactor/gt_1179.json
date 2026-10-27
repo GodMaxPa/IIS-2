@@ -1,0 +1,28 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/rutile",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/carbon",
+      "count": 2
+    }
+  ],
+  "outputs": [],
+  "duration": 500,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:chlorine",
+      "amount": 4000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:titaniumtetrachloride",
+      "amount": 1000
+    }
+  ]
+}

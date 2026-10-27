@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/carbon",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_carbon",
+      "count": 2
+    }
+  ],
+  "duration": 12,
+  "eut": 16
+}

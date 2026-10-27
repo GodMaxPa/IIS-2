@@ -11,6 +11,7 @@
     "iis:wire_cutter_blue_topaz",
     "iis:wire_cutter_brass",
     "iis:wire_cutter_bronze",
+    "iis:wire_cutter_carbon",
     "iis:wire_cutter_certus_quartz",
     "iis:wire_cutter_chrome",
     "iis:wire_cutter_cobalt",
@@ -49,6 +50,7 @@
     "iis:wire_cutter_steel_magnetic",
     "iis:wire_cutter_tanzanite",
     "iis:wire_cutter_tin_alloy",
+    "iis:wire_cutter_titanium",
     "iis:wire_cutter_topaz",
     "iis:wire_cutter_wrought_iron"
   ]

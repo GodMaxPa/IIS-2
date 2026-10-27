@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/carbon",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_carbon",
+      "count": 1
+    }
+  ],
+  "duration": 12,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_plate"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/malachite",
+      "count": 10
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_copper",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_carbon",
+      "count": 1
+    },
+    {
+      "id": "iis:capsule",
+      "count": 5,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:oxygen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 200,
+  "eut": 90,
+  "fluid_outputs": [
+    {
+      "id": "iis:hydrogen",
+      "amount": 2000
+    }
+  ]
+}

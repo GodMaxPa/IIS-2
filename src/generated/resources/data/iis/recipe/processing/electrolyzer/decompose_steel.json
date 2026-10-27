@@ -1,0 +1,21 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/steel",
+      "count": 50
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron",
+      "count": 50
+    },
+    {
+      "id": "iis:dust_carbon",
+      "count": 1
+    }
+  ],
+  "duration": 2500,
+  "eut": 60
+}

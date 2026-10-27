@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/magnesiumchloride",
+    "#iis:tiny_dusts/magnesiumchloride",
+    "#iis:tiny_dusts/magnesiumchloride",
+    "#iis:tiny_dusts/magnesiumchloride",
+    "#iis:tiny_dusts/magnesiumchloride",
+    "#iis:tiny_dusts/magnesiumchloride",
+    "#iis:tiny_dusts/magnesiumchloride",
+    "#iis:tiny_dusts/magnesiumchloride",
+    "#iis:tiny_dusts/magnesiumchloride"
+  ],
+  "result": {
+    "id": "iis:dust_magnesiumchloride"
+  }
+}

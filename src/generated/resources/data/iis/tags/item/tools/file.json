@@ -11,6 +11,7 @@
     "iis:file_blue_topaz",
     "iis:file_brass",
     "iis:file_bronze",
+    "iis:file_carbon",
     "iis:file_certus_quartz",
     "iis:file_chrome",
     "iis:file_cobalt",
@@ -49,6 +50,7 @@
     "iis:file_steel_magnetic",
     "iis:file_tanzanite",
     "iis:file_tin_alloy",
+    "iis:file_titanium",
     "iis:file_topaz",
     "iis:file_wrought_iron"
   ]

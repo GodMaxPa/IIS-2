@@ -11,6 +11,7 @@
     "iis:screwdriver_blue_topaz",
     "iis:screwdriver_brass",
     "iis:screwdriver_bronze",
+    "iis:screwdriver_carbon",
     "iis:screwdriver_certus_quartz",
     "iis:screwdriver_chrome",
     "iis:screwdriver_cobalt",
@@ -49,6 +50,7 @@
     "iis:screwdriver_steel_magnetic",
     "iis:screwdriver_tanzanite",
     "iis:screwdriver_tin_alloy",
+    "iis:screwdriver_titanium",
     "iis:screwdriver_topaz",
     "iis:screwdriver_wrought_iron"
   ]

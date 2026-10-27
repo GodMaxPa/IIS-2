@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sodium",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/magnesiumchloride",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_magnesium",
+      "count": 6
+    }
+  ],
+  "duration": 300,
+  "eut": 240,
+  "fluid_outputs": [
+    {
+      "id": "iis:chlorine",
+      "amount": 3000
+    }
+  ]
+}

@@ -11,6 +11,7 @@
     "iis:wrench_blue_topaz",
     "iis:wrench_brass",
     "iis:wrench_bronze",
+    "iis:wrench_carbon",
     "iis:wrench_certus_quartz",
     "iis:wrench_chrome",
     "iis:wrench_cobalt",
@@ -49,6 +50,7 @@
     "iis:wrench_steel_magnetic",
     "iis:wrench_tanzanite",
     "iis:wrench_tin_alloy",
+    "iis:wrench_titanium",
     "iis:wrench_topaz",
     "iis:wrench_wrought_iron",
     "iis:wrench_lv_aluminium",
@@ -61,6 +63,7 @@
     "iis:wrench_lv_blue_topaz",
     "iis:wrench_lv_brass",
     "iis:wrench_lv_bronze",
+    "iis:wrench_lv_carbon",
     "iis:wrench_lv_certus_quartz",
     "iis:wrench_lv_chrome",
     "iis:wrench_lv_cobalt",
@@ -99,6 +102,7 @@
     "iis:wrench_lv_steel_magnetic",
     "iis:wrench_lv_tanzanite",
     "iis:wrench_lv_tin_alloy",
+    "iis:wrench_lv_titanium",
     "iis:wrench_lv_topaz",
     "iis:wrench_lv_wrought_iron"
   ]

@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_ilmenite",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_rutile",
+      "count": 1
     }
   ],
-  "duration": 30,
+  "duration": 240,
   "eut": 5
 }

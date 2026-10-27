@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/titanium",
+      "count": 6
+    },
+    {
+      "ingredient": "#c:frames/titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:stable_titanium_casing",
+      "count": 2
+    }
+  ],
+  "duration": 50,
+  "eut": 16
+}

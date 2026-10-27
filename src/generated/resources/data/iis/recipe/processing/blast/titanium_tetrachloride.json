@@ -1,0 +1,28 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/magnesium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_titanium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_magnesiumchloride",
+      "count": 2
+    }
+  ],
+  "duration": 800,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:titaniumtetrachloride",
+      "amount": 1000
+    }
+  ],
+  "temp": 2140
+}

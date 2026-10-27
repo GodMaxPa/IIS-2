@@ -1,0 +1,23 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/lignite",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_carbon",
+      "count": 3
+    }
+  ],
+  "duration": 40,
+  "eut": 30,
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

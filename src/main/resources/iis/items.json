@@ -1395,6 +1395,66 @@
     "material": "calcite"
   },
   {
+    "id": "dust_carbon",
+    "prefix": "dust",
+    "material": "carbon"
+  },
+  {
+    "id": "small_dust_carbon",
+    "prefix": "small_dust",
+    "material": "carbon"
+  },
+  {
+    "id": "tiny_dust_carbon",
+    "prefix": "tiny_dust",
+    "material": "carbon"
+  },
+  {
+    "id": "ingot_carbon",
+    "prefix": "ingot",
+    "material": "carbon"
+  },
+  {
+    "id": "nugget_carbon",
+    "prefix": "nugget",
+    "material": "carbon"
+  },
+  {
+    "id": "plate_carbon",
+    "prefix": "plate",
+    "material": "carbon"
+  },
+  {
+    "id": "double_plate_carbon",
+    "prefix": "double_plate",
+    "material": "carbon"
+  },
+  {
+    "id": "rod_carbon",
+    "prefix": "rod",
+    "material": "carbon"
+  },
+  {
+    "id": "bolt_carbon",
+    "prefix": "bolt",
+    "material": "carbon"
+  },
+  {
+    "id": "screw_carbon",
+    "prefix": "screw",
+    "material": "carbon"
+  },
+  {
+    "id": "long_rod_carbon",
+    "prefix": "long_rod",
+    "material": "carbon"
+  },
+  {
+    "id": "turbine_blade_carbon",
+    "prefix": "turbine_blade",
+    "material": "carbon"
+  },
+  {
     "id": "crushed_cassiterite",
     "prefix": "crushed",
     "material": "cassiterite"
@@ -4085,6 +4145,21 @@
     "material": "magnesium"
   },
   {
+    "id": "dust_magnesiumchloride",
+    "prefix": "dust",
+    "material": "magnesiumchloride"
+  },
+  {
+    "id": "small_dust_magnesiumchloride",
+    "prefix": "small_dust",
+    "material": "magnesiumchloride"
+  },
+  {
+    "id": "tiny_dust_magnesiumchloride",
+    "prefix": "tiny_dust",
+    "material": "magnesiumchloride"
+  },
+  {
     "id": "crushed_magnetite",
     "prefix": "crushed",
     "material": "magnetite"
@@ -5800,6 +5875,21 @@
     "material": "ruby"
   },
   {
+    "id": "dust_rutile",
+    "prefix": "dust",
+    "material": "rutile"
+  },
+  {
+    "id": "small_dust_rutile",
+    "prefix": "small_dust",
+    "material": "rutile"
+  },
+  {
+    "id": "tiny_dust_rutile",
+    "prefix": "tiny_dust",
+    "material": "rutile"
+  },
+  {
     "id": "crushed_salt",
     "prefix": "crushed",
     "material": "salt"
@@ -7185,6 +7275,121 @@
     "material": "tin_alloy"
   },
   {
+    "id": "crushed_titanium",
+    "prefix": "crushed",
+    "material": "titanium"
+  },
+  {
+    "id": "purified_titanium",
+    "prefix": "purified",
+    "material": "titanium"
+  },
+  {
+    "id": "centrifuged_titanium",
+    "prefix": "centrifuged",
+    "material": "titanium"
+  },
+  {
+    "id": "impure_dust_titanium",
+    "prefix": "impure_dust",
+    "material": "titanium"
+  },
+  {
+    "id": "pure_dust_titanium",
+    "prefix": "pure_dust",
+    "material": "titanium"
+  },
+  {
+    "id": "dust_titanium",
+    "prefix": "dust",
+    "material": "titanium"
+  },
+  {
+    "id": "small_dust_titanium",
+    "prefix": "small_dust",
+    "material": "titanium"
+  },
+  {
+    "id": "tiny_dust_titanium",
+    "prefix": "tiny_dust",
+    "material": "titanium"
+  },
+  {
+    "id": "ingot_titanium",
+    "prefix": "ingot",
+    "material": "titanium"
+  },
+  {
+    "id": "hot_ingot_titanium",
+    "prefix": "hot_ingot",
+    "material": "titanium"
+  },
+  {
+    "id": "nugget_titanium",
+    "prefix": "nugget",
+    "material": "titanium"
+  },
+  {
+    "id": "plate_titanium",
+    "prefix": "plate",
+    "material": "titanium"
+  },
+  {
+    "id": "double_plate_titanium",
+    "prefix": "double_plate",
+    "material": "titanium"
+  },
+  {
+    "id": "rod_titanium",
+    "prefix": "rod",
+    "material": "titanium"
+  },
+  {
+    "id": "bolt_titanium",
+    "prefix": "bolt",
+    "material": "titanium"
+  },
+  {
+    "id": "screw_titanium",
+    "prefix": "screw",
+    "material": "titanium"
+  },
+  {
+    "id": "ring_titanium",
+    "prefix": "ring",
+    "material": "titanium"
+  },
+  {
+    "id": "foil_titanium",
+    "prefix": "foil",
+    "material": "titanium"
+  },
+  {
+    "id": "small_gear_titanium",
+    "prefix": "small_gear",
+    "material": "titanium"
+  },
+  {
+    "id": "rotor_titanium",
+    "prefix": "rotor",
+    "material": "titanium"
+  },
+  {
+    "id": "long_rod_titanium",
+    "prefix": "long_rod",
+    "material": "titanium"
+  },
+  {
+    "id": "turbine_blade_titanium",
+    "prefix": "turbine_blade",
+    "material": "titanium"
+  },
+  {
+    "id": "gear_titanium",
+    "prefix": "gear",
+    "material": "titanium"
+  },
+  {
     "id": "crushed_topaz",
     "prefix": "crushed",
     "material": "topaz"
@@ -8208,6 +8413,51 @@
     "id": "wrench_head_bronze",
     "prefix": "wrench_head",
     "material": "bronze"
+  },
+  {
+    "id": "sword_head_carbon",
+    "prefix": "sword_head",
+    "material": "carbon"
+  },
+  {
+    "id": "pickaxe_head_carbon",
+    "prefix": "pickaxe_head",
+    "material": "carbon"
+  },
+  {
+    "id": "shovel_head_carbon",
+    "prefix": "shovel_head",
+    "material": "carbon"
+  },
+  {
+    "id": "axe_head_carbon",
+    "prefix": "axe_head",
+    "material": "carbon"
+  },
+  {
+    "id": "hoe_head_carbon",
+    "prefix": "hoe_head",
+    "material": "carbon"
+  },
+  {
+    "id": "saw_head_carbon",
+    "prefix": "saw_head",
+    "material": "carbon"
+  },
+  {
+    "id": "drill_head_carbon",
+    "prefix": "drill_head",
+    "material": "carbon"
+  },
+  {
+    "id": "chainsaw_head_carbon",
+    "prefix": "chainsaw_head",
+    "material": "carbon"
+  },
+  {
+    "id": "wrench_head_carbon",
+    "prefix": "wrench_head",
+    "material": "carbon"
   },
   {
     "id": "sword_head_certus_quartz",
@@ -9918,6 +10168,51 @@
     "id": "wrench_head_tin_alloy",
     "prefix": "wrench_head",
     "material": "tin_alloy"
+  },
+  {
+    "id": "sword_head_titanium",
+    "prefix": "sword_head",
+    "material": "titanium"
+  },
+  {
+    "id": "pickaxe_head_titanium",
+    "prefix": "pickaxe_head",
+    "material": "titanium"
+  },
+  {
+    "id": "shovel_head_titanium",
+    "prefix": "shovel_head",
+    "material": "titanium"
+  },
+  {
+    "id": "axe_head_titanium",
+    "prefix": "axe_head",
+    "material": "titanium"
+  },
+  {
+    "id": "hoe_head_titanium",
+    "prefix": "hoe_head",
+    "material": "titanium"
+  },
+  {
+    "id": "saw_head_titanium",
+    "prefix": "saw_head",
+    "material": "titanium"
+  },
+  {
+    "id": "drill_head_titanium",
+    "prefix": "drill_head",
+    "material": "titanium"
+  },
+  {
+    "id": "chainsaw_head_titanium",
+    "prefix": "chainsaw_head",
+    "material": "titanium"
+  },
+  {
+    "id": "wrench_head_titanium",
+    "prefix": "wrench_head",
+    "material": "titanium"
   },
   {
     "id": "sword_head_topaz",

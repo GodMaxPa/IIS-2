@@ -1,0 +1,66 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:chloroform",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 5
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "minecraft:water",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 6,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:tetrafluoroethylene",
+          "amount": 1000
+        }
+      }
+    },
+    {
+      "id": "iis:capsule",
+      "count": 8
+    },
+    {
+      "id": "iis:dust_carbon",
+      "count": 1
+    }
+  ],
+  "duration": 480,
+  "eut": 240,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrofluoricacid_gt5u",
+      "amount": 8000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dilutedhydrochloricacid_gt5u",
+      "amount": 15000
+    }
+  ],
+  "circuit": 11
+}

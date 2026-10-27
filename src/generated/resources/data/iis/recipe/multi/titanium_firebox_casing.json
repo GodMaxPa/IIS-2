@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PSP",
+    "SFS",
+    "PSP"
+  ],
+  "key": {
+    "P": "#c:plates/titanium",
+    "F": "#c:frames/titanium",
+    "S": "#c:rods/titanium"
+  },
+  "result": {
+    "id": "iis:titanium_firebox_casing",
+    "count": 2
+  }
+}
