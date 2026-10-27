@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCE",
+    "XMP",
+    "CCE"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "X": "iis:electric_piston_hv",
+    "E": "#c:circuits/advanced",
+    "P": "iis:pipe_medium_stainless_steel",
+    "C": "#iis:wires/4x/kanthal"
+  },
+  "result": {
+    "id": "iis:extruder_hv"
+  }
+}

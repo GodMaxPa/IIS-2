@@ -26,6 +26,9 @@ HATCHES = [
     # D89: GT_Loader_MetaTileEntities:215-216 dynamo hatches (energy out of multiblock generators)
     ('hatch_dynamo_lv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.01.name', 'LV Dynamo Hatch'),
     ('hatch_dynamo_mv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.02.name', 'MV Dynamo Hatch'),
+    # D93: GT_Loader_MetaTileEntities:217, :239 HV dynamo and energy hatches
+    ('hatch_energy_hv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.03.name', 'HV Energy Hatch'),
+    ('hatch_dynamo_hv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.03.name', 'HV Dynamo Hatch'),
 ]
 
 
@@ -110,23 +113,26 @@ def generate(g):
 
     # --- casings ------------------------------------------------------------------------------------------------
     for bid, src, key, en in (('heat_proof_casing', 'MACHINE_HEATPROOFCASING', 'gt.blockcasings.11.name', 'Heat Proof Machine Casing'),
-                              ('coil_cupronickel', 'MACHINE_COIL_CUPRONICKEL', 'gt.blockcasings5.0.name', 'Cupronickel Coil Block')):
+                              ('coil_cupronickel', 'MACHINE_COIL_CUPRONICKEL', 'gt.blockcasings5.0.name', 'Cupronickel Coil Block'),
+                              ('coil_kanthal', 'MACHINE_COIL_KANTHAL', 'gt.blockcasings5.1.name', 'Kanthal Coil Block')):  # D93
         first(os.path.join(BI, src + '.png')).save(tex_out(f'block/multi/{bid}.png'))
         write(os.path.join(A, 'models', 'block', bid + '.json'), {'parent': 'minecraft:block/cube_all', 'textures': {'all': f'{NS}:block/multi/{bid}'}})
         write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': {'': {'model': f'{NS}:block/{bid}'}}})
         simple(bid)
         name(f'block.{NS}.{bid}', en, ru(key, en))
     tooltip('coil_cupronickel', [('Base Heating Capacity = 1800 Kelvin', 'Нагрев: 1800 K')])
+    tooltip('coil_kanthal', [('Base Heating Capacity = 2700 Kelvin', 'Нагрев: 2700 K')])
     shaped('multi/heat_proof_casing', f'{NS}:heat_proof_casing', 2, ['PhP', 'PFP', 'PwP'], {'P': tag_of('plate', 'Invar'), 'F': '#c:frames/invar'})
     shaped('multi/coil_cupronickel', f'{NS}:coil_cupronickel', 1, ['PPP', 'PwP', 'PPP'], {'P': '#iis:wires/2x/cupronickel'})
+    shaped('multi/coil_kanthal', f'{NS}:coil_kanthal', 1, ['PPP', 'PwP', 'PPP'], {'P': '#iis:wires/2x/kanthal'})   # GT_Loader_MetaTileEntities:92
 
     # --- hatches (front overlay over the LV casing; any of 6 facings) -----------------------------------------------
     sides = {}
-    for tr in ('lv', 'mv'):
+    for tr in ('lv', 'mv', 'hv'):
         sides[tr] = first(os.path.join(LVI, f'MACHINE_{tr.upper()}_SIDE.png'))
         sides[tr].save(tex_out(f'block/multi/hatch_{tr}_side.png'))
     for bid, ov, key, en in HATCHES:
-        tr = 'mv' if bid.endswith('_mv') else 'lv'
+        tr = bid[-2:] if bid[-3:] in ('_mv', '_hv') else 'lv'
         ovp = os.path.join(BI, ov + '.png')
         if not os.path.exists(ovp):
             ovp = os.path.join(LVI, ov + '.png')
@@ -145,6 +151,9 @@ def generate(g):
                                 ('More than 32 EU/t from the generator - the whole machine explodes', 'Больше 32 EU/t от генератора — вся машина взрывается')])
     tooltip('hatch_dynamo_mv', [('Energy output for multiblock generators: 128 EU/t, 1 A, from the front', 'Выход энергии многоблочного генератора: 128 EU/t, 1 А, спереди'),
                                 ('More than 128 EU/t from the generator - the whole machine explodes', 'Больше 128 EU/t от генератора — вся машина взрывается')])
+    tooltip('hatch_energy_hv', [('Energy input for multiblocks: 512 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 512 EU/t, до 2 А, спереди')])
+    tooltip('hatch_dynamo_hv', [('Energy output for multiblock generators: 512 EU/t, 1 A, from the front', 'Выход энергии многоблочного генератора: 512 EU/t, 1 А, спереди'),
+                                ('More than 512 EU/t from the generator - the whole machine explodes', 'Больше 512 EU/t от генератора — вся машина взрывается')])
     tooltip('hatch_input_bus_lv', [('Item input for multiblocks, 4 slots', 'Вход предметов многоблочной машины, 4 слота')])
     tooltip('hatch_output_bus_lv', [('Item output for multiblocks, 4 slots', 'Выход предметов многоблочной машины, 4 слота')])
     tooltip('hatch_input_lv', [('Fluid input for multiblocks, 16000 L', 'Вход жидкости многоблочной машины, 16000 л')])
@@ -159,6 +168,9 @@ def generate(g):
     # GT_Loader_MetaTileEntities:226-227 " MC": hull, cable (tin for LV, copper for MV)
     shaped('multi/hatch_dynamo_lv', f'{NS}:hatch_dynamo_lv', 1, ['MC'], {'M': HULL, 'C': '#iis:cables/1x/tin'})
     shaped('multi/hatch_dynamo_mv', f'{NS}:hatch_dynamo_mv', 1, ['MC'], {'M': f'{NS}:hull_mv', 'C': '#iis:cables/1x/copper'})
+    # D93: :271 "CM " and :228 " MC": HV hull, gold cable
+    shaped('multi/hatch_energy_hv', f'{NS}:hatch_energy_hv', 1, ['CM'], {'M': f'{NS}:hull_hv', 'C': '#iis:cables/1x/gold'})
+    shaped('multi/hatch_dynamo_hv', f'{NS}:hatch_dynamo_hv', 1, ['MC'], {'M': f'{NS}:hull_hv', 'C': '#iis:cables/1x/gold'})
     shaped('multi/hatch_input_lv', f'{NS}:hatch_input_lv', 1, ['G', 'M'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_output_lv', f'{NS}:hatch_output_lv', 1, ['M', 'G'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_input_bus_lv', f'{NS}:hatch_input_bus_lv', 1, ['C', 'M'], {'M': HULL, 'C': '#c:chests/wooden'})
@@ -279,13 +291,15 @@ def generate(g):
     # --- assembler recipes (GT_MachineRecipeLoader:1380, 1381; frame 4 rods) ---------------------------------------
     rec = {}
 
-    def mrec(rtype, rid, inputs, outputs, duration, eut, temp=0, fin=None, fout=None):
+    def mrec(rtype, rid, inputs, outputs, duration, eut, temp=0, fin=None, fout=None, circuit=0):
         outputs = [o for o in outputs if o and o['id']]
         if any(i['ingredient'] is None for i in inputs) or not outputs:
             return
         r = {'type': f'{NS}:{rtype}', 'inputs': inputs, 'outputs': outputs, 'duration': int(duration), 'eut': int(eut)}
         if temp:
             r['temp'] = int(temp)
+        if circuit:
+            r['circuit'] = circuit
         if fin:
             r['fluid_inputs'] = [fin]
         if fout:
@@ -303,7 +317,9 @@ def generate(g):
             o['chance'] = chance
         return o
     mrec('assembler', 'heat_proof_casing', [ing(tag_of('plate', 'Invar'), 6), ing('#c:frames/invar')], [out(f'{NS}:heat_proof_casing', 2)], 50, 16)
-    mrec('assembler', 'coil_cupronickel', [ing('#iis:wires/2x/cupronickel', 8)], [out(f'{NS}:coil_cupronickel')], 50, 16)
+    # GT_MachineRecipeLoader:1381-1382: 8 2x wires + programmed circuit 8 (the circuit was missing before D93)
+    mrec('assembler', 'coil_cupronickel', [ing('#iis:wires/2x/cupronickel', 8)], [out(f'{NS}:coil_cupronickel')], 50, 16, circuit=8)
+    mrec('assembler', 'coil_kanthal', [ing('#iis:wires/2x/kanthal', 8)], [out(f'{NS}:coil_kanthal')], 50, 16, circuit=8)
     for mid in frames:
         mrec('assembler', f'frame_{mid}', [ing(f'#c:rods/{mid}', 4)], [out(f'{NS}:frame_{mid}')], 64, 8)
 

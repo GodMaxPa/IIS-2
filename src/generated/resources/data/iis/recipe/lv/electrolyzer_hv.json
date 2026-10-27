@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IGI",
+    "IMI",
+    "CWC"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold",
+    "I": "#iis:wires/1x/electrum",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:electrolyzer_hv"
+  }
+}

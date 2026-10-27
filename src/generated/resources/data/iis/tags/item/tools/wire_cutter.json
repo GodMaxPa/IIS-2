@@ -27,6 +27,7 @@
     "iis:wire_cutter_iridium",
     "iis:wire_cutter_iron",
     "iis:wire_cutter_iron_magnetic",
+    "iis:wire_cutter_kanthal",
     "iis:wire_cutter_magnalium",
     "iis:wire_cutter_manganese",
     "iis:wire_cutter_molybdenum",

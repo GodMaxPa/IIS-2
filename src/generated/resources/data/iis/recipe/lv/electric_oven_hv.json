@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CEC",
+    "CMC",
+    "WEW"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "E": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold",
+    "C": "#iis:wires/2x/kanthal"
+  },
+  "result": {
+    "id": "iis:electric_oven_hv"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/kanthal",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_kanthal",
+      "amount": 16
+    }
+  ]
+}

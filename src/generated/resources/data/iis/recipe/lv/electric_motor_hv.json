@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CWR",
+    "WIW",
+    "RWC"
+  ],
+  "key": {
+    "I": "#c:rods/steel_magnetic",
+    "R": "#c:rods/stainless_steel",
+    "W": "#iis:wires/4x/copper",
+    "C": "#iis:cables/1x/gold"
+  },
+  "result": {
+    "id": "iis:electric_motor_hv"
+  }
+}

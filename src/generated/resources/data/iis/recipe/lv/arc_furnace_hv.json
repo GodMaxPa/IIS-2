@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WGW",
+    "CMC",
+    "PPP"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "P": "#c:plates/stainless_steel",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/4x/gold",
+    "G": "#c:dusts/graphite"
+  },
+  "result": {
+    "id": "iis:arc_furnace_hv"
+  }
+}

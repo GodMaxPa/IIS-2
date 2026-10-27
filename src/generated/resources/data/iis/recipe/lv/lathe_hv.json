@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCW",
+    "EMD",
+    "CWP"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "E": "iis:electric_motor_hv",
+    "P": "iis:electric_piston_hv",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold",
+    "D": "minecraft:diamond"
+  },
+  "result": {
+    "id": "iis:lathe_hv"
+  }
+}

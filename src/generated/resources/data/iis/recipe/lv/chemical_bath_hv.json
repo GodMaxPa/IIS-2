@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "VGW",
+    "PGV",
+    "CMC"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "P": "iis:electric_pump_hv",
+    "V": "iis:conveyor_module_hv",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:chemical_bath_hv"
+  }
+}

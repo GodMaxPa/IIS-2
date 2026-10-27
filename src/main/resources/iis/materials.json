@@ -2307,6 +2307,36 @@
     "toolQuality": 2
   },
   {
+    "id": "kanthal",
+    "gtName": "Kanthal",
+    "gtId": 312,
+    "en": "Kanthal",
+    "ru": "Кантал",
+    "ruOre": "Канталовая руда",
+    "color": 12767967,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "FeAlCr",
+    "types": 67,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "kanthal",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 1800,
+    "byProducts": [],
+    "toolDurability": 64,
+    "toolSpeed": 6.0,
+    "toolQuality": 2
+  },
+  {
     "id": "lapis",
     "gtName": "Lapis",
     "gtId": 526,

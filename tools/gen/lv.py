@@ -32,6 +32,7 @@ WIRES = [
     ('Steel', 2, 4, 2, 2048),
     ('Aluminium', 1, 2, 1, 2048),
     ('Platinum', 1, 2, 2, 8192),
+    ('Kanthal', 3, 6, 4, 512),       # GT_Loader_MetaTileEntities:1482 (bEC), HV heating coils (D93)
 ]
 # size, bare thickness, insulated thickness (GT makeWires; there is no 16x cable — commented out in GT), insulation ring
 # (GT_MetaPipeEntity_Cable#getTexture by thickness: <0.374 TINY, <0.499 SMALL, <0.624 MEDIUM, <0.749 MEDIUM_PLUS, <0.874 LARGE)
@@ -111,6 +112,11 @@ MV_TANKS = {'mixer': 16000}
 MV_MACHINES = [m[:7] + (MV_TANKS.get(m[0], m[7]),) + m[8:] for m in MACHINES if m[0] != 'thermal_centrifuge'] + [
     ('thermal_centrifuge', 'thermalcentrifuge', 'THERMAL_CENTRIFUGE', 'ThermalCentrifuge', 'thermal_centrifuge', 1, 3, 0, 'Thermal Centrifuge'),
 ]
+# HV basic machines (GT tier 3, D93): GT_Loader_MetaTileEntities Machine_HV_* — as MV except the macerator (2 outputs: byproducts)
+# and the mixer (24000 L); the HV compressor tank (12000) stays 0 like at LV/MV (D82)
+HV_TANKS = {'mixer': 24000}
+HV_OUTPUTS = {'macerator': 2}
+HV_MACHINES = [m[:6] + (HV_OUTPUTS.get(m[0], m[6]), HV_TANKS.get(m[0], m[7])) + m[8:] for m in MV_MACHINES]
 # GT_Loader_MetaTileEntities Machine_MV_* crafting: GT pattern letters; X.* resolved for tier 2 in lv.generate
 # (GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330, Tier.ELECTRIC[2]); other values are literal ingredients
 MV_CRAFT = {
@@ -165,6 +171,14 @@ ITEMS = [
     # D86: GT_MetaGenerated_Item_01:656-657 emitters
     ('emitter_lv', 'gt:680', 'gt.metaitem.01.32680.name', 'Emitter (LV)', 'Излучатель (LV)'),
     ('emitter_mv', 'gt:681', 'gt.metaitem.01.32681.name', 'Emitter (MV)', 'Излучатель (MV)'),
+    # HV (D93): GT_MetaGenerated_Item_01:496-669 HV parts, :720 diamond grinding head (craftingGrinder of the HV macerator)
+    ('electric_motor_hv', 'gt:602', 'gt.metaitem.01.32602.name', 'Electric Motor (HV)', 'Электродвигатель (HV)'),
+    ('electric_pump_hv', 'gt:612', 'gt.metaitem.01.32612.name', 'Electric Pump (HV)', 'Электрическая помпа (HV)'),
+    ('conveyor_module_hv', 'gt:632', 'gt.metaitem.01.32632.name', 'Conveyor Module (HV)', 'Конвейерный модуль (HV)'),
+    ('electric_piston_hv', 'gt:642', 'gt.metaitem.01.32642.name', 'Electric Piston (HV)', 'Электропоршень (HV)'),
+    ('robot_arm_hv', 'gt:652', 'gt.metaitem.01.32652.name', 'Robot Arm (HV)', 'Манипулятор (HV)'),
+    ('emitter_hv', 'gt:682', 'gt.metaitem.01.32682.name', 'Emitter (HV)', 'Излучатель (HV)'),
+    ('grinder_diamond', 'gt:722', 'gt.metaitem.01.32722.name', 'Diamond Grinding Head', 'Алмазная шлифовальная головка'),
     ('circuit_good', 'gt:702', 'gt.metaitem.01.32702.name', 'Good Electronic Circuit', 'Хорошая электросхема'),
     ('diode', 'gt:715', 'gt.metaitem.01.32715.name', 'Diode', 'Диод'),
     ('circuit_basic', 'gt:701', 'gt.metaitem.01.32701.name', 'Integrated Logic Circuit', 'Логическая интегральная электросхема'),
@@ -685,7 +699,8 @@ def generate(g):
     # LV basic machines
     # --------------------------------------------------------------------------------------------------------
     machine_list = []
-    for (mid_, gtn, ov, gui, rmap, nin, nout, tank, en), tr in [(m, 'lv') for m in MACHINES] + [(m, 'mv') for m in MV_MACHINES]:
+    for (mid_, gtn, ov, gui, rmap, nin, nout, tank, en), tr in ([(m, 'lv') for m in MACHINES] + [(m, 'mv') for m in MV_MACHINES]
+                                                              + [(m, 'hv') for m in HV_MACHINES]):
         bid = f'{mid_}_{tr}'
         odir = os.path.join(LV, 'basicmachines', ov.lower())
         T = tr.upper()
@@ -697,8 +712,8 @@ def generate(g):
             'back': (f'MACHINE_{T}_SIDE', os.path.join(ic, 'OVERLAY_PIPE_OUT.png')),
             'top': (f'MACHINE_{T}_TOP', ovf('TOP')), 'bottom': (f'MACHINE_{T}_BOTTOM', ovf('BOTTOM'))})
         shutil.copy(os.path.join(LV, 'gui', gui + '.png'), tex_out(f'gui/lv/{gui.lower()}.png'))
-        prefix, tier_n, volts = ('Basic', '01', 32) if tr == 'lv' else ('Advanced', '02', 128)
-        name(f'block.{NS}.{bid}', f'{prefix} {en}', ru(f'gt.blockmachines.basicmachine.{gtn}.tier.{tier_n}.name', f'{prefix} {en}'))
+        prefix, tier_n, volts, suffix = {'lv': ('Basic', '01', 32, ''), 'mv': ('Advanced', '02', 128, ''), 'hv': ('Advanced', '03', 512, ' II')}[tr]
+        name(f'block.{NS}.{bid}', f'{prefix} {en}{suffix}', ru(f'gt.blockmachines.basicmachine.{gtn}.tier.{tier_n}.name', f'{prefix} {en}{suffix}'))
         tooltip_lines(bid, [(f'Voltage IN: {volts} EU/t ({T})', f'Входное напряжение: {volts} EU/t ({T})'),
                             ('Output side: back', 'Выход: задняя сторона')])
         machine_list.append({'id': bid, 'type': mid_ if tr == 'lv' else f'{mid_}_{tr}', 'recipeMap': rmap, 'inputs': nin, 'outputs': nout,
@@ -1131,6 +1146,35 @@ def generate(g):
     MV_CRAFT['thermal_centrifuge'] = (['CEC', 'OMO', 'WEW'], {'M': 'HULL', 'E': 'MOTOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'O': 'COIL_HEATING_DOUBLE'})
     for mid_, (pattern, letters) in MV_CRAFT.items():
         shaped(f'lv/{mid_}_mv', f'{NS}:{mid_}_mv', 1, pattern, {k: XMV.get(v, v) for k, v in letters.items()})
+    # --- HV (D93): GT_MetaGenerated_Item_01:496 motor, :553 pump, :580 conveyor, :612 piston, :630 robot arm, :669 emitter ---
+    MOTOR_HV, PISTON_HV, PUMP_HV, CONV_HV, ARM_HV = (f'{NS}:{x}' for x in ('electric_motor_hv', 'electric_piston_hv', 'electric_pump_hv',
+                                                                           'conveyor_module_hv', 'robot_arm_hv'))
+    CIRC_HV = '#c:circuits/advanced'
+    shaped('lv/electric_motor_hv', MOTOR_HV, 1, ['CWR', 'WIW', 'RWC'], {'I': R('SteelMagnetic'), 'R': R('StainlessSteel'), 'W': W('Copper', 4),
+                                                                       'C': C('Gold')})
+    shaped('lv/electric_pump_hv', PUMP_HV, 1, ['SXO', 'dPw', 'OMW'], {'M': MOTOR_HV, 'O': tag_of('ring', 'Rubber'), 'X': tag_of('rotor', 'Steel'),
+                                                                     'S': tag_of('screw', 'Steel'), 'W': C('Gold'), 'P': f'{NS}:pipe_medium_stainless_steel'})
+    shaped('lv/conveyor_module_hv', CONV_HV, 1, ['RRR', 'MCM', 'RRR'], {'M': MOTOR_HV, 'C': C('Gold'), 'R': P('Rubber')})
+    shaped('lv/electric_piston_hv', PISTON_HV, 1, ['PPP', 'CSS', 'CMG'], {'P': P('StainlessSteel'), 'S': R('StainlessSteel'),
+                                                                         'G': tag_of('small_gear', 'StainlessSteel'), 'M': MOTOR_HV, 'C': C('Gold')})
+    shaped('lv/robot_arm_hv', ARM_HV, 1, ['CCC', 'MSM', 'PES'], {'S': R('StainlessSteel'), 'M': MOTOR_HV, 'P': PISTON_HV, 'E': CIRC_HV, 'C': C('Gold')})
+    shaped('lv/emitter_hv', f'{NS}:emitter_hv', 1, ['SSC', 'WQS', 'CWS'], {'Q': 'minecraft:emerald', 'S': R('Chrome'), 'C': CIRC_HV, 'W': C('Gold')})
+    # :732 diamond grinding head "DSD/SIS/DSD" (industrial diamond -> diamond, as for the MV macerator)
+    shaped('lv/grinder_diamond', f'{NS}:grinder_diamond', 1, ['DSD', 'SIS', 'DSD'], {'D': tag_of('dust', 'Diamond'), 'S': P('Steel'),
+                                                                                     'I': 'minecraft:diamond'})
+    # HV machines: Tier.ELECTRIC[3] (stainless steel, HV hull, gold cables, Advanced circuit; better circuit = Data, EV — the HV
+    # circuit assembler gets no crafting yet), GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330 for mTier 3
+    XHV = {'HULL': f'{NS}:hull_hv', 'CIRCUIT': CIRC_HV, 'WIRE': C('Gold'), 'WIRE4': C('Gold', 4), 'GLASS': 'minecraft:glass',
+           'PLATE': P('StainlessSteel'), 'PIPE': f'{NS}:pipe_medium_stainless_steel', 'COIL_HEATING': W('Kanthal', 2),
+           'COIL_HEATING_DOUBLE': W('Kanthal', 4), 'STICK_ELECTROMAGNETIC': R('Steel'), 'COIL_ELECTRIC': W('Copper', 4),
+           'ROTOR': tag_of('rotor', 'Steel'), 'MOTOR': MOTOR_HV, 'PISTON': PISTON_HV, 'PUMP': PUMP_HV, 'CONVEYOR': CONV_HV, 'ROBOT_ARM': ARM_HV,
+           'EMITTER': f'{NS}:emitter_hv', 'INDUSTRIAL_DIAMOND': 'minecraft:diamond',
+           'SILVER_WIRE': W('Electrum')}   # the HV electrolyzer takes 1x electrum wire (:777)
+    HV_CRAFT = {k: (pat, dict(let)) for k, (pat, let) in MV_CRAFT.items() if k != 'circuit_assembler'}
+    HV_CRAFT['macerator'][1]['G'] = f'{NS}:grinder_diamond'                 # :705 craftingGrinder
+    HV_CRAFT['chemical_reactor'][1]['G'] = f'{NS}:pipe_medium_plastic'      # :832 plastic pipe instead of glass
+    for mid_, (pattern, letters) in HV_CRAFT.items():
+        shaped(f'lv/{mid_}_hv', f'{NS}:{mid_}_hv', 1, pattern, {k: XHV.get(v, v) for k, v in letters.items()})
     # GT_Loader_MetaTileEntities:206 MV transformer " BB/CM / BB": MV hull, gold cable, copper cables
     shaped('lv/transformer_mv', f'{NS}:transformer_mv', 1, [' BB', 'CM ', ' BB'], {'M': HULL_MV, 'C': C('Gold'), 'B': C('Copper')})
 
@@ -1271,7 +1315,9 @@ def generate(g):
                                ('invar', [('Iron', 2), ('Nickel', 1)], 'Invar', 3, 300), ('electrum', [('Gold', 1), ('Silver', 1)], 'Electrum', 2, 200),
                                ('cupronickel', [('Copper', 1), ('Nickel', 1)], 'Cupronickel', 2, 200),
                                # GT_MachineRecipeLoader:1770 (LV III, D76)
-                               ('stainless_steel', [('Iron', 4), ('Invar', 3), ('Manganese', 1), ('Chrome', 1)], 'StainlessSteel', 9, 900)):
+                               ('stainless_steel', [('Iron', 4), ('Invar', 3), ('Manganese', 1), ('Chrome', 1)], 'StainlessSteel', 9, 900),
+                               # :1771 kanthal for HV heating coils (D93)
+                               ('kanthal', [('Iron', 1), ('Aluminium', 1), ('Chrome', 1)], 'Kanthal', 3, 300)):
         if all(ref('dust', m) for m, _ in ins) and ref('dust', o):
             mrec('mixer', f'{rid}_dust', [ing(tag_of('dust', m), c) for m, c in ins], [out(ref('dust', o), oc)], t, 8)
     # alloy smelter (LV has 6 slots): battery alloy, soldering alloy; rubber (GT_MachineRecipeLoader:1235, restored, D45)

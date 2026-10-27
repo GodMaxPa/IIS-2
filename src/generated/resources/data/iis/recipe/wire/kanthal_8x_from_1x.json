@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/kanthal",
+    "#iis:wires/1x/kanthal",
+    "#iis:wires/1x/kanthal",
+    "#iis:wires/1x/kanthal",
+    "#iis:wires/1x/kanthal",
+    "#iis:wires/1x/kanthal",
+    "#iis:wires/1x/kanthal",
+    "#iis:wires/1x/kanthal"
+  ],
+  "result": {
+    "id": "iis:wire_kanthal_8x"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CEC",
+    "OMO",
+    "WEW"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "E": "iis:electric_motor_hv",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold",
+    "O": "#iis:wires/4x/kanthal"
+  },
+  "result": {
+    "id": "iis:thermal_centrifuge_hv"
+  }
+}

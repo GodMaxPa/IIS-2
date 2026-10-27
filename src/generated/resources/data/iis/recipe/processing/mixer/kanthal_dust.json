@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/iron",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/aluminium",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/chrome",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_kanthal",
+      "count": 3
+    }
+  ],
+  "duration": 300,
+  "eut": 8
+}

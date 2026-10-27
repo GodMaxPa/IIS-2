@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/forge_hammer_hv_side",
+    "north": "iis:block/lv/forge_hammer_hv_front",
+    "south": "iis:block/lv/forge_hammer_hv_back",
+    "east": "iis:block/lv/forge_hammer_hv_side",
+    "west": "iis:block/lv/forge_hammer_hv_side",
+    "up": "iis:block/lv/forge_hammer_hv_top",
+    "down": "iis:block/lv/forge_hammer_hv_bottom"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/kanthal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:shovel_head_kanthal",
+      "count": 1
+    }
+  ],
+  "duration": 44,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_shovel"
+  ]
+}

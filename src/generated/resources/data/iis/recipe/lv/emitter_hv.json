@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSC",
+    "WQS",
+    "CWS"
+  ],
+  "key": {
+    "Q": "minecraft:emerald",
+    "S": "#c:rods/chrome",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold"
+  },
+  "result": {
+    "id": "iis:emitter_hv"
+  }
+}

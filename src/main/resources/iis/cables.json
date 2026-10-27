@@ -1868,5 +1868,115 @@
     "amperage": 32,
     "loss": 2,
     "thickness": 12.0
+  },
+  {
+    "id": "wire_kanthal_1x",
+    "material": "kanthal",
+    "size": 1,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 4,
+    "loss": 6,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_kanthal_1x",
+    "material": "kanthal",
+    "size": 1,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 4,
+    "loss": 3,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_kanthal_2x",
+    "material": "kanthal",
+    "size": 2,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 8,
+    "loss": 6,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_kanthal_2x",
+    "material": "kanthal",
+    "size": 2,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 8,
+    "loss": 3,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_kanthal_4x",
+    "material": "kanthal",
+    "size": 4,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 16,
+    "loss": 6,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_kanthal_4x",
+    "material": "kanthal",
+    "size": 4,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 16,
+    "loss": 3,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_kanthal_8x",
+    "material": "kanthal",
+    "size": 8,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 32,
+    "loss": 6,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_kanthal_8x",
+    "material": "kanthal",
+    "size": 8,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 32,
+    "loss": 3,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_kanthal_12x",
+    "material": "kanthal",
+    "size": 12,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 48,
+    "loss": 6,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_kanthal_12x",
+    "material": "kanthal",
+    "size": 12,
+    "insulated": true,
+    "voltage": 512,
+    "amperage": 48,
+    "loss": 3,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_kanthal_16x",
+    "material": "kanthal",
+    "size": 16,
+    "insulated": false,
+    "voltage": 512,
+    "amperage": 64,
+    "loss": 6,
+    "thickness": 12.0
   }
 ]

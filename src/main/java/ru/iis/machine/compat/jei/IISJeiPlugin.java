@@ -90,6 +90,8 @@ public final class IISJeiPlugin implements IModPlugin {
         registration.addCraftingStation(RecipeTypes.SMELTING, ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_FURNACE).get(),
                 ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_FURNACE_MV).get(),
                 ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_OVEN).get(),
-                ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_OVEN_MV).get());
+                ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_OVEN_MV).get(),
+                ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_FURNACE_HV).get(),
+                ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_OVEN_HV).get());
     }
 }

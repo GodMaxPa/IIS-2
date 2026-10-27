@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/kanthal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_kanthal",
+      "count": 1
+    }
+  ],
+  "duration": 44,
+  "eut": 24
+}

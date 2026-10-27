@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/extruder_hv_side",
+    "north": "iis:block/lv/extruder_hv_front",
+    "south": "iis:block/lv/extruder_hv_back",
+    "east": "iis:block/lv/extruder_hv_side",
+    "west": "iis:block/lv/extruder_hv_side",
+    "up": "iis:block/lv/extruder_hv_top",
+    "down": "iis:block/lv/extruder_hv_bottom"
+  }
+}

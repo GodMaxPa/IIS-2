@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "CMC",
+    "GGG"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "P": "iis:electric_pump_hv",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:canner_hv"
+  }
+}

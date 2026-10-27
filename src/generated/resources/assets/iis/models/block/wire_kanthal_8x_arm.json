@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "iis:block/cable/wire_kanthal",
+    "side": "iis:block/cable/wire_kanthal",
+    "end": "iis:block/cable/wire_kanthal"
+  },
+  "elements": [
+    {
+      "from": [
+        4.0,
+        4.0,
+        0
+      ],
+      "to": [
+        12.0,
+        12.0,
+        4.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#end",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "#side"
+        },
+        "west": {
+          "texture": "#side"
+        },
+        "up": {
+          "texture": "#side"
+        },
+        "down": {
+          "texture": "#side"
+        }
+      }
+    }
+  ]
+}

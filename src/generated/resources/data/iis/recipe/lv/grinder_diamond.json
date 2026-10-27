@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DSD",
+    "SIS",
+    "DSD"
+  ],
+  "key": {
+    "D": "#c:dusts/diamond",
+    "S": "#c:plates/steel",
+    "I": "minecraft:diamond"
+  },
+  "result": {
+    "id": "iis:grinder_diamond"
+  }
+}

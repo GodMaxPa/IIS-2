@@ -11,6 +11,9 @@ public enum HatchType {
     /** GT_Loader_MetaTileEntities:215–216 Hatch_Dynamo_LV/MV: выход энергии многоблочного генератора (D89). */
     DYNAMO("hatch_dynamo_lv", 32),
     DYNAMO_MV("hatch_dynamo_mv", 128),
+    /** GT_Loader_MetaTileEntities:239, :217 Hatch_Energy_HV, Hatch_Dynamo_HV (D93). */
+    ENERGY_HV("hatch_energy_hv", 512),
+    DYNAMO_HV("hatch_dynamo_hv", 512),
     INPUT_BUS("hatch_input_bus_lv"),
     OUTPUT_BUS("hatch_output_bus_lv"),
     INPUT_HATCH("hatch_input_lv"),
@@ -36,7 +39,7 @@ public enum HatchType {
     }
 
     public boolean dynamo() {
-        return this == DYNAMO || this == DYNAMO_MV;
+        return this == DYNAMO || this == DYNAMO_MV || this == DYNAMO_HV;
     }
 
     /** GT_MetaTileEntity_Hatch#getSlots: LV — 2×2. */

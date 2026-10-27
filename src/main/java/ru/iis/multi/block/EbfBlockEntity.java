@@ -30,6 +30,7 @@ import java.util.List;
  */
 public class EbfBlockEntity extends MultiblockControllerBlockEntity {
     public static final int CUPRONICKEL_HEAT = 1800;
+    public static final int KANTHAL_HEAT = 2700;
 
     private int heat;
 
@@ -58,14 +59,16 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
         BlockPos muffler = center.above(3);
         if (hatchAt(sl, muffler) != HatchType.MUFFLER) return false;
         parts.mufflers.add(muffler);
-        if (!sl.getBlockState(center.above(2).east()).is(MultiContent.COIL_CUPRONICKEL.get())) return false;
-        heat = CUPRONICKEL_HEAT;
+        // GT checkMachine: the coil east of the centre sets the type, all 16 coils must be the same
+        net.minecraft.world.level.block.Block coil = sl.getBlockState(center.above(2).east()).getBlock();
+        int coilHeat = coilHeat(coil);
+        if (coilHeat == 0) return false;
         for (int dx = -1; dx <= 1; dx++) {
             for (int dz = -1; dz <= 1; dz++) {
                 if (dx == 0 && dz == 0) continue;
                 BlockPos c = center.offset(dx, 0, dz);
-                if (!sl.getBlockState(c.above(1)).is(MultiContent.COIL_CUPRONICKEL.get())) return false;
-                if (!sl.getBlockState(c.above(2)).is(MultiContent.COIL_CUPRONICKEL.get())) return false;
+                if (!sl.getBlockState(c.above(1)).is(coil)) return false;
+                if (!sl.getBlockState(c.above(2)).is(coil)) return false;
                 BlockPos top = c.above(3);
                 HatchType t = hatchAt(sl, top);
                 if (t == HatchType.OUTPUT_HATCH) parts.outputHatches.add(top);
@@ -85,7 +88,7 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
                     case MAINTENANCE -> parts.maintenance.add(b);
                     case INPUT_BUS -> parts.inputBuses.add(b);
                     case INPUT_HATCH -> parts.inputHatches.add(b);
-                    case ENERGY, ENERGY_MV -> parts.energy.add(b);
+                    case ENERGY, ENERGY_MV, ENERGY_HV -> parts.energy.add(b);
                     case OUTPUT_BUS -> parts.outputBuses.add(b);
                     default -> {
                         return false;
@@ -93,7 +96,15 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
                 }
             }
         }
+        heat = coilHeat;
         return true;
+    }
+
+    /** GT mHeatingCapacity by coil meta: cupronickel 1800, kanthal 2700 (D93); 0 — not a coil. */
+    public static int coilHeat(net.minecraft.world.level.block.Block b) {
+        if (b == MultiContent.COIL_CUPRONICKEL.get()) return CUPRONICKEL_HEAT;
+        if (b == MultiContent.COIL_KANTHAL.get()) return KANTHAL_HEAT;
+        return 0;
     }
 
     // --- работа ------------------------------------------------------------------------------------------------------

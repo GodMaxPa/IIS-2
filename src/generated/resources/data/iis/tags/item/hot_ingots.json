@@ -3,6 +3,7 @@
   "values": [
     "iis:hot_ingot_black_bronze",
     "iis:hot_ingot_iridium",
+    "iis:hot_ingot_kanthal",
     "iis:hot_ingot_palladium"
   ]
 }

@@ -98,6 +98,8 @@ public final class IISGameTests {
             new Test("hv_polymerization_oxygen", 300, LargeGameTests::reactorMakesPlastic),
             new Test("hv_circuit_assembler_advanced", 1000, LargeGameTests::circuitAssemblerMakesAdvanced),
             new Test("hv_capsule_crafting_remainder", 20, LargeGameTests::filledCapsuleLeavesEmpty),
+            new Test("hv_ebf_kanthal_coils", 200, LargeGameTests::ebfKanthalCoils),
+            new Test("hv_macerator_byproduct", 800, LargeGameTests::hvMaceratorByproduct),
             new Test("extruder_mv_plate", 200, MvGameTests::extruderMvPlate),
             new Test("extruder_lv_cell_only", 300, MvGameTests::extruderLvCellOnly),
             new Test("forming_press_doge_coin", 200, MvGameTests::pressDogeCoin),

@@ -1,0 +1,17 @@
+{
+  "type": "iis:wiremill",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/kanthal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_kanthal_1x",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 4
+}

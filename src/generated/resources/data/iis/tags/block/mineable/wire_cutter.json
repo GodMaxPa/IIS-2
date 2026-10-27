@@ -187,6 +187,17 @@
     "iis:cable_platinum_8x",
     "iis:wire_platinum_12x",
     "iis:cable_platinum_12x",
-    "iis:wire_platinum_16x"
+    "iis:wire_platinum_16x",
+    "iis:wire_kanthal_1x",
+    "iis:cable_kanthal_1x",
+    "iis:wire_kanthal_2x",
+    "iis:cable_kanthal_2x",
+    "iis:wire_kanthal_4x",
+    "iis:cable_kanthal_4x",
+    "iis:wire_kanthal_8x",
+    "iis:cable_kanthal_8x",
+    "iis:wire_kanthal_12x",
+    "iis:cable_kanthal_12x",
+    "iis:wire_kanthal_16x"
   ]
 }

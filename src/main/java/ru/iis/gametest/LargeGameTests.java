@@ -288,4 +288,29 @@ final class LargeGameTests {
         h.assertTrue(empty.getItem().getCraftingRemainder(empty) == null, "empty capsule must leave nothing");
         h.succeed();
     }
+
+    /** ЭДП с 16 катушками из кантала: нагрев 2700 K (GT mHeatingCapacity, D93); одна чужая катушка — форма не собрана. */
+    static void ebfKanthalCoils(GameTestHelper h) {
+        EbfBlockEntity e = MultiGameTests.build(h, 1);
+        BlockPos center = new BlockPos(4, 1, 2);
+        for (int dx = -1; dx <= 1; dx++)
+            for (int dz = -1; dz <= 1; dz++) {
+                if (dx == 0 && dz == 0) continue;
+                h.setBlock(center.offset(dx, 1, dz), MultiContent.COIL_KANTHAL.get());
+                h.setBlock(center.offset(dx, 2, dz), MultiContent.COIL_KANTHAL.get());
+            }
+        h.assertTrue(EbfBlockEntity.coilHeat(MultiContent.COIL_CUPRONICKEL.get()) == 1800, "cupronickel heat");
+        h.succeedWhen(() -> h.assertTrue(e.heat() == EbfBlockEntity.KANTHAL_HEAT, "heat " + e.heat()));
+    }
+
+    /** Измельчитель HV: второй выход GT (побочный продукт) — 5 блоков дыни дают ломтики и хотя бы раз семена (80 %). */
+    static void hvMaceratorByproduct(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.MACERATOR_HV);
+        m.setItem(0, new ItemStack(Items.MELON, 5));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.getItem(0).isEmpty(), "melons left " + m.getItem(0));
+            h.assertTrue(m.getItem(1).is(Items.MELON_SLICE) && m.getItem(1).getCount() == 40, "slices " + m.getItem(1));
+            h.assertTrue(m.getItem(2).is(Items.MELON_SEEDS), "seeds " + m.getItem(2));
+        });
+    }
 }

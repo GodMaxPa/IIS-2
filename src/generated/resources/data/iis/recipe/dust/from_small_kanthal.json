@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/kanthal",
+    "#iis:small_dusts/kanthal",
+    "#iis:small_dusts/kanthal",
+    "#iis:small_dusts/kanthal"
+  ],
+  "result": {
+    "id": "iis:dust_kanthal"
+  }
+}

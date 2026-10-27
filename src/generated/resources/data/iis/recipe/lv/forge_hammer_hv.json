@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "CMC",
+    "WAW"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "P": "iis:electric_piston_hv",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold",
+    "A": "minecraft:anvil"
+  },
+  "result": {
+    "id": "iis:forge_hammer_hv"
+  }
+}

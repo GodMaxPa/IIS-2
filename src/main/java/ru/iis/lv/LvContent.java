@@ -198,6 +198,14 @@ public final class LvContent {
     // D86: излучатели GT (GT_MetaGenerated_Item_01:656-657) для лазерного гравёра
     public static final DeferredItem<Item> EMITTER_LV = item("emitter_lv");
     public static final DeferredItem<Item> EMITTER_MV = item("emitter_mv");
+    // D93: детали HV (GT_MetaGenerated_Item_01:496-669) и алмазная шлифовальная головка (:720) для измельчителя HV
+    public static final DeferredItem<Item> ELECTRIC_MOTOR_HV = item("electric_motor_hv");
+    public static final DeferredItem<Item> ELECTRIC_PUMP_HV = item("electric_pump_hv");
+    public static final DeferredItem<Item> CONVEYOR_MODULE_HV = item("conveyor_module_hv");
+    public static final DeferredItem<Item> ELECTRIC_PISTON_HV = item("electric_piston_hv");
+    public static final DeferredItem<Item> ROBOT_ARM_HV = item("robot_arm_hv");
+    public static final DeferredItem<Item> EMITTER_HV = item("emitter_hv");
+    public static final DeferredItem<Item> GRINDER_DIAMOND = item("grinder_diamond");
     // D91: кремниевая буля, пластины и микросхемы GT (GT_MetaGenerated_Item_03:82-94)
     public static final DeferredItem<Item> SILICON_BOULE = item("silicon_boule");
     public static final DeferredItem<Item> SILICON_WAFER = item("silicon_wafer");

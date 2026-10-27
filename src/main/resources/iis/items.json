@@ -3565,6 +3565,71 @@
     "material": "jasper"
   },
   {
+    "id": "dust_kanthal",
+    "prefix": "dust",
+    "material": "kanthal"
+  },
+  {
+    "id": "small_dust_kanthal",
+    "prefix": "small_dust",
+    "material": "kanthal"
+  },
+  {
+    "id": "tiny_dust_kanthal",
+    "prefix": "tiny_dust",
+    "material": "kanthal"
+  },
+  {
+    "id": "ingot_kanthal",
+    "prefix": "ingot",
+    "material": "kanthal"
+  },
+  {
+    "id": "hot_ingot_kanthal",
+    "prefix": "hot_ingot",
+    "material": "kanthal"
+  },
+  {
+    "id": "nugget_kanthal",
+    "prefix": "nugget",
+    "material": "kanthal"
+  },
+  {
+    "id": "plate_kanthal",
+    "prefix": "plate",
+    "material": "kanthal"
+  },
+  {
+    "id": "double_plate_kanthal",
+    "prefix": "double_plate",
+    "material": "kanthal"
+  },
+  {
+    "id": "rod_kanthal",
+    "prefix": "rod",
+    "material": "kanthal"
+  },
+  {
+    "id": "bolt_kanthal",
+    "prefix": "bolt",
+    "material": "kanthal"
+  },
+  {
+    "id": "screw_kanthal",
+    "prefix": "screw",
+    "material": "kanthal"
+  },
+  {
+    "id": "long_rod_kanthal",
+    "prefix": "long_rod",
+    "material": "kanthal"
+  },
+  {
+    "id": "turbine_blade_kanthal",
+    "prefix": "turbine_blade",
+    "material": "kanthal"
+  },
+  {
     "id": "crushed_lapis",
     "prefix": "crushed",
     "material": "lapis"
@@ -8863,6 +8928,51 @@
     "id": "wrench_head_iron_magnetic",
     "prefix": "wrench_head",
     "material": "iron_magnetic"
+  },
+  {
+    "id": "sword_head_kanthal",
+    "prefix": "sword_head",
+    "material": "kanthal"
+  },
+  {
+    "id": "pickaxe_head_kanthal",
+    "prefix": "pickaxe_head",
+    "material": "kanthal"
+  },
+  {
+    "id": "shovel_head_kanthal",
+    "prefix": "shovel_head",
+    "material": "kanthal"
+  },
+  {
+    "id": "axe_head_kanthal",
+    "prefix": "axe_head",
+    "material": "kanthal"
+  },
+  {
+    "id": "hoe_head_kanthal",
+    "prefix": "hoe_head",
+    "material": "kanthal"
+  },
+  {
+    "id": "saw_head_kanthal",
+    "prefix": "saw_head",
+    "material": "kanthal"
+  },
+  {
+    "id": "drill_head_kanthal",
+    "prefix": "drill_head",
+    "material": "kanthal"
+  },
+  {
+    "id": "chainsaw_head_kanthal",
+    "prefix": "chainsaw_head",
+    "material": "kanthal"
+  },
+  {
+    "id": "wrench_head_kanthal",
+    "prefix": "wrench_head",
+    "material": "kanthal"
   },
   {
     "id": "sword_head_magnalium",
