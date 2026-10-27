@@ -249,6 +249,15 @@ public final class LvContent {
     public static final DeferredItem<BatteryItem> BATTERY_LV = ITEMS.registerItem("battery_lv", p -> new BatteryItem(50000, 32, 1, p), p -> p.stacksTo(1));
     public static final DeferredItem<BatteryItem> BATTERY_CADMIUM_LV = ITEMS.registerItem("battery_cadmium_lv", p -> new BatteryItem(75000, 32, 1, p), p -> p.stacksTo(1));
     public static final DeferredItem<BatteryItem> BATTERY_LITHIUM_LV = ITEMS.registerItem("battery_lithium_lv", p -> new BatteryItem(100000, 32, 1, p), p -> p.stacksTo(1));
+    // D96: GT_MetaGenerated_Item_01:428-444 setElectricStats — MV 200 000 / 300 000 / 400 000 EU при 128 EU/t, HV ×4 при 512 EU/t
+    public static final DeferredItem<Item> BATTERY_HULL_MV = item("battery_hull_mv");
+    public static final DeferredItem<Item> BATTERY_HULL_HV = item("battery_hull_hv");
+    public static final DeferredItem<BatteryItem> BATTERY_SODIUM_MV = ITEMS.registerItem("battery_sodium_mv", p -> new BatteryItem(200000, 128, 2, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_CADMIUM_MV = ITEMS.registerItem("battery_cadmium_mv", p -> new BatteryItem(300000, 128, 2, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_LITHIUM_MV = ITEMS.registerItem("battery_lithium_mv", p -> new BatteryItem(400000, 128, 2, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_SODIUM_HV = ITEMS.registerItem("battery_sodium_hv", p -> new BatteryItem(800000, 512, 3, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_CADMIUM_HV = ITEMS.registerItem("battery_cadmium_hv", p -> new BatteryItem(1200000, 512, 3, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_LITHIUM_HV = ITEMS.registerItem("battery_lithium_hv", p -> new BatteryItem(1600000, 512, 3, p), p -> p.stacksTo(1));
     public static final DeferredItem<Item> BATTERY_HULL_LV = item("battery_hull_lv");
     // покрытия GT (ru.iis.cover.Covers.ITEMS); конвейер, помпа и манипулятор — сами детали LV
     public static final DeferredItem<Item> COVER_CONTROLLER = item("cover_controller");

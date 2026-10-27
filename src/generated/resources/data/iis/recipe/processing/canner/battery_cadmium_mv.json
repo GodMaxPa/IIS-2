@@ -1,0 +1,21 @@
+{
+  "type": "iis:canner",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/cadmium",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:battery_hull_mv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:battery_cadmium_mv",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

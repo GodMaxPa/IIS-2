@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:cables/1x/gold",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/battery_alloy",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:battery_hull_hv",
+      "count": 1
+    }
+  ],
+  "duration": 3200,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_plastic",
+      "amount": 1296
+    }
+  ]
+}

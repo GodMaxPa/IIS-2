@@ -391,4 +391,40 @@ final class LargeGameTests {
             h.assertTrue(cap == 32768, "gui capacity " + cap);
         });
     }
+
+    /** Батарейки MV/HV (D96): буфер HV заряжает литиевую HV по 512 EU/t (ёмкость 1 600 000); буфер MV не берёт HV-батарейку
+     *  (уровень выше), но заряжает натриевую MV по 128 EU/t. */
+    static void batteryChargingTiers(GameTestHelper h) {
+        BlockPos hp = new BlockPos(2, 1, 2), mp = new BlockPos(5, 1, 2);
+        h.setBlock(hp, LvContent.BATTERY_BUFFERS_HV.get(0).get().defaultBlockState().setValue(MachineBlock.FACING, Direction.EAST));
+        h.setBlock(mp, LvContent.BATTERY_BUFFERS_MV.get(1).get().defaultBlockState().setValue(MachineBlock.FACING, Direction.EAST));
+        var hb = h.getBlockEntity(hp, ru.iis.lv.block.BatteryBufferBlockEntity.class);
+        var mb = h.getBlockEntity(mp, ru.iis.lv.block.BatteryBufferBlockEntity.class);
+        var lithiumHv = LvContent.BATTERY_LITHIUM_HV.get();
+        h.assertTrue(lithiumHv.capacity == 1_600_000 && lithiumHv.transferLimit == 512 && lithiumHv.tier == 3, "lithium HV stats");
+        hb.setItem(0, new ItemStack(lithiumHv));
+        mb.setItem(0, new ItemStack(LvContent.BATTERY_SODIUM_HV.get()));
+        mb.setItem(1, new ItemStack(LvContent.BATTERY_SODIUM_MV.get()));
+        h.onEachTick(() -> {
+            hb.energy.stored = hb.energy.capacity;
+            mb.energy.stored = mb.energy.capacity;
+        });
+        h.runAfterDelay(40, () -> {
+            long hv = ru.iis.lv.item.BatteryItem.charge(hb.getItem(0));
+            long mvHv = ru.iis.lv.item.BatteryItem.charge(mb.getItem(0));
+            long mv = ru.iis.lv.item.BatteryItem.charge(mb.getItem(1));
+            h.assertTrue(hv > 0 && hv % 512 == 0, "HV battery charge " + hv);
+            h.assertTrue(mvHv == 0, "MV buffer charged an HV battery: " + mvHv);
+            h.assertTrue(mv > 0 && mv % 128 == 0 && mv <= 128L * 41, "MV battery charge " + mv);
+            h.succeed();
+        });
+    }
+
+    /** Консервирующий станок LV: 8 литиевой пыли + средний корпус → средняя литиевая батарея (400 тиков, 2 EU/t). */
+    static void mvBatteryCanning(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.CANNER);
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("dust_lithium"), 8));
+        m.setItem(1, new ItemStack(LvContent.BATTERY_HULL_MV.get()));
+        h.succeedWhen(() -> h.assertTrue(m.getItem(2).is(LvContent.BATTERY_LITHIUM_MV.get()), "output " + m.getItem(2)));
+    }
 }

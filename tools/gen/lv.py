@@ -218,6 +218,15 @@ ITEMS = [
     ('battery_cadmium_lv', 'gt:517', 'gt.metaitem.01.32517.name', 'Small Cadmium Battery', 'Малая кадмиевая батарея'),
     ('battery_lithium_lv', 'gt:518', 'gt.metaitem.01.32518.name', 'Small Lithium Battery', 'Малая литиевая батарея'),
     ('battery_hull_lv', 'gt:500', 'gt.metaitem.01.32500.name', 'Small Battery Hull', 'Малый корпус батареи'),
+    # D96: GT_MetaGenerated_Item_01:402-403 MV/HV hulls, :428-444 MV/HV sodium, cadmium, lithium batteries
+    ('battery_hull_mv', 'gt:501', 'gt.metaitem.01.32501.name', 'Medium Battery Hull', 'Средний корпус батареи'),
+    ('battery_hull_hv', 'gt:502', 'gt.metaitem.01.32502.name', 'Large Battery Hull', 'Большой корпус батареи'),
+    ('battery_sodium_mv', 'gt:529', 'gt.metaitem.01.32529.name', 'Medium Sodium Battery', 'Средняя натриевая батарея'),
+    ('battery_cadmium_mv', 'gt:527', 'gt.metaitem.01.32527.name', 'Medium Cadmium Battery', 'Средняя кадмиевая батарея'),
+    ('battery_lithium_mv', 'gt:528', 'gt.metaitem.01.32528.name', 'Medium Lithium Battery', 'Средняя литиевая батарея'),
+    ('battery_sodium_hv', 'gt:539', 'gt.metaitem.01.32539.name', 'Large Sodium Battery', 'Большая натриевая батарея'),
+    ('battery_cadmium_hv', 'gt:537', 'gt.metaitem.01.32537.name', 'Large Cadmium Battery', 'Большая кадмиевая батарея'),
+    ('battery_lithium_hv', 'gt:538', 'gt.metaitem.01.32538.name', 'Large Lithium Battery', 'Большая литиевая батарея'),
     # covers (GT_MetaGenerated_Item_01:752-783)
     ('cover_controller', 'gt:730', 'gt.metaitem.01.32730.name', 'Machine Controller', 'Контроллер машины'),
     ('cover_activity_detector', 'gt:731', 'gt.metaitem.01.32731.name', 'Activity Detector', 'Детектор активности'),
@@ -1219,6 +1228,8 @@ def generate(g):
                                                                                          'C': CIRC, 'B': '#c:chests/wooden'})
     # GT_MetaGenerated_Item_01:405 small battery hull "C/P/P" (tin cable, battery alloy plates)
     shaped('lv/battery_hull_lv', f'{NS}:battery_hull_lv', 1, ['C', 'P', 'P'], {'C': C('Tin'), 'P': P('BatteryAlloy')})
+    # :406 medium battery hull "C C/PPP/PPP" (copper cables); the large hull has no crafting in GT — assembler only (D96)
+    shaped('lv/battery_hull_mv', f'{NS}:battery_hull_mv', 1, ['C C', 'PPP', 'PPP'], {'C': C('Copper'), 'P': P('BatteryAlloy')})
     # GT_MetaGenerated_Item_01:731 diamond sawblade " D /DGD/ D " (small diamond dust, cobalt brass gear); :1472 assembler variant
     shaped('lv/diamond_sawblade', f'{NS}:diamond_sawblade', 1, [' D ', 'DGD', ' D '],
            {'D': tag_of('small_dust', 'Diamond'), 'G': tag_of('gear', 'CobaltBrass')})
@@ -1456,11 +1467,22 @@ def generate(g):
     # GT_MachineRecipeLoader:416 regulator: LV pump + 2 basic circuits; :422 fluid filter: shutter + 2 basic circuits (800 t, 4 EU/t)
     mrec('assembler', 'fluid_regulator_lv', [ing(PUMP), ing('#c:circuits/basic', 2)], [out(f'{NS}:fluid_regulator_lv')], 800, 4)
     mrec('assembler', 'cover_fluid_filter', [ing(f'{NS}:cover_shutter'), ing('#c:circuits/basic', 2)], [out(f'{NS}:cover_fluid_filter')], 800, 4)
-    # GT_MetaGenerated_Item_01:463-465 canner: 2 dust + hull -> battery (100 t, 2 EU/t); :453-455 extractor: battery -> hull
-    for m, bid in (('Cadmium', 'battery_cadmium_lv'), ('Lithium', 'battery_lithium_lv'), ('Sodium', 'battery_lv')):
-        if ref('dust', m):
-            mrec('canner', bid, [ing(tag_of('dust', m), 2), ing(f'{NS}:battery_hull_lv')], [out(f'{NS}:{bid}')], 100, 2)
-        mrec('extractor', f'hull_from_{bid}', [ing(f'{NS}:{bid}')], [out(f'{NS}:battery_hull_lv')], 300, 2)
+    # GT_MetaGenerated_Item_01:463-471 canner: 2 / 8 / 32 dust + LV / MV / HV hull -> battery (100 / 400 / 1600 t, 2 EU/t);
+    # :453-461 extractor: battery -> hull (IC2 extractor recipe, GT addIC2RecipesToGT: 300 t, 2 EU/t)
+    for tr, dust_n, ticks in (('lv', 2, 100), ('mv', 8, 400), ('hv', 32, 1600)):
+        for m in ('Cadmium', 'Lithium', 'Sodium'):
+            bid = 'battery_lv' if (tr, m) == ('lv', 'Sodium') else f'battery_{m.lower()}_{tr}'
+            if ref('dust', m):
+                mrec('canner', bid, [ing(tag_of('dust', m), dust_n), ing(f'{NS}:battery_hull_{tr}')], [out(f'{NS}:{bid}')], ticks, 2)
+            mrec('extractor', f'hull_from_{bid}', [ing(f'{NS}:{bid}')], [out(f'{NS}:battery_hull_{tr}')], 300, 2)
+    # GT_MachineRecipeLoader:1428-1431 assembler hulls with molten plastic: LV tin cable + 1 plate + 144 L (800 t, 1 EU/t),
+    # MV 2 copper / annealed copper cables + 3 plates + 432 L (1600 t, 2), HV 2 gold cables + 9 plates + 1296 L (3200 t, 4)
+    plastic = lambda n: {'ingredient': f'{NS}:molten_plastic', 'amount': n}
+    for rid, cable, cn, plates, liters, ticks, eut, hull in (
+            ('lv', 'Tin', 1, 1, 144, 800, 1, 'lv'), ('mv', 'Copper', 2, 3, 432, 1600, 2, 'mv'),
+            ('mv_annealed', 'AnnealedCopper', 2, 3, 432, 1600, 2, 'mv'), ('hv', 'Gold', 2, 9, 1296, 3200, 4, 'hv')):
+        mrec('assembler', f'battery_hull_{rid}', [ing(C(cable), cn), ing(P('BatteryAlloy'), plates)], [out(f'{NS}:battery_hull_{hull}')],
+             ticks, eut, plastic(liters))
     for key, r in machine_recipes.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     by_type = {}
