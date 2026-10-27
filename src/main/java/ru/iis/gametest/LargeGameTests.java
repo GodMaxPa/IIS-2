@@ -491,6 +491,34 @@ final class LargeGameTests {
         });
     }
 
+    /** Большая турбина с большим стальным ротором на динамо-люке EV (D99): выход растёт до 540 EU/t, машина цела. */
+    static void largeRotorEvDynamo(GameTestHelper h) {
+        LargeTurbineBlockEntity t = turbine(h, HatchType.DYNAMO_EV);
+        t.setItem(0, MultiContent.ROTORS.get(LargeTurbineLogic.Size.LARGE).get().create("steel"));
+        DynamoHatchBlockEntity dyn = h.getBlockEntity(T_DYNAMO, DynamoHatchBlockEntity.class);
+        h.succeedWhen(() -> {
+            h.assertTrue(h.getBlockState(T_CTRL).is(MultiContent.LARGE_STEAM_TURBINE.get()), "turbine exploded");
+            h.assertTrue(t.formed() && t.eut() == 540, "turbine EU/t " + t.eut());
+            h.assertTrue(dyn.voltage() == 2048 && dyn.energy.stored > DynamoHatchBlockEntity.MIN_STORED, "dynamo got " + dyn.energy.stored);
+        });
+    }
+
+    /** Трансформатор EV (D99): понижает 8192 → 2048 В, 4 А; запас 512 + 2 × 8192. Буфер EV 4×4: запас 2048 × 64 × 16. */
+    static void evTransformerAndBuffer(GameTestHelper h) {
+        BlockPos tp = new BlockPos(2, 1, 2), bp = new BlockPos(5, 1, 2);
+        h.setBlock(tp, LvContent.TRANSFORMER_EV.get().defaultBlockState().setValue(ru.iis.lv.block.TransformerBlock.FACING, Direction.WEST));
+        var t = h.getBlockEntity(tp, ru.iis.lv.block.TransformerBlockEntity.class);
+        h.assertTrue(t.outputVoltage() == 2048 && t.outputAmperes() == 4, "step-down out " + t.outputVoltage() + " V " + t.outputAmperes() + " A");
+        h.assertTrue(t.energy.capacity == 512 + 2 * 8192, "capacity " + t.energy.capacity);
+        h.setBlock(bp, LvContent.BATTERY_BUFFERS_EV.get(3).get().defaultBlockState().setValue(MachineBlock.FACING, Direction.EAST));
+        var b = h.getBlockEntity(bp, ru.iis.lv.block.BatteryBufferBlockEntity.class);
+        h.assertTrue(b.slots() == 16 && b.energy.capacity == 2048L * 64 * 16 && b.outputVoltage() == 2048, "buffer " + b.energy.capacity);
+        b.energy.stored = b.energy.capacity;
+        long shown = (b.data.get(0) & 0xFFFF) | ((long) (b.data.get(1) & 0xFFFF) << 16);
+        h.assertTrue(shown == b.energy.capacity, "gui energy " + shown);
+        h.succeed();
+    }
+
     /** Химреактор EV (D98): 7 тунгстата + 4000 л соляной кислоты → 4 хлорида лития + 7 вольфрамовой кислоты (1920 EU/t). */
     static void evReactorTungsticAcid(GameTestHelper h) {
         var m = poweredMachine(h, ru.iis.lv.LvMachineType.CHEMICAL_REACTOR_EV);

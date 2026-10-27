@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "KBB",
+    "CM ",
+    "KBB"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "C": "#iis:cables/1x/tungsten",
+    "B": "#iis:cables/1x/aluminium",
+    "K": "iis:coil_small"
+  },
+  "result": {
+    "id": "iis:transformer_ev"
+  }
+}

@@ -141,7 +141,7 @@ public final class MultiContent {
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EnergyHatchBlockEntity>> ENERGY_HATCH_BE = BLOCK_ENTITIES.register("energy_hatch",
-            () -> new BlockEntityType<>(EnergyHatchBlockEntity::new, hatches(HatchType.ENERGY, HatchType.ENERGY_MV, HatchType.ENERGY_HV)));
+            () -> new BlockEntityType<>(EnergyHatchBlockEntity::new, hatches(HatchType.ENERGY, HatchType.ENERGY_MV, HatchType.ENERGY_HV, HatchType.ENERGY_EV)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemBusBlockEntity>> ITEM_BUS_BE = BLOCK_ENTITIES.register("item_bus",
             () -> new BlockEntityType<>(ItemBusBlockEntity::new, hatches(HatchType.INPUT_BUS, HatchType.OUTPUT_BUS)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidHatchBlockEntity>> FLUID_HATCH_BE = BLOCK_ENTITIES.register("fluid_hatch",
@@ -155,7 +155,7 @@ public final class MultiContent {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeBoilerBlockEntity>> LARGE_BOILER_BE = BLOCK_ENTITIES.register("large_boiler",
             () -> new BlockEntityType<>(LargeBoilerBlockEntity::new, LARGE_BOILERS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DynamoHatchBlockEntity>> DYNAMO_HATCH_BE = BLOCK_ENTITIES.register("dynamo_hatch",
-            () -> new BlockEntityType<>(DynamoHatchBlockEntity::new, hatches(HatchType.DYNAMO, HatchType.DYNAMO_MV, HatchType.DYNAMO_HV)));
+            () -> new BlockEntityType<>(DynamoHatchBlockEntity::new, hatches(HatchType.DYNAMO, HatchType.DYNAMO_MV, HatchType.DYNAMO_HV, HatchType.DYNAMO_EV)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeTurbineBlockEntity>> LARGE_TURBINE_BE = BLOCK_ENTITIES.register("large_steam_turbine",
             () -> new BlockEntityType<>(LargeTurbineBlockEntity::new, LARGE_STEAM_TURBINE.get()));
 

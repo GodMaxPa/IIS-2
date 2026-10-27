@@ -114,6 +114,12 @@
     "iis:wire_nichrome_4x",
     "iis:wire_nichrome_8x",
     "iis:wire_nichrome_12x",
-    "iis:wire_nichrome_16x"
+    "iis:wire_nichrome_16x",
+    "iis:wire_tungsten_1x",
+    "iis:wire_tungsten_2x",
+    "iis:wire_tungsten_4x",
+    "iis:wire_tungsten_8x",
+    "iis:wire_tungsten_12x",
+    "iis:wire_tungsten_16x"
   ]
 }

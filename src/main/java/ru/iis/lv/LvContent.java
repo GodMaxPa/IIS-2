@@ -140,6 +140,10 @@ public final class LvContent {
     public static final java.util.List<DeferredBlock<BatteryBufferBlock>> BATTERY_BUFFERS_MV = java.util.stream.IntStream.of(1, 2, 3, 4)
             .mapToObj(n -> block("battery_buffer_" + n + "x" + n + "_mv", p -> new BatteryBufferBlock(n * n, VoltageTier.MV, p), LvContent::metal))
             .toList();
+    /** GT_Loader_MetaTileEntities:491, 513, 535, 557 Battery_Buffer_*_EV (D99). */
+    public static final java.util.List<DeferredBlock<BatteryBufferBlock>> BATTERY_BUFFERS_EV = java.util.stream.IntStream.of(1, 2, 3, 4)
+            .mapToObj(n -> block("battery_buffer_" + n + "x" + n + "_ev", p -> new BatteryBufferBlock(n * n, VoltageTier.EV, p), LvContent::metal))
+            .toList();
     /** GT_Loader_MetaTileEntities:490, 512, 534, 556 Battery_Buffer_*_HV (D94). */
     public static final java.util.List<DeferredBlock<BatteryBufferBlock>> BATTERY_BUFFERS_HV = java.util.stream.IntStream.of(1, 2, 3, 4)
             .mapToObj(n -> block("battery_buffer_" + n + "x" + n + "_hv", p -> new BatteryBufferBlock(n * n, VoltageTier.HV, p), LvContent::metal))
@@ -149,6 +153,8 @@ public final class LvContent {
     public static final DeferredBlock<TransformerBlock> TRANSFORMER_MV = block("transformer_mv", p -> new TransformerBlock(VoltageTier.MV, p), LvContent::metal);
     /** GT_Loader_MetaTileEntities:197 Transformer_EV_HV (D94). */
     public static final DeferredBlock<TransformerBlock> TRANSFORMER_HV = block("transformer_hv", p -> new TransformerBlock(VoltageTier.HV, p), LvContent::metal);
+    /** GT_Loader_MetaTileEntities:198 Transformer_IV_EV (D99). */
+    public static final DeferredBlock<TransformerBlock> TRANSFORMER_EV = block("transformer_ev", p -> new TransformerBlock(VoltageTier.EV, p), LvContent::metal);
 
     // --- коксовая печь ---------------------------------------------------------------------------------------------
     public static final DeferredBlock<Block> COKE_OVEN_BRICKS = block("coke_oven_bricks", Block::new,
@@ -310,10 +316,10 @@ public final class LvContent {
             () -> new BlockEntityType<>(GeneratorBlockEntity::new, GENERATORS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BatteryBufferBlockEntity>> BATTERY_BUFFER_BE = BLOCK_ENTITIES.register("battery_buffer",
             () -> new BlockEntityType<>(BatteryBufferBlockEntity::new, java.util.stream.Stream.of(java.util.stream.Stream.of(BATTERY_BUFFER_1X1, BATTERY_BUFFER_2X2, BATTERY_BUFFER_3X3,
-                    BATTERY_BUFFER_4X4), BATTERY_BUFFERS_MV.stream(), BATTERY_BUFFERS_HV.stream()).flatMap(x -> x)
+                    BATTERY_BUFFER_4X4), BATTERY_BUFFERS_MV.stream(), BATTERY_BUFFERS_HV.stream(), BATTERY_BUFFERS_EV.stream()).flatMap(x -> x)
                     .map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TransformerBlockEntity>> TRANSFORMER_BE = BLOCK_ENTITIES.register("transformer",
-            () -> new BlockEntityType<>(TransformerBlockEntity::new, TRANSFORMER.get(), TRANSFORMER_MV.get(), TRANSFORMER_HV.get()));
+            () -> new BlockEntityType<>(TransformerBlockEntity::new, TRANSFORMER.get(), TRANSFORMER_MV.get(), TRANSFORMER_HV.get(), TRANSFORMER_EV.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CokeOvenBlockEntity>> COKE_OVEN_BE = BLOCK_ENTITIES.register("coke_oven",
             () -> new BlockEntityType<>(CokeOvenBlockEntity::new, COKE_OVEN.get()));
 

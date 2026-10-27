@@ -2088,5 +2088,115 @@
     "amperage": 48,
     "loss": 8,
     "thickness": 12.0
+  },
+  {
+    "id": "wire_tungsten_1x",
+    "material": "tungsten",
+    "size": 1,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 2,
+    "loss": 4,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_tungsten_1x",
+    "material": "tungsten",
+    "size": 1,
+    "insulated": true,
+    "voltage": 8192,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_tungsten_2x",
+    "material": "tungsten",
+    "size": 2,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 4,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_tungsten_2x",
+    "material": "tungsten",
+    "size": 2,
+    "insulated": true,
+    "voltage": 8192,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_tungsten_4x",
+    "material": "tungsten",
+    "size": 4,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 8,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_tungsten_4x",
+    "material": "tungsten",
+    "size": 4,
+    "insulated": true,
+    "voltage": 8192,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_tungsten_8x",
+    "material": "tungsten",
+    "size": 8,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_tungsten_8x",
+    "material": "tungsten",
+    "size": 8,
+    "insulated": true,
+    "voltage": 8192,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_tungsten_12x",
+    "material": "tungsten",
+    "size": 12,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 24,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_tungsten_12x",
+    "material": "tungsten",
+    "size": 12,
+    "insulated": true,
+    "voltage": 8192,
+    "amperage": 24,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_tungsten_16x",
+    "material": "tungsten",
+    "size": 16,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 32,
+    "loss": 4,
+    "thickness": 12.0
   }
 ]

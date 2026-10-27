@@ -317,6 +317,7 @@
     "iis:casing_ev",
     "iis:assembler_ev",
     "iis:chemical_reactor_ev",
+    "iis:transformer_ev",
     "iis:coke_oven_bricks",
     "iis:coke_oven",
     "iis:frost_proof_casing",

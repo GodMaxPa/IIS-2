@@ -29,6 +29,9 @@ HATCHES = [
     # D93: GT_Loader_MetaTileEntities:217, :239 HV dynamo and energy hatches
     ('hatch_energy_hv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.03.name', 'HV Energy Hatch'),
     ('hatch_dynamo_hv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.03.name', 'HV Dynamo Hatch'),
+    # D99: GT_Loader_MetaTileEntities:218, :240 EV dynamo and energy hatches
+    ('hatch_energy_ev', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.04.name', 'EV Energy Hatch'),
+    ('hatch_dynamo_ev', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.04.name', 'EV Dynamo Hatch'),
 ]
 
 
@@ -131,11 +134,11 @@ def generate(g):
 
     # --- hatches (front overlay over the LV casing; any of 6 facings) -----------------------------------------------
     sides = {}
-    for tr in ('lv', 'mv', 'hv'):
+    for tr in ('lv', 'mv', 'hv', 'ev'):
         sides[tr] = first(os.path.join(LVI, f'MACHINE_{tr.upper()}_SIDE.png'))
         sides[tr].save(tex_out(f'block/multi/hatch_{tr}_side.png'))
     for bid, ov, key, en in HATCHES:
-        tr = bid[-2:] if bid[-3:] in ('_mv', '_hv') else 'lv'
+        tr = bid[-2:] if bid[-3:] in ('_mv', '_hv', '_ev') else 'lv'
         ovp = os.path.join(BI, ov + '.png')
         if not os.path.exists(ovp):
             ovp = os.path.join(LVI, ov + '.png')
@@ -157,6 +160,9 @@ def generate(g):
     tooltip('hatch_energy_hv', [('Energy input for multiblocks: 512 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 512 EU/t, до 2 А, спереди')])
     tooltip('hatch_dynamo_hv', [('Energy output for multiblock generators: 512 EU/t, 1 A, from the front', 'Выход энергии многоблочного генератора: 512 EU/t, 1 А, спереди'),
                                 ('More than 512 EU/t from the generator - the whole machine explodes', 'Больше 512 EU/t от генератора — вся машина взрывается')])
+    tooltip('hatch_energy_ev', [('Energy input for multiblocks: 2048 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 2048 EU/t, до 2 А, спереди')])
+    tooltip('hatch_dynamo_ev', [('Energy output for multiblock generators: 2048 EU/t, 1 A, from the front', 'Выход энергии многоблочного генератора: 2048 EU/t, 1 А, спереди'),
+                                ('More than 2048 EU/t from the generator - the whole machine explodes', 'Больше 2048 EU/t от генератора — вся машина взрывается')])
     tooltip('hatch_input_bus_lv', [('Item input for multiblocks, 4 slots', 'Вход предметов многоблочной машины, 4 слота')])
     tooltip('hatch_output_bus_lv', [('Item output for multiblocks, 4 slots', 'Выход предметов многоблочной машины, 4 слота')])
     tooltip('hatch_input_lv', [('Fluid input for multiblocks, 16000 L', 'Вход жидкости многоблочной машины, 16000 л')])
@@ -174,6 +180,9 @@ def generate(g):
     # D93: :271 "CM " and :228 " MC": HV hull, gold cable
     shaped('multi/hatch_energy_hv', f'{NS}:hatch_energy_hv', 1, ['CM'], {'M': f'{NS}:hull_hv', 'C': '#iis:cables/1x/gold'})
     shaped('multi/hatch_dynamo_hv', f'{NS}:hatch_dynamo_hv', 1, ['MC'], {'M': f'{NS}:hull_hv', 'C': '#iis:cables/1x/gold'})
+    # D99: :272 "CM " and :229 " MC": EV hull, aluminium cable
+    shaped('multi/hatch_energy_ev', f'{NS}:hatch_energy_ev', 1, ['CM'], {'M': f'{NS}:hull_ev', 'C': '#iis:cables/1x/aluminium'})
+    shaped('multi/hatch_dynamo_ev', f'{NS}:hatch_dynamo_ev', 1, ['MC'], {'M': f'{NS}:hull_ev', 'C': '#iis:cables/1x/aluminium'})
     shaped('multi/hatch_input_lv', f'{NS}:hatch_input_lv', 1, ['G', 'M'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_output_lv', f'{NS}:hatch_output_lv', 1, ['M', 'G'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_input_bus_lv', f'{NS}:hatch_input_bus_lv', 1, ['C', 'M'], {'M': HULL, 'C': '#c:chests/wooden'})

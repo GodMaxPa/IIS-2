@@ -34,6 +34,7 @@ WIRES = [
     ('Platinum', 1, 2, 2, 8192),
     ('Kanthal', 3, 6, 4, 512),       # GT_Loader_MetaTileEntities:1482 (bEC), HV heating coils (D93)
     ('Nichrome', 4, 8, 3, 2048),     # :1488 (bEC), EV heating coils, nichrome EBF coil (D98)
+    ('Tungsten', 2, 4, 2, 8192),     # :1498 (bEC), IV side of the EV transformer (D99)
 ]
 # size, bare thickness, insulated thickness (GT makeWires; there is no 16x cable — commented out in GT), insulation ring
 # (GT_MetaPipeEntity_Cable#getTexture by thickness: <0.374 TINY, <0.499 SMALL, <0.624 MEDIUM, <0.749 MEDIUM_PLUS, <0.874 LARGE)
@@ -815,11 +816,11 @@ def generate(g):
     # GT_MetaTileEntity_BasicBatteryBuffer: front = energy out, other sides plain casing
     # GT_Loader_MetaTileEntities:488-556: 1x1, 2x2, 3x3, 4x4 for LV (3x3/4x4 — D95), MV (D95), HV (D94)
     buffers = [(f'battery_buffer_{k}x{k}_{tr}', k * k, f'batterybuffer.{k * k:02d}.tier.{tn}', f'{k}by{k}')
-               for tr, tn in (('lv', '01'), ('mv', '02'), ('hv', '03')) for k in (1, 2, 3, 4)]
+               for tr, tn in (('lv', '01'), ('mv', '02'), ('hv', '03'), ('ev', '04')) for k in (1, 2, 3, 4)]   # EV: D99
     for bid, n, gtl, gui in buffers:
         BT = bid[-2:].upper()
         side_k = {1: '1x1', 4: '2x2', 9: '3x3', 16: '4x4'}[n]
-        volts = {'LV': 32, 'MV': 128, 'HV': 512}[BT]
+        volts = {'LV': 32, 'MV': 128, 'HV': 512, 'EV': 2048}[BT]
         for face, base, ov in (('front', f'MACHINE_{BT}_SIDE', os.path.join(ic, 'OVERLAY_ENERGY_OUT.png')), ('side', f'MACHINE_{BT}_SIDE', None),
                                ('top', f'MACHINE_{BT}_TOP', None), ('bottom', f'MACHINE_{BT}_BOTTOM', None)):
             im, _ = layer(os.path.join(ic, base + '.png'), ov)
@@ -840,7 +841,8 @@ def generate(g):
                             (f'Output: {volts} EU/t, up to {n} A (one per battery)', f'Выход: {volts} EU/t, до {n} А (по ампер на батарейку)')])
     # GT_MetaTileEntity_Transformer: step-down (default) — front = higher tier in (IN_MULTI), other sides lower tier out (OUT);
     # step-up — front = higher tier out (OUT_MULTI), other sides lower tier in (IN). Facing: any of 6 directions. Casing of mTier.
-    for tr, lo, hi, n_ in (('lv', 32, 128, '01'), ('mv', 128, 512, '02'), ('hv', 512, 2048, '03')):   # HV: EV <-> HV (D94)
+    for tr, lo, hi, n_ in (('lv', 32, 128, '01'), ('mv', 128, 512, '02'), ('hv', 512, 2048, '03'),   # HV: EV <-> HV (D94)
+                           ('ev', 2048, 8192, '04')):                                                # EV: IV <-> EV (D99)
         bid, T, LO, HI = f'transformer_{tr}', tr.upper(), VOLTAGE_NAMES[lo], VOLTAGE_NAMES[hi]
         for mode, front_ov, side_ov in (('', 'OVERLAY_ENERGY_IN_MULTI', 'OVERLAY_ENERGY_OUT'), ('_up', 'OVERLAY_ENERGY_OUT_MULTI', 'OVERLAY_ENERGY_IN')):
             for face, base, ov in (('front', f'MACHINE_{T}_SIDE', front_ov), ('side', f'MACHINE_{T}_SIDE', side_ov),
@@ -1313,6 +1315,13 @@ def generate(g):
     # :207 "KBB/CM /KBB": HV hull, aluminium cable (EV side), gold cables, small coils
     shaped('lv/transformer_hv', f'{NS}:transformer_hv', 1, ['KBB', 'CM ', 'KBB'],
            {'M': HULL_HV, 'C': C('Aluminium'), 'B': C('Gold'), 'K': f'{NS}:coil_small'})
+    # --- D99: EV battery buffers (:502-568 "WTW/WMW", aluminium wires 1x-16x), IV <-> EV transformer (:208 "KBB/CM /KBB":
+    # EV hull, tungsten cable, aluminium cables, small coils) ---
+    for k, wsize in ((1, 1), (2, 4), (3, 8), (4, 16)):
+        shaped(f'lv/battery_buffer_{k}x{k}_ev', f'{NS}:battery_buffer_{k}x{k}_ev', 1, ['WTW', 'WMW'],
+               {'M': f'{NS}:hull_ev', 'W': W('Aluminium', wsize), 'T': '#c:chests/wooden'})
+    shaped('lv/transformer_ev', f'{NS}:transformer_ev', 1, ['KBB', 'CM ', 'KBB'],
+           {'M': f'{NS}:hull_ev', 'C': C('Tungsten'), 'B': C('Aluminium'), 'K': f'{NS}:coil_small'})
     # GT_MachineRecipeLoader:481 small coil "WWW/WDW/WWW" (fine copper wire, steel bolt) -> 2; :483, :485 assembler 8 fine wires + bolt
     shaped('lv/coil_small', f'{NS}:coil_small', 2, ['WWW', 'WDW', 'WWW'], {'W': tag_of('wire_fine', 'Copper'), 'D': tag_of('bolt', 'Steel')})
 

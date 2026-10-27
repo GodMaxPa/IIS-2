@@ -95,6 +95,11 @@
     "iis:cable_nichrome_2x",
     "iis:cable_nichrome_4x",
     "iis:cable_nichrome_8x",
-    "iis:cable_nichrome_12x"
+    "iis:cable_nichrome_12x",
+    "iis:cable_tungsten_1x",
+    "iis:cable_tungsten_2x",
+    "iis:cable_tungsten_4x",
+    "iis:cable_tungsten_8x",
+    "iis:cable_tungsten_12x"
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/4x/tungsten",
+    "#iis:wires/4x/tungsten"
+  ],
+  "result": {
+    "id": "iis:wire_tungsten_8x"
+  }
+}
