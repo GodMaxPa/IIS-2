@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tungsten_steel",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pipe_large_tungsten_steel",
+      "count": 1
+    }
+  ],
+  "duration": 48,
+  "eut": 512,
+  "keep": [
+    "iis:shape_extruder_pipe_large"
+  ]
+}

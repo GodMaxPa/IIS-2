@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:turbine_blades/platinum",
+      "count": 12
+    },
+    {
+      "ingredient": "#iis:long_rods/tungsten_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:turbine_large",
+      "count": 1,
+      "components": {
+        "iis:rotor_material": "platinum",
+        "minecraft:max_damage": 19200
+      }
+    }
+  ],
+  "duration": 640,
+  "eut": 1600
+}

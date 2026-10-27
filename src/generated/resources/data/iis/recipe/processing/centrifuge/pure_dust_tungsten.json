@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/tungsten",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_tungsten",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_molybdenum",
+      "count": 1
+    }
+  ],
+  "duration": 1464,
+  "eut": 5
+}

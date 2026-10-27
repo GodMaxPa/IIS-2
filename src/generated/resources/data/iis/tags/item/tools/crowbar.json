@@ -33,7 +33,9 @@
     "iis:crowbar_manganese",
     "iis:crowbar_molybdenum",
     "iis:crowbar_neodymium",
+    "iis:crowbar_neodymium_magnetic",
     "iis:crowbar_nether_quartz",
+    "iis:crowbar_nichrome",
     "iis:crowbar_nickel",
     "iis:crowbar_olivine",
     "iis:crowbar_opal",
@@ -51,6 +53,8 @@
     "iis:crowbar_tin_alloy",
     "iis:crowbar_titanium",
     "iis:crowbar_topaz",
+    "iis:crowbar_tungsten",
+    "iis:crowbar_tungsten_steel",
     "iis:crowbar_wrought_iron"
   ]
 }

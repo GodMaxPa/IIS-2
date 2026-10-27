@@ -384,6 +384,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_neodymium_magnetic",
+    "tool": "sword",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "sword_nether_quartz",
     "tool": "sword",
     "material": "nether_quartz",
@@ -393,6 +405,18 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 1,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_nichrome",
+    "tool": "sword",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "sword"
   },
   {
@@ -609,6 +633,30 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_tungsten",
+    "tool": "sword",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_tungsten_steel",
+    "tool": "sword",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 4,
     "kind": "sword"
   },
   {
@@ -1008,6 +1056,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_neodymium_magnetic",
+    "tool": "pickaxe",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_nether_quartz",
     "tool": "pickaxe",
     "material": "nether_quartz",
@@ -1017,6 +1077,18 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 1,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_nichrome",
+    "tool": "pickaxe",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "pickaxe"
   },
   {
@@ -1233,6 +1305,30 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_tungsten",
+    "tool": "pickaxe",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_tungsten_steel",
+    "tool": "pickaxe",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 4,
     "kind": "pickaxe"
   },
   {
@@ -1632,6 +1728,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_neodymium_magnetic",
+    "tool": "shovel",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_nether_quartz",
     "tool": "shovel",
     "material": "nether_quartz",
@@ -1641,6 +1749,18 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 1,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_nichrome",
+    "tool": "shovel",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "shovel"
   },
   {
@@ -1857,6 +1977,30 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_tungsten",
+    "tool": "shovel",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_tungsten_steel",
+    "tool": "shovel",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 4,
     "kind": "shovel"
   },
   {
@@ -2256,6 +2400,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_neodymium_magnetic",
+    "tool": "axe",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "axe_nether_quartz",
     "tool": "axe",
     "material": "nether_quartz",
@@ -2265,6 +2421,18 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 1,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_nichrome",
+    "tool": "axe",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "axe"
   },
   {
@@ -2481,6 +2649,30 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_tungsten",
+    "tool": "axe",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_tungsten_steel",
+    "tool": "axe",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 4,
     "kind": "axe"
   },
   {
@@ -2880,6 +3072,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_neodymium_magnetic",
+    "tool": "hoe",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_nether_quartz",
     "tool": "hoe",
     "material": "nether_quartz",
@@ -2889,6 +3093,18 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 1,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_nichrome",
+    "tool": "hoe",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "hoe"
   },
   {
@@ -3105,6 +3321,30 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_tungsten",
+    "tool": "hoe",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_tungsten_steel",
+    "tool": "hoe",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 4,
     "kind": "hoe"
   },
   {
@@ -3504,6 +3744,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_neodymium_magnetic",
+    "tool": "saw",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "saw_nether_quartz",
     "tool": "saw",
     "material": "nether_quartz",
@@ -3513,6 +3765,18 @@
     "craftDamage": 4,
     "speed": 1.0,
     "quality": 1,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_nichrome",
+    "tool": "saw",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "axe"
   },
   {
@@ -3729,6 +3993,30 @@
     "craftDamage": 4,
     "speed": 7.0,
     "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_tungsten",
+    "tool": "saw",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_tungsten_steel",
+    "tool": "saw",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 8.0,
+    "quality": 4,
     "kind": "axe"
   },
   {
@@ -4128,6 +4416,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_neodymium_magnetic",
+    "tool": "hammer",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_nether_quartz",
     "tool": "hammer",
     "material": "nether_quartz",
@@ -4137,6 +4437,18 @@
     "craftDamage": 8,
     "speed": 0.75,
     "quality": 1,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_nichrome",
+    "tool": "hammer",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 4.5,
+    "quality": 2,
     "kind": "pickaxe"
   },
   {
@@ -4341,6 +4653,30 @@
     "craftDamage": 8,
     "speed": 5.25,
     "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_tungsten",
+    "tool": "hammer",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_tungsten_steel",
+    "tool": "hammer",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 4,
     "kind": "pickaxe"
   },
   {
@@ -4740,6 +5076,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_neodymium_magnetic",
+    "tool": "wrench",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_nether_quartz",
     "tool": "wrench",
     "material": "nether_quartz",
@@ -4749,6 +5097,18 @@
     "craftDamage": 16,
     "speed": 1.0,
     "quality": 1,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_nichrome",
+    "tool": "wrench",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "wrench"
   },
   {
@@ -4965,6 +5325,30 @@
     "craftDamage": 16,
     "speed": 7.0,
     "quality": 3,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_tungsten",
+    "tool": "wrench",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_tungsten_steel",
+    "tool": "wrench",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 8.0,
+    "quality": 4,
     "kind": "wrench"
   },
   {
@@ -5364,6 +5748,18 @@
     "kind": null
   },
   {
+    "id": "file_neodymium_magnetic",
+    "tool": "file",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "file_nether_quartz",
     "tool": "file",
     "material": "nether_quartz",
@@ -5373,6 +5769,18 @@
     "craftDamage": 8,
     "speed": 1.0,
     "quality": 1,
+    "kind": null
+  },
+  {
+    "id": "file_nichrome",
+    "tool": "file",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
     "kind": null
   },
   {
@@ -5589,6 +5997,30 @@
     "craftDamage": 8,
     "speed": 7.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "file_tungsten",
+    "tool": "file",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "file_tungsten_steel",
+    "tool": "file",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 8.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -5988,6 +6420,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_neodymium_magnetic",
+    "tool": "screwdriver",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "screwdriver_nether_quartz",
     "tool": "screwdriver",
     "material": "nether_quartz",
@@ -5997,6 +6441,18 @@
     "craftDamage": 8,
     "speed": 1.0,
     "quality": 1,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_nichrome",
+    "tool": "screwdriver",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
     "kind": null
   },
   {
@@ -6213,6 +6669,30 @@
     "craftDamage": 8,
     "speed": 7.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_tungsten",
+    "tool": "screwdriver",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_tungsten_steel",
+    "tool": "screwdriver",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 8.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -6648,6 +7128,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_neodymium_magnetic",
+    "tool": "knife",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "knife_nether_quartz",
     "tool": "knife",
     "material": "nether_quartz",
@@ -6657,6 +7149,18 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 1,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_nichrome",
+    "tool": "knife",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": "sword"
   },
   {
@@ -6873,6 +7377,30 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_tungsten",
+    "tool": "knife",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_tungsten_steel",
+    "tool": "knife",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 4,
     "kind": "sword"
   },
   {
@@ -7272,6 +7800,18 @@
     "kind": "wire_cutter"
   },
   {
+    "id": "wire_cutter_neodymium_magnetic",
+    "tool": "wire_cutter",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
     "id": "wire_cutter_nether_quartz",
     "tool": "wire_cutter",
     "material": "nether_quartz",
@@ -7281,6 +7821,18 @@
     "craftDamage": 8,
     "speed": 1.25,
     "quality": 1,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_nichrome",
+    "tool": "wire_cutter",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 2,
     "kind": "wire_cutter"
   },
   {
@@ -7497,6 +8049,30 @@
     "craftDamage": 8,
     "speed": 8.75,
     "quality": 3,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_tungsten",
+    "tool": "wire_cutter",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 3,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_tungsten_steel",
+    "tool": "wire_cutter",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 10.0,
+    "quality": 4,
     "kind": "wire_cutter"
   },
   {
@@ -7920,6 +8496,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_neodymium_magnetic",
+    "tool": "crowbar",
+    "material": "neodymium_magnetic",
+    "handle": "steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "crowbar_nether_quartz",
     "tool": "crowbar",
     "material": "nether_quartz",
@@ -7929,6 +8517,18 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 1,
+    "kind": null
+  },
+  {
+    "id": "crowbar_nichrome",
+    "tool": "crowbar",
+    "material": "nichrome",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
     "kind": null
   },
   {
@@ -8133,6 +8733,30 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "crowbar_tungsten",
+    "tool": "crowbar",
+    "material": "tungsten",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "crowbar_tungsten_steel",
+    "tool": "crowbar",
+    "material": "tungsten_steel",
+    "handle": "steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -8532,6 +9156,18 @@
     "kind": "drill"
   },
   {
+    "id": "drill_lv_neodymium_magnetic",
+    "tool": "drill_lv",
+    "material": "neodymium_magnetic",
+    "handle": "stainless_steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 21.0,
+    "quality": 2,
+    "kind": "drill"
+  },
+  {
     "id": "drill_lv_nether_quartz",
     "tool": "drill_lv",
     "material": "nether_quartz",
@@ -8541,6 +9177,18 @@
     "craftDamage": 2,
     "speed": 3.0,
     "quality": 1,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_nichrome",
+    "tool": "drill_lv",
+    "material": "nichrome",
+    "handle": "stainless_steel",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 18.0,
+    "quality": 2,
     "kind": "drill"
   },
   {
@@ -8757,6 +9405,30 @@
     "craftDamage": 2,
     "speed": 21.0,
     "quality": 3,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_tungsten",
+    "tool": "drill_lv",
+    "material": "tungsten",
+    "handle": "stainless_steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 21.0,
+    "quality": 3,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_tungsten_steel",
+    "tool": "drill_lv",
+    "material": "tungsten_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 24.0,
+    "quality": 4,
     "kind": "drill"
   },
   {
@@ -9156,6 +9828,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_neodymium_magnetic",
+    "tool": "chainsaw_lv",
+    "material": "neodymium_magnetic",
+    "handle": "stainless_steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 14.0,
+    "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_nether_quartz",
     "tool": "chainsaw_lv",
     "material": "nether_quartz",
@@ -9165,6 +9849,18 @@
     "craftDamage": 16,
     "speed": 2.0,
     "quality": 1,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_nichrome",
+    "tool": "chainsaw_lv",
+    "material": "nichrome",
+    "handle": "stainless_steel",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 12.0,
+    "quality": 2,
     "kind": "chainsaw"
   },
   {
@@ -9381,6 +10077,30 @@
     "craftDamage": 16,
     "speed": 14.0,
     "quality": 3,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_tungsten",
+    "tool": "chainsaw_lv",
+    "material": "tungsten",
+    "handle": "stainless_steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 14.0,
+    "quality": 3,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_tungsten_steel",
+    "tool": "chainsaw_lv",
+    "material": "tungsten_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 16.0,
+    "quality": 4,
     "kind": "chainsaw"
   },
   {
@@ -9780,6 +10500,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_lv_neodymium_magnetic",
+    "tool": "wrench_lv",
+    "material": "neodymium_magnetic",
+    "handle": "stainless_steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 14.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_lv_nether_quartz",
     "tool": "wrench_lv",
     "material": "nether_quartz",
@@ -9789,6 +10521,18 @@
     "craftDamage": 16,
     "speed": 2.0,
     "quality": 1,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_nichrome",
+    "tool": "wrench_lv",
+    "material": "nichrome",
+    "handle": "stainless_steel",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 12.0,
+    "quality": 2,
     "kind": "wrench"
   },
   {
@@ -10005,6 +10749,30 @@
     "craftDamage": 16,
     "speed": 14.0,
     "quality": 3,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_tungsten",
+    "tool": "wrench_lv",
+    "material": "tungsten",
+    "handle": "stainless_steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 14.0,
+    "quality": 3,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_tungsten_steel",
+    "tool": "wrench_lv",
+    "material": "tungsten_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 5120,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 16.0,
+    "quality": 4,
     "kind": "wrench"
   },
   {

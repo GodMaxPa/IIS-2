@@ -1,0 +1,24 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/tungsten_trioxide",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_tungsten",
+      "count": 1
+    }
+  ],
+  "duration": 12000,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrogen",
+      "amount": 6000
+    }
+  ],
+  "temp": 3000
+}

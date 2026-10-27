@@ -24,6 +24,10 @@ CASINGS = [
     ('stable_titanium_casing', 'MACHINE_CASING_STABLE_TITANIUM', 'gt.blockcasings4.2.name', 'Stable Titanium Machine Casing'),
     ('titanium_pipe_casing', 'MACHINE_CASING_PIPE_TITANIUM', 'gt.blockcasings2.14.name', 'Titanium Pipe Casing'),
     ('titanium_firebox_casing', 'MACHINE_CASING_FIREBOX_TITANIUM', 'gt.blockcasings4.3.name', 'Titanium Firebox Casing'),
+    # D98: GT_Block_Casings4:0, Casings2:15, Casings3:15
+    ('robust_tungstensteel_casing', 'MACHINE_CASING_ROBUST_TUNGSTENSTEEL', 'gt.blockcasings4.0.name', 'Robust Tungstensteel Machine Casing'),
+    ('tungstensteel_pipe_casing', 'MACHINE_CASING_PIPE_TUNGSTENSTEEL', 'gt.blockcasings2.15.name', 'Tungstensteel Pipe Casing'),
+    ('tungstensteel_firebox_casing', 'MACHINE_CASING_FIREBOX_TUNGSTENSTEEL', 'gt.blockcasings3.15.name', 'Tungstensteel Firebox Casing'),
 ]
 # tier, casing, pipe, firebox, steam L/t, steam per coal (L), heat-up seconds (32 portions of 40 ticks for bronze, 42 of 30 for
 # steel; GT's description says 500 / increase = 31.25 and 41.67 s, forgetting the boost), EN, material
@@ -32,6 +36,9 @@ BOILERS = [
     ('steel', 'solid_steel_casing', 'steel_pipe_casing', 'steel_firebox_casing', 1200, 36000, 63, 'Large Steel Boiler', 'Steel'),
     # D97: 800 EU/t, boost 130 %: 63 portions of 26 ticks = 82 s (GT says 500 / 8 = 62.5 s)
     ('titanium', 'stable_titanium_casing', 'titanium_pipe_casing', 'titanium_firebox_casing', 1600, 41600, 82, 'Large Titanium Boiler', 'Titanium'),
+    # D98: 1000 EU/t, boost 120 %: 125 portions of 24 ticks = 150 s (GT says 500 / 4 = 125 s)
+    ('tungstensteel', 'robust_tungstensteel_casing', 'tungstensteel_pipe_casing', 'tungstensteel_firebox_casing', 2000, 48000, 150,
+     'Large Tungstensteel Boiler', 'Tungstensteel'),
 ]
 
 
@@ -114,12 +121,15 @@ def generate(g):
     # :63 stable titanium casing "PhP/PFP/PwP" (titanium plates + frame); assembler :1393
     shaped('multi/stable_titanium_casing', f'{NS}:stable_titanium_casing', 2, ['PhP', 'PFP', 'PwP'],
            {'P': tag_of('plate', 'Titanium'), 'F': '#c:frames/titanium'})
-    for m in ('Bronze', 'Steel', 'Titanium'):   # :75-77, :87-89
-        mid = m.lower()
+    # :68 robust tungstensteel casing "PhP/PFP/PwP" (D98); assembler :1391
+    shaped('multi/robust_tungstensteel_casing', f'{NS}:robust_tungstensteel_casing', 2, ['PhP', 'PFP', 'PwP'],
+           {'P': tag_of('plate', 'TungstenSteel'), 'F': '#c:frames/tungsten_steel'})
+    for m in ('Bronze', 'Steel', 'Titanium', 'TungstenSteel'):   # :75-78, :87-90
+        bm, mid = m.lower(), mat_id(m)
         # :75-76 pipe casings "PIP/IFI/PIP" (I — medium pipe), :87-88 fireboxes "PSP/SFS/PSP" (S — rod)
-        shaped(f'multi/{mid}_pipe_casing', f'{NS}:{mid}_pipe_casing', 2, ['PIP', 'IFI', 'PIP'],
+        shaped(f'multi/{bm}_pipe_casing', f'{NS}:{bm}_pipe_casing', 2, ['PIP', 'IFI', 'PIP'],
                {'P': tag_of('plate', m), 'F': f'#c:frames/{mid}', 'I': f'{NS}:pipe_medium_{mid}'})
-        shaped(f'multi/{mid}_firebox_casing', f'{NS}:{mid}_firebox_casing', 2, ['PSP', 'SFS', 'PSP'],
+        shaped(f'multi/{bm}_firebox_casing', f'{NS}:{bm}_firebox_casing', 2, ['PSP', 'SFS', 'PSP'],
                {'P': tag_of('plate', m), 'F': f'#c:frames/{mid}', 'S': tag_of('rod', m)})
     tooltip('bronze_firebox_casing', [('Bottom layer of the Large Bronze Boiler', 'Нижний слой большого бронзового котла')])
     tooltip('steel_firebox_casing', [('Bottom layer of the Large Steel Boiler', 'Нижний слой большого стального котла')])
@@ -127,6 +137,8 @@ def generate(g):
     tooltip('steel_pipe_casing', [('Middle column of the Large Steel Boiler', 'Середина большого стального котла')])
     tooltip('titanium_firebox_casing', [('Bottom layer of the Large Titanium Boiler', 'Нижний слой большого титанового котла')])
     tooltip('titanium_pipe_casing', [('Middle column of the Large Titanium Boiler', 'Середина большого титанового котла')])
+    tooltip('tungstensteel_firebox_casing', [('Bottom layer of the Large Tungstensteel Boiler', 'Нижний слой большого вольфрамостального котла')])
+    tooltip('tungstensteel_pipe_casing', [('Middle column of the Large Tungstensteel Boiler', 'Середина большого вольфрамостального котла')])
 
     # --- controllers -----------------------------------------------------------------------------------------------------
     for tier, casing, pipe, firebox, steam, per_coal, heat_s, en, mat in BOILERS:
@@ -149,10 +161,12 @@ def generate(g):
         write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': variants})
         simple(bid)
         name(f'block.{NS}.{bid}', en, ru(f'gt.blockmachines.multimachine.boiler.{tier}.name', en))
-        m_ru = {'bronze': 'бронзовые', 'steel': 'стальные', 'titanium': 'титановые'}[tier]
+        m_ru = {'bronze': 'бронзовые', 'steel': 'стальные', 'titanium': 'титановые', 'tungstensteel': 'вольфрамостальные'}[tier]
         c_en, c_ru = {'bronze': ('Bronze Plated Bricks', 'кирпичи, обшитые бронзой'),
                       'steel': ('Solid Steel Machine Casings', 'стальные корпуса механизма'),
-                      'titanium': ('Stable Titanium Machine Casings', 'стабильные титановые корпуса')}[tier]
+                      'titanium': ('Stable Titanium Machine Casings', 'стабильные титановые корпуса'),
+                      'tungstensteel': ('Robust Tungstensteel Machine Casings', 'прочные вольфрамостальные корпуса')}[tier]
+        oxygen = {'titanium': 32, 'tungstensteel': 40}.get(tier)
         tooltip(bid, [
             (f'Produces {per_coal} L of Steam with 1 Coal at {steam} L/t', f'{per_coal} л пара с 1 угля, {steam} л/т'),
             ('A programmed circuit in the controller throttles it (-50 L/t per config)', 'Программная схема в контроллере снижает выход (−50 л/т за единицу)'),
@@ -163,8 +177,8 @@ def generate(g):
             ('Distilled Water first, then Water; runs dry - explodes', 'Сначала дистиллированная вода, потом обычная; без воды — взрыв'),
             (f'Diesel fuels have 1/4 efficiency; heats up in {heat_s} s', f'Дизельное топливо — с 1/4 отдачи; разогрев {heat_s} с'),
             ('Causes up to 240 Pollution per second', 'Загрязнение: до 240 в секунду')]
-            + ([('32 L of Oxygen per portion and solid fuel give a boost (x3)', '32 л кислорода за порцию с твёрдым топливом — разгон ×3')]
-               if tier == 'titanium' else []))
+            + ([(f'{oxygen} L of Oxygen per portion and solid fuel give a boost (x3)', f'{oxygen} л кислорода за порцию с твёрдым топливом — разгон ×3')]
+               if oxygen else []))
     # GT_Loader_MetaTileEntities:1157 "WCW/CMC/WCW": bronze firebox, basic circuit, tin cable.
     shaped('multi/large_boiler_bronze', f'{NS}:large_boiler_bronze', 1, ['WCW', 'CMC', 'WCW'],
            {'M': f'{NS}:bronze_firebox_casing', 'C': '#c:circuits/basic', 'W': '#iis:cables/1x/tin'})
@@ -174,6 +188,9 @@ def generate(g):
     # :1159 titanium: titanium firebox, Data circuits, gold cables (D97)
     shaped('multi/large_boiler_titanium', f'{NS}:large_boiler_titanium', 1, ['WCW', 'CMC', 'WCW'],
            {'M': f'{NS}:titanium_firebox_casing', 'C': '#c:circuits/data', 'W': '#iis:cables/1x/gold'})
+    # :1160 tungstensteel: tungstensteel firebox, Elite circuits, aluminium cables (D98)
+    shaped('multi/large_boiler_tungstensteel', f'{NS}:large_boiler_tungstensteel', 1, ['WCW', 'CMC', 'WCW'],
+           {'M': f'{NS}:tungstensteel_firebox_casing', 'C': '#c:circuits/elite', 'W': '#iis:cables/1x/aluminium'})
     shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'LargeBoiler.png'), tex_out('gui/multi/large_boiler.png'))
     for k, en, ruu in (('gui.iis.boiler.steam', 'Steam: %s L/t', 'Пар: %s л/т'),
                        ('gui.iis.boiler.sh_steam', 'Superheated steam: %s L/t', 'Перегретый пар: %s л/т'),
@@ -322,7 +339,7 @@ def generate(g):
          [rout(ref('hot_ingot', 'Titanium')), rout(ref('dust', 'Magnesiumchloride'), 2)], 800, 480,
          fin={'ingredient': f'{NS}:titaniumtetrachloride', 'amount': 1000}, temp=2140)
     # ProcessingToolHead:156 normal turbine: 8 blades + long titanium rod (320 t, 400 EU/t — HV assembler); durability x2.
-    # Large (12 blades + tungstensteel, 1600 EU/t) and huge (16 + americium, 6400 EU/t) wait for those materials
+    # Large: D98 below; huge (16 + americium, 6400 EU/t, IV) waits for americium
     if ref('long_rod', 'Titanium'):
         for n in sorted(g['names']):
             mid = mat_id(n)
@@ -341,6 +358,50 @@ def generate(g):
     mrec('circuit_assembler', 'circuit_data', [ing(f'{NS}:circuit_board_plastic', 2), ing(f'{NS}:circuit_advanced', 3), ing(f'{NS}:diode', 4),
                                                ing(f'{NS}:chip_ram', 4), ing(tag_of('wire_fine', 'Electrum'), 6)],
          [rout(f'{NS}:circuit_data')], 400, 90, fin={'ingredient': f'{NS}:molten_solderingalloy', 'amount': 144})
+    # --- D98: nichrome, tungstensteel, Elite circuit, large rotor, EV parts ---------------------------------------------
+    # GT_MachineRecipeLoader:1033 EBF 4 nickel + 1 chrome ingots -> 5 hot nichrome (max(mass / 32, 1) x 2700 t, 480 EU/t, 2700 K);
+    # :1029 tungsten + steel ingots -> 2 hot tungstensteel (max(mass / 80, 1) x 3000 t, 480 EU/t, 3000 K — nichrome coils)
+    mass = g['mass']
+    mrec('blast', 'nichrome_ingots', [ing(tag_of('ingot', 'Nickel'), 4), ing(tag_of('ingot', 'Chrome'))], [rout(ref('hot_ingot', 'Nichrome'), 5)],
+         max(mass('Nichrome') // 32, 1) * 2700, 480, temp=2700)
+    mrec('blast', 'tungstensteel_ingots', [ing(tag_of('ingot', 'Tungsten')), ing(tag_of('ingot', 'Steel'))],
+         [rout(ref('hot_ingot', 'TungstenSteel'), 2)], max(mass('TungstenSteel') // 80, 1) * 3000, 480, temp=3000)
+    # IIS tungsten processing (GT_MachineRecipeLoader2:37-52): scheelite / tungstate + 4000 L HCl -> chloride + 7 tungstic acid
+    # (100 t, 1920 EU/t — EV chemical reactor); tungstic acid + circuit 1 -> 4 WO3 + 3000 L water (200 t, 90); EBF 4 WO3 +
+    # 6000 L hydrogen -> hot tungsten ingot (12000 t, 120 EU/t, 3000 K — nichrome coils)
+    hcl = {'ingredient': f'{NS}:hydrochloricacid_gt5u', 'amount': 4000}
+    mrec('chemical_reactor', 'tungstic_acid_scheelite', [ing(tag_of('dust', 'Scheelite'), 6)],
+         [rout(ref('dust', 'CalciumChloride'), 3), rout(ref('dust', 'TungstigAcid'), 7)], 100, 1920, fin=hcl)
+    mrec('chemical_reactor', 'tungstic_acid_tungstate', [ing(tag_of('dust', 'Tungstate'), 7)],
+         [rout(ref('dust', 'LithiumChloride'), 4), rout(ref('dust', 'TungstigAcid'), 7)], 100, 1920, fin=hcl)
+    mrec('chemical_reactor', 'tungsten_trioxide', [ing(tag_of('dust', 'TungstigAcid'), 7)], [rout(ref('dust', 'TungstenTrioxide'), 4)], 200, 90,
+         fout={'id': 'minecraft:water', 'amount': 3000}, circuit=1)
+    mrec('blast', 'tungsten_trioxide', [ing(tag_of('dust', 'TungstenTrioxide'), 4)], [rout(ref('hot_ingot', 'Tungsten'))], 12000, 120,
+         fin={'ingredient': f'{NS}:hydrogen', 'amount': 6000}, temp=3000)
+    # GT_CraftingRecipeLoader:381 4 nickel + 1 chrome dust -> 5 nichrome dust
+    if ref('dust', 'Nichrome'):
+        g['shapeless']('dust/mix_nichrome', ref('dust', 'Nichrome'), 5, [tag_of('dust', 'Nickel')] * 4 + [tag_of('dust', 'Chrome')])
+    # :1391 assembler 6 tungstensteel plates + frame -> 2 robust casings
+    mrec('assembler', 'robust_tungstensteel_casing', [ing(tag_of('plate', 'TungstenSteel'), 6), ing('#c:frames/tungsten_steel')],
+         [rout(f'{NS}:robust_tungstensteel_casing', 2)], 50, 16)
+    # ProcessingToolHead:157 large turbine: 12 blades + long tungstensteel rod (640 t, 1600 EU/t — EV assembler); durability x3
+    if ref('long_rod', 'TungstenSteel'):
+        for n in sorted(g['names']):
+            mid = mat_id(n)
+            if ref('turbine_blade', n) and any(m['id'] == mid for m in turbine_mats):
+                m = mat_by_name[n]
+                rec[f'assembler/turbine_large_{mid}'] = {
+                    'type': f'{NS}:assembler', 'inputs': [ing(tag_of('turbine_blade', n), 12), ing(tag_of('long_rod', 'TungstenSteel'))],
+                    'outputs': [{'id': f'{NS}:turbine_large', 'count': 1, 'components': {
+                        f'{NS}:rotor_material': mid, 'minecraft:max_damage': 100 * int(m['toolDurability'] * 3.0)}}],
+                    'duration': 640, 'eut': 1600}
+    # :489 capacitor: plastic plate + 2 aluminium foil -> 2 (80 t, 96 EU/t)
+    mrec('assembler', 'capacitor', [ing(tag_of('plate', 'Plastic')), ing(tag_of('foil', 'Aluminium'), 2)], [rout(f'{NS}:capacitor', 2)], 80, 96)
+    # :572 Elite circuit: aluminium frame + 4 Data + 4 small coils + 24 capacitors + 16 RAM + 12 1x annealed copper wires +
+    # 288 L soldering alloy (1600 t, 480 EU/t — HV circuit assembler)
+    mrec('circuit_assembler', 'circuit_elite', [ing('#c:frames/aluminium'), ing(f'{NS}:circuit_data', 4), ing(f'{NS}:coil_small', 4),
+                                                ing(f'{NS}:capacitor', 24), ing(f'{NS}:chip_ram', 16), ing('#iis:wires/1x/annealed_copper', 12)],
+         [rout(f'{NS}:circuit_elite')], 1600, 480, fin={'ingredient': f'{NS}:molten_solderingalloy', 'amount': 288})
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     stats['d90_machine_recipes'] = len(rec)
@@ -438,7 +499,8 @@ def d92(g, mrec, ing, rout, shaped, tag_of, ref, NS):
       [rout(f'{NS}:circuit_advanced')], 800, 28, fin=sol)
     # --- hulls in the assembler (:1404-1407, mHardMachineCasings): 2 cables + casing + 288 L molten plastic (50 t, 16 EU/t) ---
     for rid, cable, casing, hull in (('lv', 'tin', 'casing_lv', 'hull_lv'), ('mv', 'copper', 'casing_mv', 'hull_mv'),
-                                     ('mv_annealed', 'annealed_copper', 'casing_mv', 'hull_mv'), ('hv', 'gold', 'casing_hv', 'hull_hv')):
+                                     ('mv_annealed', 'annealed_copper', 'casing_mv', 'hull_mv'), ('hv', 'gold', 'casing_hv', 'hull_hv'),
+                                     ('ev', 'aluminium', 'casing_ev', 'hull_ev')):   # :1408 EV (D98)
         m('assembler', f'hull_{rid}', [ing(f'#iis:cables/1x/{cable}', 2), ing(f'{NS}:{casing}')], [rout(f'{NS}:{hull}')], 50, 16,
           fin=fl(pl, 288))
     return n[0]

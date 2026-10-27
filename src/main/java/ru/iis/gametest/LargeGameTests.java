@@ -452,4 +452,54 @@ final class LargeGameTests {
             h.assertTrue(o.getMaxDamage() == 102400, "rotor durability " + o.getMaxDamage());
         });
     }
+
+    /** ЭДП с нихромовыми катушками (D98): нагрев 3600 K — хватает для вольфрамостали (3000 K). */
+    static void ebfNichromeCoils(GameTestHelper h) {
+        EbfBlockEntity e = MultiGameTests.build(h, 1);
+        BlockPos center = new BlockPos(4, 1, 2);
+        for (int dx = -1; dx <= 1; dx++)
+            for (int dz = -1; dz <= 1; dz++) {
+                if (dx == 0 && dz == 0) continue;
+                h.setBlock(center.offset(dx, 1, dz), MultiContent.COIL_NICHROME.get());
+                h.setBlock(center.offset(dx, 2, dz), MultiContent.COIL_NICHROME.get());
+            }
+        h.succeedWhen(() -> h.assertTrue(e.heat() == EbfBlockEntity.NICHROME_HEAT, "heat " + e.heat()));
+    }
+
+    /** Большой вольфрамостальной котёл (D98): формируется из вольфрамостальных корпусов, жжёт уголь и даёт пар. */
+    static void tungstensteelBoilerCoal(GameTestHelper h) {
+        LargeBoilerBlockEntity b = build(h, LargeBoilerLogic.Tier.TUNGSTENSTEEL);
+        ItemBusBlockEntity bus = h.getBlockEntity(BUS, ItemBusBlockEntity.class);
+        bus.setItem(0, new ItemStack(Items.COAL, 64));
+        h.succeedWhen(() -> {
+            h.assertTrue(b.formed(), "boiler not formed");
+            h.assertTrue(bus.getItem(0).getCount() < 64, "coal not used");
+            h.assertTrue(steam(h) > 0, "no steam in the output hatch");
+        });
+    }
+
+    /** Сборщик EV (D98): 12 стальных лопастей + длинный вольфрамостальной стержень → большой ротор (1600 EU/t), прочность ×3. */
+    static void assemblerMakesLargeRotor(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.ASSEMBLER_EV);
+        h.assertTrue(m.type().voltage() == 2048, "EV assembler voltage " + m.type().voltage());
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("turbine_blade_steel"), 12));
+        m.setItem(1, new ItemStack(ru.iis.command.SelfTest.item("long_rod_tungsten_steel")));
+        h.succeedWhen(() -> {
+            ItemStack o = m.getItem(m.type().inputs);
+            h.assertTrue(o.getItem() instanceof ru.iis.multi.TurbineRotorItem r && r.size == LargeTurbineLogic.Size.LARGE, "rotor: " + o);
+            h.assertTrue(o.getMaxDamage() == 153600, "rotor durability " + o.getMaxDamage());
+        });
+    }
+
+    /** Химреактор EV (D98): 7 тунгстата + 4000 л соляной кислоты → 4 хлорида лития + 7 вольфрамовой кислоты (1920 EU/t). */
+    static void evReactorTungsticAcid(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.CHEMICAL_REACTOR_EV);
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("dust_tungstate"), 7));
+        m.tank().setAmount(gt("hydrochloricacid_gt5u"), 4000);
+        h.succeedWhen(() -> {
+            int i = m.type().inputs;
+            h.assertTrue(m.getItem(i).is(ru.iis.command.SelfTest.item("dust_lithium_chloride")) && m.getItem(i).getCount() == 4, "out0 " + m.getItem(i));
+            h.assertTrue(m.getItem(i + 1).is(ru.iis.command.SelfTest.item("dust_tungstig_acid")) && m.getItem(i + 1).getCount() == 7, "out1 " + m.getItem(i + 1));
+        });
+    }
 }

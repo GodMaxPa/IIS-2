@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:small_dusts/tungsten",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 6,
+  "eut": 85,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_tungsten",
+      "amount": 36
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "fPd",
+    "SPS",
+    " P "
+  ],
+  "key": {
+    "P": "#iis:double_plates/neodymium_magnetic",
+    "S": "#iis:screws/neodymium_magnetic",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:turbine_blade_neodymium_magnetic"
+  }
+}

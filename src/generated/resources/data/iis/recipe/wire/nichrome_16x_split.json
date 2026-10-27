@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/16x/nichrome"
+  ],
+  "result": {
+    "id": "iis:wire_nichrome_1x",
+    "count": 16
+  }
+}

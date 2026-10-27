@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tungsten_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ring_tungsten_steel",
+      "count": 4
+    }
+  ],
+  "duration": 238,
+  "eut": 384,
+  "keep": [
+    "iis:shape_extruder_ring"
+  ]
+}

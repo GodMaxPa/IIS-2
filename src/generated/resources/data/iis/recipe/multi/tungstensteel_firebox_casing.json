@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PSP",
+    "SFS",
+    "PSP"
+  ],
+  "key": {
+    "P": "#c:plates/tungsten_steel",
+    "F": "#c:frames/tungsten_steel",
+    "S": "#c:rods/tungsten_steel"
+  },
+  "result": {
+    "id": "iis:tungstensteel_firebox_casing",
+    "count": 2
+  }
+}

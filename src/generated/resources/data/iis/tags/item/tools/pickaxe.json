@@ -33,7 +33,9 @@
     "iis:pickaxe_manganese",
     "iis:pickaxe_molybdenum",
     "iis:pickaxe_neodymium",
+    "iis:pickaxe_neodymium_magnetic",
     "iis:pickaxe_nether_quartz",
+    "iis:pickaxe_nichrome",
     "iis:pickaxe_nickel",
     "iis:pickaxe_olivine",
     "iis:pickaxe_opal",
@@ -52,6 +54,8 @@
     "iis:pickaxe_tin_alloy",
     "iis:pickaxe_titanium",
     "iis:pickaxe_topaz",
+    "iis:pickaxe_tungsten",
+    "iis:pickaxe_tungsten_steel",
     "iis:pickaxe_wrought_iron"
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/nichrome",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_nickel",
+      "count": 4
+    },
+    {
+      "id": "iis:dust_chrome",
+      "count": 1
+    }
+  ],
+  "duration": 1120,
+  "eut": 10
+}

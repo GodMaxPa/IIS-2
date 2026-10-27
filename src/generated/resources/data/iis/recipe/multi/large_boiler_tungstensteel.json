@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCW",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:tungstensteel_firebox_casing",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/aluminium"
+  },
+  "result": {
+    "id": "iis:large_boiler_tungstensteel"
+  }
+}

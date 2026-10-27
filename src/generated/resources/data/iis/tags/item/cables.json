@@ -90,6 +90,11 @@
     "iis:cable_kanthal_2x",
     "iis:cable_kanthal_4x",
     "iis:cable_kanthal_8x",
-    "iis:cable_kanthal_12x"
+    "iis:cable_kanthal_12x",
+    "iis:cable_nichrome_1x",
+    "iis:cable_nichrome_2x",
+    "iis:cable_nichrome_4x",
+    "iis:cable_nichrome_8x",
+    "iis:cable_nichrome_12x"
   ]
 }

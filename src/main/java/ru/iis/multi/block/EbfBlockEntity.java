@@ -31,6 +31,7 @@ import java.util.List;
 public class EbfBlockEntity extends MultiblockControllerBlockEntity {
     public static final int CUPRONICKEL_HEAT = 1800;
     public static final int KANTHAL_HEAT = 2700;
+    public static final int NICHROME_HEAT = 3600;
 
     private int heat;
 
@@ -100,10 +101,11 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
         return true;
     }
 
-    /** GT mHeatingCapacity by coil meta: cupronickel 1800, kanthal 2700 (D93); 0 — not a coil. */
+    /** GT mHeatingCapacity by coil meta: cupronickel 1800, kanthal 2700 (D93), nichrome 3600 (D98); 0 — not a coil. */
     public static int coilHeat(net.minecraft.world.level.block.Block b) {
         if (b == MultiContent.COIL_CUPRONICKEL.get()) return CUPRONICKEL_HEAT;
         if (b == MultiContent.COIL_KANTHAL.get()) return KANTHAL_HEAT;
+        if (b == MultiContent.COIL_NICHROME.get()) return NICHROME_HEAT;
         return 0;
     }
 

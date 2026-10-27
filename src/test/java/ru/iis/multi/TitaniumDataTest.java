@@ -44,7 +44,7 @@ class TitaniumDataTest {
         assertEquals("#iis:long_rods/titanium", rotor.getAsJsonArray("inputs").get(1).getAsJsonObject().get("ingredient").getAsString());
         assertEquals(400, rotor.get("eut").getAsInt());
         assertEquals(320, rotor.get("duration").getAsInt());
-        assertFalse(Files.exists(RECIPES.resolve("processing/assembler/turbine_large_steel.json")));   // вольфрамосталь — позже
+        assertFalse(Files.exists(RECIPES.resolve("processing/assembler/turbine_huge_steel.json")));    // америций — позже (большой — D98)
         JsonObject boiler = json("multi/large_boiler_titanium").getAsJsonObject("key");               // GT_Loader_MetaTileEntities:1159
         assertEquals("#c:circuits/data", boiler.get("C").getAsString());
         assertEquals("iis:titanium_firebox_casing", boiler.get("M").getAsString());

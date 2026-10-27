@@ -33,7 +33,9 @@
     "iis:drill_lv_manganese",
     "iis:drill_lv_molybdenum",
     "iis:drill_lv_neodymium",
+    "iis:drill_lv_neodymium_magnetic",
     "iis:drill_lv_nether_quartz",
+    "iis:drill_lv_nichrome",
     "iis:drill_lv_nickel",
     "iis:drill_lv_olivine",
     "iis:drill_lv_opal",
@@ -52,6 +54,8 @@
     "iis:drill_lv_tin_alloy",
     "iis:drill_lv_titanium",
     "iis:drill_lv_topaz",
+    "iis:drill_lv_tungsten",
+    "iis:drill_lv_tungsten_steel",
     "iis:drill_lv_wrought_iron"
   ]
 }

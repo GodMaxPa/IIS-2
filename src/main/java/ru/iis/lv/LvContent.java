@@ -118,6 +118,9 @@ public final class LvContent {
     public static final DeferredBlock<Block> CASING_HV = block("casing_hv", Block::new, LvContent::metal);
     // D92: Hull_HV (GT_Loader_MetaTileEntities:174, пластик)
     public static final DeferredBlock<Block> HULL_HV = block("hull_hv", Block::new, LvContent::metal);
+    // D98: GT_Block_Casings1 meta 4, Hull_EV (титан, пластик)
+    public static final DeferredBlock<Block> CASING_EV = block("casing_ev", Block::new, LvContent::metal);
+    public static final DeferredBlock<Block> HULL_EV = block("hull_ev", Block::new, LvContent::metal);
 
     // --- машины, генераторы, буферы, трансформатор ----------------------------------------------------------------
     public static final Map<LvMachineType, DeferredBlock<ElectricMachineBlock>> MACHINES = new EnumMap<>(LvMachineType.class);
@@ -219,6 +222,13 @@ public final class LvContent {
     public static final DeferredItem<Item> ROBOT_ARM_HV = item("robot_arm_hv");
     public static final DeferredItem<Item> EMITTER_HV = item("emitter_hv");
     public static final DeferredItem<Item> GRINDER_DIAMOND = item("grinder_diamond");
+    // D98: детали EV (GT_MetaGenerated_Item_01:485-631), конденсатор (:714), схема Elite (:699)
+    public static final DeferredItem<Item> ELECTRIC_MOTOR_EV = item("electric_motor_ev");
+    public static final DeferredItem<Item> ELECTRIC_PISTON_EV = item("electric_piston_ev");
+    public static final DeferredItem<Item> CONVEYOR_MODULE_EV = item("conveyor_module_ev");
+    public static final DeferredItem<Item> ROBOT_ARM_EV = item("robot_arm_ev");
+    public static final DeferredItem<Item> CAPACITOR = item("capacitor");
+    public static final DeferredItem<Item> CIRCUIT_ELITE = item("circuit_elite");
     // D94: малая катушка GT (GT_MetaGenerated_Item_03:50) — трансформатор HV
     public static final DeferredItem<Item> COIL_SMALL = item("coil_small");
     // D91: кремниевая буля, пластины и микросхемы GT (GT_MetaGenerated_Item_03:82-94)

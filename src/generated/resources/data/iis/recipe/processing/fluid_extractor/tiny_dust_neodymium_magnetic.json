@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/neodymium_magnetic",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 50,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_neodymium",
+      "amount": 16
+    }
+  ]
+}

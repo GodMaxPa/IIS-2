@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:turbine_blades/black_bronze",
+      "count": 12
+    },
+    {
+      "ingredient": "#iis:long_rods/tungsten_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:turbine_large",
+      "count": 1,
+      "components": {
+        "iis:rotor_material": "black_bronze",
+        "minecraft:max_damage": 76800
+      }
+    }
+  ],
+  "duration": 640,
+  "eut": 1600
+}

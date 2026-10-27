@@ -33,7 +33,9 @@
     "iis:shovel_manganese",
     "iis:shovel_molybdenum",
     "iis:shovel_neodymium",
+    "iis:shovel_neodymium_magnetic",
     "iis:shovel_nether_quartz",
+    "iis:shovel_nichrome",
     "iis:shovel_nickel",
     "iis:shovel_olivine",
     "iis:shovel_opal",
@@ -52,6 +54,8 @@
     "iis:shovel_tin_alloy",
     "iis:shovel_titanium",
     "iis:shovel_topaz",
+    "iis:shovel_tungsten",
+    "iis:shovel_tungsten_steel",
     "iis:shovel_wrought_iron"
   ]
 }

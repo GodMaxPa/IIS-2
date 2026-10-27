@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/tungsten_trioxide",
+    "#iis:small_dusts/tungsten_trioxide",
+    "#iis:small_dusts/tungsten_trioxide",
+    "#iis:small_dusts/tungsten_trioxide"
+  ],
+  "result": {
+    "id": "iis:dust_tungsten_trioxide"
+  }
+}

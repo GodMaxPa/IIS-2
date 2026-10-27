@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:turbine_blades/stainless_steel",
+      "count": 12
+    },
+    {
+      "ingredient": "#iis:long_rods/tungsten_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:turbine_large",
+      "count": 1,
+      "components": {
+        "iis:rotor_material": "stainless_steel",
+        "minecraft:max_damage": 144000
+      }
+    }
+  ],
+  "duration": 640,
+  "eut": 1600
+}

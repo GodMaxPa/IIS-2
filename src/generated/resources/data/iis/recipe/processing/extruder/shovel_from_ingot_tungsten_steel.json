@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tungsten_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:shovel_head_tungsten_steel",
+      "count": 1
+    }
+  ],
+  "duration": 119,
+  "eut": 512,
+  "keep": [
+    "iis:shape_extruder_shovel"
+  ]
+}

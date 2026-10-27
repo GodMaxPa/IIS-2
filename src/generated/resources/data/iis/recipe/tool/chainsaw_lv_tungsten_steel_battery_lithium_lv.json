@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SXd",
+    "GMG",
+    "PBP"
+  ],
+  "key": {
+    "X": "#iis:tool_heads/chainsaw/tungsten_steel",
+    "M": "iis:electric_motor_lv",
+    "S": "#iis:screws/stainless_steel",
+    "P": "#c:plates/stainless_steel",
+    "G": "#iis:small_gears/stainless_steel",
+    "B": "iis:battery_lithium_lv",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:chainsaw_lv_tungsten_steel",
+    "components": {
+      "iis:max_charge": 100000
+    }
+  }
+}

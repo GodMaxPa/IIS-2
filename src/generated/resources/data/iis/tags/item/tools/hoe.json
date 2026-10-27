@@ -33,7 +33,9 @@
     "iis:hoe_manganese",
     "iis:hoe_molybdenum",
     "iis:hoe_neodymium",
+    "iis:hoe_neodymium_magnetic",
     "iis:hoe_nether_quartz",
+    "iis:hoe_nichrome",
     "iis:hoe_nickel",
     "iis:hoe_olivine",
     "iis:hoe_opal",
@@ -52,6 +54,8 @@
     "iis:hoe_tin_alloy",
     "iis:hoe_titanium",
     "iis:hoe_topaz",
+    "iis:hoe_tungsten",
+    "iis:hoe_tungsten_steel",
     "iis:hoe_wrought_iron"
   ]
 }

@@ -1978,5 +1978,115 @@
     "amperage": 64,
     "loss": 6,
     "thickness": 12.0
+  },
+  {
+    "id": "wire_nichrome_1x",
+    "material": "nichrome",
+    "size": 1,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 3,
+    "loss": 8,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_nichrome_1x",
+    "material": "nichrome",
+    "size": 1,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 3,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_nichrome_2x",
+    "material": "nichrome",
+    "size": 2,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 6,
+    "loss": 8,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_nichrome_2x",
+    "material": "nichrome",
+    "size": 2,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 6,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_nichrome_4x",
+    "material": "nichrome",
+    "size": 4,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 12,
+    "loss": 8,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_nichrome_4x",
+    "material": "nichrome",
+    "size": 4,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 12,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_nichrome_8x",
+    "material": "nichrome",
+    "size": 8,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 24,
+    "loss": 8,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_nichrome_8x",
+    "material": "nichrome",
+    "size": 8,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 24,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_nichrome_12x",
+    "material": "nichrome",
+    "size": 12,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 36,
+    "loss": 8,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_nichrome_12x",
+    "material": "nichrome",
+    "size": 12,
+    "insulated": true,
+    "voltage": 2048,
+    "amperage": 36,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_nichrome_16x",
+    "material": "nichrome",
+    "size": 16,
+    "insulated": false,
+    "voltage": 2048,
+    "amperage": 48,
+    "loss": 8,
+    "thickness": 12.0
   }
 ]

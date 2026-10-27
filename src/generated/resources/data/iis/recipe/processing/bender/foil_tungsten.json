@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/tungsten",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_tungsten",
+      "count": 4
+    }
+  ],
+  "duration": 183,
+  "eut": 24
+}

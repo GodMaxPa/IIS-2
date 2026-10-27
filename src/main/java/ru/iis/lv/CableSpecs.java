@@ -26,7 +26,8 @@ public final class CableSpecs {
             {"cupronickel", 3, 6, 2, 128L}, {"copper", 2, 4, 1, 128L}, {"annealed_copper", 1, 2, 1, 128L},
             {"gold", 2, 4, 3, 512L}, {"electrum", 2, 4, 2, 512L}, {"silver", 1, 2, 1, 512L},
             {"steel", 2, 4, 2, 2048L}, {"aluminium", 1, 2, 1, 2048L}, {"platinum", 1, 2, 2, 8192L},
-            {"kanthal", 3, 6, 4, 512L}};   // D93: катушки HV
+            {"kanthal", 3, 6, 4, 512L},    // D93: катушки HV
+            {"nichrome", 4, 8, 3, 2048L}};  // D98: катушки EV, нихромовая катушка ЭДП
     private static final int[] SIZES = {1, 2, 4, 8, 12, 16};
     /** Ширина GT: провод 0.125…0.75 блока, кабель 0.25…0.75 (в пикселях ×16); кабеля 16x в GT нет (закомментирован). */
     private static final double[][] THICK = {{2, 4}, {4, 6}, {6, 8}, {8, 10}, {10, 12}, {12, 0}};

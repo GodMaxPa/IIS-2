@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tungsten",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_tungsten",
+      "count": 1
+    }
+  ],
+  "duration": 366,
+  "eut": 128,
+  "keep": [
+    "iis:mold_plate"
+  ]
+}

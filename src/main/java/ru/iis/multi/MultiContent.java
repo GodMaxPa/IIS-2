@@ -62,7 +62,7 @@ public final class MultiContent {
         return b;
     }
 
-    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel", "titanium");
+    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel", "titanium", "tungsten_steel");
     public static final Map<String, DeferredBlock<Block>> FRAMES = new LinkedHashMap<>();
     static {
         for (String m : FRAME_MATERIALS) {
@@ -73,6 +73,8 @@ public final class MultiContent {
     public static final DeferredBlock<Block> COIL_CUPRONICKEL = block("coil_cupronickel", Block::new, MultiContent::metal);
     /** GT_Block_Casings5 meta 1 (D93): 2700 K. */
     public static final DeferredBlock<Block> COIL_KANTHAL = block("coil_kanthal", Block::new, MultiContent::metal);
+    /** GT_Block_Casings5 meta 2 (D98): 3600 K. */
+    public static final DeferredBlock<Block> COIL_NICHROME = block("coil_nichrome", Block::new, MultiContent::metal);
     /** GT_Block_Casings2 meta 1: морозостойкий корпус вакуумного морозильника (D81). */
     public static final DeferredBlock<Block> FROST_PROOF_CASING = block("frost_proof_casing", Block::new, MultiContent::metal);
     public static final Map<HatchType, DeferredBlock<HatchBlock>> HATCHES = new EnumMap<>(HatchType.class);
@@ -94,10 +96,14 @@ public final class MultiContent {
     public static final DeferredBlock<Block> STABLE_TITANIUM_CASING = block("stable_titanium_casing", Block::new, MultiContent::metal);
     public static final DeferredBlock<Block> TITANIUM_PIPE_CASING = block("titanium_pipe_casing", Block::new, MultiContent::metal);
     public static final DeferredBlock<Block> TITANIUM_FIREBOX_CASING = block("titanium_firebox_casing", Block::new, MultiContent::metal);
-    /** Большие котлы GT (GT_Loader_MetaTileEntities:1152–1154); вольфрамостальной придёт с вольфрамосталью. */
+    /** D98: GT_Block_Casings4:0 прочный вольфрамостальной корпус, Casings2:15 трубы, Casings3:15 топка. */
+    public static final DeferredBlock<Block> ROBUST_TUNGSTENSTEEL_CASING = block("robust_tungstensteel_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> TUNGSTENSTEEL_PIPE_CASING = block("tungstensteel_pipe_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> TUNGSTENSTEEL_FIREBOX_CASING = block("tungstensteel_firebox_casing", Block::new, MultiContent::metal);
+    /** Большие котлы GT (GT_Loader_MetaTileEntities:1152–1155). */
     public static final Map<LargeBoilerLogic.Tier, DeferredBlock<LargeBoilerBlock>> LARGE_BOILERS = new EnumMap<>(LargeBoilerLogic.Tier.class);
     static {
-        for (LargeBoilerLogic.Tier t : List.of(LargeBoilerLogic.Tier.BRONZE, LargeBoilerLogic.Tier.STEEL, LargeBoilerLogic.Tier.TITANIUM)) {
+        for (LargeBoilerLogic.Tier t : LargeBoilerLogic.Tier.values()) {
             LARGE_BOILERS.put(t, block("large_boiler_" + t.name().toLowerCase(Locale.ROOT), p -> new LargeBoilerBlock(p, t),
                     p -> metal(p).lightLevel(s -> s.getValue(MachineBlock.ACTIVE) ? 13 : 0)));
         }
@@ -122,6 +128,8 @@ public final class MultiContent {
         return switch (t) {
             case STEEL -> new LargeBoilerBlockEntity.Casings(SOLID_STEEL_CASING.get(), STEEL_PIPE_CASING.get(), STEEL_FIREBOX_CASING.get());
             case TITANIUM -> new LargeBoilerBlockEntity.Casings(STABLE_TITANIUM_CASING.get(), TITANIUM_PIPE_CASING.get(), TITANIUM_FIREBOX_CASING.get());
+            case TUNGSTENSTEEL -> new LargeBoilerBlockEntity.Casings(ROBUST_TUNGSTENSTEEL_CASING.get(), TUNGSTENSTEEL_PIPE_CASING.get(),
+                    TUNGSTENSTEEL_FIREBOX_CASING.get());
             default -> new LargeBoilerBlockEntity.Casings(BRONZE_PLATED_BRICKS.get(), BRONZE_PIPE_CASING.get(), BRONZE_FIREBOX_CASING.get());
         };
     }

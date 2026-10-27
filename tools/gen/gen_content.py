@@ -148,6 +148,11 @@ names |= {'Plastic', 'Wheat'}
 names |= {'Kanthal'}
 # D97: titanium (GT_MachineRecipeLoader:1043, 1179): rutile + carbon + chlorine -> TiCl4, magnesium reduction in the EBF
 names |= {'Titanium', 'Rutile', 'Carbon', 'Magnesiumchloride'}
+# D98: tungsten (tungstate/scheelite electrolysis), tungstensteel (GT_MachineRecipeLoader:1029), nichrome coils (:1033),
+# magnetic neodymium for the EV motor (ProcessingTransforming:40)
+names |= {'Tungsten', 'TungstenSteel', 'Nichrome', 'NeodymiumMagnetic'}
+# IIS tungsten processing (GT_MachineRecipeLoader2:36-52): tungstic acid, tungsten trioxide, lithium and calcium chlorides
+names |= {'TungstigAcid', 'TungstenTrioxide', 'LithiumChloride', 'CalciumChloride'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64

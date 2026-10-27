@@ -33,7 +33,9 @@
     "iis:file_manganese",
     "iis:file_molybdenum",
     "iis:file_neodymium",
+    "iis:file_neodymium_magnetic",
     "iis:file_nether_quartz",
+    "iis:file_nichrome",
     "iis:file_nickel",
     "iis:file_olivine",
     "iis:file_opal",
@@ -52,6 +54,8 @@
     "iis:file_tin_alloy",
     "iis:file_titanium",
     "iis:file_topaz",
+    "iis:file_tungsten",
+    "iis:file_tungsten_steel",
     "iis:file_wrought_iron"
   ]
 }

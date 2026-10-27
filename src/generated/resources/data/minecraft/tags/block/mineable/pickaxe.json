@@ -314,6 +314,9 @@
     "iis:end_small_ore_zinc",
     "iis:firebrick_casing",
     "iis:bricked_blast_furnace",
+    "iis:casing_ev",
+    "iis:assembler_ev",
+    "iis:chemical_reactor_ev",
     "iis:coke_oven_bricks",
     "iis:coke_oven",
     "iis:frost_proof_casing",
@@ -330,6 +333,9 @@
     "iis:universal_tank_steel",
     "iis:stable_titanium_casing",
     "iis:titanium_pipe_casing",
-    "iis:titanium_firebox_casing"
+    "iis:titanium_firebox_casing",
+    "iis:robust_tungstensteel_casing",
+    "iis:tungstensteel_pipe_casing",
+    "iis:tungstensteel_firebox_casing"
   ]
 }

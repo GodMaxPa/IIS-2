@@ -33,6 +33,7 @@ WIRES = [
     ('Aluminium', 1, 2, 1, 2048),
     ('Platinum', 1, 2, 2, 8192),
     ('Kanthal', 3, 6, 4, 512),       # GT_Loader_MetaTileEntities:1482 (bEC), HV heating coils (D93)
+    ('Nichrome', 4, 8, 3, 2048),     # :1488 (bEC), EV heating coils, nichrome EBF coil (D98)
 ]
 # size, bare thickness, insulated thickness (GT makeWires; there is no 16x cable — commented out in GT), insulation ring
 # (GT_MetaPipeEntity_Cable#getTexture by thickness: <0.374 TINY, <0.499 SMALL, <0.624 MEDIUM, <0.749 MEDIUM_PLUS, <0.874 LARGE)
@@ -117,6 +118,9 @@ MV_MACHINES = [m[:7] + (MV_TANKS.get(m[0], m[7]),) + m[8:] for m in MACHINES if 
 HV_TANKS = {'mixer': 24000}
 HV_OUTPUTS = {'macerator': 2}
 HV_MACHINES = [m[:6] + (HV_OUTPUTS.get(m[0], m[6]), HV_TANKS.get(m[0], m[7])) + m[8:] for m in MV_MACHINES]
+# EV (D98): the assembler (large turbine rotor, 1600 EU/t) and the chemical reactor (tungsten processing, 1920 EU/t —
+# GT_MachineRecipeLoader2:37-42) only (GT_Loader_MetaTileEntities Machine_EV_Assembler, :833 Machine_EV_ChemicalReactor)
+EV_MACHINES = [m for m in HV_MACHINES if m[0] in ('assembler', 'chemical_reactor')]
 # GT_Loader_MetaTileEntities Machine_MV_* crafting: GT pattern letters; X.* resolved for tier 2 in lv.generate
 # (GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330, Tier.ELECTRIC[2]); other values are literal ingredients
 MV_CRAFT = {
@@ -186,6 +190,13 @@ ITEMS = [
     ('electric_piston_hv', 'gt:642', 'gt.metaitem.01.32642.name', 'Electric Piston (HV)', 'Электропоршень (HV)'),
     ('robot_arm_hv', 'gt:652', 'gt.metaitem.01.32652.name', 'Robot Arm (HV)', 'Манипулятор (HV)'),
     ('emitter_hv', 'gt:682', 'gt.metaitem.01.32682.name', 'Emitter (HV)', 'Излучатель (HV)'),
+    # D98: GT_MetaGenerated_Item_01:485-631 EV motor, piston, conveyor, robot arm; :714 capacitor, :699 Elite circuit (Mainframe)
+    ('electric_motor_ev', 'gt:603', 'gt.metaitem.01.32603.name', 'Electric Motor (EV)', 'Электродвигатель (EV)'),
+    ('electric_piston_ev', 'gt:643', 'gt.metaitem.01.32643.name', 'Electric Piston (EV)', 'Электропоршень (EV)'),
+    ('conveyor_module_ev', 'gt:633', 'gt.metaitem.01.32633.name', 'Conveyor Module (EV)', 'Конвейерный модуль (EV)'),
+    ('robot_arm_ev', 'gt:653', 'gt.metaitem.01.32653.name', 'Robot Arm (EV)', 'Манипулятор (EV)'),
+    ('capacitor', 'gt:718', 'gt.metaitem.01.32718.name', 'Capacitor', 'Конденсатор'),
+    ('circuit_elite', 'gt:705', 'gt.metaitem.01.32705.name', 'Mainframe', 'Мейнфрейм'),
     # D94: GT_MetaGenerated_Item_03:50 small coil (HV transformer)
     ('coil_small', 'gt:coil_small', 'gt.metaitem.03.32014.name', 'Small Coil', 'Малая катушка'),
     ('grinder_diamond', 'gt:722', 'gt.metaitem.01.32722.name', 'Diamond Grinding Head', 'Алмазная шлифовальная головка'),
@@ -521,6 +532,7 @@ def generate(g):
     add_item_tag('c:circuits/good', f'{NS}:circuit_integrated_good')   # Item_03:141, circuit Good (D92)
     add_item_tag('c:circuits/advanced', f'{NS}:circuit_advanced')      # IC2 advancedCircuit = circuit Advanced (D92)
     add_item_tag('c:circuits/data', f'{NS}:circuit_data')              # GT circuit Data (D97)
+    add_item_tag('c:circuits/elite', f'{NS}:circuit_elite')            # GT circuit Elite (D98)
     name(f'item.{NS}.battery_lv.tooltip', 'Stores %s / %s EU', 'Запас: %s / %s EU')
 
     # creosote (Railcraft coke oven byproduct; GT Materials.Creosote, FuelType 3 = semifluid generator)
@@ -675,11 +687,12 @@ def generate(g):
     # --------------------------------------------------------------------------------------------------------
     ic = os.path.join(LV, 'iconsets')
     for f in ('MACHINE_LV_SIDE', 'MACHINE_LV_TOP', 'MACHINE_LV_BOTTOM', 'MACHINE_MV_SIDE', 'MACHINE_MV_TOP', 'MACHINE_MV_BOTTOM',
-              'MACHINE_HV_SIDE', 'MACHINE_HV_TOP', 'MACHINE_HV_BOTTOM'):
+              'MACHINE_HV_SIDE', 'MACHINE_HV_TOP', 'MACHINE_HV_BOTTOM', 'MACHINE_EV_SIDE', 'MACHINE_EV_TOP', 'MACHINE_EV_BOTTOM'):
         img(os.path.join(ic, f + '.png')).crop((0, 0, 16, 16)).save(tex_out(f'block/lv/{f.lower()}.png'))
     for bid, en, key in (('casing_lv', 'LV Machine Casing', 'gt.blockcasings.1.name'), ('hull_lv', 'LV Machine Hull', 'gt.blockmachines.hull.tier.01.name'),
                          ('casing_mv', 'MV Machine Casing', 'gt.blockcasings.2.name'), ('hull_mv', 'MV Machine Hull', 'gt.blockmachines.hull.tier.02.name'),
-                         ('casing_hv', 'HV Machine Casing', 'gt.blockcasings.3.name'), ('hull_hv', 'HV Machine Hull', 'gt.blockmachines.hull.tier.03.name')):
+                         ('casing_hv', 'HV Machine Casing', 'gt.blockcasings.3.name'), ('hull_hv', 'HV Machine Hull', 'gt.blockmachines.hull.tier.03.name'),
+                         ('casing_ev', 'EV Machine Casing', 'gt.blockcasings.4.name'), ('hull_ev', 'EV Machine Hull', 'gt.blockmachines.hull.tier.04.name')):
         tr = bid[-2:]
         side, top, bottom = (f'{NS}:block/lv/machine_{tr}_{x}' for x in ('side', 'top', 'bottom'))
         cube_model(bid, {'front': side, 'back': side, 'side': side, 'top': top, 'bottom': bottom})
@@ -700,6 +713,10 @@ def generate(g):
     shaped('lv/casing_hv', f'{NS}:casing_hv', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'StainlessSteel')})
     shaped('lv/hull_hv', f'{NS}:hull_hv', 1, ['PHP', 'CMC'],
            {'P': tag_of('plate', 'Plastic'), 'H': tag_of('plate', 'StainlessSteel'), 'C': C('Gold'), 'M': f'{NS}:casing_hv'})
+    # D98: :55 Casing_EV (titanium), :175 Hull_EV "PHP/CMC" (aluminium cable, titanium + plastic plates)
+    shaped('lv/casing_ev', f'{NS}:casing_ev', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'Titanium')})
+    shaped('lv/hull_ev', f'{NS}:hull_ev', 1, ['PHP', 'CMC'],
+           {'P': tag_of('plate', 'Plastic'), 'H': tag_of('plate', 'Titanium'), 'C': C('Aluminium'), 'M': f'{NS}:casing_ev'})
 
     def machine_tex(bid, base_dir, faces_src):
         """faces_src: face -> (base iconset name, overlay path or None)."""
@@ -723,7 +740,7 @@ def generate(g):
     # --------------------------------------------------------------------------------------------------------
     machine_list = []
     for (mid_, gtn, ov, gui, rmap, nin, nout, tank, en), tr in ([(m, 'lv') for m in MACHINES] + [(m, 'mv') for m in MV_MACHINES]
-                                                              + [(m, 'hv') for m in HV_MACHINES]):
+                                                              + [(m, 'hv') for m in HV_MACHINES] + [(m, 'ev') for m in EV_MACHINES]):
         bid = f'{mid_}_{tr}'
         odir = os.path.join(LV, 'basicmachines', ov.lower())
         T = tr.upper()
@@ -735,7 +752,8 @@ def generate(g):
             'back': (f'MACHINE_{T}_SIDE', os.path.join(ic, 'OVERLAY_PIPE_OUT.png')),
             'top': (f'MACHINE_{T}_TOP', ovf('TOP')), 'bottom': (f'MACHINE_{T}_BOTTOM', ovf('BOTTOM'))})
         shutil.copy(os.path.join(LV, 'gui', gui + '.png'), tex_out(f'gui/lv/{gui.lower()}.png'))
-        prefix, tier_n, volts, suffix = {'lv': ('Basic', '01', 32, ''), 'mv': ('Advanced', '02', 128, ''), 'hv': ('Advanced', '03', 512, ' II')}[tr]
+        prefix, tier_n, volts, suffix = {'lv': ('Basic', '01', 32, ''), 'mv': ('Advanced', '02', 128, ''), 'hv': ('Advanced', '03', 512, ' II'),
+                                         'ev': ('Advanced', '04', 2048, ' III')}[tr]
         name(f'block.{NS}.{bid}', f'{prefix} {en}{suffix}', ru(f'gt.blockmachines.basicmachine.{gtn}.tier.{tier_n}.name', f'{prefix} {en}{suffix}'))
         tooltip_lines(bid, [(f'Voltage IN: {volts} EU/t ({T})', f'Входное напряжение: {volts} EU/t ({T})'),
                             ('Output side: back', 'Выход: задняя сторона')])
@@ -1219,6 +1237,23 @@ def generate(g):
     HV_CRAFT['chemical_reactor'][1]['G'] = f'{NS}:pipe_medium_plastic'      # :832 plastic pipe instead of glass
     for mid_, (pattern, letters) in HV_CRAFT.items():
         shaped(f'lv/{mid_}_hv', f'{NS}:{mid_}_hv', 1, pattern, {k: XHV.get(v, v) for k, v in letters.items()})
+    # --- EV (D98): GT_MetaGenerated_Item_01:497 motor (magnetic neodymium, titanium rods, 8x annealed copper, aluminium cable),
+    # :583 conveyor, :613 piston (titanium), :631 robot arm (Data circuit); EV assembler (Tier.ELECTRIC[4]: EV hull, Data circuit,
+    # aluminium cable)
+    MOTOR_EV, PISTON_EV, CONV_EV, ARM_EV = (f'{NS}:{x}' for x in ('electric_motor_ev', 'electric_piston_ev', 'conveyor_module_ev', 'robot_arm_ev'))
+    CIRC_EV = '#c:circuits/data'
+    shaped('lv/electric_motor_ev', MOTOR_EV, 1, ['CWR', 'WIW', 'RWC'], {'I': R('NeodymiumMagnetic'), 'R': R('Titanium'), 'W': W('AnnealedCopper', 8),
+                                                                       'C': C('Aluminium')})
+    shaped('lv/conveyor_module_ev', CONV_EV, 1, ['RRR', 'MCM', 'RRR'], {'M': MOTOR_EV, 'C': C('Aluminium'), 'R': P('Rubber')})
+    shaped('lv/electric_piston_ev', PISTON_EV, 1, ['PPP', 'CSS', 'CMG'], {'P': P('Titanium'), 'S': R('Titanium'),
+                                                                         'G': tag_of('small_gear', 'Titanium'), 'M': MOTOR_EV, 'C': C('Aluminium')})
+    shaped('lv/robot_arm_ev', ARM_EV, 1, ['CCC', 'MSM', 'PES'], {'S': R('Titanium'), 'M': MOTOR_EV, 'P': PISTON_EV, 'E': CIRC_EV, 'C': C('Aluminium')})
+    XEV = {'HULL': f'{NS}:hull_ev', 'CIRCUIT': CIRC_EV, 'WIRE': C('Aluminium'), 'CONVEYOR': CONV_EV, 'ROBOT_ARM': ARM_EV, 'MOTOR': MOTOR_EV,
+           'ROTOR': tag_of('rotor', 'StainlessSteel')}
+    EV_CRAFT = {m[0]: (MV_CRAFT[m[0]][0], dict(MV_CRAFT[m[0]][1])) for m in EV_MACHINES}
+    EV_CRAFT['chemical_reactor'][1]['G'] = f'{NS}:pipe_large_plastic'   # :833 large plastic pipe
+    for mid_, (pattern, letters) in EV_CRAFT.items():
+        shaped(f'lv/{mid_}_ev', f'{NS}:{mid_}_ev', 1, pattern, {k: XEV.get(v, v) for k, v in letters.items()})
     # GT_Loader_MetaTileEntities:206 MV transformer " BB/CM / BB": MV hull, gold cable, copper cables
     shaped('lv/transformer_mv', f'{NS}:transformer_mv', 1, [' BB', 'CM ', ' BB'], {'M': HULL_MV, 'C': C('Gold'), 'B': C('Copper')})
 
@@ -1378,10 +1413,12 @@ def generate(g):
             mrec('ore_washer', f'impure_{mid}', [ing(tag_of('impure_dust', n))], [out(ref('dust', n))], 8, 4, WATER(100))
         # LV macerator gives all outputs (steam ones keep only the first): already in iis:macerator
     # ProcessingTransforming: polarizer iron/wrought iron/steel forms -> magnetic (max(16, amount*128/M), 16 EU/t)
-    for src, dst in (('Iron', 'IronMagnetic'), ('WroughtIron', 'IronMagnetic'), ('Steel', 'SteelMagnetic')):
+    # :40 neodymium -> magnetic neodymium at 256 EU/t (HV polarizer, D98)
+    for src, dst, eut in (('Iron', 'IronMagnetic', 16), ('WroughtIron', 'IronMagnetic', 16), ('Steel', 'SteelMagnetic', 16),
+                          ('Neodymium', 'NeodymiumMagnetic', 256)):
         for p, ticks in (('rod', 64), ('ingot', 128), ('plate', 128), ('dust', 128), ('long_rod', 128)):
             if ref(p, src) and ref(p, dst):
-                mrec('polarizer', f'{p}_{mat_id(src)}', [ing(tag_of(p, src))], [out(ref(p, dst))], ticks, 16)
+                mrec('polarizer', f'{p}_{mat_id(src)}', [ing(tag_of(p, src))], [out(ref(p, dst))], ticks, eut)
     # IIS RailCraft.zs:254 Mixer: 4 clay dust + 5 sand + 100 L water -> wet coke oven brick (20 t, 16 EU/t)
     mrec('mixer', 'wet_coke_oven_brick', [ing(tag_of('dust', 'Clay'), 4), ing('#c:sands', 5)], [out(f'{NS}:wet_coke_oven_brick')], 20, 16, WATER(100))
     # GT_MachineRecipeLoader mixer alloy dusts (bronze, brass, red alloy, battery alloy, soldering alloy, invar, electrum, cupronickel)
@@ -1452,7 +1489,7 @@ def generate(g):
     stats['chem'] = _chem.chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER)
     # GT_MachineRecipeLoader:1371-1372: assembler 8 plates + programmed circuit 8 -> machine casing (50 t, 16 EU/t); the hull
     # variant needs molten plastic (mHardMachineCasings) and waits for plastic
-    for tr, mat in (('lv', 'Steel'), ('mv', 'Aluminium'), ('hv', 'StainlessSteel')):   # :1373 HV (D90)
+    for tr, mat in (('lv', 'Steel'), ('mv', 'Aluminium'), ('hv', 'StainlessSteel'), ('ev', 'Titanium')):   # :1373 HV (D90), :1374 EV (D98)
         mrec('assembler', f'casing_{tr}', [ing(tag_of('plate', mat), 8)], [out(f'{NS}:casing_{tr}')], 50, 16, circuit=8)
     # GT_MachineRecipeLoader:483, :485 small coil: 8 fine copper / annealed copper wires + steel bolt -> 2 (80 t, 8 EU/t, D94)
     for wm in ('Copper', 'AnnealedCopper'):

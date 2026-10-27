@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/lithium_chloride",
+    "#iis:small_dusts/lithium_chloride",
+    "#iis:small_dusts/lithium_chloride",
+    "#iis:small_dusts/lithium_chloride"
+  ],
+  "result": {
+    "id": "iis:dust_lithium_chloride"
+  }
+}

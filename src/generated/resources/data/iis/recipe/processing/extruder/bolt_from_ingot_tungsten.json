@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tungsten",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_tungsten",
+      "count": 8
+    }
+  ],
+  "duration": 366,
+  "eut": 512,
+  "keep": [
+    "iis:shape_extruder_bolt"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "CSS",
+    "CMG"
+  ],
+  "key": {
+    "P": "#c:plates/titanium",
+    "S": "#c:rods/titanium",
+    "G": "#iis:small_gears/titanium",
+    "M": "iis:electric_motor_ev",
+    "C": "#iis:cables/1x/aluminium"
+  },
+  "result": {
+    "id": "iis:electric_piston_ev"
+  }
+}

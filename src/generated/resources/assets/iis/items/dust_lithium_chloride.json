@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/dust_lithium_chloride",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 15137535
+      }
+    ]
+  }
+}

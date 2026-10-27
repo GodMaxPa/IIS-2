@@ -1,0 +1,43 @@
+{
+  "type": "iis:circuit_assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:frames/aluminium",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:circuit_data",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:coil_small",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:capacitor",
+      "count": 24
+    },
+    {
+      "ingredient": "iis:chip_ram",
+      "count": 16
+    },
+    {
+      "ingredient": "#iis:wires/1x/annealed_copper",
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    }
+  ],
+  "duration": 1600,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 288
+    }
+  ]
+}

@@ -122,7 +122,10 @@ public enum LvMachineType {
     ARC_FURNACE_HV("arc_furnace", GtRecipeMap.ARC_FURNACE, 1, 6, 16000, "arcfurnace", VoltageTier.HV),
     LASER_ENGRAVER_HV("laser_engraver", GtRecipeMap.LASER_ENGRAVER, 2, 1, 0, "laserengraver", VoltageTier.HV),
     BREWERY_HV("brewery", GtRecipeMap.BREWERY, 1, 0, 750, "potionbrewer", VoltageTier.HV),
-    CIRCUIT_ASSEMBLER_HV("circuit_assembler", GtRecipeMap.CIRCUIT_ASSEMBLER, 6, 1, 16000, "circuitassembler", VoltageTier.HV);
+    CIRCUIT_ASSEMBLER_HV("circuit_assembler", GtRecipeMap.CIRCUIT_ASSEMBLER, 6, 1, 16000, "circuitassembler", VoltageTier.HV),
+    // EV (D98): пока только сборщик (большой ротор, 1600 EU/t) и химреактор (переработка вольфрама, 1920 EU/t)
+    ASSEMBLER_EV("assembler", GtRecipeMap.ASSEMBLER, 6, 1, 16000, "assembler", VoltageTier.EV),
+    CHEMICAL_REACTOR_EV("chemical_reactor", GtRecipeMap.CHEMICAL_REACTOR, 3, 3, 16000, "chemicalreactor", VoltageTier.EV);
 
     public final String id;
     public final GtRecipeMap recipeMap;

@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/scheelite",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_calcium_chloride",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_tungstig_acid",
+      "count": 7
+    }
+  ],
+  "duration": 100,
+  "eut": 1920,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrochloricacid_gt5u",
+      "amount": 4000
+    }
+  ]
+}

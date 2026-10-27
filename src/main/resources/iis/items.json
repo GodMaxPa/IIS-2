@@ -1395,6 +1395,21 @@
     "material": "calcite"
   },
   {
+    "id": "dust_calcium_chloride",
+    "prefix": "dust",
+    "material": "calcium_chloride"
+  },
+  {
+    "id": "small_dust_calcium_chloride",
+    "prefix": "small_dust",
+    "material": "calcium_chloride"
+  },
+  {
+    "id": "tiny_dust_calcium_chloride",
+    "prefix": "tiny_dust",
+    "material": "calcium_chloride"
+  },
+  {
     "id": "dust_carbon",
     "prefix": "dust",
     "material": "carbon"
@@ -4020,6 +4035,21 @@
     "material": "lithium"
   },
   {
+    "id": "dust_lithium_chloride",
+    "prefix": "dust",
+    "material": "lithium_chloride"
+  },
+  {
+    "id": "small_dust_lithium_chloride",
+    "prefix": "small_dust",
+    "material": "lithium_chloride"
+  },
+  {
+    "id": "tiny_dust_lithium_chloride",
+    "prefix": "tiny_dust",
+    "material": "lithium_chloride"
+  },
+  {
     "id": "dust_magnalium",
     "prefix": "dust",
     "material": "magnalium"
@@ -4585,6 +4615,66 @@
     "material": "neodymium"
   },
   {
+    "id": "dust_neodymium_magnetic",
+    "prefix": "dust",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "small_dust_neodymium_magnetic",
+    "prefix": "small_dust",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "tiny_dust_neodymium_magnetic",
+    "prefix": "tiny_dust",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "ingot_neodymium_magnetic",
+    "prefix": "ingot",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "nugget_neodymium_magnetic",
+    "prefix": "nugget",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "plate_neodymium_magnetic",
+    "prefix": "plate",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "double_plate_neodymium_magnetic",
+    "prefix": "double_plate",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "rod_neodymium_magnetic",
+    "prefix": "rod",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "bolt_neodymium_magnetic",
+    "prefix": "bolt",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "screw_neodymium_magnetic",
+    "prefix": "screw",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "long_rod_neodymium_magnetic",
+    "prefix": "long_rod",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "turbine_blade_neodymium_magnetic",
+    "prefix": "turbine_blade",
+    "material": "neodymium_magnetic"
+  },
+  {
     "id": "crushed_nether_quartz",
     "prefix": "crushed",
     "material": "nether_quartz"
@@ -4658,6 +4748,76 @@
     "id": "tiny_dust_netherrack",
     "prefix": "tiny_dust",
     "material": "netherrack"
+  },
+  {
+    "id": "dust_nichrome",
+    "prefix": "dust",
+    "material": "nichrome"
+  },
+  {
+    "id": "small_dust_nichrome",
+    "prefix": "small_dust",
+    "material": "nichrome"
+  },
+  {
+    "id": "tiny_dust_nichrome",
+    "prefix": "tiny_dust",
+    "material": "nichrome"
+  },
+  {
+    "id": "ingot_nichrome",
+    "prefix": "ingot",
+    "material": "nichrome"
+  },
+  {
+    "id": "hot_ingot_nichrome",
+    "prefix": "hot_ingot",
+    "material": "nichrome"
+  },
+  {
+    "id": "nugget_nichrome",
+    "prefix": "nugget",
+    "material": "nichrome"
+  },
+  {
+    "id": "plate_nichrome",
+    "prefix": "plate",
+    "material": "nichrome"
+  },
+  {
+    "id": "double_plate_nichrome",
+    "prefix": "double_plate",
+    "material": "nichrome"
+  },
+  {
+    "id": "rod_nichrome",
+    "prefix": "rod",
+    "material": "nichrome"
+  },
+  {
+    "id": "bolt_nichrome",
+    "prefix": "bolt",
+    "material": "nichrome"
+  },
+  {
+    "id": "screw_nichrome",
+    "prefix": "screw",
+    "material": "nichrome"
+  },
+  {
+    "id": "foil_nichrome",
+    "prefix": "foil",
+    "material": "nichrome"
+  },
+  {
+    "id": "long_rod_nichrome",
+    "prefix": "long_rod",
+    "material": "nichrome"
+  },
+  {
+    "id": "turbine_blade_nichrome",
+    "prefix": "turbine_blade",
+    "material": "nichrome"
   },
   {
     "id": "crushed_nickel",
@@ -7565,6 +7725,221 @@
     "material": "tungstate"
   },
   {
+    "id": "crushed_tungsten",
+    "prefix": "crushed",
+    "material": "tungsten"
+  },
+  {
+    "id": "purified_tungsten",
+    "prefix": "purified",
+    "material": "tungsten"
+  },
+  {
+    "id": "centrifuged_tungsten",
+    "prefix": "centrifuged",
+    "material": "tungsten"
+  },
+  {
+    "id": "impure_dust_tungsten",
+    "prefix": "impure_dust",
+    "material": "tungsten"
+  },
+  {
+    "id": "pure_dust_tungsten",
+    "prefix": "pure_dust",
+    "material": "tungsten"
+  },
+  {
+    "id": "dust_tungsten",
+    "prefix": "dust",
+    "material": "tungsten"
+  },
+  {
+    "id": "small_dust_tungsten",
+    "prefix": "small_dust",
+    "material": "tungsten"
+  },
+  {
+    "id": "tiny_dust_tungsten",
+    "prefix": "tiny_dust",
+    "material": "tungsten"
+  },
+  {
+    "id": "ingot_tungsten",
+    "prefix": "ingot",
+    "material": "tungsten"
+  },
+  {
+    "id": "hot_ingot_tungsten",
+    "prefix": "hot_ingot",
+    "material": "tungsten"
+  },
+  {
+    "id": "nugget_tungsten",
+    "prefix": "nugget",
+    "material": "tungsten"
+  },
+  {
+    "id": "plate_tungsten",
+    "prefix": "plate",
+    "material": "tungsten"
+  },
+  {
+    "id": "double_plate_tungsten",
+    "prefix": "double_plate",
+    "material": "tungsten"
+  },
+  {
+    "id": "rod_tungsten",
+    "prefix": "rod",
+    "material": "tungsten"
+  },
+  {
+    "id": "bolt_tungsten",
+    "prefix": "bolt",
+    "material": "tungsten"
+  },
+  {
+    "id": "screw_tungsten",
+    "prefix": "screw",
+    "material": "tungsten"
+  },
+  {
+    "id": "foil_tungsten",
+    "prefix": "foil",
+    "material": "tungsten"
+  },
+  {
+    "id": "long_rod_tungsten",
+    "prefix": "long_rod",
+    "material": "tungsten"
+  },
+  {
+    "id": "turbine_blade_tungsten",
+    "prefix": "turbine_blade",
+    "material": "tungsten"
+  },
+  {
+    "id": "dust_tungsten_steel",
+    "prefix": "dust",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "small_dust_tungsten_steel",
+    "prefix": "small_dust",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "tiny_dust_tungsten_steel",
+    "prefix": "tiny_dust",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "ingot_tungsten_steel",
+    "prefix": "ingot",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "hot_ingot_tungsten_steel",
+    "prefix": "hot_ingot",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "nugget_tungsten_steel",
+    "prefix": "nugget",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "plate_tungsten_steel",
+    "prefix": "plate",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "double_plate_tungsten_steel",
+    "prefix": "double_plate",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "rod_tungsten_steel",
+    "prefix": "rod",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "bolt_tungsten_steel",
+    "prefix": "bolt",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "screw_tungsten_steel",
+    "prefix": "screw",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "ring_tungsten_steel",
+    "prefix": "ring",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "foil_tungsten_steel",
+    "prefix": "foil",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "small_gear_tungsten_steel",
+    "prefix": "small_gear",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "rotor_tungsten_steel",
+    "prefix": "rotor",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "long_rod_tungsten_steel",
+    "prefix": "long_rod",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "turbine_blade_tungsten_steel",
+    "prefix": "turbine_blade",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "gear_tungsten_steel",
+    "prefix": "gear",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "dust_tungsten_trioxide",
+    "prefix": "dust",
+    "material": "tungsten_trioxide"
+  },
+  {
+    "id": "small_dust_tungsten_trioxide",
+    "prefix": "small_dust",
+    "material": "tungsten_trioxide"
+  },
+  {
+    "id": "tiny_dust_tungsten_trioxide",
+    "prefix": "tiny_dust",
+    "material": "tungsten_trioxide"
+  },
+  {
+    "id": "dust_tungstig_acid",
+    "prefix": "dust",
+    "material": "tungstig_acid"
+  },
+  {
+    "id": "small_dust_tungstig_acid",
+    "prefix": "small_dust",
+    "material": "tungstig_acid"
+  },
+  {
+    "id": "tiny_dust_tungstig_acid",
+    "prefix": "tiny_dust",
+    "material": "tungstig_acid"
+  },
+  {
     "id": "crushed_uraninite",
     "prefix": "crushed",
     "material": "uraninite"
@@ -9405,6 +9780,51 @@
     "material": "neodymium"
   },
   {
+    "id": "sword_head_neodymium_magnetic",
+    "prefix": "sword_head",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "pickaxe_head_neodymium_magnetic",
+    "prefix": "pickaxe_head",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "shovel_head_neodymium_magnetic",
+    "prefix": "shovel_head",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "axe_head_neodymium_magnetic",
+    "prefix": "axe_head",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "hoe_head_neodymium_magnetic",
+    "prefix": "hoe_head",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "saw_head_neodymium_magnetic",
+    "prefix": "saw_head",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "drill_head_neodymium_magnetic",
+    "prefix": "drill_head",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "chainsaw_head_neodymium_magnetic",
+    "prefix": "chainsaw_head",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "wrench_head_neodymium_magnetic",
+    "prefix": "wrench_head",
+    "material": "neodymium_magnetic"
+  },
+  {
     "id": "sword_head_nether_quartz",
     "prefix": "sword_head",
     "material": "nether_quartz"
@@ -9448,6 +9868,51 @@
     "id": "wrench_head_nether_quartz",
     "prefix": "wrench_head",
     "material": "nether_quartz"
+  },
+  {
+    "id": "sword_head_nichrome",
+    "prefix": "sword_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "pickaxe_head_nichrome",
+    "prefix": "pickaxe_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "shovel_head_nichrome",
+    "prefix": "shovel_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "axe_head_nichrome",
+    "prefix": "axe_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "hoe_head_nichrome",
+    "prefix": "hoe_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "saw_head_nichrome",
+    "prefix": "saw_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "drill_head_nichrome",
+    "prefix": "drill_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "chainsaw_head_nichrome",
+    "prefix": "chainsaw_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "wrench_head_nichrome",
+    "prefix": "wrench_head",
+    "material": "nichrome"
   },
   {
     "id": "sword_head_nickel",
@@ -10258,6 +10723,96 @@
     "id": "wrench_head_topaz",
     "prefix": "wrench_head",
     "material": "topaz"
+  },
+  {
+    "id": "sword_head_tungsten",
+    "prefix": "sword_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "pickaxe_head_tungsten",
+    "prefix": "pickaxe_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "shovel_head_tungsten",
+    "prefix": "shovel_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "axe_head_tungsten",
+    "prefix": "axe_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "hoe_head_tungsten",
+    "prefix": "hoe_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "saw_head_tungsten",
+    "prefix": "saw_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "drill_head_tungsten",
+    "prefix": "drill_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "chainsaw_head_tungsten",
+    "prefix": "chainsaw_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "wrench_head_tungsten",
+    "prefix": "wrench_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "sword_head_tungsten_steel",
+    "prefix": "sword_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "pickaxe_head_tungsten_steel",
+    "prefix": "pickaxe_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "shovel_head_tungsten_steel",
+    "prefix": "shovel_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "axe_head_tungsten_steel",
+    "prefix": "axe_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "hoe_head_tungsten_steel",
+    "prefix": "hoe_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "saw_head_tungsten_steel",
+    "prefix": "saw_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "drill_head_tungsten_steel",
+    "prefix": "drill_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "chainsaw_head_tungsten_steel",
+    "prefix": "chainsaw_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "wrench_head_tungsten_steel",
+    "prefix": "wrench_head",
+    "material": "tungsten_steel"
   },
   {
     "id": "sword_head_wrought_iron",

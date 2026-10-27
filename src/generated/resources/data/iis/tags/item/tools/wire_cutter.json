@@ -33,7 +33,9 @@
     "iis:wire_cutter_manganese",
     "iis:wire_cutter_molybdenum",
     "iis:wire_cutter_neodymium",
+    "iis:wire_cutter_neodymium_magnetic",
     "iis:wire_cutter_nether_quartz",
+    "iis:wire_cutter_nichrome",
     "iis:wire_cutter_nickel",
     "iis:wire_cutter_olivine",
     "iis:wire_cutter_opal",
@@ -52,6 +54,8 @@
     "iis:wire_cutter_tin_alloy",
     "iis:wire_cutter_titanium",
     "iis:wire_cutter_topaz",
+    "iis:wire_cutter_tungsten",
+    "iis:wire_cutter_tungsten_steel",
     "iis:wire_cutter_wrought_iron"
   ]
 }

@@ -33,7 +33,9 @@
     "iis:chainsaw_lv_manganese",
     "iis:chainsaw_lv_molybdenum",
     "iis:chainsaw_lv_neodymium",
+    "iis:chainsaw_lv_neodymium_magnetic",
     "iis:chainsaw_lv_nether_quartz",
+    "iis:chainsaw_lv_nichrome",
     "iis:chainsaw_lv_nickel",
     "iis:chainsaw_lv_olivine",
     "iis:chainsaw_lv_opal",
@@ -52,6 +54,8 @@
     "iis:chainsaw_lv_tin_alloy",
     "iis:chainsaw_lv_titanium",
     "iis:chainsaw_lv_topaz",
+    "iis:chainsaw_lv_tungsten",
+    "iis:chainsaw_lv_tungsten_steel",
     "iis:chainsaw_lv_wrought_iron"
   ]
 }

@@ -33,7 +33,9 @@
     "iis:screwdriver_manganese",
     "iis:screwdriver_molybdenum",
     "iis:screwdriver_neodymium",
+    "iis:screwdriver_neodymium_magnetic",
     "iis:screwdriver_nether_quartz",
+    "iis:screwdriver_nichrome",
     "iis:screwdriver_nickel",
     "iis:screwdriver_olivine",
     "iis:screwdriver_opal",
@@ -52,6 +54,8 @@
     "iis:screwdriver_tin_alloy",
     "iis:screwdriver_titanium",
     "iis:screwdriver_topaz",
+    "iis:screwdriver_tungsten",
+    "iis:screwdriver_tungsten_steel",
     "iis:screwdriver_wrought_iron"
   ]
 }

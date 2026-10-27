@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/tungsten_steel",
+    "#iis:small_dusts/tungsten_steel",
+    "#iis:small_dusts/tungsten_steel",
+    "#iis:small_dusts/tungsten_steel"
+  ],
+  "result": {
+    "id": "iis:dust_tungsten_steel"
+  }
+}

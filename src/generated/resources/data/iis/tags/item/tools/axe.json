@@ -33,7 +33,9 @@
     "iis:axe_manganese",
     "iis:axe_molybdenum",
     "iis:axe_neodymium",
+    "iis:axe_neodymium_magnetic",
     "iis:axe_nether_quartz",
+    "iis:axe_nichrome",
     "iis:axe_nickel",
     "iis:axe_olivine",
     "iis:axe_opal",
@@ -52,6 +54,8 @@
     "iis:axe_tin_alloy",
     "iis:axe_titanium",
     "iis:axe_topaz",
+    "iis:axe_tungsten",
+    "iis:axe_tungsten_steel",
     "iis:axe_wrought_iron"
   ]
 }

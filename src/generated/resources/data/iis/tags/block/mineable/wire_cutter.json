@@ -198,6 +198,17 @@
     "iis:cable_kanthal_8x",
     "iis:wire_kanthal_12x",
     "iis:cable_kanthal_12x",
-    "iis:wire_kanthal_16x"
+    "iis:wire_kanthal_16x",
+    "iis:wire_nichrome_1x",
+    "iis:cable_nichrome_1x",
+    "iis:wire_nichrome_2x",
+    "iis:cable_nichrome_2x",
+    "iis:wire_nichrome_4x",
+    "iis:cable_nichrome_4x",
+    "iis:wire_nichrome_8x",
+    "iis:cable_nichrome_8x",
+    "iis:wire_nichrome_12x",
+    "iis:cable_nichrome_12x",
+    "iis:wire_nichrome_16x"
   ]
 }

@@ -33,7 +33,9 @@
     "iis:knife_manganese",
     "iis:knife_molybdenum",
     "iis:knife_neodymium",
+    "iis:knife_neodymium_magnetic",
     "iis:knife_nether_quartz",
+    "iis:knife_nichrome",
     "iis:knife_nickel",
     "iis:knife_olivine",
     "iis:knife_opal",
@@ -52,6 +54,8 @@
     "iis:knife_tin_alloy",
     "iis:knife_titanium",
     "iis:knife_topaz",
+    "iis:knife_tungsten",
+    "iis:knife_tungsten_steel",
     "iis:knife_wrought_iron"
   ]
 }

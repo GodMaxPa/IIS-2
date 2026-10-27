@@ -33,7 +33,9 @@
     "iis:hammer_manganese",
     "iis:hammer_molybdenum",
     "iis:hammer_neodymium",
+    "iis:hammer_neodymium_magnetic",
     "iis:hammer_nether_quartz",
+    "iis:hammer_nichrome",
     "iis:hammer_nickel",
     "iis:hammer_olivine",
     "iis:hammer_opal",
@@ -51,6 +53,8 @@
     "iis:hammer_tin_alloy",
     "iis:hammer_titanium",
     "iis:hammer_topaz",
+    "iis:hammer_tungsten",
+    "iis:hammer_tungsten_steel",
     "iis:hammer_wrought_iron"
   ]
 }

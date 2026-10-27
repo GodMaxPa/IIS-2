@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SPS",
+    "PwP",
+    "SPS"
+  ],
+  "key": {
+    "P": "#c:plates/tungsten_steel",
+    "S": "#c:rods/tungsten_steel",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:gear_tungsten_steel"
+  }
+}

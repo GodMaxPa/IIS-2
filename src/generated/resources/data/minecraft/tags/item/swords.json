@@ -33,7 +33,9 @@
     "iis:sword_manganese",
     "iis:sword_molybdenum",
     "iis:sword_neodymium",
+    "iis:sword_neodymium_magnetic",
     "iis:sword_nether_quartz",
+    "iis:sword_nichrome",
     "iis:sword_nickel",
     "iis:sword_olivine",
     "iis:sword_opal",
@@ -52,6 +54,8 @@
     "iis:sword_tin_alloy",
     "iis:sword_titanium",
     "iis:sword_topaz",
+    "iis:sword_tungsten",
+    "iis:sword_tungsten_steel",
     "iis:sword_wrought_iron",
     "iis:knife_aluminium",
     "iis:knife_amber",
@@ -85,7 +89,9 @@
     "iis:knife_manganese",
     "iis:knife_molybdenum",
     "iis:knife_neodymium",
+    "iis:knife_neodymium_magnetic",
     "iis:knife_nether_quartz",
+    "iis:knife_nichrome",
     "iis:knife_nickel",
     "iis:knife_olivine",
     "iis:knife_opal",
@@ -104,6 +110,8 @@
     "iis:knife_tin_alloy",
     "iis:knife_titanium",
     "iis:knife_topaz",
+    "iis:knife_tungsten",
+    "iis:knife_tungsten_steel",
     "iis:knife_wrought_iron"
   ]
 }

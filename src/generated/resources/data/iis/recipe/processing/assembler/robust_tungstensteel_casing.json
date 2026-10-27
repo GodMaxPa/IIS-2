@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/tungsten_steel",
+      "count": 6
+    },
+    {
+      "ingredient": "#c:frames/tungsten_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:robust_tungstensteel_casing",
+      "count": 2
+    }
+  ],
+  "duration": 50,
+  "eut": 16
+}

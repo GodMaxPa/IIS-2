@@ -33,7 +33,9 @@
     "iis:wrench_manganese",
     "iis:wrench_molybdenum",
     "iis:wrench_neodymium",
+    "iis:wrench_neodymium_magnetic",
     "iis:wrench_nether_quartz",
+    "iis:wrench_nichrome",
     "iis:wrench_nickel",
     "iis:wrench_olivine",
     "iis:wrench_opal",
@@ -52,6 +54,8 @@
     "iis:wrench_tin_alloy",
     "iis:wrench_titanium",
     "iis:wrench_topaz",
+    "iis:wrench_tungsten",
+    "iis:wrench_tungsten_steel",
     "iis:wrench_wrought_iron",
     "iis:wrench_lv_aluminium",
     "iis:wrench_lv_amber",
@@ -85,7 +89,9 @@
     "iis:wrench_lv_manganese",
     "iis:wrench_lv_molybdenum",
     "iis:wrench_lv_neodymium",
+    "iis:wrench_lv_neodymium_magnetic",
     "iis:wrench_lv_nether_quartz",
+    "iis:wrench_lv_nichrome",
     "iis:wrench_lv_nickel",
     "iis:wrench_lv_olivine",
     "iis:wrench_lv_opal",
@@ -104,6 +110,8 @@
     "iis:wrench_lv_tin_alloy",
     "iis:wrench_lv_titanium",
     "iis:wrench_lv_topaz",
+    "iis:wrench_lv_tungsten",
+    "iis:wrench_lv_tungsten_steel",
     "iis:wrench_lv_wrought_iron"
   ]
 }

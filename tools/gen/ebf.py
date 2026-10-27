@@ -11,7 +11,7 @@ from PIL import Image
 
 # GT5 textures: the cloud checkout, or locally a checkout of IdealIndustrial/GT5Unofficial@00021e3 given by IIS_GT5_TEXTURES
 GT = os.environ.get('IIS_GT5_TEXTURES', '/home/claude/ref/gt5/src/main/resources/assets/gregtech/textures')
-FRAMES = ['Invar', 'Steel', 'Iron', 'Bronze', 'Aluminium', 'BlueSteel', 'Titanium']  # blue steel: turbine casing (D90); titanium: D97
+FRAMES = ['Invar', 'Steel', 'Iron', 'Bronze', 'Aluminium', 'BlueSteel', 'Titanium', 'TungstenSteel']  # blue steel: D90; titanium: D97; D98
 HATCHES = [
     # id, overlay, GT lang key, EN
     ('hatch_energy_lv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.01.name', 'LV Energy Hatch'),
@@ -114,7 +114,8 @@ def generate(g):
     # --- casings ------------------------------------------------------------------------------------------------
     for bid, src, key, en in (('heat_proof_casing', 'MACHINE_HEATPROOFCASING', 'gt.blockcasings.11.name', 'Heat Proof Machine Casing'),
                               ('coil_cupronickel', 'MACHINE_COIL_CUPRONICKEL', 'gt.blockcasings5.0.name', 'Cupronickel Coil Block'),
-                              ('coil_kanthal', 'MACHINE_COIL_KANTHAL', 'gt.blockcasings5.1.name', 'Kanthal Coil Block')):  # D93
+                              ('coil_kanthal', 'MACHINE_COIL_KANTHAL', 'gt.blockcasings5.1.name', 'Kanthal Coil Block'),  # D93
+                              ('coil_nichrome', 'MACHINE_COIL_NICHROME', 'gt.blockcasings5.2.name', 'Nichrome Coil Block')):  # D98
         first(os.path.join(BI, src + '.png')).save(tex_out(f'block/multi/{bid}.png'))
         write(os.path.join(A, 'models', 'block', bid + '.json'), {'parent': 'minecraft:block/cube_all', 'textures': {'all': f'{NS}:block/multi/{bid}'}})
         write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': {'': {'model': f'{NS}:block/{bid}'}}})
@@ -122,9 +123,11 @@ def generate(g):
         name(f'block.{NS}.{bid}', en, ru(key, en))
     tooltip('coil_cupronickel', [('Base Heating Capacity = 1800 Kelvin', 'Нагрев: 1800 K')])
     tooltip('coil_kanthal', [('Base Heating Capacity = 2700 Kelvin', 'Нагрев: 2700 K')])
+    tooltip('coil_nichrome', [('Base Heating Capacity = 3600 Kelvin', 'Нагрев: 3600 K')])
     shaped('multi/heat_proof_casing', f'{NS}:heat_proof_casing', 2, ['PhP', 'PFP', 'PwP'], {'P': tag_of('plate', 'Invar'), 'F': '#c:frames/invar'})
     shaped('multi/coil_cupronickel', f'{NS}:coil_cupronickel', 1, ['PPP', 'PwP', 'PPP'], {'P': '#iis:wires/2x/cupronickel'})
     shaped('multi/coil_kanthal', f'{NS}:coil_kanthal', 1, ['PPP', 'PwP', 'PPP'], {'P': '#iis:wires/2x/kanthal'})   # GT_Loader_MetaTileEntities:92
+    shaped('multi/coil_nichrome', f'{NS}:coil_nichrome', 1, ['PPP', 'PwP', 'PPP'], {'P': '#iis:wires/2x/nichrome'})   # :93 (D98)
 
     # --- hatches (front overlay over the LV casing; any of 6 facings) -----------------------------------------------
     sides = {}
@@ -320,6 +323,7 @@ def generate(g):
     # GT_MachineRecipeLoader:1381-1382: 8 2x wires + programmed circuit 8 (the circuit was missing before D93)
     mrec('assembler', 'coil_cupronickel', [ing('#iis:wires/2x/cupronickel', 8)], [out(f'{NS}:coil_cupronickel')], 50, 16, circuit=8)
     mrec('assembler', 'coil_kanthal', [ing('#iis:wires/2x/kanthal', 8)], [out(f'{NS}:coil_kanthal')], 50, 16, circuit=8)
+    mrec('assembler', 'coil_nichrome', [ing('#iis:wires/2x/nichrome', 8)], [out(f'{NS}:coil_nichrome')], 50, 16, circuit=8)   # :1383
     for mid in frames:
         mrec('assembler', f'frame_{mid}', [ing(f'#c:rods/{mid}', 4)], [out(f'{NS}:frame_{mid}')], 64, 8)
 

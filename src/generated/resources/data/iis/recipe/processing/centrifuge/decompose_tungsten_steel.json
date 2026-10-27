@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/tungsten_steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_tungsten",
+      "count": 1
+    }
+  ],
+  "duration": 952,
+  "eut": 10
+}

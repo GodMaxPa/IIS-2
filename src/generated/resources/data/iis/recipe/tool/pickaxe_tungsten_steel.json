@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/pickaxe/tungsten_steel",
+    "#c:rods/steel"
+  ],
+  "result": {
+    "id": "iis:pickaxe_tungsten_steel"
+  }
+}

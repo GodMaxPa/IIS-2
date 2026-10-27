@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:foils/nichrome",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 6,
+  "eut": 73,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_nichrome",
+      "amount": 36
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/nichrome",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_nichrome",
+      "count": 2
+    }
+  ],
+  "duration": 112,
+  "eut": 96,
+  "keep": [
+    "iis:shape_extruder_rod"
+  ]
+}

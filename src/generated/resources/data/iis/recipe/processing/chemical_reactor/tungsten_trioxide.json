@@ -1,0 +1,24 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/tungstig_acid",
+      "count": 7
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_tungsten_trioxide",
+      "count": 4
+    }
+  ],
+  "duration": 200,
+  "eut": 90,
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 3000
+    }
+  ],
+  "circuit": 1
+}

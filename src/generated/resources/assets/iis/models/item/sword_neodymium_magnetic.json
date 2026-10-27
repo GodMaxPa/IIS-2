@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "iis:item/tools/handle_sword",
+    "layer1": "iis:item/materialicons/magnetic/toolheadsword",
+    "layer2": "iis:item/materialicons/magnetic/toolheadsword_overlay"
+  }
+}

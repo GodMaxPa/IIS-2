@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/tungstig_acid",
+    "#iis:small_dusts/tungstig_acid",
+    "#iis:small_dusts/tungstig_acid",
+    "#iis:small_dusts/tungstig_acid"
+  ],
+  "result": {
+    "id": "iis:dust_tungstig_acid"
+  }
+}

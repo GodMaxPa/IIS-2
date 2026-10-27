@@ -70,6 +70,7 @@
     "iis:hull_mv",
     "iis:casing_hv",
     "iis:hull_hv",
+    "iis:hull_ev",
     "iis:macerator_lv",
     "iis:electric_furnace_lv",
     "iis:alloy_smelter_lv",
@@ -203,9 +204,11 @@
     "iis:frame_aluminium",
     "iis:frame_blue_steel",
     "iis:frame_titanium",
+    "iis:frame_tungsten_steel",
     "iis:heat_proof_casing",
     "iis:coil_cupronickel",
     "iis:coil_kanthal",
+    "iis:coil_nichrome",
     "iis:hatch_energy_lv",
     "iis:hatch_input_bus_lv",
     "iis:hatch_output_bus_lv",
@@ -228,6 +231,7 @@
     "iis:large_boiler_bronze",
     "iis:large_boiler_steel",
     "iis:large_boiler_titanium",
+    "iis:large_boiler_tungstensteel",
     "iis:turbine_casing",
     "iis:large_steam_turbine"
   ]
