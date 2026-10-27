@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:turbine_blades/invar",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:long_rods/magnalium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:turbine_small",
+      "count": 1,
+      "components": {
+        "iis:rotor_material": "invar",
+        "minecraft:max_damage": 25600
+      }
+    }
+  ],
+  "duration": 160,
+  "eut": 100
+}

@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/drill_lv_black_steel",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13158620
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 6579300
+      }
+    ]
+  }
+}

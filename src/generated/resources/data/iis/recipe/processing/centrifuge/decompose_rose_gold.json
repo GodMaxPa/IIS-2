@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/rose_gold",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_copper",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_gold",
+      "count": 4
+    }
+  ],
+  "duration": 3380,
+  "eut": 10
+}

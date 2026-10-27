@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "fPd",
+    "SPS",
+    " P "
+  ],
+  "key": {
+    "P": "#iis:double_plates/cobalt_brass",
+    "S": "#iis:screws/cobalt_brass",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:turbine_blade_cobalt_brass"
+  }
+}

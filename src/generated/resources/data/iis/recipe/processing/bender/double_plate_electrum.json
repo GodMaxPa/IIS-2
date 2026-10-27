@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/electrum",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_electrum",
+      "count": 1
+    }
+  ],
+  "duration": 302,
+  "eut": 96
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/copper",
+      "count": 3
+    },
+    {
+      "ingredient": "#iis:tiny_dusts/electrum",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_black_bronze",
+      "count": 5
+    }
+  ],
+  "duration": 55,
+  "eut": 8
+}

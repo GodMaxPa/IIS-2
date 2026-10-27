@@ -200,4 +200,19 @@ final class LargeGameTests {
             h.succeed();
         });
     }
+
+    // --- детали турбины (D90) ---------------------------------------------------------------------------------------
+    /** Сборщик MV: 4 стальные лопасти + длинный стержень магналия → стальной малый ротор (100 EU/t, прочность 51200). */
+    static void assemblerMakesSmallRotor(GameTestHelper h) {
+        ru.iis.lv.block.ElectricMachineBlockEntity m = LvGameTests.machine(h, new BlockPos(4, 1, 4), ru.iis.lv.LvMachineType.ASSEMBLER_MV, Direction.NORTH);
+        h.onEachTick(() -> m.energy.stored = m.energy.capacity);
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("turbine_blade_steel"), 4));
+        m.setItem(1, new ItemStack(ru.iis.command.SelfTest.item("long_rod_magnalium")));
+        h.succeedWhen(() -> {
+            ItemStack o = m.getItem(m.type().inputs);
+            h.assertTrue(o.getItem() instanceof ru.iis.multi.TurbineRotorItem r && r.size == LargeTurbineLogic.Size.SMALL, "rotor: " + o);
+            h.assertTrue("steel".equals(o.get(MultiContent.ROTOR_MATERIAL.get())), "rotor material " + o.get(MultiContent.ROTOR_MATERIAL.get()));
+            h.assertTrue(o.getMaxDamage() == 51200, "rotor durability " + o.getMaxDamage());
+        });
+    }
 }

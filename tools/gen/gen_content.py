@@ -138,6 +138,8 @@ names |= {'Cadmium', 'Lithium', 'Sodium'}
 names |= {'Chrome', 'StainlessSteel'}
 # MV (D81): gallium for diodes (GT_MachineRecipeLoader:477, tiny pile)
 names |= {'Gallium'}
+# D90: turbine parts — magnalium (rotor rods, turbine casing plates) and the blue steel chain (turbine casing frame)
+names |= {'Magnalium', 'RoseGold', 'BlackBronze', 'BlackSteel', 'BlueSteel'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64
@@ -158,6 +160,8 @@ PREFIXES = [
     ('nugget',        'nugget',           B_METAL,                 '01', 9,  '{} Nugget',               'c:nuggets'),
     ('gem',           'gem',              B_GEM,                   '01', 8,  '{}',                      'c:gems'),
     ('plate',         'plate',            B_METAL | B_GEM,         '01', 17, '{} Plate',                'c:plates'),
+    # D90: OrePrefixes.plateDouble (B[1], index 18; PAPER or not NO_SMASHING) — turbine blades
+    ('double_plate',  'plateDouble',      B_METAL,                 '01', 18, 'Double {} Plate',         'iis:double_plates'),
     ('rod',           'stick',            B_METAL | B_GEM,         '01', 23, '{} Rod',                  'c:rods'),
     # D86: OrePrefixes.lens (B[2], index 24), only MAGICAL or TRANSPARENT + HAS_COLOR materials (OrePrefixes:477)
     ('lens',          'lens',             B_GEM,                   '01', 24, '{} Lens',                 'iis:lenses'),
@@ -170,6 +174,8 @@ PREFIXES = [
     ('small_gear',    'gearGtSmall',      B_METAL,                 '02', 20, 'Small {} Gear',           'iis:small_gears'),
     ('rotor',         'rotor',            B_METAL,                 '02', 21, '{} Rotor',                'iis:rotors'),
     ('long_rod',      'stickLong',        B_METAL,                 '02', 22, 'Long {} Rod',             'iis:long_rods'),
+    # D90: OrePrefixes.turbineBlade (B[6] tool materials, index 16; not NO_SMASHING, not BOUNCY)
+    ('turbine_blade', 'turbineBlade',     B_TOOL,                  '02', 16, '{} Turbine Blade',        'iis:turbine_blades'),
     ('gear',          'gearGt',           B_METAL | B_GEM,         '02', 31, '{} Gear',                 'c:gears'),
     # gem qualities (sifter outputs; OrePrefixes condition: TRANSPARENT & CRYSTAL & !QUARTZ & !PEARL & !MAGICAL)
     ('gem_chipped',   'gemChipped',       B_GEM,                   '02', 27, 'Chipped {}',              'iis:chipped_gems'),
@@ -259,6 +265,12 @@ def has_form(prefix, name):
     if prefix == 'lens':
         st = set(prop(name, 'ListSubTags', []) or [])
         if 'MAGICAL' not in st and not ({'TRANSPARENT', 'HAS_COLOR'} <= st):
+            return False
+    if prefix in ('double_plate', 'turbine_blade'):  # OrePrefixes:465, 479 conditions
+        st = set(prop(name, 'ListSubTags', []) or [])
+        if prefix == 'double_plate' and 'NO_SMASHING' in st and 'PAPER' not in st:
+            return False
+        if prefix == 'turbine_blade' and st & {'NO_SMASHING', 'BOUNCY'}:
             return False
     if prefix in GEM_QUALITIES:
         st = set(prop(name, 'ListSubTags', []) or [])
@@ -916,7 +928,7 @@ for w in ('oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 
 # GT5 GT_Block_Machines / GT_Block_Casings: machines, casings, hulls, hatches and pipes are harvested only with a wrench
 # (iis:mineable/wrench); wires and cables — with a wire cutter (iis:mineable/wire_cutter, hand still drops them)
 import re as _re
-_WRENCH = _re.compile(r'^iis:(hull_.*|boiler_.*|steam_.*|pipe_.*|casing_lv|.*_lv|.*_mv|battery_buffer_.*|transformer_lv|frame_.*|heat_proof_casing|coil_.*|hatch_.*|electric_blast_furnace|large_boiler_.*|large_steam_turbine|turbine_casing|bronze_plated_bricks|solid_steel_casing|(bronze|steel)_(pipe|firebox)_casing)$')
+_WRENCH = _re.compile(r'^iis:(hull_.*|boiler_.*|steam_.*|pipe_.*|casing_lv|casing_hv|hull_hv|.*_lv|.*_mv|battery_buffer_.*|transformer_lv|frame_.*|heat_proof_casing|coil_.*|hatch_.*|electric_blast_furnace|large_boiler_.*|large_steam_turbine|turbine_casing|bronze_plated_bricks|solid_steel_casing|(bronze|steel)_(pipe|firebox)_casing)$')
 _CUTTER = _re.compile(r'^iis:(wire|cable)_.*$')
 block_tags.setdefault('iis:mineable/wrench', [])
 block_tags.setdefault('iis:mineable/wire_cutter', [])

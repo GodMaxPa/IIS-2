@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/rose_gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_rose_gold",
+      "count": 1
+    }
+  ],
+  "duration": 169,
+  "eut": 24
+}

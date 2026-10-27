@@ -1,0 +1,29 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#iis:small_dusts/rose_gold",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/brass",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/black_steel",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:small_dusts/steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_blue_steel",
+      "count": 8
+    }
+  ],
+  "duration": 200,
+  "eut": 8
+}

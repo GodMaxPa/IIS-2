@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:bolts/black_bronze",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 3,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_blackbronze",
+      "amount": 18
+    }
+  ]
+}

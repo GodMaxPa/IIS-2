@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/black_bronze",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_black_bronze",
+      "count": 8
+    }
+  ],
+  "duration": 196,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_bolt"
+  ]
+}

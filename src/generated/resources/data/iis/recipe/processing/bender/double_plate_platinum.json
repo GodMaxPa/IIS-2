@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/platinum",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_platinum",
+      "count": 1
+    }
+  ],
+  "duration": 390,
+  "eut": 96
+}

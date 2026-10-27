@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "IhI",
+    "III",
+    " I "
+  ],
+  "key": {
+    "I": "#c:ingots/rose_gold",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:wrench_rose_gold"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/magnalium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_magnalium",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 96
+}

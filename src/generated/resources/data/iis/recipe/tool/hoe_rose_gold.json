@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/hoe/rose_gold",
+    "#c:rods/steel"
+  ],
+  "result": {
+    "id": "iis:hoe_rose_gold"
+  }
+}

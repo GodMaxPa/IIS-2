@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/black_bronze",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_black_bronze",
+      "count": 2
+    }
+  ],
+  "duration": 98,
+  "eut": 16
+}

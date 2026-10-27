@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/black_bronze",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:tiny_dusts/nickel",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:tiny_dusts/steel",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_black_steel",
+      "count": 5
+    }
+  ],
+  "duration": 55,
+  "eut": 8
+}

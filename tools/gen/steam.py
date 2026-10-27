@@ -434,7 +434,8 @@ def generate(g):
     # GT_MachineRecipeLoader:32-52 + :1559 alloy smelter (dust/ingot combinations, duration = amount * 50, 16 EU/t)
     ALLOYS = [('Tetrahedrite', 3, 'Tin', 1, 'Bronze', 3), ('Tetrahedrite', 3, 'Zinc', 1, 'Brass', 3), ('Copper', 3, 'Tin', 1, 'Bronze', 4),
               ('Copper', 3, 'Zinc', 1, 'Brass', 4), ('Copper', 1, 'Nickel', 1, 'Cupronickel', 2), ('Copper', 1, 'Redstone', 4, 'RedAlloy', 1),
-              ('Iron', 1, 'Tin', 1, 'TinAlloy', 2), ('Iron', 2, 'Nickel', 1, 'Invar', 3), ('Gold', 1, 'Silver', 1, 'Electrum', 2)]
+              ('Iron', 1, 'Tin', 1, 'TinAlloy', 2), ('Iron', 2, 'Nickel', 1, 'Invar', 3), ('Gold', 1, 'Silver', 1, 'Electrum', 2),
+              ('Magnesium', 1, 'Aluminium', 2, 'Magnalium', 3)]  # D90: GT_MachineRecipeLoader:50
     for a, an, b, bn, o, on in ALLOYS:
         out_ingot = ref('ingot', o)
         if not out_ingot:

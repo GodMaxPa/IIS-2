@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/magnalium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_magnalium",
+      "count": 1
+    }
+  ],
+  "duration": 25,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_plate"
+  ]
+}

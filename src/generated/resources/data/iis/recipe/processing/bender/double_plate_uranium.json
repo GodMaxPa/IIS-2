@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/uranium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_uranium",
+      "count": 1
+    }
+  ],
+  "duration": 476,
+  "eut": 96
+}

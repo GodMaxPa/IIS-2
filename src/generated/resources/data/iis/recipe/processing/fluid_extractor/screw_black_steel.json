@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:screws/black_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_blacksteel",
+      "amount": 16
+    }
+  ]
+}

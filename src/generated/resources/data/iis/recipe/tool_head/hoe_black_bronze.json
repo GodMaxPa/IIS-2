@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PIh",
+    "f  "
+  ],
+  "key": {
+    "P": "#c:plates/black_bronze",
+    "I": "#c:ingots/black_bronze",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:hoe_head_black_bronze"
+  }
+}

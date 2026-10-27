@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/blue_steel",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_blue_steel",
+      "count": 2
+    }
+  ],
+  "duration": 74,
+  "eut": 16
+}

@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:turbine_blades/gold",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:long_rods/magnalium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:turbine_small",
+      "count": 1,
+      "components": {
+        "iis:rotor_material": "gold",
+        "minecraft:max_damage": 6400
+      }
+    }
+  ],
+  "duration": 160,
+  "eut": 100
+}

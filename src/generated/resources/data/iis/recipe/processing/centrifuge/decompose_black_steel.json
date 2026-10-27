@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/black_steel",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_nickel",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_black_bronze",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_steel",
+      "count": 3
+    }
+  ],
+  "duration": 1280,
+  "eut": 15
+}

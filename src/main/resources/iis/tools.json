@@ -48,6 +48,42 @@
     "kind": "sword"
   },
   {
+    "id": "sword_black_bronze",
+    "tool": "sword",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_black_steel",
+    "tool": "sword",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 6.5,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_blue_steel",
+    "tool": "sword",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.5,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "sword_blue_topaz",
     "tool": "sword",
     "material": "blue_topaz",
@@ -276,6 +312,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_magnalium",
+    "tool": "sword",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "sword_manganese",
     "tool": "sword",
     "material": "manganese",
@@ -380,6 +428,18 @@
     "blockDamage": 4,
     "craftDamage": 2,
     "speed": 12.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_rose_gold",
+    "tool": "sword",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 14.0,
     "quality": 2,
     "kind": "sword"
   },
@@ -560,6 +620,42 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 14.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_black_bronze",
+    "tool": "pickaxe",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_black_steel",
+    "tool": "pickaxe",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.5,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_blue_steel",
+    "tool": "pickaxe",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.5,
     "quality": 2,
     "kind": "pickaxe"
   },
@@ -792,6 +888,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_magnalium",
+    "tool": "pickaxe",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_manganese",
     "tool": "pickaxe",
     "material": "manganese",
@@ -896,6 +1004,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 12.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_rose_gold",
+    "tool": "pickaxe",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 14.0,
     "quality": 2,
     "kind": "pickaxe"
   },
@@ -1076,6 +1196,42 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 14.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_black_bronze",
+    "tool": "shovel",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_black_steel",
+    "tool": "shovel",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.5,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_blue_steel",
+    "tool": "shovel",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.5,
     "quality": 2,
     "kind": "shovel"
   },
@@ -1308,6 +1464,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_magnalium",
+    "tool": "shovel",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_manganese",
     "tool": "shovel",
     "material": "manganese",
@@ -1412,6 +1580,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 12.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_rose_gold",
+    "tool": "shovel",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 14.0,
     "quality": 2,
     "kind": "shovel"
   },
@@ -1592,6 +1772,42 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 14.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_black_bronze",
+    "tool": "axe",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_black_steel",
+    "tool": "axe",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.5,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_blue_steel",
+    "tool": "axe",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.5,
     "quality": 2,
     "kind": "axe"
   },
@@ -1824,6 +2040,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_magnalium",
+    "tool": "axe",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "axe_manganese",
     "tool": "axe",
     "material": "manganese",
@@ -1928,6 +2156,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 12.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_rose_gold",
+    "tool": "axe",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 14.0,
     "quality": 2,
     "kind": "axe"
   },
@@ -2108,6 +2348,42 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 14.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_black_bronze",
+    "tool": "hoe",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_black_steel",
+    "tool": "hoe",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.5,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_blue_steel",
+    "tool": "hoe",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.5,
     "quality": 2,
     "kind": "hoe"
   },
@@ -2340,6 +2616,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_magnalium",
+    "tool": "hoe",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_manganese",
     "tool": "hoe",
     "material": "manganese",
@@ -2444,6 +2732,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 12.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_rose_gold",
+    "tool": "hoe",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 14.0,
     "quality": 2,
     "kind": "hoe"
   },
@@ -2624,6 +2924,42 @@
     "blockDamage": 1,
     "craftDamage": 4,
     "speed": 14.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_black_bronze",
+    "tool": "saw",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_black_steel",
+    "tool": "saw",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 6.5,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_blue_steel",
+    "tool": "saw",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.5,
     "quality": 2,
     "kind": "axe"
   },
@@ -2856,6 +3192,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_magnalium",
+    "tool": "saw",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
     "id": "saw_manganese",
     "tool": "saw",
     "material": "manganese",
@@ -2960,6 +3308,18 @@
     "blockDamage": 1,
     "craftDamage": 4,
     "speed": 12.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_rose_gold",
+    "tool": "saw",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 14.0,
     "quality": 2,
     "kind": "axe"
   },
@@ -3140,6 +3500,42 @@
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 10.5,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_black_bronze",
+    "tool": "hammer",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 9.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_black_steel",
+    "tool": "hammer",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 4.875,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_blue_steel",
+    "tool": "hammer",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.625,
     "quality": 2,
     "kind": "pickaxe"
   },
@@ -3372,6 +3768,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_magnalium",
+    "tool": "hammer",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 4.5,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_manganese",
     "tool": "hammer",
     "material": "manganese",
@@ -3476,6 +3884,18 @@
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 9.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_rose_gold",
+    "tool": "hammer",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 10.5,
     "quality": 2,
     "kind": "pickaxe"
   },
@@ -3644,6 +4064,42 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 14.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_black_bronze",
+    "tool": "wrench",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_black_steel",
+    "tool": "wrench",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.5,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_blue_steel",
+    "tool": "wrench",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.5,
     "quality": 2,
     "kind": "wrench"
   },
@@ -3876,6 +4332,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_magnalium",
+    "tool": "wrench",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_manganese",
     "tool": "wrench",
     "material": "manganese",
@@ -3980,6 +4448,18 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 12.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_rose_gold",
+    "tool": "wrench",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 14.0,
     "quality": 2,
     "kind": "wrench"
   },
@@ -4160,6 +4640,42 @@
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 14.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_black_bronze",
+    "tool": "file",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_black_steel",
+    "tool": "file",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_blue_steel",
+    "tool": "file",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.5,
     "quality": 2,
     "kind": null
   },
@@ -4392,6 +4908,18 @@
     "kind": null
   },
   {
+    "id": "file_magnalium",
+    "tool": "file",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "file_manganese",
     "tool": "file",
     "material": "manganese",
@@ -4496,6 +5024,18 @@
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 12.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_rose_gold",
+    "tool": "file",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 14.0,
     "quality": 2,
     "kind": null
   },
@@ -4676,6 +5216,42 @@
     "blockDamage": 4,
     "craftDamage": 8,
     "speed": 14.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_black_bronze",
+    "tool": "screwdriver",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_black_steel",
+    "tool": "screwdriver",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 6.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_blue_steel",
+    "tool": "screwdriver",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.5,
     "quality": 2,
     "kind": null
   },
@@ -4908,6 +5484,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_magnalium",
+    "tool": "screwdriver",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "screwdriver_manganese",
     "tool": "screwdriver",
     "material": "manganese",
@@ -5012,6 +5600,18 @@
     "blockDamage": 4,
     "craftDamage": 8,
     "speed": 12.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_rose_gold",
+    "tool": "screwdriver",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 14.0,
     "quality": 2,
     "kind": null
   },
@@ -5228,6 +5828,42 @@
     "blockDamage": 2,
     "craftDamage": 2,
     "speed": 14.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_black_bronze",
+    "tool": "knife",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_black_steel",
+    "tool": "knife",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 6.5,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_blue_steel",
+    "tool": "knife",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.5,
     "quality": 2,
     "kind": "sword"
   },
@@ -5460,6 +6096,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_magnalium",
+    "tool": "knife",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "knife_manganese",
     "tool": "knife",
     "material": "manganese",
@@ -5564,6 +6212,18 @@
     "blockDamage": 2,
     "craftDamage": 2,
     "speed": 12.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_rose_gold",
+    "tool": "knife",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 14.0,
     "quality": 2,
     "kind": "sword"
   },
@@ -5744,6 +6404,42 @@
     "blockDamage": 2,
     "craftDamage": 8,
     "speed": 17.5,
+    "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_black_bronze",
+    "tool": "wire_cutter",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 15.0,
+    "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_black_steel",
+    "tool": "wire_cutter",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.125,
+    "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_blue_steel",
+    "tool": "wire_cutter",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 9.375,
     "quality": 2,
     "kind": "wire_cutter"
   },
@@ -5976,6 +6672,18 @@
     "kind": "wire_cutter"
   },
   {
+    "id": "wire_cutter_magnalium",
+    "tool": "wire_cutter",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
     "id": "wire_cutter_manganese",
     "tool": "wire_cutter",
     "material": "manganese",
@@ -6080,6 +6788,18 @@
     "blockDamage": 2,
     "craftDamage": 8,
     "speed": 15.0,
+    "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_rose_gold",
+    "tool": "wire_cutter",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 17.5,
     "quality": 2,
     "kind": "wire_cutter"
   },
@@ -6284,6 +7004,42 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 14.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "crowbar_black_bronze",
+    "tool": "crowbar",
+    "material": "black_bronze",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "crowbar_black_steel",
+    "tool": "crowbar",
+    "material": "black_steel",
+    "handle": "wood",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.5,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "crowbar_blue_steel",
+    "tool": "crowbar",
+    "material": "blue_steel",
+    "handle": "wood",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.5,
     "quality": 2,
     "kind": null
   },
@@ -6516,6 +7272,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_magnalium",
+    "tool": "crowbar",
+    "material": "magnalium",
+    "handle": "wood",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "crowbar_manganese",
     "tool": "crowbar",
     "material": "manganese",
@@ -6620,6 +7388,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 12.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "crowbar_rose_gold",
+    "tool": "crowbar",
+    "material": "rose_gold",
+    "handle": "steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 14.0,
     "quality": 2,
     "kind": null
   },
@@ -6788,6 +7568,42 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 42.0,
+    "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_black_bronze",
+    "tool": "drill_lv",
+    "material": "black_bronze",
+    "handle": "stainless_steel",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 36.0,
+    "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_black_steel",
+    "tool": "drill_lv",
+    "material": "black_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 19.5,
+    "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_blue_steel",
+    "tool": "drill_lv",
+    "material": "blue_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 22.5,
     "quality": 2,
     "kind": "drill"
   },
@@ -7020,6 +7836,18 @@
     "kind": "drill"
   },
   {
+    "id": "drill_lv_magnalium",
+    "tool": "drill_lv",
+    "material": "magnalium",
+    "handle": "stainless_steel",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 18.0,
+    "quality": 2,
+    "kind": "drill"
+  },
+  {
     "id": "drill_lv_manganese",
     "tool": "drill_lv",
     "material": "manganese",
@@ -7124,6 +7952,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 36.0,
+    "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_rose_gold",
+    "tool": "drill_lv",
+    "material": "rose_gold",
+    "handle": "stainless_steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 42.0,
     "quality": 2,
     "kind": "drill"
   },
@@ -7304,6 +8144,42 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 28.0,
+    "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_black_bronze",
+    "tool": "chainsaw_lv",
+    "material": "black_bronze",
+    "handle": "stainless_steel",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 24.0,
+    "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_black_steel",
+    "tool": "chainsaw_lv",
+    "material": "black_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 13.0,
+    "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_blue_steel",
+    "tool": "chainsaw_lv",
+    "material": "blue_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 15.0,
     "quality": 2,
     "kind": "chainsaw"
   },
@@ -7536,6 +8412,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_magnalium",
+    "tool": "chainsaw_lv",
+    "material": "magnalium",
+    "handle": "stainless_steel",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_manganese",
     "tool": "chainsaw_lv",
     "material": "manganese",
@@ -7640,6 +8528,18 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 24.0,
+    "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_rose_gold",
+    "tool": "chainsaw_lv",
+    "material": "rose_gold",
+    "handle": "stainless_steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 28.0,
     "quality": 2,
     "kind": "chainsaw"
   },
@@ -7820,6 +8720,42 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 28.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_black_bronze",
+    "tool": "wrench_lv",
+    "material": "black_bronze",
+    "handle": "stainless_steel",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 24.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_black_steel",
+    "tool": "wrench_lv",
+    "material": "black_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 1536,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 13.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_blue_steel",
+    "tool": "wrench_lv",
+    "material": "blue_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 2048,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 15.0,
     "quality": 2,
     "kind": "wrench"
   },
@@ -8052,6 +8988,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_lv_magnalium",
+    "tool": "wrench_lv",
+    "material": "magnalium",
+    "handle": "stainless_steel",
+    "maxDamage": 512,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_lv_manganese",
     "tool": "wrench_lv",
     "material": "manganese",
@@ -8156,6 +9104,18 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 24.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_rose_gold",
+    "tool": "wrench_lv",
+    "material": "rose_gold",
+    "handle": "stainless_steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 28.0,
     "quality": 2,
     "kind": "wrench"
   },

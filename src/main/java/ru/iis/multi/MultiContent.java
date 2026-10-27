@@ -62,7 +62,7 @@ public final class MultiContent {
         return b;
     }
 
-    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium");
+    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel");
     public static final Map<String, DeferredBlock<Block>> FRAMES = new LinkedHashMap<>();
     static {
         for (String m : FRAME_MATERIALS) {

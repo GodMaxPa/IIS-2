@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/copper",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:tiny_dusts/gold",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_rose_gold",
+      "count": 5
+    }
+  ],
+  "duration": 55,
+  "eut": 8
+}

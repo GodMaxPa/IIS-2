@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "fPd",
+    "SPS",
+    " P "
+  ],
+  "key": {
+    "P": "#iis:double_plates/tin_alloy",
+    "S": "#iis:screws/tin_alloy",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:turbine_blade_tin_alloy"
+  }
+}

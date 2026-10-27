@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/tin_alloy",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_tin_alloy",
+      "count": 1
+    }
+  ],
+  "duration": 174,
+  "eut": 96
+}

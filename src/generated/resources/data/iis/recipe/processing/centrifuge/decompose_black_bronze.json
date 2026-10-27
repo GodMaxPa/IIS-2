@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/black_bronze",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_gold",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_silver",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_copper",
+      "count": 3
+    }
+  ],
+  "duration": 1960,
+  "eut": 15
+}

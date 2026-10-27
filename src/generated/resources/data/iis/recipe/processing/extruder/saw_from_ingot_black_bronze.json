@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/black_bronze",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:saw_head_black_bronze",
+      "count": 1
+    }
+  ],
+  "duration": 196,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_saw"
+  ]
+}

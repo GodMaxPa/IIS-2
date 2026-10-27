@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/blue_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_blue_steel",
+      "count": 1
+    }
+  ],
+  "duration": 74,
+  "eut": 24
+}

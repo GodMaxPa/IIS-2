@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/cobalt",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_cobalt",
+      "count": 1
+    }
+  ],
+  "duration": 118,
+  "eut": 96
+}

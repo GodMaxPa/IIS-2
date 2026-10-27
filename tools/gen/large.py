@@ -33,6 +33,20 @@ def generate(g):
     import json
     write, A, D, NS, lang, REF = g['write'], g['A'], g['D'], g['NS'], g['lang'], g['REF']
     tag_of, shaped, block_tags = g['tag_of'], g['shaped'], g['block_tags']
+    ref, mat_id, mat_by_name = g['ref'], g['mat_id'], g['mat_by_name']
+    rec = {}
+
+    def mrec(rtype, rid, inputs, outputs, duration, eut):
+        if any(i['ingredient'] is None for i in inputs) or any(o['id'] is None for o in outputs):
+            return
+        rec.setdefault(f'{rtype}/{rid}', {'type': f'{NS}:{rtype}', 'inputs': inputs, 'outputs': outputs,
+                                          'duration': max(1, int(duration)), 'eut': int(eut)})
+
+    def ing(i, c=1):
+        return {'ingredient': i, 'count': c}
+
+    def rout(i, c=1):
+        return {'id': i, 'count': c}
     ru_lang = json.load(open(os.path.join(REF, 'gt5_lang_ru_machines.json'), encoding='utf-8'))
     BI = os.path.join(GT, 'blocks', 'iconsets')
     stats = {}
@@ -147,8 +161,10 @@ def generate(g):
     write(os.path.join(A, 'blockstates', 'turbine_casing.json'), {'variants': {'': {'model': f'{NS}:block/turbine_casing'}}})
     simple('turbine_casing')
     name(f'block.{NS}.turbine_casing', 'Turbine Casing', ru('gt.blockcasings4.9.name', 'Turbine Casing'))
-    tooltip('turbine_casing', [('Walls of the Large Steam Turbine', 'Стенки большой паровой турбины'),
-                               ('Crafting arrives with Magnalium and Blue Steel', 'Крафт появится вместе с магналием и синей сталью')])
+    tooltip('turbine_casing', [('Walls of the Large Steam Turbine', 'Стенки большой паровой турбины')])
+    # GT_Loader_MetaTileEntities:71 "PhP/PFP/PwP" magnalium plates + blue steel frame -> 2; GT_MachineRecipeLoader:1396 assembler (D90)
+    shaped('multi/turbine_casing', f'{NS}:turbine_casing', 2, ['PhP', 'PFP', 'PwP'], {'P': tag_of('plate', 'Magnalium'), 'F': '#c:frames/blue_steel'})
+    mrec('assembler', 'turbine_casing', [ing(tag_of('plate', 'Magnalium'), 6), ing('#c:frames/blue_steel')], [rout(f'{NS}:turbine_casing', 2)], 50, 16)
     tc = first(os.path.join(BI, 'MACHINE_CASING_TURBINE.png'))
     for suf, ov in (('', 'LARGETURBINE_ST5'), ('_active', 'LARGETURBINE_ST_ACTIVE5')):
         o = Image.open(os.path.join(BI, ov + '.png')).convert('RGBA')
@@ -213,4 +229,40 @@ def generate(g):
     for m in turbine_mats:
         name(f'material.{NS}.{m["id"]}', m['en'], m['ru'])
     stats['rotor_materials'] = len(turbine_mats)
+
+    # --- D90: blue steel chain and magnalium (GT_CraftingRecipeLoader:383-389, GT_MachineRecipeLoader:1766-1783) ------------
+    # crafting: dusts mixed by hand
+    for out_m, cnt, ins in (('RoseGold', 5, ['Gold'] * 4 + ['Copper']), ('BlackBronze', 5, ['Gold', 'Silver'] + ['Copper'] * 3),
+                            ('BlackSteel', 5, ['Nickel', 'BlackBronze'] + ['Steel'] * 3),
+                            ('BlueSteel', 8, ['RoseGold', 'Brass'] + ['Steel'] * 2 + ['BlackSteel'] * 4)):
+        g['shapeless'](f'dust/mix_{mat_id(out_m)}', ref('dust', out_m), cnt, [tag_of('dust', m) for m in ins])
+    # mixer: dust, small and tiny piles (amount of the form x 100 ticks per output dust, 8 EU/t)
+    for out_m, cnt, ins in (('RoseGold', 5, [('Copper', 1), ('Gold', 4)]), ('BlackBronze', 5, [('Copper', 3), ('Electrum', 2)]),
+                            ('BlackSteel', 5, [('BlackBronze', 1), ('Nickel', 1), ('Steel', 3)]),
+                            ('BlueSteel', 8, [('RoseGold', 1), ('Brass', 1), ('BlackSteel', 4), ('Steel', 2)])):
+        for p, ticks in (('dust', cnt * 100), ('small_dust', cnt * 100 // 4), ('tiny_dust', cnt * 100 // 9)):
+            mrec('mixer', f'{mat_id(out_m)}_{p}', [ing(tag_of(p, m), c) for m, c in ins], [rout(ref(p, out_m), cnt)], ticks, 8)
+
+    # --- D90: double plates (ProcessingPlate:110-120), turbine blades (ProcessingToolHead:154-161) and small rotors -------
+    rods = ref('long_rod', 'Magnalium')
+    for n in sorted(g['names']):
+        dp, pl, mid = ref('double_plate', n), ref('plate', n), mat_id(n)
+        if dp and pl:
+            mrec('bender', f'double_plate_{mid}', [ing(tag_of('plate', n), 2)], [rout(dp)], max(g['mass'](n) * 2, 1), 96)
+            shaped(f'plate/double_plate_{mid}', dp, 1, ['P', 'P', 'h'], {'P': tag_of('plate', n)})
+        blade = ref('turbine_blade', n)
+        if blade and dp and ref('screw', n):
+            shaped(f'part/turbine_blade_{mid}', blade, 1, ['fPd', 'SPS', ' P '], {'P': tag_of('double_plate', n), 'S': tag_of('screw', n)})
+        # assembler 4 blades + long magnalium rod -> small turbine (160 t, 100 EU/t); bigger rotors need titanium,
+        # tungstensteel and americium rods (later)
+        if blade and rods and any(m['id'] == mid for m in turbine_mats):
+            m = mat_by_name[n]
+            rec[f'assembler/turbine_small_{mid}'] = {
+                'type': f'{NS}:assembler', 'inputs': [ing(tag_of('turbine_blade', n), 4), ing(tag_of('long_rod', 'Magnalium'))],
+                'outputs': [{'id': f'{NS}:turbine_small', 'count': 1, 'components': {
+                    f'{NS}:rotor_material': mid, 'minecraft:max_damage': 100 * int(m['toolDurability'] * 1.0)}}],
+                'duration': 160, 'eut': 100}
+    for key, r in rec.items():
+        write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
+    stats['d90_machine_recipes'] = len(rec)
     return stats

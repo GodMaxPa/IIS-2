@@ -1,0 +1,21 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/magnesium",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:ingots/aluminium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_magnalium",
+      "count": 3
+    }
+  ],
+  "duration": 150,
+  "eut": 16
+}

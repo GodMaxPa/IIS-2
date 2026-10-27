@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P",
+    "P",
+    "h"
+  ],
+  "key": {
+    "P": "#c:plates/tin_alloy",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:double_plate_tin_alloy"
+  }
+}

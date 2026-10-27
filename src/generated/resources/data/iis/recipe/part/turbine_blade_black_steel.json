@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "fPd",
+    "SPS",
+    " P "
+  ],
+  "key": {
+    "P": "#iis:double_plates/black_steel",
+    "S": "#iis:screws/black_steel",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:turbine_blade_black_steel"
+  }
+}

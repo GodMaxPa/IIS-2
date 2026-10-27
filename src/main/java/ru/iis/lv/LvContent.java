@@ -114,6 +114,8 @@ public final class LvContent {
     // MV (D81): GT_Block_Casings1 meta 2, Hull_MV
     public static final DeferredBlock<Block> CASING_MV = block("casing_mv", Block::new, LvContent::metal);
     public static final DeferredBlock<Block> HULL_MV = block("hull_mv", Block::new, LvContent::metal);
+    // HV (D90): GT_Block_Casings1 meta 3
+    public static final DeferredBlock<Block> CASING_HV = block("casing_hv", Block::new, LvContent::metal);
 
     // --- машины, генераторы, буферы, трансформатор ----------------------------------------------------------------
     public static final Map<LvMachineType, DeferredBlock<ElectricMachineBlock>> MACHINES = new EnumMap<>(LvMachineType.class);

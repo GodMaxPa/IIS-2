@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/gold",
+    "#c:dusts/silver",
+    "#c:dusts/copper",
+    "#c:dusts/copper",
+    "#c:dusts/copper"
+  ],
+  "result": {
+    "id": "iis:dust_black_bronze",
+    "count": 5
+  }
+}

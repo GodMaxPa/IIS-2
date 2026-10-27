@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/rose_gold",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_rose_gold",
+      "count": 2
+    }
+  ],
+  "duration": 169,
+  "eut": 16
+}

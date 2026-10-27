@@ -1,0 +1,29 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/blue_steel",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_rose_gold",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_brass",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_steel",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_black_steel",
+      "count": 4
+    }
+  ],
+  "duration": 2368,
+  "eut": 20
+}

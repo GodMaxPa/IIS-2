@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/magnalium",
+    "#iis:tiny_dusts/magnalium",
+    "#iis:tiny_dusts/magnalium",
+    "#iis:tiny_dusts/magnalium",
+    "#iis:tiny_dusts/magnalium",
+    "#iis:tiny_dusts/magnalium",
+    "#iis:tiny_dusts/magnalium",
+    "#iis:tiny_dusts/magnalium",
+    "#iis:tiny_dusts/magnalium"
+  ],
+  "result": {
+    "id": "iis:dust_magnalium"
+  }
+}

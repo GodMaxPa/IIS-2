@@ -95,6 +95,11 @@
     "material": "aluminium"
   },
   {
+    "id": "double_plate_aluminium",
+    "prefix": "double_plate",
+    "material": "aluminium"
+  },
+  {
     "id": "rod_aluminium",
     "prefix": "rod",
     "material": "aluminium"
@@ -127,6 +132,11 @@
   {
     "id": "long_rod_aluminium",
     "prefix": "long_rod",
+    "material": "aluminium"
+  },
+  {
+    "id": "turbine_blade_aluminium",
+    "prefix": "turbine_blade",
     "material": "aluminium"
   },
   {
@@ -730,6 +740,11 @@
     "material": "beryllium"
   },
   {
+    "id": "double_plate_beryllium",
+    "prefix": "double_plate",
+    "material": "beryllium"
+  },
+  {
     "id": "rod_beryllium",
     "prefix": "rod",
     "material": "beryllium"
@@ -747,6 +762,11 @@
   {
     "id": "long_rod_beryllium",
     "prefix": "long_rod",
+    "material": "beryllium"
+  },
+  {
+    "id": "turbine_blade_beryllium",
+    "prefix": "turbine_blade",
     "material": "beryllium"
   },
   {
@@ -805,6 +825,11 @@
     "material": "bismuth"
   },
   {
+    "id": "double_plate_bismuth",
+    "prefix": "double_plate",
+    "material": "bismuth"
+  },
+  {
     "id": "rod_bismuth",
     "prefix": "rod",
     "material": "bismuth"
@@ -823,6 +848,201 @@
     "id": "long_rod_bismuth",
     "prefix": "long_rod",
     "material": "bismuth"
+  },
+  {
+    "id": "turbine_blade_bismuth",
+    "prefix": "turbine_blade",
+    "material": "bismuth"
+  },
+  {
+    "id": "dust_black_bronze",
+    "prefix": "dust",
+    "material": "black_bronze"
+  },
+  {
+    "id": "small_dust_black_bronze",
+    "prefix": "small_dust",
+    "material": "black_bronze"
+  },
+  {
+    "id": "tiny_dust_black_bronze",
+    "prefix": "tiny_dust",
+    "material": "black_bronze"
+  },
+  {
+    "id": "ingot_black_bronze",
+    "prefix": "ingot",
+    "material": "black_bronze"
+  },
+  {
+    "id": "hot_ingot_black_bronze",
+    "prefix": "hot_ingot",
+    "material": "black_bronze"
+  },
+  {
+    "id": "nugget_black_bronze",
+    "prefix": "nugget",
+    "material": "black_bronze"
+  },
+  {
+    "id": "plate_black_bronze",
+    "prefix": "plate",
+    "material": "black_bronze"
+  },
+  {
+    "id": "double_plate_black_bronze",
+    "prefix": "double_plate",
+    "material": "black_bronze"
+  },
+  {
+    "id": "rod_black_bronze",
+    "prefix": "rod",
+    "material": "black_bronze"
+  },
+  {
+    "id": "bolt_black_bronze",
+    "prefix": "bolt",
+    "material": "black_bronze"
+  },
+  {
+    "id": "screw_black_bronze",
+    "prefix": "screw",
+    "material": "black_bronze"
+  },
+  {
+    "id": "long_rod_black_bronze",
+    "prefix": "long_rod",
+    "material": "black_bronze"
+  },
+  {
+    "id": "turbine_blade_black_bronze",
+    "prefix": "turbine_blade",
+    "material": "black_bronze"
+  },
+  {
+    "id": "dust_black_steel",
+    "prefix": "dust",
+    "material": "black_steel"
+  },
+  {
+    "id": "small_dust_black_steel",
+    "prefix": "small_dust",
+    "material": "black_steel"
+  },
+  {
+    "id": "tiny_dust_black_steel",
+    "prefix": "tiny_dust",
+    "material": "black_steel"
+  },
+  {
+    "id": "ingot_black_steel",
+    "prefix": "ingot",
+    "material": "black_steel"
+  },
+  {
+    "id": "nugget_black_steel",
+    "prefix": "nugget",
+    "material": "black_steel"
+  },
+  {
+    "id": "plate_black_steel",
+    "prefix": "plate",
+    "material": "black_steel"
+  },
+  {
+    "id": "double_plate_black_steel",
+    "prefix": "double_plate",
+    "material": "black_steel"
+  },
+  {
+    "id": "rod_black_steel",
+    "prefix": "rod",
+    "material": "black_steel"
+  },
+  {
+    "id": "bolt_black_steel",
+    "prefix": "bolt",
+    "material": "black_steel"
+  },
+  {
+    "id": "screw_black_steel",
+    "prefix": "screw",
+    "material": "black_steel"
+  },
+  {
+    "id": "foil_black_steel",
+    "prefix": "foil",
+    "material": "black_steel"
+  },
+  {
+    "id": "long_rod_black_steel",
+    "prefix": "long_rod",
+    "material": "black_steel"
+  },
+  {
+    "id": "turbine_blade_black_steel",
+    "prefix": "turbine_blade",
+    "material": "black_steel"
+  },
+  {
+    "id": "dust_blue_steel",
+    "prefix": "dust",
+    "material": "blue_steel"
+  },
+  {
+    "id": "small_dust_blue_steel",
+    "prefix": "small_dust",
+    "material": "blue_steel"
+  },
+  {
+    "id": "tiny_dust_blue_steel",
+    "prefix": "tiny_dust",
+    "material": "blue_steel"
+  },
+  {
+    "id": "ingot_blue_steel",
+    "prefix": "ingot",
+    "material": "blue_steel"
+  },
+  {
+    "id": "nugget_blue_steel",
+    "prefix": "nugget",
+    "material": "blue_steel"
+  },
+  {
+    "id": "plate_blue_steel",
+    "prefix": "plate",
+    "material": "blue_steel"
+  },
+  {
+    "id": "double_plate_blue_steel",
+    "prefix": "double_plate",
+    "material": "blue_steel"
+  },
+  {
+    "id": "rod_blue_steel",
+    "prefix": "rod",
+    "material": "blue_steel"
+  },
+  {
+    "id": "bolt_blue_steel",
+    "prefix": "bolt",
+    "material": "blue_steel"
+  },
+  {
+    "id": "screw_blue_steel",
+    "prefix": "screw",
+    "material": "blue_steel"
+  },
+  {
+    "id": "long_rod_blue_steel",
+    "prefix": "long_rod",
+    "material": "blue_steel"
+  },
+  {
+    "id": "turbine_blade_blue_steel",
+    "prefix": "turbine_blade",
+    "material": "blue_steel"
   },
   {
     "id": "crushed_blue_topaz",
@@ -945,6 +1165,11 @@
     "material": "brass"
   },
   {
+    "id": "double_plate_brass",
+    "prefix": "double_plate",
+    "material": "brass"
+  },
+  {
     "id": "rod_brass",
     "prefix": "rod",
     "material": "brass"
@@ -967,6 +1192,11 @@
   {
     "id": "long_rod_brass",
     "prefix": "long_rod",
+    "material": "brass"
+  },
+  {
+    "id": "turbine_blade_brass",
+    "prefix": "turbine_blade",
     "material": "brass"
   },
   {
@@ -1015,6 +1245,11 @@
     "material": "bronze"
   },
   {
+    "id": "double_plate_bronze",
+    "prefix": "double_plate",
+    "material": "bronze"
+  },
+  {
     "id": "rod_bronze",
     "prefix": "rod",
     "material": "bronze"
@@ -1052,6 +1287,11 @@
   {
     "id": "long_rod_bronze",
     "prefix": "long_rod",
+    "material": "bronze"
+  },
+  {
+    "id": "turbine_blade_bronze",
+    "prefix": "turbine_blade",
     "material": "bronze"
   },
   {
@@ -1370,6 +1610,11 @@
     "material": "chrome"
   },
   {
+    "id": "double_plate_chrome",
+    "prefix": "double_plate",
+    "material": "chrome"
+  },
+  {
     "id": "rod_chrome",
     "prefix": "rod",
     "material": "chrome"
@@ -1397,6 +1642,11 @@
   {
     "id": "long_rod_chrome",
     "prefix": "long_rod",
+    "material": "chrome"
+  },
+  {
+    "id": "turbine_blade_chrome",
+    "prefix": "turbine_blade",
     "material": "chrome"
   },
   {
@@ -1525,6 +1775,11 @@
     "material": "cobalt"
   },
   {
+    "id": "double_plate_cobalt",
+    "prefix": "double_plate",
+    "material": "cobalt"
+  },
+  {
     "id": "rod_cobalt",
     "prefix": "rod",
     "material": "cobalt"
@@ -1542,6 +1797,11 @@
   {
     "id": "long_rod_cobalt",
     "prefix": "long_rod",
+    "material": "cobalt"
+  },
+  {
+    "id": "turbine_blade_cobalt",
+    "prefix": "turbine_blade",
     "material": "cobalt"
   },
   {
@@ -1575,6 +1835,11 @@
     "material": "cobalt_brass"
   },
   {
+    "id": "double_plate_cobalt_brass",
+    "prefix": "double_plate",
+    "material": "cobalt_brass"
+  },
+  {
     "id": "rod_cobalt_brass",
     "prefix": "rod",
     "material": "cobalt_brass"
@@ -1592,6 +1857,11 @@
   {
     "id": "long_rod_cobalt_brass",
     "prefix": "long_rod",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "turbine_blade_cobalt_brass",
+    "prefix": "turbine_blade",
     "material": "cobalt_brass"
   },
   {
@@ -1775,6 +2045,11 @@
     "material": "cupronickel"
   },
   {
+    "id": "double_plate_cupronickel",
+    "prefix": "double_plate",
+    "material": "cupronickel"
+  },
+  {
     "id": "rod_cupronickel",
     "prefix": "rod",
     "material": "cupronickel"
@@ -1792,6 +2067,11 @@
   {
     "id": "long_rod_cupronickel",
     "prefix": "long_rod",
+    "material": "cupronickel"
+  },
+  {
+    "id": "turbine_blade_cupronickel",
+    "prefix": "turbine_blade",
     "material": "cupronickel"
   },
   {
@@ -1930,6 +2210,11 @@
     "material": "electrum"
   },
   {
+    "id": "double_plate_electrum",
+    "prefix": "double_plate",
+    "material": "electrum"
+  },
+  {
     "id": "rod_electrum",
     "prefix": "rod",
     "material": "electrum"
@@ -1957,6 +2242,11 @@
   {
     "id": "long_rod_electrum",
     "prefix": "long_rod",
+    "material": "electrum"
+  },
+  {
+    "id": "turbine_blade_electrum",
+    "prefix": "turbine_blade",
     "material": "electrum"
   },
   {
@@ -2625,6 +2915,11 @@
     "material": "gold"
   },
   {
+    "id": "double_plate_gold",
+    "prefix": "double_plate",
+    "material": "gold"
+  },
+  {
     "id": "rod_gold",
     "prefix": "rod",
     "material": "gold"
@@ -2652,6 +2947,11 @@
   {
     "id": "long_rod_gold",
     "prefix": "long_rod",
+    "material": "gold"
+  },
+  {
+    "id": "turbine_blade_gold",
+    "prefix": "turbine_blade",
     "material": "gold"
   },
   {
@@ -2900,6 +3200,11 @@
     "material": "invar"
   },
   {
+    "id": "double_plate_invar",
+    "prefix": "double_plate",
+    "material": "invar"
+  },
+  {
     "id": "rod_invar",
     "prefix": "rod",
     "material": "invar"
@@ -2922,6 +3227,11 @@
   {
     "id": "long_rod_invar",
     "prefix": "long_rod",
+    "material": "invar"
+  },
+  {
+    "id": "turbine_blade_invar",
+    "prefix": "turbine_blade",
     "material": "invar"
   },
   {
@@ -2985,6 +3295,11 @@
     "material": "iridium"
   },
   {
+    "id": "double_plate_iridium",
+    "prefix": "double_plate",
+    "material": "iridium"
+  },
+  {
     "id": "rod_iridium",
     "prefix": "rod",
     "material": "iridium"
@@ -3012,6 +3327,11 @@
   {
     "id": "long_rod_iridium",
     "prefix": "long_rod",
+    "material": "iridium"
+  },
+  {
+    "id": "turbine_blade_iridium",
+    "prefix": "turbine_blade",
     "material": "iridium"
   },
   {
@@ -3060,6 +3380,11 @@
     "material": "iron"
   },
   {
+    "id": "double_plate_iron",
+    "prefix": "double_plate",
+    "material": "iron"
+  },
+  {
     "id": "rod_iron",
     "prefix": "rod",
     "material": "iron"
@@ -3092,6 +3417,11 @@
   {
     "id": "long_rod_iron",
     "prefix": "long_rod",
+    "material": "iron"
+  },
+  {
+    "id": "turbine_blade_iron",
+    "prefix": "turbine_blade",
     "material": "iron"
   },
   {
@@ -3130,6 +3460,11 @@
     "material": "iron_magnetic"
   },
   {
+    "id": "double_plate_iron_magnetic",
+    "prefix": "double_plate",
+    "material": "iron_magnetic"
+  },
+  {
     "id": "rod_iron_magnetic",
     "prefix": "rod",
     "material": "iron_magnetic"
@@ -3147,6 +3482,11 @@
   {
     "id": "long_rod_iron_magnetic",
     "prefix": "long_rod",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "turbine_blade_iron_magnetic",
+    "prefix": "turbine_blade",
     "material": "iron_magnetic"
   },
   {
@@ -3385,6 +3725,11 @@
     "material": "lead"
   },
   {
+    "id": "double_plate_lead",
+    "prefix": "double_plate",
+    "material": "lead"
+  },
+  {
     "id": "rod_lead",
     "prefix": "rod",
     "material": "lead"
@@ -3407,6 +3752,11 @@
   {
     "id": "long_rod_lead",
     "prefix": "long_rod",
+    "material": "lead"
+  },
+  {
+    "id": "turbine_blade_lead",
+    "prefix": "turbine_blade",
     "material": "lead"
   },
   {
@@ -3543,6 +3893,66 @@
     "id": "nugget_lithium",
     "prefix": "nugget",
     "material": "lithium"
+  },
+  {
+    "id": "dust_magnalium",
+    "prefix": "dust",
+    "material": "magnalium"
+  },
+  {
+    "id": "small_dust_magnalium",
+    "prefix": "small_dust",
+    "material": "magnalium"
+  },
+  {
+    "id": "tiny_dust_magnalium",
+    "prefix": "tiny_dust",
+    "material": "magnalium"
+  },
+  {
+    "id": "ingot_magnalium",
+    "prefix": "ingot",
+    "material": "magnalium"
+  },
+  {
+    "id": "nugget_magnalium",
+    "prefix": "nugget",
+    "material": "magnalium"
+  },
+  {
+    "id": "plate_magnalium",
+    "prefix": "plate",
+    "material": "magnalium"
+  },
+  {
+    "id": "double_plate_magnalium",
+    "prefix": "double_plate",
+    "material": "magnalium"
+  },
+  {
+    "id": "rod_magnalium",
+    "prefix": "rod",
+    "material": "magnalium"
+  },
+  {
+    "id": "bolt_magnalium",
+    "prefix": "bolt",
+    "material": "magnalium"
+  },
+  {
+    "id": "screw_magnalium",
+    "prefix": "screw",
+    "material": "magnalium"
+  },
+  {
+    "id": "long_rod_magnalium",
+    "prefix": "long_rod",
+    "material": "magnalium"
+  },
+  {
+    "id": "turbine_blade_magnalium",
+    "prefix": "turbine_blade",
+    "material": "magnalium"
   },
   {
     "id": "crushed_magnesite",
@@ -3745,6 +4155,11 @@
     "material": "manganese"
   },
   {
+    "id": "double_plate_manganese",
+    "prefix": "double_plate",
+    "material": "manganese"
+  },
+  {
     "id": "rod_manganese",
     "prefix": "rod",
     "material": "manganese"
@@ -3767,6 +4182,11 @@
   {
     "id": "long_rod_manganese",
     "prefix": "long_rod",
+    "material": "manganese"
+  },
+  {
+    "id": "turbine_blade_manganese",
+    "prefix": "turbine_blade",
     "material": "manganese"
   },
   {
@@ -3865,6 +4285,11 @@
     "material": "molybdenum"
   },
   {
+    "id": "double_plate_molybdenum",
+    "prefix": "double_plate",
+    "material": "molybdenum"
+  },
+  {
     "id": "rod_molybdenum",
     "prefix": "rod",
     "material": "molybdenum"
@@ -3882,6 +4307,11 @@
   {
     "id": "long_rod_molybdenum",
     "prefix": "long_rod",
+    "material": "molybdenum"
+  },
+  {
+    "id": "turbine_blade_molybdenum",
+    "prefix": "turbine_blade",
     "material": "molybdenum"
   },
   {
@@ -3985,6 +4415,11 @@
     "material": "neodymium"
   },
   {
+    "id": "double_plate_neodymium",
+    "prefix": "double_plate",
+    "material": "neodymium"
+  },
+  {
     "id": "rod_neodymium",
     "prefix": "rod",
     "material": "neodymium"
@@ -4002,6 +4437,11 @@
   {
     "id": "long_rod_neodymium",
     "prefix": "long_rod",
+    "material": "neodymium"
+  },
+  {
+    "id": "turbine_blade_neodymium",
+    "prefix": "turbine_blade",
     "material": "neodymium"
   },
   {
@@ -4135,6 +4575,11 @@
     "material": "nickel"
   },
   {
+    "id": "double_plate_nickel",
+    "prefix": "double_plate",
+    "material": "nickel"
+  },
+  {
     "id": "rod_nickel",
     "prefix": "rod",
     "material": "nickel"
@@ -4152,6 +4597,11 @@
   {
     "id": "long_rod_nickel",
     "prefix": "long_rod",
+    "material": "nickel"
+  },
+  {
+    "id": "turbine_blade_nickel",
+    "prefix": "turbine_blade",
     "material": "nickel"
   },
   {
@@ -4435,6 +4885,11 @@
     "material": "palladium"
   },
   {
+    "id": "double_plate_palladium",
+    "prefix": "double_plate",
+    "material": "palladium"
+  },
+  {
     "id": "rod_palladium",
     "prefix": "rod",
     "material": "palladium"
@@ -4452,6 +4907,11 @@
   {
     "id": "long_rod_palladium",
     "prefix": "long_rod",
+    "material": "palladium"
+  },
+  {
+    "id": "turbine_blade_palladium",
+    "prefix": "turbine_blade",
     "material": "palladium"
   },
   {
@@ -4605,6 +5065,11 @@
     "material": "platinum"
   },
   {
+    "id": "double_plate_platinum",
+    "prefix": "double_plate",
+    "material": "platinum"
+  },
+  {
     "id": "rod_platinum",
     "prefix": "rod",
     "material": "platinum"
@@ -4632,6 +5097,11 @@
   {
     "id": "long_rod_platinum",
     "prefix": "long_rod",
+    "material": "platinum"
+  },
+  {
+    "id": "turbine_blade_platinum",
+    "prefix": "turbine_blade",
     "material": "platinum"
   },
   {
@@ -5003,6 +5473,66 @@
     "id": "tiny_dust_rock_salt",
     "prefix": "tiny_dust",
     "material": "rock_salt"
+  },
+  {
+    "id": "dust_rose_gold",
+    "prefix": "dust",
+    "material": "rose_gold"
+  },
+  {
+    "id": "small_dust_rose_gold",
+    "prefix": "small_dust",
+    "material": "rose_gold"
+  },
+  {
+    "id": "tiny_dust_rose_gold",
+    "prefix": "tiny_dust",
+    "material": "rose_gold"
+  },
+  {
+    "id": "ingot_rose_gold",
+    "prefix": "ingot",
+    "material": "rose_gold"
+  },
+  {
+    "id": "nugget_rose_gold",
+    "prefix": "nugget",
+    "material": "rose_gold"
+  },
+  {
+    "id": "plate_rose_gold",
+    "prefix": "plate",
+    "material": "rose_gold"
+  },
+  {
+    "id": "double_plate_rose_gold",
+    "prefix": "double_plate",
+    "material": "rose_gold"
+  },
+  {
+    "id": "rod_rose_gold",
+    "prefix": "rod",
+    "material": "rose_gold"
+  },
+  {
+    "id": "bolt_rose_gold",
+    "prefix": "bolt",
+    "material": "rose_gold"
+  },
+  {
+    "id": "screw_rose_gold",
+    "prefix": "screw",
+    "material": "rose_gold"
+  },
+  {
+    "id": "long_rod_rose_gold",
+    "prefix": "long_rod",
+    "material": "rose_gold"
+  },
+  {
+    "id": "turbine_blade_rose_gold",
+    "prefix": "turbine_blade",
+    "material": "rose_gold"
   },
   {
     "id": "dust_rubber",
@@ -5415,6 +5945,11 @@
     "material": "silver"
   },
   {
+    "id": "double_plate_silver",
+    "prefix": "double_plate",
+    "material": "silver"
+  },
+  {
     "id": "rod_silver",
     "prefix": "rod",
     "material": "silver"
@@ -5432,6 +5967,11 @@
   {
     "id": "long_rod_silver",
     "prefix": "long_rod",
+    "material": "silver"
+  },
+  {
+    "id": "turbine_blade_silver",
+    "prefix": "turbine_blade",
     "material": "silver"
   },
   {
@@ -5735,6 +6275,11 @@
     "material": "stainless_steel"
   },
   {
+    "id": "double_plate_stainless_steel",
+    "prefix": "double_plate",
+    "material": "stainless_steel"
+  },
+  {
     "id": "rod_stainless_steel",
     "prefix": "rod",
     "material": "stainless_steel"
@@ -5770,6 +6315,11 @@
     "material": "stainless_steel"
   },
   {
+    "id": "turbine_blade_stainless_steel",
+    "prefix": "turbine_blade",
+    "material": "stainless_steel"
+  },
+  {
     "id": "gear_stainless_steel",
     "prefix": "gear",
     "material": "stainless_steel"
@@ -5802,6 +6352,11 @@
   {
     "id": "plate_steel",
     "prefix": "plate",
+    "material": "steel"
+  },
+  {
+    "id": "double_plate_steel",
+    "prefix": "double_plate",
     "material": "steel"
   },
   {
@@ -5850,6 +6405,11 @@
     "material": "steel"
   },
   {
+    "id": "turbine_blade_steel",
+    "prefix": "turbine_blade",
+    "material": "steel"
+  },
+  {
     "id": "gear_steel",
     "prefix": "gear",
     "material": "steel"
@@ -5885,6 +6445,11 @@
     "material": "steel_magnetic"
   },
   {
+    "id": "double_plate_steel_magnetic",
+    "prefix": "double_plate",
+    "material": "steel_magnetic"
+  },
+  {
     "id": "rod_steel_magnetic",
     "prefix": "rod",
     "material": "steel_magnetic"
@@ -5902,6 +6467,11 @@
   {
     "id": "long_rod_steel_magnetic",
     "prefix": "long_rod",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "turbine_blade_steel_magnetic",
+    "prefix": "turbine_blade",
     "material": "steel_magnetic"
   },
   {
@@ -6265,6 +6835,11 @@
     "material": "thorium"
   },
   {
+    "id": "double_plate_thorium",
+    "prefix": "double_plate",
+    "material": "thorium"
+  },
+  {
     "id": "rod_thorium",
     "prefix": "rod",
     "material": "thorium"
@@ -6282,6 +6857,11 @@
   {
     "id": "long_rod_thorium",
     "prefix": "long_rod",
+    "material": "thorium"
+  },
+  {
+    "id": "turbine_blade_thorium",
+    "prefix": "turbine_blade",
     "material": "thorium"
   },
   {
@@ -6405,6 +6985,11 @@
     "material": "tin_alloy"
   },
   {
+    "id": "double_plate_tin_alloy",
+    "prefix": "double_plate",
+    "material": "tin_alloy"
+  },
+  {
     "id": "rod_tin_alloy",
     "prefix": "rod",
     "material": "tin_alloy"
@@ -6422,6 +7007,11 @@
   {
     "id": "long_rod_tin_alloy",
     "prefix": "long_rod",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "turbine_blade_tin_alloy",
+    "prefix": "turbine_blade",
     "material": "tin_alloy"
   },
   {
@@ -6695,6 +7285,11 @@
     "material": "uranium"
   },
   {
+    "id": "double_plate_uranium",
+    "prefix": "double_plate",
+    "material": "uranium"
+  },
+  {
     "id": "rod_uranium",
     "prefix": "rod",
     "material": "uranium"
@@ -6712,6 +7307,11 @@
   {
     "id": "long_rod_uranium",
     "prefix": "long_rod",
+    "material": "uranium"
+  },
+  {
+    "id": "turbine_blade_uranium",
+    "prefix": "turbine_blade",
     "material": "uranium"
   },
   {
@@ -6785,6 +7385,11 @@
     "material": "wrought_iron"
   },
   {
+    "id": "double_plate_wrought_iron",
+    "prefix": "double_plate",
+    "material": "wrought_iron"
+  },
+  {
     "id": "rod_wrought_iron",
     "prefix": "rod",
     "material": "wrought_iron"
@@ -6807,6 +7412,11 @@
   {
     "id": "long_rod_wrought_iron",
     "prefix": "long_rod",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "turbine_blade_wrought_iron",
+    "prefix": "turbine_blade",
     "material": "wrought_iron"
   },
   {
@@ -7128,6 +7738,141 @@
     "id": "wrench_head_beryllium",
     "prefix": "wrench_head",
     "material": "beryllium"
+  },
+  {
+    "id": "sword_head_black_bronze",
+    "prefix": "sword_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "pickaxe_head_black_bronze",
+    "prefix": "pickaxe_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "shovel_head_black_bronze",
+    "prefix": "shovel_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "axe_head_black_bronze",
+    "prefix": "axe_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "hoe_head_black_bronze",
+    "prefix": "hoe_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "saw_head_black_bronze",
+    "prefix": "saw_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "drill_head_black_bronze",
+    "prefix": "drill_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "chainsaw_head_black_bronze",
+    "prefix": "chainsaw_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "wrench_head_black_bronze",
+    "prefix": "wrench_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "sword_head_black_steel",
+    "prefix": "sword_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "pickaxe_head_black_steel",
+    "prefix": "pickaxe_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "shovel_head_black_steel",
+    "prefix": "shovel_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "axe_head_black_steel",
+    "prefix": "axe_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "hoe_head_black_steel",
+    "prefix": "hoe_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "saw_head_black_steel",
+    "prefix": "saw_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "drill_head_black_steel",
+    "prefix": "drill_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "chainsaw_head_black_steel",
+    "prefix": "chainsaw_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "wrench_head_black_steel",
+    "prefix": "wrench_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "sword_head_blue_steel",
+    "prefix": "sword_head",
+    "material": "blue_steel"
+  },
+  {
+    "id": "pickaxe_head_blue_steel",
+    "prefix": "pickaxe_head",
+    "material": "blue_steel"
+  },
+  {
+    "id": "shovel_head_blue_steel",
+    "prefix": "shovel_head",
+    "material": "blue_steel"
+  },
+  {
+    "id": "axe_head_blue_steel",
+    "prefix": "axe_head",
+    "material": "blue_steel"
+  },
+  {
+    "id": "hoe_head_blue_steel",
+    "prefix": "hoe_head",
+    "material": "blue_steel"
+  },
+  {
+    "id": "saw_head_blue_steel",
+    "prefix": "saw_head",
+    "material": "blue_steel"
+  },
+  {
+    "id": "drill_head_blue_steel",
+    "prefix": "drill_head",
+    "material": "blue_steel"
+  },
+  {
+    "id": "chainsaw_head_blue_steel",
+    "prefix": "chainsaw_head",
+    "material": "blue_steel"
+  },
+  {
+    "id": "wrench_head_blue_steel",
+    "prefix": "wrench_head",
+    "material": "blue_steel"
   },
   {
     "id": "sword_head_blue_topaz",
@@ -7985,6 +8730,51 @@
     "material": "iron_magnetic"
   },
   {
+    "id": "sword_head_magnalium",
+    "prefix": "sword_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "pickaxe_head_magnalium",
+    "prefix": "pickaxe_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "shovel_head_magnalium",
+    "prefix": "shovel_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "axe_head_magnalium",
+    "prefix": "axe_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "hoe_head_magnalium",
+    "prefix": "hoe_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "saw_head_magnalium",
+    "prefix": "saw_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "drill_head_magnalium",
+    "prefix": "drill_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "chainsaw_head_magnalium",
+    "prefix": "chainsaw_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "wrench_head_magnalium",
+    "prefix": "wrench_head",
+    "material": "magnalium"
+  },
+  {
     "id": "sword_head_manganese",
     "prefix": "sword_head",
     "material": "manganese"
@@ -8388,6 +9178,51 @@
     "id": "wrench_head_platinum",
     "prefix": "wrench_head",
     "material": "platinum"
+  },
+  {
+    "id": "sword_head_rose_gold",
+    "prefix": "sword_head",
+    "material": "rose_gold"
+  },
+  {
+    "id": "pickaxe_head_rose_gold",
+    "prefix": "pickaxe_head",
+    "material": "rose_gold"
+  },
+  {
+    "id": "shovel_head_rose_gold",
+    "prefix": "shovel_head",
+    "material": "rose_gold"
+  },
+  {
+    "id": "axe_head_rose_gold",
+    "prefix": "axe_head",
+    "material": "rose_gold"
+  },
+  {
+    "id": "hoe_head_rose_gold",
+    "prefix": "hoe_head",
+    "material": "rose_gold"
+  },
+  {
+    "id": "saw_head_rose_gold",
+    "prefix": "saw_head",
+    "material": "rose_gold"
+  },
+  {
+    "id": "drill_head_rose_gold",
+    "prefix": "drill_head",
+    "material": "rose_gold"
+  },
+  {
+    "id": "chainsaw_head_rose_gold",
+    "prefix": "chainsaw_head",
+    "material": "rose_gold"
+  },
+  {
+    "id": "wrench_head_rose_gold",
+    "prefix": "wrench_head",
+    "material": "rose_gold"
   },
   {
     "id": "sword_head_rubber",

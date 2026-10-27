@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/gold",
+    "#c:dusts/gold",
+    "#c:dusts/gold",
+    "#c:dusts/gold",
+    "#c:dusts/copper"
+  ],
+  "result": {
+    "id": "iis:dust_rose_gold",
+    "count": 5
+  }
+}

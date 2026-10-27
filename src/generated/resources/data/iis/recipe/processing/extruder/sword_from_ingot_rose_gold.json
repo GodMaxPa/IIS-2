@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/rose_gold",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sword_head_rose_gold",
+      "count": 1
+    }
+  ],
+  "duration": 338,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_sword"
+  ]
+}

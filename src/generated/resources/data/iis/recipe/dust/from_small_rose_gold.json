@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/rose_gold",
+    "#iis:small_dusts/rose_gold",
+    "#iis:small_dusts/rose_gold",
+    "#iis:small_dusts/rose_gold"
+  ],
+  "result": {
+    "id": "iis:dust_rose_gold"
+  }
+}

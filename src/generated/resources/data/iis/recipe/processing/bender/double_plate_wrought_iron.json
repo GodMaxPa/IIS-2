@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/wrought_iron",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_wrought_iron",
+      "count": 1
+    }
+  ],
+  "duration": 112,
+  "eut": 96
+}

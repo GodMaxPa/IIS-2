@@ -594,10 +594,12 @@ def generate(g):
     # Machine casing, hull (GT_Loader_MetaTileEntities: Casing_LV "PPP/PwP/PPP", HardMachineCasings Hull_LV "PHP/CMC")
     # --------------------------------------------------------------------------------------------------------
     ic = os.path.join(LV, 'iconsets')
-    for f in ('MACHINE_LV_SIDE', 'MACHINE_LV_TOP', 'MACHINE_LV_BOTTOM', 'MACHINE_MV_SIDE', 'MACHINE_MV_TOP', 'MACHINE_MV_BOTTOM'):
+    for f in ('MACHINE_LV_SIDE', 'MACHINE_LV_TOP', 'MACHINE_LV_BOTTOM', 'MACHINE_MV_SIDE', 'MACHINE_MV_TOP', 'MACHINE_MV_BOTTOM',
+              'MACHINE_HV_SIDE', 'MACHINE_HV_TOP', 'MACHINE_HV_BOTTOM'):
         img(os.path.join(ic, f + '.png')).crop((0, 0, 16, 16)).save(tex_out(f'block/lv/{f.lower()}.png'))
     for bid, en, key in (('casing_lv', 'LV Machine Casing', 'gt.blockcasings.1.name'), ('hull_lv', 'LV Machine Hull', 'gt.blockmachines.hull.tier.01.name'),
-                         ('casing_mv', 'MV Machine Casing', 'gt.blockcasings.2.name'), ('hull_mv', 'MV Machine Hull', 'gt.blockmachines.hull.tier.02.name')):
+                         ('casing_mv', 'MV Machine Casing', 'gt.blockcasings.2.name'), ('hull_mv', 'MV Machine Hull', 'gt.blockmachines.hull.tier.02.name'),
+                         ('casing_hv', 'HV Machine Casing', 'gt.blockcasings.3.name')):
         tr = bid[-2:]
         side, top, bottom = (f'{NS}:block/lv/machine_{tr}_{x}' for x in ('side', 'top', 'bottom'))
         cube_model(bid, {'front': side, 'back': side, 'side': side, 'top': top, 'bottom': bottom})
@@ -613,6 +615,8 @@ def generate(g):
     shaped('lv/casing_mv', f'{NS}:casing_mv', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'Aluminium')})
     shaped('lv/hull_mv', f'{NS}:hull_mv', 1, ['PHP', 'CMC'],
            {'P': tag_of('plate', 'WroughtIron'), 'H': tag_of('plate', 'Aluminium'), 'C': C('Copper'), 'M': f'{NS}:casing_mv'})
+    # D90: GT_Loader_MetaTileEntities:54 Casing_HV (stainless steel); the HV hull (:174 "PHP/CMC" with plastic plates) waits for plastic
+    shaped('lv/casing_hv', f'{NS}:casing_hv', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'StainlessSteel')})
 
     def machine_tex(bid, base_dir, faces_src):
         """faces_src: face -> (base iconset name, overlay path or None)."""
@@ -1278,7 +1282,7 @@ def generate(g):
     stats['chem'] = _chem.chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER)
     # GT_MachineRecipeLoader:1371-1372: assembler 8 plates + programmed circuit 8 -> machine casing (50 t, 16 EU/t); the hull
     # variant needs molten plastic (mHardMachineCasings) and waits for plastic
-    for tr, mat in (('lv', 'Steel'), ('mv', 'Aluminium')):
+    for tr, mat in (('lv', 'Steel'), ('mv', 'Aluminium'), ('hv', 'StainlessSteel')):   # :1373 HV (D90)
         mrec('assembler', f'casing_{tr}', [ing(tag_of('plate', mat), 8)], [out(f'{NS}:casing_{tr}')], 50, 16, circuit=8)
     # --- covers: GT_MachineRecipeLoader:610-615 (lever/torch/pressure plates + plate + molten solder), :671 shutter, items :783 drain/crafting ---
     cover_plates = [tag_of('plate', m) for m in ('Iron', 'WroughtIron', 'Aluminium') if ref('plate', m)]

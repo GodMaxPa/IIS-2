@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/black_bronze",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_black_bronze",
+      "count": 1
+    }
+  ],
+  "duration": 4000,
+  "eut": 120,
+  "temp": 2000
+}

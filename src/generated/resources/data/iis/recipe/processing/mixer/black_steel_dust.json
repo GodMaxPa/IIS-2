@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/black_bronze",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/nickel",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/steel",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_black_steel",
+      "count": 5
+    }
+  ],
+  "duration": 500,
+  "eut": 8
+}
