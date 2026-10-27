@@ -1,0 +1,26 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/wood",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_board_phenolic",
+      "count": 1
+    }
+  ],
+  "duration": 30,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:glue",
+      "amount": 100
+    }
+  ],
+  "keep": [
+    "iis:mold_plate"
+  ]
+}

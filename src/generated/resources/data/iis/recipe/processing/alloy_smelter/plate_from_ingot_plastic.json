@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/plastic",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_plastic",
+      "count": 1
+    }
+  ],
+  "duration": 8,
+  "eut": 8,
+  "keep": [
+    "iis:mold_plate"
+  ]
+}

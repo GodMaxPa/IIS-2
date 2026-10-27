@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/wheat",
+    "#iis:small_dusts/wheat",
+    "#iis:small_dusts/wheat",
+    "#iis:small_dusts/wheat"
+  ],
+  "result": {
+    "id": "iis:dust_wheat"
+  }
+}

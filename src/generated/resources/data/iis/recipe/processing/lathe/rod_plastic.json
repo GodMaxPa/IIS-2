@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/plastic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_plastic",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_plastic",
+      "count": 2
+    }
+  ],
+  "duration": 20,
+  "eut": 16
+}

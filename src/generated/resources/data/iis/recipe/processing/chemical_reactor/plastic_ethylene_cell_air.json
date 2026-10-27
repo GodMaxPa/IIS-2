@@ -1,0 +1,39 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:ethylene",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 1
+    }
+  ],
+  "duration": 1120,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:air",
+      "amount": 14000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_plastic",
+      "amount": 1000
+    }
+  ],
+  "circuit": 1
+}

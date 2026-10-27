@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/plastic",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 28,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_plastic",
+      "amount": 144
+    }
+  ]
+}

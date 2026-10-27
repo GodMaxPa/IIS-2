@@ -420,6 +420,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_plastic",
+    "tool": "sword",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "sword"
+  },
+  {
     "id": "sword_platinum",
     "tool": "sword",
     "material": "platinum",
@@ -993,6 +1005,18 @@
     "craftDamage": 2,
     "speed": 8.0,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_plastic",
+    "tool": "pickaxe",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "pickaxe"
   },
   {
@@ -1572,6 +1596,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_plastic",
+    "tool": "shovel",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_platinum",
     "tool": "shovel",
     "material": "platinum",
@@ -2145,6 +2181,18 @@
     "craftDamage": 2,
     "speed": 8.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_plastic",
+    "tool": "axe",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "axe"
   },
   {
@@ -2724,6 +2772,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_plastic",
+    "tool": "hoe",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_platinum",
     "tool": "hoe",
     "material": "platinum",
@@ -3297,6 +3357,18 @@
     "craftDamage": 4,
     "speed": 8.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_plastic",
+    "tool": "saw",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "axe"
   },
   {
@@ -3876,6 +3948,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_plastic",
+    "tool": "hammer",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 2.25,
+    "quality": 1,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_platinum",
     "tool": "hammer",
     "material": "platinum",
@@ -4437,6 +4521,18 @@
     "craftDamage": 16,
     "speed": 8.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_plastic",
+    "tool": "wrench",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "wrench"
   },
   {
@@ -5016,6 +5112,18 @@
     "kind": null
   },
   {
+    "id": "file_plastic",
+    "tool": "file",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": null
+  },
+  {
     "id": "file_platinum",
     "tool": "file",
     "material": "platinum",
@@ -5589,6 +5697,18 @@
     "craftDamage": 8,
     "speed": 8.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_plastic",
+    "tool": "screwdriver",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
     "kind": null
   },
   {
@@ -6204,6 +6324,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_plastic",
+    "tool": "knife",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "sword"
+  },
+  {
     "id": "knife_platinum",
     "tool": "knife",
     "material": "platinum",
@@ -6777,6 +6909,18 @@
     "craftDamage": 8,
     "speed": 10.0,
     "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_plastic",
+    "tool": "wire_cutter",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 3.75,
+    "quality": 1,
     "kind": "wire_cutter"
   },
   {
@@ -7380,6 +7524,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_plastic",
+    "tool": "crowbar",
+    "material": "plastic",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": null
+  },
+  {
     "id": "crowbar_platinum",
     "tool": "crowbar",
     "material": "platinum",
@@ -7941,6 +8097,18 @@
     "craftDamage": 2,
     "speed": 24.0,
     "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_plastic",
+    "tool": "drill_lv",
+    "material": "plastic",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 9.0,
+    "quality": 1,
     "kind": "drill"
   },
   {
@@ -8520,6 +8688,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_plastic",
+    "tool": "chainsaw_lv",
+    "material": "plastic",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_platinum",
     "tool": "chainsaw_lv",
     "material": "platinum",
@@ -9093,6 +9273,18 @@
     "craftDamage": 16,
     "speed": 16.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_plastic",
+    "tool": "wrench_lv",
+    "material": "plastic",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
     "kind": "wrench"
   },
   {

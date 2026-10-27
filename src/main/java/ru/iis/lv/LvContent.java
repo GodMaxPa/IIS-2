@@ -116,6 +116,8 @@ public final class LvContent {
     public static final DeferredBlock<Block> HULL_MV = block("hull_mv", Block::new, LvContent::metal);
     // HV (D90): GT_Block_Casings1 meta 3
     public static final DeferredBlock<Block> CASING_HV = block("casing_hv", Block::new, LvContent::metal);
+    // D92: Hull_HV (GT_Loader_MetaTileEntities:174, пластик)
+    public static final DeferredBlock<Block> HULL_HV = block("hull_hv", Block::new, LvContent::metal);
 
     // --- машины, генераторы, буферы, трансформатор ----------------------------------------------------------------
     public static final Map<LvMachineType, DeferredBlock<ElectricMachineBlock>> MACHINES = new EnumMap<>(LvMachineType.class);
@@ -203,6 +205,13 @@ public final class LvContent {
     public static final DeferredItem<Item> CHIP_ILC = item("chip_ilc");
     public static final DeferredItem<Item> WAFER_RAM = item("wafer_ram");
     public static final DeferredItem<Item> CHIP_RAM = item("chip_ram");
+    // D92: транзистор, текстолитовая плата, хорошая интегральная схема, схема HV; растительный шарик и биоотходы (вместо IC2)
+    public static final DeferredItem<Item> TRANSISTOR = item("transistor");
+    public static final DeferredItem<Item> CIRCUIT_BOARD_PHENOLIC = item("circuit_board_phenolic");
+    public static final DeferredItem<Item> CIRCUIT_INTEGRATED_GOOD = item("circuit_integrated_good");
+    public static final DeferredItem<Item> CIRCUIT_ADVANCED = item("circuit_advanced");
+    public static final DeferredItem<Item> PLANT_BALL = item("plant_ball");
+    public static final DeferredItem<Item> BIO_CHAFF = item("bio_chaff");
     public static final List<String> EXTRUDER_SHAPE_IDS = List.of("plate", "rod", "bolt", "ring", "cell", "ingot", "wire", "casing",
             "pipe_tiny", "pipe_small", "pipe_medium", "pipe_large", "pipe_huge", "block", "sword", "pickaxe", "shovel", "axe", "hoe", "saw",
             "gear", "bottle", "small_gear");

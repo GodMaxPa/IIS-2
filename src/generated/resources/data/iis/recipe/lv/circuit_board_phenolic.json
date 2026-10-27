@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PRP",
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+    "P": "#c:dusts/wood",
+    "R": {
+      "neoforge:ingredient_type": "neoforge:components",
+      "items": "iis:capsule",
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:glue",
+          "amount": 1000
+        }
+      }
+    }
+  },
+  "result": {
+    "id": "iis:circuit_board_phenolic",
+    "count": 8
+  }
+}

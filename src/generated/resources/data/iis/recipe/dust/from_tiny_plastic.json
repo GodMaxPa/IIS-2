@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/plastic",
+    "#iis:tiny_dusts/plastic",
+    "#iis:tiny_dusts/plastic",
+    "#iis:tiny_dusts/plastic",
+    "#iis:tiny_dusts/plastic",
+    "#iis:tiny_dusts/plastic",
+    "#iis:tiny_dusts/plastic",
+    "#iis:tiny_dusts/plastic",
+    "#iis:tiny_dusts/plastic"
+  ],
+  "result": {
+    "id": "iis:dust_plastic"
+  }
+}

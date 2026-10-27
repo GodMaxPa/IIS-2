@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "iis:circuit_good"
+    "iis:circuit_good",
+    "iis:circuit_integrated_good"
   ]
 }

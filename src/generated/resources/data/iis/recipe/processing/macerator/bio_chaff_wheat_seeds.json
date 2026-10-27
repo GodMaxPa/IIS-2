@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:wheat_seeds",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bio_chaff",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

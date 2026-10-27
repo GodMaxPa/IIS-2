@@ -1,0 +1,24 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/wood",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plant_ball",
+      "count": 1,
+      "chance": 100
+    }
+  ],
+  "duration": 16,
+  "eut": 4,
+  "fluid_outputs": [
+    {
+      "id": "iis:creosote",
+      "amount": 5
+    }
+  ]
+}

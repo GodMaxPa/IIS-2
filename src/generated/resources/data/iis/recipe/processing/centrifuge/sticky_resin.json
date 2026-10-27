@@ -1,0 +1,28 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "iis:sticky_resin",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_raw_rubber",
+      "count": 3
+    },
+    {
+      "id": "iis:plant_ball",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 300,
+  "eut": 5,
+  "fluid_outputs": [
+    {
+      "id": "iis:glue",
+      "amount": 100
+    }
+  ]
+}

@@ -227,4 +227,65 @@ final class LargeGameTests {
             h.assertTrue(m.getItem(1).is(ru.iis.command.SelfTest.item("lens_ruby")), "lens consumed: " + m.getItem(1));
         });
     }
+
+    private static net.minecraft.world.level.material.Fluid gt(String id) {
+        return ru.iis.fluid.GtFluids.get(id).source().get();
+    }
+
+    private static ru.iis.lv.block.ElectricMachineBlockEntity poweredMachine(GameTestHelper h, ru.iis.lv.LvMachineType t) {
+        ru.iis.lv.block.ElectricMachineBlockEntity m = LvGameTests.machine(h, new BlockPos(4, 1, 4), t, Direction.NORTH);
+        h.onEachTick(() -> m.energy.stored = m.energy.capacity);
+        return m;
+    }
+
+    /** Пивоварня LV (D92): биоотходы + 750 л воды → 750 л биомассы (GT_MachineRecipeLoader:767, 128 тиков). */
+    static void breweryMakesBiomass(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.BREWERY);
+        m.setItem(0, new ItemStack(LvContent.BIO_CHAFF.get()));
+        m.tank().setAmount(Fluids.WATER, 750);
+        h.succeedWhen(() -> {
+            h.assertTrue(m.outTank().amount() == 750 && m.outTank().resource().getFluid() == gt("biomass"), "biomass " + m.outTank().amount());
+            h.assertTrue(m.getItem(0).isEmpty(), "bio chaff left: " + m.getItem(0));
+        });
+    }
+
+    /** Химреактор LV: капсула кислорода + схема 1 + 144 л этилена → 216 л расплава пластика и пустая капсула (GT_RecipeAdder:274). */
+    static void reactorMakesPlastic(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.CHEMICAL_REACTOR);
+        m.setItem(0, ru.iis.fluid.CapsuleItem.withContent(new ItemStack(ru.iis.fluid.FluidContainers.CAPSULE.get()),
+                ru.iis.fluid.FluidContent.of(gt("oxygen"), 1000)));
+        m.setItem(1, ProgrammedCircuitItem.withConfig(new ItemStack(LvContent.PROGRAMMED_CIRCUIT.get()), 1));
+        m.tank().setAmount(gt("ethylene"), 144);
+        h.succeedWhen(() -> {
+            h.assertTrue(m.outTank().amount() == 216 && m.outTank().resource().getFluid() == gt("molten_plastic"), "plastic " + m.outTank().amount());
+            ItemStack o = m.getItem(m.type().inputs);
+            h.assertTrue(o.is(ru.iis.fluid.FluidContainers.CAPSULE.get()) && ru.iis.fluid.CapsuleItem.content(o).isEmpty(), "capsule " + o);
+        });
+    }
+
+    /** Сборщик схем LV: 2 хорошие интегральные схемы, 3 логические микросхемы, ОЗУ, 4 транзистора, 16 тонких проводов электрума
+     *  + 72 л паяльного сплава → схема HV (GT_MachineRecipeLoader:563, 800 тиков, 28 EU/t). */
+    static void circuitAssemblerMakesAdvanced(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.CIRCUIT_ASSEMBLER);
+        m.setItem(0, new ItemStack(LvContent.CIRCUIT_INTEGRATED_GOOD.get(), 2));
+        m.setItem(1, new ItemStack(LvContent.CHIP_ILC.get(), 3));
+        m.setItem(2, new ItemStack(LvContent.CHIP_RAM.get()));
+        m.setItem(3, new ItemStack(LvContent.TRANSISTOR.get(), 4));
+        m.setItem(4, new ItemStack(ru.iis.command.SelfTest.item("wire_fine_electrum"), 16));
+        m.tank().setAmount(gt("molten_solderingalloy"), 72);
+        h.succeedWhen(() -> h.assertTrue(m.getItem(m.type().inputs).is(LvContent.CIRCUIT_ADVANCED.get()), "output " + m.getItem(m.type().inputs)));
+    }
+
+    /** Полная капсула в верстаке оставляет пустую (клей в текстолитовой плате, GT_MachineRecipeLoader:442); пустая — ничего. */
+    static void filledCapsuleLeavesEmpty(GameTestHelper h) {
+        ItemStack glue = ru.iis.fluid.CapsuleItem.withContent(new ItemStack(ru.iis.fluid.FluidContainers.CAPSULE.get()),
+                ru.iis.fluid.FluidContent.of(gt("glue"), 1000));
+        var rem = glue.getItem().getCraftingRemainder(glue);
+        h.assertTrue(rem != null, "no remainder");
+        ItemStack r = rem.create();
+        h.assertTrue(r.is(ru.iis.fluid.FluidContainers.CAPSULE.get()) && ru.iis.fluid.CapsuleItem.content(r).isEmpty(), "remainder " + r);
+        ItemStack empty = new ItemStack(ru.iis.fluid.FluidContainers.CAPSULE.get());
+        h.assertTrue(empty.getItem().getCraftingRemainder(empty) == null, "empty capsule must leave nothing");
+        h.succeed();
+    }
 }

@@ -1,0 +1,39 @@
+{
+  "type": "iis:circuit_assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_integrated_good",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:chip_ilc",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:chip_ram",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:transistor",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:fine_wires/electrum",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    }
+  ],
+  "duration": 800,
+  "eut": 28,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 72
+    }
+  ]
+}

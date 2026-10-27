@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/wood",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_wood",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

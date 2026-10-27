@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CPC",
+    "PMP",
+    "BPB"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "C": "#c:circuits/advanced",
+    "P": "#c:gears/steel",
+    "B": "iis:pipe_large_steel"
+  },
+  "result": {
+    "id": "iis:large_steam_turbine"
+  }
+}

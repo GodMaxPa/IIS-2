@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#iis:long_rods/plastic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_plastic",
+      "count": 2
+    }
+  ],
+  "duration": 8,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 4
+    }
+  ]
+}

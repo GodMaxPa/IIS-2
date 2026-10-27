@@ -46,6 +46,13 @@ public class CapsuleItem extends Item {
         this.universal = universal;
     }
 
+    /** Как у капсул IC2/GT: полная капсула в верстаке (клей в текстолитовой плате GT, D92) оставляет пустую. */
+    @Override
+    public net.minecraft.world.item.@Nullable ItemStackTemplate getCraftingRemainder(net.minecraft.world.item.ItemInstance instance) {
+        if (!(instance instanceof ItemStack stack) || stack.isEmpty() || content(stack).isEmpty()) return null;
+        return net.minecraft.world.item.ItemStackTemplate.fromNonEmptyStack(withContent(stack, FluidContent.EMPTY));
+    }
+
     public static FluidContent content(ItemStack stack) {
         FluidContent c = stack.get(FluidContainers.CONTENT.get());
         return c == null ? FluidContent.EMPTY : c;

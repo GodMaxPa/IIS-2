@@ -1,0 +1,29 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/wood",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:charcoal",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:sulfuricacid",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dilutedsulfuricacid",
+      "amount": 1000
+    }
+  ]
+}

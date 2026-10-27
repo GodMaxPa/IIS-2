@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/plastic",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:saw_head_plastic",
+      "count": 1
+    }
+  ],
+  "duration": 8,
+  "eut": 32,
+  "keep": [
+    "iis:shape_extruder_saw"
+  ]
+}

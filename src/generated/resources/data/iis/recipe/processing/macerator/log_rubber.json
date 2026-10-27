@@ -1,0 +1,22 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:rubber_log",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_wood",
+      "count": 6
+    },
+    {
+      "id": "iis:sticky_resin",
+      "count": 1,
+      "chance": 3300
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

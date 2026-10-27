@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCW",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:steel_firebox_casing",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/copper"
+  },
+  "result": {
+    "id": "iis:large_boiler_steel"
+  }
+}

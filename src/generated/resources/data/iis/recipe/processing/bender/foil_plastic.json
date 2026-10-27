@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/plastic",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_plastic",
+      "count": 4
+    }
+  ],
+  "duration": 4,
+  "eut": 24
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/wood",
+    "#iis:tiny_dusts/wood",
+    "#iis:tiny_dusts/wood",
+    "#iis:tiny_dusts/wood",
+    "#iis:tiny_dusts/wood",
+    "#iis:tiny_dusts/wood",
+    "#iis:tiny_dusts/wood",
+    "#iis:tiny_dusts/wood",
+    "#iis:tiny_dusts/wood"
+  ],
+  "result": {
+    "id": "iis:dust_wood"
+  }
+}

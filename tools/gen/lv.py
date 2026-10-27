@@ -87,6 +87,10 @@ MACHINES = [
     ('arc_furnace',   'arcfurnace',    'ARC_FURNACE',      'ArcFurnace',   'arc_furnace',   1, 6, 16000, 'Arc Furnace'),
     # :1030 precision laser engraver (2, 1)
     ('laser_engraver', 'laserengraver', 'LASER_ENGRAVER',  'LaserEngraver', 'laser_engraver', 2, 1, 0,    'Precision Laser Engraver'),
+    # D92: :931 brewery (GT_MetaTileEntity_PotionBrewer: 1 in, 0 out, tank 750), :1374 circuit assembler (6, 1, 16000)
+    ('brewery',       'brewery',       'POTIONBREWER',     'PotionBrewer', 'brewery',       1, 0, 750,   'Brewery'),
+    ('circuit_assembler', 'circuitassembler', 'CIRCUITASSEMBLER', 'CircuitAssembler', 'circuit_assembler', 6, 1, 16000,
+                      'Circuit Assembling Machine'),
 ]
 # GT crafting of the D83 machines (both tiers, X.* resolved per tier like MV_CRAFT)
 NEW_CRAFT = {
@@ -96,6 +100,10 @@ NEW_CRAFT = {
     'electric_oven': (['CEC', 'CMC', 'WEW'], {'M': 'HULL', 'E': 'CIRCUIT', 'W': 'WIRE', 'C': 'COIL_HEATING'}),
     'arc_furnace': (['WGW', 'CMC', 'PPP'], {'M': 'HULL', 'P': 'PLATE', 'C': 'CIRCUIT', 'W': 'WIRE4', 'G': '#c:dusts/graphite'}),
     'laser_engraver': (['PEP', 'CMC', 'WCW'], {'M': 'HULL', 'E': 'EMITTER', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE'}),
+    # D92: GT_Loader_MetaTileEntities:940-941 brewery "GPG/WMW/CBC" (blaze rod), :1374-1375 circuit assembler "ACE/VMV/WCW"
+    'brewery': (['GPG', 'WMW', 'CBC'], {'M': 'HULL', 'P': 'PUMP', 'B': 'minecraft:blaze_rod', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
+    'circuit_assembler': (['ACE', 'VMV', 'WCW'], {'M': 'HULL', 'V': 'CONVEYOR', 'A': 'ROBOT_ARM', 'C': 'BETTER_CIRCUIT', 'W': 'WIRE',
+                                                  'E': 'EMITTER'}),
 }
 # MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
 # outputs and tanks as LV except the mixer (16000 L, :1022); the compressor tank (LV 4000, MV 8000) stays 0 as at LV (D82)
@@ -171,6 +179,15 @@ ITEMS = [
     ('chip_ilc', 'gt:chip_ilc', 'gt.metaitem.03.32037.name', 'Integrated Logic Circuit', 'Логическая микросхема'),
     ('wafer_ram', 'gt:wafer_ram', 'gt.metaitem.03.32038.name', 'Random Access Memory Chip (Wafer)', 'Пластина микросхем ОЗУ'),
     ('chip_ram', 'gt:chip_ram', 'gt.metaitem.03.32039.name', 'Random Access Memory Chip', 'Микросхема ОЗУ'),
+    # D92: GT_MetaGenerated_Item_01:713 transistor, :715 phenolic board, Item_03:141 good integrated circuit; the HV circuit is
+    # IC2's advanced circuit in IIS 1 (GT_Proxy:416) — our own item with GT's Processor Assembly icon (:696)
+    ('transistor', 'gt:717', 'gt.metaitem.01.32717.name', 'Transistor', 'Транзистор'),
+    ('circuit_board_phenolic', 'gt:719', 'gt.metaitem.01.32719.name', 'Phenolic Circuit Board', 'Текстолитовая печатная плата'),
+    ('circuit_integrated_good', 'gt:integrated_good', 'gt.metaitem.03.32079.name', 'Good Integrated Circuit', 'Хорошая интегральная схема'),
+    ('circuit_advanced', 'gt:703', None, 'Advanced Circuit', 'Улучшенная электросхема'),
+    # IC2 plant ball and bio chaff (IIS 1 config/ic2/macerator.ini, GT compressor recipes): own art, IC2 is not ported (D5)
+    ('plant_ball', 'gen:plant_ball', None, 'Plantball', 'Растительный шарик'),
+    ('bio_chaff', 'gen:bio_chaff', None, 'Bio Chaff', 'Биоотходы'),
     ('diamond_sawblade', 'gt:721', 'gt.metaitem.01.32721.name', 'Diamond Sawblade', 'Алмазный пильный диск'),
     ('item_filter', 'gt:729', 'gt.metaitem.01.32729.name', 'Item Filter', 'Фильтр'),
     ('battery_lv', 'gt:519', 'gt.metaitem.01.32519.name', 'Small Sodium Battery', 'Малая натриевая батарея'),
@@ -402,6 +419,23 @@ def generate(g):
             for y in range(10, 14):
                 for x in range(10, 13):
                     im.putpixel((x, y), (120, 85, 50, 255))
+        elif kind == 'plant_ball':
+            # a tight ball of leaves: green with darker blades and a shaded lower right
+            for y in range(2, 15):
+                for x in range(2, 15):
+                    d = (x - 8) ** 2 + (y - 8) ** 2
+                    if d < 37 + rnd.randint(-3, 2):
+                        c = 120 + rnd.randint(-25, 25) - (25 if x + y > 18 else 0)
+                        dark = rnd.random() < 0.25
+                        im.putpixel((x, y), (int(c * 0.35), c if not dark else int(c * 0.7), int(c * 0.2), 255))
+        elif kind == 'bio_chaff':
+            # loose heap of chopped plant matter: yellow-green and brown flecks
+            for y in range(6, 15):
+                for x in range(1, 16):
+                    if abs(x - 8) < (y - 4) * 0.9 and rnd.random() < 0.85:
+                        c = 110 + rnd.randint(-30, 30)
+                        im.putpixel((x, y), (int(c * 0.75), c, int(c * 0.3), 255) if rnd.random() < 0.6 else
+                                    (c, int(c * 0.75), int(c * 0.4), 255))
         return im
 
     # --------------------------------------------------------------------------------------------------------
@@ -448,6 +482,8 @@ def generate(g):
     add_item_tag('c:plates/wood', f'{NS}:plate_wood')
     add_item_tag('c:circuits/basic', f'{NS}:circuit_basic')   # GT OrePrefixes.circuit Basic
     add_item_tag('c:circuits/good', f'{NS}:circuit_good')     # GT OrePrefixes.circuit Good (D81)
+    add_item_tag('c:circuits/good', f'{NS}:circuit_integrated_good')   # Item_03:141, circuit Good (D92)
+    add_item_tag('c:circuits/advanced', f'{NS}:circuit_advanced')      # IC2 advancedCircuit = circuit Advanced (D92)
     name(f'item.{NS}.battery_lv.tooltip', 'Stores %s / %s EU', 'Запас: %s / %s EU')
 
     # creosote (Railcraft coke oven byproduct; GT Materials.Creosote, FuelType 3 = semifluid generator)
@@ -606,7 +642,7 @@ def generate(g):
         img(os.path.join(ic, f + '.png')).crop((0, 0, 16, 16)).save(tex_out(f'block/lv/{f.lower()}.png'))
     for bid, en, key in (('casing_lv', 'LV Machine Casing', 'gt.blockcasings.1.name'), ('hull_lv', 'LV Machine Hull', 'gt.blockmachines.hull.tier.01.name'),
                          ('casing_mv', 'MV Machine Casing', 'gt.blockcasings.2.name'), ('hull_mv', 'MV Machine Hull', 'gt.blockmachines.hull.tier.02.name'),
-                         ('casing_hv', 'HV Machine Casing', 'gt.blockcasings.3.name')):
+                         ('casing_hv', 'HV Machine Casing', 'gt.blockcasings.3.name'), ('hull_hv', 'HV Machine Hull', 'gt.blockmachines.hull.tier.03.name')):
         tr = bid[-2:]
         side, top, bottom = (f'{NS}:block/lv/machine_{tr}_{x}' for x in ('side', 'top', 'bottom'))
         cube_model(bid, {'front': side, 'back': side, 'side': side, 'top': top, 'bottom': bottom})
@@ -622,8 +658,11 @@ def generate(g):
     shaped('lv/casing_mv', f'{NS}:casing_mv', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'Aluminium')})
     shaped('lv/hull_mv', f'{NS}:hull_mv', 1, ['PHP', 'CMC'],
            {'P': tag_of('plate', 'WroughtIron'), 'H': tag_of('plate', 'Aluminium'), 'C': C('Copper'), 'M': f'{NS}:casing_mv'})
-    # D90: GT_Loader_MetaTileEntities:54 Casing_HV (stainless steel); the HV hull (:174 "PHP/CMC" with plastic plates) waits for plastic
+    # D90: GT_Loader_MetaTileEntities:54 Casing_HV (stainless steel); D92: :174 Hull_HV "PHP/CMC" (gold cable, stainless steel +
+    # plastic plates)
     shaped('lv/casing_hv', f'{NS}:casing_hv', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'StainlessSteel')})
+    shaped('lv/hull_hv', f'{NS}:hull_hv', 1, ['PHP', 'CMC'],
+           {'P': tag_of('plate', 'Plastic'), 'H': tag_of('plate', 'StainlessSteel'), 'C': C('Gold'), 'M': f'{NS}:casing_hv'})
 
     def machine_tex(bid, base_dir, faces_src):
         """faces_src: face -> (base iconset name, overlay path or None)."""
@@ -1047,13 +1086,14 @@ def generate(g):
     XMV['PIPE'] = f'{NS}:pipe_medium_steel'
     XMV['WIRE4'] = C('Copper', 4)
     XMV['EMITTER'] = f'{NS}:emitter_mv'
+    XMV['BETTER_CIRCUIT'] = '#c:circuits/advanced'   # Tier.ELECTRIC[2].mBetterManagingObject (D92)
     # GT_MetaGenerated_Item_01:665, :668 emitters "SSC/WQS/CWS": quartzite / nether quartz, brass / electrum rods, circuit, cable
     shaped('lv/emitter_lv', f'{NS}:emitter_lv', 1, ['SSC', 'WQS', 'CWS'], {'Q': tag_of('gem', 'Quartzite'), 'S': R('Brass'), 'C': CIRC, 'W': C('Tin')})
     shaped('lv/emitter_mv', f'{NS}:emitter_mv', 1, ['SSC', 'WQS', 'CWS'], {'Q': 'minecraft:quartz', 'S': R('Electrum'), 'C': CIRC_MV, 'W': C('Copper')})
     # LV versions of the D83 machines: X.* for tier 1 (Tier.ELECTRIC[1], GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330)
     XLV = {'HULL': HULL, 'CIRCUIT': CIRC, 'WIRE': C('Tin'), 'GLASS': 'minecraft:glass', 'PLATE': P('Steel'), 'PIPE': f'{NS}:pipe_medium_bronze',
            'COIL_HEATING': W('Copper', 2), 'COIL_HEATING_DOUBLE': W('Copper', 4), 'MOTOR': MOTOR, 'PISTON': PISTON, 'PUMP': PUMP,
-           'CONVEYOR': CONV, 'ROBOT_ARM': ARM, 'WIRE4': C('Tin', 4), 'EMITTER': f'{NS}:emitter_lv'}
+           'CONVEYOR': CONV, 'ROBOT_ARM': ARM, 'WIRE4': C('Tin', 4), 'EMITTER': f'{NS}:emitter_lv', 'BETTER_CIRCUIT': CIRC_MV}
     for mid_, (pattern, letters) in NEW_CRAFT.items():
         shaped(f'lv/{mid_}_lv', f'{NS}:{mid_}_lv', 1, pattern, {k: XLV.get(v, v) for k, v in letters.items()})
     # GT_MetaGenerated_Item_01:204-254 extruder shapes (wire cutter) and molds (hammer) from the empty shape

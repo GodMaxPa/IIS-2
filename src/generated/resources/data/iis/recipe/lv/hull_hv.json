@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PHP",
+    "CMC"
+  ],
+  "key": {
+    "P": "#c:plates/plastic",
+    "H": "#c:plates/stainless_steel",
+    "C": "#iis:cables/1x/gold",
+    "M": "iis:casing_hv"
+  },
+  "result": {
+    "id": "iis:hull_hv"
+  }
+}

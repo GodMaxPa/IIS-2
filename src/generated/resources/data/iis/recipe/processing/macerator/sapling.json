@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#minecraft:saplings",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_wood",
+      "count": 2
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

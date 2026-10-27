@@ -288,6 +288,24 @@
     "gui": "lv/laserengraver"
   },
   {
+    "id": "brewery_lv",
+    "type": "brewery",
+    "recipeMap": "brewery",
+    "inputs": 1,
+    "outputs": 0,
+    "tank": 750,
+    "gui": "lv/potionbrewer"
+  },
+  {
+    "id": "circuit_assembler_lv",
+    "type": "circuit_assembler",
+    "recipeMap": "circuit_assembler",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/circuitassembler"
+  },
+  {
     "id": "macerator_mv",
     "type": "macerator_mv",
     "recipeMap": "macerator",
@@ -565,6 +583,24 @@
     "outputs": 1,
     "tank": 0,
     "gui": "lv/laserengraver"
+  },
+  {
+    "id": "brewery_mv",
+    "type": "brewery_mv",
+    "recipeMap": "brewery",
+    "inputs": 1,
+    "outputs": 0,
+    "tank": 750,
+    "gui": "lv/potionbrewer"
+  },
+  {
+    "id": "circuit_assembler_mv",
+    "type": "circuit_assembler_mv",
+    "recipeMap": "circuit_assembler",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/circuitassembler"
   },
   {
     "id": "thermal_centrifuge_mv",

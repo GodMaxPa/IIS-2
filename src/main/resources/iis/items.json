@@ -5010,6 +5010,61 @@
     "material": "pitchblende"
   },
   {
+    "id": "dust_plastic",
+    "prefix": "dust",
+    "material": "plastic"
+  },
+  {
+    "id": "small_dust_plastic",
+    "prefix": "small_dust",
+    "material": "plastic"
+  },
+  {
+    "id": "tiny_dust_plastic",
+    "prefix": "tiny_dust",
+    "material": "plastic"
+  },
+  {
+    "id": "ingot_plastic",
+    "prefix": "ingot",
+    "material": "plastic"
+  },
+  {
+    "id": "nugget_plastic",
+    "prefix": "nugget",
+    "material": "plastic"
+  },
+  {
+    "id": "plate_plastic",
+    "prefix": "plate",
+    "material": "plastic"
+  },
+  {
+    "id": "rod_plastic",
+    "prefix": "rod",
+    "material": "plastic"
+  },
+  {
+    "id": "bolt_plastic",
+    "prefix": "bolt",
+    "material": "plastic"
+  },
+  {
+    "id": "screw_plastic",
+    "prefix": "screw",
+    "material": "plastic"
+  },
+  {
+    "id": "foil_plastic",
+    "prefix": "foil",
+    "material": "plastic"
+  },
+  {
+    "id": "long_rod_plastic",
+    "prefix": "long_rod",
+    "material": "plastic"
+  },
+  {
     "id": "crushed_platinum",
     "prefix": "crushed",
     "material": "platinum"
@@ -7405,6 +7460,36 @@
     "material": "vanadium_magnetite"
   },
   {
+    "id": "dust_wheat",
+    "prefix": "dust",
+    "material": "wheat"
+  },
+  {
+    "id": "small_dust_wheat",
+    "prefix": "small_dust",
+    "material": "wheat"
+  },
+  {
+    "id": "tiny_dust_wheat",
+    "prefix": "tiny_dust",
+    "material": "wheat"
+  },
+  {
+    "id": "dust_wood",
+    "prefix": "dust",
+    "material": "wood"
+  },
+  {
+    "id": "small_dust_wood",
+    "prefix": "small_dust",
+    "material": "wood"
+  },
+  {
+    "id": "tiny_dust_wood",
+    "prefix": "tiny_dust",
+    "material": "wood"
+  },
+  {
     "id": "dust_wrought_iron",
     "prefix": "dust",
     "material": "wrought_iron"
@@ -9183,6 +9268,51 @@
     "id": "wrench_head_palladium",
     "prefix": "wrench_head",
     "material": "palladium"
+  },
+  {
+    "id": "sword_head_plastic",
+    "prefix": "sword_head",
+    "material": "plastic"
+  },
+  {
+    "id": "pickaxe_head_plastic",
+    "prefix": "pickaxe_head",
+    "material": "plastic"
+  },
+  {
+    "id": "shovel_head_plastic",
+    "prefix": "shovel_head",
+    "material": "plastic"
+  },
+  {
+    "id": "axe_head_plastic",
+    "prefix": "axe_head",
+    "material": "plastic"
+  },
+  {
+    "id": "hoe_head_plastic",
+    "prefix": "hoe_head",
+    "material": "plastic"
+  },
+  {
+    "id": "saw_head_plastic",
+    "prefix": "saw_head",
+    "material": "plastic"
+  },
+  {
+    "id": "drill_head_plastic",
+    "prefix": "drill_head",
+    "material": "plastic"
+  },
+  {
+    "id": "chainsaw_head_plastic",
+    "prefix": "chainsaw_head",
+    "material": "plastic"
+  },
+  {
+    "id": "wrench_head_plastic",
+    "prefix": "wrench_head",
+    "material": "plastic"
   },
   {
     "id": "sword_head_platinum",

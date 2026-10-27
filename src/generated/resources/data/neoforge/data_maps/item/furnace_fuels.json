@@ -30,6 +30,9 @@
     "iis:dust_sulfur": {
       "burn_time": 1600
     },
+    "iis:dust_wood": {
+      "burn_time": 100
+    },
     "iis:gem_lignite": {
       "burn_time": 1200
     },
@@ -57,6 +60,9 @@
     "iis:small_dust_sodium": {
       "burn_time": 100
     },
+    "iis:small_dust_wood": {
+      "burn_time": 25
+    },
     "iis:tiny_dust_charcoal": {
       "burn_time": 177
     },
@@ -71,6 +77,9 @@
     },
     "iis:tiny_dust_sodium": {
       "burn_time": 44
+    },
+    "iis:tiny_dust_wood": {
+      "burn_time": 11
     }
   }
 }

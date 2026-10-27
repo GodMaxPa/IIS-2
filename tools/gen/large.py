@@ -36,16 +36,20 @@ def generate(g):
     ref, mat_id, mat_by_name = g['ref'], g['mat_id'], g['mat_by_name']
     rec = {}
 
-    def mrec(rtype, rid, inputs, outputs, duration, eut, fin=None, keep=None, temp=0):
+    def mrec(rtype, rid, inputs, outputs, duration, eut, fin=None, keep=None, temp=0, fout=None, circuit=0):
         if any(i['ingredient'] is None for i in inputs) or any(o['id'] is None for o in outputs):
             return
         r = {'type': f'{NS}:{rtype}', 'inputs': inputs, 'outputs': outputs, 'duration': max(1, int(duration)), 'eut': int(eut)}
         if fin:
             r['fluid_inputs'] = [fin]
+        if fout:
+            r['fluid_outputs'] = [fout]
         if keep:
             r['keep'] = [keep]
         if temp:
             r['temp'] = temp
+        if circuit:
+            r['circuit'] = circuit
         rec.setdefault(f'{rtype}/{rid}', r)
 
     def cutter(rid, inp, outs, dur, eut):
@@ -146,11 +150,12 @@ def generate(g):
             ('Distilled Water first, then Water; runs dry - explodes', 'Сначала дистиллированная вода, потом обычная; без воды — взрыв'),
             (f'Diesel fuels have 1/4 efficiency; heats up in {heat_s} s', f'Дизельное топливо — с 1/4 отдачи; разогрев {heat_s} с'),
             ('Causes up to 240 Pollution per second', 'Загрязнение: до 240 в секунду')])
-    # GT_Loader_MetaTileEntities:1157 "WCW/CMC/WCW": bronze firebox, basic circuit, tin cable. The steel boiler (:1158) needs
-    # an Advanced (HV) circuit — not in IIS 2 yet: its controller comes from the creative tab until HV (like the vacuum freezer).
+    # GT_Loader_MetaTileEntities:1157 "WCW/CMC/WCW": bronze firebox, basic circuit, tin cable.
     shaped('multi/large_boiler_bronze', f'{NS}:large_boiler_bronze', 1, ['WCW', 'CMC', 'WCW'],
            {'M': f'{NS}:bronze_firebox_casing', 'C': '#c:circuits/basic', 'W': '#iis:cables/1x/tin'})
-    name(f'block.{NS}.large_boiler_steel.tooltip.9', 'Crafting arrives with the Advanced (HV) circuit', 'Крафт появится вместе со схемой HV')
+    # :1158 steel: steel firebox, Advanced (HV) circuits, copper cables (D92)
+    shaped('multi/large_boiler_steel', f'{NS}:large_boiler_steel', 1, ['WCW', 'CMC', 'WCW'],
+           {'M': f'{NS}:steel_firebox_casing', 'C': '#c:circuits/advanced', 'W': '#iis:cables/1x/copper'})
     shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'LargeBoiler.png'), tex_out('gui/multi/large_boiler.png'))
     for k, en, ruu in (('gui.iis.boiler.steam', 'Steam: %s L/t', 'Пар: %s л/т'),
                        ('gui.iis.boiler.sh_steam', 'Superheated steam: %s L/t', 'Перегретый пар: %s л/т'),
@@ -166,8 +171,7 @@ def generate(g):
     stats['large_boilers'] = len(BOILERS)
 
     # --- large steam turbine (GT_MetaTileEntity_LargeTurbine_Steam, D89) ------------------------------------------------
-    # Casing GT_Block_Casings4:9 ("PhP/PFP/PwP" magnalium plates + blue steel frame) and controller (:1247 HV hull, Advanced
-    # circuits) need HV materials: both come from the creative tab until then, like the steel boiler.
+    # Casing GT_Block_Casings4:9 ("PhP/PFP/PwP" magnalium plates + blue steel frame, D90) and controller (:1248, D92).
     first(os.path.join(BI, 'MACHINE_CASING_TURBINE.png')).save(tex_out('block/multi/turbine_casing.png'))
     write(os.path.join(A, 'models', 'block', 'turbine_casing.json'), {'parent': 'minecraft:block/cube_all', 'textures': {'all': f'{NS}:block/multi/turbine_casing'}})
     write(os.path.join(A, 'blockstates', 'turbine_casing.json'), {'variants': {'': {'model': f'{NS}:block/turbine_casing'}}})
@@ -208,8 +212,10 @@ def generate(g):
         ('Side centres of layers 2-3: steam input hatch, distilled water output hatch, maintenance', 'Середины сторон 2-го и 3-го слоёв: вход пара, выход дистиллированной воды, обслуживание'),
         ('Back centre: Dynamo Hatch; Turbine Casings for the rest (24 at least)', 'Середина задней стороны — динамо-люк; остальное — турбинные корпуса (не меньше 24)'),
         ('Needs a turbine rotor in the controller; output 60-3360 EU/t by rotor', 'Нужен ротор в контроллере; выход 60–3360 EU/t в зависимости от ротора'),
-        ('More EU/t than the dynamo hatch takes - the whole machine explodes', 'Выход больше, чем принимает динамо-люк, — вся машина взрывается'),
-        ('Crafting arrives with the HV hull and the Advanced (HV) circuit', 'Крафт появится вместе с корпусом HV и схемой HV')])
+        ('More EU/t than the dynamo hatch takes - the whole machine explodes', 'Выход больше, чем принимает динамо-люк, — вся машина взрывается')])
+    # GT_Loader_MetaTileEntities:1248 "CPC/PMP/BPB": HV hull, Advanced circuits, steel gears, large steel pipes (D92)
+    shaped('multi/large_steam_turbine', f'{NS}:large_steam_turbine', 1, ['CPC', 'PMP', 'BPB'],
+           {'M': f'{NS}:hull_hv', 'C': '#c:circuits/advanced', 'P': tag_of('gear', 'Steel'), 'B': f'{NS}:pipe_large_steel'})
     shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'LargeTurbine.png'), tex_out('gui/multi/large_turbine.png'))
     for k, en, ruu in (('gui.iis.turbine.no_rotor', 'Insert a turbine rotor', 'Вставьте ротор турбины'),
                        ('gui.iis.turbine.output', 'Output: %s EU/t', 'Выход: %s EU/t'),
@@ -288,7 +294,105 @@ def generate(g):
     for wid, wire in (('wire', '#iis:wires/1x/tin'), ('fine_wire', tag_of('wire_fine', 'Tin'))):
         shaped(f'lv/diode_wafer_{wid}', f'{NS}:diode', 1, ['BG ', 'WDW', 'BG '], {'B': '#c:dyes/black', 'G': 'minecraft:glass_pane',
                                                                              'D': f'{NS}:silicon_wafer', 'W': wire})
+    stats['d92_machine_recipes'] = d92(g, mrec, ing, rout, shaped, tag_of, ref, NS)
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     stats['d90_machine_recipes'] = len(rec)
     return stats
+
+
+def d92(g, mrec, ing, rout, shaped, tag_of, ref, NS):
+    """D92: biomass -> ethanol -> ethylene -> plastic and glue, the circuit assembler chain up to the Advanced (HV) circuit, HV hull.
+
+    IIS 1 got bio chaff from IC2: config/ic2/macerator.ini of the IIS 1.19.1 pack, moved into the GT macerator by
+    GT_ModHandler#addIC2RecipesToGT (GT_Mod:699, 300 t, 2 EU/t) unless GT already had a recipe for the input. Plant balls come
+    from GT compressor recipes. Everything else is GT_MachineRecipeLoader / GT_RecipeAdder (line numbers below).
+    Returns the number of recipes it tried to add (mrec skips those with a missing item).
+    """
+    def capsule(fid=None):
+        comp = {f'!{NS}:fluid_content': {}} if fid is None else {f'{NS}:fluid_content': {'fluid': fid, 'amount': 1000}}
+        return {'neoforge:ingredient_type': 'neoforge:components', 'items': f'{NS}:capsule', 'components': comp}
+
+    def fl(fid, amount):
+        return {'ingredient': fid, 'amount': amount}
+
+    def fo(fid, amount):
+        return {'id': fid, 'amount': amount}
+
+    n = [0]
+
+    def m(*a, **k):
+        n[0] += 1
+        mrec(*a, **k)
+    # --- bio chaff: IC2 macerator entries GT did not override (reeds, melon, pumpkin, wheat and saplings have GT recipes) ---
+    for rid, item, cnt in (('leaves', '#minecraft:leaves', 8), ('potato', 'minecraft:potato', 8), ('carrot', 'minecraft:carrot', 8),
+                           ('cactus', 'minecraft:cactus', 8), ('wheat_seeds', 'minecraft:wheat_seeds', 16),
+                           ('melon_seeds', 'minecraft:melon_seeds', 16), ('pumpkin_seeds', 'minecraft:pumpkin_seeds', 16),
+                           ('plant_ball', f'{NS}:plant_ball', 1)):
+        m('macerator', f'bio_chaff_{rid}', [ing(item, cnt)], [rout(f'{NS}:bio_chaff')], 300, 2)
+    m('macerator', 'bio_chaff_dirt', [ing(f'{NS}:bio_chaff')], [rout('minecraft:dirt')], 300, 2)
+    # GT's own macerator recipes for those plants (GT_MetaGenerated_Item_02:413-417, ProcessingSaplings:18; 400 t, 2 EU/t)
+    m('macerator', 'sugar_cane', [ing('minecraft:sugar_cane')], [rout('minecraft:sugar')], 400, 2)
+    m('macerator', 'melon_block', [ing('minecraft:melon')], [rout('minecraft:melon_slice', 8), dict(rout('minecraft:melon_seeds'), chance=8000)],
+      400, 2)
+    m('macerator', 'pumpkin', [ing('minecraft:pumpkin')], [rout('minecraft:pumpkin_seeds', 4)], 400, 2)
+    m('macerator', 'melon_slice', [ing('minecraft:melon_slice')], [rout('minecraft:melon_seeds')], 400, 2)
+    m('macerator', 'wheat', [ing('minecraft:wheat')], [rout(ref('dust', 'Wheat'))], 400, 2)
+    m('macerator', 'sapling', [ing('#minecraft:saplings')], [rout(ref('small_dust', 'Wood'), 2)], 400, 2)
+    # wood pulp (dustWood): ProcessingLog:24 log -> 6 + 80 % 1 (rubber log :22: 6 + 33 % sticky resin), 400 t, 2 EU/t;
+    # 4 small or 9 tiny piles -> 1 (ProcessingDust; the generator skips the other Wood forms, they are vanilla)
+    wood = ref('dust', 'Wood')
+    for w, kind in [(w, 'logs') for w in ('oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'cherry', 'pale_oak')] + \
+                   [('crimson', 'stems'), ('warped', 'stems')]:
+        m('macerator', f'{kind[:-1]}_{w}', [ing(f'#minecraft:{w}_{kind}')], [rout(wood, 6), dict(rout(wood), chance=8000)], 400, 2)
+    m('macerator', 'log_rubber', [ing(f'{NS}:rubber_log')], [rout(wood, 6), dict(rout(f'{NS}:sticky_resin'), chance=3300)], 400, 2)
+    # :383 fluid extractor: wood pulp -> 5 L creosote, 1 % plant ball (16 t, 4 EU/t)
+    m('fluid_extractor', 'dust_wood_creosote', [ing(tag_of('dust', 'Wood'))], [dict(rout(f'{NS}:plant_ball'), chance=100)], 16, 4,
+      fout=fo(f'{NS}:creosote', 5))
+    if wood:
+        g['shapeless']('dust/from_small_wood', wood, 1, [tag_of('small_dust', 'Wood')] * 4)
+        g['shapeless']('dust/from_tiny_wood', wood, 1, [tag_of('tiny_dust', 'Wood')] * 9)
+    # plant balls: compressor 8 saplings (ProcessingSaplings:19), 8 wheat (:955), 8 sugar cane (:1832); 300 t, 2 EU/t
+    for rid, item in (('saplings', '#minecraft:saplings'), ('wheat', 'minecraft:wheat'), ('sugar_cane', 'minecraft:sugar_cane')):
+        m('compressor', f'plant_ball_{rid}', [ing(item, 8)], [rout(f'{NS}:plant_ball')], 300, 2)
+    # :1887 centrifuge: sticky resin -> 3 raw rubber dust, 10 % plant ball, 100 L glue (300 t, 5 EU/t)
+    m('centrifuge', 'sticky_resin', [ing(f'{NS}:sticky_resin')],
+      [rout(ref('dust', 'RawRubber'), 3), dict(rout(f'{NS}:plant_ball'), chance=1000)], 300, 5, fout=fo(f'{NS}:glue', 100))
+    # --- brewery (:767, GT_RecipeAdder#addBrewingRecipe:784): bio chaff + 750 L water or distilled water -> 750 L biomass ---
+    for rid, water in (('water', 'minecraft:water'), ('distilled_water', f'{NS}:distilled_water')):
+        m('brewery', f'biomass_{rid}', [ing(f'{NS}:bio_chaff')], [], 128, 4, fin=fl(water, 750), fout=fo(f'{NS}:biomass', 750))
+    # biomass -> ethanol (distillery :713) and ethanol -> ethylene (:3437) are imported by chem.py
+    # --- polymerization (:3443, GT_RecipeAdder#addDefaultPolymerizationRecipes:271-276): ethylene -> molten polyethylene ---
+    eth, pl = f'{NS}:ethylene', f'{NS}:molten_plastic'
+    m('chemical_reactor', 'plastic_air_cell', [ing(capsule(f'{NS}:air'))], [rout(f'{NS}:capsule')], 320, 30,
+      fin=fl(eth, 288), fout=fo(pl, 288), circuit=1)
+    m('chemical_reactor', 'plastic_oxygen_cell', [ing(capsule(f'{NS}:oxygen'))], [rout(f'{NS}:capsule')], 160, 30,
+      fin=fl(eth, 144), fout=fo(pl, 216), circuit=1)
+    m('chemical_reactor', 'plastic_ethylene_cell_air', [ing(capsule(eth))], [rout(f'{NS}:capsule')], 1120, 30,
+      fin=fl(f'{NS}:air', 14000), fout=fo(pl, 1000), circuit=1)
+    m('chemical_reactor', 'plastic_ethylene_cell_oxygen', [ing(capsule(eth))], [rout(f'{NS}:capsule')], 1120, 30,
+      fin=fl(f'{NS}:oxygen', 7000), fout=fo(pl, 1500), circuit=1)
+    # --- phenolic circuit board (:442 crafting 8 wood dust + glue cell -> 8; :444 assembler with the plate mold, 30 t, 8 EU/t) ---
+    shaped('lv/circuit_board_phenolic', f'{NS}:circuit_board_phenolic', 8, ['PRP', 'PPP', 'PPP'],
+           {'P': tag_of('dust', 'Wood'), 'R': capsule(f'{NS}:glue')})
+    m('assembler', 'circuit_board_phenolic', [ing(tag_of('dust', 'Wood'))], [rout(f'{NS}:circuit_board_phenolic')], 30, 8,
+      fin=fl(f'{NS}:glue', 100), keep=f'{NS}:mold_plate')
+    # --- transistor (:487): silicon plate + 6 fine tin wires + 144 L molten plastic -> 8 (80 t, 24 EU/t) ---
+    m('assembler', 'transistor', [ing(tag_of('plate', 'Silicon')), ing(tag_of('wire_fine', 'Tin'), 6)], [rout(f'{NS}:transistor', 8)],
+      80, 24, fin=fl(pl, 144))
+    # --- circuit assembler (:555-564). IIS 1 Recipes.cfg useonlygoodsolderingmaterials=true: soldering alloy only, 72 L ---
+    sol = fl(f'{NS}:molten_solderingalloy', 144 // 2)
+    m('circuit_assembler', 'circuit_basic', [ing(f'{NS}:circuit_board_phenolic'), ing(f'{NS}:chip_ilc'), ing(f'{NS}:resistor', 2),
+                                             ing(tag_of('wire_fine', 'Copper'), 4)], [rout(f'{NS}:circuit_basic')], 200, 8, fin=sol)
+    m('circuit_assembler', 'circuit_integrated_good', [ing(f'{NS}:circuit_board_phenolic'), ing(f'{NS}:circuit_basic', 3),
+                                                       ing(f'{NS}:resistor', 4), ing(tag_of('wire_fine', 'Gold'), 8)],
+      [rout(f'{NS}:circuit_integrated_good')], 400, 16, fin=sol)
+    m('circuit_assembler', 'circuit_advanced', [ing(f'{NS}:circuit_integrated_good', 2), ing(f'{NS}:chip_ilc', 3), ing(f'{NS}:chip_ram'),
+                                                ing(f'{NS}:transistor', 4), ing(tag_of('wire_fine', 'Electrum'), 16)],
+      [rout(f'{NS}:circuit_advanced')], 800, 28, fin=sol)
+    # --- hulls in the assembler (:1404-1407, mHardMachineCasings): 2 cables + casing + 288 L molten plastic (50 t, 16 EU/t) ---
+    for rid, cable, casing, hull in (('lv', 'tin', 'casing_lv', 'hull_lv'), ('mv', 'copper', 'casing_mv', 'hull_mv'),
+                                     ('mv_annealed', 'annealed_copper', 'casing_mv', 'hull_mv'), ('hv', 'gold', 'casing_hv', 'hull_hv')):
+        m('assembler', f'hull_{rid}', [ing(f'#iis:cables/1x/{cable}', 2), ing(f'{NS}:{casing}')], [rout(f'{NS}:{hull}')], 50, 16,
+          fin=fl(pl, 288))
+    return n[0]
