@@ -14,16 +14,17 @@ import ru.iis.lv.block.BatteryBufferBlock;
 import ru.iis.lv.item.BatteryItem;
 import ru.iis.machine.menu.MachineMenu;
 
-/** GT_Container_1by1 (80,35) и GT_Container_2by2 (71..89, 26..44). */
+/** GT_Container_1by1 (80,35), 2by2 (71..89, 26..44), 3by3 (62..98, 17..53), 4by4 (53..107, 8..62). */
 public class BatteryBufferMenu extends MachineMenu {
     public final int slots;
 
     public BatteryBufferMenu(int id, Inventory inventory, Container container, ContainerData data, int slots) {
         super(LvContent.BATTERY_BUFFER_MENU.get(), id, container, data);
         this.slots = slots;
-        int[][] pos = slots == 1 ? new int[][]{{80, 35}} : new int[][]{{71, 26}, {89, 26}, {71, 44}, {89, 44}};
+        int side = (int) Math.round(Math.sqrt(slots));
+        int x0 = side == 1 ? 80 : side == 2 ? 71 : side == 3 ? 62 : 53, y0 = side == 1 ? 35 : side == 2 ? 26 : side == 3 ? 17 : 8;
         for (int i = 0; i < slots; i++) {
-            addSlot(new Slot(container, i, pos[i][0], pos[i][1]) {
+            addSlot(new Slot(container, i, x0 + 18 * (i % side), y0 + 18 * (i / side)) {
                 @Override
                 public boolean mayPlace(ItemStack stack) {
                     return stack.getItem() instanceof BatteryItem;
@@ -41,7 +42,7 @@ public class BatteryBufferMenu extends MachineMenu {
     public static BatteryBufferMenu client(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
         BlockPos pos = buf.readBlockPos();
         int n = inventory.player.level().getBlockState(pos).getBlock() instanceof BatteryBufferBlock b ? b.slots : 1;
-        return new BatteryBufferMenu(id, inventory, new SimpleContainer(n), new SimpleContainerData(2), n);
+        return new BatteryBufferMenu(id, inventory, new SimpleContainer(n), new SimpleContainerData(4), n);
     }
 
     @Override
@@ -49,6 +50,6 @@ public class BatteryBufferMenu extends MachineMenu {
         return stack.getItem() instanceof BatteryItem;
     }
 
-    public int energy() { return data(0); }
-    public int capacity() { return data(1); }
+    public int energy() { return (data(0) & 0xFFFF) | ((data(1) & 0xFFFF) << 16); }
+    public int capacity() { return (data(2) & 0xFFFF) | ((data(3) & 0xFFFF) << 16); }
 }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PCP",
+    "RMR",
+    "EWE"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "E": "iis:electric_motor_hv",
+    "R": "#iis:rotors/steel",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold",
+    "P": "iis:pipe_medium_stainless_steel"
+  },
+  "result": {
+    "id": "iis:steam_turbine_hv"
+  }
+}

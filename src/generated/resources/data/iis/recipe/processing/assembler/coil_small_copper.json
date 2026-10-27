@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:fine_wires/copper",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:bolts/steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:coil_small",
+      "count": 2
+    }
+  ],
+  "duration": 80,
+  "eut": 8
+}

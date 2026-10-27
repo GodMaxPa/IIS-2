@@ -7,10 +7,13 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class BatteryBufferBlock extends LvMachineBlock {
     public final int slots;
+    /** GT mTier: напряжение выхода и какие батарейки можно заряжать (не выше уровня буфера). */
+    public final ru.iis.energy.VoltageTier tier;
 
-    public BatteryBufferBlock(int slots, Properties properties) {
+    public BatteryBufferBlock(int slots, ru.iis.energy.VoltageTier tier, Properties properties) {
         super(properties);
         this.slots = slots;
+        this.tier = tier;
         registerDefaultState(defaultBlockState().setValue(ACTIVE, false));
     }
 

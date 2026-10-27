@@ -29,22 +29,22 @@ import ru.iis.machine.block.FluidTank;
 import ru.iis.machine.block.MachineBlock;
 
 /**
- * Генератор LV на жидком топливе (GT_MetaTileEntity_BasicGenerator): бак, раз в 10 тиков сжигает топливо
- * в запас, выдаёт 32 EU/t 1 А через лицевую сторону. Топливо — по трубам с любой стороны, кроме лицевой,
+ * Генератор на жидком топливе (GT_MetaTileEntity_BasicGenerator): бак, раз в 10 тиков сжигает топливо
+ * в запас, выдаёт V[уровень] EU/t 1 А через лицевую сторону (LV 32, HV 512). Топливо — по трубам с любой стороны, кроме лицевой,
  * или ведром в верхний слот (пустое ведро — в нижний).
  */
 public class GeneratorBlockEntity extends ElectricBlockEntity {
-    public static final long VOLTAGE = VoltageTier.LV.voltage();
     /** GT_MetaTileEntity_BasicGenerator#getMinimumStoredEU = 512. */
     public static final long MIN_STORED = 512;
     public static final int SLOT_IN = 0, SLOT_OUT = 1;
 
-    private final GeneratorLogic logic = new GeneratorLogic(VOLTAGE, MIN_STORED);
+    private final GeneratorLogic logic;
     private final FluidTank tank;
 
     public GeneratorBlockEntity(BlockPos pos, BlockState state) {
-        super(LvContent.GENERATOR_BE.get(), pos, state, 2, VOLTAGE * 40 + MIN_STORED, 0);
+        super(LvContent.GENERATOR_BE.get(), pos, state, 2, type(state).voltage() * 40 + MIN_STORED, 0);
         GeneratorType t = type(state);
+        this.logic = new GeneratorLogic(t.voltage(), MIN_STORED);
         this.tank = new FluidTank(t.tank, f -> Fuels.fuelPower(t, f) > 0, false, this::setChanged);
     }
 
@@ -72,7 +72,7 @@ public class GeneratorBlockEntity extends ElectricBlockEntity {
 
     @Override
     public long outputVoltage() {
-        return VOLTAGE;
+        return type().voltage();
     }
 
     @Override
@@ -103,10 +103,10 @@ public class GeneratorBlockEntity extends ElectricBlockEntity {
         GeneratorType t = type();
         int power = Fuels.fuelPower(t, f);
         if (power <= 0) return null;
-        if (t == GeneratorType.STEAM_TURBINE) {
-            return new long[]{GeneratorLogic.STEAM_TURBINE_EU_PER_OPERATION, GeneratorLogic.steamTurbineLitersPerOperation(1)};
+        if (t.steam()) {
+            return new long[]{GeneratorLogic.STEAM_TURBINE_EU_PER_OPERATION, GeneratorLogic.steamTurbineLitersPerOperation(t.tier.tier())};
         }
-        return new long[]{power * (long) GeneratorLogic.combustionEfficiency(1) / 100, 1};
+        return new long[]{power * (long) GeneratorLogic.combustionEfficiency(t.tier.tier()) / 100, 1};
     }
 
     @Override
@@ -118,12 +118,9 @@ public class GeneratorBlockEntity extends ElectricBlockEntity {
                 if (f != null) {
                     long used = logic.burn(energy, tank.amount(), f[0], f[1]);
                     if (used > 0) {
-                        // GT_MetaTileEntity_BasicGenerator: 10 × getPollution() за сжигание (дизель LV 2, газовая турбина LV 1)
-                        GeneratorType t = type();
-                        if (t != GeneratorType.STEAM_TURBINE) {
-                            ru.iis.pollution.Pollution.add(sl, worldPosition, 10 * (t == GeneratorType.DIESEL
-                                    ? ru.iis.pollution.PollutionLogic.DIESEL_BASE : ru.iis.pollution.PollutionLogic.GAS_TURBINE_BASE));
-                        }
+                        // GT_MetaTileEntity_BasicGenerator: 10 × getPollution() за сжигание (дизель LV 2, HV 8; газовая турбина LV 1, HV 4)
+                        int pollution = type().pollution();
+                        if (pollution > 0) ru.iis.pollution.Pollution.add(sl, worldPosition, 10 * pollution);
                         tank.drainInternal((int) used);
                         setChanged();
                     }

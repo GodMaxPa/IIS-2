@@ -313,4 +313,50 @@ final class LargeGameTests {
             h.assertTrue(m.getItem(2).is(Items.MELON_SEEDS), "seeds " + m.getItem(2));
         });
     }
+
+    /** Паровая турбина HV (D94) → золотой кабель → измельчитель HV: 512 В, 1 А; руда халькопирита → 2 дроблёной. */
+    static void hvSteamTurbinePowersMacerator(GameTestHelper h) {
+        var gen = LvGameTests.generator(h, new BlockPos(1, 1, 4), ru.iis.lv.GeneratorType.STEAM_TURBINE_HV, Direction.EAST);
+        h.assertTrue(gen.tank().capacity() == 72000 && gen.outputVoltage() == 512, "tank " + gen.tank().capacity() + " V " + gen.outputVoltage());
+        gen.tank().setAmount(IISFluids.STEAM.get(), 72000);
+        var m = LvGameTests.machine(h, new BlockPos(4, 1, 4), ru.iis.lv.LvMachineType.MACERATOR_HV, Direction.NORTH);
+        for (int x = 2; x <= 3; x++) LvGameTests.cable(h, new BlockPos(x, 1, 4), "cable_gold_1x");
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("ore_chalcopyrite")));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.getItem(1).is(ru.iis.command.SelfTest.item("crushed_chalcopyrite")), "output " + m.getItem(1));
+            h.assertTrue(gen.tank().amount() < 72000, "turbine used no steam");
+        });
+    }
+
+    /** Трансформатор HV (D94): понижает 2048 → 512 В, 4 А с пяти сторон; запас 512 + 2 × 2048. */
+    static void hvTransformerStepDown(GameTestHelper h) {
+        BlockPos tp = new BlockPos(2, 1, 4);
+        h.setBlock(tp, LvContent.TRANSFORMER_HV.get().defaultBlockState().setValue(ru.iis.lv.block.TransformerBlock.FACING, Direction.WEST));
+        var t = h.getBlockEntity(tp, ru.iis.lv.block.TransformerBlockEntity.class);
+        h.assertTrue(t.outputVoltage() == 512 && t.outputAmperes() == 4, "step-down out " + t.outputVoltage() + " V " + t.outputAmperes() + " A");
+        h.assertTrue(t.energy.capacity == 512 + 2 * 2048, "capacity " + t.energy.capacity);
+        var m = LvGameTests.machine(h, new BlockPos(4, 1, 4), ru.iis.lv.LvMachineType.MACERATOR_HV, Direction.NORTH);
+        LvGameTests.cable(h, new BlockPos(3, 1, 4), "cable_gold_4x");
+        h.onEachTick(() -> t.energy.stored = t.energy.capacity);
+        h.succeedWhen(() -> h.assertTrue(m.energy.stored >= m.energy.capacity / 2 && !h.getBlockState(tp).isAir(), "HV machine stored " + m.energy.stored));
+    }
+
+    /** Буфер HV 4×4 (D94): 16 слотов, запас 512 × 64 × 16; заряжает батарейку LV (уровень не выше буфера), питает машину HV
+     *  512 В; в интерфейс запас идёт двумя половинами по 16 бит. */
+    static void hvBatteryBuffer4x4(GameTestHelper h) {
+        BlockPos bp = new BlockPos(2, 1, 4);
+        h.setBlock(bp, LvContent.BATTERY_BUFFERS_HV.get(3).get().defaultBlockState().setValue(MachineBlock.FACING, Direction.EAST));
+        var b = h.getBlockEntity(bp, ru.iis.lv.block.BatteryBufferBlockEntity.class);
+        h.assertTrue(b.slots() == 16 && b.energy.capacity == 512L * 64 * 16 && b.outputVoltage() == 512, "buffer " + b.slots() + " " + b.energy.capacity);
+        var m = LvGameTests.machine(h, new BlockPos(4, 1, 4), ru.iis.lv.LvMachineType.MACERATOR_HV, Direction.NORTH);
+        LvGameTests.cable(h, new BlockPos(3, 1, 4), "cable_gold_1x");
+        b.setItem(0, new ItemStack(LvContent.BATTERY_LV.get()));
+        h.onEachTick(() -> b.energy.stored = b.energy.capacity);
+        h.succeedWhen(() -> {
+            h.assertTrue(ru.iis.lv.item.BatteryItem.charge(b.getItem(0)) > 0, "battery not charged");
+            h.assertTrue(m.energy.stored > 0, "machine got no energy");
+            long shown = (b.data.get(0) & 0xFFFF) | ((long) (b.data.get(1) & 0xFFFF) << 16);
+            h.assertTrue(shown == b.energy.stored, "gui energy " + shown + " vs " + b.energy.stored);
+        });
+    }
 }

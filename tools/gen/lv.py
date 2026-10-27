@@ -153,6 +153,10 @@ GENERATORS = [
     ('steam_turbine_lv', 'basicgenerator.steamturbine.tier.01', 'STEAM_TURBINE', 'Basic Steam Turbine'),
     ('diesel_generator_lv', 'basicgenerator.diesel.tier.01', 'DIESEL_GENERATOR', 'Basic Combustion Generator'),
     ('gas_turbine_lv', 'basicgenerator.gasturbine.tier.01', 'GAS_TURBINE', 'Basic Gas Turbine'),
+    # D94: GT_Loader_MetaTileEntities:1165, 1175, 1183 (mTier 3, HV casing)
+    ('steam_turbine_hv', 'basicgenerator.steamturbine.tier.03', 'STEAM_TURBINE', 'Turbo Steam Turbine'),
+    ('diesel_generator_hv', 'basicgenerator.diesel.tier.03', 'DIESEL_GENERATOR', 'Turbo Combustion Generator'),
+    ('gas_turbine_hv', 'basicgenerator.gasturbine.tier.03', 'GAS_TURBINE', 'Turbo Gas Turbine'),
 ]
 
 # Simple items: id, texture source ('gt:<file in lv/items>' or 'gen:<procedural kind>'), GT lang key, EN, RU fallback
@@ -178,6 +182,8 @@ ITEMS = [
     ('electric_piston_hv', 'gt:642', 'gt.metaitem.01.32642.name', 'Electric Piston (HV)', 'Электропоршень (HV)'),
     ('robot_arm_hv', 'gt:652', 'gt.metaitem.01.32652.name', 'Robot Arm (HV)', 'Манипулятор (HV)'),
     ('emitter_hv', 'gt:682', 'gt.metaitem.01.32682.name', 'Emitter (HV)', 'Излучатель (HV)'),
+    # D94: GT_MetaGenerated_Item_03:50 small coil (HV transformer)
+    ('coil_small', 'gt:coil_small', 'gt.metaitem.03.32014.name', 'Small Coil', 'Малая катушка'),
     ('grinder_diamond', 'gt:722', 'gt.metaitem.01.32722.name', 'Diamond Grinding Head', 'Алмазная шлифовальная головка'),
     ('circuit_good', 'gt:702', 'gt.metaitem.01.32702.name', 'Good Electronic Circuit', 'Хорошая электросхема'),
     ('diode', 'gt:715', 'gt.metaitem.01.32715.name', 'Diode', 'Диод'),
@@ -725,6 +731,8 @@ def generate(g):
     # Generators, battery buffers, transformer
     # --------------------------------------------------------------------------------------------------------
     for bid, gtl, tp, en in GENERATORS:
+        GT_ = bid[-2:].upper()
+
         def gf(part):
             return lambda active: os.path.join(ic, f'{tp}_{part}{"_ACTIVE" if active else ""}.png')
         front_ov = os.path.join(ic, 'OVERLAY_ENERGY_OUT.png')
@@ -732,11 +740,11 @@ def generate(g):
         faces = {}
         for active in (False, True):
             suf = '_active' if active else ''
-            fr, meta = layer(os.path.join(ic, 'MACHINE_LV_SIDE.png'), gf('FRONT')(active))
+            fr, meta = layer(os.path.join(ic, f'MACHINE_{GT_}_SIDE.png'), gf('FRONT')(active))
             fr = Image.alpha_composite(fr.crop((0, 0, 16, 16)), img(front_ov).crop((0, 0, 16, 16)))
             save_anim(fr, f'block/lv/{bid}_front{suf}')
-        for part, face, base in (('BACK', 'back', 'MACHINE_LV_SIDE'), ('SIDE', 'side', 'MACHINE_LV_SIDE'), ('TOP', 'top', 'MACHINE_LV_TOP'),
-                                 ('BOTTOM', 'bottom', 'MACHINE_LV_BOTTOM')):
+        for part, face, base in (('BACK', 'back', f'MACHINE_{GT_}_SIDE'), ('SIDE', 'side', f'MACHINE_{GT_}_SIDE'), ('TOP', 'top', f'MACHINE_{GT_}_TOP'),
+                                 ('BOTTOM', 'bottom', f'MACHINE_{GT_}_BOTTOM')):
             for active in (False, True):
                 suf = '_active' if active else ''
                 im, meta = layer(os.path.join(ic, base + '.png'), gf(part)(active))
@@ -755,12 +763,24 @@ def generate(g):
     name(f'block.{NS}.diesel_generator_lv.tooltip.1', 'Output: 32 EU/t, 1 A from the front', 'Выход: 32 EU/t, 1 А спереди')
     name(f'block.{NS}.gas_turbine_lv.tooltip.0', 'Burns gaseous fuels (efficiency 95%)', 'Сжигает газообразное топливо (КПД 95%)')
     name(f'block.{NS}.gas_turbine_lv.tooltip.1', 'Output: 32 EU/t, 1 A from the front', 'Выход: 32 EU/t, 1 А спереди')
+    # HV (D94): steam 3 EU per 9 L (GT "Fuel Efficiency: 600 / 9 = 66 %"), combustion 85 %, tank 72000 / 16000 L
+    name(f'block.{NS}.steam_turbine_hv.tooltip.0', 'Converts Steam into EU: 3 EU per 9 L (66%)', 'Превращает пар в EU: 3 EU за 9 л (66%)')
+    name(f'block.{NS}.diesel_generator_hv.tooltip.0', 'Burns liquid fuels (efficiency 85%)', 'Сжигает жидкое топливо (КПД 85%)')
+    name(f'block.{NS}.gas_turbine_hv.tooltip.0', 'Burns gaseous fuels (efficiency 85%)', 'Сжигает газообразное топливо (КПД 85%)')
+    for bid in ('steam_turbine_hv', 'diesel_generator_hv', 'gas_turbine_hv'):
+        name(f'block.{NS}.{bid}.tooltip.1', 'Output: 512 EU/t, 1 A from the front', 'Выход: 512 EU/t, 1 А спереди')
     shutil.copy(os.path.join(LV, 'gui', 'BasicTank.png'), tex_out('gui/lv/basictank.png'))
 
     # GT_MetaTileEntity_BasicBatteryBuffer: front = energy out, other sides plain casing
-    for bid, n, gtl, gui in (('battery_buffer_1x1_lv', 1, 'batterybuffer.01.tier.01', '1by1'), ('battery_buffer_2x2_lv', 4, 'batterybuffer.04.tier.01', '2by2')):
-        for face, base, ov in (('front', 'MACHINE_LV_SIDE', os.path.join(ic, 'OVERLAY_ENERGY_OUT.png')), ('side', 'MACHINE_LV_SIDE', None),
-                               ('top', 'MACHINE_LV_TOP', None), ('bottom', 'MACHINE_LV_BOTTOM', None)):
+    buffers = [('battery_buffer_1x1_lv', 1, 'batterybuffer.01.tier.01', '1by1'), ('battery_buffer_2x2_lv', 4, 'batterybuffer.04.tier.01', '2by2')]
+    # D94: GT_Loader_MetaTileEntities:490, 512, 534, 556 HV 1x1, 2x2, 3x3, 4x4
+    buffers += [(f'battery_buffer_{k}x{k}_hv', k * k, f'batterybuffer.{k * k:02d}.tier.03', f'{k}by{k}') for k in (1, 2, 3, 4)]
+    for bid, n, gtl, gui in buffers:
+        BT = bid[-2:].upper()
+        side_k = {1: '1x1', 4: '2x2', 9: '3x3', 16: '4x4'}[n]
+        volts = {'LV': 32, 'HV': 512}[BT]
+        for face, base, ov in (('front', f'MACHINE_{BT}_SIDE', os.path.join(ic, 'OVERLAY_ENERGY_OUT.png')), ('side', f'MACHINE_{BT}_SIDE', None),
+                               ('top', f'MACHINE_{BT}_TOP', None), ('bottom', f'MACHINE_{BT}_BOTTOM', None)):
             im, _ = layer(os.path.join(ic, base + '.png'), ov)
             im.crop((0, 0, 16, 16)).save(tex_out(f'block/lv/{bid}_{face}.png'))
         cube_model(bid, {'front': f'{NS}:block/lv/{bid}_front', 'back': f'{NS}:block/lv/{bid}_side', 'side': f'{NS}:block/lv/{bid}_side',
@@ -769,17 +789,17 @@ def generate(g):
         block_item(bid)
         simple_loot(bid)
         pickaxe(bid)
-        en = f'Battery Buffer {"1x1" if n == 1 else "2x2"} (LV)'
+        en = f'Battery Buffer {side_k} ({BT})'
         rut = ru(f'gt.blockmachines.{gtl}.name', en)
-        if '1x1' not in rut and '2x2' not in rut and '4x' not in rut:
-            rut = f'{rut} {"1x1" if n == 1 else "2x2"}'
+        if not any(x in rut for x in ('1x1', '2x2', '3x3', '4x4', '4x', '9x', '16x')):
+            rut = f'{rut} {side_k}'
         shutil.copy(os.path.join(LV, 'gui', gui + '.png'), tex_out(f'gui/lv/{gui}.png'))
         name(f'block.{NS}.{bid}', en, rut)
         tooltip_lines(bid, [('Charges batteries, outputs from the front', 'Заряжает батарейки, выдаёт энергию спереди'),
-                            (f'Output: 32 EU/t, up to {n} A (one per battery)', f'Выход: 32 EU/t, до {n} А (по ампер на батарейку)')])
+                            (f'Output: {volts} EU/t, up to {n} A (one per battery)', f'Выход: {volts} EU/t, до {n} А (по ампер на батарейку)')])
     # GT_MetaTileEntity_Transformer: step-down (default) — front = higher tier in (IN_MULTI), other sides lower tier out (OUT);
     # step-up — front = higher tier out (OUT_MULTI), other sides lower tier in (IN). Facing: any of 6 directions. Casing of mTier.
-    for tr, lo, hi, n_ in (('lv', 32, 128, '01'), ('mv', 128, 512, '02')):
+    for tr, lo, hi, n_ in (('lv', 32, 128, '01'), ('mv', 128, 512, '02'), ('hv', 512, 2048, '03')):   # HV: EV <-> HV (D94)
         bid, T, LO, HI = f'transformer_{tr}', tr.upper(), VOLTAGE_NAMES[lo], VOLTAGE_NAMES[hi]
         for mode, front_ov, side_ov in (('', 'OVERLAY_ENERGY_IN_MULTI', 'OVERLAY_ENERGY_OUT'), ('_up', 'OVERLAY_ENERGY_OUT_MULTI', 'OVERLAY_ENERGY_IN')):
             for face, base, ov in (('front', f'MACHINE_{T}_SIDE', front_ov), ('side', f'MACHINE_{T}_SIDE', side_ov),
@@ -1203,6 +1223,24 @@ def generate(g):
     shaped('lv/transformer_lv', f'{NS}:transformer_lv', 1, [' BB', 'CM ', ' BB'], {'M': HULL, 'C': C('Copper'), 'B': C('Tin')})
     shaped('lv/battery_buffer_1x1_lv', f'{NS}:battery_buffer_1x1_lv', 1, ['WTW', 'WMW'], {'M': HULL, 'W': W('Tin'), 'T': '#c:chests/wooden'})
     shaped('lv/battery_buffer_2x2_lv', f'{NS}:battery_buffer_2x2_lv', 1, ['WTW', 'WMW'], {'M': HULL, 'W': W('Tin', 4), 'T': '#c:chests/wooden'})
+    # --- D94: HV generators, battery buffers, EV <-> HV transformer (GT_Loader_MetaTileEntities) ---
+    HULL_HV = f'{NS}:hull_hv'
+    # :1169 "PCP/EME/GWG" stainless steel gears; :1179 "CRC/RMR/EWE" steel rotors; :1187 "PCP/RMR/EWE" stainless steel pipes
+    shaped('lv/diesel_generator_hv', f'{NS}:diesel_generator_hv', 1, ['PCP', 'EME', 'GWG'],
+           {'M': HULL_HV, 'P': PISTON_HV, 'E': MOTOR_HV, 'C': CIRC_HV, 'W': C('Gold'), 'G': tag_of('gear', 'StainlessSteel')})
+    shaped('lv/gas_turbine_hv', f'{NS}:gas_turbine_hv', 1, ['CRC', 'RMR', 'EWE'],
+           {'M': HULL_HV, 'E': MOTOR_HV, 'R': tag_of('rotor', 'Steel'), 'C': CIRC_HV, 'W': C('Gold')})
+    shaped('lv/steam_turbine_hv', f'{NS}:steam_turbine_hv', 1, ['PCP', 'RMR', 'EWE'],
+           {'M': HULL_HV, 'E': MOTOR_HV, 'R': tag_of('rotor', 'Steel'), 'C': CIRC_HV, 'W': C('Gold'), 'P': f'{NS}:pipe_medium_stainless_steel'})
+    # :501-567 "WTW/WMW": HV hull, chest, gold wires 1x / 4x / 8x / 16x
+    for k, wsize in ((1, 1), (2, 4), (3, 8), (4, 16)):
+        shaped(f'lv/battery_buffer_{k}x{k}_hv', f'{NS}:battery_buffer_{k}x{k}_hv', 1, ['WTW', 'WMW'],
+               {'M': HULL_HV, 'W': W('Gold', wsize), 'T': '#c:chests/wooden'})
+    # :207 "KBB/CM /KBB": HV hull, aluminium cable (EV side), gold cables, small coils
+    shaped('lv/transformer_hv', f'{NS}:transformer_hv', 1, ['KBB', 'CM ', 'KBB'],
+           {'M': HULL_HV, 'C': C('Aluminium'), 'B': C('Gold'), 'K': f'{NS}:coil_small'})
+    # GT_MachineRecipeLoader:481 small coil "WWW/WDW/WWW" (fine copper wire, steel bolt) -> 2; :483, :485 assembler 8 fine wires + bolt
+    shaped('lv/coil_small', f'{NS}:coil_small', 2, ['WWW', 'WDW', 'WWW'], {'W': tag_of('wire_fine', 'Copper'), 'D': tag_of('bolt', 'Steel')})
 
     # --------------------------------------------------------------------------------------------------------
     # Machine recipes
@@ -1377,6 +1415,9 @@ def generate(g):
     # variant needs molten plastic (mHardMachineCasings) and waits for plastic
     for tr, mat in (('lv', 'Steel'), ('mv', 'Aluminium'), ('hv', 'StainlessSteel')):   # :1373 HV (D90)
         mrec('assembler', f'casing_{tr}', [ing(tag_of('plate', mat), 8)], [out(f'{NS}:casing_{tr}')], 50, 16, circuit=8)
+    # GT_MachineRecipeLoader:483, :485 small coil: 8 fine copper / annealed copper wires + steel bolt -> 2 (80 t, 8 EU/t, D94)
+    for wm in ('Copper', 'AnnealedCopper'):
+        mrec('assembler', f'coil_small_{mat_id(wm)}', [ing(tag_of('wire_fine', wm), 8), ing(tag_of('bolt', 'Steel'))], [out(f'{NS}:coil_small', 2)], 80, 8)
     # --- covers: GT_MachineRecipeLoader:610-615 (lever/torch/pressure plates + plate + molten solder), :671 shutter, items :783 drain/crafting ---
     cover_plates = [tag_of('plate', m) for m in ('Iron', 'WroughtIron', 'Aluminium') if ref('plate', m)]
     for pl in cover_plates:

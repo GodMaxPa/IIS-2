@@ -8,7 +8,7 @@ import ru.iis.machine.client.MachineScreen;
 
 public class BatteryBufferScreen extends MachineScreen<BatteryBufferMenu> {
     public BatteryBufferScreen(BatteryBufferMenu menu, Inventory inventory, Component title) {
-        super(menu, inventory, title, menu.slots == 1 ? "lv/1by1" : "lv/2by2");
+        super(menu, inventory, title, "lv/" + (int) Math.round(Math.sqrt(menu.slots)) + "by" + (int) Math.round(Math.sqrt(menu.slots)));
     }
 
     @Override

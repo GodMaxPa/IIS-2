@@ -46,7 +46,7 @@ public final class Fuels {
     /** EU на литр до учёта КПД; 0 — не топливо для этого генератора. */
     public static int fuelPower(GeneratorType type, Fluid fluid) {
         if (fluid == Fluids.EMPTY) return 0;
-        if (type == GeneratorType.STEAM_TURBINE) return fluid.isSame(IISFluids.STEAM.get()) ? 1 : 0;
+        if (type.steam()) return fluid.isSame(IISFluids.STEAM.get()) ? 1 : 0;
         return power(type.fuelKind, fluid);
     }
 

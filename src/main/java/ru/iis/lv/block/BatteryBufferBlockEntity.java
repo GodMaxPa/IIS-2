@@ -18,17 +18,24 @@ import ru.iis.lv.item.BatteryItem;
 import ru.iis.lv.menu.BatteryBufferMenu;
 
 /**
- * Аккумуляторный буфер LV (GT_MetaTileEntity_BasicBatteryBuffer).
+ * Аккумуляторный буфер (GT_MetaTileEntity_BasicBatteryBuffer), V = V[уровень]: LV 32, HV 512 (D94).
  * Запас V×64×слотов, минимум V×16×слотов; приём — 2 А на каждую заряжаемую батарейку со всех сторон, кроме лицевой;
  * выдача — 1 А на батарейку через лицевую. Запас выше 2/3 — батарейки заряжаются, ниже 1/3 — разряжаются в запас
- * (по 32 EU/t на батарейку).
+ * (по V EU/t на батарейку). Заряжаются батарейки не выше уровня буфера (IC2 ElectricItem tier).
  */
 public class BatteryBufferBlockEntity extends ElectricBlockEntity {
-    public static final long VOLTAGE = VoltageTier.LV.voltage();
     private int batteries;
+    private final long voltage;
+    private final int tier;
 
     public BatteryBufferBlockEntity(BlockPos pos, BlockState state) {
-        super(LvContent.BATTERY_BUFFER_BE.get(), pos, state, slots(state), VOLTAGE * 64 * slots(state), VOLTAGE);
+        super(LvContent.BATTERY_BUFFER_BE.get(), pos, state, slots(state), tier(state).voltage() * 64 * slots(state), tier(state).voltage());
+        this.voltage = tier(state).voltage();
+        this.tier = tier(state).tier();
+    }
+
+    private static VoltageTier tier(BlockState s) {
+        return s.getBlock() instanceof BatteryBufferBlock b ? b.tier : VoltageTier.LV;
     }
 
     private static int slots(BlockState s) {
@@ -51,7 +58,7 @@ public class BatteryBufferBlockEntity extends ElectricBlockEntity {
 
     @Override
     public long outputVoltage() {
-        return VOLTAGE;
+        return voltage;
     }
 
     @Override
@@ -61,7 +68,7 @@ public class BatteryBufferBlockEntity extends ElectricBlockEntity {
 
     @Override
     public long minimumStored() {
-        return VOLTAGE * 16 * items.size();
+        return voltage * 16 * items.size();
     }
 
     /** Детектор энергии «с батареями»: заряд и ёмкость батарей в слотах. */
@@ -87,13 +94,13 @@ public class BatteryBufferBlockEntity extends ElectricBlockEntity {
         boolean discharge = energy.stored < energy.capacity / 3;
         batteries = 0;
         for (ItemStack s : items) {
-            if (!(s.getItem() instanceof BatteryItem b) || b.tier > 1) continue;
+            if (!(s.getItem() instanceof BatteryItem b) || b.tier > tier) continue;
             if (b.isBattery()) batteries++;
             if (charge) {
                 long d = b.charge(s, energy.stored);
                 energy.stored -= d;
             } else if (discharge && b.isBattery() && energy.stored < energy.capacity) {
-                long d = b.discharge(s, Math.min(VOLTAGE, energy.capacity - energy.stored));
+                long d = b.discharge(s, Math.min(voltage, energy.capacity - energy.stored));
                 energy.stored += d;
             }
         }
@@ -132,8 +139,11 @@ public class BatteryBufferBlockEntity extends ElectricBlockEntity {
         @Override
         public int get(int i) {
             return switch (i) {
-                case 0 -> (int) Math.min(Short.MAX_VALUE, energy.stored);
-                case 1 -> (int) Math.min(Short.MAX_VALUE, energy.capacity);
+                // запас HV-буфера до 524 288 EU: по 16 бит (данные контейнера передаются как short)
+                case 0 -> (int) (energy.stored & 0xFFFF);
+                case 1 -> (int) ((energy.stored >> 16) & 0xFFFF);
+                case 2 -> (int) (energy.capacity & 0xFFFF);
+                case 3 -> (int) ((energy.capacity >> 16) & 0xFFFF);
                 default -> 0;
             };
         }
@@ -143,7 +153,7 @@ public class BatteryBufferBlockEntity extends ElectricBlockEntity {
 
         @Override
         public int getCount() {
-            return 2;
+            return 4;
         }
     };
 

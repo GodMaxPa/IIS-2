@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "WDW",
+    "WWW"
+  ],
+  "key": {
+    "W": "#iis:fine_wires/copper",
+    "D": "#iis:bolts/steel"
+  },
+  "result": {
+    "id": "iis:coil_small",
+    "count": 2
+  }
+}
