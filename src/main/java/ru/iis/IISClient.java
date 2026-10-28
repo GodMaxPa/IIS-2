@@ -69,6 +69,9 @@ public final class IISClient {
             event.register(List.of(BlockTintSources.constant(0xFF000000 | rgb)), b.get());
         });
         event.register(List.of(BlockTintSources.constant(0xFF5F8F3F)), ru.iis.lv.LvContent.RUBBER_LEAVES.get());
+        // пути Railcraft (D102): ванильные текстуры рельсов, окрашенные по типу пути
+        ru.iis.rail.RailContent.TRACKS.values().forEach(b -> event.register(
+                List.of(BlockTintSources.constant(0xFF000000 | ((ru.iis.rail.IisRail) b.get()).kind().color)), b.get()));
     }
 
     /** Покрытия GT на гранях электроблоков. */

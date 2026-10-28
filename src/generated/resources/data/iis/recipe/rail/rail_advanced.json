@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:rail_standard",
+      "count": 3
+    },
+    {
+      "ingredient": "#c:plates/gold",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rail_advanced",
+      "count": 8
+    }
+  ],
+  "duration": 400,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_redstone",
+      "amount": 432
+    }
+  ]
+}

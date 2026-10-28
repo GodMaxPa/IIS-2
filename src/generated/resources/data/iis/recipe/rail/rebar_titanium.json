@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/titanium",
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rebar",
+      "count": 32
+    }
+  ],
+  "duration": 1600,
+  "eut": 15
+}

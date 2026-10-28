@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RKW",
+    "PLI"
+  ],
+  "key": {
+    "R": "#c:dyes/red",
+    "K": "#c:dyes/black",
+    "W": "#c:dyes/white",
+    "P": "iis:electric_piston_lv",
+    "I": "#c:plates/iron",
+    "L": "minecraft:lever"
+  },
+  "result": {
+    "id": "iis:switch_lever",
+    "count": 1
+  }
+}

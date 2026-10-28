@@ -1,0 +1,6 @@
+{
+  "parent": "iis:block/rail/template_flat",
+  "textures": {
+    "rail": "minecraft:block/activator_rail"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "thrown=false": {
+      "model": "iis:block/rail/switch_lever"
+    },
+    "thrown=true": {
+      "model": "iis:block/rail/switch_lever_thrown"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/bronze",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rail_standard",
+      "count": 3
+    }
+  ],
+  "duration": 300,
+  "eut": 15
+}

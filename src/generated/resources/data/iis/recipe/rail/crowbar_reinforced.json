@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "hDS",
+    "DSD",
+    "SDf"
+  ],
+  "key": {
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file",
+    "D": "#c:dyes/red",
+    "S": "#c:ingots/steel"
+  },
+  "result": {
+    "id": "iis:crowbar_reinforced",
+    "count": 1
+  }
+}

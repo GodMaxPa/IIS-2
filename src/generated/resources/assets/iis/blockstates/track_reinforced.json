@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "shape=north_south": {
+      "model": "iis:block/rail/track_reinforced"
+    },
+    "shape=east_west": {
+      "model": "iis:block/rail/track_reinforced",
+      "y": 90
+    },
+    "shape=south_east": {
+      "model": "iis:block/rail/track_reinforced_corner"
+    },
+    "shape=south_west": {
+      "model": "iis:block/rail/track_reinforced_corner",
+      "y": 90
+    },
+    "shape=north_west": {
+      "model": "iis:block/rail/track_reinforced_corner",
+      "y": 180
+    },
+    "shape=north_east": {
+      "model": "iis:block/rail/track_reinforced_corner",
+      "y": 270
+    },
+    "shape=ascending_north": {
+      "model": "iis:block/rail/track_reinforced_raised_ne"
+    },
+    "shape=ascending_east": {
+      "model": "iis:block/rail/track_reinforced_raised_ne",
+      "y": 90
+    },
+    "shape=ascending_south": {
+      "model": "iis:block/rail/track_reinforced_raised_sw"
+    },
+    "shape=ascending_west": {
+      "model": "iis:block/rail/track_reinforced_raised_sw",
+      "y": 90
+    }
+  }
+}

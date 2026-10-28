@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/track_electric_switch",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": -2521014
+      }
+    ]
+  }
+}

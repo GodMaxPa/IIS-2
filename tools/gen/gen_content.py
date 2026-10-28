@@ -913,6 +913,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_large', os.path.join(ROOT, 'tools'
 _large = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_large)
 lv_stats['large'] = _large.generate(globals())
+# Railway by Railcraft of the IIS 1 pack (D102)
+_spec = _ilu.spec_from_file_location('iis_gen_rail', os.path.join(ROOT, 'tools', 'gen', 'rail.py'))
+_rail = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_rail)
+lv_stats['rail'] = _rail.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

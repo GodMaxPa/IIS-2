@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:rail_reinforced",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:rail_advanced",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:track_reinforced_booster",
+      "count": 4
+    }
+  ],
+  "duration": 50,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_concrete",
+      "amount": 144
+    }
+  ]
+}

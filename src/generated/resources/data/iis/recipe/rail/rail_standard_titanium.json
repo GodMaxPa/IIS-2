@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/titanium",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rail_standard",
+      "count": 16
+    }
+  ],
+  "duration": 1600,
+  "eut": 15
+}

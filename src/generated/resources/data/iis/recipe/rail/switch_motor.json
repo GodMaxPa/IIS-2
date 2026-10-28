@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RKW",
+    "PCI"
+  ],
+  "key": {
+    "R": "#c:dyes/red",
+    "K": "#c:dyes/black",
+    "W": "#c:dyes/white",
+    "P": "iis:electric_piston_lv",
+    "I": "#c:plates/iron",
+    "C": "iis:circuit_receiver"
+  },
+  "result": {
+    "id": "iis:switch_motor",
+    "count": 1
+  }
+}

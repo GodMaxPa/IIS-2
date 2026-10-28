@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:rail_standard",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:wires/1x/annealed_copper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rail_electric",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 4
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:railbed_stone",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:rail_reinforced",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:track_reinforced",
+      "count": 32
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

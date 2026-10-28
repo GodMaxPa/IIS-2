@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/stainless_steel",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rail_standard",
+      "count": 12
+    }
+  ],
+  "duration": 1200,
+  "eut": 15
+}

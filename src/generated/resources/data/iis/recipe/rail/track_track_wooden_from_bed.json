@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:railbed_wood",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:rail_wooden",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:track_wooden",
+      "count": 32
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

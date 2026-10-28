@@ -1,0 +1,62 @@
+{
+  "variants": {
+    "facing=north,mirrored=false,switched=false": {
+      "model": "iis:block/rail/track_electric_switch"
+    },
+    "facing=north,mirrored=false,switched=true": {
+      "model": "iis:block/rail/track_electric_switch_corner"
+    },
+    "facing=north,mirrored=true,switched=false": {
+      "model": "iis:block/rail/track_electric_switch"
+    },
+    "facing=north,mirrored=true,switched=true": {
+      "model": "iis:block/rail/track_electric_switch_corner",
+      "y": 90
+    },
+    "facing=east,mirrored=false,switched=false": {
+      "model": "iis:block/rail/track_electric_switch",
+      "y": 90
+    },
+    "facing=east,mirrored=false,switched=true": {
+      "model": "iis:block/rail/track_electric_switch_corner",
+      "y": 90
+    },
+    "facing=east,mirrored=true,switched=false": {
+      "model": "iis:block/rail/track_electric_switch",
+      "y": 90
+    },
+    "facing=east,mirrored=true,switched=true": {
+      "model": "iis:block/rail/track_electric_switch_corner",
+      "y": 180
+    },
+    "facing=south,mirrored=false,switched=false": {
+      "model": "iis:block/rail/track_electric_switch"
+    },
+    "facing=south,mirrored=false,switched=true": {
+      "model": "iis:block/rail/track_electric_switch_corner",
+      "y": 180
+    },
+    "facing=south,mirrored=true,switched=false": {
+      "model": "iis:block/rail/track_electric_switch"
+    },
+    "facing=south,mirrored=true,switched=true": {
+      "model": "iis:block/rail/track_electric_switch_corner",
+      "y": 270
+    },
+    "facing=west,mirrored=false,switched=false": {
+      "model": "iis:block/rail/track_electric_switch",
+      "y": 90
+    },
+    "facing=west,mirrored=false,switched=true": {
+      "model": "iis:block/rail/track_electric_switch_corner",
+      "y": 270
+    },
+    "facing=west,mirrored=true,switched=false": {
+      "model": "iis:block/rail/track_electric_switch",
+      "y": 90
+    },
+    "facing=west,mirrored=true,switched=true": {
+      "model": "iis:block/rail/track_electric_switch_corner"
+    }
+  }
+}

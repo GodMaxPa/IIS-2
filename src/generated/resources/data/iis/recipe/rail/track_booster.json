@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:rail",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:fine_wires/gold",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:powered_rail",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_redstone",
+      "amount": 144
+    }
+  ]
+}

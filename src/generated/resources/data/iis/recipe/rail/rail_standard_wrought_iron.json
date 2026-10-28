@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/wrought_iron",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rail_standard",
+      "count": 5
+    }
+  ],
+  "duration": 400,
+  "eut": 15
+}

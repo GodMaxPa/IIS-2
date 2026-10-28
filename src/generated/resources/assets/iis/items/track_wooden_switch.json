@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/track_wooden_switch",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": -6522290
+      }
+    ]
+  }
+}

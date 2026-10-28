@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PBP"
+  ],
+  "key": {
+    "P": "minecraft:stone_pressure_plate",
+    "B": "minecraft:powered_rail"
+  },
+  "result": {
+    "id": "iis:track_locking",
+    "count": 1
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "variants": {
+    "powered=false,shape=north_south": {
+      "model": "iis:block/rail/track_reinforced_booster"
+    },
+    "powered=false,shape=east_west": {
+      "model": "iis:block/rail/track_reinforced_booster",
+      "y": 90
+    },
+    "powered=false,shape=ascending_north": {
+      "model": "iis:block/rail/track_reinforced_booster_raised_ne"
+    },
+    "powered=false,shape=ascending_east": {
+      "model": "iis:block/rail/track_reinforced_booster_raised_ne",
+      "y": 90
+    },
+    "powered=false,shape=ascending_south": {
+      "model": "iis:block/rail/track_reinforced_booster_raised_sw"
+    },
+    "powered=false,shape=ascending_west": {
+      "model": "iis:block/rail/track_reinforced_booster_raised_sw",
+      "y": 90
+    },
+    "powered=true,shape=north_south": {
+      "model": "iis:block/rail/track_reinforced_booster_on"
+    },
+    "powered=true,shape=east_west": {
+      "model": "iis:block/rail/track_reinforced_booster_on",
+      "y": 90
+    },
+    "powered=true,shape=ascending_north": {
+      "model": "iis:block/rail/track_reinforced_booster_on_raised_ne"
+    },
+    "powered=true,shape=ascending_east": {
+      "model": "iis:block/rail/track_reinforced_booster_on_raised_ne",
+      "y": 90
+    },
+    "powered=true,shape=ascending_south": {
+      "model": "iis:block/rail/track_reinforced_booster_on_raised_sw"
+    },
+    "powered=true,shape=ascending_west": {
+      "model": "iis:block/rail/track_reinforced_booster_on_raised_sw",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:quartz_slab",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:rebar",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tie_stone",
+      "count": 1
+    }
+  ],
+  "duration": 128,
+  "eut": 8
+}

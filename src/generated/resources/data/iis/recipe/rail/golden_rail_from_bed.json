@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:railbed_wood",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:rail_advanced",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:powered_rail",
+      "count": 16
+    }
+  ],
+  "duration": 400,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_redstone",
+      "amount": 144
+    }
+  ]
+}

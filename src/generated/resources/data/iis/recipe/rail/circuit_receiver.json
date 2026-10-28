@@ -1,0 +1,32 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:circuits/basic",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:fine_wires/gold",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:coated_circuit_board",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_receiver",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eut": 5,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 144
+    }
+  ],
+  "circuit": 3
+}

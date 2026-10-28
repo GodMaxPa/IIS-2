@@ -1,0 +1,24 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:rail_electric",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:track_electric",
+      "count": 16
+    }
+  ],
+  "duration": 400,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_concrete",
+      "amount": 576
+    }
+  ],
+  "circuit": 1
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "iis:block/rail/template_raised_sw",
+  "textures": {
+    "rail": "minecraft:block/rail"
+  }
+}

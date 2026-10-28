@@ -213,6 +213,16 @@ public final class IISGameTests {
             new Test("cover_conveyor_mv", 160, UxGameTests::conveyorMv),
             new Test("cover_gui_buttons", 20, UxGameTests::coverGuiButtons),
             new Test("creative_tab_tiers", 20, UxGameTests::creativeTabTiers),
+            // D102: железная дорога, заход 1
+            new Test("rail_wooden_track_slow", 40, RailGameTests::woodenTrackIsSlow),
+            new Test("rail_high_speed_booster", 60, RailGameTests::highSpeedBooster),
+            new Test("rail_high_speed_off_track_explodes", 40, RailGameTests::highSpeedOffTrackExplodes),
+            new Test("rail_junction_straight", 80, RailGameTests::junctionGoesStraight),
+            new Test("rail_switch_routes", 20, RailGameTests::switchRoutes),
+            new Test("rail_linked_carts", 40, RailGameTests::linkedCartsMoveTogether),
+            new Test("rail_locking_track", 100, RailGameTests::lockingTrackHoldsAndReleases),
+            new Test("rail_buffer_stop", 80, RailGameTests::bufferStopStops),
+            new Test("rail_coupler_track", 120, RailGameTests::couplerTrackLinks),
             new Test("selftest", 20, h -> {
                 h.assertTrue(SelfTest.runSilently(h.getLevel(), h.absolutePos(new BlockPos(4, 1, 4))), "selftest failed, see log");
                 h.succeed();

@@ -1,0 +1,18 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:track_wooden",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:track_wooden_junction",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 16,
+  "circuit": 1
+}

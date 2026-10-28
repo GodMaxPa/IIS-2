@@ -1,0 +1,24 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:track_high_speed",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:track_high_speed_transition",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_redstone",
+      "amount": 144
+    }
+  ],
+  "circuit": 1
+}

@@ -1,0 +1,109 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "minecraft:block/rail",
+    "rail": "minecraft:block/rail",
+    "bumper": "minecraft:block/stripped_oak_log",
+    "post": "minecraft:block/iron_block"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        1.0,
+        0
+      ],
+      "to": [
+        16,
+        1.0,
+        16
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            16,
+            16,
+            0
+          ],
+          "texture": "#rail",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#rail",
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        1,
+        1,
+        0
+      ],
+      "to": [
+        15,
+        9,
+        3
+      ],
+      "faces": {
+        "north": {
+          "texture": "#bumper"
+        },
+        "south": {
+          "texture": "#bumper"
+        },
+        "east": {
+          "texture": "#bumper"
+        },
+        "west": {
+          "texture": "#bumper"
+        },
+        "up": {
+          "texture": "#bumper"
+        },
+        "down": {
+          "texture": "#bumper"
+        }
+      }
+    },
+    {
+      "from": [
+        6,
+        1,
+        3
+      ],
+      "to": [
+        10,
+        5,
+        6
+      ],
+      "faces": {
+        "north": {
+          "texture": "#post"
+        },
+        "south": {
+          "texture": "#post"
+        },
+        "east": {
+          "texture": "#post"
+        },
+        "west": {
+          "texture": "#post"
+        },
+        "up": {
+          "texture": "#post"
+        },
+        "down": {
+          "texture": "#post"
+        }
+      }
+    }
+  ]
+}

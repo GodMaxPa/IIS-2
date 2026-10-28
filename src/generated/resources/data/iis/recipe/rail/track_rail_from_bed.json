@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:railbed_wood",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:rail_standard",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:rail",
+      "count": 32
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

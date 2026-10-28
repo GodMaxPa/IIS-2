@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/track_reinforced_booster",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": -9539200
+      }
+    ]
+  }
+}

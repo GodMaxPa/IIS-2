@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.iis.rail.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "OldMinecartBehaviorMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:tie_stone",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:railbed_stone",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 4,
+  "circuit": 4
+}

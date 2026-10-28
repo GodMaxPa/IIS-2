@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "#minecraft:wooden_slabs",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tie_wood",
+      "count": 1
+    }
+  ],
+  "duration": 160,
+  "eut": 5,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:creosote",
+      "amount": 500
+    }
+  ]
+}

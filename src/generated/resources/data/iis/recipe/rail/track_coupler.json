@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:powered_rail",
+    "#iis:tools/crowbar"
+  ],
+  "result": {
+    "id": "iis:track_coupler",
+    "count": 1
+  }
+}

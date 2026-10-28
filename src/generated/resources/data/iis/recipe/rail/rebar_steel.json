@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/steel",
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rebar",
+      "count": 16
+    }
+  ],
+  "duration": 800,
+  "eut": 15
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:rail",
+    "#c:storage_blocks/iron"
+  ],
+  "result": {
+    "id": "iis:track_buffer_stop",
+    "count": 1
+  }
+}

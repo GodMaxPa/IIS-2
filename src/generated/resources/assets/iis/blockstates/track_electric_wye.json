@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iis:block/rail/track_electric_wye"
+    },
+    "facing=east": {
+      "model": "iis:block/rail/track_electric_wye",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iis:block/rail/track_electric_wye",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iis:block/rail/track_electric_wye",
+      "y": 270
+    }
+  }
+}

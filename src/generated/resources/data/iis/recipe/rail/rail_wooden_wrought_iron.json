@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:tie_wood",
+      "count": 6
+    },
+    {
+      "ingredient": "#c:plates/wrought_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rail_wooden",
+      "count": 6
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

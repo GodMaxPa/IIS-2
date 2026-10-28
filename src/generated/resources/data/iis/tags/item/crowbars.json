@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "iis:crowbar_red",
+    "iis:crowbar_reinforced",
+    "#iis:tools/crowbar"
+  ]
+}
