@@ -280,6 +280,17 @@ public final class LvContent {
     public static final DeferredItem<BatteryItem> BATTERY_SODIUM_HV = ITEMS.registerItem("battery_sodium_hv", p -> new BatteryItem(800000, 512, 3, p), p -> p.stacksTo(1));
     public static final DeferredItem<BatteryItem> BATTERY_CADMIUM_HV = ITEMS.registerItem("battery_cadmium_hv", p -> new BatteryItem(1200000, 512, 3, p), p -> p.stacksTo(1));
     public static final DeferredItem<BatteryItem> BATTERY_LITHIUM_HV = ITEMS.registerItem("battery_lithium_hv", p -> new BatteryItem(1600000, 512, 3, p), p -> p.stacksTo(1));
+    // D101: одноразовые GT (GT_MetaGenerated_Item_01:410-436): кислотные 18000 / 72000 / 288000 и ртутные 32000 / 128000 / 512000 EU
+    public static final DeferredItem<BatteryItem> BATTERY_ACID_LV = ITEMS.registerItem("battery_acid_lv", p -> new BatteryItem(18000, 32, 1, false, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_MERCURY_LV = ITEMS.registerItem("battery_mercury_lv", p -> new BatteryItem(32000, 32, 1, false, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_ACID_MV = ITEMS.registerItem("battery_acid_mv", p -> new BatteryItem(72000, 128, 2, false, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_MERCURY_MV = ITEMS.registerItem("battery_mercury_mv", p -> new BatteryItem(128000, 128, 2, false, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_ACID_HV = ITEMS.registerItem("battery_acid_hv", p -> new BatteryItem(288000, 512, 3, false, p), p -> p.stacksTo(1));
+    public static final DeferredItem<BatteryItem> BATTERY_MERCURY_HV = ITEMS.registerItem("battery_mercury_hv", p -> new BatteryItem(512000, 512, 3, false, p), p -> p.stacksTo(1));
+    /** Все батарейки — во вкладку пустыми и заряженными (D101: раньше там была только натриевая LV). */
+    public static final List<DeferredItem<BatteryItem>> BATTERIES = List.of(BATTERY_LV, BATTERY_CADMIUM_LV, BATTERY_LITHIUM_LV, BATTERY_ACID_LV,
+            BATTERY_MERCURY_LV, BATTERY_SODIUM_MV, BATTERY_CADMIUM_MV, BATTERY_LITHIUM_MV, BATTERY_ACID_MV, BATTERY_MERCURY_MV,
+            BATTERY_SODIUM_HV, BATTERY_CADMIUM_HV, BATTERY_LITHIUM_HV, BATTERY_ACID_HV, BATTERY_MERCURY_HV);
     public static final DeferredItem<Item> BATTERY_HULL_LV = item("battery_hull_lv");
     // покрытия GT (ru.iis.cover.Covers.ITEMS); конвейер, помпа и манипулятор — сами детали LV
     public static final DeferredItem<Item> COVER_CONTROLLER = item("cover_controller");
@@ -304,7 +315,7 @@ public final class LvContent {
         }
     }
     static {
-        TAB_ORDER.add(BATTERY_LV);
+        TAB_ORDER.addAll(BATTERIES);
         TAB_ORDER.add(TREETAP);
         TAB_ORDER.add(MULTIMETER);
         TAB_ORDER.add(IISFluids.CREOSOTE_BUCKET);
@@ -334,19 +345,62 @@ public final class LvContent {
             () -> IMenuTypeExtension.create(BatteryBufferMenu::client));
     public static final DeferredHolder<MenuType<?>, MenuType<CokeOvenMenu>> COKE_OVEN_MENU = MENUS.register("coke_oven",
             () -> IMenuTypeExtension.create(CokeOvenMenu::client));
+    /** Интерфейс покрытия (D101). */
+    public static final DeferredHolder<MenuType<?>, MenuType<ru.iis.cover.CoverMenu>> COVER_MENU = MENUS.register("cover",
+            () -> IMenuTypeExtension.create(ru.iis.cover.CoverMenu::client));
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = TABS.register("lv", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.iis.lv"))
-            .icon(() -> new ItemStack(MACHINES.get(LvMachineType.MACERATOR).get()))
-            .displayItems((params, out) -> TAB_ORDER.forEach(i -> {
-                out.accept(i.get());
-                if (i == BATTERY_LV) {
-                    ItemStack full = new ItemStack(BATTERY_LV.get());
-                    BatteryItem.setCharge(full, BATTERY_LV.get().capacity);
-                    out.accept(full);
-                }
-            }))
-            .build());
+    private static final String[] TAB_IDS = {"lv", "mv", "hv", "ev"};
+
+    /** Вкладки по напряжению (D101): LV, MV, HV, EV — уровень предмета по {@link #tabTier}. */
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = tierTab(0, LvMachineType.MACERATOR);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_MV = tierTab(1, LvMachineType.MACERATOR_MV);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_HV = tierTab(2, LvMachineType.MACERATOR_HV);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_EV = tierTab(3, LvMachineType.MACERATOR_EV);
+
+    private static DeferredHolder<CreativeModeTab, CreativeModeTab> tierTab(int tier, LvMachineType icon) {
+        return TABS.register(TAB_IDS[tier], () -> {
+            CreativeModeTab.Builder b = CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.iis." + TAB_IDS[tier]))
+                    .icon(() -> new ItemStack(MACHINES.get(icon).get()))
+                    .displayItems((params, out) -> TAB_ORDER.forEach(i -> {
+                        Item item = i.get();
+                        if (tabTier(item) != tier) return;
+                        // одноразовые — только заряженными (пустая — это уже выработанная), перезаряжаемые — пустой и заряженной
+                        if (!(item instanceof BatteryItem bat) || bat.rechargeable) out.accept(item);
+                        if (item instanceof BatteryItem bat) {
+                            ItemStack full = new ItemStack(bat);
+                            BatteryItem.setCharge(full, bat.capacity);
+                            out.accept(full);
+                        }
+                    }));
+            if (tier > 0) b.withTabsBefore(Identifier.fromNamespaceAndPath(IIS.MODID, TAB_IDS[tier - 1]));
+            return b.build();
+        });
+    }
+
+    /** Предметы без суффикса уровня: эпоха, в которой они нужны (схемы GT: Good — MV, Advanced — HV, Data и Elite — EV). */
+    private static final Map<String, Integer> TAB_TIER_IDS = Map.ofEntries(
+            Map.entry("circuit_good", 1), Map.entry("diode", 1), Map.entry("mold_credit", 1), Map.entry("mold_arrow", 1),
+            Map.entry("coin_doge", 1), Map.entry("arrow_head_glass_empty", 1),
+            Map.entry("circuit_advanced", 2), Map.entry("transistor", 2), Map.entry("circuit_board_phenolic", 2),
+            Map.entry("circuit_integrated_good", 2), Map.entry("silicon_boule", 2), Map.entry("silicon_wafer", 2),
+            Map.entry("wafer_ilc", 2), Map.entry("chip_ilc", 2), Map.entry("wafer_ram", 2), Map.entry("chip_ram", 2),
+            Map.entry("coil_small", 2), Map.entry("grinder_diamond", 2), Map.entry("plant_ball", 2), Map.entry("bio_chaff", 2),
+            Map.entry("circuit_data", 3), Map.entry("circuit_board_plastic", 3), Map.entry("capacitor", 3), Map.entry("circuit_elite", 3));
+
+    /** Уровень вкладки 0…3 (LV…EV): суффикс _lv/_mv/_hv/_ev, у кабелей — напряжение, насадки экструдера — MV, иначе по таблице или LV. */
+    public static int tabTier(Item item) {
+        return tabTier(net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(item).getPath());
+    }
+
+    public static int tabTier(String id) {
+        for (CableSpecs.Spec s : CableSpecs.ALL) {
+            if (s.id().equals(id)) return s.voltage() <= 32 ? 0 : s.voltage() <= 128 ? 1 : s.voltage() <= 512 ? 2 : 3;
+        }
+        for (int t = TAB_IDS.length - 1; t >= 0; t--) if (id.endsWith("_" + TAB_IDS[t])) return t;
+        if (id.startsWith("shape_extruder_")) return 1;
+        return TAB_TIER_IDS.getOrDefault(id, 0);
+    }
 
     /** Вкладка «Инструменты» LV: электроинструменты заряженными до 100 000 EU (литиевая батарея). */
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB = TABS.register("electric_tools", () -> CreativeModeTab.builder()

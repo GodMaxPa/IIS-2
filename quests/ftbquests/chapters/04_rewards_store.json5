@@ -1,0 +1,387 @@
+{
+  "id": "1D00000000000022",
+  "filename": "04_rewards_store",
+  "order_index": 4,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A00000000000744",
+      "x": 0.75,
+      "y": 0.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A000000000000A4",
+        "1A000000000000A5",
+        "1A000000000000FE",
+        "1A00000000000067"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 16,
+          "consume_items": true,
+          "id": "1B00000000074400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000745",
+      "x": 2.75,
+      "y": 0.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A00000000000744"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 24,
+          "consume_items": true,
+          "id": "1B00000000074500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000746",
+      "x": 2.75,
+      "y": 2.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A00000000000745"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 32,
+          "consume_items": true,
+          "id": "1B00000000074600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000747",
+      "x": 4.75,
+      "y": 2.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A00000000000746",
+        "1A00000000000741",
+        "1A00000000000137",
+        "1A000000000004CF",
+        "1A000000000001C6"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 48,
+          "consume_items": true,
+          "id": "1B00000000074700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000748",
+      "x": 4.75,
+      "y": 0.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A00000000000747"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 64,
+          "consume_items": true,
+          "id": "1B00000000074800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000749",
+      "x": 6.75,
+      "y": 0.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A00000000000748"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 96,
+          "consume_items": true,
+          "id": "1B00000000074900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000074A",
+      "x": 6.75,
+      "y": 2.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A00000000000749"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 128,
+          "consume_items": true,
+          "id": "1B00000000074A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000074B",
+      "x": 8.75,
+      "y": 2.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A0000000000074A"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 192,
+          "consume_items": true,
+          "id": "1B00000000074B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000074C",
+      "x": 8.75,
+      "y": 0.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A0000000000074B"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 256,
+          "consume_items": true,
+          "id": "1B00000000074C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000074D",
+      "x": 10.75,
+      "y": 0.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A0000000000074C"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 320,
+          "consume_items": true,
+          "id": "1B00000000074D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000074E",
+      "x": 10.75,
+      "y": 2.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A0000000000074D"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 384,
+          "consume_items": true,
+          "id": "1B00000000074E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000074F",
+      "x": 12.75,
+      "y": 2.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A0000000000074E"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 448,
+          "consume_items": true,
+          "id": "1B00000000074F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000750",
+      "x": 12.75,
+      "y": 0.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A0000000000074F"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 512,
+          "consume_items": true,
+          "id": "1B00000000075000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000751",
+      "x": 14.75,
+      "y": 0.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A00000000000750"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 640,
+          "consume_items": true,
+          "id": "1B00000000075100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000752",
+      "x": 14.75,
+      "y": 2.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A00000000000751"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 768,
+          "consume_items": true,
+          "id": "1B00000000075200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000753",
+      "x": 16.75,
+      "y": 2.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A00000000000752"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint",
+            "count": 1
+          },
+          "count": 1024,
+          "consume_items": true,
+          "id": "1B00000000075300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000754",
+      "x": 16.75,
+      "y": 0.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A00000000000753"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000000075400"
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "id": "minecraft:book",
+    "count": 1
+  }
+}

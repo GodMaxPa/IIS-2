@@ -26,6 +26,15 @@ public class GeneratorScreen extends MachineScreen<GeneratorMenu> {
     }
 
     @Override
+    public boolean mouseClicked(net.minecraft.client.input.MouseButtonEvent event, boolean doubleClick) {
+        if (!menu.getCarried().isEmpty() && hovering(80, 35, 16, 16, (int) event.x(), (int) event.y())) {
+            net.minecraft.client.Minecraft.getInstance().gameMode.handleInventoryButtonClick(menu.containerId, 0);
+            return true;
+        }
+        return super.mouseClicked(event, doubleClick);
+    }
+
+    @Override
     public void extractRenderState(GuiGraphicsExtractor g, int mouseX, int mouseY, float a) {
         super.extractRenderState(g, mouseX, mouseY, a);
         if (hovering(80, 35, 16, 16, mouseX, mouseY)) {

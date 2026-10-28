@@ -1,0 +1,739 @@
+{
+  "id": "1D0000000000001F",
+  "filename": "15_hv__cleanroom",
+  "order_index": 15,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A0000000000002F",
+      "x": 14.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000000E6",
+        "1A0000000000012B"
+      ],
+      "icon": {
+        "id": "iis:lens_green_sapphire",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lens_green_sapphire",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000002F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000042",
+      "x": 6.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000000EC",
+        "1A000000000000FB",
+        "1A000000000001F0",
+        "1A000000000000FA"
+      ],
+      "icon": {
+        "id": "iis:macerator_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:macerator_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000089",
+      "x": 8.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000000F0",
+        "1A000000000000F1",
+        "1A000000000000F5",
+        "1A000000000001E3",
+        "1A00000000000149",
+        "1A000000000000FE"
+      ],
+      "icon": {
+        "id": "iis:emitter_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:emitter_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000008900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000008F",
+      "x": 12.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A00000000000095"
+      ],
+      "icon": {
+        "id": "iis:wire_fine_annealed_copper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_fine_annealed_copper",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000008F00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000DE",
+      "x": 12.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000418",
+        "1A000000000002DD"
+      ],
+      "icon": {
+        "id": "iis:chip_ilc",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chip_ilc",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000DE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000E4",
+      "x": 9.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A000000000000E5",
+        "1A00000000000113",
+        "1A000000000004BC"
+      ],
+      "icon": {
+        "id": "iis:transistor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:transistor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000E400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000E6",
+      "x": 14.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000058"
+      ],
+      "icon": {
+        "id": "iis:gem_exquisite_green_sapphire",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gem_exquisite_green_sapphire",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000E600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000E8",
+      "x": 11.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000000E7"
+      ],
+      "icon": {
+        "id": "iis:chip_ram",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chip_ram",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000E800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000EA",
+      "x": 6.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000E9",
+        "1A000000000000EB"
+      ],
+      "icon": {
+        "id": "iis:ingot_electrum",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_electrum",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000EA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000ED",
+      "x": 6.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000EA",
+        "1A00000000000149"
+      ],
+      "icon": {
+        "id": "iis:wire_fine_electrum",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_fine_electrum",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000ED00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000EE",
+      "x": 8.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000EF",
+        "1A000000000000EC",
+        "1A00000000000089"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000EE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000F0",
+      "x": 6.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000000EA"
+      ],
+      "icon": {
+        "id": "iis:rod_electrum",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_electrum",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000F000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000F2",
+      "x": 5.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F3",
+        "1A000000000001E7",
+        "1A000000000001DA"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:dust_chrome",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_chrome",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000F200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000F6",
+      "x": 2.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000043D",
+        "1A00000000000442"
+      ],
+      "icon": {
+        "id": "iis:dust_manganese",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_manganese",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000F600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000F8",
+      "x": 2.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000000F7"
+      ],
+      "icon": {
+        "id": "iis:rotor_stainless_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rotor_stainless_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000F800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000F9",
+      "x": 5.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A00000000000111"
+      ],
+      "icon": {
+        "id": "iis:electric_motor_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_motor_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000F900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000FB",
+      "x": 5.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A000000000000F9"
+      ],
+      "icon": {
+        "id": "iis:electric_piston_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_piston_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000FB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000FD",
+      "x": 3.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000E9",
+        "1A000000000000EB",
+        "1A000000000000FE"
+      ],
+      "icon": {
+        "id": "iis:dust_black_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_black_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000FD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000FF",
+      "x": 2.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000FD",
+        "1A0000000000009B",
+        "1A00000000000100"
+      ],
+      "icon": {
+        "id": "iis:dust_black_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_black_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000FF00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000113",
+      "x": 9.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000001D9"
+      ],
+      "icon": {
+        "id": "iis:wire_fine_tin",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_fine_tin",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000011300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000116",
+      "x": 5.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000000F7"
+      ],
+      "icon": {
+        "id": "iis:casing_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:casing_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000011600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001EF",
+      "x": 12.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000001EE",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001EF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002DC",
+      "x": 9.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000000F5",
+        "1A000000000001FD",
+        "1A00000000000089",
+        "1A000000000002E4"
+      ],
+      "icon": {
+        "id": "iis:laser_engraver_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_engraver_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002DC00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000325",
+      "x": 2.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:rotor_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rotor_steel",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B00000000032500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000342",
+      "x": 11.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A000000000001EA"
+      ],
+      "icon": {
+        "id": "iis:plate_gallium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_gallium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004BC",
+      "x": 8.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A000000000004BD"
+      ],
+      "icon": {
+        "id": "iis:plate_silicon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_silicon",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004BC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004BD",
+      "x": 6.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000015F"
+      ],
+      "icon": {
+        "id": "iis:ingot_silicon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_silicon",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004BD00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000068C",
+      "x": 12.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000013F"
+      ],
+      "icon": {
+        "id": "iis:plate_lead",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_lead",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000068C00"
+        }
+      ]
+    }
+  ],
+  "quest_links": [
+    {
+      "id": "1E00000001F000E0",
+      "linked_quest": "1A000000000000E0",
+      "x": 9.5,
+      "y": 2.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000001F000E1",
+      "linked_quest": "1A000000000000E1",
+      "x": 11.0,
+      "y": 2.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000001F000E3",
+      "linked_quest": "1A000000000000E3",
+      "x": 11.0,
+      "y": 3.5,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000001F000E7",
+      "linked_quest": "1A000000000000E7",
+      "x": 12.5,
+      "y": 5.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000001F000EC",
+      "linked_quest": "1A000000000000EC",
+      "x": 8.75,
+      "y": 4.25,
+      "size": 2.5
+    },
+    {
+      "id": "1E00000001F000F7",
+      "linked_quest": "1A000000000000F7",
+      "x": 3.5,
+      "y": 5.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000001F000FA",
+      "linked_quest": "1A000000000000FA",
+      "x": 6.5,
+      "y": 5.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000001F00418",
+      "linked_quest": "1A00000000000418",
+      "x": 11.0,
+      "y": 0.5,
+      "size": 1.0
+    }
+  ]
+}

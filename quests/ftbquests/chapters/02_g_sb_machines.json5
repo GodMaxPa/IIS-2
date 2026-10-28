@@ -1,0 +1,3860 @@
+{
+  "id": "1D0000000000001A",
+  "filename": "02_g_sb_machines",
+  "order_index": 2,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A00000000000474",
+      "x": 0.5,
+      "y": 14.0,
+      "dependencies": [
+        "1A000000000001BE"
+      ],
+      "icon": {
+        "id": "iis:steam_macerator_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_macerator_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000047400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000485",
+      "x": 11.0,
+      "y": 14.0,
+      "dependencies": [
+        "1A000000000001BE"
+      ],
+      "icon": {
+        "id": "iis:boiler_coal_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:boiler_coal_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048500"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000048C",
+      "x": 0.5,
+      "y": 15.5,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:steam_macerator_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_macerator_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000048D",
+      "x": 0.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:macerator_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:macerator_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000048E",
+      "x": 0.5,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:macerator_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:macerator_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000048F",
+      "x": 0.5,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:macerator_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:macerator_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000490",
+      "x": 0.5,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:macerator_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:macerator_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000049000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000496",
+      "x": 20.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:ore_washer_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ore_washer_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000049600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000497",
+      "x": 20.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:ore_washer_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ore_washer_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000049700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000498",
+      "x": 20.0,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:ore_washer_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ore_washer_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000049800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000499",
+      "x": 20.0,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:ore_washer_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ore_washer_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000049900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004DA",
+      "x": 14.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:electromagnetic_separator_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electromagnetic_separator_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004DA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004DB",
+      "x": 9.5,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:centrifuge_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:centrifuge_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004DB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004DC",
+      "x": 9.5,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:centrifuge_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:centrifuge_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004DC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004DD",
+      "x": 9.5,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:centrifuge_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:centrifuge_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004DD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004E2",
+      "x": 11.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:thermal_centrifuge_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:thermal_centrifuge_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004E200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004E3",
+      "x": 11.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:thermal_centrifuge_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:thermal_centrifuge_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004E300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004E4",
+      "x": 11.0,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:thermal_centrifuge_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:thermal_centrifuge_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004E400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004E5",
+      "x": 11.0,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:thermal_centrifuge_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:thermal_centrifuge_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004E500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004EA",
+      "x": 12.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:sifter_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sifter_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004EA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004EB",
+      "x": 12.5,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:sifter_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sifter_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004EB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004EC",
+      "x": 12.5,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:sifter_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sifter_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004EC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004ED",
+      "x": 12.5,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:sifter_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sifter_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004ED00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004F2",
+      "x": 17.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:electrolyzer_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electrolyzer_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004F200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004F3",
+      "x": 14.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:electromagnetic_separator_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electromagnetic_separator_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004F300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004F4",
+      "x": 14.0,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:electromagnetic_separator_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electromagnetic_separator_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004F400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004F5",
+      "x": 14.0,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:electromagnetic_separator_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electromagnetic_separator_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004F500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004FA",
+      "x": 15.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:chemical_bath_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_bath_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004FA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004FB",
+      "x": 15.5,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:chemical_bath_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_bath_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004FB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004FC",
+      "x": 15.5,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:chemical_bath_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_bath_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004FC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004FD",
+      "x": 15.5,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:chemical_bath_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_bath_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004FD00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000502",
+      "x": 9.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:centrifuge_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:centrifuge_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000503",
+      "x": 17.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:electrolyzer_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electrolyzer_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000504",
+      "x": 17.0,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:electrolyzer_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electrolyzer_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000505",
+      "x": 17.0,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:electrolyzer_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electrolyzer_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050500"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000050A",
+      "x": 2.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:forge_hammer_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forge_hammer_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000050B",
+      "x": 2.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:forge_hammer_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forge_hammer_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000050C",
+      "x": 2.0,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:forge_hammer_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forge_hammer_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000050D",
+      "x": 2.0,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:forge_hammer_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forge_hammer_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000512",
+      "x": 2.0,
+      "y": 15.5,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:steam_forge_hammer_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_forge_hammer_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000051200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000513",
+      "x": 2.0,
+      "y": 14.0,
+      "dependencies": [
+        "1A000000000001BE"
+      ],
+      "icon": {
+        "id": "iis:steam_forge_hammer_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_forge_hammer_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000051300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000514",
+      "x": 26.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:bender_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bender_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000051400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000515",
+      "x": 26.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:bender_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bender_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000051500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000516",
+      "x": 26.0,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:bender_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bender_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000051600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000517",
+      "x": 26.0,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:bender_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bender_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000051700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000522",
+      "x": 27.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:wiremill_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wiremill_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000052200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000523",
+      "x": 27.5,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:wiremill_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wiremill_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000052300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000524",
+      "x": 27.5,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:wiremill_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wiremill_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000052400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000525",
+      "x": 27.5,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:wiremill_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wiremill_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000052500"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000052A",
+      "x": 29.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:lathe_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lathe_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000052A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000052B",
+      "x": 29.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:lathe_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lathe_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000052B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000052C",
+      "x": 29.0,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:lathe_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lathe_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000052C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000052D",
+      "x": 29.0,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:lathe_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lathe_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000052D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000532",
+      "x": 30.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:extruder_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extruder_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000533",
+      "x": 30.5,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:extruder_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extruder_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000534",
+      "x": 30.5,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:extruder_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extruder_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000535",
+      "x": 30.5,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:extruder_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extruder_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053500"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000053A",
+      "x": 6.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:electric_furnace_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_furnace_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000053B",
+      "x": 6.5,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:electric_furnace_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_furnace_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000053C",
+      "x": 6.5,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:electric_furnace_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_furnace_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000053D",
+      "x": 6.5,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:electric_furnace_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_furnace_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000562",
+      "x": 32.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:cutter_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cutter_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000563",
+      "x": 32.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:cutter_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cutter_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000564",
+      "x": 32.0,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:cutter_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cutter_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000565",
+      "x": 32.0,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:cutter_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cutter_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056500"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000056A",
+      "x": 33.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:assembler_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assembler_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000056B",
+      "x": 33.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:assembler_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assembler_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000056C",
+      "x": 33.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:assembler_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assembler_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000056D",
+      "x": 33.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:assembler_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assembler_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000572",
+      "x": 35.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000057200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000573",
+      "x": 35.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000057300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000574",
+      "x": 35.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000057400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000575",
+      "x": 35.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000057500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000582",
+      "x": 38.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:fluid_extractor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_extractor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000058200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000583",
+      "x": 38.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:fluid_extractor_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_extractor_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000058300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000584",
+      "x": 38.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:fluid_extractor_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_extractor_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000058400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000585",
+      "x": 38.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:fluid_extractor_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_extractor_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000058500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005A2",
+      "x": 3.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:chemical_reactor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_reactor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005A200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005A3",
+      "x": 3.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:chemical_reactor_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_reactor_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005A300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005A4",
+      "x": 3.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:chemical_reactor_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_reactor_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005A400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005A5",
+      "x": 3.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:chemical_reactor_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_reactor_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005A500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005AA",
+      "x": 3.5,
+      "y": 14.0,
+      "dependencies": [
+        "1A000000000001BE"
+      ],
+      "icon": {
+        "id": "iis:steam_alloy_smelter_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_alloy_smelter_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005AA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005AB",
+      "x": 3.5,
+      "y": 15.5,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:steam_alloy_smelter_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_alloy_smelter_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005AB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005AC",
+      "x": 3.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:alloy_smelter_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:alloy_smelter_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005AC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005AD",
+      "x": 3.5,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:alloy_smelter_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:alloy_smelter_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005AD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005AE",
+      "x": 3.5,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:alloy_smelter_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:alloy_smelter_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005AE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005AF",
+      "x": 3.5,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:alloy_smelter_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:alloy_smelter_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005AF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005B4",
+      "x": 5.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:compressor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005B400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005B5",
+      "x": 5.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:compressor_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressor_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005B500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005B6",
+      "x": 5.0,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:compressor_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressor_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005B600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005B7",
+      "x": 5.0,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:compressor_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressor_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005B700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005BC",
+      "x": 5.0,
+      "y": 15.5,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:steam_compressor_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_compressor_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005BC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005BD",
+      "x": 5.0,
+      "y": 14.0,
+      "dependencies": [
+        "1A000000000001BE"
+      ],
+      "icon": {
+        "id": "iis:steam_compressor_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_compressor_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005BD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005BE",
+      "x": 6.5,
+      "y": 15.5,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:steam_furnace_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_furnace_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005BE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005BF",
+      "x": 6.5,
+      "y": 14.0,
+      "dependencies": [
+        "1A000000000001BE"
+      ],
+      "icon": {
+        "id": "iis:steam_furnace_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_furnace_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005BF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005C1",
+      "x": 8.0,
+      "y": 14.0,
+      "dependencies": [
+        "1A000000000001BE"
+      ],
+      "icon": {
+        "id": "iis:steam_extractor_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_extractor_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005C100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005C2",
+      "x": 8.0,
+      "y": 15.5,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:steam_extractor_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_extractor_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005C200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005C3",
+      "x": 8.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:extractor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005C300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005C4",
+      "x": 8.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:extractor_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005C400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005C5",
+      "x": 8.0,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:extractor_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005C500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005C6",
+      "x": 8.0,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:extractor_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005C600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005CB",
+      "x": 5.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:fluid_canner_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005CB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005D0",
+      "x": 12.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:brewery_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:brewery_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005D000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005D2",
+      "x": 15.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:fluid_solidifier_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_solidifier_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005D200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005D3",
+      "x": 17.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:distillery_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:distillery_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005D300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005D4",
+      "x": 18.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:polarizer_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:polarizer_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005D400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005D5",
+      "x": 20.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:autoclave_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:autoclave_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005D500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005D6",
+      "x": 21.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:mixer_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mixer_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005D600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005D7",
+      "x": 23.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:laser_engraver_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_engraver_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005D700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005D8",
+      "x": 24.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:forming_press_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_press_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005D800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005D9",
+      "x": 5.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:fluid_canner_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005D900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005DE",
+      "x": 12.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:brewery_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:brewery_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005DE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005E0",
+      "x": 15.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:fluid_solidifier_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_solidifier_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005E000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005E1",
+      "x": 17.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:distillery_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:distillery_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005E100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005E2",
+      "x": 18.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:polarizer_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:polarizer_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005E200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005E3",
+      "x": 20.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:autoclave_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:autoclave_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005E300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005E4",
+      "x": 21.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:mixer_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mixer_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005E400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005E5",
+      "x": 23.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:laser_engraver_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_engraver_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005E500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005E6",
+      "x": 24.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:forming_press_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_press_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005E600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005E7",
+      "x": 5.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:fluid_canner_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005E700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005EC",
+      "x": 12.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:brewery_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:brewery_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005EC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005EE",
+      "x": 15.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:fluid_solidifier_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_solidifier_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005EE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005EF",
+      "x": 17.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:distillery_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:distillery_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005EF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005F0",
+      "x": 18.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:polarizer_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:polarizer_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005F000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005F1",
+      "x": 20.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:autoclave_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:autoclave_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005F100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005F2",
+      "x": 21.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:mixer_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mixer_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005F200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005F3",
+      "x": 23.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:laser_engraver_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_engraver_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005F300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005F4",
+      "x": 24.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:forming_press_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_press_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005F400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005F5",
+      "x": 5.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:fluid_canner_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005F500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005FA",
+      "x": 12.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:brewery_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:brewery_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005FA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005FC",
+      "x": 15.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:fluid_solidifier_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_solidifier_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005FC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005FD",
+      "x": 17.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:distillery_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:distillery_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005FD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005FE",
+      "x": 18.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:polarizer_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:polarizer_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005FE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005FF",
+      "x": 20.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:autoclave_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:autoclave_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005FF00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000600",
+      "x": 21.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:mixer_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mixer_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000060000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000601",
+      "x": 23.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:laser_engraver_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_engraver_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000060100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000602",
+      "x": 24.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:forming_press_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_press_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000060200"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000063B",
+      "x": 26.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:fluid_heater_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_heater_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000063B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000063D",
+      "x": 29.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:arc_furnace_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:arc_furnace_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000063D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000063F",
+      "x": 32.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:electric_oven_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_oven_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000063F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000641",
+      "x": 39.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:diesel_generator_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:diesel_generator_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000064100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000642",
+      "x": 38.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:gas_turbine_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gas_turbine_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000064200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000643",
+      "x": 36.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:steam_turbine_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_turbine_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000064300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000645",
+      "x": 26.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:fluid_heater_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_heater_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000064500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000647",
+      "x": 29.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:arc_furnace_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:arc_furnace_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000064700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000649",
+      "x": 32.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:electric_oven_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_oven_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000064900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000064B",
+      "x": 39.5,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:diesel_generator_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:diesel_generator_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000064B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000064C",
+      "x": 38.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:gas_turbine_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gas_turbine_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000064C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000064D",
+      "x": 36.5,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:steam_turbine_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_turbine_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000064D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000064F",
+      "x": 26.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:fluid_heater_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_heater_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000064F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000651",
+      "x": 29.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:arc_furnace_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:arc_furnace_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000065100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000653",
+      "x": 32.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:electric_oven_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_oven_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000065300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000655",
+      "x": 39.5,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:diesel_generator_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:diesel_generator_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000065500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000656",
+      "x": 38.0,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:gas_turbine_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gas_turbine_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000065600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000657",
+      "x": 36.5,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:steam_turbine_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_turbine_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000065700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000659",
+      "x": 26.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:fluid_heater_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_heater_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000065900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000065B",
+      "x": 29.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:arc_furnace_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:arc_furnace_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000065B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000065D",
+      "x": 32.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:electric_oven_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_oven_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000065D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000066B",
+      "x": 12.5,
+      "y": 14.0,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:boiler_coal_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:boiler_coal_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000066B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000066C",
+      "x": 15.5,
+      "y": 14.0,
+      "dependencies": [
+        "1A000000000001BE"
+      ],
+      "icon": {
+        "id": "iis:boiler_solar_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:boiler_solar_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000066C00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000672",
+      "x": 17.0,
+      "y": 14.0,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:boiler_lava_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:boiler_lava_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000067200"
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "id": "minecraft:cake",
+    "count": 1
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "1D00000000000001",
+  "filename": "21_advanced_me_network",
+  "order_index": 21,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A00000000000046",
+      "x": 9.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000020",
+        "1A00000000000047"
+      ],
+      "icon": {
+        "id": "minecraft:ender_eye",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:ender_eye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000047",
+      "x": 8.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000048"
+      ],
+      "icon": {
+        "id": "minecraft:blaze_powder",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:blaze_powder",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004700"
+        }
+      ]
+    }
+  ]
+}

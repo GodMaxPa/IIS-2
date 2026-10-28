@@ -94,6 +94,8 @@ MACHINES = [
     ('brewery',       'brewery',       'POTIONBREWER',     'PotionBrewer', 'brewery',       1, 0, 750,   'Brewery'),
     ('circuit_assembler', 'circuitassembler', 'CIRCUITASSEMBLER', 'CircuitAssembler', 'circuit_assembler', 6, 1, 16000,
                       'Circuit Assembling Machine'),
+    # D101: :839 fluid canner (1, 1, 16000; MV 32000, HV 48000, EV 64000) — single-use GT batteries
+    ('fluid_canner',  'fluidcanner',   'FLUID_CANNER',     'FluidCanner',  'fluid_canner',  1, 1, 16000, 'Fluid Canner'),
 ]
 # GT crafting of the D83 machines (both tiers, X.* resolved per tier like MV_CRAFT)
 NEW_CRAFT = {
@@ -107,21 +109,22 @@ NEW_CRAFT = {
     'brewery': (['GPG', 'WMW', 'CBC'], {'M': 'HULL', 'P': 'PUMP', 'B': 'minecraft:blaze_rod', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
     'circuit_assembler': (['ACE', 'VMV', 'WCW'], {'M': 'HULL', 'V': 'CONVEYOR', 'A': 'ROBOT_ARM', 'C': 'BETTER_CIRCUIT', 'W': 'WIRE',
                                                   'E': 'EMITTER'}),
+    'fluid_canner': (['GCG', 'GMG', 'WPW'], {'M': 'HULL', 'P': 'PUMP', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),   # :839 (D101)
 }
 # MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
 # outputs and tanks as LV except the mixer (16000 L, :1022); the compressor tank (LV 4000, MV 8000) stays 0 as at LV (D82)
-MV_TANKS = {'mixer': 16000}
+MV_TANKS = {'mixer': 16000, 'fluid_canner': 32000}
 MV_MACHINES = [m[:7] + (MV_TANKS.get(m[0], m[7]),) + m[8:] for m in MACHINES if m[0] != 'thermal_centrifuge'] + [
     ('thermal_centrifuge', 'thermalcentrifuge', 'THERMAL_CENTRIFUGE', 'ThermalCentrifuge', 'thermal_centrifuge', 1, 3, 0, 'Thermal Centrifuge'),
 ]
 # HV basic machines (GT tier 3, D93): GT_Loader_MetaTileEntities Machine_HV_* — as MV except the macerator (2 outputs: byproducts)
 # and the mixer (24000 L); the HV compressor tank (12000) stays 0 like at LV/MV (D82)
-HV_TANKS = {'mixer': 24000}
+HV_TANKS = {'mixer': 24000, 'fluid_canner': 48000}
 HV_OUTPUTS = {'macerator': 2}
 HV_MACHINES = [m[:6] + (HV_OUTPUTS.get(m[0], m[6]), HV_TANKS.get(m[0], m[7])) + m[8:] for m in MV_MACHINES]
 # EV basic machines (GT tier 4; assembler and chemical reactor D98, the rest D100): Machine_EV_* — as HV except the macerator
 # (3 outputs) and the mixer (32000 L); the compressor tank (16000) stays 0 like at LV-HV (D82)
-EV_TANKS = {'mixer': 32000}
+EV_TANKS = {'mixer': 32000, 'fluid_canner': 64000}
 EV_OUTPUTS = {'macerator': 3}
 EV_MACHINES = [m[:6] + (EV_OUTPUTS.get(m[0], m[6]), EV_TANKS.get(m[0], m[7])) + m[8:] for m in HV_MACHINES]
 # GT_Loader_MetaTileEntities Machine_MV_* crafting: GT pattern letters; X.* resolved for tier 2 in lv.generate
@@ -239,6 +242,13 @@ ITEMS = [
     ('battery_lithium_lv', 'gt:518', 'gt.metaitem.01.32518.name', 'Small Lithium Battery', 'Малая литиевая батарея'),
     ('battery_hull_lv', 'gt:500', 'gt.metaitem.01.32500.name', 'Small Battery Hull', 'Малый корпус батареи'),
     # D96: GT_MetaGenerated_Item_01:402-403 MV/HV hulls, :428-444 MV/HV sodium, cadmium, lithium batteries
+    # D101: GT_MetaGenerated_Item_01:410-436 single-use acid and mercury batteries (fluid canner, not rechargeable)
+    ('battery_acid_lv', 'gt:510', 'gt.metaitem.01.32510.name', 'Small Acid Battery', 'Малая кислотная батарейка'),
+    ('battery_mercury_lv', 'gt:511', 'gt.metaitem.01.32511.name', 'Small Mercury Battery', 'Малая ртутная батарейка'),
+    ('battery_acid_mv', 'gt:520', 'gt.metaitem.01.32520.name', 'Medium Acid Battery', 'Средняя кислотная батарея'),
+    ('battery_mercury_mv', 'gt:521', 'gt.metaitem.01.32521.name', 'Medium Mercury Battery', 'Средняя ртутная батарея'),
+    ('battery_acid_hv', 'gt:530', 'gt.metaitem.01.32530.name', 'Large Acid Battery', 'Большая кислотная батарея'),
+    ('battery_mercury_hv', 'gt:531', 'gt.metaitem.01.32531.name', 'Large Mercury Battery', 'Большая ртутная батарея'),
     ('battery_hull_mv', 'gt:501', 'gt.metaitem.01.32501.name', 'Medium Battery Hull', 'Средний корпус батареи'),
     ('battery_hull_hv', 'gt:502', 'gt.metaitem.01.32502.name', 'Large Battery Hull', 'Большой корпус батареи'),
     ('battery_sodium_mv', 'gt:529', 'gt.metaitem.01.32529.name', 'Medium Sodium Battery', 'Средняя натриевая батарея'),
@@ -502,6 +512,22 @@ def generate(g):
             gen_item(val).save(tex_out(f'item/{iid}.png'))
         item_model(iid, f'{NS}:item/{iid}')
         name(f'item.{NS}.{iid}', en, ru(key, ruf))
+    # D101: GT battery charge icons (GT_MetaGenerated_Item_Renderer:136-148): 1 — empty, 8 — full, 2..7 by charge; the client
+    # property iis:battery_charge (ru.iis.lv.client.BatteryChargeProperty) gives that index
+    for iid, src, *_ in ITEMS:
+        kind, val = src.split(':')
+        cdir = os.path.join(LV, 'items', f'{val}_charge')
+        if kind != 'gt' or not iid.startswith('battery_') or iid.startswith('battery_hull') or not os.path.isdir(cdir):
+            continue
+        entries = []
+        for k in range(1, 9):
+            shutil.copy(os.path.join(cdir, f'{k}.png'), tex_out(f'item/battery/{iid}_{k}.png'))
+            write(os.path.join(A, 'models', 'item', f'{iid}_{k}.json'),
+                  {'parent': 'minecraft:item/generated', 'textures': {'layer0': f'{NS}:item/battery/{iid}_{k}'}})
+            entries.append({'threshold': float(k), 'model': {'type': 'minecraft:model', 'model': f'{NS}:item/{iid}_{k}'}})
+        write(os.path.join(A, 'items', iid + '.json'), {'model': {
+            'type': 'minecraft:range_dispatch', 'property': f'{NS}:battery_charge', 'entries': entries,
+            'fallback': {'type': 'minecraft:model', 'model': f'{NS}:item/{iid}'}}})
     # cover faces (GT registerCover textures: casing + overlay, first animation frame)
     for cid, casing, ov in (('conveyor', 'LV', 'CONVEYOR'), ('pump', 'LV', 'PUMP'), ('arm', 'LV', 'ARM'), ('shutter', 'LV', 'SHUTTER'),
                             ('controller', 'MV', 'CONTROLLER'), ('activity_detector', 'MV', 'ACTIVITYDETECTOR'),
@@ -512,6 +538,12 @@ def generate(g):
         icd = os.path.join(LV, 'iconsets')
         im, _ = layer(os.path.join(icd, f'MACHINE_{casing}_SIDE.png'), os.path.join(icd, f'OVERLAY_{ov}.png'))
         im.crop((0, 0, 16, 16)).save(tex_out(f'block/cover/{cid}.png'))
+    # D101: MV-EV conveyor / pump / robot arm covers (GT_MetaGenerated_Item_01:511-513, 591-593, 636-638: MACHINE_CASINGS[tier] + overlay)
+    for cid, ov in (('conveyor', 'CONVEYOR'), ('pump', 'PUMP'), ('arm', 'ARM')):
+        for tr in ('mv', 'hv', 'ev'):
+            icd = os.path.join(LV, 'iconsets')
+            im, _ = layer(os.path.join(icd, f'MACHINE_{tr.upper()}_SIDE.png'), os.path.join(icd, f'OVERLAY_{ov}.png'))
+            im.crop((0, 0, 16, 16)).save(tex_out(f'block/cover/{cid}_{tr}.png'))
     en_int = {}
     for line in open(os.path.join(g['ROOT'], 'tools', 'gen', 'lang', 'gt5_interaction_en.txt'), encoding='utf-8'):
         k, _, v = line.rstrip('\n').partition('=')
@@ -520,6 +552,15 @@ def generate(g):
         k = f'Interaction_DESCRIPTION_Index_{i:03d}'
         name(f'cover.{NS}.mode.{i:03d}', en_int.get(k, k), ru(k, en_int.get(k, k)))
     name(f'cover.{NS}.all_slots', 'all', 'все')
+    # D101: cover GUI (GT_GUICover; GuiCover.png / GuiButtons.png), GT_Cover_Conveyor.GUI tooltips Index_228-232 (absent from
+    # GregTech.lang.ru — our Russian) and the row labels (GT: trans("-1", ...), untranslated in the reference)
+    shutil.copy(os.path.join(LV, 'gui', 'GuiCover.png'), tex_out('gui/cover/gui_cover.png'))
+    shutil.copy(os.path.join(LV, 'gui', 'GuiButtons.png'), tex_out('gui/cover/gui_buttons.png'))
+    for i, ruu in ((228, 'Без условия'), (229, 'По условию'), (230, 'Обратное условие'), (231, 'Пропускать внутрь'), (232, 'Не пропускать внутрь')):
+        k = f'Interaction_DESCRIPTION_Index_{i:03d}'
+        name(f'cover.{NS}.mode.{i:03d}', en_int.get(k, k), ru(k, ruu))
+    name(f'gui.{NS}.cover.io', 'Import/Export', 'Ввод/вывод')
+    name(f'gui.{NS}.cover.input', 'Enable Input', 'Пропуск внутрь')
     # GT_Cover_Fluidfilter modes 4-7: in GT5-II @ 00021e3 their keys (Index_219-222) point to unrelated lines, so the text is ours
     for mode, en, ruu in ((4, 'Deny input, filter output', 'Запрет входа, выход только выбранной'),
                           (5, 'Deny input, invert output', 'Запрет входа, выход всех, кроме выбранной'),
@@ -527,7 +568,7 @@ def generate(g):
                           (7, 'Permit any input, invert output', 'Любой вход, выход всех, кроме выбранной')):
         name(f'cover.{NS}.fluid_filter.mode.{mode}', en, ruu)
     for i, (en, ruu) in enumerate((('Cover: right-click a side of a machine, pipe or hatch (not the front)', 'Покрытие: ПКМ по стороне машины, трубы или люка (не по лицевой)'),
-                                   ('Screwdriver: change mode (Shift: back)', 'Отвёртка: сменить режим (Shift — назад)'),
+                                   ('Screwdriver: change mode (Shift: back); Shift + right-click with an empty hand: settings', 'Отвёртка: сменить режим (Shift — назад); Shift + ПКМ пустой рукой — настройка'),
                                    ('Crowbar: remove the cover', 'Монтировка: снять покрытие'))):
         name(f'cover.{NS}.tooltip.{i}', en, ruu)
     name(f'message.{NS}.cover.attached', 'Cover attached: %s', 'Покрытие установлено: %s')
@@ -755,14 +796,16 @@ def generate(g):
             return lambda active: os.path.join(odir, f'OVERLAY_{part}{"_ACTIVE" if active else ""}.png')
         machine_tex(bid, odir, {
             'front': (f'MACHINE_{T}_SIDE', ovf('FRONT')), 'side': (f'MACHINE_{T}_SIDE', ovf('SIDE')),
-            'back': (f'MACHINE_{T}_SIDE', os.path.join(ic, 'OVERLAY_PIPE_OUT.png')),
+            # D101: the output overlays (OVERLAY_PIPE_OUT / OVERLAY_FLUID_OUT) follow the wrench-set sides, drawn by CoverRenderer
+            'back': (f'MACHINE_{T}_SIDE', ovf('SIDE')),
             'top': (f'MACHINE_{T}_TOP', ovf('TOP')), 'bottom': (f'MACHINE_{T}_BOTTOM', ovf('BOTTOM'))})
         shutil.copy(os.path.join(LV, 'gui', gui + '.png'), tex_out(f'gui/lv/{gui.lower()}.png'))
         prefix, tier_n, volts, suffix = {'lv': ('Basic', '01', 32, ''), 'mv': ('Advanced', '02', 128, ''), 'hv': ('Advanced', '03', 512, ' II'),
                                          'ev': ('Advanced', '04', 2048, ' III')}[tr]
         name(f'block.{NS}.{bid}', f'{prefix} {en}{suffix}', ru(f'gt.blockmachines.basicmachine.{gtn}.tier.{tier_n}.name', f'{prefix} {en}{suffix}'))
         tooltip_lines(bid, [(f'Voltage IN: {volts} EU/t ({T})', f'Входное напряжение: {volts} EU/t ({T})'),
-                            ('Output side: back', 'Выход: задняя сторона')])
+                            ('Output: back; wrench sets item output, Ctrl + wrench fluid output', 'Выход: сзади; ключ — выход предметов, Ctrl + ключ — жидкостей'),
+                            ('Shift + wrench turns the front', 'Shift + ключ — повернуть лицевую сторону')])
         machine_list.append({'id': bid, 'type': mid_ if tr == 'lv' else f'{mid_}_{tr}', 'recipeMap': rmap, 'inputs': nin, 'outputs': nout,
                              'tank': tank, 'gui': f'lv/{gui.lower()}'})
     write(os.path.join(g['RES'], NS, 'lv_machines.json'), machine_list)
@@ -817,6 +860,15 @@ def generate(g):
     for bid in ('steam_turbine_mv', 'diesel_generator_mv', 'gas_turbine_mv'):
         name(f'block.{NS}.{bid}.tooltip.1', 'Output: 128 EU/t, 1 A from the front', 'Выход: 128 EU/t, 1 А спереди')
     shutil.copy(os.path.join(LV, 'gui', 'BasicTank.png'), tex_out('gui/lv/basictank.png'))
+    # D101: output-side overlays (GT Textures.BlockIcons.OVERLAY_PIPE_OUT / OVERLAY_FLUID_OUT), wrench messages
+    for ovn in ('PIPE_OUT', 'FLUID_OUT'):
+        im = img(os.path.join(ic, f'OVERLAY_{ovn}.png')).crop((0, 0, 16, 16))
+        im.save(tex_out(f'block/overlay/{ovn.lower()}.png'))
+    name(f'message.{NS}.output.items', 'Item output: %s', 'Выход предметов: %s')
+    name(f'message.{NS}.output.fluids', 'Fluid output: %s', 'Выход жидкостей: %s')
+    for dn, en_, ru_ in (('down', 'bottom', 'низ'), ('up', 'top', 'верх'), ('north', 'north', 'север'), ('south', 'south', 'юг'),
+                         ('west', 'west', 'запад'), ('east', 'east', 'восток')):
+        name(f'direction.{NS}.{dn}', en_, ru_)
 
     # GT_MetaTileEntity_BasicBatteryBuffer: front = energy out, other sides plain casing
     # GT_Loader_MetaTileEntities:488-556: 1x1, 2x2, 3x3, 4x4 for LV (3x3/4x4 — D95), MV (D95), HV (D94)
@@ -1552,6 +1604,15 @@ def generate(g):
             ('mv_annealed', 'AnnealedCopper', 2, 3, 432, 1600, 2, 'mv'), ('hv', 'Gold', 2, 9, 1296, 3200, 4, 'hv')):
         mrec('assembler', f'battery_hull_{rid}', [ing(C(cable), cn), ing(P('BatteryAlloy'), plates)], [out(f'{NS}:battery_hull_{hull}')],
              ticks, eut, plastic(liters))
+    # D101: GT_MachineRecipeLoader:220-225 fluid canner: hull + 1000 / 4000 / 16000 L mercury or sulfuric acid -> fully charged
+    # single-use battery (GT_RecipeAdder#addFluidCannerRecipe: L / 62 ticks, 1 EU/t); GT_MetaGenerated_Item_01:447-452 extractor ->
+    # hull. Charges: setElectricStats acid 18000 / 72000 / 288000, mercury 32000 / 128000 / 512000 EU
+    for tr, liters, acid_eu, mercury_eu in (('lv', 1000, 18000, 32000), ('mv', 4000, 72000, 128000), ('hv', 16000, 288000, 512000)):
+        for kind, fid, eu in (('acid', f'{NS}:sulfuricacid', acid_eu), ('mercury', f'{NS}:mercury', mercury_eu)):
+            bid = f'battery_{kind}_{tr}'
+            mrec('fluid_canner', bid, [ing(f'{NS}:battery_hull_{tr}')], [{'id': f'{NS}:{bid}', 'count': 1, 'components': {f'{NS}:charge': eu}}],
+                 liters // 62, 1, {'ingredient': fid, 'amount': liters})
+            mrec('extractor', f'hull_from_{bid}', [ing(f'{NS}:{bid}')], [out(f'{NS}:battery_hull_{tr}')], 300, 2)
     for key, r in machine_recipes.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     by_type = {}
@@ -1568,7 +1629,8 @@ def generate(g):
     write(os.path.join(g['RES'], NS, 'fuels.json'), fuels)
 
     # misc lang
-    for k, en, ruu in (('itemGroup.iis.lv', 'IIS 2.0: LV', 'ИИС 2.0: LV'),
+    for k, en, ruu in (('itemGroup.iis.lv', 'IIS 2.0: LV', 'ИИС 2.0: LV'), ('itemGroup.iis.mv', 'IIS 2.0: MV', 'ИИС 2.0: MV'),
+                       ('itemGroup.iis.hv', 'IIS 2.0: HV', 'ИИС 2.0: HV'), ('itemGroup.iis.ev', 'IIS 2.0: EV', 'ИИС 2.0: EV'),
                        ('gui.iis.energy', 'Energy', 'Энергия'), ('gui.iis.eu', '%s / %s EU', '%s / %s EU'),
                        ('gui.iis.fluid', '%s: %s / %s L', '%s: %s / %s л'), ('gui.iis.no_energy', 'Not enough energy', 'Недостаточно энергии'),
                        ('gui.iis.empty', 'Empty', 'Пусто'),

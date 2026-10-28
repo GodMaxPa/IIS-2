@@ -503,7 +503,7 @@ def generate(g):
                        ('jei.iis.macerator', 'Macerator', 'Дробитель'), ('jei.iis.forge_hammer', 'Forge Hammer', 'Кузнечный молот'),
                        ('jei.iis.compressor', 'Compressor', 'Компрессор'), ('jei.iis.extractor', 'Extractor', 'Экстрактор'),
                        ('jei.iis.alloy_smelter', 'Alloy Smelter', 'Печь сплавов'), ('jei.iis.primitive_blast', 'Bricked Blast Furnace', 'Кирпичная доменная печь'),
-                       ('jei.iis.eut', '%s EU/t (steam: %s L/t)', '%s EU/t (пар: %s л/т)'), ('jei.iis.duration', '%s s', '%s с'),
+                       ('jei.iis.eut', '%s EU/t (steam: %s L/t)', '%s EU/t (пар: %s л/т)'), ('jei.iis.tiered', '%s (%s)', '%s (%s)'), ('jei.iis.duration', '%s s', '%s с'),
                        ('jei.iis.chance', 'Chance: %s%%', 'Шанс: %s%%'), ('jei.iis.steam_only_first', 'Steam machines give only the first output',
                                                                          'Паровые машины выдают только первый продукт'),
                        ('message.iis.pipe.connected', 'Connected', 'Подключено'), ('message.iis.pipe.disconnected', 'Disconnected', 'Отключено')):

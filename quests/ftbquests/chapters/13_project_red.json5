@@ -1,0 +1,224 @@
+{
+  "id": "1D00000000000021",
+  "filename": "13_project_red",
+  "order_index": 13,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A00000000000066",
+      "x": 8.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000000067"
+      ],
+      "icon": {
+        "id": "minecraft:redstone_torch",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:redstone_torch",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000006600"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000015E",
+      "x": 5.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000000175"
+      ],
+      "icon": {
+        "id": "minecraft:glowstone_dust",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:glowstone_dust",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000015E00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001A2",
+      "x": 2.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000000148",
+        "1A000000000001AD"
+      ],
+      "icon": {
+        "id": "iis:plate_glass",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_glass",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001A200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001EE",
+      "x": 3.5,
+      "y": 1.5,
+      "dependencies": [
+        "1A000000000001EC",
+        "1A00000000000487",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:emitter_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:emitter_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001EE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001FF",
+      "x": 0.5,
+      "y": 3.0,
+      "dependencies": [
+        "1A000000000000F4"
+      ],
+      "icon": {
+        "id": "iis:foil_aluminium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:foil_aluminium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001FF00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000045C",
+      "x": 5.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A000000000001BA",
+        "1A000000000001A4",
+        "1A000000000001E3"
+      ],
+      "icon": {
+        "id": "iis:cover_controller",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cover_controller",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000070E",
+      "x": 6.5,
+      "y": 6.0,
+      "dependencies": [
+        "1A0000000000070F"
+      ],
+      "icon": {
+        "id": "iis:cover_energy_detector",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cover_energy_detector",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000070E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000070F",
+      "x": 5.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A0000000000015E",
+        "1A000000000001E3",
+        "1A00000000000149",
+        "1A000000000000FE",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:multimeter",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:multimeter",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000070F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000711",
+      "x": 5.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A000000000000EB"
+      ],
+      "icon": {
+        "id": "minecraft:gold_nugget",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:gold_nugget",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071100"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "1D00000000000010",
+  "filename": "26_space_rocket__moon",
+  "order_index": 26,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A00000000000301",
+      "x": 3.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000304"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:rocket_fuel",
+            "amount": 1
+          },
+          "id": "1B00000000030100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000304",
+      "x": 6.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000305"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:hypochlorousacid",
+            "amount": 1
+          },
+          "id": "1B00000000030400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000308",
+      "x": 5.0,
+      "y": -1.0,
+      "dependencies": [
+        "1A0000000000001F"
+      ],
+      "icon": {
+        "id": "iis:double_plate_titanium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:double_plate_titanium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000030800"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000030C",
+      "x": 2.0,
+      "y": -1.0,
+      "dependencies": [
+        "1A000000000000F7"
+      ],
+      "icon": {
+        "id": "iis:bolt_stainless_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bolt_stainless_steel",
+            "count": 1
+          },
+          "count": 4,
+          "id": "1B00000000030C00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000326",
+      "x": 11.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000001AD"
+      ],
+      "icon": {
+        "id": "iis:shape_extruder_pipe_small",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:shape_extruder_pipe_small",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032600"
+        }
+      ]
+    }
+  ]
+}

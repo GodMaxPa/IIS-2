@@ -35,8 +35,17 @@ public final class Covers {
     /** Предмет → вид покрытия (GT_MetaGenerated_Item_01: registerCover). */
     public static final Map<String, CoverKind> ITEMS = Map.ofEntries(
             Map.entry("conveyor_module_lv", CoverKind.CONVEYOR),
+            Map.entry("conveyor_module_mv", CoverKind.CONVEYOR),
+            Map.entry("conveyor_module_hv", CoverKind.CONVEYOR),
+            Map.entry("conveyor_module_ev", CoverKind.CONVEYOR),
             Map.entry("electric_pump_lv", CoverKind.PUMP),
+            Map.entry("electric_pump_mv", CoverKind.PUMP),
+            Map.entry("electric_pump_hv", CoverKind.PUMP),
+            Map.entry("electric_pump_ev", CoverKind.PUMP),
             Map.entry("robot_arm_lv", CoverKind.ARM),
+            Map.entry("robot_arm_mv", CoverKind.ARM),
+            Map.entry("robot_arm_hv", CoverKind.ARM),
+            Map.entry("robot_arm_ev", CoverKind.ARM),
             Map.entry("cover_shutter", CoverKind.SHUTTER),
             Map.entry("cover_controller", CoverKind.CONTROLLER),
             Map.entry("cover_activity_detector", CoverKind.ACTIVITY_DETECTOR),
@@ -53,11 +62,35 @@ public final class Covers {
         return id.getNamespace().equals(IIS.MODID) ? ITEMS.get(id.getPath()) : null;
     }
 
+    /** Уровень покрытия по id предмета (суффикс _mv/_hv/_ev; у остальных 0 — LV). */
+    public static int tierOf(String path) {
+        for (int t = CoverSet.TIERS.length - 1; t > 0; t--) if (path.endsWith("_" + CoverSet.TIERS[t])) return t;
+        return 0;
+    }
+
+    public static int tierOf(ItemStack stack) {
+        return tierOf(BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
+    }
+
     public static Item itemOf(CoverKind k) {
+        return itemOf(k, 0);
+    }
+
+    public static Item itemOf(CoverKind k, int tier) {
+        String best = null;
         for (var e : ITEMS.entrySet()) {
-            if (e.getValue() == k) return BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.fromNamespaceAndPath(IIS.MODID, e.getKey()));
+            if (e.getValue() != k) continue;
+            if (tierOf(e.getKey()) == tier) { best = e.getKey(); break; }
+            if (best == null || tierOf(e.getKey()) == 0) best = e.getKey();
         }
-        throw new IllegalStateException("no item for " + k);
+        if (best == null) throw new IllegalStateException("no item for " + k);
+        return BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.fromNamespaceAndPath(IIS.MODID, best));
+    }
+
+    /** Текстура покрытия: у конвейера, помпы и манипулятора MV–EV — свой корпус (GT MACHINE_CASINGS[tier]). */
+    public static String textureId(CoverKind k, int tier) {
+        boolean tiered = k == CoverKind.CONVEYOR || k == CoverKind.PUMP || k == CoverKind.ARM;
+        return tiered && tier > 0 ? k.id + "_" + CoverSet.TIERS[tier] : k.id;
     }
 
     /** GT_Utility.getClickedFacingCoords: первая координата точки клика на грани (0..1) — для «правой половины». */
@@ -74,25 +107,49 @@ public final class Covers {
     /**
      * ПКМ по блоку-хозяину. null — не наше действие (дальше — обычная логика блока).
      * front — сторона, на которую покрытие ставить нельзя (лицевая сторона машины).
+     * GT BaseMetaTileEntity.onRightclick (D101): покрытие ставится и снимается монтировкой на грани по сетке 3×3, как у ключа;
+     * отвёртка — по кликнутой грани, если на ней есть покрытие, иначе по сетке; Shift + ПКМ пустой рукой — интерфейс покрытия.
      */
     public static @Nullable InteractionResult use(CoverHost host, ItemStack stack, Player player, InteractionHand hand, BlockHitResult hit, @Nullable Direction front) {
         Level level = host.coverLevel();
         if (level == null) return null;
-        Direction side = hit.getDirection();
+        Direction grid = ru.iis.machine.block.Wrench.wrenchingSide(host.coverPos(), hit);
         CoverSet covers = host.covers();
-        CoverKind present = covers.get(side);
         CoverKind newKind = kindOf(stack);
-        if (present == null) {
-            if (newKind == null || side == front) return null;
+        if (newKind != null && covers.get(grid) == null) {
+            if (grid == front) return null;
             if (!level.isClientSide()) {
-                covers.attach(side, newKind);
+                int t = tierOf(stack);
+                covers.attach(grid, newKind, t);
+                player.sendOverlayMessage(Component.translatable("message.iis.cover.attached", Component.translatable(itemOf(newKind, t).getDescriptionId())));
                 if (!player.getAbilities().instabuild) stack.shrink(1);
                 host.coversChanged();
-                player.sendOverlayMessage(Component.translatable("message.iis.cover.attached", Component.translatable(itemOf(newKind).getDescriptionId())));
+                level.playSound(null, host.coverPos(), net.minecraft.sounds.SoundEvents.IRON_TRAPDOOR_CLOSE, net.minecraft.sounds.SoundSource.BLOCKS, 0.6f, 1.4f);
             }
             return InteractionResult.SUCCESS;
         }
+        if (stack.isEmpty() && player.isShiftKeyDown()) {
+            Direction gs = covers.get(hit.getDirection()) != null ? hit.getDirection() : grid;
+            CoverKind k = covers.get(gs);
+            if (k == null || !CoverMenu.hasGui(k)) return null;
+            if (!level.isClientSide()) CoverMenu.open(player, host, gs);
+            return InteractionResult.SUCCESS;
+        }
         Maintenance.Problem tool = stack.isEmpty() ? null : MaintenanceHatchBlockEntity.problemFor(stack);
+        if (tool == Maintenance.Problem.CROWBAR && covers.get(grid) != null) {
+            if (!level.isClientSide()) {
+                int t = covers.tier(grid);
+                CoverKind k = covers.remove(host, grid);
+                host.coversChanged();
+                if (k != null) Block.popResourceFromFace(level, host.coverPos(), grid, new ItemStack(itemOf(k, t)));
+                if (!player.getAbilities().instabuild) stack.hurtAndBreak(20, player, hand);
+            }
+            return InteractionResult.SUCCESS;
+        }
+        Direction side = hit.getDirection();
+        if (tool == Maintenance.Problem.SCREWDRIVER && covers.get(side) == null) side = grid;
+        CoverKind present = covers.get(side);
+        if (present == null) return null;
         Vec3 local = hit.getLocation().subtract(Vec3.atLowerCornerOf(host.coverPos()));
         boolean right = faceU(side, local) >= 0.5f;
         if (tool == Maintenance.Problem.SCREWDRIVER) {
@@ -101,15 +158,6 @@ public final class Covers {
                 host.coversChanged();
                 player.sendOverlayMessage(msg);
                 if (!player.getAbilities().instabuild) stack.hurtAndBreak(4, player, hand);
-            }
-            return InteractionResult.SUCCESS;
-        }
-        if (tool == Maintenance.Problem.CROWBAR) {
-            if (!level.isClientSide()) {
-                CoverKind k = covers.remove(host, side);
-                host.coversChanged();
-                if (k != null) Block.popResourceFromFace(level, host.coverPos(), side, new ItemStack(itemOf(k)));
-                if (!player.getAbilities().instabuild) stack.hurtAndBreak(20, player, hand);
             }
             return InteractionResult.SUCCESS;
         }
@@ -171,7 +219,7 @@ public final class Covers {
     public static void dropAll(CoverHost host, Level level, BlockPos pos) {
         for (Direction d : Direction.values()) {
             CoverKind k = host.covers().get(d);
-            if (k != null) Block.popResource(level, pos, new ItemStack(itemOf(k)));
+            if (k != null) Block.popResource(level, pos, new ItemStack(itemOf(k, host.covers().tier(d))));
         }
     }
 

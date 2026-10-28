@@ -1,0 +1,54 @@
+{
+  "id": "1D00000000000000",
+  "filename": "33_rocket__odp__array",
+  "order_index": 33,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A00000000000004",
+      "x": 12.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000006"
+      ],
+      "icon": {
+        "id": "iis:rotor_tungsten_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rotor_tungsten_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000005",
+      "x": 11.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000006"
+      ],
+      "icon": {
+        "id": "iis:screw_tungsten_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:screw_tungsten_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000500"
+        }
+      ]
+    }
+  ]
+}

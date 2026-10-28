@@ -1,0 +1,105 @@
+{
+  "id": "1D00000000000017",
+  "filename": "29_enderio_features",
+  "order_index": 29,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A00000000000257",
+      "x": 2.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000000F9"
+      ],
+      "icon": {
+        "id": "iis:centrifuge_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:centrifuge_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000025700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000273",
+      "x": 0.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000048"
+      ],
+      "icon": {
+        "id": "minecraft:soul_sand",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:soul_sand",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000276",
+      "x": 0.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000001AD"
+      ],
+      "icon": {
+        "id": "iis:mold_bottle",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mold_bottle",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000277",
+      "x": 0.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000276",
+        "1A00000000000148"
+      ],
+      "icon": {
+        "id": "minecraft:glass_bottle",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:glass_bottle",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027700"
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "id": "minecraft:ender_eye",
+    "count": 1
+  }
+}

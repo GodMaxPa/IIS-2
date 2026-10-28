@@ -11,19 +11,33 @@ import ru.iis.lv.LvContent;
 import java.util.function.Consumer;
 
 /**
- * Перезаряжаемая батарейка LV (GT Battery_RE_LV_Sodium: 50000 EU, уровень 1, предел передачи 32 EU/t).
- * Заряд хранится в компоненте iis:charge.
+ * Батарейка GT (Battery_RE_*: перезаряжаемая, Battery_SU_*: одноразовая — только разряжается, GT setElectricStats aSpecialData
+ * −3 / −2). Заряд хранится в компоненте iis:charge.
  */
 public class BatteryItem extends Item {
     public final long capacity;
     public final long transferLimit;
     public final int tier;
+    /** false — одноразовая (кислотная, ртутная, D101): заряжается только при изготовлении в фасовщике жидкостей. */
+    public final boolean rechargeable;
 
     public BatteryItem(long capacity, long transferLimit, int tier, Properties properties) {
+        this(capacity, transferLimit, tier, true, properties);
+    }
+
+    public BatteryItem(long capacity, long transferLimit, int tier, boolean rechargeable, Properties properties) {
         super(properties);
         this.capacity = capacity;
         this.transferLimit = transferLimit;
         this.tier = tier;
+        this.rechargeable = rechargeable;
+    }
+
+    /** GT_MetaGenerated_Item_Renderer:136-148: индекс значка заряда — 1 пустая, 8 полная, иначе 7 − min(5, (макс − заряд)·6 / макс). */
+    public static int chargeIcon(long charge, long capacity) {
+        if (charge <= 0) return 1;
+        if (charge >= capacity) return 8;
+        return 7 - (int) Math.max(0L, Math.min(5L, (capacity - charge) * 6L / capacity));
     }
 
     /** Батарейка (отдаёт энергию буферу и машинам). Электроинструменты — нет, их только заряжают. */
@@ -46,6 +60,7 @@ public class BatteryItem extends Item {
 
     /** Зарядить до amount EU (не больше предела передачи); вернуть принятое. */
     public long charge(ItemStack stack, long amount) {
+        if (!rechargeable) return 0;
         long c = charge(stack);
         long d = Math.min(Math.min(amount, transferLimit), capacity(stack) - c);
         if (d <= 0) return 0;

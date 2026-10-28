@@ -38,10 +38,19 @@ public final class IISClient {
             e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "fluid_content"), ru.iis.fluid.client.FluidContentTint.CODEC);
             e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "rotor_material"), ru.iis.multi.client.RotorTint.CODEC);
         });
+        modBus.addListener((net.neoforged.neoforge.client.event.RegisterRangeSelectItemModelPropertyEvent e) ->
+                e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "battery_charge"), ru.iis.lv.client.BatteryChargeProperty.CODEC));
         modBus.addListener(IISClient::registerFluidModels);
         modBus.addListener(IISClient::registerCoverRenderers);
         NeoForge.EVENT_BUS.addListener(IISClient::machineTooltips);
         NeoForge.EVENT_BUS.addListener(ru.iis.client.WrenchGrid::onExtract);
+        // GT_Packet_Key: перед ПКМ гаечным ключом сообщить серверу, зажат ли Ctrl (выход жидкостей машины, D101)
+        NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.HIGHEST, true, net.neoforged.neoforge.event.entity.player.PlayerInteractEvent.RightClickBlock.class, e -> {
+            if (e.getLevel().isClientSide() && ru.iis.machine.block.Wrench.is(e.getItemStack())) {
+                net.neoforged.neoforge.client.network.ClientPacketDistributor.sendToServer(
+                        new ru.iis.net.IISNetwork.WrenchKeys(net.minecraft.client.Minecraft.getInstance().hasControlDown()));
+            }
+        });
         // раньше JEI: он читает рецепты в том же событии
         NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.HIGHEST, ru.iis.machine.client.ClientRecipes::onReceived);
     }
@@ -84,6 +93,7 @@ public final class IISClient {
         event.register(ru.iis.lv.LvContent.GENERATOR_MENU.get(), ru.iis.lv.client.GeneratorScreen::new);
         event.register(ru.iis.lv.LvContent.BATTERY_BUFFER_MENU.get(), ru.iis.lv.client.BatteryBufferScreen::new);
         event.register(ru.iis.lv.LvContent.COKE_OVEN_MENU.get(), ru.iis.lv.client.CokeOvenScreen::new);
+        event.register(ru.iis.lv.LvContent.COVER_MENU.get(), ru.iis.cover.client.CoverScreen::new);
         event.register(ru.iis.multi.MultiContent.ITEM_BUS_MENU.get(), ru.iis.multi.client.MultiScreens.Bus::new);
         event.register(ru.iis.multi.MultiContent.FLUID_HATCH_MENU.get(), ru.iis.multi.client.MultiScreens.FluidHatch::new);
         event.register(ru.iis.multi.MultiContent.EBF_MENU.get(), ru.iis.multi.client.MultiScreens.Ebf::new);

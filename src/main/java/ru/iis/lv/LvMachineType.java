@@ -53,6 +53,8 @@ public enum LvMachineType {
     // D92: :931 PotionBrewer (1, 0, бак 750), :1374 CircuitAssembler (6, 1, 16000)
     BREWERY("brewery", GtRecipeMap.BREWERY, 1, 0, 750, "potionbrewer"),
     CIRCUIT_ASSEMBLER("circuit_assembler", GtRecipeMap.CIRCUIT_ASSEMBLER, 6, 1, 16000, "circuitassembler"),
+    // D101: :839 FluidCanner (1, 1, бак 16000; MV 32000, HV 48000, EV 64000)
+    FLUID_CANNER("fluid_canner", GtRecipeMap.FLUID_CANNER, 1, 1, 16000, "fluidcanner"),
     THERMAL_CENTRIFUGE_MV("thermal_centrifuge", GtRecipeMap.THERMAL_CENTRIFUGE, 1, 3, 0, "thermalcentrifuge", VoltageTier.MV),
     // MV (D82): GT_Loader_MetaTileEntities Machine_MV_* — те же входы/выходы/баки, что у LV, кроме смесителя (бак 16000)
     MACERATOR_MV("macerator", GtRecipeMap.MACERATOR, 1, 1, 0, "macerator1", VoltageTier.MV),
@@ -88,6 +90,7 @@ public enum LvMachineType {
     LASER_ENGRAVER_MV("laser_engraver", GtRecipeMap.LASER_ENGRAVER, 2, 1, 0, "laserengraver", VoltageTier.MV),
     BREWERY_MV("brewery", GtRecipeMap.BREWERY, 1, 0, 750, "potionbrewer", VoltageTier.MV),
     CIRCUIT_ASSEMBLER_MV("circuit_assembler", GtRecipeMap.CIRCUIT_ASSEMBLER, 6, 1, 16000, "circuitassembler", VoltageTier.MV),
+    FLUID_CANNER_MV("fluid_canner", GtRecipeMap.FLUID_CANNER, 1, 1, 32000, "fluidcanner", VoltageTier.MV),
     // HV (D93): Machine_HV_* — как MV, кроме измельчителя (2 выхода — побочные продукты) и смесителя (бак 24000)
     THERMAL_CENTRIFUGE_HV("thermal_centrifuge", GtRecipeMap.THERMAL_CENTRIFUGE, 1, 3, 0, "thermalcentrifuge", VoltageTier.HV),
     MACERATOR_HV("macerator", GtRecipeMap.MACERATOR, 1, 2, 0, "macerator1", VoltageTier.HV),
@@ -123,6 +126,7 @@ public enum LvMachineType {
     LASER_ENGRAVER_HV("laser_engraver", GtRecipeMap.LASER_ENGRAVER, 2, 1, 0, "laserengraver", VoltageTier.HV),
     BREWERY_HV("brewery", GtRecipeMap.BREWERY, 1, 0, 750, "potionbrewer", VoltageTier.HV),
     CIRCUIT_ASSEMBLER_HV("circuit_assembler", GtRecipeMap.CIRCUIT_ASSEMBLER, 6, 1, 16000, "circuitassembler", VoltageTier.HV),
+    FLUID_CANNER_HV("fluid_canner", GtRecipeMap.FLUID_CANNER, 1, 1, 48000, "fluidcanner", VoltageTier.HV),
     // EV (D98): пока только сборщик (большой ротор, 1600 EU/t) и химреактор (переработка вольфрама, 1920 EU/t)
     ASSEMBLER_EV("assembler", GtRecipeMap.ASSEMBLER, 6, 1, 16000, "assembler", VoltageTier.EV),
     CHEMICAL_REACTOR_EV("chemical_reactor", GtRecipeMap.CHEMICAL_REACTOR, 3, 3, 16000, "chemicalreactor", VoltageTier.EV),
@@ -158,7 +162,8 @@ public enum LvMachineType {
     ARC_FURNACE_EV("arc_furnace", GtRecipeMap.ARC_FURNACE, 1, 6, 16000, "arcfurnace", VoltageTier.EV),
     LASER_ENGRAVER_EV("laser_engraver", GtRecipeMap.LASER_ENGRAVER, 2, 1, 0, "laserengraver", VoltageTier.EV),
     BREWERY_EV("brewery", GtRecipeMap.BREWERY, 1, 0, 750, "potionbrewer", VoltageTier.EV),
-    CIRCUIT_ASSEMBLER_EV("circuit_assembler", GtRecipeMap.CIRCUIT_ASSEMBLER, 6, 1, 16000, "circuitassembler", VoltageTier.EV);
+    CIRCUIT_ASSEMBLER_EV("circuit_assembler", GtRecipeMap.CIRCUIT_ASSEMBLER, 6, 1, 16000, "circuitassembler", VoltageTier.EV),
+    FLUID_CANNER_EV("fluid_canner", GtRecipeMap.FLUID_CANNER, 1, 1, 64000, "fluidcanner", VoltageTier.EV);
 
     public final String id;
     public final GtRecipeMap recipeMap;

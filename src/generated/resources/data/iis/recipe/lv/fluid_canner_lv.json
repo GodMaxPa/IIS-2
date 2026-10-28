@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GCG",
+    "GMG",
+    "WPW"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "P": "iis:electric_pump_lv",
+    "C": "#c:circuits/basic",
+    "W": "#iis:cables/1x/tin",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:fluid_canner_lv"
+  }
+}

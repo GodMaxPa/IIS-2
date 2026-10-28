@@ -32,6 +32,9 @@ public final class CoverSet {
     /** GT_Cover_ItemMeter. */
     static final int METER_CONVERTED = 0x80000000, METER_INVERT = 0x40000000, METER_SLOT = 0x0FFFFFFF;
     public static final int CONVEYOR_RATE = 400, PUMP_RATE = 32, ARM_RATE = 400;
+    /** GT_MetaGenerated_Item_01:510-513, 590-593, 635-638 (D101): по уровню LV, MV, HV, EV. */
+    static final int[] CONVEYOR_TICKS = {400, 100, 20, 4}, PUMP_RATES = {32, 128, 512, 2048};
+    public static final String[] TIERS = {"lv", "mv", "hv", "ev"};
     /** GT_MetaGenerated_Item_01:525 FluidRegulator_LV: new GT_Cover_FluidRegulator(32). */
     public static final int REGULATOR_RATE = 32;
 
@@ -40,6 +43,8 @@ public final class CoverSet {
     private final @Nullable Fluid[] filter = new Fluid[6];
     private final int[] data = new int[6];
     private final int[] redstone = new int[6];
+    /** Уровень покрытия (0 — LV … 3 — EV): у конвейера, помпы и манипулятора от него скорость. */
+    private final int[] tier = new int[6];
 
     public @Nullable CoverKind get(Direction side) {
         return kind[side.get3DDataValue()];
@@ -47,6 +52,15 @@ public final class CoverSet {
 
     public int data(Direction side) {
         return data[side.get3DDataValue()];
+    }
+
+    public int tier(Direction side) {
+        return tier[side.get3DDataValue()];
+    }
+
+    /** Новые данные из интерфейса покрытия (GT_Packet_TileEntityCover). */
+    public void setData(Direction side, int v) {
+        data[side.get3DDataValue()] = v;
     }
 
     public boolean any() {
@@ -59,8 +73,13 @@ public final class CoverSet {
     }
 
     public void attach(Direction side, CoverKind k) {
+        attach(side, k, 0);
+    }
+
+    public void attach(Direction side, CoverKind k, int coverTier) {
         int i = side.get3DDataValue();
         kind[i] = k;
+        tier[i] = Math.max(0, Math.min(TIERS.length - 1, coverTier));
         data[i] = k == CoverKind.ARM ? ARM_CONVERTED | (1 << 14) | ARM_EXPORT : k == CoverKind.ITEM_DETECTOR ? METER_CONVERTED : 0;
         redstone[i] = 0;
         filter[i] = null;
@@ -78,6 +97,7 @@ public final class CoverSet {
         data[i] = 0;
         redstone[i] = 0;
         filter[i] = null;
+        tier[i] = 0;
         return k;
     }
 
@@ -178,9 +198,9 @@ public final class CoverSet {
     }
 
     // --- работа ------------------------------------------------------------------------------------------------
-    private static int tickRate(CoverKind k, int v) {
+    private static int tickRate(CoverKind k, int v, int t) {
         return switch (k) {
-            case CONVEYOR, ARM -> CONVEYOR_RATE;
+            case CONVEYOR, ARM -> CONVEYOR_TICKS[t];
             case PUMP, CONTROLLER, FLUID_REGULATOR -> 1;
             case ACTIVITY_DETECTOR, ITEM_DETECTOR, FLUID_DETECTOR -> 5;
             case ENERGY_DETECTOR -> 20;
@@ -196,12 +216,12 @@ public final class CoverSet {
             int i = side.get3DDataValue();
             CoverKind k = kind[i];
             if (k == null) continue;
-            int rate = tickRate(k, data[i]);
+            int rate = tickRate(k, data[i], tier[i]);
             if (rate <= 0 || timer % rate != 0) continue;
             int before = redstone[i];
             switch (k) {
                 case CONVEYOR -> conveyor(h, level, side, data[i]);
-                case PUMP -> pump(h, level, side, data[i]);
+                case PUMP -> pump(h, level, side, data[i], PUMP_RATES[tier[i]]);
                 case ARM -> arm(h, level, side, data[i]);
                 case CONTROLLER -> controller(h, level, side, data[i]);
                 case ACTIVITY_DETECTOR -> redstone[i] = activity(h, data[i]);
@@ -246,15 +266,15 @@ public final class CoverSet {
         if (costs && moved > 0) h.useEu(4L * moved);
     }
 
-    /** GT_Cover_Pump.doCoverThings: 32 л/тик; 1 EU, если перекачано ≥ 10 л. */
-    private static void pump(CoverHost h, ServerLevel l, Direction side, int v) {
+    /** GT_Cover_Pump.doCoverThings: rate л/тик (LV 32 … EV 2048); 1 EU, если перекачано ≥ 10 л. */
+    private static void pump(CoverHost h, ServerLevel l, Direction side, int v, int rate) {
         if (condBlocks(h, v)) return;
         ResourceHandler<FluidResource> own = h.rawFluids(side), other = neighbourFluids(l, h.coverPos(), side);
         if (own == null || other == null) return;
         ResourceHandler<FluidResource> from = v % 2 == 0 ? own : other, to = v % 2 == 0 ? other : own;
         int can;
         try (Transaction tx = Transaction.openRoot()) {
-            can = ResourceHandlerUtil.move(from, to, r -> true, PUMP_RATE, tx); // пробно, без фиксации
+            can = ResourceHandlerUtil.move(from, to, r -> true, rate, tx); // пробно, без фиксации
         }
         if (can <= 0) return;
         long cost = Math.min(1, can / 10);
@@ -574,6 +594,7 @@ public final class CoverSet {
             s.putString("kind", k.id);
             s.putInt("data", data(d));
             s.putInt("rs", redstone[d.get3DDataValue()]);
+            if (tier[d.get3DDataValue()] > 0) s.putInt("tier", tier[d.get3DDataValue()]);
             Fluid f = filter[d.get3DDataValue()];
             if (f != null) s.putString("fluid", net.minecraft.core.registries.BuiltInRegistries.FLUID.getKey(f).toString());
         }
@@ -586,6 +607,7 @@ public final class CoverSet {
             data[i] = 0;
             redstone[i] = 0;
             filter[i] = null;
+            tier[i] = 0;
         }
         in.child("covers").ifPresent(c -> {
             for (Direction d : Direction.values()) {
@@ -597,6 +619,7 @@ public final class CoverSet {
                             kind[i] = k;
                             data[i] = s.getIntOr("data", 0);
                             redstone[i] = s.getIntOr("rs", 0);
+                            tier[i] = Math.max(0, Math.min(TIERS.length - 1, s.getIntOr("tier", 0)));
                             String f = s.getStringOr("fluid", "");
                             if (!f.isEmpty()) {
                                 var fluidId = net.minecraft.resources.Identifier.tryParse(f);

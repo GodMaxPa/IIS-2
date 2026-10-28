@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "iis:item/tools/power_unit_lv",
-    "layer1": "iis:item/materialicons/emerald/toolheadwrench",
-    "layer2": "iis:item/materialicons/emerald/toolheadwrench_overlay"
-  }
-}

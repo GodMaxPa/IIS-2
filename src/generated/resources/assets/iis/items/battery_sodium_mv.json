@@ -1,6 +1,68 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "iis:item/battery_sodium_mv"
+    "type": "minecraft:range_dispatch",
+    "property": "iis:battery_charge",
+    "entries": [
+      {
+        "threshold": 1.0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "iis:item/battery_sodium_mv_1"
+        }
+      },
+      {
+        "threshold": 2.0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "iis:item/battery_sodium_mv_2"
+        }
+      },
+      {
+        "threshold": 3.0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "iis:item/battery_sodium_mv_3"
+        }
+      },
+      {
+        "threshold": 4.0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "iis:item/battery_sodium_mv_4"
+        }
+      },
+      {
+        "threshold": 5.0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "iis:item/battery_sodium_mv_5"
+        }
+      },
+      {
+        "threshold": 6.0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "iis:item/battery_sodium_mv_6"
+        }
+      },
+      {
+        "threshold": 7.0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "iis:item/battery_sodium_mv_7"
+        }
+      },
+      {
+        "threshold": 8.0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "iis:item/battery_sodium_mv_8"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "iis:item/battery_sodium_mv"
+    }
   }
 }

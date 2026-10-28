@@ -38,7 +38,7 @@ class HvMachinesTest {
             assertEquals(mv.inputs, hv.inputs, hv.name());
             // GT: у измельчителя HV два выхода (побочные продукты), у смесителя HV бак 24000
             assertEquals(mv == LvMachineType.MACERATOR_MV ? 2 : mv.outputs, hv.outputs, hv.name());
-            assertEquals(mv == LvMachineType.MIXER_MV ? 24000 : mv.tank, hv.tank, hv.name());
+            assertEquals(mv == LvMachineType.MIXER_MV ? 24000 : mv == LvMachineType.FLUID_CANNER_MV ? 48000 : mv.tank, hv.tank, hv.name());
         }
         assertEquals(512, LvMachineType.MACERATOR_HV.voltage());
     }

@@ -12,30 +12,6 @@
     "kind": "sword"
   },
   {
-    "id": "sword_amber",
-    "tool": "sword",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 4.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "sword_amethyst",
-    "tool": "sword",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "sword"
-  },
-  {
     "id": "sword_beryllium",
     "tool": "sword",
     "material": "beryllium",
@@ -84,18 +60,6 @@
     "kind": "sword"
   },
   {
-    "id": "sword_blue_topaz",
-    "tool": "sword",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "sword"
-  },
-  {
     "id": "sword_brass",
     "tool": "sword",
     "material": "brass",
@@ -129,18 +93,6 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "sword_certus_quartz",
-    "tool": "sword",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 5.0,
-    "quality": 1,
     "kind": "sword"
   },
   {
@@ -192,18 +144,6 @@
     "kind": "sword"
   },
   {
-    "id": "sword_diamond",
-    "tool": "sword",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 8.0,
-    "quality": 3,
-    "kind": "sword"
-  },
-  {
     "id": "sword_electrum",
     "tool": "sword",
     "material": "electrum",
@@ -216,42 +156,6 @@
     "kind": "sword"
   },
   {
-    "id": "sword_emerald",
-    "tool": "sword",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "sword_garnet_red",
-    "tool": "sword",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "sword_garnet_yellow",
-    "tool": "sword",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
     "id": "sword_gold",
     "tool": "sword",
     "material": "gold",
@@ -260,18 +164,6 @@
     "blockDamage": 4,
     "craftDamage": 2,
     "speed": 12.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "sword_green_sapphire",
-    "tool": "sword",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "sword"
   },
@@ -396,18 +288,6 @@
     "kind": "sword"
   },
   {
-    "id": "sword_nether_quartz",
-    "tool": "sword",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 1.0,
-    "quality": 1,
-    "kind": "sword"
-  },
-  {
     "id": "sword_nichrome",
     "tool": "sword",
     "material": "nichrome",
@@ -428,30 +308,6 @@
     "blockDamage": 4,
     "craftDamage": 2,
     "speed": 6.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "sword_olivine",
-    "tool": "sword",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "sword_opal",
-    "tool": "sword",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "sword"
   },
@@ -516,30 +372,6 @@
     "kind": "sword"
   },
   {
-    "id": "sword_ruby",
-    "tool": "sword",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "sword_sapphire",
-    "tool": "sword",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
     "id": "sword_silver",
     "tool": "sword",
     "material": "silver",
@@ -588,18 +420,6 @@
     "kind": "sword"
   },
   {
-    "id": "sword_tanzanite",
-    "tool": "sword",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
     "id": "sword_tin_alloy",
     "tool": "sword",
     "material": "tin_alloy",
@@ -617,18 +437,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 4,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "sword"
-  },
-  {
-    "id": "sword_topaz",
-    "tool": "sword",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 4,
     "craftDamage": 2,
     "speed": 7.0,
@@ -684,30 +492,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "pickaxe_amber",
-    "tool": "pickaxe",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 4.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "pickaxe_amethyst",
-    "tool": "pickaxe",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "pickaxe"
-  },
-  {
     "id": "pickaxe_beryllium",
     "tool": "pickaxe",
     "material": "beryllium",
@@ -756,18 +540,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "pickaxe_blue_topaz",
-    "tool": "pickaxe",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "pickaxe"
-  },
-  {
     "id": "pickaxe_brass",
     "tool": "pickaxe",
     "material": "brass",
@@ -801,18 +573,6 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "pickaxe_certus_quartz",
-    "tool": "pickaxe",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 5.0,
-    "quality": 1,
     "kind": "pickaxe"
   },
   {
@@ -864,18 +624,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "pickaxe_diamond",
-    "tool": "pickaxe",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 8.0,
-    "quality": 3,
-    "kind": "pickaxe"
-  },
-  {
     "id": "pickaxe_electrum",
     "tool": "pickaxe",
     "material": "electrum",
@@ -888,42 +636,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "pickaxe_emerald",
-    "tool": "pickaxe",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "pickaxe_garnet_red",
-    "tool": "pickaxe",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "pickaxe_garnet_yellow",
-    "tool": "pickaxe",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
     "id": "pickaxe_gold",
     "tool": "pickaxe",
     "material": "gold",
@@ -932,18 +644,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 12.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "pickaxe_green_sapphire",
-    "tool": "pickaxe",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "pickaxe"
   },
@@ -1068,18 +768,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "pickaxe_nether_quartz",
-    "tool": "pickaxe",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 1.0,
-    "quality": 1,
-    "kind": "pickaxe"
-  },
-  {
     "id": "pickaxe_nichrome",
     "tool": "pickaxe",
     "material": "nichrome",
@@ -1100,30 +788,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "pickaxe_olivine",
-    "tool": "pickaxe",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "pickaxe_opal",
-    "tool": "pickaxe",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "pickaxe"
   },
@@ -1188,30 +852,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "pickaxe_ruby",
-    "tool": "pickaxe",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "pickaxe_sapphire",
-    "tool": "pickaxe",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
     "id": "pickaxe_silver",
     "tool": "pickaxe",
     "material": "silver",
@@ -1260,18 +900,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "pickaxe_tanzanite",
-    "tool": "pickaxe",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
     "id": "pickaxe_tin_alloy",
     "tool": "pickaxe",
     "material": "tin_alloy",
@@ -1289,18 +917,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "pickaxe_topaz",
-    "tool": "pickaxe",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 7.0,
@@ -1356,30 +972,6 @@
     "kind": "shovel"
   },
   {
-    "id": "shovel_amber",
-    "tool": "shovel",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 4.0,
-    "quality": 2,
-    "kind": "shovel"
-  },
-  {
-    "id": "shovel_amethyst",
-    "tool": "shovel",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "shovel"
-  },
-  {
     "id": "shovel_beryllium",
     "tool": "shovel",
     "material": "beryllium",
@@ -1428,18 +1020,6 @@
     "kind": "shovel"
   },
   {
-    "id": "shovel_blue_topaz",
-    "tool": "shovel",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "shovel"
-  },
-  {
     "id": "shovel_brass",
     "tool": "shovel",
     "material": "brass",
@@ -1473,18 +1053,6 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 2,
-    "kind": "shovel"
-  },
-  {
-    "id": "shovel_certus_quartz",
-    "tool": "shovel",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 5.0,
-    "quality": 1,
     "kind": "shovel"
   },
   {
@@ -1536,18 +1104,6 @@
     "kind": "shovel"
   },
   {
-    "id": "shovel_diamond",
-    "tool": "shovel",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 8.0,
-    "quality": 3,
-    "kind": "shovel"
-  },
-  {
     "id": "shovel_electrum",
     "tool": "shovel",
     "material": "electrum",
@@ -1560,42 +1116,6 @@
     "kind": "shovel"
   },
   {
-    "id": "shovel_emerald",
-    "tool": "shovel",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "shovel"
-  },
-  {
-    "id": "shovel_garnet_red",
-    "tool": "shovel",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "shovel"
-  },
-  {
-    "id": "shovel_garnet_yellow",
-    "tool": "shovel",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "shovel"
-  },
-  {
     "id": "shovel_gold",
     "tool": "shovel",
     "material": "gold",
@@ -1604,18 +1124,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 12.0,
-    "quality": 2,
-    "kind": "shovel"
-  },
-  {
-    "id": "shovel_green_sapphire",
-    "tool": "shovel",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "shovel"
   },
@@ -1740,18 +1248,6 @@
     "kind": "shovel"
   },
   {
-    "id": "shovel_nether_quartz",
-    "tool": "shovel",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 1.0,
-    "quality": 1,
-    "kind": "shovel"
-  },
-  {
     "id": "shovel_nichrome",
     "tool": "shovel",
     "material": "nichrome",
@@ -1772,30 +1268,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
-    "quality": 2,
-    "kind": "shovel"
-  },
-  {
-    "id": "shovel_olivine",
-    "tool": "shovel",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "shovel"
-  },
-  {
-    "id": "shovel_opal",
-    "tool": "shovel",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "shovel"
   },
@@ -1860,30 +1332,6 @@
     "kind": "shovel"
   },
   {
-    "id": "shovel_ruby",
-    "tool": "shovel",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "shovel"
-  },
-  {
-    "id": "shovel_sapphire",
-    "tool": "shovel",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "shovel"
-  },
-  {
     "id": "shovel_silver",
     "tool": "shovel",
     "material": "silver",
@@ -1932,18 +1380,6 @@
     "kind": "shovel"
   },
   {
-    "id": "shovel_tanzanite",
-    "tool": "shovel",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "shovel"
-  },
-  {
     "id": "shovel_tin_alloy",
     "tool": "shovel",
     "material": "tin_alloy",
@@ -1961,18 +1397,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "shovel"
-  },
-  {
-    "id": "shovel_topaz",
-    "tool": "shovel",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 7.0,
@@ -2028,30 +1452,6 @@
     "kind": "axe"
   },
   {
-    "id": "axe_amber",
-    "tool": "axe",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 4.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "axe_amethyst",
-    "tool": "axe",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "axe"
-  },
-  {
     "id": "axe_beryllium",
     "tool": "axe",
     "material": "beryllium",
@@ -2100,18 +1500,6 @@
     "kind": "axe"
   },
   {
-    "id": "axe_blue_topaz",
-    "tool": "axe",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "axe"
-  },
-  {
     "id": "axe_brass",
     "tool": "axe",
     "material": "brass",
@@ -2145,18 +1533,6 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "axe_certus_quartz",
-    "tool": "axe",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 5.0,
-    "quality": 1,
     "kind": "axe"
   },
   {
@@ -2208,18 +1584,6 @@
     "kind": "axe"
   },
   {
-    "id": "axe_diamond",
-    "tool": "axe",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 8.0,
-    "quality": 3,
-    "kind": "axe"
-  },
-  {
     "id": "axe_electrum",
     "tool": "axe",
     "material": "electrum",
@@ -2232,42 +1596,6 @@
     "kind": "axe"
   },
   {
-    "id": "axe_emerald",
-    "tool": "axe",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "axe_garnet_red",
-    "tool": "axe",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "axe_garnet_yellow",
-    "tool": "axe",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
     "id": "axe_gold",
     "tool": "axe",
     "material": "gold",
@@ -2276,18 +1604,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 12.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "axe_green_sapphire",
-    "tool": "axe",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "axe"
   },
@@ -2412,18 +1728,6 @@
     "kind": "axe"
   },
   {
-    "id": "axe_nether_quartz",
-    "tool": "axe",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 1.0,
-    "quality": 1,
-    "kind": "axe"
-  },
-  {
     "id": "axe_nichrome",
     "tool": "axe",
     "material": "nichrome",
@@ -2444,30 +1748,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "axe_olivine",
-    "tool": "axe",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "axe_opal",
-    "tool": "axe",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "axe"
   },
@@ -2532,30 +1812,6 @@
     "kind": "axe"
   },
   {
-    "id": "axe_ruby",
-    "tool": "axe",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "axe_sapphire",
-    "tool": "axe",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
     "id": "axe_silver",
     "tool": "axe",
     "material": "silver",
@@ -2604,18 +1860,6 @@
     "kind": "axe"
   },
   {
-    "id": "axe_tanzanite",
-    "tool": "axe",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
     "id": "axe_tin_alloy",
     "tool": "axe",
     "material": "tin_alloy",
@@ -2633,18 +1877,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "axe"
-  },
-  {
-    "id": "axe_topaz",
-    "tool": "axe",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 7.0,
@@ -2700,30 +1932,6 @@
     "kind": "hoe"
   },
   {
-    "id": "hoe_amber",
-    "tool": "hoe",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 4.0,
-    "quality": 2,
-    "kind": "hoe"
-  },
-  {
-    "id": "hoe_amethyst",
-    "tool": "hoe",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "hoe"
-  },
-  {
     "id": "hoe_beryllium",
     "tool": "hoe",
     "material": "beryllium",
@@ -2772,18 +1980,6 @@
     "kind": "hoe"
   },
   {
-    "id": "hoe_blue_topaz",
-    "tool": "hoe",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "hoe"
-  },
-  {
     "id": "hoe_brass",
     "tool": "hoe",
     "material": "brass",
@@ -2817,18 +2013,6 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 2,
-    "kind": "hoe"
-  },
-  {
-    "id": "hoe_certus_quartz",
-    "tool": "hoe",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 5.0,
-    "quality": 1,
     "kind": "hoe"
   },
   {
@@ -2880,18 +2064,6 @@
     "kind": "hoe"
   },
   {
-    "id": "hoe_diamond",
-    "tool": "hoe",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 8.0,
-    "quality": 3,
-    "kind": "hoe"
-  },
-  {
     "id": "hoe_electrum",
     "tool": "hoe",
     "material": "electrum",
@@ -2904,42 +2076,6 @@
     "kind": "hoe"
   },
   {
-    "id": "hoe_emerald",
-    "tool": "hoe",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "hoe"
-  },
-  {
-    "id": "hoe_garnet_red",
-    "tool": "hoe",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "hoe"
-  },
-  {
-    "id": "hoe_garnet_yellow",
-    "tool": "hoe",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "hoe"
-  },
-  {
     "id": "hoe_gold",
     "tool": "hoe",
     "material": "gold",
@@ -2948,18 +2084,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 12.0,
-    "quality": 2,
-    "kind": "hoe"
-  },
-  {
-    "id": "hoe_green_sapphire",
-    "tool": "hoe",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "hoe"
   },
@@ -3084,18 +2208,6 @@
     "kind": "hoe"
   },
   {
-    "id": "hoe_nether_quartz",
-    "tool": "hoe",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 1.0,
-    "quality": 1,
-    "kind": "hoe"
-  },
-  {
     "id": "hoe_nichrome",
     "tool": "hoe",
     "material": "nichrome",
@@ -3116,30 +2228,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
-    "quality": 2,
-    "kind": "hoe"
-  },
-  {
-    "id": "hoe_olivine",
-    "tool": "hoe",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "hoe"
-  },
-  {
-    "id": "hoe_opal",
-    "tool": "hoe",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "hoe"
   },
@@ -3204,30 +2292,6 @@
     "kind": "hoe"
   },
   {
-    "id": "hoe_ruby",
-    "tool": "hoe",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "hoe"
-  },
-  {
-    "id": "hoe_sapphire",
-    "tool": "hoe",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "hoe"
-  },
-  {
     "id": "hoe_silver",
     "tool": "hoe",
     "material": "silver",
@@ -3276,18 +2340,6 @@
     "kind": "hoe"
   },
   {
-    "id": "hoe_tanzanite",
-    "tool": "hoe",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "hoe"
-  },
-  {
     "id": "hoe_tin_alloy",
     "tool": "hoe",
     "material": "tin_alloy",
@@ -3305,18 +2357,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "hoe"
-  },
-  {
-    "id": "hoe_topaz",
-    "tool": "hoe",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 7.0,
@@ -3372,30 +2412,6 @@
     "kind": "axe"
   },
   {
-    "id": "saw_amber",
-    "tool": "saw",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 4.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "saw_amethyst",
-    "tool": "saw",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "axe"
-  },
-  {
     "id": "saw_beryllium",
     "tool": "saw",
     "material": "beryllium",
@@ -3444,18 +2460,6 @@
     "kind": "axe"
   },
   {
-    "id": "saw_blue_topaz",
-    "tool": "saw",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "axe"
-  },
-  {
     "id": "saw_brass",
     "tool": "saw",
     "material": "brass",
@@ -3489,18 +2493,6 @@
     "craftDamage": 4,
     "speed": 1.0,
     "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "saw_certus_quartz",
-    "tool": "saw",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 5.0,
-    "quality": 1,
     "kind": "axe"
   },
   {
@@ -3552,18 +2544,6 @@
     "kind": "axe"
   },
   {
-    "id": "saw_diamond",
-    "tool": "saw",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 8.0,
-    "quality": 3,
-    "kind": "axe"
-  },
-  {
     "id": "saw_electrum",
     "tool": "saw",
     "material": "electrum",
@@ -3576,42 +2556,6 @@
     "kind": "axe"
   },
   {
-    "id": "saw_emerald",
-    "tool": "saw",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "saw_garnet_red",
-    "tool": "saw",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "saw_garnet_yellow",
-    "tool": "saw",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
     "id": "saw_gold",
     "tool": "saw",
     "material": "gold",
@@ -3620,18 +2564,6 @@
     "blockDamage": 1,
     "craftDamage": 4,
     "speed": 12.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "saw_green_sapphire",
-    "tool": "saw",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
     "quality": 2,
     "kind": "axe"
   },
@@ -3756,18 +2688,6 @@
     "kind": "axe"
   },
   {
-    "id": "saw_nether_quartz",
-    "tool": "saw",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 1.0,
-    "quality": 1,
-    "kind": "axe"
-  },
-  {
     "id": "saw_nichrome",
     "tool": "saw",
     "material": "nichrome",
@@ -3788,30 +2708,6 @@
     "blockDamage": 1,
     "craftDamage": 4,
     "speed": 6.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "saw_olivine",
-    "tool": "saw",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "saw_opal",
-    "tool": "saw",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
     "quality": 2,
     "kind": "axe"
   },
@@ -3876,30 +2772,6 @@
     "kind": "axe"
   },
   {
-    "id": "saw_ruby",
-    "tool": "saw",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
-    "id": "saw_sapphire",
-    "tool": "saw",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
     "id": "saw_silver",
     "tool": "saw",
     "material": "silver",
@@ -3948,18 +2820,6 @@
     "kind": "axe"
   },
   {
-    "id": "saw_tanzanite",
-    "tool": "saw",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "axe"
-  },
-  {
     "id": "saw_tin_alloy",
     "tool": "saw",
     "material": "tin_alloy",
@@ -3977,18 +2837,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 4,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "axe"
-  },
-  {
-    "id": "saw_topaz",
-    "tool": "saw",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 4,
     "speed": 7.0,
@@ -4044,30 +2892,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "hammer_amber",
-    "tool": "hammer",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 3.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "hammer_amethyst",
-    "tool": "hammer",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
-    "quality": 3,
-    "kind": "pickaxe"
-  },
-  {
     "id": "hammer_beryllium",
     "tool": "hammer",
     "material": "beryllium",
@@ -4116,18 +2940,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "hammer_blue_topaz",
-    "tool": "hammer",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
-    "quality": 3,
-    "kind": "pickaxe"
-  },
-  {
     "id": "hammer_brass",
     "tool": "hammer",
     "material": "brass",
@@ -4161,18 +2973,6 @@
     "craftDamage": 8,
     "speed": 0.75,
     "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "hammer_certus_quartz",
-    "tool": "hammer",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 3.75,
-    "quality": 1,
     "kind": "pickaxe"
   },
   {
@@ -4224,18 +3024,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "hammer_diamond",
-    "tool": "hammer",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 6.0,
-    "quality": 3,
-    "kind": "pickaxe"
-  },
-  {
     "id": "hammer_electrum",
     "tool": "hammer",
     "material": "electrum",
@@ -4248,42 +3036,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "hammer_emerald",
-    "tool": "hammer",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "hammer_garnet_red",
-    "tool": "hammer",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "hammer_garnet_yellow",
-    "tool": "hammer",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
     "id": "hammer_gold",
     "tool": "hammer",
     "material": "gold",
@@ -4292,18 +3044,6 @@
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 9.0,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "hammer_green_sapphire",
-    "tool": "hammer",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
     "quality": 2,
     "kind": "pickaxe"
   },
@@ -4428,18 +3168,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "hammer_nether_quartz",
-    "tool": "hammer",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 0.75,
-    "quality": 1,
-    "kind": "pickaxe"
-  },
-  {
     "id": "hammer_nichrome",
     "tool": "hammer",
     "material": "nichrome",
@@ -4460,30 +3188,6 @@
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 4.5,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "hammer_olivine",
-    "tool": "hammer",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "hammer_opal",
-    "tool": "hammer",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
     "quality": 2,
     "kind": "pickaxe"
   },
@@ -4536,30 +3240,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "hammer_ruby",
-    "tool": "hammer",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "hammer_sapphire",
-    "tool": "hammer",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
     "id": "hammer_silver",
     "tool": "hammer",
     "material": "silver",
@@ -4608,18 +3288,6 @@
     "kind": "pickaxe"
   },
   {
-    "id": "hammer_tanzanite",
-    "tool": "hammer",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
-    "quality": 2,
-    "kind": "pickaxe"
-  },
-  {
     "id": "hammer_tin_alloy",
     "tool": "hammer",
     "material": "tin_alloy",
@@ -4637,18 +3305,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.25,
-    "quality": 3,
-    "kind": "pickaxe"
-  },
-  {
-    "id": "hammer_topaz",
-    "tool": "hammer",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 5.25,
@@ -4704,30 +3360,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_amber",
-    "tool": "wrench",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 4.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_amethyst",
-    "tool": "wrench",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_beryllium",
     "tool": "wrench",
     "material": "beryllium",
@@ -4776,18 +3408,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_blue_topaz",
-    "tool": "wrench",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_brass",
     "tool": "wrench",
     "material": "brass",
@@ -4821,18 +3441,6 @@
     "craftDamage": 16,
     "speed": 1.0,
     "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_certus_quartz",
-    "tool": "wrench",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 5.0,
-    "quality": 1,
     "kind": "wrench"
   },
   {
@@ -4884,18 +3492,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_diamond",
-    "tool": "wrench",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 8.0,
-    "quality": 3,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_electrum",
     "tool": "wrench",
     "material": "electrum",
@@ -4908,42 +3504,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_emerald",
-    "tool": "wrench",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_garnet_red",
-    "tool": "wrench",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_garnet_yellow",
-    "tool": "wrench",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_gold",
     "tool": "wrench",
     "material": "gold",
@@ -4952,18 +3512,6 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 12.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_green_sapphire",
-    "tool": "wrench",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
     "quality": 2,
     "kind": "wrench"
   },
@@ -5088,18 +3636,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_nether_quartz",
-    "tool": "wrench",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 1.0,
-    "quality": 1,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_nichrome",
     "tool": "wrench",
     "material": "nichrome",
@@ -5120,30 +3656,6 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 6.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_olivine",
-    "tool": "wrench",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_opal",
-    "tool": "wrench",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
     "quality": 2,
     "kind": "wrench"
   },
@@ -5208,30 +3720,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_ruby",
-    "tool": "wrench",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_sapphire",
-    "tool": "wrench",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_silver",
     "tool": "wrench",
     "material": "silver",
@@ -5280,18 +3768,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_tanzanite",
-    "tool": "wrench",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_tin_alloy",
     "tool": "wrench",
     "material": "tin_alloy",
@@ -5309,18 +3785,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_topaz",
-    "tool": "wrench",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 7.0,
@@ -5376,30 +3840,6 @@
     "kind": null
   },
   {
-    "id": "file_amber",
-    "tool": "file",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 4.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "file_amethyst",
-    "tool": "file",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
     "id": "file_beryllium",
     "tool": "file",
     "material": "beryllium",
@@ -5448,18 +3888,6 @@
     "kind": null
   },
   {
-    "id": "file_blue_topaz",
-    "tool": "file",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
     "id": "file_brass",
     "tool": "file",
     "material": "brass",
@@ -5493,18 +3921,6 @@
     "craftDamage": 8,
     "speed": 1.0,
     "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "file_certus_quartz",
-    "tool": "file",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 5.0,
-    "quality": 1,
     "kind": null
   },
   {
@@ -5556,18 +3972,6 @@
     "kind": null
   },
   {
-    "id": "file_diamond",
-    "tool": "file",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 8.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
     "id": "file_electrum",
     "tool": "file",
     "material": "electrum",
@@ -5580,42 +3984,6 @@
     "kind": null
   },
   {
-    "id": "file_emerald",
-    "tool": "file",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "file_garnet_red",
-    "tool": "file",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "file_garnet_yellow",
-    "tool": "file",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
     "id": "file_gold",
     "tool": "file",
     "material": "gold",
@@ -5624,18 +3992,6 @@
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 12.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "file_green_sapphire",
-    "tool": "file",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
     "quality": 2,
     "kind": null
   },
@@ -5760,18 +4116,6 @@
     "kind": null
   },
   {
-    "id": "file_nether_quartz",
-    "tool": "file",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 1.0,
-    "quality": 1,
-    "kind": null
-  },
-  {
     "id": "file_nichrome",
     "tool": "file",
     "material": "nichrome",
@@ -5792,30 +4136,6 @@
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 6.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "file_olivine",
-    "tool": "file",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "file_opal",
-    "tool": "file",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
     "quality": 2,
     "kind": null
   },
@@ -5880,30 +4200,6 @@
     "kind": null
   },
   {
-    "id": "file_ruby",
-    "tool": "file",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "file_sapphire",
-    "tool": "file",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
     "id": "file_silver",
     "tool": "file",
     "material": "silver",
@@ -5952,18 +4248,6 @@
     "kind": null
   },
   {
-    "id": "file_tanzanite",
-    "tool": "file",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
     "id": "file_tin_alloy",
     "tool": "file",
     "material": "tin_alloy",
@@ -5981,18 +4265,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
-    "id": "file_topaz",
-    "tool": "file",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 8,
     "speed": 7.0,
@@ -6048,30 +4320,6 @@
     "kind": null
   },
   {
-    "id": "screwdriver_amber",
-    "tool": "screwdriver",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 4.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "screwdriver_amethyst",
-    "tool": "screwdriver",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
     "id": "screwdriver_beryllium",
     "tool": "screwdriver",
     "material": "beryllium",
@@ -6120,18 +4368,6 @@
     "kind": null
   },
   {
-    "id": "screwdriver_blue_topaz",
-    "tool": "screwdriver",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
     "id": "screwdriver_brass",
     "tool": "screwdriver",
     "material": "brass",
@@ -6165,18 +4401,6 @@
     "craftDamage": 8,
     "speed": 1.0,
     "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "screwdriver_certus_quartz",
-    "tool": "screwdriver",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 5.0,
-    "quality": 1,
     "kind": null
   },
   {
@@ -6228,18 +4452,6 @@
     "kind": null
   },
   {
-    "id": "screwdriver_diamond",
-    "tool": "screwdriver",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 8.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
     "id": "screwdriver_electrum",
     "tool": "screwdriver",
     "material": "electrum",
@@ -6252,42 +4464,6 @@
     "kind": null
   },
   {
-    "id": "screwdriver_emerald",
-    "tool": "screwdriver",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "screwdriver_garnet_red",
-    "tool": "screwdriver",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "screwdriver_garnet_yellow",
-    "tool": "screwdriver",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
     "id": "screwdriver_gold",
     "tool": "screwdriver",
     "material": "gold",
@@ -6296,18 +4472,6 @@
     "blockDamage": 4,
     "craftDamage": 8,
     "speed": 12.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "screwdriver_green_sapphire",
-    "tool": "screwdriver",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
     "quality": 2,
     "kind": null
   },
@@ -6432,18 +4596,6 @@
     "kind": null
   },
   {
-    "id": "screwdriver_nether_quartz",
-    "tool": "screwdriver",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 1.0,
-    "quality": 1,
-    "kind": null
-  },
-  {
     "id": "screwdriver_nichrome",
     "tool": "screwdriver",
     "material": "nichrome",
@@ -6464,30 +4616,6 @@
     "blockDamage": 4,
     "craftDamage": 8,
     "speed": 6.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "screwdriver_olivine",
-    "tool": "screwdriver",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "screwdriver_opal",
-    "tool": "screwdriver",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
     "quality": 2,
     "kind": null
   },
@@ -6552,30 +4680,6 @@
     "kind": null
   },
   {
-    "id": "screwdriver_ruby",
-    "tool": "screwdriver",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "screwdriver_sapphire",
-    "tool": "screwdriver",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
     "id": "screwdriver_silver",
     "tool": "screwdriver",
     "material": "silver",
@@ -6624,18 +4728,6 @@
     "kind": null
   },
   {
-    "id": "screwdriver_tanzanite",
-    "tool": "screwdriver",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
     "id": "screwdriver_tin_alloy",
     "tool": "screwdriver",
     "material": "tin_alloy",
@@ -6653,18 +4745,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 4,
-    "craftDamage": 8,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
-    "id": "screwdriver_topaz",
-    "tool": "screwdriver",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 4,
     "craftDamage": 8,
     "speed": 7.0,
@@ -6756,30 +4836,6 @@
     "kind": "sword"
   },
   {
-    "id": "knife_amber",
-    "tool": "knife",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 4.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "knife_amethyst",
-    "tool": "knife",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "sword"
-  },
-  {
     "id": "knife_beryllium",
     "tool": "knife",
     "material": "beryllium",
@@ -6828,18 +4884,6 @@
     "kind": "sword"
   },
   {
-    "id": "knife_blue_topaz",
-    "tool": "knife",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "sword"
-  },
-  {
     "id": "knife_brass",
     "tool": "knife",
     "material": "brass",
@@ -6873,18 +4917,6 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "knife_certus_quartz",
-    "tool": "knife",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 5.0,
-    "quality": 1,
     "kind": "sword"
   },
   {
@@ -6936,18 +4968,6 @@
     "kind": "sword"
   },
   {
-    "id": "knife_diamond",
-    "tool": "knife",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 8.0,
-    "quality": 3,
-    "kind": "sword"
-  },
-  {
     "id": "knife_electrum",
     "tool": "knife",
     "material": "electrum",
@@ -6960,42 +4980,6 @@
     "kind": "sword"
   },
   {
-    "id": "knife_emerald",
-    "tool": "knife",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "knife_garnet_red",
-    "tool": "knife",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "knife_garnet_yellow",
-    "tool": "knife",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
     "id": "knife_gold",
     "tool": "knife",
     "material": "gold",
@@ -7004,18 +4988,6 @@
     "blockDamage": 2,
     "craftDamage": 2,
     "speed": 12.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "knife_green_sapphire",
-    "tool": "knife",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "sword"
   },
@@ -7140,18 +5112,6 @@
     "kind": "sword"
   },
   {
-    "id": "knife_nether_quartz",
-    "tool": "knife",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 1.0,
-    "quality": 1,
-    "kind": "sword"
-  },
-  {
     "id": "knife_nichrome",
     "tool": "knife",
     "material": "nichrome",
@@ -7172,30 +5132,6 @@
     "blockDamage": 2,
     "craftDamage": 2,
     "speed": 6.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "knife_olivine",
-    "tool": "knife",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "knife_opal",
-    "tool": "knife",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": "sword"
   },
@@ -7260,30 +5196,6 @@
     "kind": "sword"
   },
   {
-    "id": "knife_ruby",
-    "tool": "knife",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
-    "id": "knife_sapphire",
-    "tool": "knife",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
     "id": "knife_silver",
     "tool": "knife",
     "material": "silver",
@@ -7332,18 +5244,6 @@
     "kind": "sword"
   },
   {
-    "id": "knife_tanzanite",
-    "tool": "knife",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": "sword"
-  },
-  {
     "id": "knife_tin_alloy",
     "tool": "knife",
     "material": "tin_alloy",
@@ -7361,18 +5261,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 2,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": "sword"
-  },
-  {
-    "id": "knife_topaz",
-    "tool": "knife",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 2,
     "craftDamage": 2,
     "speed": 7.0,
@@ -7428,30 +5316,6 @@
     "kind": "wire_cutter"
   },
   {
-    "id": "wire_cutter_amber",
-    "tool": "wire_cutter",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 5.0,
-    "quality": 2,
-    "kind": "wire_cutter"
-  },
-  {
-    "id": "wire_cutter_amethyst",
-    "tool": "wire_cutter",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
-    "quality": 3,
-    "kind": "wire_cutter"
-  },
-  {
     "id": "wire_cutter_beryllium",
     "tool": "wire_cutter",
     "material": "beryllium",
@@ -7500,18 +5364,6 @@
     "kind": "wire_cutter"
   },
   {
-    "id": "wire_cutter_blue_topaz",
-    "tool": "wire_cutter",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
-    "quality": 3,
-    "kind": "wire_cutter"
-  },
-  {
     "id": "wire_cutter_brass",
     "tool": "wire_cutter",
     "material": "brass",
@@ -7545,18 +5397,6 @@
     "craftDamage": 8,
     "speed": 1.25,
     "quality": 2,
-    "kind": "wire_cutter"
-  },
-  {
-    "id": "wire_cutter_certus_quartz",
-    "tool": "wire_cutter",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 6.25,
-    "quality": 1,
     "kind": "wire_cutter"
   },
   {
@@ -7608,18 +5448,6 @@
     "kind": "wire_cutter"
   },
   {
-    "id": "wire_cutter_diamond",
-    "tool": "wire_cutter",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 10.0,
-    "quality": 3,
-    "kind": "wire_cutter"
-  },
-  {
     "id": "wire_cutter_electrum",
     "tool": "wire_cutter",
     "material": "electrum",
@@ -7632,42 +5460,6 @@
     "kind": "wire_cutter"
   },
   {
-    "id": "wire_cutter_emerald",
-    "tool": "wire_cutter",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
-    "quality": 2,
-    "kind": "wire_cutter"
-  },
-  {
-    "id": "wire_cutter_garnet_red",
-    "tool": "wire_cutter",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
-    "quality": 2,
-    "kind": "wire_cutter"
-  },
-  {
-    "id": "wire_cutter_garnet_yellow",
-    "tool": "wire_cutter",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
-    "quality": 2,
-    "kind": "wire_cutter"
-  },
-  {
     "id": "wire_cutter_gold",
     "tool": "wire_cutter",
     "material": "gold",
@@ -7676,18 +5468,6 @@
     "blockDamage": 2,
     "craftDamage": 8,
     "speed": 15.0,
-    "quality": 2,
-    "kind": "wire_cutter"
-  },
-  {
-    "id": "wire_cutter_green_sapphire",
-    "tool": "wire_cutter",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
     "quality": 2,
     "kind": "wire_cutter"
   },
@@ -7812,18 +5592,6 @@
     "kind": "wire_cutter"
   },
   {
-    "id": "wire_cutter_nether_quartz",
-    "tool": "wire_cutter",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 1.25,
-    "quality": 1,
-    "kind": "wire_cutter"
-  },
-  {
     "id": "wire_cutter_nichrome",
     "tool": "wire_cutter",
     "material": "nichrome",
@@ -7844,30 +5612,6 @@
     "blockDamage": 2,
     "craftDamage": 8,
     "speed": 7.5,
-    "quality": 2,
-    "kind": "wire_cutter"
-  },
-  {
-    "id": "wire_cutter_olivine",
-    "tool": "wire_cutter",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
-    "quality": 2,
-    "kind": "wire_cutter"
-  },
-  {
-    "id": "wire_cutter_opal",
-    "tool": "wire_cutter",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
     "quality": 2,
     "kind": "wire_cutter"
   },
@@ -7932,30 +5676,6 @@
     "kind": "wire_cutter"
   },
   {
-    "id": "wire_cutter_ruby",
-    "tool": "wire_cutter",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
-    "quality": 2,
-    "kind": "wire_cutter"
-  },
-  {
-    "id": "wire_cutter_sapphire",
-    "tool": "wire_cutter",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
-    "quality": 2,
-    "kind": "wire_cutter"
-  },
-  {
     "id": "wire_cutter_silver",
     "tool": "wire_cutter",
     "material": "silver",
@@ -8004,18 +5724,6 @@
     "kind": "wire_cutter"
   },
   {
-    "id": "wire_cutter_tanzanite",
-    "tool": "wire_cutter",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
-    "quality": 2,
-    "kind": "wire_cutter"
-  },
-  {
     "id": "wire_cutter_tin_alloy",
     "tool": "wire_cutter",
     "material": "tin_alloy",
@@ -8033,18 +5741,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 2,
-    "craftDamage": 8,
-    "speed": 8.75,
-    "quality": 3,
-    "kind": "wire_cutter"
-  },
-  {
-    "id": "wire_cutter_topaz",
-    "tool": "wire_cutter",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 2,
     "craftDamage": 8,
     "speed": 8.75,
@@ -8124,30 +5820,6 @@
     "kind": null
   },
   {
-    "id": "crowbar_amber",
-    "tool": "crowbar",
-    "material": "amber",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 4.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "crowbar_amethyst",
-    "tool": "crowbar",
-    "material": "amethyst",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
     "id": "crowbar_beryllium",
     "tool": "crowbar",
     "material": "beryllium",
@@ -8196,18 +5868,6 @@
     "kind": null
   },
   {
-    "id": "crowbar_blue_topaz",
-    "tool": "crowbar",
-    "material": "blue_topaz",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
     "id": "crowbar_brass",
     "tool": "crowbar",
     "material": "brass",
@@ -8241,18 +5901,6 @@
     "craftDamage": 2,
     "speed": 1.0,
     "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "crowbar_certus_quartz",
-    "tool": "crowbar",
-    "material": "certus_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 5.0,
-    "quality": 1,
     "kind": null
   },
   {
@@ -8304,18 +5952,6 @@
     "kind": null
   },
   {
-    "id": "crowbar_diamond",
-    "tool": "crowbar",
-    "material": "diamond",
-    "handle": "wood",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 8.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
     "id": "crowbar_electrum",
     "tool": "crowbar",
     "material": "electrum",
@@ -8328,42 +5964,6 @@
     "kind": null
   },
   {
-    "id": "crowbar_emerald",
-    "tool": "crowbar",
-    "material": "emerald",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "crowbar_garnet_red",
-    "tool": "crowbar",
-    "material": "garnet_red",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "crowbar_garnet_yellow",
-    "tool": "crowbar",
-    "material": "garnet_yellow",
-    "handle": "wood",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
     "id": "crowbar_gold",
     "tool": "crowbar",
     "material": "gold",
@@ -8372,18 +5972,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 12.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "crowbar_green_sapphire",
-    "tool": "crowbar",
-    "material": "green_sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": null
   },
@@ -8508,18 +6096,6 @@
     "kind": null
   },
   {
-    "id": "crowbar_nether_quartz",
-    "tool": "crowbar",
-    "material": "nether_quartz",
-    "handle": "wood",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 1.0,
-    "quality": 1,
-    "kind": null
-  },
-  {
     "id": "crowbar_nichrome",
     "tool": "crowbar",
     "material": "nichrome",
@@ -8540,30 +6116,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "crowbar_olivine",
-    "tool": "crowbar",
-    "material": "olivine",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "crowbar_opal",
-    "tool": "crowbar",
-    "material": "opal",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
     "quality": 2,
     "kind": null
   },
@@ -8616,30 +6168,6 @@
     "kind": null
   },
   {
-    "id": "crowbar_ruby",
-    "tool": "crowbar",
-    "material": "ruby",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
-    "id": "crowbar_sapphire",
-    "tool": "crowbar",
-    "material": "sapphire",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
     "id": "crowbar_silver",
     "tool": "crowbar",
     "material": "silver",
@@ -8688,18 +6216,6 @@
     "kind": null
   },
   {
-    "id": "crowbar_tanzanite",
-    "tool": "crowbar",
-    "material": "tanzanite",
-    "handle": "wood",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 2,
-    "kind": null
-  },
-  {
     "id": "crowbar_tin_alloy",
     "tool": "crowbar",
     "material": "tin_alloy",
@@ -8717,18 +6233,6 @@
     "material": "titanium",
     "handle": "wood",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 7.0,
-    "quality": 3,
-    "kind": null
-  },
-  {
-    "id": "crowbar_topaz",
-    "tool": "crowbar",
-    "material": "topaz",
-    "handle": "wood",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 7.0,
@@ -8784,30 +6288,6 @@
     "kind": "drill"
   },
   {
-    "id": "drill_lv_amber",
-    "tool": "drill_lv",
-    "material": "amber",
-    "handle": "stainless_steel",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 12.0,
-    "quality": 2,
-    "kind": "drill"
-  },
-  {
-    "id": "drill_lv_amethyst",
-    "tool": "drill_lv",
-    "material": "amethyst",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
-    "quality": 3,
-    "kind": "drill"
-  },
-  {
     "id": "drill_lv_beryllium",
     "tool": "drill_lv",
     "material": "beryllium",
@@ -8856,18 +6336,6 @@
     "kind": "drill"
   },
   {
-    "id": "drill_lv_blue_topaz",
-    "tool": "drill_lv",
-    "material": "blue_topaz",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
-    "quality": 3,
-    "kind": "drill"
-  },
-  {
     "id": "drill_lv_brass",
     "tool": "drill_lv",
     "material": "brass",
@@ -8901,18 +6369,6 @@
     "craftDamage": 2,
     "speed": 3.0,
     "quality": 2,
-    "kind": "drill"
-  },
-  {
-    "id": "drill_lv_certus_quartz",
-    "tool": "drill_lv",
-    "material": "certus_quartz",
-    "handle": "stainless_steel",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 15.0,
-    "quality": 1,
     "kind": "drill"
   },
   {
@@ -8964,18 +6420,6 @@
     "kind": "drill"
   },
   {
-    "id": "drill_lv_diamond",
-    "tool": "drill_lv",
-    "material": "diamond",
-    "handle": "stainless_steel",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 24.0,
-    "quality": 3,
-    "kind": "drill"
-  },
-  {
     "id": "drill_lv_electrum",
     "tool": "drill_lv",
     "material": "electrum",
@@ -8988,42 +6432,6 @@
     "kind": "drill"
   },
   {
-    "id": "drill_lv_emerald",
-    "tool": "drill_lv",
-    "material": "emerald",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
-    "quality": 2,
-    "kind": "drill"
-  },
-  {
-    "id": "drill_lv_garnet_red",
-    "tool": "drill_lv",
-    "material": "garnet_red",
-    "handle": "stainless_steel",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
-    "quality": 2,
-    "kind": "drill"
-  },
-  {
-    "id": "drill_lv_garnet_yellow",
-    "tool": "drill_lv",
-    "material": "garnet_yellow",
-    "handle": "stainless_steel",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
-    "quality": 2,
-    "kind": "drill"
-  },
-  {
     "id": "drill_lv_gold",
     "tool": "drill_lv",
     "material": "gold",
@@ -9032,18 +6440,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 36.0,
-    "quality": 2,
-    "kind": "drill"
-  },
-  {
-    "id": "drill_lv_green_sapphire",
-    "tool": "drill_lv",
-    "material": "green_sapphire",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
     "quality": 2,
     "kind": "drill"
   },
@@ -9168,18 +6564,6 @@
     "kind": "drill"
   },
   {
-    "id": "drill_lv_nether_quartz",
-    "tool": "drill_lv",
-    "material": "nether_quartz",
-    "handle": "stainless_steel",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 3.0,
-    "quality": 1,
-    "kind": "drill"
-  },
-  {
     "id": "drill_lv_nichrome",
     "tool": "drill_lv",
     "material": "nichrome",
@@ -9200,30 +6584,6 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 18.0,
-    "quality": 2,
-    "kind": "drill"
-  },
-  {
-    "id": "drill_lv_olivine",
-    "tool": "drill_lv",
-    "material": "olivine",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
-    "quality": 2,
-    "kind": "drill"
-  },
-  {
-    "id": "drill_lv_opal",
-    "tool": "drill_lv",
-    "material": "opal",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
     "quality": 2,
     "kind": "drill"
   },
@@ -9288,30 +6648,6 @@
     "kind": "drill"
   },
   {
-    "id": "drill_lv_ruby",
-    "tool": "drill_lv",
-    "material": "ruby",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
-    "quality": 2,
-    "kind": "drill"
-  },
-  {
-    "id": "drill_lv_sapphire",
-    "tool": "drill_lv",
-    "material": "sapphire",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
-    "quality": 2,
-    "kind": "drill"
-  },
-  {
     "id": "drill_lv_silver",
     "tool": "drill_lv",
     "material": "silver",
@@ -9360,18 +6696,6 @@
     "kind": "drill"
   },
   {
-    "id": "drill_lv_tanzanite",
-    "tool": "drill_lv",
-    "material": "tanzanite",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
-    "quality": 2,
-    "kind": "drill"
-  },
-  {
     "id": "drill_lv_tin_alloy",
     "tool": "drill_lv",
     "material": "tin_alloy",
@@ -9389,18 +6713,6 @@
     "material": "titanium",
     "handle": "stainless_steel",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 2,
-    "speed": 21.0,
-    "quality": 3,
-    "kind": "drill"
-  },
-  {
-    "id": "drill_lv_topaz",
-    "tool": "drill_lv",
-    "material": "topaz",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 21.0,
@@ -9456,30 +6768,6 @@
     "kind": "chainsaw"
   },
   {
-    "id": "chainsaw_lv_amber",
-    "tool": "chainsaw_lv",
-    "material": "amber",
-    "handle": "stainless_steel",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 8.0,
-    "quality": 2,
-    "kind": "chainsaw"
-  },
-  {
-    "id": "chainsaw_lv_amethyst",
-    "tool": "chainsaw_lv",
-    "material": "amethyst",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 3,
-    "kind": "chainsaw"
-  },
-  {
     "id": "chainsaw_lv_beryllium",
     "tool": "chainsaw_lv",
     "material": "beryllium",
@@ -9528,18 +6816,6 @@
     "kind": "chainsaw"
   },
   {
-    "id": "chainsaw_lv_blue_topaz",
-    "tool": "chainsaw_lv",
-    "material": "blue_topaz",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 3,
-    "kind": "chainsaw"
-  },
-  {
     "id": "chainsaw_lv_brass",
     "tool": "chainsaw_lv",
     "material": "brass",
@@ -9573,18 +6849,6 @@
     "craftDamage": 16,
     "speed": 2.0,
     "quality": 2,
-    "kind": "chainsaw"
-  },
-  {
-    "id": "chainsaw_lv_certus_quartz",
-    "tool": "chainsaw_lv",
-    "material": "certus_quartz",
-    "handle": "stainless_steel",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 10.0,
-    "quality": 1,
     "kind": "chainsaw"
   },
   {
@@ -9636,18 +6900,6 @@
     "kind": "chainsaw"
   },
   {
-    "id": "chainsaw_lv_diamond",
-    "tool": "chainsaw_lv",
-    "material": "diamond",
-    "handle": "stainless_steel",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 16.0,
-    "quality": 3,
-    "kind": "chainsaw"
-  },
-  {
     "id": "chainsaw_lv_electrum",
     "tool": "chainsaw_lv",
     "material": "electrum",
@@ -9660,42 +6912,6 @@
     "kind": "chainsaw"
   },
   {
-    "id": "chainsaw_lv_emerald",
-    "tool": "chainsaw_lv",
-    "material": "emerald",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "chainsaw"
-  },
-  {
-    "id": "chainsaw_lv_garnet_red",
-    "tool": "chainsaw_lv",
-    "material": "garnet_red",
-    "handle": "stainless_steel",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "chainsaw"
-  },
-  {
-    "id": "chainsaw_lv_garnet_yellow",
-    "tool": "chainsaw_lv",
-    "material": "garnet_yellow",
-    "handle": "stainless_steel",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "chainsaw"
-  },
-  {
     "id": "chainsaw_lv_gold",
     "tool": "chainsaw_lv",
     "material": "gold",
@@ -9704,18 +6920,6 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 24.0,
-    "quality": 2,
-    "kind": "chainsaw"
-  },
-  {
-    "id": "chainsaw_lv_green_sapphire",
-    "tool": "chainsaw_lv",
-    "material": "green_sapphire",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
     "quality": 2,
     "kind": "chainsaw"
   },
@@ -9840,18 +7044,6 @@
     "kind": "chainsaw"
   },
   {
-    "id": "chainsaw_lv_nether_quartz",
-    "tool": "chainsaw_lv",
-    "material": "nether_quartz",
-    "handle": "stainless_steel",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 2.0,
-    "quality": 1,
-    "kind": "chainsaw"
-  },
-  {
     "id": "chainsaw_lv_nichrome",
     "tool": "chainsaw_lv",
     "material": "nichrome",
@@ -9872,30 +7064,6 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 12.0,
-    "quality": 2,
-    "kind": "chainsaw"
-  },
-  {
-    "id": "chainsaw_lv_olivine",
-    "tool": "chainsaw_lv",
-    "material": "olivine",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "chainsaw"
-  },
-  {
-    "id": "chainsaw_lv_opal",
-    "tool": "chainsaw_lv",
-    "material": "opal",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
     "quality": 2,
     "kind": "chainsaw"
   },
@@ -9960,30 +7128,6 @@
     "kind": "chainsaw"
   },
   {
-    "id": "chainsaw_lv_ruby",
-    "tool": "chainsaw_lv",
-    "material": "ruby",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "chainsaw"
-  },
-  {
-    "id": "chainsaw_lv_sapphire",
-    "tool": "chainsaw_lv",
-    "material": "sapphire",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "chainsaw"
-  },
-  {
     "id": "chainsaw_lv_silver",
     "tool": "chainsaw_lv",
     "material": "silver",
@@ -10032,18 +7176,6 @@
     "kind": "chainsaw"
   },
   {
-    "id": "chainsaw_lv_tanzanite",
-    "tool": "chainsaw_lv",
-    "material": "tanzanite",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "chainsaw"
-  },
-  {
     "id": "chainsaw_lv_tin_alloy",
     "tool": "chainsaw_lv",
     "material": "tin_alloy",
@@ -10061,18 +7193,6 @@
     "material": "titanium",
     "handle": "stainless_steel",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 3,
-    "kind": "chainsaw"
-  },
-  {
-    "id": "chainsaw_lv_topaz",
-    "tool": "chainsaw_lv",
-    "material": "topaz",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 14.0,
@@ -10128,30 +7248,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_lv_amber",
-    "tool": "wrench_lv",
-    "material": "amber",
-    "handle": "stainless_steel",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 8.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_lv_amethyst",
-    "tool": "wrench_lv",
-    "material": "amethyst",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 3,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_lv_beryllium",
     "tool": "wrench_lv",
     "material": "beryllium",
@@ -10200,18 +7296,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_lv_blue_topaz",
-    "tool": "wrench_lv",
-    "material": "blue_topaz",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 3,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_lv_brass",
     "tool": "wrench_lv",
     "material": "brass",
@@ -10245,18 +7329,6 @@
     "craftDamage": 16,
     "speed": 2.0,
     "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_lv_certus_quartz",
-    "tool": "wrench_lv",
-    "material": "certus_quartz",
-    "handle": "stainless_steel",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 10.0,
-    "quality": 1,
     "kind": "wrench"
   },
   {
@@ -10308,18 +7380,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_lv_diamond",
-    "tool": "wrench_lv",
-    "material": "diamond",
-    "handle": "stainless_steel",
-    "maxDamage": 2560,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 16.0,
-    "quality": 3,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_lv_electrum",
     "tool": "wrench_lv",
     "material": "electrum",
@@ -10332,42 +7392,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_lv_emerald",
-    "tool": "wrench_lv",
-    "material": "emerald",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_lv_garnet_red",
-    "tool": "wrench_lv",
-    "material": "garnet_red",
-    "handle": "stainless_steel",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_lv_garnet_yellow",
-    "tool": "wrench_lv",
-    "material": "garnet_yellow",
-    "handle": "stainless_steel",
-    "maxDamage": 256,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_lv_gold",
     "tool": "wrench_lv",
     "material": "gold",
@@ -10376,18 +7400,6 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 24.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_lv_green_sapphire",
-    "tool": "wrench_lv",
-    "material": "green_sapphire",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
     "quality": 2,
     "kind": "wrench"
   },
@@ -10512,18 +7524,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_lv_nether_quartz",
-    "tool": "wrench_lv",
-    "material": "nether_quartz",
-    "handle": "stainless_steel",
-    "maxDamage": 64,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 2.0,
-    "quality": 1,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_lv_nichrome",
     "tool": "wrench_lv",
     "material": "nichrome",
@@ -10544,30 +7544,6 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 12.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_lv_olivine",
-    "tool": "wrench_lv",
-    "material": "olivine",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_lv_opal",
-    "tool": "wrench_lv",
-    "material": "opal",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
     "quality": 2,
     "kind": "wrench"
   },
@@ -10632,30 +7608,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_lv_ruby",
-    "tool": "wrench_lv",
-    "material": "ruby",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_lv_sapphire",
-    "tool": "wrench_lv",
-    "material": "sapphire",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_lv_silver",
     "tool": "wrench_lv",
     "material": "silver",
@@ -10704,18 +7656,6 @@
     "kind": "wrench"
   },
   {
-    "id": "wrench_lv_tanzanite",
-    "tool": "wrench_lv",
-    "material": "tanzanite",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 2,
-    "kind": "wrench"
-  },
-  {
     "id": "wrench_lv_tin_alloy",
     "tool": "wrench_lv",
     "material": "tin_alloy",
@@ -10733,18 +7673,6 @@
     "material": "titanium",
     "handle": "stainless_steel",
     "maxDamage": 3200,
-    "blockDamage": 1,
-    "craftDamage": 16,
-    "speed": 14.0,
-    "quality": 3,
-    "kind": "wrench"
-  },
-  {
-    "id": "wrench_lv_topaz",
-    "tool": "wrench_lv",
-    "material": "topaz",
-    "handle": "stainless_steel",
-    "maxDamage": 512,
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 14.0,

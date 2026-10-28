@@ -50,6 +50,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
     /** GT mOutputFluid: выходной бак той же ёмкости, снаружи только слив (LV III, D76). */
     private final FluidTank outTank;
     private final net.neoforged.neoforge.transfer.CombinedResourceHandler<FluidResource> fluids;
+    private final ResourceHandler<FluidResource> drainOnly;
+    private @Nullable Direction itemOut, fluidOut;
     private List<ItemStack> pending = List.of();
     private FluidStack pendingFluid = FluidStack.EMPTY;
     private boolean inventoryChanged = true;
@@ -67,6 +69,17 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
                 && level instanceof ServerLevel sl && GtRecipes.acceptsFluid(sl, t.recipeMap, f), true, this::markDirty);
         this.outTank = new FluidTank(Math.max(1, t.tank), f -> false, true, this::markDirty);
         this.fluids = new net.neoforged.neoforge.transfer.CombinedResourceHandler<>(tank, outTank);
+        this.drainOnly = new net.neoforged.neoforge.transfer.DelegatingResourceHandler<>(fluids) {
+            @Override
+            public int insert(int index, FluidResource resource, int amount, net.neoforged.neoforge.transfer.transaction.TransactionContext tx) {
+                return 0;
+            }
+
+            @Override
+            public int insert(FluidResource resource, int amount, net.neoforged.neoforge.transfer.transaction.TransactionContext tx) {
+                return 0;
+            }
+        };
     }
 
     private static LvMachineType type(BlockState state) {
@@ -87,8 +100,30 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         return type(getBlockState());
     }
 
+    /** GT getFrontFacing: выход предметов; после установки — задняя сторона (GT_MetaTileEntity_BasicMachine.doDisplayThings). */
     public Direction outputSide() {
-        return front().getOpposite();
+        return itemOut != null && itemOut != front() ? itemOut : front().getOpposite();
+    }
+
+    /** GT getFluidFacing: выход жидкостей (Ctrl + ключ), по умолчанию тоже задняя сторона. */
+    public Direction fluidOutputSide() {
+        return fluidOut != null && fluidOut != front() ? fluidOut : front().getOpposite();
+    }
+
+    /** Ключ (D101): true — сторона выхода изменилась; на лицевую сторону выход не ставится. */
+    public boolean setOutputSide(Direction side, boolean fluid) {
+        if (side == front() || side == (fluid ? fluidOutputSide() : outputSide())) return false;
+        if (fluid) fluidOut = side;
+        else itemOut = side;
+        coversChanged();
+        return true;
+    }
+
+    /** GT setMainFacing: выход, оказавшийся на новой лицевой стороне, уходит на заднюю. */
+    void mainFacingChanged() {
+        if (itemOut == front()) itemOut = null;
+        if (fluidOut == front()) fluidOut = null;
+        coversChanged();
     }
 
     public ElectricMachineLogic logic() {
@@ -109,7 +144,9 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
     }
 
     public @Nullable ResourceHandler<FluidResource> fluidHandler(@Nullable Direction side) {
-        return type().tank > 0 && side != front() ? fluids : null;
+        if (type().tank <= 0 || side == front()) return null;
+        // GT isLiquidInput: со стороны выхода жидкостей не заливается
+        return side != null && side == fluidOutputSide() ? drainOnly : fluids;
     }
 
     public @Nullable ResourceHandler<ItemResource> itemHandler(@Nullable Direction side) {
@@ -184,9 +221,9 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         }
     }
 
-    /** GT mFluidTransfer: выходная жидкость сливается в бак со стороны выхода, не больше 1000 × (int) 1.5^mTier л за раз (LV 1000, MV 2000). */
+    /** GT mFluidTransfer: выходная жидкость сливается в бак со стороны выхода жидкостей, не больше 1000 × (int) 1.5^mTier л за раз (LV 1000, MV 2000). */
     private void autoOutputFluid(ServerLevel sl) {
-        Direction side = outputSide();
+        Direction side = fluidOutputSide();
         ResourceHandler<FluidResource> target = sl.getCapability(net.neoforged.neoforge.capabilities.Capabilities.Fluid.BLOCK, worldPosition.relative(side), side.getOpposite());
         if (target == null) return;
         FluidResource r = outTank.resource();
@@ -369,6 +406,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         out.putBoolean("itemTransfer", itemTransfer);
         out.putBoolean("fluidTransfer", fluidTransfer);
         out.putBoolean("allowedToWork", allowedToWork);
+        out.putInt("itemOut", itemOut == null ? -1 : itemOut.get3DDataValue());
+        out.putInt("fluidOut", fluidOut == null ? -1 : fluidOut.get3DDataValue());
         if (!pending.isEmpty()) out.store("pending", ItemStack.OPTIONAL_CODEC.listOf(), pending);
     }
 
@@ -386,6 +425,9 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         itemTransfer = in.getBooleanOr("itemTransfer", false);
         fluidTransfer = in.getBooleanOr("fluidTransfer", false);
         allowedToWork = in.getBooleanOr("allowedToWork", true);
+        int io = in.getIntOr("itemOut", -1), fo = in.getIntOr("fluidOut", -1);
+        itemOut = io < 0 ? null : Direction.from3DDataValue(io);
+        fluidOut = fo < 0 ? null : Direction.from3DDataValue(fo);
         pending = in.read("pending", ItemStack.OPTIONAL_CODEC.listOf()).orElse(List.of());
     }
 }

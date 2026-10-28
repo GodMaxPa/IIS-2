@@ -59,11 +59,13 @@ public class ElectricMachineMenu extends MachineMenu {
     public int outFluidAmount() { return data(10); }
     public int outFluidId() { return data(11); }
 
-    /** Кнопки автовыгрузки (GT_Container_BasicMachine.slotClick 0/1). */
+    /** Кнопки автовыгрузки (GT_Container_BasicMachine.slotClick 0/1); 2 — капсула/ведро на курсоре по иконке жидкости (D101). */
     @Override
     public boolean clickMenuButton(net.minecraft.world.entity.player.Player player, int id) {
+        if (!(container instanceof ru.iis.lv.block.ElectricMachineBlockEntity be)) return id >= 0 && id <= 2;
+        if (id == 2) return type.tank > 0 && ru.iis.fluid.GuiFluidClick.click(player, this, be.tank(), be.outTank());
         if (id != 0 && id != 1) return false;
-        if (container instanceof ru.iis.lv.block.ElectricMachineBlockEntity be) be.toggleTransfer(id);
+        be.toggleTransfer(id);
         return true;
     }
 }

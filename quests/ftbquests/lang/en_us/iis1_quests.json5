@@ -1,0 +1,2928 @@
+{
+  "chapter.1D00000000000000.title": "Rocket & ODP & Array",
+  "chapter.1D00000000000001.title": "Advanced ME network",
+  "chapter.1D00000000000002.title": "AL, Nuc Reactor, ODP III",
+  "chapter.1D00000000000003.title": "Rails & Trains",
+  "chapter.1D00000000000004.title": "[G] General Progress",
+  "chapter.1D00000000000005.title": "Vacuum Freezer & LST",
+  "chapter.1D00000000000006.title": "First Aluminium",
+  "chapter.1D00000000000007.title": "D.Tower & I.Compressor",
+  "chapter.1D00000000000008.title": "Circuit & Turbine & Pump",
+  "chapter.1D00000000000009.title": "First Steps",
+  "chapter.1D0000000000000A.title": "Good Circuit",
+  "chapter.1D0000000000000B.title": "Big chemistry",
+  "chapter.1D0000000000000C.title": "N. Star & Fusion Reactor",
+  "chapter.1D0000000000000D.title": "Naquadah & Fusion II",
+  "chapter.1D0000000000000E.title": "Polyethylene & PGS",
+  "chapter.1D0000000000000F.title": "More Multiblocks",
+  "chapter.1D00000000000010.title": "Space Rocket & Moon",
+  "chapter.1D00000000000011.title": "Titanium & Start of ME",
+  "chapter.1D00000000000012.title": "Cmb.Engine, L.Turb., ODP",
+  "chapter.1D00000000000013.title": "End Game Content",
+  "chapter.1D00000000000014.title": "Very Nice Equipment",
+  "chapter.1D00000000000016.title": "Cross breeding",
+  "chapter.1D00000000000017.title": "EnderIO Features",
+  "chapter.1D00000000000018.title": "[G] Multiblocks",
+  "chapter.1D00000000000019.title": "[G] Quality of Life",
+  "chapter.1D0000000000001A.title": "[G] SB Machines",
+  "chapter.1D0000000000001B.title": "Steam & Steel",
+  "chapter.1D0000000000001C.title": "First Tools",
+  "chapter.1D0000000000001D.title": "Nether & LBB",
+  "chapter.1D0000000000001E.title": "AE2: Proc. & Cont.",
+  "chapter.1D0000000000001F.title": "HV & Cleanroom",
+  "chapter.1D00000000000020.title": "Large Plasma Generator",
+  "chapter.1D00000000000021.title": "Project Red",
+  "chapter.1D00000000000022.title": "[Rewards List]",
+  "quest.1A00000000000004.quest_desc": [
+    "A part of the IV tier pump."
+  ],
+  "quest.1A00000000000004.title": "Tungstensteel Rotor",
+  "quest.1A00000000000005.quest_desc": [
+    "A part of the IV tier pump."
+  ],
+  "quest.1A00000000000005.title": "Tungstensteel Screw",
+  "quest.1A00000000000006.quest_desc": [
+    "You may produce this out of steel and tungsten ingots."
+  ],
+  "quest.1A00000000000006.title": "Tungstensteel Ingot",
+  "quest.1A00000000000017.quest_desc": [
+    "Screw, rotor and pipe are different, other parts are the same as those for other pumps."
+  ],
+  "quest.1A00000000000017.title": "Electric Pump (EV)",
+  "quest.1A0000000000001D.quest_desc": [
+    "A part of HV tier machines."
+  ],
+  "quest.1A0000000000001D.title": "Emitter (HV)",
+  "quest.1A0000000000001E.quest_desc": [
+    "Can be created from the ingot using a Lathe or an Extruder."
+  ],
+  "quest.1A0000000000001E.title": "Platinum Rod",
+  "quest.1A0000000000001F.quest_desc": [
+    "You have to prepare and build a blast furnace with kanthal coil blocks and with a HV energy hatch (or better) in order to smelt titanium ingots."
+  ],
+  "quest.1A0000000000001F.title": "Titanium Ingot",
+  "quest.1A00000000000020.quest_desc": [
+    "The drop of endermans."
+  ],
+  "quest.1A00000000000020.title": "Ender Pearl",
+  "quest.1A00000000000021.quest_desc": [
+    "Height to search: 40 - 50 PLATINUM vein (Sheldonite, Palladium, Platinum and Iridium). Or you may look it up in NEI and find another way to obtain platinum."
+  ],
+  "quest.1A00000000000021.title": "Platinum",
+  "quest.1A00000000000026.quest_desc": [
+    "Use a Lathe to produce the lens from the exquisite gem."
+  ],
+  "quest.1A00000000000026.title": "Yellow Garnet Lens",
+  "quest.1A0000000000002A.quest_desc": [
+    "Prepare 9 blue gems such as: Sapphire, Blue Topaz or Opal."
+  ],
+  "quest.1A0000000000002A.title": "Nine Blue Gems",
+  "quest.1A0000000000002C.quest_desc": [
+    "A cheap alternative for a Diamond Lens. You can make it from a glass pane. Look it up in NEI."
+  ],
+  "quest.1A0000000000002C.title": "Glass Lens",
+  "quest.1A0000000000002D.quest_desc": [
+    "Put an Exquisite Gem into a Lathe."
+  ],
+  "quest.1A0000000000002D.title": "Diamond Lens",
+  "quest.1A0000000000002F.quest_desc": [
+    "Put an Exquisite Gem into a Lathe."
+  ],
+  "quest.1A0000000000002F.title": "Green Sapphire Lens",
+  "quest.1A00000000000040.quest_desc": [
+    "Height to search: 40 - 80 QUARTZ vein (Quartzite, Barite, Certus Quartz). Certus Quartz is important stuff for most machines of AE2."
+  ],
+  "quest.1A00000000000040.title": "Certus Quartz",
+  "quest.1A00000000000042.quest_desc": [
+    "The main difference from previous tier, in addition to the higher speed, is the ability to get by-products."
+  ],
+  "quest.1A00000000000042.title": "Universal Macerator",
+  "quest.1A00000000000046.quest_desc": [
+    "A mix of an Ender Pearl and Blaze Powder."
+  ],
+  "quest.1A00000000000046.title": "Eye of Ender",
+  "quest.1A00000000000047.quest_desc": [
+    "This is just a crushed blaze rod."
+  ],
+  "quest.1A00000000000047.title": "Blaze Powder",
+  "quest.1A00000000000048.quest_desc": [
+    "Go to hell, bastard! Sorry, I mean, you just have to go to the Nether in order to find a blaze and obtain blaze rods."
+  ],
+  "quest.1A00000000000048.title": "Blaze Rod",
+  "quest.1A0000000000004A.quest_desc": [
+    "Compressor can... yeah, compress! :)"
+  ],
+  "quest.1A0000000000004A.title": "Compressor",
+  "quest.1A00000000000056.quest_desc": [
+    "Is it okay to create 1 plate from 2 ingots with a hand-held hammer? Of course not! Is it more profitable to use 3 ingots to create 2 plates via steam forge hammer? Not bad, but with this bending machine you will craft one-to-one, ingot-to-plate."
+  ],
+  "quest.1A00000000000056.title": "Basic Bending Machine",
+  "quest.1A00000000000057.quest_desc": [
+    "Find or craft (with an implosion compressor from dust) 9 yellow garnet gems."
+  ],
+  "quest.1A00000000000057.title": "Yellow Garnet (gem)",
+  "quest.1A00000000000058.quest_desc": [
+    "It can help you to sift purified ore of any gems to obtain great gems with a small chance, and moreover, it will give you a more profitable result."
+  ],
+  "quest.1A00000000000058.title": "Basic Sifting Machine",
+  "quest.1A00000000000059.quest_desc": [
+    "You can produce it with a sifting machine from purified crushed ore. Another way is to use an implosion compressor to get the output from low level gems or even gem dust."
+  ],
+  "quest.1A00000000000059.title": "Exquisite Blue Gem",
+  "quest.1A00000000000060.quest_desc": [
+    "Use a lathe to create the rod from nether quartz."
+  ],
+  "quest.1A00000000000060.title": "Nether Quartz Rod",
+  "quest.1A00000000000061.quest_desc": [
+    "Use lathe to create the rod from certus quartz"
+  ],
+  "quest.1A00000000000061.title": "Certus Quartz Rod",
+  "quest.1A00000000000062.quest_desc": [
+    "You may produce it with a sifting machine from purified crushed ore. Another way is to use an implosion compressor to get the output from low level gems."
+  ],
+  "quest.1A00000000000062.title": "Exquisite Yellow Garnet",
+  "quest.1A00000000000066.quest_desc": [
+    "Stick + redstone"
+  ],
+  "quest.1A00000000000066.title": "Redstone Torch",
+  "quest.1A00000000000067.quest_desc": [
+    "Redstone quests chain. Height for search: 10-40 REDSTONE vein (Redstone, Ruby and Cinnabar)."
+  ],
+  "quest.1A00000000000067.title": "Real Redstone",
+  "quest.1A0000000000006A.quest_desc": [
+    "Copper + redstone (using an alloy smelter) to get a red alloy ingot. Then create a plate from it."
+  ],
+  "quest.1A0000000000006A.title": "Red Alloy Plate",
+  "quest.1A00000000000072.quest_desc": [
+    "With this multiblock machine you will be able to produce steel faster. Also you may smelt there other refractory metals. For the first run on LV tier use 3 LV energy hatches and connect to them a battery buffer with at least 5 small LV batteries to send 5 amperes (via 8x Tin cable). Or you may use only 2 LV energy hatches with a battery buffer with at less 2 small LV batteries closely connected to each hatch. Note that energy losses at LV tier are high, so don't use long wire connections (in any cases)."
+  ],
+  "quest.1A00000000000072.title": "Electric blast furnace",
+  "quest.1A00000000000073.quest_desc": [
+    "It can dismantle gregtech machines, connect or disconnect pipes, set the direction of a gas or steam flow."
+  ],
+  "quest.1A00000000000073.title": "Wrench (gregtech)",
+  "quest.1A00000000000074.quest_desc": [
+    "Use a metal bender."
+  ],
+  "quest.1A00000000000074.title": "Tungstensteel Plate",
+  "quest.1A00000000000075.quest_desc": [
+    "You may craft it from the plate using a hammer. But if you have MV (or better) extruder, you can use it to make small gears directly from the ingot."
+  ],
+  "quest.1A00000000000075.title": "Small Tungstensteel Gear",
+  "quest.1A0000000000007F.quest_desc": [
+    "A motor for MV tier machines."
+  ],
+  "quest.1A0000000000007F.title": "Electric Motor (MV)",
+  "quest.1A00000000000083.quest_desc": [
+    "Use a fluid extractor MV+ tier to get helium from monazite."
+  ],
+  "quest.1A00000000000083.title": "Helium Gas",
+  "quest.1A00000000000084.quest_desc": [
+    "An EV tier energy hatch - it can consume up to 2048 eu/t."
+  ],
+  "quest.1A00000000000084.title": "EV Energy Hatch",
+  "quest.1A00000000000085.quest_desc": [
+    "Use an EBF with Nichrome coils (or better) to smelt Iridium dust into the ingot."
+  ],
+  "quest.1A00000000000085.title": "Iridium Ingot",
+  "quest.1A00000000000089.quest_desc": [
+    "A part of high tech machines."
+  ],
+  "quest.1A00000000000089.title": "Emitter (MV)",
+  "quest.1A0000000000008D.quest_desc": [
+    "There few ways to craft it, use NEI."
+  ],
+  "quest.1A0000000000008D.title": "Long Magnetic Neodymium Rod",
+  "quest.1A0000000000008F.quest_desc": [
+    "Use a wiremill..."
+  ],
+  "quest.1A0000000000008F.title": "Fine Annealed Copper Wire",
+  "quest.1A00000000000093.quest_desc": [
+    "Use an HV tier polarizer on a neodymium rod. A Neodymium ingot can be obtained using an EBF because using a regular furnace won't work."
+  ],
+  "quest.1A00000000000093.title": "Magnetic Neodymium Rod",
+  "quest.1A00000000000095.quest_desc": [
+    "You can make it from a regular copper ingot with oxygen using an EBF or an Arc furnace."
+  ],
+  "quest.1A00000000000095.title": "Annealed Copper",
+  "quest.1A0000000000009B.quest_desc": [
+    "Use an iron ingot and charcoal or charcoal blocks to get steel ingots."
+  ],
+  "quest.1A0000000000009B.title": "First Steel",
+  "quest.1A0000000000009C.quest_desc": [
+    "You don't have to craft it immediately. But it will be required in the future. Just slice a diamond block by a cutting machine."
+  ],
+  "quest.1A0000000000009C.title": "Diamond Plate",
+  "quest.1A000000000000A3.quest_desc": [
+    "To make a tin alloy ingot you have to smelt iron and tin 1-to-1 in an alloy smelter. Then use a bender to make the plate."
+  ],
+  "quest.1A000000000000A3.title": "Tin Alloy",
+  "quest.1A000000000000A4.quest_desc": [
+    "Height for search: 10-40 IRON ORE vein (Brown Limonite, Yellow Limonite, Banded Iron, Malachite) or 50-120 MAGNETITE vein (Magnetite, Iron, VanadiumMagnetite) or 10 - 30 COPPER vein (Chalcopyrite, Iron, Pyrite, Copper). Find and smelt Iron/Magnetite/Limonite/Banded Iron ores to get an iron ingot. Note that with level 1 pickaxe (stone or flint one) you can only dig Brown Limonite ore. Other ores require at least second level pickaxe to dig them out. Another way to find iron ore is to dig it out of a small ore block."
+  ],
+  "quest.1A000000000000A4.title": "Iron",
+  "quest.1A000000000000A5.quest_desc": [
+    "Height for search: 40-120 TIN vein (Cassiterite, Tin). Melt tin ore to get a tin ingot. Also you may smelt an \"Impure Pile of Tin Dust\", which you can find by breaking small tin ore blocks."
+  ],
+  "quest.1A000000000000A5.title": "Tin",
+  "quest.1A000000000000A6.quest_desc": [
+    "Height to search: 5 - 30 BERYLLIUM vein (Beryllium, Emerald, Thorium). Use a regular furnace to get ingot. Then use a bender to get a plate."
+  ],
+  "quest.1A000000000000A6.title": "Beryllium",
+  "quest.1A000000000000A7.quest_desc": [
+    "Craft a furnace to smelt ores or cook food. Note! some quests contain two rewards: fixed and one more is variation. Variation you may choose in the bottom of this window by click arrow right."
+  ],
+  "quest.1A000000000000A7.title": "First Furnace",
+  "quest.1A000000000000AA.quest_desc": [
+    "With a hammer or a bender."
+  ],
+  "quest.1A000000000000AA.title": "Double Beryllium Plate",
+  "quest.1A000000000000AD.quest_desc": [
+    "An EV tier Robot Arm."
+  ],
+  "quest.1A000000000000AD.title": "Robot Arm (EV)",
+  "quest.1A000000000000AE.quest_desc": [
+    "Height to search: 20 - 30 URANIUM vein (Uraninite, Uranium), 10 - 40 PITCHBLENDE vein (Pitchblende, Uraninite)."
+  ],
+  "quest.1A000000000000AE.title": "Uranium 238 Ingot",
+  "quest.1A000000000000B2.quest_desc": [
+    "For starters, you have to craft an Iron or Bronze pickaxe head. Then use a wooden stick to make a second level pickaxe. It can dig most of gregtech ores (but not all). Later you can craft a level 3 pickaxe from §9cobalt §for §bdiamonds§f."
+  ],
+  "quest.1A000000000000B2.title": "2 Level Pickaxe",
+  "quest.1A000000000000B7.quest_desc": [
+    "Height to search: 5 - 30. You can find it in a beryllium ore vein. Another way to get it - as by-product of coal, monazite, uraninite, uranium or pitchblende ores (look it up in NEI)."
+  ],
+  "quest.1A000000000000B7.title": "Thorium Dust",
+  "quest.1A000000000000BA.quest_desc": [
+    "This shit is an important part of most low tier conveyors."
+  ],
+  "quest.1A000000000000BA.title": "Rubber Sheet",
+  "quest.1A000000000000BB.quest_desc": [
+    "Use any tier chemical reactor to produce Radon from 3 plutonium-239 ingots."
+  ],
+  "quest.1A000000000000BB.title": "Radon",
+  "quest.1A000000000000BC.quest_desc": [
+    "Use HV+ tier chemical reactor to make an indium concentrate fluid from purified galena and sphalerite ores with sulfuric acid."
+  ],
+  "quest.1A000000000000BC.title": "Indium Concentrate",
+  "quest.1A000000000000C0.quest_desc": [
+    "Height to search: 10-40 NICKEL vein (Garnierite, Nickel, Cobaltite, Pentlandite). You can create a cobalt pickaxe that can dig even diamond blocks. To make a cobalt ingot from cobaltite dust you have to put it into your primitive blast furnace with coal or charcoal. Or you can directly put cobaltite ore into a regular furnace (but with lower efficiency). In the second case you will get 1 ingot per ore block instead of 2 ingots per block ore when using a macerator and a primitive blast furnace."
+  ],
+  "quest.1A000000000000C0.title": "Cobaltite Dust",
+  "quest.1A000000000000C4.quest_desc": [
+    "An EV tier chemical reactor."
+  ],
+  "quest.1A000000000000C4.title": "Advanced Chemical Reactor III",
+  "quest.1A000000000000C5.quest_desc": [
+    "An HV tier Chemical Bath."
+  ],
+  "quest.1A000000000000C5.title": "Advanced Chemical Bath II",
+  "quest.1A000000000000C6.quest_desc": [
+    "Can be used as a part of some HV machines."
+  ],
+  "quest.1A000000000000C6.title": "Electric Pump (HV)",
+  "quest.1A000000000000C9.quest_desc": [
+    "A part of a Processing Array multiblock."
+  ],
+  "quest.1A000000000000C9.title": "Robust Tungstensteel Machine Casing",
+  "quest.1A000000000000D0.quest_desc": [
+    "You can get it from deuterium that in turn can be produced from hydrogen."
+  ],
+  "quest.1A000000000000D0.title": "Tritium",
+  "quest.1A000000000000D1.quest_desc": [
+    "You can get it from hydrogen."
+  ],
+  "quest.1A000000000000D1.title": "Deuterium",
+  "quest.1A000000000000D3.quest_desc": [
+    "Pour water into an electrolyzer, or find any other way to get it."
+  ],
+  "quest.1A000000000000D3.title": "Hydrogen Gas",
+  "quest.1A000000000000D4.quest_desc": [
+    "To produce it, you have to use a Fusion reactor tier 1."
+  ],
+  "quest.1A000000000000D4.title": "Helium Plasma",
+  "quest.1A000000000000D6.quest_desc": [
+    "To produce it, you have to use a Fusion reactor tier 1."
+  ],
+  "quest.1A000000000000D6.title": "Oxygen Plasma",
+  "quest.1A000000000000D7.quest_desc": [
+    "To produce it, you have to use a Fusion reactor tier 2."
+  ],
+  "quest.1A000000000000D7.title": "Sulfur Plasma",
+  "quest.1A000000000000D8.quest_desc": [
+    "To produce it, you have to use a Fusion reactor tier 2."
+  ],
+  "quest.1A000000000000D8.title": "Nitrogen Plasma",
+  "quest.1A000000000000D9.quest_desc": [
+    "Height for search: 50-60 SALTS vein (Rock Salt, Salt, Lepidolite, Spodumene)."
+  ],
+  "quest.1A000000000000D9.title": "Rock Salt",
+  "quest.1A000000000000DA.quest_desc": [
+    "To produce it, you have to use a Fusion reactor tier 3."
+  ],
+  "quest.1A000000000000DA.title": "Iron Plasma",
+  "quest.1A000000000000DD.quest_desc": [
+    "To produce it, you have to use a Fusion reactor tier 3."
+  ],
+  "quest.1A000000000000DD.title": "Nickel Plasma",
+  "quest.1A000000000000DE.quest_desc": [
+    "A component used for crafting LV, MV and HV tiers electronic circuits. You can obtain it by dicing an engraved wafer that can be produced using a precision laser with a ruby lens."
+  ],
+  "quest.1A000000000000DE.title": "Integrated Logic Circuit",
+  "quest.1A000000000000DF.quest_desc": [
+    "The substrate for electronic circuits."
+  ],
+  "quest.1A000000000000DF.title": "Wafer",
+  "quest.1A000000000000E0.quest_desc": [
+    "Just drop wood logs into a macerator to get wood pulp. Place it to an assembly machine with mold plate and glue. To get glue, use a centrifuge and sticky resin. Another way is not so profitable because of higher consumption of glue - use a cell with glue and 8 wood pulps to make a Phenolic Circuit Board on a crafting table."
+  ],
+  "quest.1A000000000000E0.title": "Phenolic Circuit Board",
+  "quest.1A000000000000E1.quest_desc": [
+    "A component used for crafting LV, MV and HV tiers electronic circuits. You can obtain it by dicing an engraved wafer that can be produced using a precision laser with a ruby lens."
+  ],
+  "quest.1A000000000000E1.title": "Integrated Logic Circuit",
+  "quest.1A000000000000E2.quest_desc": [
+    "Smelt 9 tin and 1 antimony ingots in an alloy smelter to get 10 soldering alloy ingots."
+  ],
+  "quest.1A000000000000E2.title": "Soldering Alloy Ingot",
+  "quest.1A000000000000E3.quest_desc": [
+    "An MV tier circuit that can be upgraded into a HV tier circuit. Can be created by a Circuit Assembly Machine. Use NEI for more details."
+  ],
+  "quest.1A000000000000E3.title": "Good Integrated Circuit",
+  "quest.1A000000000000E4.quest_desc": [
+    "A part of circuits."
+  ],
+  "quest.1A000000000000E4.title": "Transistor",
+  "quest.1A000000000000E5.quest_desc": [
+    "One of the most required items for many chemical processes and circuit crafting."
+  ],
+  "quest.1A000000000000E5.title": "Polyethylene Sheet",
+  "quest.1A000000000000E6.quest_desc": [
+    "Height to search: 10-40. For starters, find a sapphire ore vein. Then use a Sifting machine to get an exquisite green sapphire from crushed green sapphire ore."
+  ],
+  "quest.1A000000000000E6.title": "Exquisite Green Sapphire",
+  "quest.1A000000000000E7.quest_desc": [
+    "Another type of wafer."
+  ],
+  "quest.1A000000000000E7.title": "RAM chip (wafer)",
+  "quest.1A000000000000E8.quest_desc": [
+    "A RAM chip often used for crafting circuits."
+  ],
+  "quest.1A000000000000E8.title": "Random Access Memory Chip",
+  "quest.1A000000000000E9.quest_desc": [
+    "Height to search: 30-60 GALENA vein (Galena, Silver, Lead). You may find silver ore in a vein of galena ore."
+  ],
+  "quest.1A000000000000E9.title": "Silver Ingot",
+  "quest.1A000000000000EA.quest_desc": [
+    "An alloy of silver and gold (use an alloy smelter)."
+  ],
+  "quest.1A000000000000EA.title": "Electrum Ingot",
+  "quest.1A000000000000EB.quest_desc": [
+    "Height to search: 60-80 GOLD vein (Magnetite, Vanadium Magnetite, Gold). Find gold inside a vein of magnetite ore and smelt it to get an ingot. Also you may meet it in small gold ore blocks. So, \"impure pile of Gold dust\" can be smelted into a gold ingot as well."
+  ],
+  "quest.1A000000000000EB.title": "Gold Ingot",
+  "quest.1A000000000000EC.quest_desc": [
+    "An HV tier Circuit."
+  ],
+  "quest.1A000000000000EC.title": "Advanced Circuit",
+  "quest.1A000000000000ED.quest_desc": [
+    "Use a wiremill..."
+  ],
+  "quest.1A000000000000ED.title": "Fine Electrum Wire",
+  "quest.1A000000000000EE.quest_desc": [
+    "Can produce circuits like the basic tier machine, but more powerful ones."
+  ],
+  "quest.1A000000000000EE.title": "Advanced Circuit Assembling",
+  "quest.1A000000000000EF.quest_desc": [
+    "An MV tier robot arm."
+  ],
+  "quest.1A000000000000EF.title": "Robot Arm (MV)",
+  "quest.1A000000000000F0.quest_desc": [
+    "Use an extruder or a lathe to get it from an ingot."
+  ],
+  "quest.1A000000000000F0.title": "Electrum Rod",
+  "quest.1A000000000000F1.quest_desc": [
+    "Use an autoclave to get nether quartz from nether dust or just smelt nether quartz ore (block) using a furnace or put nether quartz ore (block) into a forge hammer."
+  ],
+  "quest.1A000000000000F1.title": "Nether Quartz (gem or dust)",
+  "quest.1A000000000000F2.quest_desc": [
+    "Height to search: 10-40 REDSTONE vein (Redstone, Ruby, Cinnabar). You may get it from ruby dust via an advanced electrolyzer. Also ruby dust can be produced from redstone dust."
+  ],
+  "quest.1A000000000000F2.title": "Chrome Dust",
+  "quest.1A000000000000F3.quest_desc": [
+    "It can disintegrate most chemical compounds to simple substances."
+  ],
+  "quest.1A000000000000F3.title": "Advanced Electrolyzer",
+  "quest.1A000000000000F4.quest_desc": [
+    "Put aluminium dust into an EBF (Electric blast furnace) and wait for 85 seconds. Don't forget to feed EBF with sufficient energy during the process (at least 204k of energy per one aluminium ingot excluding energy loss on transmission by wires)."
+  ],
+  "quest.1A000000000000F4.title": "Aluminium Ingot",
+  "quest.1A000000000000F5.quest_desc": [
+    "Better than a simple electronic circuit. Can be used to craft MV tier machines."
+  ],
+  "quest.1A000000000000F5.title": "Good Electronic Circuit",
+  "quest.1A000000000000F6.quest_desc": [
+    "Height to search: 20-30 MANGANESE vein (Grossular, Spessartine, Pyrolusite, Tantalite). Find a vein with tantalite, pyrolusite or spessartine ore. You may get manganese from all of them as by-product."
+  ],
+  "quest.1A000000000000F6.title": "Manganese Dust",
+  "quest.1A000000000000F7.quest_desc": [
+    "The main material for HV tier machines."
+  ],
+  "quest.1A000000000000F7.title": "Stainless Steel Ingot",
+  "quest.1A000000000000F8.quest_desc": [
+    "A part of HV steam and gas turbines. Also can be used for other HV tier machines."
+  ],
+  "quest.1A000000000000F8.title": "Stainless Steel Rotor",
+  "quest.1A000000000000F9.quest_desc": [
+    "A motor for HV tier machines."
+  ],
+  "quest.1A000000000000F9.title": "Electric Motor (HV)",
+  "quest.1A000000000000FA.quest_desc": [
+    "A base for any HV tier machines."
+  ],
+  "quest.1A000000000000FA.title": "HV Machine Hull",
+  "quest.1A000000000000FB.quest_desc": [
+    "An HV tier piston."
+  ],
+  "quest.1A000000000000FB.title": "Electric Piston (HV)",
+  "quest.1A000000000000FD.quest_desc": [
+    "Silver, Gold and Copper - that is all you need to craft it."
+  ],
+  "quest.1A000000000000FD.title": "Black Bronze Dust",
+  "quest.1A000000000000FE.quest_desc": [
+    "Height for search: 10-30 COPPER vein (Chalcopyrite, Iron, Pyrite, Copper) or 80-120 TETRAHEDRITE vein (Tetrahedrite, Copper, Stibnite). Melt copper ore to get a copper ingot. Also you may smelt an \"Impure Pile of Copper Dust\", which you can find by breaking small copper ore blocks."
+  ],
+  "quest.1A000000000000FE.title": "Copper",
+  "quest.1A000000000000FF.quest_desc": [
+    "Black Bronze, Nickel and Steel - that is all. Use NEI."
+  ],
+  "quest.1A000000000000FF.title": "Black Steel Dust",
+  "quest.1A00000000000100.quest_desc": [
+    "Height for search: 10-40 NICKEL vein (Garnierite, Nickel, Cobaltite, Pentlandite). Find and smelt nickel ore (or Pentlandite or Garnierite) to get a nickel ingot."
+  ],
+  "quest.1A00000000000100.title": "Nickel",
+  "quest.1A00000000000103.quest_desc": [
+    "Height for search: 5-20 DIAMOND vein (Graphite, Diamond, Coal). You have to sift purified diamond ore to find an exquisite diamond - it would be a nice raw stuff to create the diamond lens."
+  ],
+  "quest.1A00000000000103.title": "Exquisite Diamond",
+  "quest.1A00000000000104.quest_desc": [
+    "With this lathe it will become possible to avoid the need to produce a diamond lens from an Exquisite Diamond. Just craft a glass pane in order to make a glass lens from it. It may be used in the same recipes as the diamond one."
+  ],
+  "quest.1A00000000000104.title": "Advanced Lathe II",
+  "quest.1A00000000000108.quest_desc": [
+    "A component of electronic devices."
+  ],
+  "quest.1A00000000000108.title": "Capacitor",
+  "quest.1A00000000000109.quest_desc": [
+    "It will help you to craft circuits from LV to IV. To craft this use a polyethylene sheet, copper foil and sulfuric acid. Use NEI for more info."
+  ],
+  "quest.1A00000000000109.title": "Plastic Circuit Board",
+  "quest.1A0000000000010B.quest_desc": [
+    "Use a wiremill twice - to get wire from an ingot and to get fine wire from wire."
+  ],
+  "quest.1A0000000000010B.title": "Fine Red Alloy Wire",
+  "quest.1A0000000000010C.quest_desc": [
+    "A basic electronic component."
+  ],
+  "quest.1A0000000000010C.title": "Small Coil",
+  "quest.1A0000000000010E.quest_desc": [
+    "Height for search is not defined, because there are no existing veins of zinc ore. Find a Crushed Zinc Ore. It is one of the materials used to craft a filter for sifting machine. Also it is the only source of gallium dust at your current industrial level."
+  ],
+  "quest.1A0000000000010E.title": "Crushed Zinc Ore",
+  "quest.1A00000000000110.quest_desc": [
+    "An EV tier circuit."
+  ],
+  "quest.1A00000000000110.title": "Workstation",
+  "quest.1A00000000000111.quest_desc": [
+    "The only way to obtain it from a regular steel rod is using an Electromagnetic Polarizer."
+  ],
+  "quest.1A00000000000111.title": "Magnetic Steel Rod",
+  "quest.1A00000000000112.quest_desc": [
+    "HV batteries that you may create by using a large battery hull. Can contain sodium, cadmium or lithium. To complete this quest, you have to craft any one of them."
+  ],
+  "quest.1A00000000000112.title": "Large Battery",
+  "quest.1A00000000000113.quest_desc": [
+    "Use a wiremill to make it."
+  ],
+  "quest.1A00000000000113.title": "Fine Tin Wire",
+  "quest.1A00000000000114.quest_desc": [
+    "Regular walls for a vacuum freezer."
+  ],
+  "quest.1A00000000000114.title": "Frost Proof Machine Casing",
+  "quest.1A00000000000115.quest_desc": [
+    "Primary purpose of this machine is cooling hot ingots that you may get from a blast furnace."
+  ],
+  "quest.1A00000000000115.title": "Vacuum Freezer",
+  "quest.1A00000000000116.quest_desc": [
+    "Use stainless steel plates."
+  ],
+  "quest.1A00000000000116.title": "HV Machine Casing",
+  "quest.1A00000000000117.quest_desc": [
+    "...with a hammer or a metal bender."
+  ],
+  "quest.1A00000000000117.title": "Electrum Foil",
+  "quest.1A00000000000118.quest_desc": [
+    "A mix of Aluminium + Iron + Chrome."
+  ],
+  "quest.1A00000000000118.title": "Kanthal Dust",
+  "quest.1A00000000000119.quest_desc": [
+    "It is a material for crafting next tier coil blocks for a Blast Furnace / pyrolyse oven / multi smelter. Now it is HOT! Don't keep it in your inventory for a long time, at least not without a rubber suit. To cool it, you have to use a vacuum freezer."
+  ],
+  "quest.1A00000000000119.title": "Hot Kanthal Ingot",
+  "quest.1A0000000000011B.quest_desc": [
+    "Use a hammer / forge hammer to make a tin plate."
+  ],
+  "quest.1A0000000000011B.title": "Tin Plate",
+  "quest.1A0000000000011C.quest_desc": [
+    "An Electronic Circuit is the main item to craft any electronic machines."
+  ],
+  "quest.1A0000000000011C.title": "Electronic Circuit",
+  "quest.1A0000000000011D.quest_desc": [
+    "An important part of a steam turbine. To craft it you have to prepare 4 tin plates, a tin ring and a tin screw. Tin rings are crafted from tin rods with a hammer. Tin screws - also from tin rods, but using a saw and a file. The following tools are required for rotor crafting: a hammer, a file and a screwdriver."
+  ],
+  "quest.1A0000000000011D.title": "Tin Rotor",
+  "quest.1A0000000000011E.quest_desc": [
+    "Use 4 redstone dusts and an iron rod to craft a Magnetic Iron Rod. Good advice for you: craft the§6§6§0§1§2§3§b Basic Polarize§f§br§f to polarize rods without consuming redstone. It is not required, but is strongly recommended to save redstone to apply it for other goals."
+  ],
+  "quest.1A0000000000011E.title": "Magnetic Iron Rod",
+  "quest.1A0000000000011F.quest_desc": [
+    "Use a file on an ingot to make the rod. Later you will be able to make it using a lathe or an extruder."
+  ],
+  "quest.1A0000000000011F.title": "Iron Rod",
+  "quest.1A00000000000120.quest_desc": [
+    "It is time to craft an Electric motor (LV). You will find a lot of items where it can be used."
+  ],
+  "quest.1A00000000000120.title": "Electric Motor (LV)",
+  "quest.1A00000000000122.quest_desc": [
+    "Can convert voltage between 512 and 2048 eu/t both ways."
+  ],
+  "quest.1A00000000000122.title": "High Voltage Transformer",
+  "quest.1A00000000000123.quest_desc": [
+    "Craft the carpet from black wool. One more usage for wool is shredding it in order to get strings."
+  ],
+  "quest.1A00000000000123.title": "Black Carpet",
+  "quest.1A00000000000125.quest_desc": [
+    "To craft any LV machine you first have to craft an LV Machine Casing."
+  ],
+  "quest.1A00000000000125.title": "LV Machine Casing",
+  "quest.1A00000000000126.quest_desc": [
+    "The Steam Turbine is close. Next step is the LV machine hull - craft it now."
+  ],
+  "quest.1A00000000000126.title": "LV machine Hull",
+  "quest.1A00000000000127.quest_desc": [
+    "The tech chain is as follows: Iron ingot (to a furnace)-> iron nuggets (also to a furnace) -> wrought Iron nuggets, smelt them with use of a specific mold into a wrought iron ingot with an alloy smelter. And a wrought Iron ingot can be easily transformed into a wrought iron plate."
+  ],
+  "quest.1A00000000000127.title": "Wrought Iron Plate",
+  "quest.1A00000000000128.quest_desc": [
+    "Yes! It is time to craft your first energy generator!"
+  ],
+  "quest.1A00000000000128.title": "Basic Steam Turbine",
+  "quest.1A00000000000129.quest_desc": [
+    "Craft a file from 2 iron or bronze plates. Plates can produced from ingots. Btw, unlike other tools, a file has no other uses. It can be used only as a part of crafting recipes."
+  ],
+  "quest.1A00000000000129.title": "File (gregtech)",
+  "quest.1A0000000000012A.quest_desc": [
+    "Use your allow smelter to smelt an Invar Ingot from 2 parts of iron and 1 part of nickel. You have to craft at least §b56§r ingots."
+  ],
+  "quest.1A0000000000012A.title": "Invar Ingot",
+  "quest.1A0000000000012B.quest_desc": [
+    "You can use this to make rods more efficiently. Now it will return you 1 dust from 2 ingots of any metal."
+  ],
+  "quest.1A0000000000012B.title": "Basic Lathe",
+  "quest.1A0000000000012D.quest_desc": [
+    "Craft 6 items to continue your industrialization."
+  ],
+  "quest.1A0000000000012D.title": "Invar plate",
+  "quest.1A0000000000012E.quest_desc": [
+    "It can push. Maybe."
+  ],
+  "quest.1A0000000000012E.title": "Electric piston (LV)",
+  "quest.1A0000000000012F.quest_desc": [
+    "This casing is the base for an EBF (electric blast furnace)."
+  ],
+  "quest.1A0000000000012F.title": "Heat proof machine casing",
+  "quest.1A00000000000130.quest_desc": [
+    "A part of a piston. You can easily craft it with a hammer from the plate, but this is not a profitable way."
+  ],
+  "quest.1A00000000000130.title": "Small steel gear",
+  "quest.1A00000000000131.quest_desc": [
+    "You should be already familiar with all parts of a pump. except a few new ones: tin screw and paper or rubber ring. A pump is not only a part of other machines, it is also a useful tool to transport fluids in and out of machines. Click RMB + Shift on a placed pump to open GUI."
+  ],
+  "quest.1A00000000000131.title": "Electric Pump (LV)",
+  "quest.1A00000000000133.quest_desc": [
+    "Tin ingot + file = tin rod / tin rod + saw = 2*Tin bolt / 2*Tin bolt + file = tin screw. Profit! In fact, profit can be earned if you craft 8 screws from 1 tin ingot. So, use NEI to find the best crafts chain to achieve this result."
+  ],
+  "quest.1A00000000000133.title": "Tin Screw",
+  "quest.1A00000000000134.quest_desc": [
+    "If you choose to make a buffer with 9 slots for batteries, it is important to place there only 8 batteries or less and use 8x tin cable to prevent fire. But you may also craft a battery buffer with 4 or 16 slots. Note that each battery inside it adds 1 ampere."
+  ],
+  "quest.1A00000000000134.title": "Low Voltage Battery Buffer (4-16)",
+  "quest.1A00000000000135.quest_desc": [
+    "These blocks are designed to be a source of heat for blast furnaces in order to smelt metals and alloys. You need to craft 16 coils for one blast furnace. Also these coils can be used to build a pyrolyse oven."
+  ],
+  "quest.1A00000000000135.title": "Cupronickel Coil Block",
+  "quest.1A00000000000136.quest_desc": [
+    "Soft Mallet - you can craft it from wood planks and sticks. The most important usage of this tool is turning on/off machines, including electrical multiblocks. Multiblocks are turned off by default."
+  ],
+  "quest.1A00000000000136.title": "Soft Mallet",
+  "quest.1A00000000000137.quest_desc": [
+    "Just craft it after making wooden planks."
+  ],
+  "quest.1A00000000000137.title": "Crafting Table",
+  "quest.1A0000000000013A.quest_desc": [
+    "It can disintegrate most chemical compounds to simple substances."
+  ],
+  "quest.1A0000000000013A.title": "Basic Electrolyzer",
+  "quest.1A0000000000013B.quest_desc": [
+    "A large crafting multitask. The task list is below. All crafted blocks will be used to build a Blast Furnace."
+  ],
+  "quest.1A0000000000013B.title": "Interfaces of Blast Furnace",
+  "quest.1A0000000000013C.quest_desc": [
+    "Height for search: 80-120 TETRAHEDRITE vein (Tetrahedrite, Copper, Stibnite). Find Stibnite or Tetrahedrite ores to get antimony from them. Use NEI to get more info."
+  ],
+  "quest.1A0000000000013C.title": "Antimony Ingot",
+  "quest.1A0000000000013D.quest_desc": [
+    "Use a Canning machine to fill the battery hull with lithium."
+  ],
+  "quest.1A0000000000013D.title": "Small Lithium Battery",
+  "quest.1A0000000000013E.quest_desc": [
+    "The cheapest battery because it is easy to find materials to craft it. But it has the worst energy capacity. Anyway, it is better than nothing."
+  ],
+  "quest.1A0000000000013E.title": "Small Sodium Battery",
+  "quest.1A0000000000013F.quest_desc": [
+    "Height for search: 30-60 GALENA vein (Galena, Silver, Lead). Find lead ore and smelt it to get lead ingots. But there is more than one way to get Lead. It is not necessary to dig up galena ore with the hope of finding lead ore there. You may just smelt an \"Impure Pile Of Lead dust\" to get a lead ingot."
+  ],
+  "quest.1A0000000000013F.title": "Lead Ingot",
+  "quest.1A00000000000140.quest_desc": [
+    "A machine used for canning. You can use it to produce canned food or to fill up batteries with sodium, cadmium or lithium."
+  ],
+  "quest.1A00000000000140.title": "Basic Canning Machine",
+  "quest.1A00000000000141.quest_desc": [
+    "Use an Alloy Smelter to get 5 battery alloy ingots from 4 lead and 1 antimony ingots."
+  ],
+  "quest.1A00000000000141.title": "Battery Alloy Ingot",
+  "quest.1A00000000000142.quest_desc": [
+    "This is the casing for LV batteries. You can craft it from 2 battery alloy plates and a tin cable."
+  ],
+  "quest.1A00000000000142.title": "Small Battery Hull",
+  "quest.1A00000000000143.quest_desc": [
+    "Don't craft this unless you have a voracious power tool."
+  ],
+  "quest.1A00000000000143.title": "Batpack - for what?",
+  "quest.1A00000000000147.quest_desc": [
+    "This machine can be used to get alloys such as bronze more profitably. Moreover, you don't need to use dusts only, you can create bronze from tin and copper ingots."
+  ],
+  "quest.1A00000000000147.title": "Steam Alloy Smelter",
+  "quest.1A00000000000148.quest_desc": [
+    "Create a glass block from sand by putting it into a furnace."
+  ],
+  "quest.1A00000000000148.title": "Glass",
+  "quest.1A00000000000149.quest_desc": [
+    "You may use most of metals to craft a wire cutter. Early in the game it may be used to craft wires from plates or fine wire from foil. Also it can help you to dismantle wires placed at your base."
+  ],
+  "quest.1A00000000000149.title": "Wire Cutter (gregtech)",
+  "quest.1A0000000000014B.quest_desc": [
+    "Same recipe as for other screws."
+  ],
+  "quest.1A0000000000014B.title": "Stainless Steel Screw",
+  "quest.1A0000000000014C.quest_desc": [
+    "An EV tier Motor."
+  ],
+  "quest.1A0000000000014C.title": "Electric Motor (EV)",
+  "quest.1A00000000000150.quest_desc": [
+    "An HV tier polarizer (or better) is the only way to get magnetic neodymium rods."
+  ],
+  "quest.1A00000000000150.title": "Advanced Polarizer II",
+  "quest.1A00000000000151.quest_desc": [
+    "Height to search: 20-40 MONAZITE vein (Bastnasite, Monazite, Neodymium). You have to look for Bastnasite, Monazite or Neodymium ores. Or you may get neodymium dust from Rare Earth which is subproduct of redstone ore processing - use NEI."
+  ],
+  "quest.1A00000000000151.title": "Neodymium Dust",
+  "quest.1A00000000000152.quest_desc": [
+    "Use an extruder and a rod shape."
+  ],
+  "quest.1A00000000000152.title": "Titanium Rod",
+  "quest.1A0000000000015A.quest_desc": [
+    "Can process more recipes compared to the basic one."
+  ],
+  "quest.1A0000000000015A.title": "Advanced Precision Laser II",
+  "quest.1A0000000000015D.quest_desc": [
+    "Pump the air into a centrifuge by a fluid canner machine from a compressed air cell. This is the way to get nitrogen gas."
+  ],
+  "quest.1A0000000000015D.title": "Nitrogen Gas",
+  "quest.1A0000000000015E.quest_desc": [
+    "You can meet it in the Nether - it drops out of \"lamp\" blocks."
+  ],
+  "quest.1A0000000000015E.title": "Glowstone",
+  "quest.1A0000000000015F.quest_desc": [
+    "Now you've got to have all the machines to create it. The way is: cobblestone into a hammer -> gravel into a hammer again -> sand into a furnace -> glass into a forge hammer (or a macerator) -> glass dust into a centrifuge -> silicon dioxide into an electrolyzer. On the last step you obtain oxygen as a sub-product, don't get rid of it, it is a useful gas."
+  ],
+  "quest.1A0000000000015F.title": "Silicon Dust",
+  "quest.1A00000000000169.quest_desc": [
+    "...with a hammer or a metal bender."
+  ],
+  "quest.1A00000000000169.title": "Copper Foil",
+  "quest.1A0000000000016B.quest_desc": [
+    "It may craft circuits up to LuV tier."
+  ],
+  "quest.1A0000000000016B.title": "Advanced Circuit Assembling III",
+  "quest.1A0000000000016C.quest_desc": [
+    "An EV tier Conveyor."
+  ],
+  "quest.1A0000000000016C.title": "Conveyor Module (EV)",
+  "quest.1A0000000000016D.quest_desc": [
+    "An EV tier piston."
+  ],
+  "quest.1A0000000000016D.title": "Electric Piston (EV)",
+  "quest.1A0000000000016E.quest_desc": [
+    "An EV tier Emitter."
+  ],
+  "quest.1A0000000000016E.title": "Emitter (EV)",
+  "quest.1A0000000000016F.quest_desc": [
+    "An IV tier Circuit."
+  ],
+  "quest.1A0000000000016F.title": "Mainframe",
+  "quest.1A00000000000173.quest_desc": [
+    "A part of certain machines."
+  ],
+  "quest.1A00000000000173.title": "Solid Steel Machine Casing",
+  "quest.1A00000000000175.quest_desc": [
+    "Obsidian is solidified lava. You may create it by pouring water from a bucket into a lava lake. But to dig it you must have pickaxe tier 3, like with diamonds. What is it for? If you play Minecraft for the first time, you should know that this is the only way to build a portal to the Nether. Just build an obsidian frame of 4 blocks width and 5 blocks height. Then use matches or a flint and a steel nugget to lit the fire inside the frame in order to open the portal."
+  ],
+  "quest.1A00000000000175.title": "Obsidian",
+  "quest.1A00000000000178.quest_desc": [
+    "Gelled Toluene + sulfuric acid."
+  ],
+  "quest.1A00000000000178.title": "TNT",
+  "quest.1A0000000000017A.quest_desc": [
+    "A well known acid."
+  ],
+  "quest.1A0000000000017A.title": "Sulfuric Acid",
+  "quest.1A0000000000017B.quest_desc": [
+    "There are several ways to obtain it. Also it may be a by-product for distillery tower."
+  ],
+  "quest.1A0000000000017B.title": "Methanol",
+  "quest.1A0000000000017C.quest_desc": [
+    "Ohhh! It's a nice machine. It is hard to craft but you ought to have it."
+  ],
+  "quest.1A0000000000017C.title": "Basic Distillery",
+  "quest.1A0000000000017D.quest_desc": [
+    "You may obtain this from wood tar, but it is not the only way."
+  ],
+  "quest.1A0000000000017D.title": "Toluene",
+  "quest.1A0000000000017E.quest_desc": [
+    "Required for producing Glass Tubes in an Alloy Smelter."
+  ],
+  "quest.1A0000000000017E.title": "Mold (Ball)",
+  "quest.1A0000000000017F.quest_desc": [
+    "From a pyrolyse oven or charcoal."
+  ],
+  "quest.1A0000000000017F.title": "Wood Tar",
+  "quest.1A00000000000180.quest_desc": [
+    "Sulfuric Acid + Nitric Acid by a mixer."
+  ],
+  "quest.1A00000000000180.title": "Nitration Mixture",
+  "quest.1A00000000000181.quest_desc": [
+    "Glycerol + nitration mixture (by a chemical reactor)."
+  ],
+  "quest.1A00000000000181.title": "Glyceryl Trinitrate",
+  "quest.1A00000000000182.quest_desc": [
+    "Put seeds into a fluid extractor to produce seed oil."
+  ],
+  "quest.1A00000000000182.title": "Seed Oil",
+  "quest.1A00000000000183.quest_desc": [
+    "You can make seed oil from this."
+  ],
+  "quest.1A00000000000183.title": "Seeds",
+  "quest.1A00000000000184.quest_desc": [
+    "With this machine you will get ability to squeeze or smelt items to obtain fluids from them. But LV tier is §cnot as useful as MV§f. So if you don't have a strong need to craft it, you may make directly the §aMV tier Fluid Extractor§f."
+  ],
+  "quest.1A00000000000184.title": "Basic Fluid Extractor",
+  "quest.1A00000000000185.quest_desc": [
+    "Use a chemical reactor to make glycerol from sodium hydroxide + seed oil + methanol."
+  ],
+  "quest.1A00000000000185.title": "Glycerol",
+  "quest.1A00000000000187.quest_desc": [
+    "Hurray!!! Now you can get double resources from ore blocks. And you can create wood pulp from wood.. Why? - to compress it to get wood planks."
+  ],
+  "quest.1A00000000000187.title": "Macerator",
+  "quest.1A00000000000188.quest_desc": [
+    "Height for search: 5-20 DIAMOND vein (Graphite, Diamond, Coal). There are three ways to obtain diamonds: first two matter for you in case if you have found a vein of diamonds. You may dig diamond blocks using a cobalt pickaxe or you may blow it up with a powder barrel or a boiler. The last option is simple but it's unlikely that you will use it in a real game. You may also find a diamond just by breaking small diamond ore."
+  ],
+  "quest.1A00000000000188.title": "Diamonds",
+  "quest.1A00000000000189.quest_desc": [
+    "Furnace, bricks and bronze plates - these are all you have to use in order to craft a small coal boiler. Btw, it has the word \"coal\" in its name because it can consume all types of coal (except compressed coal blocks)."
+  ],
+  "quest.1A00000000000189.title": "Small Coal Boiler",
+  "quest.1A0000000000018A.quest_desc": [
+    "You wanna push? Buy (or craft) the piston!"
+  ],
+  "quest.1A0000000000018A.title": "Piston",
+  "quest.1A0000000000018B.quest_desc": [
+    "Kill 3 Creepers"
+  ],
+  "quest.1A0000000000018B.title": "Creeper",
+  "quest.1A0000000000018C.quest_desc": [
+    "Create a fire sword to cook animals alive. It can be crafted from 2 flints and a stick."
+  ],
+  "quest.1A0000000000018C.title": "Sword",
+  "quest.1A0000000000018E.quest_desc": [
+    "You may get it from spiders or wool."
+  ],
+  "quest.1A0000000000018E.title": "String",
+  "quest.1A0000000000018F.quest_desc": [
+    "Wood plank is the base material to craft a circuit board. To make it you should put wood pulp into a compressor."
+  ],
+  "quest.1A0000000000018F.title": "Wood Plank (compressed)",
+  "quest.1A00000000000190.quest_desc": [
+    "A few more steps, and you will be able to ctaft basic circuits."
+  ],
+  "quest.1A00000000000190.title": "Coated Circuit Board",
+  "quest.1A00000000000191.quest_desc": [
+    "Find Sugar Canes. Breed them to get more........"
+  ],
+  "quest.1A00000000000191.title": "Sugar Canes",
+  "quest.1A00000000000192.quest_desc": [
+    "Do you have some iron ingots? Actually, you may use bronze, but that would be a bit expensive. Anyway, it is time to craft a saw. Two plates, a file and a hammer to craft the saw blade, then just add a stick to it in order to get a tool fully ready for use. A saw will help you to obtain planks from wood blocks as well as sticks from planks with increased efficiency. But more importantly, you may create two plates of stone from a stone block. They are required to make paper from chad (and chad from sugar canes)."
+  ],
+  "quest.1A00000000000192.title": "Saw (gregtech)",
+  "quest.1A00000000000193.quest_desc": [
+    "Craft paper from sugar canes via chad and stone slabs. Slabs will not be consumed."
+  ],
+  "quest.1A00000000000193.title": "Paper",
+  "quest.1A00000000000194.quest_desc": [
+    "Use a saw to cut stone into stone slabs."
+  ],
+  "quest.1A00000000000194.title": "Stone Slab",
+  "quest.1A00000000000195.quest_desc": [
+    "Use a mortar to obtain Chad from Sugar Canes."
+  ],
+  "quest.1A00000000000195.title": "Chad",
+  "quest.1A00000000000197.quest_desc": [
+    "Create a hammer with 6 iron ingots and a stick. Or you may use bronze ingots instead of iron ingots. The main application of a hammer is making plates from ingots (but with a horribly low efficiency - 2-to-1). An additional ability is to find ores around you by clicking RMB on a stone block while you hold the hammer in your hand."
+  ],
+  "quest.1A00000000000197.title": "Hammer (gregtech)",
+  "quest.1A00000000000198.quest_desc": [
+    "Screwdriver is one of useful tools that you will require to setup your base in order to configure automatic resource processing and build production lines. You may choose a certain rule for machines (setting output mode) and covers (adjusting other settings such as flow directions for pumps or flow speed for fluid regulators) by clicking RMB on them while you hold a screwdriver. And one more ability - you may set max fuel capacity of the internal buffer of single block generators lower than it is by default."
+  ],
+  "quest.1A00000000000198.title": "Screwdriver (gregtech)",
+  "quest.1A00000000000199.quest_desc": [
+    "A Vacuum tube is another item to craft circuit."
+  ],
+  "quest.1A00000000000199.title": "Vacuum tube",
+  "quest.1A0000000000019A.quest_desc": [
+    "Use a cutter on copper foil. Copper foil can be obtained from copper plate using a hammer."
+  ],
+  "quest.1A0000000000019A.title": "Fine copper wire",
+  "quest.1A0000000000019B.quest_desc": [
+    "The main item for vacuum tubes."
+  ],
+  "quest.1A0000000000019B.title": "Glass Tube",
+  "quest.1A0000000000019C.quest_desc": [
+    "Another stuff used as a component of circuits."
+  ],
+  "quest.1A0000000000019C.title": "Resistor",
+  "quest.1A0000000000019E.quest_desc": [
+    "Just put usual charcoal into a macerator."
+  ],
+  "quest.1A0000000000019E.title": "Charcoal Dust",
+  "quest.1A0000000000019F.quest_desc": [
+    "One copper and 4 redstone dust may be used to get a red alloy ingot - use an alloy smelter."
+  ],
+  "quest.1A0000000000019F.title": "Red alloy",
+  "quest.1A000000000001A2.quest_desc": [
+    "An important part of a Computer Monitor."
+  ],
+  "quest.1A000000000001A2.title": "Glass Pane",
+  "quest.1A000000000001A3.quest_desc": [
+    "6 iron rods may be used to craft iron bars with a wrench."
+  ],
+  "quest.1A000000000001A3.title": "Iron Bars",
+  "quest.1A000000000001A4.quest_desc": [
+    "Stick + cobblestone."
+  ],
+  "quest.1A000000000001A4.title": "Lever",
+  "quest.1A000000000001A5.quest_desc": [
+    "Craft a mortar from stone and flint."
+  ],
+  "quest.1A000000000001A5.title": "Mortar",
+  "quest.1A000000000001A7.quest_desc": [
+    "Use Paper and Leather to craft an Empty Book."
+  ],
+  "quest.1A000000000001A7.title": "Book",
+  "quest.1A000000000001A8.quest_desc": [
+    "From cows or horses."
+  ],
+  "quest.1A000000000001A8.title": "Leather",
+  "quest.1A000000000001AB.quest_desc": [
+    "Not only a (bad) weapon, but also a handy way to craft paper or rubber rings."
+  ],
+  "quest.1A000000000001AB.title": "Knife (gregtech)",
+  "quest.1A000000000001AC.quest_desc": [
+    "You don't have to craft it immediately. But it will be required in future. To craft it, you have to compress 9 diamonds with a compressor."
+  ],
+  "quest.1A000000000001AC.title": "Diamond Block",
+  "quest.1A000000000001AD.quest_desc": [
+    "Use a hammer, a file and 4 steel plates to craft this shape."
+  ],
+  "quest.1A000000000001AD.title": "Empty Shape Plate",
+  "quest.1A000000000001AF.quest_desc": [
+    "You may create it from an empty mold using a wire cutter. It may give you the ability to create 4 rings per 1 rubber pulp (or bar). An extruder machine is required (LV or higher)."
+  ],
+  "quest.1A000000000001AF.title": "Extruder Shape (Ring)",
+  "quest.1A000000000001B0.quest_desc": [
+    "Just dig anywhere."
+  ],
+  "quest.1A000000000001B0.title": "Get cobblestone",
+  "quest.1A000000000001B1.quest_desc": [
+    "Find any tree and get two blocks of wood."
+  ],
+  "quest.1A000000000001B1.title": "First step",
+  "quest.1A000000000001B2.quest_desc": [
+    "Create the Flint Axe."
+  ],
+  "quest.1A000000000001B2.title": "Axe",
+  "quest.1A000000000001B3.quest_desc": [
+    "Dig gravel to find a flint. It may drop out with a small chance. But if you do not want to spend your time, you can use a few other ways: 1) craft it from 4 gravel blocks. 2) If you are lucky enough to find a sheep and obtain wool - you may craft a useful tool - scoop (to sift gravel)."
+  ],
+  "quest.1A000000000001B3.title": "Flint",
+  "quest.1A000000000001B4.quest_desc": [
+    "Craft your first wooden pickaxe. There are many options of what to craft pickaxe from: stone, flint, iron, steel, bronze, cobalt and etc. Some materials used to make a pickaxe are harder than other and can dig out more solid resource blocks."
+  ],
+  "quest.1A000000000001B4.title": "Pickaxe (wooden)",
+  "quest.1A000000000001B5.quest_desc": [
+    "A mix of brass, aluminium and cobalt dusts."
+  ],
+  "quest.1A000000000001B5.title": "Cobalt Brass Dust",
+  "quest.1A000000000001B6.quest_desc": [
+    "Fry cobblestone to get..."
+  ],
+  "quest.1A000000000001B6.title": "Stone source",
+  "quest.1A000000000001B7.quest_desc": [
+    "Fry a chicken."
+  ],
+  "quest.1A000000000001B7.title": "Cook as cook",
+  "quest.1A000000000001B8.quest_desc": [
+    "Find and dig out some sand."
+  ],
+  "quest.1A000000000001B8.title": "Sand",
+  "quest.1A000000000001B9.quest_desc": [
+    "Find gravel."
+  ],
+  "quest.1A000000000001B9.title": "Gravel",
+  "quest.1A000000000001BA.quest_desc": [
+    "Craft an Iron Plate with a hammer and two iron ingots."
+  ],
+  "quest.1A000000000001BA.title": "Iron Plate",
+  "quest.1A000000000001BB.quest_desc": [
+    "Craft a bucket with a hammer and 3 iron plates."
+  ],
+  "quest.1A000000000001BB.title": "Bucket",
+  "quest.1A000000000001BC.quest_desc": [
+    "Craft a cauldron - use 7 iron plates and a hammer."
+  ],
+  "quest.1A000000000001BC.title": "Cauldron",
+  "quest.1A000000000001BD.quest_desc": [
+    "Use a Mortar to get Copper and Tin dusts from tin and copper ingots. Then craft bronze dust from 3 copper dusts and 1 tin dust."
+  ],
+  "quest.1A000000000001BD.title": "Bronze Dust",
+  "quest.1A000000000001BE.quest_desc": [
+    "Smelt bronze dust to get a bronze ingot. Then use a hammer to get bronze plates."
+  ],
+  "quest.1A000000000001BE.title": "Bronze Plate",
+  "quest.1A000000000001BF.quest_desc": [
+    "You have to find clay - usually you may find it in a river or an ocean beach underwater."
+  ],
+  "quest.1A000000000001BF.title": "Clay (balls)",
+  "quest.1A000000000001C0.quest_desc": [
+    "Use a Furnace to get a brick from clay."
+  ],
+  "quest.1A000000000001C0.title": "Brick",
+  "quest.1A000000000001C1.quest_desc": [
+    "Use 4 bricks to create a bricks block."
+  ],
+  "quest.1A000000000001C1.title": "Bricks block",
+  "quest.1A000000000001C2.quest_desc": [
+    "Use bricks blocks and bronze plates with a hammer to get bricked bronze hull. It is the base part of most steam machines."
+  ],
+  "quest.1A000000000001C2.title": "Bricked Bronze Hull",
+  "quest.1A000000000001C4.quest_desc": [
+    "Use a charcoal pile igniter to transform wood into charcoal. For starters, craft at least 9 brick blocks and put them in the shape of a square 3 by 3. Then put logs (wood) onto it, from 1 to 5 blocks height. Position the charcoal pile igniter on top in the center. All sides including top have to be covered by dirt."
+  ],
+  "quest.1A000000000001C4.title": "Charcoal",
+  "quest.1A000000000001C6.quest_desc": [
+    "This machine can be used to get 2 plates from 3 ingots - this is more efficient than using a regular hammer. Another way to use a forge hammer - to obtain crushed ore from ore blocks or make impure dust from crushed ore very quickly. Also you will be able to make sand from... well, it would be better if you searched recipes by yourself."
+  ],
+  "quest.1A000000000001C6.title": "Forge Hammer",
+  "quest.1A000000000001C7.quest_desc": [
+    "Anvil looks really cool. This is the main reason to craft it =) (it is a joke)."
+  ],
+  "quest.1A000000000001C7.title": "Anvil",
+  "quest.1A000000000001C9.quest_desc": [
+    "Blast furnace is the only way to obtain steel. Steel is cool. Why? - It is another story...)"
+  ],
+  "quest.1A000000000001C9.title": "Bricked BF",
+  "quest.1A000000000001CA.quest_desc": [
+    "You have to craft 32 of them."
+  ],
+  "quest.1A000000000001CA.title": "Firebricks",
+  "quest.1A000000000001CB.quest_desc": [
+    "You have to craft §a32§f of them, but you should know that they are crafted in two items per one crafting operation, so you need to do it only 16 times. Also, these blocks may be used to build a §6Large Bronze Boiler§f - it requires at least §a24§f blocks."
+  ],
+  "quest.1A000000000001CB.title": "Bronze Plated Bricks",
+  "quest.1A000000000001CE.quest_desc": [
+    "Use a steam compressor to make the block of iron from 9 iron ingots."
+  ],
+  "quest.1A000000000001CE.title": "Block of Iron",
+  "quest.1A000000000001CF.quest_desc": [
+    "Find Sticky Resin."
+  ],
+  "quest.1A000000000001CF.title": "Sticky Resin",
+  "quest.1A000000000001D0.quest_desc": [
+    "Do you have some wood? If yes - you can craft a treetap out of 5 wooden planks. It is a useful thing to make torches from sticky resin."
+  ],
+  "quest.1A000000000001D0.title": "Treetap",
+  "quest.1A000000000001D1.quest_desc": [
+    "Your first light. You can craft it out of sticky resin and stick."
+  ],
+  "quest.1A000000000001D1.title": "Torch",
+  "quest.1A000000000001D2.quest_desc": [
+    "It may be used as a part of a Water Tank in the recipe."
+  ],
+  "quest.1A000000000001D2.title": "Slimeball",
+  "quest.1A000000000001D3.quest_desc": [
+    "Craft at least one chest and one door. Build any... basically any box, but with a door to protect yourself from night monsters."
+  ],
+  "quest.1A000000000001D3.title": "Home, sweet home...",
+  "quest.1A000000000001D5.quest_desc": [
+    "Craft a flint shovel."
+  ],
+  "quest.1A000000000001D5.title": "Shovel",
+  "quest.1A000000000001D6.quest_desc": [
+    "Pour water into this solar boiler and place it beneath the clear sky (transparent blocks such as glass are allowed)."
+  ],
+  "quest.1A000000000001D6.title": "Simple Solar Boiler",
+  "quest.1A000000000001D7.quest_desc": [
+    "Use a forge hammer to craft 2 silver plates from 3 silver ingots."
+  ],
+  "quest.1A000000000001D7.title": "Silver Plate",
+  "quest.1A000000000001D8.quest_desc": [
+    "Height to search: 30-60 GALENA vein (Galena, Silver, Lead). You may find silver ore in a vein of galena ore."
+  ],
+  "quest.1A000000000001D8.title": "Crushed Silver Ore",
+  "quest.1A000000000001D9.quest_desc": [
+    "This is a way to produce 2 wires from 1 ingot. Also it is a more profitable way to get fine wires."
+  ],
+  "quest.1A000000000001D9.title": "Basic Wiremill",
+  "quest.1A000000000001DA.quest_desc": [
+    "A useful spinner, better than washing machine, despite the fact that it looks the same."
+  ],
+  "quest.1A000000000001DA.title": "Basic Centrifuge",
+  "quest.1A000000000001DB.quest_desc": [
+    "Also (as a centrifuge) can be used to extract raw resin from sticky resin, but has less functionality in other avenues."
+  ],
+  "quest.1A000000000001DB.title": "Basic Extractor",
+  "quest.1A000000000001DC.quest_desc": [
+    "...can be obtained from sticky resin. Needed to create rubber."
+  ],
+  "quest.1A000000000001DC.title": "Raw Rubber Pulp",
+  "quest.1A000000000001DD.quest_desc": [
+    "Can be used to produce some chemicals."
+  ],
+  "quest.1A000000000001DD.title": "Basic Chemical Reactor",
+  "quest.1A000000000001DE.quest_desc": [
+    "Height for search (only in nether): 5 - 20 SULFUR vein (Sulfur, Pyrite, Sphalerite). Sulfur ore veins can be only found in the Nether. But in the Overworld you may find small sulfur ore blocks and get sulfur dust as by-product from the following ores: Galena, Pyrite, Cinnabar, Pentlandite, Lead and Silver."
+  ],
+  "quest.1A000000000001DE.title": "Find the sulfur",
+  "quest.1A000000000001DF.quest_desc": [
+    "Can be crafted using 4 steel plates, a hammer and a file. Then just modify it by a hammer to get the desired result."
+  ],
+  "quest.1A000000000001DF.title": "Mold (Plate)",
+  "quest.1A000000000001E0.quest_desc": [
+    "Can turn liquids into solid state if possible. Needs a mold to work."
+  ],
+  "quest.1A000000000001E0.title": "Basic Fluid Solidifier",
+  "quest.1A000000000001E1.quest_desc": [
+    "Can transport items from and to machines, pipes, chests. Also may be used as a component in crafting complex things. Click RMB + Shift on a conveyor placed as cover to open GUI."
+  ],
+  "quest.1A000000000001E1.title": "Conveyor module (LV)",
+  "quest.1A000000000001E2.quest_desc": [
+    "It can give you satisfaction. For example, it may help you to craft an assembly machine."
+  ],
+  "quest.1A000000000001E2.title": "Robot Arm (LV)",
+  "quest.1A000000000001E3.quest_desc": [
+    "Can do a lot of useful different things."
+  ],
+  "quest.1A000000000001E3.title": "Basic Assembling Machine",
+  "quest.1A000000000001E4.quest_desc": [
+    "A material for an LV emitter or for item pipes. It is an alloy of zinc(1) and copper(3)."
+  ],
+  "quest.1A000000000001E4.title": "Brass Ingot",
+  "quest.1A000000000001E6.quest_desc": [
+    "The unique part of the sifting machine"
+  ],
+  "quest.1A000000000001E6.title": "Item Filter",
+  "quest.1A000000000001E7.quest_desc": [
+    "Now you can wash crushed ore to get by-products. There are 4 ways how to wash by using different programmed circuits. With config \"1\" - a fast wash without by-products. \"2\" - also fast washing without by-products, but you will get dirty water in the output hatch of your washing plant. \"3\" - slow, but you will get by-products. \"4\" - also as \"3\", but with dirty water in the output."
+  ],
+  "quest.1A000000000001E7.title": "Basic Ore Washing Plant",
+  "quest.1A000000000001E8.quest_desc": [
+    "Height to search (for Ruby ore): 10-40. After finding ruby ore inside a redstone vein, you need to use a sifter to find an Exquisite Ruby (from purified ruby ore). It is nice stuff to create a ruby lens using a lathe. Also you may create a red lens from other red exquisite gems such as Jasper or Red Garnet. It will also work fine."
+  ],
+  "quest.1A000000000001E8.title": "Exquisite Red Gem",
+  "quest.1A000000000001E9.quest_desc": [
+    "It can convert MV to LV voltage and vice versa (LV to MV)."
+  ],
+  "quest.1A000000000001E9.title": "Low Voltage Transformer",
+  "quest.1A000000000001EA.quest_desc": [
+    "The way to get it is hard. For starters, you have to use a cauldron or an ore washing plant to get purified zinc ore, then put it into a macerator or a forge hammer to obtain purified zinc dust. And in the end drop it into a centrifuge to get gallium as by-product."
+  ],
+  "quest.1A000000000001EA.title": "Tiny Pile of Gallium Dust",
+  "quest.1A000000000001EB.quest_desc": [
+    "To craft a diode you need following materials: a Glass pane, charcoal dust, fine tin wire and a tiny pile of gallium dust."
+  ],
+  "quest.1A000000000001EB.title": "Diode",
+  "quest.1A000000000001EC.quest_desc": [
+    "Height to search: 40 - 80 QUARTZ vein (Quartzite, Barite, Certus Quartz). If you found quartzite dust, you may use an Autoclave to convert quartzite dust into quartzite. Btw, amidst quartzite ore you may find certus quartz ore - collect it too, for future development."
+  ],
+  "quest.1A000000000001EC.title": "Find Quartzite (gem or dust)",
+  "quest.1A000000000001EE.quest_desc": [
+    "A part of high tech machines."
+  ],
+  "quest.1A000000000001EE.title": "Emitter (LV)",
+  "quest.1A000000000001EF.quest_desc": [
+    "To craft electronic circuits more powerful and cheap than those you can make on a crafting table."
+  ],
+  "quest.1A000000000001EF.title": "Basic Circuit Assembling Machine",
+  "quest.1A000000000001F0.quest_desc": [
+    "An important part of a macerator and a rock breaker."
+  ],
+  "quest.1A000000000001F0.title": "Diamond Grinding Head",
+  "quest.1A000000000001F5.quest_desc": [
+    "The base for high level electronic circuit"
+  ],
+  "quest.1A000000000001F5.title": "Monocrystalline Silicon Boule",
+  "quest.1A000000000001F7.quest_desc": [
+    "This is a part of some machines."
+  ],
+  "quest.1A000000000001F7.title": "Steel Gear",
+  "quest.1A000000000001F9.quest_desc": [
+    "It is time to work with bauxite. Universal macerator allow you to get gallium dust as sub product. Use NEI for more info."
+  ],
+  "quest.1A000000000001F9.title": "Basic Thermal Centrifuge",
+  "quest.1A000000000001FB.quest_desc": [
+    "By this machine with help of oxygen you may quickly convert iron to wrought iron, copper to annealed copper and etc."
+  ],
+  "quest.1A000000000001FB.title": "Basic Arc Furnace",
+  "quest.1A000000000001FC.quest_desc": [
+    "Height for search: 5-20 DIAMOND vein (Graphite, Diamond, Coal)."
+  ],
+  "quest.1A000000000001FC.title": "Graphite Dust",
+  "quest.1A000000000001FD.quest_desc": [
+    "Use an Exquisite Ruby/Red Garnet/Jasper to make a red lens from it by Lathe."
+  ],
+  "quest.1A000000000001FD.title": "Red Lens",
+  "quest.1A000000000001FF.quest_desc": [
+    "...by hammer or metal bender."
+  ],
+  "quest.1A000000000001FF.title": "Aluminium Foil",
+  "quest.1A00000000000201.quest_desc": [
+    "Height to search: 50 - 60. the main source of chlorine may be salt ores (common or rock salt)"
+  ],
+  "quest.1A00000000000201.title": "Chlorine",
+  "quest.1A00000000000202.quest_desc": [
+    "Chlorine + Methane (by chemical reactor)"
+  ],
+  "quest.1A00000000000202.title": "Chloromethane",
+  "quest.1A00000000000203.quest_desc": [
+    "The most popular and easy way to produce gas fuel for gas turbines. There are many ways to produce it, but only few of them may be profitable."
+  ],
+  "quest.1A00000000000203.title": "Methane Gas",
+  "quest.1A00000000000204.quest_desc": [
+    "Chloromethane + silicon (by chemical reactor MV tier or better)"
+  ],
+  "quest.1A00000000000204.title": "Dimethyldichlorosilane",
+  "quest.1A00000000000206.quest_desc": [
+    "It is sub product of creating the chloromethane. Or you may directly do it from ethylene and chlorine."
+  ],
+  "quest.1A00000000000206.title": "Hydrochloric Acid",
+  "quest.1A00000000000207.quest_desc": [
+    "Hydrochloric acid + ethylene + oxygen (by chemical reactor)"
+  ],
+  "quest.1A00000000000207.title": "Vinyl Chloride",
+  "quest.1A00000000000208.quest_desc": [
+    "There so much ways to get it via electrolyzer, so use NEI to find your favorite. The simplest is to get it from water. Note, that to mark this quest as completed, you have to put a bit of oxygen to one of: Universal cell or Certus quartz tank. Only these two items may help you to detect your fluids or gases for this and other liquid quests."
+  ],
+  "quest.1A00000000000208.title": "Oxygen Gas",
+  "quest.1A00000000000209.quest_desc": [
+    "Almost the plastic, it just few steps left."
+  ],
+  "quest.1A00000000000209.title": "Ethylene",
+  "quest.1A0000000000020B.quest_desc": [
+    "Chlorine + Methane (by chemical reactor)"
+  ],
+  "quest.1A0000000000020B.title": "Chloroform",
+  "quest.1A0000000000020C.quest_desc": [
+    "Hydrogen + fluorine (by chemical reactor)"
+  ],
+  "quest.1A0000000000020C.title": "Hydrofluoric Acid",
+  "quest.1A0000000000020D.quest_desc": [
+    "Bastnasite, Lepidolite, Topaz, Biotite - all these resources may be used to produce fluorine."
+  ],
+  "quest.1A0000000000020D.title": "Fluorine",
+  "quest.1A0000000000020E.quest_desc": [
+    "Chloroform + Hydrofluoric. Use HV tier chemical reactor."
+  ],
+  "quest.1A0000000000020E.title": "Tetrafluoroethylene",
+  "quest.1A0000000000020F.quest_desc": [
+    "HV tier chemical reactor"
+  ],
+  "quest.1A0000000000020F.title": "Advanced Chemical Reactor II",
+  "quest.1A00000000000214.quest_desc": [
+    "Distil wood tar to get benzene. Use distillery MV+ tier."
+  ],
+  "quest.1A00000000000214.title": "Benzene",
+  "quest.1A00000000000217.quest_desc": [
+    "Yeah, benzene + chlorine (by chemical reactor)"
+  ],
+  "quest.1A00000000000217.title": "Dichlorobenzene",
+  "quest.1A00000000000219.quest_desc": [
+    "It may be converted from ethylene by MV+ chemical reactor"
+  ],
+  "quest.1A00000000000219.title": "Propene",
+  "quest.1A0000000000021A.quest_desc": [
+    "LCR recipe: sodium hydroxide + propene + chlorine + water."
+  ],
+  "quest.1A0000000000021A.title": "Epichlorohydrin",
+  "quest.1A0000000000021B.quest_desc": [
+    "Distil wood tar to get phenol. Use distillery MV+ tier."
+  ],
+  "quest.1A0000000000021B.title": "Phenol",
+  "quest.1A0000000000021C.quest_desc": [
+    "...by pyrolyse oven"
+  ],
+  "quest.1A0000000000021C.title": "Wood Vinegar",
+  "quest.1A0000000000021D.quest_desc": [
+    "Use MV+ distillery for wood vinegar"
+  ],
+  "quest.1A0000000000021D.title": "Acetone",
+  "quest.1A00000000000222.quest_desc": [
+    "Prepare distilled water, mince meat, salt and sugar. Than drop these to the mixer, then boil by fluid heater."
+  ],
+  "quest.1A00000000000222.title": "Sterilized Growth Medium",
+  "quest.1A00000000000223.quest_desc": [
+    "You may get it from coal, charcoal dust or from a lot of other materials."
+  ],
+  "quest.1A00000000000223.title": "Carbon Dust",
+  "quest.1A0000000000022D.quest_desc": [
+    "from sugar canes"
+  ],
+  "quest.1A0000000000022D.title": "Sugar",
+  "quest.1A0000000000022E.quest_desc": [
+    "Use a fluid MV extractor to melt cobalt brass alloy. Then you have to solidify it in a fluid solidifier with gear mold (cheapes way). A second way is to make this gear from cobalt brass plates and rods by wrench, but it is a bit more expensive."
+  ],
+  "quest.1A0000000000022E.title": "Cobalt Brass Gear",
+  "quest.1A0000000000022F.quest_desc": [
+    "Use any chemical reactor to make the styrene from ethylene and benzene."
+  ],
+  "quest.1A0000000000022F.title": "Styrene",
+  "quest.1A00000000000230.quest_desc": [
+    "Use MV+ chemical reactor to make it from ethylene by programmed circuit configured as #4"
+  ],
+  "quest.1A00000000000230.title": "Butene",
+  "quest.1A00000000000231.quest_desc": [
+    "Use MV+ chemical reactor to make the butadiene from butene."
+  ],
+  "quest.1A00000000000231.title": "Butadiene",
+  "quest.1A00000000000241.quest_desc": [
+    "Do you think that this is completely useless stuff? Not quite..."
+  ],
+  "quest.1A00000000000241.title": "Stone Dust",
+  "quest.1A00000000000243.quest_desc": [
+    "This machine looks simple. But in fact it may do a lot of useful things. For example: concrete, industrial biomass, drilling fluid and some other things."
+  ],
+  "quest.1A00000000000243.title": "Basic Mixer",
+  "quest.1A0000000000024C.quest_desc": [
+    "Can molten more materials with more high heat proof than basic machine. For example now you may get molten glass from glass (block or panel), which you may use to craft the tin electron tube."
+  ],
+  "quest.1A0000000000024C.title": "Advanced Fluid Extractor",
+  "quest.1A0000000000024E.quest_desc": [
+    "Collect the 9 stars. Use 27 heads and 36 blocks of soul sand to build (to summon) and kill 9 withers. Be very careful, because this is hard boss."
+  ],
+  "quest.1A0000000000024E.title": "Nether Star",
+  "quest.1A00000000000253.quest_desc": [
+    "Prepare a few liters of coffee (in real), because now you have to kill a thouthands of wither skeletons to collect at least the 27 of them heads."
+  ],
+  "quest.1A00000000000253.title": "Wither Skeleton Skull",
+  "quest.1A00000000000256.quest_desc": [
+    "Can do a lot of useful different things."
+  ],
+  "quest.1A00000000000256.title": "Advanced Assembling Machine",
+  "quest.1A00000000000257.quest_desc": [
+    "HV tier centrifuge."
+  ],
+  "quest.1A00000000000257.title": "Turbo Centrifuge",
+  "quest.1A0000000000025E.quest_desc": [
+    "Height to search: 10-40 REDSTONE vein (Redstone, Ruby, Cinnabar). You may get Chrome Dust from ruby dust via advanced electrolyzer. Also ruby dust can be produced from redstone dust. As well as for aluminium you should use blast furnace to get Chrome Ingot from Chrome Dust."
+  ],
+  "quest.1A0000000000025E.title": "Chrome Ingot",
+  "quest.1A00000000000273.quest_desc": [
+    "Go to the nether and find it."
+  ],
+  "quest.1A00000000000273.title": "Soul Sand",
+  "quest.1A00000000000276.quest_desc": [
+    "Configure the empty steel shape by hammer on the crafting table, to get the desired result."
+  ],
+  "quest.1A00000000000276.title": "Mold (Bottle)",
+  "quest.1A00000000000277.quest_desc": [
+    "Use Mold (Bottle) to make from glass dust the glass bottle with help of alloy smelter. Glass dust you may get just by broken the glass block in forge hammer."
+  ],
+  "quest.1A00000000000277.title": "Glass Bottle",
+  "quest.1A00000000000281.quest_desc": [
+    "May be created from tungsten rod"
+  ],
+  "quest.1A00000000000281.title": "Tungsten Bolt",
+  "quest.1A00000000000288.quest_desc": [
+    "Height to search: 40 - 50 PLATINUM vein (Sheldonite, Palladium, Platinum, Iridium). But you should know that the chance to find this vein of ore is very small. In this case you may to use other way to get it. And this way named \"Platinum Group Sludge Dust\" (or PGS dust). You may get the info how to get it in quest set #6 - \"Polyethylene & PGS\""
+  ],
+  "quest.1A00000000000288.title": "Iridium Dust",
+  "quest.1A0000000000028C.quest_desc": [
+    "Collect the 53 cells with liquid air and put them to centrifuge. Among other things you will get the cell with argon."
+  ],
+  "quest.1A0000000000028C.title": "Argon Gas",
+  "quest.1A0000000000029F.quest_desc": [
+    "Prepare Emerald Lens to get ability to create the CPU (crystal processing unit) You may create it from Exquisite Emerald gem by Lathe. Or from 9 emeralds by compressing them to get a block, then cut it on cutting machine to get a plate and finaly process an emerald plate on lathe 512 v."
+  ],
+  "quest.1A0000000000029F.title": "Emerald Lens",
+  "quest.1A000000000002B3.quest_desc": [
+    "HV tier cutting machine."
+  ],
+  "quest.1A000000000002B3.title": "Advanced Cutting Machine II",
+  "quest.1A000000000002B4.quest_desc": [
+    "The main part of cutting machine."
+  ],
+  "quest.1A000000000002B4.title": "Diamond Sawblade",
+  "quest.1A000000000002C2.quest_desc": [
+    "I hope this machine don't need a description. Just push inside different stuff for experiment or use NEI if you don't like adventures."
+  ],
+  "quest.1A000000000002C2.title": "Advanced Chemical Reactor",
+  "quest.1A000000000002C3.quest_desc": [
+    "The part of MV steam and gas turbines. Also may be used for other MV tier machines"
+  ],
+  "quest.1A000000000002C3.title": "Bronze Rotor",
+  "quest.1A000000000002C4.quest_desc": [
+    "Like a basic, but works faster and can process recipes with more voltage."
+  ],
+  "quest.1A000000000002C4.title": "Advanced Distillery",
+  "quest.1A000000000002C8.quest_desc": [
+    "Take it to hand and right-click on dirt. it is recommended to have a water near in 4 blocks."
+  ],
+  "quest.1A000000000002C8.title": "Wooden/Stone/Flint Hoe",
+  "quest.1A000000000002C9.quest_desc": [
+    "Now you have all required stuff to successfully crossbreed plants to get any one plant type and quickly set new plant fields."
+  ],
+  "quest.1A000000000002C9.title": "Cross breeding LvL 2",
+  "quest.1A000000000002CA.quest_desc": [
+    ""
+  ],
+  "quest.1A000000000002CA.title": "Oil",
+  "quest.1A000000000002CB.quest_desc": [
+    "Use MV (or better) Distillery to get sulfuric naphtha from oil."
+  ],
+  "quest.1A000000000002CB.title": "Sulfuric Naphtha",
+  "quest.1A000000000002CC.quest_desc": [
+    "You may get it by chemical reactor from hydrogen and sulfuric naphtha."
+  ],
+  "quest.1A000000000002CC.title": "Naphtha",
+  "quest.1A000000000002CD.quest_desc": [
+    "It may be produced by Pyrolyse Oven."
+  ],
+  "quest.1A000000000002CD.title": "Wood Gas",
+  "quest.1A000000000002CE.quest_desc": [
+    "May be created from sulfur dust and oxygen with help of programmed circuit (with configuration == 3) by chemical reactor. Also you may get it from sulfur dioxide."
+  ],
+  "quest.1A000000000002CE.title": "Sulfur Trioxide",
+  "quest.1A000000000002CF.quest_desc": [
+    "Purified Pentlandite Ore + Nitric Acid by chemical reactor..."
+  ],
+  "quest.1A000000000002CF.title": "Nickel Sulfate Water Solution",
+  "quest.1A000000000002D0.quest_desc": [
+    "Purified Chalcopyrite Ore + Nitric Acid by chemical reactor..."
+  ],
+  "quest.1A000000000002D0.title": "Blue Vitriol Water Solution",
+  "quest.1A000000000002D1.quest_desc": [
+    "Early tier chemical stuff that may be used to craft the nitric acid. Currently, you have only one way to get this liquid - by using the distillery machine. Later you may create it from hydrogen and nitrogen by HV+ chemical reactor."
+  ],
+  "quest.1A000000000002D1.title": "Ammonia",
+  "quest.1A000000000002D2.quest_desc": [
+    "This machine may put in and out fluids of cells."
+  ],
+  "quest.1A000000000002D2.title": "Basic Fluid Canner",
+  "quest.1A000000000002D3.quest_desc": [
+    "Use bending machine with programmed circuit #12 to make the cell from tin or steel plates"
+  ],
+  "quest.1A000000000002D3.title": "Empty Cell",
+  "quest.1A000000000002D4.quest_desc": [
+    "Ammonia + oxygen (to chemical reactor)"
+  ],
+  "quest.1A000000000002D4.title": "Nitric Oxide",
+  "quest.1A000000000002D5.quest_desc": [
+    "...From nitric oxide with oxygen. This is the main component for crafting the nitric acid."
+  ],
+  "quest.1A000000000002D5.title": "Nitrogen Dioxide",
+  "quest.1A000000000002D6.quest_desc": [
+    "This is acid is heavy to manufacture. But it may be required for some uncommon recipes."
+  ],
+  "quest.1A000000000002D6.title": "Nitric Acid",
+  "quest.1A000000000002D7.quest_desc": [
+    ""
+  ],
+  "quest.1A000000000002D7.title": "Purified Pentlandite Ore",
+  "quest.1A000000000002D8.quest_desc": [
+    ""
+  ],
+  "quest.1A000000000002D8.title": "Purified Chalcopyrite Ore",
+  "quest.1A000000000002DA.quest_desc": [
+    "The way to craft 2 rods per 1 ingot. And it is not all, there a lot of useful recipes will be opened for you by this machine."
+  ],
+  "quest.1A000000000002DA.title": "Advanced Extruder",
+  "quest.1A000000000002DB.quest_desc": [
+    "Find any sea or large lake. There may spawn squids. Touch them by your sword or axe (use LMB). After this action some of them may give you a present =)"
+  ],
+  "quest.1A000000000002DB.title": "Ink Sac",
+  "quest.1A000000000002DC.quest_desc": [
+    "High tech machine to engrave the wafers or chips to craft powerful circuits."
+  ],
+  "quest.1A000000000002DC.title": "Advanced Precision Laser Engr.",
+  "quest.1A000000000002DD.quest_desc": [
+    "It is enough powerful to cut wafers for circuits."
+  ],
+  "quest.1A000000000002DD.title": "Advanced Cutting Machine",
+  "quest.1A000000000002DE.quest_desc": [
+    "The frame for MV machines"
+  ],
+  "quest.1A000000000002DE.title": "MV Machine Casing",
+  "quest.1A000000000002DF.quest_desc": [
+    "Works the same as Basic Steam Turbine but produce the 128 eu/t. You have to use copper wires or cables to transfer energy. DO NOT connect this turbine to LV machines, or it may call explosion."
+  ],
+  "quest.1A000000000002DF.title": "Advanced Steam Turbine",
+  "quest.1A000000000002E1.quest_desc": [
+    "Main Container for all MV machines"
+  ],
+  "quest.1A000000000002E1.title": "MV Machine Hull",
+  "quest.1A000000000002E2.quest_desc": [
+    "Now it's time to craft the polarizer if you don't did it early yet. This machine allow you to polarize iron rods to craft LV motors without using redstone to polarize rods handly. Also this is the only one way to polarize steel rods."
+  ],
+  "quest.1A000000000002E2.title": "Basic Polarizer",
+  "quest.1A000000000002E3.quest_desc": [
+    "It is a part of some MV tier machines. And, btw, it can be placed on machines or item pipes to transport items."
+  ],
+  "quest.1A000000000002E3.title": "Conveyor Module (MV)",
+  "quest.1A000000000002E4.quest_desc": [
+    "MV tier piston"
+  ],
+  "quest.1A000000000002E4.title": "Electric Piston (MV)",
+  "quest.1A000000000002E5.quest_desc": [
+    "Same as LV but can faster transfer fluids. Also it is a part of some MV tier machines."
+  ],
+  "quest.1A000000000002E5.title": "Electric Pump (MV)",
+  "quest.1A000000000002E6.quest_desc": [
+    "a ring from rubber sheet"
+  ],
+  "quest.1A000000000002E6.title": "Rubber Ring",
+  "quest.1A000000000002EC.quest_desc": [
+    "What is this and what is for? The answer is next: This is the early tier fuel that may be processed to different energy liquids and gases, witch may be the fuel source for gas turbines and combustion generators. You may get this via grinding most of plants products. Also this is the source of dirt for Forestry Farm Multiblock. Just grind bio chaff again."
+  ],
+  "quest.1A000000000002EC.title": "Bio Chaff",
+  "quest.1A000000000002EE.quest_desc": [
+    "To craft this tool just use flint and steel nugget. Cheap stuff to make fire if you have steel."
+  ],
+  "quest.1A000000000002EE.title": "Flint and Steel",
+  "quest.1A000000000002F1.quest_desc": [
+    "Can accept 128 eu/t (and two ampers). It will be convenient to use it instead of 2 (or 3) lv energy hatches for Electric Blast Furnace."
+  ],
+  "quest.1A000000000002F1.title": "MV Energy Hatch",
+  "quest.1A000000000002F2.quest_desc": [
+    "This is multiblock machine that has a target to give you an ocean of steam. If, sure, you will feed it a lot. Btw, it is highly recomended to create the separated water source, to prevent water deficit, or it may come the explosion. Note, that it can use distilled water, and it wil use distilled water with higher priority, in case if this boiler has two hatches with common and distilled water."
+  ],
+  "quest.1A000000000002F2.title": "Large Bronze Boiler",
+  "quest.1A000000000002F3.quest_desc": [
+    "A part of LBB (large bronze boiler)."
+  ],
+  "quest.1A000000000002F3.title": "Bronze Firebox Casing",
+  "quest.1A000000000002F5.quest_desc": [
+    "Height to search: 10-40 NICKEL vein (Garnierite, Nickel, Cobaltite, Pentlandite). Your target is Cobaltite ore. But there is a different easy way. You may get it via washing plant. Put there crushed copper ore and you will get tiny cobalt dust as sub product."
+  ],
+  "quest.1A000000000002F5.title": "Cobalt Ingot",
+  "quest.1A000000000002F6.quest_desc": [
+    "You can make it from bio chuff via mixer."
+  ],
+  "quest.1A000000000002F6.title": "Industrial Biomass",
+  "quest.1A000000000002F7.quest_desc": [
+    "Use basic fermenter to convert industrial biomass to fermented biomass."
+  ],
+  "quest.1A000000000002F7.title": "Fermented Biomass",
+  "quest.1A000000000002F8.quest_desc": [
+    "Just put bio chaff to brewery machine."
+  ],
+  "quest.1A000000000002F8.title": "Biomass",
+  "quest.1A000000000002F9.quest_desc": [
+    "There are few ways to get it via distillery."
+  ],
+  "quest.1A000000000002F9.title": "Ethanol",
+  "quest.1A000000000002FA.quest_desc": [
+    "Can process bio chaff to common liquid biomass with help of water."
+  ],
+  "quest.1A000000000002FA.title": "Basic Brewery",
+  "quest.1A000000000002FB.quest_desc": [
+    "Can produce energy from most liquid fuel."
+  ],
+  "quest.1A000000000002FB.title": "Basic Combustion Generator",
+  "quest.1A000000000002FC.quest_desc": [
+    "Can produce energy from any gas fuel."
+  ],
+  "quest.1A000000000002FC.title": "Basic Gas Turbine",
+  "quest.1A00000000000301.quest_desc": [
+    "Pour to mixer Dinitrogen Tetroxide and 1,1-Dimethylhydrazine"
+  ],
+  "quest.1A00000000000301.title": "Rocket Fuel",
+  "quest.1A00000000000304.quest_desc": [
+    "Water + Chlorine + Mercury"
+  ],
+  "quest.1A00000000000304.title": "Hypochlorous Acid",
+  "quest.1A00000000000305.quest_desc": [
+    "You may get it via centrifuge by redstone or by cinnabar."
+  ],
+  "quest.1A00000000000305.title": "Mercury",
+  "quest.1A00000000000308.quest_desc": [
+    "May be created frow two titanium plates."
+  ],
+  "quest.1A00000000000308.title": "Double Titanium Plate",
+  "quest.1A0000000000030C.quest_desc": [
+    "May be created from Stainless Steel rod."
+  ],
+  "quest.1A0000000000030C.title": "Stainless Steel Bolt",
+  "quest.1A00000000000325.quest_desc": [
+    "A part of electric HV pumps."
+  ],
+  "quest.1A00000000000325.title": "Steel Rotor",
+  "quest.1A00000000000326.quest_desc": [
+    "It may help you to create oxygen pipe (for galactic craft)"
+  ],
+  "quest.1A00000000000326.title": "Extruder Shape (small pipe)",
+  "quest.1A0000000000032E.quest_desc": [
+    "Height for search: 50-90 BAUXITE vein (Bauxite, Aluminium, Ilmenite). Look at NEI to find a way to get it from Bauxite or Ilmenite ores."
+  ],
+  "quest.1A0000000000032E.title": "Rutile Dust",
+  "quest.1A0000000000032F.quest_desc": [
+    "Replace it for your Electric Blast Furnace to get ability to smelt metals by HV tier recipes."
+  ],
+  "quest.1A0000000000032F.title": "HV Energy Hatch",
+  "quest.1A00000000000330.quest_desc": [
+    "Rutile dust + carbon + chlorine by chemical reactor HV tier"
+  ],
+  "quest.1A00000000000330.title": "Titaniumtetrachloride",
+  "quest.1A00000000000331.quest_desc": [
+    "Height to search: 10 - 40 OLIVINE vein (Bentonite, Magnesite, Olivine, Glauconite). Look for Magnesite ore to use it as source of magnesium dust."
+  ],
+  "quest.1A00000000000331.title": "Magnesium Dust",
+  "quest.1A00000000000332.quest_desc": [
+    "This coil block is for Blast Furnace / pyrolyse oven / multi smelter."
+  ],
+  "quest.1A00000000000332.title": "Kanthal Coil Block",
+  "quest.1A00000000000339.quest_desc": [
+    "May be used as part of HV machines. Also may be used standalone."
+  ],
+  "quest.1A00000000000339.title": "Conveyor Module (HV)",
+  "quest.1A0000000000033A.quest_desc": [
+    "The part of HV tier machines,"
+  ],
+  "quest.1A0000000000033A.title": "Robot Arm (HV)",
+  "quest.1A0000000000033B.quest_desc": [
+    "Height to search: 5 - 30 BERYLLIUM vein (Beryllium, Emerald, Thorium). There is a small chance to find a crushed emerald ore from small ore block. Then you can sift it to get common emerald."
+  ],
+  "quest.1A0000000000033B.title": "Emerald",
+  "quest.1A0000000000033E.quest_desc": [
+    "Better than previous models."
+  ],
+  "quest.1A0000000000033E.title": "Advanced Assembling Machine II",
+  "quest.1A0000000000033F.quest_desc": [
+    "Better than previous models. It may craft up to IV circuits."
+  ],
+  "quest.1A0000000000033F.title": "Advanced Circuit Assembling II",
+  "quest.1A00000000000342.quest_desc": [
+    "Create it by bending machine."
+  ],
+  "quest.1A00000000000342.title": "Gallium Plate",
+  "quest.1A00000000000344.quest_desc": [
+    "Use wiremill..."
+  ],
+  "quest.1A00000000000344.title": "Fine Platinum Wire",
+  "quest.1A00000000000345.quest_desc": [
+    "Use Vacuum Freezer, to cool the hot kanthal ingot."
+  ],
+  "quest.1A00000000000345.title": "Kanthal Ingot",
+  "quest.1A00000000000347.quest_desc": [
+    "This is the subprodust of titanium ingots. What sould you do with this? Put it to chemical reactor HV+ with sodium to get back part of resources."
+  ],
+  "quest.1A00000000000347.title": "Magnesiumchloride Dust",
+  "quest.1A0000000000034A.quest_desc": [
+    "MV battry"
+  ],
+  "quest.1A0000000000034A.title": "Medium Lithium Battery",
+  "quest.1A0000000000034B.quest_desc": [
+    "It may be used as container for MV batteries."
+  ],
+  "quest.1A0000000000034B.title": "Medium Battery Hull",
+  "quest.1A00000000000350.quest_desc": [
+    "The #3 tier of coil block which you may use in EBF construction."
+  ],
+  "quest.1A00000000000350.title": "Nichrome Coil Block",
+  "quest.1A00000000000351.quest_desc": [
+    "Use Chrome Ingot and Nickel Ingot to make new alloy - the nichrome. The EBF will help you with it."
+  ],
+  "quest.1A00000000000351.title": "Nichrome Ingot",
+  "quest.1A00000000000353.quest_desc": [
+    "Height to search: 20 - 50 TUNGSTATE vein (Scheelite, Tungstate, Lithium). But it wil be hard to find. So you may use centrifuge MV+ tier to separate lava to get few type of resources including the small pile of tangstate dust with a tiny chance (only 2.5%% per every 100 mb)."
+  ],
+  "quest.1A00000000000353.title": "Tungstate Dust",
+  "quest.1A00000000000354.quest_desc": [
+    "Better than basic."
+  ],
+  "quest.1A00000000000354.title": "Advanced Centrifuge",
+  "quest.1A00000000000355.quest_desc": [
+    "If you want to use extruder, you should use the HV tier or better of it."
+  ],
+  "quest.1A00000000000355.title": "Tungstensteel Rod",
+  "quest.1A00000000000356.quest_desc": [
+    "Use EBF with nichrome coil blocks."
+  ],
+  "quest.1A00000000000356.title": "Tungsten Ingot",
+  "quest.1A00000000000357.quest_desc": [
+    "Use EV+ Chemical Reactor to make the tungstig acid dust from the tungstate or scheelite dust."
+  ],
+  "quest.1A00000000000357.title": "Tungstig Acid Dust",
+  "quest.1A0000000000035D.quest_desc": [
+    "Height to search: 20 - 50 MOLYBDENUM vein (Wulfenite, Molybdenite, Molybdenum, Powellite). Very rare vein of ore. Other way to get it - as subproduct of scheelite or tungsten ore."
+  ],
+  "quest.1A0000000000035D.title": "Molybdenum Dust",
+  "quest.1A00000000000387.quest_desc": [
+    "Better than common."
+  ],
+  "quest.1A00000000000387.title": "Advanced Forming Press II",
+  "quest.1A000000000003AC.quest_desc": [
+    "Height to search: 20-40 MONAZITE vein (Bastnasite, Monazite, Neodymium)"
+  ],
+  "quest.1A000000000003AC.title": "Monazite Dust",
+  "quest.1A000000000003AE.quest_desc": [
+    "Prepare one of blue rods, as Lapis, Lazurite, Sodalite. Use lathe to get a rod."
+  ],
+  "quest.1A000000000003AE.title": "One of Blue Rods",
+  "quest.1A000000000003B0.quest_desc": [
+    "Create one lens of: Blue topaz, sapphire, opal"
+  ],
+  "quest.1A000000000003B0.title": "Any Blue Lens",
+  "quest.1A000000000003B6.quest_desc": [
+    "A part of Combustion Engine (multiblock)"
+  ],
+  "quest.1A000000000003B6.title": "Stable Titanium Machine Casing",
+  "quest.1A000000000003B8.quest_desc": [
+    "A part of Combustion Engine (multiblock)"
+  ],
+  "quest.1A000000000003B8.title": "Titanium Rotor",
+  "quest.1A000000000003BA.quest_desc": [
+    "A part of Combustion Engine (multiblock)"
+  ],
+  "quest.1A000000000003BA.title": "Titanium Gear",
+  "quest.1A000000000003BE.quest_desc": [
+    "Multiblocks usually produce more than 512 eu/t. So they require at least EV dynamo hatch."
+  ],
+  "quest.1A000000000003BE.title": "EV Dynamo hatch",
+  "quest.1A000000000003BF.quest_desc": [
+    "The easyest was is to distill it from creosote oil."
+  ],
+  "quest.1A000000000003BF.title": "Lubricant",
+  "quest.1A000000000003C0.quest_desc": [
+    "An early way to get it is by fluid extractor from wood pulp. To get info about other ways - use NEI (as always)"
+  ],
+  "quest.1A000000000003C0.title": "Creosote oil",
+  "quest.1A000000000003C2.quest_desc": [
+    "A part of large turbine (rotor)."
+  ],
+  "quest.1A000000000003C2.title": "Long Tungstensteel Rod",
+  "quest.1A000000000003C4.quest_desc": [
+    "Better that previous version, and may work with 2048 eu/t voltage."
+  ],
+  "quest.1A000000000003C4.title": "Advanced Assembling Machine III",
+  "quest.1A000000000003C5.quest_desc": [
+    "A part of large turbine"
+  ],
+  "quest.1A000000000003C5.title": "Stainless Steel Gear",
+  "quest.1A000000000003C7.quest_desc": [
+    "A mix of gold and copper dusts"
+  ],
+  "quest.1A000000000003C7.title": "Rose Gold",
+  "quest.1A000000000003C8.quest_desc": [
+    "A complex mix of ferrous and non-ferrous metall dusts."
+  ],
+  "quest.1A000000000003C8.title": "Blue Steel Dust",
+  "quest.1A000000000003CA.quest_desc": [
+    "A part of turbine."
+  ],
+  "quest.1A000000000003CA.title": "Turbine Casing",
+  "quest.1A000000000003CC.quest_desc": [
+    "An alloy of magnesium and aluminium. May be produced in alloy smelter."
+  ],
+  "quest.1A000000000003CC.title": "Magnalium Plate",
+  "quest.1A000000000003CE.quest_desc": [
+    "A base for all EV machines"
+  ],
+  "quest.1A000000000003CE.title": "EV Machine Hull",
+  "quest.1A000000000003D0.quest_desc": [
+    "You may create this from empty mold."
+  ],
+  "quest.1A000000000003D0.title": "Mold (casing)",
+  "quest.1A000000000003D1.quest_desc": [
+    "An alloy of copper and nickel. Can be produced by alloy smelter. You have to prepare a full stacks of §6copper§r and §bnickel§r ingots ar dusts (one per each material) to go forward."
+  ],
+  "quest.1A000000000003D1.title": "Cupronickel",
+  "quest.1A000000000003D3.quest_desc": [
+    "May be crafted from 6 glass blocks"
+  ],
+  "quest.1A000000000003D3.title": "Glass Pane (for windows)",
+  "quest.1A000000000003D8.quest_desc": [
+    "Just use a cutting saw on certus quartz block"
+  ],
+  "quest.1A000000000003D8.title": "Certus Quartz Plate",
+  "quest.1A000000000003DA.quest_desc": [
+    "You may get it by compressing 4 nether quartz"
+  ],
+  "quest.1A000000000003DA.title": "Block of Quartz",
+  "quest.1A000000000003DB.quest_desc": [
+    "Just use a cutting saw on nether quartz block"
+  ],
+  "quest.1A000000000003DB.title": "Nether Quartz Plate",
+  "quest.1A000000000003E1.quest_desc": [
+    "Multiblocks usually produce more than 512 eu/t. So they require at least EV dynamo hatch. Usually, but not always. You may use it for any multiblock generators, that produce less than 512 eu/t"
+  ],
+  "quest.1A000000000003E1.title": "HV Dynamo hatch",
+  "quest.1A000000000003E3.quest_desc": [
+    "Height to search: 50 - 80 COAL vein (Coal, Lignite). You have to collect 40 items in total in you inventory."
+  ],
+  "quest.1A000000000003E3.title": "Coal Dust",
+  "quest.1A000000000003EB.quest_desc": [
+    "May be produced from scrap. Use OSS to pour there liquid."
+  ],
+  "quest.1A000000000003EB.title": "UU Amplifier",
+  "quest.1A000000000003FB.quest_desc": [
+    "May be created in implosion compressor from low-level sapphires or even from sapphire dust."
+  ],
+  "quest.1A000000000003FB.title": "Flawless Sapphire",
+  "quest.1A000000000003FD.quest_desc": [
+    "To get it, just put sticky resin to centrifuge."
+  ],
+  "quest.1A000000000003FD.title": "Glue",
+  "quest.1A000000000003FF.quest_desc": [
+    "Height to search: 20 - 50 TUNGSTATE vein (Scheelite, Tungstate, Lithium). But Low-level way is to get it a Lithium dust from lepidolite ore: Height for search: 50-60 SALTS vein (Rock Salt, Salt, Lepidolite, Spodumene). These are a raw source of Sodium and Lithium. To get 2 lithium dusts, you have to crush 9 lepidolite ores and process them in a washing plant. It will give you tiny lithium dusts as by-product. Salt is needed to get sodium, use an electrolyzer. Also, in order to get lithium dust, you may process spodumene ore. In this case, to get lithium as by-product, you have to crush it, purify, then crush again and send to a centrifuge."
+  ],
+  "quest.1A000000000003FF.title": "Lithium Dust",
+  "quest.1A00000000000402.quest_desc": [
+    "May convert voltage between 128 and 512 eu/t to both sides."
+  ],
+  "quest.1A00000000000402.title": "Medium Voltage Transformer",
+  "quest.1A00000000000403.quest_desc": [
+    "May convert voltage between 2048 and 8192 eu/t to both sides."
+  ],
+  "quest.1A00000000000403.title": "Extreme Transformer",
+  "quest.1A00000000000414.quest_desc": [
+    "May be created from common titanium rod."
+  ],
+  "quest.1A00000000000414.title": "Long Titanium Rod",
+  "quest.1A00000000000416.quest_desc": [
+    "Multiblock generator. Require any turbine (rotor) and optimal steam flow to work with max efficiently."
+  ],
+  "quest.1A00000000000416.title": "Large Steam Turbine",
+  "quest.1A00000000000418.quest_desc": [
+    "May be created in precision laser engraver from wafer with help of ruby lens."
+  ],
+  "quest.1A00000000000418.title": "Integrated Logic Circuit (wafer)",
+  "quest.1A0000000000041A.quest_desc": [
+    "Put aluminium and magnesium dust or ingot to alloy smelter, to get magnaluim ingots"
+  ],
+  "quest.1A0000000000041A.title": "Magnalium Ingot",
+  "quest.1A0000000000041B.quest_desc": [
+    "Main veins (with a lot of aluminium inside): height for search: 50-90 BAUXITE vein (Bauxite, Aluminium, Ilmenite), 10-40 SAPPHIRE vein (Almandine, Pyrope, Sapphire, Green Sapphire). As you now are on LV tier, currently you may pull aluminium as dust only from anuminium ore, supphire dust or green sapphire dust. But there are secondary veins (with a small part of aluminium inside): height for search: 50-60 SALTS vein (Rock Salt, Salt, Lepidolite, Spodumene), 5 - 30 BERILLIUM vein (Beryllium, Emerald, Thorium), 10 - 40 OLIVINE (Bentonite, Magnesite, Olivine, Glauconite). Ores, to get aluminium dust as subproduct, are: Spodumene, Almandine, Emerald, Bentonite, Glauconite."
+  ],
+  "quest.1A0000000000041B.title": "Aluminium Dust",
+  "quest.1A0000000000041C.quest_desc": [
+    "Use extruder or lathe to get rods."
+  ],
+  "quest.1A0000000000041C.title": "Magnalium Rod",
+  "quest.1A0000000000041D.quest_desc": [
+    "Use EBF to smelt it to ingot."
+  ],
+  "quest.1A0000000000041D.title": "Blue Steel Ingot",
+  "quest.1A0000000000041E.quest_desc": [
+    "Use Lathe or MV (or better) Extruder to make a rod from ingot."
+  ],
+  "quest.1A0000000000041E.title": "Blue Steel Rod",
+  "quest.1A0000000000041F.quest_desc": [
+    "May be created from common rods by hammer."
+  ],
+  "quest.1A0000000000041F.title": "Long Magnalium Rod",
+  "quest.1A00000000000425.quest_desc": [
+    "A part of heat exchanger."
+  ],
+  "quest.1A00000000000425.title": "Titanium Pipe Casing",
+  "quest.1A00000000000427.quest_desc": [
+    "Allow you to make pipes with size Huge"
+  ],
+  "quest.1A00000000000427.title": "Extruder Shape (Huge Pipe)",
+  "quest.1A0000000000042B.quest_desc": [
+    "Better then previous (it works faster)"
+  ],
+  "quest.1A0000000000042B.title": "Advanced Extruder II",
+  "quest.1A0000000000042D.quest_desc": [
+    "Better and faster then previuos version."
+  ],
+  "quest.1A0000000000042D.title": "Advanced Wiremill",
+  "quest.1A00000000000438.quest_desc": [
+    "May be crafted from Empty Shape Plate by hammer"
+  ],
+  "quest.1A00000000000438.title": "Mold (block)",
+  "quest.1A00000000000439.quest_desc": [
+    "May be created with help of assembling machine from tin item casing and glass pane. It is nice stuff to complete §dfluid quests§f. To do that, you have to pour fluid to it by right mouse click with §3§f§buniversal fluid cell§f in hand on machine that contain fluid. This will pull liquid from machine to your cell."
+  ],
+  "quest.1A00000000000439.title": "Universal Fluid Cell",
+  "quest.1A0000000000043C.quest_desc": [
+    "Use Lathe to make an invar rod from invar ingot"
+  ],
+  "quest.1A0000000000043C.title": "Invar Rod",
+  "quest.1A0000000000043D.quest_desc": [
+    "It is significantly stronger than stone pickaxe."
+  ],
+  "quest.1A0000000000043D.title": "Pickaxe (flint)",
+  "quest.1A00000000000440.quest_desc": [
+    "Simplest shovel. Required only wood to be created from."
+  ],
+  "quest.1A00000000000440.title": "Wooden Shovel",
+  "quest.1A00000000000441.quest_desc": [
+    "It is significantly stronger than wooden shovel."
+  ],
+  "quest.1A00000000000441.title": "Stone Shovel",
+  "quest.1A00000000000442.quest_desc": [
+    "It is significantly stronger than wooden pickaxe."
+  ],
+  "quest.1A00000000000442.title": "Stone Pickaxe",
+  "quest.1A00000000000444.quest_desc": [
+    "Better than common boiler, but require more coal to heat up."
+  ],
+  "quest.1A00000000000444.title": "High Pressure Coal Boliler",
+  "quest.1A00000000000445.quest_desc": [
+    "Nice alloy, that you may create from tin and copper. It is a main material for steam machines."
+  ],
+  "quest.1A00000000000445.title": "Bronze Ingot",
+  "quest.1A00000000000446.quest_desc": [
+    "Use saw on any wooden plank to get a wooden slab."
+  ],
+  "quest.1A00000000000446.title": "Wood Slab",
+  "quest.1A0000000000044C.quest_desc": [
+    "A common rails track."
+  ],
+  "quest.1A0000000000044C.title": "Track",
+  "quest.1A0000000000044F.quest_desc": [
+    "It is a nice stuff to ride it on tracks. Or you may use it to automatically transferring your resources from miner to your base (just example). But in this case you have to use one of two locomotive types to pull your train."
+  ],
+  "quest.1A0000000000044F.title": "Minecart",
+  "quest.1A00000000000450.quest_desc": [
+    "A part of minecart wheels"
+  ],
+  "quest.1A00000000000450.title": "Iron Ring",
+  "quest.1A00000000000451.quest_desc": [
+    "A part of LBB (large bronze boiler)."
+  ],
+  "quest.1A00000000000451.title": "Bronze Pipe Casing",
+  "quest.1A00000000000453.quest_desc": [
+    "Just a bronze stick. It may be used as a part of some machines."
+  ],
+  "quest.1A00000000000453.title": "Bronze Rod",
+  "quest.1A00000000000459.quest_desc": [
+    "Prepare dyes"
+  ],
+  "quest.1A00000000000459.title": "Red Yellow Lime Dyes",
+  "quest.1A0000000000045A.quest_desc": [
+    "It may show to spawn point. Also it may be used as a part to craft an other items"
+  ],
+  "quest.1A0000000000045A.title": "Compas",
+  "quest.1A0000000000045C.quest_desc": [
+    "May be used as a cover on GT machines, to control their states by redstone signal."
+  ],
+  "quest.1A0000000000045C.title": "Machine Controller",
+  "quest.1A0000000000046D.quest_desc": [
+    "Create a nether portal. Now you can do it."
+  ],
+  "quest.1A0000000000046D.title": "Nether Portal",
+  "quest.1A0000000000046F.quest_desc": [
+    "Just a bucket with lava inside."
+  ],
+  "quest.1A0000000000046F.title": "Lava Bucket",
+  "quest.1A00000000000470.quest_desc": [
+    "Empty battery casing, that may be filled by sodium, lithium or cadmium. It was in case if you want to create an accumulator. But you may craft a single-use battery by filling to it with mercury or with sulfuric acid."
+  ],
+  "quest.1A00000000000470.title": "Large Battery Hull",
+  "quest.1A00000000000474.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000474.title": "[sb] Steam Macerator",
+  "quest.1A00000000000475.quest_desc": [
+    "Crowbar - can be crafted from any metal rods and any blue dye + hammer and file. You may use it to pull out covers such as plates that was set on the sides of machine or pipe."
+  ],
+  "quest.1A00000000000475.title": "Crowbar",
+  "quest.1A00000000000478.quest_desc": [
+    "Simple sign that allow you to write some text."
+  ],
+  "quest.1A00000000000478.title": "Sign",
+  "quest.1A00000000000485.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000485.title": "[sb] Small Coal Boiler",
+  "quest.1A00000000000487.quest_desc": [
+    "Use a file or a lathe to make a rod from a brass ingot."
+  ],
+  "quest.1A00000000000487.title": "Brass Rod",
+  "quest.1A00000000000489.quest_desc": [
+    "This is a present - solar panel. You may place it as a cover on a top on any machine, battery buffer or even machine hull. In the last case it may be use as \"solar energy generator\". Just turn it energy output to direction you want."
+  ],
+  "quest.1A00000000000489.title": "Solar Panel",
+  "quest.1A0000000000048B.quest_desc": [
+    "It is used to keep a given area of Chunks constantly loaded into memory, allowing for the game's processes to go on, regardless if a Player is present or not. A Redstone signal will deactivate the Loader. It is important to always verify the coverage of the area loaded, using the Show Lasers feature, as some machines may operate in unintended ways if not loaded properly."
+  ],
+  "quest.1A0000000000048B.title": "Chunk Loader",
+  "quest.1A0000000000048C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000048C.title": "[sb] High Pressure Macerator",
+  "quest.1A0000000000048D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000048D.title": "[sb] Basic Macerator",
+  "quest.1A0000000000048E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000048E.title": "[sb] Advanced Macerator",
+  "quest.1A0000000000048F.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000048F.title": "[sb] Universal Macerator",
+  "quest.1A00000000000490.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000490.title": "[sb] Universal Pulverizer",
+  "quest.1A00000000000496.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000496.title": "[sb] Basic Ore Washing Plant",
+  "quest.1A00000000000497.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000497.title": "[sb] Advanced Ore Washing Plant",
+  "quest.1A00000000000498.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000498.title": "[sb] Advanced Ore Washing Plant II",
+  "quest.1A00000000000499.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000499.title": "[sb] Advanced Ore Washing Plant III",
+  "quest.1A0000000000049E.quest_desc": [
+    "You may craft it from 4 clay balls."
+  ],
+  "quest.1A0000000000049E.title": "Clay (block)",
+  "quest.1A0000000000049F.quest_desc": [
+    "Use mortar (or macerator, if you have it) to craft a clay dust from clay block."
+  ],
+  "quest.1A0000000000049F.title": "Clay Dust",
+  "quest.1A000000000004A0.quest_desc": [
+    "Combine clay dust and brick dust to get fireclay dust."
+  ],
+  "quest.1A000000000004A0.title": "Fireclay Dust",
+  "quest.1A000000000004A1.quest_desc": [
+    "Use compressor to get raw compressed fireclay bricks from fireclay dust."
+  ],
+  "quest.1A000000000004A1.title": "Compressed Fireclay",
+  "quest.1A000000000004A2.quest_desc": [
+    "Put compressed fireclay bricks to furnace to get firebrick."
+  ],
+  "quest.1A000000000004A2.title": "Firebrick",
+  "quest.1A000000000004A3.quest_desc": [
+    "Use forge hammer to crush bricks to brick dust. You will get 1 small brick dust per each brick. Then you may combine 4 of them, to get normal size brick dust."
+  ],
+  "quest.1A000000000004A3.title": "Brick Dust",
+  "quest.1A000000000004A4.quest_desc": [
+    "Use a file on tin ingot to create a tin rod."
+  ],
+  "quest.1A000000000004A4.title": "Tin rod",
+  "quest.1A000000000004A5.quest_desc": [
+    "Use a saw on tin rod to make tin bolts."
+  ],
+  "quest.1A000000000004A5.title": "Tin bolt",
+  "quest.1A000000000004A6.quest_desc": [
+    "Use hammer on tin rod to get a tin ring."
+  ],
+  "quest.1A000000000004A6.title": "Tin Ring",
+  "quest.1A000000000004A7.quest_desc": [
+    "You have to find any sheep (with any body color). But to get exactly a black wool you have to paint it to black (by any black dye - squid ink for example). Btw, from two sheeps you may create one more via feeding them by wheat. And if both of them where black  new one will be black too."
+  ],
+  "quest.1A000000000004A7.title": "Black Wool",
+  "quest.1A000000000004A9.quest_desc": [
+    "You may use it to make an ingots from small or tiny piles or nuggets."
+  ],
+  "quest.1A000000000004A9.title": "Mold (Ingot)",
+  "quest.1A000000000004AA.quest_desc": [
+    "Use file or lathe (or MV extruder, if you have it) to make a steel rod from steel ingot."
+  ],
+  "quest.1A000000000004AA.title": "Steel Rod",
+  "quest.1A000000000004AD.quest_desc": [
+    "Nice machine that may do useful work for you. As an example: cut wood to planks, cut steel plate to casings, cut wool to carpet, cut rod to bolts and other else. So it may process your stuff with more efficient (in most cases)."
+  ],
+  "quest.1A000000000004AD.title": "Basic Cutting Machine",
+  "quest.1A000000000004B0.quest_desc": [
+    "May be crafted from steel rod by hammer."
+  ],
+  "quest.1A000000000004B0.title": "Steel Ring",
+  "quest.1A000000000004B1.quest_desc": [
+    "Use 3 wooden planks and 3 blocks of wool to craft a bed. It will give you ability to skip a night (if you play solo) while you sleeping."
+  ],
+  "quest.1A000000000004B1.title": "Bed",
+  "quest.1A000000000004B2.quest_desc": [
+    "Find and kill few sheeps to get 3 wools in total."
+  ],
+  "quest.1A000000000004B2.title": "Wool (any color)",
+  "quest.1A000000000004B3.quest_desc": [
+    "Use a saw on any wood planks to get wooden slabs."
+  ],
+  "quest.1A000000000004B3.title": "Wooden Slab",
+  "quest.1A000000000004B9.quest_desc": [
+    "Use Cutting Machine to make a plate from a block."
+  ],
+  "quest.1A000000000004B9.title": "Yellow Garnet Plate",
+  "quest.1A000000000004BB.quest_desc": [
+    "Faster than LV, and can work with all bending recipes."
+  ],
+  "quest.1A000000000004BB.title": "Advanced Bending Machine",
+  "quest.1A000000000004BC.quest_desc": [
+    "May be created from silicon ingot by few ways."
+  ],
+  "quest.1A000000000004BC.title": "Silicon Plate",
+  "quest.1A000000000004BD.quest_desc": [
+    "You may get it from silicon dust by common furnace."
+  ],
+  "quest.1A000000000004BD.title": "Silicon Ingot",
+  "quest.1A000000000004C3.quest_desc": [
+    "Put it to lathe (Any tier) to get a lens."
+  ],
+  "quest.1A000000000004C3.title": "Exquisite Emerald",
+  "quest.1A000000000004C4.quest_desc": [
+    "Use cutting machine to make a plate from emerald block."
+  ],
+  "quest.1A000000000004C4.title": "Emerald Plate",
+  "quest.1A000000000004C5.quest_desc": [
+    "Compress 9 emeralds to get a block from it"
+  ],
+  "quest.1A000000000004C5.title": "Block of Emerald",
+  "quest.1A000000000004C6.quest_desc": [
+    "Prepare 9 emeralds. And one more requirement to went by this quest branch is to own a lathe HV tier."
+  ],
+  "quest.1A000000000004C6.title": "Nine emeralds",
+  "quest.1A000000000004C9.quest_desc": [
+    "It is a part of Cargo Loader or Unloader. Also you may use it standalone."
+  ],
+  "quest.1A000000000004C9.title": "Hopper",
+  "quest.1A000000000004CF.quest_desc": [
+    "Make it from wood planks."
+  ],
+  "quest.1A000000000004CF.title": "Stick",
+  "quest.1A000000000004D1.quest_desc": [
+    "You have to find a rare ore vien... Height to search: 20 - 50 TUNGSTATE vein (Scheelite, Tungstate, Lithium). But there is one other way to get this enough rare stuff. Any way, if you found tungstate ore vien - you are lucky!"
+  ],
+  "quest.1A000000000004D1.title": "Tungstate - the lucky way",
+  "quest.1A000000000004D2.quest_desc": [
+    "You may put it as a cover on pipe or input/output hatch to set a flow power. Negative numbers means that it will pump into a block on which you put it. Positive - it will pump a gas o liquid from a block on which you place it, to the side it looks to. You may set flow by clicking RMB with empty hand or by screwdriver."
+  ],
+  "quest.1A000000000004D2.title": "Fluid Regulator",
+  "quest.1A000000000004DA.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004DA.title": "[sb] Basic Electromagnetic Separator",
+  "quest.1A000000000004DB.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004DB.title": "[sb] Advanced Centrifuge",
+  "quest.1A000000000004DC.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004DC.title": "[sb] Turbo Centrifuge",
+  "quest.1A000000000004DD.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004DD.title": "[sb] Molecular Separator",
+  "quest.1A000000000004E2.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004E2.title": "[sb] Basic Thermal Centrifuge",
+  "quest.1A000000000004E3.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004E3.title": "[sb] Advanced Thermal Centrifuge",
+  "quest.1A000000000004E4.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004E4.title": "[sb] Advanced Thermal Centrifuge II",
+  "quest.1A000000000004E5.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004E5.title": "[sb] Advanced Thermal Centrifuge III",
+  "quest.1A000000000004EA.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004EA.title": "[sb] Basic Sifting Machine",
+  "quest.1A000000000004EB.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004EB.title": "[sb] Advanced Sifting Machine",
+  "quest.1A000000000004EC.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004EC.title": "[sb] Advanced Sifting Machine II",
+  "quest.1A000000000004ED.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004ED.title": "[sb] Advanced Sifting Machine III",
+  "quest.1A000000000004F2.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004F2.title": "[sb] Basic Electrolyzer",
+  "quest.1A000000000004F3.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004F3.title": "[sb] Advanced Electromagnetic Separator",
+  "quest.1A000000000004F4.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004F4.title": "[sb] Advanced Electromagnetic Separator II",
+  "quest.1A000000000004F5.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004F5.title": "[sb] Advanced Electromagnetic Separator III",
+  "quest.1A000000000004FA.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004FA.title": "[sb] Basic Chemical Bath",
+  "quest.1A000000000004FB.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004FB.title": "[sb] Advanced Chemical Bath",
+  "quest.1A000000000004FC.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004FC.title": "[sb] Advanced Chemical Bath II",
+  "quest.1A000000000004FD.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004FD.title": "[sb] Advanced Chemical Bath III",
+  "quest.1A00000000000502.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000502.title": "[sb] Basic Centifuge",
+  "quest.1A00000000000503.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000503.title": "[sb] Advanced Electrolyzer",
+  "quest.1A00000000000504.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000504.title": "[sb] Advanced Electrolyzer II",
+  "quest.1A00000000000505.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000505.title": "[sb] Advanced Electrolyzer III",
+  "quest.1A0000000000050A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000050A.title": "[sb] Basic Forge Hammer",
+  "quest.1A0000000000050B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000050B.title": "[sb] Advanced Forge Hammer",
+  "quest.1A0000000000050C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000050C.title": "[sb] Advanced Forge Hammer II",
+  "quest.1A0000000000050D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000050D.title": "[sb] Advanced Forge Hammer III",
+  "quest.1A00000000000512.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000512.title": "[sb] High Pressure Forge Hammer",
+  "quest.1A00000000000513.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000513.title": "[sb] Steam Forge Hammer",
+  "quest.1A00000000000514.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000514.title": "[sb] Basic Bending Machine",
+  "quest.1A00000000000515.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000515.title": "[sb] Advanced Bending Machine",
+  "quest.1A00000000000516.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000516.title": "[sb] Advanced Bending Machine II",
+  "quest.1A00000000000517.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000517.title": "[sb] Advanced Bending Machine III",
+  "quest.1A0000000000051D.quest_desc": [
+    "A part of neutronium reflector."
+  ],
+  "quest.1A0000000000051D.title": "Double Steel Plate",
+  "quest.1A00000000000522.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000522.title": "[sb] Basic Wiremill",
+  "quest.1A00000000000523.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000523.title": "[sb] Advanced Wiremill",
+  "quest.1A00000000000524.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000524.title": "[sb] Advanced Wiremill II",
+  "quest.1A00000000000525.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000525.title": "[sb] Advanced Wiremill III",
+  "quest.1A0000000000052A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000052A.title": "[sb] Basic Lathe",
+  "quest.1A0000000000052B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000052B.title": "[sb] Advanced Lathe",
+  "quest.1A0000000000052C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000052C.title": "[sb] Advanced Lathe II",
+  "quest.1A0000000000052D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000052D.title": "[sb] Advanced Lathe III",
+  "quest.1A00000000000532.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000532.title": "[sb] Basic Extruder",
+  "quest.1A00000000000533.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000533.title": "[sb] Advanced Extruder",
+  "quest.1A00000000000534.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000534.title": "[sb] Advanced Extruder II",
+  "quest.1A00000000000535.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000535.title": "[sb] Advanced Extruder III",
+  "quest.1A0000000000053A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000053A.title": "[sb] Basic Electric Furnace",
+  "quest.1A0000000000053B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000053B.title": "[sb] Advanced Electric Furnace",
+  "quest.1A0000000000053C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000053C.title": "[sb] Advanced Electric Furnace II",
+  "quest.1A0000000000053D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000053D.title": "[sb] Advanced Electric Furnace III",
+  "quest.1A00000000000562.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000562.title": "[sb] Basic Cutting Machine",
+  "quest.1A00000000000563.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000563.title": "[sb] Advanced Cutting Machine",
+  "quest.1A00000000000564.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000564.title": "[sb] Advanced Cutting Machine II",
+  "quest.1A00000000000565.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000565.title": "[sb] Advanced Cutting Machine III",
+  "quest.1A0000000000056A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000056A.title": "[sb] Basic Assembling Machine",
+  "quest.1A0000000000056B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000056B.title": "[sb] Advanced Assembling Machine",
+  "quest.1A0000000000056C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000056C.title": "[sb] Advanced Assembling Machine II",
+  "quest.1A0000000000056D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000056D.title": "[sb] Advanced Assembling Machine III",
+  "quest.1A00000000000572.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000572.title": "[sb] Basic Circuit Assembling Machine",
+  "quest.1A00000000000573.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000573.title": "[sb] Advanced Circuit Assembling Machine",
+  "quest.1A00000000000574.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000574.title": "[sb] Advanced Circuit Assembling Machine II",
+  "quest.1A00000000000575.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000575.title": "[sb] Advanced Circuit Assembling Machine III",
+  "quest.1A00000000000582.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000582.title": "[sb] Basic Fluid Extractor",
+  "quest.1A00000000000583.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000583.title": "[sb] Advanced Fluid Extractor",
+  "quest.1A00000000000584.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000584.title": "[sb] Advanced Fluid Extractor II",
+  "quest.1A00000000000585.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000585.title": "[sb] Advanced Fluid Extractor III",
+  "quest.1A000000000005A2.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005A2.title": "[sb] Basic Chemical Reactor",
+  "quest.1A000000000005A3.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005A3.title": "[sb] Advanced Chemical Reactor",
+  "quest.1A000000000005A4.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005A4.title": "[sb] Advanced Chemical Reactor II",
+  "quest.1A000000000005A5.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005A5.title": "[sb] Advanced Chemical Reactor III",
+  "quest.1A000000000005AA.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005AA.title": "[sb] Steam Alloy Smelter",
+  "quest.1A000000000005AB.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005AB.title": "[sb] High Pressure Alloy Smelter",
+  "quest.1A000000000005AC.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005AC.title": "[sb] Basic Alloy Smelter",
+  "quest.1A000000000005AD.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005AD.title": "[sb] Advanced Alloy Smelter",
+  "quest.1A000000000005AE.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005AE.title": "[sb] Advanced Alloy Smelter II",
+  "quest.1A000000000005AF.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005AF.title": "[sb] Advanced Alloy Smelter III",
+  "quest.1A000000000005B4.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005B4.title": "[sb] Basic Compressor",
+  "quest.1A000000000005B5.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005B5.title": "[sb] Advanced Compressor",
+  "quest.1A000000000005B6.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005B6.title": "[sb] Advanced Compressor II",
+  "quest.1A000000000005B7.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005B7.title": "[sb] Advanced Compressor III",
+  "quest.1A000000000005BC.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005BC.title": "[sb] High Pressure Compressor",
+  "quest.1A000000000005BD.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005BD.title": "[sb] Steam Compressor",
+  "quest.1A000000000005BE.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005BE.title": "[sb] High Pressure Furnace",
+  "quest.1A000000000005BF.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005BF.title": "[sb] Steam Furnace",
+  "quest.1A000000000005C1.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005C1.title": "[sb] Steam Extractor",
+  "quest.1A000000000005C2.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005C2.title": "[sb] High Pressure Extractor",
+  "quest.1A000000000005C3.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005C3.title": "[sb] Basic Extractor",
+  "quest.1A000000000005C4.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005C4.title": "[sb] Advanced Extractor",
+  "quest.1A000000000005C5.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005C5.title": "[sb] Advanced Extractor II",
+  "quest.1A000000000005C6.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005C6.title": "[sb] Advanced Extractor III",
+  "quest.1A000000000005CB.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005CB.title": "[sb] Basic Fluid Canner",
+  "quest.1A000000000005D0.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005D0.title": "[sb] Basic Brewery",
+  "quest.1A000000000005D2.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005D2.title": "[sb] Basic Fluid Solidifier",
+  "quest.1A000000000005D3.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005D3.title": "[sb] Basic Distillery",
+  "quest.1A000000000005D4.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005D4.title": "[sb] Basic Polarizer",
+  "quest.1A000000000005D5.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005D5.title": "[sb] Basic Autoclave",
+  "quest.1A000000000005D6.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005D6.title": "[sb] Basic Mixer",
+  "quest.1A000000000005D7.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005D7.title": "[sb] Basic Precision Laser Engraver",
+  "quest.1A000000000005D8.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005D8.title": "[sb] Basic Forming Press",
+  "quest.1A000000000005D9.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005D9.title": "[sb] Advanced Fluid Canner",
+  "quest.1A000000000005DE.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005DE.title": "[sb] Advanced Brewery",
+  "quest.1A000000000005E0.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005E0.title": "[sb] Advanced Fluid Solidifier",
+  "quest.1A000000000005E1.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005E1.title": "[sb] Advanced Distillery",
+  "quest.1A000000000005E2.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005E2.title": "[sb] Advanced Polarizer",
+  "quest.1A000000000005E3.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005E3.title": "[sb] Advanced Autoclave",
+  "quest.1A000000000005E4.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005E4.title": "[sb] Advanced Mixer",
+  "quest.1A000000000005E5.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005E5.title": "[sb] Advanced Precision Laser Engraver",
+  "quest.1A000000000005E6.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005E6.title": "[sb] Advanced Forming Press",
+  "quest.1A000000000005E7.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005E7.title": "[sb] Quick Fluid Canner",
+  "quest.1A000000000005EC.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005EC.title": "[sb] Advanced Brewery II",
+  "quest.1A000000000005EE.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005EE.title": "[sb] Advanced Fluid Solidifier II",
+  "quest.1A000000000005EF.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005EF.title": "[sb] Advanced Distillery II",
+  "quest.1A000000000005F0.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005F0.title": "[sb] Advanced Polarizer II",
+  "quest.1A000000000005F1.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005F1.title": "[sb] Advanced Autoclave II",
+  "quest.1A000000000005F2.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005F2.title": "[sb] Advanced Mixer II",
+  "quest.1A000000000005F3.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005F3.title": "[sb] Advanced Precision Laser Engraver II",
+  "quest.1A000000000005F4.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005F4.title": "[sb] Advanced Forming Press II",
+  "quest.1A000000000005F5.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005F5.title": "[sb] Turbo Fluid Canner",
+  "quest.1A000000000005FA.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005FA.title": "[sb] Advanced Brewery III",
+  "quest.1A000000000005FC.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005FC.title": "[sb] Advanced Fluid Solidifier III",
+  "quest.1A000000000005FD.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005FD.title": "[sb] Advanced Distillery III",
+  "quest.1A000000000005FE.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005FE.title": "[sb] Advanced Polarizer III",
+  "quest.1A000000000005FF.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005FF.title": "[sb] Advanced Autoclave III",
+  "quest.1A00000000000600.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000600.title": "[sb] Advanced Mixer III",
+  "quest.1A00000000000601.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000601.title": "[sb] Advanced Precision Laser Engraver III",
+  "quest.1A00000000000602.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000602.title": "[sb] Advanced Forming Press III",
+  "quest.1A0000000000063B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000063B.title": "[sb] Basic Fluid Heater",
+  "quest.1A0000000000063D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000063D.title": "[sb] Basic Arc Furnace",
+  "quest.1A0000000000063F.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000063F.title": "[sb] Basic Electric Oven",
+  "quest.1A00000000000641.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000641.title": "[sb] Basic Combustion Generator",
+  "quest.1A00000000000642.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000642.title": "[sb] Basic Gas Turbine",
+  "quest.1A00000000000643.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000643.title": "[sb] Basic Steam Turbine",
+  "quest.1A00000000000645.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000645.title": "[sb] Advanced Fluid Heater",
+  "quest.1A00000000000647.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000647.title": "[sb] Advanced Arc Furnace",
+  "quest.1A00000000000649.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000649.title": "[sb] Advanced Electric Oven",
+  "quest.1A0000000000064B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000064B.title": "[sb] Advanced Combustion Generator",
+  "quest.1A0000000000064C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000064C.title": "[sb] Advanced Gas Turbine",
+  "quest.1A0000000000064D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000064D.title": "[sb] Advanced Steam Turbine",
+  "quest.1A0000000000064F.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000064F.title": "[sb] Advanced Fluid Heater II",
+  "quest.1A00000000000651.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000651.title": "[sb] Advanced Arc Furnace II",
+  "quest.1A00000000000653.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000653.title": "[sb] Advanced Electric Oven II",
+  "quest.1A00000000000655.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000655.title": "[sb] Turbo Combustion Generator",
+  "quest.1A00000000000656.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000656.title": "[sb] Turbo Gas Turbine",
+  "quest.1A00000000000657.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000657.title": "[sb] Turbo Steam Turbine",
+  "quest.1A00000000000659.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000659.title": "[sb] Advanced Fluid Heater III",
+  "quest.1A0000000000065B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000065B.title": "[sb] Advanced Arc Furnace III",
+  "quest.1A0000000000065D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000065D.title": "[sb] Advanced Electric Oven III",
+  "quest.1A0000000000066B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000066B.title": "[sb] High Pressure Coal Boiler",
+  "quest.1A0000000000066C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000066C.title": "[sb] Simple Solar Boiler",
+  "quest.1A00000000000672.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000672.title": "[sb] High Pressure Lava Boiler",
+  "quest.1A00000000000674.quest_desc": [
+    "As an other plates you may do it from 2 ingots by hammer."
+  ],
+  "quest.1A00000000000674.title": "Steel Plate",
+  "quest.1A0000000000067C.quest_desc": [
+    "A part of some bronze steam machines."
+  ],
+  "quest.1A0000000000067C.title": "Bronze Hull",
+  "quest.1A0000000000067F.quest_desc": [
+    "A part of some machines or stuffs."
+  ],
+  "quest.1A0000000000067F.title": "Bronze Ring",
+  "quest.1A0000000000068C.quest_desc": [
+    "Use a hammer or a bending machine to make a plate from an lead ingot."
+  ],
+  "quest.1A0000000000068C.title": "Lead Plate",
+  "quest.1A0000000000068D.quest_desc": [
+    "A part of EV Machine Hull."
+  ],
+  "quest.1A0000000000068D.title": "EV Machine Casing",
+  "quest.1A0000000000068E.quest_desc": [
+    "I gas you should know how to craft it at this progress level..."
+  ],
+  "quest.1A0000000000068E.title": "Titanium Plate",
+  "quest.1A0000000000069D.quest_desc": [
+    "Cheap MV tier Battery."
+  ],
+  "quest.1A0000000000069D.title": "Medium Sodium Battery",
+  "quest.1A000000000006A8.quest_desc": [
+    "Useful track for railroad that push your train or cart forward by moving direction"
+  ],
+  "quest.1A000000000006A8.title": "Booster Track",
+  "quest.1A000000000006AB.quest_desc": [
+    "A part of Locking Track"
+  ],
+  "quest.1A000000000006AB.title": "Pressure Plate",
+  "quest.1A000000000006AC.quest_desc": [
+    "You may create it from common gold wire by wiremill or from gold foil by wire cutter."
+  ],
+  "quest.1A000000000006AC.title": "Fine Gold Wire",
+  "quest.1A000000000006B1.quest_desc": [
+    "Prepare one of blue plates, as Lapis, Lazurite, Sodalite. Use compressor to get a block and then cut it to get plates"
+  ],
+  "quest.1A000000000006B1.title": "One of Blue Plates",
+  "quest.1A000000000006B2.quest_desc": [
+    "You may make it from plate by bending machine or by hammer"
+  ],
+  "quest.1A000000000006B2.title": "Thin Polyethylene Sheet",
+  "quest.1A000000000006B6.quest_desc": [
+    "You may craft it from steel plates and hammer."
+  ],
+  "quest.1A000000000006B6.title": "Steel Hull",
+  "quest.1A000000000006B8.quest_desc": [
+    "A part of Tin Electron Tube"
+  ],
+  "quest.1A000000000006B8.title": "Iron Bolt",
+  "quest.1A000000000006BA.quest_desc": [
+    "It may be useful for some recipes such as for some ender io ingots. There are many ways to get it (use NEI)"
+  ],
+  "quest.1A000000000006BA.title": "Ashes",
+  "quest.1A000000000006C7.quest_desc": [
+    "Height to search: 20 - 50 TUNGSTATE vein (Scheelite, Tungstate, Lithium). But it wil be hard to find. So you may use centrifuge MV+ tier to separate lava to get few type of resources including the small pile of tangstate dust with a tiny chance (only 2.5%% per every 100 mb)."
+  ],
+  "quest.1A000000000006C7.title": "Scheelite Dust",
+  "quest.1A000000000006CB.quest_desc": [
+    "There are few ways how to craft it."
+  ],
+  "quest.1A000000000006CB.title": "Olivine Lens",
+  "quest.1A000000000006CC.quest_desc": [
+    "You have to find 9 Olivines"
+  ],
+  "quest.1A000000000006CC.title": "Olivine",
+  "quest.1A000000000006CD.quest_desc": [
+    "You may use a sifting machine to get it from purified olivine ore."
+  ],
+  "quest.1A000000000006CD.title": "Exquisite Olivine",
+  "quest.1A000000000006CF.quest_desc": [
+    "Use a cutting machine to make a plate from a block"
+  ],
+  "quest.1A000000000006CF.title": "Olivine Plate",
+  "quest.1A000000000006D4.quest_desc": [
+    "Copper + redstone (using an alloy smelter) to get a red alloy ingot. Then create a plate from it."
+  ],
+  "quest.1A000000000006D4.title": "Red Alloy Plate",
+  "quest.1A000000000006E5.quest_desc": [
+    "Use EV+ Chemical Reactor to make the tungsten trioxide dust from the tungstate or scheelite dust."
+  ],
+  "quest.1A000000000006E5.title": "Tungsten Trioxide Dust",
+  "quest.1A000000000006E7.quest_desc": [
+    "Craft it from steel. Most profit way is to use extruder to get 2 rods from 1 ingot, then cut them by cutting machine to get 4 bolts per each rod. Then use lathe or file to get screws from bolts. Other way to get directly bolts from ingot is to user extruder with bolt shape."
+  ],
+  "quest.1A000000000006E7.title": "Steel Screw",
+  "quest.1A000000000006E8.quest_desc": [
+    "Most of stone is fine to create stone brick that are suitable to craft farm blocks from them."
+  ],
+  "quest.1A000000000006E8.title": "Stone Bricks",
+  "quest.1A000000000006ED.quest_desc": [
+    "You may craft it from plate by hammer. But if you have MV (or better) extruder, you can use it  to make small gears directly from ingot."
+  ],
+  "quest.1A000000000006ED.title": "Small Aluminium Gear",
+  "quest.1A000000000006EE.quest_desc": [
+    "Use file or lathe to make a rod from ingot. If you have MV+ tier extruder, it will be the best choose to produce any rods."
+  ],
+  "quest.1A000000000006EE.title": "Aluminium Rod",
+  "quest.1A000000000006F2.quest_desc": [
+    "Better than Large Bronze Boiler."
+  ],
+  "quest.1A000000000006F2.title": "Large Steel Boiler",
+  "quest.1A000000000006F3.quest_desc": [
+    "Better than Large Steel Boiler"
+  ],
+  "quest.1A000000000006F3.title": "Large Titanium Boiler",
+  "quest.1A000000000006F4.quest_desc": [
+    "Better than Large Titanium Boiler"
+  ],
+  "quest.1A000000000006F4.title": "Large Tungstensteel Boiler",
+  "quest.1A000000000006F7.quest_desc": [
+    "This is easy way to craft a small coil. Other way is to use nikel-zink ferrite bolt instead of steel bolt to get more coils."
+  ],
+  "quest.1A000000000006F7.title": "Small Coil - easy way",
+  "quest.1A000000000006FE.quest_desc": [
+    "Use a wiremill to craft it from an ingot."
+  ],
+  "quest.1A000000000006FE.title": "Fine Soldering Alloy Wire",
+  "quest.1A00000000000705.quest_desc": [
+    "Currently you can only make 2 planks from 1 wood log by crafting. But later you may use cutting tools or machines to increase output result."
+  ],
+  "quest.1A00000000000705.title": "Wood Planks",
+  "quest.1A0000000000070E.quest_desc": [
+    "No Description"
+  ],
+  "quest.1A0000000000070E.title": "Energy Detector",
+  "quest.1A0000000000070F.quest_desc": [
+    "A part of Energy Detector."
+  ],
+  "quest.1A0000000000070F.title": "EU-Reader",
+  "quest.1A00000000000711.quest_desc": [
+    "A part of most IC Gates. You may create it from gold ingot via common furnace."
+  ],
+  "quest.1A00000000000711.title": "Gold Nugget",
+  "quest.1A0000000000071E.quest_desc": [
+    "If you found a horse it will be useful."
+  ],
+  "quest.1A0000000000071E.title": "Saddle",
+  "quest.1A00000000000726.quest_desc": [
+    "Can be crafted from a rubber ingot with help of lathe."
+  ],
+  "quest.1A00000000000726.title": "Rubber Rod",
+  "quest.1A00000000000727.quest_desc": [
+    "You can craft it from molten rubber."
+  ],
+  "quest.1A00000000000727.title": "Rubber Bar",
+  "quest.1A00000000000729.quest_desc": [
+    "Use an electrolyzer to get a sodium from Salt"
+  ],
+  "quest.1A00000000000729.title": "Sodium Dust",
+  "quest.1A0000000000072A.quest_desc": [
+    "You may use HV+ macerator to get a tiny dust of tungsten."
+  ],
+  "quest.1A0000000000072A.title": "End Stone",
+  "quest.1A0000000000072B.quest_desc": [
+    "You can craft it from iron rods and plates with help of wrench."
+  ],
+  "quest.1A0000000000072B.title": "Iron Gear",
+  "quest.1A0000000000072C.quest_desc": [
+    "Common stone button, can be crafted from stone and stone from cobblestone by furnace."
+  ],
+  "quest.1A0000000000072C.title": "A Button",
+  "quest.1A00000000000733.quest_desc": [
+    "Common bowl, that you can craft by knife from wood plank, or by lathe from wood slab."
+  ],
+  "quest.1A00000000000733.title": "Bowl",
+  "quest.1A00000000000741.quest_desc": [
+    "Find a sheep and ask it, where you can find a wool."
+  ],
+  "quest.1A00000000000741.title": "A wool with any color",
+  "quest.1A00000000000744.title": "Flintmans way",
+  "quest.1A00000000000745.title": "Flintmans way",
+  "quest.1A00000000000746.title": "Flintmans way",
+  "quest.1A00000000000747.title": "Flintmans way",
+  "quest.1A00000000000748.title": "Flintmans way",
+  "quest.1A00000000000749.title": "Flintmans way",
+  "quest.1A0000000000074A.title": "Flintmans way",
+  "quest.1A0000000000074B.title": "Flintmans way",
+  "quest.1A0000000000074C.title": "Flintmans way",
+  "quest.1A0000000000074D.title": "Flintmans way",
+  "quest.1A0000000000074E.title": "Flintmans way",
+  "quest.1A0000000000074F.title": "Flintmans way",
+  "quest.1A00000000000750.title": "Flintmans way",
+  "quest.1A00000000000751.title": "Flintmans way",
+  "quest.1A00000000000752.title": "Flintmans way",
+  "quest.1A00000000000753.title": "Flintmans way",
+  "quest.1A00000000000754.quest_desc": [
+    "Congratulations, you are Plyushkin. Check the confirmation box if you agree with this statement."
+  ],
+  "quest.1A00000000000754.title": "Flintmans way",
+  "quest.1A0000000000076D.quest_desc": [
+    "Common bow, that allow you to range attack"
+  ],
+  "quest.1A0000000000076D.title": "Bow",
+  "quest.1A0000000000078D.quest_desc": [
+    "Any red dye."
+  ],
+  "quest.1A0000000000078D.title": "Red Dye",
+  "quest.1A00000000000793.quest_desc": [
+    "Early, but not stable way to get Data Orb. You have to use One of 3 exquisite green gems with tritium in HV autoclave, to get a Data Orb with only 5% chance."
+  ],
+  "quest.1A00000000000793.title": "Exquisite Gem Way",
+  "quest.1A00000000000799.quest_desc": [
+    "Common wooden ladder, that can help you to climb up."
+  ],
+  "quest.1A00000000000799.title": "Ladder"
+}

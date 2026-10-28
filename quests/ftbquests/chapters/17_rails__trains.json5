@@ -1,0 +1,314 @@
+{
+  "id": "1D00000000000003",
+  "filename": "17_rails__trains",
+  "order_index": 17,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A0000000000010B",
+      "x": 3.5,
+      "y": 7.5,
+      "dependencies": [
+        "1A0000000000019F",
+        "1A00000000000149"
+      ],
+      "icon": {
+        "id": "iis:wire_fine_red_alloy",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_fine_red_alloy",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000010B00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003C0",
+      "x": 14.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000000017C",
+        "1A000000000002C4",
+        "1A0000000000013D",
+        "1A000000000000BA",
+        "1A000000000000F5",
+        "1A00000000000100",
+        "1A000000000002F1",
+        "1A0000000000011F"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:creosote",
+            "amount": 1
+          },
+          "id": "1B0000000003C000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000446",
+      "x": 14.0,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000000192"
+      ],
+      "icon": {
+        "id": "minecraft:oak_slab",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:oak_slab",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000044600"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000044C",
+      "x": 11.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A0000000000011F",
+        "1A00000000000056",
+        "1A00000000000446",
+        "1A000000000003C0",
+        "1A000000000001E3"
+      ],
+      "icon": {
+        "id": "minecraft:rail",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:rail",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000044C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000044F",
+      "x": 1.0,
+      "y": 11.5,
+      "size": 2.0,
+      "dependencies": [
+        "1A00000000000197",
+        "1A00000000000073",
+        "1A00000000000450"
+      ],
+      "icon": {
+        "id": "minecraft:minecart",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:minecart",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000044F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000450",
+      "x": 3.5,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000000011F",
+        "1A00000000000197"
+      ],
+      "icon": {
+        "id": "iis:ring_iron",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ring_iron",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000459",
+      "x": 12.5,
+      "y": 4.5,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:lime_dye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045900"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:yellow_dye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045901"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:red_dye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045902"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000045A",
+      "x": 11.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A000000000000A4",
+        "1A00000000000067"
+      ],
+      "icon": {
+        "id": "minecraft:compass",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:compass",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045A00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004C9",
+      "x": 9.5,
+      "y": 9.0,
+      "dependencies": [
+        "1A000000000000A4",
+        "1A00000000000073"
+      ],
+      "icon": {
+        "id": "minecraft:hopper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:hopper",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004C900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006A8",
+      "x": 9.5,
+      "y": 7.5,
+      "dependencies": [
+        "1A0000000000044C",
+        "1A00000000000184",
+        "1A0000000000024C",
+        "1A000000000001E3",
+        "1A000000000006AC"
+      ],
+      "icon": {
+        "id": "minecraft:powered_rail",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:powered_rail",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006A800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006AB",
+      "x": 8.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A000000000000A7"
+      ],
+      "icon": {
+        "id": "minecraft:stone_pressure_plate",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:stone_pressure_plate",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006AB00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000078D",
+      "x": 5.0,
+      "y": 10.5,
+      "icon": {
+        "id": "minecraft:red_dye",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:red_dye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000078D00"
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "id": "minecraft:rail",
+    "count": 1
+  }
+}

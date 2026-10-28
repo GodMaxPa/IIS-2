@@ -9,6 +9,7 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.ItemLike;
 import ru.iis.IIS;
 import ru.iis.machine.IISMachines;
@@ -19,25 +20,51 @@ import ru.iis.machine.recipe.GtRecipeMap;
 import ru.iis.machine.recipe.GtRecipes;
 
 import java.util.ArrayList;
-import java.util.EnumMap;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/** Показ рецептов машин ИИС в JEI. JEI необязателен: класс загружается только им. */
+/**
+ * Показ рецептов машин ИИС в JEI. JEI необязателен: класс загружается только им.
+ * D101: рецепты на энергии разделены по напряжению — отдельная категория для LV, MV, HV, EV и IV+ (по EU/t рецепта);
+ * машина показана в категориях своего уровня и ниже, паровые — в LV.
+ */
 @JeiPlugin
 public final class IISJeiPlugin implements IModPlugin {
-    private final Map<GtRecipeMap, IRecipeHolderType<GtRecipe>> types = new EnumMap<>(GtRecipeMap.class);
+    /** LV, MV, HV, EV, IV+: рецепт попадает в первую, где EU/t не больше напряжения. */
+    static final String[] TIERS = {"LV", "MV", "HV", "EV", "IV"};
+    private static final long[] VOLTS = {32, 128, 512, 2048, Long.MAX_VALUE};
+    private final Map<String, IRecipeHolderType<GtRecipe>> types = new HashMap<>();
 
     @Override
     public Identifier getPluginUid() {
         return Identifier.fromNamespaceAndPath(IIS.MODID, "machines");
     }
 
-    private IRecipeHolderType<GtRecipe> type(GtRecipeMap m) {
-        return types.computeIfAbsent(m, k -> IRecipeType.create(GtRecipes.type(k)));
+    /** Карты без EU (кирпичная доменная печь, коксовая печь) не делятся. */
+    static boolean tiered(GtRecipeMap m) {
+        return m != GtRecipeMap.PRIMITIVE_BLAST && m != GtRecipeMap.COKE_OVEN;
     }
 
-    private static List<ItemLike> stations(GtRecipeMap m) {
+    static int recipeTier(GtRecipe r) {
+        int t = 0;
+        while (r.eut() > VOLTS[t]) t++;
+        return t;
+    }
+
+    /** tier — индекс в TIERS, -1 — неделимая карта. */
+    private IRecipeHolderType<GtRecipe> type(GtRecipeMap m, int tier) {
+        if (tier < 0) return types.computeIfAbsent(m.id, k -> IRecipeType.create(GtRecipes.type(m)));
+        return types.computeIfAbsent(m.id + "_" + tier, k -> IRecipeHolderType.create(
+                Identifier.fromNamespaceAndPath(IIS.MODID, m.id + "_" + TIERS[tier].toLowerCase(java.util.Locale.ROOT))));
+    }
+
+    private static int[] tiersOf(GtRecipeMap m) {
+        return tiered(m) ? new int[]{0, 1, 2, 3, 4} : new int[]{-1};
+    }
+
+    /** Машины, на которых идут рецепты уровня tier (-1 — все). */
+    private static List<ItemLike> stations(GtRecipeMap m, int tier) {
         List<ItemLike> r = new ArrayList<>();
         if (m == GtRecipeMap.PRIMITIVE_BLAST) {
             r.add(IISMachines.BRICKED_BLAST_FURNACE.get());
@@ -55,12 +82,14 @@ public final class IISJeiPlugin implements IModPlugin {
             r.add(ru.iis.lv.LvContent.COKE_OVEN.get());
             return r;
         }
-        for (SteamMachineType t : SteamMachineType.values()) {
-            if (t.recipeMap != m) continue;
-            for (SteamMachineType.Tier tier : SteamMachineType.Tier.values()) r.add(IISMachines.STEAM_MACHINES.get(t.blockId(tier)).get());
+        if (tier <= 0) {
+            for (SteamMachineType t : SteamMachineType.values()) {
+                if (t.recipeMap != m) continue;
+                for (SteamMachineType.Tier st : SteamMachineType.Tier.values()) r.add(IISMachines.STEAM_MACHINES.get(t.blockId(st)).get());
+            }
         }
         for (ru.iis.lv.LvMachineType t : ru.iis.lv.LvMachineType.values()) {
-            if (t.recipeMap == m) r.add(ru.iis.lv.LvContent.MACHINES.get(t).get());
+            if (t.recipeMap == m && t.tier.tier() - 1 >= tier) r.add(ru.iis.lv.LvContent.MACHINES.get(t).get());
         }
         return r;
     }
@@ -68,21 +97,33 @@ public final class IISJeiPlugin implements IModPlugin {
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
         for (GtRecipeMap m : GtRecipeMap.values()) {
-            registration.addRecipeCategories(new GtRecipeCategory(type(m), m, registration.getJeiHelpers().getGuiHelper(), stations(m).getFirst()));
+            List<ItemLike> all = stations(m, -1);
+            for (int tier : tiersOf(m)) {
+                List<ItemLike> st = stations(m, tier);
+                ItemLike icon = st.isEmpty() ? all.getLast() : st.getFirst();
+                registration.addRecipeCategories(new GtRecipeCategory(type(m, tier), m, tier < 0 ? null : TIERS[tier],
+                        registration.getJeiHelpers().getGuiHelper(), icon));
+            }
         }
     }
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         for (GtRecipeMap m : GtRecipeMap.values()) {
-            registration.addRecipes(type(m), new ArrayList<>(GtRecipes.all(ClientRecipes.get(), m)));
+            List<RecipeHolder<GtRecipe>> all = new ArrayList<>(GtRecipes.all(ClientRecipes.get(), m));
+            for (int tier : tiersOf(m)) {
+                registration.addRecipes(type(m, tier), tier < 0 ? all : all.stream().filter(h -> recipeTier(h.value()) == tier).toList());
+            }
         }
     }
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
         for (GtRecipeMap m : GtRecipeMap.values()) {
-            registration.addCraftingStation(type(m), stations(m).toArray(ItemLike[]::new));
+            for (int tier : tiersOf(m)) {
+                List<ItemLike> st = stations(m, tier);
+                if (!st.isEmpty()) registration.addCraftingStation(type(m, tier), st.toArray(ItemLike[]::new));
+            }
         }
         for (SteamMachineType.Tier tier : SteamMachineType.Tier.values()) {
             registration.addCraftingStation(RecipeTypes.SMELTING, IISMachines.STEAM_MACHINES.get(SteamMachineType.FURNACE.blockId(tier)).get());

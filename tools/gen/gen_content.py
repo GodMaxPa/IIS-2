@@ -307,8 +307,10 @@ def mat_id(name):
 
 
 # Tool materials: tool-capable materials whose GT handle is available (wood; steel since the steam age, D24 revised)
+# D101 (owner, "as in IIS 1"): no tools from minerals — only metals (an ingot and no gem form); GT5 also makes ruby hammers,
+# opal drills, diamond pickaxes and so on, IIS 1 does not
 tool_mats = sorted(n for n in names if tool_capable(n) and handle_material(n) in ('Wood', 'Steel')
-                   and n not in NOT_GENERATED_MATERIALS and (has_form('ingot', n) or has_form('gem', n)))
+                   and n not in NOT_GENERATED_MATERIALS and has_form('ingot', n) and not has_form('gem', n))
 
 # ----------------------------------------------------------------------------------------------------------------
 # Items: material forms

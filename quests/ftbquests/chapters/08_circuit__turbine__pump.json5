@@ -1,0 +1,748 @@
+{
+  "id": "1D00000000000008",
+  "filename": "08_circuit__turbine__pump",
+  "order_index": 8,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A00000000000100",
+      "x": 7.5,
+      "y": 10.0,
+      "dependencies": [
+        "1A000000000000A7"
+      ],
+      "icon": {
+        "id": "iis:ingot_nickel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_nickel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000010000"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000011D",
+      "x": 7.5,
+      "y": 5.5,
+      "dependencies": [
+        "1A00000000000198",
+        "1A00000000000129",
+        "1A00000000000133",
+        "1A0000000000011B",
+        "1A000000000004A6"
+      ],
+      "icon": {
+        "id": "iis:rotor_tin",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rotor_tin",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000011D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000011E",
+      "x": 4.5,
+      "y": 7.0,
+      "dependencies": [
+        "1A0000000000011F"
+      ],
+      "icon": {
+        "id": "iis:rod_iron_magnetic",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_iron_magnetic",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000011E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000120",
+      "x": 6.0,
+      "y": 8.5,
+      "dependencies": [
+        "1A00000000000123",
+        "1A0000000000018E",
+        "1A0000000000011B",
+        "1A00000000000149",
+        "1A0000000000011E",
+        "1A000000000000FE"
+      ],
+      "icon": {
+        "id": "iis:electric_motor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_motor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000128",
+      "x": 8.25,
+      "y": 7.75,
+      "size": 2.5,
+      "dependencies": [
+        "1A00000000000126",
+        "1A0000000000011D",
+        "1A00000000000120",
+        "1A00000000000073",
+        "1A000000000001BE",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:steam_turbine_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_turbine_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000133",
+      "x": 6.0,
+      "y": 7.0,
+      "dependencies": [
+        "1A00000000000129",
+        "1A00000000000192",
+        "1A000000000004A5"
+      ],
+      "icon": {
+        "id": "iis:screw_tin",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:screw_tin",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000013300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000169",
+      "x": 18.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A000000000000FE",
+        "1A00000000000197"
+      ],
+      "icon": {
+        "id": "iis:foil_copper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:foil_copper",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B00000000016900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000017E",
+      "x": 17.5,
+      "y": 10.0,
+      "dependencies": [
+        "1A000000000001AD"
+      ],
+      "icon": {
+        "id": "iis:mold_ball",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mold_ball",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000017E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000191",
+      "x": 15.5,
+      "y": 2.0,
+      "icon": {
+        "id": "minecraft:sugar_cane",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:sugar_cane",
+            "count": 1
+          },
+          "count": 24,
+          "id": "1B00000000019100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000193",
+      "x": 19.0,
+      "y": 3.5,
+      "size": 2.0,
+      "dependencies": [
+        "1A00000000000194",
+        "1A00000000000195"
+      ],
+      "icon": {
+        "id": "minecraft:paper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:paper",
+            "count": 1
+          },
+          "count": 10,
+          "id": "1B00000000019300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000194",
+      "x": 18.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000000192"
+      ],
+      "icon": {
+        "id": "minecraft:smooth_stone_slab",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:smooth_stone_slab",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000019400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000195",
+      "x": 17.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000191",
+        "1A000000000001A5"
+      ],
+      "icon": {
+        "id": "iis:dust_paper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_paper",
+            "count": 1
+          },
+          "count": 15,
+          "id": "1B00000000019500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000199",
+      "x": 19.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000000019A",
+        "1A00000000000193",
+        "1A0000000000019B"
+      ],
+      "icon": {
+        "id": "iis:vacuum_tube",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vacuum_tube",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B00000000019900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000019A",
+      "x": 16.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A00000000000169",
+        "1A00000000000149"
+      ],
+      "icon": {
+        "id": "iis:wire_fine_copper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_fine_copper",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000019A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000019B",
+      "x": 20.5,
+      "y": 10.0,
+      "dependencies": [
+        "1A0000000000017E"
+      ],
+      "icon": {
+        "id": "iis:glass_tube",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:glass_tube",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B00000000019B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000019C",
+      "x": 14.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A00000000000193",
+        "1A0000000000019A",
+        "1A0000000000019E",
+        "1A000000000003E3"
+      ],
+      "icon": {
+        "id": "iis:resistor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:resistor",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B00000000019C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000019E",
+      "x": 13.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000001C2"
+      ],
+      "icon": {
+        "id": "iis:dust_charcoal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_charcoal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000019E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000019F",
+      "x": 9.0,
+      "y": 5.5,
+      "dependencies": [
+        "1A00000000000067",
+        "1A00000000000147"
+      ],
+      "icon": {
+        "id": "iis:ingot_red_alloy",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_red_alloy",
+            "count": 1
+          },
+          "count": 6,
+          "id": "1B00000000019F00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001A4",
+      "x": 4.5,
+      "y": 4.0,
+      "dependencies": [
+        "1A000000000001B0"
+      ],
+      "icon": {
+        "id": "minecraft:lever",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:lever",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001A400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001A7",
+      "x": 20.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000000193",
+        "1A000000000001A8"
+      ],
+      "icon": {
+        "id": "minecraft:book",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:book",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001A700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001A8",
+      "x": 21.5,
+      "y": 6.0,
+      "icon": {
+        "id": "minecraft:leather",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:leather",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001A800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001AC",
+      "x": 6.0,
+      "y": 10.0,
+      "dependencies": [
+        "1A00000000000188",
+        "1A0000000000004A"
+      ],
+      "icon": {
+        "id": "minecraft:diamond_block",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:diamond_block",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001AC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002DB",
+      "x": 13.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000018C"
+      ],
+      "icon": {
+        "id": "minecraft:ink_sac",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:ink_sac",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002DB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003D0",
+      "x": 16.0,
+      "y": 10.0,
+      "dependencies": [
+        "1A000000000001AD"
+      ],
+      "icon": {
+        "id": "iis:mold_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mold_casing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003D000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003E3",
+      "x": 14.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000043D",
+        "1A00000000000442"
+      ],
+      "icon": {
+        "id": "iis:dust_coal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_coal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003E300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004A4",
+      "x": 7.5,
+      "y": 4.0,
+      "dependencies": [
+        "1A00000000000129",
+        "1A000000000000A5"
+      ],
+      "icon": {
+        "id": "iis:rod_tin",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_tin",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004A400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004A5",
+      "x": 6.0,
+      "y": 5.5,
+      "dependencies": [
+        "1A000000000004A4"
+      ],
+      "icon": {
+        "id": "iis:bolt_tin",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bolt_tin",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004A500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004A6",
+      "x": 9.0,
+      "y": 4.0,
+      "dependencies": [
+        "1A00000000000197",
+        "1A000000000004A4"
+      ],
+      "icon": {
+        "id": "iis:ring_tin",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ring_tin",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004A600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006D4",
+      "x": 10.5,
+      "y": 5.5,
+      "dependencies": [
+        "1A0000000000019F"
+      ],
+      "icon": {
+        "id": "iis:plate_red_alloy",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_red_alloy",
+            "count": 1
+          },
+          "count": 4,
+          "id": "1B0000000006D400"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000071E",
+      "x": 21.5,
+      "y": 7.5,
+      "dependencies": [
+        "1A000000000001A8",
+        "1A000000000004B2",
+        "1A0000000000018E",
+        "1A000000000001AB"
+      ],
+      "icon": {
+        "id": "minecraft:saddle",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:saddle",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071E00"
+        }
+      ]
+    }
+  ],
+  "quest_links": [
+    {
+      "id": "1E0000000080011C",
+      "linked_quest": "1A0000000000011C",
+      "x": 12.0,
+      "y": 9.0,
+      "size": 2.0
+    },
+    {
+      "id": "1E00000000800190",
+      "linked_quest": "1A00000000000190",
+      "x": 9.0,
+      "y": 10.0,
+      "size": 1.0
+    }
+  ],
+  "icon": {
+    "id": "iis:circuit_basic",
+    "count": 1
+  }
+}

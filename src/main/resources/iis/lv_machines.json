@@ -306,6 +306,15 @@
     "gui": "lv/circuitassembler"
   },
   {
+    "id": "fluid_canner_lv",
+    "type": "fluid_canner",
+    "recipeMap": "fluid_canner",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/fluidcanner"
+  },
+  {
     "id": "macerator_mv",
     "type": "macerator_mv",
     "recipeMap": "macerator",
@@ -601,6 +610,15 @@
     "outputs": 1,
     "tank": 16000,
     "gui": "lv/circuitassembler"
+  },
+  {
+    "id": "fluid_canner_mv",
+    "type": "fluid_canner_mv",
+    "recipeMap": "fluid_canner",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 32000,
+    "gui": "lv/fluidcanner"
   },
   {
     "id": "thermal_centrifuge_mv",
@@ -909,6 +927,15 @@
     "gui": "lv/circuitassembler"
   },
   {
+    "id": "fluid_canner_hv",
+    "type": "fluid_canner_hv",
+    "recipeMap": "fluid_canner",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 48000,
+    "gui": "lv/fluidcanner"
+  },
+  {
     "id": "thermal_centrifuge_hv",
     "type": "thermal_centrifuge_hv",
     "recipeMap": "thermal_centrifuge",
@@ -1213,6 +1240,15 @@
     "outputs": 1,
     "tank": 16000,
     "gui": "lv/circuitassembler"
+  },
+  {
+    "id": "fluid_canner_ev",
+    "type": "fluid_canner_ev",
+    "recipeMap": "fluid_canner",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 64000,
+    "gui": "lv/fluidcanner"
   },
   {
     "id": "thermal_centrifuge_ev",

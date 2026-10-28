@@ -21,12 +21,13 @@ import ru.iis.machine.recipe.GtRecipeMap;
 
 import java.util.List;
 
-/** Категория JEI для одной карты рецептов GT. */
+/** Категория JEI для одной карты рецептов GT (D101: и одного уровня напряжения — tier, null у карт без EU). */
 public class GtRecipeCategory extends AbstractRecipeCategory<RecipeHolder<GtRecipe>> {
     private final GtRecipeMap map;
 
-    public GtRecipeCategory(IRecipeHolderType<GtRecipe> type, GtRecipeMap map, IGuiHelper gui, ItemLike icon) {
-        super(type, Component.translatable("jei.iis." + map.id), gui.createDrawableItemLike(icon), 150, 78);
+    public GtRecipeCategory(IRecipeHolderType<GtRecipe> type, GtRecipeMap map, @org.jspecify.annotations.Nullable String tier, IGuiHelper gui, ItemLike icon) {
+        super(type, tier == null ? Component.translatable("jei.iis." + map.id)
+                : Component.translatable("jei.iis.tiered", Component.translatable("jei.iis." + map.id), tier), gui.createDrawableItemLike(icon), 150, 78);
         this.map = map;
     }
 

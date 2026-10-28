@@ -204,6 +204,15 @@ public final class IISGameTests {
             new Test("bio_hearth_fuel_slot", 20, FluidGameTests::hearthFuelSlot),
             new Test("bio_press_extract", 2000, FluidGameTests::pressExtract),
             new Test("bio_filter_w0", 1100, FluidGameTests::filterW0),
+            // D101
+            new Test("fluid_canner_mercury_battery", 100, UxGameTests::fluidCannerMercuryBattery),
+            new Test("single_use_batteries", 20, UxGameTests::singleUseBatteries),
+            new Test("capsule_gui_click", 20, UxGameTests::capsuleGuiClick),
+            new Test("machine_separate_output_sides", 100, UxGameTests::separateOutputSides),
+            new Test("cover_grid_placement", 20, UxGameTests::coverGridPlacement),
+            new Test("cover_conveyor_mv", 160, UxGameTests::conveyorMv),
+            new Test("cover_gui_buttons", 20, UxGameTests::coverGuiButtons),
+            new Test("creative_tab_tiers", 20, UxGameTests::creativeTabTiers),
             new Test("selftest", 20, h -> {
                 h.assertTrue(SelfTest.runSilently(h.getLevel(), h.absolutePos(new BlockPos(4, 1, 4))), "selftest failed, see log");
                 h.succeed();

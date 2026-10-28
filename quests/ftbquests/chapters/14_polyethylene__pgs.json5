@@ -1,0 +1,594 @@
+{
+  "id": "1D0000000000000E",
+  "filename": "14_polyethylene__pgs",
+  "order_index": 14,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A00000000000021",
+      "x": 0.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000000A7"
+      ],
+      "icon": {
+        "id": "iis:ingot_platinum",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_platinum",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000002100"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_platinum",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000002101"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000D3",
+      "x": 8.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000001DA",
+        "1A0000000000013A"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:hydrogen",
+            "amount": 1
+          },
+          "id": "1B0000000000D300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000E5",
+      "x": 10.25,
+      "y": 4.25,
+      "size": 2.5,
+      "dependencies": [
+        "1A00000000000208",
+        "1A00000000000209"
+      ],
+      "icon": {
+        "id": "iis:plate_plastic",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_plastic",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000E500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000143",
+      "x": 14.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000001BE"
+      ],
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000000014300"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000015D",
+      "x": 11.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000002D2",
+        "1A0000000000004A",
+        "1A000000000002D3",
+        "1A00000000000128",
+        "1A0000000000012E"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:nitrogen",
+            "amount": 1
+          },
+          "id": "1B00000000015D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000173",
+      "x": 0.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:solid_steel_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:solid_steel_casing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000017300"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000017A",
+      "x": 6.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000002CE",
+        "1A000000000002CF",
+        "1A000000000002D0"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:sulfuricacid",
+            "amount": 1
+          },
+          "id": "1B00000000017A00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000209",
+      "x": 8.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000002F9",
+        "1A0000000000017A",
+        "1A000000000002C2",
+        "1A000000000002C4",
+        "1A000000000002CD",
+        "1A000000000002CC"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:ethylene",
+            "amount": 1
+          },
+          "id": "1B00000000020900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002C2",
+      "x": 5.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000007F",
+        "1A000000000002C3"
+      ],
+      "icon": {
+        "id": "iis:chemical_reactor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_reactor_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002C200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002CA",
+      "x": 5.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000001DA",
+        "1A000000000000F5",
+        "1A0000000000009B",
+        "1A00000000000173",
+        "1A000000000001D9"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:oil",
+            "amount": 1
+          },
+          "id": "1B0000000002CA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002CB",
+      "x": 6.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000002CA",
+        "1A0000000000017C",
+        "1A000000000002C4"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:liquid_sulfuricnaphtha",
+            "amount": 1
+          },
+          "id": "1B0000000002CB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002CC",
+      "x": 6.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000002CB",
+        "1A000000000000D3"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:liquid_naphtha",
+            "amount": 1
+          },
+          "id": "1B0000000002CC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002CD",
+      "x": 9.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000013D",
+        "1A000000000000BA",
+        "1A000000000000F5",
+        "1A00000000000100",
+        "1A000000000002F1",
+        "1A0000000000011F"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:woodgas",
+            "amount": 1
+          },
+          "id": "1B0000000002CD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002CE",
+      "x": 5.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000208",
+        "1A000000000001DE"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:sulfurtrioxide",
+            "amount": 1
+          },
+          "id": "1B0000000002CE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002CF",
+      "x": 8.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000002D7",
+        "1A000000000000F1",
+        "1A00000000000040",
+        "1A00000000000438",
+        "1A00000000000073"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:solution_nickelsulfate",
+            "amount": 1
+          },
+          "id": "1B0000000002CF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D0",
+      "x": 5.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000002D8"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:solution_bluevitriol",
+            "amount": 1
+          },
+          "id": "1B0000000002D000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D1",
+      "x": 3.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000017C"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:ammonia",
+            "amount": 1
+          },
+          "id": "1B0000000002D100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D2",
+      "x": 11.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000131"
+      ],
+      "icon": {
+        "id": "iis:fluid_canner_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002D200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D4",
+      "x": 3.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A000000000002D1",
+        "1A00000000000208"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:nitricoxide",
+            "amount": 1
+          },
+          "id": "1B0000000002D400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D5",
+      "x": 5.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A000000000002D4"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:nitrogendioxide",
+            "amount": 1
+          },
+          "id": "1B0000000002D500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D6",
+      "x": 6.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A000000000002D5",
+        "1A000000000000F8",
+        "1A000000000000F9",
+        "1A0000000000020E"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:nitricacid",
+            "amount": 1
+          },
+          "id": "1B0000000002D600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D7",
+      "x": 8.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A000000000002D6"
+      ],
+      "icon": {
+        "id": "iis:purified_pentlandite",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:purified_pentlandite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002D700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D8",
+      "x": 5.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000002D6"
+      ],
+      "icon": {
+        "id": "iis:purified_chalcopyrite",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:purified_chalcopyrite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002D800"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000034B",
+      "x": 14.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000001E3",
+        "1A00000000000149",
+        "1A000000000000FE",
+        "1A00000000000141"
+      ],
+      "icon": {
+        "id": "iis:battery_hull_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:battery_hull_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000069D",
+      "x": 14.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000034B"
+      ],
+      "icon": {
+        "id": "iis:battery_sodium_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:battery_sodium_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000069D00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006B2",
+      "x": 12.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000E5"
+      ],
+      "icon": {
+        "id": "iis:foil_plastic",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:foil_plastic",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006B200"
+        }
+      ]
+    }
+  ],
+  "quest_links": [
+    {
+      "id": "1E00000000E00109",
+      "linked_quest": "1A00000000000109",
+      "x": 8.0,
+      "y": 5.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000000E0034A",
+      "linked_quest": "1A0000000000034A",
+      "x": 14.0,
+      "y": 8.0,
+      "size": 1.0
+    }
+  ],
+  "icon": {
+    "id": "iis:plate_plastic",
+    "count": 1
+  }
+}

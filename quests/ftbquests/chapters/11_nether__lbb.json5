@@ -1,0 +1,369 @@
+{
+  "id": "1D0000000000001D",
+  "filename": "11_nether__lbb",
+  "order_index": 11,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A00000000000040",
+      "x": 5.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000043D",
+        "1A00000000000442"
+      ],
+      "icon": {
+        "id": "iis:gem_certus_quartz",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gem_certus_quartz",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004000"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_certus_quartz",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004001"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000048",
+      "x": 6.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000046D"
+      ],
+      "icon": {
+        "id": "minecraft:blaze_rod",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:blaze_rod",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000F1",
+      "x": 5.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000046D"
+      ],
+      "icon": {
+        "id": "minecraft:quartz",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:quartz",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000F100"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_nether_quartz",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000F101"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000175",
+      "x": 3.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000188",
+        "1A000000000002F5"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "minecraft:obsidian",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:obsidian",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000017500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F9",
+      "x": 2.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000149",
+        "1A000000000000FE",
+        "1A00000000000125"
+      ],
+      "icon": {
+        "id": "iis:thermal_centrifuge_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:thermal_centrifuge_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002EE",
+      "x": 2.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "minecraft:flint_and_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:flint_and_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002EE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002F3",
+      "x": 12.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000453",
+        "1A00000000000073"
+      ],
+      "icon": {
+        "id": "iis:bronze_firebox_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bronze_firebox_casing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002F300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000438",
+      "x": 3.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000001AD"
+      ],
+      "icon": {
+        "id": "iis:mold_block",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mold_block",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000439",
+      "x": 9.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000000A5",
+        "1A00000000000197",
+        "1A000000000001E3",
+        "1A000000000003D3"
+      ],
+      "icon": {
+        "id": "iis:universal_capsule",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:universal_capsule",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043900"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000451",
+      "x": 11.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000453",
+        "1A00000000000073"
+      ],
+      "icon": {
+        "id": "iis:bronze_pipe_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bronze_pipe_casing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045100"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000046D",
+      "x": 5.75,
+      "y": 5.75,
+      "size": 2.5,
+      "dependencies": [
+        "1A00000000000175",
+        "1A000000000002EE",
+        "1A0000000000046F"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:netherrack",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000046F",
+      "x": 8.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000001BB"
+      ],
+      "icon": {
+        "id": "minecraft:lava_bucket",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:lava_bucket",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046F00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004B0",
+      "x": 2.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000004AA"
+      ],
+      "icon": {
+        "id": "iis:ring_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ring_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004B000"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000067F",
+      "x": 11.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000453",
+        "1A000000000002DA"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:ring_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ring_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000067F00"
+        }
+      ]
+    }
+  ],
+  "quest_links": [
+    {
+      "id": "1E00000001D002F2",
+      "linked_quest": "1A000000000002F2",
+      "x": 11.75,
+      "y": 1.25,
+      "size": 2.5
+    }
+  ]
+}

@@ -138,7 +138,7 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
         if (exploded || !exposedToRain(sl)) return;
         if (sl.isRaining() && rainPossible(sl)) {
             if (rnd.nextInt(10) == 0) doEnergyExplosion();
-            else setOnFire(sl);
+            else if (energy.stored > 0) setOnFire(sl);   // D101 (владелец): поджигает только машина с зарядом; GT — любая
         }
         if (!exploded && sl.isThundering() && rainPossible(sl) && rnd.nextInt(3) == 0) doEnergyExplosion();
     }

@@ -1,0 +1,26 @@
+{
+  "type": "iis:fluid_canner",
+  "inputs": [
+    {
+      "ingredient": "iis:battery_hull_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:battery_mercury_lv",
+      "count": 1,
+      "components": {
+        "iis:charge": 32000
+      }
+    }
+  ],
+  "duration": 16,
+  "eut": 1,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:mercury",
+      "amount": 1000
+    }
+  ]
+}

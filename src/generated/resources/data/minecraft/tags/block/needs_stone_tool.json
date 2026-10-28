@@ -163,6 +163,7 @@
     "iis:laser_engraver_ev",
     "iis:brewery_ev",
     "iis:circuit_assembler_ev",
+    "iis:fluid_canner_ev",
     "iis:thermal_centrifuge_ev",
     "iis:transformer_ev",
     "iis:coke_oven_bricks",

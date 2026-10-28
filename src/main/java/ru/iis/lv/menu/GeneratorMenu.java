@@ -37,6 +37,13 @@ public class GeneratorMenu extends MachineMenu {
         return slot == 0;
     }
 
+    /** 0 — капсула/ведро на курсоре по иконке жидкости: залить топливо (D101). */
+    @Override
+    public boolean clickMenuButton(net.minecraft.world.entity.player.Player player, int id) {
+        if (id != 0) return false;
+        return container instanceof ru.iis.lv.block.GeneratorBlockEntity be && ru.iis.fluid.GuiFluidClick.click(player, this, be.tank(), null);
+    }
+
     public int energy() { return data(0); }
     public int capacity() { return data(1); }
     public int fluidAmount() { return data(2); }

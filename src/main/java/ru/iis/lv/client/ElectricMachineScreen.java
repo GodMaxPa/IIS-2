@@ -33,6 +33,10 @@ public class ElectricMachineScreen extends MachineScreen<ElectricMachineMenu> {
                 return true;
             }
         }
+        if (menu.type.tank > 0 && !menu.getCarried().isEmpty() && hovering(53, 63, 16, 16, (int) event.x(), (int) event.y())) {
+            net.minecraft.client.Minecraft.getInstance().gameMode.handleInventoryButtonClick(menu.containerId, 2);
+            return true;
+        }
         return super.mouseClicked(event, doubleClick);
     }
 

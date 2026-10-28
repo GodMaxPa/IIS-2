@@ -1,0 +1,58 @@
+{
+  "id": "1D0000000000000C",
+  "filename": "30_n_star__fusion_reactor",
+  "order_index": 30,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A0000000000024E",
+      "x": 3.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A00000000000253"
+      ],
+      "icon": {
+        "id": "minecraft:nether_star",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:nether_star",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000253",
+      "x": 2.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000046D"
+      ],
+      "icon": {
+        "id": "minecraft:wither_skeleton_skull",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:wither_skeleton_skull",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000025300"
+        }
+      ]
+    }
+  ],
+  "icon": {
+    "id": "minecraft:nether_star",
+    "count": 1
+  }
+}

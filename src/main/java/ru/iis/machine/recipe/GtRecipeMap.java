@@ -48,7 +48,9 @@ public enum GtRecipeMap {
     LASER_ENGRAVER("laser_engraver", 2, 1),
     // D92: sBrewingRecipes (предмет + 750 л жидкости → 750 л), sCircuitAssemblerRecipes (до 6 входов + припой → 1)
     BREWERY("brewery", 1, 0),
-    CIRCUIT_ASSEMBLER("circuit_assembler", 6, 1);
+    CIRCUIT_ASSEMBLER("circuit_assembler", 6, 1),
+    // D101: sFluidCannerRecipes (предмет + жидкость → предмет), одноразовые батарейки GT
+    FLUID_CANNER("fluid_canner", 1, 1);
 
     public final String id;
     public final int maxInputs, maxOutputs;
