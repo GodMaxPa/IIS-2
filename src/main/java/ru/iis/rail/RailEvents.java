@@ -47,6 +47,24 @@ public final class RailEvents {
     }
 
     /** Разбитая вагонетка освобождает сцепки соседей. */
+    /**
+     * Очки путейца ({@code ItemGoggles}): надетые, раз в 10 тиков показывают над хотбаром сведения о сигнале под
+     * прицелом — тип, показание, с чем спарен (вместо «ауры» линий Railcraft).
+     */
+    public static void onPlayerTick(net.neoforged.neoforge.event.tick.PlayerTickEvent.Post event) {
+        Player p = event.getEntity();
+        if (!(p.level() instanceof ServerLevel sl) || p.tickCount % 10 != 0) return;
+        if (!p.getItemBySlot(net.minecraft.world.entity.EquipmentSlot.HEAD).is(RailContent.GOGGLES.get())) return;
+        if (!(p.pick(p.blockInteractionRange(), 0, false) instanceof net.minecraft.world.phys.BlockHitResult hit)
+                || hit.getType() != net.minecraft.world.phys.HitResult.Type.BLOCK) return;
+        if (!(sl.getBlockEntity(hit.getBlockPos()) instanceof ru.iis.rail.signal.SignalBlockEntity be)) return;
+        BlockPos partner = be.partner();
+        Component aspect = Component.translatable("signal.iis.aspect." + be.aspect().getSerializedName());
+        Component pair = partner == null ? Component.translatable("message.iis.goggles.unpaired")
+                : Component.translatable("message.iis.goggles.paired", partner.getX(), partner.getY(), partner.getZ());
+        p.sendOverlayMessage(Component.translatable("message.iis.goggles", aspect, pair));
+    }
+
     public static void onEntityLeave(EntityLeaveLevelEvent event) {
         if (event.getEntity() instanceof AbstractMinecart cart && event.getLevel() instanceof ServerLevel level
                 && cart.getRemovalReason() != null && cart.getRemovalReason().shouldDestroy()) {

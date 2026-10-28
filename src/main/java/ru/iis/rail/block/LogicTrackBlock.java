@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.RailShape;
 import net.minecraft.world.phys.BlockHitResult;
@@ -32,6 +33,7 @@ import ru.iis.rail.IisRail;
 import ru.iis.rail.RailContent;
 import ru.iis.rail.RailShapes;
 import ru.iis.rail.TrackKind;
+import ru.iis.rail.cart.Locomotive;
 import ru.iis.rail.cart.TrainLinks;
 
 /**
@@ -40,20 +42,26 @@ import ru.iis.rail.cart.TrainLinks;
  * блокирующий ({@code TrackNextGenLocking}, профиль «Lockdown»: держит вагонетку, красный сигнал отпускает — дальше
  * в том направлении, в котором она пришла),
  * сцепной ({@code TrackCoupler}: с сигналом сцепляет вагонетку со следующей, в режиме расцепки — рвёт её сцепки;
- * монтировка переключает режим).
+ * монтировка переключает режим),
+ * локомотивный ({@code TrackLocomotive}: с сигналом переводит проходящий локомотив в режим пути — ход, холостой ход
+ * или стоп; монтировка переключает режим).
  */
 public class LogicTrackBlock extends BaseRailBlock implements IisRail {
-    public enum Type { BUFFER_STOP, LOCKING, COUPLER }
+    public enum Type { BUFFER_STOP, LOCKING, COUPLER, LOCOMOTIVE }
 
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
     /** Сцепной путь: false — сцепка, true — расцепка. */
     public static final BooleanProperty DECOUPLER = BooleanProperty.create("decoupler");
     public static final EnumProperty<RailShape> SHAPE = BlockStateProperties.RAIL_SHAPE_STRAIGHT;
+    /** Локомотивный путь: режим, в который переводится локомотив (Locomotive.Mode: ход, холостой, стоп). */
+    public static final IntegerProperty LOCO_MODE = IntegerProperty.create("loco_mode", 0, 2);
     /** Ключи в данных вагонетки: направление прихода на блокирующий путь и задержка после отпуска. */
     public static final String LOCK_DIR = "iis_lock_dir", LOCK_COOLDOWN = "iis_lock_cd";
     /** Скорость, с которой блокирующий путь отпускает вагонетку. */
     public static final double RELEASE_SPEED = 0.4;
+
+    private static final String[] MODE_KEYS = {"running", "idle", "shutdown"};
 
     private final Type type;
     private final MapCodec<LogicTrackBlock> codec;
@@ -63,7 +71,7 @@ public class LogicTrackBlock extends BaseRailBlock implements IisRail {
         this.type = type;
         this.codec = simpleCodec(p -> new LogicTrackBlock(type, p));
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(POWERED, false).setValue(DECOUPLER, false)
-                .setValue(SHAPE, RailShape.NORTH_SOUTH).setValue(WATERLOGGED, false));
+                .setValue(SHAPE, RailShape.NORTH_SOUTH).setValue(LOCO_MODE, 0).setValue(WATERLOGGED, false));
     }
 
     @Override
@@ -87,7 +95,7 @@ public class LogicTrackBlock extends BaseRailBlock implements IisRail {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, POWERED, DECOUPLER, SHAPE, WATERLOGGED);
+        builder.add(FACING, POWERED, DECOUPLER, SHAPE, LOCO_MODE, WATERLOGGED);
     }
 
     @Override
@@ -138,7 +146,16 @@ public class LogicTrackBlock extends BaseRailBlock implements IisRail {
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (type != Type.COUPLER || !stack.is(RailContent.CROWBARS)) return InteractionResult.TRY_WITH_EMPTY_HAND;
+        if (!stack.is(RailContent.CROWBARS) || type != Type.COUPLER && type != Type.LOCOMOTIVE) return InteractionResult.TRY_WITH_EMPTY_HAND;
+        if (type == Type.LOCOMOTIVE) {
+            if (!level.isClientSide()) {
+                BlockState next = state.setValue(LOCO_MODE, (state.getValue(LOCO_MODE) + 1) % 3);
+                level.setBlock(pos, next, 3);
+                player.sendOverlayMessage(Component.translatable("message.iis.rail.loco_track",
+                        Component.translatable("gui.iis.loco.mode." + MODE_KEYS[next.getValue(LOCO_MODE)])));
+            }
+            return InteractionResult.SUCCESS;
+        }
         if (!level.isClientSide()) {
             BlockState next = state.cycle(DECOUPLER);
             level.setBlock(pos, next, 3);
@@ -161,6 +178,9 @@ public class LogicTrackBlock extends BaseRailBlock implements IisRail {
                 if (!state.getValue(POWERED)) return;
                 if (state.getValue(DECOUPLER)) TrainLinks.breakAll(level, cart);
                 else TrainLinks.setAutoLink(cart, true);
+            }
+            case LOCOMOTIVE -> {
+                if (state.getValue(POWERED) && cart instanceof Locomotive loco) loco.setMode(Locomotive.Mode.values()[state.getValue(LOCO_MODE)]);
             }
         }
     }

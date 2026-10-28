@@ -16,6 +16,11 @@ import ru.iis.rail.block.LogicTrackBlock;
 import ru.iis.rail.block.SwitchActuatorBlock;
 import ru.iis.rail.block.SwitchTrackBlock;
 import ru.iis.rail.block.ElectricFeederBlockEntity;
+import ru.iis.rail.block.ItemDetectorBlock;
+import ru.iis.rail.block.ItemLoaderBlockEntity;
+import ru.iis.rail.signal.PairingToolItem;
+import ru.iis.rail.signal.SignalAspect;
+import ru.iis.rail.signal.SignalBlockEntity;
 import ru.iis.rail.cart.ElectricLocomotive;
 import ru.iis.rail.cart.Locomotive;
 import ru.iis.rail.cart.SteamLocomotive;
@@ -252,6 +257,151 @@ final class RailGameTests {
         h.runAtTickTime(22, () -> {
             h.assertTrue(rel(h, l).x > 3, "loco at " + rel(h, l));
             h.succeed();
+        });
+    }
+
+    // --- заход 3: сигналы, детектор, погрузчики, локомотивный путь ----------------------------------------------
+
+    private static SignalBlockEntity signal(GameTestHelper h, BlockPos p) {
+        return (SignalBlockEntity) h.getLevel().getBlockEntity(h.absolutePos(p));
+    }
+
+    /** Спаренные блок-сигналы: свободный участок — зелёный, вагонетка между ними — красный, без пары — мигающий красный. */
+    static void blockSignalOccupancy(GameTestHelper h) {
+        line(h, Blocks.RAIL, 0, 8, 4);
+        BlockPos a = new BlockPos(1, 1, 3), b = new BlockPos(7, 1, 3), lone = new BlockPos(4, 1, 6);
+        h.setBlock(a, RailContent.BLOCK_SIGNAL.get());
+        h.setBlock(b, RailContent.BLOCK_SIGNAL.get());
+        h.setBlock(lone, RailContent.BLOCK_SIGNAL.get());
+        h.assertTrue(PairingToolItem.pair(h.getLevel(), h.absolutePos(a), h.absolutePos(b), false), "pairing failed");
+        h.runAtTickTime(10, () -> {
+            h.assertTrue(signal(h, a).aspect() == SignalAspect.GREEN && signal(h, b).aspect() == SignalAspect.GREEN, "clear block: " + signal(h, a).aspect());
+            h.assertTrue(signal(h, lone).aspect() == SignalAspect.BLINK_RED, "unpaired: " + signal(h, lone).aspect());
+            cart(h, 4.5, 4.5, 0, 0);
+        });
+        h.runAtTickTime(20, () -> {
+            h.assertTrue(signal(h, a).aspect() == SignalAspect.RED && signal(h, b).aspect() == SignalAspect.RED, "occupied block: " + signal(h, a).aspect());
+            h.succeed();
+        });
+    }
+
+    /** Приёмник, настроенный на контроллер: даёт сигнал при зелёном контроллера и снимает при красном (контроллер под сигналом). */
+    static void receiverFollowsController(GameTestHelper h) {
+        BlockPos ctrl = new BlockPos(2, 1, 2), recv = new BlockPos(6, 1, 2);
+        h.setBlock(ctrl, RailContent.CONTROLLER_BOX.get());
+        h.setBlock(recv, RailContent.RECEIVER_BOX.get());
+        h.assertTrue(PairingToolItem.pair(h.getLevel(), h.absolutePos(ctrl), h.absolutePos(recv), true), "tuning failed");
+        h.runAtTickTime(10, () -> {
+            h.assertTrue(signal(h, recv).powered(), "receiver not powered on green");
+            h.assertTrue(h.getLevel().hasNeighborSignal(h.absolutePos(recv.east())), "no redstone from the receiver");
+            h.setBlock(ctrl.north(), Blocks.REDSTONE_BLOCK);
+        });
+        h.runAtTickTime(20, () -> {
+            h.assertTrue(signal(h, ctrl).aspect() == SignalAspect.RED, "controller " + signal(h, ctrl).aspect());
+            h.assertTrue(!signal(h, recv).powered(), "receiver still powered on red");
+            h.succeed();
+        });
+    }
+
+    /** Детектор предметов: сундучная вагонетка рядом — 15; в режиме «пустая» с грузом — 0. */
+    static void itemDetector(GameTestHelper h) {
+        line(h, Blocks.RAIL, 0, 8, 4);
+        BlockPos d = new BlockPos(4, 1, 5);
+        h.setBlock(d, RailContent.ITEM_DETECTOR.get());
+        MinecartChest c = h.spawn(EntityType.CHEST_MINECART, new Vec3(4.5, 1.0625, 4.5));
+        c.setItem(0, new ItemStack(Items.COAL));
+        h.runAtTickTime(6, () -> {
+            h.assertTrue(h.getBlockState(d).getValue(ItemDetectorBlock.POWER) == 15, "no power for a chest cart");
+            h.setBlock(d, h.getBlockState(d).setValue(ItemDetectorBlock.MODE, ItemDetectorBlock.Mode.EMPTY));
+        });
+        h.runAtTickTime(12, () -> {
+            h.assertTrue(h.getBlockState(d).getValue(ItemDetectorBlock.POWER) == 0, "empty mode with cargo powered");
+            h.succeed();
+        });
+    }
+
+    /** Погрузчик над блокирующим путём грузит остановленную вагонетку и, закончив, подаёт сигнал — путь её отпускает. */
+    static void itemLoaderLoadsAndReleases(GameTestHelper h) {
+        line(h, Blocks.RAIL, 0, 8, 4);
+        BlockPos lock = new BlockPos(4, 1, 4), loader = new BlockPos(4, 2, 4);
+        h.setBlock(lock, track("track_locking").defaultBlockState().setValue(ru.iis.rail.block.LogicTrackBlock.FACING, Direction.EAST)
+                .setValue(ru.iis.rail.block.LogicTrackBlock.SHAPE, RailShape.EAST_WEST));
+        h.setBlock(loader, RailContent.ITEM_LOADER.get());
+        ItemLoaderBlockEntity be = (ItemLoaderBlockEntity) h.getLevel().getBlockEntity(h.absolutePos(loader));
+        be.setItem(0, new ItemStack(Items.COAL, 3));
+        MinecartChest c = h.spawn(EntityType.CHEST_MINECART, new Vec3(1.5, 1.0625, 4.5));
+        c.setDeltaMovement(0.3, 0, 0);
+        h.succeedWhen(() -> {
+            int coal = 0;
+            for (int i = 0; i < c.getContainerSize(); i++) if (c.getItem(i).is(Items.COAL)) coal += c.getItem(i).getCount();
+            h.assertTrue(coal == 3, "loaded " + coal);
+            h.assertTrue(be.isEmpty(), "buffer not empty");
+            h.assertTrue(rel(h, c).x > 6, "not released: at " + rel(h, c));
+        });
+    }
+
+    /** Разгрузчик под блокирующим путём выгружает вагонетку в свой буфер. */
+    static void itemUnloaderUnloads(GameTestHelper h) {
+        line(h, Blocks.RAIL, 0, 8, 4);
+        BlockPos lock = new BlockPos(4, 1, 4), unloader = new BlockPos(4, 0, 4);
+        h.setBlock(unloader, RailContent.ITEM_UNLOADER.get());
+        h.setBlock(lock, track("track_locking").defaultBlockState().setValue(ru.iis.rail.block.LogicTrackBlock.FACING, Direction.EAST)
+                .setValue(ru.iis.rail.block.LogicTrackBlock.SHAPE, RailShape.EAST_WEST));
+        ItemLoaderBlockEntity be = (ItemLoaderBlockEntity) h.getLevel().getBlockEntity(h.absolutePos(unloader));
+        MinecartChest c = h.spawn(EntityType.CHEST_MINECART, new Vec3(1.5, 1.0625, 4.5));
+        c.setItem(3, new ItemStack(Items.IRON_INGOT, 4));
+        c.setDeltaMovement(0.3, 0, 0);
+        h.succeedWhen(() -> {
+            h.assertTrue(c.isEmpty(), "cart not empty");
+            h.assertTrue(be.getItem(0).is(Items.IRON_INGOT) && be.getItem(0).getCount() == 4, "buffer " + be.getItem(0));
+            h.assertTrue(rel(h, c).x > 6, "not released: at " + rel(h, c));
+        });
+    }
+
+    /** Локомотивный путь с сигналом в режиме «стоп» глушит проходящий паровоз. */
+    static void locomotiveTrackStops(GameTestHelper h) {
+        line(h, Blocks.RAIL, 0, 8, 4);
+        BlockPos t = new BlockPos(5, 1, 4);
+        h.setBlock(t, track("track_locomotive").defaultBlockState().setValue(ru.iis.rail.block.LogicTrackBlock.FACING, Direction.EAST)
+                .setValue(ru.iis.rail.block.LogicTrackBlock.SHAPE, RailShape.EAST_WEST).setValue(ru.iis.rail.block.LogicTrackBlock.LOCO_MODE, 2));
+        h.setBlock(new BlockPos(5, 1, 5), Blocks.REDSTONE_BLOCK);
+        SteamLocomotive l = loco(h, RailContent.STEAM_LOCO.get(), 1.5, 4.5);
+        l.addWater(SteamLocomotive.WATER_CAPACITY);
+        l.addSteam(SteamLocomotive.STEAM_CAPACITY);
+        l.setMode(Locomotive.Mode.RUNNING);
+        h.succeedWhen(() -> h.assertTrue(l.mode() == Locomotive.Mode.SHUTDOWN, "mode " + l.mode()));
+    }
+
+    // --- заход 4: путеукладчик и тоннельный бур -----------------------------------------------------------------
+
+    /** Путеукладчик, которого тянут, на конце пути кладёт следующий путь из запаса. */
+    static void trackLayerLaysTrack(GameTestHelper h) {
+        line(h, Blocks.RAIL, 0, 3, 4);
+        ru.iis.rail.cart.TrackLayerCart c = h.spawn(RailContent.TRACK_LAYER_CART.get(), new Vec3(0.5, 1.0625, 4.5));
+        c.setItem(0, new ItemStack(Items.RAIL, 8));
+        // в поезде путеукладчик тянет локомотив; здесь — толчок каждый тик (своё торможение 0.9)
+        h.onEachTick(() -> c.setDeltaMovement(0.1, c.getDeltaMovement().y, 0));
+        h.succeedWhen(() -> {
+            h.assertTrue(h.getBlockState(new BlockPos(6, 1, 4)).is(Blocks.RAIL), "no rail laid at x 6");
+            h.assertTrue(c.getItem(0).getCount() < 6, "stock " + c.getItem(0).getCount());
+        });
+    }
+
+    /** Тоннельный бур с углём и головкой выбуривает слой камня впереди и едет. */
+    static void tunnelBoreBores(GameTestHelper h) {
+        line(h, Blocks.RAIL, 0, 2, 4);
+        for (int x = 3; x <= 8; x++) for (int z = 3; z <= 5; z++) for (int y = 1; y <= 3; y++) h.setBlock(new BlockPos(x, y, z), Blocks.STONE);
+        ru.iis.rail.cart.TunnelBore b = h.spawn(RailContent.TUNNEL_BORE_CART.get(), new Vec3(1.5, 1.0625, 4.5));
+        b.setFacing(Direction.EAST);
+        b.setItem(ru.iis.rail.cart.TunnelBore.SLOT_HEAD, new ItemStack(RailContent.BOREHEAD_DIAMOND.get()));
+        b.setItem(ru.iis.rail.cart.TunnelBore.FUEL_FROM, new ItemStack(Items.COAL, 16));
+        b.setItem(ru.iis.rail.cart.TunnelBore.RAILS_FROM, new ItemStack(Items.RAIL, 16));
+        double x0 = b.getX();
+        h.succeedWhen(() -> {
+            h.assertTrue(h.getBlockState(new BlockPos(4, 1, 4)).isAir() || h.getBlockState(new BlockPos(4, 1, 4)).is(Blocks.RAIL), "layer not bored");
+            h.assertTrue(h.getBlockState(new BlockPos(4, 2, 3)).isAir() && h.getBlockState(new BlockPos(4, 3, 5)).isAir(), "3x3 not cleared");
+            h.assertTrue(b.getX() > x0 + 0.5, "bore did not move");
+            h.assertTrue(b.getItem(ru.iis.rail.cart.TunnelBore.SLOT_HEAD).getDamageValue() > 0, "head not worn");
         });
     }
 }

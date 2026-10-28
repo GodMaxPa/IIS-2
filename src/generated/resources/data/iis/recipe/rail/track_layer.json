@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RMR",
+    "CGC",
+    "AmA"
+  ],
+  "key": {
+    "R": "iis:circuit_receiver",
+    "M": "iis:cover_controller",
+    "C": "iis:conveyor_module_lv",
+    "G": "iis:steel_gear_box_casing",
+    "A": "iis:robot_arm_lv",
+    "m": "minecraft:minecart"
+  },
+  "result": {
+    "id": "iis:track_layer",
+    "count": 1
+  }
+}

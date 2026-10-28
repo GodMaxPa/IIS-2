@@ -93,6 +93,24 @@ IC2_MAP = {
     ('itemPartCircuitAdv', 0): f'{NS}:circuit_advanced', ('blockRubWood', 0): f'{NS}:rubber_log', ('itemToolMEter', 0): f'{NS}:multimeter',
     ('itemRubber', 0): f'{NS}:plate_rubber',
 }
+# Railcraft items ported in D102 (track items are told apart by their track id in the damage value)
+RAILCRAFT_MAP = {
+    ('detector', 0): 'detector_item', ('part.tie', 0): 'tie_wood', ('part.tie', 1): 'tie_stone', ('part.railbed', 0): 'railbed_wood',
+    ('part.railbed', 1): 'railbed_stone', ('part.rail', 0): 'rail_standard', ('part.rail', 1): 'rail_advanced', ('part.rail', 2): 'rail_wooden',
+    ('part.rail', 3): 'rail_high_speed', ('part.rail', 4): 'rail_reinforced', ('part.rail', 5): 'rail_electric', ('part.rebar', 0): 'rebar',
+    ('part.circuit', 0): 'circuit_controller', ('part.circuit', 1): 'circuit_receiver', ('part.circuit', 2): 'circuit_signal',
+    ('track', 736): 'track_wooden', ('track', 20176): 'track_locking', ('track', 30516): 'track_locomotive',
+    ('cart.loco.steam.solid', 0): 'loco_steam', ('cart.loco.electric', 0): 'loco_electric', ('cart.track.layer', 0): 'track_layer',
+    ('cart.bore', 0): 'tunnel_bore', ('borehead.iron', 0): 'borehead_iron', ('borehead.steel', 0): 'borehead_steel',
+    ('borehead.diamond', 0): 'borehead_diamond', ('tool.signal.tuner', 0): 'signal_tuner', ('tool.surveyor', 0): 'signal_surveyor',
+    ('signal', 3): 'block_signal', ('signal', 8): 'signal_receiver_box', ('signal', 9): 'signal_controller_box',
+    ('signal', 2): 'switch_motor', ('signal', 4): 'switch_lever', ('part.signal.lamp', 0): 'signal_lamp', ('armor.goggles', 0): 'trackman_goggles',
+    ('machine.gamma', 0): 'item_loader', ('machine.gamma', 1): 'item_unloader', ('machine.gamma', 2): 'item_loader_advanced',
+    ('machine.gamma', 3): 'item_unloader_advanced', ('machine.epsilon', 0): 'electric_feeder', ('tool.crowbar', 0): 'crowbar_red',
+    ('tool.crowbar.reinforced', 0): 'crowbar_reinforced',
+    # the IC2 MFE cart is not ported: the electric locomotive takes an MV 2x2 battery buffer instead (PORTING_NOTES, D102)
+    ('cart.energy.mfe', 0): 'battery_buffer_2x2_mv',
+}
 GT_TOOLS = {0: 'sword', 2: 'pickaxe', 4: 'shovel', 6: 'axe', 8: 'hoe', 10: 'saw', 12: 'hammer', 14: 'soft_hammer', 16: 'wrench',
             18: 'file', 20: 'crowbar', 22: 'screwdriver', 24: 'mortar', 26: 'wire_cutter', 34: 'knife'}
 TIERS = {'01': 'lv', '02': 'mv', '03': 'hv', '04': 'ev'}
@@ -137,6 +155,9 @@ class Mapper:
             r = f'minecraft:{r}' if r else None
         elif mod == 'IC2':
             r = IC2_MAP.get((name, dmg))
+        elif mod == 'Railcraft':
+            r = RAILCRAFT_MAP.get((name, dmg))
+            r = f'{NS}:{r}' if r else None
         elif mod == 'gregtech':
             r = self.gregtech(name, dmg)
         if r is None and oredict:

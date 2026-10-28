@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XXX",
+    "XPX",
+    "XXX"
+  ],
+  "key": {
+    "X": "#minecraft:planks",
+    "P": "minecraft:stone_pressure_plate"
+  },
+  "result": {
+    "id": "iis:detector_item",
+    "count": 1
+  }
+}

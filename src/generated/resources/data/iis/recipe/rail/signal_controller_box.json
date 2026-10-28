@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ICI",
+    "IRI"
+  ],
+  "key": {
+    "I": "#c:ingots/iron",
+    "R": "#c:dusts/redstone",
+    "C": "iis:circuit_controller"
+  },
+  "result": {
+    "id": "iis:signal_controller_box",
+    "count": 1
+  }
+}

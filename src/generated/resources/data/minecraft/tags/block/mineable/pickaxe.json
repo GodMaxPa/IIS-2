@@ -397,8 +397,16 @@
     "iis:track_buffer_stop",
     "iis:track_locking",
     "iis:track_coupler",
+    "iis:track_locomotive",
     "iis:switch_lever",
     "iis:switch_motor",
+    "iis:block_signal",
+    "iis:signal_controller_box",
+    "iis:signal_receiver_box",
+    "iis:item_loader",
+    "iis:item_unloader",
+    "iis:item_loader_advanced",
+    "iis:item_unloader_advanced",
     "iis:electric_feeder"
   ]
 }

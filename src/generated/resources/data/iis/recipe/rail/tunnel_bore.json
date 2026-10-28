@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GLG",
+    "BLB",
+    "hTw"
+  ],
+  "key": {
+    "G": "iis:steel_gear_box_casing",
+    "L": "iis:loco_steam",
+    "B": "iis:boiler_coal_steel",
+    "h": "#iis:tools/hammer",
+    "T": "iis:track_layer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:tunnel_bore",
+    "count": 1
+  }
+}

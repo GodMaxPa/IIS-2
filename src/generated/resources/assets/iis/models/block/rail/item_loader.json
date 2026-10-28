@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/rail/item_loader_side",
+    "north": "iis:block/rail/item_loader_mouth",
+    "south": "iis:block/rail/item_loader_side",
+    "east": "iis:block/rail/item_loader_side",
+    "west": "iis:block/rail/item_loader_side",
+    "up": "iis:block/rail/item_loader_side",
+    "down": "iis:block/rail/item_loader_side"
+  }
+}

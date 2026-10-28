@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "SDS",
+    "SLS"
+  ],
+  "key": {
+    "S": "#c:cobblestones",
+    "D": "iis:detector_item",
+    "L": "minecraft:hopper"
+  },
+  "result": {
+    "id": "iis:item_unloader",
+    "count": 1
+  }
+}

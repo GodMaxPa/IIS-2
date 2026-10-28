@@ -25,6 +25,7 @@
     "iis:track_electric_wye",
     "iis:track_buffer_stop",
     "iis:track_locking",
-    "iis:track_coupler"
+    "iis:track_coupler",
+    "iis:track_locomotive"
   ]
 }

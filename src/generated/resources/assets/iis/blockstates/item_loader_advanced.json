@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iis:block/rail/item_loader_advanced"
+    },
+    "facing=south": {
+      "model": "iis:block/rail/item_loader_advanced",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "iis:block/rail/item_loader_advanced",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "iis:block/rail/item_loader_advanced",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "iis:block/rail/item_loader_advanced",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "iis:block/rail/item_loader_advanced",
+      "x": 90
+    }
+  }
+}

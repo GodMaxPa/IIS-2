@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PRP",
+    "RLR",
+    "PCP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "R": "#c:dusts/redstone",
+    "L": "iis:item_loader",
+    "C": "iis:conveyor_module_lv"
+  },
+  "result": {
+    "id": "iis:item_loader_advanced",
+    "count": 1
+  }
+}

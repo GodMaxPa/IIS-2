@@ -18,11 +18,14 @@ import net.minecraft.world.phys.Vec3;
 
 import java.util.function.Supplier;
 
-/** Ставит локомотив на путь (как MinecartItem) передом туда, куда смотрит игрок (Railcraft ItemLocomotive). */
-public class LocomotiveItem extends Item {
-    private final Supplier<? extends EntityType<? extends Locomotive>> type;
+/**
+ * Ставит вагонетку Railcraft на путь (как MinecartItem); локомотив и тоннельный бур — передом туда, куда смотрит игрок
+ * (ItemLocomotive, ItemTunnelBore).
+ */
+public class RailCartItem extends Item {
+    private final Supplier<? extends EntityType<? extends AbstractMinecart>> type;
 
-    public LocomotiveItem(Supplier<? extends EntityType<? extends Locomotive>> type, Properties p) {
+    public RailCartItem(Supplier<? extends EntityType<? extends AbstractMinecart>> type, Properties p) {
         super(p);
         this.type = type;
     }
@@ -38,10 +41,11 @@ public class LocomotiveItem extends Item {
         if (level instanceof ServerLevel sl) {
             AbstractMinecart cart = AbstractMinecart.createMinecart(level, pos.getX() + 0.5, pos.getY() + 0.0625 + offset, pos.getZ() + 0.5,
                     type.get(), EntitySpawnReason.DISPENSER, stack, context.getPlayer());
-            if (!(cart instanceof Locomotive loco)) return InteractionResult.FAIL;
+            if (cart == null) return InteractionResult.FAIL;
             Vec3 look = context.getPlayer() != null ? context.getPlayer().getLookAngle() : new Vec3(context.getHorizontalDirection().getStepX(), 0, context.getHorizontalDirection().getStepZ());
-            sl.addFreshEntity(loco);
-            loco.setHeading(new Vec3(look.x, 0, look.z));
+            if (cart instanceof TunnelBore bore) bore.setFacing(context.getHorizontalDirection());
+            sl.addFreshEntity(cart);
+            if (cart instanceof Locomotive loco) loco.setHeading(new Vec3(look.x, 0, look.z));
             sl.gameEvent(GameEvent.ENTITY_PLACE, pos, GameEvent.Context.of(context.getPlayer(), sl.getBlockState(pos.below())));
         }
         stack.shrink(1);

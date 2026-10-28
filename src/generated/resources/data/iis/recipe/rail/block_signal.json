@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LCI",
+    " BI"
+  ],
+  "key": {
+    "L": "iis:signal_lamp",
+    "C": "iis:circuit_signal",
+    "I": "#c:ingots/iron",
+    "B": "#c:dyes/black"
+  },
+  "result": {
+    "id": "iis:block_signal",
+    "count": 1
+  }
+}

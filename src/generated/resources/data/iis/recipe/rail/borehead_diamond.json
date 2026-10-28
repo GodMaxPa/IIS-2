@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "SBS",
+    "SSS"
+  ],
+  "key": {
+    "S": "#c:ingots/steel",
+    "B": "#c:storage_blocks/diamond"
+  },
+  "result": {
+    "id": "iis:borehead_diamond",
+    "count": 1
+  }
+}

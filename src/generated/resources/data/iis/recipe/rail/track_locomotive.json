@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:rail",
+    "iis:signal_lamp"
+  ],
+  "result": {
+    "id": "iis:track_locomotive",
+    "count": 1
+  }
+}

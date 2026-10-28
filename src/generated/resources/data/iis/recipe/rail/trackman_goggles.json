@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GCG",
+    "I I",
+    "LLL"
+  ],
+  "key": {
+    "C": "iis:circuit_receiver",
+    "I": "#c:ingots/steel",
+    "L": "minecraft:leather",
+    "G": "#c:glass_panes/colorless"
+  },
+  "result": {
+    "id": "iis:trackman_goggles",
+    "count": 1
+  }
+}

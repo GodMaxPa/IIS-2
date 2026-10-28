@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PG ",
+    "PYT",
+    "PRS"
+  ],
+  "key": {
+    "P": "#c:glass_panes/colorless",
+    "G": "#c:dyes/lime",
+    "Y": "#c:dyes/yellow",
+    "R": "#c:dyes/red",
+    "S": "#c:dusts/redstone",
+    "T": "#c:dusts/glowstone"
+  },
+  "result": {
+    "id": "iis:signal_lamp",
+    "count": 1
+  }
+}

@@ -91,6 +91,10 @@ public final class IISClient {
                 c -> new net.minecraft.client.renderer.entity.MinecartRenderer(c, net.minecraft.client.model.geom.ModelLayers.MINECART));
         event.registerEntityRenderer(ru.iis.rail.RailContent.ELECTRIC_LOCO.get(),
                 c -> new net.minecraft.client.renderer.entity.MinecartRenderer(c, net.minecraft.client.model.geom.ModelLayers.MINECART));
+        event.registerEntityRenderer(ru.iis.rail.RailContent.TRACK_LAYER_CART.get(),
+                c -> new net.minecraft.client.renderer.entity.MinecartRenderer(c, net.minecraft.client.model.geom.ModelLayers.MINECART));
+        event.registerEntityRenderer(ru.iis.rail.RailContent.TUNNEL_BORE_CART.get(),
+                c -> new net.minecraft.client.renderer.entity.MinecartRenderer(c, net.minecraft.client.model.geom.ModelLayers.MINECART));
     }
 
     private static void registerScreens(RegisterMenuScreensEvent event) {

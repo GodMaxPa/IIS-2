@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/rail/item_unloader_advanced_side",
+    "north": "iis:block/rail/item_unloader_advanced_mouth",
+    "south": "iis:block/rail/item_unloader_advanced_side",
+    "east": "iis:block/rail/item_unloader_advanced_side",
+    "west": "iis:block/rail/item_unloader_advanced_side",
+    "up": "iis:block/rail/item_unloader_advanced_side",
+    "down": "iis:block/rail/item_unloader_advanced_side"
+  }
+}

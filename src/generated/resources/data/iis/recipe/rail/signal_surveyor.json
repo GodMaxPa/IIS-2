@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " C ",
+    "BGB",
+    " R "
+  ],
+  "key": {
+    "G": "#c:glass_panes/colorless",
+    "C": "minecraft:compass",
+    "B": "minecraft:stone_button",
+    "R": "#c:dusts/redstone"
+  },
+  "result": {
+    "id": "iis:signal_surveyor",
+    "count": 1
+  }
+}

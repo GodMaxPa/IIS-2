@@ -881,6 +881,10 @@
     "Another stuff used as a component of circuits."
   ],
   "quest.1A0000000000019C.title": "Resistor",
+  "quest.1A0000000000019D.quest_desc": [
+    "This block will output a redstone signal if there is a Chest Cart that contains the specified items in front of it."
+  ],
+  "quest.1A0000000000019D.title": "Detector - Item",
   "quest.1A0000000000019E.quest_desc": [
     "Just put usual charcoal into a macerator."
   ],
@@ -1885,10 +1889,34 @@
     "Use saw on any wooden plank to get a wooden slab."
   ],
   "quest.1A00000000000446.title": "Wood Slab",
+  "quest.1A00000000000447.quest_desc": [
+    "May be used as a part of rails tracks. You may craft it handly with help of crafting table, but it is recommended to use a chemical bath."
+  ],
+  "quest.1A00000000000447.title": "Wooden Tie",
+  "quest.1A00000000000448.quest_desc": [
+    "May be used as a part of rails tracks."
+  ],
+  "quest.1A00000000000448.title": "Wooden Railbed",
+  "quest.1A00000000000449.quest_desc": [
+    "A part of wooden track"
+  ],
+  "quest.1A00000000000449.title": "Wooden Rail",
+  "quest.1A0000000000044A.quest_desc": [
+    "A part of standard track."
+  ],
+  "quest.1A0000000000044A.title": "Standard Rail",
+  "quest.1A0000000000044B.quest_desc": [
+    "A cheapest but slowest rails track."
+  ],
+  "quest.1A0000000000044B.title": "Wooden Track",
   "quest.1A0000000000044C.quest_desc": [
     "A common rails track."
   ],
   "quest.1A0000000000044C.title": "Track",
+  "quest.1A0000000000044E.quest_desc": [
+    "You may use it as a source of power to move you train. But don't forget to fill it up with coal and water."
+  ],
+  "quest.1A0000000000044E.title": "Steam Locomotive",
   "quest.1A0000000000044F.quest_desc": [
     "It is a nice stuff to ride it on tracks. Or you may use it to automatically transferring your resources from miner to your base (just example). But in this case you have to use one of two locomotive types to pull your train."
   ],
@@ -1905,6 +1933,22 @@
     "Just a bronze stick. It may be used as a part of some machines."
   ],
   "quest.1A00000000000453.title": "Bronze Rod",
+  "quest.1A00000000000455.quest_desc": [
+    "You may put a MFE to a Minecart to get transportable energy storage. Also, later, you may pull it out with help of crafting grid."
+  ],
+  "quest.1A00000000000455.title": "MFE Cart",
+  "quest.1A00000000000456.quest_desc": [
+    "A part of some items or machines."
+  ],
+  "quest.1A00000000000456.title": "Steel Gear Box Casing",
+  "quest.1A00000000000457.quest_desc": [
+    "A part of Tunnel Bore"
+  ],
+  "quest.1A00000000000457.title": "Track Layer Cart",
+  "quest.1A00000000000458.quest_desc": [
+    "It is a part of some railcraft items or machines."
+  ],
+  "quest.1A00000000000458.title": "Receiver Circuit",
   "quest.1A00000000000459.quest_desc": [
     "Prepare dyes"
   ],
@@ -1917,6 +1961,30 @@
     "May be used as a cover on GT machines, to control their states by redstone signal."
   ],
   "quest.1A0000000000045C.title": "Machine Controller",
+  "quest.1A0000000000045D.quest_desc": [
+    "Amazing machine that may help you to dig wide(3 by 3 blocks) tunnels inside mounts or underground. It require tracks, gravel and coal to work. It may take that things from minecart with chest and use them while working. But note, that this machine afraid of lava and it will stop if lava source or stream appear next or in front of tunnel bore machine."
+  ],
+  "quest.1A0000000000045D.title": "Tunnel Bore",
+  "quest.1A0000000000045E.quest_desc": [
+    "It is required MFE cart (or cart with other energy storage) to pull it as energy source to working."
+  ],
+  "quest.1A0000000000045E.title": "Electric Locomotive",
+  "quest.1A00000000000462.quest_desc": [
+    "It is a part of some railcraft items or machines."
+  ],
+  "quest.1A00000000000462.title": "Controller Circuit",
+  "quest.1A00000000000463.quest_desc": [
+    "An item that may link controller and receiver between together."
+  ],
+  "quest.1A00000000000463.title": "Signal Tuner",
+  "quest.1A00000000000465.quest_desc": [
+    "It may get wireless redstone signal from Signal Controller Box, that was linked with this block by signal tuner."
+  ],
+  "quest.1A00000000000465.title": "Signal Recevier Box",
+  "quest.1A00000000000466.quest_desc": [
+    "It may emit wireless redstone signal that may be received by Signal Receiver Box, that was linked with this block by signal tuner."
+  ],
+  "quest.1A00000000000466.title": "Signal Controller Box",
   "quest.1A0000000000046D.quest_desc": [
     "Create a nether portal. Now you can do it."
   ],
@@ -2741,10 +2809,34 @@
     "Cheap MV tier Battery."
   ],
   "quest.1A0000000000069D.title": "Medium Sodium Battery",
+  "quest.1A000000000006A4.quest_desc": [
+    "This item may allow you to view signal lines between two linked signal blocks. To activate this function you have to take this goggles to your hand and do RMB until in chat you see \"Current Aura: Signalling\". Then you may weare it to see signal lines."
+  ],
+  "quest.1A000000000006A4.title": "Trackman's Goggles",
+  "quest.1A000000000006A5.quest_desc": [
+    "A part of some railcraft items."
+  ],
+  "quest.1A000000000006A5.title": "Signal Circuit",
+  "quest.1A000000000006A6.quest_desc": [
+    "It can detect staying or moving carts or trains if you place two block signals near railroad tracks and link them together by signal block surveyor. To convert the train detection to redstone signal use a signal tuner on one of linked signal blocks and then click on signal recevier box. After this if a train that appear on railroad tracks between to linked signal blocks will activate the emiting of redstone signal from the linked signal recevier box."
+  ],
+  "quest.1A000000000006A6.title": "Block Signal",
+  "quest.1A000000000006A7.quest_desc": [
+    "An item, that may link two signal blocks together."
+  ],
+  "quest.1A000000000006A7.title": "Signal Block Surveyor",
   "quest.1A000000000006A8.quest_desc": [
     "Useful track for railroad that push your train or cart forward by moving direction"
   ],
   "quest.1A000000000006A8.title": "Booster Track",
+  "quest.1A000000000006A9.quest_desc": [
+    "A track that may to stop and hold a cart or a train until it get a redstone signal. It may work in few mods - for carts and for trains. Also you may set a direction to push a cart or a train on redstone signal activation. But for train it will work only if a train moving direction is the same as you set for locking track. To change a working settings use a crowbar."
+  ],
+  "quest.1A000000000006A9.title": "Locking Track",
+  "quest.1A000000000006AA.quest_desc": [
+    "A track that may change working status for train. It will work if you send a redstone signal to this track. To change a working settings use a crowbar."
+  ],
+  "quest.1A000000000006AA.title": "Locomotive Track",
   "quest.1A000000000006AB.quest_desc": [
     "A part of Locking Track"
   ],
@@ -2753,6 +2845,10 @@
     "You may create it from common gold wire by wiremill or from gold foil by wire cutter."
   ],
   "quest.1A000000000006AC.title": "Fine Gold Wire",
+  "quest.1A000000000006AE.quest_desc": [
+    "A part of some railcraft items."
+  ],
+  "quest.1A000000000006AE.title": "Signal Lamp",
   "quest.1A000000000006B1.quest_desc": [
     "Prepare one of blue plates, as Lapis, Lazurite, Sodalite. Use compressor to get a block and then cut it to get plates"
   ],
@@ -2885,6 +2981,10 @@
     "Common bowl, that you can craft by knife from wood plank, or by lathe from wood slab."
   ],
   "quest.1A00000000000733.title": "Bowl",
+  "quest.1A0000000000073B.quest_desc": [
+    "A block, that can load items to carts or locomotives (for example - coal). Should be placed above rails (carts)."
+  ],
+  "quest.1A0000000000073B.title": "Item Loader",
   "quest.1A00000000000741.quest_desc": [
     "Find a sheep and ask it, where you can find a wool."
   ],
@@ -2913,10 +3013,26 @@
     "Common bow, that allow you to range attack"
   ],
   "quest.1A0000000000076D.title": "Bow",
+  "quest.1A0000000000078A.quest_desc": [
+    "A block, that can unload items from carts"
+  ],
+  "quest.1A0000000000078A.title": "Item Unloader",
+  "quest.1A0000000000078B.quest_desc": [
+    "Work side can be changed by RMB click with (red) crowbar in hand."
+  ],
+  "quest.1A0000000000078B.title": "Adv. Item Loader",
+  "quest.1A0000000000078C.quest_desc": [
+    "Work side can be changed by RMB click with (red) crowbar in hand."
+  ],
+  "quest.1A0000000000078C.title": "Adv. Item Unloader",
   "quest.1A0000000000078D.quest_desc": [
     "Any red dye."
   ],
   "quest.1A0000000000078D.title": "Red Dye",
+  "quest.1A0000000000078E.quest_desc": [
+    "Red Crowbar from railcraft mod can rotate active side of any railcraft blocks or detectors"
+  ],
+  "quest.1A0000000000078E.title": "Red Crowbar",
   "quest.1A00000000000793.quest_desc": [
     "Early, but not stable way to get Data Orb. You have to use One of 3 exquisite green gems with tritium in HV autoclave, to get a Data Orb with only 5% chance."
   ],

@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,lamp=off": {
+      "model": "iis:block/rail/signal_receiver_box_off"
+    },
+    "facing=east,lamp=off": {
+      "model": "iis:block/rail/signal_receiver_box_off",
+      "y": 90
+    },
+    "facing=south,lamp=off": {
+      "model": "iis:block/rail/signal_receiver_box_off",
+      "y": 180
+    },
+    "facing=west,lamp=off": {
+      "model": "iis:block/rail/signal_receiver_box_off",
+      "y": 270
+    },
+    "facing=north,lamp=green": {
+      "model": "iis:block/rail/signal_receiver_box_green"
+    },
+    "facing=east,lamp=green": {
+      "model": "iis:block/rail/signal_receiver_box_green",
+      "y": 90
+    },
+    "facing=south,lamp=green": {
+      "model": "iis:block/rail/signal_receiver_box_green",
+      "y": 180
+    },
+    "facing=west,lamp=green": {
+      "model": "iis:block/rail/signal_receiver_box_green",
+      "y": 270
+    },
+    "facing=north,lamp=yellow": {
+      "model": "iis:block/rail/signal_receiver_box_yellow"
+    },
+    "facing=east,lamp=yellow": {
+      "model": "iis:block/rail/signal_receiver_box_yellow",
+      "y": 90
+    },
+    "facing=south,lamp=yellow": {
+      "model": "iis:block/rail/signal_receiver_box_yellow",
+      "y": 180
+    },
+    "facing=west,lamp=yellow": {
+      "model": "iis:block/rail/signal_receiver_box_yellow",
+      "y": 270
+    },
+    "facing=north,lamp=red": {
+      "model": "iis:block/rail/signal_receiver_box_red"
+    },
+    "facing=east,lamp=red": {
+      "model": "iis:block/rail/signal_receiver_box_red",
+      "y": 90
+    },
+    "facing=south,lamp=red": {
+      "model": "iis:block/rail/signal_receiver_box_red",
+      "y": 180
+    },
+    "facing=west,lamp=red": {
+      "model": "iis:block/rail/signal_receiver_box_red",
+      "y": 270
+    }
+  }
+}

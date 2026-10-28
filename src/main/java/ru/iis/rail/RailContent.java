@@ -26,7 +26,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import ru.iis.IIS;
 import ru.iis.rail.block.*;
 import ru.iis.rail.cart.ElectricLocomotive;
-import ru.iis.rail.cart.LocomotiveItem;
+import ru.iis.rail.cart.RailCartItem;
 import ru.iis.rail.cart.SteamLocomotive;
 import ru.iis.rail.menu.LocomotiveMenu;
 
@@ -119,6 +119,7 @@ public final class RailContent {
         track("track_buffer_stop", p -> new LogicTrackBlock(LogicTrackBlock.Type.BUFFER_STOP, p), p -> p.strength(0.7f).sound(SoundType.METAL).noOcclusion());
         track("track_locking", p -> new LogicTrackBlock(LogicTrackBlock.Type.LOCKING, p), RailContent::rail);
         track("track_coupler", p -> new LogicTrackBlock(LogicTrackBlock.Type.COUPLER, p), RailContent::rail);
+        track("track_locomotive", p -> new LogicTrackBlock(LogicTrackBlock.Type.LOCOMOTIVE, p), RailContent::rail);
     }
     public static final DeferredBlock<SwitchActuatorBlock> SWITCH_LEVER = block("switch_lever", p -> new SwitchActuatorBlock(false, p),
             p -> p.mapColor(MapColor.METAL).strength(1.0f).sound(SoundType.METAL).noOcclusion());
@@ -131,17 +132,76 @@ public final class RailContent {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ElectricFeederBlockEntity>> FEEDER_BE = BLOCK_ENTITIES.register("electric_feeder",
             () -> new BlockEntityType<>(ElectricFeederBlockEntity::new, ELECTRIC_FEEDER.get()));
 
+    // --- сигналы, детектор, погрузчики, инструменты (заход 3) ----------------------------------------------------
+    public static final DeferredItem<Item> SIGNAL_LAMP = item("signal_lamp");
+    private static Block.Properties signal(Block.Properties p) {
+        return p.mapColor(MapColor.METAL).strength(2.0f, 6.0f).sound(SoundType.METAL).noOcclusion();
+    }
+    public static final DeferredBlock<ru.iis.rail.signal.SignalBlock> BLOCK_SIGNAL = block("block_signal",
+            p -> new ru.iis.rail.signal.SignalBlock(ru.iis.rail.signal.SignalBlock.Type.BLOCK_SIGNAL, p), RailContent::signal);
+    public static final DeferredBlock<ru.iis.rail.signal.SignalBlock> CONTROLLER_BOX = block("signal_controller_box",
+            p -> new ru.iis.rail.signal.SignalBlock(ru.iis.rail.signal.SignalBlock.Type.CONTROLLER_BOX, p), RailContent::signal);
+    public static final DeferredBlock<ru.iis.rail.signal.SignalBlock> RECEIVER_BOX = block("signal_receiver_box",
+            p -> new ru.iis.rail.signal.SignalBlock(ru.iis.rail.signal.SignalBlock.Type.RECEIVER_BOX, p), RailContent::signal);
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ru.iis.rail.signal.SignalBlockEntity>> SIGNAL_BE = BLOCK_ENTITIES.register("signal",
+            () -> new BlockEntityType<>(ru.iis.rail.signal.SignalBlockEntity::new, BLOCK_SIGNAL.get(), CONTROLLER_BOX.get(), RECEIVER_BOX.get()));
+    public static final DeferredItem<ru.iis.rail.signal.PairingToolItem> SURVEYOR = ITEMS.registerItem("signal_surveyor",
+            p -> new ru.iis.rail.signal.PairingToolItem(false, p.stacksTo(1)));
+    public static final DeferredItem<ru.iis.rail.signal.PairingToolItem> TUNER = ITEMS.registerItem("signal_tuner",
+            p -> new ru.iis.rail.signal.PairingToolItem(true, p.stacksTo(1)));
+    /** Очки путейца: надеваются на голову (без модели на игроке). */
+    public static final DeferredItem<Item> GOGGLES = ITEMS.registerSimpleItem("trackman_goggles", p -> p.stacksTo(1)
+            .component(net.minecraft.core.component.DataComponents.EQUIPPABLE,
+                    net.minecraft.world.item.equipment.Equippable.builder(net.minecraft.world.entity.EquipmentSlot.HEAD).build()));
+    static {
+        TAB_ORDER.add(SURVEYOR);
+        TAB_ORDER.add(TUNER);
+        TAB_ORDER.add(GOGGLES);
+    }
+    public static final DeferredBlock<ItemDetectorBlock> ITEM_DETECTOR = block("detector_item", ItemDetectorBlock::new,
+            p -> p.mapColor(MapColor.WOOD).strength(2.0f).sound(SoundType.WOOD));
+    private static Block.Properties loader(Block.Properties p) {
+        return p.mapColor(MapColor.STONE).strength(3.5f, 6.0f).sound(SoundType.STONE).requiresCorrectToolForDrops();
+    }
+    public static final DeferredBlock<ItemLoaderBlock> ITEM_LOADER = block("item_loader", p -> new ItemLoaderBlock(false, false, p), RailContent::loader);
+    public static final DeferredBlock<ItemLoaderBlock> ITEM_UNLOADER = block("item_unloader", p -> new ItemLoaderBlock(true, false, p), RailContent::loader);
+    public static final DeferredBlock<ItemLoaderBlock> ITEM_LOADER_ADVANCED = block("item_loader_advanced", p -> new ItemLoaderBlock(false, true, p), RailContent::loader);
+    public static final DeferredBlock<ItemLoaderBlock> ITEM_UNLOADER_ADVANCED = block("item_unloader_advanced", p -> new ItemLoaderBlock(true, true, p), RailContent::loader);
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemLoaderBlockEntity>> LOADER_BE = BLOCK_ENTITIES.register("item_loader",
+            () -> new BlockEntityType<>(ItemLoaderBlockEntity::new, ITEM_LOADER.get(), ITEM_UNLOADER.get(), ITEM_LOADER_ADVANCED.get(), ITEM_UNLOADER_ADVANCED.get()));
+
     // --- локомотивы (заход 2) -----------------------------------------------------------------------------------
     public static final DeferredHolder<EntityType<?>, EntityType<SteamLocomotive>> STEAM_LOCO = ENTITIES.registerEntityType("loco_steam",
             SteamLocomotive::new, MobCategory.MISC, b -> b.noLootTable().sized(0.98f, 0.7f).passengerAttachments(0.1875f).clientTrackingRange(8));
     public static final DeferredHolder<EntityType<?>, EntityType<ElectricLocomotive>> ELECTRIC_LOCO = ENTITIES.registerEntityType("loco_electric",
             ElectricLocomotive::new, MobCategory.MISC, b -> b.noLootTable().sized(0.98f, 0.7f).passengerAttachments(0.1875f).clientTrackingRange(8));
-    public static final DeferredItem<LocomotiveItem> LOCO_STEAM = ITEMS.registerItem("loco_steam", p -> new LocomotiveItem(STEAM_LOCO, p.stacksTo(1)));
-    public static final DeferredItem<LocomotiveItem> LOCO_ELECTRIC = ITEMS.registerItem("loco_electric", p -> new LocomotiveItem(ELECTRIC_LOCO, p.stacksTo(1)));
+    public static final DeferredItem<RailCartItem> LOCO_STEAM = ITEMS.registerItem("loco_steam", p -> new RailCartItem(STEAM_LOCO, p.stacksTo(1)));
+    public static final DeferredItem<RailCartItem> LOCO_ELECTRIC = ITEMS.registerItem("loco_electric", p -> new RailCartItem(ELECTRIC_LOCO, p.stacksTo(1)));
     static {
         TAB_ORDER.add(LOCO_STEAM);
         TAB_ORDER.add(LOCO_ELECTRIC);
     }
+    // --- путеукладчик и тоннельный бур (заход 4) -----------------------------------------------------------------
+    public static final DeferredHolder<EntityType<?>, EntityType<ru.iis.rail.cart.TrackLayerCart>> TRACK_LAYER_CART = ENTITIES.registerEntityType("track_layer",
+            ru.iis.rail.cart.TrackLayerCart::new, MobCategory.MISC, b -> b.noLootTable().sized(0.98f, 0.7f).passengerAttachments(0.1875f).clientTrackingRange(8));
+    public static final DeferredHolder<EntityType<?>, EntityType<ru.iis.rail.cart.TunnelBore>> TUNNEL_BORE_CART = ENTITIES.registerEntityType("tunnel_bore",
+            ru.iis.rail.cart.TunnelBore::new, MobCategory.MISC, b -> b.noLootTable().sized(0.98f, 0.7f).passengerAttachments(0.1875f).clientTrackingRange(8));
+    public static final DeferredItem<RailCartItem> TRACK_LAYER = ITEMS.registerItem("track_layer", p -> new RailCartItem(TRACK_LAYER_CART, p.stacksTo(1)));
+    public static final DeferredItem<RailCartItem> TUNNEL_BORE = ITEMS.registerItem("tunnel_bore", p -> new RailCartItem(TUNNEL_BORE_CART, p.stacksTo(1)));
+    public static final DeferredItem<ru.iis.rail.cart.BoreHeadItem> BOREHEAD_IRON = ITEMS.registerItem("borehead_iron",
+            p -> new ru.iis.rail.cart.BoreHeadItem(2, 1.0f, p.durability(1500)));
+    public static final DeferredItem<ru.iis.rail.cart.BoreHeadItem> BOREHEAD_STEEL = ITEMS.registerItem("borehead_steel",
+            p -> new ru.iis.rail.cart.BoreHeadItem(2, 1.2f, p.durability(3000)));
+    public static final DeferredItem<ru.iis.rail.cart.BoreHeadItem> BOREHEAD_DIAMOND = ITEMS.registerItem("borehead_diamond",
+            p -> new ru.iis.rail.cart.BoreHeadItem(3, 1.4f, p.durability(6000)));
+    static {
+        TAB_ORDER.add(TRACK_LAYER);
+        TAB_ORDER.add(TUNNEL_BORE);
+        TAB_ORDER.add(BOREHEAD_IRON);
+        TAB_ORDER.add(BOREHEAD_STEEL);
+        TAB_ORDER.add(BOREHEAD_DIAMOND);
+    }
+
     public static final DeferredHolder<MenuType<?>, MenuType<LocomotiveMenu>> LOCO_MENU = MENUS.register("locomotive",
             () -> IMenuTypeExtension.create(LocomotiveMenu::client));
 
@@ -167,5 +227,6 @@ public final class RailContent {
         NeoForge.EVENT_BUS.addListener(RailEvents::onEntityTick);
         NeoForge.EVENT_BUS.addListener(RailEvents::onEntityInteract);
         NeoForge.EVENT_BUS.addListener(RailEvents::onEntityLeave);
+        NeoForge.EVENT_BUS.addListener(RailEvents::onPlayerTick);
     }
 }

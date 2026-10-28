@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " T ",
+    "BRB"
+  ],
+  "key": {
+    "B": "minecraft:stone_button",
+    "R": "iis:circuit_receiver",
+    "T": "minecraft:redstone_torch"
+  },
+  "result": {
+    "id": "iis:signal_tuner",
+    "count": 1
+  }
+}
