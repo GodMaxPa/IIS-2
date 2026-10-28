@@ -57,6 +57,8 @@ ITEMS = {  # id -> (en, ru)
     'circuit_signal': ('Signal Circuit', 'Сигнальная схема'),
     'crowbar_red': ('Crowbar', 'Монтировка Railcraft'),
     'crowbar_reinforced': ('Reinforced Crowbar', 'Усиленная монтировка'),
+    'loco_steam': ('Steam Locomotive', 'Паровоз'),
+    'loco_electric': ('Electric Locomotive', 'Электровоз'),
 }
 
 
@@ -127,6 +129,21 @@ def generate(g):
         d.line([12, 3, 14, 3], fill=c); d.line([14, 3, 14, 5], fill=shade(c, 0.8)); d.line([2, 12, 2, 14], fill=c)
         return im
 
+    def draw_loco(body, frame, steam):
+        im = canvas(); d = ImageDraw.Draw(im)
+        d.rectangle([1, 10, 14, 12], fill=frame)
+        for x in (3, 11):
+            d.ellipse([x - 2, 11, x + 2, 15], fill=(30, 30, 30, 255)); d.point((x, 13), fill=(150, 150, 150, 255))
+        if steam:
+            d.rectangle([1, 5, 10, 9], fill=body); d.line([1, 5, 10, 5], fill=shade(body, 1.6))
+            d.rectangle([10, 2, 14, 9], fill=shade(frame, 0.8)); d.rectangle([11, 3, 13, 5], fill=(220, 200, 120, 255))
+            d.rectangle([3, 1, 4, 4], fill=(30, 30, 30, 255))
+        else:
+            d.rectangle([1, 3, 14, 9], fill=body); d.line([1, 3, 14, 3], fill=shade(body, 1.2))
+            d.rectangle([2, 4, 4, 6], fill=(140, 200, 230, 255)); d.rectangle([11, 4, 13, 6], fill=(140, 200, 230, 255))
+            d.line([6, 0, 9, 2], fill=(60, 60, 60, 255)); d.line([7, 2, 7, 3], fill=(60, 60, 60, 255))
+        return im
+
     WOOD, STONE = (130, 95, 60, 255), (125, 125, 125, 255)
     RAILC = {'standard': (175, 175, 180, 255), 'advanced': (205, 170, 70, 255), 'wooden': (150, 110, 70, 255),
              'high_speed': (225, 200, 110, 255), 'reinforced': (80, 82, 95, 255), 'electric': (205, 120, 70, 255)}
@@ -136,6 +153,8 @@ def generate(g):
               'crowbar_red': draw_crowbar((190, 40, 40, 255)), 'crowbar_reinforced': draw_crowbar((150, 155, 170, 255))}
     for k, c in RAILC.items():
         images[f'rail_{k}'] = draw_rail(c)
+    images['loco_steam'] = draw_loco((45, 45, 50, 255), (170, 40, 35, 255), True)
+    images['loco_electric'] = draw_loco((205, 170, 40, 255), (70, 75, 85, 255), False)
     for iid, im in images.items():
         im.save(tex(f'item/rail/{iid}'))
         write(os.path.join(A, 'models', 'item', iid + '.json'), {'parent': 'minecraft:item/handheld' if iid.startswith('crowbar') else 'minecraft:item/generated',
@@ -387,7 +406,47 @@ def generate(g):
     # GT_RailcraftRecipesLoader:120-121: crowbars "hDS / DSD / SDf" with red dye
     for cid, ingot in (('crowbar_red', 'minecraft:iron_ingot'), ('crowbar_reinforced', '#c:ingots/steel')):
         shaped(cid, ['hDS', 'DSD', 'SDf'], {'h': f'#{NS}:tools/hammer', 'f': f'#{NS}:tools/file', 'D': '#c:dyes/red', 'S': ingot}, I(cid))
+    # --- locomotives and the electric feeder (pass 2) -------------------------------------------------------------
+    # RailCraft.zs:229-240 (IIS 1): steam loco "BBF/BBF/ICC" with high-pressure coal boilers and bronze firebox casings;
+    # electric loco "MAW/AGA/HBH" — the IC2 MFE cart is not ported, replaced by an MV 2x2 battery buffer (PORTING_NOTES)
+    shaped('loco_steam', ['BBF', 'BBF', 'ICC'], {'B': I('boiler_coal_steel'), 'F': I('bronze_firebox_casing'), 'I': 'minecraft:iron_bars',
+                                                 'C': 'minecraft:minecart'}, I('loco_steam'))
+    shaped('loco_electric', ['MAW', 'AGA', 'HBH'], {'M': I('cover_controller'), 'A': '#c:circuits/advanced', 'W': f'#{NS}:tools/wrench',
+                                                    'G': I('steel_gear_box_casing'), 'H': I('electric_motor_hv'), 'B': I('battery_buffer_2x2_mv')},
+           I('loco_electric'))
+    # GT_RailcraftRecipesLoader:114: electric feeder "PWP/WWW/PWP", iron plates and 2x copper wire
+    shaped('electric_feeder', ['PWP', 'WWW', 'PWP'], {'P': '#c:plates/iron', 'W': f'#{NS}:wires/2x/copper'}, I('electric_feeder'))
     stats['recipes'] = n_rec[0]
+
+    im = canvas(); d = ImageDraw.Draw(im)
+    d.rectangle([0, 0, 15, 15], fill=(95, 98, 105, 255)); d.rectangle([0, 0, 15, 15], outline=(60, 62, 68, 255))
+    d.rectangle([3, 3, 12, 12], fill=(50, 52, 58, 255))
+    d.polygon([(9, 3), (5, 8), (8, 8), (6, 12), (11, 6), (8, 6)], fill=(235, 190, 50, 255))
+    im.save(tex('block/rail/electric_feeder'))
+    write(os.path.join(A, 'models', 'block', 'rail', 'electric_feeder.json'), {'parent': 'minecraft:block/cube_all', 'textures': {'all': f'{NS}:block/rail/electric_feeder'}})
+    write(os.path.join(A, 'blockstates', 'electric_feeder.json'), {'variants': {'': {'model': f'{NS}:block/rail/electric_feeder'}}})
+    write(os.path.join(A, 'items', 'electric_feeder.json'), {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/rail/electric_feeder'}})
+    write(os.path.join(D, NS, 'loot_table', 'blocks', 'electric_feeder.json'), {
+        'type': 'minecraft:block', 'pools': [{'rolls': 1, 'entries': [{'type': 'minecraft:item', 'name': f'{NS}:electric_feeder'}],
+                                              'conditions': [{'condition': 'minecraft:survives_explosion'}]}]})
+    block_tags.setdefault('minecraft:mineable/pickaxe', []).append(f'{NS}:electric_feeder')
+    block_tags.setdefault('minecraft:needs_stone_tool', []).append(f'{NS}:electric_feeder')
+    name(f'block.{NS}.electric_feeder', 'Electric Feeder', 'Электрический фидер')
+    name(f'block.{NS}.electric_feeder.tooltip.0', 'Feeds electric tracks next to it from GT cables, up to 512 V',
+         'Питает соседние электрические пути от проводов GT, до 512 В')
+    name(f'message.{NS}.electric_feeder', 'Stored: %s / %s EU', 'Запас: %s / %s EU')
+    for eid in ('loco_steam', 'loco_electric'):
+        name(f'entity.{NS}.{eid}', *ITEMS[eid])
+    name(f'item.{NS}.loco_steam.tooltip.0', 'Water and solid fuel; boils at 100 °C, needs half a steam tank to move',
+         'Вода и твёрдое топливо; кипит со 100 °C, едет от половины бака пара')
+    name(f'item.{NS}.loco_steam.tooltip.1', 'Takes fuel from a linked chest cart', 'Берёт топливо из сцепленной сундучной вагонетки')
+    name(f'item.{NS}.loco_electric.tooltip.0', 'Charges on electric tracks fed by an electric feeder', 'Заряжается на электрических путях от фидера')
+    for key, en, ru in (('mode.running', 'Run', 'Ход'), ('mode.idle', 'Idle', 'Холост.'), ('mode.shutdown', 'Stop', 'Стоп'),
+                        ('speed.max', 'Max', 'Макс'), ('speed.slow', '0.3', '0.3'), ('speed.slower', '0.2', '0.2'), ('speed.slowest', '0.1', '0.1'),
+                        ('speed.reverse', 'Rev', 'Назад'), ('water', 'Water %s', 'Вода %s'), ('steam', 'Steam %s', 'Пар %s'),
+                        ('heat', 'Heat %s°', 'Жар %s°'), ('charge', 'Charge %s / %s EU', 'Заряд %s / %s EU'),
+                        ('electric_hint', 'Charges on electric track', 'Зарядка на электропути')):
+        name(f'gui.{NS}.loco.{key}', en, ru)
 
     # vanilla rail crafting is replaced (Railcraft ModuleCore removes it; IIS 1 makes rails in the GT assembler)
     ovr = os.path.join(g['GEN'], 'packs', 'iis_overrides', 'data', 'minecraft', 'recipe')

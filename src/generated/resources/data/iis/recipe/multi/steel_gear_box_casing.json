@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PhP",
+    "GFG",
+    "PwP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "G": "#c:gears/steel",
+    "F": "#c:frames/steel",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:steel_gear_box_casing",
+    "count": 2
+  }
+}

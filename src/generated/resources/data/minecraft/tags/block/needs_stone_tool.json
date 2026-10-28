@@ -167,6 +167,7 @@
     "iis:thermal_centrifuge_ev",
     "iis:transformer_ev",
     "iis:coke_oven_bricks",
-    "iis:coke_oven"
+    "iis:coke_oven",
+    "iis:electric_feeder"
   ]
 }

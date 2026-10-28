@@ -371,6 +371,7 @@
     "iis:robust_tungstensteel_casing",
     "iis:tungstensteel_pipe_casing",
     "iis:tungstensteel_firebox_casing",
+    "iis:steel_gear_box_casing",
     "iis:track_wooden",
     "iis:track_wooden_booster",
     "iis:track_wooden_junction",
@@ -397,6 +398,7 @@
     "iis:track_locking",
     "iis:track_coupler",
     "iis:switch_lever",
-    "iis:switch_motor"
+    "iis:switch_motor",
+    "iis:electric_feeder"
   ]
 }

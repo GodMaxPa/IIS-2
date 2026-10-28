@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PWP",
+    "WWW",
+    "PWP"
+  ],
+  "key": {
+    "P": "#c:plates/iron",
+    "W": "#iis:wires/2x/copper"
+  },
+  "result": {
+    "id": "iis:electric_feeder",
+    "count": 1
+  }
+}

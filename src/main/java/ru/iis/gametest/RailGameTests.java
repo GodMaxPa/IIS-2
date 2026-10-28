@@ -15,7 +15,14 @@ import ru.iis.rail.RailSpeed;
 import ru.iis.rail.block.LogicTrackBlock;
 import ru.iis.rail.block.SwitchActuatorBlock;
 import ru.iis.rail.block.SwitchTrackBlock;
+import ru.iis.rail.block.ElectricFeederBlockEntity;
+import ru.iis.rail.cart.ElectricLocomotive;
+import ru.iis.rail.cart.Locomotive;
+import ru.iis.rail.cart.SteamLocomotive;
 import ru.iis.rail.cart.TrainLinks;
+import net.minecraft.world.entity.vehicle.minecart.MinecartChest;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 /** Железная дорога Railcraft, заход 1 (D102): скорости путей, режим высокой скорости, стрелки, сцепка, логические пути. */
 final class RailGameTests {
@@ -170,5 +177,81 @@ final class RailGameTests {
         AbstractMinecart parked = cart(h, 6.5, 4.5, 0, 0);
         AbstractMinecart moving = cart(h, 1.5, 4.5, 0.25, 0);
         h.succeedWhen(() -> h.assertTrue(TrainLinks.areLinked(parked, moving), "not coupled"));
+    }
+
+    // --- заход 2: локомотивы ------------------------------------------------------------------------------------
+
+    private static <L extends Locomotive> L loco(GameTestHelper h, EntityType<L> type, double x, double z) {
+        L l = h.spawn(type, new Vec3(x, 1.0625, z));
+        l.setHeading(new Vec3(1, 0, 0));
+        return l;
+    }
+
+    /** Котёл паровоза: с водой и углём на холостом ходу топка горит, нагрев растёт, уголь сгорает. */
+    static void steamLocoBoilerHeats(GameTestHelper h) {
+        line(h, Blocks.RAIL, 0, 8, 4);
+        SteamLocomotive l = loco(h, RailContent.STEAM_LOCO.get(), 4.5, 4.5);
+        l.addWater(SteamLocomotive.WATER_CAPACITY);
+        l.inventory.setItem(SteamLocomotive.SLOT_BURN, new ItemStack(Items.COAL, 2));
+        l.setMode(Locomotive.Mode.IDLE);
+        h.runAtTickTime(60, () -> {
+            h.assertTrue(l.burning(), "firebox not burning");
+            h.assertTrue(l.heat() > 25, "heat " + l.heat());
+            h.assertTrue(l.inventory.getItem(SteamLocomotive.SLOT_BURN).getCount() < 2, "coal not used");
+            h.succeed();
+        });
+    }
+
+    /** Паровоз с паром от половины бака едет вперёд и тянет сцепленную вагонетку. */
+    static void steamLocoPullsCart(GameTestHelper h) {
+        line(h, Blocks.RAIL, 0, 8, 4);
+        SteamLocomotive l = loco(h, RailContent.STEAM_LOCO.get(), 2.5, 4.5);
+        AbstractMinecart tail = cart(h, 0.9, 4.5, 0, 0);
+        h.assertTrue(TrainLinks.createLink(l, tail), "link failed");
+        l.addWater(SteamLocomotive.WATER_CAPACITY);
+        l.addSteam(SteamLocomotive.STEAM_CAPACITY);
+        l.setMode(Locomotive.Mode.RUNNING);
+        double tx = tail.position().x;
+        h.runAtTickTime(12, () -> {
+            h.assertTrue(rel(h, l).x > 3.5, "loco at " + rel(h, l));
+            h.assertTrue(tail.position().x > tx + 0.8, "tail did not follow: " + (tail.position().x - tx));
+            h.assertTrue(l.steam() < SteamLocomotive.STEAM_CAPACITY, "no steam used");
+            h.succeed();
+        });
+    }
+
+    /** Паровоз берёт топливо из сцепленной сундучной вагонетки (тендера). */
+    static void steamLocoTender(GameTestHelper h) {
+        line(h, Blocks.RAIL, 0, 8, 4);
+        SteamLocomotive l = loco(h, RailContent.STEAM_LOCO.get(), 4.5, 4.5);
+        MinecartChest tender = h.spawn(EntityType.CHEST_MINECART, new Vec3(2.9, 1.0625, 4.5));
+        tender.setItem(5, new ItemStack(Items.COAL, 10));
+        h.assertTrue(TrainLinks.createLink(l, tender), "link failed");
+        h.succeedWhen(() -> {
+            int n = 0;
+            for (int i = SteamLocomotive.SLOT_BURN; i < SteamLocomotive.SLOTS; i++) n += l.inventory.getItem(i).getCount();
+            h.assertTrue(n > 0, "no fuel pulled from the tender");
+        });
+    }
+
+    /** Электровоз на электрическом пути заряжается от фидера и едет. */
+    static void electricLocoChargesAndRuns(GameTestHelper h) {
+        line(h, track("track_electric"), 0, 8, 4);
+        BlockPos feeder = new BlockPos(1, 0, 4);
+        h.setBlock(feeder, RailContent.ELECTRIC_FEEDER.get());
+        ElectricFeederBlockEntity f = (ElectricFeederBlockEntity) h.getLevel().getBlockEntity(h.absolutePos(feeder));
+        f.energy.stored = ElectricFeederBlockEntity.CAPACITY;
+        ElectricLocomotive l = loco(h, RailContent.ELECTRIC_LOCO.get(), 1.5, 4.5);
+        l.setMode(Locomotive.Mode.IDLE);
+        h.assertTrue(l.mode() == Locomotive.Mode.SHUTDOWN, "electric loco has no idle mode");
+        h.runAtTickTime(10, () -> {
+            h.assertTrue(l.charge() > 0, "not charged");
+            h.assertTrue(f.energy.stored < ElectricFeederBlockEntity.CAPACITY, "feeder not drained");
+            l.setMode(Locomotive.Mode.RUNNING);
+        });
+        h.runAtTickTime(22, () -> {
+            h.assertTrue(rel(h, l).x > 3, "loco at " + rel(h, l));
+            h.succeed();
+        });
     }
 }

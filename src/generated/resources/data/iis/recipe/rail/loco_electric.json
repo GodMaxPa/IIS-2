@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MAW",
+    "AGA",
+    "HBH"
+  ],
+  "key": {
+    "M": "iis:cover_controller",
+    "A": "#c:circuits/advanced",
+    "W": "#iis:tools/wrench",
+    "G": "iis:steel_gear_box_casing",
+    "H": "iis:electric_motor_hv",
+    "B": "iis:battery_buffer_2x2_mv"
+  },
+  "result": {
+    "id": "iis:loco_electric",
+    "count": 1
+  }
+}

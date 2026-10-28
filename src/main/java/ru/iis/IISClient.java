@@ -86,6 +86,11 @@ public final class IISClient {
         event.registerBlockEntityRenderer(ru.iis.multi.MultiContent.ITEM_BUS_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
         event.registerBlockEntityRenderer(ru.iis.multi.MultiContent.FLUID_HATCH_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
         event.registerBlockEntityRenderer(ru.iis.multi.MultiContent.ENERGY_HATCH_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
+        // локомотивы Railcraft (D102): вагонетка с блоком котла или буфера батарей
+        event.registerEntityRenderer(ru.iis.rail.RailContent.STEAM_LOCO.get(),
+                c -> new net.minecraft.client.renderer.entity.MinecartRenderer(c, net.minecraft.client.model.geom.ModelLayers.MINECART));
+        event.registerEntityRenderer(ru.iis.rail.RailContent.ELECTRIC_LOCO.get(),
+                c -> new net.minecraft.client.renderer.entity.MinecartRenderer(c, net.minecraft.client.model.geom.ModelLayers.MINECART));
     }
 
     private static void registerScreens(RegisterMenuScreensEvent event) {
@@ -105,6 +110,7 @@ public final class IISClient {
         event.register(ru.iis.multi.MultiContent.LARGE_TURBINE_MENU.get(), ru.iis.multi.client.MultiScreens.LargeTurbine::new);
         event.register(ru.iis.bio.BioContent.STATION_MENU.get(), ru.iis.bio.client.BioStationScreen::new);
         event.register(ru.iis.bio.BioContent.HEARTH_MENU.get(), ru.iis.bio.client.HearthScreen::new);
+        event.register(ru.iis.rail.RailContent.LOCO_MENU.get(), ru.iis.rail.client.LocomotiveScreen::new);
     }
 
     private static void registerFluidModels(RegisterFluidModelsEvent event) {

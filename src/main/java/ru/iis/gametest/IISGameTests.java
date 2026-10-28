@@ -223,6 +223,10 @@ public final class IISGameTests {
             new Test("rail_locking_track", 100, RailGameTests::lockingTrackHoldsAndReleases),
             new Test("rail_buffer_stop", 80, RailGameTests::bufferStopStops),
             new Test("rail_coupler_track", 120, RailGameTests::couplerTrackLinks),
+            new Test("rail_steam_loco_boiler", 80, RailGameTests::steamLocoBoilerHeats),
+            new Test("rail_steam_loco_pulls_cart", 40, RailGameTests::steamLocoPullsCart),
+            new Test("rail_steam_loco_tender", 60, RailGameTests::steamLocoTender),
+            new Test("rail_electric_loco", 60, RailGameTests::electricLocoChargesAndRuns),
             new Test("selftest", 20, h -> {
                 h.assertTrue(SelfTest.runSilently(h.getLevel(), h.absolutePos(new BlockPos(4, 1, 4))), "selftest failed, see log");
                 h.succeed();

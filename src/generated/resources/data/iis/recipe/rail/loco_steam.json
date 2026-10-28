@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBF",
+    "BBF",
+    "ICC"
+  ],
+  "key": {
+    "B": "iis:boiler_coal_steel",
+    "F": "iis:bronze_firebox_casing",
+    "I": "minecraft:iron_bars",
+    "C": "minecraft:minecart"
+  },
+  "result": {
+    "id": "iis:loco_steam",
+    "count": 1
+  }
+}

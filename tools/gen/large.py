@@ -28,6 +28,8 @@ CASINGS = [
     ('robust_tungstensteel_casing', 'MACHINE_CASING_ROBUST_TUNGSTENSTEEL', 'gt.blockcasings4.0.name', 'Robust Tungstensteel Machine Casing'),
     ('tungstensteel_pipe_casing', 'MACHINE_CASING_PIPE_TUNGSTENSTEEL', 'gt.blockcasings2.15.name', 'Tungstensteel Pipe Casing'),
     ('tungstensteel_firebox_casing', 'MACHINE_CASING_FIREBOX_TUNGSTENSTEEL', 'gt.blockcasings3.15.name', 'Tungstensteel Firebox Casing'),
+    # D102: GT_Block_Casings2:3, для паровоза, электровоза и тоннельного бура Railcraft (скрипт RailCraft.zs ИИС 1)
+    ('steel_gear_box_casing', 'MACHINE_CASING_GEARBOX_STEEL', 'gt.blockcasings2.3.name', 'Steel Gear Box Casing'),
 ]
 # tier, casing, pipe, firebox, steam L/t, steam per coal (L), heat-up seconds (32 portions of 40 ticks for bronze, 42 of 30 for
 # steel; GT's description says 500 / increase = 31.25 and 41.67 s, forgetting the boost), EN, material
@@ -117,6 +119,9 @@ def generate(g):
         name(f'block.{NS}.{bid}', en, ru(key, en))
     # GT_Loader_MetaTileEntities:61 "PhP/PBP/PwP": bronze plates + brick block -> 2; :62 steel plates + steel frame -> 2
     shaped('multi/bronze_plated_bricks', f'{NS}:bronze_plated_bricks', 2, ['PhP', 'PBP', 'PwP'], {'P': tag_of('plate', 'Bronze'), 'B': 'minecraft:bricks'})
+    # :81 steel gear box casing "PhP/GFG/PwP": steel plates, steel gears, steel frame -> 2 (D102)
+    shaped('multi/steel_gear_box_casing', f'{NS}:steel_gear_box_casing', 2, ['PhP', 'GFG', 'PwP'],
+           {'P': tag_of('plate', 'Steel'), 'G': tag_of('gear', 'Steel'), 'F': '#c:frames/steel'})
     shaped('multi/solid_steel_casing', f'{NS}:solid_steel_casing', 2, ['PhP', 'PFP', 'PwP'], {'P': tag_of('plate', 'Steel'), 'F': '#c:frames/steel'})
     # :63 stable titanium casing "PhP/PFP/PwP" (titanium plates + frame); assembler :1393
     shaped('multi/stable_titanium_casing', f'{NS}:stable_titanium_casing', 2, ['PhP', 'PFP', 'PwP'],

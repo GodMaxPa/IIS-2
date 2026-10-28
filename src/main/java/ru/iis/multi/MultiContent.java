@@ -92,6 +92,8 @@ public final class MultiContent {
     public static final DeferredBlock<Block> SOLID_STEEL_CASING = block("solid_steel_casing", Block::new, MultiContent::metal);
     public static final DeferredBlock<Block> STEEL_PIPE_CASING = block("steel_pipe_casing", Block::new, MultiContent::metal);
     public static final DeferredBlock<Block> STEEL_FIREBOX_CASING = block("steel_firebox_casing", Block::new, MultiContent::metal);
+    /** D102: GT_Block_Casings2:3 стальной корпус коробки передач (локомотивы и бур Railcraft по скрипту ИИС 1). */
+    public static final DeferredBlock<Block> STEEL_GEAR_BOX_CASING = block("steel_gear_box_casing", Block::new, MultiContent::metal);
     /** D97: GT_Block_Casings4:2 стабильный титановый корпус, Casings2:14 титановые трубы, Casings4:3 титановая топка. */
     public static final DeferredBlock<Block> STABLE_TITANIUM_CASING = block("stable_titanium_casing", Block::new, MultiContent::metal);
     public static final DeferredBlock<Block> TITANIUM_PIPE_CASING = block("titanium_pipe_casing", Block::new, MultiContent::metal);
