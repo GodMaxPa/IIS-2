@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PGP",
+    "WMW",
+    "CBC"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "P": "iis:electric_pump_iv",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/platinum",
+    "G": "minecraft:glass",
+    "B": "#c:chests/wooden"
+  },
+  "result": {
+    "id": "iis:fluid_solidifier_iv"
+  }
+}

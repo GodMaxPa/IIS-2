@@ -100,6 +100,16 @@
     "iis:cable_tungsten_2x",
     "iis:cable_tungsten_4x",
     "iis:cable_tungsten_8x",
-    "iis:cable_tungsten_12x"
+    "iis:cable_tungsten_12x",
+    "iis:cable_tungsten_steel_1x",
+    "iis:cable_tungsten_steel_2x",
+    "iis:cable_tungsten_steel_4x",
+    "iis:cable_tungsten_steel_8x",
+    "iis:cable_tungsten_steel_12x",
+    "iis:cable_osmium_1x",
+    "iis:cable_osmium_2x",
+    "iis:cable_osmium_4x",
+    "iis:cable_osmium_8x",
+    "iis:cable_osmium_12x"
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:rods/styrene_butadiene_rubber",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:bolt_styrene_butadiene_rubber",
+    "count": 2
+  }
+}

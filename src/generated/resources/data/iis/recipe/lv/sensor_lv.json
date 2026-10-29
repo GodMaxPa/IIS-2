@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P Q",
+    "PS ",
+    "CPP"
+  ],
+  "key": {
+    "Q": "#c:gems/quartzite",
+    "S": "#c:rods/brass",
+    "P": "#c:plates/steel",
+    "C": "#c:circuits/basic"
+  },
+  "result": {
+    "id": "iis:sensor_lv"
+  }
+}

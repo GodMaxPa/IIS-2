@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PEP",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "E": "iis:emitter_iv",
+    "P": "iis:electric_piston_iv",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/platinum"
+  },
+  "result": {
+    "id": "iis:laser_engraver_iv"
+  }
+}

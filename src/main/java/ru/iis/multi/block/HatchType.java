@@ -17,6 +17,9 @@ public enum HatchType {
     /** GT_Loader_MetaTileEntities:240, :218 Hatch_Energy_EV, Hatch_Dynamo_EV (D99). */
     ENERGY_EV("hatch_energy_ev", 2048),
     DYNAMO_EV("hatch_dynamo_ev", 2048),
+    /** GT_Loader_MetaTileEntities:273, :230 Hatch_Energy_IV, Hatch_Dynamo_IV (D103). */
+    ENERGY_IV("hatch_energy_iv", 8192),
+    DYNAMO_IV("hatch_dynamo_iv", 8192),
     INPUT_BUS("hatch_input_bus_lv"),
     OUTPUT_BUS("hatch_output_bus_lv"),
     INPUT_HATCH("hatch_input_lv"),
@@ -42,7 +45,7 @@ public enum HatchType {
     }
 
     public boolean dynamo() {
-        return this == DYNAMO || this == DYNAMO_MV || this == DYNAMO_HV || this == DYNAMO_EV;
+        return this == DYNAMO || this == DYNAMO_MV || this == DYNAMO_HV || this == DYNAMO_EV || this == DYNAMO_IV;
     }
 
     /** GT_MetaTileEntity_Hatch#getSlots: LV — 2×2. */

@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/tiny_dust_vanadium",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 3289650
+      }
+    ]
+  }
+}

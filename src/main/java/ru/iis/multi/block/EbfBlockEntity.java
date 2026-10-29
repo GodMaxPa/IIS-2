@@ -32,6 +32,7 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
     public static final int CUPRONICKEL_HEAT = 1800;
     public static final int KANTHAL_HEAT = 2700;
     public static final int NICHROME_HEAT = 3600;
+    public static final int TUNGSTENSTEEL_HEAT = 4500;
 
     private int heat;
 
@@ -89,7 +90,7 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
                     case MAINTENANCE -> parts.maintenance.add(b);
                     case INPUT_BUS -> parts.inputBuses.add(b);
                     case INPUT_HATCH -> parts.inputHatches.add(b);
-                    case ENERGY, ENERGY_MV, ENERGY_HV, ENERGY_EV -> parts.energy.add(b);
+                    case ENERGY, ENERGY_MV, ENERGY_HV, ENERGY_EV, ENERGY_IV -> parts.energy.add(b);
                     case OUTPUT_BUS -> parts.outputBuses.add(b);
                     default -> {
                         return false;
@@ -101,11 +102,12 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
         return true;
     }
 
-    /** GT mHeatingCapacity by coil meta: cupronickel 1800, kanthal 2700 (D93), nichrome 3600 (D98); 0 — not a coil. */
+    /** GT mHeatingCapacity by coil meta: cupronickel 1800, kanthal 2700 (D93), nichrome 3600 (D98), tungstensteel 4500 (D103); 0 — not a coil. */
     public static int coilHeat(net.minecraft.world.level.block.Block b) {
         if (b == MultiContent.COIL_CUPRONICKEL.get()) return CUPRONICKEL_HEAT;
         if (b == MultiContent.COIL_KANTHAL.get()) return KANTHAL_HEAT;
         if (b == MultiContent.COIL_NICHROME.get()) return NICHROME_HEAT;
+        if (b == MultiContent.COIL_TUNGSTENSTEEL.get()) return TUNGSTENSTEEL_HEAT;
         return 0;
     }
 

@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/osmium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_osmium",
+      "count": 1
+    }
+  ],
+  "duration": 13224,
+  "eut": 120,
+  "temp": 3306
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ZSZ",
+    "WMW",
+    "ZSZ"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "S": "#c:rods/vanadium_gallium",
+    "Z": "#iis:wires/8x/annealed_copper",
+    "W": "#iis:cables/1x/platinum"
+  },
+  "result": {
+    "id": "iis:polarizer_iv"
+  }
+}

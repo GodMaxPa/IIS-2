@@ -1,0 +1,43 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:dimethyldichlorosilane",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 11
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_polydimethylsiloxane",
+      "count": 10
+    },
+    {
+      "id": "iis:capsule",
+      "count": 11
+    }
+  ],
+  "duration": 240,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 9000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dilutedhydrochloricacid_gt5u",
+      "amount": 10000
+    }
+  ],
+  "circuit": 1
+}

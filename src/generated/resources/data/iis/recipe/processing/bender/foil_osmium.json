@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/osmium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_osmium",
+      "count": 4
+    }
+  ],
+  "duration": 190,
+  "eut": 24
+}

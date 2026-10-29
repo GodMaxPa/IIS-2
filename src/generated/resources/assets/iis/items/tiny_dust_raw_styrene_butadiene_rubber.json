@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/tiny_dust_raw_styrene_butadiene_rubber",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 5521469
+      }
+    ]
+  }
+}

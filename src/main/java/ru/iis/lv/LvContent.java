@@ -121,6 +121,9 @@ public final class LvContent {
     // D98: GT_Block_Casings1 meta 4, Hull_EV (титан, пластик)
     public static final DeferredBlock<Block> CASING_EV = block("casing_ev", Block::new, LvContent::metal);
     public static final DeferredBlock<Block> HULL_EV = block("hull_ev", Block::new, LvContent::metal);
+    // D103: GT_Block_Casings1 meta 5, Hull_IV (вольфрамосталь, пластик, вольфрамовый кабель)
+    public static final DeferredBlock<Block> CASING_IV = block("casing_iv", Block::new, LvContent::metal);
+    public static final DeferredBlock<Block> HULL_IV = block("hull_iv", Block::new, LvContent::metal);
 
     // --- машины, генераторы, буферы, трансформатор ----------------------------------------------------------------
     public static final Map<LvMachineType, DeferredBlock<ElectricMachineBlock>> MACHINES = new EnumMap<>(LvMachineType.class);
@@ -143,6 +146,10 @@ public final class LvContent {
     /** GT_Loader_MetaTileEntities:491, 513, 535, 557 Battery_Buffer_*_EV (D99). */
     public static final java.util.List<DeferredBlock<BatteryBufferBlock>> BATTERY_BUFFERS_EV = java.util.stream.IntStream.of(1, 2, 3, 4)
             .mapToObj(n -> block("battery_buffer_" + n + "x" + n + "_ev", p -> new BatteryBufferBlock(n * n, VoltageTier.EV, p), LvContent::metal))
+            .toList();
+    /** GT_Loader_MetaTileEntities:503, 525, 547, 569 Battery_Buffer_*_IV (D103). */
+    public static final java.util.List<DeferredBlock<BatteryBufferBlock>> BATTERY_BUFFERS_IV = java.util.stream.IntStream.of(1, 2, 3, 4)
+            .mapToObj(n -> block("battery_buffer_" + n + "x" + n + "_iv", p -> new BatteryBufferBlock(n * n, VoltageTier.IV, p), LvContent::metal))
             .toList();
     /** GT_Loader_MetaTileEntities:490, 512, 534, 556 Battery_Buffer_*_HV (D94). */
     public static final java.util.List<DeferredBlock<BatteryBufferBlock>> BATTERY_BUFFERS_HV = java.util.stream.IntStream.of(1, 2, 3, 4)
@@ -236,6 +243,18 @@ public final class LvContent {
     // D100: помпа и излучатель EV (GT_MetaGenerated_Item_01:504, :658)
     public static final DeferredItem<Item> ELECTRIC_PUMP_EV = item("electric_pump_ev");
     public static final DeferredItem<Item> EMITTER_EV = item("emitter_ev");
+    // D103: детали IV (GT_MetaGenerated_Item_01:498–689) и датчики LV–IV (:685–689)
+    public static final DeferredItem<Item> ELECTRIC_MOTOR_IV = item("electric_motor_iv");
+    public static final DeferredItem<Item> ELECTRIC_PUMP_IV = item("electric_pump_iv");
+    public static final DeferredItem<Item> CONVEYOR_MODULE_IV = item("conveyor_module_iv");
+    public static final DeferredItem<Item> ELECTRIC_PISTON_IV = item("electric_piston_iv");
+    public static final DeferredItem<Item> ROBOT_ARM_IV = item("robot_arm_iv");
+    public static final DeferredItem<Item> EMITTER_IV = item("emitter_iv");
+    public static final DeferredItem<Item> SENSOR_LV = item("sensor_lv");
+    public static final DeferredItem<Item> SENSOR_MV = item("sensor_mv");
+    public static final DeferredItem<Item> SENSOR_HV = item("sensor_hv");
+    public static final DeferredItem<Item> SENSOR_EV = item("sensor_ev");
+    public static final DeferredItem<Item> SENSOR_IV = item("sensor_iv");
     public static final DeferredItem<Item> CAPACITOR = item("capacitor");
     public static final DeferredItem<Item> CIRCUIT_ELITE = item("circuit_elite");
     // D94: малая катушка GT (GT_MetaGenerated_Item_03:50) — трансформатор HV
@@ -330,7 +349,7 @@ public final class LvContent {
             () -> new BlockEntityType<>(GeneratorBlockEntity::new, GENERATORS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BatteryBufferBlockEntity>> BATTERY_BUFFER_BE = BLOCK_ENTITIES.register("battery_buffer",
             () -> new BlockEntityType<>(BatteryBufferBlockEntity::new, java.util.stream.Stream.of(java.util.stream.Stream.of(BATTERY_BUFFER_1X1, BATTERY_BUFFER_2X2, BATTERY_BUFFER_3X3,
-                    BATTERY_BUFFER_4X4), BATTERY_BUFFERS_MV.stream(), BATTERY_BUFFERS_HV.stream(), BATTERY_BUFFERS_EV.stream()).flatMap(x -> x)
+                    BATTERY_BUFFER_4X4), BATTERY_BUFFERS_MV.stream(), BATTERY_BUFFERS_HV.stream(), BATTERY_BUFFERS_EV.stream(), BATTERY_BUFFERS_IV.stream()).flatMap(x -> x)
                     .map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TransformerBlockEntity>> TRANSFORMER_BE = BLOCK_ENTITIES.register("transformer",
             () -> new BlockEntityType<>(TransformerBlockEntity::new, TRANSFORMER.get(), TRANSFORMER_MV.get(), TRANSFORMER_HV.get(), TRANSFORMER_EV.get()));
@@ -349,13 +368,14 @@ public final class LvContent {
     public static final DeferredHolder<MenuType<?>, MenuType<ru.iis.cover.CoverMenu>> COVER_MENU = MENUS.register("cover",
             () -> IMenuTypeExtension.create(ru.iis.cover.CoverMenu::client));
 
-    private static final String[] TAB_IDS = {"lv", "mv", "hv", "ev"};
+    private static final String[] TAB_IDS = {"lv", "mv", "hv", "ev", "iv"};
 
-    /** Вкладки по напряжению (D101): LV, MV, HV, EV — уровень предмета по {@link #tabTier}. */
+    /** Вкладки по напряжению (D101, IV — D103): LV, MV, HV, EV, IV — уровень предмета по {@link #tabTier}. */
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = tierTab(0, LvMachineType.MACERATOR);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_MV = tierTab(1, LvMachineType.MACERATOR_MV);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_HV = tierTab(2, LvMachineType.MACERATOR_HV);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_EV = tierTab(3, LvMachineType.MACERATOR_EV);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_IV = tierTab(4, LvMachineType.MACERATOR_IV);
 
     private static DeferredHolder<CreativeModeTab, CreativeModeTab> tierTab(int tier, LvMachineType icon) {
         return TABS.register(TAB_IDS[tier], () -> {
@@ -388,14 +408,14 @@ public final class LvContent {
             Map.entry("coil_small", 2), Map.entry("grinder_diamond", 2), Map.entry("plant_ball", 2), Map.entry("bio_chaff", 2),
             Map.entry("circuit_data", 3), Map.entry("circuit_board_plastic", 3), Map.entry("capacitor", 3), Map.entry("circuit_elite", 3));
 
-    /** Уровень вкладки 0…3 (LV…EV): суффикс _lv/_mv/_hv/_ev, у кабелей — напряжение, насадки экструдера — MV, иначе по таблице или LV. */
+    /** Уровень вкладки 0…4 (LV…IV): суффикс _lv/_mv/_hv/_ev/_iv, у кабелей — напряжение, насадки экструдера — MV, иначе по таблице или LV. */
     public static int tabTier(Item item) {
         return tabTier(net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(item).getPath());
     }
 
     public static int tabTier(String id) {
         for (CableSpecs.Spec s : CableSpecs.ALL) {
-            if (s.id().equals(id)) return s.voltage() <= 32 ? 0 : s.voltage() <= 128 ? 1 : s.voltage() <= 512 ? 2 : 3;
+            if (s.id().equals(id)) return s.voltage() <= 32 ? 0 : s.voltage() <= 128 ? 1 : s.voltage() <= 512 ? 2 : s.voltage() <= 2048 ? 3 : 4;
         }
         for (int t = TAB_IDS.length - 1; t >= 0; t--) if (id.endsWith("_" + TAB_IDS[t])) return t;
         if (id.startsWith("shape_extruder_")) return 1;

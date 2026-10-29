@@ -43,6 +43,8 @@ def snake(name):
 # Source data
 # ----------------------------------------------------------------------------------------------------------------
 code = {m['name']: m for m in json.load(open(os.path.join(REF, 'gt5_materials.json'), encoding='utf-8'))}
+# builder materials (GT5U style) carry a display name with spaces; the Java variable is the key (D103)
+code.update({m['var']: m for m in code.values() if m.get('builder') and m['var'] not in code})
 props = json.load(open(os.path.join(REF, 'iis_material_properties.json'), encoding='utf-8'))
 veins_src = json.load(open(os.path.join(REF, 'iis_ore_veins.json'), encoding='utf-8'))
 small_src = json.load(open(os.path.join(REF, 'iis_small_ores.json'), encoding='utf-8'))
@@ -153,6 +155,12 @@ names |= {'Titanium', 'Rutile', 'Carbon', 'Magnesiumchloride'}
 names |= {'Tungsten', 'TungstenSteel', 'Nichrome', 'NeodymiumMagnetic'}
 # IIS tungsten processing (GT_MachineRecipeLoader2:36-52): tungstic acid, tungsten trioxide, lithium and calcium chlorides
 names |= {'TungstigAcid', 'TungstenTrioxide', 'LithiumChloride', 'CalciumChloride'}
+# D103 (IV): osmium (emitter / sensor IV rods; platinum group sludge GT_MachineRecipeLoader:428-432, iridium ore byproduct),
+# vanadium-gallium (IV electromagnetic rods, GT_MetaTileEntity_BasicMachine_GT_Recipe X.STICK_ELECTROMAGNETIC; EBF :1031),
+# silicone (Si + methane + chlorine -> PDMS, :2994; PDMS + sulfur -> silicone, :3452) and styrene-butadiene rubber (:3490-3501)
+# for the IV pump rings and conveyor plates
+names |= {'Osmium', 'PlatinumGroupSludge', 'Palladium', 'Vanadium', 'VanadiumGallium', 'Polydimethylsiloxane', 'Silicone',
+          'RawStyreneButadieneRubber', 'StyreneButadieneRubber'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64

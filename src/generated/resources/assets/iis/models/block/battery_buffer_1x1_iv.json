@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/battery_buffer_1x1_iv_side",
+    "north": "iis:block/lv/battery_buffer_1x1_iv_front",
+    "south": "iis:block/lv/battery_buffer_1x1_iv_side",
+    "east": "iis:block/lv/battery_buffer_1x1_iv_side",
+    "west": "iis:block/lv/battery_buffer_1x1_iv_side",
+    "up": "iis:block/lv/battery_buffer_1x1_iv_top",
+    "down": "iis:block/lv/battery_buffer_1x1_iv_bottom"
+  }
+}

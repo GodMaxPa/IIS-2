@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GCG",
+    "EMP",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "E": "iis:electric_piston_iv",
+    "P": "iis:electric_pump_iv",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/platinum",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:extractor_iv"
+  }
+}

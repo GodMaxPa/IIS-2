@@ -371,6 +371,16 @@ def generate(g):
          max(mass('Nichrome') // 32, 1) * 2700, 480, temp=2700)
     mrec('blast', 'tungstensteel_ingots', [ing(tag_of('ingot', 'Tungsten')), ing(tag_of('ingot', 'Steel'))],
          [rout(ref('hot_ingot', 'TungstenSteel'), 2)], max(mass('TungstenSteel') // 80, 1) * 3000, 480, temp=3000)
+    # D103: :1031 EBF 3 vanadium + 1 gallium ingots -> 4 hot vanadium-gallium (max(mass / 40, 1) x 4500 t, 480 EU/t, 4500 K —
+    # tungstensteel coils); dust mix as for nichrome; :432 centrifuge of platinum group sludge (900 t, 30 EU/t; 100/100/100/80/60/60 %)
+    mrec('blast', 'vanadium_gallium_ingots', [ing(tag_of('ingot', 'Vanadium'), 3), ing(tag_of('ingot', 'Gallium'))],
+         [rout(ref('hot_ingot', 'VanadiumGallium'), 4)], max(mass('VanadiumGallium') // 40, 1) * 4500, 480, temp=4500)
+    if ref('dust', 'VanadiumGallium'):
+        g['shapeless']('dust/mix_vanadium_gallium', ref('dust', 'VanadiumGallium'), 4, [tag_of('dust', 'Vanadium')] * 3 + [tag_of('dust', 'Gallium')])
+    mrec('centrifuge', 'platinum_group_sludge', [ing(tag_of('dust', 'PlatinumGroupSludge'))],
+         [rout(ref('dust', 'SiliconDioxide')), rout(ref('tiny_dust', 'Gold')), rout(ref('tiny_dust', 'Platinum')),
+          dict(rout(ref('tiny_dust', 'Palladium')), chance=8000), dict(rout(ref('tiny_dust', 'Iridium')), chance=6000),
+          dict(rout(ref('tiny_dust', 'Osmium')), chance=6000)], 900, 30)
     # IIS tungsten processing (GT_MachineRecipeLoader2:37-52): scheelite / tungstate + 4000 L HCl -> chloride + 7 tungstic acid
     # (100 t, 1920 EU/t — EV chemical reactor); tungstic acid + circuit 1 -> 4 WO3 + 3000 L water (200 t, 90); EBF 4 WO3 +
     # 6000 L hydrogen -> hot tungsten ingot (12000 t, 120 EU/t, 3000 K — nichrome coils)
@@ -505,7 +515,7 @@ def d92(g, mrec, ing, rout, shaped, tag_of, ref, NS):
     # --- hulls in the assembler (:1404-1407, mHardMachineCasings): 2 cables + casing + 288 L molten plastic (50 t, 16 EU/t) ---
     for rid, cable, casing, hull in (('lv', 'tin', 'casing_lv', 'hull_lv'), ('mv', 'copper', 'casing_mv', 'hull_mv'),
                                      ('mv_annealed', 'annealed_copper', 'casing_mv', 'hull_mv'), ('hv', 'gold', 'casing_hv', 'hull_hv'),
-                                     ('ev', 'aluminium', 'casing_ev', 'hull_ev')):   # :1408 EV (D98)
+                                     ('ev', 'aluminium', 'casing_ev', 'hull_ev'), ('iv', 'tungsten', 'casing_iv', 'hull_iv')):   # :1408 EV (D98), :1409 IV (D103)
         m('assembler', f'hull_{rid}', [ing(f'#iis:cables/1x/{cable}', 2), ing(f'{NS}:{casing}')], [rout(f'{NS}:{hull}')], 50, 16,
           fin=fl(pl, 288))
     return n[0]

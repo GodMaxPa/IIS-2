@@ -120,6 +120,18 @@
     "iis:wire_tungsten_4x",
     "iis:wire_tungsten_8x",
     "iis:wire_tungsten_12x",
-    "iis:wire_tungsten_16x"
+    "iis:wire_tungsten_16x",
+    "iis:wire_tungsten_steel_1x",
+    "iis:wire_tungsten_steel_2x",
+    "iis:wire_tungsten_steel_4x",
+    "iis:wire_tungsten_steel_8x",
+    "iis:wire_tungsten_steel_12x",
+    "iis:wire_tungsten_steel_16x",
+    "iis:wire_osmium_1x",
+    "iis:wire_osmium_2x",
+    "iis:wire_osmium_4x",
+    "iis:wire_osmium_8x",
+    "iis:wire_osmium_12x",
+    "iis:wire_osmium_16x"
   ]
 }

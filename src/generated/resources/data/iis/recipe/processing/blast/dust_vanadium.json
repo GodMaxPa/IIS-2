@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/vanadium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_vanadium",
+      "count": 1
+    }
+  ],
+  "duration": 2183,
+  "eut": 120,
+  "temp": 2183
+}

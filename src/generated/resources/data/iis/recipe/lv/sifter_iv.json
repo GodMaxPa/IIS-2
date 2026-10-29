@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WFW",
+    "PMP",
+    "CFC"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "P": "iis:electric_piston_iv",
+    "F": "iis:item_filter",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/platinum"
+  },
+  "result": {
+    "id": "iis:sifter_iv"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P Q",
+    "PS ",
+    "CPP"
+  ],
+  "key": {
+    "Q": "minecraft:ender_pearl",
+    "S": "#c:rods/platinum",
+    "P": "#c:plates/titanium",
+    "C": "#c:circuits/data"
+  },
+  "result": {
+    "id": "iis:sensor_ev"
+  }
+}

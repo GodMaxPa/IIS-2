@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCC",
+    "MSM",
+    "PES"
+  ],
+  "key": {
+    "S": "#c:rods/tungsten_steel",
+    "M": "iis:electric_motor_iv",
+    "P": "iis:electric_piston_iv",
+    "E": "#c:circuits/elite",
+    "C": "#iis:cables/1x/tungsten"
+  },
+  "result": {
+    "id": "iis:robot_arm_iv"
+  }
+}

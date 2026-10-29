@@ -582,6 +582,51 @@ final class LargeGameTests {
         h.succeedWhen(() -> h.assertTrue(count(out, "hot_ingot_tungsten_steel") == 2, "output bus " + out.stacks()));
     }
 
+    /** Ванадий-галлий (GT_MachineRecipeLoader:1031, D103): 3 ванадия + 1 галлий → 4 горячих слитка; 4500 K — только на
+     *  вольфрамостальных катушках, 480 EU/t → на EV 1920 EU/t × 2250 тиков. */
+    static void ebfSmeltsVanadiumGallium(GameTestHelper h) {
+        EbfBlockEntity e = smeltingEbf(h, MultiContent.COIL_TUNGSTENSTEEL.get());
+        ItemBusBlockEntity in = h.getBlockEntity(new BlockPos(5, 1, 2), ItemBusBlockEntity.class);
+        ItemBusBlockEntity out = h.getBlockEntity(new BlockPos(4, 1, 3), ItemBusBlockEntity.class);
+        in.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("ingot_vanadium"), 3));
+        in.setItem(1, new ItemStack(ru.iis.command.SelfTest.item("ingot_gallium")));
+        h.succeedWhen(() -> {
+            h.assertTrue(e.heat() == EbfBlockEntity.TUNGSTENSTEEL_HEAT, "heat " + e.heat());
+            h.assertTrue(count(out, "hot_ingot_vanadium_gallium") == 4, "output bus " + out.stacks());
+        });
+    }
+
+    /** На нихроме (3600 K) ванадий-галлий не плавится. */
+    static void ebfVanadiumGalliumNeedsTungstensteel(GameTestHelper h) {
+        smeltingEbf(h, MultiContent.COIL_NICHROME.get());
+        ItemBusBlockEntity in = h.getBlockEntity(new BlockPos(5, 1, 2), ItemBusBlockEntity.class);
+        ItemBusBlockEntity out = h.getBlockEntity(new BlockPos(4, 1, 3), ItemBusBlockEntity.class);
+        in.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("ingot_vanadium"), 3));
+        in.setItem(1, new ItemStack(ru.iis.command.SelfTest.item("ingot_gallium")));
+        h.runAtTickTime(300, () -> {
+            h.assertTrue(count(out, "hot_ingot_vanadium_gallium") == 0, "smelted on nichrome: " + out.stacks());
+            h.succeed();
+        });
+    }
+
+    /** Измельчитель IV (D103): 8192 В, четыре выхода; руда халькопирита → 2 дроблёной. */
+    static void ivMaceratorOre(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.MACERATOR_IV);
+        h.assertTrue(m.type().voltage() == 8192 && m.type().outputs == 4, "IV macerator " + m.type().voltage() + " / " + m.type().outputs);
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("ore_chalcopyrite")));
+        h.succeedWhen(() -> h.assertTrue(m.getItem(1).is(ru.iis.command.SelfTest.item("crushed_chalcopyrite")) && m.getItem(1).getCount() == 2,
+                "output " + m.getItem(1)));
+    }
+
+    /** Силикон (GT_MachineRecipeLoader:3452, D103): 9 полидиметилсилоксана + 1 сера → 1296 л расплава силикона, химреактор IV. */
+    static void ivReactorSilicone(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.CHEMICAL_REACTOR_IV);
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("dust_polydimethylsiloxane"), 9));
+        m.setItem(1, new ItemStack(ru.iis.command.SelfTest.item("dust_sulfur")));
+        h.succeedWhen(() -> h.assertTrue(m.outTank().amount() == 1296 && m.outTank().resource().getFluid() == gt("molten_silicone"),
+                "silicone " + m.outTank().amount()));
+    }
+
     /** Измельчитель EV (D100): 2048 В; руда халькопирита → 2 дроблёной. */
     static void evMaceratorOre(GameTestHelper h) {
         var m = poweredMachine(h, ru.iis.lv.LvMachineType.MACERATOR_EV);

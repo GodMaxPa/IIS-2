@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/silicone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_silicone",
+      "count": 4
+    }
+  ],
+  "duration": 14,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 1
+    }
+  ]
+}

@@ -312,6 +312,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_osmium",
+    "tool": "sword",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 4,
+    "kind": "sword"
+  },
+  {
     "id": "sword_palladium",
     "tool": "sword",
     "material": "palladium",
@@ -372,6 +384,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_silicone",
+    "tool": "sword",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "sword"
+  },
+  {
     "id": "sword_silver",
     "tool": "sword",
     "material": "silver",
@@ -417,6 +441,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_styrene_butadiene_rubber",
+    "tool": "sword",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "sword"
   },
   {
@@ -792,6 +828,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_osmium",
+    "tool": "pickaxe",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 4,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_palladium",
     "tool": "pickaxe",
     "material": "palladium",
@@ -852,6 +900,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_silicone",
+    "tool": "pickaxe",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_silver",
     "tool": "pickaxe",
     "material": "silver",
@@ -897,6 +957,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_styrene_butadiene_rubber",
+    "tool": "pickaxe",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "pickaxe"
   },
   {
@@ -1272,6 +1344,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_osmium",
+    "tool": "shovel",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 4,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_palladium",
     "tool": "shovel",
     "material": "palladium",
@@ -1332,6 +1416,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_silicone",
+    "tool": "shovel",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_silver",
     "tool": "shovel",
     "material": "silver",
@@ -1377,6 +1473,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_styrene_butadiene_rubber",
+    "tool": "shovel",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "shovel"
   },
   {
@@ -1752,6 +1860,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_osmium",
+    "tool": "axe",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 4,
+    "kind": "axe"
+  },
+  {
     "id": "axe_palladium",
     "tool": "axe",
     "material": "palladium",
@@ -1812,6 +1932,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_silicone",
+    "tool": "axe",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "axe"
+  },
+  {
     "id": "axe_silver",
     "tool": "axe",
     "material": "silver",
@@ -1857,6 +1989,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_styrene_butadiene_rubber",
+    "tool": "axe",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "axe"
   },
   {
@@ -2232,6 +2376,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_osmium",
+    "tool": "hoe",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 4,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_palladium",
     "tool": "hoe",
     "material": "palladium",
@@ -2292,6 +2448,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_silicone",
+    "tool": "hoe",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_silver",
     "tool": "hoe",
     "material": "silver",
@@ -2337,6 +2505,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_styrene_butadiene_rubber",
+    "tool": "hoe",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "hoe"
   },
   {
@@ -2712,6 +2892,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_osmium",
+    "tool": "saw",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 16.0,
+    "quality": 4,
+    "kind": "axe"
+  },
+  {
     "id": "saw_palladium",
     "tool": "saw",
     "material": "palladium",
@@ -2772,6 +2964,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_silicone",
+    "tool": "saw",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "axe"
+  },
+  {
     "id": "saw_silver",
     "tool": "saw",
     "material": "silver",
@@ -2817,6 +3021,18 @@
     "craftDamage": 4,
     "speed": 6.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_styrene_butadiene_rubber",
+    "tool": "saw",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "axe"
   },
   {
@@ -3192,6 +3408,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_osmium",
+    "tool": "hammer",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 12.0,
+    "quality": 4,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_palladium",
     "tool": "hammer",
     "material": "palladium",
@@ -3240,6 +3468,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_silicone",
+    "tool": "hammer",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 2.25,
+    "quality": 1,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_silver",
     "tool": "hammer",
     "material": "silver",
@@ -3285,6 +3525,18 @@
     "craftDamage": 8,
     "speed": 4.5,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_styrene_butadiene_rubber",
+    "tool": "hammer",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 2.25,
+    "quality": 1,
     "kind": "pickaxe"
   },
   {
@@ -3660,6 +3912,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_osmium",
+    "tool": "wrench",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 16.0,
+    "quality": 4,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_palladium",
     "tool": "wrench",
     "material": "palladium",
@@ -3720,6 +3984,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_silicone",
+    "tool": "wrench",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_silver",
     "tool": "wrench",
     "material": "silver",
@@ -3765,6 +4041,18 @@
     "craftDamage": 16,
     "speed": 6.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_styrene_butadiene_rubber",
+    "tool": "wrench",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "wrench"
   },
   {
@@ -4140,6 +4428,18 @@
     "kind": null
   },
   {
+    "id": "file_osmium",
+    "tool": "file",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 16.0,
+    "quality": 4,
+    "kind": null
+  },
+  {
     "id": "file_palladium",
     "tool": "file",
     "material": "palladium",
@@ -4200,6 +4500,18 @@
     "kind": null
   },
   {
+    "id": "file_silicone",
+    "tool": "file",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": null
+  },
+  {
     "id": "file_silver",
     "tool": "file",
     "material": "silver",
@@ -4245,6 +4557,18 @@
     "craftDamage": 8,
     "speed": 6.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_styrene_butadiene_rubber",
+    "tool": "file",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
     "kind": null
   },
   {
@@ -4620,6 +4944,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_osmium",
+    "tool": "screwdriver",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 16.0,
+    "quality": 4,
+    "kind": null
+  },
+  {
     "id": "screwdriver_palladium",
     "tool": "screwdriver",
     "material": "palladium",
@@ -4680,6 +5016,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_silicone",
+    "tool": "screwdriver",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": null
+  },
+  {
     "id": "screwdriver_silver",
     "tool": "screwdriver",
     "material": "silver",
@@ -4725,6 +5073,18 @@
     "craftDamage": 8,
     "speed": 6.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_styrene_butadiene_rubber",
+    "tool": "screwdriver",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
     "kind": null
   },
   {
@@ -5136,6 +5496,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_osmium",
+    "tool": "knife",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 4,
+    "kind": "sword"
+  },
+  {
     "id": "knife_palladium",
     "tool": "knife",
     "material": "palladium",
@@ -5196,6 +5568,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_silicone",
+    "tool": "knife",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "sword"
+  },
+  {
     "id": "knife_silver",
     "tool": "knife",
     "material": "silver",
@@ -5241,6 +5625,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_styrene_butadiene_rubber",
+    "tool": "knife",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "sword"
   },
   {
@@ -5616,6 +6012,18 @@
     "kind": "wire_cutter"
   },
   {
+    "id": "wire_cutter_osmium",
+    "tool": "wire_cutter",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 20.0,
+    "quality": 4,
+    "kind": "wire_cutter"
+  },
+  {
     "id": "wire_cutter_palladium",
     "tool": "wire_cutter",
     "material": "palladium",
@@ -5676,6 +6084,18 @@
     "kind": "wire_cutter"
   },
   {
+    "id": "wire_cutter_silicone",
+    "tool": "wire_cutter",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 3.75,
+    "quality": 1,
+    "kind": "wire_cutter"
+  },
+  {
     "id": "wire_cutter_silver",
     "tool": "wire_cutter",
     "material": "silver",
@@ -5721,6 +6141,18 @@
     "craftDamage": 8,
     "speed": 7.5,
     "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_styrene_butadiene_rubber",
+    "tool": "wire_cutter",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 3.75,
+    "quality": 1,
     "kind": "wire_cutter"
   },
   {
@@ -6120,6 +6552,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_osmium",
+    "tool": "crowbar",
+    "material": "osmium",
+    "handle": "steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 4,
+    "kind": null
+  },
+  {
     "id": "crowbar_palladium",
     "tool": "crowbar",
     "material": "palladium",
@@ -6168,6 +6612,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_silicone",
+    "tool": "crowbar",
+    "material": "silicone",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": null
+  },
+  {
     "id": "crowbar_silver",
     "tool": "crowbar",
     "material": "silver",
@@ -6213,6 +6669,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "crowbar_styrene_butadiene_rubber",
+    "tool": "crowbar",
+    "material": "styrene_butadiene_rubber",
+    "handle": "wood",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": null
   },
   {
@@ -6588,6 +7056,18 @@
     "kind": "drill"
   },
   {
+    "id": "drill_lv_osmium",
+    "tool": "drill_lv",
+    "material": "osmium",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 48.0,
+    "quality": 4,
+    "kind": "drill"
+  },
+  {
     "id": "drill_lv_palladium",
     "tool": "drill_lv",
     "material": "palladium",
@@ -6648,6 +7128,18 @@
     "kind": "drill"
   },
   {
+    "id": "drill_lv_silicone",
+    "tool": "drill_lv",
+    "material": "silicone",
+    "handle": "stainless_steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 9.0,
+    "quality": 1,
+    "kind": "drill"
+  },
+  {
     "id": "drill_lv_silver",
     "tool": "drill_lv",
     "material": "silver",
@@ -6693,6 +7185,18 @@
     "craftDamage": 2,
     "speed": 18.0,
     "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_styrene_butadiene_rubber",
+    "tool": "drill_lv",
+    "material": "styrene_butadiene_rubber",
+    "handle": "stainless_steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 9.0,
+    "quality": 1,
     "kind": "drill"
   },
   {
@@ -7068,6 +7572,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_osmium",
+    "tool": "chainsaw_lv",
+    "material": "osmium",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 32.0,
+    "quality": 4,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_palladium",
     "tool": "chainsaw_lv",
     "material": "palladium",
@@ -7128,6 +7644,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_silicone",
+    "tool": "chainsaw_lv",
+    "material": "silicone",
+    "handle": "stainless_steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_silver",
     "tool": "chainsaw_lv",
     "material": "silver",
@@ -7173,6 +7701,18 @@
     "craftDamage": 16,
     "speed": 12.0,
     "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_styrene_butadiene_rubber",
+    "tool": "chainsaw_lv",
+    "material": "styrene_butadiene_rubber",
+    "handle": "stainless_steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
     "kind": "chainsaw"
   },
   {
@@ -7548,6 +8088,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_lv_osmium",
+    "tool": "wrench_lv",
+    "material": "osmium",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 32.0,
+    "quality": 4,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_lv_palladium",
     "tool": "wrench_lv",
     "material": "palladium",
@@ -7608,6 +8160,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_lv_silicone",
+    "tool": "wrench_lv",
+    "material": "silicone",
+    "handle": "stainless_steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_lv_silver",
     "tool": "wrench_lv",
     "material": "silver",
@@ -7653,6 +8217,18 @@
     "craftDamage": 16,
     "speed": 12.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_styrene_butadiene_rubber",
+    "tool": "wrench_lv",
+    "material": "styrene_butadiene_rubber",
+    "handle": "stainless_steel",
+    "maxDamage": 256,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
     "kind": "wrench"
   },
   {

@@ -75,6 +75,8 @@ public final class MultiContent {
     public static final DeferredBlock<Block> COIL_KANTHAL = block("coil_kanthal", Block::new, MultiContent::metal);
     /** GT_Block_Casings5 meta 2 (D98): 3600 K. */
     public static final DeferredBlock<Block> COIL_NICHROME = block("coil_nichrome", Block::new, MultiContent::metal);
+    /** GT_Block_Casings5 meta 3 (D103): 4500 K — ванадий-галлий. */
+    public static final DeferredBlock<Block> COIL_TUNGSTENSTEEL = block("coil_tungstensteel", Block::new, MultiContent::metal);
     /** GT_Block_Casings2 meta 1: морозостойкий корпус вакуумного морозильника (D81). */
     public static final DeferredBlock<Block> FROST_PROOF_CASING = block("frost_proof_casing", Block::new, MultiContent::metal);
     public static final Map<HatchType, DeferredBlock<HatchBlock>> HATCHES = new EnumMap<>(HatchType.class);
@@ -143,7 +145,7 @@ public final class MultiContent {
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EnergyHatchBlockEntity>> ENERGY_HATCH_BE = BLOCK_ENTITIES.register("energy_hatch",
-            () -> new BlockEntityType<>(EnergyHatchBlockEntity::new, hatches(HatchType.ENERGY, HatchType.ENERGY_MV, HatchType.ENERGY_HV, HatchType.ENERGY_EV)));
+            () -> new BlockEntityType<>(EnergyHatchBlockEntity::new, hatches(HatchType.ENERGY, HatchType.ENERGY_MV, HatchType.ENERGY_HV, HatchType.ENERGY_EV, HatchType.ENERGY_IV)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemBusBlockEntity>> ITEM_BUS_BE = BLOCK_ENTITIES.register("item_bus",
             () -> new BlockEntityType<>(ItemBusBlockEntity::new, hatches(HatchType.INPUT_BUS, HatchType.OUTPUT_BUS)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidHatchBlockEntity>> FLUID_HATCH_BE = BLOCK_ENTITIES.register("fluid_hatch",
@@ -157,7 +159,7 @@ public final class MultiContent {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeBoilerBlockEntity>> LARGE_BOILER_BE = BLOCK_ENTITIES.register("large_boiler",
             () -> new BlockEntityType<>(LargeBoilerBlockEntity::new, LARGE_BOILERS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DynamoHatchBlockEntity>> DYNAMO_HATCH_BE = BLOCK_ENTITIES.register("dynamo_hatch",
-            () -> new BlockEntityType<>(DynamoHatchBlockEntity::new, hatches(HatchType.DYNAMO, HatchType.DYNAMO_MV, HatchType.DYNAMO_HV, HatchType.DYNAMO_EV)));
+            () -> new BlockEntityType<>(DynamoHatchBlockEntity::new, hatches(HatchType.DYNAMO, HatchType.DYNAMO_MV, HatchType.DYNAMO_HV, HatchType.DYNAMO_EV, HatchType.DYNAMO_IV)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeTurbineBlockEntity>> LARGE_TURBINE_BE = BLOCK_ENTITIES.register("large_steam_turbine",
             () -> new BlockEntityType<>(LargeTurbineBlockEntity::new, LARGE_STEAM_TURBINE.get()));
 

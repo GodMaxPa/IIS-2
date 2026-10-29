@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WGW",
+    "CMC",
+    "PPP"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "P": "#c:plates/tungsten_steel",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/4x/platinum",
+    "G": "#c:dusts/graphite"
+  },
+  "result": {
+    "id": "iis:arc_furnace_iv"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/styrene_butadiene_rubber",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hoe_head_styrene_butadiene_rubber",
+      "count": 1
+    }
+  ],
+  "duration": 10,
+  "eut": 32,
+  "keep": [
+    "iis:shape_extruder_hoe"
+  ]
+}

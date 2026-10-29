@@ -1,0 +1,17 @@
+{
+  "type": "iis:vacuum_freezer",
+  "inputs": [
+    {
+      "ingredient": "#iis:hot_ingots/vanadium_gallium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_vanadium_gallium",
+      "count": 1
+    }
+  ],
+  "duration": 165,
+  "eut": 120
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PHP",
+    "CMC"
+  ],
+  "key": {
+    "P": "#c:plates/plastic",
+    "H": "#c:plates/tungsten_steel",
+    "C": "#iis:cables/1x/tungsten",
+    "M": "iis:casing_iv"
+  },
+  "result": {
+    "id": "iis:hull_iv"
+  }
+}

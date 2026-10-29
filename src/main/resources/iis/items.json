@@ -5125,6 +5125,116 @@
     "material": "opal"
   },
   {
+    "id": "crushed_osmium",
+    "prefix": "crushed",
+    "material": "osmium"
+  },
+  {
+    "id": "purified_osmium",
+    "prefix": "purified",
+    "material": "osmium"
+  },
+  {
+    "id": "centrifuged_osmium",
+    "prefix": "centrifuged",
+    "material": "osmium"
+  },
+  {
+    "id": "impure_dust_osmium",
+    "prefix": "impure_dust",
+    "material": "osmium"
+  },
+  {
+    "id": "pure_dust_osmium",
+    "prefix": "pure_dust",
+    "material": "osmium"
+  },
+  {
+    "id": "dust_osmium",
+    "prefix": "dust",
+    "material": "osmium"
+  },
+  {
+    "id": "small_dust_osmium",
+    "prefix": "small_dust",
+    "material": "osmium"
+  },
+  {
+    "id": "tiny_dust_osmium",
+    "prefix": "tiny_dust",
+    "material": "osmium"
+  },
+  {
+    "id": "ingot_osmium",
+    "prefix": "ingot",
+    "material": "osmium"
+  },
+  {
+    "id": "hot_ingot_osmium",
+    "prefix": "hot_ingot",
+    "material": "osmium"
+  },
+  {
+    "id": "nugget_osmium",
+    "prefix": "nugget",
+    "material": "osmium"
+  },
+  {
+    "id": "plate_osmium",
+    "prefix": "plate",
+    "material": "osmium"
+  },
+  {
+    "id": "double_plate_osmium",
+    "prefix": "double_plate",
+    "material": "osmium"
+  },
+  {
+    "id": "rod_osmium",
+    "prefix": "rod",
+    "material": "osmium"
+  },
+  {
+    "id": "bolt_osmium",
+    "prefix": "bolt",
+    "material": "osmium"
+  },
+  {
+    "id": "screw_osmium",
+    "prefix": "screw",
+    "material": "osmium"
+  },
+  {
+    "id": "ring_osmium",
+    "prefix": "ring",
+    "material": "osmium"
+  },
+  {
+    "id": "foil_osmium",
+    "prefix": "foil",
+    "material": "osmium"
+  },
+  {
+    "id": "wire_fine_osmium",
+    "prefix": "wire_fine",
+    "material": "osmium"
+  },
+  {
+    "id": "rotor_osmium",
+    "prefix": "rotor",
+    "material": "osmium"
+  },
+  {
+    "id": "long_rod_osmium",
+    "prefix": "long_rod",
+    "material": "osmium"
+  },
+  {
+    "id": "turbine_blade_osmium",
+    "prefix": "turbine_blade",
+    "material": "osmium"
+  },
+  {
     "id": "crushed_palladium",
     "prefix": "crushed",
     "material": "palladium"
@@ -5460,6 +5570,36 @@
     "material": "platinum"
   },
   {
+    "id": "dust_platinum_group_sludge",
+    "prefix": "dust",
+    "material": "platinum_group_sludge"
+  },
+  {
+    "id": "small_dust_platinum_group_sludge",
+    "prefix": "small_dust",
+    "material": "platinum_group_sludge"
+  },
+  {
+    "id": "tiny_dust_platinum_group_sludge",
+    "prefix": "tiny_dust",
+    "material": "platinum_group_sludge"
+  },
+  {
+    "id": "dust_polydimethylsiloxane",
+    "prefix": "dust",
+    "material": "polydimethylsiloxane"
+  },
+  {
+    "id": "small_dust_polydimethylsiloxane",
+    "prefix": "small_dust",
+    "material": "polydimethylsiloxane"
+  },
+  {
+    "id": "tiny_dust_polydimethylsiloxane",
+    "prefix": "tiny_dust",
+    "material": "polydimethylsiloxane"
+  },
+  {
     "id": "crushed_powellite",
     "prefix": "crushed",
     "material": "powellite"
@@ -5718,6 +5858,21 @@
     "id": "tiny_dust_raw_rubber",
     "prefix": "tiny_dust",
     "material": "raw_rubber"
+  },
+  {
+    "id": "dust_raw_styrene_butadiene_rubber",
+    "prefix": "dust",
+    "material": "raw_styrene_butadiene_rubber"
+  },
+  {
+    "id": "small_dust_raw_styrene_butadiene_rubber",
+    "prefix": "small_dust",
+    "material": "raw_styrene_butadiene_rubber"
+  },
+  {
+    "id": "tiny_dust_raw_styrene_butadiene_rubber",
+    "prefix": "tiny_dust",
+    "material": "raw_styrene_butadiene_rubber"
   },
   {
     "id": "dust_red_alloy",
@@ -6308,6 +6463,66 @@
     "id": "tiny_dust_silicon_dioxide",
     "prefix": "tiny_dust",
     "material": "silicon_dioxide"
+  },
+  {
+    "id": "dust_silicone",
+    "prefix": "dust",
+    "material": "silicone"
+  },
+  {
+    "id": "small_dust_silicone",
+    "prefix": "small_dust",
+    "material": "silicone"
+  },
+  {
+    "id": "tiny_dust_silicone",
+    "prefix": "tiny_dust",
+    "material": "silicone"
+  },
+  {
+    "id": "ingot_silicone",
+    "prefix": "ingot",
+    "material": "silicone"
+  },
+  {
+    "id": "nugget_silicone",
+    "prefix": "nugget",
+    "material": "silicone"
+  },
+  {
+    "id": "plate_silicone",
+    "prefix": "plate",
+    "material": "silicone"
+  },
+  {
+    "id": "rod_silicone",
+    "prefix": "rod",
+    "material": "silicone"
+  },
+  {
+    "id": "bolt_silicone",
+    "prefix": "bolt",
+    "material": "silicone"
+  },
+  {
+    "id": "screw_silicone",
+    "prefix": "screw",
+    "material": "silicone"
+  },
+  {
+    "id": "ring_silicone",
+    "prefix": "ring",
+    "material": "silicone"
+  },
+  {
+    "id": "foil_silicone",
+    "prefix": "foil",
+    "material": "silicone"
+  },
+  {
+    "id": "long_rod_silicone",
+    "prefix": "long_rod",
+    "material": "silicone"
   },
   {
     "id": "crushed_silver",
@@ -6948,6 +7163,61 @@
     "id": "tiny_dust_stone",
     "prefix": "tiny_dust",
     "material": "stone"
+  },
+  {
+    "id": "dust_styrene_butadiene_rubber",
+    "prefix": "dust",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "small_dust_styrene_butadiene_rubber",
+    "prefix": "small_dust",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "tiny_dust_styrene_butadiene_rubber",
+    "prefix": "tiny_dust",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "ingot_styrene_butadiene_rubber",
+    "prefix": "ingot",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "nugget_styrene_butadiene_rubber",
+    "prefix": "nugget",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "plate_styrene_butadiene_rubber",
+    "prefix": "plate",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "rod_styrene_butadiene_rubber",
+    "prefix": "rod",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "bolt_styrene_butadiene_rubber",
+    "prefix": "bolt",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "screw_styrene_butadiene_rubber",
+    "prefix": "screw",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "ring_styrene_butadiene_rubber",
+    "prefix": "ring",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "long_rod_styrene_butadiene_rubber",
+    "prefix": "long_rod",
+    "material": "styrene_butadiene_rubber"
   },
   {
     "id": "crushed_sulfur",
@@ -8063,6 +8333,106 @@
     "id": "turbine_blade_uranium",
     "prefix": "turbine_blade",
     "material": "uranium"
+  },
+  {
+    "id": "crushed_vanadium",
+    "prefix": "crushed",
+    "material": "vanadium"
+  },
+  {
+    "id": "purified_vanadium",
+    "prefix": "purified",
+    "material": "vanadium"
+  },
+  {
+    "id": "centrifuged_vanadium",
+    "prefix": "centrifuged",
+    "material": "vanadium"
+  },
+  {
+    "id": "impure_dust_vanadium",
+    "prefix": "impure_dust",
+    "material": "vanadium"
+  },
+  {
+    "id": "pure_dust_vanadium",
+    "prefix": "pure_dust",
+    "material": "vanadium"
+  },
+  {
+    "id": "dust_vanadium",
+    "prefix": "dust",
+    "material": "vanadium"
+  },
+  {
+    "id": "small_dust_vanadium",
+    "prefix": "small_dust",
+    "material": "vanadium"
+  },
+  {
+    "id": "tiny_dust_vanadium",
+    "prefix": "tiny_dust",
+    "material": "vanadium"
+  },
+  {
+    "id": "ingot_vanadium",
+    "prefix": "ingot",
+    "material": "vanadium"
+  },
+  {
+    "id": "hot_ingot_vanadium",
+    "prefix": "hot_ingot",
+    "material": "vanadium"
+  },
+  {
+    "id": "nugget_vanadium",
+    "prefix": "nugget",
+    "material": "vanadium"
+  },
+  {
+    "id": "dust_vanadium_gallium",
+    "prefix": "dust",
+    "material": "vanadium_gallium"
+  },
+  {
+    "id": "small_dust_vanadium_gallium",
+    "prefix": "small_dust",
+    "material": "vanadium_gallium"
+  },
+  {
+    "id": "tiny_dust_vanadium_gallium",
+    "prefix": "tiny_dust",
+    "material": "vanadium_gallium"
+  },
+  {
+    "id": "ingot_vanadium_gallium",
+    "prefix": "ingot",
+    "material": "vanadium_gallium"
+  },
+  {
+    "id": "hot_ingot_vanadium_gallium",
+    "prefix": "hot_ingot",
+    "material": "vanadium_gallium"
+  },
+  {
+    "id": "nugget_vanadium_gallium",
+    "prefix": "nugget",
+    "material": "vanadium_gallium"
+  },
+  {
+    "id": "plate_vanadium_gallium",
+    "prefix": "plate",
+    "material": "vanadium_gallium"
+  },
+  {
+    "id": "rod_vanadium_gallium",
+    "prefix": "rod",
+    "material": "vanadium_gallium"
+  },
+  {
+    "id": "foil_vanadium_gallium",
+    "prefix": "foil",
+    "material": "vanadium_gallium"
   },
   {
     "id": "crushed_vanadium_magnetite",
@@ -9510,6 +9880,51 @@
     "material": "nickel"
   },
   {
+    "id": "sword_head_osmium",
+    "prefix": "sword_head",
+    "material": "osmium"
+  },
+  {
+    "id": "pickaxe_head_osmium",
+    "prefix": "pickaxe_head",
+    "material": "osmium"
+  },
+  {
+    "id": "shovel_head_osmium",
+    "prefix": "shovel_head",
+    "material": "osmium"
+  },
+  {
+    "id": "axe_head_osmium",
+    "prefix": "axe_head",
+    "material": "osmium"
+  },
+  {
+    "id": "hoe_head_osmium",
+    "prefix": "hoe_head",
+    "material": "osmium"
+  },
+  {
+    "id": "saw_head_osmium",
+    "prefix": "saw_head",
+    "material": "osmium"
+  },
+  {
+    "id": "drill_head_osmium",
+    "prefix": "drill_head",
+    "material": "osmium"
+  },
+  {
+    "id": "chainsaw_head_osmium",
+    "prefix": "chainsaw_head",
+    "material": "osmium"
+  },
+  {
+    "id": "wrench_head_osmium",
+    "prefix": "wrench_head",
+    "material": "osmium"
+  },
+  {
     "id": "sword_head_palladium",
     "prefix": "sword_head",
     "material": "palladium"
@@ -9735,6 +10150,51 @@
     "material": "rubber"
   },
   {
+    "id": "sword_head_silicone",
+    "prefix": "sword_head",
+    "material": "silicone"
+  },
+  {
+    "id": "pickaxe_head_silicone",
+    "prefix": "pickaxe_head",
+    "material": "silicone"
+  },
+  {
+    "id": "shovel_head_silicone",
+    "prefix": "shovel_head",
+    "material": "silicone"
+  },
+  {
+    "id": "axe_head_silicone",
+    "prefix": "axe_head",
+    "material": "silicone"
+  },
+  {
+    "id": "hoe_head_silicone",
+    "prefix": "hoe_head",
+    "material": "silicone"
+  },
+  {
+    "id": "saw_head_silicone",
+    "prefix": "saw_head",
+    "material": "silicone"
+  },
+  {
+    "id": "drill_head_silicone",
+    "prefix": "drill_head",
+    "material": "silicone"
+  },
+  {
+    "id": "chainsaw_head_silicone",
+    "prefix": "chainsaw_head",
+    "material": "silicone"
+  },
+  {
+    "id": "wrench_head_silicone",
+    "prefix": "wrench_head",
+    "material": "silicone"
+  },
+  {
     "id": "sword_head_silver",
     "prefix": "sword_head",
     "material": "silver"
@@ -9913,6 +10373,51 @@
     "id": "wrench_head_steel_magnetic",
     "prefix": "wrench_head",
     "material": "steel_magnetic"
+  },
+  {
+    "id": "sword_head_styrene_butadiene_rubber",
+    "prefix": "sword_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "pickaxe_head_styrene_butadiene_rubber",
+    "prefix": "pickaxe_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "shovel_head_styrene_butadiene_rubber",
+    "prefix": "shovel_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "axe_head_styrene_butadiene_rubber",
+    "prefix": "axe_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "hoe_head_styrene_butadiene_rubber",
+    "prefix": "hoe_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "saw_head_styrene_butadiene_rubber",
+    "prefix": "saw_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "drill_head_styrene_butadiene_rubber",
+    "prefix": "drill_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "chainsaw_head_styrene_butadiene_rubber",
+    "prefix": "chainsaw_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "wrench_head_styrene_butadiene_rubber",
+    "prefix": "wrench_head",
+    "material": "styrene_butadiene_rubber"
   },
   {
     "id": "sword_head_tin_alloy",

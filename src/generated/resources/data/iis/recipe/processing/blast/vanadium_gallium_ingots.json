@@ -1,0 +1,22 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/vanadium",
+      "count": 3
+    },
+    {
+      "ingredient": "#c:ingots/gallium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_vanadium_gallium",
+      "count": 4
+    }
+  ],
+  "duration": 4500,
+  "eut": 480,
+  "temp": 4500
+}

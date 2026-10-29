@@ -1,0 +1,29 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#iis:purified_ores/chalcopyrite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_platinum_group_sludge",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:nitricacid",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:solution_bluevitriol",
+      "amount": 9000
+    }
+  ]
+}

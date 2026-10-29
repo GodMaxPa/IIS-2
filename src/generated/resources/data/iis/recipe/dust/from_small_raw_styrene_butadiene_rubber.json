@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/raw_styrene_butadiene_rubber",
+    "#iis:small_dusts/raw_styrene_butadiene_rubber",
+    "#iis:small_dusts/raw_styrene_butadiene_rubber",
+    "#iis:small_dusts/raw_styrene_butadiene_rubber"
+  ],
+  "result": {
+    "id": "iis:dust_raw_styrene_butadiene_rubber"
+  }
+}

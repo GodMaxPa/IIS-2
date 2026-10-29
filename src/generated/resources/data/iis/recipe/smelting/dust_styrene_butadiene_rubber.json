@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "#c:dusts/styrene_butadiene_rubber",
+  "result": {
+    "id": "iis:ingot_styrene_butadiene_rubber"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

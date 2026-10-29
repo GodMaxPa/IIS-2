@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/osmium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_osmium",
+      "count": 8
+    }
+  ],
+  "duration": 380,
+  "eut": 512,
+  "keep": [
+    "iis:shape_extruder_bolt"
+  ]
+}

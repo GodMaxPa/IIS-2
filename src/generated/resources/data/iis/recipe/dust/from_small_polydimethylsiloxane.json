@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/polydimethylsiloxane",
+    "#iis:small_dusts/polydimethylsiloxane",
+    "#iis:small_dusts/polydimethylsiloxane",
+    "#iis:small_dusts/polydimethylsiloxane"
+  ],
+  "result": {
+    "id": "iis:dust_polydimethylsiloxane"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PEG",
+    "WWM",
+    "CCW"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "E": "iis:electric_motor_iv",
+    "P": "iis:electric_piston_iv",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/platinum",
+    "G": "iis:grinder_diamond"
+  },
+  "result": {
+    "id": "iis:macerator_iv"
+  }
+}

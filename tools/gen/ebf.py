@@ -32,6 +32,8 @@ HATCHES = [
     # D99: GT_Loader_MetaTileEntities:218, :240 EV dynamo and energy hatches
     ('hatch_energy_ev', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.04.name', 'EV Energy Hatch'),
     ('hatch_dynamo_ev', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.04.name', 'EV Dynamo Hatch'),
+    ('hatch_energy_iv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.05.name', 'IV Energy Hatch'),   # D103
+    ('hatch_dynamo_iv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.05.name', 'IV Dynamo Hatch'),
 ]
 
 
@@ -118,7 +120,8 @@ def generate(g):
     for bid, src, key, en in (('heat_proof_casing', 'MACHINE_HEATPROOFCASING', 'gt.blockcasings.11.name', 'Heat Proof Machine Casing'),
                               ('coil_cupronickel', 'MACHINE_COIL_CUPRONICKEL', 'gt.blockcasings5.0.name', 'Cupronickel Coil Block'),
                               ('coil_kanthal', 'MACHINE_COIL_KANTHAL', 'gt.blockcasings5.1.name', 'Kanthal Coil Block'),  # D93
-                              ('coil_nichrome', 'MACHINE_COIL_NICHROME', 'gt.blockcasings5.2.name', 'Nichrome Coil Block')):  # D98
+                              ('coil_nichrome', 'MACHINE_COIL_NICHROME', 'gt.blockcasings5.2.name', 'Nichrome Coil Block'),  # D98
+                              ('coil_tungstensteel', 'MACHINE_COIL_TUNGSTENSTEEL', 'gt.blockcasings5.3.name', 'TungstenSteel Coil Block')):  # D103
         first(os.path.join(BI, src + '.png')).save(tex_out(f'block/multi/{bid}.png'))
         write(os.path.join(A, 'models', 'block', bid + '.json'), {'parent': 'minecraft:block/cube_all', 'textures': {'all': f'{NS}:block/multi/{bid}'}})
         write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': {'': {'model': f'{NS}:block/{bid}'}}})
@@ -127,18 +130,20 @@ def generate(g):
     tooltip('coil_cupronickel', [('Base Heating Capacity = 1800 Kelvin', 'Нагрев: 1800 K')])
     tooltip('coil_kanthal', [('Base Heating Capacity = 2700 Kelvin', 'Нагрев: 2700 K')])
     tooltip('coil_nichrome', [('Base Heating Capacity = 3600 Kelvin', 'Нагрев: 3600 K')])
+    tooltip('coil_tungstensteel', [('Base Heating Capacity = 4500 Kelvin', 'Нагрев: 4500 K')])
     shaped('multi/heat_proof_casing', f'{NS}:heat_proof_casing', 2, ['PhP', 'PFP', 'PwP'], {'P': tag_of('plate', 'Invar'), 'F': '#c:frames/invar'})
     shaped('multi/coil_cupronickel', f'{NS}:coil_cupronickel', 1, ['PPP', 'PwP', 'PPP'], {'P': '#iis:wires/2x/cupronickel'})
     shaped('multi/coil_kanthal', f'{NS}:coil_kanthal', 1, ['PPP', 'PwP', 'PPP'], {'P': '#iis:wires/2x/kanthal'})   # GT_Loader_MetaTileEntities:92
     shaped('multi/coil_nichrome', f'{NS}:coil_nichrome', 1, ['PPP', 'PwP', 'PPP'], {'P': '#iis:wires/2x/nichrome'})   # :93 (D98)
+    shaped('multi/coil_tungstensteel', f'{NS}:coil_tungstensteel', 1, ['PPP', 'PwP', 'PPP'], {'P': '#iis:wires/2x/tungsten_steel'})   # :94 (D103)
 
     # --- hatches (front overlay over the LV casing; any of 6 facings) -----------------------------------------------
     sides = {}
-    for tr in ('lv', 'mv', 'hv', 'ev'):
+    for tr in ('lv', 'mv', 'hv', 'ev', 'iv'):
         sides[tr] = first(os.path.join(LVI, f'MACHINE_{tr.upper()}_SIDE.png'))
         sides[tr].save(tex_out(f'block/multi/hatch_{tr}_side.png'))
     for bid, ov, key, en in HATCHES:
-        tr = bid[-2:] if bid[-3:] in ('_mv', '_hv', '_ev') else 'lv'
+        tr = bid[-2:] if bid[-3:] in ('_mv', '_hv', '_ev', '_iv') else 'lv'
         ovp = os.path.join(BI, ov + '.png')
         if not os.path.exists(ovp):
             ovp = os.path.join(LVI, ov + '.png')
@@ -163,6 +168,9 @@ def generate(g):
     tooltip('hatch_energy_ev', [('Energy input for multiblocks: 2048 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 2048 EU/t, до 2 А, спереди')])
     tooltip('hatch_dynamo_ev', [('Energy output for multiblock generators: 2048 EU/t, 1 A, from the front', 'Выход энергии многоблочного генератора: 2048 EU/t, 1 А, спереди'),
                                 ('More than 2048 EU/t from the generator - the whole machine explodes', 'Больше 2048 EU/t от генератора — вся машина взрывается')])
+    tooltip('hatch_energy_iv', [('Energy input for multiblocks: 8192 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 8192 EU/t, до 2 А, спереди')])
+    tooltip('hatch_dynamo_iv', [('Energy output for multiblock generators: 8192 EU/t, 1 A, from the front', 'Выход энергии многоблочного генератора: 8192 EU/t, 1 А, спереди'),
+                                ('More than 8192 EU/t from the generator - the whole machine explodes', 'Больше 8192 EU/t от генератора — вся машина взрывается')])
     tooltip('hatch_input_bus_lv', [('Item input for multiblocks, 4 slots', 'Вход предметов многоблочной машины, 4 слота')])
     tooltip('hatch_output_bus_lv', [('Item output for multiblocks, 4 slots', 'Выход предметов многоблочной машины, 4 слота')])
     tooltip('hatch_input_lv', [('Fluid input for multiblocks, 16000 L', 'Вход жидкости многоблочной машины, 16000 л')])
@@ -183,6 +191,9 @@ def generate(g):
     # D99: :272 "CM " and :229 " MC": EV hull, aluminium cable
     shaped('multi/hatch_energy_ev', f'{NS}:hatch_energy_ev', 1, ['CM'], {'M': f'{NS}:hull_ev', 'C': '#iis:cables/1x/aluminium'})
     shaped('multi/hatch_dynamo_ev', f'{NS}:hatch_dynamo_ev', 1, ['MC'], {'M': f'{NS}:hull_ev', 'C': '#iis:cables/1x/aluminium'})
+    # D103: GT_Loader_MetaTileEntities:273 "CM", :230 " MC": IV hull, tungsten cable
+    shaped('multi/hatch_energy_iv', f'{NS}:hatch_energy_iv', 1, ['CM'], {'M': f'{NS}:hull_iv', 'C': '#iis:cables/1x/tungsten'})
+    shaped('multi/hatch_dynamo_iv', f'{NS}:hatch_dynamo_iv', 1, ['MC'], {'M': f'{NS}:hull_iv', 'C': '#iis:cables/1x/tungsten'})
     shaped('multi/hatch_input_lv', f'{NS}:hatch_input_lv', 1, ['G', 'M'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_output_lv', f'{NS}:hatch_output_lv', 1, ['M', 'G'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_input_bus_lv', f'{NS}:hatch_input_bus_lv', 1, ['C', 'M'], {'M': HULL, 'C': '#c:chests/wooden'})
@@ -333,6 +344,7 @@ def generate(g):
     mrec('assembler', 'coil_cupronickel', [ing('#iis:wires/2x/cupronickel', 8)], [out(f'{NS}:coil_cupronickel')], 50, 16, circuit=8)
     mrec('assembler', 'coil_kanthal', [ing('#iis:wires/2x/kanthal', 8)], [out(f'{NS}:coil_kanthal')], 50, 16, circuit=8)
     mrec('assembler', 'coil_nichrome', [ing('#iis:wires/2x/nichrome', 8)], [out(f'{NS}:coil_nichrome')], 50, 16, circuit=8)   # :1383
+    mrec('assembler', 'coil_tungstensteel', [ing('#iis:wires/2x/tungsten_steel', 8)], [out(f'{NS}:coil_tungstensteel')], 50, 16, circuit=8)   # :1384 (D103)
     for mid in frames:
         mrec('assembler', f'frame_{mid}', [ing(f'#c:rods/{mid}', 4)], [out(f'{NS}:frame_{mid}')], 64, 8)
 

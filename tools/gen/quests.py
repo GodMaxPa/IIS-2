@@ -113,7 +113,7 @@ RAILCRAFT_MAP = {
 }
 GT_TOOLS = {0: 'sword', 2: 'pickaxe', 4: 'shovel', 6: 'axe', 8: 'hoe', 10: 'saw', 12: 'hammer', 14: 'soft_hammer', 16: 'wrench',
             18: 'file', 20: 'crowbar', 22: 'screwdriver', 24: 'mortar', 26: 'wire_cutter', 34: 'knife'}
-TIERS = {'01': 'lv', '02': 'mv', '03': 'hv', '04': 'ev'}
+TIERS = {'01': 'lv', '02': 'mv', '03': 'hv', '04': 'ev', '05': 'iv'}
 # OreDict prefixes (GT OrePrefixes names) -> our item id prefix
 OREDICT_PREFIXES = ['ingot', 'dust', 'plate', 'gem', 'nugget', 'block', 'gear', 'stick', 'ring', 'bolt', 'screw', 'wire', 'cable', 'ore']
 OREDICT_OUR = {'stick': 'rod'}

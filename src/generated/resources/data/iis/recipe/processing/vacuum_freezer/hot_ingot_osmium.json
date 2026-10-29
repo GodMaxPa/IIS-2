@@ -1,0 +1,17 @@
+{
+  "type": "iis:vacuum_freezer",
+  "inputs": [
+    {
+      "ingredient": "#iis:hot_ingots/osmium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_osmium",
+      "count": 1
+    }
+  ],
+  "duration": 570,
+  "eut": 120
+}

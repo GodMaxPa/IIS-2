@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/osmium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 81,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_osmium",
+      "amount": 144
+    }
+  ]
+}

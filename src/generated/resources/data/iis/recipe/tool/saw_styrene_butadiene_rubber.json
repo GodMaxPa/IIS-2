@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/saw/styrene_butadiene_rubber",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:saw_styrene_butadiene_rubber"
+  }
+}

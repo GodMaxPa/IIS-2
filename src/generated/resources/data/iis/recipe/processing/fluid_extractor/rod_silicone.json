@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/silicone",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 12,
+  "eut": 42,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_silicone",
+      "amount": 72
+    }
+  ]
+}

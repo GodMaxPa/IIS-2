@@ -1,0 +1,49 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:styrene",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:butadiene",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_raw_styrene_butadiene_rubber",
+      "count": 4
+    },
+    {
+      "id": "iis:capsule",
+      "count": 4
+    }
+  ],
+  "duration": 160,
+  "eut": 240,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:air",
+      "amount": 4000
+    }
+  ]
+}

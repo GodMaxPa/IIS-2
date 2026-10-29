@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/vanadium_gallium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 94,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_vanadiumgallium",
+      "amount": 144
+    }
+  ]
+}

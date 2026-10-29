@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/vanadium_gallium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 94,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_vanadiumgallium",
+      "amount": 16
+    }
+  ]
+}

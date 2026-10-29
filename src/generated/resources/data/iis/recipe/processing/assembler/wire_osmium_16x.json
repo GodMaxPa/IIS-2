@@ -1,0 +1,18 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/osmium",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_osmium_16x",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 8,
+  "circuit": 16
+}

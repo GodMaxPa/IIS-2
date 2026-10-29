@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSC",
+    "WQS",
+    "CWS"
+  ],
+  "key": {
+    "Q": "minecraft:ender_eye",
+    "S": "#c:rods/osmium",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/tungsten"
+  },
+  "result": {
+    "id": "iis:emitter_iv"
+  }
+}

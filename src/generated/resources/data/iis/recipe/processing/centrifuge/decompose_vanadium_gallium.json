@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/vanadium_gallium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_vanadium",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_gallium",
+      "count": 1
+    }
+  ],
+  "duration": 880,
+  "eut": 10
+}

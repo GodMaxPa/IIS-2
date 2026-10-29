@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/plate_vanadium_gallium",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 8421516
+      }
+    ]
+  }
+}

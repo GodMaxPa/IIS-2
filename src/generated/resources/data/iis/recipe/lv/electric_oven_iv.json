@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CEC",
+    "CMC",
+    "WEW"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "E": "#c:circuits/elite",
+    "W": "#iis:cables/1x/platinum",
+    "C": "#iis:wires/2x/tungsten_steel"
+  },
+  "result": {
+    "id": "iis:electric_oven_iv"
+  }
+}

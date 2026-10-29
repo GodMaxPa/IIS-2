@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCG",
+    "VMB",
+    "CWE"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "E": "iis:electric_motor_iv",
+    "V": "iis:conveyor_module_iv",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/platinum",
+    "G": "minecraft:glass",
+    "B": "iis:diamond_sawblade"
+  },
+  "result": {
+    "id": "iis:cutter_iv"
+  }
+}

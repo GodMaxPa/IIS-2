@@ -32,9 +32,9 @@ public final class CoverSet {
     /** GT_Cover_ItemMeter. */
     static final int METER_CONVERTED = 0x80000000, METER_INVERT = 0x40000000, METER_SLOT = 0x0FFFFFFF;
     public static final int CONVEYOR_RATE = 400, PUMP_RATE = 32, ARM_RATE = 400;
-    /** GT_MetaGenerated_Item_01:510-513, 590-593, 635-638 (D101): по уровню LV, MV, HV, EV. */
-    static final int[] CONVEYOR_TICKS = {400, 100, 20, 4}, PUMP_RATES = {32, 128, 512, 2048};
-    public static final String[] TIERS = {"lv", "mv", "hv", "ev"};
+    /** GT_MetaGenerated_Item_01:510-513, 590-593, 635-638 (D101): по уровню LV, MV, HV, EV, IV (IV — D103). */
+    static final int[] CONVEYOR_TICKS = {400, 100, 20, 4, 1}, PUMP_RATES = {32, 128, 512, 2048, 8192};
+    public static final String[] TIERS = {"lv", "mv", "hv", "ev", "iv"};
     /** GT_MetaGenerated_Item_01:525 FluidRegulator_LV: new GT_Cover_FluidRegulator(32). */
     public static final int REGULATOR_RATE = 32;
 

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P Q",
+    "PS ",
+    "CPP"
+  ],
+  "key": {
+    "Q": "#c:gems/emerald",
+    "S": "#c:rods/chrome",
+    "P": "#c:plates/stainless_steel",
+    "C": "#c:circuits/advanced"
+  },
+  "result": {
+    "id": "iis:sensor_hv"
+  }
+}

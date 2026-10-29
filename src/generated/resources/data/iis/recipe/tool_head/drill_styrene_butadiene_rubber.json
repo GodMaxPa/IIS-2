@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XSX",
+    "XSX",
+    "ShS"
+  ],
+  "key": {
+    "X": "#c:plates/styrene_butadiene_rubber",
+    "S": "#c:plates/steel",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:drill_head_styrene_butadiene_rubber"
+  }
+}

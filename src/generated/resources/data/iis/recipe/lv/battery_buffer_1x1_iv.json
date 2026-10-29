@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WTW",
+    "WMW"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "W": "#iis:wires/1x/tungsten",
+    "T": "#c:chests/wooden"
+  },
+  "result": {
+    "id": "iis:battery_buffer_1x1_iv"
+  }
+}

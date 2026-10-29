@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/vanadium",
+    "#c:dusts/vanadium",
+    "#c:dusts/vanadium",
+    "#c:dusts/gallium"
+  ],
+  "result": {
+    "id": "iis:dust_vanadium_gallium",
+    "count": 4
+  }
+}

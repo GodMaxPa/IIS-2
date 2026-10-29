@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/4x/osmium",
+    "#iis:wires/4x/osmium"
+  ],
+  "result": {
+    "id": "iis:wire_osmium_8x"
+  }
+}

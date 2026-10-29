@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/silicone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ring_silicone",
+      "count": 4
+    }
+  ],
+  "duration": 14,
+  "eut": 24,
+  "keep": [
+    "iis:shape_extruder_ring"
+  ]
+}

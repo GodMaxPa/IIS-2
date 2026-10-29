@@ -1,0 +1,22 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/polydimethylsiloxane",
+      "count": 9
+    },
+    {
+      "ingredient": "#c:dusts/sulfur",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 600,
+  "eut": 30,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_silicone",
+      "amount": 1296
+    }
+  ]
+}

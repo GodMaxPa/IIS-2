@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "P",
+    "P",
+    "S"
+  ],
+  "key": {
+    "P": "#c:plates/styrene_butadiene_rubber",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "iis:file_styrene_butadiene_rubber"
+  }
+}

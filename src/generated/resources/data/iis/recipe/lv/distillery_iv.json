@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GBG",
+    "CMC",
+    "WPW"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "P": "iis:electric_pump_iv",
+    "B": "minecraft:blaze_rod",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/platinum",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:distillery_iv"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iis:block/hatch_dynamo_iv"
+    },
+    "facing=east": {
+      "model": "iis:block/hatch_dynamo_iv",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iis:block/hatch_dynamo_iv",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iis:block/hatch_dynamo_iv",
+      "y": 270
+    },
+    "facing=down": {
+      "model": "iis:block/hatch_dynamo_iv",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "iis:block/hatch_dynamo_iv",
+      "x": 270
+    }
+  }
+}

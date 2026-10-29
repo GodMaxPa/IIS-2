@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OGO",
+    "PMP",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "P": "iis:electric_pump_iv",
+    "O": "#iis:wires/4x/tungsten_steel",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/platinum",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:fluid_heater_iv"
+  }
+}

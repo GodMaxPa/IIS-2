@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ShS"
+  ],
+  "key": {
+    "S": "#c:rods/styrene_butadiene_rubber",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:long_rod_styrene_butadiene_rubber"
+  }
+}

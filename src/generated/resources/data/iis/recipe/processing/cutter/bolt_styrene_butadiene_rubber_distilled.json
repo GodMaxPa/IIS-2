@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/styrene_butadiene_rubber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_styrene_butadiene_rubber",
+      "count": 4
+    }
+  ],
+  "duration": 20,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 3
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SXO",
+    "dPw",
+    "OMW"
+  ],
+  "key": {
+    "M": "iis:electric_motor_iv",
+    "O": "#iis:rings/silicone",
+    "X": "#iis:rotors/tungsten_steel",
+    "S": "#iis:screws/tungsten_steel",
+    "W": "#iis:cables/1x/tungsten",
+    "P": "iis:pipe_medium_tungsten_steel",
+    "d": "#iis:tools/screwdriver",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:electric_pump_iv"
+  }
+}

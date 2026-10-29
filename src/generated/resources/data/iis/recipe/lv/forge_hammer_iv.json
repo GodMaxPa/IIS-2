@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "CMC",
+    "WAW"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "P": "iis:electric_piston_iv",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/platinum",
+    "A": "minecraft:anvil"
+  },
+  "result": {
+    "id": "iis:forge_hammer_iv"
+  }
+}
