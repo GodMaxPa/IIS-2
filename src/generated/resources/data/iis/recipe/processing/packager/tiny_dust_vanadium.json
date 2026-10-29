@@ -1,0 +1,20 @@
+{
+  "type": "iis:packager",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/vanadium",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_vanadium",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 4,
+  "keep": [
+    "iis:schematic_dust"
+  ]
+}

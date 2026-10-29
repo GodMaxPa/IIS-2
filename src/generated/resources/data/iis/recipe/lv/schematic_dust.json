@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    " P ",
+    "  d"
+  ],
+  "key": {
+    "P": "iis:schematic",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:schematic_dust"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "iis:packager",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/jasper",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_jasper",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 4,
+  "keep": [
+    "iis:schematic_dust"
+  ]
+}

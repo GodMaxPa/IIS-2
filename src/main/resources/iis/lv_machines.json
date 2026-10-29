@@ -315,6 +315,33 @@
     "gui": "lv/fluidcanner"
   },
   {
+    "id": "rock_breaker_lv",
+    "type": "rock_breaker",
+    "recipeMap": "rock_breaker",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/rockbreaker"
+  },
+  {
+    "id": "packager_lv",
+    "type": "packager",
+    "recipeMap": "packager",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/packager"
+  },
+  {
+    "id": "unpackager_lv",
+    "type": "unpackager",
+    "recipeMap": "unpackager",
+    "inputs": 1,
+    "outputs": 2,
+    "tank": 0,
+    "gui": "lv/unpackager"
+  },
+  {
     "id": "macerator_mv",
     "type": "macerator_mv",
     "recipeMap": "macerator",
@@ -619,6 +646,33 @@
     "outputs": 1,
     "tank": 32000,
     "gui": "lv/fluidcanner"
+  },
+  {
+    "id": "rock_breaker_mv",
+    "type": "rock_breaker_mv",
+    "recipeMap": "rock_breaker",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/rockbreaker"
+  },
+  {
+    "id": "packager_mv",
+    "type": "packager_mv",
+    "recipeMap": "packager",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/packager"
+  },
+  {
+    "id": "unpackager_mv",
+    "type": "unpackager_mv",
+    "recipeMap": "unpackager",
+    "inputs": 1,
+    "outputs": 2,
+    "tank": 0,
+    "gui": "lv/unpackager"
   },
   {
     "id": "thermal_centrifuge_mv",
@@ -936,6 +990,33 @@
     "gui": "lv/fluidcanner"
   },
   {
+    "id": "rock_breaker_hv",
+    "type": "rock_breaker_hv",
+    "recipeMap": "rock_breaker",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/rockbreaker"
+  },
+  {
+    "id": "packager_hv",
+    "type": "packager_hv",
+    "recipeMap": "packager",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/packager"
+  },
+  {
+    "id": "unpackager_hv",
+    "type": "unpackager_hv",
+    "recipeMap": "unpackager",
+    "inputs": 1,
+    "outputs": 2,
+    "tank": 0,
+    "gui": "lv/unpackager"
+  },
+  {
     "id": "thermal_centrifuge_hv",
     "type": "thermal_centrifuge_hv",
     "recipeMap": "thermal_centrifuge",
@@ -1251,6 +1332,33 @@
     "gui": "lv/fluidcanner"
   },
   {
+    "id": "rock_breaker_ev",
+    "type": "rock_breaker_ev",
+    "recipeMap": "rock_breaker",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/rockbreaker"
+  },
+  {
+    "id": "packager_ev",
+    "type": "packager_ev",
+    "recipeMap": "packager",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/packager"
+  },
+  {
+    "id": "unpackager_ev",
+    "type": "unpackager_ev",
+    "recipeMap": "unpackager",
+    "inputs": 1,
+    "outputs": 2,
+    "tank": 0,
+    "gui": "lv/unpackager"
+  },
+  {
     "id": "thermal_centrifuge_ev",
     "type": "thermal_centrifuge_ev",
     "recipeMap": "thermal_centrifuge",
@@ -1555,6 +1663,33 @@
     "outputs": 1,
     "tank": 80000,
     "gui": "lv/fluidcanner"
+  },
+  {
+    "id": "rock_breaker_iv",
+    "type": "rock_breaker_iv",
+    "recipeMap": "rock_breaker",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/rockbreaker"
+  },
+  {
+    "id": "packager_iv",
+    "type": "packager_iv",
+    "recipeMap": "packager",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/packager"
+  },
+  {
+    "id": "unpackager_iv",
+    "type": "unpackager_iv",
+    "recipeMap": "unpackager",
+    "inputs": 1,
+    "outputs": 2,
+    "tank": 0,
+    "gui": "lv/unpackager"
   },
   {
     "id": "thermal_centrifuge_iv",

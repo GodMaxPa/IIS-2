@@ -1,0 +1,21 @@
+{
+  "type": "iis:packager",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/12x/red_alloy",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/paper",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_red_alloy_12x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

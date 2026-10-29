@@ -1,0 +1,20 @@
+{
+  "type": "iis:packager",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/wrought_iron",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_wrought_iron",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 4,
+  "keep": [
+    "iis:schematic_dust"
+  ]
+}

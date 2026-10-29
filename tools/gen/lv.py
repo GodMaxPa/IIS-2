@@ -98,6 +98,10 @@ MACHINES = [
                       'Circuit Assembling Machine'),
     # D101: :839 fluid canner (1, 1, 16000; MV 32000, HV 48000, EV 64000) — single-use GT batteries
     ('fluid_canner',  'fluidcanner',   'FLUID_CANNER',     'FluidCanner',  'fluid_canner',  1, 1, 16000, 'Fluid Canner'),
+    # D103: GT_MetaTileEntity_RockBreaker (1 input + the programmed circuit -> 2 slots here), Boxinator, Unboxinator
+    ('rock_breaker',  'rockbreaker',   'ROCK_BREAKER',     'RockBreaker',  'rock_breaker',  2, 1, 0,     'Rock Breaker'),
+    ('packager',      'boxinator',     'BOXINATOR',        'Packager',     'packager',      2, 1, 0,     'Packager'),
+    ('unpackager',    'unboxinator',   'UNBOXINATOR',      'Unpackager',   'unpackager',    1, 2, 0,     'Unpackager'),
 ]
 # GT crafting of the D83 machines (both tiers, X.* resolved per tier like MV_CRAFT)
 NEW_CRAFT = {
@@ -112,6 +116,12 @@ NEW_CRAFT = {
     'circuit_assembler': (['ACE', 'VMV', 'WCW'], {'M': 'HULL', 'V': 'CONVEYOR', 'A': 'ROBOT_ARM', 'C': 'BETTER_CIRCUIT', 'W': 'WIRE',
                                                   'E': 'EMITTER'}),
     'fluid_canner': (['GCG', 'GMG', 'WPW'], {'M': 'HULL', 'P': 'PUMP', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),   # :839 (D101)
+    # D103: :858-862 rock breaker "PED/WMW/GCG" (craftingGrinder = diamond grinding head), :812-816 packager "BCB/RMV/WCW",
+    # :818-822 unpackager "BCB/VMR/WCW"
+    'rock_breaker': (['PED', 'WMW', 'GCG'], {'M': 'HULL', 'D': 'iis:grinder_diamond', 'E': 'MOTOR', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE',
+                                             'G': 'GLASS'}),
+    'packager': (['BCB', 'RMV', 'WCW'], {'M': 'HULL', 'R': 'ROBOT_ARM', 'V': 'CONVEYOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'B': '#c:chests/wooden'}),
+    'unpackager': (['BCB', 'VMR', 'WCW'], {'M': 'HULL', 'R': 'ROBOT_ARM', 'V': 'CONVEYOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'B': '#c:chests/wooden'}),
 }
 # MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
 # outputs and tanks as LV except the mixer (16000 L, :1022); the compressor tank (LV 4000, MV 8000) stays 0 as at LV (D82)
@@ -224,6 +234,9 @@ ITEMS = [
     ('sensor_ev', 'gt:693', 'gt.metaitem.01.32693.name', 'Sensor (EV)', 'Сенсор (EV)'),
     ('sensor_iv', 'gt:694', 'gt.metaitem.01.32694.name', 'Sensor (IV)', 'Сенсор (IV)'),
     ('capacitor', 'gt:718', 'gt.metaitem.01.32718.name', 'Capacitor', 'Конденсатор'),
+    # D103: GT_MetaGenerated_Item_01:383, 388 schematic and dust schematic (packager)
+    ('schematic', 'gt:490', 'gt.metaitem.01.32490.name', 'Schematic', 'Схема'),
+    ('schematic_dust', 'gt:498', 'gt.metaitem.01.32498.name', 'Schematic (Dusts)', 'Схема (Пыль)'),
     ('circuit_elite', 'gt:705', 'gt.metaitem.01.32705.name', 'Mainframe', 'Мейнфрейм'),
     # D94: GT_MetaGenerated_Item_03:50 small coil (HV transformer)
     ('coil_small', 'gt:coil_small', 'gt.metaitem.03.32014.name', 'Small Coil', 'Малая катушка'),
@@ -1626,6 +1639,37 @@ def generate(g):
     mrec('coke_oven', 'coal', [ing('minecraft:coal')], [out(f'{NS}:coal_coke')], 1800, 0, None, {'id': f'{NS}:creosote', 'amount': 500})
     mrec('coke_oven', 'coal_block', [ing('minecraft:coal_block')], [], 1800 * 9, 0, None, {'id': f'{NS}:creosote', 'amount': 4500})
     machine_recipes.pop('coke_oven/coal_block', None)  # needs a coke block; coal only for now
+    # --- D103: rock breaker (GT_MachineRecipeLoader:2019-2029, programmed circuit 1-3 / 11-13 / 21-23, 30 EU/t), packager and
+    # unpackager (ProcessingDust:237, 253 tiny x9 / small x4 + dust schematic -> dust, 100 t 4 EU/t; ProcessingWire:111-120
+    # wire + paper / carpet -> cable, :174 cable -> wire 100 t 8 EU/t), schematics (:421 assembler, GT_MetaGenerated_Item_01:393)
+    for c, out_, n, t in ((1, 'minecraft:cobblestone', 1, 16), (2, 'minecraft:cobblestone', 8, 128), (3, 'minecraft:cobblestone', 64, 1024),
+                          (11, 'minecraft:stone', 1, 16), (12, 'minecraft:stone', 8, 128), (13, 'minecraft:stone', 64, 1024)):
+        mrec('rock_breaker', f'{out_.split(":")[1]}_{n}', [], [{'id': out_, 'count': n}], t, 30, circuit=c)
+    for c, n, t in ((21, 1, 128), (22, 8, 1024), (23, 64, 8192)):
+        mrec('rock_breaker', f'obsidian_{n}', [ing('minecraft:redstone', n)], [{'id': 'minecraft:obsidian', 'count': n}], t, 30, circuit=c)
+    mrec('assembler', 'schematic', [ing(P('StainlessSteel'), 2), ing('#c:circuits/good', 4)], [out(f'{NS}:schematic')], 3200, 4)
+    shaped('lv/schematic_dust', f'{NS}:schematic_dust', 1, ['   ', ' P ', '  d'], {'P': f'{NS}:schematic', 'd': '#iis:tools/screwdriver'})
+    shapeless('lv/schematic_from_dust', f'{NS}:schematic', 1, [f'{NS}:schematic_dust'])
+    keep_schematic = [f'{NS}:schematic_dust']
+    for n_ in sorted(names):
+        d_ = ref('dust', n_)
+        if not d_:
+            continue
+        for form, k in (('tiny_dust', 9), ('small_dust', 4)):
+            if ref(form, n_):
+                mrec('packager', f'{form}_{mat_id(n_)}', [ing(tag_of(form, n_), k)], [out(d_)], 100, 4, keep=keep_schematic)
+    for mat, *_ in WIRES:
+        mid = mat_id(mat)
+        for size in (1, 2, 4, 8, 12):
+            cable = f'{NS}:cable_{mid}_{size}x'
+            if not os.path.exists(os.path.join(A, 'items', f'cable_{mid}_{size}x.json')):
+                continue
+            mrec('unpackager', f'cable_{mid}_{size}x', [ing(cable)], [out(f'{NS}:wire_{mid}_{size}x')], 100, 8)
+            cost = size // 4 + 1
+            if mat in WIRE_PAPER:
+                mrec('packager', f'cable_{mid}_{size}x_paper', [ing(W(mat, size)), ing(P('Paper'), cost)], [out(cable)], 100, 8)
+            if mat in WIRE_CARPET:
+                mrec('packager', f'cable_{mid}_{size}x_carpet', [ing(W(mat, size)), ing('minecraft:black_carpet', cost)], [out(cable)], 100, 8)
     lv2_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER)
     # LV III: chemistry and melts (D76)
     import importlib.util as _ilu

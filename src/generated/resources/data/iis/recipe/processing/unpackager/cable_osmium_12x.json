@@ -1,0 +1,17 @@
+{
+  "type": "iis:unpackager",
+  "inputs": [
+    {
+      "ingredient": "iis:cable_osmium_12x",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_osmium_12x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

@@ -1,0 +1,20 @@
+{
+  "type": "iis:packager",
+  "inputs": [
+    {
+      "ingredient": "#iis:small_dusts/glass",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_glass",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 4,
+  "keep": [
+    "iis:schematic_dust"
+  ]
+}

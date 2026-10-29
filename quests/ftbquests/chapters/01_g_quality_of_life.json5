@@ -122,6 +122,29 @@
       ]
     },
     {
+      "id": "1A00000000000300",
+      "x": 5.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000000F7"
+      ],
+      "icon": {
+        "id": "iis:schematic",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:schematic",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000030000"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000475",
       "x": 3.5,
       "y": 2.0,
@@ -164,6 +187,65 @@
           },
           "count": 1,
           "id": "1B00000000047800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004D5",
+      "x": 6.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000001E2"
+      ],
+      "icon": {
+        "id": "iis:packager_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:packager_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D500"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:packager_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D501"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:packager_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D502"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:packager_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D503"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:packager_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D504"
         }
       ]
     }

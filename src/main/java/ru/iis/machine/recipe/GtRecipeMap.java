@@ -50,7 +50,12 @@ public enum GtRecipeMap {
     BREWERY("brewery", 1, 0),
     CIRCUIT_ASSEMBLER("circuit_assembler", 6, 1),
     // D101: sFluidCannerRecipes (предмет + жидкость → предмет), одноразовые батарейки GT
-    FLUID_CANNER("fluid_canner", 1, 1);
+    FLUID_CANNER("fluid_canner", 1, 1),
+    // D103: sRockBreakerFakeRecipes (по программной схеме: булыжник, камень, обсидиан из красной пыли), sBoxinatorRecipes,
+    // sUnboxinatorRecipes
+    ROCK_BREAKER("rock_breaker", 2, 1),
+    PACKAGER("packager", 2, 1),
+    UNPACKAGER("unpackager", 1, 2);
 
     public final String id;
     public final int maxInputs, maxOutputs;

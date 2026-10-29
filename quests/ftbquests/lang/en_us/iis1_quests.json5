@@ -1237,6 +1237,10 @@
     "An important part of a macerator and a rock breaker."
   ],
   "quest.1A000000000001F0.title": "Diamond Grinding Head",
+  "quest.1A000000000001F4.quest_desc": [
+    "This is a wonderful machine. You can check it, when place water cell and lava into. Also programmed circiut is required. Then connect it to electricity and enjoy of infinite generation of cobblestone. Also it may produce obsidian from redstone dust, yeah."
+  ],
+  "quest.1A000000000001F4.title": "Basic Rock Breaker",
   "quest.1A000000000001F5.quest_desc": [
     "The base for high level electronic circuit"
   ],
@@ -1673,6 +1677,10 @@
     "Can produce energy from any gas fuel."
   ],
   "quest.1A000000000002FC.title": "Basic Gas Turbine",
+  "quest.1A00000000000300.quest_desc": [
+    "It is required for some recipes. Also you may use it with packager to combine small and tiny dust to get a dust with normal size. But you have to set a config \"dusts\" on it by screwdriver on crafting table."
+  ],
+  "quest.1A00000000000300.title": "Schematic",
   "quest.1A00000000000301.quest_desc": [
     "Pour to mixer Dinitrogen Tetroxide and 1,1-Dimethylhydrazine"
   ],
@@ -2333,6 +2341,10 @@
     "You may put it as a cover on pipe or input/output hatch to set a flow power. Negative numbers means that it will pump into a block on which you put it. Positive - it will pump a gas o liquid from a block on which you place it, to the side it looks to. You may set flow by clicking RMB with empty hand or by screwdriver."
   ],
   "quest.1A000000000004D2.title": "Fluid Regulator",
+  "quest.1A000000000004D5.quest_desc": [
+    "Craft any packager between LV and (including) IV tier. It may not only make covered LV wires (with help of carpet), but also combine small and tiny dusts to make from it a dust with normal size. Note, that this mode require to use a item \"schematic (Dusts)\"."
+  ],
+  "quest.1A000000000004D5.title": "Packager (LV - IV)",
   "quest.1A000000000004DA.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2585,6 +2597,66 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000053E.title": "[sb] Molecular Exitement Processor (IV)",
+  "quest.1A0000000000054A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000054A.title": "[sb] Basic Packager",
+  "quest.1A0000000000054B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000054B.title": "[sb] Advanced Packager",
+  "quest.1A0000000000054C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000054C.title": "[sb] Advanced Packager II",
+  "quest.1A0000000000054D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000054D.title": "[sb] Advanced Packager III",
+  "quest.1A0000000000054E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000054E.title": "[sb] Boxinator (IV)",
+  "quest.1A00000000000552.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000552.title": "[sb] Basic Unpackager",
+  "quest.1A00000000000553.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000553.title": "[sb] Advanced Unpackager",
+  "quest.1A00000000000554.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000554.title": "[sb] Advanced Unpackager II",
+  "quest.1A00000000000555.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000555.title": "[sb] Advanced Unpackager III",
+  "quest.1A00000000000556.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000556.title": "[sb] Unboxinator (IV)",
+  "quest.1A0000000000055A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000055A.title": "[sb] Basic Rock Breaker",
+  "quest.1A0000000000055B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000055B.title": "[sb] Advanced Rock Breaker",
+  "quest.1A0000000000055C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000055C.title": "[sb] Advanced Rock Breaker II",
+  "quest.1A0000000000055D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000055D.title": "[sb] Advanced Rock Breaker III",
+  "quest.1A0000000000055E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000055E.title": "[sb] Cryogenic Magma Solidifier R-8200 (IV)",
   "quest.1A00000000000562.quest_desc": [
     "One of many single-block machines."
   ],

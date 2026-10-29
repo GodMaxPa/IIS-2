@@ -1,0 +1,21 @@
+{
+  "type": "iis:packager",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/4x/zinc",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:black_carpet",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_zinc_4x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

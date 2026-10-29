@@ -1,0 +1,20 @@
+{
+  "type": "iis:packager",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/green_sapphire",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_green_sapphire",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 4,
+  "keep": [
+    "iis:schematic_dust"
+  ]
+}

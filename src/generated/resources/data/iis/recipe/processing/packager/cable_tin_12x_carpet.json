@@ -1,0 +1,21 @@
+{
+  "type": "iis:packager",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/12x/tin",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:black_carpet",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_tin_12x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

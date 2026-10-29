@@ -1,0 +1,20 @@
+{
+  "type": "iis:packager",
+  "inputs": [
+    {
+      "ingredient": "#iis:small_dusts/blue_steel",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_blue_steel",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 4,
+  "keep": [
+    "iis:schematic_dust"
+  ]
+}

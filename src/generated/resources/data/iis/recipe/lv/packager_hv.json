@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BCB",
+    "RMV",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "R": "iis:robot_arm_hv",
+    "V": "iis:conveyor_module_hv",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold",
+    "B": "#c:chests/wooden"
+  },
+  "result": {
+    "id": "iis:packager_hv"
+  }
+}

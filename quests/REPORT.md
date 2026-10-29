@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 836; hidden until their items are ported: 1106; chapters: 34.
+Quests in IIS 1: 1943; written: 854; hidden until their items are ported: 1088; chapters: 34.
 
 ## Most needed unported items (task count)
 
@@ -20,7 +20,6 @@ Quests in IIS 1: 1943; written: 836; hidden until their items are ported: 1106; 
 - 2 × `gregtech:gt.blockmachines:324` Принтер (EV)
 - 2 × `gregtech:gt.blockmachines:325` Принтер (IV)
 - 2 × `gregtech:gt.blockmachines:680` Улучшенный автобур (MV)
-- 2 × `gregtech:gt.blockmachines:441` Разрушитель камня (LV)
 - 2 × `gregtech:gt.metaitem.01:11070` Европиевый слиток
 - 2 × `gregtech:gt.blockmachines:1184` Сборщик микросхем (IV)
 - 2 × `EnderIO:itemSoulVessel:0` 
@@ -41,11 +40,6 @@ Quests in IIS 1: 1943; written: 836; hidden until their items are ported: 1106; 
 - 2 × `gregtech:gt.blockmachines:331` Утилизатор (LV)
 - 2 × `gregtech:gt.blockmachines:471` Амплифабрикатор (LV)
 - 2 × `gregtech:gt.blockmachines:679` Автобур (LV)
-- 2 × `gregtech:gt.blockmachines:401` Упаковщик (LV)
-- 2 × `gregtech:gt.blockmachines:402` Упаковщик (MV)
-- 2 × `gregtech:gt.blockmachines:403` Упаковщик (HV)
-- 2 × `gregtech:gt.blockmachines:404` Упаковщик (EV)
-- 2 × `gregtech:gt.blockmachines:405` Упаковщик (IV)
 - 2 × `gregtech:gt.blockmachines:315` Микроволновая печь (IV)
 - 2 × `gregtech:gt.blockmachines:314` Микроволновая печь (EV)
 - 2 × `gregtech:gt.blockmachines:313` Микроволновая печь (HV)
@@ -84,6 +78,12 @@ Quests in IIS 1: 1943; written: 836; hidden until their items are ported: 1106; 
 - 1 × `gregtech:gt.blockgem1:4` Блок синего топаза
 - 1 × `gregtech:gt.blockgem2:5` Опаловый блок
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:19` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:15` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:35` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:22` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:8` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:39` 
+- 1 × `appliedenergistics2:item.ItemBasicStorageCell.1k:0` 
 
 ## Unported fluids
 
@@ -96,8 +96,8 @@ Quests in IIS 1: 1943; written: 836; hidden until their items are ported: 1106; 
 
 ## Dropped reward items
 
-- 428 × `('gregtech:gt.metaitem.01', 32000)`
-- 185 × `('gregtech:gt.metaitem.01', 32001)`
+- 430 × `('gregtech:gt.metaitem.01', 32000)`
+- 186 × `('gregtech:gt.metaitem.01', 32001)`
 - 16 × `bq_standard:choice`
 - 6 × `('gregtech:gt.metaitem.01', 32003)`
 - 5 × `('gregtech:gt.metaitem.01', 32002)`

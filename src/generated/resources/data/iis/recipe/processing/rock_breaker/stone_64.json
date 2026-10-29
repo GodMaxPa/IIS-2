@@ -1,0 +1,13 @@
+{
+  "type": "iis:rock_breaker",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "minecraft:stone",
+      "count": 64
+    }
+  ],
+  "duration": 1024,
+  "eut": 30,
+  "circuit": 13
+}

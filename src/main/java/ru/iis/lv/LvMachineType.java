@@ -198,7 +198,23 @@ public enum LvMachineType {
     ARC_FURNACE_IV("arc_furnace", GtRecipeMap.ARC_FURNACE, 1, 6, 16000, "arcfurnace", VoltageTier.IV),
     LASER_ENGRAVER_IV("laser_engraver", GtRecipeMap.LASER_ENGRAVER, 2, 1, 0, "laserengraver", VoltageTier.IV),
     BREWERY_IV("brewery", GtRecipeMap.BREWERY, 1, 0, 750, "potionbrewer", VoltageTier.IV),
-    FLUID_CANNER_IV("fluid_canner", GtRecipeMap.FLUID_CANNER, 1, 1, 80000, "fluidcanner", VoltageTier.IV);
+    FLUID_CANNER_IV("fluid_canner", GtRecipeMap.FLUID_CANNER, 1, 1, 80000, "fluidcanner", VoltageTier.IV),
+    // D103: разрушитель камня (GT_MetaTileEntity_RockBreaker: красная пыль и программная схема), упаковщик и распаковщик LV–IV
+    ROCK_BREAKER("rock_breaker", GtRecipeMap.ROCK_BREAKER, 2, 1, 0, "rockbreaker"),
+    PACKAGER("packager", GtRecipeMap.PACKAGER, 2, 1, 0, "packager"),
+    UNPACKAGER("unpackager", GtRecipeMap.UNPACKAGER, 1, 2, 0, "unpackager"),
+    ROCK_BREAKER_MV("rock_breaker", GtRecipeMap.ROCK_BREAKER, 2, 1, 0, "rockbreaker", VoltageTier.MV),
+    PACKAGER_MV("packager", GtRecipeMap.PACKAGER, 2, 1, 0, "packager", VoltageTier.MV),
+    UNPACKAGER_MV("unpackager", GtRecipeMap.UNPACKAGER, 1, 2, 0, "unpackager", VoltageTier.MV),
+    ROCK_BREAKER_HV("rock_breaker", GtRecipeMap.ROCK_BREAKER, 2, 1, 0, "rockbreaker", VoltageTier.HV),
+    PACKAGER_HV("packager", GtRecipeMap.PACKAGER, 2, 1, 0, "packager", VoltageTier.HV),
+    UNPACKAGER_HV("unpackager", GtRecipeMap.UNPACKAGER, 1, 2, 0, "unpackager", VoltageTier.HV),
+    ROCK_BREAKER_EV("rock_breaker", GtRecipeMap.ROCK_BREAKER, 2, 1, 0, "rockbreaker", VoltageTier.EV),
+    PACKAGER_EV("packager", GtRecipeMap.PACKAGER, 2, 1, 0, "packager", VoltageTier.EV),
+    UNPACKAGER_EV("unpackager", GtRecipeMap.UNPACKAGER, 1, 2, 0, "unpackager", VoltageTier.EV),
+    ROCK_BREAKER_IV("rock_breaker", GtRecipeMap.ROCK_BREAKER, 2, 1, 0, "rockbreaker", VoltageTier.IV),
+    PACKAGER_IV("packager", GtRecipeMap.PACKAGER, 2, 1, 0, "packager", VoltageTier.IV),
+    UNPACKAGER_IV("unpackager", GtRecipeMap.UNPACKAGER, 1, 2, 0, "unpackager", VoltageTier.IV);
 
     public final String id;
     public final GtRecipeMap recipeMap;

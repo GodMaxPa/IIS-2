@@ -1,0 +1,13 @@
+{
+  "type": "iis:rock_breaker",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "minecraft:cobblestone",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 30,
+  "circuit": 1
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:rock_breaker",
+  "inputs": [
+    {
+      "ingredient": "minecraft:redstone",
+      "count": 64
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:obsidian",
+      "count": 64
+    }
+  ],
+  "duration": 8192,
+  "eut": 30,
+  "circuit": 23
+}

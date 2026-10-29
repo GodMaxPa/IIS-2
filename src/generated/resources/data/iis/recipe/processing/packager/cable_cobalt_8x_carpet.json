@@ -1,0 +1,21 @@
+{
+  "type": "iis:packager",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/8x/cobalt",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:black_carpet",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_cobalt_8x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

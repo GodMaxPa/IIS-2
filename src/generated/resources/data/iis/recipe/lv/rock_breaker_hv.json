@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PED",
+    "WMW",
+    "GCG"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "D": "iis:grinder_diamond",
+    "E": "iis:electric_motor_hv",
+    "P": "iis:electric_piston_hv",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:rock_breaker_hv"
+  }
+}

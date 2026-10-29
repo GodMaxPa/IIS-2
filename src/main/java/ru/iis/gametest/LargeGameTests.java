@@ -622,6 +622,40 @@ final class LargeGameTests {
         h.succeedWhen(() -> h.assertTrue(count(out, "hot_ingot_tungsten_steel") == 2, "output bus " + out.stacks()));
     }
 
+    private static ItemStack programmed(int n) {
+        return ru.iis.lv.item.ProgrammedCircuitItem.withConfig(new ItemStack(LvContent.PROGRAMMED_CIRCUIT.get()), n);
+    }
+
+    /** Разрушитель камня LV (GT_MachineRecipeLoader:2019, D103): схема 1 → булыжник, по одному за 16 тиков. */
+    static void rockBreakerMakesCobble(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.ROCK_BREAKER);
+        m.setItem(1, programmed(1));
+        h.succeedWhen(() -> h.assertTrue(m.getItem(2).is(net.minecraft.world.item.Items.COBBLESTONE) && m.getItem(2).getCount() >= 2,
+                "cobblestone " + m.getItem(2)));
+    }
+
+    /** Разрушитель камня LV (:2027): схема 21 + красная пыль → обсидиан (128 тиков). */
+    static void rockBreakerMakesObsidian(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.ROCK_BREAKER);
+        m.setItem(1, programmed(21));
+        m.setItem(0, new ItemStack(net.minecraft.world.item.Items.REDSTONE));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.getItem(2).is(net.minecraft.world.item.Items.OBSIDIAN), "obsidian " + m.getItem(2));
+            h.assertTrue(m.getItem(0).isEmpty(), "redstone left " + m.getItem(0));
+        });
+    }
+
+    /** Упаковщик LV (ProcessingDust:253, D103): 9 крошечных медных пылей + схема пыли (остаётся) → медная пыль. */
+    static void packagerJoinsTinyDust(GameTestHelper h) {
+        var m = poweredMachine(h, ru.iis.lv.LvMachineType.PACKAGER);
+        m.setItem(0, new ItemStack(ru.iis.command.SelfTest.item("tiny_dust_copper"), 9));
+        m.setItem(1, new ItemStack(ru.iis.command.SelfTest.item("schematic_dust")));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.getItem(2).is(ru.iis.command.SelfTest.item("dust_copper")), "output " + m.getItem(2));
+            h.assertTrue(m.getItem(1).is(ru.iis.command.SelfTest.item("schematic_dust")), "schematic consumed");
+        });
+    }
+
     /** Измельчитель IV (D103): 8192 В, четыре выхода; руда халькопирита → 2 дроблёной. */
     static void ivMaceratorOre(GameTestHelper h) {
         var m = poweredMachine(h, ru.iis.lv.LvMachineType.MACERATOR_IV);

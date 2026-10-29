@@ -256,6 +256,9 @@ public final class LvContent {
     public static final DeferredItem<Item> SENSOR_EV = item("sensor_ev");
     public static final DeferredItem<Item> SENSOR_IV = item("sensor_iv");
     public static final DeferredItem<Item> CAPACITOR = item("capacitor");
+    // D103: схемы GT для упаковщика (GT_MetaGenerated_Item_01:383, 388)
+    public static final DeferredItem<Item> SCHEMATIC = item("schematic");
+    public static final DeferredItem<Item> SCHEMATIC_DUST = item("schematic_dust");
     public static final DeferredItem<Item> CIRCUIT_ELITE = item("circuit_elite");
     // D94: малая катушка GT (GT_MetaGenerated_Item_03:50) — трансформатор HV
     public static final DeferredItem<Item> COIL_SMALL = item("coil_small");
@@ -406,6 +409,7 @@ public final class LvContent {
             Map.entry("circuit_integrated_good", 2), Map.entry("silicon_boule", 2), Map.entry("silicon_wafer", 2),
             Map.entry("wafer_ilc", 2), Map.entry("chip_ilc", 2), Map.entry("wafer_ram", 2), Map.entry("chip_ram", 2),
             Map.entry("coil_small", 2), Map.entry("grinder_diamond", 2), Map.entry("plant_ball", 2), Map.entry("bio_chaff", 2),
+            Map.entry("schematic", 1), Map.entry("schematic_dust", 1),
             Map.entry("circuit_data", 3), Map.entry("circuit_board_plastic", 3), Map.entry("capacitor", 3), Map.entry("circuit_elite", 3));
 
     /** Уровень вкладки 0…4 (LV…IV): суффикс _lv/_mv/_hv/_ev/_iv, у кабелей — напряжение, насадки экструдера — MV, иначе по таблице или LV. */
