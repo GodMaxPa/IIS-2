@@ -140,8 +140,11 @@ public final class MultiContent {
 
     public static final DeferredItem<SolderingIronItem> SOLDERING_IRON = ITEMS.registerItem("soldering_iron_lv", SolderingIronItem::new, p -> p.stacksTo(1));
 
+    /** Блоки люков этих видов, со всеми уровнями (шины и люки MV–IV, D103). */
     private static Block[] hatches(HatchType... types) {
-        return Arrays.stream(types).map(t -> HATCHES.get(t).get()).toArray(Block[]::new);
+        java.util.Set<HatchType> kinds = java.util.Set.of(types);
+        return Arrays.stream(HatchType.values()).filter(t -> kinds.contains(t) || kinds.contains(t.kind()) && t.kind() != t)
+                .map(t -> HATCHES.get(t).get()).toArray(Block[]::new);
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EnergyHatchBlockEntity>> ENERGY_HATCH_BE = BLOCK_ENTITIES.register("energy_hatch",

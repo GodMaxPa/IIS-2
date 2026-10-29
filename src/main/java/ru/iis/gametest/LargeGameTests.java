@@ -609,6 +609,19 @@ final class LargeGameTests {
         });
     }
 
+    /** Шина IV (D103) в ЭДП работает как шина LV: 36 слотов, вольфрамосталь плавится из слитков в 20-м слоте. */
+    static void ebfAcceptsIvBus(GameTestHelper h) {
+        smeltingEbf(h, MultiContent.COIL_NICHROME.get());
+        BlockPos busPos = new BlockPos(5, 1, 2);
+        h.setBlock(busPos, MultiGameTests.hatch(HatchType.INPUT_BUS_IV, Direction.NORTH));
+        ItemBusBlockEntity in = h.getBlockEntity(busPos, ItemBusBlockEntity.class);
+        ItemBusBlockEntity out = h.getBlockEntity(new BlockPos(4, 1, 3), ItemBusBlockEntity.class);
+        h.assertTrue(in.getContainerSize() == 36, "IV bus slots " + in.getContainerSize());
+        in.setItem(20, new ItemStack(ru.iis.command.SelfTest.item("ingot_tungsten")));
+        in.setItem(30, new ItemStack(ru.iis.command.SelfTest.item("ingot_steel")));
+        h.succeedWhen(() -> h.assertTrue(count(out, "hot_ingot_tungsten_steel") == 2, "output bus " + out.stacks()));
+    }
+
     /** Измельчитель IV (D103): 8192 В, четыре выхода; руда халькопирита → 2 дроблёной. */
     static void ivMaceratorOre(GameTestHelper h) {
         var m = poweredMachine(h, ru.iis.lv.LvMachineType.MACERATOR_IV);

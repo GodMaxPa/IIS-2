@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iis:block/hatch_output_ev"
+    },
+    "facing=east": {
+      "model": "iis:block/hatch_output_ev",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iis:block/hatch_output_ev",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iis:block/hatch_output_ev",
+      "y": 270
+    },
+    "facing=down": {
+      "model": "iis:block/hatch_output_ev",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "iis:block/hatch_output_ev",
+      "x": 270
+    }
+  }
+}

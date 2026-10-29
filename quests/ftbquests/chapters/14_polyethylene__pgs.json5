@@ -102,8 +102,7 @@
         "1A000000000002D2",
         "1A0000000000004A",
         "1A000000000002D3",
-        "1A00000000000128",
-        "1A0000000000012E"
+        "1A00000000000721"
       ],
       "tasks": [
         {
@@ -499,6 +498,91 @@
       ]
     },
     {
+      "id": "1A000000000002D9",
+      "x": 6.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000002D7",
+        "1A000000000002D8"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:tiny_dust_platinum_group_sludge",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:tiny_dust_platinum_group_sludge",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002D900"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000346",
+      "x": 12.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000126",
+        "1A0000000000012E"
+      ],
+      "icon": {
+        "id": "iis:forming_press_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_press_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034600"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_press_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034601"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_press_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034602"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_press_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034603"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_press_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034604"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000034B",
       "x": 14.0,
       "y": 6.5,
@@ -567,6 +651,66 @@
           },
           "count": 1,
           "id": "1B0000000006B200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000721",
+      "x": 12.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000128",
+        "1A0000000000012E"
+      ],
+      "icon": {
+        "id": "iis:compressor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072100"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressor_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072101"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressor_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072102"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressor_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072103"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressor_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072104"
         }
       ]
     }

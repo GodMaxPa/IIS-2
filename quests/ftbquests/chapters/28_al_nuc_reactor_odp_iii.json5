@@ -28,6 +28,76 @@
       ]
     },
     {
+      "id": "1A00000000000076",
+      "x": 2.0,
+      "y": 7.0,
+      "dependencies": [
+        "1A00000000000075",
+        "1A00000000000080"
+      ],
+      "icon": {
+        "id": "iis:electric_piston_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_piston_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000007600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000077",
+      "x": 0.5,
+      "y": 5.5,
+      "dependencies": [
+        "1A00000000000076"
+      ],
+      "icon": {
+        "id": "iis:robot_arm_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:robot_arm_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000007700"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000007D",
+      "x": 2.0,
+      "y": 1.0,
+      "dependencies": [
+        "1A00000000000079"
+      ],
+      "icon": {
+        "id": "iis:hatch_energy_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hatch_energy_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000007D00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000083",
       "x": 6.5,
       "y": 1.0,

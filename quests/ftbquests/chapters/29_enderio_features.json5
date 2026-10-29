@@ -5,6 +5,29 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A00000000000022",
+      "x": 3.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000023"
+      ],
+      "icon": {
+        "id": "iis:rod_osmium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_osmium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000002200"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000257",
       "x": 2.0,
       "y": 6.5,
@@ -24,6 +47,30 @@
           },
           "count": 1,
           "id": "1B00000000025700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000260",
+      "x": 5.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000046",
+        "1A00000000000022"
+      ],
+      "icon": {
+        "id": "iis:emitter_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:emitter_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000026000"
         }
       ]
     },

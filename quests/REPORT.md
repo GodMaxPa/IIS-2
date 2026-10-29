@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 764; hidden until their items are ported: 1178; chapters: 34.
+Quests in IIS 1: 1943; written: 836; hidden until their items are ported: 1106; chapters: 34.
 
 ## Most needed unported items (task count)
 
@@ -9,8 +9,6 @@ Quests in IIS 1: 1943; written: 764; hidden until their items are ported: 1178; 
 - 8 × `gregtech:gt.metaitem.01:32003` Золотая монета
 - 5 × `gregtech:gt.metaitem.01:32000` Медная монета
 - 5 × `gregtech:gt.metaitem.01:32004` Платиновая монета
-- 4 × `gregtech:gt.blockmachines:575` Автоклав (IV)
-- 2 × `gregtech:gt.metaitem.01:32694` Сенсор (IV)
 - 2 × `gregtech:gt.blockmachines:341` Сканер (LV)
 - 2 × `gregtech:gt.blockmachines:342` Сканер (MV)
 - 2 × `gregtech:gt.blockmachines:343` Сканер (HV)
@@ -23,10 +21,7 @@ Quests in IIS 1: 1943; written: 764; hidden until their items are ported: 1178; 
 - 2 × `gregtech:gt.blockmachines:325` Принтер (IV)
 - 2 × `gregtech:gt.blockmachines:680` Улучшенный автобур (MV)
 - 2 × `gregtech:gt.blockmachines:441` Разрушитель камня (LV)
-- 2 × `gregtech:gt.blockmachines:545` Химическая ванна (IV)
-- 2 × `gregtech:gt.blockmachines:625` Нагреватель жидкости (IV)
 - 2 × `gregtech:gt.metaitem.01:11070` Европиевый слиток
-- 2 × `gregtech:gt.blockmachines:215` Сборочный станок (IV)
 - 2 × `gregtech:gt.blockmachines:1184` Сборщик микросхем (IV)
 - 2 × `EnderIO:itemSoulVessel:0` 
 - 2 × `gregtech:gt.blockmachines:1185` Сборщик микросхем (LuV)
@@ -39,8 +34,6 @@ Quests in IIS 1: 1943; written: 764; hidden until their items are ported: 1178; 
 - 2 × `gregtech:gt.blockmachines:453` Разборочный станок (HV)
 - 2 × `gregtech:gt.blockmachines:454` Разборочный станок (EV)
 - 2 × `gregtech:gt.blockmachines:501` Ферментёр (LV)
-- 2 × `gregtech:gt.blockmachines:435` Разливочная машина (IV)
-- 2 × `gregtech:gt.blockmachines:605` Формовочный пресс (IV)
 - 2 × `gregtech:gt.blockmachines:576` Автоклав (LuV)
 - 2 × `gregtech:gt.blockmachines:577` Автоклав (ZPM)
 - 2 × `gregtech:gt.blockmachines:681` Органический репликатор (LV)
@@ -48,7 +41,6 @@ Quests in IIS 1: 1943; written: 764; hidden until their items are ported: 1178; 
 - 2 × `gregtech:gt.blockmachines:331` Утилизатор (LV)
 - 2 × `gregtech:gt.blockmachines:471` Амплифабрикатор (LV)
 - 2 × `gregtech:gt.blockmachines:679` Автобур (LV)
-- 2 × `gregtech:gt.blockmachines:585` Миксер (IV)
 - 2 × `gregtech:gt.blockmachines:401` Упаковщик (LV)
 - 2 × `gregtech:gt.blockmachines:402` Упаковщик (MV)
 - 2 × `gregtech:gt.blockmachines:403` Упаковщик (HV)
@@ -59,8 +51,6 @@ Quests in IIS 1: 1943; written: 764; hidden until their items are ported: 1178; 
 - 2 × `gregtech:gt.blockmachines:313` Микроволновая печь (HV)
 - 2 × `gregtech:gt.blockmachines:312` Микроволновая печь (MV)
 - 2 × `gregtech:gt.blockmachines:311` Микроволновая печь (LV)
-- 2 × `gregtech:gt.blockmachines:245` Компрессор (IV)
-- 2 × `gregtech:gt.blockmachines:275` Экстрактор (IV)
 - 2 × `gregtech:gt.blockmachines:50` Входной люк (ULV)
 - 2 × `gregtech:gt.blockmachines:60` Выходной люк (ULV)
 - 2 × `gregtech:gt.blockmachines:1146` Отпугиватель монстров (LV)
@@ -70,12 +60,7 @@ Quests in IIS 1: 1943; written: 764; hidden until their items are ported: 1178; 
 - 2 × `gregtech:gt.blockmachines:1150` Отпугиватель монстров (IV)
 - 2 × `gregtech:gt.metaitem.01:32018` Базовый считыватель данных
 - 2 × `ProjRed|Fabrication:projectred.fabrication.icblueprint:0` 
-- 1 × `gregtech:gt.metaitem.01:32614` Электрическая помпа (IV)
-- 1 × `gregtech:gt.metaitem.01:28635` Кольцо из бутадиен-стирольного каучука
-- 1 × `gregtech:gt.metaitem.01:28471` Кольцо из силиконовой резины
 - 1 × `gregtech:gt.blockmachines:5162` 
-- 1 × `gregtech:gt.metaitem.01:17635` Лист бутадиен-стирольного каучука
-- 1 × `gregtech:gt.metaitem.01:17471` Лист силиконовой резины
 - 1 × `GalacticraftMars:item.itemTier3Rocket:3` 
 - 1 × `GalacticraftMars:item.itemBasicAsteroids:1` 
 - 1 × `GalacticraftMars:item.itemBasicAsteroids:2` 
@@ -84,6 +69,21 @@ Quests in IIS 1: 1943; written: 764; hidden until their items are ported: 1178; 
 - 1 × `gregtech:gt.blockmachines:5165` 
 - 1 × `gregtech:gt.metaitem.01:32619` Жидкостный регулятор (IV)
 - 1 × `gregtech:gt.metaitem.01:11103` Америциевый слиток
+- 1 × `gregtech:gt.metaitem.01:32695` Сенсор (LuV)
+- 1 × `gregtech:gt.metaitem.01:17329` Тританиевая пластина
+- 1 × `gregtech:gt.blockmachines:1194` Блок управления термоядерным реактором II (ZPM)
+- 1 × `gregtech:gt.metaitem.01:32464` Сверхпрочный слиток T3
+- 1 × `gregtech:gt.metaitem.01:17325` Пластина сплава наквадаха
+- 1 × `gregtech:gt.metaitem.01:11325` Слиток сплава наквадаха
+- 1 × `gregtech:gt.blockmachines:4468` 
+- 1 × `gregtech:gt.blockmachines:1170` Сборочная линия
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:14` 
+- 1 × `gregtech:gt.metaitem.01:22305` Плотная стальная пластина
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:13` 
+- 1 × `gregtech:gt.blockgem2:12` Сапфировый блок
+- 1 × `gregtech:gt.blockgem1:4` Блок синего топаза
+- 1 × `gregtech:gt.blockgem2:5` Опаловый блок
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:19` 
 
 ## Unported fluids
 
@@ -96,8 +96,8 @@ Quests in IIS 1: 1943; written: 764; hidden until their items are ported: 1178; 
 
 ## Dropped reward items
 
-- 417 × `('gregtech:gt.metaitem.01', 32000)`
-- 157 × `('gregtech:gt.metaitem.01', 32001)`
+- 428 × `('gregtech:gt.metaitem.01', 32000)`
+- 185 × `('gregtech:gt.metaitem.01', 32001)`
 - 16 × `bq_standard:choice`
 - 6 × `('gregtech:gt.metaitem.01', 32003)`
 - 5 × `('gregtech:gt.metaitem.01', 32002)`

@@ -5,6 +5,29 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A00000000000007",
+      "x": 12.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000232"
+      ],
+      "icon": {
+        "id": "iis:plate_styrene_butadiene_rubber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_styrene_butadiene_rubber",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000700"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000117",
       "x": 3.5,
       "y": 6.5,
@@ -264,7 +287,7 @@
       "y": 5.0,
       "dependencies": [
         "1A00000000000187",
-        "1A00000000000131",
+        "1A0000000000022C",
         "1A0000000000022D"
       ],
       "tasks": [
@@ -275,6 +298,65 @@
             "amount": 1
           },
           "id": "1B00000000022200"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000022C",
+      "x": 0.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000131"
+      ],
+      "icon": {
+        "id": "iis:fluid_heater_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_heater_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022C00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_heater_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022C01"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_heater_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022C02"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_heater_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022C03"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_heater_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022C04"
         }
       ]
     },
@@ -353,6 +435,31 @@
             "amount": 1
           },
           "id": "1B00000000023100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000232",
+      "x": 12.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000231",
+        "1A0000000000022F",
+        "1A0000000000020F"
+      ],
+      "icon": {
+        "id": "iis:dust_raw_styrene_butadiene_rubber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_raw_styrene_butadiene_rubber",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000023200"
         }
       ]
     },

@@ -72,6 +72,22 @@ class IvMachinesTest {
     }
 
     @Test
+    void hatchesMvToIvFollowGt() {
+        // GT_MetaTileEntity_Hatch#getSlots, GT_MetaTileEntity_Hatch_Input#countCapacity, muffler 0.7^(tier - 1)
+        assertEquals(4, ru.iis.multi.block.HatchType.INPUT_BUS.slots());
+        assertEquals(9, ru.iis.multi.block.HatchType.INPUT_BUS_MV.slots());
+        assertEquals(36, ru.iis.multi.block.HatchType.OUTPUT_BUS_IV.slots());
+        assertEquals(16000, ru.iis.multi.block.HatchType.INPUT_HATCH.tank());
+        assertEquals(32000, ru.iis.multi.block.HatchType.INPUT_HATCH_HV.tank());
+        assertEquals(64000, ru.iis.multi.block.HatchType.OUTPUT_HATCH_EV.tank());
+        assertEquals(128000, ru.iis.multi.block.HatchType.INPUT_HATCH_IV.tank());
+        assertSame(ru.iis.multi.block.HatchType.MUFFLER, ru.iis.multi.block.HatchType.MUFFLER_IV.kind());
+        assertSame(ru.iis.multi.block.HatchType.ENERGY_EV, ru.iis.multi.block.HatchType.ENERGY_EV.kind());
+        assertEquals(4, ru.iis.multi.block.HatchType.ENERGY_EV.tier);
+        assertEquals(2400, ru.iis.pollution.PollutionLogic.mufflerOutput(10000, 5));   // (int) (10000 × 0.7⁴)
+    }
+
+    @Test
     void ivMaterialChains() throws IOException {
         JsonObject vg = recipe("processing/blast/vanadium_gallium_ingots");
         assertEquals(4500, vg.get("temperature") != null ? vg.get("temperature").getAsInt() : vg.get("temp").getAsInt());

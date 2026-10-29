@@ -35,6 +35,14 @@ HATCHES = [
     ('hatch_energy_iv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.05.name', 'IV Energy Hatch'),   # D103
     ('hatch_dynamo_iv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.05.name', 'IV Dynamo Hatch'),
 ]
+# D103: buses, fluid hatches and mufflers MV-IV (GT_Loader_MetaTileEntities:294-422)
+for _tr, _tn in (('mv', '02'), ('hv', '03'), ('ev', '04'), ('iv', '05')):
+    _T = _tr.upper()
+    HATCHES += [(f'hatch_input_bus_{_tr}', 'OVERLAY_PIPE_IN', f'gt.blockmachines.hatch.input_bus.tier.{_tn}.name', f'{_T} Input Bus'),
+                (f'hatch_output_bus_{_tr}', 'OVERLAY_PIPE_OUT', f'gt.blockmachines.hatch.output_bus.tier.{_tn}.name', f'{_T} Output Bus'),
+                (f'hatch_input_{_tr}', 'OVERLAY_PIPE_IN', f'gt.blockmachines.hatch.input.tier.{_tn}.name', f'{_T} Input Hatch'),
+                (f'hatch_output_{_tr}', 'OVERLAY_PIPE_OUT', f'gt.blockmachines.hatch.output.tier.{_tn}.name', f'{_T} Output Hatch'),
+                (f'hatch_muffler_{_tr}', 'OVERLAY_MUFFLER', f'gt.blockmachines.hatch.muffler.tier.{_tn}.name', f'{_T} Muffler Hatch')]
 
 
 def generate(g):
@@ -178,6 +186,18 @@ def generate(g):
     tooltip('hatch_maintenance', [('Right-click with a tool to fix a problem', 'ПКМ инструментом — устранить неисправность'),
                                   ('Wrench, Screwdriver, Soft Hammer, Hammer, Soldering Iron, Crowbar', 'Ключ, отвёртка, киянка, молот, паяльник, монтировка')])
     tooltip('hatch_muffler_lv', [('Outputs the pollution, front must face air', 'Выпускает загрязнение; спереди должен быть воздух')])
+    # D103: GT getSlots (tier + 1)^2, countCapacity 8000 x (tier + 1) up to HV, 8000 x 8 x (tier - 3) above; muffler 0.7^(tier - 1)
+    for tr, tier in (('mv', 2), ('hv', 3), ('ev', 4), ('iv', 5)):
+        slots, tank = (tier + 1) ** 2, 8000 * ((tier - 3) * 8 if tier > 3 else tier + 1)
+        shown = ' (the window shows 16)' if slots > 16 else ''
+        shown_ru = ' (в окне 16)' if slots > 16 else ''
+        tooltip(f'hatch_input_bus_{tr}', [(f'Item input for multiblocks, {slots} slots{shown}', f'Вход предметов многоблочной машины, {slots} слотов{shown_ru}')])
+        tooltip(f'hatch_output_bus_{tr}', [(f'Item output for multiblocks, {slots} slots{shown}', f'Выход предметов многоблочной машины, {slots} слотов{shown_ru}')])
+        tooltip(f'hatch_input_{tr}', [(f'Fluid input for multiblocks, {tank} L', f'Вход жидкости многоблочной машины, {tank} л')])
+        tooltip(f'hatch_output_{tr}', [(f'Fluid output for multiblocks, {tank} L', f'Выход жидкости многоблочной машины, {tank} л')])
+        pct = round(100 * 0.7 ** (tier - 1))
+        tooltip(f'hatch_muffler_{tr}', [('Outputs the pollution, front must face air', 'Выпускает загрязнение; спереди должен быть воздух'),
+                                        (f'Reduces pollution to {pct}%', f'Снижает загрязнение до {pct}%')])
     HULL = f'{NS}:hull_lv'
     shaped('multi/hatch_energy_lv', f'{NS}:hatch_energy_lv', 1, ['CM'], {'M': HULL, 'C': '#iis:cables/1x/tin'})
     # GT_Loader_MetaTileEntities:270 "CM ": MV hull, copper cable
@@ -200,6 +220,14 @@ def generate(g):
     shaped('multi/hatch_output_bus_lv', f'{NS}:hatch_output_bus_lv', 1, ['M', 'C'], {'M': HULL, 'C': '#c:chests/wooden'})
     shaped('multi/hatch_maintenance', f'{NS}:hatch_maintenance', 1, ['dwx', 'hMc', 'fsr'], {'M': HULL})
     shaped('multi/hatch_muffler_lv', f'{NS}:hatch_muffler_lv', 1, ['M', 'P'], {'M': HULL, 'P': f'{NS}:pipe_medium_steel'})
+    # D103: :294-422 the same patterns on the MV-IV hulls (the muffler always takes a medium steel pipe)
+    for tr in ('mv', 'hv', 'ev', 'iv'):
+        H = f'{NS}:hull_{tr}'
+        shaped(f'multi/hatch_input_{tr}', f'{NS}:hatch_input_{tr}', 1, ['G', 'M'], {'M': H, 'G': 'minecraft:glass'})
+        shaped(f'multi/hatch_output_{tr}', f'{NS}:hatch_output_{tr}', 1, ['M', 'G'], {'M': H, 'G': 'minecraft:glass'})
+        shaped(f'multi/hatch_input_bus_{tr}', f'{NS}:hatch_input_bus_{tr}', 1, ['C', 'M'], {'M': H, 'C': '#c:chests/wooden'})
+        shaped(f'multi/hatch_output_bus_{tr}', f'{NS}:hatch_output_bus_{tr}', 1, ['M', 'C'], {'M': H, 'C': '#c:chests/wooden'})
+        shaped(f'multi/hatch_muffler_{tr}', f'{NS}:hatch_muffler_{tr}', 1, ['M', 'P'], {'M': H, 'P': f'{NS}:pipe_medium_steel'})
 
     # --- EBF controller --------------------------------------------------------------------------------------------
     hp = first(os.path.join(BI, 'MACHINE_HEATPROOFCASING.png'))

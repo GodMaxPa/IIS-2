@@ -816,6 +816,86 @@
           "id": "1B00000000067400"
         }
       ]
+    },
+    {
+      "id": "1A000000000006AF",
+      "x": 3.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000073",
+        "1A000000000001BE",
+        "1A0000000000018A",
+        "1A0000000000067C"
+      ],
+      "icon": {
+        "id": "iis:steam_extractor_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_extractor_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006AF00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_extractor_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006AF01"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006AF02"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006AF03"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006AF04"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006AF05"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006AF06"
+        }
+      ]
     }
   ],
   "quest_links": [

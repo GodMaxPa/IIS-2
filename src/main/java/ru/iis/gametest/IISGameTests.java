@@ -117,6 +117,7 @@ public final class IISGameTests {
             new Test("ev_transformer_and_buffer", 20, LargeGameTests::evTransformerAndBuffer),
             new Test("ev_macerator_ore", 200, LargeGameTests::evMaceratorOre),
             new Test("iv_macerator_ore", 200, LargeGameTests::ivMaceratorOre),
+            new Test("ebf_accepts_iv_bus", 2000, LargeGameTests::ebfAcceptsIvBus),
             new Test("iv_reactor_silicone", 300, LargeGameTests::ivReactorSilicone),
             new Test("ebf_smelts_vanadium_gallium", 2600, LargeGameTests::ebfSmeltsVanadiumGallium),
             new Test("ebf_vanadium_gallium_needs_tungstensteel", 320, LargeGameTests::ebfVanadiumGalliumNeedsTungstensteel),

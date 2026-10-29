@@ -86,11 +86,11 @@ public class FluidHatchBlockEntity extends BaseContainerBlockEntity implements W
     public FluidHatchBlockEntity(BlockPos pos, BlockState state) {
         super(MultiContent.FLUID_HATCH_BE.get(), pos, state);
         boolean input = isInput(state);
-        this.tank = new FluidTank(HatchType.TANK, f -> input, !input, this::setChanged);
+        this.tank = new FluidTank(state.getBlock() instanceof HatchBlock h ? h.type.tank() : HatchType.TANK, f -> input, !input, this::setChanged);
     }
 
     private static boolean isInput(BlockState s) {
-        return s.getBlock() instanceof HatchBlock h && h.type == HatchType.INPUT_HATCH;
+        return s.getBlock() instanceof HatchBlock h && h.type.kind() == HatchType.INPUT_HATCH;
     }
 
     public boolean isInput() {
@@ -170,8 +170,11 @@ public class FluidHatchBlockEntity extends BaseContainerBlockEntity implements W
         @Override
         public int get(int i) {
             return switch (i) {
-                case 0 -> tank.amount();
+                // данные окна передаются по 16 бит: запас люков EV/IV (64 000, 128 000 л) — двумя частями
+                case 0 -> tank.amount() & 0x7FFF;
                 case 1 -> tank.amount() > 0 ? BuiltInRegistries.FLUID.getId(tank.resource().getFluid()) : -1;
+                case 2 -> tank.amount() >> 15;
+                case 3 -> tank.capacity() / 1000;
                 default -> 0;
             };
         }
@@ -181,7 +184,7 @@ public class FluidHatchBlockEntity extends BaseContainerBlockEntity implements W
 
         @Override
         public int getCount() {
-            return 2;
+            return 4;
         }
     };
 

@@ -22,7 +22,7 @@ public class FluidHatchMenu extends MachineMenu {
 
     public static FluidHatchMenu client(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
         buf.readBlockPos();
-        return new FluidHatchMenu(id, inventory, new SimpleContainer(2), new SimpleContainerData(2));
+        return new FluidHatchMenu(id, inventory, new SimpleContainer(2), new SimpleContainerData(4));
     }
 
     @Override
@@ -30,6 +30,7 @@ public class FluidHatchMenu extends MachineMenu {
         return slot == 0;
     }
 
-    public int amount() { return data(0); }
+    public int amount() { return data(0) | data(2) << 15; }
+    public int capacity() { return data(3) * 1000; }
     public int fluidId() { return data(1); }
 }

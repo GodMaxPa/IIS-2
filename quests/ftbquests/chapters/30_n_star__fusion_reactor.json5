@@ -5,6 +5,66 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A0000000000001C",
+      "x": 0.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000022",
+        "1A00000000000006",
+        "1A00000000000023",
+        "1A00000000000074",
+        "1A00000000000046"
+      ],
+      "icon": {
+        "id": "iis:sensor_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sensor_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000001C00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sensor_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000001C01"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000249",
+      "x": 13.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000268",
+        "1A00000000000269"
+      ],
+      "icon": {
+        "id": "iis:ingot_vanadium_gallium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_vanadium_gallium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024900"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000024E",
       "x": 3.5,
       "y": 8.0,
@@ -28,6 +88,30 @@
       ]
     },
     {
+      "id": "1A00000000000252",
+      "x": 5.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000259",
+        "1A00000000000077"
+      ],
+      "icon": {
+        "id": "iis:assembler_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assembler_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000025200"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000253",
       "x": 2.0,
       "y": 6.5,
@@ -47,6 +131,29 @@
           },
           "count": 1,
           "id": "1B00000000025300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000259",
+      "x": 3.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000080"
+      ],
+      "icon": {
+        "id": "iis:conveyor_module_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:conveyor_module_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000025900"
         }
       ]
     }

@@ -25,10 +25,19 @@ public enum HatchType {
     INPUT_HATCH("hatch_input_lv"),
     OUTPUT_HATCH("hatch_output_lv"),
     MAINTENANCE("hatch_maintenance"),
-    MUFFLER("hatch_muffler_lv");
+    MUFFLER("hatch_muffler_lv"),
+    /** D103: шины, люки жидкостей и выхлопные люки MV–IV (GT_Loader_MetaTileEntities:294–422): тот же вид, что у LV, но больше. */
+    INPUT_BUS_MV("hatch_input_bus_mv", "INPUT_BUS", 2), INPUT_BUS_HV("hatch_input_bus_hv", "INPUT_BUS", 3), INPUT_BUS_EV("hatch_input_bus_ev", "INPUT_BUS", 4), INPUT_BUS_IV("hatch_input_bus_iv", "INPUT_BUS", 5),
+    OUTPUT_BUS_MV("hatch_output_bus_mv", "OUTPUT_BUS", 2), OUTPUT_BUS_HV("hatch_output_bus_hv", "OUTPUT_BUS", 3), OUTPUT_BUS_EV("hatch_output_bus_ev", "OUTPUT_BUS", 4), OUTPUT_BUS_IV("hatch_output_bus_iv", "OUTPUT_BUS", 5),
+    INPUT_HATCH_MV("hatch_input_mv", "INPUT_HATCH", 2), INPUT_HATCH_HV("hatch_input_hv", "INPUT_HATCH", 3), INPUT_HATCH_EV("hatch_input_ev", "INPUT_HATCH", 4), INPUT_HATCH_IV("hatch_input_iv", "INPUT_HATCH", 5),
+    OUTPUT_HATCH_MV("hatch_output_mv", "OUTPUT_HATCH", 2), OUTPUT_HATCH_HV("hatch_output_hv", "OUTPUT_HATCH", 3), OUTPUT_HATCH_EV("hatch_output_ev", "OUTPUT_HATCH", 4), OUTPUT_HATCH_IV("hatch_output_iv", "OUTPUT_HATCH", 5),
+    MUFFLER_MV("hatch_muffler_mv", "MUFFLER", 2), MUFFLER_HV("hatch_muffler_hv", "MUFFLER", 3), MUFFLER_EV("hatch_muffler_ev", "MUFFLER", 4), MUFFLER_IV("hatch_muffler_iv", "MUFFLER", 5);
 
     public final String id;
     public final long voltage;
+    /** Уровень GT (LV = 1); для люков энергии — по напряжению. */
+    public final int tier;
+    private final String base;
 
     HatchType(String id) {
         this(id, 0);
@@ -37,6 +46,30 @@ public enum HatchType {
     HatchType(String id, long voltage) {
         this.id = id;
         this.voltage = voltage;
+        this.tier = voltage <= 0 ? 1 : ru.iis.energy.VoltageTier.forVoltage(voltage).tier();
+        this.base = null;
+    }
+
+    HatchType(String id, String base, int tier) {
+        this.id = id;
+        this.voltage = 0;
+        this.tier = tier;
+        this.base = base;
+    }
+
+    /** Вид люка: у шин, люков жидкостей и глушителей MV–IV — их тип LV, у остальных — сам тип. */
+    public HatchType kind() {
+        return base == null ? this : valueOf(base);
+    }
+
+    /** GT_MetaTileEntity_Hatch#getSlots: (уровень + 1)² — LV 4, MV 9, HV 16, EV 25, IV 36. */
+    public int slots() {
+        return (tier + 1) * (tier + 1);
+    }
+
+    /** GT_MetaTileEntity_Hatch_Input#countCapacity: 8000 × (уровень + 1) до HV, выше 8000 × 8 × (уровень − 3). */
+    public int tank() {
+        return 8000 * (tier > 3 ? (tier - 3) * 8 : tier + 1);
     }
 
     /** Люк с энергией (вход или выход): к нему подключаются провода. */

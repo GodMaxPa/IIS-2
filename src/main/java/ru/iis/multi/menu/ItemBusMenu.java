@@ -10,25 +10,30 @@ import net.minecraft.world.item.ItemStack;
 import ru.iis.machine.menu.MachineMenu;
 import ru.iis.multi.MultiContent;
 
-/** GT_Container_2by2: шина LV, слоты (71..89, 26..44). Выходная шина — только забирать. */
+/**
+ * GT_Container_2by2 / 3by3 / 4by4: шина LV — 2×2 (71, 26), MV — 3×3 (62, 17), HV и выше — 4×4 (53, 8); у EV и IV слотов больше
+ * (25, 36), но, как в GT, окно показывает первые 16 (D103). Выходная шина — только забирать.
+ */
 public class ItemBusMenu extends MachineMenu {
     public final boolean input;
 
     public ItemBusMenu(int id, Inventory inventory, Container container, boolean input) {
         super(MultiContent.ITEM_BUS_MENU.get(), id, container, new SimpleContainerData(0));
         this.input = input;
-        int[][] pos = {{71, 26}, {89, 26}, {71, 44}, {89, 44}};
-        for (int i = 0; i < 4; i++) {
-            addSlot(input ? new Slot(container, i, pos[i][0], pos[i][1]) : new OutputSlot(container, i, pos[i][0], pos[i][1]));
+        int n = Math.min(16, container.getContainerSize()), side = n <= 4 ? 2 : n <= 9 ? 3 : 4;
+        int x0 = side == 2 ? 71 : side == 3 ? 62 : 53, y0 = side == 2 ? 26 : side == 3 ? 17 : 8;
+        for (int i = 0; i < side * side; i++) {
+            int x = x0 + 18 * (i % side), y = y0 + 18 * (i / side);
+            addSlot(input ? new Slot(container, i, x, y) : new OutputSlot(container, i, x, y));
         }
         finish(inventory);
     }
 
     public static ItemBusMenu client(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
         var pos = buf.readBlockPos();
-        boolean input = inventory.player.level().getBlockState(pos).getBlock() instanceof ru.iis.multi.block.HatchBlock h
-                && h.type == ru.iis.multi.block.HatchType.INPUT_BUS;
-        return new ItemBusMenu(id, inventory, new SimpleContainer(4), input);
+        var state = inventory.player.level().getBlockState(pos);
+        boolean input = state.getBlock() instanceof ru.iis.multi.block.HatchBlock h && h.type.kind() == ru.iis.multi.block.HatchType.INPUT_BUS;
+        return new ItemBusMenu(id, inventory, new SimpleContainer(ru.iis.multi.block.ItemBusBlockEntity.slots(state)), input);
     }
 
     @Override

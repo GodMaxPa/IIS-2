@@ -110,8 +110,9 @@ public abstract class MultiblockControllerBlockEntity extends BaseContainerBlock
         return 20;
     }
 
+    /** Вид люка в клетке (шины и люки MV–IV — как LV, D103); null — не люк. */
     protected HatchType hatchAt(ServerLevel sl, BlockPos p) {
-        return sl.getBlockState(p).getBlock() instanceof HatchBlock h ? h.type : null;
+        return sl.getBlockState(p).getBlock() instanceof HatchBlock h ? h.type.kind() : null;
     }
 
     // --- работа ------------------------------------------------------------------------------------------------------
@@ -183,7 +184,7 @@ public abstract class MultiblockControllerBlockEntity extends BaseContainerBlock
             if (pollution < PollutionLogic.MUFFLER_PORTION) break;
             BlockState ms = sl.getBlockState(m);
             if (!(ms.getBlock() instanceof HatchBlock) || !sl.getBlockState(m.relative(ms.getValue(HatchBlock.FACING))).isAir()) continue;
-            Pollution.add(sl, m, PollutionLogic.mufflerOutput(PollutionLogic.MUFFLER_PORTION, 1));
+            Pollution.add(sl, m, PollutionLogic.mufflerOutput(PollutionLogic.MUFFLER_PORTION, ((HatchBlock) ms.getBlock()).type.tier));
             pollution -= PollutionLogic.MUFFLER_PORTION;
         }
         if (pollution >= PollutionLogic.MUFFLER_PORTION) {

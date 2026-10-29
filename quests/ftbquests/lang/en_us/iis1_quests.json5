@@ -33,6 +33,18 @@
   "chapter.1D00000000000020.title": "Large Plasma Generator",
   "chapter.1D00000000000021.title": "Project Red",
   "chapter.1D00000000000022.title": "[Rewards List]",
+  "quest.1A00000000000000.quest_desc": [
+    "A part of some IV tier machines."
+  ],
+  "quest.1A00000000000000.title": "Electric Pump (IV)",
+  "quest.1A00000000000001.quest_desc": [
+    "Required for the IV tier pump."
+  ],
+  "quest.1A00000000000001.title": "Stirene-Butadiene Rubber Ring",
+  "quest.1A00000000000002.quest_desc": [
+    "Required for the IV or higher tier pump."
+  ],
+  "quest.1A00000000000002.title": "Silicone Rubber Ring",
   "quest.1A00000000000004.quest_desc": [
     "A part of the IV tier pump."
   ],
@@ -45,10 +57,30 @@
     "You may produce this out of steel and tungsten ingots."
   ],
   "quest.1A00000000000006.title": "Tungstensteel Ingot",
+  "quest.1A00000000000007.quest_desc": [
+    "Use any chemical reactor to make rubber from raw pulp. Then you may cast it into plates. Plates may be used as parts for IV+ tier conveyors."
+  ],
+  "quest.1A00000000000007.title": "Styrene-Butadiene Rubber Sheet",
+  "quest.1A00000000000008.quest_desc": [
+    "Use sulfur with polydimethylsiloxane to get molten silicon rubber - then you may cast it into sheets."
+  ],
+  "quest.1A00000000000008.title": "Silicone Rubber Sheet",
   "quest.1A00000000000017.quest_desc": [
     "Screw, rotor and pipe are different, other parts are the same as those for other pumps."
   ],
   "quest.1A00000000000017.title": "Electric Pump (EV)",
+  "quest.1A00000000000019.quest_desc": [
+    "A part of some HV machines."
+  ],
+  "quest.1A00000000000019.title": "Sensor (HV)",
+  "quest.1A0000000000001B.quest_desc": [
+    "A part of some EV machines."
+  ],
+  "quest.1A0000000000001B.title": "Sensor (EV)",
+  "quest.1A0000000000001C.quest_desc": [
+    "Tungstensteel plates, an osmium rod, an ender eye and an IV circuit - not so hard."
+  ],
+  "quest.1A0000000000001C.title": "Sensor (IV)",
   "quest.1A0000000000001D.quest_desc": [
     "A part of HV tier machines."
   ],
@@ -69,6 +101,14 @@
     "Height to search: 40 - 50 PLATINUM vein (Sheldonite, Palladium, Platinum and Iridium). Or you may look it up in NEI and find another way to obtain platinum."
   ],
   "quest.1A00000000000021.title": "Platinum",
+  "quest.1A00000000000022.quest_desc": [
+    "Can be created from an osmium ingot using a Lathe or an Extruder."
+  ],
+  "quest.1A00000000000022.title": "Osmium Rod",
+  "quest.1A00000000000023.quest_desc": [
+    "Use an EBF with nichrome coil blocks (or better) to smelt the dust into the ingot."
+  ],
+  "quest.1A00000000000023.title": "Osmium Ingot",
   "quest.1A00000000000026.quest_desc": [
     "Use a Lathe to produce the lens from the exquisite gem."
   ],
@@ -169,10 +209,38 @@
     "You may craft it from the plate using a hammer. But if you have MV (or better) extruder, you can use it to make small gears directly from the ingot."
   ],
   "quest.1A00000000000075.title": "Small Tungstensteel Gear",
+  "quest.1A00000000000076.quest_desc": [
+    "The recipe is the same as for previous tier piston, but the basic material is tungstensteel."
+  ],
+  "quest.1A00000000000076.title": "Electric Piston (IV)",
+  "quest.1A00000000000077.quest_desc": [
+    "The recipe is the same as for previous tier robot arm, but it uses IV tier components."
+  ],
+  "quest.1A00000000000077.title": "Robot Arm (IV)",
+  "quest.1A00000000000078.quest_desc": [
+    "Tungstensteel casing."
+  ],
+  "quest.1A00000000000078.title": "IV Machine Casing",
+  "quest.1A00000000000079.quest_desc": [
+    "A machine hull for all IV tier machines."
+  ],
+  "quest.1A00000000000079.title": "IV Machine Hull",
+  "quest.1A0000000000007D.quest_desc": [
+    "You have to use at least an IV energy hatch for assembly line recipes."
+  ],
+  "quest.1A0000000000007D.title": "IV Energy Hatch",
   "quest.1A0000000000007F.quest_desc": [
     "A motor for MV tier machines."
   ],
   "quest.1A0000000000007F.title": "Electric Motor (MV)",
+  "quest.1A00000000000080.quest_desc": [
+    "A part of some IV tier machines."
+  ],
+  "quest.1A00000000000080.title": "Electric Motor (IV)",
+  "quest.1A00000000000081.quest_desc": [
+    "Height to search: 40 - 50 PLATINUM vein (Sheldonite, Palladium, Platinum, Iridium), 10 - 40 SOAPSTONE vein (Soapstone, Talc, Glauconite, Pentlandite), 10 - 40 NICKEL vein (Garnierite, Nickel, Cobaltite, Pentlandite), 10 - 30 COPPER vein (Chalcopyrite, Iron, Pyrite, Copper). All these veins can be a source of osmium. Just process Iridium, Pentlandite or Chalcopyrite ores to get an osmium as by-product."
+  ],
+  "quest.1A00000000000081.title": "Osmium Dust",
   "quest.1A00000000000083.quest_desc": [
     "Use a fluid extractor MV+ tier to get helium from monazite."
   ],
@@ -189,6 +257,10 @@
     "A part of high tech machines."
   ],
   "quest.1A00000000000089.title": "Emitter (MV)",
+  "quest.1A0000000000008A.quest_desc": [
+    "A part of high tech machines."
+  ],
+  "quest.1A0000000000008A.title": "Sensor (MV)",
   "quest.1A0000000000008D.quest_desc": [
     "There few ways to craft it, use NEI."
   ],
@@ -1149,6 +1221,10 @@
     "Height to search: 40 - 80 QUARTZ vein (Quartzite, Barite, Certus Quartz). If you found quartzite dust, you may use an Autoclave to convert quartzite dust into quartzite. Btw, amidst quartzite ore you may find certus quartz ore - collect it too, for future development."
   ],
   "quest.1A000000000001EC.title": "Find Quartzite (gem or dust)",
+  "quest.1A000000000001ED.quest_desc": [
+    "The machine which can help you to obtain quartzite out of quartzite dust."
+  ],
+  "quest.1A000000000001ED.title": "Basic Autoclave",
   "quest.1A000000000001EE.quest_desc": [
     "A part of high tech machines."
   ],
@@ -1185,6 +1261,10 @@
     "Use an Exquisite Ruby/Red Garnet/Jasper to make a red lens from it by Lathe."
   ],
   "quest.1A000000000001FD.title": "Red Lens",
+  "quest.1A000000000001FE.quest_desc": [
+    "...by hammer or metal bender."
+  ],
+  "quest.1A000000000001FE.title": "Thin Silicone Rubber Sheet",
   "quest.1A000000000001FF.quest_desc": [
     "...by hammer or metal bender."
   ],
@@ -1205,6 +1285,10 @@
     "Chloromethane + silicon (by chemical reactor MV tier or better)"
   ],
   "quest.1A00000000000204.title": "Dimethyldichlorosilane",
+  "quest.1A00000000000205.quest_desc": [
+    "Dimethyldichlorosilane + water (by chemical reactor MV tier or better)"
+  ],
+  "quest.1A00000000000205.title": "Polydimethylsiloxane",
   "quest.1A00000000000206.quest_desc": [
     "It is sub product of creating the chloromethane. Or you may directly do it from ethylene and chlorine."
   ],
@@ -1269,6 +1353,10 @@
     "Use MV+ distillery for wood vinegar"
   ],
   "quest.1A0000000000021D.title": "Acetone",
+  "quest.1A00000000000221.quest_desc": [
+    "Rare to use detail of some machines."
+  ],
+  "quest.1A00000000000221.title": "Sensor (LV)",
   "quest.1A00000000000222.quest_desc": [
     "Prepare distilled water, mince meat, salt and sugar. Than drop these to the mixer, then boil by fluid heater."
   ],
@@ -1277,6 +1365,14 @@
     "You may get it from coal, charcoal dust or from a lot of other materials."
   ],
   "quest.1A00000000000223.title": "Carbon Dust",
+  "quest.1A00000000000226.quest_desc": [
+    "Like chemical reactor, but with other features."
+  ],
+  "quest.1A00000000000226.title": "Basic Chemical Bath",
+  "quest.1A0000000000022C.quest_desc": [
+    "It can boil water. But it dosn't mean that you have to do this. You may create LV - IV machine to complete this quest."
+  ],
+  "quest.1A0000000000022C.title": "Fluid Heater",
   "quest.1A0000000000022D.quest_desc": [
     "from sugar canes"
   ],
@@ -1297,6 +1393,10 @@
     "Use MV+ chemical reactor to make the butadiene from butene."
   ],
   "quest.1A00000000000231.title": "Butadiene",
+  "quest.1A00000000000232.quest_desc": [
+    "Use HV+ chemical reactor to make this from styrene and butadiene with help of oxygen. Also you may use the air instead of oxygen, but it is less profitable."
+  ],
+  "quest.1A00000000000232.title": "Raw Styrene-Butadiene Rubber",
   "quest.1A00000000000241.quest_desc": [
     "Do you think that this is completely useless stuff? Not quite..."
   ],
@@ -1305,6 +1405,10 @@
     "This machine looks simple. But in fact it may do a lot of useful things. For example: concrete, industrial biomass, drilling fluid and some other things."
   ],
   "quest.1A00000000000243.title": "Basic Mixer",
+  "quest.1A00000000000249.quest_desc": [
+    "Use 3 vanadium ingots and 1 gallium ingot to smelt them to get a new alloy."
+  ],
+  "quest.1A00000000000249.title": "Vanadium-Gallium Ingot",
   "quest.1A0000000000024C.quest_desc": [
     "Can molten more materials with more high heat proof than basic machine. For example now you may get molten glass from glass (block or panel), which you may use to craft the tin electron tube."
   ],
@@ -1313,6 +1417,10 @@
     "Collect the 9 stars. Use 27 heads and 36 blocks of soul sand to build (to summon) and kill 9 withers. Be very careful, because this is hard boss."
   ],
   "quest.1A0000000000024E.title": "Nether Star",
+  "quest.1A00000000000252.quest_desc": [
+    "Useful machine, that used to assembling some complex components and details."
+  ],
+  "quest.1A00000000000252.title": "Advanced Assembling Machine IV",
   "quest.1A00000000000253.quest_desc": [
     "Prepare a few liters of coffee (in real), because now you have to kill a thouthands of wither skeletons to collect at least the 27 of them heads."
   ],
@@ -1325,10 +1433,26 @@
     "HV tier centrifuge."
   ],
   "quest.1A00000000000257.title": "Turbo Centrifuge",
+  "quest.1A00000000000259.quest_desc": [
+    "The main difference between previous tier conveyor modules and IV tier (and higher) is in requirement to use the silicon rubber sheet or styrene-butadiene rubber sheet."
+  ],
+  "quest.1A00000000000259.title": "Conveyor Module (IV)",
   "quest.1A0000000000025E.quest_desc": [
     "Height to search: 10-40 REDSTONE vein (Redstone, Ruby, Cinnabar). You may get Chrome Dust from ruby dust via advanced electrolyzer. Also ruby dust can be produced from redstone dust. As well as for aluminium you should use blast furnace to get Chrome Ingot from Chrome Dust."
   ],
   "quest.1A0000000000025E.title": "Chrome Ingot",
+  "quest.1A00000000000260.quest_desc": [
+    "Emitter IV tier."
+  ],
+  "quest.1A00000000000260.title": "Emitter (IV)",
+  "quest.1A00000000000268.quest_desc": [
+    "Crafting recipe is the same as for previous coil block tiers, but you have to use the tungstensteel ingots as root stuff."
+  ],
+  "quest.1A00000000000268.title": "Tungstensteel Coil Block",
+  "quest.1A00000000000269.quest_desc": [
+    "Height to search: 20 - 50 MAGNETITE vein (Magnetite, Iron, Vanadium Magnetite) or GOLD vein (Magnetite, Vanadium Magnetite, Gold). Use Centrifuge to separate the Vanadium Magnetite Dust."
+  ],
+  "quest.1A00000000000269.title": "Vanadium Dust",
   "quest.1A00000000000273.quest_desc": [
     "Go to the nether and find it."
   ],
@@ -1445,6 +1569,10 @@
     ""
   ],
   "quest.1A000000000002D8.title": "Purified Chalcopyrite Ore",
+  "quest.1A000000000002D9.quest_desc": [
+    "This stuff is more valuable than it seems. And it is one of ways to get rare resources."
+  ],
+  "quest.1A000000000002D9.title": "Tine pile of PGS",
   "quest.1A000000000002DA.quest_desc": [
     "The way to craft 2 rods per 1 ingot. And it is not all, there a lot of useful recipes will be opened for you by this machine."
   ],
@@ -1565,6 +1693,10 @@
     "May be created from Stainless Steel rod."
   ],
   "quest.1A0000000000030C.title": "Stainless Steel Bolt",
+  "quest.1A00000000000323.quest_desc": [
+    "To fill an oxygen tank you have to craft and use at least MV (or better) Fluid Canner"
+  ],
+  "quest.1A00000000000323.title": "MV+ Fluid Canner",
   "quest.1A00000000000325.quest_desc": [
     "A part of electric HV pumps."
   ],
@@ -1625,6 +1757,10 @@
     "Use Vacuum Freezer, to cool the hot kanthal ingot."
   ],
   "quest.1A00000000000345.title": "Kanthal Ingot",
+  "quest.1A00000000000346.quest_desc": [
+    "Use press shapes with this machine to get different printed stuffs. To complete this quest you may creaft any tier machine between LV and IV"
+  ],
+  "quest.1A00000000000346.title": "Forming Press",
   "quest.1A00000000000347.quest_desc": [
     "This is the subprodust of titanium ingots. What sould you do with this? Put it to chemical reactor HV+ with sodium to get back part of resources."
   ],
@@ -1673,6 +1809,10 @@
     "Better than common."
   ],
   "quest.1A00000000000387.title": "Advanced Forming Press II",
+  "quest.1A00000000000391.quest_desc": [
+    "Like previous, but you may process more recipes with it."
+  ],
+  "quest.1A00000000000391.title": "Advanced Autoclave II",
   "quest.1A000000000003AC.quest_desc": [
     "Height to search: 20-40 MONAZITE vein (Bastnasite, Monazite, Neodymium)"
   ],
@@ -1697,6 +1837,10 @@
     "A part of Combustion Engine (multiblock)"
   ],
   "quest.1A000000000003BA.title": "Titanium Gear",
+  "quest.1A000000000003BD.quest_desc": [
+    "It may be used as source of energy for multiblock generators. It may output up to 8192 eu/t without blowing up."
+  ],
+  "quest.1A000000000003BD.title": "IV Dynamo Hatch",
   "quest.1A000000000003BE.quest_desc": [
     "Multiblocks usually produce more than 512 eu/t. So they require at least EV dynamo hatch."
   ],
@@ -2045,6 +2189,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000490.title": "[sb] Universal Pulverizer",
+  "quest.1A00000000000491.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000491.title": "[sb] Blend-O-Matic (IV)",
   "quest.1A00000000000496.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2061,6 +2209,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000499.title": "[sb] Advanced Ore Washing Plant III",
+  "quest.1A0000000000049A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000049A.title": "[sb] Repurpoused Laundary Washer (IV)",
   "quest.1A0000000000049E.quest_desc": [
     "You may craft it from 4 clay balls."
   ],
@@ -2165,6 +2317,10 @@
     "It is a part of Cargo Loader or Unloader. Also you may use it standalone."
   ],
   "quest.1A000000000004C9.title": "Hopper",
+  "quest.1A000000000004CA.quest_desc": [
+    "It is required to make a coolant. To make it use mixer MV or better tier."
+  ],
+  "quest.1A000000000004CA.title": "MV (or better) Mixer",
   "quest.1A000000000004CF.quest_desc": [
     "Make it from wood planks."
   ],
@@ -2193,6 +2349,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000004DD.title": "[sb] Molecular Separator",
+  "quest.1A000000000004DE.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004DE.title": "[sb] Molecular Cyclone (IV)",
   "quest.1A000000000004E2.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2209,6 +2369,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000004E5.title": "[sb] Advanced Thermal Centrifuge III",
+  "quest.1A000000000004E6.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004E6.title": "[sb] Blaze Sweatshop T-6350 (IV)",
   "quest.1A000000000004EA.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2225,6 +2389,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000004ED.title": "[sb] Advanced Sifting Machine III",
+  "quest.1A000000000004EE.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004EE.title": "[sb] Advanced Sifting Machine IV",
   "quest.1A000000000004F2.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2241,6 +2409,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000004F5.title": "[sb] Advanced Electromagnetic Separator III",
+  "quest.1A000000000004F6.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004F6.title": "[sb] Advanced Electromagnetic Separator IV",
   "quest.1A000000000004FA.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2257,6 +2429,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000004FD.title": "[sb] Advanced Chemical Bath III",
+  "quest.1A000000000004FE.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004FE.title": "[sb] Advanced Chemical Bath IV",
   "quest.1A00000000000502.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2273,6 +2449,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000505.title": "[sb] Advanced Electrolyzer III",
+  "quest.1A00000000000506.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000506.title": "[sb] Molecular Disintegrator E-4908 (IV)",
   "quest.1A0000000000050A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2289,6 +2469,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000050D.title": "[sb] Advanced Forge Hammer III",
+  "quest.1A0000000000050E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000050E.title": "[sb] Advanced Forge Hammer IV",
   "quest.1A00000000000512.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2313,6 +2497,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000517.title": "[sb] Advanced Bending Machine III",
+  "quest.1A00000000000518.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000518.title": "[sb] Advanced Bending Machine IV",
   "quest.1A0000000000051D.quest_desc": [
     "A part of neutronium reflector."
   ],
@@ -2333,6 +2521,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000525.title": "[sb] Advanced Wiremill III",
+  "quest.1A00000000000526.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000526.title": "[sb] Advanced Wiremill IV",
   "quest.1A0000000000052A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2349,6 +2541,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000052D.title": "[sb] Advanced Lathe III",
+  "quest.1A0000000000052E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000052E.title": "[sb] Advanced Lathe IV",
   "quest.1A00000000000532.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2365,6 +2561,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000535.title": "[sb] Advanced Extruder III",
+  "quest.1A00000000000536.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000536.title": "[sb] Advanced Extruder IV",
   "quest.1A0000000000053A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2381,6 +2581,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000053D.title": "[sb] Advanced Electric Furnace III",
+  "quest.1A0000000000053E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000053E.title": "[sb] Molecular Exitement Processor (IV)",
   "quest.1A00000000000562.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2397,6 +2601,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000565.title": "[sb] Advanced Cutting Machine III",
+  "quest.1A00000000000566.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000566.title": "[sb] Advanced Cutting Machine IV",
   "quest.1A0000000000056A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2413,6 +2621,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000056D.title": "[sb] Advanced Assembling Machine III",
+  "quest.1A0000000000056E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000056E.title": "[sb] Advanced Assembling Machine IV",
   "quest.1A00000000000572.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2445,6 +2657,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000585.title": "[sb] Advanced Fluid Extractor III",
+  "quest.1A00000000000586.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000586.title": "[sb] Advanced Fluid Extractor IV",
   "quest.1A000000000005A2.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2461,6 +2677,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005A5.title": "[sb] Advanced Chemical Reactor III",
+  "quest.1A000000000005A6.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005A6.title": "[sb] Advanced Chemical Reactor IV",
   "quest.1A000000000005AA.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2485,6 +2705,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005AF.title": "[sb] Advanced Alloy Smelter III",
+  "quest.1A000000000005B0.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005B0.title": "[sb] Advanced Alloy Smelter IV",
   "quest.1A000000000005B4.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2501,6 +2725,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005B7.title": "[sb] Advanced Compressor III",
+  "quest.1A000000000005B8.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005B8.title": "[sb] Singularity Compressor (IV)",
   "quest.1A000000000005BC.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2541,6 +2769,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005C6.title": "[sb] Advanced Extractor III",
+  "quest.1A000000000005C7.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005C7.title": "[sb] Vacuum Extractor (IV)",
   "quest.1A000000000005CB.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2685,6 +2917,42 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000602.title": "[sb] Advanced Forming Press III",
+  "quest.1A00000000000603.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000603.title": "[sb] Instant Fluid Canner (IV)",
+  "quest.1A00000000000608.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000608.title": "[sb] Advanced Brewery IV",
+  "quest.1A0000000000060A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000060A.title": "[sb] Advanced Fluid Solidifier IV",
+  "quest.1A0000000000060B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000060B.title": "[sb] Advanced Distillery IV",
+  "quest.1A0000000000060C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000060C.title": "[sb] Advanced Polarizer IV",
+  "quest.1A0000000000060D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000060D.title": "[sb] Advanced Autoclave IV",
+  "quest.1A0000000000060E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000060E.title": "[sb] Advanced Mixer IV",
+  "quest.1A0000000000060F.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000060F.title": "[sb] Advanced Precision Laser Engraver IV",
+  "quest.1A00000000000610.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000610.title": "[sb] Advanced Forming Press IV",
   "quest.1A0000000000063B.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2769,6 +3037,18 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000065D.title": "[sb] Advanced Electric Oven III",
+  "quest.1A00000000000663.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000663.title": "[sb] Advanced Fluid Heater IV",
+  "quest.1A00000000000665.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000665.title": "[sb] Advanced Arc Furnace IV",
+  "quest.1A00000000000667.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000667.title": "[sb] Advanced Electric Oven IV",
   "quest.1A0000000000066B.quest_desc": [
     "One of many single-block machines."
   ],
@@ -2849,6 +3129,10 @@
     "A part of some railcraft items."
   ],
   "quest.1A000000000006AE.title": "Signal Lamp",
+  "quest.1A000000000006AF.quest_desc": [
+    "You may use it to get a raw rubber from a sticky resin. Or to get dyes from flowers with more efficient. But it is §cstrongly recommended§r to use exactly §acentrifuge§r to produce a raw rubber, because it will give you also a glue."
+  ],
+  "quest.1A000000000006AF.title": "Steam Extractor",
   "quest.1A000000000006B1.quest_desc": [
     "Prepare one of blue plates, as Lapis, Lazurite, Sodalite. Use compressor to get a block and then cut it to get plates"
   ],
@@ -2953,6 +3237,10 @@
     "If you found a horse it will be useful."
   ],
   "quest.1A0000000000071E.title": "Saddle",
+  "quest.1A00000000000721.quest_desc": [
+    "You have to craft any electric compressor between LV and IV tier."
+  ],
+  "quest.1A00000000000721.title": "Any Electric Compressor",
   "quest.1A00000000000726.quest_desc": [
     "Can be crafted from a rubber ingot with help of lathe."
   ],

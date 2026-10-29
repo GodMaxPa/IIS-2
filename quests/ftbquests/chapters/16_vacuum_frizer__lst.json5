@@ -5,6 +5,29 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A00000000000008",
+      "x": 2.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000205"
+      ],
+      "icon": {
+        "id": "iis:plate_silicone",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_silicone",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000800"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000002C",
       "x": 11.0,
       "y": 8.0,
@@ -237,6 +260,29 @@
       ]
     },
     {
+      "id": "1A000000000001FE",
+      "x": 3.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000008"
+      ],
+      "icon": {
+        "id": "iis:foil_silicone",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:foil_silicone",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001FE00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000201",
       "x": 3.5,
       "y": 6.5,
@@ -286,6 +332,29 @@
             "amount": 1
           },
           "id": "1B00000000020400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000205",
+      "x": 0.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000204"
+      ],
+      "icon": {
+        "id": "iis:dust_polydimethylsiloxane",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_polydimethylsiloxane",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000020500"
         }
       ]
     },

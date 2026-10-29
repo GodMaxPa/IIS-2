@@ -10,7 +10,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import ru.iis.machine.client.MachineScreen;
-import ru.iis.multi.block.HatchType;
 import ru.iis.multi.block.MaintenanceHatchBlockEntity;
 import ru.iis.multi.logic.Maintenance;
 import ru.iis.multi.menu.ControllerMenu;
@@ -24,7 +23,7 @@ public final class MultiScreens {
 
     public static class Bus extends MachineScreen<ItemBusMenu> {
         public Bus(ItemBusMenu menu, Inventory inventory, Component title) {
-            super(menu, inventory, title, "lv/2by2");
+            super(menu, inventory, title, menu.slots.size() - 36 <= 4 ? "lv/2by2" : menu.slots.size() - 36 <= 9 ? "lv/3by3" : "lv/4by4");
         }
 
         @Override
@@ -51,7 +50,7 @@ public final class MultiScreens {
             super.extractLabels(g, mouseX, mouseY);
             Fluid f = fluid();
             g.text(font, f == Fluids.EMPTY ? Component.translatable("gui.iis.empty") : f.getFluidType().getDescription(), 10, 20, 0xFFFAFAFF, false);
-            g.text(font, Component.literal(menu.amount() + " / " + HatchType.TANK + " L"), 10, 30, 0xFFFAFAFF, false);
+            g.text(font, Component.literal(menu.amount() + " / " + menu.capacity() + " L"), 10, 30, 0xFFFAFAFF, false);
         }
     }
 

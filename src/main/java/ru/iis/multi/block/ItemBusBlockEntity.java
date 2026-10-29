@@ -22,7 +22,7 @@ import ru.iis.multi.menu.ItemBusMenu;
 
 /** Входная/выходная шина LV (4 слота). Входная принимает предметы снаружи, выходная — только отдаёт. */
 public class ItemBusBlockEntity extends BaseContainerBlockEntity implements WorldlyContainer, ru.iis.cover.CoverHost, ru.iis.machine.block.MachineBlock.TickingMachine {
-    private NonNullList<ItemStack> items = NonNullList.withSize(HatchType.BUS_SLOTS, ItemStack.EMPTY);
+    private NonNullList<ItemStack> items;
     private final ru.iis.cover.CoverSet covers = new ru.iis.cover.CoverSet();
 
     // --- покрытия (CoverHost, D80) ----------------------------------------------------------------------------------
@@ -70,10 +70,16 @@ public class ItemBusBlockEntity extends BaseContainerBlockEntity implements Worl
 
     public ItemBusBlockEntity(BlockPos pos, BlockState state) {
         super(MultiContent.ITEM_BUS_BE.get(), pos, state);
+        items = NonNullList.withSize(slots(state), ItemStack.EMPTY);
+    }
+
+    /** Слотов у шины: LV 4, MV 9, HV 16, EV 25, IV 36 (D103). */
+    public static int slots(BlockState state) {
+        return state.getBlock() instanceof HatchBlock h ? h.type.slots() : HatchType.BUS_SLOTS;
     }
 
     public boolean isInput() {
-        return getBlockState().getBlock() instanceof HatchBlock h && h.type == HatchType.INPUT_BUS;
+        return getBlockState().getBlock() instanceof HatchBlock h && h.type.kind() == HatchType.INPUT_BUS;
     }
 
     public NonNullList<ItemStack> stacks() {
@@ -155,7 +161,7 @@ public class ItemBusBlockEntity extends BaseContainerBlockEntity implements Worl
     @Override
     protected void loadAdditional(ValueInput in) {
         super.loadAdditional(in);
-        items = NonNullList.withSize(HatchType.BUS_SLOTS, ItemStack.EMPTY);
+        items = NonNullList.withSize(slots(getBlockState()), ItemStack.EMPTY);
         ContainerHelper.loadAllItems(in, items);
         covers.load(in);
     }

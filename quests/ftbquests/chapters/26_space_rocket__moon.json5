@@ -87,6 +87,53 @@
       ]
     },
     {
+      "id": "1A00000000000323",
+      "x": 14.0,
+      "y": 0.5,
+      "icon": {
+        "id": "iis:fluid_canner_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032300"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032301"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032302"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032303"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000326",
       "x": 11.0,
       "y": 0.5,

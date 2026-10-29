@@ -5,6 +5,79 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A00000000000000",
+      "x": 11.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000006",
+        "1A00000000000004",
+        "1A00000000000005",
+        "1A00000000000001",
+        "1A00000000000002"
+      ],
+      "icon": {
+        "id": "iis:electric_pump_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_pump_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000001",
+      "x": 11.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000007"
+      ],
+      "icon": {
+        "id": "iis:ring_styrene_butadiene_rubber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ring_styrene_butadiene_rubber",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000002",
+      "x": 12.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000008"
+      ],
+      "icon": {
+        "id": "iis:ring_silicone",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ring_silicone",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000200"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000004",
       "x": 12.5,
       "y": 5.0,
