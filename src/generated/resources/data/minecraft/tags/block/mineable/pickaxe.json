@@ -458,6 +458,8 @@
     "iis:oil_cracker",
     "iis:chemically_inert_casing",
     "iis:ptfe_pipe_casing",
-    "iis:large_chemical_reactor"
+    "iis:large_chemical_reactor",
+    "iis:turbine_casing_stainless",
+    "iis:large_gas_turbine"
   ]
 }

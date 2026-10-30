@@ -57,10 +57,10 @@ def generate(g):
         simple(bid)
         name(f'block.{NS}.{bid}', en, ru(key, en))
 
-    def controller(bid, casing_tex, overlay, key, en, lines):
+    def controller(bid, casing_tex, overlay, key, en, lines, active=None):
         side = f'{NS}:block/multi/{casing_tex}'
         base = Image.open(tex_out(f'block/multi/{casing_tex}.png')).convert('RGBA')
-        for suf, ov in (('', overlay), ('_active', overlay + '_ACTIVE')):
+        for suf, ov in (('', overlay), ('_active', active or overlay + '_ACTIVE')):
             o = Image.open(os.path.join(BI, ov + '.png')).convert('RGBA')
             n = max(1, o.height // 16)
             out = Image.new('RGBA', (16, 16 * n))
@@ -222,6 +222,22 @@ def generate(g):
     shaped('multi/large_chemical_reactor', f'{NS}:large_chemical_reactor', 1, ['CRC', 'PMP', 'CBC'],
            {'C': '#c:circuits/advanced', 'R': tag_of('rotor', 'StainlessSteel'), 'P': f'{NS}:pipe_large_polytetrafluoroethylene',
             'M': f'{NS}:electric_motor_hv', 'B': f'{NS}:hull_hv'})
+
+    # --- large gas turbine ---------------------------------------------------------------------------------------
+    casing('turbine_casing_stainless', 'MACHINE_CASING_CLEAN_STAINLESSSTEEL', 'gt.blockcasings4.10.name', 'Stainless Steel Turbine Casing')
+    # GT_Loader_MetaTileEntities:72 "PhP/PFP/PwP" stainless plates + turbine casing -> 2; GT_MachineRecipeLoader:1397 assembler
+    shaped('multi/turbine_casing_stainless', f'{NS}:turbine_casing_stainless', 2, ['PhP', 'PFP', 'PwP'],
+           {'P': tag_of('plate', 'StainlessSteel'), 'F': f'{NS}:turbine_casing'})
+    mrec('assembler', 'turbine_casing_stainless', [ing(tag_of('plate', 'StainlessSteel'), 6), ing(f'{NS}:turbine_casing')],
+         [out(f'{NS}:turbine_casing_stainless', 2)], 50, 16)
+    controller('large_gas_turbine', 'turbine_casing_stainless', 'LARGETURBINE_SS5', 'gt.blockmachines.multimachine.largegasturbine.name', 'Large Gas Turbine', [
+        ('Shape of the large steam turbine on stainless steel turbine casings', 'Форма большой паровой турбины на турбинных корпусах из нержавеющей стали'),
+        ('Burns gas fuels from input hatches; a rotor in the controller', 'Сжигает газовое топливо из входных люков; ротор — в контроллере'),
+        ('Optimal flow = rotor optimum / EU per litre, up to 125 %', 'Оптимальный поток = оптимум ротора / EU на литр, до 125 %'),
+        ('Needs a muffler: causes 160 Pollution per second', 'Нужен глушитель: загрязнение 160 в секунду')], active='LARGETURBINE_SS_ACTIVE5')
+    # :1249 "CPC/PMP/BPB": EV hull, large stainless steel pipes, Data circuits, stainless steel gears
+    shaped('multi/large_gas_turbine', f'{NS}:large_gas_turbine', 1, ['CPC', 'PMP', 'BPB'],
+           {'M': f'{NS}:hull_ev', 'B': f'{NS}:pipe_large_stainless_steel', 'C': '#c:circuits/data', 'P': tag_of('gear', 'StainlessSteel')})
 
     fluids = json.load(open(os.path.join(g['RES'], NS, 'gt_fluids.json'), encoding='utf-8'))
     fluid_ids = {f['id'] for f in fluids}

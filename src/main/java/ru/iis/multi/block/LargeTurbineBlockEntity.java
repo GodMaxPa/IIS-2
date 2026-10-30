@@ -33,7 +33,16 @@ public class LargeTurbineBlockEntity extends MultiblockControllerBlockEntity {
     private float water;
 
     public LargeTurbineBlockEntity(BlockPos pos, BlockState state) {
-        super(MultiContent.LARGE_TURBINE_BE.get(), pos, state);
+        this(MultiContent.LARGE_TURBINE_BE.get(), pos, state);
+    }
+
+    protected LargeTurbineBlockEntity(net.minecraft.world.level.block.entity.BlockEntityType<?> type, BlockPos pos, BlockState state) {
+        super(type, pos, state);
+    }
+
+    /** Корпус турбины (у газовой — стальной турбинный корпус из нержавейки, D104). */
+    protected net.minecraft.world.level.block.Block casing() {
+        return MultiContent.TURBINE_CASING.get();
     }
 
     public ItemStack rotor() {
@@ -72,7 +81,7 @@ public class LargeTurbineBlockEntity extends MultiblockControllerBlockEntity {
                 if (i == 0 && j == 0) continue;
                 for (int k = 0; k < 4; k++) {
                     BlockPos p = worldPosition.relative(lateral, i).above(j).relative(back, k);
-                    if (sl.getBlockState(p).is(MultiContent.TURBINE_CASING.get())) continue;
+                    if (sl.getBlockState(p).is(casing())) continue;
                     if (!((i == 0 || j == 0) && (k == 1 || k == 2)) || !addToMachineList(sl, p)) return false;
                 }
             }
@@ -120,6 +129,23 @@ public class LargeTurbineBlockEntity extends MultiblockControllerBlockEntity {
         if (!(rotor.getItem() instanceof TurbineRotorItem r) || TurbineRotorItem.material(rotor) == null) return false;
         optFlow = r.optimalFlow(rotor);
         baseEff = r.baseEfficiency(rotor);
+        eut = LargeTurbineLogic.approach(eut, targetPower(sl));
+        if (eut <= 0) {
+            efficiency = 0;
+            maxProgress = 0;
+            return false;
+        }
+        maxProgress = 1;
+        progress = 0;
+        efficiencyIncrease = 10;
+        pendingItems = java.util.List.of();
+        pendingFluids = java.util.List.of();
+        setChanged();
+        return true;
+    }
+
+    /** GT fluidIntoPower паровой турбины: пар до 125 % оптимума, на каждые 160 л — 1 л дистиллированной воды. */
+    protected int targetPower(ServerLevel sl) {
         int remaining = LargeTurbineLogic.flowLimit(optFlow), total = 0;
         for (BlockPos p : parts.inputHatches) {
             if (remaining <= 0) break;
@@ -135,19 +161,19 @@ public class LargeTurbineBlockEntity extends MultiblockControllerBlockEntity {
         int distilled = (int) water;
         water -= distilled;
         if (distilled > 0) addFluidOutput(sl, GtFluids.get("distilled_water").source().get(), distilled);
-        eut = LargeTurbineLogic.approach(eut, LargeTurbineLogic.steamPower(total, optFlow, baseEff));
-        if (eut <= 0) {
-            efficiency = 0;
-            maxProgress = 0;
-            return false;
-        }
-        maxProgress = 1;
-        progress = 0;
-        efficiencyIncrease = 10;
-        pendingItems = java.util.List.of();
-        pendingFluids = java.util.List.of();
-        setChanged();
-        return true;
+        return LargeTurbineLogic.steamPower(total, optFlow, baseEff);
+    }
+
+    protected int optFlow() {
+        return optFlow;
+    }
+
+    protected int baseEff() {
+        return baseEff;
+    }
+
+    protected void setStoredFluid(int amount) {
+        storedFluid = amount;
     }
 
     /**

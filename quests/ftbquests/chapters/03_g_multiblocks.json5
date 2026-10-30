@@ -60,6 +60,62 @@
       ]
     },
     {
+      "id": "1A0000000000014E",
+      "x": 0.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000017",
+        "1A000000000000F7",
+        "1A0000000000014F"
+      ],
+      "icon": {
+        "id": "iis:distillation_tower",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:distillation_tower",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000014E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000174",
+      "x": 11.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000173",
+        "1A000000000000F4",
+        "1A00000000000175",
+        "1A00000000000181",
+        "1A00000000000180",
+        "1A00000000000178",
+        "1A0000000000018B",
+        "1A0000000000018E",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:implosion_compressor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implosion_compressor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000017400"
+        }
+      ]
+    },
+    {
       "id": "1A000000000001C9",
       "x": 3.5,
       "y": 0.5,
@@ -79,6 +135,59 @@
           },
           "count": 1,
           "id": "1B0000000001C900"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000211",
+      "x": 9.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000000F8",
+        "1A000000000000F9",
+        "1A00000000000210"
+      ],
+      "icon": {
+        "id": "iis:large_chemical_reactor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:large_chemical_reactor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000021100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000215",
+      "x": 6.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000013D",
+        "1A000000000000BA",
+        "1A000000000000F5",
+        "1A00000000000100",
+        "1A000000000002F1",
+        "1A0000000000011F"
+      ],
+      "icon": {
+        "id": "iis:pyrolyse_oven",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pyrolyse_oven",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000021500"
         }
       ]
     },
@@ -111,6 +220,58 @@
       ]
     },
     {
+      "id": "1A000000000003C1",
+      "x": 2.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000003BD",
+        "1A000000000003BE",
+        "1A000000000003E1",
+        "1A000000000003C5",
+        "1A000000000000F7",
+        "1A000000000003CB"
+      ],
+      "icon": {
+        "id": "iis:large_gas_turbine",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:large_gas_turbine",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003C100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003F8",
+      "x": 2.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000014F",
+        "1A000000000000C6"
+      ],
+      "icon": {
+        "id": "iis:oil_cracker",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:oil_cracker",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003F800"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000416",
       "x": 0.5,
       "y": 5.0,
@@ -134,6 +295,31 @@
           },
           "count": 1,
           "id": "1B00000000041600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006EF",
+      "x": 3.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000EC",
+        "1A0000000000012F",
+        "1A00000000000095"
+      ],
+      "icon": {
+        "id": "iis:multi_smelter",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:multi_smelter",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006EF00"
         }
       ]
     },

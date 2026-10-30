@@ -123,6 +123,7 @@ public final class IISGameTests {
             new Test("distillation_tower_ethane", 300, RecipeMultiGameTests::towerSplitsCrackedEthane),
             new Test("oil_cracker_propane", 200, RecipeMultiGameTests::crackerHydrocracksPropane),
             new Test("large_chemical_reactor_silicone", 300, RecipeMultiGameTests::largeChemicalReactorSilicone),
+            new Test("large_gas_turbine_methane", 400, RecipeMultiGameTests::gasTurbineBurnsMethane),
             new Test("rock_breaker_cobble", 100, LargeGameTests::rockBreakerMakesCobble),
             new Test("rock_breaker_obsidian", 300, LargeGameTests::rockBreakerMakesObsidian),
             new Test("packager_tiny_dust", 200, LargeGameTests::packagerJoinsTinyDust),

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PhP",
+    "PFP",
+    "PwP"
+  ],
+  "key": {
+    "P": "#c:plates/stainless_steel",
+    "F": "iis:turbine_casing",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:turbine_casing_stainless",
+    "count": 2
+  }
+}

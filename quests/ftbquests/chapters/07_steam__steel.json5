@@ -558,6 +558,29 @@
       ]
     },
     {
+      "id": "1A000000000002EF",
+      "x": 17.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000000127"
+      ],
+      "icon": {
+        "id": "iis:casing_ulv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:casing_ulv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002EF00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000444",
       "x": 12.5,
       "y": 3.0,

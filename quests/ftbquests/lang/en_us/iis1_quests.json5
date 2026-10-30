@@ -761,6 +761,14 @@
     "An EV tier Motor."
   ],
   "quest.1A0000000000014C.title": "Electric Motor (EV)",
+  "quest.1A0000000000014E.quest_desc": [
+    "Many times better, but much more expensive than the regular single block distillery. The main feature is that it can distill one fluid to obtain multiple different liquids at same time."
+  ],
+  "quest.1A0000000000014E.title": "Distillation Tower",
+  "quest.1A0000000000014F.quest_desc": [
+    "A part of a distillery multiblock."
+  ],
+  "quest.1A0000000000014F.title": "Clean Stainlessteel Casing",
   "quest.1A00000000000150.quest_desc": [
     "An HV tier polarizer (or better) is the only way to get magnetic neodymium rods."
   ],
@@ -817,6 +825,10 @@
     "A part of certain machines."
   ],
   "quest.1A00000000000173.title": "Solid Steel Machine Casing",
+  "quest.1A00000000000174.quest_desc": [
+    "You can blow up stuff inside of it without negative effects."
+  ],
+  "quest.1A00000000000174.title": "Implosion Compressor",
   "quest.1A00000000000175.quest_desc": [
     "Obsidian is solidified lava. You may create it by pouring water from a bucket into a lava lake. But to dig it you must have pickaxe tier 3, like with diamonds. What is it for? If you play Minecraft for the first time, you should know that this is the only way to build a portal to the Nether. Just build an obsidian frame of 4 blocks width and 5 blocks height. Then use matches or a flint and a steel nugget to lit the fire inside the frame in order to open the portal."
   ],
@@ -1329,10 +1341,22 @@
     "HV tier chemical reactor"
   ],
   "quest.1A0000000000020F.title": "Advanced Chemical Reactor II",
+  "quest.1A00000000000210.quest_desc": [
+    "Use oxygen to polymerize - then you may solidify it to sheets."
+  ],
+  "quest.1A00000000000210.title": "Polytetrafluoroethylene Sheet",
+  "quest.1A00000000000211.quest_desc": [
+    "It have both advantages and lacks in comparison with common single block chemical reactor. It is much more expensive, but it can do more recipes and don't consume more energy if you connect higher voltage. So you may greatly grow processes speed without any negative effects."
+  ],
+  "quest.1A00000000000211.title": "Large Chemical Reactor",
   "quest.1A00000000000214.quest_desc": [
     "Distil wood tar to get benzene. Use distillery MV+ tier."
   ],
   "quest.1A00000000000214.title": "Benzene",
+  "quest.1A00000000000215.quest_desc": [
+    "It is a wonderful multiblock. With it help you may fast convert wood to charcoal. But moreover it may give you alot of useful sub products. Use NEI to find what circuit config you want to use, to get target sub products."
+  ],
+  "quest.1A00000000000215.title": "Pyrolyse Oven",
   "quest.1A00000000000217.quest_desc": [
     "Yeah, benzene + chlorine (by chemical reactor)"
   ],
@@ -1633,6 +1657,10 @@
     "To craft this tool just use flint and steel nugget. Cheap stuff to make fire if you have steel."
   ],
   "quest.1A000000000002EE.title": "Flint and Steel",
+  "quest.1A000000000002EF.quest_desc": [
+    "A part of ULV machine hull"
+  ],
+  "quest.1A000000000002EF.title": "ULV machine casings",
   "quest.1A000000000002F1.quest_desc": [
     "Can accept 128 eu/t (and two ampers). It will be convenient to use it instead of 2 (or 3) lv energy hatches for Electric Blast Furnace."
   ],
@@ -1697,6 +1725,10 @@
     "May be created frow two titanium plates."
   ],
   "quest.1A00000000000308.title": "Double Titanium Plate",
+  "quest.1A0000000000030B.quest_desc": [
+    "A part of Heavy Duty Alloy Ingot"
+  ],
+  "quest.1A0000000000030B.title": "Double PTFE Sheet",
   "quest.1A0000000000030C.quest_desc": [
     "May be created from Stainless Steel rod."
   ],
@@ -1861,6 +1893,10 @@
     "An early way to get it is by fluid extractor from wood pulp. To get info about other ways - use NEI (as always)"
   ],
   "quest.1A000000000003C0.title": "Creosote oil",
+  "quest.1A000000000003C1.quest_desc": [
+    "It may consume most gas fuels to produce energy."
+  ],
+  "quest.1A000000000003C1.title": "Large Gas Turbine",
   "quest.1A000000000003C2.quest_desc": [
     "A part of large turbine (rotor)."
   ],
@@ -1885,6 +1921,10 @@
     "A part of turbine."
   ],
   "quest.1A000000000003CA.title": "Turbine Casing",
+  "quest.1A000000000003CB.quest_desc": [
+    "A part of large turbine"
+  ],
+  "quest.1A000000000003CB.title": "Stainles Steel Turbine Casing",
   "quest.1A000000000003CC.quest_desc": [
     "An alloy of magnesium and aluminium. May be produced in alloy smelter."
   ],
@@ -1929,6 +1969,10 @@
     "May be produced from scrap. Use OSS to pour there liquid."
   ],
   "quest.1A000000000003EB.title": "UU Amplifier",
+  "quest.1A000000000003F8.quest_desc": [
+    "You may use this multiblock to divide oil into fractions with help of steam or hydrogen."
+  ],
+  "quest.1A000000000003F8.title": "Oil Cracking Unit",
   "quest.1A000000000003FB.quest_desc": [
     "May be created in implosion compressor from low-level sapphires or even from sapphire dust."
   ],
@@ -3269,6 +3313,10 @@
     "Use file or lathe to make a rod from ingot. If you have MV+ tier extruder, it will be the best choose to produce any rods."
   ],
   "quest.1A000000000006EE.title": "Aluminium Rod",
+  "quest.1A000000000006EF.quest_desc": [
+    "A multiblock that allow you to smelt more than 1 item per operation. Depends on coils."
+  ],
+  "quest.1A000000000006EF.title": "Multi Smelter",
   "quest.1A000000000006F2.quest_desc": [
     "Better than Large Bronze Boiler."
   ],

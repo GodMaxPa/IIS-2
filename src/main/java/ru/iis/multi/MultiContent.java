@@ -130,6 +130,9 @@ public final class MultiContent {
     /** GT_Block_Casings4:9 — турбинный корпус (D89); большая паровая турбина GT_Loader_MetaTileEntities:1243. */
     public static final DeferredBlock<Block> TURBINE_CASING = block("turbine_casing", Block::new, MultiContent::metal);
     public static final DeferredBlock<EbfBlock> LARGE_STEAM_TURBINE = block("large_steam_turbine", p -> new EbfBlock(p, LargeTurbineBlockEntity::new), MultiContent::metal);
+    /** D104: GT_MetaTileEntity_LargeTurbine_Gas и GT_Block_Casings4 meta 10 (турбинный корпус из нержавеющей стали). */
+    public static final DeferredBlock<EbfBlock> LARGE_GAS_TURBINE = block("large_gas_turbine", p -> new EbfBlock(p, LargeGasTurbineBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<Block> TURBINE_CASING_STAINLESS = block("turbine_casing_stainless", Block::new, MultiContent::metal);
 
     /** Материал ротора турбины (GT: основной материал инструмента). */
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<String>> ROTOR_MATERIAL = COMPONENTS.registerComponentType("rotor_material",
@@ -191,6 +194,8 @@ public final class MultiContent {
             () -> new BlockEntityType<>(DynamoHatchBlockEntity::new, hatches(HatchType.DYNAMO, HatchType.DYNAMO_MV, HatchType.DYNAMO_HV, HatchType.DYNAMO_EV, HatchType.DYNAMO_IV)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeTurbineBlockEntity>> LARGE_TURBINE_BE = BLOCK_ENTITIES.register("large_steam_turbine",
             () -> new BlockEntityType<>(LargeTurbineBlockEntity::new, LARGE_STEAM_TURBINE.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeGasTurbineBlockEntity>> LARGE_GAS_TURBINE_BE = BLOCK_ENTITIES.register("large_gas_turbine",
+            () -> new BlockEntityType<>(LargeGasTurbineBlockEntity::new, LARGE_GAS_TURBINE.get()));
 
     public static final DeferredHolder<MenuType<?>, MenuType<ItemBusMenu>> ITEM_BUS_MENU = MENUS.register("item_bus", () -> IMenuTypeExtension.create(ItemBusMenu::client));
     public static final DeferredHolder<MenuType<?>, MenuType<FluidHatchMenu>> FLUID_HATCH_MENU = MENUS.register("fluid_hatch", () -> IMenuTypeExtension.create(FluidHatchMenu::client));

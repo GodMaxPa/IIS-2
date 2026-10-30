@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CPC",
+    "PMP",
+    "BPB"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "B": "iis:pipe_large_stainless_steel",
+    "C": "#c:circuits/data",
+    "P": "#c:gears/stainless_steel"
+  },
+  "result": {
+    "id": "iis:large_gas_turbine"
+  }
+}

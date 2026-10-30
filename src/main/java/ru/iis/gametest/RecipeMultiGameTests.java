@@ -203,4 +203,30 @@ final class RecipeMultiGameTests {
         h.succeedWhen(() -> h.assertTrue(out.tank().amount() == 1296 && out.tank().resource().getFluid() == fluid("molten_silicone"),
                 "silicone " + out.tank().amount()));
     }
+
+    /** Большая газовая турбина на метане (стальной малый ротор, люк MV): мощность растёт, энергия идёт в динамо-люк, метан расходуется. */
+    static void gasTurbineBurnsMethane(GameTestHelper h) {
+        for (int x = 3; x <= 5; x++) for (int y = 1; y <= 3; y++) for (int z = 1; z <= 4; z++)
+            h.setBlock(new BlockPos(x, y, z), MultiContent.TURBINE_CASING_STAINLESS.get());
+        h.setBlock(new BlockPos(4, 2, 2), net.minecraft.world.level.block.Blocks.AIR);
+        h.setBlock(new BlockPos(4, 2, 3), net.minecraft.world.level.block.Blocks.AIR);
+        BlockPos fuelPos = new BlockPos(4, 3, 2), muffler = new BlockPos(3, 2, 2), dynamo = new BlockPos(4, 2, 4), ctrl = new BlockPos(4, 2, 1);
+        h.setBlock(fuelPos, MultiGameTests.hatch(HatchType.INPUT_HATCH, Direction.UP));
+        h.setBlock(muffler, MultiGameTests.hatch(HatchType.MUFFLER, Direction.WEST));
+        h.setBlock(new BlockPos(4, 1, 3), MultiGameTests.hatch(HatchType.MAINTENANCE, Direction.DOWN));
+        h.setBlock(dynamo, MultiGameTests.hatch(HatchType.DYNAMO_MV, Direction.SOUTH));
+        h.setBlock(ctrl, MultiContent.LARGE_GAS_TURBINE.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
+        LargeGasTurbineBlockEntity t = h.getBlockEntity(ctrl, LargeGasTurbineBlockEntity.class);
+        t.maintenance().setMask(63);
+        t.setItem(0, MultiContent.ROTORS.get(ru.iis.multi.logic.LargeTurbineLogic.Size.SMALL).get().create("steel"));
+        FluidHatchBlockEntity fuel = h.getBlockEntity(fuelPos, FluidHatchBlockEntity.class);
+        fuel.tank().setAmount(fluid("methane"), 16000);
+        DynamoHatchBlockEntity dyn = h.getBlockEntity(dynamo, DynamoHatchBlockEntity.class);
+        h.succeedWhen(() -> {
+            h.assertTrue(t.formed(), "turbine not formed");
+            h.assertTrue(t.eut() > 20, "turbine EU/t " + t.eut());
+            h.assertTrue(dyn.energy.stored > DynamoHatchBlockEntity.MIN_STORED, "dynamo got " + dyn.energy.stored);
+            h.assertTrue(fuel.tank().amount() < 16000, "no methane burnt");
+        });
+    }
 }

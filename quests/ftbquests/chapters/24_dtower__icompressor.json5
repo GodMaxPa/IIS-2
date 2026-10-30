@@ -186,6 +186,29 @@
       ]
     },
     {
+      "id": "1A0000000000014F",
+      "x": 12.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A000000000000F7"
+      ],
+      "icon": {
+        "id": "iis:clean_stainless_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:clean_stainless_casing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000014F00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000150",
       "x": 6.5,
       "y": 2.0,
@@ -620,11 +643,36 @@
   ],
   "quest_links": [
     {
+      "id": "1E0000000070014E",
+      "linked_quest": "1A0000000000014E",
+      "x": 10.25,
+      "y": 7.25,
+      "size": 2.5
+    },
+    {
+      "id": "1E00000000700174",
+      "linked_quest": "1A00000000000174",
+      "x": 11.75,
+      "y": 4.25,
+      "size": 2.5
+    },
+    {
       "id": "1E000000007003CE",
       "linked_quest": "1A000000000003CE",
       "x": -1.0,
       "y": 8.0,
       "size": 1.0
+    },
+    {
+      "id": "1E000000007003F8",
+      "linked_quest": "1A000000000003F8",
+      "x": 14.75,
+      "y": 7.25,
+      "size": 2.5
     }
-  ]
+  ],
+  "icon": {
+    "id": "iis:distillation_tower",
+    "count": 1
+  }
 }
