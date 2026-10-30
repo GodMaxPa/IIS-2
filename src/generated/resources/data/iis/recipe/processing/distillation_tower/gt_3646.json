@@ -1,0 +1,51 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 120,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:steamcracked_naphtha",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_heavy_fuel",
+      "amount": 100
+    },
+    {
+      "id": "iis:liquid_light_fuel",
+      "amount": 100
+    },
+    {
+      "id": "iis:liquid_toluene",
+      "amount": 200
+    },
+    {
+      "id": "iis:benzene",
+      "amount": 400
+    },
+    {
+      "id": "iis:butadiene",
+      "amount": 400
+    },
+    {
+      "id": "iis:propene",
+      "amount": 600
+    },
+    {
+      "id": "iis:ethylene",
+      "amount": 600
+    },
+    {
+      "id": "iis:methane",
+      "amount": 600
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_carbon",
+      "count": 1
+    }
+  ]
+}

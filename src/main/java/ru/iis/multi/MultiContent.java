@@ -62,7 +62,7 @@ public final class MultiContent {
         return b;
     }
 
-    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel", "titanium", "tungsten_steel");
+    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel", "titanium", "tungsten_steel", "stainless_steel");
     public static final Map<String, DeferredBlock<Block>> FRAMES = new LinkedHashMap<>();
     static {
         for (String m : FRAME_MATERIALS) {
@@ -86,6 +86,16 @@ public final class MultiContent {
     public static final DeferredBlock<EbfBlock> EBF = block("electric_blast_furnace", EbfBlock::new,
             p -> metal(p).lightLevel(s -> s.getValue(MachineBlock.ACTIVE) ? 13 : 0));
     public static final DeferredBlock<EbfBlock> VACUUM_FREEZER = block("vacuum_freezer", p -> new EbfBlock(p, VacuumFreezerBlockEntity::new), MultiContent::metal);
+    // D104: многоблоки по картам рецептов GT
+    public static final DeferredBlock<EbfBlock> IMPLOSION_COMPRESSOR = block("implosion_compressor", p -> new EbfBlock(p, ImplosionCompressorBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<EbfBlock> MULTI_SMELTER = block("multi_smelter", p -> new EbfBlock(p, MultiSmelterBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<EbfBlock> PYROLYSE_OVEN = block("pyrolyse_oven", p -> new EbfBlock(p, PyrolyseOvenBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<EbfBlock> DISTILLATION_TOWER = block("distillation_tower", p -> new EbfBlock(p, DistillationTowerBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<EbfBlock> OIL_CRACKER = block("oil_cracker", p -> new EbfBlock(p, OilCrackerBlockEntity::new), MultiContent::metal);
+    /** GT_Block_Casings4 meta 1 (D104): чистый корпус из нержавеющей стали — колонна и крекер. */
+    public static final DeferredBlock<Block> CLEAN_STAINLESS_CASING = block("clean_stainless_casing", Block::new, MultiContent::metal);
+    /** GT_Block_Casings1 meta 0 (D104): каркас механизма ULV — пиролизная печь. */
+    public static final DeferredBlock<Block> CASING_ULV = block("casing_ulv", Block::new, MultiContent::metal);
 
     /** Корпуса больших котлов (D88): GT_Block_Casings1:10, Casings2:0, 12, 13, Casings3:13, 14. */
     public static final DeferredBlock<Block> BRONZE_PLATED_BRICKS = block("bronze_plated_bricks", Block::new, MultiContent::metal);
@@ -157,6 +167,16 @@ public final class MultiContent {
             () -> new BlockEntityType<>(MaintenanceHatchBlockEntity::new, hatches(HatchType.MAINTENANCE)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EbfBlockEntity>> EBF_BE = BLOCK_ENTITIES.register("electric_blast_furnace",
             () -> new BlockEntityType<>(EbfBlockEntity::new, EBF.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ImplosionCompressorBlockEntity>> IMPLOSION_COMPRESSOR_BE = BLOCK_ENTITIES.register("implosion_compressor",
+            () -> new BlockEntityType<>(ImplosionCompressorBlockEntity::new, IMPLOSION_COMPRESSOR.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MultiSmelterBlockEntity>> MULTI_SMELTER_BE = BLOCK_ENTITIES.register("multi_smelter",
+            () -> new BlockEntityType<>(MultiSmelterBlockEntity::new, MULTI_SMELTER.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PyrolyseOvenBlockEntity>> PYROLYSE_OVEN_BE = BLOCK_ENTITIES.register("pyrolyse_oven",
+            () -> new BlockEntityType<>(PyrolyseOvenBlockEntity::new, PYROLYSE_OVEN.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DistillationTowerBlockEntity>> DISTILLATION_TOWER_BE = BLOCK_ENTITIES.register("distillation_tower",
+            () -> new BlockEntityType<>(DistillationTowerBlockEntity::new, DISTILLATION_TOWER.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<OilCrackerBlockEntity>> OIL_CRACKER_BE = BLOCK_ENTITIES.register("oil_cracker",
+            () -> new BlockEntityType<>(OilCrackerBlockEntity::new, OIL_CRACKER.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VacuumFreezerBlockEntity>> VACUUM_FREEZER_BE = BLOCK_ENTITIES.register("vacuum_freezer",
             () -> new BlockEntityType<>(VacuumFreezerBlockEntity::new, VACUUM_FREEZER.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeBoilerBlockEntity>> LARGE_BOILER_BE = BLOCK_ENTITIES.register("large_boiler",

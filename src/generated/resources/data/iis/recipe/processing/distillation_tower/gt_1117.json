@@ -1,0 +1,27 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 16,
+  "eut": 400,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:biomass",
+      "amount": 600
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:bioethanol",
+      "amount": 240
+    },
+    {
+      "id": "minecraft:water",
+      "amount": 240
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_wood",
+      "count": 1
+    }
+  ]
+}

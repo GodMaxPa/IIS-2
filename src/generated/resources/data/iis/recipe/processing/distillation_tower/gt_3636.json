@@ -1,0 +1,21 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 120,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrocracked_gas",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:methane",
+      "amount": 1500
+    },
+    {
+      "id": "iis:helium",
+      "amount": 20
+    }
+  ]
+}

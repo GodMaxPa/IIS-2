@@ -1,0 +1,25 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 120,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrocracked_butane",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:propane",
+      "amount": 1000
+    },
+    {
+      "id": "iis:ethane",
+      "amount": 1000
+    },
+    {
+      "id": "iis:methane",
+      "amount": 1000
+    }
+  ]
+}

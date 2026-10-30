@@ -1,0 +1,25 @@
+{
+  "type": "iis:implosion",
+  "inputs": [
+    {
+      "ingredient": "#iis:flawless_gems/green_sapphire",
+      "count": 3
+    },
+    {
+      "ingredient": "minecraft:tnt",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_exquisite_green_sapphire",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_dark_ash",
+      "count": 2
+    }
+  ],
+  "duration": 20,
+  "eut": 30
+}

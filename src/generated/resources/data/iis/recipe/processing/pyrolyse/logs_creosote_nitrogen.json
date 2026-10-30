@@ -1,0 +1,30 @@
+{
+  "type": "iis:pyrolyse",
+  "inputs": [
+    {
+      "ingredient": "#minecraft:logs",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:charcoal",
+      "count": 20
+    }
+  ],
+  "duration": 320,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:nitrogen",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:creosote",
+      "amount": 4000
+    }
+  ],
+  "circuit": 2
+}

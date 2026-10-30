@@ -78,6 +78,23 @@ public final class IISJeiPlugin implements IModPlugin {
             r.add(ru.iis.multi.MultiContent.VACUUM_FREEZER.get());
             return r;
         }
+        // D104: многоблоки
+        if (m == GtRecipeMap.IMPLOSION) {
+            r.add(ru.iis.multi.MultiContent.IMPLOSION_COMPRESSOR.get());
+            return r;
+        }
+        if (m == GtRecipeMap.DISTILLATION_TOWER) {
+            r.add(ru.iis.multi.MultiContent.DISTILLATION_TOWER.get());
+            return r;
+        }
+        if (m == GtRecipeMap.CRACKING) {
+            r.add(ru.iis.multi.MultiContent.OIL_CRACKER.get());
+            return r;
+        }
+        if (m == GtRecipeMap.PYROLYSE) {
+            r.add(ru.iis.multi.MultiContent.PYROLYSE_OVEN.get());
+            return r;
+        }
         if (m == GtRecipeMap.COKE_OVEN) {
             r.add(ru.iis.lv.LvContent.COKE_OVEN.get());
             return r;
@@ -98,6 +115,7 @@ public final class IISJeiPlugin implements IModPlugin {
     public void registerCategories(IRecipeCategoryRegistration registration) {
         for (GtRecipeMap m : GtRecipeMap.values()) {
             List<ItemLike> all = stations(m, -1);
+            if (all.isEmpty()) continue;   // карта без машины (её многоблок ещё не перенесён)
             for (int tier : tiersOf(m)) {
                 List<ItemLike> st = stations(m, tier);
                 ItemLike icon = st.isEmpty() ? all.getLast() : st.getFirst();
@@ -110,6 +128,7 @@ public final class IISJeiPlugin implements IModPlugin {
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         for (GtRecipeMap m : GtRecipeMap.values()) {
+            if (stations(m, -1).isEmpty()) continue;
             List<RecipeHolder<GtRecipe>> all = new ArrayList<>(GtRecipes.all(ClientRecipes.get(), m));
             for (int tier : tiersOf(m)) {
                 registration.addRecipes(type(m, tier), tier < 0 ? all : all.stream().filter(h -> recipeTier(h.value()) == tier).toList());

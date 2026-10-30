@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/clean_stainless_casing",
+    "north": "iis:block/multi/oil_cracker_front_active",
+    "south": "iis:block/multi/clean_stainless_casing",
+    "east": "iis:block/multi/clean_stainless_casing",
+    "west": "iis:block/multi/clean_stainless_casing",
+    "up": "iis:block/multi/clean_stainless_casing",
+    "down": "iis:block/multi/clean_stainless_casing"
+  }
+}

@@ -926,6 +926,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_rail', os.path.join(ROOT, 'tools',
 _rail = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_rail)
 lv_stats['rail'] = _rail.generate(globals())
+# Multiblocks by GT recipe maps (D104)
+_spec = _ilu.spec_from_file_location('iis_gen_multis', os.path.join(ROOT, 'tools', 'gen', 'multis.py'))
+_multis = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_multis)
+lv_stats['multis'] = _multis.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

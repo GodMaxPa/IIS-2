@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OOO",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "O": "minecraft:obsidian",
+    "M": "iis:solid_steel_casing",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/aluminium"
+  },
+  "result": {
+    "id": "iis:implosion_compressor"
+  }
+}

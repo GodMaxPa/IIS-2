@@ -448,6 +448,13 @@
     "iis:item_unloader",
     "iis:item_loader_advanced",
     "iis:item_unloader_advanced",
-    "iis:electric_feeder"
+    "iis:electric_feeder",
+    "iis:casing_ulv",
+    "iis:implosion_compressor",
+    "iis:multi_smelter",
+    "iis:pyrolyse_oven",
+    "iis:clean_stainless_casing",
+    "iis:distillation_tower",
+    "iis:oil_cracker"
   ]
 }

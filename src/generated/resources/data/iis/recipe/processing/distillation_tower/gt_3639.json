@@ -1,0 +1,39 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 120,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:steamcracked_gas",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:butadiene",
+      "amount": 60
+    },
+    {
+      "id": "iis:propene",
+      "amount": 70
+    },
+    {
+      "id": "iis:ethylene",
+      "amount": 100
+    },
+    {
+      "id": "iis:methane",
+      "amount": 750
+    },
+    {
+      "id": "iis:helium",
+      "amount": 20
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_carbon",
+      "count": 1
+    }
+  ]
+}

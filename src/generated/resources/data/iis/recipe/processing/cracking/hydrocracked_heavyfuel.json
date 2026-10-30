@@ -1,0 +1,21 @@
+{
+  "type": "iis:cracking",
+  "duration": 20,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_heavy_fuel",
+      "amount": 1000
+    },
+    {
+      "ingredient": "iis:hydrogen",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:hydrocracked_heavyfuel",
+      "amount": 1000
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WEP",
+    "EME",
+    "WCP"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "W": "iis:electric_piston_mv",
+    "P": "#iis:wires/4x/cupronickel",
+    "E": "#c:circuits/good",
+    "C": "iis:electric_pump_mv"
+  },
+  "result": {
+    "id": "iis:pyrolyse_oven"
+  }
+}

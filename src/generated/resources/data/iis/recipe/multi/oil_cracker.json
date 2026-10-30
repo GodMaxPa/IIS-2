@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCW",
+    "EME",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "W": "iis:coil_cupronickel",
+    "E": "#c:circuits/advanced",
+    "C": "iis:electric_pump_hv"
+  },
+  "result": {
+    "id": "iis:oil_cracker"
+  }
+}

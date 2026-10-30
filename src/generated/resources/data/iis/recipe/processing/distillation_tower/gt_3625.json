@@ -1,0 +1,31 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 120,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:steamcracked_propane",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:propene",
+      "amount": 500
+    },
+    {
+      "id": "iis:ethylene",
+      "amount": 1000
+    },
+    {
+      "id": "iis:methane",
+      "amount": 500
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_carbon",
+      "count": 1
+    }
+  ]
+}

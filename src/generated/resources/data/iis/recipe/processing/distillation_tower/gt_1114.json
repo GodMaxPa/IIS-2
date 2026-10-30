@@ -1,0 +1,17 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 16,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:creosote",
+      "amount": 24
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:lubricant",
+      "amount": 12
+    }
+  ]
+}

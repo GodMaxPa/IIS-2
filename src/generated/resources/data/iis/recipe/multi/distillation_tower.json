@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CBC",
+    "FMF",
+    "CBC"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "B": "iis:pipe_large_stainless_steel",
+    "C": "#c:circuits/data",
+    "F": "iis:electric_pump_ev"
+  },
+  "result": {
+    "id": "iis:distillation_tower"
+  }
+}

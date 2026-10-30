@@ -55,14 +55,28 @@ public enum GtRecipeMap {
     // sUnboxinatorRecipes
     ROCK_BREAKER("rock_breaker", 2, 1),
     PACKAGER("packager", 2, 1),
-    UNPACKAGER("unpackager", 1, 2);
+    UNPACKAGER("unpackager", 1, 2),
+    // D104: многоблоки — sImplosionRecipes, sPyrolyseRecipes, sDistillationRecipes (до 11 жидкостей на выходе — по этажу на
+    // каждую), sCrackingRecipes (две жидкости на входе)
+    IMPLOSION("implosion", 2, 2),
+    PYROLYSE("pyrolyse", 2, 1),
+    DISTILLATION_TOWER("distillation_tower", 0, 1, 1, 11),
+    CRACKING("cracking", 0, 0, 2, 1);
 
     public final String id;
     public final int maxInputs, maxOutputs;
+    /** Сколько жидкостей на входе и выходе (у одноблочных машин GT — по одной). */
+    public final int maxFluidInputs, maxFluidOutputs;
 
     GtRecipeMap(String id, int maxInputs, int maxOutputs) {
+        this(id, maxInputs, maxOutputs, 1, 1);
+    }
+
+    GtRecipeMap(String id, int maxInputs, int maxOutputs, int maxFluidInputs, int maxFluidOutputs) {
         this.id = id;
         this.maxInputs = maxInputs;
         this.maxOutputs = maxOutputs;
+        this.maxFluidInputs = maxFluidInputs;
+        this.maxFluidOutputs = maxFluidOutputs;
     }
 }

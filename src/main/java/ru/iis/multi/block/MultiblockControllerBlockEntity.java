@@ -270,6 +270,11 @@ public abstract class MultiblockControllerBlockEntity extends BaseContainerBlock
         }
     }
 
+    /** Выдача жидкостей результата (ректификационная колонна раскладывает их по этажам). */
+    protected void outputFluids(ServerLevel sl, List<FluidOutput> fluids) {
+        for (FluidOutput f : fluids) addFluidOutput(sl, f.fluid(), f.amount());
+    }
+
     /** Выдача: предметы по одному в выходные шины (с последнего слота), жидкости — в выходные люки; лишнее пропадает (как в GT5). */
     private void finish(ServerLevel sl) {
         for (ItemStack st : pendingItems) {
@@ -285,7 +290,7 @@ public abstract class MultiblockControllerBlockEntity extends BaseContainerBlock
                 }
             }
         }
-        for (FluidOutput f : pendingFluids) addFluidOutput(sl, f.fluid(), f.amount());
+        outputFluids(sl, pendingFluids);
         efficiency = Math.max(0, Math.min(efficiency + efficiencyIncrease, maintenance.maxEfficiency()));
         pendingItems = List.of();
         pendingFluids = List.of();

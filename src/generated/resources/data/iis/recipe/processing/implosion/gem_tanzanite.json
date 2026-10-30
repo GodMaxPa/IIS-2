@@ -1,0 +1,25 @@
+{
+  "type": "iis:implosion",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/tanzanite",
+      "count": 4
+    },
+    {
+      "ingredient": "minecraft:tnt",
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_tanzanite",
+      "count": 3
+    },
+    {
+      "id": "iis:tiny_dust_dark_ash",
+      "count": 12
+    }
+  ],
+  "duration": 20,
+  "eut": 30
+}

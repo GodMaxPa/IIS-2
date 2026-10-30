@@ -1,0 +1,24 @@
+{
+  "type": "iis:pyrolyse",
+  "inputs": [
+    {
+      "ingredient": "#minecraft:logs",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_ash",
+      "count": 4
+    }
+  ],
+  "duration": 320,
+  "eut": 192,
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_heavy_oil",
+      "amount": 200
+    }
+  ],
+  "circuit": 3
+}

@@ -95,8 +95,8 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
                 ChanceOutput.CODEC.listOf(0, map.maxOutputs).optionalFieldOf("outputs", List.of()).forGetter(GtRecipe::outputs),
                 Codec.intRange(1, Integer.MAX_VALUE).fieldOf("duration").forGetter(GtRecipe::duration),
                 Codec.intRange(0, Integer.MAX_VALUE).optionalFieldOf("eut", 0).forGetter(GtRecipe::eut),
-                SizedFluidIngredient.CODEC.listOf(0, 1).optionalFieldOf("fluid_inputs", List.of()).forGetter(GtRecipe::fluidInputs),
-                FluidOutput.CODEC.listOf(0, 1).optionalFieldOf("fluid_outputs", List.of()).forGetter(GtRecipe::fluidOutputs),
+                SizedFluidIngredient.CODEC.listOf(0, map.maxFluidInputs).optionalFieldOf("fluid_inputs", List.of()).forGetter(GtRecipe::fluidInputs),
+                FluidOutput.CODEC.listOf(0, map.maxFluidOutputs).optionalFieldOf("fluid_outputs", List.of()).forGetter(GtRecipe::fluidOutputs),
                 Codec.intRange(0, Integer.MAX_VALUE).optionalFieldOf("temp", 0).forGetter(GtRecipe::temperature),
                 Codec.intRange(-1, ru.iis.lv.item.ProgrammedCircuitItem.MAX).optionalFieldOf("circuit", -1).forGetter(GtRecipe::circuit),
                 Ingredient.CODEC.listOf().optionalFieldOf("keep", List.of()).forGetter(GtRecipe::keep)

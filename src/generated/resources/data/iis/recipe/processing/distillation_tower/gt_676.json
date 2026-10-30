@@ -1,0 +1,29 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 20,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_light_oil",
+      "amount": 150
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_sulfuricheavy_fuel",
+      "amount": 10
+    },
+    {
+      "id": "iis:liquid_sufluriclight_fuel",
+      "amount": 20
+    },
+    {
+      "id": "iis:liquid_sulfuricnaphtha",
+      "amount": 30
+    },
+    {
+      "id": "iis:gas_sulfuricgas",
+      "amount": 240
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 50,
+  "eut": 640,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:acetone",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:ethenone",
+      "amount": 500
+    },
+    {
+      "id": "iis:methane",
+      "amount": 500
+    }
+  ]
+}

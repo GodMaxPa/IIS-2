@@ -1,0 +1,37 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 120,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hydrocracked_heavyfuel",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_light_fuel",
+      "amount": 800
+    },
+    {
+      "id": "iis:liquid_naphtha",
+      "amount": 400
+    },
+    {
+      "id": "iis:butane",
+      "amount": 100
+    },
+    {
+      "id": "iis:propane",
+      "amount": 100
+    },
+    {
+      "id": "iis:ethane",
+      "amount": 75
+    },
+    {
+      "id": "iis:methane",
+      "amount": 75
+    }
+  ]
+}

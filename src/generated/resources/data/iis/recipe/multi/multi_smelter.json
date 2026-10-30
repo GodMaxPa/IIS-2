@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FFF",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "F": "minecraft:furnace",
+    "M": "iis:heat_proof_casing",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/annealed_copper"
+  },
+  "result": {
+    "id": "iis:multi_smelter"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 240,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:gas_gas",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:butane",
+      "amount": 60
+    },
+    {
+      "id": "iis:propane",
+      "amount": 70
+    },
+    {
+      "id": "iis:ethane",
+      "amount": 100
+    },
+    {
+      "id": "iis:methane",
+      "amount": 750
+    },
+    {
+      "id": "iis:helium",
+      "amount": 20
+    }
+  ]
+}

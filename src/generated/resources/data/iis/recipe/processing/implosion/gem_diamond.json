@@ -1,0 +1,25 @@
+{
+  "type": "iis:implosion",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/diamond",
+      "count": 4
+    },
+    {
+      "ingredient": "minecraft:tnt",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:diamond",
+      "count": 3
+    },
+    {
+      "id": "iis:tiny_dust_dark_ash",
+      "count": 16
+    }
+  ],
+  "duration": 20,
+  "eut": 30
+}

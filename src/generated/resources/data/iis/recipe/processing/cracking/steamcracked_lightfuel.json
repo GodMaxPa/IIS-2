@@ -1,0 +1,21 @@
+{
+  "type": "iis:cracking",
+  "duration": 20,
+  "eut": 240,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_light_fuel",
+      "amount": 1000
+    },
+    {
+      "ingredient": "iis:steam",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:steamcracked_lightfuel",
+      "amount": 1000
+    }
+  ]
+}

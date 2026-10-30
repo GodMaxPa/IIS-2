@@ -1,0 +1,21 @@
+{
+  "type": "iis:distillation_tower",
+  "duration": 300,
+  "eut": 64,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dilutedhydrochloricacid_gt5u",
+      "amount": 5000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 3000
+    },
+    {
+      "id": "iis:hydrochloricacid_gt5u",
+      "amount": 2000
+    }
+  ]
+}
