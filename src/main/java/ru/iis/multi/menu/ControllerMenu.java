@@ -27,6 +27,8 @@ public class ControllerMenu extends MachineMenu {
     public static final int HEAT_EXCHANGER_DATA = 14;
     /** Обрабатывающий массив (D105): 10 — сколько машин сработало, 11 — машина в слоте годится. */
     public static final int ARRAY_DATA = 12;
+    /** Буровые (D106): 10 — глубина, 11 — этап (спуск, дно, подъём), 12 — труб в контроллере. */
+    public static final int DRILL_DATA = 13;
 
     public ControllerMenu(MenuType<?> type, int id, Inventory inventory, Container container, ContainerData data) {
         super(type, id, container, data);
@@ -61,6 +63,15 @@ public class ControllerMenu extends MachineMenu {
         return processingArray(id, inventory, new SimpleContainer(1), new SimpleContainerData(ARRAY_DATA));
     }
 
+    public static ControllerMenu drill(int id, Inventory inventory, Container container, ContainerData data) {
+        return new ControllerMenu(MultiContent.DRILL_MENU.get(), id, inventory, container, data);
+    }
+
+    public static ControllerMenu drillClient(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
+        buf.readBlockPos();
+        return drill(id, inventory, new SimpleContainer(1), new SimpleContainerData(DRILL_DATA));
+    }
+
     public static ControllerMenu heatExchanger(int id, Inventory inventory, Container container, ContainerData data) {
         return new ControllerMenu(MultiContent.HEAT_EXCHANGER_MENU.get(), id, inventory, container, data);
     }
@@ -73,7 +84,7 @@ public class ControllerMenu extends MachineMenu {
     @Override
     protected boolean acceptsShiftClick(int slot, ItemStack stack) {
         return stack.getItem() instanceof ProgrammedCircuitItem || stack.getItem() instanceof ru.iis.multi.TurbineRotorItem
-                || ru.iis.multi.block.ProcessingArrayBlockEntity.machine(stack) != null;
+                || ru.iis.multi.block.ProcessingArrayBlockEntity.machine(stack) != null || stack.is(MultiContent.MINING_PIPE.asItem());
     }
 
     public boolean formed() { return data(0) != 0; }

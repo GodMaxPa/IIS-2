@@ -469,6 +469,16 @@
     "iis:plascrete",
     "iis:plascrete_window",
     "iis:filter_casing",
-    "iis:cleanroom"
+    "iis:cleanroom",
+    "iis:mining_pipe",
+    "iis:mining_pipe_tip",
+    "iis:light_concrete",
+    "iis:oil_drill_1",
+    "iis:oil_drill_2",
+    "iis:oil_drill_3",
+    "iis:ore_drill_1",
+    "iis:ore_drill_2",
+    "iis:concrete_backfiller_1",
+    "iis:concrete_backfiller_2"
   ]
 }

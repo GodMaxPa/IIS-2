@@ -1865,6 +1865,14 @@
     "Height to search: 20 - 50 MOLYBDENUM vein (Wulfenite, Molybdenite, Molybdenum, Powellite). Very rare vein of ore. Other way to get it - as subproduct of scheelite or tungsten ore."
   ],
   "quest.1A0000000000035D.title": "Molybdenum Dust",
+  "quest.1A00000000000361.quest_desc": [
+    "The controller of wonderful multiblock that will give you ability to have a rest instead digging ores. This machine may dig instead of you. But you have to feed it with mining pipes and by ore drilling fluid."
+  ],
+  "quest.1A00000000000361.title": "Ore Drilling Plant",
+  "quest.1A00000000000362.quest_desc": [
+    "The controller of wonderful multiblock that will give you ability to have a rest instead digging ores. This machine may dig instead of you. But you have to feed it with mining pipes and by ore drilling fluid."
+  ],
+  "quest.1A00000000000362.title": "Ore Drilling Plant II",
   "quest.1A00000000000387.quest_desc": [
     "Better than common."
   ],
@@ -1873,6 +1881,10 @@
     "Like previous, but you may process more recipes with it."
   ],
   "quest.1A00000000000391.title": "Advanced Autoclave II",
+  "quest.1A00000000000397.quest_desc": [
+    "Use mixer to blend stone dust and clay dust. Or use quicklime dust instead of clay dust. By this action you will get wet concrete. Than you should use fluid solidifier with mold (block) to get light concrete block."
+  ],
+  "quest.1A00000000000397.title": "Light Concrete",
   "quest.1A000000000003AC.quest_desc": [
     "Height to search: 20-40 MONAZITE vein (Bastnasite, Monazite, Neodymium)"
   ],
@@ -1989,6 +2001,18 @@
     "May be produced from scrap. Use OSS to pour there liquid."
   ],
   "quest.1A000000000003EB.title": "UU Amplifier",
+  "quest.1A000000000003F4.quest_desc": [
+    "Multiblock, that may pump fluids out from under bedrock space, in case if there are not void."
+  ],
+  "quest.1A000000000003F4.title": "Oil Drilling Rig",
+  "quest.1A000000000003F6.quest_desc": [
+    "Same as common but may work in larger area."
+  ],
+  "quest.1A000000000003F6.title": "Oil Drilling Rig II",
+  "quest.1A000000000003F7.quest_desc": [
+    "Same as common but may work in huge area."
+  ],
+  "quest.1A000000000003F7.title": "Oil Drilling Rig III",
   "quest.1A000000000003F8.quest_desc": [
     "You may use this multiblock to divide oil into fractions with help of steam or hydrogen."
   ],
@@ -3349,6 +3373,14 @@
     "A multiblock that allow you to smelt more than 1 item per operation. Depends on coils."
   ],
   "quest.1A000000000006EF.title": "Multi Smelter",
+  "quest.1A000000000006F0.quest_desc": [
+    "A multiblock that can fill empty space under himself with concrete."
+  ],
+  "quest.1A000000000006F0.title": "Concrete Backfiller",
+  "quest.1A000000000006F1.quest_desc": [
+    "A multiblock that can fill empty space under himself with concrete. Better than  common version."
+  ],
+  "quest.1A000000000006F1.title": "Advanced Concrete Backfiller",
   "quest.1A000000000006F2.quest_desc": [
     "Better than Large Bronze Boiler."
   ],

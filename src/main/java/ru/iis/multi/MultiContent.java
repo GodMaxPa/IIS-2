@@ -155,6 +155,34 @@ public final class MultiContent {
                     .isValidSpawn((s, l, pos, e) -> false).isRedstoneConductor((s, l, pos) -> false).isSuffocating((s, l, pos) -> false)
                     .isViewBlocking((s, l, pos) -> false));
     public static final DeferredBlock<Block> FILTER_CASING = block("filter_casing", Block::new, MultiContent::metal);
+    /** D106: шахтная труба и наконечник (вместо miningPipe / miningPipeTip IC2), буровые GT_MetaTileEntity_OilDrill1–3,
+     *  OreDrillingPlant1–2, ConcreteBackfiller1–2; светлый бетон GT_Block_Concretes meta 8. */
+    public static final DeferredBlock<MiningPipeBlock> MINING_PIPE = block("mining_pipe", MiningPipeBlock::new,
+            p -> p.mapColor(MapColor.METAL).sound(SoundType.METAL).strength(1.0f, 6.0f).noOcclusion());
+    public static final DeferredBlock<MiningPipeBlock> MINING_PIPE_TIP = BLOCKS.registerBlock("mining_pipe_tip", MiningPipeBlock::new,
+            p -> p.mapColor(MapColor.METAL).sound(SoundType.METAL).strength(1.0f, 6.0f).noOcclusion());
+    public static final DeferredBlock<Block> LIGHT_CONCRETE = block("light_concrete", Block::new,
+            p -> p.mapColor(MapColor.STONE).sound(SoundType.STONE).strength(1.5f, 6.0f).requiresCorrectToolForDrops());
+    public static final List<DeferredBlock<EbfBlock>> OIL_DRILLS = List.of(
+            block("oil_drill_1", p -> new EbfBlock(p, OilDrillBlockEntity::new), MultiContent::metal),
+            block("oil_drill_2", p -> new EbfBlock(p, OilDrillBlockEntity::new), MultiContent::metal),
+            block("oil_drill_3", p -> new EbfBlock(p, OilDrillBlockEntity::new), MultiContent::metal));
+    public static final List<DeferredBlock<EbfBlock>> ORE_DRILLS = List.of(
+            block("ore_drill_1", p -> new EbfBlock(p, OreDrillBlockEntity::new), MultiContent::metal),
+            block("ore_drill_2", p -> new EbfBlock(p, OreDrillBlockEntity::new), MultiContent::metal));
+    public static final List<DeferredBlock<EbfBlock>> BACKFILLERS = List.of(
+            block("concrete_backfiller_1", p -> new EbfBlock(p, BackfillerBlockEntity::new), MultiContent::metal),
+            block("concrete_backfiller_2", p -> new EbfBlock(p, BackfillerBlockEntity::new), MultiContent::metal));
+
+    /** Номер блока контроллера в ряду уровней (I — 0); −1 — не из ряда. */
+    public static int index(List<DeferredBlock<EbfBlock>> list, Block b) {
+        for (int i = 0; i < list.size(); i++) if (list.get(i).get() == b) return i;
+        return -1;
+    }
+
+    private static Block[] blocks(List<DeferredBlock<EbfBlock>> list) {
+        return list.stream().map(DeferredBlock::get).toArray(Block[]::new);
+    }
 
     /** Материал ротора турбины (GT: основной материал инструмента). */
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<String>> ROTOR_MATERIAL = COMPONENTS.registerComponentType("rotor_material",
@@ -226,6 +254,12 @@ public final class MultiContent {
             () -> new BlockEntityType<>(CharcoalPileBlockEntity::new, CHARCOAL_PILE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CleanroomBlockEntity>> CLEANROOM_BE = BLOCK_ENTITIES.register("cleanroom",
             () -> new BlockEntityType<>(CleanroomBlockEntity::new, CLEANROOM.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<OilDrillBlockEntity>> OIL_DRILL_BE = BLOCK_ENTITIES.register("oil_drill",
+            () -> new BlockEntityType<>(OilDrillBlockEntity::new, blocks(OIL_DRILLS)));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<OreDrillBlockEntity>> ORE_DRILL_BE = BLOCK_ENTITIES.register("ore_drill",
+            () -> new BlockEntityType<>(OreDrillBlockEntity::new, blocks(ORE_DRILLS)));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BackfillerBlockEntity>> BACKFILLER_BE = BLOCK_ENTITIES.register("concrete_backfiller",
+            () -> new BlockEntityType<>(BackfillerBlockEntity::new, blocks(BACKFILLERS)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<HeatExchangerBlockEntity>> HEAT_EXCHANGER_BE = BLOCK_ENTITIES.register("heat_exchanger",
             () -> new BlockEntityType<>(HeatExchangerBlockEntity::new, HEAT_EXCHANGER.get()));
 
@@ -237,6 +271,7 @@ public final class MultiContent {
     public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> LARGE_TURBINE_MENU = MENUS.register("large_steam_turbine", () -> IMenuTypeExtension.create(ControllerMenu::turbineClient));
     public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> PROCESSING_ARRAY_MENU = MENUS.register("processing_array", () -> IMenuTypeExtension.create(ControllerMenu::processingArrayClient));
     public static final DeferredHolder<MenuType<?>, MenuType<EbfMenu>> CLEANROOM_MENU = MENUS.register("cleanroom", () -> IMenuTypeExtension.create(EbfMenu::cleanroomClient));
+    public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> DRILL_MENU = MENUS.register("drill", () -> IMenuTypeExtension.create(ControllerMenu::drillClient));
     public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> HEAT_EXCHANGER_MENU = MENUS.register("heat_exchanger", () -> IMenuTypeExtension.create(ControllerMenu::heatExchangerClient));
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = TABS.register("multi", () -> CreativeModeTab.builder()

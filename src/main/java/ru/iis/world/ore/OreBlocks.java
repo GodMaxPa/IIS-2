@@ -95,6 +95,27 @@ public final class OreBlocks {
         return b == null ? null : b.get().defaultBlockState();
     }
 
+    /** Блок — руда GT (обычная или малая), D106: рудная буровая. */
+    public static boolean isOre(Block b) {
+        return blocks(false).contains(b) || blocks(true).contains(b);
+    }
+
+    public static boolean isSmallOre(Block b) {
+        return blocks(true).contains(b);
+    }
+
+    private static java.util.Set<Block> oreSet, smallSet;
+
+    private static synchronized java.util.Set<Block> blocks(boolean small) {
+        if (oreSet == null) {
+            oreSet = new java.util.HashSet<>();
+            smallSet = new java.util.HashSet<>();
+            ORES.values().forEach(m -> m.values().forEach(d -> oreSet.add(d.get())));
+            SMALL.values().forEach(m -> m.values().forEach(d -> smallSet.add(d.get())));
+        }
+        return small ? smallSet : oreSet;
+    }
+
     public static Map<String, EnumMap<OreHost, DeferredBlock<Block>>> allSmall() {
         return Collections.unmodifiableMap(SMALL);
     }

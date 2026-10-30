@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "EME",
+    "CQC"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "W": "#c:frames/steel",
+    "E": "#c:circuits/good",
+    "C": "iis:electric_motor_mv",
+    "P": "iis:pipe_large_steel",
+    "Q": "iis:electric_pump_mv"
+  },
+  "result": {
+    "id": "iis:concrete_backfiller_1"
+  }
+}

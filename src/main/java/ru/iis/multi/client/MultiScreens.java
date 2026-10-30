@@ -248,6 +248,28 @@ public final class MultiScreens {
         }
     }
 
+    /** Буровые (D106): экран GT DrillingRig.png со слотом шахтных труб. */
+    public static class Drill extends MachineScreen<ControllerMenu> {
+        public Drill(ControllerMenu menu, Inventory inventory, Component title) {
+            super(menu, inventory, title, "multi/drill");
+        }
+
+        @Override
+        protected void extractGauges(GuiGraphicsExtractor g) {}
+
+        @Override
+        protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
+            int y = statusLines(g, font, title, menu.formed(), menu.okMask(), menu.works(), menu.mufflerBlocked());
+            if (y < 0) return;
+            int white = 0xFFFAFAFF;
+            g.text(font, Component.translatable("gui.iis.drill.state." + Math.max(0, Math.min(2, menu.extra(1)))), 10, y, white, false);
+            y += 10;
+            g.text(font, Component.translatable("gui.iis.drill.depth", menu.extra(0), menu.extra(2)), 10, y, white, false);
+            y += 10;
+            if (y <= 70 && menu.eut() > 0) g.text(font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
+        }
+    }
+
     /** Чистая комната (D105): экран GT MultiblockDisplay.png; чистота — это КПД машины. */
     public static class Cleanroom extends Ebf {
         public Cleanroom(EbfMenu menu, Inventory inventory, Component title) {

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "EME",
+    "CQC"
+  ],
+  "key": {
+    "M": "iis:concrete_backfiller_1",
+    "W": "#c:frames/titanium",
+    "E": "#c:circuits/data",
+    "C": "iis:electric_motor_ev",
+    "P": "iis:pipe_large_steel",
+    "Q": "iis:electric_pump_ev"
+  },
+  "result": {
+    "id": "iis:concrete_backfiller_2"
+  }
+}

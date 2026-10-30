@@ -1,0 +1,23 @@
+{
+  "_source": "IIS 1.19.1 config/GregTech/GregTech.cfg, category undergroundfluid (GT_UO_*): DimBlackList 1, overworld (0), nether (-1); the Moon is not ported",
+  "blacklist": ["minecraft:the_end"],
+  "dimensions": {
+    "minecraft:overworld": [
+      {"fluid": "iis:gas_natural_gas", "chance": 4, "decrease": 7, "max": 625, "min": 90},
+      {"fluid": "iis:liquid_light_oil", "chance": 4, "decrease": 6, "max": 625, "min": 90},
+      {"fluid": "iis:liquid_medium_oil", "chance": 4, "decrease": 5, "max": 625, "min": 90},
+      {"fluid": "iis:liquid_heavy_oil", "chance": 4, "decrease": 4, "max": 625, "min": 90},
+      {"fluid": "iis:oil", "chance": 4, "decrease": 5, "max": 625, "min": 90},
+      {"fluid": "minecraft:water", "chance": 30, "decrease": 1, "max": 2000, "min": 200},
+      {"fluid": "iis:saltwater", "chance": 50, "decrease": 5, "max": 0, "min": 0}
+    ],
+    "minecraft:the_nether": [
+      {"fluid": "iis:oxygen", "chance": 50, "decrease": 1, "max": 0, "min": 0},
+      {"fluid": "minecraft:lava", "chance": 20, "decrease": 1, "max": 1000, "min": 500},
+      {"fluid": "iis:liquid_hydricsulfur", "chance": 10, "decrease": 1, "max": 800, "min": 400},
+      {"fluid": "iis:mercury", "chance": 10, "decrease": 1, "max": 600, "min": 300},
+      {"fluid": "iis:molten_redstone", "chance": 5, "decrease": 1, "max": 40, "min": 10},
+      {"fluid": "iis:molten_gold", "chance": 5, "decrease": 1, "max": 6, "min": 2}
+    ]
+  }
+}

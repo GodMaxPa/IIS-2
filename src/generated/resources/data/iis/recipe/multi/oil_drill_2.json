@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "EME",
+    "CCC"
+  ],
+  "key": {
+    "M": "iis:oil_drill_1",
+    "W": "#c:frames/titanium",
+    "E": "#c:circuits/advanced",
+    "C": "iis:electric_motor_hv"
+  },
+  "result": {
+    "id": "iis:oil_drill_2"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "EME",
+    "CCC"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "W": "#c:frames/titanium",
+    "E": "#c:circuits/data",
+    "C": "iis:electric_motor_ev"
+  },
+  "result": {
+    "id": "iis:ore_drill_1"
+  }
+}

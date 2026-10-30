@@ -507,6 +507,102 @@ def generate(g):
     raw('laser_engraver', 'wafer_cpu', {'inputs': [ing(f'{NS}:silicon_wafer')], 'outputs': [out(f'{NS}:wafer_cpu')], 'duration': 900, 'eut': 120,
                                        'keep': ['#iis:crafting_lens/white'], 'cleanroom': True})
 
+    # --- D106: mining pipes, drilling rigs, ore drilling plants, concrete backfillers --------------------------------
+    # mining pipe and tip: own art (IC2 miningPipe / miningPipeTip are not ported, D5), a thin column
+    def pipe_tex(name, tip):
+        img = Image.new('RGBA', (16, 16), (0, 0, 0, 0))
+        for yy in range(16):
+            for xx in range(16):
+                base = 150 + (12 if xx in (6, 7) else 0) - (25 if xx in (5, 10) else 0)
+                if tip and yy >= 12:
+                    base = 70 + 10 * ((xx + yy) % 2)
+                if yy % 4 == 0 and not (tip and yy >= 12):
+                    base -= 30
+                img.putpixel((xx, yy), (base, base, base + 8, 255))
+        img.save(tex_out(f'block/multi/{name}.png'))
+    for bid, tip in (('mining_pipe', False), ('mining_pipe_tip', True)):
+        pipe_tex(bid, tip)
+        t = f'{NS}:block/multi/{bid}'
+        faces = {d: {'texture': '#side', 'uv': [5, 0, 11, 16]} for d in ('north', 'south', 'east', 'west')}
+        faces['up'] = {'texture': '#side', 'uv': [5, 5, 11, 11]}
+        faces['down'] = {'texture': '#side', 'uv': [5, 5, 11, 11]}
+        write(os.path.join(A, 'models', 'block', bid + '.json'), {'parent': 'minecraft:block/block', 'textures': {'particle': t, 'side': t},
+                                                                   'elements': [{'from': [5, 0, 5], 'to': [11, 16, 11], 'faces': faces}]})
+        write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': {'': {'model': f'{NS}:block/{bid}'}}})
+        write(os.path.join(D, NS, 'loot_table', 'blocks', bid + '.json'), {
+            'type': 'minecraft:block', 'random_sequence': f'{NS}:blocks/{bid}',
+            'pools': [{'rolls': 1.0, 'bonus_rolls': 0.0, 'conditions': [{'condition': 'minecraft:survives_explosion'}],
+                       'entries': [{'type': 'minecraft:item', 'name': f'{NS}:mining_pipe'}]}]})
+        block_tags['minecraft:mineable/pickaxe'].append(f'{NS}:{bid}')
+    write(os.path.join(A, 'items', 'mining_pipe.json'), {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/mining_pipe'}})
+    name(f'block.{NS}.mining_pipe', 'Mining Pipe', 'Шахтная труба')
+    name(f'block.{NS}.mining_pipe_tip', 'Mining Pipe Tip', 'Наконечник шахтной трубы')
+    # GT_IndustialCraftRecipesLoader:155-163, scripts/GT_IC2.zs:321-323 (IIS 1)
+    shaped('multi/mining_pipe', f'{NS}:mining_pipe', 1, ['hPf'], {'P': f'{NS}:pipe_small_steel'})
+    mrec('wiremill', 'mining_pipe', [ing(f'{NS}:pipe_tiny_steel')], [out(f'{NS}:mining_pipe')], 200, 16)
+    for size, n, dur in (('tiny', 1, 1), ('small', 2, 4), ('medium', 4, 8), ('large', 8, 16)):
+        raw('extruder', f'mining_pipe_from_{size}', {'inputs': [ing(f'{NS}:pipe_{size}_steel')], 'outputs': [out(f'{NS}:mining_pipe', n)],
+                                                    'duration': dur, 'eut': 64, 'keep': [f'{NS}:shape_extruder_pipe_tiny']})
+    mrec('macerator', 'mining_pipe', [ing(f'{NS}:mining_pipe')], [out(f'{NS}:small_dust_steel', 2)], 300, 2)   # IC2 macerator -> GT (addIC2RecipesToGT: 300 t, 2 EU/t)
+
+    first(os.path.join(BI, 'CONCRETE_LIGHT_STONE.png')).save(tex_out('block/multi/light_concrete.png'))
+    cube_block('light_concrete', f'{NS}:block/multi/light_concrete')
+    name(f'block.{NS}.light_concrete', 'Light Concrete', ru('gt.blockconcretes.8.name', 'Светлый бетон'))
+
+    base_lines = lambda casing_en, casing_ru, frame_en, frame_ru: [
+        ('3x7x3; controller in the middle of the front of the bottom 3x3', 'Размер 3×7×3; контроллер — в середине передней стороны нижней площадки 3×3'),
+        (f'Bottom: {casing_en} or hatches; a pillar of 3 casings in the middle', f'Низ: {casing_ru} или люки; в центре — столб из 3 корпусов'),
+        (f'{frame_en} frame boxes around the pillar and 3 on top', f'{frame_ru} — вокруг столба и 3 сверху'),
+        ('Lowers mining pipes from the controller slot down to bedrock', 'Опускает шахтные трубы из слота контроллера до бедрока')]
+    tiers = [('solid_steel_casing', 'solid steel casings', 'прочные стальные корпуса', 'Steel', 'Стальные рамки'),
+             ('stable_titanium_casing', 'stable titanium casings', 'стабильные титановые корпуса', 'Titanium', 'Титановые рамки'),
+             ('robust_tungstensteel_casing', 'robust tungstensteel casings', 'прочные вольфрамостальные корпуса', 'Tungstensteel',
+              'Вольфрамостальные рамки')]
+    roman = ['I', 'II', 'III']
+    volts = ['MV', 'HV', 'EV', 'IV']
+    # oil drilling rigs: GT_Loader_MetaTileEntities:1314-1316 "WWW/EME/CCC"
+    oil_craft = [('hull_mv', 'steel', '#c:circuits/good', 'electric_motor_mv'), ('oil_drill_1', 'titanium', '#c:circuits/advanced', 'electric_motor_hv'),
+                 ('oil_drill_2', 'tungsten_steel', '#c:circuits/data', 'electric_motor_ev')]
+    for i, (rng, mt) in enumerate(((1, 'MV'), (3, 'HV'), (6, 'EV'))):
+        cas, cen, cru, fen, fru = tiers[i]
+        controller(f'oil_drill_{i + 1}', cas, 'OVERLAY_FRONT_ORE_DRILL', f'gt.blockmachines.multimachine.oildrill{i + 1}.name', f'Oil Drilling Rig {roman[i]}',
+                   base_lines(cen, cru, fen, fru) + [
+                       (f'Maintenance and output hatch, {mt}+ energy hatch', f'Люк обслуживания, выходной люк, энергия от {mt}'),
+                       (f'Pumps the underground fluid of a {rng}x{rng} chunk field', f'Качает подземную жидкость поля {rng}×{rng} чанков')])
+        m, frame, circ, motor = oil_craft[i]
+        shaped(f'multi/oil_drill_{i + 1}', f'{NS}:oil_drill_{i + 1}', 1, ['WWW', 'EME', 'CCC'],
+               {'M': f'{NS}:{m}', 'W': f'#c:frames/{frame}', 'E': circ, 'C': f'{NS}:{motor}'})
+    # ore drilling plants: :1323-1327
+    ore_craft = [('hull_ev', 'titanium', '#c:circuits/data', 'electric_motor_ev'), ('ore_drill_1', 'tungsten_steel', '#c:circuits/elite', 'electric_motor_iv')]
+    for i, (rad, mt) in enumerate(((48, 'MV'), (64, 'HV'))):
+        cas, cen, cru, fen, fru = tiers[i]
+        controller(f'ore_drill_{i + 1}', cas, 'OVERLAY_FRONT_ORE_DRILL', f'gt.blockmachines.multimachine.oredrill{i + 1}.name', f'Ore Drilling Plant {roman[i]}',
+                   base_lines(cen, cru, fen, fru) + [
+                       (f'Maintenance, drilling fluid input hatch, output bus, {mt}+ energy', f'Обслуживание, люк буровой жидкости, выходная шина, энергия от {mt}'),
+                       (f'Mines ores in a radius of {rad} blocks, 2000 L of drilling fluid a cycle', f'Добывает руды в радиусе {rad} блоков, 2000 л буровой жидкости за цикл'),
+                       ('Grinds them at once: every output x1-4', 'Сразу размалывает: каждый выход ×1–4')])
+        m, frame, circ, motor = ore_craft[i]
+        shaped(f'multi/ore_drill_{i + 1}', f'{NS}:ore_drill_{i + 1}', 1, ['WWW', 'EME', 'CCC'],
+               {'M': f'{NS}:{m}', 'W': f'#c:frames/{frame}', 'E': circ, 'C': f'{NS}:{motor}'})
+    # concrete backfillers: :1318-1321 "WPW/EME/CQC"
+    bf_craft = [('hull_mv', 'steel', '#c:circuits/good', 'electric_motor_mv', 'electric_pump_mv'),
+                ('concrete_backfiller_1', 'titanium', '#c:circuits/data', 'electric_motor_ev', 'electric_pump_ev')]
+    for i, (rad, mt, key, en) in enumerate(((16, 'MV', 'concretebackfiller1', 'Concrete Backfiller'),
+                                            (64, 'EV', 'concretebackfiller3', 'Advanced Concrete Backfiller'))):
+        cas, cen, cru, fen, fru = tiers[i]
+        controller(f'concrete_backfiller_{i + 1}', cas, 'OVERLAY_FRONT_ORE_DRILL', f'gt.blockmachines.multimachine.{key}.name', en,
+                   base_lines(cen, cru, fen, fru) + [
+                       (f'Maintenance and input hatch, {mt}+ energy hatch', f'Люк обслуживания, входной люк, энергия от {mt}'),
+                       (f'On the way up fills air within {rad} blocks with light concrete', f'На подъёме заливает пустоты в радиусе {rad} блоков светлым бетоном'),
+                       ('144 L of molten concrete a block', '144 л расплава бетона на блок')])
+        m, frame, circ, motor, pump = bf_craft[i]
+        shaped(f'multi/concrete_backfiller_{i + 1}', f'{NS}:concrete_backfiller_{i + 1}', 1, ['WPW', 'EME', 'CQC'],
+               {'M': f'{NS}:{m}', 'W': f'#c:frames/{frame}', 'E': circ, 'C': f'{NS}:{motor}', 'P': f'{NS}:pipe_large_steel', 'Q': f'{NS}:{pump}'})
+    shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'DrillingRig.png'), tex_out('gui/multi/drill.png'))
+    for k, en, ruu in (('gui.iis.drill.state.0', 'Lowering pipes', 'Спуск труб'), ('gui.iis.drill.state.1', 'At the bottom', 'У дна'),
+                       ('gui.iis.drill.state.2', 'Lifting pipes', 'Подъём труб'), ('gui.iis.drill.depth', 'Depth: %s, pipes: %s', 'Глубина: %s, труб: %s')):
+        name(k, en, ruu)
+
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     for k in ('implosion', 'pyrolyse', 'cracking', 'distillation_tower'):

@@ -1,0 +1,20 @@
+{
+  "inputs": [
+    {
+      "ingredient": "iis:pipe_large_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:mining_pipe",
+      "count": 8
+    }
+  ],
+  "duration": 16,
+  "eut": 64,
+  "keep": [
+    "iis:shape_extruder_pipe_tiny"
+  ],
+  "type": "iis:extruder"
+}
