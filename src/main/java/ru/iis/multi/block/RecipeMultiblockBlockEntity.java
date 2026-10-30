@@ -154,6 +154,8 @@ public abstract class RecipeMultiblockBlockEntity extends MultiblockControllerBl
             if (take == null) continue;
             int[] pick = matchFluids(r, fluids);
             if (pick == null) continue;
+            int clean = r.cleanroom() ? CleanroomBlockEntity.cleanlinessAt(sl, worldPosition) : 10000;
+            if (clean <= 0) continue;
             for (int i = 0; i < take.length; i++) if (take[i] > 0) slots.get(i).shrink(take[i]);
             inputBusesChanged(sl);
             drainFluids(sl, r, pick);
@@ -176,6 +178,7 @@ public abstract class RecipeMultiblockBlockEntity extends MultiblockControllerBl
         }
         progress = 0;
         pendingItems = r.rollOutputs(sl.getRandom());
+        if (r.cleanroom()) pendingItems = CleanroomBlockEntity.spoil(pendingItems, CleanroomBlockEntity.cleanlinessAt(sl, worldPosition), sl.getRandom());
         pendingFluids = new ArrayList<>(r.fluidOutputs());
         setChanged();
     }

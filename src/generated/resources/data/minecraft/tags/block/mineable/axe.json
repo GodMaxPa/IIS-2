@@ -4,6 +4,7 @@
     "iis:rubber_log",
     "iis:butcher_block",
     "iis:stone_press",
-    "iis:detector_item"
+    "iis:detector_item",
+    "iis:brittle_charcoal"
   ]
 }

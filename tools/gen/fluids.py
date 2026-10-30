@@ -22,7 +22,10 @@ TEX = os.path.join(HERE, 'textures')
 SKIP_FLUIDS = {'steam', 'creosote', 'water', 'lava', 'ic2steam', 'ic2distilledwater'}
 # IC2 fluids that GT5 recipes use (GT_ModHandler.getDistilledWater -> "ic2distilledwater"); IC2 is not ported (D5), so they
 # become our own GT-style fluids: id, en, ru, state, temperature K, rgb
-IC2_FLUIDS = [('distilled_water', 'Distilled Water', 'Дистиллированная вода', 1, 295, (90, 130, 230))]
+IC2_FLUIDS = [('distilled_water', 'Distilled Water', 'Дистиллированная вода', 1, 295, (90, 130, 230)),
+              # D105: heat exchanger and HP turbine (ic2superheatedsteam, ic2pahoehoelava)
+              ('superheated_steam', 'Superheated Steam', 'Перегретый пар', 2, 600, (230, 230, 240)),
+              ('pahoehoe_lava', 'Pahoehoe Lava', 'Лава пахоэхоэ', 1, 1200, (140, 60, 30))]
 STATES = ['gt_solid', 'gt_liquid', 'gt_gas', 'gt_plasma', 'gt_molten']
 
 # GT_Loader_MetaTileEntities#generateFluidPipes: material, base capacity, heat limit K, gas proof, colour, iconSet, en, ru (adjective)

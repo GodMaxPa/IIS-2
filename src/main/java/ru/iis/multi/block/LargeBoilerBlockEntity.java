@@ -198,7 +198,8 @@ public class LargeBoilerBlockEntity extends MultiblockControllerBlockEntity {
             if (steam > 0) {
                 int water = logic.waterFor(steam);
                 if (depleteInput(sl, GtFluids.get("distilled_water").source().get(), water) || depleteInput(sl, Fluids.WATER, water)) {
-                    addFluidOutput(sl, IISFluids.STEAM.get(), steam);
+                    // GT: с кислородом — перегретый пар (D105)
+                    addFluidOutput(sl, logic.oxygenBoost ? GtFluids.get("superheated_steam").source().get() : IISFluids.STEAM.get(), steam);
                     generated = steam;
                 } else {
                     explodeMultiblock(sl);

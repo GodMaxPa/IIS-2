@@ -1,0 +1,27 @@
+{
+  "inputs": [
+    {
+      "ingredient": "#c:frames/black_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/plastic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plascrete",
+      "count": 1
+    }
+  ],
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_concrete",
+      "amount": 144
+    }
+  ],
+  "duration": 200,
+  "eut": 48,
+  "type": "iis:assembler"
+}

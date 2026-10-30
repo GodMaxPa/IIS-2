@@ -298,6 +298,9 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         var match = GtRecipes.find(sl, t.recipeMap, inputs, fluid, eut -> eut <= voltage);
         if (match.isEmpty()) return null;
         var m = match.get();
+        // GT: рецепт чистой комнаты без неё (или при нулевой чистоте) не начинается
+        int clean = m.recipe().cleanroom() ? ru.iis.multi.block.CleanroomBlockEntity.cleanlinessAt(sl, worldPosition) : 10000;
+        if (clean <= 0) return null;
         var outs = m.recipe().outputs();
         for (int i = 0; i < outs.size() && i < t.outputs; i++) {
             if (!fits(i, outs.get(i).create())) return null;
@@ -311,6 +314,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         }
         for (var f : m.recipe().fluidInputs()) tank.drainInternal(f.amount());
         pending = m.recipe().rollOutputs(sl.getRandom());
+        if (m.recipe().cleanroom()) pending = ru.iis.multi.block.CleanroomBlockEntity.spoil(pending, clean, sl.getRandom());
         pendingFluid = m.recipe().fluidOutputs().isEmpty() ? FluidStack.EMPTY : m.recipe().fluidOutputs().getFirst().create();
         setChanged();
         Overclock.Result oc = Overclock.basicMachine(Math.max(1, m.recipe().eut()), m.recipe().duration(), t.tier, 1);

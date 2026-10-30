@@ -149,8 +149,13 @@ public class LargeTurbineBlockEntity extends MultiblockControllerBlockEntity {
         int remaining = LargeTurbineLogic.flowLimit(optFlow), total = 0;
         for (BlockPos p : parts.inputHatches) {
             if (remaining <= 0) break;
-            if (!(sl.getBlockEntity(p) instanceof FluidHatchBlockEntity h) || h.tank().amount() <= 0
-                    || !h.tank().resource().getFluid().isSame(IISFluids.STEAM.get())) continue;
+            if (!(sl.getBlockEntity(p) instanceof FluidHatchBlockEntity h) || h.tank().amount() <= 0) continue;
+            // GT: перегретый пар в обычной турбине просто сгорает (D105)
+            if (h.tank().resource().getFluid().isSame(GtFluids.get("superheated_steam").source().get())) {
+                h.tank().drainInternal(h.tank().amount());
+                continue;
+            }
+            if (!h.tank().resource().getFluid().isSame(IISFluids.STEAM.get())) continue;
             int flow = Math.min(h.tank().amount(), remaining);
             h.tank().drainInternal(flow);
             storedFluid = h.tank().amount();

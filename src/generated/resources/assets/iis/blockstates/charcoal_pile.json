@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=north,active=false": {
+      "model": "iis:block/charcoal_pile"
+    },
+    "facing=north,active=true": {
+      "model": "iis:block/charcoal_pile_active"
+    },
+    "facing=east,active=false": {
+      "model": "iis:block/charcoal_pile"
+    },
+    "facing=east,active=true": {
+      "model": "iis:block/charcoal_pile_active"
+    },
+    "facing=south,active=false": {
+      "model": "iis:block/charcoal_pile"
+    },
+    "facing=south,active=true": {
+      "model": "iis:block/charcoal_pile_active"
+    },
+    "facing=west,active=false": {
+      "model": "iis:block/charcoal_pile"
+    },
+    "facing=west,active=true": {
+      "model": "iis:block/charcoal_pile_active"
+    }
+  }
+}

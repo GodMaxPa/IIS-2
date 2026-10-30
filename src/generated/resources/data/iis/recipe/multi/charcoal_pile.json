@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EME",
+    "CCC"
+  ],
+  "key": {
+    "M": "iis:hull_bronze_bricked",
+    "E": "#c:nuggets/wrought_iron",
+    "C": "minecraft:flint"
+  },
+  "result": {
+    "id": "iis:charcoal_pile"
+  }
+}

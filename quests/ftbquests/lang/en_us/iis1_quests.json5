@@ -357,6 +357,10 @@
     "A part of a Processing Array multiblock."
   ],
   "quest.1A000000000000C9.title": "Robust Tungstensteel Machine Casing",
+  "quest.1A000000000000CA.quest_desc": [
+    "This multiblock provides you with the convenient utilization of space and allows you to gain the working power of any sixteen GT machines operating simultaneously. Note that you have to feed it with power sufficient for all of the machines used. For example, if you put inside 16 LV electrolyzers to get gas products from water, you'll need 480 eu/t and an HV (or better) energy hatch (30 eu/t * 16 = 480 eu/t)."
+  ],
+  "quest.1A000000000000CA.title": "Processing Array",
   "quest.1A000000000000D0.quest_desc": [
     "You can get it from deuterium that in turn can be produced from hydrogen."
   ],
@@ -517,6 +521,10 @@
     "An HV tier piston."
   ],
   "quest.1A000000000000FB.title": "Electric Piston (HV)",
+  "quest.1A000000000000FC.quest_desc": [
+    "A controller for a cleanroom multiblock. This is a room designed for placing there precision laser engravers in order to produce high tech items. Min size is 3 by 3 and height is 4."
+  ],
+  "quest.1A000000000000FC.title": "Cleanroom Controller",
   "quest.1A000000000000FD.quest_desc": [
     "Silver, Gold and Copper - that is all you need to craft it."
   ],
@@ -541,6 +549,14 @@
     "With this lathe it will become possible to avoid the need to produce a diamond lens from an Exquisite Diamond. Just craft a glass pane in order to make a glass lens from it. It may be used in the same recipes as the diamond one."
   ],
   "quest.1A00000000000104.title": "Advanced Lathe II",
+  "quest.1A00000000000105.quest_desc": [
+    "Warning! You may get it via laser engraver only if it will be placed inside a working cleanroom. The result is directly related to the efficiency of the cleanroom. As such, after the cleanroom started working, you should wait until it completely filters the air inside of it."
+  ],
+  "quest.1A00000000000105.title": "Central Processing Unit (Wafer)",
+  "quest.1A00000000000106.quest_desc": [
+    "A component of circuits."
+  ],
+  "quest.1A00000000000106.title": "Central Processing Unit",
   "quest.1A00000000000108.quest_desc": [
     "A component of electronic devices."
   ],
@@ -1093,6 +1109,10 @@
     "Use bricks blocks and bronze plates with a hammer to get bricked bronze hull. It is the base part of most steam machines."
   ],
   "quest.1A000000000001C2.title": "Bricked Bronze Hull",
+  "quest.1A000000000001C3.quest_desc": [
+    "Craft the Charcoal Pile Igniter from 2 wrought iron nuggets, 3 flints and a bricked bronze hull. To get wrought iron nuggets, you have to smelt an iron ingot to iron nuggets, then smelt them again."
+  ],
+  "quest.1A000000000001C3.title": "Charcoal Pile Igniter",
   "quest.1A000000000001C4.quest_desc": [
     "Use a charcoal pile igniter to transform wood into charcoal. For starters, craft at least 9 brick blocks and put them in the shape of a square 3 by 3. Then put logs (wood) onto it, from 1 to 5 blocks height. Position the charcoal pile igniter on top in the center. All sides including top have to be covered by dirt."
   ],
@@ -2029,6 +2049,18 @@
     "May be created from common rods by hammer."
   ],
   "quest.1A0000000000041F.title": "Long Magnalium Rod",
+  "quest.1A00000000000421.quest_desc": [
+    "Require superheated steam to work."
+  ],
+  "quest.1A00000000000421.title": "Large HP Steam Turbine",
+  "quest.1A00000000000423.quest_desc": [
+    "A part of large HP steam turbine."
+  ],
+  "quest.1A00000000000423.title": "Titanium Turbine Casing",
+  "quest.1A00000000000424.quest_desc": [
+    "Multiblock, that may produce superheated steam from lava or hot coolant. It will be nice to use it in tandem with large HP steam turbine"
+  ],
+  "quest.1A00000000000424.title": "Large Heat Exchanger",
   "quest.1A00000000000425.quest_desc": [
     "A part of heat exchanger."
   ],
@@ -3329,6 +3361,10 @@
     "Better than Large Titanium Boiler"
   ],
   "quest.1A000000000006F4.title": "Large Tungstensteel Boiler",
+  "quest.1A000000000006F5.quest_desc": [
+    "Filter Machine Casing needs for Cleanroom only if you want to build cleanroom larger than 3 by 3 blocks for base."
+  ],
+  "quest.1A000000000006F5.title": "Filter Machine Casing",
   "quest.1A000000000006F7.quest_desc": [
     "This is easy way to craft a small coil. Other way is to use nikel-zink ferrite bolt instead of steel bolt to get more coils."
   ],

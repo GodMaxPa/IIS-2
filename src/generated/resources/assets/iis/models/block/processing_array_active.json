@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/robust_tungstensteel_casing",
+    "north": "iis:block/multi/processing_array_front_active",
+    "south": "iis:block/multi/robust_tungstensteel_casing",
+    "east": "iis:block/multi/robust_tungstensteel_casing",
+    "west": "iis:block/multi/robust_tungstensteel_casing",
+    "up": "iis:block/multi/robust_tungstensteel_casing",
+    "down": "iis:block/multi/robust_tungstensteel_casing"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    {
+      "ingredient": "iis:silicon_wafer",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wafer_cpu",
+      "count": 1
+    }
+  ],
+  "duration": 900,
+  "eut": 120,
+  "keep": [
+    "#iis:crafting_lens/white"
+  ],
+  "cleanroom": true,
+  "type": "iis:laser_engraver"
+}

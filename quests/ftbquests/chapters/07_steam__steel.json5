@@ -390,11 +390,34 @@
       ]
     },
     {
+      "id": "1A000000000001C3",
+      "x": 6.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000001C2"
+      ],
+      "icon": {
+        "id": "iis:charcoal_pile",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:charcoal_pile",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001C300"
+        }
+      ]
+    },
+    {
       "id": "1A000000000001C4",
       "x": 6.5,
       "y": 0.5,
       "dependencies": [
-        "1A000000000001C2"
+        "1A000000000001C3"
       ],
       "icon": {
         "id": "minecraft:charcoal",

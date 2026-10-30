@@ -209,6 +209,7 @@
     "iis:transformer_ev",
     "iis:coke_oven_bricks",
     "iis:coke_oven",
-    "iis:electric_feeder"
+    "iis:electric_feeder",
+    "iis:brittle_charcoal"
   ]
 }

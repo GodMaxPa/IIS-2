@@ -62,7 +62,8 @@ public final class MultiContent {
         return b;
     }
 
-    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel", "titanium", "tungsten_steel", "stainless_steel", "polytetrafluoroethylene");
+    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel", "titanium", "tungsten_steel", "stainless_steel", "polytetrafluoroethylene",
+            "black_steel");
     public static final Map<String, DeferredBlock<Block>> FRAMES = new LinkedHashMap<>();
     static {
         for (String m : FRAME_MATERIALS) {
@@ -133,6 +134,27 @@ public final class MultiContent {
     /** D104: GT_MetaTileEntity_LargeTurbine_Gas и GT_Block_Casings4 meta 10 (турбинный корпус из нержавеющей стали). */
     public static final DeferredBlock<EbfBlock> LARGE_GAS_TURBINE = block("large_gas_turbine", p -> new EbfBlock(p, LargeGasTurbineBlockEntity::new), MultiContent::metal);
     public static final DeferredBlock<Block> TURBINE_CASING_STAINLESS = block("turbine_casing_stainless", Block::new, MultiContent::metal);
+    /** D105: GT_MetaTileEntity_LargeTurbine_HPSteam и GT_Block_Casings4 meta 11 (титановый турбинный корпус). */
+    public static final DeferredBlock<EbfBlock> LARGE_HP_TURBINE = block("large_hp_steam_turbine", p -> new EbfBlock(p, LargeHpTurbineBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<Block> TURBINE_CASING_TITANIUM = block("turbine_casing_titanium", Block::new, MultiContent::metal);
+    /** D105: GT_MetaTileEntity_HeatExchanger. */
+    public static final DeferredBlock<EbfBlock> HEAT_EXCHANGER = block("heat_exchanger", p -> new EbfBlock(p, HeatExchangerBlockEntity::new), MultiContent::metal);
+    /** D105: GT_MetaTileEntity_ProcessingArray (на прочных вольфрамостальных корпусах). */
+    public static final DeferredBlock<EbfBlock> PROCESSING_ARRAY = block("processing_array", p -> new EbfBlock(p, ProcessingArrayBlockEntity::new), MultiContent::metal);
+    /** D105: GT_MetaTileEntity_Charcoal_Pit и GT_Block_Reinforced meta 4 (ломкий уголь: 1–2 древесных угля, топор). */
+    public static final DeferredBlock<EbfBlock> CHARCOAL_PILE = block("charcoal_pile", p -> new EbfBlock(p, CharcoalPileBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<Block> BRITTLE_CHARCOAL = block("brittle_charcoal", Block::new,
+            p -> p.mapColor(MapColor.COLOR_BLACK).sound(SoundType.WOOD).strength(0.5f, 8.0f).requiresCorrectToolForDrops());
+    /** D105: GT_MetaTileEntity_Cleanroom; GT_Block_Reinforced meta 2 (пласкрит), GT_Block_Glass_Casings meta 0 (окно), Casings3 meta 11 (фильтр). */
+    public static final DeferredBlock<EbfBlock> CLEANROOM = block("cleanroom", p -> new EbfBlock(p, CleanroomBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<Block> PLASCRETE = block("plascrete", Block::new,
+            p -> p.mapColor(MapColor.STONE).sound(SoundType.STONE).strength(40.0f, 100.0f).requiresCorrectToolForDrops());
+    public static final DeferredBlock<net.minecraft.world.level.block.TransparentBlock> PLASCRETE_WINDOW = block("plascrete_window",
+            net.minecraft.world.level.block.TransparentBlock::new,
+            p -> p.mapColor(MapColor.STONE).sound(SoundType.GLASS).strength(40.0f, 100.0f).requiresCorrectToolForDrops().noOcclusion()
+                    .isValidSpawn((s, l, pos, e) -> false).isRedstoneConductor((s, l, pos) -> false).isSuffocating((s, l, pos) -> false)
+                    .isViewBlocking((s, l, pos) -> false));
+    public static final DeferredBlock<Block> FILTER_CASING = block("filter_casing", Block::new, MultiContent::metal);
 
     /** Материал ротора турбины (GT: основной материал инструмента). */
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<String>> ROTOR_MATERIAL = COMPONENTS.registerComponentType("rotor_material",
@@ -196,6 +218,16 @@ public final class MultiContent {
             () -> new BlockEntityType<>(LargeTurbineBlockEntity::new, LARGE_STEAM_TURBINE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeGasTurbineBlockEntity>> LARGE_GAS_TURBINE_BE = BLOCK_ENTITIES.register("large_gas_turbine",
             () -> new BlockEntityType<>(LargeGasTurbineBlockEntity::new, LARGE_GAS_TURBINE.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeHpTurbineBlockEntity>> LARGE_HP_TURBINE_BE = BLOCK_ENTITIES.register("large_hp_steam_turbine",
+            () -> new BlockEntityType<>(LargeHpTurbineBlockEntity::new, LARGE_HP_TURBINE.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ProcessingArrayBlockEntity>> PROCESSING_ARRAY_BE = BLOCK_ENTITIES.register("processing_array",
+            () -> new BlockEntityType<>(ProcessingArrayBlockEntity::new, PROCESSING_ARRAY.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CharcoalPileBlockEntity>> CHARCOAL_PILE_BE = BLOCK_ENTITIES.register("charcoal_pile",
+            () -> new BlockEntityType<>(CharcoalPileBlockEntity::new, CHARCOAL_PILE.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CleanroomBlockEntity>> CLEANROOM_BE = BLOCK_ENTITIES.register("cleanroom",
+            () -> new BlockEntityType<>(CleanroomBlockEntity::new, CLEANROOM.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<HeatExchangerBlockEntity>> HEAT_EXCHANGER_BE = BLOCK_ENTITIES.register("heat_exchanger",
+            () -> new BlockEntityType<>(HeatExchangerBlockEntity::new, HEAT_EXCHANGER.get()));
 
     public static final DeferredHolder<MenuType<?>, MenuType<ItemBusMenu>> ITEM_BUS_MENU = MENUS.register("item_bus", () -> IMenuTypeExtension.create(ItemBusMenu::client));
     public static final DeferredHolder<MenuType<?>, MenuType<FluidHatchMenu>> FLUID_HATCH_MENU = MENUS.register("fluid_hatch", () -> IMenuTypeExtension.create(FluidHatchMenu::client));
@@ -203,6 +235,9 @@ public final class MultiContent {
     public static final DeferredHolder<MenuType<?>, MenuType<EbfMenu>> VACUUM_FREEZER_MENU = MENUS.register("vacuum_freezer", () -> IMenuTypeExtension.create(EbfMenu::freezerClient));
     public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> LARGE_BOILER_MENU = MENUS.register("large_boiler", () -> IMenuTypeExtension.create(ControllerMenu::boilerClient));
     public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> LARGE_TURBINE_MENU = MENUS.register("large_steam_turbine", () -> IMenuTypeExtension.create(ControllerMenu::turbineClient));
+    public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> PROCESSING_ARRAY_MENU = MENUS.register("processing_array", () -> IMenuTypeExtension.create(ControllerMenu::processingArrayClient));
+    public static final DeferredHolder<MenuType<?>, MenuType<EbfMenu>> CLEANROOM_MENU = MENUS.register("cleanroom", () -> IMenuTypeExtension.create(EbfMenu::cleanroomClient));
+    public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> HEAT_EXCHANGER_MENU = MENUS.register("heat_exchanger", () -> IMenuTypeExtension.create(ControllerMenu::heatExchangerClient));
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = TABS.register("multi", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.iis.multi"))

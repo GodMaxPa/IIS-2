@@ -112,6 +112,9 @@ public final class IISClient {
         event.register(ru.iis.multi.MultiContent.VACUUM_FREEZER_MENU.get(), ru.iis.multi.client.MultiScreens.Freezer::new);
         event.register(ru.iis.multi.MultiContent.LARGE_BOILER_MENU.get(), ru.iis.multi.client.MultiScreens.LargeBoiler::new);
         event.register(ru.iis.multi.MultiContent.LARGE_TURBINE_MENU.get(), ru.iis.multi.client.MultiScreens.LargeTurbine::new);
+        event.register(ru.iis.multi.MultiContent.HEAT_EXCHANGER_MENU.get(), ru.iis.multi.client.MultiScreens.HeatExchanger::new);
+        event.register(ru.iis.multi.MultiContent.PROCESSING_ARRAY_MENU.get(), ru.iis.multi.client.MultiScreens.ProcessingArray::new);
+        event.register(ru.iis.multi.MultiContent.CLEANROOM_MENU.get(), ru.iis.multi.client.MultiScreens.Cleanroom::new);
         event.register(ru.iis.bio.BioContent.STATION_MENU.get(), ru.iis.bio.client.BioStationScreen::new);
         event.register(ru.iis.bio.BioContent.HEARTH_MENU.get(), ru.iis.bio.client.HearthScreen::new);
         event.register(ru.iis.rail.RailContent.LOCO_MENU.get(), ru.iis.rail.client.LocomotiveScreen::new);

@@ -200,6 +200,73 @@ public final class MultiScreens {
         }
     }
 
+    /** Большой теплообменник (D105): экран GT LargeHeatExchanger.png со слотом схемы; строки GT getInfoData. */
+    public static class HeatExchanger extends MachineScreen<ControllerMenu> {
+        public HeatExchanger(ControllerMenu menu, Inventory inventory, Component title) {
+            super(menu, inventory, title, "multi/heat_exchanger");
+        }
+
+        @Override
+        protected void extractGauges(GuiGraphicsExtractor g) {}
+
+        @Override
+        protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
+            int y = statusLines(g, font, title, menu.formed(), menu.okMask(), menu.works(), menu.mufflerBlocked());
+            if (y < 0) return;
+            int white = 0xFFFAFAFF;
+            g.text(font, Component.translatable(menu.extra(1) != 0 ? "gui.iis.boiler.sh_steam" : "gui.iis.boiler.steam", menu.extra(0)), 10, y, white, false);
+            y += 10;
+            g.text(font, Component.translatable("gui.iis.boiler.efficiency", menu.efficiency()), 10, y, white, false);
+            y += 10;
+            if (y <= 70) g.text(font, Component.translatable("gui.iis.heat_exchanger.threshold", menu.extra(2)), 10, y, white, false);
+            y += 10;
+            if (y <= 70 && menu.extra(3) > 0) g.text(font, Component.translatable("gui.iis.boiler.circuit", menu.extra(3)), 10, y, white, false);
+        }
+    }
+
+    /** Обрабатывающий массив (D105): экран GT ProcessingArray.png со слотом машин. */
+    public static class ProcessingArray extends MachineScreen<ControllerMenu> {
+        public ProcessingArray(ControllerMenu menu, Inventory inventory, Component title) {
+            super(menu, inventory, title, "multi/processing_array");
+        }
+
+        @Override
+        protected void extractGauges(GuiGraphicsExtractor g) {}
+
+        @Override
+        protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
+            int y = statusLines(g, font, title, menu.formed(), menu.okMask(), menu.works(), menu.mufflerBlocked());
+            if (y < 0) return;
+            int white = 0xFFFAFAFF, red = 0xFFFF5555;
+            if (menu.extra(1) == 0) {
+                g.text(font, Component.translatable("gui.iis.processing_array.no_machine"), 10, y, red, false);
+                return;
+            }
+            g.text(font, Component.translatable("gui.iis.processing_array.parallel", menu.extra(0)), 10, y, white, false);
+            y += 10;
+            if (menu.eut() > 0) g.text(font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
+        }
+    }
+
+    /** Чистая комната (D105): экран GT MultiblockDisplay.png; чистота — это КПД машины. */
+    public static class Cleanroom extends Ebf {
+        public Cleanroom(EbfMenu menu, Inventory inventory, Component title) {
+            super(menu, inventory, title, "multi/cleanroom");
+        }
+
+        @Override
+        protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
+            int y = statusLines(g, font, title, menu.formed(), menu.okMask(), menu.works(), menu.mufflerBlocked());
+            if (y < 0) return;
+            int white = 0xFFFAFAFF;
+            g.text(font, Component.translatable("gui.iis.cleanroom.cleanliness", menu.efficiency()), 10, y, white, false);
+            y += 10;
+            g.text(font, Component.translatable("gui.iis.ebf.voltage", menu.voltage()), 10, y, white, false);
+            y += 10;
+            if (y <= 70 && menu.eut() > 0) g.text(font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
+        }
+    }
+
     /** Вакуумный морозильник: экран GT VacuumFreezer.png, те же строки без нагрева (D81). */
     public static class Freezer extends Ebf {
         public Freezer(EbfMenu menu, Inventory inventory, Component title) {

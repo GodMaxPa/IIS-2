@@ -30,6 +30,16 @@ public class EbfMenu extends MachineMenu {
         return freezer(id, inventory, new SimpleContainerData(10));
     }
 
+    /** Чистая комната (D105): те же сведения и чистота. */
+    public static EbfMenu cleanroom(int id, Inventory inventory, ContainerData data) {
+        return new EbfMenu(MultiContent.CLEANROOM_MENU.get(), id, inventory, data);
+    }
+
+    public static EbfMenu cleanroomClient(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
+        buf.readBlockPos();
+        return cleanroom(id, inventory, new SimpleContainerData(10));
+    }
+
     public static EbfMenu client(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
         buf.readBlockPos();
         return new EbfMenu(id, inventory, new SimpleContainerData(10));

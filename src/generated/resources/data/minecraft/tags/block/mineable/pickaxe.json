@@ -460,6 +460,15 @@
     "iis:ptfe_pipe_casing",
     "iis:large_chemical_reactor",
     "iis:turbine_casing_stainless",
-    "iis:large_gas_turbine"
+    "iis:large_gas_turbine",
+    "iis:turbine_casing_titanium",
+    "iis:large_hp_steam_turbine",
+    "iis:heat_exchanger",
+    "iis:processing_array",
+    "iis:charcoal_pile",
+    "iis:plascrete",
+    "iis:plascrete_window",
+    "iis:filter_casing",
+    "iis:cleanroom"
   ]
 }

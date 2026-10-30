@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/bronze_plated_bricks",
+    "north": "iis:block/multi/bronze_plated_bricks",
+    "south": "iis:block/multi/bronze_plated_bricks",
+    "east": "iis:block/multi/bronze_plated_bricks",
+    "west": "iis:block/multi/bronze_plated_bricks",
+    "up": "iis:block/multi/charcoal_pile_top",
+    "down": "iis:block/multi/bronze_plated_bricks"
+  }
+}

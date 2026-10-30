@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/plascrete_window",
+    "north": "iis:block/multi/plascrete_window",
+    "south": "iis:block/multi/plascrete_window",
+    "east": "iis:block/multi/plascrete_window",
+    "west": "iis:block/multi/plascrete_window",
+    "up": "iis:block/multi/plascrete_window",
+    "down": "iis:block/multi/plascrete_window"
+  },
+  "render_type": "minecraft:translucent"
+}

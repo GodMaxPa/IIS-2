@@ -330,6 +330,7 @@ def generate(g):
     mrec('laser_engraver', 'wafer_ram', [ing(f'{NS}:silicon_wafer')], [rout(f'{NS}:wafer_ram')], 900, 120, keep='#iis:crafting_lens/cyan')
     cutter('chip_ilc', [ing(f'{NS}:wafer_ilc')], [rout(f'{NS}:chip_ilc', 8)], 600, 48)
     cutter('chip_ram', [ing(f'{NS}:wafer_ram')], [rout(f'{NS}:chip_ram', 32)], 600, 48)
+    cutter('chip_cpu', [ing(f'{NS}:wafer_cpu')], [rout(f'{NS}:chip_cpu', 8)], 600, 48)   # :511, the wafer: multis.py (cleanroom)
     # diode from a silicon wafer: 1 diode (the tiny gallium variant gives 4, lv.py)
     for wid, wire in (('wire', '#iis:wires/1x/tin'), ('fine_wire', tag_of('wire_fine', 'Tin'))):
         shaped(f'lv/diode_wafer_{wid}', f'{NS}:diode', 1, ['BG ', 'WDW', 'BG '], {'B': '#c:dyes/black', 'G': 'minecraft:glass_pane',

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CPC",
+    "PMP",
+    "BPB"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "B": "iis:pipe_large_titanium",
+    "C": "#c:circuits/elite",
+    "P": "#c:gears/titanium"
+  },
+  "result": {
+    "id": "iis:large_hp_steam_turbine"
+  }
+}

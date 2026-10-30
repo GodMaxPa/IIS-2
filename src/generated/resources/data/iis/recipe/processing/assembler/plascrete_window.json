@@ -1,0 +1,27 @@
+{
+  "inputs": [
+    {
+      "ingredient": "iis:plascrete",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/glass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plascrete_window",
+      "count": 1
+    }
+  ],
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:glue",
+      "amount": 100
+    }
+  ],
+  "duration": 600,
+  "eut": 4,
+  "type": "iis:assembler"
+}

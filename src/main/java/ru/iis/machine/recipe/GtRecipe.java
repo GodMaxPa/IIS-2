@@ -36,6 +36,8 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
     private final int circuit;
     /** Неизрасходуемые входы — формы отвердителя (GT Shape_Mold_*.get(0)): должны лежать во входе (D76). */
     private final List<Ingredient> keep;
+    /** GT mSpecialValue −200: рецепт идёт только в чистой комнате, выходы выпадают с шансом её чистоты (D105). */
+    private final boolean cleanroom;
 
     public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut,
                     List<SizedFluidIngredient> fluidInputs, List<FluidOutput> fluidOutputs) {
@@ -54,6 +56,13 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
 
     public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut,
                     List<SizedFluidIngredient> fluidInputs, List<FluidOutput> fluidOutputs, int temperature, int circuit, List<Ingredient> keep) {
+        this(map, inputs, outputs, duration, eut, fluidInputs, fluidOutputs, temperature, circuit, keep, false);
+    }
+
+    public GtRecipe(GtRecipeMap map, List<SizedIngredient> inputs, List<ChanceOutput> outputs, int duration, int eut,
+                    List<SizedFluidIngredient> fluidInputs, List<FluidOutput> fluidOutputs, int temperature, int circuit, List<Ingredient> keep,
+                    boolean cleanroom) {
+        this.cleanroom = cleanroom;
         this.keep = List.copyOf(keep);
         this.circuit = circuit;
         this.temperature = temperature;
@@ -80,6 +89,7 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
     public int temperature() { return temperature; }
     public int circuit() { return circuit; }
     public List<Ingredient> keep() { return keep; }
+    public boolean cleanroom() { return cleanroom; }
 
     /** Хватает ли жидкости во входном баке (GT: одна входная жидкость на машину). */
     public boolean fluidMatches(@Nullable FluidStack tank) {
@@ -99,8 +109,9 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
                 FluidOutput.CODEC.listOf(0, map.maxFluidOutputs).optionalFieldOf("fluid_outputs", List.of()).forGetter(GtRecipe::fluidOutputs),
                 Codec.intRange(0, Integer.MAX_VALUE).optionalFieldOf("temp", 0).forGetter(GtRecipe::temperature),
                 Codec.intRange(-1, ru.iis.lv.item.ProgrammedCircuitItem.MAX).optionalFieldOf("circuit", -1).forGetter(GtRecipe::circuit),
-                Ingredient.CODEC.listOf().optionalFieldOf("keep", List.of()).forGetter(GtRecipe::keep)
-        ).apply(i, (in, out, d, e, fi, fo, t, c, k) -> new GtRecipe(map, in, out, d, e, fi, fo, t, c, k)));
+                Ingredient.CODEC.listOf().optionalFieldOf("keep", List.of()).forGetter(GtRecipe::keep),
+                Codec.BOOL.optionalFieldOf("cleanroom", false).forGetter(GtRecipe::cleanroom)
+        ).apply(i, (in, out, d, e, fi, fo, t, c, k, cr) -> new GtRecipe(map, in, out, d, e, fi, fo, t, c, k, cr)));
     }
 
     static StreamCodec<RegistryFriendlyByteBuf, GtRecipe> streamCodec(GtRecipeMap map) {
@@ -112,9 +123,10 @@ public final class GtRecipe implements Recipe<GtRecipeInput> {
                 SizedFluidIngredient.STREAM_CODEC.apply(ByteBufCodecs.list()), GtRecipe::fluidInputs,
                 FluidOutput.STREAM_CODEC.apply(ByteBufCodecs.list()), GtRecipe::fluidOutputs,
                 ByteBufCodecs.VAR_INT, GtRecipe::temperature,
-                ByteBufCodecs.VAR_INT.map(v -> v - 1, v -> v + 1), GtRecipe::circuit,
+                // схема (+1) и признак чистой комнаты (бит 20) — одним числом: у composite не больше девяти полей
+                ByteBufCodecs.VAR_INT, r -> (r.circuit() + 1) | (r.cleanroom() ? 1 << 20 : 0),
                 Ingredient.CONTENTS_STREAM_CODEC.apply(ByteBufCodecs.list()), GtRecipe::keep,
-                (in, out, d, e, fi, fo, t, c, k) -> new GtRecipe(map, in, out, d, e, fi, fo, t, c, k));
+                (in, out, d, e, fi, fo, t, c, k) -> new GtRecipe(map, in, out, d, e, fi, fo, t, (c & 0xFFFFF) - 1, k, (c >> 20) != 0));
     }
 
     /**

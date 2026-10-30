@@ -255,6 +255,9 @@ ITEMS = [
     ('chip_ilc', 'gt:chip_ilc', 'gt.metaitem.03.32037.name', 'Integrated Logic Circuit', 'Логическая микросхема'),
     ('wafer_ram', 'gt:wafer_ram', 'gt.metaitem.03.32038.name', 'Random Access Memory Chip (Wafer)', 'Пластина микросхем ОЗУ'),
     ('chip_ram', 'gt:chip_ram', 'gt.metaitem.03.32039.name', 'Random Access Memory Chip', 'Микросхема ОЗУ'),
+    # D105: GT_MetaGenerated_Item_03:102-103 CPU wafer (engraved only in a cleanroom) and chip
+    ('wafer_cpu', 'gt:wafer_cpu', 'gt.metaitem.03.32044.name', 'Central Processing Unit (Wafer)', 'Пластина центральных процессоров'),
+    ('chip_cpu', 'gt:chip_cpu', 'gt.metaitem.03.32045.name', 'Central Processing Unit', 'Центральный процессор'),
     # D92: GT_MetaGenerated_Item_01:713 transistor, :715 phenolic board, Item_03:141 good integrated circuit; the HV circuit is
     # IC2's advanced circuit in IIS 1 (GT_Proxy:416) — our own item with GT's Processor Assembly icon (:696)
     ('transistor', 'gt:717', 'gt.metaitem.01.32717.name', 'Transistor', 'Транзистор'),

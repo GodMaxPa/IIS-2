@@ -3211,5 +3211,17 @@
 "state": 1,
 "temperature": 295,
 "color": 5931750
+},
+{
+"id": "superheated_steam",
+"state": 2,
+"temperature": 600,
+"color": 15132400
+},
+{
+"id": "pahoehoe_lava",
+"state": 1,
+"temperature": 1200,
+"color": 9190430
 }
 ]

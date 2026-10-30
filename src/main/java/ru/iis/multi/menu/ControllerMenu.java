@@ -15,7 +15,7 @@ import ru.iis.multi.MultiContent;
 
 /**
  * Экран контроллера со слотом (GT_Container_MultiMachine: слот 1 в (152, 5)): программная схема большого котла (D88),
- * ротор большой турбины (D89).
+ * ротор большой турбины (D89), программная схема теплообменника (D105).
  * Сведения 0–9 — общие (как у {@link EbfMenu}), дальше — свои у каждой машины.
  */
 public class ControllerMenu extends MachineMenu {
@@ -23,6 +23,10 @@ public class ControllerMenu extends MachineMenu {
     public static final int BOILER_DATA = 14;
     /** Турбина: 10 — отдача EU/t, 11 — оптимальный поток, 12 — пар в люке, 13 — износ ротора %, 14 — ротор на месте. */
     public static final int TURBINE_DATA = 15;
+    /** Теплообменник (D105): 10 — пар л/т, 11 — перегретый, 12 — порог перегрева л/с, 13 — настройка схемы. */
+    public static final int HEAT_EXCHANGER_DATA = 14;
+    /** Обрабатывающий массив (D105): 10 — сколько машин сработало, 11 — машина в слоте годится. */
+    public static final int ARRAY_DATA = 12;
 
     public ControllerMenu(MenuType<?> type, int id, Inventory inventory, Container container, ContainerData data) {
         super(type, id, container, data);
@@ -48,9 +52,28 @@ public class ControllerMenu extends MachineMenu {
         return turbine(id, inventory, new SimpleContainer(1), new SimpleContainerData(TURBINE_DATA));
     }
 
+    public static ControllerMenu processingArray(int id, Inventory inventory, Container container, ContainerData data) {
+        return new ControllerMenu(MultiContent.PROCESSING_ARRAY_MENU.get(), id, inventory, container, data);
+    }
+
+    public static ControllerMenu processingArrayClient(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
+        buf.readBlockPos();
+        return processingArray(id, inventory, new SimpleContainer(1), new SimpleContainerData(ARRAY_DATA));
+    }
+
+    public static ControllerMenu heatExchanger(int id, Inventory inventory, Container container, ContainerData data) {
+        return new ControllerMenu(MultiContent.HEAT_EXCHANGER_MENU.get(), id, inventory, container, data);
+    }
+
+    public static ControllerMenu heatExchangerClient(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
+        buf.readBlockPos();
+        return heatExchanger(id, inventory, new SimpleContainer(1), new SimpleContainerData(HEAT_EXCHANGER_DATA));
+    }
+
     @Override
     protected boolean acceptsShiftClick(int slot, ItemStack stack) {
-        return stack.getItem() instanceof ProgrammedCircuitItem || stack.getItem() instanceof ru.iis.multi.TurbineRotorItem;
+        return stack.getItem() instanceof ProgrammedCircuitItem || stack.getItem() instanceof ru.iis.multi.TurbineRotorItem
+                || ru.iis.multi.block.ProcessingArrayBlockEntity.machine(stack) != null;
     }
 
     public boolean formed() { return data(0) != 0; }

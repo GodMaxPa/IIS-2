@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "SSS",
+    "MFV"
+  ],
+  "key": {
+    "P": "minecraft:iron_bars",
+    "S": "iis:item_filter",
+    "M": "iis:electric_motor_mv",
+    "F": "#c:frames/steel",
+    "V": "#iis:rotors/steel"
+  },
+  "result": {
+    "id": "iis:filter_casing",
+    "count": 2
+  }
+}

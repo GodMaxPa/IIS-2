@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/plascrete",
+    "north": "iis:block/multi/plascrete",
+    "south": "iis:block/multi/plascrete",
+    "east": "iis:block/multi/plascrete",
+    "west": "iis:block/multi/plascrete",
+    "up": "iis:block/multi/cleanroom_top",
+    "down": "iis:block/multi/cleanroom_top"
+  }
+}

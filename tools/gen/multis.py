@@ -350,6 +350,163 @@ def generate(g):
         rec[f'distillation_tower/gt_{line}'] = r
     stats['tower_skipped'] = tower_skipped
 
+
+    # --- D105: HP steam turbine, heat exchanger, processing array, charcoal pile, cleanroom ------------------------
+    def cube_block(bid, sides, top=None, bottom=None, render=None, loot=True):
+        """Block model with own side/top/bottom textures (iis:block/... ids or minecraft ones)."""
+        m = {'parent': 'minecraft:block/cube', 'textures': {'particle': sides, 'north': sides, 'south': sides, 'east': sides, 'west': sides,
+                                                             'up': top or sides, 'down': bottom or sides}}
+        if render:
+            m['render_type'] = render
+        write(os.path.join(A, 'models', 'block', bid + '.json'), m)
+        write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': {'': {'model': f'{NS}:block/{bid}'}}})
+        if loot:
+            simple(bid)
+        else:
+            write(os.path.join(A, 'items', bid + '.json'), {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/{bid}'}})
+
+    def top_controller(bid, casing_tex, overlay, key, en, lines, both=False):
+        """Controller with the GT overlay on top (charcoal pile; cleanroom also on the bottom), plain sides."""
+        side = f'{NS}:block/multi/{casing_tex}'
+        base = Image.open(tex_out(f'block/multi/{casing_tex}.png')).convert('RGBA')
+        for suf, ov in (('', overlay), ('_active', overlay + '_ACTIVE')):
+            o = Image.open(os.path.join(BI, ov + '.png')).convert('RGBA')
+            n = max(1, o.height // 16)
+            outi = Image.new('RGBA', (16, 16 * n))
+            for f in range(n):
+                outi.paste(Image.alpha_composite(base, o.crop((0, 16 * f, 16, 16 * f + 16))), (0, 16 * f))
+            outi.save(tex_out(f'block/multi/{bid}_top{suf}.png'))
+            meta = os.path.join(BI, ov + '.png.mcmeta')
+            if n > 1 and os.path.exists(meta):
+                shutil.copy(meta, tex_out(f'block/multi/{bid}_top{suf}.png.mcmeta'))
+            top = f'{NS}:block/multi/{bid}_top{suf}'
+            write(os.path.join(A, 'models', 'block', bid + suf + '.json'), {'parent': 'minecraft:block/cube', 'textures': {
+                'particle': side, 'north': side, 'south': side, 'east': side, 'west': side, 'up': top, 'down': top if both else side}})
+        variants = {}
+        for facing in ('north', 'east', 'south', 'west'):
+            for active in (False, True):
+                variants[f'facing={facing},active={str(active).lower()}'] = {'model': f'{NS}:block/{bid}' + ('_active' if active else '')}
+        write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': variants})
+        simple(bid)
+        name(f'block.{NS}.{bid}', en, ru(key, en))
+        tooltip(bid, lines)
+
+    def raw(rtype, rid, r):
+        r = dict(r)
+        r['type'] = f'{NS}:{rtype}'
+        rec.setdefault(f'{rtype}/{rid}', r)
+
+    # titanium turbine casing: GT_Loader_MetaTileEntities:73 "PhP/PFP/PwP" titanium plates + turbine casing -> 2; :1398 assembler
+    casing('turbine_casing_titanium', 'MACHINE_CASING_STABLE_TITANIUM', 'gt.blockcasings4.11.name', 'Titanium Turbine Casing')
+    shaped('multi/turbine_casing_titanium', f'{NS}:turbine_casing_titanium', 2, ['PhP', 'PFP', 'PwP'],
+           {'P': tag_of('plate', 'Titanium'), 'F': f'{NS}:turbine_casing'})
+    mrec('assembler', 'turbine_casing_titanium', [ing(tag_of('plate', 'Titanium'), 6), ing(f'{NS}:turbine_casing')],
+         [out(f'{NS}:turbine_casing_titanium', 2)], 50, 16)
+    controller('large_hp_steam_turbine', 'turbine_casing_titanium', 'LARGETURBINE_TI5', 'gt.blockmachines.multimachine.largehpturbine.name',
+               'Large HP Steam Turbine', [
+                   ('Shape of the large steam turbine on titanium turbine casings', 'Форма большой паровой турбины на титановых турбинных корпусах'),
+                   ('Burns superheated steam: 1 L = 1 EU, up to 125 % of the optimal flow', 'Перегретый пар: 1 л = 1 EU, до 125 % оптимального потока'),
+                   ('Spent steam goes to output hatches; plain steam is wasted', 'Отработанный пар — в выходные люки; обычный пар пропадает'),
+                   ('A rotor in the controller; no pollution', 'Ротор — в контроллере; не загрязняет')], active='LARGETURBINE_TI_ACTIVE5')
+    # GT_Loader_MetaTileEntities:1250 "CPC/PMP/BPB": IV hull, large titanium pipes, Elite circuits, titanium gears
+    shaped('multi/large_hp_steam_turbine', f'{NS}:large_hp_steam_turbine', 1, ['CPC', 'PMP', 'BPB'],
+           {'M': f'{NS}:hull_iv', 'B': f'{NS}:pipe_large_titanium', 'C': '#c:circuits/elite', 'P': tag_of('gear', 'Titanium')})
+
+    controller('heat_exchanger', 'stable_titanium_casing', 'OVERLAY_FRONT_HEAT_EXCHANGER', 'gt.blockmachines.multimachine.heatexchanger.name',
+               'Large Heat Exchanger', [
+                   ('3x4x3; controller in the middle of the bottom front side', 'Размер 3×4×3; контроллер — в середине передней стороны внизу'),
+                   ('Middle column: lava input hatch, 2 titanium pipe casings, output hatch', 'Средний столб: люк лавы, 2 корпуса с титановыми трубами, выходной люк'),
+                   ('At least 24 stable titanium casings; distilled water in, steam out', 'Не меньше 24 стабильных титановых корпусов; вход воды, выход пара'),
+                   ('Lava to pahoehoe lava; 1000 L/s or more gives superheated steam', 'Лава → лава пахоэхоэ; от 1000 л/с — перегретый пар'),
+                   ('Circuit 1-25 lowers that threshold by 150 L/s a step for 1.5 % output', 'Схема 1–25 снижает порог на 150 л/с за ступень ценой 1,5 % выхода'),
+                   ('Runs dry without distilled water - explodes', 'Без дистиллированной воды взрывается')])
+    # :1294 "WCW/CMC/WCW": titanium pipe casing, medium titanium pipes, EV pumps
+    shaped('multi/heat_exchanger', f'{NS}:heat_exchanger', 1, ['WCW', 'CMC', 'WCW'],
+           {'M': f'{NS}:titanium_pipe_casing', 'C': f'{NS}:pipe_medium_titanium', 'W': f'{NS}:electric_pump_ev'})
+    shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'LargeHeatExchanger.png'), tex_out('gui/multi/heat_exchanger.png'))
+    name('gui.iis.heat_exchanger.threshold', 'Superheated at: %s L/s', 'Перегрев от: %s л/с')
+
+    controller('processing_array', 'robust_tungstensteel_casing', 'OVERLAY_FRONT_PROCESSING_ARRAY', 'gt.blockmachines.multimachine.processingarray.name',
+               'Processing Array', [
+                   ('3x3x3 hollow, controller in the middle of a side', 'Куб 3×3×3, пустой внутри; контроллер — в середине стенки'),
+                   ('At least 16 robust tungstensteel casings; the rest: hatches', 'Не меньше 16 прочных вольфрамостальных корпусов; остальное — люки'),
+                   ('Put up to 16 single-block machines of one kind into the controller', 'В контроллер — до 16 одноблочных машин одного вида'),
+                   ('Runs their recipes at their voltage, as many at once as machines', 'Работает по их рецептам и напряжению, столько сразу, сколько машин')])
+    # GT_MachineRecipeLoader:71 needs the EV digital transformer (not ported yet) - the controller has no recipe for now
+    shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'ProcessingArray.png'), tex_out('gui/multi/processing_array.png'))
+    name('gui.iis.processing_array.no_machine', 'Insert single-block machines', 'Вставьте одноблочные машины')
+    name('gui.iis.processing_array.parallel', 'Machines working: %s', 'Работает машин: %s')
+
+    # charcoal pile igniter: casing = bronze plated bricks, rock breaker overlay on top; brittle charcoal looks like a coal block
+    top_controller('charcoal_pile', 'bronze_plated_bricks', 'OVERLAY_TOP_ROCK_BREAKER', 'gt.blockmachines.multimachine.charcoalpile.name',
+                   'Charcoal Pile Igniter', [
+                       ('Place on top of a log pile, up to 11x6x11', 'Ставится сверху на кучу брёвен до 11×6×11'),
+                       ('Bricks under the logs, dirt or grass around and above', 'Под брёвнами — кирпичи, вокруг и сверху — земля или дёрн'),
+                       ('No air between the logs', 'Без пустот между брёвнами'),
+                       ('Turns all the logs into brittle charcoal', 'Превращает все брёвна в ломкий уголь'),
+                       ('Causes 100 Pollution per second', 'Загрязнение: 100 в секунду')])
+    # GT_Loader_MetaTileEntities:1304 "EME/CCC": bricked bronze hull, wrought iron nuggets, flint
+    shaped('multi/charcoal_pile', f'{NS}:charcoal_pile', 1, ['EME', 'CCC'],
+           {'M': f'{NS}:hull_bronze_bricked', 'E': tag_of('nugget', 'WroughtIron'), 'C': 'minecraft:flint'})
+    write(os.path.join(A, 'models', 'block', 'brittle_charcoal.json'), {'parent': 'minecraft:block/cube_all', 'textures': {'all': 'minecraft:block/coal_block'}})
+    write(os.path.join(A, 'blockstates', 'brittle_charcoal.json'), {'variants': {'': {'model': f'{NS}:block/brittle_charcoal'}}})
+    write(os.path.join(A, 'items', 'brittle_charcoal.json'), {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/brittle_charcoal'}})
+    # GT_Block_Reinforced#dropBlockAsItemWithChance: 1-2 charcoal; axe, harvest level 1
+    write(os.path.join(D, NS, 'loot_table', 'blocks', 'brittle_charcoal.json'), {
+        'type': 'minecraft:block', 'random_sequence': f'{NS}:blocks/brittle_charcoal',
+        'pools': [{'rolls': 1.0, 'bonus_rolls': 0.0, 'conditions': [{'condition': 'minecraft:survives_explosion'}],
+                   'entries': [{'type': 'minecraft:item', 'name': 'minecraft:charcoal', 'functions': [
+                       {'function': 'minecraft:set_count', 'count': {'type': 'minecraft:uniform', 'min': 1, 'max': 2}}]}]}]})
+    block_tags.setdefault('minecraft:mineable/axe', []).append(f'{NS}:brittle_charcoal')
+    block_tags['minecraft:needs_stone_tool'].append(f'{NS}:brittle_charcoal')
+    name(f'block.{NS}.brittle_charcoal', 'Brittle Charcoal', ru('gt.blockreinforced.4.name', 'Ломкий уголь'))
+    g['shapeless']('multi/charcoal_from_brittle', 'minecraft:charcoal', 1, [f'{NS}:brittle_charcoal'])
+
+    # cleanroom: plascrete (GT_Block_Reinforced:2), plascrete window (GT_Block_Glass_Casings:0, the GT png is broken - drawn here),
+    # filter machine casing (GT_Block_Casings3:11)
+    first(os.path.join(BI, 'BLOCK_PLASCRETE.png')).save(tex_out('block/multi/plascrete.png'))
+    cube_block('plascrete', f'{NS}:block/multi/plascrete')
+    name(f'block.{NS}.plascrete', 'Plascrete', ru('gt.blockreinforced.2.name', 'Пласкрит'))
+    plas = first(os.path.join(BI, 'BLOCK_PLASCRETE.png'))
+    win = Image.new('RGBA', (16, 16), (0, 0, 0, 0))
+    for yy in range(16):
+        for xx in range(16):
+            if xx in (0, 15) or yy in (0, 15):
+                win.putpixel((xx, yy), plas.getpixel((xx, yy)))
+            elif (xx + yy) % 7 == 0 and 3 < xx < 12:
+                win.putpixel((xx, yy), (235, 240, 245, 110))
+            else:
+                win.putpixel((xx, yy), (200, 215, 225, 45))
+    win.save(tex_out('block/multi/plascrete_window.png'))
+    cube_block('plascrete_window', f'{NS}:block/multi/plascrete_window', render='minecraft:translucent')
+    name(f'block.{NS}.plascrete_window', 'Plascrete Window', ru('gt.blockglass1.0.name', 'Окно из пласкрита'))
+    casing('filter_casing', 'MACHINE_CASING_VENT', 'gt.blockcasings3.11.name', 'Filter Machine Casing')
+    # GT_MachineRecipeLoader:343 black steel frame + plastic dust + 144 L concrete -> plascrete (200 t, 48 EU/t)
+    raw('assembler', 'plascrete', {'inputs': [ing('#c:frames/black_steel'), ing(tag_of('dust', 'Plastic'))], 'outputs': [out(f'{NS}:plascrete')],
+                                  'fluid_inputs': [{'ingredient': f'{NS}:molten_concrete', 'amount': 144}], 'duration': 200, 'eut': 48})
+    # :347 plascrete + glass plate + 100 L glue -> window (600 t, 4 EU/t); the "BPB/PGP/BPB" craft with a glue cell is left out
+    raw('assembler', 'plascrete_window', {'inputs': [ing(f'{NS}:plascrete'), ing(tag_of('plate', 'Glass'))], 'outputs': [out(f'{NS}:plascrete_window')],
+                                         'fluid_inputs': [{'ingredient': f'{NS}:glue', 'amount': 100}], 'duration': 600, 'eut': 4})
+    # GT_Loader_MetaTileEntities:85 "PPP/SSS/MFV": iron bars, item filters, MV motor, steel frame, steel rotor -> 2
+    shaped('multi/filter_casing', f'{NS}:filter_casing', 2, ['PPP', 'SSS', 'MFV'],
+           {'P': 'minecraft:iron_bars', 'S': f'{NS}:item_filter', 'M': f'{NS}:electric_motor_mv', 'F': '#c:frames/steel', 'V': tag_of('rotor', 'Steel')})
+    top_controller('cleanroom', 'plascrete', 'OVERLAY_TOP_CLEANROOM', 'gt.blockmachines.multimachine.cleanroom.name', 'Cleanroom Controller', [
+        ('Top center of a hollow room from 3x4x3 to 15x15x15, square plan', 'Центр потолка пустой комнаты от 3×4×3 до 15×15×15, квадратной в плане'),
+        ('Ceiling: filter machine casings; edges: plascrete', 'Потолок — фильтрующие корпуса, рёбра — пласкрит'),
+        ('Walls, floor: plascrete, windows, an iron door (two from 7x7)', 'Стены и пол: пласкрит, окна, железная дверь (от 7×7 — две)'),
+        ('One maintenance and one energy hatch; machine hulls up to 1/3 of a wall', 'Один люк обслуживания и один энергетический; корпуса машин — до трети стены'),
+        ('3 EU/t per ceiling block; cleaning 80 s per block of height', '3 EU/t на блок потолка; очистка — 80 с на блок высоты'),
+        ('Keep the door closed; machines inside make cleanroom recipes', 'Держите дверь закрытой; машины внутри делают рецепты чистой комнаты')], both=True)
+    # :1366 "FFF/RHR/MCM": HV hull, item filters, stainless steel rotors, HV motors, Advanced circuit
+    shaped('multi/cleanroom', f'{NS}:cleanroom', 1, ['FFF', 'RHR', 'MCM'],
+           {'H': f'{NS}:hull_hv', 'F': f'{NS}:item_filter', 'R': tag_of('rotor', 'StainlessSteel'), 'M': f'{NS}:electric_motor_hv',
+            'C': '#c:circuits/advanced'})
+    shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'MultiblockDisplay.png'), tex_out('gui/multi/cleanroom.png'))
+    name('gui.iis.cleanroom.cleanliness', 'Cleanliness: %s%%', 'Чистота: %s%%')
+    # ProcessingCrafting:52 (craftingLensWhite) CPU wafer - cleanroom only; GT_MachineRecipeLoader:511 cutter -> 8 CPU chips
+    raw('laser_engraver', 'wafer_cpu', {'inputs': [ing(f'{NS}:silicon_wafer')], 'outputs': [out(f'{NS}:wafer_cpu')], 'duration': 900, 'eut': 120,
+                                       'keep': ['#iis:crafting_lens/white'], 'cleanroom': True})
+
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     for k in ('implosion', 'pyrolyse', 'cracking', 'distillation_tower'):

@@ -89,7 +89,7 @@ public class GtRecipeCategory extends AbstractRecipeCategory<RecipeHolder<GtReci
             builder.addText(Component.translatable("jei.iis.duration", seconds), 90, 10).setPosition(62, 46);
         } else {
             builder.addText(List.of(Component.translatable("jei.iis.eut", r.eut(), 2 * r.eut()),
-                    Component.translatable("jei.iis.duration", seconds)), 150, 20).setPosition(0, 58);
+                    Component.translatable(r.cleanroom() ? "jei.iis.duration_cleanroom" : "jei.iis.duration", seconds)), 150, 20).setPosition(0, 58);
         }
     }
 }

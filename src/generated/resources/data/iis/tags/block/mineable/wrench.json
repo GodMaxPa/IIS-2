@@ -228,6 +228,7 @@
     "iis:frame_tungsten_steel",
     "iis:frame_stainless_steel",
     "iis:frame_polytetrafluoroethylene",
+    "iis:frame_black_steel",
     "iis:heat_proof_casing",
     "iis:coil_cupronickel",
     "iis:coil_kanthal",

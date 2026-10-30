@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FFF",
+    "RHR",
+    "MCM"
+  ],
+  "key": {
+    "H": "iis:hull_hv",
+    "F": "iis:item_filter",
+    "R": "#iis:rotors/stainless_steel",
+    "M": "iis:electric_motor_hv",
+    "C": "#c:circuits/advanced"
+  },
+  "result": {
+    "id": "iis:cleanroom"
+  }
+}

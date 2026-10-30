@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=north,active=false": {
+      "model": "iis:block/cleanroom"
+    },
+    "facing=north,active=true": {
+      "model": "iis:block/cleanroom_active"
+    },
+    "facing=east,active=false": {
+      "model": "iis:block/cleanroom"
+    },
+    "facing=east,active=true": {
+      "model": "iis:block/cleanroom_active"
+    },
+    "facing=south,active=false": {
+      "model": "iis:block/cleanroom"
+    },
+    "facing=south,active=true": {
+      "model": "iis:block/cleanroom_active"
+    },
+    "facing=west,active=false": {
+      "model": "iis:block/cleanroom"
+    },
+    "facing=west,active=true": {
+      "model": "iis:block/cleanroom_active"
+    }
+  }
+}
