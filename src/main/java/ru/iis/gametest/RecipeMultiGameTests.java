@@ -179,4 +179,28 @@ final class RecipeMultiGameTests {
             h.assertTrue(o.tank().amount() == 1000 && o.tank().resource().getFluid() == fluid("hydrocracked_propane"), "out " + o.tank().amount());
         });
     }
+
+    /** Большой химреактор на MV: 9 ПДМС + сера → 1296 л силикона; идеальный разгон 30 EU/t × 600 → 120 EU/t × 150 тиков. */
+    static void largeChemicalReactorSilicone(GameTestHelper h) {
+        BlockPos c = new BlockPos(4, 2, 2);
+        for (int dx = -1; dx <= 1; dx++) for (int dy = -1; dy <= 1; dy++) for (int dz = -1; dz <= 1; dz++)
+            h.setBlock(c.offset(dx, dy, dz), MultiContent.CHEMICALLY_INERT_CASING.get());
+        h.setBlock(c, MultiContent.PTFE_PIPE_CASING.get());
+        h.setBlock(c.above(), MultiContent.COIL_CUPRONICKEL.get());
+        h.setBlock(c.below(), MultiGameTests.hatch(HatchType.ENERGY_MV, Direction.DOWN));
+        h.setBlock(c.west(), MultiGameTests.hatch(HatchType.INPUT_BUS, Direction.WEST));
+        h.setBlock(c.east(), MultiGameTests.hatch(HatchType.OUTPUT_HATCH, Direction.EAST));
+        h.setBlock(c.south(), MultiGameTests.hatch(HatchType.MAINTENANCE, Direction.SOUTH));
+        h.setBlock(c.north(), MultiContent.LARGE_CHEMICAL_REACTOR.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
+        LargeChemicalReactorBlockEntity e = h.getBlockEntity(c.north(), LargeChemicalReactorBlockEntity.class);
+        e.maintenance().setMask(63);
+        powered(h, c.below());
+        ItemBusBlockEntity in = h.getBlockEntity(c.west(), ItemBusBlockEntity.class);
+        in.setItem(0, new ItemStack(SelfTest.item("dust_polydimethylsiloxane"), 9));
+        in.setItem(1, new ItemStack(SelfTest.item("dust_sulfur")));
+        FluidHatchBlockEntity out = h.getBlockEntity(c.east(), FluidHatchBlockEntity.class);
+        h.runAtTickTime(60, () -> h.assertTrue(e.formed() && e.maxProgress() == 150, "formed " + e.formed() + " time " + e.maxProgress()));
+        h.succeedWhen(() -> h.assertTrue(out.tank().amount() == 1296 && out.tank().resource().getFluid() == fluid("molten_silicone"),
+                "silicone " + out.tank().amount()));
+    }
 }

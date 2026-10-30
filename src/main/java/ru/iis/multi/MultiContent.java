@@ -62,7 +62,7 @@ public final class MultiContent {
         return b;
     }
 
-    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel", "titanium", "tungsten_steel", "stainless_steel");
+    public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel", "titanium", "tungsten_steel", "stainless_steel", "polytetrafluoroethylene");
     public static final Map<String, DeferredBlock<Block>> FRAMES = new LinkedHashMap<>();
     static {
         for (String m : FRAME_MATERIALS) {
@@ -92,6 +92,10 @@ public final class MultiContent {
     public static final DeferredBlock<EbfBlock> PYROLYSE_OVEN = block("pyrolyse_oven", p -> new EbfBlock(p, PyrolyseOvenBlockEntity::new), MultiContent::metal);
     public static final DeferredBlock<EbfBlock> DISTILLATION_TOWER = block("distillation_tower", p -> new EbfBlock(p, DistillationTowerBlockEntity::new), MultiContent::metal);
     public static final DeferredBlock<EbfBlock> OIL_CRACKER = block("oil_cracker", p -> new EbfBlock(p, OilCrackerBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<EbfBlock> LARGE_CHEMICAL_REACTOR = block("large_chemical_reactor", p -> new EbfBlock(p, LargeChemicalReactorBlockEntity::new), MultiContent::metal);
+    /** GT_Block_Casings8 meta 0 и 1 (D104): химически стойкий корпус и корпус с ПТФЭ-трубами — большой химреактор. */
+    public static final DeferredBlock<Block> CHEMICALLY_INERT_CASING = block("chemically_inert_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> PTFE_PIPE_CASING = block("ptfe_pipe_casing", Block::new, MultiContent::metal);
     /** GT_Block_Casings4 meta 1 (D104): чистый корпус из нержавеющей стали — колонна и крекер. */
     public static final DeferredBlock<Block> CLEAN_STAINLESS_CASING = block("clean_stainless_casing", Block::new, MultiContent::metal);
     /** GT_Block_Casings1 meta 0 (D104): каркас механизма ULV — пиролизная печь. */
@@ -177,6 +181,8 @@ public final class MultiContent {
             () -> new BlockEntityType<>(DistillationTowerBlockEntity::new, DISTILLATION_TOWER.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<OilCrackerBlockEntity>> OIL_CRACKER_BE = BLOCK_ENTITIES.register("oil_cracker",
             () -> new BlockEntityType<>(OilCrackerBlockEntity::new, OIL_CRACKER.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeChemicalReactorBlockEntity>> LARGE_CHEMICAL_REACTOR_BE = BLOCK_ENTITIES.register("large_chemical_reactor",
+            () -> new BlockEntityType<>(LargeChemicalReactorBlockEntity::new, LARGE_CHEMICAL_REACTOR.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VacuumFreezerBlockEntity>> VACUUM_FREEZER_BE = BLOCK_ENTITIES.register("vacuum_freezer",
             () -> new BlockEntityType<>(VacuumFreezerBlockEntity::new, VACUUM_FREEZER.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeBoilerBlockEntity>> LARGE_BOILER_BE = BLOCK_ENTITIES.register("large_boiler",

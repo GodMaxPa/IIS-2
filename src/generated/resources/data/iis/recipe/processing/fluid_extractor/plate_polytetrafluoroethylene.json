@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/polytetrafluoroethylene",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 52,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_polytetrafluoroethylene",
+      "amount": 144
+    }
+  ]
+}

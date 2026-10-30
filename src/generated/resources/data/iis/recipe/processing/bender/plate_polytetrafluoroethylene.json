@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/polytetrafluoroethylene",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_polytetrafluoroethylene",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 24
+}

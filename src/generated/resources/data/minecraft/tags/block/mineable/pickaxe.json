@@ -455,6 +455,9 @@
     "iis:pyrolyse_oven",
     "iis:clean_stainless_casing",
     "iis:distillation_tower",
-    "iis:oil_cracker"
+    "iis:oil_cracker",
+    "iis:chemically_inert_casing",
+    "iis:ptfe_pipe_casing",
+    "iis:large_chemical_reactor"
   ]
 }

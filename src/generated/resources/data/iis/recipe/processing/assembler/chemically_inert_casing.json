@@ -1,0 +1,24 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:solid_steel_casing",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:chemically_inert_casing",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 16,
+  "circuit": 6,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_polytetrafluoroethylene",
+      "amount": 216
+    }
+  ]
+}

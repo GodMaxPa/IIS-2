@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/polytetrafluoroethylene",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_polytetrafluoroethylene",
+      "count": 4
+    }
+  ],
+  "duration": 64,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 3
+    }
+  ]
+}

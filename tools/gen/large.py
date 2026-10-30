@@ -494,6 +494,15 @@ def d92(g, mrec, ing, rout, shaped, tag_of, ref, NS):
       fin=fl(f'{NS}:air', 14000), fout=fo(pl, 1000), circuit=1)
     m('chemical_reactor', 'plastic_ethylene_cell_oxygen', [ing(capsule(eth))], [rout(f'{NS}:capsule')], 1120, 30,
       fin=fl(f'{NS}:oxygen', 7000), fout=fo(pl, 1500), circuit=1)
+    # D104: :3450 the same polymerization for tetrafluoroethylene -> molten PTFE
+    tfe, ptfe = f'{NS}:tetrafluoroethylene', f'{NS}:molten_polytetrafluoroethylene'
+    m('chemical_reactor', 'ptfe_air_cell', [ing(capsule(f'{NS}:air'))], [rout(f'{NS}:capsule')], 320, 30, fin=fl(tfe, 288), fout=fo(ptfe, 288), circuit=1)
+    m('chemical_reactor', 'ptfe_oxygen_cell', [ing(capsule(f'{NS}:oxygen'))], [rout(f'{NS}:capsule')], 160, 30, fin=fl(tfe, 144), fout=fo(ptfe, 216),
+      circuit=1)
+    m('chemical_reactor', 'ptfe_tfe_cell_air', [ing(capsule(tfe))], [rout(f'{NS}:capsule')], 1120, 30, fin=fl(f'{NS}:air', 14000), fout=fo(ptfe, 1000),
+      circuit=1)
+    m('chemical_reactor', 'ptfe_tfe_cell_oxygen', [ing(capsule(tfe))], [rout(f'{NS}:capsule')], 1120, 30, fin=fl(f'{NS}:oxygen', 7000), fout=fo(ptfe, 1500),
+      circuit=1)
     # --- phenolic circuit board (:442 crafting 8 wood dust + glue cell -> 8; :444 assembler with the plate mold, 30 t, 8 EU/t) ---
     shaped('lv/circuit_board_phenolic', f'{NS}:circuit_board_phenolic', 8, ['PRP', 'PPP', 'PPP'],
            {'P': tag_of('dust', 'Wood'), 'R': capsule(f'{NS}:glue')})

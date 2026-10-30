@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/chemically_inert_casing",
+    "north": "iis:block/multi/large_chemical_reactor_front_active",
+    "south": "iis:block/multi/chemically_inert_casing",
+    "east": "iis:block/multi/chemically_inert_casing",
+    "west": "iis:block/multi/chemically_inert_casing",
+    "up": "iis:block/multi/chemically_inert_casing",
+    "down": "iis:block/multi/chemically_inert_casing"
+  }
+}

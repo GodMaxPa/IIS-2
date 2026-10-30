@@ -3657,6 +3657,35 @@
     "toolQuality": 0
   },
   {
+    "id": "polytetrafluoroethylene",
+    "gtName": "Polytetrafluoroethylene",
+    "gtId": 473,
+    "en": "Polytetrafluoroethylene",
+    "ru": "Политетрафторэтилен",
+    "ruOre": "Политетрафторэтиленовая руда",
+    "color": 7188913,
+    "iconSet": "DULL",
+    "harvestLevel": 1,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "C2F4",
+    "types": 195,
+    "subTags": [
+      "HAS_COLOR",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "polytetrafluoroethylene",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 32,
+    "toolSpeed": 3.0,
+    "toolQuality": 1
+  },
+  {
     "id": "powellite",
     "gtName": "Powellite",
     "gtId": 883,

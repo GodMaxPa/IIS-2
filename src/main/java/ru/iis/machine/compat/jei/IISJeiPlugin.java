@@ -108,6 +108,7 @@ public final class IISJeiPlugin implements IModPlugin {
         for (ru.iis.lv.LvMachineType t : ru.iis.lv.LvMachineType.values()) {
             if (t.recipeMap == m && t.tier.tier() - 1 >= tier) r.add(ru.iis.lv.LvContent.MACHINES.get(t).get());
         }
+        if (m == GtRecipeMap.CHEMICAL_REACTOR) r.add(ru.iis.multi.MultiContent.LARGE_CHEMICAL_REACTOR.get());   // D104
         return r;
     }
 

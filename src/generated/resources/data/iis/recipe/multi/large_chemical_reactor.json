@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CRC",
+    "PMP",
+    "CBC"
+  ],
+  "key": {
+    "C": "#c:circuits/advanced",
+    "R": "#iis:rotors/stainless_steel",
+    "P": "iis:pipe_large_polytetrafluoroethylene",
+    "M": "iis:electric_motor_hv",
+    "B": "iis:hull_hv"
+  },
+  "result": {
+    "id": "iis:large_chemical_reactor"
+  }
+}

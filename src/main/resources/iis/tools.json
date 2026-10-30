@@ -360,6 +360,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_polytetrafluoroethylene",
+    "tool": "sword",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "sword"
+  },
+  {
     "id": "sword_rose_gold",
     "tool": "sword",
     "material": "rose_gold",
@@ -873,6 +885,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_polytetrafluoroethylene",
+    "tool": "pickaxe",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "pickaxe"
   },
   {
@@ -1392,6 +1416,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_polytetrafluoroethylene",
+    "tool": "shovel",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_rose_gold",
     "tool": "shovel",
     "material": "rose_gold",
@@ -1905,6 +1941,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_polytetrafluoroethylene",
+    "tool": "axe",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "axe"
   },
   {
@@ -2424,6 +2472,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_polytetrafluoroethylene",
+    "tool": "hoe",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_rose_gold",
     "tool": "hoe",
     "material": "rose_gold",
@@ -2937,6 +2997,18 @@
     "craftDamage": 4,
     "speed": 12.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_polytetrafluoroethylene",
+    "tool": "saw",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "axe"
   },
   {
@@ -3456,6 +3528,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_polytetrafluoroethylene",
+    "tool": "hammer",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 2.25,
+    "quality": 1,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_rose_gold",
     "tool": "hammer",
     "material": "rose_gold",
@@ -3957,6 +4041,18 @@
     "craftDamage": 16,
     "speed": 12.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_polytetrafluoroethylene",
+    "tool": "wrench",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "wrench"
   },
   {
@@ -4476,6 +4572,18 @@
     "kind": null
   },
   {
+    "id": "file_polytetrafluoroethylene",
+    "tool": "file",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": null
+  },
+  {
     "id": "file_rose_gold",
     "tool": "file",
     "material": "rose_gold",
@@ -4989,6 +5097,18 @@
     "craftDamage": 8,
     "speed": 12.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_polytetrafluoroethylene",
+    "tool": "screwdriver",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
     "kind": null
   },
   {
@@ -5544,6 +5664,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_polytetrafluoroethylene",
+    "tool": "knife",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "sword"
+  },
+  {
     "id": "knife_rose_gold",
     "tool": "knife",
     "material": "rose_gold",
@@ -6057,6 +6189,18 @@
     "craftDamage": 8,
     "speed": 15.0,
     "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_polytetrafluoroethylene",
+    "tool": "wire_cutter",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 3.75,
+    "quality": 1,
     "kind": "wire_cutter"
   },
   {
@@ -6600,6 +6744,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_polytetrafluoroethylene",
+    "tool": "crowbar",
+    "material": "polytetrafluoroethylene",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": null
+  },
+  {
     "id": "crowbar_rose_gold",
     "tool": "crowbar",
     "material": "rose_gold",
@@ -7101,6 +7257,18 @@
     "craftDamage": 2,
     "speed": 36.0,
     "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_polytetrafluoroethylene",
+    "tool": "drill_lv",
+    "material": "polytetrafluoroethylene",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 9.0,
+    "quality": 1,
     "kind": "drill"
   },
   {
@@ -7620,6 +7788,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_polytetrafluoroethylene",
+    "tool": "chainsaw_lv",
+    "material": "polytetrafluoroethylene",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_rose_gold",
     "tool": "chainsaw_lv",
     "material": "rose_gold",
@@ -8133,6 +8313,18 @@
     "craftDamage": 16,
     "speed": 24.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_polytetrafluoroethylene",
+    "tool": "wrench_lv",
+    "material": "polytetrafluoroethylene",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
     "kind": "wrench"
   },
   {

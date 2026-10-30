@@ -161,6 +161,8 @@ names |= {'TungstigAcid', 'TungstenTrioxide', 'LithiumChloride', 'CalciumChlorid
 # for the IV pump rings and conveyor plates
 names |= {'Osmium', 'PlatinumGroupSludge', 'Palladium', 'Vanadium', 'VanadiumGallium', 'Polydimethylsiloxane', 'Silicone',
           'RawStyreneButadieneRubber', 'StyreneButadieneRubber'}
+# D104: PTFE (polymerized tetrafluoroethylene) for the large chemical reactor casings and pipes
+names |= {'Polytetrafluoroethylene'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64

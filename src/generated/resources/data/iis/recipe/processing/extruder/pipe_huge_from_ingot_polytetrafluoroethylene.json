@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/polytetrafluoroethylene",
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pipe_huge_polytetrafluoroethylene",
+      "count": 1
+    }
+  ],
+  "duration": 96,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_pipe_huge"
+  ]
+}

@@ -201,6 +201,28 @@ def generate(g):
     shaped('multi/oil_cracker', f'{NS}:oil_cracker', 1, ['WCW', 'EME', 'WCW'],
            {'M': f'{NS}:hull_hv', 'W': f'{NS}:coil_cupronickel', 'E': '#c:circuits/advanced', 'C': f'{NS}:electric_pump_hv'})
 
+    # --- large chemical reactor ---------------------------------------------------------------------------------
+    casing('chemically_inert_casing', 'MACHINE_CASING_CHEMICALLY_INERT', 'gt.blockcasings8.0.name', 'Chemically Inert Machine Casing')
+    # GT_MachineRecipeLoader:1400: solid steel casing + circuit 6 + 216 L molten PTFE (50 t, 16 EU/t); no crafting in GT
+    rec['assembler/chemically_inert_casing'] = {'type': f'{NS}:assembler', 'inputs': [ing(f'{NS}:solid_steel_casing')],
+                                                'outputs': [out(f'{NS}:chemically_inert_casing')], 'duration': 50, 'eut': 16, 'circuit': 6,
+                                                'fluid_inputs': [{'ingredient': f'{NS}:molten_polytetrafluoroethylene', 'amount': 216}]}
+    casing('ptfe_pipe_casing', 'MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE', 'gt.blockcasings8.1.name', 'PTFE Pipe Machine Casing')
+    # GT_Loader_MetaTileEntities:79 "PIP/IFI/PIP" PTFE plates, medium PTFE pipes, PTFE frame -> 2
+    shaped('multi/ptfe_pipe_casing', f'{NS}:ptfe_pipe_casing', 2, ['PIP', 'IFI', 'PIP'],
+           {'P': tag_of('plate', 'Polytetrafluoroethylene'), 'I': f'{NS}:pipe_medium_polytetrafluoroethylene', 'F': '#c:frames/polytetrafluoroethylene'})
+    controller('large_chemical_reactor', 'chemically_inert_casing', 'OVERLAY_FRONT_LARGE_CHEMICAL_REACTOR', 'gt.blockmachines.multimachine.chemicalreactor.name',
+               'Large Chemical Reactor', [
+                   ('3x3x3, controller in the middle of a side; PTFE pipe casing in the center',
+                    'Куб 3×3×3, контроллер — в середине стенки; в центре — корпус с ПТФЭ-трубами'),
+                   ('At least one cupronickel coil in the middle of a face', 'Хотя бы одна мельхиоровая катушка в середине грани'),
+                   ('The rest: chemically inert casings (at least 8) or hatches', 'Остальное — химически стойкие корпуса (не меньше 8) или люки'),
+                   ('Chemical reactor recipes with perfect overclock (x4 power, /4 time)', 'Рецепты химреактора с идеальным разгоном (×4 энергии, ÷4 времени)')])
+    # :1391 "CRC/PMP/CBC": Advanced circuits, stainless steel rotor, large PTFE pipes, HV motor, HV hull
+    shaped('multi/large_chemical_reactor', f'{NS}:large_chemical_reactor', 1, ['CRC', 'PMP', 'CBC'],
+           {'C': '#c:circuits/advanced', 'R': tag_of('rotor', 'StainlessSteel'), 'P': f'{NS}:pipe_large_polytetrafluoroethylene',
+            'M': f'{NS}:electric_motor_hv', 'B': f'{NS}:hull_hv'})
+
     fluids = json.load(open(os.path.join(g['RES'], NS, 'gt_fluids.json'), encoding='utf-8'))
     fluid_ids = {f['id'] for f in fluids}
     by_mat = {}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "iis:block/ptfe_pipe_casing"
+    }
+  }
+}

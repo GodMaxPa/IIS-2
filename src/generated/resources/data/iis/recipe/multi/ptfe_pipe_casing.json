@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PIP",
+    "IFI",
+    "PIP"
+  ],
+  "key": {
+    "P": "#c:plates/polytetrafluoroethylene",
+    "I": "iis:pipe_medium_polytetrafluoroethylene",
+    "F": "#c:frames/polytetrafluoroethylene"
+  },
+  "result": {
+    "id": "iis:ptfe_pipe_casing",
+    "count": 2
+  }
+}

@@ -5600,6 +5600,66 @@
     "material": "polydimethylsiloxane"
   },
   {
+    "id": "dust_polytetrafluoroethylene",
+    "prefix": "dust",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "small_dust_polytetrafluoroethylene",
+    "prefix": "small_dust",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "tiny_dust_polytetrafluoroethylene",
+    "prefix": "tiny_dust",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "ingot_polytetrafluoroethylene",
+    "prefix": "ingot",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "nugget_polytetrafluoroethylene",
+    "prefix": "nugget",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "plate_polytetrafluoroethylene",
+    "prefix": "plate",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "double_plate_polytetrafluoroethylene",
+    "prefix": "double_plate",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "rod_polytetrafluoroethylene",
+    "prefix": "rod",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "bolt_polytetrafluoroethylene",
+    "prefix": "bolt",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "screw_polytetrafluoroethylene",
+    "prefix": "screw",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "long_rod_polytetrafluoroethylene",
+    "prefix": "long_rod",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "turbine_blade_polytetrafluoroethylene",
+    "prefix": "turbine_blade",
+    "material": "polytetrafluoroethylene"
+  },
+  {
     "id": "crushed_powellite",
     "prefix": "crushed",
     "material": "powellite"
@@ -10058,6 +10118,51 @@
     "id": "wrench_head_platinum",
     "prefix": "wrench_head",
     "material": "platinum"
+  },
+  {
+    "id": "sword_head_polytetrafluoroethylene",
+    "prefix": "sword_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "pickaxe_head_polytetrafluoroethylene",
+    "prefix": "pickaxe_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "shovel_head_polytetrafluoroethylene",
+    "prefix": "shovel_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "axe_head_polytetrafluoroethylene",
+    "prefix": "axe_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "hoe_head_polytetrafluoroethylene",
+    "prefix": "hoe_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "saw_head_polytetrafluoroethylene",
+    "prefix": "saw_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "drill_head_polytetrafluoroethylene",
+    "prefix": "drill_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "chainsaw_head_polytetrafluoroethylene",
+    "prefix": "chainsaw_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "wrench_head_polytetrafluoroethylene",
+    "prefix": "wrench_head",
+    "material": "polytetrafluoroethylene"
   },
   {
     "id": "sword_head_rose_gold",
