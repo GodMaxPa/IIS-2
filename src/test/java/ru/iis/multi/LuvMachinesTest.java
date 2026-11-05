@@ -47,7 +47,7 @@ class LuvMachinesTest {
             assertEquals(iv.recipeMap, luv.recipeMap, luv.name());
             assertEquals(iv.inputs, luv.inputs, luv.name());
             assertEquals(iv.outputs, luv.outputs, luv.name());
-            int tank = iv == LvMachineType.MIXER_IV ? 48000 : iv == LvMachineType.FLUID_CANNER_IV ? 96000 : iv == LvMachineType.FILTER_IV ? 56000 : iv.tank;
+            int tank = iv == LvMachineType.COMPRESSOR_IV ? 24000 : iv == LvMachineType.MIXER_IV ? 48000 : iv == LvMachineType.FLUID_CANNER_IV ? 96000 : iv == LvMachineType.FILTER_IV ? 56000 : iv.tank;
             assertEquals(tank, luv.tank, luv.name());
         }
         assertEquals(32768, LvMachineType.MACERATOR_LUV.voltage());

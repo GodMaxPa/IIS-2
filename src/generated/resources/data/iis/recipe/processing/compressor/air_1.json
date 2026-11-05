@@ -1,0 +1,14 @@
+{
+  "type": "iis:compressor",
+  "inputs": [],
+  "outputs": [],
+  "duration": 30,
+  "eut": 30,
+  "circuit": 1,
+  "fluid_outputs": [
+    {
+      "id": "iis:air",
+      "amount": 2000
+    }
+  ]
+}

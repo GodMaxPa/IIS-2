@@ -72,8 +72,20 @@ def generate(g):
         mrec('chemical_bath', f'epoxid_fiber_reinforced_{fibre}', [ing(I(fibre))], [out(ref('plate', 'EpoxidFiberReinforced'))], 240, 16, fin=fl('molten_epoxid', 144))
     # GT_CraftingRecipeLoader:334 superconductor wire: "NPT/CCC/NPT" with nitrogen cells, LV pumps, tiny tungstensteel pipes, naquadah wire
     N2 = {'neoforge:ingredient_type': 'neoforge:components', 'items': I('capsule'), 'components': {'iis:fluid_content': {'fluid': I('nitrogen'), 'amount': 1000}}}
-    shaped('wire/superconductor_craft', I('wire_superconductor_1x'), 3, ['NPT', 'CCC', 'NPT'],
-           {'N': N2, 'P': I('electric_pump_lv'), 'T': I('pipe_tiny_tungsten_steel'), 'C': '#iis:wires/1x/naquadah'})
+    HE = {'neoforge:ingredient_type': 'neoforge:components', 'items': I('capsule'), 'components': {'iis:fluid_content': {'fluid': I('helium'), 'amount': 1000}}}
+    # D114: all four of :331-334: without naquadah it comes from YBCO (quest "Superconducting wire" follows the YBCO cable)
+    for wire, bottom, extra in (('naquadah', 'NPT', {}), ('yttrium_barium_cuprate', 'NPT', {}), ('niobium_titanium', 'HPT', {'H': HE}), ('vanadium_gallium', 'HPT', {'H': HE})):
+        shaped(f'wire/superconductor_{wire}', I('wire_superconductor_1x'), 3, ['NPT', 'CCC', bottom],
+               dict({'N': N2, 'P': I('electric_pump_lv'), 'T': I('pipe_tiny_tungsten_steel'), 'C': f'#iis:wires/1x/{wire}'}, **extra))
+    # D114: air and argon. GT_MachineRecipeLoader:1833-1834 the compressor draws air (programmed circuit 0 or 1), :1231 the freezer liquefies a cell of it,
+    # ProcessingCell: 53 cells of liquid air split by composition (Materials:494: 40 N, 11 O, Ar, noble gases), mass x 2 x 53 ticks
+    for c, dur, eut in ((0, 300, 2), (1, 30, 30)):
+        mrec('compressor', f'air_{c}', [], [], dur, eut, circuit=c)
+        rec[f'compressor/air_{c}']['fluid_outputs'] = [{'id': I('air'), 'amount': 2000}]
+    CAP = lambda fid: {'neoforge:ingredient_type': 'neoforge:components', 'items': I('capsule'), 'components': {'iis:fluid_content': {'fluid': I(fid), 'amount': 1000}}}
+    CAPO = lambda fid, n: {'id': I('capsule'), 'count': n, 'components': {'iis:fluid_content': {'fluid': I(fid), 'amount': 1000}}}
+    mrec('vacuum_freezer', 'liquid_air', [ing(CAP('air'))], [CAPO('liquidair', 1)], 25, 120)
+    mrec('centrifuge', 'liquid_air', [ing(CAP('liquidair'), 53)], [CAPO('nitrogen', 40), CAPO('oxygen', 11), CAPO('argon', 1), CAPO('noblegases', 1)], max(1, mass('LiquidAir') * 2 * 53), 5)
 
     # --- wafers and chips ------------------------------------------------------------------------------------------------
     # :624-625 naquadah doped boule and wafer; :504, :506 they give four times the NAND and NOR wafers

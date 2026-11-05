@@ -62,7 +62,7 @@ MACHINES = [
     ('macerator',     'macerator',     'MACERATOR',        'Macerator1',   'macerator',     1, 1, 0,     'Macerator'),
     ('electric_furnace', 'e_furnace',  'ELECTRIC_FURNACE', 'E_Furnace',    None,            1, 1, 0,     'Electric Furnace'),
     ('alloy_smelter', 'alloysmelter',  'ALLOY_SMELTER',    'AlloySmelter', 'alloy_smelter', 6, 1, 0,     'Alloy Smelter'),
-    ('compressor',    'compressor',    'COMPRESSOR',       'Compressor',   'compressor',    1, 1, 0,     'Compressor'),
+    ('compressor',    'compressor',    'COMPRESSOR',       'Compressor',   'compressor',    1, 1, 4000,  'Compressor'),   # D114: GT tank, 4000 per tier: air
     ('extractor',     'extractor',     'EXTRACTOR',        'Extractor',    'extractor',     1, 1, 0,     'Extractor'),
     ('forge_hammer',  'hammer',        'HAMMER',           'Hammer',       'forge_hammer',  1, 1, 0,     'Forge Hammer'),
     ('wiremill',      'wiremill',      'WIREMILL',         'Wiremill',     'wiremill',      1, 1, 0,     'Wiremill'),
@@ -140,31 +140,31 @@ NEW_CRAFT = {
 }
 # MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
 # outputs and tanks as LV except the mixer (16000 L, :1022); the compressor tank (LV 4000, MV 8000) stays 0 as at LV (D82)
-MV_TANKS = {'mixer': 16000, 'fluid_canner': 32000, 'filter': 24000}
+MV_TANKS = {'compressor': 8000, 'mixer': 16000, 'fluid_canner': 32000, 'filter': 24000}
 MV_MACHINES = [m[:7] + (MV_TANKS.get(m[0], m[7]),) + m[8:] for m in MACHINES if m[0] != 'thermal_centrifuge'] + [
     ('thermal_centrifuge', 'thermalcentrifuge', 'THERMAL_CENTRIFUGE', 'ThermalCentrifuge', 'thermal_centrifuge', 1, 3, 0, 'Thermal Centrifuge'),
 ]
 # HV basic machines (GT tier 3, D93): GT_Loader_MetaTileEntities Machine_HV_* — as MV except the macerator (2 outputs: byproducts)
 # and the mixer (24000 L); the HV compressor tank (12000) stays 0 like at LV/MV (D82)
-HV_TANKS = {'mixer': 24000, 'fluid_canner': 48000, 'filter': 32000}
+HV_TANKS = {'compressor': 12000, 'mixer': 24000, 'fluid_canner': 48000, 'filter': 32000}
 HV_OUTPUTS = {'macerator': 2}
 HV_MACHINES = [m[:6] + (HV_OUTPUTS.get(m[0], m[6]), HV_TANKS.get(m[0], m[7])) + m[8:] for m in MV_MACHINES]
 # EV basic machines (GT tier 4; assembler and chemical reactor D98, the rest D100): Machine_EV_* — as HV except the macerator
 # (3 outputs) and the mixer (32000 L); the compressor tank (16000) stays 0 like at LV-HV (D82)
-EV_TANKS = {'mixer': 32000, 'fluid_canner': 64000, 'filter': 40000}
+EV_TANKS = {'compressor': 16000, 'mixer': 32000, 'fluid_canner': 64000, 'filter': 40000}
 EV_OUTPUTS = {'macerator': 3}
 EV_MACHINES = [m[:6] + (EV_OUTPUTS.get(m[0], m[6]), EV_TANKS.get(m[0], m[7])) + m[8:] for m in HV_MACHINES]
 # IV basic machines (GT tier 5, D103): Machine_IV_* — as EV except the macerator (4 outputs), the mixer (40000 L) and the fluid
 # canner (80000 L); the IV circuit assembler needs the Master circuit (LuV) and waits for it
-IV_TANKS = {'mixer': 40000, 'fluid_canner': 80000, 'filter': 48000}
+IV_TANKS = {'compressor': 20000, 'mixer': 40000, 'fluid_canner': 80000, 'filter': 48000}
 IV_OUTPUTS = {'macerator': 4}
 IV_MACHINES = [m[:6] + (IV_OUTPUTS.get(m[0], m[6]), IV_TANKS.get(m[0], m[7])) + m[8:] for m in EV_MACHINES]
 # LuV basic machines (GT tier 6, D110): Machine_LuV_* — as IV except the macerator (GT_Loader_MetaTileEntities:708: 4 outputs as at IV),
 # the mixer (48000 L), the fluid canner (96000 L) and the filter (56000 L)
-LUV_TANKS = {'mixer': 48000, 'fluid_canner': 96000, 'filter': 56000}
+LUV_TANKS = {'compressor': 24000, 'mixer': 48000, 'fluid_canner': 96000, 'filter': 56000}
 LUV_MACHINES = [m[:7] + (LUV_TANKS.get(m[0], m[7]),) + m[8:] for m in IV_MACHINES]
 # ZPM basic machines (GT tier 7, D112): Machine_ZPM_*: as LuV except the mixer (56000 L) and the filter (64000 L)
-ZPM_TANKS = {'mixer': 56000, 'filter': 64000}
+ZPM_TANKS = {'compressor': 28000, 'mixer': 56000, 'filter': 64000}
 ZPM_MACHINES = [m[:7] + (ZPM_TANKS.get(m[0], m[7]),) + m[8:] for m in LUV_MACHINES]
 # GT_MetaTileEntity_Scanner (D110): 1 input, 1 output, the data stick in the special slot; the assembly line research only
 SCANNER = ('scanner', 'scanner', 'SCANNER', 'Scanner', None, 1, 1, 0, 'Scanner')

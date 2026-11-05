@@ -316,4 +316,14 @@ final class LuvGameTests {
             h.succeed();
         });
     }
+
+    /** D114: компрессор со схемой 1 набирает 2000 л воздуха за 30 тиков (GT_MachineRecipeLoader:1834), схема остаётся. */
+    static void compressorDrawsAir(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.COMPRESSOR_MV);
+        m.setItem(0, ru.iis.lv.item.ProgrammedCircuitItem.withConfig(new ItemStack(LvContent.PROGRAMMED_CIRCUIT.get()), 1));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.outTank().resource().getFluid() == GtFluids.get("air").source().get() && m.outTank().amount() >= 2000, "air " + m.outTank().amount());
+            h.assertTrue(!m.getItem(0).isEmpty(), "circuit consumed");
+        });
+    }
 }

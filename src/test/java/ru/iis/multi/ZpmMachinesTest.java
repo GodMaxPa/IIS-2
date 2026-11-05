@@ -49,7 +49,7 @@ class ZpmMachinesTest {
             assertEquals(luv.recipeMap, zpm.recipeMap, zpm.name());
             assertEquals(luv.inputs, zpm.inputs, zpm.name());
             assertEquals(luv.outputs, zpm.outputs, zpm.name());
-            int tank = luv == LvMachineType.MIXER_LUV ? 56000 : luv == LvMachineType.FILTER_LUV ? 64000 : luv.tank;
+            int tank = luv == LvMachineType.COMPRESSOR_LUV ? 28000 : luv == LvMachineType.MIXER_LUV ? 56000 : luv == LvMachineType.FILTER_LUV ? 64000 : luv.tank;
             assertEquals(tank, zpm.tank, zpm.name());
         }
         assertEquals(131072, LvMachineType.MACERATOR_ZPM.voltage());
@@ -110,6 +110,18 @@ class ZpmMachinesTest {
             if (s.id().equals("wire_superconductor_8x")) assertEquals(32, s.amperage());
         }
         assertTrue(naquadah);
+    }
+
+    /** D114: четыре рецепта сверхпроводника и воздух → жидкий воздух → аргон (GT_CraftingRecipeLoader:331-334, GT_MachineRecipeLoader:1231, 1833-1834). */
+    @Test
+    void airAndSuperconductorHaveSources() throws IOException {
+        for (String wire : new String[]{"naquadah", "yttrium_barium_cuprate", "niobium_titanium", "vanadium_gallium"}) {
+            assertEquals("#iis:wires/1x/" + wire, key("wire/superconductor_" + wire, "C"));
+        }
+        assertEquals(2000, recipe("processing/compressor/air_1").getAsJsonArray("fluid_outputs").get(0).getAsJsonObject().get("amount").getAsInt());
+        assertEquals(53, count(recipe("processing/centrifuge/liquid_air"), 0));
+        assertEquals(4, recipe("processing/centrifuge/liquid_air").getAsJsonArray("outputs").size());
+        assertEquals(4000, LvMachineType.COMPRESSOR.tank);
     }
 
     @Test

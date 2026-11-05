@@ -150,6 +150,7 @@ public final class IISGameTests {
             new Test("plutonium_gives_radon", 200, LuvGameTests::plutoniumGivesRadon),
             new Test("radon_makes_quantum_eye", 300, LuvGameTests::radonMakesQuantumEye),
             new Test("assembly_line_builds_zpm_motor", 900, LuvGameTests::assemblyLineBuildsZpmMotor, false, FLOOR16),
+            new Test("compressor_draws_air", 200, LuvGameTests::compressorDrawsAir),
             new Test("scanner_zpm_researches_luv_part", 200, LuvGameTests::scannerZpmResearchesLuvPart),
             new Test("circuit_assembler_makes_quantum_processor", 300, LuvGameTests::circuitAssemblerMakesQuantumProcessor),
             new Test("reactor_makes_qbit_wafer", 500, LuvGameTests::reactorMakesQbitWafer),

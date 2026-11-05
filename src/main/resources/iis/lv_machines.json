@@ -32,7 +32,7 @@
     "recipeMap": "compressor",
     "inputs": 1,
     "outputs": 1,
-    "tank": 0,
+    "tank": 4000,
     "gui": "lv/compressor"
   },
   {
@@ -392,7 +392,7 @@
     "recipeMap": "compressor",
     "inputs": 1,
     "outputs": 1,
-    "tank": 0,
+    "tank": 8000,
     "gui": "lv/compressor"
   },
   {
@@ -752,7 +752,7 @@
     "recipeMap": "compressor",
     "inputs": 1,
     "outputs": 1,
-    "tank": 0,
+    "tank": 12000,
     "gui": "lv/compressor"
   },
   {
@@ -1112,7 +1112,7 @@
     "recipeMap": "compressor",
     "inputs": 1,
     "outputs": 1,
-    "tank": 0,
+    "tank": 16000,
     "gui": "lv/compressor"
   },
   {
@@ -1472,7 +1472,7 @@
     "recipeMap": "compressor",
     "inputs": 1,
     "outputs": 1,
-    "tank": 0,
+    "tank": 20000,
     "gui": "lv/compressor"
   },
   {
@@ -1832,7 +1832,7 @@
     "recipeMap": "compressor",
     "inputs": 1,
     "outputs": 1,
-    "tank": 0,
+    "tank": 24000,
     "gui": "lv/compressor"
   },
   {
@@ -2192,7 +2192,7 @@
     "recipeMap": "compressor",
     "inputs": 1,
     "outputs": 1,
-    "tank": 0,
+    "tank": 28000,
     "gui": "lv/compressor"
   },
   {

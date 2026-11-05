@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "NPT",
+    "CCC",
+    "NPT"
+  ],
+  "key": {
+    "N": {
+      "neoforge:ingredient_type": "neoforge:components",
+      "items": "iis:capsule",
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:nitrogen",
+          "amount": 1000
+        }
+      }
+    },
+    "P": "iis:electric_pump_lv",
+    "T": "iis:pipe_tiny_tungsten_steel",
+    "C": "#iis:wires/1x/yttrium_barium_cuprate"
+  },
+  "result": {
+    "id": "iis:wire_superconductor_1x",
+    "count": 3
+  }
+}

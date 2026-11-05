@@ -70,6 +70,8 @@ for f in glob.glob(f'{R}/data/iis/recipe/**/*.json', recursive=True):
             ing = x['ingredient']
             reqs.append(['F:' + (ing if isinstance(ing, str) else ing.get('fluid', str(ing)))])
         outs += [x['id'] for x in d.get('outputs', [])]
+        # a capsule of gas is that gas: any canner pours it out and back (D114)
+        outs += ['F:' + x['components']['iis:fluid_content']['fluid'] for x in d.get('outputs', []) if 'iis:fluid_content' in x.get('components', {})]
         outs += ['F:' + x['id'] for x in d.get('fluid_outputs', [])]
         if t == 'iis:assembly_line':
             pass
@@ -103,7 +105,7 @@ for f in glob.glob(f'{R}/data/iis/loot_table/blocks/*.json'):
         t = open(f, encoding='utf-8').read()
         for part in t.split('"name"')[1:]:
             have.add(part.split('"')[1])
-FLUID_SEEDS = ['minecraft:water', 'minecraft:lava', 'iis:oil', 'iis:oilmedium', 'iis:oillight', 'iis:oilheavy', 'iis:oilextraheavy', 'iis:naturalgas', 'iis:gas', 'iis:creosote', 'iis:saltwater', 'iis:dirtywater', 'iis:muddywater', 'iis:steam', 'iis:air']
+FLUID_SEEDS = ['minecraft:water', 'minecraft:lava', 'iis:oil', 'iis:oilmedium', 'iis:oillight', 'iis:oilheavy', 'iis:oilextraheavy', 'iis:naturalgas', 'iis:gas', 'iis:creosote', 'iis:saltwater', 'iis:dirtywater', 'iis:muddywater', 'iis:steam']
 for x in FLUID_SEEDS:
     have.add('F:' + x)
 seeds = ['iis:rubber_log', 'iis:sticky_resin', 'iis:plant_ball']
