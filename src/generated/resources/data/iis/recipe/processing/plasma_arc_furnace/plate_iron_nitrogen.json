@@ -1,0 +1,29 @@
+{
+  "type": "iis:plasma_arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_wrought_iron",
+      "count": 1
+    }
+  ],
+  "duration": 3,
+  "eut": 32,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:plasma_nitrogen",
+      "amount": 1
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:nitrogen",
+      "amount": 1
+    }
+  ]
+}

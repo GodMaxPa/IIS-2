@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:credit_silver"
+  ],
+  "result": {
+    "id": "iis:credit_cupronickel",
+    "count": 8
+  }
+}

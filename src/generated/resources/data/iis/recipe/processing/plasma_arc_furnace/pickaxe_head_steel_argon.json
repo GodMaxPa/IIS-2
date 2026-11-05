@@ -1,0 +1,29 @@
+{
+  "type": "iis:plasma_arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#iis:tool_heads/pickaxe/steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_steel",
+      "count": 3
+    }
+  ],
+  "duration": 10,
+  "eut": 32,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:plasma_argon",
+      "amount": 1
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:argon",
+      "amount": 1
+    }
+  ]
+}

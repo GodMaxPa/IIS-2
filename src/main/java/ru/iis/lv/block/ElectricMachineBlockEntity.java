@@ -280,6 +280,17 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         LvMachineType t = type();
         List<ItemStack> inputs = new ArrayList<>(items.subList(0, t.inputs));
         if (t.id.equals("scanner")) return scan(sl, t);
+        if (t.id.equals("recycler")) {
+            // GT_Recipe_Map_Recycler: всё, кроме самого утиля, в утиль с шансом 12,5 %, 45 тиков, 1 EU/t (D119)
+            ItemStack in = inputs.get(0);
+            ItemStack scrap = new ItemStack(ru.iis.gear.GearContent.SCRAP.get());
+            if (in.isEmpty() || in.is(scrap.getItem()) || !fits(0, scrap)) return null;
+            in.shrink(1);
+            pending = sl.getRandom().nextInt(10000) < 1250 ? List.of(scrap) : List.of();
+            setChanged();
+            Overclock.Result oc = Overclock.basicMachine(1, 45, t.tier, 1);
+            return new int[]{(int) oc.euPerTick(), oc.durationTicks()};
+        }
         if (t.recipeMap == null) {
             ItemStack in = inputs.get(0);
             if (in.isEmpty()) return null;

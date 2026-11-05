@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ACA",
+    "WMW",
+    "ACA"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "A": "iis:robot_arm_mv",
+    "C": "#c:circuits/good",
+    "W": "#iis:cables/1x/copper"
+  },
+  "result": {
+    "id": "iis:disassembler_mv"
+  }
+}

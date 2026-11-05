@@ -23,6 +23,7 @@ SKIP_FLUIDS = {'steam', 'creosote', 'water', 'lava', 'ic2steam', 'ic2distilledwa
 # IC2 fluids that GT5 recipes use (GT_ModHandler.getDistilledWater -> "ic2distilledwater"); IC2 is not ported (D5), so they
 # become our own GT-style fluids: id, en, ru, state, temperature K, rgb
 IC2_FLUIDS = [('distilled_water', 'Distilled Water', 'Дистиллированная вода', 1, 295, (90, 130, 230)),
+              ('uumatter', 'UU Matter', 'UU-материя', 1, 295, (170, 40, 170)),
               # D105: heat exchanger and HP turbine (ic2superheatedsteam, ic2pahoehoelava)
               ('superheated_steam', 'Superheated Steam', 'Перегретый пар', 2, 600, (230, 230, 240)),
               ('pahoehoe_lava', 'Pahoehoe Lava', 'Лава пахоэхоэ', 1, 1200, (140, 60, 30)),

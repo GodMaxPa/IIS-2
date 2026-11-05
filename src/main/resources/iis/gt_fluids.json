@@ -3213,6 +3213,12 @@
 "color": 5931750
 },
 {
+"id": "uumatter",
+"state": 1,
+"temperature": 295,
+"color": 11151530
+},
+{
 "id": "superheated_steam",
 "state": 2,
 "temperature": 600,

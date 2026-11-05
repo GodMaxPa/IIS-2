@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/recycler_zpm_side",
+    "north": "iis:block/lv/recycler_zpm_front",
+    "south": "iis:block/lv/recycler_zpm_back",
+    "east": "iis:block/lv/recycler_zpm_side",
+    "west": "iis:block/lv/recycler_zpm_side",
+    "up": "iis:block/lv/recycler_zpm_top",
+    "down": "iis:block/lv/recycler_zpm_bottom"
+  }
+}

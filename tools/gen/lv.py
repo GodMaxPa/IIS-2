@@ -115,6 +115,14 @@ MACHINES = [
     ('filter',        'filter',        'FILTER',           'Filter',       'filter',        1, 6, 16000, 'Fluid Filter'),
     # D109: :712 microwave (smelting, 32 t, 4 EU/t; metal explodes)
     ('microwave',     'microwave',     'MICROWAVE',        'E_Furnace',    None,            1, 1, 0,     'Microwave'),
+    # D119: :721, 730, 903, 885, 949, 1093, 867 (recycler in code, disassembler: eggs only)
+    ('fermenter',     'fermenter',     'FERMENTER',        'Fermenter',    'fermenter',     1, 1, 1000,  'Fermenter'),
+    ('printer',       'printer',       'PRINTER',          'Printer',      'printer',       1, 1, 16000, 'Printer'),
+    ('recycler',      'recycler',      'RECYCLER',         'Recycler',     None,            1, 1, 0,     'Recycler'),
+    ('amplifab',      'amplifab',      'AMPLIFAB',         'Amplifabricator', 'amplifab',   1, 1, 1000,  'Amplifabricator'),
+    ('massfab',       'massfab',       'MASSFAB',          'Massfabricator', 'massfab',     1, 1, 1000,  'Mass Fabricator'),
+    ('plasma_arc_furnace', 'plasmaarcfurnace', 'PLASMA_ARC_FURNACE', 'PlasmaArcFurnace', 'plasma_arc_furnace', 1, 6, 1000, 'Plasma Arc Furnace'),
+    ('disassembler',  'disassembler',  'DISASSEMBLER',     'Disassembler', 'disassembler',  1, 9, 0,     'Disassembler'),
 ]
 # GT crafting of the D83 machines (both tiers, X.* resolved per tier like MV_CRAFT)
 NEW_CRAFT = {
@@ -137,6 +145,13 @@ NEW_CRAFT = {
     'unpackager': (['BCB', 'VMR', 'WCW'], {'M': 'HULL', 'R': 'ROBOT_ARM', 'V': 'CONVEYOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'B': '#c:chests/wooden'}),
     # D107: :1519-1522 "CEC/CMC/WEW" (LV :1518 "CCC/CMC/WEW", below): simple fluid filters up to MV, fluid filters from HV
     'filter': (['CEC', 'CMC', 'WEW'], {'M': 'HULL', 'E': 'CIRCUIT', 'W': 'WIRE', 'C': 'FLUID_FILTER'}),
+    # D119
+    'fermenter': (['WPW', 'GMG', 'WCW'], {'M': 'HULL', 'P': 'PUMP', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
+    'printer': (['EWE', 'CMC', 'WEW'], {'M': 'HULL', 'E': 'MOTOR', 'C': 'CIRCUIT', 'W': 'WIRE'}),
+    'recycler': (['GCG', 'PMP', 'WCW'], {'M': 'HULL', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': '#c:dusts/glowstone'}),
+    'amplifab': (['WPW', 'PMP', 'CPC'], {'M': 'HULL', 'P': 'PUMP', 'C': 'BETTER_CIRCUIT', 'W': 'WIRE4'}),
+    'plasma_arc_furnace': (['WGW', 'CMC', 'TPT'], {'M': 'HULL', 'P': 'PLATE', 'C': 'BETTER_CIRCUIT', 'W': 'WIRE4', 'T': 'PUMP', 'G': '#c:dusts/graphite'}),
+    'disassembler': (['ACA', 'WMW', 'ACA'], {'M': 'HULL', 'A': 'ROBOT_ARM', 'C': 'CIRCUIT', 'W': 'WIRE'}),
     'microwave': (['LWC', 'LMR', 'LEC'], {'M': 'HULL', 'E': 'MOTOR', 'R': 'EMITTER', 'C': 'CIRCUIT', 'W': 'WIRE', 'L': '#c:plates/lead'}),   # :712 D109
 }
 # MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
@@ -1545,7 +1560,7 @@ def generate(g):
         shaped(f'lv/{mid_}_luv', f'{NS}:{mid_}_luv', 1, pattern, {k: XLUV.get(v, v) for k, v in letters.items()})
     # --- ZPM (D112): Tier.ELECTRIC[7] and GT_MetaTileEntity_BasicMachine_GT_Recipe for mTier 7: HSS-E plates, medium high pressure pipes, naquadah heating coils,
     # 8x superconductor electric coils, iridium rotor, naquadah cable, Ultimate circuits (the better one, Superconductor, is not ported: no ZPM circuit assembler recipe)
-    XZPM = {'HULL': f'{NS}:hull_zpm', 'CIRCUIT': '#c:circuits/ultimate', 'WIRE': C('Naquadah'), 'WIRE4': C('Naquadah', 4), 'GLASS': f'{NS}:reinforced_glass',
+    XZPM = {'BETTER_CIRCUIT': '#c:circuits/superconductor', 'HULL': f'{NS}:hull_zpm', 'CIRCUIT': '#c:circuits/ultimate', 'WIRE': C('Naquadah'), 'WIRE4': C('Naquadah', 4), 'GLASS': f'{NS}:reinforced_glass',
             'PLATE': P('HSSE'), 'PIPE': f'{NS}:pipe_medium_high_pressure', 'COIL_HEATING': W('Naquadah', 2), 'COIL_HEATING_DOUBLE': W('Naquadah', 4),
             'STICK_ELECTROMAGNETIC': R('VanadiumGallium'), 'COIL_ELECTRIC': W('Superconductor', 8), 'ROTOR': tag_of('rotor', 'Iridium'),
             'MOTOR': f'{NS}:electric_motor_zpm', 'PISTON': f'{NS}:electric_piston_zpm', 'PUMP': f'{NS}:electric_pump_zpm', 'CONVEYOR': f'{NS}:conveyor_module_zpm',

@@ -1,0 +1,23 @@
+{
+  "type": "iis:printer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:glass_pane",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:yellow_stained_glass_pane",
+      "count": 1
+    }
+  ],
+  "duration": 256,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dye_chemical_dyeyellow",
+      "amount": 144
+    }
+  ]
+}

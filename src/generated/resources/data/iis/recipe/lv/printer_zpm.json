@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EWE",
+    "CMC",
+    "WEW"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "E": "iis:electric_motor_zpm",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah"
+  },
+  "result": {
+    "id": "iis:printer_zpm"
+  }
+}

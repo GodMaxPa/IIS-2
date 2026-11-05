@@ -1,0 +1,23 @@
+{
+  "type": "iis:printer",
+  "inputs": [
+    {
+      "ingredient": "#minecraft:wool",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:yellow_wool",
+      "count": 1
+    }
+  ],
+  "duration": 256,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dye_watermixed_dyeyellow",
+      "amount": 144
+    }
+  ]
+}

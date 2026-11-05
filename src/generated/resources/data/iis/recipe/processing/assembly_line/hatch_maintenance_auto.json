@@ -1,0 +1,39 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:hull_zpm",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:robot_arm_zpm",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:auto_repair_kit",
+      "count": 64
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hatch_maintenance_auto",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 30000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 500
+    }
+  ],
+  "keep": [
+    "iis:hatch_maintenance_semiauto"
+  ],
+  "temp": 288000
+}

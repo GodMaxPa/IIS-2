@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GCG",
+    "PMP",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "P": "iis:electric_piston_mv",
+    "C": "#c:circuits/good",
+    "W": "#iis:cables/1x/copper",
+    "G": "#c:dusts/glowstone"
+  },
+  "result": {
+    "id": "iis:recycler_mv"
+  }
+}

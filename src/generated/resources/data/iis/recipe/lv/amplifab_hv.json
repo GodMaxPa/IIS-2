@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "PMP",
+    "CPC"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "P": "iis:electric_pump_hv",
+    "C": "#c:circuits/data",
+    "W": "#iis:cables/4x/gold"
+  },
+  "result": {
+    "id": "iis:amplifab_hv"
+  }
+}

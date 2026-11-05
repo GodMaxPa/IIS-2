@@ -1,0 +1,35 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:duct_tape",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:screws/steel",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:fine_wires/soldering_alloy",
+      "count": 16
+    },
+    {
+      "ingredient": "#c:circuits/advanced",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:auto_repair_kit",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 2000
+    }
+  ]
+}

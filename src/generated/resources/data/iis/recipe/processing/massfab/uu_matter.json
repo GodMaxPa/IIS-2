@@ -1,0 +1,14 @@
+{
+  "type": "iis:massfab",
+  "inputs": [],
+  "outputs": [],
+  "duration": 25720,
+  "eut": 32,
+  "fluid_outputs": [
+    {
+      "id": "iis:uumatter",
+      "amount": 1
+    }
+  ],
+  "circuit": 1
+}

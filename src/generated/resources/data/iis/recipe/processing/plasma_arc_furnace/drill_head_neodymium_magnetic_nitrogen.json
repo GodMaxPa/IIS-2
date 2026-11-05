@@ -1,0 +1,29 @@
+{
+  "type": "iis:plasma_arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#iis:tool_heads/drill/neodymium_magnetic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_neodymium",
+      "count": 4
+    }
+  ],
+  "duration": 36,
+  "eut": 32,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:plasma_nitrogen",
+      "amount": 2
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:nitrogen",
+      "amount": 2
+    }
+  ]
+}

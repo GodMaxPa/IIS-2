@@ -1,0 +1,29 @@
+{
+  "type": "iis:plasma_arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#iis:tool_heads/hoe/nichrome",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_nichrome",
+      "count": 2
+    }
+  ],
+  "duration": 7,
+  "eut": 32,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:plasma_nitrogen",
+      "amount": 1
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:nitrogen",
+      "amount": 1
+    }
+  ]
+}

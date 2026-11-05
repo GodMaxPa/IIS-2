@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WGW",
+    "CMC",
+    "TPT"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "P": "#c:plates/hssg",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/4x/niobium_titanium",
+    "T": "iis:electric_pump_luv",
+    "G": "#c:dusts/graphite"
+  },
+  "result": {
+    "id": "iis:plasma_arc_furnace_luv"
+  }
+}

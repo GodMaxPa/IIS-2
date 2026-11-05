@@ -294,6 +294,10 @@
     "Sure, for scanning you also may use the LV scanner, but the difference in energy is not that great for your current industrial level, yet it will work 2 times faster than an LV tier scanner. Anyway, to complete this quest, you have to craft any scanner with a tier between LV and IV."
   ],
   "quest.1A00000000000087.title": "Scanner",
+  "quest.1A00000000000088.quest_desc": [
+    "Don't craft it without special necessity. You may, of course, but for what? Btw, for this quest any tier machine will do."
+  ],
+  "quest.1A00000000000088.title": "Printer",
   "quest.1A00000000000089.quest_desc": [
     "A part of high tech machines."
   ],
@@ -930,6 +934,10 @@
     "Just craft it after making wooden planks."
   ],
   "quest.1A00000000000137.title": "Crafting Table",
+  "quest.1A00000000000138.quest_desc": [
+    "This block is required for most of gregtech multiblock machines. For starters, prepare following tools: a screwdriver, a wrench, a wire cutter, a hammer, a crowbar, a file, a saw and a soft mallet. Then place them in a crafting table around an LV machine hull."
+  ],
+  "quest.1A00000000000138.title": "Maintenance Hatch",
   "quest.1A00000000000139.quest_desc": [
     "This is one of the tools that can help you in maintenance of your multiblocks. To complete a quest you have to charge it a bit."
   ],
@@ -2162,6 +2170,14 @@
     "The main part of cutting machine."
   ],
   "quest.1A000000000002B4.title": "Diamond Sawblade",
+  "quest.1A000000000002B6.quest_desc": [
+    "Use disassembler to get it from eggs with a very low chance."
+  ],
+  "quest.1A000000000002B6.title": "Stemcells",
+  "quest.1A000000000002B7.quest_desc": [
+    "You have to craft an any tier Disassembler (LV - IV) to complete this quest. Note that an IV tier Disassembler may disassemble tools and machines with 100%% efficiency. Also each new tier has more efficient and may give you a stemcells with higher chance. But if you want you may use even LV tier."
+  ],
+  "quest.1A000000000002B7.title": "Disassembler",
   "quest.1A000000000002C2.quest_desc": [
     "I hope this machine don't need a description. Just push inside different stuff for experiment or use NEI if you don't like adventures."
   ],
@@ -2298,6 +2314,10 @@
     "a ring from rubber sheet"
   ],
   "quest.1A000000000002E6.title": "Rubber Ring",
+  "quest.1A000000000002EB.quest_desc": [
+    "It has few uses. But some of them are an important part of technological chains. At least it can convert industrial biomass to fermented biomass."
+  ],
+  "quest.1A000000000002EB.title": "Basic Fermenter",
   "quest.1A000000000002EC.quest_desc": [
     "What is this and what is for? The answer is next: This is the early tier fuel that may be processed to different energy liquids and gases, witch may be the fuel source for gas turbines and combustion generators. You may get this via grinding most of plants products. Also this is the source of dirt for Forestry Farm Multiblock. Just grind bio chaff again."
   ],
@@ -2602,6 +2622,10 @@
     "This is the subprodust of titanium ingots. What sould you do with this? Put it to chemical reactor HV+ with sodium to get back part of resources."
   ],
   "quest.1A00000000000347.title": "Magnesiumchloride Dust",
+  "quest.1A00000000000349.quest_desc": [
+    "Nice stuff to debug anything around you. This is the most important thing to work with plants to grow them and select some of them with better params to crossbreed them. Instead of cronalyzer, it may show you params of growing plant while it growing, and it don't require to get seeds as first step, to know plant characteristics. So it may greatly help you and up a speed of you crosbreeding work."
+  ],
+  "quest.1A00000000000349.title": "Portable Scanner",
   "quest.1A0000000000034A.quest_desc": [
     "MV battry"
   ],
@@ -2986,10 +3010,30 @@
     "Expensive part of some machines. Required osmium to be created from."
   ],
   "quest.1A000000000003E5.title": "Field Generator (LV)",
+  "quest.1A000000000003E7.quest_desc": [
+    "with help of this machine you may create an uu-matter from uu amplifier. It require 8 amperes to work. Each next level accelerate speed and energy consuming in 2 times, but in 2 times down amperes count."
+  ],
+  "quest.1A000000000003E7.title": "Basic Mass Fabricator",
+  "quest.1A000000000003E8.quest_desc": [
+    "You may use this machine as garbage box but with useful feature: if you waste here some useless items, it may give you in result a \"scrap\" item with a low chance. A scrap is main source of uu amplifier. Other way to use it is to craft a \"scrap box\", that may give you some interesting things. But there are an exception for some items that can't be converted to \"scrap\", such as cobblestone, sand, stone dust, glass, glass dust and etc."
+  ],
+  "quest.1A000000000003E8.title": "Basic Recycler",
+  "quest.1A000000000003E9.quest_desc": [
+    "May by produced from most items by recycler"
+  ],
+  "quest.1A000000000003E9.title": "Scrap",
+  "quest.1A000000000003EA.quest_desc": [
+    "May produce uu amplifier from scrap or scrap boxes"
+  ],
+  "quest.1A000000000003EA.title": "Basic Amplifabricator",
   "quest.1A000000000003EB.quest_desc": [
     "May be produced from scrap. Use OSS to pour there liquid."
   ],
   "quest.1A000000000003EB.title": "UU Amplifier",
+  "quest.1A000000000003EC.quest_desc": [
+    "May be produced from UU amplifier by mass fabricator. Use OSS to pour there liquid."
+  ],
+  "quest.1A000000000003EC.title": "UU-Matter",
   "quest.1A000000000003F4.quest_desc": [
     "Multiblock, that may pump fluids out from under bedrock space, in case if there are not void."
   ],
@@ -3934,6 +3978,34 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000540.title": "[sb] Molecular Exitement Processor (ZPM)",
+  "quest.1A00000000000542.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000542.title": "[sb] Basic Recycler",
+  "quest.1A00000000000543.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000543.title": "[sb] Advanced Recycler",
+  "quest.1A00000000000544.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000544.title": "[sb] Advanced Recycler II",
+  "quest.1A00000000000545.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000545.title": "[sb] Advanced Recycler III",
+  "quest.1A00000000000546.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000546.title": "[sb] The Oblitterator (IV)",
+  "quest.1A00000000000547.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000547.title": "[sb] The Oblitterator (LuV)",
+  "quest.1A00000000000548.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000548.title": "[sb] The Oblitterator (ZPM)",
   "quest.1A0000000000054A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4102,6 +4174,34 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000578.title": "[sb] Advanced Circuit Assembling Machine VI",
+  "quest.1A0000000000057B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000057B.title": "[sb] Advanced Disassembler VI",
+  "quest.1A0000000000057C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000057C.title": "[sb] Advanced Disassembler V",
+  "quest.1A0000000000057D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000057D.title": "[sb] Advanced Disassembler IV",
+  "quest.1A0000000000057E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000057E.title": "[sb] Advanced Disassembler III",
+  "quest.1A0000000000057F.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000057F.title": "[sb] Advanced Disassembler II",
+  "quest.1A00000000000580.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000580.title": "[sb] Advanced Disassembler",
+  "quest.1A00000000000581.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000581.title": "[sb] Basic Disassembler",
   "quest.1A00000000000582.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4158,6 +4258,34 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000591.title": "[sb] Basic Microwave",
+  "quest.1A00000000000592.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000592.title": "[sb] Basic Printer",
+  "quest.1A00000000000593.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000593.title": "[sb] Advanced Printer",
+  "quest.1A00000000000594.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000594.title": "[sb] Advanced Printer II",
+  "quest.1A00000000000595.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000595.title": "[sb] Advanced Printer III",
+  "quest.1A00000000000596.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000596.title": "[sb] Advanced Printer IV",
+  "quest.1A00000000000597.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000597.title": "[sb] Advanced Printer V",
+  "quest.1A00000000000598.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000598.title": "[sb] Advanced Printer VI",
   "quest.1A0000000000059B.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4338,10 +4466,22 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005CB.title": "[sb] Basic Fluid Canner",
+  "quest.1A000000000005CC.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005CC.title": "[sb] Basic Mass Fabricator",
+  "quest.1A000000000005CD.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005CD.title": "[sb] Basic Amplifabricator",
   "quest.1A000000000005D0.quest_desc": [
     "One of many single-block machines."
   ],
   "quest.1A000000000005D0.title": "[sb] Basic Brewery",
+  "quest.1A000000000005D1.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005D1.title": "[sb] Basic Fermenter",
   "quest.1A000000000005D2.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4374,10 +4514,22 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005D9.title": "[sb] Advanced Fluid Canner",
+  "quest.1A000000000005DA.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005DA.title": "[sb] Advanced Mass Fabricator",
+  "quest.1A000000000005DB.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005DB.title": "[sb] Advanced Amplifabricator",
   "quest.1A000000000005DE.quest_desc": [
     "One of many single-block machines."
   ],
   "quest.1A000000000005DE.title": "[sb] Advanced Brewery",
+  "quest.1A000000000005DF.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005DF.title": "[sb] Advanced Fermenter",
   "quest.1A000000000005E0.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4410,10 +4562,22 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005E7.title": "[sb] Quick Fluid Canner",
+  "quest.1A000000000005E8.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005E8.title": "[sb] Advanced Mass Fabricator II",
+  "quest.1A000000000005E9.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005E9.title": "[sb] Advanced Amplifabricator II",
   "quest.1A000000000005EC.quest_desc": [
     "One of many single-block machines."
   ],
   "quest.1A000000000005EC.title": "[sb] Advanced Brewery II",
+  "quest.1A000000000005ED.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005ED.title": "[sb] Advanced Fermenter II",
   "quest.1A000000000005EE.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4446,10 +4610,22 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005F5.title": "[sb] Turbo Fluid Canner",
+  "quest.1A000000000005F6.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005F6.title": "[sb] Advanced Mass Fabricator III",
+  "quest.1A000000000005F7.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005F7.title": "[sb] Advanced Amplifabricator III",
   "quest.1A000000000005FA.quest_desc": [
     "One of many single-block machines."
   ],
   "quest.1A000000000005FA.title": "[sb] Advanced Brewery III",
+  "quest.1A000000000005FB.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005FB.title": "[sb] Advanced Fermenter III",
   "quest.1A000000000005FC.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4482,10 +4658,22 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000603.title": "[sb] Instant Fluid Canner (IV)",
+  "quest.1A00000000000604.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000604.title": "[sb] Advanced Mass Fabricator IV",
+  "quest.1A00000000000605.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000605.title": "[sb] Advanced Amplifabricator IV",
   "quest.1A00000000000608.quest_desc": [
     "One of many single-block machines."
   ],
   "quest.1A00000000000608.title": "[sb] Advanced Brewery IV",
+  "quest.1A00000000000609.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000609.title": "[sb] Advanced Fermenter IV",
   "quest.1A0000000000060A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4518,10 +4706,22 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000611.title": "[sb] Instant Fluid Canner (LuV)",
+  "quest.1A00000000000612.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000612.title": "[sb] Advanced Mass Fabricator V",
+  "quest.1A00000000000613.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000613.title": "[sb] Advanced Amplifabricator V",
   "quest.1A00000000000616.quest_desc": [
     "One of many single-block machines."
   ],
   "quest.1A00000000000616.title": "[sb] Advanced Brewery V",
+  "quest.1A00000000000617.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000617.title": "[sb] Advanced Fermenter V",
   "quest.1A00000000000618.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4554,10 +4754,22 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000061F.title": "[sb] Instant Fluid Canner (ZPM)",
+  "quest.1A00000000000620.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000620.title": "[sb] Advanced Mass Fabricator VI",
+  "quest.1A00000000000621.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000621.title": "[sb] Advanced Amplifabricator VI",
   "quest.1A00000000000624.quest_desc": [
     "One of many single-block machines."
   ],
   "quest.1A00000000000624.title": "[sb] Advanced Brewery VI",
+  "quest.1A00000000000625.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000625.title": "[sb] Advanced Fermenter VI",
   "quest.1A00000000000626.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4594,6 +4806,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000063D.title": "[sb] Basic Arc Furnace",
+  "quest.1A0000000000063E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000063E.title": "[sb] Basic Plasma Arc Furnace",
   "quest.1A0000000000063F.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4622,6 +4838,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000647.title": "[sb] Advanced Arc Furnace",
+  "quest.1A00000000000648.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000648.title": "[sb] Advanced Plasma Arc Furnace",
   "quest.1A00000000000649.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4650,6 +4870,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000651.title": "[sb] Advanced Arc Furnace II",
+  "quest.1A00000000000652.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000652.title": "[sb] Advanced Plasma Arc Furnace II",
   "quest.1A00000000000653.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4678,6 +4902,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000065B.title": "[sb] Advanced Arc Furnace III",
+  "quest.1A0000000000065C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000065C.title": "[sb] Advanced Plasma Arc Furnace III",
   "quest.1A0000000000065D.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4698,6 +4926,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000665.title": "[sb] Advanced Arc Furnace IV",
+  "quest.1A00000000000666.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000666.title": "[sb] Advanced Plasma Arc Furnace IV",
   "quest.1A00000000000667.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4726,6 +4958,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000066F.title": "[sb] Advanced Arc Furnace V",
+  "quest.1A00000000000670.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000670.title": "[sb] Advanced Plasma Arc Furnace V",
   "quest.1A00000000000671.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4758,6 +4994,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000679.title": "[sb] Advanced Arc Furnace VI",
+  "quest.1A0000000000067A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000067A.title": "[sb] Advanced Plasma Arc Furnace VI",
   "quest.1A0000000000067B.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5030,10 +5270,26 @@
     "An energy storage. It can take any voltage and give out MV voltage (128 eu/t)."
   ],
   "quest.1A000000000006FB.title": "CESU",
+  "quest.1A000000000006FC.quest_desc": [
+    "Super tool that can fix all issues for any your multiblock. You must have it!"
+  ],
+  "quest.1A000000000006FC.title": "Duct Tape Ultimate",
+  "quest.1A000000000006FD.quest_desc": [
+    "Put 4 stacks of this stuff to semi-auto maintenance hatch to forgot about problems with this multiblock (at least for month)."
+  ],
+  "quest.1A000000000006FD.title": "Auto Repair Kit",
   "quest.1A000000000006FE.quest_desc": [
     "Use a wiremill to craft it from an ingot."
   ],
   "quest.1A000000000006FE.title": "Fine Soldering Alloy Wire",
+  "quest.1A000000000006FF.quest_desc": [
+    "Nice hatch that give you ability to put there a stack of Auto Repair Kit to automatically repair multiblock. But for each auto-repair one of the kit will be consumed."
+  ],
+  "quest.1A000000000006FF.title": "Semi-Auto Maintenance Hatch",
+  "quest.1A00000000000700.quest_desc": [
+    "This is  the best choose to completely forgot about any problems with your multiblock."
+  ],
+  "quest.1A00000000000700.title": "Auto Maintenance Hatch",
   "quest.1A00000000000705.quest_desc": [
     "Currently you can only make 2 planks from 1 wood log by crafting. But later you may use cutting tools or machines to increase output result."
   ],
@@ -5098,14 +5354,22 @@
     "Common bowl, that you can craft by knife from wood plank, or by lathe from wood slab."
   ],
   "quest.1A00000000000733.title": "Bowl",
+  "quest.1A00000000000738.title": "Apple",
+  "quest.1A00000000000739.title": "Wood",
+  "quest.1A0000000000073A.title": "Lignite Coal",
   "quest.1A0000000000073B.quest_desc": [
     "A block, that can load items to carts or locomotives (for example - coal). Should be placed above rails (carts)."
   ],
   "quest.1A0000000000073B.title": "Item Loader",
+  "quest.1A0000000000073C.title": "Iron",
+  "quest.1A0000000000073D.title": "Tin",
+  "quest.1A0000000000073E.title": "Copper",
+  "quest.1A0000000000073F.title": "Redstone",
   "quest.1A00000000000741.quest_desc": [
     "Find a sheep and ask it, where you can find a wool."
   ],
   "quest.1A00000000000741.title": "A wool with any color",
+  "quest.1A00000000000743.title": "Clay",
   "quest.1A00000000000744.title": "Flintmans way",
   "quest.1A00000000000745.title": "Flintmans way",
   "quest.1A00000000000746.title": "Flintmans way",
@@ -5126,10 +5390,62 @@
     "Congratulations, you are Plyushkin. Check the confirmation box if you agree with this statement."
   ],
   "quest.1A00000000000754.title": "Flintmans way",
+  "quest.1A00000000000755.title": "Gunpowder",
+  "quest.1A00000000000756.title": "String",
+  "quest.1A00000000000757.title": "LV Machine Hull",
+  "quest.1A00000000000758.title": "ULV Machine Hull",
+  "quest.1A00000000000759.title": "MV Machine Hull",
+  "quest.1A0000000000075A.title": "HV Machine Hull",
+  "quest.1A0000000000075B.title": "EV Machine Hull",
+  "quest.1A0000000000075C.title": "IV Machine Hull",
+  "quest.1A0000000000075D.title": "LuV Machine Hull",
+  "quest.1A0000000000075E.title": "ZPM Machine Hull",
+  "quest.1A0000000000075F.title": "Sticky Resin",
+  "quest.1A00000000000760.title": "Circuit LV",
+  "quest.1A00000000000761.title": "UV Machine Hull",
+  "quest.1A00000000000762.title": "Circuit MV",
+  "quest.1A00000000000763.title": "Circuit HV",
+  "quest.1A00000000000764.title": "Circuit EV",
+  "quest.1A00000000000765.title": "Circuit IV",
+  "quest.1A00000000000766.title": "Circuit LuV",
+  "quest.1A00000000000767.title": "Circuit ZPM",
+  "quest.1A00000000000768.title": "Galluim",
+  "quest.1A00000000000769.title": "Circuit UV",
+  "quest.1A0000000000076A.title": "Aluminium (Bauxite)",
+  "quest.1A0000000000076B.title": "Titanium (Ilmenite)",
+  "quest.1A0000000000076C.title": "Hot Arrows",
   "quest.1A0000000000076D.quest_desc": [
     "Common bow, that allow you to range attack"
   ],
   "quest.1A0000000000076D.title": "Bow",
+  "quest.1A0000000000076E.title": "Salt",
+  "quest.1A0000000000076F.title": "Lithium (Lepidolite)",
+  "quest.1A00000000000770.title": "Certus Quartz",
+  "quest.1A00000000000771.title": "Nether Quartz",
+  "quest.1A00000000000772.title": "Antimony (Stibnite)",
+  "quest.1A00000000000773.title": "Sulfur",
+  "quest.1A00000000000774.title": "Silver",
+  "quest.1A00000000000775.title": "Gold",
+  "quest.1A00000000000776.title": "Nickel",
+  "quest.1A00000000000777.title": "Lead",
+  "quest.1A00000000000778.title": "Manganese",
+  "quest.1A00000000000779.title": "Ruby",
+  "quest.1A0000000000077A.title": "Tungsten",
+  "quest.1A0000000000077B.title": "Annihilation Core",
+  "quest.1A0000000000077C.title": "Formation Core",
+  "quest.1A0000000000077D.title": "ME Cable",
+  "quest.1A0000000000077E.title": "ME interface",
+  "quest.1A0000000000077F.title": "Pattern Capacity Card",
+  "quest.1A00000000000780.title": "1k ME Storage Component",
+  "quest.1A00000000000781.title": "4k ME Storage Component",
+  "quest.1A00000000000782.title": "16k ME Storage Component",
+  "quest.1A00000000000783.title": "Lapotron Crystal",
+  "quest.1A00000000000784.title": "Energy Crystal",
+  "quest.1A00000000000785.title": "Item Conduit",
+  "quest.1A00000000000786.title": "Ender Pearl",
+  "quest.1A00000000000787.title": "Fluid Conduit",
+  "quest.1A00000000000788.title": "Solar Panel",
+  "quest.1A00000000000789.title": "Simple Solar Boiler",
   "quest.1A0000000000078A.quest_desc": [
     "A block, that can unload items from carts"
   ],

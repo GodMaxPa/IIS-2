@@ -1,0 +1,23 @@
+{
+  "type": "iis:printer",
+  "inputs": [
+    {
+      "ingredient": "#minecraft:wool_carpets",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:red_carpet",
+      "count": 1
+    }
+  ],
+  "duration": 256,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dye_watermixed_dyered",
+      "amount": 144
+    }
+  ]
+}

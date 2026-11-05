@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:credit_platinum",
+    "iis:credit_platinum",
+    "iis:credit_platinum",
+    "iis:credit_platinum",
+    "iis:credit_platinum",
+    "iis:credit_platinum",
+    "iis:credit_platinum",
+    "iis:credit_platinum"
+  ],
+  "result": {
+    "id": "iis:credit_osmium"
+  }
+}

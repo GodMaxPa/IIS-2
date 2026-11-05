@@ -1,0 +1,29 @@
+{
+  "type": "iis:plasma_arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#iis:bolts/plutonium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_plutonium",
+      "count": 1
+    }
+  ],
+  "duration": 1,
+  "eut": 32,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:plasma_argon",
+      "amount": 1
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:argon",
+      "amount": 1
+    }
+  ]
+}

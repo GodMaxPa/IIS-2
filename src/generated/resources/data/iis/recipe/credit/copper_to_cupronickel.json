@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:credit_copper",
+    "iis:credit_copper",
+    "iis:credit_copper",
+    "iis:credit_copper",
+    "iis:credit_copper",
+    "iis:credit_copper",
+    "iis:credit_copper",
+    "iis:credit_copper"
+  ],
+  "result": {
+    "id": "iis:credit_cupronickel"
+  }
+}

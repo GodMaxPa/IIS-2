@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CHC",
+    "AMA",
+    "CHC"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "H": "iis:hatch_maintenance",
+    "A": "iis:robot_arm_iv",
+    "C": "#c:circuits/elite"
+  },
+  "result": {
+    "id": "iis:hatch_maintenance_semiauto"
+  }
+}

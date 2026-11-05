@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "PMP",
+    "CPC"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "P": "iis:electric_pump_zpm",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:cables/4x/naquadah"
+  },
+  "result": {
+    "id": "iis:amplifab_zpm"
+  }
+}

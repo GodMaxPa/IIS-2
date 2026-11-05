@@ -74,11 +74,11 @@ public class HatchBlock extends Block implements EntityBlock, EnergyConnectable 
             if (r != null) return r;
         }
         // ключ поворачивает люк; у люка обслуживания ключ — ещё и ремонтный инструмент, там поворот с Shift
-        if (ru.iis.machine.block.Wrench.is(stack) && (type != HatchType.MAINTENANCE || player.isShiftKeyDown())) {
+        if (ru.iis.machine.block.Wrench.is(stack) && (type.kind() != HatchType.MAINTENANCE || player.isShiftKeyDown())) {
             if (!level.isClientSide()) ru.iis.machine.block.Wrench.rotate(level, pos, state, FACING, ru.iis.machine.block.Wrench.wrenchingSide(pos, hit), player, hand, stack);
             return InteractionResult.SUCCESS;
         }
-        if (type != HatchType.MAINTENANCE) return InteractionResult.TRY_WITH_EMPTY_HAND;
+        if (type.kind() != HatchType.MAINTENANCE) return InteractionResult.TRY_WITH_EMPTY_HAND;
         if (!level.isClientSide() && level.getBlockEntity(pos) instanceof MaintenanceHatchBlockEntity m) m.useTool(stack, player, hand);
         return InteractionResult.SUCCESS;
     }

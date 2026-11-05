@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/silicone",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:carbon_mesh",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:duct_tape",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 64,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:glue",
+      "amount": 300
+    }
+  ]
+}

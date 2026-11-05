@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WGW",
+    "CMC",
+    "TPT"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "P": "#c:plates/hsse",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:cables/4x/naquadah",
+    "T": "iis:electric_pump_zpm",
+    "G": "#c:dusts/graphite"
+  },
+  "result": {
+    "id": "iis:plasma_arc_furnace_zpm"
+  }
+}

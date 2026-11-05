@@ -120,6 +120,12 @@ public final class GearContent {
     public static final DeferredItem<Item> CASING_IRON = item("item_casing_iron");
     public static final DeferredItem<Item> CASING_LEAD = item("item_casing_lead");
     public static final DeferredItem<Item> COAL_BALL = item("coal_ball");
+    // D119: остатки GT
+    public static final DeferredItem<Item> SCRAP = item("scrap");
+    public static final DeferredItem<Item> DUCT_TAPE = item("duct_tape");
+    public static final DeferredItem<Item> AUTO_REPAIR_KIT = item("auto_repair_kit");
+    public static final DeferredItem<Item> STEM_CELL = item("stem_cell");
+    public static final List<DeferredItem<Item>> CREDITS = java.util.stream.Stream.of("copper", "cupronickel", "silver", "gold", "platinum", "osmium", "naquadah", "neutronium").map(s -> item("credit_" + s)).toList();
     public static final DeferredItem<Item> COMPRESSED_COAL_BALL = item("compressed_coal_ball");
     public static final DeferredItem<Item> COAL_CHUNK = item("coal_chunk");
     public static final DeferredItem<Item> INDUSTRIAL_DIAMOND = item("industrial_diamond");

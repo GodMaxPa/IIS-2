@@ -1,0 +1,19 @@
+{
+  "type": "iis:fermenter",
+  "inputs": [],
+  "outputs": [],
+  "duration": 150,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:biomass",
+      "amount": 100
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:fermentedbiomass",
+      "amount": 100
+    }
+  ]
+}

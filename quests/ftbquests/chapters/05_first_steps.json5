@@ -27,6 +27,16 @@
           "count": 1,
           "id": "1B0000000000A400"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000000A400"
+        }
       ]
     },
     {
@@ -52,6 +62,16 @@
           "count": 1,
           "id": "1B0000000000A500"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000000A500"
+        }
       ]
     },
     {
@@ -75,6 +95,16 @@
           },
           "count": 1,
           "id": "1B0000000000A700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000000A700"
         }
       ]
     },
@@ -101,6 +131,16 @@
           "count": 1,
           "id": "1B0000000000FE00"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000000FE00"
+        }
       ]
     },
     {
@@ -125,6 +165,16 @@
           "count": 1,
           "id": "1B00000000013700"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000013700"
+        }
       ]
     },
     {
@@ -148,6 +198,16 @@
           },
           "count": 1,
           "id": "1B00000000014800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000014800"
         }
       ]
     },
@@ -174,6 +234,16 @@
           "count": 1,
           "id": "1B00000000018C00"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000018C00"
+        }
       ]
     },
     {
@@ -199,6 +269,16 @@
           "count": 8,
           "id": "1B0000000001B000"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001B000"
+        }
       ]
     },
     {
@@ -218,6 +298,16 @@
           },
           "count": 2,
           "id": "1B0000000001B100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001B100"
         }
       ]
     },
@@ -244,6 +334,16 @@
           "count": 1,
           "id": "1B0000000001B200"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001B200"
+        }
       ]
     },
     {
@@ -266,6 +366,16 @@
           },
           "count": 1,
           "id": "1B0000000001B300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001B300"
         }
       ]
     },
@@ -291,6 +401,16 @@
           "count": 1,
           "id": "1B0000000001B400"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001B400"
+        }
       ]
     },
     {
@@ -313,6 +433,16 @@
           },
           "count": 5,
           "id": "1B0000000001B600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001B600"
         }
       ]
     },
@@ -337,6 +467,16 @@
           "count": 2,
           "id": "1B0000000001B700"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001B700"
+        }
       ]
     },
     {
@@ -356,6 +496,16 @@
           },
           "count": 1,
           "id": "1B0000000001B800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001B800"
         }
       ]
     },
@@ -377,6 +527,16 @@
           "count": 1,
           "id": "1B0000000001B900"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001B900"
+        }
       ]
     },
     {
@@ -396,6 +556,16 @@
           },
           "count": 1,
           "id": "1B0000000001BF00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001BF00"
         }
       ]
     },
@@ -421,6 +591,16 @@
           "count": 1,
           "id": "1B0000000001C000"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001C000"
+        }
       ]
     },
     {
@@ -443,6 +623,16 @@
           },
           "count": 3,
           "id": "1B0000000001C100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000001C100"
         }
       ]
     },
@@ -467,6 +657,16 @@
           "count": 1,
           "id": "1B0000000001CF00"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001CF00"
+        }
       ]
     },
     {
@@ -489,6 +689,16 @@
           },
           "count": 1,
           "id": "1B0000000001D000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001D000"
         }
       ]
     },
@@ -514,6 +724,16 @@
           "count": 1,
           "id": "1B0000000001D100"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001D100"
+        }
       ]
     },
     {
@@ -533,6 +753,16 @@
           },
           "count": 1,
           "id": "1B0000000001D200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001D200"
         }
       ]
     },
@@ -566,6 +796,16 @@
           "count": 1,
           "id": "1B0000000001D301"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001D300"
+        }
       ]
     },
     {
@@ -589,6 +829,16 @@
           },
           "count": 1,
           "id": "1B0000000001D400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001D400"
         }
       ]
     },
@@ -614,6 +864,16 @@
           },
           "count": 1,
           "id": "1B0000000001D500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001D500"
         }
       ]
     },
@@ -666,6 +926,16 @@
           "count": 64,
           "id": "1B0000000001D803"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000001D800"
+        }
       ]
     },
     {
@@ -688,6 +958,16 @@
           },
           "count": 1,
           "id": "1B0000000003D300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000003D300"
         }
       ]
     },
@@ -714,6 +994,16 @@
           "count": 1,
           "id": "1B00000000043D00"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000043D00"
+        }
       ]
     },
     {
@@ -737,6 +1027,16 @@
           },
           "count": 1,
           "id": "1B00000000044000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000044000"
         }
       ]
     },
@@ -763,6 +1063,16 @@
           "count": 1,
           "id": "1B00000000044100"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000044100"
+        }
       ]
     },
     {
@@ -785,6 +1095,16 @@
           },
           "count": 1,
           "id": "1B00000000044200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000044200"
         }
       ]
     },
@@ -810,6 +1130,16 @@
           "count": 1,
           "id": "1B0000000004B100"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000004B100"
+        }
       ]
     },
     {
@@ -829,6 +1159,16 @@
           },
           "count": 3,
           "id": "1B0000000004B200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000004B200"
         }
       ]
     },
@@ -853,6 +1193,16 @@
           "count": 1,
           "id": "1B0000000004CF00"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000004CF00"
+        }
       ]
     },
     {
@@ -875,6 +1225,16 @@
           },
           "count": 1,
           "id": "1B00000000070500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000070500"
         }
       ]
     },
@@ -899,6 +1259,16 @@
           },
           "count": 1,
           "id": "1B00000000079900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000079900"
         }
       ]
     }

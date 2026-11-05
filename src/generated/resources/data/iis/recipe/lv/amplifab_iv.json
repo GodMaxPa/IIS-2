@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "PMP",
+    "CPC"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "P": "iis:electric_pump_iv",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/4x/platinum"
+  },
+  "result": {
+    "id": "iis:amplifab_iv"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "GMG",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "P": "iis:electric_pump_mv",
+    "C": "#c:circuits/good",
+    "W": "#iis:cables/1x/copper",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:fermenter_mv"
+  }
+}

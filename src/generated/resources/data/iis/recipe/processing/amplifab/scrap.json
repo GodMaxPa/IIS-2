@@ -1,0 +1,18 @@
+{
+  "type": "iis:amplifab",
+  "inputs": [
+    {
+      "ingredient": "iis:scrap",
+      "count": 9
+    }
+  ],
+  "outputs": [],
+  "duration": 180,
+  "eut": 32,
+  "fluid_outputs": [
+    {
+      "id": "iis:uuamplifier",
+      "amount": 1
+    }
+  ]
+}

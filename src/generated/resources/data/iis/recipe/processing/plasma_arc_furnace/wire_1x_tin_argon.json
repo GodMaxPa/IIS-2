@@ -1,0 +1,29 @@
+{
+  "type": "iis:plasma_arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/tin",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_tin",
+      "count": 4
+    }
+  ],
+  "duration": 3,
+  "eut": 32,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:plasma_argon",
+      "amount": 1
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:argon",
+      "amount": 1
+    }
+  ]
+}

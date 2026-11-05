@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:credit_osmium"
+  ],
+  "result": {
+    "id": "iis:credit_platinum",
+    "count": 8
+  }
+}

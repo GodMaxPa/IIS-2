@@ -1,30 +1,11 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1293; hidden until their items are ported: 649; chapters: 35.
+Quests in IIS 1: 1943; written: 1417; hidden until their items are ported: 525; chapters: 35.
 
 ## Most needed unported items (task count)
 
-- 29 × `gregtech:gt.metaitem.01:32002` Серебряная монета
-- 12 × `gregtech:gt.metaitem.01:32001` Константановая монета
-- 8 × `gregtech:gt.metaitem.01:32003` Золотая монета
-- 5 × `gregtech:gt.metaitem.01:32000` Медная монета
-- 5 × `gregtech:gt.metaitem.01:32004` Платиновая монета
-- 2 × `gregtech:gt.blockmachines:321` Принтер (LV)
-- 2 × `gregtech:gt.blockmachines:322` Принтер (MV)
-- 2 × `gregtech:gt.blockmachines:323` Принтер (HV)
-- 2 × `gregtech:gt.blockmachines:324` Принтер (EV)
-- 2 × `gregtech:gt.blockmachines:325` Принтер (IV)
 - 2 × `EnderIO:itemSoulVessel:0` 
-- 2 × `gregtech:gt.blockmachines:455` Разборочный станок (IV)
-- 2 × `gregtech:gt.blockmachines:451` Разборочный станок (LV)
-- 2 × `gregtech:gt.blockmachines:452` Разборочный станок (MV)
-- 2 × `gregtech:gt.blockmachines:453` Разборочный станок (HV)
-- 2 × `gregtech:gt.blockmachines:454` Разборочный станок (EV)
-- 2 × `gregtech:gt.blockmachines:501` Ферментёр (LV)
 - 2 × `gregtech:gt.blockmachines:681` Органический репликатор (LV)
-- 2 × `gregtech:gt.blockmachines:461` Производитель материи (LV)
-- 2 × `gregtech:gt.blockmachines:331` Утилизатор (LV)
-- 2 × `gregtech:gt.blockmachines:471` Амплифабрикатор (LV)
 - 2 × `gregtech:gt.blockmachines:50` Входной люк (ULV)
 - 2 × `gregtech:gt.blockmachines:60` Выходной люк (ULV)
 - 2 × `gregtech:gt.metaitem.01:32018` Базовый считыватель данных
@@ -84,6 +65,25 @@ Quests in IIS 1: 1943; written: 1293; hidden until their items are ported: 649; 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:48` 
 - 1 × `gregtech:gt.blockgem3:2` Блок жёлтого граната
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:16` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:23` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:20` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:18` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:17` 
+- 1 × `appliedenergistics2:tile.BlockInterface:0` 
+- 1 × `extracells:ecbaseblock:0` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:7` 
+- 1 × `appliedenergistics2:item.ItemMultiPart:280` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:25` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:27` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:28` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:30` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:29` 
+- 1 × `extracells:part.base:12` 
+- 1 × `appliedenergistics2:item.ItemMultiPart:260` 
+- 1 × `EnderIO:itemYetaWrench:0` 
+- 1 × `gregtech:gt.blockmachines:132` Улучшенный люк доступа к данным
+- 1 × `gregtech:gt.metaitem.01:11317` Осмиридиевый слиток
+- 1 × `gregtech:gt.blockmachines:4413` 
 
 ## Unported fluids
 
@@ -92,15 +92,26 @@ Quests in IIS 1: 1943; written: 1293; hidden until their items are ported: 649; 
 - 1 × `potion.poison.strong`
 - 1 × `ic2coolant`
 - 1 × `ic2distilledwater`
-- 1 × `ic2uumatter`
 
 ## Dropped reward items
 
-- 519 × `('gregtech:gt.metaitem.01', 32000)`
-- 381 × `('gregtech:gt.metaitem.01', 32001)`
-- 48 × `('gregtech:gt.metaitem.01', 32002)`
 - 16 × `bq_standard:choice`
-- 15 × `('gregtech:gt.metaitem.01', 32003)`
+- 2 × `('gregtech:gt.metaitem.02', 25802)`
 - 1 × `('lootbags:lootbag', 7)`
 - 1 × `('ChickenChunks:chickenChunkLoader', 0)`
-- 1 × `('gregtech:gt.metaitem.02', 25802)`
+- 1 × `('gregtech:gt.blockmachines', 18)`
+- 1 × `('gregtech:gt.metaitem.03', 32091)`
+- 1 × `('gregtech:gt.metaitem.02', 26347)`
+- 1 × `('gregtech:gt.blockores', 4522)`
+- 1 × `('gregtech:gt.blockores', 1022)`
+- 1 × `('gregtech:gt.blockores', 1031)`
+- 1 × `('appliedenergistics2:item.ItemMultiMaterial', 44)`
+- 1 × `('appliedenergistics2:item.ItemMultiMaterial', 43)`
+- 1 × `('appliedenergistics2:item.ItemMultiPart', 36)`
+- 1 × `('appliedenergistics2:tile.BlockInterface', 0)`
+- 1 × `('appliedenergistics2:item.ItemMultiMaterial', 54)`
+- 1 × `('appliedenergistics2:item.ItemMultiMaterial', 35)`
+- 1 × `('appliedenergistics2:item.ItemMultiMaterial', 36)`
+- 1 × `('appliedenergistics2:item.ItemMultiMaterial', 37)`
+- 1 × `('EnderIO:itemItemConduit', 0)`
+- 1 × `('EnderIO:itemLiquidConduit', 0)`

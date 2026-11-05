@@ -26,6 +26,16 @@
           "count": 1,
           "id": "1B00000000004B00"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000004B00"
+        }
       ]
     }
   ]

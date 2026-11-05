@@ -30,6 +30,7 @@ public class MaintenanceHatchBlockEntity extends BlockEntity {
     /** Исправления, ещё не переданные контроллеру. */
     private int pendingFixes;
     /** Неисправности машины, которую обслуживает люк (пишет контроллер); −1 — люк не в машине. */
+    private int kits;
     public int machineMask = -1;
     public long machineSeen = Long.MIN_VALUE;
 
@@ -63,7 +64,35 @@ public class MaintenanceHatchBlockEntity extends BlockEntity {
         });
     }
 
+    /** Вид люка: обычный, на наборах, полный автомат (D119). */
+    private HatchType type() {
+        return getBlockState().getBlock() instanceof HatchBlock h ? h.type : HatchType.MAINTENANCE;
+    }
+
+    public int kits() {
+        return kits;
+    }
+
+    public void addKits(int n) {
+        kits += n;
+        setChanged();
+    }
+
     public void useTool(ItemStack stack, Player player, InteractionHand hand) {
+        // GT_MetaTileEntity_Hatch_Maintenance#onToolClick: изолента чинит всё разом
+        if (stack.is(ru.iis.gear.GearContent.DUCT_TAPE.get())) {
+            if (!player.isCreative()) stack.shrink(1);
+            pendingFixes = 63;
+            setChanged();
+            player.sendOverlayMessage(Component.translatable("message.iis.maintenance.taped"));
+            return;
+        }
+        if (type() == HatchType.MAINTENANCE_SEMIAUTO && stack.is(ru.iis.gear.GearContent.AUTO_REPAIR_KIT.get())) {
+            addKits(stack.getCount());
+            if (!player.isCreative()) stack.setCount(0);
+            player.sendOverlayMessage(Component.translatable("message.iis.maintenance.kits", kits));
+            return;
+        }
         Maintenance.Problem p = problemFor(stack);
         if (p == null) {
             report(player);
@@ -85,6 +114,15 @@ public class MaintenanceHatchBlockEntity extends BlockEntity {
 
     /** Контроллер забирает исправления. */
     public int takeFixes() {
+        // GT autoMaintainance: при неисправности автомат чинит всё, люк на наборах тратит один набор
+        if (machineMask >= 0 && machineMask != 63) {
+            HatchType t = type();
+            if (t == HatchType.MAINTENANCE_AUTO) pendingFixes = 63;
+            else if (t == HatchType.MAINTENANCE_SEMIAUTO && kits > 0) {
+                kits--;
+                pendingFixes = 63;
+            }
+        }
         int f = pendingFixes;
         pendingFixes = 0;
         if (f != 0) setChanged();
@@ -112,11 +150,13 @@ public class MaintenanceHatchBlockEntity extends BlockEntity {
     protected void saveAdditional(ValueOutput out) {
         super.saveAdditional(out);
         out.putInt("fixes", pendingFixes);
+        out.putInt("kits", kits);
     }
 
     @Override
     protected void loadAdditional(ValueInput in) {
         super.loadAdditional(in);
         pendingFixes = in.getIntOr("fixes", 0);
+        kits = in.getIntOr("kits", 0);
     }
 }

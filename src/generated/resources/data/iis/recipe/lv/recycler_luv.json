@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GCG",
+    "PMP",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "P": "iis:electric_piston_luv",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/1x/niobium_titanium",
+    "G": "#c:dusts/glowstone"
+  },
+  "result": {
+    "id": "iis:recycler_luv"
+  }
+}

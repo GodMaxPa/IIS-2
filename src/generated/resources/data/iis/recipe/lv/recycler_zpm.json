@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GCG",
+    "PMP",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "P": "iis:electric_piston_zpm",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah",
+    "G": "#c:dusts/glowstone"
+  },
+  "result": {
+    "id": "iis:recycler_zpm"
+  }
+}

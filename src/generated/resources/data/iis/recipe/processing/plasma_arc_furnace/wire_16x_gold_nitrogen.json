@@ -1,0 +1,29 @@
+{
+  "type": "iis:plasma_arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/16x/gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:gold_ingot",
+      "count": 8
+    }
+  ],
+  "duration": 98,
+  "eut": 32,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:plasma_nitrogen",
+      "amount": 7
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:nitrogen",
+      "amount": 7
+    }
+  ]
+}

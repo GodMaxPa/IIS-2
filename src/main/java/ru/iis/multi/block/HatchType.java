@@ -31,6 +31,9 @@ public enum HatchType {
     INPUT_HATCH("hatch_input_lv"),
     OUTPUT_HATCH("hatch_output_lv"),
     MAINTENANCE("hatch_maintenance"),
+    /** D119: GT_MetaTileEntity_Hatch_Maintenance.AutoKit и FullAuto. */
+    MAINTENANCE_SEMIAUTO("hatch_maintenance_semiauto", "MAINTENANCE", 5),
+    MAINTENANCE_AUTO("hatch_maintenance_auto", "MAINTENANCE", 9),
     MUFFLER("hatch_muffler_lv"),
     /** D103: шины, люки жидкостей и выхлопные люки MV–IV (GT_Loader_MetaTileEntities:294–422): тот же вид, что у LV, но больше. */
     INPUT_BUS_MV("hatch_input_bus_mv", "INPUT_BUS", 2), INPUT_BUS_HV("hatch_input_bus_hv", "INPUT_BUS", 3), INPUT_BUS_EV("hatch_input_bus_ev", "INPUT_BUS", 4), INPUT_BUS_IV("hatch_input_bus_iv", "INPUT_BUS", 5),

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:credit_naquadah"
+  ],
+  "result": {
+    "id": "iis:credit_osmium",
+    "count": 8
+  }
+}

@@ -25,6 +25,16 @@
           "count": 1,
           "id": "1B00000000002200"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000002200"
+        }
       ]
     },
     {
@@ -48,6 +58,16 @@
           "count": 1,
           "id": "1B00000000025700"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000025700"
+        }
       ]
     },
     {
@@ -70,6 +90,16 @@
           },
           "count": 1,
           "id": "1B00000000025D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000025D00"
         }
       ]
     },
@@ -95,6 +125,16 @@
           "count": 1,
           "id": "1B00000000026000"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 6
+          },
+          "id": "1C00000000026000"
+        }
       ]
     },
     {
@@ -119,6 +159,16 @@
           "count": 1,
           "id": "1B00000000026500"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000026500"
+        }
       ]
     },
     {
@@ -141,6 +191,16 @@
           },
           "count": 1,
           "id": "1B00000000027300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000027300"
         }
       ]
     },
@@ -165,6 +225,16 @@
           "count": 1,
           "id": "1B00000000027600"
         }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000027600"
+        }
       ]
     },
     {
@@ -188,6 +258,16 @@
           },
           "count": 1,
           "id": "1B00000000027700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000027700"
         }
       ]
     }

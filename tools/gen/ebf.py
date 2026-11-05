@@ -20,6 +20,9 @@ HATCHES = [
     ('hatch_input_lv', 'OVERLAY_PIPE_IN', 'gt.blockmachines.hatch.input.tier.01.name', 'LV Input Hatch'),
     ('hatch_output_lv', 'OVERLAY_PIPE_OUT', 'gt.blockmachines.hatch.output.tier.01.name', 'LV Output Hatch'),
     ('hatch_maintenance', 'OVERLAY_MAINTENANCE', 'gt.blockmachines.hatch.maintenance.name', 'Maintenance Hatch'),
+    # D119: GT_Loader_MetaTileEntities:397, 400
+    ('hatch_maintenance_semiauto', 'OVERLAY_MAINTENANCE', 'gt.blockmachines.hatch.maintenance.semiauto.name', 'Semi-Auto Maintenance Hatch'),
+    ('hatch_maintenance_auto', 'OVERLAY_MAINTENANCE', 'gt.blockmachines.hatch.maintenance.auto.name', 'Auto Maintenance Hatch'),
     ('hatch_muffler_lv', 'OVERLAY_MUFFLER', 'gt.blockmachines.hatch.muffler.tier.01.name', 'LV Muffler Hatch'),
     # D82: GT_Loader_MetaTileEntities:238 (MV casing)
     ('hatch_energy_mv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.02.name', 'MV Energy Hatch'),

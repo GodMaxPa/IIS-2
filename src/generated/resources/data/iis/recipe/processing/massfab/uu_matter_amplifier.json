@@ -1,0 +1,19 @@
+{
+  "type": "iis:massfab",
+  "inputs": [],
+  "outputs": [],
+  "duration": 643,
+  "eut": 32,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:uuamplifier",
+      "amount": 1
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:uumatter",
+      "amount": 1
+    }
+  ]
+}

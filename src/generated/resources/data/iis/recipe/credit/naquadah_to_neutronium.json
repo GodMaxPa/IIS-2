@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:credit_naquadah",
+    "iis:credit_naquadah",
+    "iis:credit_naquadah",
+    "iis:credit_naquadah",
+    "iis:credit_naquadah",
+    "iis:credit_naquadah",
+    "iis:credit_naquadah",
+    "iis:credit_naquadah"
+  ],
+  "result": {
+    "id": "iis:credit_neutronium"
+  }
+}

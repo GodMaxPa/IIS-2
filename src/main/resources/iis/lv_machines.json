@@ -360,6 +360,69 @@
     "gui": "lv/e_furnace"
   },
   {
+    "id": "fermenter_lv",
+    "type": "fermenter",
+    "recipeMap": "fermenter",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/fermenter"
+  },
+  {
+    "id": "printer_lv",
+    "type": "printer",
+    "recipeMap": "printer",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/printer"
+  },
+  {
+    "id": "recycler_lv",
+    "type": "recycler",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/recycler"
+  },
+  {
+    "id": "amplifab_lv",
+    "type": "amplifab",
+    "recipeMap": "amplifab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/amplifabricator"
+  },
+  {
+    "id": "massfab_lv",
+    "type": "massfab",
+    "recipeMap": "massfab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/massfabricator"
+  },
+  {
+    "id": "plasma_arc_furnace_lv",
+    "type": "plasma_arc_furnace",
+    "recipeMap": "plasma_arc_furnace",
+    "inputs": 1,
+    "outputs": 6,
+    "tank": 1000,
+    "gui": "lv/plasmaarcfurnace"
+  },
+  {
+    "id": "disassembler_lv",
+    "type": "disassembler",
+    "recipeMap": "disassembler",
+    "inputs": 1,
+    "outputs": 9,
+    "tank": 0,
+    "gui": "lv/disassembler"
+  },
+  {
     "id": "macerator_mv",
     "type": "macerator_mv",
     "recipeMap": "macerator",
@@ -709,6 +772,69 @@
     "outputs": 1,
     "tank": 0,
     "gui": "lv/e_furnace"
+  },
+  {
+    "id": "fermenter_mv",
+    "type": "fermenter_mv",
+    "recipeMap": "fermenter",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/fermenter"
+  },
+  {
+    "id": "printer_mv",
+    "type": "printer_mv",
+    "recipeMap": "printer",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/printer"
+  },
+  {
+    "id": "recycler_mv",
+    "type": "recycler_mv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/recycler"
+  },
+  {
+    "id": "amplifab_mv",
+    "type": "amplifab_mv",
+    "recipeMap": "amplifab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/amplifabricator"
+  },
+  {
+    "id": "massfab_mv",
+    "type": "massfab_mv",
+    "recipeMap": "massfab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/massfabricator"
+  },
+  {
+    "id": "plasma_arc_furnace_mv",
+    "type": "plasma_arc_furnace_mv",
+    "recipeMap": "plasma_arc_furnace",
+    "inputs": 1,
+    "outputs": 6,
+    "tank": 1000,
+    "gui": "lv/plasmaarcfurnace"
+  },
+  {
+    "id": "disassembler_mv",
+    "type": "disassembler_mv",
+    "recipeMap": "disassembler",
+    "inputs": 1,
+    "outputs": 9,
+    "tank": 0,
+    "gui": "lv/disassembler"
   },
   {
     "id": "thermal_centrifuge_mv",
@@ -1071,6 +1197,69 @@
     "gui": "lv/e_furnace"
   },
   {
+    "id": "fermenter_hv",
+    "type": "fermenter_hv",
+    "recipeMap": "fermenter",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/fermenter"
+  },
+  {
+    "id": "printer_hv",
+    "type": "printer_hv",
+    "recipeMap": "printer",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/printer"
+  },
+  {
+    "id": "recycler_hv",
+    "type": "recycler_hv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/recycler"
+  },
+  {
+    "id": "amplifab_hv",
+    "type": "amplifab_hv",
+    "recipeMap": "amplifab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/amplifabricator"
+  },
+  {
+    "id": "massfab_hv",
+    "type": "massfab_hv",
+    "recipeMap": "massfab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/massfabricator"
+  },
+  {
+    "id": "plasma_arc_furnace_hv",
+    "type": "plasma_arc_furnace_hv",
+    "recipeMap": "plasma_arc_furnace",
+    "inputs": 1,
+    "outputs": 6,
+    "tank": 1000,
+    "gui": "lv/plasmaarcfurnace"
+  },
+  {
+    "id": "disassembler_hv",
+    "type": "disassembler_hv",
+    "recipeMap": "disassembler",
+    "inputs": 1,
+    "outputs": 9,
+    "tank": 0,
+    "gui": "lv/disassembler"
+  },
+  {
     "id": "thermal_centrifuge_hv",
     "type": "thermal_centrifuge_hv",
     "recipeMap": "thermal_centrifuge",
@@ -1429,6 +1618,69 @@
     "outputs": 1,
     "tank": 0,
     "gui": "lv/e_furnace"
+  },
+  {
+    "id": "fermenter_ev",
+    "type": "fermenter_ev",
+    "recipeMap": "fermenter",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/fermenter"
+  },
+  {
+    "id": "printer_ev",
+    "type": "printer_ev",
+    "recipeMap": "printer",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/printer"
+  },
+  {
+    "id": "recycler_ev",
+    "type": "recycler_ev",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/recycler"
+  },
+  {
+    "id": "amplifab_ev",
+    "type": "amplifab_ev",
+    "recipeMap": "amplifab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/amplifabricator"
+  },
+  {
+    "id": "massfab_ev",
+    "type": "massfab_ev",
+    "recipeMap": "massfab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/massfabricator"
+  },
+  {
+    "id": "plasma_arc_furnace_ev",
+    "type": "plasma_arc_furnace_ev",
+    "recipeMap": "plasma_arc_furnace",
+    "inputs": 1,
+    "outputs": 6,
+    "tank": 1000,
+    "gui": "lv/plasmaarcfurnace"
+  },
+  {
+    "id": "disassembler_ev",
+    "type": "disassembler_ev",
+    "recipeMap": "disassembler",
+    "inputs": 1,
+    "outputs": 9,
+    "tank": 0,
+    "gui": "lv/disassembler"
   },
   {
     "id": "thermal_centrifuge_ev",
@@ -1791,6 +2043,69 @@
     "gui": "lv/e_furnace"
   },
   {
+    "id": "fermenter_iv",
+    "type": "fermenter_iv",
+    "recipeMap": "fermenter",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/fermenter"
+  },
+  {
+    "id": "printer_iv",
+    "type": "printer_iv",
+    "recipeMap": "printer",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/printer"
+  },
+  {
+    "id": "recycler_iv",
+    "type": "recycler_iv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/recycler"
+  },
+  {
+    "id": "amplifab_iv",
+    "type": "amplifab_iv",
+    "recipeMap": "amplifab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/amplifabricator"
+  },
+  {
+    "id": "massfab_iv",
+    "type": "massfab_iv",
+    "recipeMap": "massfab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/massfabricator"
+  },
+  {
+    "id": "plasma_arc_furnace_iv",
+    "type": "plasma_arc_furnace_iv",
+    "recipeMap": "plasma_arc_furnace",
+    "inputs": 1,
+    "outputs": 6,
+    "tank": 1000,
+    "gui": "lv/plasmaarcfurnace"
+  },
+  {
+    "id": "disassembler_iv",
+    "type": "disassembler_iv",
+    "recipeMap": "disassembler",
+    "inputs": 1,
+    "outputs": 9,
+    "tank": 0,
+    "gui": "lv/disassembler"
+  },
+  {
     "id": "thermal_centrifuge_iv",
     "type": "thermal_centrifuge_iv",
     "recipeMap": "thermal_centrifuge",
@@ -2151,6 +2466,69 @@
     "gui": "lv/e_furnace"
   },
   {
+    "id": "fermenter_luv",
+    "type": "fermenter_luv",
+    "recipeMap": "fermenter",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/fermenter"
+  },
+  {
+    "id": "printer_luv",
+    "type": "printer_luv",
+    "recipeMap": "printer",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/printer"
+  },
+  {
+    "id": "recycler_luv",
+    "type": "recycler_luv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/recycler"
+  },
+  {
+    "id": "amplifab_luv",
+    "type": "amplifab_luv",
+    "recipeMap": "amplifab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/amplifabricator"
+  },
+  {
+    "id": "massfab_luv",
+    "type": "massfab_luv",
+    "recipeMap": "massfab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/massfabricator"
+  },
+  {
+    "id": "plasma_arc_furnace_luv",
+    "type": "plasma_arc_furnace_luv",
+    "recipeMap": "plasma_arc_furnace",
+    "inputs": 1,
+    "outputs": 6,
+    "tank": 1000,
+    "gui": "lv/plasmaarcfurnace"
+  },
+  {
+    "id": "disassembler_luv",
+    "type": "disassembler_luv",
+    "recipeMap": "disassembler",
+    "inputs": 1,
+    "outputs": 9,
+    "tank": 0,
+    "gui": "lv/disassembler"
+  },
+  {
     "id": "thermal_centrifuge_luv",
     "type": "thermal_centrifuge_luv",
     "recipeMap": "thermal_centrifuge",
@@ -2509,6 +2887,69 @@
     "outputs": 1,
     "tank": 0,
     "gui": "lv/e_furnace"
+  },
+  {
+    "id": "fermenter_zpm",
+    "type": "fermenter_zpm",
+    "recipeMap": "fermenter",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/fermenter"
+  },
+  {
+    "id": "printer_zpm",
+    "type": "printer_zpm",
+    "recipeMap": "printer",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/printer"
+  },
+  {
+    "id": "recycler_zpm",
+    "type": "recycler_zpm",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/recycler"
+  },
+  {
+    "id": "amplifab_zpm",
+    "type": "amplifab_zpm",
+    "recipeMap": "amplifab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/amplifabricator"
+  },
+  {
+    "id": "massfab_zpm",
+    "type": "massfab_zpm",
+    "recipeMap": "massfab",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/massfabricator"
+  },
+  {
+    "id": "plasma_arc_furnace_zpm",
+    "type": "plasma_arc_furnace_zpm",
+    "recipeMap": "plasma_arc_furnace",
+    "inputs": 1,
+    "outputs": 6,
+    "tank": 1000,
+    "gui": "lv/plasmaarcfurnace"
+  },
+  {
+    "id": "disassembler_zpm",
+    "type": "disassembler_zpm",
+    "recipeMap": "disassembler",
+    "inputs": 1,
+    "outputs": 9,
+    "tank": 0,
+    "gui": "lv/disassembler"
   },
   {
     "id": "thermal_centrifuge_zpm",

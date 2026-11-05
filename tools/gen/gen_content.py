@@ -1026,6 +1026,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_gear', os.path.join(ROOT, 'tools',
 _gear = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_gear)
 lv_stats['gear'] = _gear.generate(globals())
+# GregTech remainder (D119)
+_spec = _ilu.spec_from_file_location('iis_gen_gtrest', os.path.join(ROOT, 'tools', 'gen', 'gtrest.py'))
+_gtrest = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_gtrest)
+lv_stats['gtrest'] = _gtrest.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

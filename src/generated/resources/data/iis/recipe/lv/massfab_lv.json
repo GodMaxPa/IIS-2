@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CFC",
+    "WMW",
+    "CFC"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "F": "iis:field_generator_lv",
+    "C": "#c:circuits/good",
+    "W": "#iis:cables/4x/tin"
+  },
+  "result": {
+    "id": "iis:massfab_lv"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CFC",
+    "WMW",
+    "CFC"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "F": "iis:field_generator_ev",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/4x/aluminium"
+  },
+  "result": {
+    "id": "iis:massfab_ev"
+  }
+}

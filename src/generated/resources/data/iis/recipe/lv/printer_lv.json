@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EWE",
+    "CMC",
+    "WEW"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "E": "iis:electric_motor_lv",
+    "C": "#c:circuits/basic",
+    "W": "#iis:cables/1x/tin"
+  },
+  "result": {
+    "id": "iis:printer_lv"
+  }
+}

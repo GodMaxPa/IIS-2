@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/printer_luv_side",
+    "north": "iis:block/lv/printer_luv_front",
+    "south": "iis:block/lv/printer_luv_back",
+    "east": "iis:block/lv/printer_luv_side",
+    "west": "iis:block/lv/printer_luv_side",
+    "up": "iis:block/lv/printer_luv_top",
+    "down": "iis:block/lv/printer_luv_bottom"
+  }
+}

@@ -134,6 +134,12 @@ for _id, _to in (('itemAdvBat', 'battery_adv'), ('itemBatRE', 'battery_re'), ('i
                  ('itemArmorEnergypack', 'energy_pack'), ('itemArmorLappack', 'lappack'), ('itemToolMiningLaser', 'mining_laser'), ('itemNanoSaber', 'nano_saber')):
     for _d in (0, 1, 26, 27):
         GC_MAP[('IC2:' + _id, _d)] = 'iis:' + _to
+# D119: GT credits (quest store and rewards), machines' own ids
+for _i, _c in enumerate(('copper', 'cupronickel', 'silver', 'gold', 'platinum', 'osmium', 'naquadah', 'neutronium')):
+    GC_MAP[('gregtech:gt.metaitem.01', 32000 + _i)] = f'iis:credit_{_c}'
+GC_MAP.update({('gregtech:gt.metaitem.01', 32762): 'iis:multimeter', ('gregtech:gt.metaitem.01', 32764): 'iis:duct_tape', ('gregtech:gt.metaitem.01', 32021): 'iis:auto_repair_kit',
+               ('gregtech:gt.metaitem.03', 32073): 'iis:stem_cell', ('gregtech:gt.blockmachines', 111): 'iis:hatch_maintenance_semiauto', ('gregtech:gt.blockmachines', 114): 'iis:hatch_maintenance_auto',
+               ('gregtech:gt.blockmachines', 90): 'iis:hatch_maintenance', ('IC2:itemScrap', 0): 'iis:scrap'})
 GC_MAP.update({('IC2:itemArmorHazmatHelmet', 0): 'iis:hazmat_helmet', ('IC2:itemArmorHazmatChestplate', 0): 'iis:hazmat_chestplate', ('IC2:itemArmorHazmatLeggings', 0): 'iis:hazmat_leggings',
                ('IC2:itemArmorRubBoots', 0): 'iis:rubber_boots'})
 GC_MAP.update({('IC2:blockElectric', 0): 'iis:batbox', ('IC2:blockElectric', 7): 'iis:cesu', ('IC2:blockElectric', 1): 'iis:mfe', ('IC2:blockElectric', 2): 'iis:mfsu',

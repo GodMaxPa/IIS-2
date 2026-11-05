@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WGW",
+    "CMC",
+    "TPT"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "P": "#c:plates/titanium",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/4x/aluminium",
+    "T": "iis:electric_pump_ev",
+    "G": "#c:dusts/graphite"
+  },
+  "result": {
+    "id": "iis:plasma_arc_furnace_ev"
+  }
+}
