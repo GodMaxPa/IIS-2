@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EEE",
+    " M ",
+    "CCC"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "E": "iis:emitter_luv",
+    "C": "#c:circuits/master"
+  },
+  "result": {
+    "id": "iis:monster_repellent_luv"
+  }
+}

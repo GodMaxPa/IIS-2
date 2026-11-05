@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/nether_star"
+  ],
+  "result": {
+    "id": "iis:small_dust_nether_star",
+    "count": 4
+  }
+}

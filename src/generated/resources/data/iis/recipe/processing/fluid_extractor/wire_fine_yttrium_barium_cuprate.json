@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:fine_wires/yttrium_barium_cuprate",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 3,
+  "eut": 94,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_yttriumbariumcuprate",
+      "amount": 18
+    }
+  ]
+}

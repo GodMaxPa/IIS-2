@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/cerium"
+  ],
+  "result": {
+    "id": "iis:small_dust_cerium",
+    "count": 4
+  }
+}

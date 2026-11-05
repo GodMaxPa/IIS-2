@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "KBB",
+    "CM ",
+    "KBB"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "C": "#iis:cables/1x/vanadium_gallium",
+    "B": "#iis:cables/1x/tungsten",
+    "K": "iis:chip_pic"
+  },
+  "result": {
+    "id": "iis:transformer_iv"
+  }
+}

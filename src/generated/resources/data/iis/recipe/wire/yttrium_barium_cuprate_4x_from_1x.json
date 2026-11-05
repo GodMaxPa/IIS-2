@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/yttrium_barium_cuprate",
+    "#iis:wires/1x/yttrium_barium_cuprate",
+    "#iis:wires/1x/yttrium_barium_cuprate",
+    "#iis:wires/1x/yttrium_barium_cuprate"
+  ],
+  "result": {
+    "id": "iis:wire_yttrium_barium_cuprate_4x"
+  }
+}

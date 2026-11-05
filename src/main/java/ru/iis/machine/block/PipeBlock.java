@@ -63,6 +63,10 @@ public class PipeBlock extends Block implements EntityBlock {
 
     private static List<Spec> buildSpecs() {
         List<Spec> l = new java.util.ArrayList<>();
+        // трубы высокого давления (GT_Loader_MetaTileEntities:1569–1571, D110): 4800, 7200, 9600 л, 1500 K, цвет красной пыли
+        l.add(new Spec("pipe_small_high_pressure", "high_pressure", 4800, 1500, 6, 0xC80000));
+        l.add(new Spec("pipe_medium_high_pressure", "high_pressure", 7200, 1500, 8, 0xC80000));
+        l.add(new Spec("pipe_large_high_pressure", "high_pressure", 9600, 1500, 12, 0xC80000));
         // деревянные — отдельно (GT_Loader_MetaTileEntities:1529–1531): 10 / 30 / 60, 350 K, пропускают газ
         l.add(new Spec("pipe_small_wood", "wood", 10, 350, 6, 0x643200, false));
         l.add(new Spec("pipe_medium_wood", "wood", 30, 350, 8, 0x643200, false));

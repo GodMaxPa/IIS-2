@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/yellow_limonite"
+  ],
+  "result": {
+    "id": "iis:small_dust_yellow_limonite",
+    "count": 4
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:screws/epoxid",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 28,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_epoxid",
+      "amount": 16
+    }
+  ]
+}

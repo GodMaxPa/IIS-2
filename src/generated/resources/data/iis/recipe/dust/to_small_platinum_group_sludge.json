@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/platinum_group_sludge"
+  ],
+  "result": {
+    "id": "iis:small_dust_platinum_group_sludge",
+    "count": 4
+  }
+}

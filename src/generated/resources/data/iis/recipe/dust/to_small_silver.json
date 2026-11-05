@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/silver"
+  ],
+  "result": {
+    "id": "iis:small_dust_silver",
+    "count": 4
+  }
+}

@@ -110,6 +110,26 @@
     "iis:cable_osmium_2x",
     "iis:cable_osmium_4x",
     "iis:cable_osmium_8x",
-    "iis:cable_osmium_12x"
+    "iis:cable_osmium_12x",
+    "iis:cable_hssg_1x",
+    "iis:cable_hssg_2x",
+    "iis:cable_hssg_4x",
+    "iis:cable_hssg_8x",
+    "iis:cable_hssg_12x",
+    "iis:cable_niobium_titanium_1x",
+    "iis:cable_niobium_titanium_2x",
+    "iis:cable_niobium_titanium_4x",
+    "iis:cable_niobium_titanium_8x",
+    "iis:cable_niobium_titanium_12x",
+    "iis:cable_vanadium_gallium_1x",
+    "iis:cable_vanadium_gallium_2x",
+    "iis:cable_vanadium_gallium_4x",
+    "iis:cable_vanadium_gallium_8x",
+    "iis:cable_vanadium_gallium_12x",
+    "iis:cable_yttrium_barium_cuprate_1x",
+    "iis:cable_yttrium_barium_cuprate_2x",
+    "iis:cable_yttrium_barium_cuprate_4x",
+    "iis:cable_yttrium_barium_cuprate_8x",
+    "iis:cable_yttrium_barium_cuprate_12x"
   ]
 }

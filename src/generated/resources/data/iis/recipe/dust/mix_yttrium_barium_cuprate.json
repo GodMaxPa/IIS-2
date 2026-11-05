@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/yttrium",
+    "#c:dusts/barium",
+    "#c:dusts/barium",
+    "#c:dusts/copper",
+    "#c:dusts/copper",
+    "#c:dusts/copper"
+  ],
+  "result": {
+    "id": "iis:dust_yttrium_barium_cuprate",
+    "count": 6
+  }
+}

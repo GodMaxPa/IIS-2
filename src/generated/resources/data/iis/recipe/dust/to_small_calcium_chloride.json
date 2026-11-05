@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/calcium_chloride"
+  ],
+  "result": {
+    "id": "iis:small_dust_calcium_chloride",
+    "count": 4
+  }
+}

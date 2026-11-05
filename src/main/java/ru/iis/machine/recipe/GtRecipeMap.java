@@ -63,7 +63,9 @@ public enum GtRecipeMap {
     IMPLOSION("implosion", 2, 2),
     PYROLYSE("pyrolyse", 2, 1),
     DISTILLATION_TOWER("distillation_tower", 0, 1, 1, 11),
-    CRACKING("cracking", 0, 0, 2, 1);
+    CRACKING("cracking", 0, 0, 2, 1),
+    // D110: GT_Recipe_AssemblyLine: до 15 входов и 4 жидкостей строго по порядку; keep[0] — исследуемый предмет (mResearchItem), temp — время исследования (mResearchTime)
+    ASSEMBLY_LINE("assembly_line", 15, 1, 4, 0);
 
     public final String id;
     public final int maxInputs, maxOutputs;

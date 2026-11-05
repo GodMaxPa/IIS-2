@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/silicon_dioxide"
+  ],
+  "result": {
+    "id": "iis:small_dust_silicon_dioxide",
+    "count": 4
+  }
+}

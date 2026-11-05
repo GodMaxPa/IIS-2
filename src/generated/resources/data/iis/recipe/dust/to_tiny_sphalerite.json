@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/sphalerite"
+  },
+  "result": {
+    "id": "iis:tiny_dust_sphalerite",
+    "count": 18
+  }
+}

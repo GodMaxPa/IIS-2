@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/nickel"
+  ],
+  "result": {
+    "id": "iis:small_dust_nickel",
+    "count": 4
+  }
+}

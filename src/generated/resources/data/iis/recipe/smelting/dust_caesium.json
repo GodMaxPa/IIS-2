@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "#c:dusts/caesium",
+  "result": {
+    "id": "iis:ingot_caesium"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

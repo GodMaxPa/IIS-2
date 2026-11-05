@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:fine_wires/niobium_titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 3,
+  "eut": 94,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_niobiumtitanium",
+      "amount": 18
+    }
+  ]
+}

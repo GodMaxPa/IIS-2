@@ -1,0 +1,24 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/12x/nickel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_nickel_12x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_styrenebutadienerubber",
+      "amount": 432
+    }
+  ],
+  "circuit": 24
+}

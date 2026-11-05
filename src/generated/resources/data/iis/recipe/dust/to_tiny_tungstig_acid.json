@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/tungstig_acid"
+  },
+  "result": {
+    "id": "iis:tiny_dust_tungstig_acid",
+    "count": 18
+  }
+}

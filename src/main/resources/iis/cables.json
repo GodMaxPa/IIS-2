@@ -2418,5 +2418,445 @@
     "amperage": 64,
     "loss": 4,
     "thickness": 12.0
+  },
+  {
+    "id": "wire_hssg_1x",
+    "material": "hssg",
+    "size": 1,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 4,
+    "loss": 4,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_hssg_1x",
+    "material": "hssg",
+    "size": 1,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_hssg_2x",
+    "material": "hssg",
+    "size": 2,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 8,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_hssg_2x",
+    "material": "hssg",
+    "size": 2,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_hssg_4x",
+    "material": "hssg",
+    "size": 4,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_hssg_4x",
+    "material": "hssg",
+    "size": 4,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_hssg_8x",
+    "material": "hssg",
+    "size": 8,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 32,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_hssg_8x",
+    "material": "hssg",
+    "size": 8,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 32,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_hssg_12x",
+    "material": "hssg",
+    "size": 12,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 48,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_hssg_12x",
+    "material": "hssg",
+    "size": 12,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 48,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_hssg_16x",
+    "material": "hssg",
+    "size": 16,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 64,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_niobium_titanium_1x",
+    "material": "niobium_titanium",
+    "size": 1,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 4,
+    "loss": 4,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_niobium_titanium_1x",
+    "material": "niobium_titanium",
+    "size": 1,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_niobium_titanium_2x",
+    "material": "niobium_titanium",
+    "size": 2,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 8,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_niobium_titanium_2x",
+    "material": "niobium_titanium",
+    "size": 2,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_niobium_titanium_4x",
+    "material": "niobium_titanium",
+    "size": 4,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_niobium_titanium_4x",
+    "material": "niobium_titanium",
+    "size": 4,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_niobium_titanium_8x",
+    "material": "niobium_titanium",
+    "size": 8,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 32,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_niobium_titanium_8x",
+    "material": "niobium_titanium",
+    "size": 8,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 32,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_niobium_titanium_12x",
+    "material": "niobium_titanium",
+    "size": 12,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 48,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_niobium_titanium_12x",
+    "material": "niobium_titanium",
+    "size": 12,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 48,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_niobium_titanium_16x",
+    "material": "niobium_titanium",
+    "size": 16,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 64,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_vanadium_gallium_1x",
+    "material": "vanadium_gallium",
+    "size": 1,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 4,
+    "loss": 4,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_vanadium_gallium_1x",
+    "material": "vanadium_gallium",
+    "size": 1,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_vanadium_gallium_2x",
+    "material": "vanadium_gallium",
+    "size": 2,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 8,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_vanadium_gallium_2x",
+    "material": "vanadium_gallium",
+    "size": 2,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_vanadium_gallium_4x",
+    "material": "vanadium_gallium",
+    "size": 4,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_vanadium_gallium_4x",
+    "material": "vanadium_gallium",
+    "size": 4,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_vanadium_gallium_8x",
+    "material": "vanadium_gallium",
+    "size": 8,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 32,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_vanadium_gallium_8x",
+    "material": "vanadium_gallium",
+    "size": 8,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 32,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_vanadium_gallium_12x",
+    "material": "vanadium_gallium",
+    "size": 12,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 48,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_vanadium_gallium_12x",
+    "material": "vanadium_gallium",
+    "size": 12,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 48,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_vanadium_gallium_16x",
+    "material": "vanadium_gallium",
+    "size": 16,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 64,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_yttrium_barium_cuprate_1x",
+    "material": "yttrium_barium_cuprate",
+    "size": 1,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 4,
+    "loss": 8,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_yttrium_barium_cuprate_1x",
+    "material": "yttrium_barium_cuprate",
+    "size": 1,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 4,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_yttrium_barium_cuprate_2x",
+    "material": "yttrium_barium_cuprate",
+    "size": 2,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 8,
+    "loss": 8,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_yttrium_barium_cuprate_2x",
+    "material": "yttrium_barium_cuprate",
+    "size": 2,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 8,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_yttrium_barium_cuprate_4x",
+    "material": "yttrium_barium_cuprate",
+    "size": 4,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 16,
+    "loss": 8,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_yttrium_barium_cuprate_4x",
+    "material": "yttrium_barium_cuprate",
+    "size": 4,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_yttrium_barium_cuprate_8x",
+    "material": "yttrium_barium_cuprate",
+    "size": 8,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 32,
+    "loss": 8,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_yttrium_barium_cuprate_8x",
+    "material": "yttrium_barium_cuprate",
+    "size": 8,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 32,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_yttrium_barium_cuprate_12x",
+    "material": "yttrium_barium_cuprate",
+    "size": 12,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 48,
+    "loss": 8,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_yttrium_barium_cuprate_12x",
+    "material": "yttrium_barium_cuprate",
+    "size": 12,
+    "insulated": true,
+    "voltage": 32768,
+    "amperage": 48,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_yttrium_barium_cuprate_16x",
+    "material": "yttrium_barium_cuprate",
+    "size": 16,
+    "insulated": false,
+    "voltage": 32768,
+    "amperage": 64,
+    "loss": 8,
+    "thickness": 12.0
   }
 ]

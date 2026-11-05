@@ -10,6 +10,11 @@
     {
       "id": "iis:pure_dust_lepidolite",
       "count": 1
+    },
+    {
+      "id": "iis:dust_caesium",
+      "count": 1,
+      "chance": 1000
     }
   ],
   "duration": 400,

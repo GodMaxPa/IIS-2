@@ -90,7 +90,7 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
                     case MAINTENANCE -> parts.maintenance.add(b);
                     case INPUT_BUS -> parts.inputBuses.add(b);
                     case INPUT_HATCH -> parts.inputHatches.add(b);
-                    case ENERGY, ENERGY_MV, ENERGY_HV, ENERGY_EV, ENERGY_IV -> parts.energy.add(b);
+                    case ENERGY, ENERGY_MV, ENERGY_HV, ENERGY_EV, ENERGY_IV, ENERGY_LUV -> parts.energy.add(b);
                     case OUTPUT_BUS -> parts.outputBuses.add(b);
                     default -> {
                         return false;

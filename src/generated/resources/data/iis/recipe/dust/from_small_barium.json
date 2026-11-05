@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/barium",
+    "#iis:small_dusts/barium",
+    "#iis:small_dusts/barium",
+    "#iis:small_dusts/barium"
+  ],
+  "result": {
+    "id": "iis:dust_barium"
+  }
+}

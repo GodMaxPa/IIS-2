@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CEC",
+    "CMC",
+    "WEW"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "E": "#c:circuits/master",
+    "W": "#iis:cables/1x/niobium_titanium",
+    "C": "iis:fluid_filter"
+  },
+  "result": {
+    "id": "iis:filter_luv"
+  }
+}

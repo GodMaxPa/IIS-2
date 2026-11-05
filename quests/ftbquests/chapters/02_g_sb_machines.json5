@@ -194,6 +194,30 @@
       ]
     },
     {
+      "id": "1A00000000000492",
+      "x": 0.5,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:macerator_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:macerator_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000049200"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000496",
       "x": 20.0,
       "y": 17.0,
@@ -310,6 +334,30 @@
           },
           "count": 1,
           "id": "1B00000000049A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000049B",
+      "x": 20.0,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:ore_washer_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ore_washer_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000049B00"
         }
       ]
     },
@@ -434,6 +482,30 @@
       ]
     },
     {
+      "id": "1A000000000004DF",
+      "x": 9.5,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:centrifuge_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:centrifuge_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004DF00"
+        }
+      ]
+    },
+    {
       "id": "1A000000000004E2",
       "x": 11.0,
       "y": 17.0,
@@ -550,6 +622,30 @@
           },
           "count": 1,
           "id": "1B0000000004E600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004E7",
+      "x": 11.0,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:thermal_centrifuge_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:thermal_centrifuge_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004E700"
         }
       ]
     },
@@ -674,6 +770,30 @@
       ]
     },
     {
+      "id": "1A000000000004EF",
+      "x": 12.5,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:sifter_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sifter_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004EF00"
+        }
+      ]
+    },
+    {
       "id": "1A000000000004F2",
       "x": 17.0,
       "y": 17.0,
@@ -790,6 +910,30 @@
           },
           "count": 1,
           "id": "1B0000000004F600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004F7",
+      "x": 14.0,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:electromagnetic_separator_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electromagnetic_separator_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004F700"
         }
       ]
     },
@@ -914,6 +1058,30 @@
       ]
     },
     {
+      "id": "1A000000000004FF",
+      "x": 15.5,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:chemical_bath_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_bath_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004FF00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000502",
       "x": 9.5,
       "y": 17.0,
@@ -1034,6 +1202,30 @@
       ]
     },
     {
+      "id": "1A00000000000507",
+      "x": 17.0,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:electrolyzer_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electrolyzer_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050700"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000050A",
       "x": 2.0,
       "y": 17.0,
@@ -1150,6 +1342,30 @@
           },
           "count": 1,
           "id": "1B00000000050E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000050F",
+      "x": 2.0,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:forge_hammer_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forge_hammer_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050F00"
         }
       ]
     },
@@ -1320,6 +1536,30 @@
       ]
     },
     {
+      "id": "1A00000000000519",
+      "x": 26.0,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:bender_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bender_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000051900"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000522",
       "x": 27.5,
       "y": 17.0,
@@ -1436,6 +1676,30 @@
           },
           "count": 1,
           "id": "1B00000000052600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000527",
+      "x": 27.5,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:wiremill_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wiremill_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000052700"
         }
       ]
     },
@@ -1560,6 +1824,30 @@
       ]
     },
     {
+      "id": "1A0000000000052F",
+      "x": 29.0,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:lathe_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lathe_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000052F00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000532",
       "x": 30.5,
       "y": 17.0,
@@ -1676,6 +1964,30 @@
           },
           "count": 1,
           "id": "1B00000000053600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000537",
+      "x": 30.5,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:extruder_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extruder_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053700"
         }
       ]
     },
@@ -1800,6 +2112,30 @@
       ]
     },
     {
+      "id": "1A0000000000053F",
+      "x": 6.5,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:electric_furnace_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_furnace_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053F00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000054A",
       "x": 21.5,
       "y": 17.0,
@@ -1916,6 +2252,30 @@
           },
           "count": 1,
           "id": "1B00000000054E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000054F",
+      "x": 21.5,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:packager_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:packager_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000054F00"
         }
       ]
     },
@@ -2040,6 +2400,30 @@
       ]
     },
     {
+      "id": "1A00000000000557",
+      "x": 23.0,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:packager_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:unpackager_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000055700"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000055A",
       "x": 24.5,
       "y": 17.0,
@@ -2156,6 +2540,30 @@
           },
           "count": 1,
           "id": "1B00000000055E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000055F",
+      "x": 24.5,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:rock_breaker_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rock_breaker_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000055F00"
         }
       ]
     },
@@ -2280,6 +2688,30 @@
       ]
     },
     {
+      "id": "1A00000000000567",
+      "x": 32.0,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:cutter_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cutter_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056700"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000056A",
       "x": 33.5,
       "y": 0.5,
@@ -2400,6 +2832,30 @@
       ]
     },
     {
+      "id": "1A0000000000056F",
+      "x": 33.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:assembler_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assembler_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056F00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000572",
       "x": 35.0,
       "y": 0.5,
@@ -2492,6 +2948,54 @@
           },
           "count": 1,
           "id": "1B00000000057500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000576",
+      "x": 35.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000006",
+        "1A0000000000016F"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000057600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000577",
+      "x": 35.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000057700"
         }
       ]
     },
@@ -2616,6 +3120,54 @@
       ]
     },
     {
+      "id": "1A00000000000587",
+      "x": 38.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:fluid_extractor_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_extractor_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000058700"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000058C",
+      "x": 39.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:microwave_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:microwave_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000058C00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000058D",
       "x": 39.5,
       "y": 6.5,
@@ -2736,6 +3288,150 @@
       ]
     },
     {
+      "id": "1A0000000000059C",
+      "x": 2.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:scanner_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:scanner_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000059C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000059D",
+      "x": 2.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000006",
+        "1A0000000000016F"
+      ],
+      "icon": {
+        "id": "iis:scanner_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:scanner_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000059D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000059E",
+      "x": 2.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:scanner_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:scanner_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000059E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000059F",
+      "x": 2.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:scanner_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:scanner_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000059F00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005A0",
+      "x": 2.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:scanner_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:scanner_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005A000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005A1",
+      "x": 2.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:scanner_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:scanner_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005A100"
+        }
+      ]
+    },
+    {
       "id": "1A000000000005A2",
       "x": 3.5,
       "y": 0.5,
@@ -2852,6 +3548,30 @@
           },
           "count": 1,
           "id": "1B0000000005A600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005A7",
+      "x": 3.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:chemical_reactor_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_reactor_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005A700"
         }
       ]
     },
@@ -3022,6 +3742,30 @@
       ]
     },
     {
+      "id": "1A000000000005B1",
+      "x": 3.5,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:alloy_smelter_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:alloy_smelter_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005B100"
+        }
+      ]
+    },
+    {
       "id": "1A000000000005B4",
       "x": 5.0,
       "y": 17.0,
@@ -3138,6 +3882,30 @@
           },
           "count": 1,
           "id": "1B0000000005B800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005B9",
+      "x": 5.0,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:compressor_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressor_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005B900"
         }
       ]
     },
@@ -3396,6 +4164,30 @@
           },
           "count": 1,
           "id": "1B0000000005C700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005C8",
+      "x": 8.0,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:extractor_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005C800"
         }
       ]
     },
@@ -4480,6 +5272,222 @@
       ]
     },
     {
+      "id": "1A00000000000611",
+      "x": 5.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:fluid_canner_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000061100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000616",
+      "x": 12.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:brewery_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:brewery_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000061600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000618",
+      "x": 15.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:fluid_solidifier_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_solidifier_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000061800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000619",
+      "x": 17.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:distillery_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:distillery_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000061900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000061A",
+      "x": 18.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:polarizer_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:polarizer_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000061A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000061B",
+      "x": 20.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:autoclave_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:autoclave_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000061B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000061C",
+      "x": 21.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:mixer_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mixer_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000061C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000061D",
+      "x": 23.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:laser_engraver_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_engraver_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000061D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000061E",
+      "x": 24.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:forming_press_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_press_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000061E00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000063B",
       "x": 26.0,
       "y": 0.5,
@@ -5270,6 +6278,78 @@
       ]
     },
     {
+      "id": "1A0000000000066D",
+      "x": 26.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:fluid_heater_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_heater_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000066D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000066F",
+      "x": 29.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:arc_furnace_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:arc_furnace_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000066F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000671",
+      "x": 32.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:electric_oven_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_oven_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000067100"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000672",
       "x": 17.0,
       "y": 14.0,
@@ -5409,6 +6489,30 @@
           },
           "count": 1,
           "id": "1B00000000069400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000695",
+      "x": 33.5,
+      "y": 24.5,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:monster_repellent_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:monster_repellent_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000069500"
         }
       ]
     }

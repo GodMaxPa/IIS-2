@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "hP"
+  ],
+  "key": {
+    "P": "#c:plates/yttrium_barium_cuprate",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:foil_yttrium_barium_cuprate",
+    "count": 2
+  }
+}

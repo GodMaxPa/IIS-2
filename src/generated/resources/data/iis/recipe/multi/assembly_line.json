@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCW",
+    "EME",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "W": "iis:assembler_casing",
+    "E": "#c:circuits/elite",
+    "C": "iis:robot_arm_iv"
+  },
+  "result": {
+    "id": "iis:assembly_line"
+  }
+}

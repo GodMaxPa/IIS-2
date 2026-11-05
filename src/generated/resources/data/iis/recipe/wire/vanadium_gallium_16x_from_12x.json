@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/12x/vanadium_gallium",
+    "#iis:wires/4x/vanadium_gallium"
+  ],
+  "result": {
+    "id": "iis:wire_vanadium_gallium_16x"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/quartzite"
+  ],
+  "result": {
+    "id": "iis:small_dust_quartzite",
+    "count": 4
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DMV",
+    "DDD"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "V": "iis:conveyor_module_ev",
+    "D": "iis:data_stick"
+  },
+  "result": {
+    "id": "iis:super_buffer_ev"
+  }
+}

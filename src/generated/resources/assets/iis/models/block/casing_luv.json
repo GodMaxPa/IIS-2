@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/machine_luv_side",
+    "north": "iis:block/lv/machine_luv_side",
+    "south": "iis:block/lv/machine_luv_side",
+    "east": "iis:block/lv/machine_luv_side",
+    "west": "iis:block/lv/machine_luv_side",
+    "up": "iis:block/lv/machine_luv_top",
+    "down": "iis:block/lv/machine_luv_bottom"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:laser_engraver",
+  "inputs": [
+    {
+      "ingredient": "iis:silicon_wafer_glowstone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wafer_cpu",
+      "count": 4
+    }
+  ],
+  "duration": 500,
+  "eut": 480,
+  "keep": [
+    "#iis:crafting_lens/white"
+  ],
+  "cleanroom": true
+}

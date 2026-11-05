@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/hssg",
+    "#iis:wires/1x/hssg",
+    "#iis:wires/1x/hssg",
+    "#iis:wires/1x/hssg",
+    "#iis:wires/1x/hssg",
+    "#iis:wires/1x/hssg",
+    "#iis:wires/1x/hssg",
+    "#iis:wires/1x/hssg"
+  ],
+  "result": {
+    "id": "iis:wire_hssg_8x"
+  }
+}

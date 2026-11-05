@@ -165,6 +165,10 @@ names |= {'Osmium', 'PlatinumGroupSludge', 'Palladium', 'Vanadium', 'VanadiumGal
           'RawStyreneButadieneRubber', 'StyreneButadieneRubber'}
 # D104: PTFE (polymerized tetrafluoroethylene) for the large chemical reactor casings and pipes
 names |= {'Polytetrafluoroethylene'}
+# D110 (LuV): HSS-G (GT_CraftingRecipeLoader:408), yttrium barium cuprate (:394; barium from barite, yttrium from rare earth,
+# GT_MachineRecipeLoader:1904), niobium-titanium (:1032; niobium from pyrochlore), epoxy resin for the nano circuit boards (:449, :2984)
+names |= {'HSSG', 'Molybdenum', 'YttriumBariumCuprate', 'Yttrium', 'Barium', 'RareEarth', 'Lanthanum', 'Cerium', 'Caesium', 'Neodymium',
+          'Niobium', 'NiobiumTitanium', 'Epoxid'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64
@@ -193,6 +197,8 @@ PREFIXES = [
     ('bolt',          'bolt',             B_METAL | B_GEM,         '01', 26, '{} Bolt',                 'iis:bolts'),
     ('screw',         'screw',            B_METAL | B_GEM,         '01', 27, '{} Screw',                'iis:screws'),
     ('ring',          'ring',             B_METAL,                 '01', 28, '{} Ring',                 'iis:rings'),
+    # D110: OrePrefixes.round (B[1], index 25); GT disables it except for HSS-G, HSS-E and neutronium (OrePrefixes:650)
+    ('round',         'round',            B_METAL,                 '01', 25, '{} Round',                'iis:rounds'),
     # LV components (GT5 GT_MetaGenerated_Item_01/02 prefix lists)
     ('foil',          'foil',             B_METAL,                 '01', 29, '{} Foil',                 'iis:foils'),
     ('wire_fine',     'wireFine',         B_METAL,                 '02', 19, 'Fine {} Wire',            'iis:fine_wires'),
@@ -806,11 +812,18 @@ for n in sorted(names):
     if screw and bolt:
         shaped(f'file/screw_{mid}', screw, 1, ['fX', 'X '], {'X': tag_of('bolt', n)})
 
+    # D110: ProcessingShaping:56 ring by hand: hammer and a rod (not for unsmashable materials)
+    if ref('ring', n) and ref('rod', n) and 'NO_SMASHING' not in set(prop(n, 'ListSubTags', []) or []):
+        shaped(f'part/ring_{mid}', ref('ring', n), 1, ['h ', ' X'], {'X': tag_of('rod', n)})
+
     # 6. Dust piles (GT5 ProcessingDust): 4 small or 9 tiny -> 1 dust
     if dust and ref('small_dust', n):
         shapeless(f'dust/from_small_{mid}', dust, 1, [tag_of('small_dust', n)] * 4)
+        # D110: GT_Proxy:586 dust -> 4 small; shaped recipes no longer tell " X" from "X ", so 9 tiny piles (:588) take two dusts on the diagonal -> 18
+        shapeless(f'dust/to_small_{mid}', ref('small_dust', n), 4, [tag_of('dust', n)])
     if dust and ref('tiny_dust', n):
         shapeless(f'dust/from_tiny_{mid}', dust, 1, [tag_of('tiny_dust', n)] * 9)
+        shaped(f'dust/to_tiny_{mid}', ref('tiny_dust', n), 18, ['X ', ' X'], {'X': tag_of('dust', n)})
 
 # IIS NuggetsFix.zs: nugget + mortar -> tiny dust for common metals
 for n in ('Gold', 'Silver', 'Tin', 'Copper', 'Iron', 'Lead'):
@@ -941,6 +954,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_auto', os.path.join(ROOT, 'tools',
 _auto = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_auto)
 lv_stats['auto'] = _auto.generate(globals())
+# LuV: nano circuits up to Master, data stick, scanner, assembly line and its recipes (D110)
+_spec = _ilu.spec_from_file_location('iis_gen_luv', os.path.join(ROOT, 'tools', 'gen', 'luv.py'))
+_luv = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_luv)
+lv_stats['luv'] = _luv.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

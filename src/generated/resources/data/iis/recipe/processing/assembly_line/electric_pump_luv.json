@@ -1,0 +1,55 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_luv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:pipe_small_high_pressure",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/hssg",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:screws/hssg",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:rings/silicone",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:rotors/hssg",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:cables/1x/yttrium_barium_cuprate",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_pump_luv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 6000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 144
+    },
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 250
+    }
+  ],
+  "keep": [
+    "iis:electric_pump_iv"
+  ],
+  "temp": 144000
+}

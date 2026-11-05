@@ -1,0 +1,22 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/niobium",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:ingots/titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_niobium_titanium",
+      "count": 2
+    }
+  ],
+  "duration": 4500,
+  "eut": 480,
+  "temp": 4500
+}

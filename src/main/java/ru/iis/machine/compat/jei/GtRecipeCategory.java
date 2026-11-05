@@ -27,7 +27,7 @@ public class GtRecipeCategory extends AbstractRecipeCategory<RecipeHolder<GtReci
 
     public GtRecipeCategory(IRecipeHolderType<GtRecipe> type, GtRecipeMap map, @org.jspecify.annotations.Nullable String tier, IGuiHelper gui, ItemLike icon) {
         super(type, tier == null ? Component.translatable("jei.iis." + map.id)
-                : Component.translatable("jei.iis.tiered", Component.translatable("jei.iis." + map.id), tier), gui.createDrawableItemLike(icon), 150, 78);
+                : Component.translatable("jei.iis.tiered", Component.translatable("jei.iis." + map.id), tier), gui.createDrawableItemLike(icon), 150, map == GtRecipeMap.ASSEMBLY_LINE ? 100 : 78);
         this.map = map;
     }
 
@@ -35,6 +35,10 @@ public class GtRecipeCategory extends AbstractRecipeCategory<RecipeHolder<GtReci
     public void setRecipe(IRecipeLayoutBuilder builder, RecipeHolder<GtRecipe> holder, IFocusGroup focuses) {
         GtRecipe r = holder.value();
         List<SizedIngredient> in = r.inputs();
+        if (map == GtRecipeMap.ASSEMBLY_LINE) {
+            assemblyLine(builder, r);
+            return;
+        }
         for (int i = 0; i < in.size(); i++) {
             SizedIngredient s = in.get(i);
             boolean grid = in.size() > 3;
@@ -77,9 +81,33 @@ public class GtRecipeCategory extends AbstractRecipeCategory<RecipeHolder<GtReci
         }
     }
 
+    /** D110: входы и жидкости строго по порядку шин и люков, исследуемый предмет над стрелкой. */
+    private void assemblyLine(IRecipeLayoutBuilder builder, GtRecipe r) {
+        for (int i = 0; i < r.inputs().size(); i++) {
+            SizedIngredient s = r.inputs().get(i);
+            builder.addInputSlot(1 + 18 * (i % 5), 1 + 18 * (i / 5)).setStandardSlotBackground()
+                    .addItemStacks(s.ingredient().items().map((Holder<Item> h) -> new ItemStack(h, s.count())).toList());
+        }
+        for (int k = 0; k < r.fluidInputs().size(); k++) {
+            var slot = builder.addInputSlot(1 + 18 * k, 58).setStandardSlotBackground();
+            for (var h : r.fluidInputs().get(k).ingredient().fluids()) slot.add(h.value(), (long) r.fluidInputs().get(k).amount());
+        }
+        if (!r.keep().isEmpty()) {
+            builder.addInputSlot(104, 1).setStandardSlotBackground()
+                    .addItemStacks(r.keep().getFirst().items().map((Holder<Item> h) -> new ItemStack(h)).toList())
+                    .addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("jei.iis.research", String.format(java.util.Locale.ROOT, "%.0f", r.temperature() / 20.0)).withStyle(ChatFormatting.GOLD)));
+        }
+        if (!r.outputs().isEmpty()) builder.addOutputSlot(130, 19).setOutputSlotBackground().add(r.outputs().getFirst().stack());
+    }
+
     @Override
     public void createRecipeExtras(IRecipeExtrasBuilder builder, RecipeHolder<GtRecipe> holder, IFocusGroup focuses) {
         GtRecipe r = holder.value();
+        if (map == GtRecipeMap.ASSEMBLY_LINE) {
+            builder.addAnimatedRecipeArrowWidget(Math.max(20, r.duration() / 4)).setPosition(100, 19);
+            builder.addText(List.of(Component.translatable("jei.iis.eut", r.eut(), 2 * r.eut()), Component.translatable("jei.iis.duration", String.format(java.util.Locale.ROOT, "%.1f", r.duration() / 20.0))), 150, 20).setPosition(0, 78);
+            return;
+        }
         builder.addAnimatedRecipeArrowWidget(Math.max(20, r.duration() / 4)).setPosition(62, 19);
         String seconds = String.format(java.util.Locale.ROOT, "%.1f", r.duration() / 20.0);
         if (map == GtRecipeMap.BLAST) {

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/scheelite"
+  ],
+  "result": {
+    "id": "iis:small_dust_scheelite",
+    "count": 4
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/yttrium_barium_cuprate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_yttrium_barium_cuprate",
+      "count": 9
+    }
+  ],
+  "duration": 1020,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 35
+    }
+  ]
+}

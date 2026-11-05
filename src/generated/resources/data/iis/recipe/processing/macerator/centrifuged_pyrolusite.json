@@ -10,6 +10,11 @@
     {
       "id": "iis:dust_pyrolusite",
       "count": 1
+    },
+    {
+      "id": "iis:dust_niobium",
+      "count": 1,
+      "chance": 1000
     }
   ],
   "duration": 400,

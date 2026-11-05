@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/spessartine"
+  ],
+  "result": {
+    "id": "iis:small_dust_spessartine",
+    "count": 4
+  }
+}

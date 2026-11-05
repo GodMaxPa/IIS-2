@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CTC",
+    "WMW",
+    "CRC"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "T": "iis:emitter_ev",
+    "R": "iis:sensor_ev",
+    "C": "#c:circuits/elite",
+    "W": "#iis:cables/1x/aluminium"
+  },
+  "result": {
+    "id": "iis:scanner_ev"
+  }
+}

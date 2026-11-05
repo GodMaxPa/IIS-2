@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/gallium",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:fine_wires/annealed_copper",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:transistor_smd",
+      "count": 32
+    }
+  ],
+  "duration": 80,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_plastic",
+      "amount": 288
+    }
+  ]
+}

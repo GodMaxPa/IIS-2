@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/red_alloy"
+  ],
+  "result": {
+    "id": "iis:small_dust_red_alloy",
+    "count": 4
+  }
+}

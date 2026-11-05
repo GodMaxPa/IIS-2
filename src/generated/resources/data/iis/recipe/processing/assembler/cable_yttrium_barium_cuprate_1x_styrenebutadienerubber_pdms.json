@@ -1,0 +1,31 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/yttrium_barium_cuprate",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/polydimethylsiloxane",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/yttrium_barium_cuprate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_yttrium_barium_cuprate_1x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_styrenebutadienerubber",
+      "amount": 36
+    }
+  ]
+}

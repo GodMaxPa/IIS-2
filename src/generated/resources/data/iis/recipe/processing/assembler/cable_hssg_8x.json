@@ -1,0 +1,28 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/8x/hssg",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/hssg",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_hssg_8x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silicone",
+      "amount": 216
+    }
+  ],
+  "circuit": 24
+}

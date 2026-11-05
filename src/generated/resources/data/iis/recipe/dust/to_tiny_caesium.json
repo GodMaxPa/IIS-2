@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/caesium"
+  },
+  "result": {
+    "id": "iis:tiny_dust_caesium",
+    "count": 18
+  }
+}

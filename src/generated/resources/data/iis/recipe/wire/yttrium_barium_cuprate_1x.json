@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "Px"
+  ],
+  "key": {
+    "P": "#c:plates/yttrium_barium_cuprate",
+    "x": "#iis:tools/wire_cutter"
+  },
+  "result": {
+    "id": "iis:wire_yttrium_barium_cuprate_1x"
+  }
+}

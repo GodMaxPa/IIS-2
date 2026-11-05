@@ -1,0 +1,63 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#iis:long_rods/hssg",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:gears/hssg",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_gears/hssg",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:electric_motor_luv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:electric_piston_luv",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/master",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:circuits/elite",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:circuits/data",
+      "count": 6
+    },
+    {
+      "ingredient": "#iis:cables/1x/yttrium_barium_cuprate",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:robot_arm_luv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 6000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 576
+    },
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 250
+    }
+  ],
+  "keep": [
+    "iis:robot_arm_iv"
+  ],
+  "temp": 144000
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/glass"
+  ],
+  "result": {
+    "id": "iis:small_dust_glass",
+    "count": 4
+  }
+}

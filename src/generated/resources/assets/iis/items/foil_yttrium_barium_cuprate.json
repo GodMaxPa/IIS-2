@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/foil_yttrium_barium_cuprate",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 5259334
+      }
+    ]
+  }
+}

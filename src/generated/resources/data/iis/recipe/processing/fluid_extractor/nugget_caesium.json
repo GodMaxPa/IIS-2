@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/caesium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 24,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_caesium",
+      "amount": 16
+    }
+  ]
+}

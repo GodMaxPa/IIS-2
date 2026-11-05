@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/monazite"
+  ],
+  "result": {
+    "id": "iis:small_dust_monazite",
+    "count": 4
+  }
+}

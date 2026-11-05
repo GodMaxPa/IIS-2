@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/niobium_titanium",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_niobium_titanium",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

@@ -1,0 +1,29 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/hssg",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_tungsten_steel",
+      "count": 5
+    },
+    {
+      "id": "iis:dust_chrome",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_molybdenum",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_vanadium",
+      "count": 1
+    }
+  ],
+  "duration": 3528,
+  "eut": 20
+}

@@ -1,0 +1,59 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#c:frames/hssg",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:sensor_iv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:sensor_ev",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:sensor_hv",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:circuits/data",
+      "count": 7
+    },
+    {
+      "ingredient": "#iis:foils/electrum",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:foils/electrum",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:foils/electrum",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:cables/1x/yttrium_barium_cuprate",
+      "count": 7
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sensor_luv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 6000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 576
+    }
+  ],
+  "keep": [
+    "iis:sensor_iv"
+  ],
+  "temp": 144000
+}

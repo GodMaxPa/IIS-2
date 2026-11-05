@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/plastic"
+  ],
+  "result": {
+    "id": "iis:small_dust_plastic",
+    "count": 4
+  }
+}

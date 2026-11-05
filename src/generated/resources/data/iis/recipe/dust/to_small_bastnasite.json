@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/bastnasite"
+  ],
+  "result": {
+    "id": "iis:small_dust_bastnasite",
+    "count": 4
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ACE",
+    "VMV",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "V": "iis:conveyor_module_iv",
+    "A": "iis:robot_arm_iv",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/1x/platinum",
+    "E": "iis:emitter_iv"
+  },
+  "result": {
+    "id": "iis:circuit_assembler_iv"
+  }
+}

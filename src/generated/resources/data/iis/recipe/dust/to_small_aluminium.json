@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/aluminium"
+  ],
+  "result": {
+    "id": "iis:small_dust_aluminium",
+    "count": 4
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:wafer_cpu",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:carbon_fiber",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wafer_nano_cpu",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 1920,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_glowstone",
+      "amount": 576
+    }
+  ]
+}

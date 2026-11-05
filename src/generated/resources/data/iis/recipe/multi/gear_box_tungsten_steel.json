@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PhP",
+    "GFG",
+    "PwP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "F": "#c:frames/tungsten_steel",
+    "G": "iis:robot_arm_iv",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:gear_box_tungsten_steel",
+    "count": 2
+  }
+}

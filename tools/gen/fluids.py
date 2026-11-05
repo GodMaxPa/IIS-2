@@ -54,6 +54,11 @@ def pipe_specs():
     out = [('pipe_small_wood', 'wood', 10, 350, 6, 0x643200, False, 'METALLIC', 'Small Wooden Fluid Pipe', 'Малая деревянная жидкостная труба'),
            ('pipe_medium_wood', 'wood', 30, 350, 8, 0x643200, False, 'METALLIC', 'Wooden Fluid Pipe', 'Деревянная жидкостная труба'),
            ('pipe_large_wood', 'wood', 60, 350, 12, 0x643200, False, 'METALLIC', 'Large Wooden Fluid Pipe', 'Большая деревянная жидкостная труба')]
+    # D110: GT_Loader_MetaTileEntities:1569-1571 high pressure pipes (Materials.Ultimate): 4800, 7200, 9600 L, 1500 K, gas proof, redstone colour
+    for size, thick, cap, en, ru in (('small', 6, 4800, 'Small High Pressure Fluid Pipe', 'Малая труба высокого давления'),
+                                     ('medium', 8, 7200, 'High Pressure Fluid Pipe', 'Труба высокого давления'),
+                                     ('large', 12, 9600, 'Large High Pressure Fluid Pipe', 'Большая труба высокого давления')):
+        out.append((f'pipe_{size}_high_pressure', 'high_pressure', cap, 1500, thick, 0xC80000, True, 'METALLIC', en, ru))
     for mat, base, heat, gas, color, iset, en, ru in GT_PIPES:
         for size, thick, div, sen, sru in SIZES:
             cap ={6: base // 6, 3: base // 3, 1: base, 0.5: base * 2, 0.25: base * 4}[div]

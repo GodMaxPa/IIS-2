@@ -121,6 +121,8 @@ final class DrillGameTests {
         h.assertTrue(read != null && read.amount() == 100 && read.fluid() == f, "read " + read);
         UndergroundFluids.Sample got = UndergroundFluids.drain(h.getLevel(), cp, 0.5f);
         h.assertTrue(got != null && got.amount() == 50, "drained " + got);
+        // GT: при малом расходе запас убывает не за каждую добычу, поэтому качаем с запасом
+        for (int i = 0; i < 64; i++) UndergroundFluids.drain(h.getLevel(), cp, 0.5f);
         UndergroundFluids.Sample after = UndergroundFluids.read(h.getLevel(), cp);
         h.assertTrue(after != null && after.amount() <= 99, "after " + after);
         h.succeed();

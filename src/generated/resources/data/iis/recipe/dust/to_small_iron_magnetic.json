@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/iron_magnetic"
+  ],
+  "result": {
+    "id": "iis:small_dust_iron_magnetic",
+    "count": 4
+  }
+}

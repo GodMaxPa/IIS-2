@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:blaze_powder",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 80,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_blaze",
+      "amount": 144
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/carbon",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:fine_wires/electrum",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:resistor_smd",
+      "count": 24
+    }
+  ],
+  "duration": 80,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_plastic",
+      "amount": 144
+    }
+  ]
+}

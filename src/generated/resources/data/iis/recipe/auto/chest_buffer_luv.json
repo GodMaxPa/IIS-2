@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CMV",
+    " X "
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "V": "iis:conveyor_module_luv",
+    "C": "#c:chests/wooden",
+    "X": "#c:circuits/basic"
+  },
+  "result": {
+    "id": "iis:chest_buffer_luv"
+  }
+}

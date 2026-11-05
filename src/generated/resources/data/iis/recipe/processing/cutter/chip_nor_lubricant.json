@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "iis:wafer_nor",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:chip_nor",
+      "count": 16
+    }
+  ],
+  "duration": 600,
+  "eut": 48,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 22
+    }
+  ]
+}

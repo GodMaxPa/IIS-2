@@ -116,9 +116,9 @@ public class HatchBlock extends Block implements EntityBlock, EnergyConnectable 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return switch (type.kind()) {
-            case ENERGY, ENERGY_MV, ENERGY_HV, ENERGY_EV, ENERGY_IV -> new EnergyHatchBlockEntity(pos, state);
-            case DYNAMO, DYNAMO_MV, DYNAMO_HV, DYNAMO_EV, DYNAMO_IV -> new DynamoHatchBlockEntity(pos, state);
-            case INPUT_BUS, OUTPUT_BUS -> new ItemBusBlockEntity(pos, state);
+            case ENERGY, ENERGY_MV, ENERGY_HV, ENERGY_EV, ENERGY_IV, ENERGY_LUV -> new EnergyHatchBlockEntity(pos, state);
+            case DYNAMO, DYNAMO_MV, DYNAMO_HV, DYNAMO_EV, DYNAMO_IV, DYNAMO_LUV -> new DynamoHatchBlockEntity(pos, state);
+            case INPUT_BUS, OUTPUT_BUS, DATA_ACCESS -> new ItemBusBlockEntity(pos, state);
             case INPUT_HATCH, OUTPUT_HATCH -> new FluidHatchBlockEntity(pos, state);
             case MAINTENANCE -> new MaintenanceHatchBlockEntity(pos, state);
             default -> null;   // глушители

@@ -1,0 +1,24 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/2x/electrum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_electrum_2x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_styrenebutadienerubber",
+      "amount": 108
+    }
+  ],
+  "circuit": 24
+}

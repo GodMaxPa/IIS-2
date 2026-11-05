@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCE",
+    "XMP",
+    "CCE"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "X": "iis:electric_piston_luv",
+    "E": "#c:circuits/master",
+    "P": "iis:pipe_small_high_pressure",
+    "C": "#iis:wires/4x/hssg"
+  },
+  "result": {
+    "id": "iis:extruder_luv"
+  }
+}

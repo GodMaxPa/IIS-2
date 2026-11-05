@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/copper"
+  ],
+  "result": {
+    "id": "iis:small_dust_copper",
+    "count": 4
+  }
+}

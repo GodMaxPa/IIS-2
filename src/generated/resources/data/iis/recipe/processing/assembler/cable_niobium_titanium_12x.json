@@ -1,0 +1,28 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/12x/niobium_titanium",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/niobium_titanium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_niobium_titanium_12x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silicone",
+      "amount": 288
+    }
+  ],
+  "circuit": 24
+}

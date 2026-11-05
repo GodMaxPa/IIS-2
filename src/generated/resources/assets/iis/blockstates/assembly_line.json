@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,active=false": {
+      "model": "iis:block/assembly_line"
+    },
+    "facing=north,active=true": {
+      "model": "iis:block/assembly_line_active"
+    },
+    "facing=east,active=false": {
+      "model": "iis:block/assembly_line",
+      "y": 90
+    },
+    "facing=east,active=true": {
+      "model": "iis:block/assembly_line_active",
+      "y": 90
+    },
+    "facing=south,active=false": {
+      "model": "iis:block/assembly_line",
+      "y": 180
+    },
+    "facing=south,active=true": {
+      "model": "iis:block/assembly_line_active",
+      "y": 180
+    },
+    "facing=west,active=false": {
+      "model": "iis:block/assembly_line",
+      "y": 270
+    },
+    "facing=west,active=true": {
+      "model": "iis:block/assembly_line_active",
+      "y": 270
+    }
+  }
+}

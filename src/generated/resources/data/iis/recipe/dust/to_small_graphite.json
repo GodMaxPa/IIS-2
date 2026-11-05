@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/graphite"
+  ],
+  "result": {
+    "id": "iis:small_dust_graphite",
+    "count": 4
+  }
+}

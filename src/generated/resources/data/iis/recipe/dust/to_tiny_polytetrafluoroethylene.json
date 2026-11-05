@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/polytetrafluoroethylene"
+  },
+  "result": {
+    "id": "iis:tiny_dust_polytetrafluoroethylene",
+    "count": 18
+  }
+}

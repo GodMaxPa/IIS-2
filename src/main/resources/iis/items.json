@@ -535,6 +535,21 @@
     "material": "barite"
   },
   {
+    "id": "dust_barium",
+    "prefix": "dust",
+    "material": "barium"
+  },
+  {
+    "id": "small_dust_barium",
+    "prefix": "small_dust",
+    "material": "barium"
+  },
+  {
+    "id": "tiny_dust_barium",
+    "prefix": "tiny_dust",
+    "material": "barium"
+  },
+  {
     "id": "crushed_bastnasite",
     "prefix": "crushed",
     "material": "bastnasite"
@@ -1355,6 +1370,31 @@
     "material": "cadmium"
   },
   {
+    "id": "dust_caesium",
+    "prefix": "dust",
+    "material": "caesium"
+  },
+  {
+    "id": "small_dust_caesium",
+    "prefix": "small_dust",
+    "material": "caesium"
+  },
+  {
+    "id": "tiny_dust_caesium",
+    "prefix": "tiny_dust",
+    "material": "caesium"
+  },
+  {
+    "id": "ingot_caesium",
+    "prefix": "ingot",
+    "material": "caesium"
+  },
+  {
+    "id": "nugget_caesium",
+    "prefix": "nugget",
+    "material": "caesium"
+  },
+  {
     "id": "crushed_calcite",
     "prefix": "crushed",
     "material": "calcite"
@@ -1508,6 +1548,31 @@
     "id": "tiny_dust_cassiterite",
     "prefix": "tiny_dust",
     "material": "cassiterite"
+  },
+  {
+    "id": "dust_cerium",
+    "prefix": "dust",
+    "material": "cerium"
+  },
+  {
+    "id": "small_dust_cerium",
+    "prefix": "small_dust",
+    "material": "cerium"
+  },
+  {
+    "id": "tiny_dust_cerium",
+    "prefix": "tiny_dust",
+    "material": "cerium"
+  },
+  {
+    "id": "ingot_cerium",
+    "prefix": "ingot",
+    "material": "cerium"
+  },
+  {
+    "id": "nugget_cerium",
+    "prefix": "nugget",
+    "material": "cerium"
   },
   {
     "id": "crushed_certus_quartz",
@@ -2475,6 +2540,66 @@
     "material": "endstone"
   },
   {
+    "id": "dust_epoxid",
+    "prefix": "dust",
+    "material": "epoxid"
+  },
+  {
+    "id": "small_dust_epoxid",
+    "prefix": "small_dust",
+    "material": "epoxid"
+  },
+  {
+    "id": "tiny_dust_epoxid",
+    "prefix": "tiny_dust",
+    "material": "epoxid"
+  },
+  {
+    "id": "ingot_epoxid",
+    "prefix": "ingot",
+    "material": "epoxid"
+  },
+  {
+    "id": "nugget_epoxid",
+    "prefix": "nugget",
+    "material": "epoxid"
+  },
+  {
+    "id": "plate_epoxid",
+    "prefix": "plate",
+    "material": "epoxid"
+  },
+  {
+    "id": "double_plate_epoxid",
+    "prefix": "double_plate",
+    "material": "epoxid"
+  },
+  {
+    "id": "rod_epoxid",
+    "prefix": "rod",
+    "material": "epoxid"
+  },
+  {
+    "id": "bolt_epoxid",
+    "prefix": "bolt",
+    "material": "epoxid"
+  },
+  {
+    "id": "screw_epoxid",
+    "prefix": "screw",
+    "material": "epoxid"
+  },
+  {
+    "id": "long_rod_epoxid",
+    "prefix": "long_rod",
+    "material": "epoxid"
+  },
+  {
+    "id": "turbine_blade_epoxid",
+    "prefix": "turbine_blade",
+    "material": "epoxid"
+  },
+  {
     "id": "dust_ferrosilite",
     "prefix": "dust",
     "material": "ferrosilite"
@@ -3255,6 +3380,101 @@
     "material": "grossular"
   },
   {
+    "id": "dust_hssg",
+    "prefix": "dust",
+    "material": "hssg"
+  },
+  {
+    "id": "small_dust_hssg",
+    "prefix": "small_dust",
+    "material": "hssg"
+  },
+  {
+    "id": "tiny_dust_hssg",
+    "prefix": "tiny_dust",
+    "material": "hssg"
+  },
+  {
+    "id": "ingot_hssg",
+    "prefix": "ingot",
+    "material": "hssg"
+  },
+  {
+    "id": "hot_ingot_hssg",
+    "prefix": "hot_ingot",
+    "material": "hssg"
+  },
+  {
+    "id": "nugget_hssg",
+    "prefix": "nugget",
+    "material": "hssg"
+  },
+  {
+    "id": "plate_hssg",
+    "prefix": "plate",
+    "material": "hssg"
+  },
+  {
+    "id": "double_plate_hssg",
+    "prefix": "double_plate",
+    "material": "hssg"
+  },
+  {
+    "id": "rod_hssg",
+    "prefix": "rod",
+    "material": "hssg"
+  },
+  {
+    "id": "bolt_hssg",
+    "prefix": "bolt",
+    "material": "hssg"
+  },
+  {
+    "id": "screw_hssg",
+    "prefix": "screw",
+    "material": "hssg"
+  },
+  {
+    "id": "ring_hssg",
+    "prefix": "ring",
+    "material": "hssg"
+  },
+  {
+    "id": "round_hssg",
+    "prefix": "round",
+    "material": "hssg"
+  },
+  {
+    "id": "foil_hssg",
+    "prefix": "foil",
+    "material": "hssg"
+  },
+  {
+    "id": "small_gear_hssg",
+    "prefix": "small_gear",
+    "material": "hssg"
+  },
+  {
+    "id": "rotor_hssg",
+    "prefix": "rotor",
+    "material": "hssg"
+  },
+  {
+    "id": "long_rod_hssg",
+    "prefix": "long_rod",
+    "material": "hssg"
+  },
+  {
+    "id": "turbine_blade_hssg",
+    "prefix": "turbine_blade",
+    "material": "hssg"
+  },
+  {
+    "id": "gear_hssg",
+    "prefix": "gear",
+    "material": "hssg"
+  },
+  {
     "id": "crushed_ilmenite",
     "prefix": "crushed",
     "material": "ilmenite"
@@ -3753,6 +3973,31 @@
     "id": "turbine_blade_kanthal",
     "prefix": "turbine_blade",
     "material": "kanthal"
+  },
+  {
+    "id": "dust_lanthanum",
+    "prefix": "dust",
+    "material": "lanthanum"
+  },
+  {
+    "id": "small_dust_lanthanum",
+    "prefix": "small_dust",
+    "material": "lanthanum"
+  },
+  {
+    "id": "tiny_dust_lanthanum",
+    "prefix": "tiny_dust",
+    "material": "lanthanum"
+  },
+  {
+    "id": "ingot_lanthanum",
+    "prefix": "ingot",
+    "material": "lanthanum"
+  },
+  {
+    "id": "nugget_lanthanum",
+    "prefix": "nugget",
+    "material": "lanthanum"
   },
   {
     "id": "crushed_lapis",
@@ -4995,6 +5240,81 @@
     "material": "nickel"
   },
   {
+    "id": "dust_niobium",
+    "prefix": "dust",
+    "material": "niobium"
+  },
+  {
+    "id": "small_dust_niobium",
+    "prefix": "small_dust",
+    "material": "niobium"
+  },
+  {
+    "id": "tiny_dust_niobium",
+    "prefix": "tiny_dust",
+    "material": "niobium"
+  },
+  {
+    "id": "ingot_niobium",
+    "prefix": "ingot",
+    "material": "niobium"
+  },
+  {
+    "id": "hot_ingot_niobium",
+    "prefix": "hot_ingot",
+    "material": "niobium"
+  },
+  {
+    "id": "nugget_niobium",
+    "prefix": "nugget",
+    "material": "niobium"
+  },
+  {
+    "id": "dust_niobium_titanium",
+    "prefix": "dust",
+    "material": "niobium_titanium"
+  },
+  {
+    "id": "small_dust_niobium_titanium",
+    "prefix": "small_dust",
+    "material": "niobium_titanium"
+  },
+  {
+    "id": "tiny_dust_niobium_titanium",
+    "prefix": "tiny_dust",
+    "material": "niobium_titanium"
+  },
+  {
+    "id": "ingot_niobium_titanium",
+    "prefix": "ingot",
+    "material": "niobium_titanium"
+  },
+  {
+    "id": "hot_ingot_niobium_titanium",
+    "prefix": "hot_ingot",
+    "material": "niobium_titanium"
+  },
+  {
+    "id": "nugget_niobium_titanium",
+    "prefix": "nugget",
+    "material": "niobium_titanium"
+  },
+  {
+    "id": "plate_niobium_titanium",
+    "prefix": "plate",
+    "material": "niobium_titanium"
+  },
+  {
+    "id": "foil_niobium_titanium",
+    "prefix": "foil",
+    "material": "niobium_titanium"
+  },
+  {
+    "id": "wire_fine_niobium_titanium",
+    "prefix": "wire_fine",
+    "material": "niobium_titanium"
+  },
+  {
     "id": "crushed_oilsands",
     "prefix": "crushed",
     "material": "oilsands"
@@ -5993,6 +6313,21 @@
     "id": "gem_quartzite",
     "prefix": "gem",
     "material": "quartzite"
+  },
+  {
+    "id": "dust_rare_earth",
+    "prefix": "dust",
+    "material": "rare_earth"
+  },
+  {
+    "id": "small_dust_rare_earth",
+    "prefix": "small_dust",
+    "material": "rare_earth"
+  },
+  {
+    "id": "tiny_dust_rare_earth",
+    "prefix": "tiny_dust",
+    "material": "rare_earth"
   },
   {
     "id": "dust_raw_rubber",
@@ -8800,6 +9135,81 @@
     "material": "yellow_limonite"
   },
   {
+    "id": "dust_yttrium",
+    "prefix": "dust",
+    "material": "yttrium"
+  },
+  {
+    "id": "small_dust_yttrium",
+    "prefix": "small_dust",
+    "material": "yttrium"
+  },
+  {
+    "id": "tiny_dust_yttrium",
+    "prefix": "tiny_dust",
+    "material": "yttrium"
+  },
+  {
+    "id": "ingot_yttrium",
+    "prefix": "ingot",
+    "material": "yttrium"
+  },
+  {
+    "id": "hot_ingot_yttrium",
+    "prefix": "hot_ingot",
+    "material": "yttrium"
+  },
+  {
+    "id": "nugget_yttrium",
+    "prefix": "nugget",
+    "material": "yttrium"
+  },
+  {
+    "id": "dust_yttrium_barium_cuprate",
+    "prefix": "dust",
+    "material": "yttrium_barium_cuprate"
+  },
+  {
+    "id": "small_dust_yttrium_barium_cuprate",
+    "prefix": "small_dust",
+    "material": "yttrium_barium_cuprate"
+  },
+  {
+    "id": "tiny_dust_yttrium_barium_cuprate",
+    "prefix": "tiny_dust",
+    "material": "yttrium_barium_cuprate"
+  },
+  {
+    "id": "ingot_yttrium_barium_cuprate",
+    "prefix": "ingot",
+    "material": "yttrium_barium_cuprate"
+  },
+  {
+    "id": "hot_ingot_yttrium_barium_cuprate",
+    "prefix": "hot_ingot",
+    "material": "yttrium_barium_cuprate"
+  },
+  {
+    "id": "nugget_yttrium_barium_cuprate",
+    "prefix": "nugget",
+    "material": "yttrium_barium_cuprate"
+  },
+  {
+    "id": "plate_yttrium_barium_cuprate",
+    "prefix": "plate",
+    "material": "yttrium_barium_cuprate"
+  },
+  {
+    "id": "foil_yttrium_barium_cuprate",
+    "prefix": "foil",
+    "material": "yttrium_barium_cuprate"
+  },
+  {
+    "id": "wire_fine_yttrium_barium_cuprate",
+    "prefix": "wire_fine",
+    "material": "yttrium_barium_cuprate"
+  },
+  {
     "id": "crushed_zinc",
     "prefix": "crushed",
     "material": "zinc"
@@ -9445,6 +9855,51 @@
     "material": "electrum"
   },
   {
+    "id": "sword_head_epoxid",
+    "prefix": "sword_head",
+    "material": "epoxid"
+  },
+  {
+    "id": "pickaxe_head_epoxid",
+    "prefix": "pickaxe_head",
+    "material": "epoxid"
+  },
+  {
+    "id": "shovel_head_epoxid",
+    "prefix": "shovel_head",
+    "material": "epoxid"
+  },
+  {
+    "id": "axe_head_epoxid",
+    "prefix": "axe_head",
+    "material": "epoxid"
+  },
+  {
+    "id": "hoe_head_epoxid",
+    "prefix": "hoe_head",
+    "material": "epoxid"
+  },
+  {
+    "id": "saw_head_epoxid",
+    "prefix": "saw_head",
+    "material": "epoxid"
+  },
+  {
+    "id": "drill_head_epoxid",
+    "prefix": "drill_head",
+    "material": "epoxid"
+  },
+  {
+    "id": "chainsaw_head_epoxid",
+    "prefix": "chainsaw_head",
+    "material": "epoxid"
+  },
+  {
+    "id": "wrench_head_epoxid",
+    "prefix": "wrench_head",
+    "material": "epoxid"
+  },
+  {
     "id": "sword_head_gold",
     "prefix": "sword_head",
     "material": "gold"
@@ -9488,6 +9943,51 @@
     "id": "wrench_head_gold",
     "prefix": "wrench_head",
     "material": "gold"
+  },
+  {
+    "id": "sword_head_hssg",
+    "prefix": "sword_head",
+    "material": "hssg"
+  },
+  {
+    "id": "pickaxe_head_hssg",
+    "prefix": "pickaxe_head",
+    "material": "hssg"
+  },
+  {
+    "id": "shovel_head_hssg",
+    "prefix": "shovel_head",
+    "material": "hssg"
+  },
+  {
+    "id": "axe_head_hssg",
+    "prefix": "axe_head",
+    "material": "hssg"
+  },
+  {
+    "id": "hoe_head_hssg",
+    "prefix": "hoe_head",
+    "material": "hssg"
+  },
+  {
+    "id": "saw_head_hssg",
+    "prefix": "saw_head",
+    "material": "hssg"
+  },
+  {
+    "id": "drill_head_hssg",
+    "prefix": "drill_head",
+    "material": "hssg"
+  },
+  {
+    "id": "chainsaw_head_hssg",
+    "prefix": "chainsaw_head",
+    "material": "hssg"
+  },
+  {
+    "id": "wrench_head_hssg",
+    "prefix": "wrench_head",
+    "material": "hssg"
   },
   {
     "id": "sword_head_invar",

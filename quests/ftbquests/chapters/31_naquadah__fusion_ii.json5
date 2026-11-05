@@ -5,6 +5,29 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A000000000000CF",
+      "x": 1.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000002A3"
+      ],
+      "icon": {
+        "id": "iis:robot_arm_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:robot_arm_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000CF00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000281",
       "x": 10.0,
       "y": 5.0,
@@ -48,6 +71,64 @@
       ]
     },
     {
+      "id": "1A0000000000029B",
+      "x": 5.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000002A6"
+      ],
+      "icon": {
+        "id": "iis:wire_fine_niobium_titanium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_niobium_titanium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029B00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_fine_niobium_titanium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029B01"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000029D",
+      "x": 1.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000000CF",
+        "1A000000000002A4",
+        "1A000000000002A2",
+        "1A0000000000023A"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029D00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000029F",
       "x": 5.5,
       "y": 0.5,
@@ -69,6 +150,127 @@
           },
           "count": 1,
           "id": "1B00000000029F00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002A0",
+      "x": 2.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000002A2",
+        "1A000000000002A3",
+        "1A0000000000023A"
+      ],
+      "icon": {
+        "id": "iis:laser_engraver_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_engraver_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002A3",
+      "x": 1.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000008C"
+      ],
+      "icon": {
+        "id": "iis:electric_piston_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_piston_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002A4",
+      "x": 1.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000008C",
+        "1A00000000000007"
+      ],
+      "icon": {
+        "id": "iis:conveyor_module_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:conveyor_module_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002A6",
+      "x": 5.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000115",
+        "1A00000000000350",
+        "1A00000000000409"
+      ],
+      "icon": {
+        "id": "iis:ingot_niobium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_niobium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000409",
+      "x": 5.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000043D",
+        "1A00000000000442"
+      ],
+      "icon": {
+        "id": "iis:dust_niobium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_niobium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000040900"
         }
       ]
     },

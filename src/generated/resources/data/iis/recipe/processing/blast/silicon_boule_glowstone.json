@@ -1,0 +1,28 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/silicon",
+      "count": 64
+    },
+    {
+      "ingredient": "minecraft:glowstone_dust",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:silicon_boule_glowstone",
+      "count": 1
+    }
+  ],
+  "duration": 12000,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:nitrogen",
+      "amount": 8000
+    }
+  ],
+  "temp": 2484
+}

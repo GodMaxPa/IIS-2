@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/epoxid",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pickaxe_head_epoxid",
+      "count": 1
+    }
+  ],
+  "duration": 18,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_pickaxe"
+  ]
+}

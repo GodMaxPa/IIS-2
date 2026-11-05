@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/polytetrafluoroethylene"
+  ],
+  "result": {
+    "id": "iis:small_dust_polytetrafluoroethylene",
+    "count": 4
+  }
+}

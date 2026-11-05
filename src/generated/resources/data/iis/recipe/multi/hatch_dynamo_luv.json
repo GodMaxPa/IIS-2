@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MC"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "C": "#iis:cables/1x/vanadium_gallium"
+  },
+  "result": {
+    "id": "iis:hatch_dynamo_luv"
+  }
+}

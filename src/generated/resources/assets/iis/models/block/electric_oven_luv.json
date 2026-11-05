@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/electric_oven_luv_side",
+    "north": "iis:block/lv/electric_oven_luv_front",
+    "south": "iis:block/lv/electric_oven_luv_back",
+    "east": "iis:block/lv/electric_oven_luv_side",
+    "west": "iis:block/lv/electric_oven_luv_side",
+    "up": "iis:block/lv/electric_oven_luv_top",
+    "down": "iis:block/lv/electric_oven_luv_bottom"
+  }
+}

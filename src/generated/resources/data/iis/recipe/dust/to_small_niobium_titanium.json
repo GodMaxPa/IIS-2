@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/niobium_titanium"
+  ],
+  "result": {
+    "id": "iis:small_dust_niobium_titanium",
+    "count": 4
+  }
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "iis:circuit_elite"
+    "iis:circuit_elite",
+    "iis:circuit_elitenanocomputer"
   ]
 }

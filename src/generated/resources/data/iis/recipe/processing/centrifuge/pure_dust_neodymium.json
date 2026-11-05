@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_neodymium",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_rare_earth",
+      "count": 1
     }
   ],
-  "duration": 144,
+  "duration": 1152,
   "eut": 5
 }

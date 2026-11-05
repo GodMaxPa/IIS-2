@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/epoxid",
+    "#iis:small_dusts/epoxid",
+    "#iis:small_dusts/epoxid",
+    "#iis:small_dusts/epoxid"
+  ],
+  "result": {
+    "id": "iis:dust_epoxid"
+  }
+}

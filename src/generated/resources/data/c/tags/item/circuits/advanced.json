@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "iis:circuit_advanced"
+    "iis:circuit_advanced",
+    "iis:circuit_nanoprocessor"
   ]
 }

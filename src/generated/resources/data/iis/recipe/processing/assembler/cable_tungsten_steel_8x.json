@@ -1,0 +1,28 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/8x/tungsten_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/tungsten_steel",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_tungsten_steel_8x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silicone",
+      "amount": 216
+    }
+  ],
+  "circuit": 24
+}

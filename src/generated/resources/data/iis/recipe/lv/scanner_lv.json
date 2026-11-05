@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CTC",
+    "WMW",
+    "CRC"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "T": "iis:emitter_lv",
+    "R": "iis:sensor_lv",
+    "C": "#c:circuits/good",
+    "W": "#iis:cables/1x/tin"
+  },
+  "result": {
+    "id": "iis:scanner_lv"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/niobium_titanium",
+    "#iis:wires/1x/niobium_titanium",
+    "#iis:wires/1x/niobium_titanium",
+    "#iis:wires/1x/niobium_titanium"
+  ],
+  "result": {
+    "id": "iis:wire_niobium_titanium_4x"
+  }
+}

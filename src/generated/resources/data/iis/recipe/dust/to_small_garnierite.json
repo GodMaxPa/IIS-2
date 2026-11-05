@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/garnierite"
+  ],
+  "result": {
+    "id": "iis:small_dust_garnierite",
+    "count": 4
+  }
+}

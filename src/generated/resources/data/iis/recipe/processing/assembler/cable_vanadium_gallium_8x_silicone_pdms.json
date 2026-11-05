@@ -1,0 +1,31 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/8x/vanadium_gallium",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/polydimethylsiloxane",
+      "count": 3
+    },
+    {
+      "ingredient": "#iis:foils/vanadium_gallium",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_vanadium_gallium_8x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silicone",
+      "amount": 108
+    }
+  ]
+}

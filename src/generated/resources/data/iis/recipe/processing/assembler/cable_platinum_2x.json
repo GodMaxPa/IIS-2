@@ -1,0 +1,28 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/2x/platinum",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/platinum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_platinum_2x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silicone",
+      "amount": 72
+    }
+  ],
+  "circuit": 24
+}

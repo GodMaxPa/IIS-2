@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/bauxite"
+  ],
+  "result": {
+    "id": "iis:small_dust_bauxite",
+    "count": 4
+  }
+}

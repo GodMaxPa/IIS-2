@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "Px"
+  ],
+  "key": {
+    "P": "#c:plates/niobium_titanium",
+    "x": "#iis:tools/wire_cutter"
+  },
+  "result": {
+    "id": "iis:wire_niobium_titanium_1x"
+  }
+}

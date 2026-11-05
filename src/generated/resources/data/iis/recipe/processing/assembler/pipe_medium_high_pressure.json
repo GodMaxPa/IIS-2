@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:pipe_medium_tungsten_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:electric_pump_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pipe_medium_high_pressure",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 148
+}

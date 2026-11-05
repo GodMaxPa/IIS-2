@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/lazurite"
+  ],
+  "result": {
+    "id": "iis:small_dust_lazurite",
+    "count": 4
+  }
+}

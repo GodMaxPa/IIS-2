@@ -20,6 +20,9 @@ public enum HatchType {
     /** GT_Loader_MetaTileEntities:273, :230 Hatch_Energy_IV, Hatch_Dynamo_IV (D103). */
     ENERGY_IV("hatch_energy_iv", 8192),
     DYNAMO_IV("hatch_dynamo_iv", 8192),
+    /** GT_Loader_MetaTileEntities:274, :231 Hatch_Energy_LuV, Hatch_Dynamo_LuV (D110). */
+    ENERGY_LUV("hatch_energy_luv", 32768),
+    DYNAMO_LUV("hatch_dynamo_luv", 32768),
     INPUT_BUS("hatch_input_bus_lv"),
     OUTPUT_BUS("hatch_output_bus_lv"),
     INPUT_HATCH("hatch_input_lv"),
@@ -31,7 +34,12 @@ public enum HatchType {
     OUTPUT_BUS_MV("hatch_output_bus_mv", "OUTPUT_BUS", 2), OUTPUT_BUS_HV("hatch_output_bus_hv", "OUTPUT_BUS", 3), OUTPUT_BUS_EV("hatch_output_bus_ev", "OUTPUT_BUS", 4), OUTPUT_BUS_IV("hatch_output_bus_iv", "OUTPUT_BUS", 5),
     INPUT_HATCH_MV("hatch_input_mv", "INPUT_HATCH", 2), INPUT_HATCH_HV("hatch_input_hv", "INPUT_HATCH", 3), INPUT_HATCH_EV("hatch_input_ev", "INPUT_HATCH", 4), INPUT_HATCH_IV("hatch_input_iv", "INPUT_HATCH", 5),
     OUTPUT_HATCH_MV("hatch_output_mv", "OUTPUT_HATCH", 2), OUTPUT_HATCH_HV("hatch_output_hv", "OUTPUT_HATCH", 3), OUTPUT_HATCH_EV("hatch_output_ev", "OUTPUT_HATCH", 4), OUTPUT_HATCH_IV("hatch_output_iv", "OUTPUT_HATCH", 5),
-    MUFFLER_MV("hatch_muffler_mv", "MUFFLER", 2), MUFFLER_HV("hatch_muffler_hv", "MUFFLER", 3), MUFFLER_EV("hatch_muffler_ev", "MUFFLER", 4), MUFFLER_IV("hatch_muffler_iv", "MUFFLER", 5);
+    MUFFLER_MV("hatch_muffler_mv", "MUFFLER", 2), MUFFLER_HV("hatch_muffler_hv", "MUFFLER", 3), MUFFLER_EV("hatch_muffler_ev", "MUFFLER", 4), MUFFLER_IV("hatch_muffler_iv", "MUFFLER", 5),
+    /** D110: GT_Loader_MetaTileEntities:285–413, LuV. */
+    INPUT_BUS_LUV("hatch_input_bus_luv", "INPUT_BUS", 6), OUTPUT_BUS_LUV("hatch_output_bus_luv", "OUTPUT_BUS", 6), INPUT_HATCH_LUV("hatch_input_luv", "INPUT_HATCH", 6),
+    OUTPUT_HATCH_LUV("hatch_output_luv", "OUTPUT_HATCH", 6), MUFFLER_LUV("hatch_muffler_luv", "MUFFLER", 6),
+    /** GT_Loader_MetaTileEntities:402 Hatch_DataAccess_EV (D110): 4 флешки для сборочной линии. */
+    DATA_ACCESS("hatch_data_access_ev");
 
     public final String id;
     public final long voltage;
@@ -78,7 +86,7 @@ public enum HatchType {
     }
 
     public boolean dynamo() {
-        return this == DYNAMO || this == DYNAMO_MV || this == DYNAMO_HV || this == DYNAMO_EV || this == DYNAMO_IV;
+        return this == DYNAMO || this == DYNAMO_MV || this == DYNAMO_HV || this == DYNAMO_EV || this == DYNAMO_IV || this == DYNAMO_LUV;
     }
 
     /** GT_MetaTileEntity_Hatch#getSlots: LV — 2×2. */

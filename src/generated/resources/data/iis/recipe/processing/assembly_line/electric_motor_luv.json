@@ -1,0 +1,55 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#iis:long_rods/neodymium_magnetic",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:long_rods/hssg",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:fine_wires/annealed_copper",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/annealed_copper",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/annealed_copper",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/annealed_copper",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:cables/1x/yttrium_barium_cuprate",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_luv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 6000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 144
+    },
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 250
+    }
+  ],
+  "keep": [
+    "iis:electric_motor_iv"
+  ],
+  "temp": 144000
+}

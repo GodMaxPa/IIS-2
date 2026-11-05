@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WFW",
+    "PMP",
+    "CFC"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "P": "iis:electric_piston_luv",
+    "F": "iis:item_filter",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/1x/niobium_titanium"
+  },
+  "result": {
+    "id": "iis:sifter_luv"
+  }
+}

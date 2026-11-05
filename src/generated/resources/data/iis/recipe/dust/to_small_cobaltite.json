@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/cobaltite"
+  ],
+  "result": {
+    "id": "iis:small_dust_cobaltite",
+    "count": 4
+  }
+}

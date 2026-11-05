@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:foils/silicone",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:foils/aluminium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capacitor_smd",
+      "count": 32
+    }
+  ],
+  "duration": 120,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_plastic",
+      "amount": 72
+    }
+  ]
+}

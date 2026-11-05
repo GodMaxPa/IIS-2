@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/green_sapphire"
+  ],
+  "result": {
+    "id": "iis:small_dust_green_sapphire",
+    "count": 4
+  }
+}

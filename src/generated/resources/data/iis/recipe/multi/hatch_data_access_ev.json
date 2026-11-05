@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "COC",
+    "OMO",
+    "COC"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "O": "iis:data_stick",
+    "C": "#c:circuits/elite"
+  },
+  "result": {
+    "id": "iis:hatch_data_access_ev"
+  }
+}

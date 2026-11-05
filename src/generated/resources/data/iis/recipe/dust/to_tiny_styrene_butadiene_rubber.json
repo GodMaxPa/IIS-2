@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/styrene_butadiene_rubber"
+  },
+  "result": {
+    "id": "iis:tiny_dust_styrene_butadiene_rubber",
+    "count": 18
+  }
+}

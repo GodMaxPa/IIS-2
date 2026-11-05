@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/niobium_titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_niobium_titanium",
+      "count": 9
+    }
+  ],
+  "duration": 710,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 16
+    }
+  ]
+}

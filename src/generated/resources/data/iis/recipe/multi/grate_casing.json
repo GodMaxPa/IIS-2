@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PVP",
+    "PFP",
+    "PMP"
+  ],
+  "key": {
+    "P": "minecraft:iron_bars",
+    "F": "#c:frames/steel",
+    "M": "iis:electric_motor_mv",
+    "V": "#iis:rotors/steel"
+  },
+  "result": {
+    "id": "iis:grate_casing",
+    "count": 2
+  }
+}

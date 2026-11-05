@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/yttrium"
+  ],
+  "result": {
+    "id": "iis:small_dust_yttrium",
+    "count": 4
+  }
+}

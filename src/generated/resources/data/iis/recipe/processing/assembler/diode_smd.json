@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:fine_wires/platinum",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:small_dusts/gallium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:diode_smd",
+      "count": 32
+    }
+  ],
+  "duration": 400,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_plastic",
+      "amount": 288
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/bastnasite",
+      "count": 6
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_cerium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_carbon",
+      "count": 1
+    },
+    {
+      "id": "iis:capsule",
+      "count": 3,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:oxygen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 192,
+  "eut": 90,
+  "fluid_outputs": [
+    {
+      "id": "iis:fluorine",
+      "amount": 1000
+    }
+  ]
+}

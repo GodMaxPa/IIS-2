@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/galena"
+  ],
+  "result": {
+    "id": "iis:small_dust_galena",
+    "count": 4
+  }
+}

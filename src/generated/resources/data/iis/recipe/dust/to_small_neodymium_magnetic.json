@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/neodymium_magnetic"
+  ],
+  "result": {
+    "id": "iis:small_dust_neodymium_magnetic",
+    "count": 4
+  }
+}

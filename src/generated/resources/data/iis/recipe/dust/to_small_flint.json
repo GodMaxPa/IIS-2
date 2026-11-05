@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/flint"
+  ],
+  "result": {
+    "id": "iis:small_dust_flint",
+    "count": 4
+  }
+}

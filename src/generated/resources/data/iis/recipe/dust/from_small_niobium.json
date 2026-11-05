@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/niobium",
+    "#iis:small_dusts/niobium",
+    "#iis:small_dusts/niobium",
+    "#iis:small_dusts/niobium"
+  ],
+  "result": {
+    "id": "iis:dust_niobium"
+  }
+}

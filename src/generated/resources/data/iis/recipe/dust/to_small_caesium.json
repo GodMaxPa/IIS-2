@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/caesium"
+  ],
+  "result": {
+    "id": "iis:small_dust_caesium",
+    "count": 4
+  }
+}

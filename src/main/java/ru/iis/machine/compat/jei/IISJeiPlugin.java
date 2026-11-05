@@ -32,8 +32,8 @@ import java.util.Map;
 @JeiPlugin
 public final class IISJeiPlugin implements IModPlugin {
     /** LV, MV, HV, EV, IV+: рецепт попадает в первую, где EU/t не больше напряжения. */
-    static final String[] TIERS = {"LV", "MV", "HV", "EV", "IV"};
-    private static final long[] VOLTS = {32, 128, 512, 2048, Long.MAX_VALUE};
+    static final String[] TIERS = {"LV", "MV", "HV", "EV", "IV", "LuV"};
+    private static final long[] VOLTS = {32, 128, 512, 2048, 8192, Long.MAX_VALUE};
     private final Map<String, IRecipeHolderType<GtRecipe>> types = new HashMap<>();
 
     @Override
@@ -43,7 +43,7 @@ public final class IISJeiPlugin implements IModPlugin {
 
     /** Карты без EU (кирпичная доменная печь, коксовая печь) не делятся. */
     static boolean tiered(GtRecipeMap m) {
-        return m != GtRecipeMap.PRIMITIVE_BLAST && m != GtRecipeMap.COKE_OVEN;
+        return m != GtRecipeMap.PRIMITIVE_BLAST && m != GtRecipeMap.COKE_OVEN && m != GtRecipeMap.ASSEMBLY_LINE;
     }
 
     static int recipeTier(GtRecipe r) {
@@ -60,7 +60,7 @@ public final class IISJeiPlugin implements IModPlugin {
     }
 
     private static int[] tiersOf(GtRecipeMap m) {
-        return tiered(m) ? new int[]{0, 1, 2, 3, 4} : new int[]{-1};
+        return tiered(m) ? new int[]{0, 1, 2, 3, 4, 5} : new int[]{-1};
     }
 
     /** Машины, на которых идут рецепты уровня tier (-1 — все). */
@@ -76,6 +76,11 @@ public final class IISJeiPlugin implements IModPlugin {
         }
         if (m == GtRecipeMap.VACUUM_FREEZER) {
             r.add(ru.iis.multi.MultiContent.VACUUM_FREEZER.get());
+            return r;
+        }
+        if (m == GtRecipeMap.ASSEMBLY_LINE) {
+            r.add(ru.iis.multi.MultiContent.ASSEMBLY_LINE.get());
+            for (ru.iis.lv.LvMachineType t : ru.iis.lv.LvMachineType.values()) if (t.id.equals("scanner")) r.add(ru.iis.lv.LvContent.MACHINES.get(t).get());
             return r;
         }
         // D104: многоблоки

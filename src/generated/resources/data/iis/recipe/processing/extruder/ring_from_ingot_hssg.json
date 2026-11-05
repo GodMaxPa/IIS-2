@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/hssg",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ring_hssg",
+      "count": 4
+    }
+  ],
+  "duration": 196,
+  "eut": 384,
+  "keep": [
+    "iis:shape_extruder_ring"
+  ]
+}

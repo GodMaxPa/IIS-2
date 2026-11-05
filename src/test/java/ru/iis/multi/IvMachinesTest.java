@@ -29,14 +29,10 @@ class IvMachinesTest {
     }
 
     @Test
-    void everyEvMachineExceptTheCircuitAssemblerHasAnIvTwin() {
+    void everyEvMachineHasAnIvTwin() {
         for (LvMachineType ev : LvMachineType.values()) {
             if (ev.tier != VoltageTier.EV) continue;
             String ivName = ev.name().replace("_EV", "_IV");
-            if (ev == LvMachineType.CIRCUIT_ASSEMBLER_EV) {
-                assertThrows(IllegalArgumentException.class, () -> LvMachineType.valueOf(ivName), "the IV circuit assembler needs the Master circuit");
-                continue;
-            }
             LvMachineType iv = LvMachineType.valueOf(ivName);
             assertEquals(VoltageTier.IV, iv.tier, iv.name());
             assertEquals(ev.id + "_iv", iv.blockId());

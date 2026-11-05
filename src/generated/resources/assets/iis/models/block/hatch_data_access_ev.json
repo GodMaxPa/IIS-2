@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/hatch_ev_side",
+    "north": "iis:block/multi/hatch_data_access_ev_front",
+    "south": "iis:block/multi/hatch_ev_side",
+    "east": "iis:block/multi/hatch_ev_side",
+    "west": "iis:block/multi/hatch_ev_side",
+    "up": "iis:block/multi/hatch_ev_side",
+    "down": "iis:block/multi/hatch_ev_side"
+  }
+}

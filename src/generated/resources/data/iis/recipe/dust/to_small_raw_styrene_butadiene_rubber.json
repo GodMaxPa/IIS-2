@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/raw_styrene_butadiene_rubber"
+  ],
+  "result": {
+    "id": "iis:small_dust_raw_styrene_butadiene_rubber",
+    "count": 4
+  }
+}

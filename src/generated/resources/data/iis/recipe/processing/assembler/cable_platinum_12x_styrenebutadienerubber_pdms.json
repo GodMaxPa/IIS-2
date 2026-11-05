@@ -1,0 +1,31 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/12x/platinum",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/polydimethylsiloxane",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:foils/platinum",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_platinum_12x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_styrenebutadienerubber",
+      "amount": 144
+    }
+  ]
+}

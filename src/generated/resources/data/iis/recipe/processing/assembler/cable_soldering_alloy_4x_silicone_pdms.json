@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/4x/soldering_alloy",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/polydimethylsiloxane",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_soldering_alloy_4x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silicone",
+      "amount": 72
+    }
+  ]
+}

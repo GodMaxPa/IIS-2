@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/black_steel"
+  ],
+  "result": {
+    "id": "iis:small_dust_black_steel",
+    "count": 4
+  }
+}

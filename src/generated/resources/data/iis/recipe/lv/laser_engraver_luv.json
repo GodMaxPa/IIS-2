@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PEP",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "E": "iis:emitter_luv",
+    "P": "iis:electric_piston_luv",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/1x/niobium_titanium"
+  },
+  "result": {
+    "id": "iis:laser_engraver_luv"
+  }
+}

@@ -10,8 +10,12 @@
     {
       "id": "minecraft:redstone",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_rare_earth",
+      "count": 1
     }
   ],
-  "duration": 85,
+  "duration": 680,
   "eut": 5
 }

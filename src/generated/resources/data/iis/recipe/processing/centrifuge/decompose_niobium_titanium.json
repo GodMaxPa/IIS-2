@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/niobium_titanium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_niobium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_titanium",
+      "count": 1
+    }
+  ],
+  "duration": 568,
+  "eut": 10
+}

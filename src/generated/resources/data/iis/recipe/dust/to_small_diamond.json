@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/diamond"
+  ],
+  "result": {
+    "id": "iis:small_dust_diamond",
+    "count": 4
+  }
+}

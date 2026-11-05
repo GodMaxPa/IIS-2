@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IGI",
+    "IMI",
+    "CWC"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/1x/niobium_titanium",
+    "I": "#iis:wires/1x/osmium",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:electrolyzer_luv"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/rare_earth",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_neodymium",
+      "count": 1,
+      "chance": 2500
+    },
+    {
+      "id": "iis:small_dust_yttrium",
+      "count": 1,
+      "chance": 2500
+    },
+    {
+      "id": "iis:small_dust_lanthanum",
+      "count": 1,
+      "chance": 2500
+    },
+    {
+      "id": "iis:small_dust_cerium",
+      "count": 1,
+      "chance": 2500
+    },
+    {
+      "id": "iis:small_dust_cadmium",
+      "count": 1,
+      "chance": 2500
+    },
+    {
+      "id": "iis:small_dust_caesium",
+      "count": 1,
+      "chance": 2500
+    }
+  ],
+  "duration": 64,
+  "eut": 20
+}

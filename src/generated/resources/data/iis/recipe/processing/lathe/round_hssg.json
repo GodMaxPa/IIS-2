@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/hssg",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:round_hssg",
+      "count": 1
+    }
+  ],
+  "duration": 24,
+  "eut": 8
+}

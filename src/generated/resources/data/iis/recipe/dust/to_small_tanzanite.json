@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/tanzanite"
+  ],
+  "result": {
+    "id": "iis:small_dust_tanzanite",
+    "count": 4
+  }
+}

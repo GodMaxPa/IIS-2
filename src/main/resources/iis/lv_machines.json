@@ -1728,6 +1728,15 @@
     "gui": "lv/potionbrewer"
   },
   {
+    "id": "circuit_assembler_iv",
+    "type": "circuit_assembler_iv",
+    "recipeMap": "circuit_assembler",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/circuitassembler"
+  },
+  {
     "id": "fluid_canner_iv",
     "type": "fluid_canner_iv",
     "recipeMap": "fluid_canner",
@@ -1789,5 +1798,419 @@
     "outputs": 3,
     "tank": 0,
     "gui": "lv/thermalcentrifuge"
+  },
+  {
+    "id": "macerator_luv",
+    "type": "macerator_luv",
+    "recipeMap": "macerator",
+    "inputs": 1,
+    "outputs": 4,
+    "tank": 0,
+    "gui": "lv/macerator1"
+  },
+  {
+    "id": "electric_furnace_luv",
+    "type": "electric_furnace_luv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/e_furnace"
+  },
+  {
+    "id": "alloy_smelter_luv",
+    "type": "alloy_smelter_luv",
+    "recipeMap": "alloy_smelter",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/alloysmelter"
+  },
+  {
+    "id": "compressor_luv",
+    "type": "compressor_luv",
+    "recipeMap": "compressor",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/compressor"
+  },
+  {
+    "id": "extractor_luv",
+    "type": "extractor_luv",
+    "recipeMap": "extractor",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/extractor"
+  },
+  {
+    "id": "forge_hammer_luv",
+    "type": "forge_hammer_luv",
+    "recipeMap": "forge_hammer",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/hammer"
+  },
+  {
+    "id": "wiremill_luv",
+    "type": "wiremill_luv",
+    "recipeMap": "wiremill",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/wiremill"
+  },
+  {
+    "id": "bender_luv",
+    "type": "bender_luv",
+    "recipeMap": "bender",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/bender"
+  },
+  {
+    "id": "lathe_luv",
+    "type": "lathe_luv",
+    "recipeMap": "lathe",
+    "inputs": 1,
+    "outputs": 2,
+    "tank": 0,
+    "gui": "lv/lathe"
+  },
+  {
+    "id": "assembler_luv",
+    "type": "assembler_luv",
+    "recipeMap": "assembler",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/assembler"
+  },
+  {
+    "id": "mixer_luv",
+    "type": "mixer_luv",
+    "recipeMap": "mixer",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 48000,
+    "gui": "lv/mixer"
+  },
+  {
+    "id": "polarizer_luv",
+    "type": "polarizer_luv",
+    "recipeMap": "polarizer",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/polarizer"
+  },
+  {
+    "id": "ore_washer_luv",
+    "type": "ore_washer_luv",
+    "recipeMap": "ore_washer",
+    "inputs": 2,
+    "outputs": 3,
+    "tank": 16000,
+    "gui": "lv/orewasher"
+  },
+  {
+    "id": "centrifuge_luv",
+    "type": "centrifuge_luv",
+    "recipeMap": "centrifuge",
+    "inputs": 2,
+    "outputs": 6,
+    "tank": 64000,
+    "gui": "lv/centrifuge"
+  },
+  {
+    "id": "sifter_luv",
+    "type": "sifter_luv",
+    "recipeMap": "sifter",
+    "inputs": 1,
+    "outputs": 9,
+    "tank": 0,
+    "gui": "lv/sifter"
+  },
+  {
+    "id": "electromagnetic_separator_luv",
+    "type": "electromagnetic_separator_luv",
+    "recipeMap": "electromagnetic_separator",
+    "inputs": 1,
+    "outputs": 3,
+    "tank": 0,
+    "gui": "lv/electromagneticseparator"
+  },
+  {
+    "id": "autoclave_luv",
+    "type": "autoclave_luv",
+    "recipeMap": "autoclave",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 8000,
+    "gui": "lv/autoclave"
+  },
+  {
+    "id": "cutter_luv",
+    "type": "cutter_luv",
+    "recipeMap": "cutter",
+    "inputs": 1,
+    "outputs": 2,
+    "tank": 8000,
+    "gui": "lv/cutter"
+  },
+  {
+    "id": "canner_luv",
+    "type": "canner_luv",
+    "recipeMap": "canner",
+    "inputs": 2,
+    "outputs": 2,
+    "tank": 0,
+    "gui": "lv/canner"
+  },
+  {
+    "id": "electrolyzer_luv",
+    "type": "electrolyzer_luv",
+    "recipeMap": "electrolyzer",
+    "inputs": 2,
+    "outputs": 6,
+    "tank": 64000,
+    "gui": "lv/electrolyzer"
+  },
+  {
+    "id": "chemical_reactor_luv",
+    "type": "chemical_reactor_luv",
+    "recipeMap": "chemical_reactor",
+    "inputs": 3,
+    "outputs": 3,
+    "tank": 16000,
+    "gui": "lv/chemicalreactor"
+  },
+  {
+    "id": "fluid_extractor_luv",
+    "type": "fluid_extractor_luv",
+    "recipeMap": "fluid_extractor",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/fluidextractor"
+  },
+  {
+    "id": "fluid_solidifier_luv",
+    "type": "fluid_solidifier_luv",
+    "recipeMap": "fluid_solidifier",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/fluidsolidifier"
+  },
+  {
+    "id": "distillery_luv",
+    "type": "distillery_luv",
+    "recipeMap": "distillery",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 1000,
+    "gui": "lv/distillery"
+  },
+  {
+    "id": "chemical_bath_luv",
+    "type": "chemical_bath_luv",
+    "recipeMap": "chemical_bath",
+    "inputs": 1,
+    "outputs": 3,
+    "tank": 8000,
+    "gui": "lv/chemicalbath"
+  },
+  {
+    "id": "extruder_luv",
+    "type": "extruder_luv",
+    "recipeMap": "extruder",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/extruder"
+  },
+  {
+    "id": "forming_press_luv",
+    "type": "forming_press_luv",
+    "recipeMap": "forming_press",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/press"
+  },
+  {
+    "id": "fluid_heater_luv",
+    "type": "fluid_heater_luv",
+    "recipeMap": "fluid_heater",
+    "inputs": 1,
+    "outputs": 0,
+    "tank": 8000,
+    "gui": "lv/fluidheater"
+  },
+  {
+    "id": "electric_oven_luv",
+    "type": "electric_oven_luv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/e_oven"
+  },
+  {
+    "id": "arc_furnace_luv",
+    "type": "arc_furnace_luv",
+    "recipeMap": "arc_furnace",
+    "inputs": 1,
+    "outputs": 6,
+    "tank": 16000,
+    "gui": "lv/arcfurnace"
+  },
+  {
+    "id": "laser_engraver_luv",
+    "type": "laser_engraver_luv",
+    "recipeMap": "laser_engraver",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/laserengraver"
+  },
+  {
+    "id": "brewery_luv",
+    "type": "brewery_luv",
+    "recipeMap": "brewery",
+    "inputs": 1,
+    "outputs": 0,
+    "tank": 750,
+    "gui": "lv/potionbrewer"
+  },
+  {
+    "id": "circuit_assembler_luv",
+    "type": "circuit_assembler_luv",
+    "recipeMap": "circuit_assembler",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/circuitassembler"
+  },
+  {
+    "id": "fluid_canner_luv",
+    "type": "fluid_canner_luv",
+    "recipeMap": "fluid_canner",
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 96000,
+    "gui": "lv/fluidcanner"
+  },
+  {
+    "id": "rock_breaker_luv",
+    "type": "rock_breaker_luv",
+    "recipeMap": "rock_breaker",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/rockbreaker"
+  },
+  {
+    "id": "packager_luv",
+    "type": "packager_luv",
+    "recipeMap": "packager",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/packager"
+  },
+  {
+    "id": "unpackager_luv",
+    "type": "unpackager_luv",
+    "recipeMap": "unpackager",
+    "inputs": 1,
+    "outputs": 2,
+    "tank": 0,
+    "gui": "lv/unpackager"
+  },
+  {
+    "id": "filter_luv",
+    "type": "filter_luv",
+    "recipeMap": "filter",
+    "inputs": 1,
+    "outputs": 6,
+    "tank": 56000,
+    "gui": "lv/filter"
+  },
+  {
+    "id": "microwave_luv",
+    "type": "microwave_luv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/e_furnace"
+  },
+  {
+    "id": "thermal_centrifuge_luv",
+    "type": "thermal_centrifuge_luv",
+    "recipeMap": "thermal_centrifuge",
+    "inputs": 1,
+    "outputs": 3,
+    "tank": 0,
+    "gui": "lv/thermalcentrifuge"
+  },
+  {
+    "id": "scanner_lv",
+    "type": "scanner",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/scanner"
+  },
+  {
+    "id": "scanner_mv",
+    "type": "scanner_mv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/scanner"
+  },
+  {
+    "id": "scanner_hv",
+    "type": "scanner_hv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/scanner"
+  },
+  {
+    "id": "scanner_ev",
+    "type": "scanner_ev",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/scanner"
+  },
+  {
+    "id": "scanner_iv",
+    "type": "scanner_iv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/scanner"
+  },
+  {
+    "id": "scanner_luv",
+    "type": "scanner_luv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/scanner"
   }
 ]

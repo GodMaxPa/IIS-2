@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/tantalite"
+  ],
+  "result": {
+    "id": "iis:small_dust_tantalite",
+    "count": 4
+  }
+}

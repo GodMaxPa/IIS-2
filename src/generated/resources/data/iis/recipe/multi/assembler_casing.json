@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PVP",
+    "PFP",
+    "PMP"
+  ],
+  "key": {
+    "P": "#c:circuits/data",
+    "F": "#c:frames/tungsten_steel",
+    "M": "iis:electric_motor_iv",
+    "V": "#c:circuits/elite"
+  },
+  "result": {
+    "id": "iis:assembler_casing",
+    "count": 2
+  }
+}

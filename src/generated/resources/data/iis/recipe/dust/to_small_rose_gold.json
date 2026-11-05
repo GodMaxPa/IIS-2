@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/rose_gold"
+  ],
+  "result": {
+    "id": "iis:small_dust_rose_gold",
+    "count": 4
+  }
+}

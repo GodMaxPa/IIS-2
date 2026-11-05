@@ -1,0 +1,24 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/4x/aluminium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_aluminium_4x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_styrenebutadienerubber",
+      "amount": 216
+    }
+  ],
+  "circuit": 24
+}

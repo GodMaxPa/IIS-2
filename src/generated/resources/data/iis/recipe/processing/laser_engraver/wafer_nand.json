@@ -1,0 +1,21 @@
+{
+  "type": "iis:laser_engraver",
+  "inputs": [
+    {
+      "ingredient": "iis:silicon_wafer_glowstone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wafer_nand",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 480,
+  "keep": [
+    "#iis:lenses/ender_pearl"
+  ],
+  "cleanroom": true
+}

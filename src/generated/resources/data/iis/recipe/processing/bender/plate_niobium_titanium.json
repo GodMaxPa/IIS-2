@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/niobium_titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_niobium_titanium",
+      "count": 1
+    }
+  ],
+  "duration": 71,
+  "eut": 24
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OGO",
+    "PMP",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "P": "iis:electric_pump_luv",
+    "O": "#iis:wires/4x/hssg",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/1x/niobium_titanium",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:fluid_heater_luv"
+  }
+}

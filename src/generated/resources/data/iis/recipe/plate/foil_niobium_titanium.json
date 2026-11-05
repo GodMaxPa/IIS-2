@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "hP"
+  ],
+  "key": {
+    "P": "#c:plates/niobium_titanium",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:foil_niobium_titanium",
+    "count": 2
+  }
+}

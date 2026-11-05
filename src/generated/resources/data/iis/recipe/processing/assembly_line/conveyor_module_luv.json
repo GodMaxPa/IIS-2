@@ -1,0 +1,47 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_luv",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/hssg",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:rings/hssg",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:rounds/hssg",
+      "count": 32
+    },
+    {
+      "ingredient": "#iis:cables/1x/yttrium_barium_cuprate",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:conveyor_module_luv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 6000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_styrenebutadienerubber",
+      "amount": 1440
+    },
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 250
+    }
+  ],
+  "keep": [
+    "iis:conveyor_module_iv"
+  ],
+  "temp": 144000
+}

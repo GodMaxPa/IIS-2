@@ -1,0 +1,28 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/4x/osmium",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/osmium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_osmium_4x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silicone",
+      "amount": 144
+    }
+  ],
+  "circuit": 24
+}

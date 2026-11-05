@@ -1,0 +1,31 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/12x/tungsten_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/polydimethylsiloxane",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:foils/tungsten_steel",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_tungsten_steel_12x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silicone",
+      "amount": 144
+    }
+  ]
+}

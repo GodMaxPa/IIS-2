@@ -1,0 +1,17 @@
+{
+  "type": "iis:unpackager",
+  "inputs": [
+    {
+      "ingredient": "iis:cable_hssg_8x",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_hssg_8x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

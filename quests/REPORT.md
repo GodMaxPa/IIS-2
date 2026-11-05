@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 938; hidden until their items are ported: 1004; chapters: 35.
+Quests in IIS 1: 1943; written: 1037; hidden until their items are ported: 905; chapters: 35.
 
 ## Most needed unported items (task count)
 
@@ -9,21 +9,13 @@ Quests in IIS 1: 1943; written: 938; hidden until their items are ported: 1004; 
 - 8 × `gregtech:gt.metaitem.01:32003` Золотая монета
 - 5 × `gregtech:gt.metaitem.01:32000` Медная монета
 - 5 × `gregtech:gt.metaitem.01:32004` Платиновая монета
-- 2 × `gregtech:gt.blockmachines:341` Сканер (LV)
-- 2 × `gregtech:gt.blockmachines:342` Сканер (MV)
-- 2 × `gregtech:gt.blockmachines:343` Сканер (HV)
-- 2 × `gregtech:gt.blockmachines:344` Сканер (EV)
-- 2 × `gregtech:gt.blockmachines:345` Сканер (IV)
 - 2 × `gregtech:gt.blockmachines:321` Принтер (LV)
 - 2 × `gregtech:gt.blockmachines:322` Принтер (MV)
 - 2 × `gregtech:gt.blockmachines:323` Принтер (HV)
 - 2 × `gregtech:gt.blockmachines:324` Принтер (EV)
 - 2 × `gregtech:gt.blockmachines:325` Принтер (IV)
 - 2 × `gregtech:gt.metaitem.01:11070` Европиевый слиток
-- 2 × `gregtech:gt.blockmachines:1184` Сборщик микросхем (IV)
 - 2 × `EnderIO:itemSoulVessel:0` 
-- 2 × `gregtech:gt.blockmachines:1185` Сборщик микросхем (LuV)
-- 2 × `gregtech:gt.blockmachines:596` Лазерный гравировщик (LuV)
 - 2 × `GalacticraftCore:item.basicItem:14` 
 - 2 × `gregtech:gt.blockmachines:1186` Сборщик микросхем (ZPM)
 - 2 × `gregtech:gt.blockmachines:455` Разборочный станок (IV)
@@ -32,7 +24,6 @@ Quests in IIS 1: 1943; written: 938; hidden until their items are ported: 1004; 
 - 2 × `gregtech:gt.blockmachines:453` Разборочный станок (HV)
 - 2 × `gregtech:gt.blockmachines:454` Разборочный станок (EV)
 - 2 × `gregtech:gt.blockmachines:501` Ферментёр (LV)
-- 2 × `gregtech:gt.blockmachines:576` Автоклав (LuV)
 - 2 × `gregtech:gt.blockmachines:577` Автоклав (ZPM)
 - 2 × `gregtech:gt.blockmachines:681` Органический репликатор (LV)
 - 2 × `gregtech:gt.blockmachines:461` Производитель материи (LV)
@@ -51,14 +42,12 @@ Quests in IIS 1: 1943; written: 938; hidden until their items are ported: 1004; 
 - 1 × `gregtech:gt.blockmachines:5165` 
 - 1 × `gregtech:gt.metaitem.01:32619` Жидкостный регулятор (IV)
 - 1 × `gregtech:gt.metaitem.01:11103` Америциевый слиток
-- 1 × `gregtech:gt.metaitem.01:32695` Сенсор (LuV)
 - 1 × `gregtech:gt.metaitem.01:17329` Тританиевая пластина
 - 1 × `gregtech:gt.blockmachines:1194` Блок управления термоядерным реактором II (ZPM)
 - 1 × `gregtech:gt.metaitem.01:32464` Сверхпрочный слиток T3
 - 1 × `gregtech:gt.metaitem.01:17325` Пластина сплава наквадаха
 - 1 × `gregtech:gt.metaitem.01:11325` Слиток сплава наквадаха
 - 1 × `gregtech:gt.blockmachines:4468` 
-- 1 × `gregtech:gt.blockmachines:1170` Сборочная линия
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:14` 
 - 1 × `gregtech:gt.metaitem.01:22305` Плотная стальная пластина
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:13` 
@@ -84,6 +73,17 @@ Quests in IIS 1: 1943; written: 938; hidden until their items are ported: 1004; 
 - 1 × `appliedenergistics2:item.ItemMultiPart:480` 
 - 1 × `appliedenergistics2:item.ItemMultiPart:440` 
 - 1 × `gregtech:gt.metaitem.01:17811` Пластина светокамня
+- 1 × `appliedenergistics2:tile.BlockCraftingUnit:0` 
+- 1 × `appliedenergistics2:tile.BlockEnergyCell:0` 
+- 1 × `appliedenergistics2:tile.BlockEnergyAcceptor:0` 
+- 1 × `appliedenergistics2:tile.BlockFluix:0` 
+- 1 × `gregtech:gt.blockgem1:7` Блок из ока Края
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:9` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:12` 
+- 1 × `appliedenergistics2:tile.BlockQuantumLinkChamber:0` 
+- 1 × `appliedenergistics2:tile.BlockQuantumRing:0` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:36` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:37` 
 
 ## Unported fluids
 
@@ -96,10 +96,10 @@ Quests in IIS 1: 1943; written: 938; hidden until their items are ported: 1004; 
 
 ## Dropped reward items
 
-- 448 × `('gregtech:gt.metaitem.01', 32000)`
-- 227 × `('gregtech:gt.metaitem.01', 32001)`
+- 453 × `('gregtech:gt.metaitem.01', 32000)`
+- 271 × `('gregtech:gt.metaitem.01', 32001)`
+- 17 × `('gregtech:gt.metaitem.01', 32002)`
 - 16 × `bq_standard:choice`
-- 13 × `('gregtech:gt.metaitem.01', 32002)`
 - 6 × `('gregtech:gt.metaitem.01', 32003)`
 - 1 × `('lootbags:lootbag', 7)`
 - 1 × `('gregtech:gt.metaitem.01', 32750)`

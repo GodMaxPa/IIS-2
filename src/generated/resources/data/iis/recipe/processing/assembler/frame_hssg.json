@@ -1,0 +1,17 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/hssg",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:frame_hssg",
+      "count": 1
+    }
+  ],
+  "duration": 64,
+  "eut": 8
+}

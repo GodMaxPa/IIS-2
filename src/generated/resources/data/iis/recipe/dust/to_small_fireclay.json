@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/fireclay"
+  ],
+  "result": {
+    "id": "iis:small_dust_fireclay",
+    "count": 4
+  }
+}

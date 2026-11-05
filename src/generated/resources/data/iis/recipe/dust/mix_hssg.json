@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/tungsten_steel",
+    "#c:dusts/tungsten_steel",
+    "#c:dusts/tungsten_steel",
+    "#c:dusts/tungsten_steel",
+    "#c:dusts/tungsten_steel",
+    "#c:dusts/chrome",
+    "#c:dusts/molybdenum",
+    "#c:dusts/molybdenum",
+    "#c:dusts/vanadium"
+  ],
+  "result": {
+    "id": "iis:dust_hssg",
+    "count": 9
+  }
+}

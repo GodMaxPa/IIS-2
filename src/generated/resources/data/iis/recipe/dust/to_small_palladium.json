@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/palladium"
+  ],
+  "result": {
+    "id": "iis:small_dust_palladium",
+    "count": 4
+  }
+}

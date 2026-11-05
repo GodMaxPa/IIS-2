@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/tin_alloy"
+  ],
+  "result": {
+    "id": "iis:small_dust_tin_alloy",
+    "count": 4
+  }
+}

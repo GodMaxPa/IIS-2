@@ -1,0 +1,31 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/4x/tungsten",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/polydimethylsiloxane",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:foils/tungsten",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_tungsten_4x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_styrenebutadienerubber",
+      "amount": 72
+    }
+  ]
+}

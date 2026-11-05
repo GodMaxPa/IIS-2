@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X",
+    "Y",
+    "Z"
+  ],
+  "key": {
+    "X": "#c:plates/iron",
+    "Y": "#c:plates/brass",
+    "Z": "#c:plates/zinc"
+  },
+  "result": {
+    "id": "iis:mixed_metal_ingot"
+  }
+}

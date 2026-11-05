@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/rare_earth"
+  ],
+  "result": {
+    "id": "iis:small_dust_rare_earth",
+    "count": 4
+  }
+}

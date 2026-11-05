@@ -63,6 +63,16 @@ public class ControllerMenu extends MachineMenu {
         return processingArray(id, inventory, new SimpleContainer(1), new SimpleContainerData(ARRAY_DATA));
     }
 
+    /** Сборочная линия (D110): слот флешки, общие данные контроллера. */
+    public static ControllerMenu assemblyLine(int id, Inventory inventory, Container container, ContainerData data) {
+        return new ControllerMenu(MultiContent.ASSEMBLY_LINE_MENU.get(), id, inventory, container, data);
+    }
+
+    public static ControllerMenu assemblyLineClient(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
+        buf.readBlockPos();
+        return assemblyLine(id, inventory, new SimpleContainer(1), new SimpleContainerData(10));
+    }
+
     public static ControllerMenu drill(int id, Inventory inventory, Container container, ContainerData data) {
         return new ControllerMenu(MultiContent.DRILL_MENU.get(), id, inventory, container, data);
     }
@@ -84,7 +94,8 @@ public class ControllerMenu extends MachineMenu {
     @Override
     protected boolean acceptsShiftClick(int slot, ItemStack stack) {
         return stack.getItem() instanceof ProgrammedCircuitItem || stack.getItem() instanceof ru.iis.multi.TurbineRotorItem
-                || ru.iis.multi.block.ProcessingArrayBlockEntity.machine(stack) != null || stack.is(MultiContent.MINING_PIPE.asItem());
+                || ru.iis.multi.block.ProcessingArrayBlockEntity.machine(stack) != null || stack.is(MultiContent.MINING_PIPE.asItem())
+                || stack.getItem() instanceof ru.iis.lv.item.DataStickItem;
     }
 
     public boolean formed() { return data(0) != 0; }

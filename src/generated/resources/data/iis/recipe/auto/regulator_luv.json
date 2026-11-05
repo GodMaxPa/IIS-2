@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XFX",
+    "VMV",
+    "XCX"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "V": "iis:robot_arm_luv",
+    "C": "#c:chests/wooden",
+    "F": "iis:item_filter",
+    "X": "#c:circuits/advanced"
+  },
+  "result": {
+    "id": "iis:regulator_luv"
+  }
+}

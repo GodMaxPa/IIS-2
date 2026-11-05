@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/redstone"
+  ],
+  "result": {
+    "id": "iis:small_dust_redstone",
+    "count": 4
+  }
+}

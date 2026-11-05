@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GBG",
+    "CMC",
+    "WPW"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "P": "iis:electric_pump_luv",
+    "B": "minecraft:blaze_rod",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/1x/niobium_titanium",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:distillery_luv"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/electrum"
+  ],
+  "result": {
+    "id": "iis:small_dust_electrum",
+    "count": 4
+  }
+}

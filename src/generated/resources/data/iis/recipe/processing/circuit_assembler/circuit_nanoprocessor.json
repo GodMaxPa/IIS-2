@@ -1,0 +1,43 @@
+{
+  "type": "iis:circuit_assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_board_epoxy",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:chip_nano_cpu",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:resistor_smd",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:capacitor_smd",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:transistor_smd",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:fine_wires/electrum",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_nanoprocessor",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 600,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 72
+    }
+  ]
+}

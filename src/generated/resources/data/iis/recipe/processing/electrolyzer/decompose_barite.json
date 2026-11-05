@@ -1,0 +1,27 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/barite",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_barium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_sulfur",
+      "count": 1
+    }
+  ],
+  "duration": 204,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 4000
+    }
+  ]
+}

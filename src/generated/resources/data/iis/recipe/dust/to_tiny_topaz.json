@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/topaz"
+  },
+  "result": {
+    "id": "iis:tiny_dust_topaz",
+    "count": 18
+  }
+}

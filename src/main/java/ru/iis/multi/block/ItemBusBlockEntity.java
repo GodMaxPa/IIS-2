@@ -82,6 +82,11 @@ public class ItemBusBlockEntity extends BaseContainerBlockEntity implements Worl
         return getBlockState().getBlock() instanceof HatchBlock h && h.type.kind() == HatchType.INPUT_BUS;
     }
 
+    /** GT_MetaTileEntity_Hatch_DataAccess (D110): флешки кладёт только игрок. */
+    public boolean isDataAccess() {
+        return getBlockState().getBlock() instanceof HatchBlock h && h.type == HatchType.DATA_ACCESS;
+    }
+
     public NonNullList<ItemStack> stacks() {
         return items;
     }
@@ -118,12 +123,12 @@ public class ItemBusBlockEntity extends BaseContainerBlockEntity implements Worl
 
     @Override
     public boolean canTakeItemThroughFace(int slot, ItemStack stack, Direction side) {
-        return !isInput();
+        return !isInput() && !isDataAccess();
     }
 
     @Override
     public boolean canPlaceItem(int slot, ItemStack stack) {
-        return isInput();
+        return isInput() || (isDataAccess() && stack.getItem() instanceof ru.iis.lv.item.DataStickItem);
     }
 
     @Override
@@ -148,7 +153,7 @@ public class ItemBusBlockEntity extends BaseContainerBlockEntity implements Worl
 
     @Override
     protected AbstractContainerMenu createMenu(int id, Inventory inventory) {
-        return new ItemBusMenu(id, inventory, this, isInput());
+        return new ItemBusMenu(id, inventory, this, isInput() || isDataAccess());
     }
 
     @Override

@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "iis:wafer_nand",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:chip_nand",
+      "count": 32
+    }
+  ],
+  "duration": 1200,
+  "eut": 48,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 90
+    }
+  ]
+}

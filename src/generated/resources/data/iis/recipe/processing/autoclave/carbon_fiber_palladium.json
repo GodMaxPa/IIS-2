@@ -1,0 +1,24 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/carbon",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:carbon_fiber",
+      "count": 8,
+      "chance": 9000
+    }
+  ],
+  "duration": 600,
+  "eut": 5,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_palladium",
+      "amount": 4
+    }
+  ]
+}

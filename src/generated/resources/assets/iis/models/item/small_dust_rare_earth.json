@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "iis:item/materialicons/fine/dustsmall",
+    "layer1": "iis:item/materialicons/fine/dustsmall_overlay"
+  }
+}

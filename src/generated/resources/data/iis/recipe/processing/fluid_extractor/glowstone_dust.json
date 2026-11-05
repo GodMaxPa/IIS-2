@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:glowstone_dust",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 40,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_glowstone",
+      "amount": 144
+    }
+  ]
+}

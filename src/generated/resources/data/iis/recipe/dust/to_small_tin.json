@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/tin"
+  ],
+  "result": {
+    "id": "iis:small_dust_tin",
+    "count": 4
+  }
+}

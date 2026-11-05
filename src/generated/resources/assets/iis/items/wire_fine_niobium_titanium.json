@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/wire_fine_niobium_titanium",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 1908009
+      }
+    ]
+  }
+}

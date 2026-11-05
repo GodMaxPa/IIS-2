@@ -1,0 +1,31 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/12x/vanadium_gallium",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/polydimethylsiloxane",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:foils/vanadium_gallium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_vanadium_gallium_12x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silicone",
+      "amount": 144
+    }
+  ]
+}

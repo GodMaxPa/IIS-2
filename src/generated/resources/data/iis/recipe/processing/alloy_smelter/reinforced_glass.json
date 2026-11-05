@@ -1,0 +1,21 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "iis:advanced_alloy_plate",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:glass",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:reinforced_glass",
+      "count": 4
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

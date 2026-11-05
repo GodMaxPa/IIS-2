@@ -28,7 +28,7 @@ public class ElectricMachineMenu extends MachineMenu {
         addSlot(new Slot(container, type.inputs + type.outputs, 80, 63) {
             @Override
             public boolean mayPlace(ItemStack stack) {
-                return stack.getItem() instanceof BatteryItem;
+                return stack.getItem() instanceof BatteryItem || stack.getItem() instanceof ru.iis.lv.item.DataStickItem;
             }
         });
         finish(inventory);
@@ -42,7 +42,7 @@ public class ElectricMachineMenu extends MachineMenu {
 
     @Override
     protected boolean acceptsShiftClick(int slot, ItemStack stack) {
-        if (stack.getItem() instanceof BatteryItem) return slot == type.inputs + type.outputs;
+        if (stack.getItem() instanceof BatteryItem || stack.getItem() instanceof ru.iis.lv.item.DataStickItem) return slot == type.inputs + type.outputs;
         return slot < type.inputs;
     }
 

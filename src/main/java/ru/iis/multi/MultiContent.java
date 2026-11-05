@@ -63,7 +63,7 @@ public final class MultiContent {
     }
 
     public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel", "titanium", "tungsten_steel", "stainless_steel", "polytetrafluoroethylene",
-            "black_steel");
+            "black_steel", "hssg");
     public static final Map<String, DeferredBlock<Block>> FRAMES = new LinkedHashMap<>();
     static {
         for (String m : FRAME_MATERIALS) {
@@ -141,6 +141,16 @@ public final class MultiContent {
     public static final DeferredBlock<EbfBlock> HEAT_EXCHANGER = block("heat_exchanger", p -> new EbfBlock(p, HeatExchangerBlockEntity::new), MultiContent::metal);
     /** D105: GT_MetaTileEntity_ProcessingArray (на прочных вольфрамостальных корпусах). */
     public static final DeferredBlock<EbfBlock> PROCESSING_ARRAY = block("processing_array", p -> new EbfBlock(p, ProcessingArrayBlockEntity::new), MultiContent::metal);
+    /** D110: GT_MetaTileEntity_AssemblyLine. */
+    public static final DeferredBlock<EbfBlock> ASSEMBLY_LINE = block("assembly_line", p -> new EbfBlock(p, AssemblyLineBlockEntity::new), MultiContent::metal);
+    /** GT_Block_Casings2 meta 5 («Assembling Line Casing», GT зовёт её Casing_Gearbox_TungstenSteel), meta 9; Casings3 meta 10. */
+    public static final DeferredBlock<Block> GEAR_BOX_TUNGSTEN_STEEL = block("gear_box_tungsten_steel", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> ASSEMBLER_CASING = block("assembler_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> GRATE_CASING = block("grate_casing", Block::new, MultiContent::metal);
+    /** IC2 не переносим (D5): своё армированное стекло, рецепт ProcessingPlate:182. */
+    public static final DeferredBlock<net.minecraft.world.level.block.TransparentBlock> REINFORCED_GLASS = block("reinforced_glass", net.minecraft.world.level.block.TransparentBlock::new,
+            p -> p.mapColor(net.minecraft.world.level.material.MapColor.NONE).sound(net.minecraft.world.level.block.SoundType.GLASS).strength(5.0f, 150.0f).noOcclusion().requiresCorrectToolForDrops()
+                    .isValidSpawn((st, l, pos, t) -> false).isRedstoneConductor((st, l, pos) -> false).isSuffocating((st, l, pos) -> false).isViewBlocking((st, l, pos) -> false));
     /** D105: GT_MetaTileEntity_Charcoal_Pit и GT_Block_Reinforced meta 4 (ломкий уголь: 1–2 древесных угля, топор). */
     public static final DeferredBlock<EbfBlock> CHARCOAL_PILE = block("charcoal_pile", p -> new EbfBlock(p, CharcoalPileBlockEntity::new), MultiContent::metal);
     public static final DeferredBlock<Block> BRITTLE_CHARCOAL = block("brittle_charcoal", Block::new,
@@ -226,9 +236,9 @@ public final class MultiContent {
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EnergyHatchBlockEntity>> ENERGY_HATCH_BE = BLOCK_ENTITIES.register("energy_hatch",
-            () -> new BlockEntityType<>(EnergyHatchBlockEntity::new, hatches(HatchType.ENERGY, HatchType.ENERGY_MV, HatchType.ENERGY_HV, HatchType.ENERGY_EV, HatchType.ENERGY_IV)));
+            () -> new BlockEntityType<>(EnergyHatchBlockEntity::new, hatches(HatchType.ENERGY, HatchType.ENERGY_MV, HatchType.ENERGY_HV, HatchType.ENERGY_EV, HatchType.ENERGY_IV, HatchType.ENERGY_LUV)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemBusBlockEntity>> ITEM_BUS_BE = BLOCK_ENTITIES.register("item_bus",
-            () -> new BlockEntityType<>(ItemBusBlockEntity::new, hatches(HatchType.INPUT_BUS, HatchType.OUTPUT_BUS)));
+            () -> new BlockEntityType<>(ItemBusBlockEntity::new, hatches(HatchType.INPUT_BUS, HatchType.OUTPUT_BUS, HatchType.DATA_ACCESS)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidHatchBlockEntity>> FLUID_HATCH_BE = BLOCK_ENTITIES.register("fluid_hatch",
             () -> new BlockEntityType<>(FluidHatchBlockEntity::new, hatches(HatchType.INPUT_HATCH, HatchType.OUTPUT_HATCH)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MaintenanceHatchBlockEntity>> MAINTENANCE_HATCH_BE = BLOCK_ENTITIES.register("maintenance_hatch",
@@ -252,7 +262,7 @@ public final class MultiContent {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeBoilerBlockEntity>> LARGE_BOILER_BE = BLOCK_ENTITIES.register("large_boiler",
             () -> new BlockEntityType<>(LargeBoilerBlockEntity::new, LARGE_BOILERS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DynamoHatchBlockEntity>> DYNAMO_HATCH_BE = BLOCK_ENTITIES.register("dynamo_hatch",
-            () -> new BlockEntityType<>(DynamoHatchBlockEntity::new, hatches(HatchType.DYNAMO, HatchType.DYNAMO_MV, HatchType.DYNAMO_HV, HatchType.DYNAMO_EV, HatchType.DYNAMO_IV)));
+            () -> new BlockEntityType<>(DynamoHatchBlockEntity::new, hatches(HatchType.DYNAMO, HatchType.DYNAMO_MV, HatchType.DYNAMO_HV, HatchType.DYNAMO_EV, HatchType.DYNAMO_IV, HatchType.DYNAMO_LUV)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeTurbineBlockEntity>> LARGE_TURBINE_BE = BLOCK_ENTITIES.register("large_steam_turbine",
             () -> new BlockEntityType<>(LargeTurbineBlockEntity::new, LARGE_STEAM_TURBINE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeGasTurbineBlockEntity>> LARGE_GAS_TURBINE_BE = BLOCK_ENTITIES.register("large_gas_turbine",
@@ -261,6 +271,8 @@ public final class MultiContent {
             () -> new BlockEntityType<>(LargeHpTurbineBlockEntity::new, LARGE_HP_TURBINE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ProcessingArrayBlockEntity>> PROCESSING_ARRAY_BE = BLOCK_ENTITIES.register("processing_array",
             () -> new BlockEntityType<>(ProcessingArrayBlockEntity::new, PROCESSING_ARRAY.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AssemblyLineBlockEntity>> ASSEMBLY_LINE_BE = BLOCK_ENTITIES.register("assembly_line",
+            () -> new BlockEntityType<>(AssemblyLineBlockEntity::new, ASSEMBLY_LINE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CharcoalPileBlockEntity>> CHARCOAL_PILE_BE = BLOCK_ENTITIES.register("charcoal_pile",
             () -> new BlockEntityType<>(CharcoalPileBlockEntity::new, CHARCOAL_PILE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CleanroomBlockEntity>> CLEANROOM_BE = BLOCK_ENTITIES.register("cleanroom",
@@ -285,6 +297,7 @@ public final class MultiContent {
     public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> LARGE_BOILER_MENU = MENUS.register("large_boiler", () -> IMenuTypeExtension.create(ControllerMenu::boilerClient));
     public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> LARGE_TURBINE_MENU = MENUS.register("large_steam_turbine", () -> IMenuTypeExtension.create(ControllerMenu::turbineClient));
     public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> PROCESSING_ARRAY_MENU = MENUS.register("processing_array", () -> IMenuTypeExtension.create(ControllerMenu::processingArrayClient));
+    public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> ASSEMBLY_LINE_MENU = MENUS.register("assembly_line", () -> IMenuTypeExtension.create(ControllerMenu::assemblyLineClient));
     public static final DeferredHolder<MenuType<?>, MenuType<EbfMenu>> CLEANROOM_MENU = MENUS.register("cleanroom", () -> IMenuTypeExtension.create(EbfMenu::cleanroomClient));
     public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> DRILL_MENU = MENUS.register("drill", () -> IMenuTypeExtension.create(ControllerMenu::drillClient));
     public static final DeferredHolder<MenuType<?>, MenuType<ControllerMenu>> HEAT_EXCHANGER_MENU = MENUS.register("heat_exchanger", () -> IMenuTypeExtension.create(ControllerMenu::heatExchangerClient));

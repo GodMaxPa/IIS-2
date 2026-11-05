@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/netherrack"
+  ],
+  "result": {
+    "id": "iis:small_dust_netherrack",
+    "count": 4
+  }
+}

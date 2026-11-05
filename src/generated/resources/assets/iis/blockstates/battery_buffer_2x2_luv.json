@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iis:block/battery_buffer_2x2_luv"
+    },
+    "facing=east": {
+      "model": "iis:block/battery_buffer_2x2_luv",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iis:block/battery_buffer_2x2_luv",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iis:block/battery_buffer_2x2_luv",
+      "y": 270
+    }
+  }
+}

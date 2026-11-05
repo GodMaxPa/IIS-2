@@ -13,6 +13,7 @@ from PIL import Image
 NS = 'iis'
 GT = os.environ.get('IIS_GT5_TEXTURES', '/home/claude/ref/gt5/src/main/resources/assets/gregtech/textures')
 TIERS = ['lv', 'mv', 'hv', 'ev', 'iv']
+AUTO_TIERS = TIERS + ['luv']   # D110: automation and repellents go up to LuV, as in GT
 
 
 def generate(g):
@@ -41,7 +42,7 @@ def generate(g):
         return Image.open(path).convert('RGBA').crop((0, 0, 16, 16))
 
     def casing(tier, part):
-        return first(os.path.join(BI, f'MACHINE_{"8V" if tier == "ulv" else tier.upper()}_{part}.png'))
+        return first(os.path.join(BI, f'MACHINE_{ {"ulv": "8V", "luv": "LuV"}.get(tier, tier.upper()) }_{part}.png'))
 
     def over(base, *names):
         im = base.copy()
@@ -101,7 +102,7 @@ def generate(g):
             r['keep'] = [keep]
         rec.setdefault(f'{rtype}/{rid}', r)
 
-    CIRC = {'lv': 'basic', 'mv': 'good', 'hv': 'advanced', 'ev': 'data', 'iv': 'elite'}
+    CIRC = {'lv': 'basic', 'mv': 'good', 'hv': 'advanced', 'ev': 'data', 'iv': 'elite', 'luv': 'master'}
     CABLE = {'lv': 'Tin', 'mv': 'Copper', 'hv': 'Gold', 'ev': 'Aluminium', 'iv': 'Tungsten'}
 
     # --- automation ---------------------------------------------------------------------------------------------------
@@ -125,7 +126,7 @@ def generate(g):
                  ('Screwdriver on a side: items per side; 1 EU per moved item', 'Отвёртка по стороне: предметов на сторону; 1 EU за предмет')])]
     for kid, icon, gui, key, en, ruu, lines in KINDS:
         shutil.copy(os.path.join(GT, 'gui', gui + '.png'), tex_out(f'gui/auto/{kid}.png'))
-        for i, t in enumerate(TIERS):
+        for i, t in enumerate(AUTO_TIERS):
             bid = f'{kid}_{t}'
             s, top, bot = casing(t, 'SIDE'), casing(t, 'TOP'), casing(t, 'BOTTOM')
             if kid == 'item_distributor':
@@ -140,7 +141,7 @@ def generate(g):
             tooltip(bid, lines + [(f'Voltage IN: {v} EU/t, 2 A', f'Входное напряжение: {v} EU/t, 2 А')])
     # GT_Loader_MetaTileEntities:1643-1700 "CMV/ X " chest buffer, " F /CMV/ X " filters; :1709-1713 regulator; :1764-1768 distributor.
     # The super buffer (:1731-1746) needs a data orb or data sticks, which are not ported: no recipe yet
-    for t in TIERS:
+    for t in AUTO_TIERS:
         hull, conv, circ = f'{NS}:hull_{t}', f'{NS}:conveyor_module_{t}', '#c:circuits/basic'
         shaped(f'auto/chest_buffer_{t}', f'{NS}:chest_buffer_{t}', 1, ['CMV', ' X '], {'M': hull, 'V': conv, 'C': '#c:chests/wooden', 'X': circ})
         shaped(f'auto/item_filter_{t}', f'{NS}:item_filter_{t}', 1, [' F ', 'CMV', ' X '], {'M': hull, 'V': conv, 'C': '#c:chests/wooden', 'F': f'{NS}:item_filter', 'X': circ})
@@ -237,9 +238,9 @@ def generate(g):
     shaped('lv/transformer_ulv', f'{NS}:transformer_ulv', 1, [' BB', 'CM ', ' BB'], {'M': f'{NS}:hull_ulv', 'C': tag_of_cable('Tin'), 'B': tag_of_cable('Lead')})
 
     shutil.copy(os.path.join(GT, 'gui', 'DigitalTransformer.png'), tex_out('gui/auto/digital_transformer.png'))
-    for i, t in enumerate(('ev', 'iv')):
+    for i, t in enumerate(('ev', 'iv', 'luv')):
         bid = f'adjustable_transformer_{t}'
-        base = first(os.path.join(BI, f'DIGITAL_TRANSFORMER_{t.upper()}.png'))
+        base = first(os.path.join(BI, f'DIGITAL_TRANSFORMER_{ {"luv": "LuV"}.get(t, t.upper()) }.png'))
         norm = {'north': over(base, 'OVERLAY_ENERGY_IN_MULTI'), 'south': over(base, 'OVERLAY_ENERGY_OUT'), 'east': over(base, 'OVERLAY_ENERGY_OUT'), 'west': over(base, 'OVERLAY_ENERGY_OUT'),
                 'up': over(base, 'OVERLAY_ENERGY_OUT'), 'down': over(base, 'OVERLAY_ENERGY_OUT')}
         inv = {'north': over(base, 'OVERLAY_ENERGY_OUT_MULTI'), 'south': over(base, 'OVERLAY_ENERGY_IN'), 'east': over(base, 'OVERLAY_ENERGY_IN'), 'west': over(base, 'OVERLAY_ENERGY_IN'),
@@ -253,6 +254,9 @@ def generate(g):
                                                     ing(f'{NS}:cover_screen'), ing('#c:circuits/data', 4)], [out(f'{NS}:adjustable_transformer_ev')], 50, 1920)
     mrec('assembler', 'adjustable_transformer_iv', [ing(f'{NS}:transformer_ev'), ing(f'{NS}:adjustable_transformer_ev'), ing('#c:circuits/elite', 2)],
          [out(f'{NS}:adjustable_transformer_iv')], 50, 1920)
+    # GT_MachineRecipeLoader:2904-2907
+    mrec('assembler', 'adjustable_transformer_luv', [ing(f'{NS}:transformer_iv'), ing(f'{NS}:adjustable_transformer_iv'), ing('#c:circuits/master', 2)],
+         [out(f'{NS}:adjustable_transformer_luv')], 50, 1920)
     # GT_MachineRecipeLoader:71: the processing array is finally craftable
     shaped('multi/processing_array', f'{NS}:processing_array', 1, ['CTC', 'FMF', 'CBC'],
            {'M': f'{NS}:hull_ev', 'B': f'{NS}:electric_pump_ev', 'C': '#c:circuits/elite', 'F': f'{NS}:robot_arm_ev', 'T': f'{NS}:adjustable_transformer_ev'})
@@ -301,7 +305,7 @@ def generate(g):
          [out(f'{NS}:cover_screen')], 50, 16)
 
     # --- D109: monster repellents (:1272-1276 "EEE/ M /CCC") and the large combustion engine (:1359-1361) ---------------------------
-    for i, t in enumerate(TIERS):
+    for i, t in enumerate(AUTO_TIERS):
         bid = f'monster_repellent_{t}'
         s, top, bot = casing(t, 'SIDE'), casing(t, 'TOP'), casing(t, 'BOTTOM')
         machine(bid, {'north': s, 'south': s, 'east': s, 'west': s, 'up': over(top, 'OVERLAY_TELEPORTER'), 'down': bot})

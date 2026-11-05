@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/opal"
+  ],
+  "result": {
+    "id": "iis:small_dust_opal",
+    "count": 4
+  }
+}

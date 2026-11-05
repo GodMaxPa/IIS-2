@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/solid_steel_casing",
+    "north": "iis:block/multi/assembly_line_front_active",
+    "south": "iis:block/multi/solid_steel_casing",
+    "east": "iis:block/multi/solid_steel_casing",
+    "west": "iis:block/multi/solid_steel_casing",
+    "up": "iis:block/multi/solid_steel_casing",
+    "down": "iis:block/multi/solid_steel_casing"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/fluid_solidifier_luv_side_active",
+    "north": "iis:block/lv/fluid_solidifier_luv_front_active",
+    "south": "iis:block/lv/fluid_solidifier_luv_back_active",
+    "east": "iis:block/lv/fluid_solidifier_luv_side_active",
+    "west": "iis:block/lv/fluid_solidifier_luv_side_active",
+    "up": "iis:block/lv/fluid_solidifier_luv_top_active",
+    "down": "iis:block/lv/fluid_solidifier_luv_bottom_active"
+  }
+}

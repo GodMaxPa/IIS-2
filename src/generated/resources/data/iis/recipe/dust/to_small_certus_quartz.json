@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/certus_quartz"
+  ],
+  "result": {
+    "id": "iis:small_dust_certus_quartz",
+    "count": 4
+  }
+}

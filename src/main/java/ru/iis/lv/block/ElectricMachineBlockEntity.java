@@ -279,6 +279,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
     private int @Nullable [] start(ServerLevel sl) {
         LvMachineType t = type();
         List<ItemStack> inputs = new ArrayList<>(items.subList(0, t.inputs));
+        if (t.id.equals("scanner")) return scan(sl, t);
         if (t.recipeMap == null) {
             ItemStack in = inputs.get(0);
             if (in.isEmpty()) return null;
@@ -334,6 +335,22 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         setChanged();
         Overclock.Result oc = Overclock.basicMachine(Math.max(1, m.recipe().eut()), m.recipe().duration(), t.tier, 1);
         return new int[]{(int) oc.euPerTick(), oc.durationTicks()};
+    }
+
+    /** GT_MetaTileEntity_Scanner#checkRecipe, ветка сборочной линии: предмет и пустая флешка → флешка с чертежом, 30 EU/t с разгоном, mResearchTime тиков. */
+    private int @Nullable [] scan(ServerLevel sl, LvMachineType t) {
+        ItemStack in = items.get(0), stick = items.get(t.inputs + t.outputs);
+        if (in.isEmpty() || !(stick.getItem() instanceof ru.iis.lv.item.DataStickItem) || !items.get(t.inputs).isEmpty()) return null;
+        for (var h : GtRecipes.all(sl.recipeAccess().recipeMap(), ru.iis.machine.recipe.GtRecipeMap.ASSEMBLY_LINE)) {
+            if (h.value().keep().isEmpty() || !h.value().keep().getFirst().test(in)) continue;
+            Overclock.Result oc = Overclock.basicMachine(30, h.value().temperature(), t.tier, 1);
+            pending = List.of(ru.iis.lv.item.DataStickItem.written(h));
+            in.shrink(1);
+            stick.shrink(1);
+            setChanged();
+            return new int[]{(int) oc.euPerTick(), oc.durationTicks()};
+        }
+        return null;
     }
 
     private boolean fits(int outIndex, ItemStack result) {

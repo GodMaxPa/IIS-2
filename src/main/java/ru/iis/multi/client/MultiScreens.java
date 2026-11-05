@@ -224,6 +224,21 @@ public final class MultiScreens {
         }
     }
 
+    /** Сборочная линия (D110): экран GT AssemblyLine.png со слотом флешки. */
+    public static class AssemblyLine extends MachineScreen<ControllerMenu> {
+        public AssemblyLine(ControllerMenu menu, Inventory inventory, Component title) {
+            super(menu, inventory, title, "multi/assembly_line");
+        }
+
+        @Override
+        protected void extractGauges(GuiGraphicsExtractor g) {}
+
+        @Override
+        protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
+            statusLines(g, font, title, menu.formed(), menu.okMask(), menu.works(), menu.mufflerBlocked());
+        }
+    }
+
     /** Обрабатывающий массив (D105): экран GT ProcessingArray.png со слотом машин. */
     public static class ProcessingArray extends MachineScreen<ControllerMenu> {
         public ProcessingArray(ControllerMenu menu, Inventory inventory, Component title) {

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/pyrochlore"
+  ],
+  "result": {
+    "id": "iis:small_dust_pyrochlore",
+    "count": 4
+  }
+}

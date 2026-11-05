@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/endstone"
+  ],
+  "result": {
+    "id": "iis:small_dust_endstone",
+    "count": 4
+  }
+}

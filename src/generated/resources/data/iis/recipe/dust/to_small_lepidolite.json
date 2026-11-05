@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/lepidolite"
+  ],
+  "result": {
+    "id": "iis:small_dust_lepidolite",
+    "count": 4
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/pitchblende"
+  ],
+  "result": {
+    "id": "iis:small_dust_pitchblende",
+    "count": 4
+  }
+}

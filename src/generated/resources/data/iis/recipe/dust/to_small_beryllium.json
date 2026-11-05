@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/beryllium"
+  ],
+  "result": {
+    "id": "iis:small_dust_beryllium",
+    "count": 4
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/yttrium_barium_cuprate",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_yttrium_barium_cuprate",
+      "count": 4
+    }
+  ],
+  "duration": 51,
+  "eut": 24
+}

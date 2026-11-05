@@ -11,7 +11,7 @@ from PIL import Image
 
 # GT5 textures: the cloud checkout, or locally a checkout of IdealIndustrial/GT5Unofficial@00021e3 given by IIS_GT5_TEXTURES
 GT = os.environ.get('IIS_GT5_TEXTURES', '/home/claude/ref/gt5/src/main/resources/assets/gregtech/textures')
-FRAMES = ['Invar', 'Steel', 'Iron', 'Bronze', 'Aluminium', 'BlueSteel', 'Titanium', 'TungstenSteel', 'StainlessSteel', 'Polytetrafluoroethylene', 'BlackSteel']  # blue steel: D90; titanium: D97; D98; D104; plascrete D105
+FRAMES = ['Invar', 'Steel', 'Iron', 'Bronze', 'Aluminium', 'BlueSteel', 'Titanium', 'TungstenSteel', 'StainlessSteel', 'Polytetrafluoroethylene', 'BlackSteel', 'HSSG']  # blue steel: D90; titanium: D97; D98; D104; plascrete D105
 HATCHES = [
     # id, overlay, GT lang key, EN
     ('hatch_energy_lv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.01.name', 'LV Energy Hatch'),
@@ -34,10 +34,13 @@ HATCHES = [
     ('hatch_dynamo_ev', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.04.name', 'EV Dynamo Hatch'),
     ('hatch_energy_iv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.05.name', 'IV Energy Hatch'),   # D103
     ('hatch_dynamo_iv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.05.name', 'IV Dynamo Hatch'),
+    ('hatch_energy_luv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.06.name', 'LuV Energy Hatch'),   # D110
+    ('hatch_dynamo_luv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.06.name', 'LuV Dynamo Hatch'),
+    ('hatch_data_access_ev', 'OVERLAY_DATA_ACCESS', 'gt.blockmachines.hatch.dataaccess.name', 'Data Access Hatch'),   # GT_Loader_MetaTileEntities:402 (D110)
 ]
 # D103: buses, fluid hatches and mufflers MV-IV (GT_Loader_MetaTileEntities:294-422)
-for _tr, _tn in (('mv', '02'), ('hv', '03'), ('ev', '04'), ('iv', '05')):
-    _T = _tr.upper()
+for _tr, _tn in (('mv', '02'), ('hv', '03'), ('ev', '04'), ('iv', '05'), ('luv', '06')):   # LuV: D110
+    _T = 'LuV' if _tr == 'luv' else _tr.upper()
     HATCHES += [(f'hatch_input_bus_{_tr}', 'OVERLAY_PIPE_IN', f'gt.blockmachines.hatch.input_bus.tier.{_tn}.name', f'{_T} Input Bus'),
                 (f'hatch_output_bus_{_tr}', 'OVERLAY_PIPE_OUT', f'gt.blockmachines.hatch.output_bus.tier.{_tn}.name', f'{_T} Output Bus'),
                 (f'hatch_input_{_tr}', 'OVERLAY_PIPE_IN', f'gt.blockmachines.hatch.input.tier.{_tn}.name', f'{_T} Input Hatch'),
@@ -147,11 +150,11 @@ def generate(g):
 
     # --- hatches (front overlay over the LV casing; any of 6 facings) -----------------------------------------------
     sides = {}
-    for tr in ('lv', 'mv', 'hv', 'ev', 'iv'):
-        sides[tr] = first(os.path.join(LVI, f'MACHINE_{tr.upper()}_SIDE.png'))
+    for tr in ('lv', 'mv', 'hv', 'ev', 'iv', 'luv'):
+        sides[tr] = first(os.path.join(LVI, f'MACHINE_{"LuV" if tr == "luv" else tr.upper()}_SIDE.png'))
         sides[tr].save(tex_out(f'block/multi/hatch_{tr}_side.png'))
     for bid, ov, key, en in HATCHES:
-        tr = bid[-2:] if bid[-3:] in ('_mv', '_hv', '_ev', '_iv') else 'lv'
+        tr = bid.rsplit('_', 1)[1] if bid.rsplit('_', 1)[1] in ('mv', 'hv', 'ev', 'iv', 'luv') else 'lv'
         ovp = os.path.join(BI, ov + '.png')
         if not os.path.exists(ovp):
             ovp = os.path.join(LVI, ov + '.png')
@@ -176,6 +179,9 @@ def generate(g):
     tooltip('hatch_energy_ev', [('Energy input for multiblocks: 2048 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 2048 EU/t, до 2 А, спереди')])
     tooltip('hatch_dynamo_ev', [('Energy output for multiblock generators: 2048 EU/t, 1 A, from the front', 'Выход энергии многоблочного генератора: 2048 EU/t, 1 А, спереди'),
                                 ('More than 2048 EU/t from the generator - the whole machine explodes', 'Больше 2048 EU/t от генератора — вся машина взрывается')])
+    tooltip('hatch_energy_luv', [('Energy input for multiblocks: 32768 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 32768 EU/t, до 2 А, спереди')])
+    tooltip('hatch_dynamo_luv', [('Energy output for multiblock generators: 32768 EU/t, 1 A, from the front', 'Выход энергии многоблочного генератора: 32768 EU/t, 1 А, спереди'),
+                                 ('More than 32768 EU/t from the generator - the whole machine explodes', 'Больше 32768 EU/t от генератора — вся машина взрывается')])
     tooltip('hatch_energy_iv', [('Energy input for multiblocks: 8192 EU/t, up to 2 A, from the front', 'Вход энергии многоблочной машины: 8192 EU/t, до 2 А, спереди')])
     tooltip('hatch_dynamo_iv', [('Energy output for multiblock generators: 8192 EU/t, 1 A, from the front', 'Выход энергии многоблочного генератора: 8192 EU/t, 1 А, спереди'),
                                 ('More than 8192 EU/t from the generator - the whole machine explodes', 'Больше 8192 EU/t от генератора — вся машина взрывается')])
@@ -214,6 +220,9 @@ def generate(g):
     # D103: GT_Loader_MetaTileEntities:273 "CM", :230 " MC": IV hull, tungsten cable
     shaped('multi/hatch_energy_iv', f'{NS}:hatch_energy_iv', 1, ['CM'], {'M': f'{NS}:hull_iv', 'C': '#iis:cables/1x/tungsten'})
     shaped('multi/hatch_dynamo_iv', f'{NS}:hatch_dynamo_iv', 1, ['MC'], {'M': f'{NS}:hull_iv', 'C': '#iis:cables/1x/tungsten'})
+    # D110: :274 "CM", :231 " MC": LuV hull, vanadium-gallium cable
+    shaped('multi/hatch_energy_luv', f'{NS}:hatch_energy_luv', 1, ['CM'], {'M': f'{NS}:hull_luv', 'C': '#iis:cables/1x/vanadium_gallium'})
+    shaped('multi/hatch_dynamo_luv', f'{NS}:hatch_dynamo_luv', 1, ['MC'], {'M': f'{NS}:hull_luv', 'C': '#iis:cables/1x/vanadium_gallium'})
     shaped('multi/hatch_input_lv', f'{NS}:hatch_input_lv', 1, ['G', 'M'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_output_lv', f'{NS}:hatch_output_lv', 1, ['M', 'G'], {'M': HULL, 'G': 'minecraft:glass'})
     shaped('multi/hatch_input_bus_lv', f'{NS}:hatch_input_bus_lv', 1, ['C', 'M'], {'M': HULL, 'C': '#c:chests/wooden'})
@@ -221,7 +230,7 @@ def generate(g):
     shaped('multi/hatch_maintenance', f'{NS}:hatch_maintenance', 1, ['dwx', 'hMc', 'fsr'], {'M': HULL})
     shaped('multi/hatch_muffler_lv', f'{NS}:hatch_muffler_lv', 1, ['M', 'P'], {'M': HULL, 'P': f'{NS}:pipe_medium_steel'})
     # D103: :294-422 the same patterns on the MV-IV hulls (the muffler always takes a medium steel pipe)
-    for tr in ('mv', 'hv', 'ev', 'iv'):
+    for tr in ('mv', 'hv', 'ev', 'iv', 'luv'):
         H = f'{NS}:hull_{tr}'
         shaped(f'multi/hatch_input_{tr}', f'{NS}:hatch_input_{tr}', 1, ['G', 'M'], {'M': H, 'G': 'minecraft:glass'})
         shaped(f'multi/hatch_output_{tr}', f'{NS}:hatch_output_{tr}', 1, ['M', 'G'], {'M': H, 'G': 'minecraft:glass'})

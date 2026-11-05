@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "CMC",
+    "GGG"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "P": "iis:electric_pump_luv",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/1x/niobium_titanium",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "iis:canner_luv"
+  }
+}
