@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/pump_casing_ulv",
+    "north": "iis:block/multi/water_pump_ulv_front_active",
+    "south": "iis:block/multi/pump_casing_ulv",
+    "east": "iis:block/multi/pump_casing_ulv",
+    "west": "iis:block/multi/pump_casing_ulv",
+    "up": "iis:block/multi/pump_casing_ulv",
+    "down": "iis:block/multi/pump_casing_ulv"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:pipe_small_copper",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/paper",
+      "count": 16
+    },
+    {
+      "ingredient": "#c:dusts/carbon",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:simple_fluid_filter",
+      "count": 4
+    }
+  ],
+  "duration": 80,
+  "eut": 8
+}

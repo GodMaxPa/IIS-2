@@ -1,0 +1,18 @@
+{
+  "duration": 50,
+  "eut": 12,
+  "circuit": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dirtywater",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 900
+    }
+  ],
+  "type": "iis:filter"
+}

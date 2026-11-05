@@ -56,6 +56,8 @@ public enum GtRecipeMap {
     ROCK_BREAKER("rock_breaker", 2, 1),
     PACKAGER("packager", 2, 1),
     UNPACKAGER("unpackager", 1, 2),
+    // D107: GT sFilterRecipes (схема — во входе; 6 выходов, вода в баке)
+    FILTER("filter", 1, 6),
     // D104: многоблоки — sImplosionRecipes, sPyrolyseRecipes, sDistillationRecipes (до 11 жидкостей на выходе — по этажу на
     // каждую), sCrackingRecipes (две жидкости на входе)
     IMPLOSION("implosion", 2, 2),

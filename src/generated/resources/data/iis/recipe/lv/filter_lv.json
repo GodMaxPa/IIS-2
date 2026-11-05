@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCC",
+    "CMC",
+    "WEW"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "E": "#c:circuits/basic",
+    "W": "#iis:cables/1x/tin",
+    "C": "iis:simple_fluid_filter"
+  },
+  "result": {
+    "id": "iis:filter_lv"
+  }
+}

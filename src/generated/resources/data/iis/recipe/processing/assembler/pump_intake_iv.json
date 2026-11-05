@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:pipe_medium_tungsten_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:rings/tungsten_steel",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:fluid_filter",
+      "count": 64
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pump_intake_iv",
+      "count": 1
+    }
+  ],
+  "duration": 160,
+  "eut": 1024
+}

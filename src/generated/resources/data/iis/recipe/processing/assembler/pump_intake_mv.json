@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:pipe_medium_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:rings/steel",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:simple_fluid_filter",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pump_intake_mv",
+      "count": 1
+    }
+  ],
+  "duration": 160,
+  "eut": 64
+}

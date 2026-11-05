@@ -32,7 +32,7 @@ class EvMachinesTest {
             assertEquals(hv.inputs, ev.inputs, ev.name());
             // GT: у измельчителя EV три выхода, у смесителя EV бак 32000
             assertEquals(hv == LvMachineType.MACERATOR_HV ? 3 : hv.outputs, ev.outputs, ev.name());
-            assertEquals(hv == LvMachineType.MIXER_HV ? 32000 : hv == LvMachineType.FLUID_CANNER_HV ? 64000 : hv.tank, ev.tank, ev.name());
+            assertEquals(hv == LvMachineType.MIXER_HV ? 32000 : hv == LvMachineType.FLUID_CANNER_HV ? 64000 : hv == LvMachineType.FILTER_HV ? 40000 : hv.tank, ev.tank, ev.name());
         }
         assertEquals(2048, LvMachineType.MACERATOR_EV.voltage());
     }

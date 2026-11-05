@@ -174,6 +174,12 @@ public final class MultiContent {
             block("concrete_backfiller_1", p -> new EbfBlock(p, BackfillerBlockEntity::new), MultiContent::metal),
             block("concrete_backfiller_2", p -> new EbfBlock(p, BackfillerBlockEntity::new), MultiContent::metal));
 
+    /** D107: GT_Block_Casings8 meta 10–15 — заборники насосов ULV–IV; GT_MetaTileEntity_WaterPumpPrimitive / _Electric LV–IV. */
+    public static final List<DeferredBlock<Block>> PUMP_INTAKES = java.util.stream.Stream.of("ulv", "lv", "mv", "hv", "ev", "iv")
+            .map(t -> block("pump_intake_" + t, Block::new, MultiContent::metal)).toList();
+    public static final List<DeferredBlock<EbfBlock>> WATER_PUMPS = java.util.stream.Stream.of("ulv", "lv", "mv", "hv", "ev", "iv")
+            .map(t -> block("water_pump_" + t, p -> new EbfBlock(p, WaterPumpBlockEntity::new), MultiContent::metal)).toList();
+
     /** Номер блока контроллера в ряду уровней (I — 0); −1 — не из ряда. */
     public static int index(List<DeferredBlock<EbfBlock>> list, Block b) {
         for (int i = 0; i < list.size(); i++) if (list.get(i).get() == b) return i;
@@ -254,6 +260,8 @@ public final class MultiContent {
             () -> new BlockEntityType<>(CharcoalPileBlockEntity::new, CHARCOAL_PILE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CleanroomBlockEntity>> CLEANROOM_BE = BLOCK_ENTITIES.register("cleanroom",
             () -> new BlockEntityType<>(CleanroomBlockEntity::new, CLEANROOM.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<WaterPumpBlockEntity>> WATER_PUMP_BE = BLOCK_ENTITIES.register("water_pump",
+            () -> new BlockEntityType<>(WaterPumpBlockEntity::new, blocks(WATER_PUMPS)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<OilDrillBlockEntity>> OIL_DRILL_BE = BLOCK_ENTITIES.register("oil_drill",
             () -> new BlockEntityType<>(OilDrillBlockEntity::new, blocks(OIL_DRILLS)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<OreDrillBlockEntity>> ORE_DRILL_BE = BLOCK_ENTITIES.register("ore_drill",

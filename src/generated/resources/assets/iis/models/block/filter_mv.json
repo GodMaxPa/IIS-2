@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/filter_mv_side",
+    "north": "iis:block/lv/filter_mv_front",
+    "south": "iis:block/lv/filter_mv_back",
+    "east": "iis:block/lv/filter_mv_side",
+    "west": "iis:block/lv/filter_mv_side",
+    "up": "iis:block/lv/filter_mv_top",
+    "down": "iis:block/lv/filter_mv_bottom"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "duration": 50,
+  "eut": 12,
+  "circuit": 1,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dirtywater",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 900
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_silicon_dioxide",
+      "count": 5
+    },
+    {
+      "id": "iis:tiny_dust_calcite",
+      "count": 2
+    }
+  ],
+  "type": "iis:filter"
+}

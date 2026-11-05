@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PSP",
+    "WOW",
+    "PSP"
+  ],
+  "key": {
+    "P": "#c:plates/paper",
+    "S": "minecraft:string",
+    "W": "#minecraft:wool",
+    "O": "iis:pipe_medium_wood"
+  },
+  "result": {
+    "id": "iis:primitive_fluid_filter"
+  }
+}

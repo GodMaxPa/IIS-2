@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RFR",
+    "FPF",
+    "RFR"
+  ],
+  "key": {
+    "R": "#iis:rings/tin",
+    "F": "iis:primitive_fluid_filter",
+    "P": "iis:pipe_medium_wood"
+  },
+  "result": {
+    "id": "iis:pump_intake_ulv"
+  }
+}

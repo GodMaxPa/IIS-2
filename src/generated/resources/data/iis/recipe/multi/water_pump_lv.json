@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PCP",
+    "BHB",
+    "PCP"
+  ],
+  "key": {
+    "P": "iis:electric_pump_lv",
+    "C": "#c:circuits/basic",
+    "B": "iis:pipe_medium_bronze",
+    "H": "iis:hull_lv"
+  },
+  "result": {
+    "id": "iis:water_pump_lv"
+  }
+}

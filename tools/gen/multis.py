@@ -603,6 +603,62 @@ def generate(g):
                        ('gui.iis.drill.state.2', 'Lifting pipes', 'Подъём труб'), ('gui.iis.drill.depth', 'Depth: %s, pipes: %s', 'Глубина: %s, труб: %s')):
         name(k, en, ruu)
 
+    # --- D107: water filters, pump intakes, water pumps, fluid filter recipes -----------------------------------------
+    # GT_CraftingRecipeLoader:493 primitive filter "PSP/WOW/PSP"; GT_MachineRecipeLoader:2599 simple filter x4 (80 t, 8 EU/t);
+    # :2600 fluid filter needs IC2 carbon fibre and glass fibre - not ported, the item has no recipe yet
+    shaped('multi/primitive_fluid_filter', f'{NS}:primitive_fluid_filter', 1, ['PSP', 'WOW', 'PSP'],
+           {'P': tag_of('plate', 'Paper'), 'S': 'minecraft:string', 'W': '#minecraft:wool', 'O': f'{NS}:pipe_medium_wood'})
+    mrec('assembler', 'simple_fluid_filter', [ing(f'{NS}:pipe_small_copper'), ing(tag_of('plate', 'Paper'), 16), ing(tag_of('dust', 'Carbon'), 8)],
+         [out(f'{NS}:simple_fluid_filter', 4)], 80, 8)
+    tiers6 = ['ulv', 'lv', 'mv', 'hv', 'ev', 'iv']
+    for i, t in enumerate(tiers6):
+        T = t.upper()
+        first(os.path.join(BI, f'MACHINE_CASING_PUMP_FILTER_{T}.png')).save(tex_out(f'block/multi/pump_intake_{t}.png'))
+        first(os.path.join(BI, f'MACHINE_CASING_PUMP_FILTER_{T}_UP.png')).save(tex_out(f'block/multi/pump_intake_{t}_up.png'))
+        cube_block(f'pump_intake_{t}', f'{NS}:block/multi/pump_intake_{t}', top=f'{NS}:block/multi/pump_intake_{t}_up')
+        name(f'block.{NS}.pump_intake_{t}', ('Primitive' if i == 0 else T) + ' Pump Intake', ru(f'gt.blockcasings8.{10 + i}.name', f'Заборник насоса {T}'))
+        first(os.path.join(BI, f'MACHINE_CASING_PUMP_{T}.png')).save(tex_out(f'block/multi/pump_casing_{t}.png'))
+        ov = 'OVERLAY_PRIMITIVE_PUMP' if i == 0 else 'OVERLAY_ELECTRIC_PUMP'
+        controller(f'water_pump_{t}', f'pump_casing_{t}', ov + '_INACTIVE', f'gt.blockmachines.multimachine.multi.waterpump.{i}.name',
+                   'Primitive Water Pump' if i == 0 else f'{T} Electric Water Pump', [
+                       ('2x2x1: an input next to the controller, an output hatch above it', 'Форма 2×2×1: сбоку от контроллера — вход, над ним — выходной люк'),
+                       (('Steam input hatch, 40 L of steam a 10-tick cycle' if i == 0 else f'Energy hatch, {[8, 4, 16, 64, 256, 1024][i]} EU/t'),
+                        ('Входной люк пара, 40 л пара за цикл в 10 тиков' if i == 0 else f'Энергетический люк, {[8, 4, 16, 64, 256, 1024][i]} EU/t')),
+                       ('A fluid pipe of the tier on top of the controller', 'На контроллере — жидкостная труба своего уровня'),
+                       (f'Pipes from the back (up to {10 if i == 0 else 10 + 4 * i}) to a {T} pump intake', f'Сзади — трубы (до {10 if i == 0 else 10 + 4 * i}) к заборнику {T}'),
+                       ('Intake in the top water layer of a river, ocean or swamp', 'Заборник — в верхнем слое воды реки, океана или болота'),
+                       (f'Needs {128 if i == 0 else 128 + 32 * i} water surface blocks in radius {16 if i == 0 else 16 + 4 * i}',
+                        f'Нужно {128 if i == 0 else 128 + 32 * i} блоков водной глади в радиусе {16 if i == 0 else 16 + 4 * i}'),
+                       ('Other pumps on the same water share the output', 'Другие насосы на той же воде делят выход')], active=ov + '_ACTIVE')
+    # intakes: GT_CraftingRecipeLoader:494 ULV "RFR/FPF/RFR"; GT_MachineRecipeLoader:1836-1840 LV-IV assembler (160 t)
+    shaped('multi/pump_intake_ulv', f'{NS}:pump_intake_ulv', 1, ['RFR', 'FPF', 'RFR'],
+           {'R': tag_of('ring', 'Tin'), 'F': f'{NS}:primitive_fluid_filter', 'P': f'{NS}:pipe_medium_wood'})
+    for t, mat, rings, filt, n, eut in (('lv', 'Bronze', 4, 'simple_fluid_filter', 4, 16), ('mv', 'Steel', 8, 'simple_fluid_filter', 16, 64),
+                                         ('hv', 'StainlessSteel', 4, 'fluid_filter', 4, 256), ('ev', 'Titanium', 8, 'fluid_filter', 16, 1024),
+                                         ('iv', 'TungstenSteel', 8, 'fluid_filter', 64, 1024)):
+        mid = g['mat_id'](mat)
+        mrec('assembler', f'pump_intake_{t}', [ing(f'{NS}:pipe_medium_{mid}'), ing(tag_of('ring', mat), rings), ing(f'{NS}:{filt}', n)],
+             [out(f'{NS}:pump_intake_{t}')], 160, eut)
+    # pumps: GT_Loader_MetaTileEntities:1413-1452
+    shaped('multi/water_pump_ulv', f'{NS}:water_pump_ulv', 1, ['PBP', 'WHW', 'PBP'],
+           {'P': 'minecraft:piston', 'B': f'{NS}:pipe_medium_bronze', 'W': f'{NS}:pipe_medium_wood', 'H': f'{NS}:hull_bronze'})
+    for t, pipe, circ in (('lv', 'bronze', 'basic'), ('mv', 'steel', 'good'), ('hv', 'stainless_steel', 'advanced'), ('ev', 'titanium', 'data'),
+                          ('iv', 'tungsten_steel', 'elite')):
+        shaped(f'multi/water_pump_{t}', f'{NS}:water_pump_{t}', 1, ['PCP', 'BHB', 'PCP'],
+               {'P': f'{NS}:electric_pump_{t}', 'C': f'#c:circuits/{circ}', 'B': f'{NS}:pipe_medium_{pipe}', 'H': f'{NS}:hull_{t}'})
+    # fluid filter recipes: GT_MachineRecipeLoader:2595-2598 (50 t, 12 EU/t); byproducts IIS 2 has no material for are dropped
+    def tiny(m, c):
+        return {'id': f'{NS}:tiny_dust_{m}', 'count': c}
+    have = lambda o: os.path.exists(os.path.join(A, 'items', o['id'].split(':')[1] + '.json'))
+    for fid, outs in (('dirtywater', [tiny('silicon_dioxide', 5), tiny('phosphate', 3), tiny('biotite', 3), tiny('calcite', 2)]),
+                      ('muddywater', [tiny('saltpeter', 4), tiny('potassium_feldspar', 1)])):
+        for c in (1, 2):
+            r = {'duration': 50, 'eut': 12, 'circuit': c, 'fluid_inputs': [{'ingredient': f'{NS}:{fid}', 'amount': 1000}],
+                 'fluid_outputs': [{'id': 'minecraft:water', 'amount': 900}]}
+            if c == 1:
+                r['outputs'] = [o for o in outs if have(o)]
+            raw('filter', f'{fid}_{c}', r)
+
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     for k in ('implosion', 'pyrolyse', 'cracking', 'distillation_tower'):

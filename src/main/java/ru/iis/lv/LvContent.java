@@ -270,6 +270,10 @@ public final class LvContent {
     /** D105: GT Circuit_Wafer_CPU / Circuit_Chip_CPU — пластина гравируется только в чистой комнате. */
     public static final DeferredItem<Item> WAFER_CPU = item("wafer_cpu");
     public static final DeferredItem<Item> CHIP_CPU = item("chip_cpu");
+    /** D107: GT_MetaGenerated_Item_03:59-61 — фильтры воды для заборников насосов и машин-фильтров. */
+    public static final DeferredItem<Item> PRIMITIVE_FLUID_FILTER = item("primitive_fluid_filter");
+    public static final DeferredItem<Item> SIMPLE_FLUID_FILTER = item("simple_fluid_filter");
+    public static final DeferredItem<Item> FLUID_FILTER = item("fluid_filter");
     public static final DeferredItem<Item> WAFER_RAM = item("wafer_ram");
     public static final DeferredItem<Item> CHIP_RAM = item("chip_ram");
     // D92: транзистор, текстолитовая плата, хорошая интегральная схема, схема HV; растительный шарик и биоотходы (вместо IC2)
@@ -411,7 +415,7 @@ public final class LvContent {
             Map.entry("circuit_advanced", 2), Map.entry("transistor", 2), Map.entry("circuit_board_phenolic", 2),
             Map.entry("circuit_integrated_good", 2), Map.entry("silicon_boule", 2), Map.entry("silicon_wafer", 2),
             Map.entry("wafer_ilc", 2), Map.entry("chip_ilc", 2), Map.entry("wafer_ram", 2), Map.entry("chip_ram", 2),
-            Map.entry("wafer_cpu", 2), Map.entry("chip_cpu", 2),
+            Map.entry("wafer_cpu", 2), Map.entry("chip_cpu", 2), Map.entry("fluid_filter", 2),
             Map.entry("coil_small", 2), Map.entry("grinder_diamond", 2), Map.entry("plant_ball", 2), Map.entry("bio_chaff", 2),
             Map.entry("schematic", 1), Map.entry("schematic_dust", 1),
             Map.entry("circuit_data", 3), Map.entry("circuit_board_plastic", 3), Map.entry("capacitor", 3), Map.entry("circuit_elite", 3));

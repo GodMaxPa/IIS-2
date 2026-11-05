@@ -44,7 +44,7 @@ class IvMachinesTest {
             assertEquals(ev.inputs, iv.inputs, iv.name());
             // GT: у измельчителя IV четыре выхода, у смесителя бак 40000, у наливщика 80000
             assertEquals(ev == LvMachineType.MACERATOR_EV ? 4 : ev.outputs, iv.outputs, iv.name());
-            int tank = ev == LvMachineType.MIXER_EV ? 40000 : ev == LvMachineType.FLUID_CANNER_EV ? 80000 : ev.tank;
+            int tank = ev == LvMachineType.MIXER_EV ? 40000 : ev == LvMachineType.FLUID_CANNER_EV ? 80000 : ev == LvMachineType.FILTER_EV ? 48000 : ev.tank;
             assertEquals(tank, iv.tank, iv.name());
         }
         assertEquals(8192, LvMachineType.MACERATOR_IV.voltage());

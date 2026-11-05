@@ -102,6 +102,8 @@ MACHINES = [
     ('rock_breaker',  'rockbreaker',   'ROCK_BREAKER',     'RockBreaker',  'rock_breaker',  2, 1, 0,     'Rock Breaker'),
     ('packager',      'boxinator',     'BOXINATOR',        'Packager',     'packager',      2, 1, 0,     'Packager'),
     ('unpackager',    'unboxinator',   'UNBOXINATOR',      'Unpackager',   'unpackager',    1, 2, 0,     'Unpackager'),
+    # D107: GT_Loader_MetaTileEntities:1518 fluid filter (the programmed circuit is the only input, 6 outputs, water tank)
+    ('filter',        'filter',        'FILTER',           'Filter',       'filter',        1, 6, 16000, 'Fluid Filter'),
 ]
 # GT crafting of the D83 machines (both tiers, X.* resolved per tier like MV_CRAFT)
 NEW_CRAFT = {
@@ -122,26 +124,28 @@ NEW_CRAFT = {
                                              'G': 'GLASS'}),
     'packager': (['BCB', 'RMV', 'WCW'], {'M': 'HULL', 'R': 'ROBOT_ARM', 'V': 'CONVEYOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'B': '#c:chests/wooden'}),
     'unpackager': (['BCB', 'VMR', 'WCW'], {'M': 'HULL', 'R': 'ROBOT_ARM', 'V': 'CONVEYOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'B': '#c:chests/wooden'}),
+    # D107: :1519-1522 "CEC/CMC/WEW" (LV :1518 "CCC/CMC/WEW", below): simple fluid filters up to MV, fluid filters from HV
+    'filter': (['CEC', 'CMC', 'WEW'], {'M': 'HULL', 'E': 'CIRCUIT', 'W': 'WIRE', 'C': 'FLUID_FILTER'}),
 }
 # MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
 # outputs and tanks as LV except the mixer (16000 L, :1022); the compressor tank (LV 4000, MV 8000) stays 0 as at LV (D82)
-MV_TANKS = {'mixer': 16000, 'fluid_canner': 32000}
+MV_TANKS = {'mixer': 16000, 'fluid_canner': 32000, 'filter': 24000}
 MV_MACHINES = [m[:7] + (MV_TANKS.get(m[0], m[7]),) + m[8:] for m in MACHINES if m[0] != 'thermal_centrifuge'] + [
     ('thermal_centrifuge', 'thermalcentrifuge', 'THERMAL_CENTRIFUGE', 'ThermalCentrifuge', 'thermal_centrifuge', 1, 3, 0, 'Thermal Centrifuge'),
 ]
 # HV basic machines (GT tier 3, D93): GT_Loader_MetaTileEntities Machine_HV_* — as MV except the macerator (2 outputs: byproducts)
 # and the mixer (24000 L); the HV compressor tank (12000) stays 0 like at LV/MV (D82)
-HV_TANKS = {'mixer': 24000, 'fluid_canner': 48000}
+HV_TANKS = {'mixer': 24000, 'fluid_canner': 48000, 'filter': 32000}
 HV_OUTPUTS = {'macerator': 2}
 HV_MACHINES = [m[:6] + (HV_OUTPUTS.get(m[0], m[6]), HV_TANKS.get(m[0], m[7])) + m[8:] for m in MV_MACHINES]
 # EV basic machines (GT tier 4; assembler and chemical reactor D98, the rest D100): Machine_EV_* — as HV except the macerator
 # (3 outputs) and the mixer (32000 L); the compressor tank (16000) stays 0 like at LV-HV (D82)
-EV_TANKS = {'mixer': 32000, 'fluid_canner': 64000}
+EV_TANKS = {'mixer': 32000, 'fluid_canner': 64000, 'filter': 40000}
 EV_OUTPUTS = {'macerator': 3}
 EV_MACHINES = [m[:6] + (EV_OUTPUTS.get(m[0], m[6]), EV_TANKS.get(m[0], m[7])) + m[8:] for m in HV_MACHINES]
 # IV basic machines (GT tier 5, D103): Machine_IV_* — as EV except the macerator (4 outputs), the mixer (40000 L) and the fluid
 # canner (80000 L); the IV circuit assembler needs the Master circuit (LuV) and waits for it
-IV_TANKS = {'mixer': 40000, 'fluid_canner': 80000}
+IV_TANKS = {'mixer': 40000, 'fluid_canner': 80000, 'filter': 48000}
 IV_OUTPUTS = {'macerator': 4}
 IV_MACHINES = [m[:6] + (IV_OUTPUTS.get(m[0], m[6]), IV_TANKS.get(m[0], m[7])) + m[8:] for m in EV_MACHINES if m[0] != 'circuit_assembler']
 # GT_Loader_MetaTileEntities Machine_MV_* crafting: GT pattern letters; X.* resolved for tier 2 in lv.generate
@@ -258,6 +262,10 @@ ITEMS = [
     # D105: GT_MetaGenerated_Item_03:102-103 CPU wafer (engraved only in a cleanroom) and chip
     ('wafer_cpu', 'gt:wafer_cpu', 'gt.metaitem.03.32044.name', 'Central Processing Unit (Wafer)', 'Пластина центральных процессоров'),
     ('chip_cpu', 'gt:chip_cpu', 'gt.metaitem.03.32045.name', 'Central Processing Unit', 'Центральный процессор'),
+    # D107: GT_MetaGenerated_Item_03:59-61 water filters (pump intakes, fluid filter machines)
+    ('primitive_fluid_filter', 'gt:primitive_fluid_filter', 'gt.metaitem.03.32023.name', 'Primitive Fluid Filter', 'Примитивный фильтр воды'),
+    ('simple_fluid_filter', 'gt:simple_fluid_filter', 'gt.metaitem.03.32024.name', 'Simple Fluid Filter', 'Простой фильтр воды'),
+    ('fluid_filter', 'gt:fluid_filter', 'gt.metaitem.03.32025.name', 'Fluid Filter', 'Фильтр воды'),
     # D92: GT_MetaGenerated_Item_01:713 transistor, :715 phenolic board, Item_03:141 good integrated circuit; the HV circuit is
     # IC2's advanced circuit in IIS 1 (GT_Proxy:416) — our own item with GT's Processor Assembly icon (:696)
     ('transistor', 'gt:717', 'gt.metaitem.01.32717.name', 'Transistor', 'Транзистор'),
@@ -1271,8 +1279,10 @@ def generate(g):
     XLV = {'HULL': HULL, 'CIRCUIT': CIRC, 'WIRE': C('Tin'), 'GLASS': 'minecraft:glass', 'PLATE': P('Steel'), 'PIPE': f'{NS}:pipe_medium_bronze',
            'COIL_HEATING': W('Copper', 2), 'COIL_HEATING_DOUBLE': W('Copper', 4), 'MOTOR': MOTOR, 'PISTON': PISTON, 'PUMP': PUMP,
            'CONVEYOR': CONV, 'ROBOT_ARM': ARM, 'WIRE4': C('Tin', 4), 'EMITTER': f'{NS}:emitter_lv', 'BETTER_CIRCUIT': CIRC_MV}
+    XLV['FLUID_FILTER'] = XMV['FLUID_FILTER'] = f'{NS}:simple_fluid_filter'
     for mid_, (pattern, letters) in NEW_CRAFT.items():
-        shaped(f'lv/{mid_}_lv', f'{NS}:{mid_}_lv', 1, pattern, {k: XLV.get(v, v) for k, v in letters.items()})
+        shaped(f'lv/{mid_}_lv', f'{NS}:{mid_}_lv', 1, ['CCC', 'CMC', 'WEW'] if mid_ == 'filter' else pattern,
+               {k: XLV.get(v, v) for k, v in letters.items()})
     # GT_MetaGenerated_Item_01:204-254 extruder shapes (wire cutter) and molds (hammer) from the empty shape
     for sid, pat in (
         ('shape_extruder_plate', ['   ', 'xP ', '   ']),
@@ -1333,6 +1343,7 @@ def generate(g):
            'EMITTER': f'{NS}:emitter_hv', 'INDUSTRIAL_DIAMOND': 'minecraft:diamond',
            'SILVER_WIRE': W('Electrum'),   # the HV electrolyzer takes 1x electrum wire (:777)
            'BETTER_CIRCUIT': '#c:circuits/data'}
+    XHV['FLUID_FILTER'] = f'{NS}:fluid_filter'
     HV_CRAFT = {k: (pat, dict(let)) for k, (pat, let) in MV_CRAFT.items()}
     HV_CRAFT['macerator'][1]['G'] = f'{NS}:grinder_diamond'                 # :705 craftingGrinder
     HV_CRAFT['chemical_reactor'][1]['G'] = f'{NS}:pipe_medium_plastic'      # :832 plastic pipe instead of glass
@@ -1364,6 +1375,7 @@ def generate(g):
            'ROTOR': tag_of('rotor', 'StainlessSteel'), 'MOTOR': MOTOR_EV, 'PISTON': PISTON_EV, 'PUMP': PUMP_EV, 'CONVEYOR': CONV_EV,
            'ROBOT_ARM': ARM_EV, 'EMITTER': f'{NS}:emitter_ev', 'INDUSTRIAL_DIAMOND': 'minecraft:diamond',
            'SILVER_WIRE': W('Platinum')}   # the EV electrolyzer takes 1x platinum wire
+    XEV['FLUID_FILTER'] = f'{NS}:fluid_filter'
     EV_CRAFT = {k: (pat, dict(let)) for k, (pat, let) in HV_CRAFT.items()}   # grinder head in the macerator as at HV
     EV_CRAFT['chemical_reactor'][1]['G'] = f'{NS}:pipe_large_plastic'   # :833 large plastic pipe
     for mid_, (pattern, letters) in EV_CRAFT.items():
@@ -1402,6 +1414,7 @@ def generate(g):
            'ROTOR': tag_of('rotor', 'TungstenSteel'), 'MOTOR': MOTOR_IV, 'PISTON': PISTON_IV, 'PUMP': PUMP_IV, 'CONVEYOR': CONV_IV,
            'ROBOT_ARM': ARM_IV, 'EMITTER': f'{NS}:emitter_iv', 'INDUSTRIAL_DIAMOND': 'minecraft:diamond',
            'SILVER_WIRE': W('Osmium')}   # the IV electrolyzer takes 1x osmium wire
+    XIV['FLUID_FILTER'] = f'{NS}:fluid_filter'
     IV_CRAFT = {k: (pat, dict(let)) for k, (pat, let) in EV_CRAFT.items() if k != 'circuit_assembler'}
     for mid_, (pattern, letters) in IV_CRAFT.items():
         shaped(f'lv/{mid_}_iv', f'{NS}:{mid_}_iv', 1, pattern, {k: XIV.get(v, v) for k, v in letters.items()})

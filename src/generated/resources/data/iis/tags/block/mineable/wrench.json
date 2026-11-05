@@ -110,6 +110,7 @@
     "iis:rock_breaker_lv",
     "iis:packager_lv",
     "iis:unpackager_lv",
+    "iis:filter_lv",
     "iis:macerator_mv",
     "iis:electric_furnace_mv",
     "iis:alloy_smelter_mv",
@@ -147,6 +148,7 @@
     "iis:rock_breaker_mv",
     "iis:packager_mv",
     "iis:unpackager_mv",
+    "iis:filter_mv",
     "iis:thermal_centrifuge_mv",
     "iis:macerator_hv",
     "iis:electric_furnace_hv",
@@ -185,6 +187,7 @@
     "iis:rock_breaker_hv",
     "iis:packager_hv",
     "iis:unpackager_hv",
+    "iis:filter_hv",
     "iis:thermal_centrifuge_hv",
     "iis:steam_turbine_lv",
     "iis:diesel_generator_lv",
@@ -282,6 +285,12 @@
     "iis:large_boiler_titanium",
     "iis:large_boiler_tungstensteel",
     "iis:turbine_casing",
-    "iis:large_steam_turbine"
+    "iis:large_steam_turbine",
+    "iis:pump_intake_lv",
+    "iis:water_pump_lv",
+    "iis:pump_intake_mv",
+    "iis:water_pump_mv",
+    "iis:pump_intake_hv",
+    "iis:water_pump_hv"
   ]
 }

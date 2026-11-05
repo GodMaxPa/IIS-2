@@ -36,7 +36,7 @@ class MvMachinesTest {
             assertEquals(lv.outputs, mv.outputs, mv.name());
             assertEquals(lv.gui, mv.gui, mv.name());
             // GT: бак MV-смесителя 16000 (у LV 8000), остальные — как у LV
-            assertEquals(lv == LvMachineType.MIXER ? 16000 : lv == LvMachineType.FLUID_CANNER ? 32000 : lv.tank, mv.tank, mv.name());   // GT: бак наливщика растёт с уровнем (D101)
+            assertEquals(lv == LvMachineType.MIXER ? 16000 : lv == LvMachineType.FLUID_CANNER ? 32000 : lv == LvMachineType.FILTER ? 24000 : lv.tank, mv.tank, mv.name());   // GT: бак наливщика растёт с уровнем (D101)
         }
         assertEquals(128, LvMachineType.MACERATOR_MV.voltage());
     }

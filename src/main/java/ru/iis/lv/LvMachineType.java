@@ -214,7 +214,13 @@ public enum LvMachineType {
     UNPACKAGER_EV("unpackager", GtRecipeMap.UNPACKAGER, 1, 2, 0, "unpackager", VoltageTier.EV),
     ROCK_BREAKER_IV("rock_breaker", GtRecipeMap.ROCK_BREAKER, 2, 1, 0, "rockbreaker", VoltageTier.IV),
     PACKAGER_IV("packager", GtRecipeMap.PACKAGER, 2, 1, 0, "packager", VoltageTier.IV),
-    UNPACKAGER_IV("unpackager", GtRecipeMap.UNPACKAGER, 1, 2, 0, "unpackager", VoltageTier.IV);
+    UNPACKAGER_IV("unpackager", GtRecipeMap.UNPACKAGER, 1, 2, 0, "unpackager", VoltageTier.IV),
+    // D107: GT_Loader_MetaTileEntities:1518-1522 Machine_*_Filter (схема во входе, 6 выходов; бак 16000, 24000, 32000, 40000, 48000)
+    FILTER("filter", GtRecipeMap.FILTER, 1, 6, 16000, "filter"),
+    FILTER_MV("filter", GtRecipeMap.FILTER, 1, 6, 24000, "filter", VoltageTier.MV),
+    FILTER_HV("filter", GtRecipeMap.FILTER, 1, 6, 32000, "filter", VoltageTier.HV),
+    FILTER_EV("filter", GtRecipeMap.FILTER, 1, 6, 40000, "filter", VoltageTier.EV),
+    FILTER_IV("filter", GtRecipeMap.FILTER, 1, 6, 48000, "filter", VoltageTier.IV);
 
     public final String id;
     public final GtRecipeMap recipeMap;

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/pump_intake_hv",
+    "north": "iis:block/multi/pump_intake_hv",
+    "south": "iis:block/multi/pump_intake_hv",
+    "east": "iis:block/multi/pump_intake_hv",
+    "west": "iis:block/multi/pump_intake_hv",
+    "up": "iis:block/multi/pump_intake_hv_up",
+    "down": "iis:block/multi/pump_intake_hv"
+  }
+}
