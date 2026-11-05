@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/plutonium",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_plutonium",
+      "count": 6
+    }
+  ],
+  "duration": 12000,
+  "eut": 8,
+  "fluid_outputs": [
+    {
+      "id": "iis:radon",
+      "amount": 100
+    }
+  ]
+}

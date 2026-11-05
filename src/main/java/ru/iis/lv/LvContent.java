@@ -230,6 +230,7 @@ public final class LvContent {
     public static final DeferredItem<Item> MIXED_METAL_INGOT = item("mixed_metal_ingot");
     public static final DeferredItem<Item> ADVANCED_ALLOY_PLATE = item("advanced_alloy_plate");
     public static final DeferredItem<Item> CARBON_FIBER = item("carbon_fiber");
+    public static final DeferredItem<Item> GLASS_FIBER = item("glass_fiber");
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<ru.iis.lv.item.DataStickItem.Research>> RESEARCH = COMPONENTS.registerComponentType("research",
             b -> b.persistent(ru.iis.lv.item.DataStickItem.Research.CODEC).networkSynchronized(ru.iis.lv.item.DataStickItem.Research.STREAM_CODEC));
     public static final DeferredItem<ru.iis.lv.item.DataStickItem> DATA_STICK = registerDataStick();
@@ -491,7 +492,7 @@ public final class LvContent {
             Map.entry("circuit_data", 3), Map.entry("circuit_board_plastic", 3), Map.entry("capacitor", 3), Map.entry("circuit_elite", 3),
             Map.entry("silicon_boule_glowstone", 3), Map.entry("silicon_wafer_glowstone", 3), Map.entry("wafer_nand", 3), Map.entry("chip_nand", 3), Map.entry("wafer_nor", 3),
             Map.entry("chip_nor", 3), Map.entry("wafer_pic", 3), Map.entry("chip_pic", 3), Map.entry("data_stick", 3), Map.entry("mixed_metal_ingot", 3), Map.entry("advanced_alloy_plate", 3),
-            Map.entry("carbon_fiber", 3), Map.entry("wafer_nano_cpu", 4), Map.entry("chip_nano_cpu", 4), Map.entry("circuit_board_epoxy", 4), Map.entry("resistor_smd", 4),
+            Map.entry("carbon_fiber", 3), Map.entry("glass_fiber", 2), Map.entry("wafer_nano_cpu", 4), Map.entry("chip_nano_cpu", 4), Map.entry("circuit_board_epoxy", 4), Map.entry("resistor_smd", 4),
             Map.entry("diode_smd", 4), Map.entry("transistor_smd", 4), Map.entry("capacitor_smd", 4), Map.entry("circuit_nanoprocessor", 4), Map.entry("circuit_nanocomputer", 4),
             Map.entry("circuit_elitenanocomputer", 4), Map.entry("circuit_master", 5));
 

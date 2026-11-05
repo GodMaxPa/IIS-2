@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/boron",
+    "#c:dusts/glass",
+    "#c:dusts/glass",
+    "#c:dusts/glass",
+    "#c:dusts/glass",
+    "#c:dusts/glass",
+    "#c:dusts/glass",
+    "#c:dusts/glass"
+  ],
+  "result": {
+    "id": "iis:dust_borosilicate_glass",
+    "count": 8
+  }
+}

@@ -1150,6 +1150,46 @@
     "material": "blue_topaz"
   },
   {
+    "id": "dust_boron",
+    "prefix": "dust",
+    "material": "boron"
+  },
+  {
+    "id": "small_dust_boron",
+    "prefix": "small_dust",
+    "material": "boron"
+  },
+  {
+    "id": "tiny_dust_boron",
+    "prefix": "tiny_dust",
+    "material": "boron"
+  },
+  {
+    "id": "dust_borosilicate_glass",
+    "prefix": "dust",
+    "material": "borosilicate_glass"
+  },
+  {
+    "id": "small_dust_borosilicate_glass",
+    "prefix": "small_dust",
+    "material": "borosilicate_glass"
+  },
+  {
+    "id": "tiny_dust_borosilicate_glass",
+    "prefix": "tiny_dust",
+    "material": "borosilicate_glass"
+  },
+  {
+    "id": "ingot_borosilicate_glass",
+    "prefix": "ingot",
+    "material": "borosilicate_glass"
+  },
+  {
+    "id": "nugget_borosilicate_glass",
+    "prefix": "nugget",
+    "material": "borosilicate_glass"
+  },
+  {
     "id": "dust_brass",
     "prefix": "dust",
     "material": "brass"
@@ -5995,6 +6035,91 @@
     "material": "platinum_group_sludge"
   },
   {
+    "id": "crushed_plutonium",
+    "prefix": "crushed",
+    "material": "plutonium"
+  },
+  {
+    "id": "purified_plutonium",
+    "prefix": "purified",
+    "material": "plutonium"
+  },
+  {
+    "id": "centrifuged_plutonium",
+    "prefix": "centrifuged",
+    "material": "plutonium"
+  },
+  {
+    "id": "impure_dust_plutonium",
+    "prefix": "impure_dust",
+    "material": "plutonium"
+  },
+  {
+    "id": "pure_dust_plutonium",
+    "prefix": "pure_dust",
+    "material": "plutonium"
+  },
+  {
+    "id": "dust_plutonium",
+    "prefix": "dust",
+    "material": "plutonium"
+  },
+  {
+    "id": "small_dust_plutonium",
+    "prefix": "small_dust",
+    "material": "plutonium"
+  },
+  {
+    "id": "tiny_dust_plutonium",
+    "prefix": "tiny_dust",
+    "material": "plutonium"
+  },
+  {
+    "id": "ingot_plutonium",
+    "prefix": "ingot",
+    "material": "plutonium"
+  },
+  {
+    "id": "nugget_plutonium",
+    "prefix": "nugget",
+    "material": "plutonium"
+  },
+  {
+    "id": "plate_plutonium",
+    "prefix": "plate",
+    "material": "plutonium"
+  },
+  {
+    "id": "double_plate_plutonium",
+    "prefix": "double_plate",
+    "material": "plutonium"
+  },
+  {
+    "id": "rod_plutonium",
+    "prefix": "rod",
+    "material": "plutonium"
+  },
+  {
+    "id": "bolt_plutonium",
+    "prefix": "bolt",
+    "material": "plutonium"
+  },
+  {
+    "id": "screw_plutonium",
+    "prefix": "screw",
+    "material": "plutonium"
+  },
+  {
+    "id": "long_rod_plutonium",
+    "prefix": "long_rod",
+    "material": "plutonium"
+  },
+  {
+    "id": "turbine_blade_plutonium",
+    "prefix": "turbine_blade",
+    "material": "plutonium"
+  },
+  {
     "id": "dust_polydimethylsiloxane",
     "prefix": "dust",
     "material": "polydimethylsiloxane"
@@ -8818,6 +8943,91 @@
     "id": "turbine_blade_uranium",
     "prefix": "turbine_blade",
     "material": "uranium"
+  },
+  {
+    "id": "crushed_uranium235",
+    "prefix": "crushed",
+    "material": "uranium235"
+  },
+  {
+    "id": "purified_uranium235",
+    "prefix": "purified",
+    "material": "uranium235"
+  },
+  {
+    "id": "centrifuged_uranium235",
+    "prefix": "centrifuged",
+    "material": "uranium235"
+  },
+  {
+    "id": "impure_dust_uranium235",
+    "prefix": "impure_dust",
+    "material": "uranium235"
+  },
+  {
+    "id": "pure_dust_uranium235",
+    "prefix": "pure_dust",
+    "material": "uranium235"
+  },
+  {
+    "id": "dust_uranium235",
+    "prefix": "dust",
+    "material": "uranium235"
+  },
+  {
+    "id": "small_dust_uranium235",
+    "prefix": "small_dust",
+    "material": "uranium235"
+  },
+  {
+    "id": "tiny_dust_uranium235",
+    "prefix": "tiny_dust",
+    "material": "uranium235"
+  },
+  {
+    "id": "ingot_uranium235",
+    "prefix": "ingot",
+    "material": "uranium235"
+  },
+  {
+    "id": "nugget_uranium235",
+    "prefix": "nugget",
+    "material": "uranium235"
+  },
+  {
+    "id": "plate_uranium235",
+    "prefix": "plate",
+    "material": "uranium235"
+  },
+  {
+    "id": "double_plate_uranium235",
+    "prefix": "double_plate",
+    "material": "uranium235"
+  },
+  {
+    "id": "rod_uranium235",
+    "prefix": "rod",
+    "material": "uranium235"
+  },
+  {
+    "id": "bolt_uranium235",
+    "prefix": "bolt",
+    "material": "uranium235"
+  },
+  {
+    "id": "screw_uranium235",
+    "prefix": "screw",
+    "material": "uranium235"
+  },
+  {
+    "id": "long_rod_uranium235",
+    "prefix": "long_rod",
+    "material": "uranium235"
+  },
+  {
+    "id": "turbine_blade_uranium235",
+    "prefix": "turbine_blade",
+    "material": "uranium235"
   },
   {
     "id": "crushed_vanadium",

@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/borosilicate_glass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:glass_fiber",
+      "count": 8
+    }
+  ],
+  "duration": 160,
+  "eut": 96,
+  "keep": [
+    "iis:shape_extruder_wire"
+  ]
+}

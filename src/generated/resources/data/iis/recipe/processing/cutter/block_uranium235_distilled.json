@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/uranium235",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_uranium235",
+      "count": 9
+    }
+  ],
+  "duration": 4700,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 165
+    }
+  ]
+}

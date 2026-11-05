@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:pipe_small_plastic",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:carbon_fiber",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:glass_fiber",
+      "count": 32
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:fluid_filter",
+      "count": 4
+    }
+  ],
+  "duration": 80,
+  "eut": 48
+}

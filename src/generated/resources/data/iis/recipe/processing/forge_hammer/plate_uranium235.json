@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/uranium235",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_uranium235",
+      "count": 2
+    }
+  ],
+  "duration": 235,
+  "eut": 16
+}

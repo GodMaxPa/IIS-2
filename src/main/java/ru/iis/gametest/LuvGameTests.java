@@ -176,4 +176,52 @@ final class LuvGameTests {
             h.succeed();
         });
     }
+
+    private static ElectricMachineBlockEntity powered(GameTestHelper h, LvMachineType t) {
+        ElectricMachineBlockEntity m = LvGameTests.machine(h, new BlockPos(4, 1, 4), t, Direction.NORTH);
+        h.onEachTick(() -> m.energy.stored = m.energy.capacity);
+        return m;
+    }
+
+    /** D111: стекловолокно (GT_MachineRecipeLoader:497): слиток боросиликатного стекла и насадка «провод» → 8 штук, насадка остаётся. */
+    static void extruderMakesGlassFiber(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.EXTRUDER_MV);
+        m.setItem(0, new ItemStack(SelfTest.item("ingot_borosilicate_glass")));
+        m.setItem(1, new ItemStack(SelfTest.item("shape_extruder_wire")));
+        h.succeedWhen(() -> {
+            h.assertTrue(m.getItem(2).is(LvContent.GLASS_FIBER.get()) && m.getItem(2).getCount() == 8, "output " + m.getItem(2));
+            h.assertTrue(m.getItem(1).is(SelfTest.item("shape_extruder_wire")), "shape consumed");
+        });
+    }
+
+    /** D111: фильтр воды (:2600): малая пластиковая труба, 8 углеродного и 32 стекловолокна → 4 фильтра. */
+    static void assemblerMakesFluidFilter(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.ASSEMBLER_MV);
+        m.setItem(0, new ItemStack(SelfTest.item("pipe_small_plastic")));
+        m.setItem(1, new ItemStack(LvContent.CARBON_FIBER.get(), 8));
+        m.setItem(2, new ItemStack(LvContent.GLASS_FIBER.get(), 32));
+        h.succeedWhen(() -> h.assertTrue(m.getItem(6).is(SelfTest.item("fluid_filter")) && m.getItem(6).getCount() == 4, "output " + m.getItem(6)));
+    }
+
+    /** D111: радон (:1829): 6 слитков плутония → 6 пыли и 100 л радона; идёт 12000 тиков у LV, конец рецепта подводит тест. */
+    static void plutoniumGivesRadon(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.CHEMICAL_REACTOR_IV);
+        m.setItem(0, new ItemStack(SelfTest.item("ingot_plutonium"), 6));
+        h.runAtTickTime(30, () -> {
+            h.assertTrue(m.logic().maxProgress > 0, "not started");
+            m.logic().progress = m.logic().maxProgress - 2;
+        });
+        h.succeedWhen(() -> {
+            h.assertTrue(m.outTank().amount() == 100 && m.outTank().resource().getFluid() == GtFluids.get("radon").source().get(), "radon " + m.outTank().amount());
+            h.assertTrue(m.getItem(3).is(SelfTest.item("dust_plutonium")) && m.getItem(3).getCount() == 6, "dust " + m.getItem(3));
+        });
+    }
+
+    /** D111: квантовое око (:1190): око Края в 250 л радона. */
+    static void radonMakesQuantumEye(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.CHEMICAL_BATH_IV);
+        m.setItem(0, new ItemStack(Items.ENDER_EYE));
+        m.tank().setAmount(GtFluids.get("radon").source().get(), 250);
+        h.succeedWhen(() -> h.assertTrue(m.getItem(1).is(LvContent.QUANTUM_EYE.get()), "output " + m.getItem(1)));
+    }
 }

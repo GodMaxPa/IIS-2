@@ -398,6 +398,8 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
         outs[:] = [o for o in outs if o['count'] > 0]
         return (dur + t - 1) // t
     for c in calls:
+        if c['line'] == 1827:   # D111: mHardRadonRecipe (GT_Mod:313, off by default): only :1829, 100 L of radon, stays
+            continue
         meth = c['method'].replace('ForBasicMachineOnly', '')
         args = c['args']
         key = (meth, len(args))

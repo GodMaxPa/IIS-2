@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/uranium235",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_uranium235",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

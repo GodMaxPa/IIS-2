@@ -394,6 +394,10 @@
     "Height to search: 20 - 30 URANIUM vein (Uraninite, Uranium), 10 - 40 PITCHBLENDE vein (Pitchblende, Uraninite)."
   ],
   "quest.1A000000000000AE.title": "Uranium 238 Ingot",
+  "quest.1A000000000000B1.quest_desc": [
+    "Height to search: 20 - 30. You may get uranium-235 as by-product only from uraninite and uranium ores."
+  ],
+  "quest.1A000000000000B1.title": "Uranium 235 Nugget",
   "quest.1A000000000000B2.quest_desc": [
     "For starters, you have to craft an Iron or Bronze pickaxe head. Then use a wooden stick to make a second level pickaxe. It can dig most of gregtech ores (but not all). Later you can craft a level 3 pickaxe from §9cobalt §for §bdiamonds§f."
   ],
@@ -402,6 +406,10 @@
     "Height to search: 5 - 30. You can find it in a beryllium ore vein. Another way to get it - as by-product of coal, monazite, uraninite, uranium or pitchblende ores (look it up in NEI)."
   ],
   "quest.1A000000000000B7.title": "Thorium Dust",
+  "quest.1A000000000000B8.quest_desc": [
+    "Prepare at least 3 dusts to create a cycle between a furnace and a chemical reactor in order to produce Radon (gas)."
+  ],
+  "quest.1A000000000000B8.title": "Plutonium 239 Dust",
   "quest.1A000000000000BA.quest_desc": [
     "This shit is an important part of most low tier conveyors."
   ],
@@ -1578,10 +1586,22 @@
     "You may get it from coal, charcoal dust or from a lot of other materials."
   ],
   "quest.1A00000000000223.title": "Carbon Dust",
+  "quest.1A00000000000225.quest_desc": [
+    "Use MV+ extruder with wire shape to get the glass fiber from borosilicate glass bar."
+  ],
+  "quest.1A00000000000225.title": "Glass Fiber",
   "quest.1A00000000000226.quest_desc": [
     "Like chemical reactor, but with other features."
   ],
   "quest.1A00000000000226.title": "Basic Chemical Bath",
+  "quest.1A00000000000227.quest_desc": [
+    "Mix the boron and glass dusts and smelt the result to get this."
+  ],
+  "quest.1A00000000000227.title": "Borosilicate Glass Bar",
+  "quest.1A00000000000228.quest_desc": [
+    "Height to search: 50-60 SALT vein (Rock Salt, Salt, Lepidolite, Spodumene).You may get a Boron as sub product of lepidolite ore."
+  ],
+  "quest.1A00000000000228.title": "Boron Dust",
   "quest.1A0000000000022C.quest_desc": [
     "It can boil water. But it dosn't mean that you have to do this. You may create LV - IV machine to complete this quest."
   ],

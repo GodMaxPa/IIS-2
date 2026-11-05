@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_uranium",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_uranium235",
+      "count": 1
     }
   ],
-  "duration": 238,
+  "duration": 1904,
   "eut": 5
 }

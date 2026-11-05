@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/boron",
+    "#iis:small_dusts/boron",
+    "#iis:small_dusts/boron",
+    "#iis:small_dusts/boron"
+  ],
+  "result": {
+    "id": "iis:dust_boron"
+  }
+}

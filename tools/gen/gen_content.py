@@ -169,6 +169,9 @@ names |= {'Polytetrafluoroethylene'}
 # GT_MachineRecipeLoader:1904), niobium-titanium (:1032; niobium from pyrochlore), epoxy resin for the nano circuit boards (:449, :2984)
 names |= {'HSSG', 'Molybdenum', 'YttriumBariumCuprate', 'Yttrium', 'Barium', 'RareEarth', 'Lanthanum', 'Cerium', 'Caesium', 'Neodymium',
           'Niobium', 'NiobiumTitanium', 'Epoxid'}
+# D111: borosilicate glass for glass fibre and the fluid filter (GT_MachineRecipeLoader:497, 2600; boron is a lepidolite byproduct), plutonium for radon
+# (:1829; uranium centrifuge :1890) and the quantum eye and star
+names |= {'Boron', 'BorosilicateGlass', 'Plutonium', 'Uranium235'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64

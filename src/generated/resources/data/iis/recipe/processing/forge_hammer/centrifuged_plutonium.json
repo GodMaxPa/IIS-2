@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#iis:centrifuged_ores/plutonium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_plutonium",
+      "count": 1
+    }
+  ],
+  "duration": 10,
+  "eut": 16
+}

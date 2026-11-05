@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/plutonium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 42,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_plutonium",
+      "amount": 144
+    }
+  ]
+}

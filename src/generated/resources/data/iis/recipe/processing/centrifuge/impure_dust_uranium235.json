@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/uranium235",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_uranium235",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_uranium235",
+      "count": 1
+    }
+  ],
+  "duration": 1880,
+  "eut": 5
+}

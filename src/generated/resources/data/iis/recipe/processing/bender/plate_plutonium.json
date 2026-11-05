@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/plutonium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_plutonium",
+      "count": 1
+    }
+  ],
+  "duration": 246,
+  "eut": 24
+}

@@ -125,6 +125,13 @@ def generate(g):
     shaped('multi/vacuum_freezer', I('vacuum_freezer'), 1, ['PPP', 'CMC', 'WCW'], {'M': I('frost_proof_casing'), 'P': I('electric_pump_hv'), 'C': '#c:circuits/data', 'W': '#iis:cables/1x/gold'})
     # ProcessingNugget:17: an iron nugget smelts into a wrought iron nugget; without it the LV hull has no wrought iron plates to start from
     g['smelting']('smelting/nugget_iron_wrought', 'minecraft:iron_nugget', ref('nugget', 'WroughtIron'), 1, xp=0.1)
+    # D111: borosilicate glass (GT_CraftingRecipeLoader:397, GT_MachineRecipeLoader:1797), glass fibre (:497), the fluid filter (:2600: HV-IV intakes and filter machines)
+    shapeless('dust/mix_borosilicate_glass', ref('dust', 'BorosilicateGlass'), 8, [tag_of('dust', 'Boron')] + [tag_of('dust', 'Glass')] * 7)
+    mrec('mixer', 'borosilicate_glass', [ing(tag_of('dust', 'Boron')), ing(tag_of('dust', 'Glass'), 7)], [out(ref('dust', 'BorosilicateGlass'), 8)], 200, 8)
+    mrec('extruder', 'glass_fiber', [ing(tag_of('ingot', 'BorosilicateGlass'))], [out(I('glass_fiber'), 8)], 160, 96, keep=I('shape_extruder_wire'))
+    mrec('assembler', 'fluid_filter', [ing(I('pipe_small_plastic')), ing(I('carbon_fiber'), 8), ing(I('glass_fiber'), 32)], [out(I('fluid_filter'), 4)], 80, 48)
+    # D111: :1890 uranium dust gives a little plutonium; six ingots of it then give radon (:1829, extracted by chem.py)
+    mrec('centrifuge', 'uranium', [ing(tag_of('dust', 'Uranium'))], [out(ref('tiny_dust', 'Uranium235'), 1, 2000), out(ref('tiny_dust', 'Plutonium'), 1, 200)], 800, 320)
     # GT_MachineRecipeLoader:1032 niobium-titanium from ingots
     mrec('blast', 'niobium_titanium_ingots', [ing(tag_of('ingot', 'Niobium')), ing(tag_of('ingot', 'Titanium'))], [out(ref('hot_ingot', 'NiobiumTitanium'), 2)],
          max(mass('NiobiumTitanium') // 80, 1) * 4500, 480, temp=4500)

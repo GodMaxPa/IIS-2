@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/uranium235"
+  ],
+  "result": {
+    "id": "iis:small_dust_uranium235",
+    "count": 4
+  }
+}

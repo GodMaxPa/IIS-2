@@ -340,6 +340,73 @@
       ]
     },
     {
+      "id": "1A00000000000225",
+      "x": 8.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000227"
+      ],
+      "icon": {
+        "id": "iis:glass_fiber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:glass_fiber",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000227",
+      "x": 9.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000228",
+        "1A00000000000148"
+      ],
+      "icon": {
+        "id": "iis:ingot_borosilicate_glass",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_borosilicate_glass",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000228",
+      "x": 11.0,
+      "y": 6.5,
+      "icon": {
+        "id": "iis:dust_boron",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_boron",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022800"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000022C",
       "x": 0.5,
       "y": 6.5,

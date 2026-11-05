@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/plutonium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_plutonium",
+      "count": 1
+    }
+  ],
+  "duration": 246,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_plate"
+  ]
+}

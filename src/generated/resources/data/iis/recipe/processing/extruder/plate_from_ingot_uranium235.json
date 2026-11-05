@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/uranium235",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_uranium235",
+      "count": 1
+    }
+  ],
+  "duration": 235,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_plate"
+  ]
+}

@@ -10,6 +10,11 @@
     {
       "id": "iis:dust_uraninite",
       "count": 1
+    },
+    {
+      "id": "iis:dust_uranium235",
+      "count": 1,
+      "chance": 1000
     }
   ],
   "duration": 400,

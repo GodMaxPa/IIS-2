@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/borosilicate_glass",
+    "#iis:small_dusts/borosilicate_glass",
+    "#iis:small_dusts/borosilicate_glass",
+    "#iis:small_dusts/borosilicate_glass"
+  ],
+  "result": {
+    "id": "iis:dust_borosilicate_glass"
+  }
+}

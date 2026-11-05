@@ -299,6 +299,8 @@ ITEMS = [
     ('emitter_luv', 'gt:685', 'gt.metaitem.01.32685.name', 'Emitter (LuV)', 'Излучатель (LuV)'),
     ('sensor_luv', 'gt:695', 'gt.metaitem.01.32695.name', 'Sensor (LuV)', 'Сенсор (LuV)'),
     ('data_stick', 'gt:708', 'gt.metaitem.01.32708.name', 'Data Stick', 'Флешка'),
+    # D111: GT_MetaGenerated_Item_03:57
+    ('glass_fiber', 'gt:glass_fiber', 'gt.metaitem.03.32021.name', 'Glass Fiber', 'Стекловолокно'),
     # IC2 is not ported (D5): our own items with the GT recipes that make them (GT_CraftingRecipeLoader:269, ProcessingPlate:182, GT_MachineRecipeLoader:402)
     ('mixed_metal_ingot', 'gt:mixed_metal_ingot', None, 'Mixed Metal Ingot', 'Слиток смешанного металла'),
     ('advanced_alloy_plate', 'gt:advanced_alloy_plate', None, 'Advanced Alloy Plate', 'Пластина улучшенного сплава'),

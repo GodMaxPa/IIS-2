@@ -10,6 +10,10 @@
     {
       "id": "iis:centrifuged_uranium",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_uranium235",
+      "count": 1
     }
   ],
   "duration": 500,

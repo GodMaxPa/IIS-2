@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/crushed_plutonium",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 15741490
+      }
+    ]
+  }
+}

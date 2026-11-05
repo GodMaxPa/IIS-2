@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1037; hidden until their items are ported: 905; chapters: 35.
+Quests in IIS 1: 1943; written: 1042; hidden until their items are ported: 900; chapters: 35.
 
 ## Most needed unported items (task count)
 
@@ -96,8 +96,8 @@ Quests in IIS 1: 1943; written: 1037; hidden until their items are ported: 905; 
 
 ## Dropped reward items
 
-- 453 × `('gregtech:gt.metaitem.01', 32000)`
-- 271 × `('gregtech:gt.metaitem.01', 32001)`
+- 456 × `('gregtech:gt.metaitem.01', 32000)`
+- 273 × `('gregtech:gt.metaitem.01', 32001)`
 - 17 × `('gregtech:gt.metaitem.01', 32002)`
 - 16 × `bq_standard:choice`
 - 6 × `('gregtech:gt.metaitem.01', 32003)`

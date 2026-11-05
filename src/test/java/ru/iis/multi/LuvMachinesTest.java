@@ -100,6 +100,27 @@ class LuvMachinesTest {
         assertEquals(18, recipe("dust/to_tiny_gallium").getAsJsonObject("result").get("count").getAsInt());
     }
 
+    /** D111: GT_MachineRecipeLoader:1827, 1829, 1890; HardRadonRecipe по умолчанию выключен: 100 л, рецепта на 2 л нет. */
+    @Test
+    void radonComesFromUraniumThroughPlutonium() throws IOException {
+        JsonObject centrifuge = recipe("processing/centrifuge/uranium");
+        assertEquals(320, centrifuge.get("eut").getAsInt());
+        JsonArray outs = centrifuge.getAsJsonArray("outputs");
+        assertEquals("iis:tiny_dust_plutonium", outs.get(1).getAsJsonObject().get("id").getAsString());
+        assertEquals(200, outs.get(1).getAsJsonObject().get("chance").getAsInt());
+        JsonObject radon = recipe("processing/chemical_reactor/gt_1829");
+        assertEquals(6, count(radon, 0));
+        assertEquals(100, radon.getAsJsonArray("fluid_outputs").get(0).getAsJsonObject().get("amount").getAsInt());
+        assertFalse(Files.exists(RECIPES.resolve("processing/chemical_reactor/gt_1827.json")), "the hard radon recipe is off");
+    }
+
+    @Test
+    void fluidFilterChain() throws IOException {
+        assertEquals("iis:glass_fiber", ingredient(recipe("processing/assembler/fluid_filter"), 2));
+        assertEquals(32, count(recipe("processing/assembler/fluid_filter"), 2));
+        assertEquals(7, count(recipe("processing/mixer/borosilicate_glass"), 1));
+    }
+
     @Test
     void luvWiresMatchMakeWires() {
         for (CableSpecs.Spec s : CableSpecs.ALL) {
