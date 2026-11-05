@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XCX",
+    "VMV",
+    " V "
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "V": "iis:conveyor_module_lv",
+    "C": "#c:chests/wooden",
+    "X": "#c:circuits/good"
+  },
+  "result": {
+    "id": "iis:item_distributor_lv"
+  }
+}

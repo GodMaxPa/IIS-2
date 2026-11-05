@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CPC",
+    "PMP",
+    "BPB"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "B": "iis:pipe_large_stainless_steel",
+    "C": "#c:circuits/advanced",
+    "P": "iis:electric_pump_hv"
+  },
+  "result": {
+    "id": "iis:pump_hv"
+  }
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "iis:circuit_basic"
+    "iis:circuit_basic",
+    "iis:circuit_microprocessor"
   ]
 }

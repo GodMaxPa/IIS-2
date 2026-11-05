@@ -38,7 +38,10 @@ public final class MaterialItems {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = TABS.register("materials", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.iis.materials"))
             .icon(() -> new ItemStack(item("ingot/bronze")))
-            .displayItems((params, out) -> ALL.forEach(i -> out.accept(i.get())))
+            .displayItems((params, out) -> {
+                ALL.forEach(i -> out.accept(i.get()));
+                ru.iis.auto.StorageBlocks.ALL.values().forEach(b -> out.accept(b.get()));
+            })
             .build());
 
     public static void register(IEventBus modBus) {

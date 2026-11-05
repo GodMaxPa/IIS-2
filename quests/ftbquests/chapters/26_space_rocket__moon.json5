@@ -178,6 +178,29 @@
           "id": "1B00000000032600"
         }
       ]
+    },
+    {
+      "id": "1A0000000000032C",
+      "x": 12.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000002E3"
+      ],
+      "icon": {
+        "id": "iis:chest_buffer_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chest_buffer_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032C00"
+        }
+      ]
     }
   ],
   "quest_links": [

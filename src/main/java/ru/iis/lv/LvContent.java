@@ -155,6 +155,12 @@ public final class LvContent {
     public static final java.util.List<DeferredBlock<BatteryBufferBlock>> BATTERY_BUFFERS_HV = java.util.stream.IntStream.of(1, 2, 3, 4)
             .mapToObj(n -> block("battery_buffer_" + n + "x" + n + "_hv", p -> new BatteryBufferBlock(n * n, VoltageTier.HV, p), LvContent::metal))
             .toList();
+    /** D108: GT_MetaTileEntity_Charger LV–IV (Battery_Charger_4by4_*): 16 слотов. */
+    public static final java.util.List<DeferredBlock<BatteryBufferBlock>> BATTERY_CHARGERS = java.util.stream.Stream.of(VoltageTier.LV, VoltageTier.MV, VoltageTier.HV, VoltageTier.EV, VoltageTier.IV)
+            .map(v -> block("battery_charger_" + v.name().toLowerCase(java.util.Locale.ROOT), p -> new BatteryBufferBlock(16, v, true, p), LvContent::metal)).toList();
+    /** D108: GT Hull_ULV и Transformer_LV_ULV: нужны настраиваемому трансформатору. */
+    public static final DeferredBlock<Block> HULL_ULV = block("hull_ulv", Block::new, LvContent::metal);
+    public static final DeferredBlock<TransformerBlock> TRANSFORMER_ULV = block("transformer_ulv", p -> new TransformerBlock(VoltageTier.ULV, p), LvContent::metal);
     public static final DeferredBlock<TransformerBlock> TRANSFORMER = block("transformer_lv", p -> new TransformerBlock(VoltageTier.LV, p), LvContent::metal);
     /** GT_Loader_MetaTileEntities:196 Transformer_HV_MV (D82). */
     public static final DeferredBlock<TransformerBlock> TRANSFORMER_MV = block("transformer_mv", p -> new TransformerBlock(VoltageTier.MV, p), LvContent::metal);
@@ -274,6 +280,17 @@ public final class LvContent {
     public static final DeferredItem<Item> PRIMITIVE_FLUID_FILTER = item("primitive_fluid_filter");
     public static final DeferredItem<Item> SIMPLE_FLUID_FILTER = item("simple_fluid_filter");
     public static final DeferredItem<Item> FLUID_FILTER = item("fluid_filter");
+    /** D108: GT Field_Generator_*, QuantumEye, QuantumStar, Cover_Screen (пока только деталь), Circuit_Microprocessor, Circuit_Processor. */
+    public static final DeferredItem<Item> FIELD_GENERATOR_LV = item("field_generator_lv");
+    public static final DeferredItem<Item> FIELD_GENERATOR_MV = item("field_generator_mv");
+    public static final DeferredItem<Item> FIELD_GENERATOR_HV = item("field_generator_hv");
+    public static final DeferredItem<Item> FIELD_GENERATOR_EV = item("field_generator_ev");
+    public static final DeferredItem<Item> FIELD_GENERATOR_IV = item("field_generator_iv");
+    public static final DeferredItem<Item> QUANTUM_EYE = item("quantum_eye");
+    public static final DeferredItem<Item> QUANTUM_STAR = item("quantum_star");
+    public static final DeferredItem<Item> COVER_SCREEN = item("cover_screen");
+    public static final DeferredItem<Item> CIRCUIT_MICROPROCESSOR = item("circuit_microprocessor");
+    public static final DeferredItem<Item> CIRCUIT_PROCESSOR = item("circuit_processor");
     public static final DeferredItem<Item> WAFER_RAM = item("wafer_ram");
     public static final DeferredItem<Item> CHIP_RAM = item("chip_ram");
     // D92: транзистор, текстолитовая плата, хорошая интегральная схема, схема HV; растительный шарик и биоотходы (вместо IC2)
@@ -359,10 +376,10 @@ public final class LvContent {
             () -> new BlockEntityType<>(GeneratorBlockEntity::new, GENERATORS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BatteryBufferBlockEntity>> BATTERY_BUFFER_BE = BLOCK_ENTITIES.register("battery_buffer",
             () -> new BlockEntityType<>(BatteryBufferBlockEntity::new, java.util.stream.Stream.of(java.util.stream.Stream.of(BATTERY_BUFFER_1X1, BATTERY_BUFFER_2X2, BATTERY_BUFFER_3X3,
-                    BATTERY_BUFFER_4X4), BATTERY_BUFFERS_MV.stream(), BATTERY_BUFFERS_HV.stream(), BATTERY_BUFFERS_EV.stream(), BATTERY_BUFFERS_IV.stream()).flatMap(x -> x)
+                    BATTERY_BUFFER_4X4), BATTERY_BUFFERS_MV.stream(), BATTERY_BUFFERS_HV.stream(), BATTERY_BUFFERS_EV.stream(), BATTERY_BUFFERS_IV.stream(), BATTERY_CHARGERS.stream()).flatMap(x -> x)
                     .map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TransformerBlockEntity>> TRANSFORMER_BE = BLOCK_ENTITIES.register("transformer",
-            () -> new BlockEntityType<>(TransformerBlockEntity::new, TRANSFORMER.get(), TRANSFORMER_MV.get(), TRANSFORMER_HV.get(), TRANSFORMER_EV.get()));
+            () -> new BlockEntityType<>(TransformerBlockEntity::new, TRANSFORMER_ULV.get(), TRANSFORMER.get(), TRANSFORMER_MV.get(), TRANSFORMER_HV.get(), TRANSFORMER_EV.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CokeOvenBlockEntity>> COKE_OVEN_BE = BLOCK_ENTITIES.register("coke_oven",
             () -> new BlockEntityType<>(CokeOvenBlockEntity::new, COKE_OVEN.get()));
 
@@ -415,7 +432,10 @@ public final class LvContent {
             Map.entry("circuit_advanced", 2), Map.entry("transistor", 2), Map.entry("circuit_board_phenolic", 2),
             Map.entry("circuit_integrated_good", 2), Map.entry("silicon_boule", 2), Map.entry("silicon_wafer", 2),
             Map.entry("wafer_ilc", 2), Map.entry("chip_ilc", 2), Map.entry("wafer_ram", 2), Map.entry("chip_ram", 2),
-            Map.entry("wafer_cpu", 2), Map.entry("chip_cpu", 2), Map.entry("fluid_filter", 2),
+            Map.entry("wafer_cpu", 2), Map.entry("chip_cpu", 2), Map.entry("fluid_filter", 2), Map.entry("field_generator_mv", 1), Map.entry("field_generator_hv", 2),
+            Map.entry("field_generator_ev", 3), Map.entry("field_generator_iv", 4), Map.entry("quantum_eye", 2), Map.entry("quantum_star", 3),
+            Map.entry("circuit_microprocessor", 2), Map.entry("circuit_processor", 2), Map.entry("battery_charger_mv", 1), Map.entry("battery_charger_hv", 2),
+            Map.entry("battery_charger_ev", 3), Map.entry("battery_charger_iv", 4),
             Map.entry("coil_small", 2), Map.entry("grinder_diamond", 2), Map.entry("plant_ball", 2), Map.entry("bio_chaff", 2),
             Map.entry("schematic", 1), Map.entry("schematic_dust", 1),
             Map.entry("circuit_data", 3), Map.entry("circuit_board_plastic", 3), Map.entry("capacitor", 3), Map.entry("circuit_elite", 3));

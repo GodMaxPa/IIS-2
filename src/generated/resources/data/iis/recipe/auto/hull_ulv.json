@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PHP",
+    "CMC"
+  ],
+  "key": {
+    "M": "iis:casing_ulv",
+    "C": "#iis:cables/1x/lead",
+    "H": "#c:plates/wrought_iron",
+    "P": "#minecraft:planks"
+  },
+  "result": {
+    "id": "iis:hull_ulv"
+  }
+}

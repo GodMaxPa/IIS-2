@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "minecraft:ender_eye",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:quantum_eye",
+      "count": 1
+    }
+  ],
+  "duration": 480,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:radon",
+      "amount": 250
+    }
+  ]
+}

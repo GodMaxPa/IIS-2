@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "iis:block/auto/item_distributor_hv_north",
+    "south": "iis:block/auto/item_distributor_hv_south",
+    "east": "iis:block/auto/item_distributor_hv_east",
+    "west": "iis:block/auto/item_distributor_hv_west",
+    "up": "iis:block/auto/item_distributor_hv_up",
+    "down": "iis:block/auto/item_distributor_hv_down",
+    "particle": "iis:block/auto/item_distributor_hv_east"
+  }
+}

@@ -39,6 +39,8 @@ public final class IIS {
         IISMachines.register(modEventBus);
         ru.iis.lv.LvContent.register(modEventBus);
         ru.iis.multi.MultiContent.register(modEventBus);
+        ru.iis.auto.AutoContent.register(modEventBus);
+        ru.iis.auto.StorageBlocks.register(modEventBus);
         ru.iis.bio.BioContent.register(modEventBus);
         ru.iis.rail.RailContent.register(modEventBus);
         GtRecipes.register(modEventBus, NeoForge.EVENT_BUS);

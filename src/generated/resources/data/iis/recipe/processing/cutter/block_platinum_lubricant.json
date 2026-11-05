@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/platinum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_platinum",
+      "count": 9
+    }
+  ],
+  "duration": 1950,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 45
+    }
+  ]
+}

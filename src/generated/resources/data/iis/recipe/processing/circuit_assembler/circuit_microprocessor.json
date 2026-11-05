@@ -1,0 +1,43 @@
+{
+  "type": "iis:circuit_assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_board_plastic",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:chip_cpu",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:resistor",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:capacitor",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:transistor",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:fine_wires/copper",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_microprocessor",
+      "count": 4
+    }
+  ],
+  "duration": 200,
+  "eut": 60,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 72
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/cobalt_brass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_cobalt_brass",
+      "count": 9
+    }
+  ],
+  "duration": 580,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 13
+    }
+  ]
+}

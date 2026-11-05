@@ -279,6 +279,53 @@
       ]
     },
     {
+      "id": "1A00000000000157",
+      "x": 3.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000004B"
+      ],
+      "icon": {
+        "id": "iis:lens_ender_eye",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lens_ender_eye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000015700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000158",
+      "x": 0.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000004A",
+        "1A00000000000020"
+      ],
+      "icon": {
+        "id": "iis:lens_ender_pearl",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lens_ender_pearl",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000015800"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000016B",
       "x": 5.0,
       "y": 0.5,

@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/tin",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_tin",
+      "count": 9
+    }
+  ],
+  "duration": 2360,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 83
+    }
+  ]
+}

@@ -102,6 +102,11 @@ public abstract class MultiblockControllerBlockEntity extends BaseContainerBlock
         return true;
     }
 
+    /** GT getMaxEfficiency − неисправности: выше неё КПД не растёт (газовая турбина с кислородом идёт выше 100 %). */
+    protected int efficiencyCap() {
+        return maintenance.maxEfficiency();
+    }
+
     /** Износ детали в слоте контроллера раз в 1000 тиков работы (GT doRandomMaintenanceDamage: ротор турбины). */
     protected void componentWear(ServerLevel sl) {}
 
@@ -291,7 +296,7 @@ public abstract class MultiblockControllerBlockEntity extends BaseContainerBlock
             }
         }
         outputFluids(sl, pendingFluids);
-        efficiency = Math.max(0, Math.min(efficiency + efficiencyIncrease, maintenance.maxEfficiency()));
+        efficiency = Math.max(0, Math.min(efficiency + efficiencyIncrease, efficiencyCap()));
         pendingItems = List.of();
         pendingFluids = List.of();
         progress = maxProgress = 0;

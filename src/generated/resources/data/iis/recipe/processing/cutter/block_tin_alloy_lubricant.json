@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/tin_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_tin_alloy",
+      "count": 9
+    }
+  ],
+  "duration": 870,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 20
+    }
+  ]
+}

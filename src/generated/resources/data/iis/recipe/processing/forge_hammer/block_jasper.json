@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/jasper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_jasper",
+      "count": 9
+    }
+  ],
+  "duration": 100,
+  "eut": 24
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DPD",
+    "PMP",
+    "DGD"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "G": "iis:field_generator_mv",
+    "D": "#c:circuits/data",
+    "P": "#c:plates/titanium"
+  },
+  "result": {
+    "id": "iis:quantum_chest_mv"
+  }
+}

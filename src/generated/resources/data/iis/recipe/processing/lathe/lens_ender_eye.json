@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/ender_eye",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:lens_ender_eye",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_ender_eye",
+      "count": 1
+    }
+  ],
+  "duration": 14,
+  "eut": 480
+}

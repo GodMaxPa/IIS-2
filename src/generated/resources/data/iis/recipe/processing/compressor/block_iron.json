@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/iron",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:iron_block",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/tungsten",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_tungsten",
+      "count": 9
+    }
+  ],
+  "duration": 3660,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 128
+    }
+  ]
+}

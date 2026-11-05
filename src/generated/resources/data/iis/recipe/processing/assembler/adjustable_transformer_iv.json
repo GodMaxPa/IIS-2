@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:transformer_ev",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:adjustable_transformer_ev",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/elite",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:adjustable_transformer_iv",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 1920
+}

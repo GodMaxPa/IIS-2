@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/black_steel",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_black_steel",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

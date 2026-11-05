@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EEE",
+    "WMW",
+    "CSC"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "E": "iis:electric_motor_lv",
+    "C": "#c:circuits/basic",
+    "W": "#iis:cables/1x/tin",
+    "S": "iis:sensor_lv"
+  },
+  "result": {
+    "id": "iis:miner_lv"
+  }
+}

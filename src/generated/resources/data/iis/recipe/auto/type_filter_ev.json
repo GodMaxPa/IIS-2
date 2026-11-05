@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " F ",
+    "CMV",
+    " X "
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "V": "iis:conveyor_module_ev",
+    "C": "#c:chests/wooden",
+    "F": "iis:item_filter",
+    "X": "#c:circuits/advanced"
+  },
+  "result": {
+    "id": "iis:type_filter_ev"
+  }
+}

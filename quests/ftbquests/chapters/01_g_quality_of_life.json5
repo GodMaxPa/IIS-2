@@ -248,6 +248,70 @@
           "id": "1B0000000004D504"
         }
       ]
+    },
+    {
+      "id": "1A000000000004D6",
+      "x": 3.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000158",
+        "1A0000000000015A",
+        "1A000000000002DD",
+        "1A0000000000015D",
+        "1A0000000000015E",
+        "1A0000000000015F"
+      ],
+      "icon": {
+        "id": "iis:super_buffer_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:super_buffer_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D600"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:super_buffer_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D601"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:super_buffer_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D602"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:super_buffer_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D603"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:super_buffer_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D604"
+        }
+      ]
     }
   ],
   "icon": {

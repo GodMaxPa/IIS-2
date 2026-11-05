@@ -41,6 +41,54 @@
       ]
     },
     {
+      "id": "1A0000000000023B",
+      "x": 11.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A00000000000023",
+        "1A00000000000046"
+      ],
+      "icon": {
+        "id": "iis:field_generator_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:field_generator_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000023B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000023D",
+      "x": 6.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000251",
+        "1A00000000000252"
+      ],
+      "icon": {
+        "id": "iis:field_generator_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:field_generator_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000023D00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000249",
       "x": 13.5,
       "y": 3.5,
@@ -84,6 +132,53 @@
           },
           "count": 1,
           "id": "1B00000000024E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000024F",
+      "x": 6.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000024E"
+      ],
+      "icon": {
+        "id": "iis:plate_nether_star",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_nether_star",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000251",
+      "x": 5.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000024E",
+        "1A000000000000BB"
+      ],
+      "icon": {
+        "id": "iis:quantum_star",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:quantum_star",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000025100"
         }
       ]
     },

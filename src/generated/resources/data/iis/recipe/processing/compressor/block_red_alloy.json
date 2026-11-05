@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/red_alloy",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_red_alloy",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

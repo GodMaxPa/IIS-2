@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/magnalium",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_magnalium",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

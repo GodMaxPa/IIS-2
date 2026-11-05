@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/electrum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_electrum",
+      "count": 9
+    }
+  ],
+  "duration": 1510,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 35
+    }
+  ]
+}

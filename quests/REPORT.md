@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 883; hidden until their items are ported: 1059; chapters: 34.
+Quests in IIS 1: 1943; written: 923; hidden until their items are ported: 1019; chapters: 35.
 
 ## Most needed unported items (task count)
 
@@ -19,7 +19,6 @@ Quests in IIS 1: 1943; written: 883; hidden until their items are ported: 1059; 
 - 2 × `gregtech:gt.blockmachines:323` Принтер (HV)
 - 2 × `gregtech:gt.blockmachines:324` Принтер (EV)
 - 2 × `gregtech:gt.blockmachines:325` Принтер (IV)
-- 2 × `gregtech:gt.blockmachines:680` Улучшенный автобур (MV)
 - 2 × `gregtech:gt.metaitem.01:11070` Европиевый слиток
 - 2 × `gregtech:gt.blockmachines:1184` Сборщик микросхем (IV)
 - 2 × `EnderIO:itemSoulVessel:0` 
@@ -39,7 +38,6 @@ Quests in IIS 1: 1943; written: 883; hidden until their items are ported: 1059; 
 - 2 × `gregtech:gt.blockmachines:461` Производитель материи (LV)
 - 2 × `gregtech:gt.blockmachines:331` Утилизатор (LV)
 - 2 × `gregtech:gt.blockmachines:471` Амплифабрикатор (LV)
-- 2 × `gregtech:gt.blockmachines:679` Автобур (LV)
 - 2 × `gregtech:gt.blockmachines:315` Микроволновая печь (IV)
 - 2 × `gregtech:gt.blockmachines:314` Микроволновая печь (EV)
 - 2 × `gregtech:gt.blockmachines:313` Микроволновая печь (HV)
@@ -84,6 +82,8 @@ Quests in IIS 1: 1943; written: 883; hidden until their items are ported: 1059; 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:8` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:39` 
 - 1 × `appliedenergistics2:item.ItemBasicStorageCell.1k:0` 
+- 1 × `appliedenergistics2:tile.BlockDrive:0` 
+- 1 × `appliedenergistics2:item.ItemMultiPart:380` 
 
 ## Unported fluids
 
@@ -96,10 +96,10 @@ Quests in IIS 1: 1943; written: 883; hidden until their items are ported: 1059; 
 
 ## Dropped reward items
 
-- 434 × `('gregtech:gt.metaitem.01', 32000)`
-- 208 × `('gregtech:gt.metaitem.01', 32001)`
+- 446 × `('gregtech:gt.metaitem.01', 32000)`
+- 224 × `('gregtech:gt.metaitem.01', 32001)`
 - 16 × `bq_standard:choice`
-- 8 × `('gregtech:gt.metaitem.01', 32002)`
+- 13 × `('gregtech:gt.metaitem.01', 32002)`
 - 6 × `('gregtech:gt.metaitem.01', 32003)`
 - 1 × `('lootbags:lootbag', 7)`
 - 1 × `('gregtech:gt.metaitem.01', 32750)`

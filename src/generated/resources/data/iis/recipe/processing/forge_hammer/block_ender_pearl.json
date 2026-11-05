@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/ender_pearl",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:ender_pearl",
+      "count": 9
+    }
+  ],
+  "duration": 100,
+  "eut": 24
+}

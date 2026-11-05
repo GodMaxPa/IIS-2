@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "minecraft:nether_star",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:quantum_star",
+      "count": 1
+    }
+  ],
+  "duration": 1920,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:radon",
+      "amount": 1250
+    }
+  ]
+}

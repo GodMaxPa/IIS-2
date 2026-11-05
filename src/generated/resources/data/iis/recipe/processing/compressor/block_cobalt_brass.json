@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/cobalt_brass",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_cobalt_brass",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

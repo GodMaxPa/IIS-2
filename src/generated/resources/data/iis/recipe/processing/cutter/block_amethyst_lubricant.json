@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/amethyst",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_amethyst",
+      "count": 9
+    }
+  ],
+  "duration": 270,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 6
+    }
+  ]
+}

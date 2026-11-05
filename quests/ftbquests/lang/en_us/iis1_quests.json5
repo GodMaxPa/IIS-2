@@ -20,6 +20,7 @@
   "chapter.1D00000000000012.title": "Cmb.Engine, L.Turb., ODP",
   "chapter.1D00000000000013.title": "End Game Content",
   "chapter.1D00000000000014.title": "Very Nice Equipment",
+  "chapter.1D00000000000015.title": "Portable and wireless",
   "chapter.1D00000000000016.title": "Cross breeding",
   "chapter.1D00000000000017.title": "EnderIO Features",
   "chapter.1D00000000000018.title": "[G] Multiblocks",
@@ -153,6 +154,10 @@
     "Compressor can... yeah, compress! :)"
   ],
   "quest.1A0000000000004A.title": "Compressor",
+  "quest.1A0000000000004B.quest_desc": [
+    "Use a cutting machine to split the block into plates."
+  ],
+  "quest.1A0000000000004B.title": "Endereye Plate",
   "quest.1A00000000000056.quest_desc": [
     "Is it okay to create 1 plate from 2 ingots with a hand-held hammer? Of course not! Is it more profitable to use 3 ingots to create 2 plates via steam forge hammer? Not bad, but with this bending machine you will craft one-to-one, ingot-to-plate."
   ],
@@ -341,6 +346,10 @@
     "Height to search: 10-40 NICKEL vein (Garnierite, Nickel, Cobaltite, Pentlandite). You can create a cobalt pickaxe that can dig even diamond blocks. To make a cobalt ingot from cobaltite dust you have to put it into your primitive blast furnace with coal or charcoal. Or you can directly put cobaltite ore into a regular furnace (but with lower efficiency). In the second case you will get 1 ingot per ore block instead of 2 ingots per block ore when using a macerator and a primitive blast furnace."
   ],
   "quest.1A000000000000C0.title": "Cobaltite Dust",
+  "quest.1A000000000000C1.quest_desc": [
+    "The Ender Eye after washing it in a chemical bath with radon."
+  ],
+  "quest.1A000000000000C1.title": "Quantum Eye",
   "quest.1A000000000000C4.quest_desc": [
     "An EV tier chemical reactor."
   ],
@@ -557,6 +566,10 @@
     "A component of circuits."
   ],
   "quest.1A00000000000106.title": "Central Processing Unit",
+  "quest.1A00000000000107.quest_desc": [
+    "The best and most cheap circuit for LV tier machines."
+  ],
+  "quest.1A00000000000107.title": "Microprocessor",
   "quest.1A00000000000108.quest_desc": [
     "A component of electronic devices."
   ],
@@ -565,6 +578,10 @@
     "It will help you to craft circuits from LV to IV. To craft this use a polyethylene sheet, copper foil and sulfuric acid. Use NEI for more info."
   ],
   "quest.1A00000000000109.title": "Plastic Circuit Board",
+  "quest.1A0000000000010A.quest_desc": [
+    "Best circuit for MV tier machines."
+  ],
+  "quest.1A0000000000010A.title": "Integrated Processor",
   "quest.1A0000000000010B.quest_desc": [
     "Use a wiremill twice - to get wire from an ingot and to get fine wire from wire."
   ],
@@ -617,6 +634,10 @@
     "It is a material for crafting next tier coil blocks for a Blast Furnace / pyrolyse oven / multi smelter. Now it is HOT! Don't keep it in your inventory for a long time, at least not without a rubber suit. To cool it, you have to use a vacuum freezer."
   ],
   "quest.1A00000000000119.title": "Hot Kanthal Ingot",
+  "quest.1A0000000000011A.quest_desc": [
+    "This miner can do your job for you. It can dig up resources (ores), but it requires mining pipes - you have to craft 54 of them (other 10 you will receive as a reward). In total, 64 mining pipes will be enough to dig up all the ores above bedrock. But the quality of work depends on the height where you place your miner, it may affect its ability to dig up all ores above bedrock. For example, it can dig up all ores below the sea level with one stack (64 items) of mining pipes inside it. Note, that you may provide your miner with lesser (than 8 eu/t) energy and it will be ok (but it may work slower). So, when you craft a miner and mining pipes, you may place your miner anywhere. Then just put mining pipes inside it, provide it with energy and enjoy. Btw, it can auto output mined ores."
+  ],
+  "quest.1A0000000000011A.title": "Advanced Miner",
   "quest.1A0000000000011B.quest_desc": [
     "Use a hammer / forge hammer to make a tin plate."
   ],
@@ -797,6 +818,14 @@
     "Use an extruder and a rod shape."
   ],
   "quest.1A00000000000152.title": "Titanium Rod",
+  "quest.1A00000000000157.quest_desc": [
+    "Place the block into a cutting saw, and then send one of the plates into an HV+ tier lathe."
+  ],
+  "quest.1A00000000000157.title": "Endereye Lens",
+  "quest.1A00000000000158.quest_desc": [
+    "Place the block into a cutting saw, and then send one of the plates into an HV+ tier lathe."
+  ],
+  "quest.1A00000000000158.title": "Enderpearl Lens",
   "quest.1A0000000000015A.quest_desc": [
     "Can process more recipes compared to the basic one."
   ],
@@ -1445,6 +1474,14 @@
     "Use HV+ chemical reactor to make this from styrene and butadiene with help of oxygen. Also you may use the air instead of oxygen, but it is less profitable."
   ],
   "quest.1A00000000000232.title": "Raw Styrene-Butadiene Rubber",
+  "quest.1A0000000000023B.quest_desc": [
+    "Endereye dust + MV circuit + 2x osmium wire (by assembling machine MV+ tier)"
+  ],
+  "quest.1A0000000000023B.title": "Field Generator (MV)",
+  "quest.1A0000000000023D.quest_desc": [
+    "High tech component used as a part for crafting complex machines."
+  ],
+  "quest.1A0000000000023D.title": "Field Generator IV",
   "quest.1A00000000000241.quest_desc": [
     "Do you think that this is completely useless stuff? Not quite..."
   ],
@@ -1465,6 +1502,14 @@
     "Collect the 9 stars. Use 27 heads and 36 blocks of soul sand to build (to summon) and kill 9 withers. Be very careful, because this is hard boss."
   ],
   "quest.1A0000000000024E.title": "Nether Star",
+  "quest.1A0000000000024F.quest_desc": [
+    "Use the cutting saw. BTW, don't forget that for fusion controller block you have to prepare two field generators IV tier, that also use the nether stars."
+  ],
+  "quest.1A0000000000024F.title": "Nether Star Plate",
+  "quest.1A00000000000251.quest_desc": [
+    "Use chemical bath HV+ to wash the star in radon."
+  ],
+  "quest.1A00000000000251.title": "Quantum Star",
   "quest.1A00000000000252.quest_desc": [
     "Useful machine, that used to assembling some complex components and details."
   ],
@@ -1493,6 +1538,10 @@
     "Emitter IV tier."
   ],
   "quest.1A00000000000260.title": "Emitter (IV)",
+  "quest.1A00000000000265.quest_desc": [
+    "A part of some HV machines"
+  ],
+  "quest.1A00000000000265.title": "Field Generator (HV)",
   "quest.1A00000000000268.quest_desc": [
     "Crafting recipe is the same as for previous coil block tiers, but you have to use the tungstensteel ingots as root stuff."
   ],
@@ -1765,6 +1814,10 @@
     "It may help you to create oxygen pipe (for galactic craft)"
   ],
   "quest.1A00000000000326.title": "Extruder Shape (small pipe)",
+  "quest.1A0000000000032C.quest_desc": [
+    "The part for rocket loader or unloader machines."
+  ],
+  "quest.1A0000000000032C.title": "Medium Voltage Chest Buffer",
   "quest.1A0000000000032E.quest_desc": [
     "Height for search: 50-90 BAUXITE vein (Bauxite, Aluminium, Ilmenite). Look at NEI to find a way to get it from Bauxite or Ilmenite ores."
   ],
@@ -1797,6 +1850,10 @@
     "Height to search: 5 - 30 BERYLLIUM vein (Beryllium, Emerald, Thorium). There is a small chance to find a crushed emerald ore from small ore block. Then you can sift it to get common emerald."
   ],
   "quest.1A0000000000033B.title": "Emerald",
+  "quest.1A0000000000033C.quest_desc": [
+    "...to view some info."
+  ],
+  "quest.1A0000000000033C.title": "Computer Monitor",
   "quest.1A0000000000033E.quest_desc": [
     "Better than previous models."
   ],
@@ -1997,6 +2054,14 @@
     "Height to search: 50 - 80 COAL vein (Coal, Lignite). You have to collect 40 items in total in you inventory."
   ],
   "quest.1A000000000003E3.title": "Coal Dust",
+  "quest.1A000000000003E4.quest_desc": [
+    "Put an ender pearl to macerator"
+  ],
+  "quest.1A000000000003E4.title": "Enderpearl Dust",
+  "quest.1A000000000003E5.quest_desc": [
+    "Expensive part of some machines. Required osmium to be created from."
+  ],
+  "quest.1A000000000003E5.title": "Field Generator (LV)",
   "quest.1A000000000003EB.quest_desc": [
     "May be produced from scrap. Use OSS to pour there liquid."
   ],
@@ -2037,6 +2102,22 @@
     "May convert voltage between 2048 and 8192 eu/t to both sides."
   ],
   "quest.1A00000000000403.title": "Extreme Transformer",
+  "quest.1A0000000000040C.quest_desc": [
+    "A base of all ULV machines. From it you can also create a cheapest input/output hatches/busses for your multiblock machines. But note that them will have the lowest capacity."
+  ],
+  "quest.1A0000000000040C.title": "ULV Machine Hull",
+  "quest.1A0000000000040D.quest_desc": [
+    "May convert voltage between 8 and 32 eu/t to both sides. By default it convert to lower voltage. To change working mode use soft mallet on it (just click RMB by placed transformer). This way perfectly works for other transformers."
+  ],
+  "quest.1A0000000000040D.title": "Ultra Low Voltage Transformer",
+  "quest.1A0000000000040E.quest_desc": [
+    "May convert voltage between 8 and 2048 eu/t to both sides."
+  ],
+  "quest.1A0000000000040E.title": "Extreme Adjustable Transformer",
+  "quest.1A0000000000040F.quest_desc": [
+    "May convert voltage between 8 and 8192 eu/t to both sides."
+  ],
+  "quest.1A0000000000040F.title": "Insane Adjustable Transformer",
   "quest.1A00000000000414.quest_desc": [
     "May be created from common titanium rod."
   ],
@@ -2269,6 +2350,10 @@
     "Use a file or a lathe to make a rod from a brass ingot."
   ],
   "quest.1A00000000000487.title": "Brass Rod",
+  "quest.1A00000000000488.quest_desc": [
+    "Miner may do your work instead of you it can dig a resources (ores). But it require mining pipes. You have to craft 54 of them. (other 10 will be the reward for you). In total 64 mining pipes are enough to dig all ores above bedrock. But quality of work is depends on height where you will place your miner, to give to it ability to dig all ores above bedrock. Fore example it can dig all ores on the sea level with one stack (64 items) of mining pipes inside it. Note, that you may give to miner lower (than 8 eu/t) energy to work and it will by ok (but it may works slower). Area of work is 17 block (8 blocks radius). So, when you craft miner and mining pipes,  you may place your miner anywere. Then just put mining pipes inside it, connect it with energy and enjoy. Btw, it may auto output digged ores."
+  ],
+  "quest.1A00000000000488.title": "Basic Miner",
   "quest.1A00000000000489.quest_desc": [
     "This is a present - solar panel. You may place it as a cover on a top on any machine, battery buffer or even machine hull. In the last case it may be use as \"solar energy generator\". Just turn it energy output to direction you want."
   ],
@@ -2445,6 +2530,18 @@
     "Craft any packager between LV and (including) IV tier. It may not only make covered LV wires (with help of carpet), but also combine small and tiny dusts to make from it a dust with normal size. Note, that this mode require to use a item \"schematic (Dusts)\"."
   ],
   "quest.1A000000000004D5.title": "Packager (LV - IV)",
+  "quest.1A000000000004D6.quest_desc": [
+    "Craft any super buffer between LV and (including) IV tier. It dont have visible inventory but it may keep inside it a lot of item stacks. But the main is it can push contained items in count you set. To set a count use a screwdriver. Also it require a bit of energy to work. Nice example how to use it is push a 4 small dusts or a 9 tiny dusts to packager (with chematica dusts) to combine these dusts to dust with normal size."
+  ],
+  "quest.1A000000000004D6.title": "Super Buffer (LV - IV)",
+  "quest.1A000000000004D7.quest_desc": [
+    "A part of fluid filter machine."
+  ],
+  "quest.1A000000000004D7.title": "Simple Fluid Filter",
+  "quest.1A000000000004D9.quest_desc": [
+    "Used together with an ore washing plant, to get common water and a bit of by-products. Also you can just filter water without by-products. Use a programmed circuit to set the working mode."
+  ],
+  "quest.1A000000000004D9.title": "Basic Fluid Filter",
   "quest.1A000000000004DA.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3137,6 +3234,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000063F.title": "[sb] Basic Electric Oven",
+  "quest.1A00000000000640.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000640.title": "[sb] Basic Pump",
   "quest.1A00000000000641.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3161,6 +3262,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000649.title": "[sb] Advanced Electric Oven",
+  "quest.1A0000000000064A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000064A.title": "[sb] Advanced Pump",
   "quest.1A0000000000064B.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3185,6 +3290,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000653.title": "[sb] Advanced Electric Oven II",
+  "quest.1A00000000000654.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000654.title": "[sb] Advanced Pump II",
   "quest.1A00000000000655.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3209,6 +3318,14 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000065D.title": "[sb] Advanced Electric Oven III",
+  "quest.1A0000000000065E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000065E.title": "[sb] Advanced Pump III",
+  "quest.1A00000000000662.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000662.title": "[sb] Basic Miner",
   "quest.1A00000000000663.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3221,6 +3338,14 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000667.title": "[sb] Advanced Electric Oven IV",
+  "quest.1A00000000000668.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000668.title": "[sb] Advanced Pump IV",
+  "quest.1A00000000000669.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000669.title": "[sb] Advanced Miner",
   "quest.1A0000000000066B.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3237,14 +3362,50 @@
     "As an other plates you may do it from 2 ingots by hammer."
   ],
   "quest.1A00000000000674.title": "Steel Plate",
+  "quest.1A00000000000675.quest_desc": [
+    "It is a small but useful multiblock, that will allow you to pump out a water from rivers without deleting water blocks while it works. Also it may work in ocean to get a salt water from it. It require a steam as a fuel to work."
+  ],
+  "quest.1A00000000000675.title": "Primitive Water Pump",
+  "quest.1A00000000000676.quest_desc": [
+    "A part of primitive pump."
+  ],
+  "quest.1A00000000000676.title": "Primitive Pump Filter",
   "quest.1A0000000000067C.quest_desc": [
     "A part of some bronze steam machines."
   ],
   "quest.1A0000000000067C.title": "Bronze Hull",
+  "quest.1A0000000000067D.quest_desc": [
+    "A part of Primitive Pump Filter"
+  ],
+  "quest.1A0000000000067D.title": "Primitive Fluid Filter",
   "quest.1A0000000000067F.quest_desc": [
     "A part of some machines or stuffs."
   ],
   "quest.1A0000000000067F.title": "Bronze Ring",
+  "quest.1A00000000000680.quest_desc": [
+    "A part of Electric Water Pump."
+  ],
+  "quest.1A00000000000680.title": "Simple Pump Filter",
+  "quest.1A00000000000686.quest_desc": [
+    "It is a small but useful multiblock, that will allow you to pump out a water from rivers without deleting water blocks while it works. Also it may work in ocean to get a salt water from it. It require a ULV (or better) energy hatch."
+  ],
+  "quest.1A00000000000686.title": "Electric Water Pump",
+  "quest.1A00000000000687.quest_desc": [
+    "It is a small but useful multiblock, that will allow you to pump out a water from rivers without deleting water blocks while it works. Also it may work in ocean to get a salt water from it."
+  ],
+  "quest.1A00000000000687.title": "Advanced Electric Water Pump",
+  "quest.1A00000000000688.quest_desc": [
+    "It is a small but useful multiblock, that will allow you to pump out a water from rivers without deleting water blocks while it works. Also it may work in ocean to get a salt water from it."
+  ],
+  "quest.1A00000000000688.title": "Advanced Electric Water Pump II",
+  "quest.1A00000000000689.quest_desc": [
+    "It is a small but useful multiblock, that will allow you to pump out a water from rivers without deleting water blocks while it works. Also it may work in ocean to get a salt water from it."
+  ],
+  "quest.1A00000000000689.title": "Advanced Electric Water Pump III",
+  "quest.1A0000000000068A.quest_desc": [
+    "It is a small but useful multiblock, that will allow you to pump out a water from rivers without deleting water blocks while it works. Also it may work in ocean to get a salt water from it."
+  ],
+  "quest.1A0000000000068A.title": "Advanced Electric Water Pump IV",
   "quest.1A0000000000068C.quest_desc": [
     "Use a hammer or a bending machine to make a plate from an lead ingot."
   ],

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "iis:block/auto/miner_mv_north",
+    "south": "iis:block/auto/miner_mv_south",
+    "east": "iis:block/auto/miner_mv_east",
+    "west": "iis:block/auto/miner_mv_west",
+    "up": "iis:block/auto/miner_mv_up",
+    "down": "iis:block/auto/miner_mv_down",
+    "particle": "iis:block/auto/miner_mv_east"
+  }
+}

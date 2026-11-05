@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "iis:blocks/quantum_tank_lv",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "iis:quantum_tank_lv",
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "source": "block_entity",
+              "include": [
+                "iis:fluid_content"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/iron_magnetic",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_iron_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

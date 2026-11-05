@@ -522,6 +522,11 @@ def d92(g, mrec, ing, rout, shaped, tag_of, ref, NS):
     m('circuit_assembler', 'circuit_advanced', [ing(f'{NS}:circuit_integrated_good', 2), ing(f'{NS}:chip_ilc', 3), ing(f'{NS}:chip_ram'),
                                                 ing(f'{NS}:transistor', 4), ing(tag_of('wire_fine', 'Electrum'), 16)],
       [rout(f'{NS}:circuit_advanced')], 800, 28, fin=sol)
+    # D108: :566-568 integrated processors from CPU chips (the cleanroom wafer); 72 L of solder, plastic board
+    m('circuit_assembler', 'circuit_microprocessor', [ing(f'{NS}:circuit_board_plastic'), ing(f'{NS}:chip_cpu', 4), ing(f'{NS}:resistor', 4), ing(f'{NS}:capacitor', 4),
+                                                      ing(f'{NS}:transistor', 4), ing(tag_of('wire_fine', 'Copper'), 2)], [rout(f'{NS}:circuit_microprocessor', 4)], 200, 60, fin=sol)
+    m('circuit_assembler', 'circuit_processor', [ing(f'{NS}:circuit_board_plastic'), ing(f'{NS}:chip_cpu'), ing(f'{NS}:resistor', 2), ing(f'{NS}:capacitor', 2),
+                                                 ing(f'{NS}:transistor', 2), ing(tag_of('wire_fine', 'RedAlloy'), 2)], [rout(f'{NS}:circuit_processor')], 200, 60, fin=sol)
     # --- hulls in the assembler (:1404-1407, mHardMachineCasings): 2 cables + casing + 288 L molten plastic (50 t, 16 EU/t) ---
     for rid, cable, casing, hull in (('lv', 'tin', 'casing_lv', 'hull_lv'), ('mv', 'copper', 'casing_mv', 'hull_mv'),
                                      ('mv_annealed', 'annealed_copper', 'casing_mv', 'hull_mv'), ('hv', 'gold', 'casing_hv', 'hull_hv'),

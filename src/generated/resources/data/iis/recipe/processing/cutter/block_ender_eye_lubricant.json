@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/ender_eye",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_ender_eye",
+      "count": 9
+    }
+  ],
+  "duration": 280,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 6
+    }
+  ]
+}

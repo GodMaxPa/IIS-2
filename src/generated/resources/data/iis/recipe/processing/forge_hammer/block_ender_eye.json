@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/ender_eye",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:ender_eye",
+      "count": 9
+    }
+  ],
+  "duration": 100,
+  "eut": 24
+}

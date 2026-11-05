@@ -1,0 +1,32 @@
+{
+  "id": "1D00000000000015",
+  "filename": "22_portable_and_wireless",
+  "order_index": 22,
+  "default_quest_shape": "",
+  "quests": [
+    {
+      "id": "1A0000000000004B",
+      "x": 7.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000004A",
+        "1A00000000000046"
+      ],
+      "icon": {
+        "id": "iis:plate_ender_eye",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_ender_eye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004B00"
+        }
+      ]
+    }
+  ]
+}

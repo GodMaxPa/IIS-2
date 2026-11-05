@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CPC",
+    "PMP",
+    "BPB"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "B": "iis:pipe_large_bronze",
+    "C": "#c:circuits/basic",
+    "P": "iis:electric_pump_lv"
+  },
+  "result": {
+    "id": "iis:pump_lv"
+  }
+}

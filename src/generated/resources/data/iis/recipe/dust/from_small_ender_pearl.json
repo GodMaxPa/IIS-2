@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/ender_pearl",
+    "#iis:small_dusts/ender_pearl",
+    "#iis:small_dusts/ender_pearl",
+    "#iis:small_dusts/ender_pearl"
+  ],
+  "result": {
+    "id": "iis:dust_ender_pearl"
+  }
+}

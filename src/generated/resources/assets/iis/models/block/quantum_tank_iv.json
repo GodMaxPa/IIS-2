@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "iis:block/auto/quantum_tank_iv_north",
+    "south": "iis:block/auto/quantum_tank_iv_south",
+    "east": "iis:block/auto/quantum_tank_iv_east",
+    "west": "iis:block/auto/quantum_tank_iv_west",
+    "up": "iis:block/auto/quantum_tank_iv_up",
+    "down": "iis:block/auto/quantum_tank_iv_down",
+    "particle": "iis:block/auto/quantum_tank_iv_east"
+  }
+}

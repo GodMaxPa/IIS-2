@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/plate_ender_pearl",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 7134408
+      }
+    ]
+  }
+}

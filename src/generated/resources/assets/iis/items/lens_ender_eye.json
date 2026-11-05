@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/lens_ender_eye",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 10549990
+      }
+    ]
+  }
+}

@@ -72,6 +72,17 @@ public final class FluidContainers {
             TANKS.put(id, b);
             TANK_ITEMS.add(ITEMS.registerItem(id, p -> new UniversalTankBlock.TankItem(b.get(), p.stacksTo(1))));
         }
+        // D108: GT_MetaTileEntity_QuantumTank — 6^T × 267000 л, стальной корпус машины своего уровня
+        int[] quantum = {1602000, 9612000, 57672000, 346032000, 2076192000};
+        String[] tiers = {"lv", "mv", "hv", "ev", "iv"};
+        for (int i = 0; i < 5; i++) {
+            String id = "quantum_tank_" + tiers[i];
+            int cap = quantum[i];
+            DeferredBlock<UniversalTankBlock> b = BLOCKS.registerBlock(id, p -> new UniversalTankBlock(cap, false, p),
+                    p -> p.mapColor(MapColor.METAL).sound(SoundType.METAL).strength(5.0f, 10.0f).requiresCorrectToolForDrops());
+            TANKS.put(id, b);
+            TANK_ITEMS.add(ITEMS.registerItem(id, p -> new UniversalTankBlock.TankItem(b.get(), p.stacksTo(1))));
+        }
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<UniversalTankBlockEntity>> TANK_BE = BLOCK_ENTITIES.register("universal_tank",

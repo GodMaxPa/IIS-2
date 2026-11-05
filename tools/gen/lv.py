@@ -266,6 +266,17 @@ ITEMS = [
     ('primitive_fluid_filter', 'gt:primitive_fluid_filter', 'gt.metaitem.03.32023.name', 'Primitive Fluid Filter', 'Примитивный фильтр воды'),
     ('simple_fluid_filter', 'gt:simple_fluid_filter', 'gt.metaitem.03.32024.name', 'Simple Fluid Filter', 'Простой фильтр воды'),
     ('fluid_filter', 'gt:fluid_filter', 'gt.metaitem.03.32025.name', 'Fluid Filter', 'Фильтр воды'),
+    # D108: GT_MetaGenerated_Item_01:670-674, 724-725, 740; GT_MetaGenerated_Item_03:78, 80
+    ('field_generator_lv', 'gt:field_generator_lv', 'gt.metaitem.01.32670.name', 'Field Generator (LV)', 'Генератор поля (LV)'),
+    ('field_generator_mv', 'gt:field_generator_mv', 'gt.metaitem.01.32671.name', 'Field Generator (MV)', 'Генератор поля (MV)'),
+    ('field_generator_hv', 'gt:field_generator_hv', 'gt.metaitem.01.32672.name', 'Field Generator (HV)', 'Генератор поля (HV)'),
+    ('field_generator_ev', 'gt:field_generator_ev', 'gt.metaitem.01.32673.name', 'Field Generator (EV)', 'Генератор поля (EV)'),
+    ('field_generator_iv', 'gt:field_generator_iv', 'gt.metaitem.01.32674.name', 'Field Generator (IV)', 'Генератор поля (IV)'),
+    ('quantum_eye', 'gt:quantum_eye', 'gt.metaitem.01.32724.name', 'Quantum Eye', 'Квантовое око'),
+    ('quantum_star', 'gt:quantum_star', 'gt.metaitem.01.32725.name', 'Quantum Star', 'Квантовая звезда'),
+    ('cover_screen', 'gt:cover_screen', 'gt.metaitem.01.32740.name', 'Computer Monitor', 'Компьютерный монитор'),
+    ('circuit_microprocessor', 'gt:circuit_microprocessor', 'gt.metaitem.03.32078.name', 'Microprocessor', 'Микропроцессор'),
+    ('circuit_processor', 'gt:circuit_processor', 'gt.metaitem.03.32080.name', 'Integrated Processor', 'Интегральный процессор'),
     # D92: GT_MetaGenerated_Item_01:713 transistor, :715 phenolic board, Item_03:141 good integrated circuit; the HV circuit is
     # IC2's advanced circuit in IIS 1 (GT_Proxy:416) — our own item with GT's Processor Assembly icon (:696)
     ('transistor', 'gt:717', 'gt.metaitem.01.32717.name', 'Transistor', 'Транзистор'),
@@ -619,6 +630,8 @@ def generate(g):
     add_item_tag('c:plates/wood', f'{NS}:plate_wood')
     add_item_tag('c:circuits/basic', f'{NS}:circuit_basic')   # GT OrePrefixes.circuit Basic
     add_item_tag('c:circuits/good', f'{NS}:circuit_good')     # GT OrePrefixes.circuit Good (D81)
+    add_item_tag('c:circuits/basic', f'{NS}:circuit_microprocessor')   # D108
+    add_item_tag('c:circuits/good', f'{NS}:circuit_processor')         # D108
     add_item_tag('c:circuits/good', f'{NS}:circuit_integrated_good')   # Item_03:141, circuit Good (D92)
     add_item_tag('c:circuits/advanced', f'{NS}:circuit_advanced')      # IC2 advancedCircuit = circuit Advanced (D92)
     add_item_tag('c:circuits/data', f'{NS}:circuit_data')              # GT circuit Data (D97)
@@ -948,7 +961,8 @@ def generate(g):
                             (f'Output: {volts} EU/t, up to {n} A (one per battery)', f'Выход: {volts} EU/t, до {n} А (по ампер на батарейку)')])
     # GT_MetaTileEntity_Transformer: step-down (default) — front = higher tier in (IN_MULTI), other sides lower tier out (OUT);
     # step-up — front = higher tier out (OUT_MULTI), other sides lower tier in (IN). Facing: any of 6 directions. Casing of mTier.
-    for tr, lo, hi, n_ in (('lv', 32, 128, '01'), ('mv', 128, 512, '02'), ('hv', 512, 2048, '03'),   # HV: EV <-> HV (D94)
+    for tr, lo, hi, n_ in (('ulv', 8, 32, '00'),                                                     # ULV: LV <-> ULV (D108)
+                           ('lv', 32, 128, '01'), ('mv', 128, 512, '02'), ('hv', 512, 2048, '03'),   # HV: EV <-> HV (D94)
                            ('ev', 2048, 8192, '04')):                                                # EV: IV <-> EV (D99)
         bid, T, LO, HI = f'transformer_{tr}', tr.upper(), VOLTAGE_NAMES[lo], VOLTAGE_NAMES[hi]
         for mode, front_ov, side_ov in (('', 'OVERLAY_ENERGY_IN_MULTI', 'OVERLAY_ENERGY_OUT'), ('_up', 'OVERLAY_ENERGY_OUT_MULTI', 'OVERLAY_ENERGY_IN')):

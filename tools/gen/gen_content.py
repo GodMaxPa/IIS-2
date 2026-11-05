@@ -142,6 +142,8 @@ names |= {'Chrome', 'StainlessSteel'}
 names |= {'Gallium'}
 # D90: turbine parts — magnalium (rotor rods, turbine casing plates) and the blue steel chain (turbine casing frame)
 names |= {'Magnalium', 'RoseGold', 'BlackBronze', 'BlackSteel', 'BlueSteel'}
+# D108: field generators (GT_MachineRecipeLoader:409-412: ender pearl, ender eye and nether star dusts)
+names |= {'EnderPearl', 'EnderEye', 'NetherStar'}
 # D91: silicon for wafers and chips (GT_MachineRecipeLoader:620; sand electrolysis :1149)
 names |= {'SiliconDioxide', 'Silicon'}
 # D92: polyethylene for the HV hull and transistors (polymerized ethylene); wheat dust (GT_MetaGenerated_Item_02:417 macerator)
@@ -228,6 +230,7 @@ VANILLA = {
     ('ingot', 'Copper'): 'minecraft:copper_ingot', ('nugget', 'Copper'): 'minecraft:copper_nugget',
     ('gem', 'Coal'): 'minecraft:coal', ('gem', 'Diamond'): 'minecraft:diamond', ('gem', 'Emerald'): 'minecraft:emerald',
     ('gem', 'Lapis'): 'minecraft:lapis_lazuli', ('gem', 'NetherQuartz'): 'minecraft:quartz',
+    ('gem', 'EnderPearl'): 'minecraft:ender_pearl', ('gem', 'EnderEye'): 'minecraft:ender_eye', ('gem', 'NetherStar'): 'minecraft:nether_star',
     ('gem', 'Flint'): 'minecraft:flint', ('gem', 'Charcoal'): 'minecraft:charcoal', ('plate', 'Paper'): 'minecraft:paper', ('dust', 'Redstone'): 'minecraft:redstone', ('rod', 'Wood'): 'minecraft:stick',
 }
 NOT_GENERATED_MATERIALS = {'Wood'}  # wood forms (planks, sticks) are vanilla
@@ -933,6 +936,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_multis', os.path.join(ROOT, 'tools
 _multis = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_multis)
 lv_stats['multis'] = _multis.generate(globals())
+# Automation, storage, miners, adjustable transformers, chargers, storage blocks (D108)
+_spec = _ilu.spec_from_file_location('iis_gen_auto', os.path.join(ROOT, 'tools', 'gen', 'auto.py'))
+_auto = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_auto)
+lv_stats['auto'] = _auto.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

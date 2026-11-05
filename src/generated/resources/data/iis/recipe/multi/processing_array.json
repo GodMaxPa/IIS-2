@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CTC",
+    "FMF",
+    "CBC"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "B": "iis:electric_pump_ev",
+    "C": "#c:circuits/elite",
+    "F": "iis:robot_arm_ev",
+    "T": "iis:adjustable_transformer_ev"
+  },
+  "result": {
+    "id": "iis:processing_array"
+  }
+}

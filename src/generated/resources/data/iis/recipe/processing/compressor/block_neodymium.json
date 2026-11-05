@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/neodymium",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_neodymium",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/nether_star",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:wires/8x/osmium",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:circuits/data",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:field_generator_ev",
+      "count": 1
+    }
+  ],
+  "duration": 1800,
+  "eut": 1920
+}

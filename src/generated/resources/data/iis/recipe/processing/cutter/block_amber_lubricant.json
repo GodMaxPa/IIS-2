@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/amber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_amber",
+      "count": 9
+    }
+  ],
+  "duration": 50,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 1
+    }
+  ]
+}

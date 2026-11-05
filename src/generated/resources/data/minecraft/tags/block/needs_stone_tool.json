@@ -208,6 +208,7 @@
     "iis:unpackager_iv",
     "iis:filter_iv",
     "iis:thermal_centrifuge_iv",
+    "iis:transformer_ulv",
     "iis:transformer_ev",
     "iis:coke_oven_bricks",
     "iis:coke_oven",

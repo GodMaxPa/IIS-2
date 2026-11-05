@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/manganese",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_manganese",
+      "count": 9
+    }
+  ],
+  "duration": 1100,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 38
+    }
+  ]
+}

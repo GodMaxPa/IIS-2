@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/ender_eye",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:wires/2x/osmium",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:circuits/good",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:field_generator_mv",
+      "count": 1
+    }
+  ],
+  "duration": 1800,
+  "eut": 120
+}

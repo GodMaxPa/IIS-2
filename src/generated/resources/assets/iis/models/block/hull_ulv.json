@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "iis:block/auto/hull_ulv_side",
+    "top": "iis:block/auto/hull_ulv_top",
+    "bottom": "iis:block/auto/hull_ulv_bottom"
+  }
+}

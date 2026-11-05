@@ -27,15 +27,22 @@ import java.util.function.Consumer;
 /** Блок универсального резервуара; ёмкость — по исполнению. ПКМ — что внутри; капсулы и вёдра — через обработчик ПКМ. */
 public class UniversalTankBlock extends BaseEntityBlock {
     public final int capacity;
+    /** Сливает ли вниз сам: квантовый резервуар GT (D108) — нет, отдаёт только когда забирают. */
+    public final boolean drainsDown;
 
     public UniversalTankBlock(int capacity, Properties properties) {
+        this(capacity, true, properties);
+    }
+
+    public UniversalTankBlock(int capacity, boolean drainsDown, Properties properties) {
         super(properties);
         this.capacity = capacity;
+        this.drainsDown = drainsDown;
     }
 
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
-        return simpleCodec(p -> new UniversalTankBlock(capacity, p));
+        return simpleCodec(p -> new UniversalTankBlock(capacity, drainsDown, p));
     }
 
     @Override
@@ -50,7 +57,7 @@ public class UniversalTankBlock extends BaseEntityBlock {
 
     @Override
     public <T extends BlockEntity> @Nullable BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (level.isClientSide() || type != FluidContainers.TANK_BE.get()) return null;
+        if (level.isClientSide() || type != FluidContainers.TANK_BE.get() || !drainsDown) return null;
         return (l, p, s, be) -> ((UniversalTankBlockEntity) be).serverTick();
     }
 

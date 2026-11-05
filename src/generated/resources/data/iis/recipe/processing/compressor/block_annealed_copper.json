@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/annealed_copper",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_annealed_copper",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

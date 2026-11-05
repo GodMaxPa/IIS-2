@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/ender_pearl",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:wires/1x/osmium",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:circuits/basic",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:field_generator_lv",
+      "count": 1
+    }
+  ],
+  "duration": 1800,
+  "eut": 30
+}

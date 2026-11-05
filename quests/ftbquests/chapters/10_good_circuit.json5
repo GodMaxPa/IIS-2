@@ -734,11 +734,34 @@
       ]
     },
     {
+      "id": "1A00000000000488",
+      "x": 11.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A00000000000221"
+      ],
+      "icon": {
+        "id": "iis:miner_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:miner_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048800"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000489",
       "x": 12.5,
       "y": 8.0,
       "dependencies": [
-        "1A00000000000221"
+        "1A00000000000488"
       ],
       "tasks": [
         {
@@ -769,6 +792,57 @@
           },
           "count": 1,
           "id": "1B0000000004AD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004D7",
+      "x": 6.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000001E3",
+        "1A00000000000197",
+        "1A00000000000073",
+        "1A000000000000FE",
+        "1A00000000000223",
+        "1A00000000000193"
+      ],
+      "icon": {
+        "id": "iis:simple_fluid_filter",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:simple_fluid_filter",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004D9",
+      "x": 6.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000004D7"
+      ],
+      "icon": {
+        "id": "iis:filter_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:filter_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D900"
         }
       ]
     },

@@ -2410,6 +2410,56 @@
     "material": "emerald"
   },
   {
+    "id": "dust_ender_eye",
+    "prefix": "dust",
+    "material": "ender_eye"
+  },
+  {
+    "id": "small_dust_ender_eye",
+    "prefix": "small_dust",
+    "material": "ender_eye"
+  },
+  {
+    "id": "tiny_dust_ender_eye",
+    "prefix": "tiny_dust",
+    "material": "ender_eye"
+  },
+  {
+    "id": "plate_ender_eye",
+    "prefix": "plate",
+    "material": "ender_eye"
+  },
+  {
+    "id": "lens_ender_eye",
+    "prefix": "lens",
+    "material": "ender_eye"
+  },
+  {
+    "id": "dust_ender_pearl",
+    "prefix": "dust",
+    "material": "ender_pearl"
+  },
+  {
+    "id": "small_dust_ender_pearl",
+    "prefix": "small_dust",
+    "material": "ender_pearl"
+  },
+  {
+    "id": "tiny_dust_ender_pearl",
+    "prefix": "tiny_dust",
+    "material": "ender_pearl"
+  },
+  {
+    "id": "plate_ender_pearl",
+    "prefix": "plate",
+    "material": "ender_pearl"
+  },
+  {
+    "id": "lens_ender_pearl",
+    "prefix": "lens",
+    "material": "ender_pearl"
+  },
+  {
     "id": "dust_endstone",
     "prefix": "dust",
     "material": "endstone"
@@ -4733,6 +4783,46 @@
     "id": "screw_nether_quartz",
     "prefix": "screw",
     "material": "nether_quartz"
+  },
+  {
+    "id": "dust_nether_star",
+    "prefix": "dust",
+    "material": "nether_star"
+  },
+  {
+    "id": "small_dust_nether_star",
+    "prefix": "small_dust",
+    "material": "nether_star"
+  },
+  {
+    "id": "tiny_dust_nether_star",
+    "prefix": "tiny_dust",
+    "material": "nether_star"
+  },
+  {
+    "id": "plate_nether_star",
+    "prefix": "plate",
+    "material": "nether_star"
+  },
+  {
+    "id": "rod_nether_star",
+    "prefix": "rod",
+    "material": "nether_star"
+  },
+  {
+    "id": "lens_nether_star",
+    "prefix": "lens",
+    "material": "nether_star"
+  },
+  {
+    "id": "bolt_nether_star",
+    "prefix": "bolt",
+    "material": "nether_star"
+  },
+  {
+    "id": "screw_nether_star",
+    "prefix": "screw",
+    "material": "nether_star"
   },
   {
     "id": "dust_netherrack",

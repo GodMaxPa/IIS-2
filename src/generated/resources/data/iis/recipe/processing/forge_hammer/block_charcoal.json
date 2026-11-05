@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/charcoal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:charcoal",
+      "count": 9
+    }
+  ],
+  "duration": 100,
+  "eut": 24
+}

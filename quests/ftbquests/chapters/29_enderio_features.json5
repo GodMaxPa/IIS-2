@@ -75,6 +75,30 @@
       ]
     },
     {
+      "id": "1A00000000000265",
+      "x": 3.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000C1",
+        "1A00000000000023"
+      ],
+      "icon": {
+        "id": "iis:field_generator_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:field_generator_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000026500"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000273",
       "x": 0.5,
       "y": 0.5,

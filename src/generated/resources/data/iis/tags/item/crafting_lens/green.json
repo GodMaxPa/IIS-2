@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "iis:lens_emerald"
+    "iis:lens_emerald",
+    "iis:lens_ender_eye",
+    "iis:lens_ender_pearl"
   ]
 }

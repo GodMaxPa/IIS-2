@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/sodalite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_sodalite",
+      "count": 9
+    }
+  ],
+  "duration": 250,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 5
+    }
+  ]
+}

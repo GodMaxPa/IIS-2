@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/silver",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_silver",
+      "count": 9
+    }
+  ],
+  "duration": 2140,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 100
+    }
+  ]
+}

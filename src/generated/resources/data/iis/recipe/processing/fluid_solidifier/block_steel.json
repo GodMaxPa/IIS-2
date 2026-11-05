@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:block_steel",
+      "count": 1
+    }
+  ],
+  "duration": 288,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_steel",
+      "amount": 1296
+    }
+  ],
+  "keep": [
+    "iis:mold_block"
+  ]
+}

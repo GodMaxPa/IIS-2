@@ -1,0 +1,37 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:transformer_ulv",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:transformer_lv",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:transformer_mv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:transformer_hv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:cover_screen",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/data",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:adjustable_transformer_ev",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 1920
+}

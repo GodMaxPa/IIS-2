@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "iis:block/auto/battery_charger_lv_north",
+    "south": "iis:block/auto/battery_charger_lv_south",
+    "east": "iis:block/auto/battery_charger_lv_east",
+    "west": "iis:block/auto/battery_charger_lv_west",
+    "up": "iis:block/auto/battery_charger_lv_up",
+    "down": "iis:block/auto/battery_charger_lv_down",
+    "particle": "iis:block/auto/battery_charger_lv_east"
+  }
+}

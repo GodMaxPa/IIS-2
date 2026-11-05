@@ -1,0 +1,29 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/glass",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/aluminium",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:circuits/basic",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:fine_wires/copper",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cover_screen",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 16
+}

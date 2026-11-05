@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DGD",
+    "PMP",
+    "DPD"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "G": "iis:field_generator_hv",
+    "D": "#c:circuits/elite",
+    "P": "#c:plates/tungsten_steel"
+  },
+  "result": {
+    "id": "iis:quantum_tank_hv"
+  }
+}

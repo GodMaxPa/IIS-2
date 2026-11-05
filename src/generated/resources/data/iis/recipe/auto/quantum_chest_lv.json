@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DPD",
+    "PMP",
+    "DGD"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "G": "iis:field_generator_lv",
+    "D": "#c:circuits/advanced",
+    "P": "#c:plates/stainless_steel"
+  },
+  "result": {
+    "id": "iis:quantum_chest_lv"
+  }
+}

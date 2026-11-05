@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CPC",
+    "PMP",
+    "BPB"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "B": "iis:pipe_large_tungsten_steel",
+    "C": "#c:circuits/elite",
+    "P": "iis:electric_pump_iv"
+  },
+  "result": {
+    "id": "iis:pump_iv"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/opal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_opal",
+      "count": 9
+    }
+  ],
+  "duration": 100,
+  "eut": 24
+}

@@ -9,10 +9,10 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 
 /** Общие кусочки GUI LV: значок жидкости (ведро) и подписи. */
-final class LvScreens {
+public final class LvScreens {
     private LvScreens() {}
 
-    static Fluid fluid(int id) {
+    public static Fluid fluid(int id) {
         return id < 0 ? Fluids.EMPTY : BuiltInRegistries.FLUID.byId(id);
     }
 

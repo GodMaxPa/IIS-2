@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/certus_quartz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_certus_quartz",
+      "count": 9
+    }
+  ],
+  "duration": 1960,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 69
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/ender_pearl",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_ender_pearl",
+      "count": 9
+    }
+  ],
+  "duration": 280,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 13
+    }
+  ]
+}

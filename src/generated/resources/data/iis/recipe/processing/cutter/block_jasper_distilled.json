@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/jasper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_jasper",
+      "count": 9
+    }
+  ],
+  "duration": 420,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 14
+    }
+  ]
+}

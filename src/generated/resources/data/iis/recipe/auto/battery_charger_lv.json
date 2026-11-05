@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WTW",
+    "WMW",
+    "BCB"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "W": "#iis:wires/16x/tin",
+    "T": "#c:chests/wooden",
+    "B": "iis:battery_lithium_lv",
+    "C": "#c:circuits/basic"
+  },
+  "result": {
+    "id": "iis:battery_charger_lv"
+  }
+}

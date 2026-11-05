@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/blue_topaz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_blue_topaz",
+      "count": 9
+    }
+  ],
+  "duration": 160,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 3
+    }
+  ]
+}

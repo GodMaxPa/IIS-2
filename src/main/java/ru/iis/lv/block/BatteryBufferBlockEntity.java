@@ -25,17 +25,23 @@ import ru.iis.lv.menu.BatteryBufferMenu;
  */
 public class BatteryBufferBlockEntity extends ElectricBlockEntity {
     private int batteries;
+    private final boolean charger;
     private final long voltage;
     private final int tier;
 
     public BatteryBufferBlockEntity(BlockPos pos, BlockState state) {
-        super(LvContent.BATTERY_BUFFER_BE.get(), pos, state, slots(state), tier(state).voltage() * 64 * slots(state), tier(state).voltage());
+        super(LvContent.BATTERY_BUFFER_BE.get(), pos, state, slots(state), tier(state).voltage() * (charger(state) ? 256 : 64) * slots(state), tier(state).voltage());
+        this.charger = charger(state);
         this.voltage = tier(state).voltage();
         this.tier = tier(state).tier();
     }
 
     private static VoltageTier tier(BlockState s) {
         return s.getBlock() instanceof BatteryBufferBlock b ? b.tier : VoltageTier.LV;
+    }
+
+    private static boolean charger(BlockState s) {
+        return s.getBlock() instanceof BatteryBufferBlock b && b.charger;
     }
 
     private static int slots(BlockState s) {
@@ -63,12 +69,12 @@ public class BatteryBufferBlockEntity extends ElectricBlockEntity {
 
     @Override
     public long outputAmperes() {
-        return batteries;
+        return charger ? batteries * 4L : batteries;
     }
 
     @Override
     public long minimumStored() {
-        return voltage * 16 * items.size();
+        return voltage * (charger ? 64 : 16) * items.size();
     }
 
     /** Детектор энергии «с батареями»: заряд и ёмкость батарей в слотах. */
@@ -104,7 +110,20 @@ public class BatteryBufferBlockEntity extends ElectricBlockEntity {
                 energy.stored += d;
             }
         }
-        energy.maxAmperesIn = batteries * 2L;
+        int chargeable = 0;
+        for (ItemStack s : items) if (s.getItem() instanceof BatteryItem b && b.tier <= tier) chargeable++;
+        energy.maxAmperesIn = charger ? chargeable * 8L : batteries * 2L;
+        // GT_MetaTileEntity_Charger#onPostTick: сверх буфера — разряд и заряд до 15 × V на предмет
+        if (charger) {
+            for (ItemStack s : items) {
+                if (!(s.getItem() instanceof BatteryItem b) || b.tier > tier) continue;
+                if (discharge && b.isBattery() && energy.stored < energy.capacity) {
+                    energy.stored += b.discharge(s, Math.min(voltage * 15, energy.capacity - energy.stored));
+                } else if (charge && energy.stored > 0) {
+                    energy.stored -= b.charge(s, Math.min(voltage * 15, energy.stored));
+                }
+            }
+        }
         setChanged();
     }
 

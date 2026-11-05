@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:quantum_star",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:wires/16x/osmium",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:circuits/elite",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:field_generator_iv",
+      "count": 1
+    }
+  ],
+  "duration": 1800,
+  "eut": 7680
+}
