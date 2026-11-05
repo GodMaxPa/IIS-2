@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CEC",
+    "CMC",
+    "WEW"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "E": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah",
+    "C": "iis:fluid_filter"
+  },
+  "result": {
+    "id": "iis:filter_zpm"
+  }
+}

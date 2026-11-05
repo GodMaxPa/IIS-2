@@ -2858,5 +2858,175 @@
     "amperage": 64,
     "loss": 8,
     "thickness": 12.0
+  },
+  {
+    "id": "wire_naquadah_1x",
+    "material": "naquadah",
+    "size": 1,
+    "insulated": false,
+    "voltage": 131072,
+    "amperage": 2,
+    "loss": 4,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_naquadah_1x",
+    "material": "naquadah",
+    "size": 1,
+    "insulated": true,
+    "voltage": 131072,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_naquadah_2x",
+    "material": "naquadah",
+    "size": 2,
+    "insulated": false,
+    "voltage": 131072,
+    "amperage": 4,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_naquadah_2x",
+    "material": "naquadah",
+    "size": 2,
+    "insulated": true,
+    "voltage": 131072,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_naquadah_4x",
+    "material": "naquadah",
+    "size": 4,
+    "insulated": false,
+    "voltage": 131072,
+    "amperage": 8,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_naquadah_4x",
+    "material": "naquadah",
+    "size": 4,
+    "insulated": true,
+    "voltage": 131072,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_naquadah_8x",
+    "material": "naquadah",
+    "size": 8,
+    "insulated": false,
+    "voltage": 131072,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_naquadah_8x",
+    "material": "naquadah",
+    "size": 8,
+    "insulated": true,
+    "voltage": 131072,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_naquadah_12x",
+    "material": "naquadah",
+    "size": 12,
+    "insulated": false,
+    "voltage": 131072,
+    "amperage": 24,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_naquadah_12x",
+    "material": "naquadah",
+    "size": 12,
+    "insulated": true,
+    "voltage": 131072,
+    "amperage": 24,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_naquadah_16x",
+    "material": "naquadah",
+    "size": 16,
+    "insulated": false,
+    "voltage": 131072,
+    "amperage": 32,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_superconductor_1x",
+    "material": "superconductor",
+    "size": 1,
+    "insulated": false,
+    "voltage": 2147483647,
+    "amperage": 4,
+    "loss": 1,
+    "thickness": 2.0
+  },
+  {
+    "id": "wire_superconductor_2x",
+    "material": "superconductor",
+    "size": 2,
+    "insulated": false,
+    "voltage": 2147483647,
+    "amperage": 8,
+    "loss": 1,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_superconductor_4x",
+    "material": "superconductor",
+    "size": 4,
+    "insulated": false,
+    "voltage": 2147483647,
+    "amperage": 16,
+    "loss": 1,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_superconductor_8x",
+    "material": "superconductor",
+    "size": 8,
+    "insulated": false,
+    "voltage": 2147483647,
+    "amperage": 32,
+    "loss": 1,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_superconductor_12x",
+    "material": "superconductor",
+    "size": 12,
+    "insulated": false,
+    "voltage": 2147483647,
+    "amperage": 48,
+    "loss": 1,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_superconductor_16x",
+    "material": "superconductor",
+    "size": 16,
+    "insulated": false,
+    "voltage": 2147483647,
+    "amperage": 64,
+    "loss": 1,
+    "thickness": 12.0
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/naquadah",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_naquadah",
+      "count": 4
+    }
+  ],
+  "duration": 98,
+  "eut": 24
+}

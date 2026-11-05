@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/epoxid_fiber_reinforced",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/copper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_board_fiberglass",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 10,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:sulfuricacid",
+      "amount": 125
+    }
+  ]
+}

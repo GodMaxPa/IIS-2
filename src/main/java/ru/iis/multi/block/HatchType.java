@@ -23,6 +23,9 @@ public enum HatchType {
     /** GT_Loader_MetaTileEntities:274, :231 Hatch_Energy_LuV, Hatch_Dynamo_LuV (D110). */
     ENERGY_LUV("hatch_energy_luv", 32768),
     DYNAMO_LUV("hatch_dynamo_luv", 32768),
+    /** GT_Loader_MetaTileEntities:275, :232 Hatch_Energy_ZPM, Hatch_Dynamo_ZPM (D112). */
+    ENERGY_ZPM("hatch_energy_zpm", 131072),
+    DYNAMO_ZPM("hatch_dynamo_zpm", 131072),
     INPUT_BUS("hatch_input_bus_lv"),
     OUTPUT_BUS("hatch_output_bus_lv"),
     INPUT_HATCH("hatch_input_lv"),
@@ -38,6 +41,9 @@ public enum HatchType {
     /** D110: GT_Loader_MetaTileEntities:285–413, LuV. */
     INPUT_BUS_LUV("hatch_input_bus_luv", "INPUT_BUS", 6), OUTPUT_BUS_LUV("hatch_output_bus_luv", "OUTPUT_BUS", 6), INPUT_HATCH_LUV("hatch_input_luv", "INPUT_HATCH", 6),
     OUTPUT_HATCH_LUV("hatch_output_luv", "OUTPUT_HATCH", 6), MUFFLER_LUV("hatch_muffler_luv", "MUFFLER", 6),
+    /** D112: GT_Loader_MetaTileEntities:286–414, ZPM. */
+    INPUT_BUS_ZPM("hatch_input_bus_zpm", "INPUT_BUS", 7), OUTPUT_BUS_ZPM("hatch_output_bus_zpm", "OUTPUT_BUS", 7), INPUT_HATCH_ZPM("hatch_input_zpm", "INPUT_HATCH", 7),
+    OUTPUT_HATCH_ZPM("hatch_output_zpm", "OUTPUT_HATCH", 7), MUFFLER_ZPM("hatch_muffler_zpm", "MUFFLER", 7),
     /** GT_Loader_MetaTileEntities:402 Hatch_DataAccess_EV (D110): 4 флешки для сборочной линии. */
     DATA_ACCESS("hatch_data_access_ev");
 
@@ -86,7 +92,7 @@ public enum HatchType {
     }
 
     public boolean dynamo() {
-        return this == DYNAMO || this == DYNAMO_MV || this == DYNAMO_HV || this == DYNAMO_EV || this == DYNAMO_IV || this == DYNAMO_LUV;
+        return this == DYNAMO || this == DYNAMO_MV || this == DYNAMO_HV || this == DYNAMO_EV || this == DYNAMO_IV || this == DYNAMO_LUV || this == DYNAMO_ZPM;
     }
 
     /** GT_MetaTileEntity_Hatch#getSlots: LV — 2×2. */

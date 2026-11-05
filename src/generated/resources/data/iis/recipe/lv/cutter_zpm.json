@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCG",
+    "VMB",
+    "CWE"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "E": "iis:electric_motor_zpm",
+    "V": "iis:conveyor_module_zpm",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah",
+    "G": "iis:reinforced_glass",
+    "B": "iis:diamond_sawblade"
+  },
+  "result": {
+    "id": "iis:cutter_zpm"
+  }
+}

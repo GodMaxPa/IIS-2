@@ -1,0 +1,55 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_zpm",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:pipe_medium_high_pressure",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/hsse",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:screws/hsse",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:rings/silicone",
+      "count": 16
+    },
+    {
+      "ingredient": "#iis:rotors/hsse",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:cables/4x/vanadium_gallium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_pump_zpm",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 24000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 288
+    },
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 750
+    }
+  ],
+  "keep": [
+    "iis:electric_pump_luv"
+  ],
+  "temp": 144000
+}

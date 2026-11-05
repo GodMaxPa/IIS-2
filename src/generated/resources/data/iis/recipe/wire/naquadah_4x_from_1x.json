@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/naquadah",
+    "#iis:wires/1x/naquadah",
+    "#iis:wires/1x/naquadah",
+    "#iis:wires/1x/naquadah"
+  ],
+  "result": {
+    "id": "iis:wire_naquadah_4x"
+  }
+}

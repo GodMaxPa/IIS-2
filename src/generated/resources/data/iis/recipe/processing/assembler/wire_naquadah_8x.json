@@ -1,0 +1,18 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/naquadah",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_naquadah_8x",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 8,
+  "circuit": 8
+}

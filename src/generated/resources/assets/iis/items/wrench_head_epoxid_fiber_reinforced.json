@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/wrench_head_epoxid_fiber_reinforced",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 10514448
+      }
+    ]
+  }
+}

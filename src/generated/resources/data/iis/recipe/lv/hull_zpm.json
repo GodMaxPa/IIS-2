@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PHP",
+    "CMC"
+  ],
+  "key": {
+    "P": "#c:plates/polytetrafluoroethylene",
+    "H": "#c:plates/iridium",
+    "C": "#iis:cables/1x/naquadah",
+    "M": "iis:casing_zpm"
+  },
+  "result": {
+    "id": "iis:hull_zpm"
+  }
+}

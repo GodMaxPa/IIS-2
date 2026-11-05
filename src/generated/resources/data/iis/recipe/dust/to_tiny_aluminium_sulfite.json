@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/aluminium_sulfite"
+  },
+  "result": {
+    "id": "iis:tiny_dust_aluminium_sulfite",
+    "count": 18
+  }
+}

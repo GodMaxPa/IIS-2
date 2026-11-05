@@ -1,0 +1,59 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_zpm",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/hsse",
+      "count": 6
+    },
+    {
+      "ingredient": "#iis:rings/hsse",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:rounds/hsse",
+      "count": 32
+    },
+    {
+      "ingredient": "#c:rods/hsse",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:gears/hsse",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_gears/hsse",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:cables/4x/vanadium_gallium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_piston_zpm",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 24000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 288
+    },
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 750
+    }
+  ],
+  "keep": [
+    "iis:electric_piston_luv"
+  ],
+  "temp": 144000
+}

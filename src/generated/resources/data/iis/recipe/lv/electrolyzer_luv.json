@@ -11,7 +11,7 @@
     "C": "#c:circuits/master",
     "W": "#iis:cables/1x/niobium_titanium",
     "I": "#iis:wires/1x/osmium",
-    "G": "minecraft:glass"
+    "G": "iis:reinforced_glass"
   },
   "result": {
     "id": "iis:electrolyzer_luv"

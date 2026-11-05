@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/gallium_arsenide",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_gallium_arsenide",
+      "count": 1
+    }
+  ],
+  "duration": 72,
+  "eut": 24
+}

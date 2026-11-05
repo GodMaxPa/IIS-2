@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:small_dusts/gallium_arsenide",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 6,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_galliumarsenide",
+      "amount": 36
+    }
+  ]
+}

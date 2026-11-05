@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/phosphate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_phosphate",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_phosphorus",
+      "count": 1
+    }
+  ],
+  "duration": 144,
+  "eut": 5
+}

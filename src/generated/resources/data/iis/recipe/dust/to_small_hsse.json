@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/hsse"
+  ],
+  "result": {
+    "id": "iis:small_dust_hsse",
+    "count": 4
+  }
+}

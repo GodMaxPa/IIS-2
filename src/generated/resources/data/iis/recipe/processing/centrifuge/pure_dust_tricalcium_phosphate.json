@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_tricalcium_phosphate",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_phosphate",
+      "count": 1
     }
   ],
-  "duration": 31,
+  "duration": 248,
   "eut": 5
 }

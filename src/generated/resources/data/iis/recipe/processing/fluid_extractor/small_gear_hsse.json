@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:small_gears/hsse",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 103,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_hsse",
+      "amount": 144
+    }
+  ]
+}

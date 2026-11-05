@@ -1,0 +1,63 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#iis:long_rods/neodymium_magnetic",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:long_rods/hsse",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:rings/hsse",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:rounds/hsse",
+      "count": 16
+    },
+    {
+      "ingredient": "#iis:fine_wires/platinum",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/platinum",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/platinum",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/platinum",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:cables/4x/vanadium_gallium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_zpm",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 24000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 288
+    },
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 750
+    }
+  ],
+  "keep": [
+    "iis:electric_motor_luv"
+  ],
+  "temp": 144000
+}

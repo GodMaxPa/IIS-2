@@ -5,6 +5,218 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A000000000002A7",
+      "x": 9.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000002A5"
+      ],
+      "icon": {
+        "id": "iis:dust_hsse",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_hsse",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002A8",
+      "x": 8.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000002A7"
+      ],
+      "icon": {
+        "id": "iis:ingot_hsse",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_hsse",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002A9",
+      "x": 6.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000002AA"
+      ],
+      "icon": {
+        "id": "iis:conveyor_module_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:conveyor_module_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002AA",
+      "x": 6.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000002A8"
+      ],
+      "icon": {
+        "id": "iis:electric_motor_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_motor_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002AA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002AB",
+      "x": 5.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000002AA"
+      ],
+      "icon": {
+        "id": "iis:electric_piston_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_piston_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002AB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002AC",
+      "x": 3.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000002AB"
+      ],
+      "icon": {
+        "id": "iis:robot_arm_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:robot_arm_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002AC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002AE",
+      "x": 5.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000004C1",
+        "1A000000000002A2"
+      ],
+      "icon": {
+        "id": "iis:emitter_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:emitter_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002AE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002AF",
+      "x": 5.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000002AE",
+        "1A000000000002AC",
+        "1A000000000002A9"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002AF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002B1",
+      "x": 2.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000015F",
+        "1A0000000000035A",
+        "1A0000000000028C"
+      ],
+      "icon": {
+        "id": "iis:silicon_boule_naquadah",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:silicon_boule_naquadah",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002B100"
+        }
+      ]
+    },
+    {
       "id": "1A000000000002B3",
       "x": 0.5,
       "y": 3.5,
@@ -49,6 +261,52 @@
           "id": "1B00000000042700"
         }
       ]
+    },
+    {
+      "id": "1A000000000004C1",
+      "x": 8.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000002A8"
+      ],
+      "icon": {
+        "id": "iis:rod_hsse",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_hsse",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004C100"
+        }
+      ]
+    }
+  ],
+  "quest_links": [
+    {
+      "id": "1E000000020002B2",
+      "linked_quest": "1A000000000002B2",
+      "x": 0.5,
+      "y": 5.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000002000405",
+      "linked_quest": "1A00000000000405",
+      "x": 12.5,
+      "y": 2.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000002000411",
+      "linked_quest": "1A00000000000411",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0
     }
   ]
 }

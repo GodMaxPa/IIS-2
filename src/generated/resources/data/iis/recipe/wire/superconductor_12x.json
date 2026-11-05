@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/8x/superconductor",
+    "#iis:wires/4x/superconductor"
+  ],
+  "result": {
+    "id": "iis:wire_superconductor_12x"
+  }
+}

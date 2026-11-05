@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "VWZ",
+    "WMS",
+    "CWZ"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "S": "#c:rods/vanadium_gallium",
+    "Z": "#iis:wires/8x/superconductor",
+    "V": "iis:conveyor_module_zpm",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah"
+  },
+  "result": {
+    "id": "iis:electromagnetic_separator_zpm"
+  }
+}

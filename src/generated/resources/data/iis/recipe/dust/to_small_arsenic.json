@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/arsenic"
+  ],
+  "result": {
+    "id": "iis:small_dust_arsenic",
+    "count": 4
+  }
+}

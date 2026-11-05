@@ -1,0 +1,33 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/aluminium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_indium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_aluminium_sulfite",
+      "count": 7
+    }
+  ],
+  "duration": 50,
+  "eut": 600,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:indiumconcentrate",
+      "amount": 8000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:leadzincsolution",
+      "amount": 8000
+    }
+  ]
+}

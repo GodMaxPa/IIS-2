@@ -218,6 +218,54 @@
       ]
     },
     {
+      "id": "1A00000000000493",
+      "x": 0.5,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:macerator_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:macerator_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000049300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000494",
+      "x": 20.0,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:ore_washer_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ore_washer_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000049400"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000496",
       "x": 20.0,
       "y": 17.0,
@@ -506,6 +554,30 @@
       ]
     },
     {
+      "id": "1A000000000004E0",
+      "x": 9.5,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:centrifuge_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:centrifuge_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004E000"
+        }
+      ]
+    },
+    {
       "id": "1A000000000004E2",
       "x": 11.0,
       "y": 17.0,
@@ -646,6 +718,30 @@
           },
           "count": 1,
           "id": "1B0000000004E700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004E8",
+      "x": 11.0,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:thermal_centrifuge_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:thermal_centrifuge_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004E800"
         }
       ]
     },
@@ -794,6 +890,30 @@
       ]
     },
     {
+      "id": "1A000000000004F0",
+      "x": 12.5,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:sifter_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sifter_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004F000"
+        }
+      ]
+    },
+    {
       "id": "1A000000000004F2",
       "x": 17.0,
       "y": 17.0,
@@ -934,6 +1054,30 @@
           },
           "count": 1,
           "id": "1B0000000004F700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004F8",
+      "x": 14.0,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:electromagnetic_separator_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electromagnetic_separator_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004F800"
         }
       ]
     },
@@ -1082,6 +1226,30 @@
       ]
     },
     {
+      "id": "1A00000000000500",
+      "x": 15.5,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:chemical_bath_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_bath_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050000"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000502",
       "x": 9.5,
       "y": 17.0,
@@ -1226,6 +1394,30 @@
       ]
     },
     {
+      "id": "1A00000000000508",
+      "x": 17.0,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:electrolyzer_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electrolyzer_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000050800"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000050A",
       "x": 2.0,
       "y": 17.0,
@@ -1366,6 +1558,30 @@
           },
           "count": 1,
           "id": "1B00000000050F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000510",
+      "x": 2.0,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:forge_hammer_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forge_hammer_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000051000"
         }
       ]
     },
@@ -1560,6 +1776,30 @@
       ]
     },
     {
+      "id": "1A0000000000051A",
+      "x": 26.0,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:bender_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bender_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000051A00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000522",
       "x": 27.5,
       "y": 17.0,
@@ -1700,6 +1940,30 @@
           },
           "count": 1,
           "id": "1B00000000052700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000528",
+      "x": 27.5,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:wiremill_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wiremill_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000052800"
         }
       ]
     },
@@ -1848,6 +2112,30 @@
       ]
     },
     {
+      "id": "1A00000000000530",
+      "x": 29.0,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:lathe_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lathe_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053000"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000532",
       "x": 30.5,
       "y": 17.0,
@@ -1988,6 +2276,30 @@
           },
           "count": 1,
           "id": "1B00000000053700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000538",
+      "x": 30.5,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:extruder_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extruder_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000053800"
         }
       ]
     },
@@ -2136,6 +2448,30 @@
       ]
     },
     {
+      "id": "1A00000000000540",
+      "x": 6.5,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:electric_furnace_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_furnace_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000054000"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000054A",
       "x": 21.5,
       "y": 17.0,
@@ -2276,6 +2612,30 @@
           },
           "count": 1,
           "id": "1B00000000054F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000550",
+      "x": 21.5,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:packager_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:packager_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000055000"
         }
       ]
     },
@@ -2424,6 +2784,30 @@
       ]
     },
     {
+      "id": "1A00000000000558",
+      "x": 23.0,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:packager_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:unpackager_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000055800"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000055A",
       "x": 24.5,
       "y": 17.0,
@@ -2564,6 +2948,30 @@
           },
           "count": 1,
           "id": "1B00000000055F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000560",
+      "x": 24.5,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:rock_breaker_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rock_breaker_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056000"
         }
       ]
     },
@@ -2712,6 +3120,30 @@
       ]
     },
     {
+      "id": "1A00000000000568",
+      "x": 32.0,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:cutter_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cutter_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000056800"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000056A",
       "x": 33.5,
       "y": 0.5,
@@ -2852,6 +3284,30 @@
           },
           "count": 1,
           "id": "1B00000000056F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000570",
+      "x": 33.5,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:assembler_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assembler_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000057000"
         }
       ]
     },
@@ -3000,6 +3456,30 @@
       ]
     },
     {
+      "id": "1A00000000000578",
+      "x": 35.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000057800"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000582",
       "x": 38.0,
       "y": 0.5,
@@ -3144,6 +3624,54 @@
       ]
     },
     {
+      "id": "1A00000000000588",
+      "x": 38.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:fluid_extractor_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_extractor_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000058800"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000058B",
+      "x": 39.5,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:microwave_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:microwave_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000058B00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000058C",
       "x": 39.5,
       "y": 8.0,
@@ -3284,6 +3812,30 @@
           },
           "count": 1,
           "id": "1B00000000059100"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000059B",
+      "x": 2.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:scanner_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:scanner_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000059B00"
         }
       ]
     },
@@ -3576,6 +4128,30 @@
       ]
     },
     {
+      "id": "1A000000000005A8",
+      "x": 3.5,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:chemical_reactor_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_reactor_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005A800"
+        }
+      ]
+    },
+    {
       "id": "1A000000000005AA",
       "x": 3.5,
       "y": 14.0,
@@ -3766,6 +4342,30 @@
       ]
     },
     {
+      "id": "1A000000000005B2",
+      "x": 3.5,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:alloy_smelter_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:alloy_smelter_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005B200"
+        }
+      ]
+    },
+    {
       "id": "1A000000000005B4",
       "x": 5.0,
       "y": 17.0,
@@ -3906,6 +4506,30 @@
           },
           "count": 1,
           "id": "1B0000000005B900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005BA",
+      "x": 5.0,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:compressor_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressor_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005BA00"
         }
       ]
     },
@@ -4188,6 +4812,30 @@
           },
           "count": 1,
           "id": "1B0000000005C800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005C9",
+      "x": 8.0,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:extractor_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005C900"
         }
       ]
     },
@@ -5488,6 +6136,222 @@
       ]
     },
     {
+      "id": "1A0000000000061F",
+      "x": 5.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:fluid_canner_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000061F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000624",
+      "x": 12.5,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:brewery_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:brewery_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000062400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000626",
+      "x": 15.5,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:fluid_solidifier_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_solidifier_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000062600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000627",
+      "x": 17.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:distillery_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:distillery_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000062700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000628",
+      "x": 18.5,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:polarizer_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:polarizer_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000062800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000629",
+      "x": 20.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:autoclave_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:autoclave_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000062900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000062A",
+      "x": 21.5,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:mixer_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mixer_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000062A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000062B",
+      "x": 23.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:laser_engraver_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_engraver_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000062B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000062C",
+      "x": 24.5,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:forming_press_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_press_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000062C00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000063B",
       "x": 26.0,
       "y": 0.5,
@@ -6373,6 +7237,78 @@
       ]
     },
     {
+      "id": "1A00000000000677",
+      "x": 26.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:fluid_heater_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_heater_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000067700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000679",
+      "x": 29.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:arc_furnace_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:arc_furnace_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000067900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000067B",
+      "x": 32.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:electric_oven_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_oven_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000067B00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000690",
       "x": 33.5,
       "y": 17.0,
@@ -6513,6 +7449,30 @@
           },
           "count": 1,
           "id": "1B00000000069500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000696",
+      "x": 33.5,
+      "y": 26.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:monster_repellent_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:monster_repellent_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000069600"
         }
       ]
     }

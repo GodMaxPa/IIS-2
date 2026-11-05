@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/gallium_arsenide"
+  },
+  "result": {
+    "id": "iis:tiny_dust_gallium_arsenide",
+    "count": 18
+  }
+}

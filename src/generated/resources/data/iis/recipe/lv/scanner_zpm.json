@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CTC",
+    "WMW",
+    "CRC"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "T": "iis:emitter_zpm",
+    "R": "iis:sensor_zpm",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah"
+  },
+  "result": {
+    "id": "iis:scanner_zpm"
+  }
+}

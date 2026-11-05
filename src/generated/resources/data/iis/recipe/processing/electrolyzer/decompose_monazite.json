@@ -1,0 +1,21 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/monazite",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_rare_earth",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_phosphate",
+      "count": 1
+    }
+  ],
+  "duration": 104,
+  "eut": 60
+}

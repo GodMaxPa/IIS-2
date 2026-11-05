@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ECE",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "E": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah",
+    "C": "#iis:wires/4x/naquadah"
+  },
+  "result": {
+    "id": "iis:alloy_smelter_zpm"
+  }
+}

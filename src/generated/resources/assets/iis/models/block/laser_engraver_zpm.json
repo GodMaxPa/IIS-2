@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/laser_engraver_zpm_side",
+    "north": "iis:block/lv/laser_engraver_zpm_front",
+    "south": "iis:block/lv/laser_engraver_zpm_back",
+    "east": "iis:block/lv/laser_engraver_zpm_side",
+    "west": "iis:block/lv/laser_engraver_zpm_side",
+    "up": "iis:block/lv/laser_engraver_zpm_top",
+    "down": "iis:block/lv/laser_engraver_zpm_bottom"
+  }
+}

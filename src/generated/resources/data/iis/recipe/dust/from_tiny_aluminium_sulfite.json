@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/aluminium_sulfite",
+    "#iis:tiny_dusts/aluminium_sulfite",
+    "#iis:tiny_dusts/aluminium_sulfite",
+    "#iis:tiny_dusts/aluminium_sulfite",
+    "#iis:tiny_dusts/aluminium_sulfite",
+    "#iis:tiny_dusts/aluminium_sulfite",
+    "#iis:tiny_dusts/aluminium_sulfite",
+    "#iis:tiny_dusts/aluminium_sulfite",
+    "#iis:tiny_dusts/aluminium_sulfite"
+  ],
+  "result": {
+    "id": "iis:dust_aluminium_sulfite"
+  }
+}

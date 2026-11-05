@@ -33,6 +33,9 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
     public static final int KANTHAL_HEAT = 2700;
     public static final int NICHROME_HEAT = 3600;
     public static final int TUNGSTENSTEEL_HEAT = 4500;
+    /** D112: GT checkMachine: HSS-G 5400, наквада 7200. */
+    public static final int HSSG_HEAT = 5400;
+    public static final int NAQUADAH_HEAT = 7200;
 
     private int heat;
 
@@ -90,7 +93,7 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
                     case MAINTENANCE -> parts.maintenance.add(b);
                     case INPUT_BUS -> parts.inputBuses.add(b);
                     case INPUT_HATCH -> parts.inputHatches.add(b);
-                    case ENERGY, ENERGY_MV, ENERGY_HV, ENERGY_EV, ENERGY_IV, ENERGY_LUV -> parts.energy.add(b);
+                    case ENERGY, ENERGY_MV, ENERGY_HV, ENERGY_EV, ENERGY_IV, ENERGY_LUV, ENERGY_ZPM -> parts.energy.add(b);
                     case OUTPUT_BUS -> parts.outputBuses.add(b);
                     default -> {
                         return false;
@@ -108,6 +111,8 @@ public class EbfBlockEntity extends MultiblockControllerBlockEntity {
         if (b == MultiContent.COIL_KANTHAL.get()) return KANTHAL_HEAT;
         if (b == MultiContent.COIL_NICHROME.get()) return NICHROME_HEAT;
         if (b == MultiContent.COIL_TUNGSTENSTEEL.get()) return TUNGSTENSTEEL_HEAT;
+        if (b == MultiContent.COIL_HSSG.get()) return HSSG_HEAT;
+        if (b == MultiContent.COIL_NAQUADAH.get()) return NAQUADAH_HEAT;
         return 0;
     }
 

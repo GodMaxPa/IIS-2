@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "VGW",
+    "PGV",
+    "CMC"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "P": "iis:electric_pump_zpm",
+    "V": "iis:conveyor_module_zpm",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah",
+    "G": "iis:reinforced_glass"
+  },
+  "result": {
+    "id": "iis:chemical_bath_zpm"
+  }
+}

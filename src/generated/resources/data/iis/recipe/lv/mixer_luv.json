@@ -11,7 +11,7 @@
     "E": "iis:electric_motor_luv",
     "R": "#iis:rotors/chrome",
     "C": "#c:circuits/master",
-    "G": "minecraft:glass"
+    "G": "iis:reinforced_glass"
   },
   "result": {
     "id": "iis:mixer_luv"

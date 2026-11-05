@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/epoxid_fiber_reinforced",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_epoxid_fiber_reinforced",
+      "count": 2
+    }
+  ],
+  "duration": 6,
+  "eut": 16
+}

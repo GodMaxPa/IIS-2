@@ -724,7 +724,7 @@
       "x": 12.5,
       "y": 5.5,
       "dependencies": [
-        "1A00000000000048",
+        "1A000000000000BD",
         "1A000000000000F1",
         "1A00000000000040",
         "1A00000000000438"
@@ -737,6 +737,66 @@
             "amount": 1
           },
           "id": "1B0000000000BC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000BD",
+      "x": 14.0,
+      "y": 5.5,
+      "dependencies": [
+        "1A00000000000048"
+      ],
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:purified_sphalerite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000BD00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:purified_galena",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000BD01"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_phosphorus",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000BD02"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000BF",
+      "x": 9.5,
+      "y": 10.0,
+      "dependencies": [
+        "1A000000000000C0"
+      ],
+      "icon": {
+        "id": "iis:ingot_arsenic",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_arsenic",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000BF00"
         }
       ]
     },
@@ -791,6 +851,53 @@
       ]
     },
     {
+      "id": "1A000000000000C2",
+      "x": 11.0,
+      "y": 7.0,
+      "dependencies": [
+        "1A000000000000C3"
+      ],
+      "icon": {
+        "id": "iis:dust_indium_gallium_phosphide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_indium_gallium_phosphide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000C200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000C3",
+      "x": 11.0,
+      "y": 5.5,
+      "dependencies": [
+        "1A000000000000BC",
+        "1A000000000000C4"
+      ],
+      "icon": {
+        "id": "iis:dust_indium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_indium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000C300"
+        }
+      ]
+    },
+    {
       "id": "1A000000000000C5",
       "x": 14.0,
       "y": 10.0,
@@ -836,6 +943,29 @@
           "id": "1B0000000003AC00"
         }
       ]
+    },
+    {
+      "id": "1A00000000000723",
+      "x": 11.0,
+      "y": 10.0,
+      "dependencies": [
+        "1A000000000000BF"
+      ],
+      "icon": {
+        "id": "iis:ingot_gallium_arsenide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_gallium_arsenide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072300"
+        }
+      ]
     }
   ],
   "quest_links": [
@@ -845,6 +975,13 @@
       "x": 2.75,
       "y": 3.25,
       "size": 2.5
+    },
+    {
+      "id": "1E000000002000C7",
+      "linked_quest": "1A000000000000C7",
+      "x": 11.0,
+      "y": 8.5,
+      "size": 1.0
     },
     {
       "id": "1E000000002003F7",

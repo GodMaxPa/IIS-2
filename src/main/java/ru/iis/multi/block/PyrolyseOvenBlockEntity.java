@@ -36,6 +36,8 @@ public class PyrolyseOvenBlockEntity extends RecipeMultiblockBlockEntity {
         if (b == MultiContent.COIL_KANTHAL.get()) return 1;
         if (b == MultiContent.COIL_NICHROME.get()) return 2;
         if (b == MultiContent.COIL_TUNGSTENSTEEL.get()) return 3;
+        if (b == MultiContent.COIL_HSSG.get()) return 4;
+        if (b == MultiContent.COIL_NAQUADAH.get()) return 5;
         return -1;
     }
 

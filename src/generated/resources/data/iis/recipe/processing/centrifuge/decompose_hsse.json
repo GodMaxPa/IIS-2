@@ -1,0 +1,29 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/hsse",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_hssg",
+      "count": 6
+    },
+    {
+      "id": "iis:dust_cobalt",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_manganese",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 1
+    }
+  ],
+  "duration": 2916,
+  "eut": 20
+}

@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/indium",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/gallium",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/phosphorus",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_indium_gallium_phosphide",
+      "count": 3
+    }
+  ],
+  "duration": 200,
+  "eut": 8
+}

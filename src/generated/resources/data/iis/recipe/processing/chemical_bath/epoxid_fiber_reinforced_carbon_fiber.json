@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "iis:carbon_fiber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_epoxid_fiber_reinforced",
+      "count": 1
+    }
+  ],
+  "duration": 240,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_epoxid",
+      "amount": 144
+    }
+  ]
+}

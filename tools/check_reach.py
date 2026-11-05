@@ -82,7 +82,7 @@ for f in glob.glob(f'{R}/data/iis/recipe/**/*.json', recursive=True):
                 'cracking': ['oil_cracker'], 'assembly_line': ['assembly_line'], 'primitive_blast': ['bricked_blast_furnace'], 'coke_oven': ['coke_oven']}.get(m)
         if ctrl is None:
             eut = d.get('eut', 0)
-            ctrl = [f'{m}_{tn}' for tn, v in (('lv', 32), ('mv', 128), ('hv', 512), ('ev', 2048), ('iv', 8192), ('luv', 32768)) if eut <= v] + ([f'steam_{m}_bronze', f'steam_{m}_steel', f'{m}_bronze', f'{m}_steel'] if eut <= 32 else [])
+            ctrl = [f'{m}_{tn}' for tn, v in (('lv', 32), ('mv', 128), ('hv', 512), ('ev', 2048), ('iv', 8192), ('luv', 32768), ('zpm', 131072)) if eut <= v] + ([f'steam_{m}_bronze', f'steam_{m}_steel', f'{m}_bronze', f'{m}_steel'] if eut <= 32 else [])
         ctrl = ['iis:' + c for c in ctrl if os.path.exists(f'{R}/assets/iis/items/{c}.json')]
         if ctrl:
             reqs.append(ctrl)
@@ -107,6 +107,10 @@ FLUID_SEEDS = ['minecraft:water', 'minecraft:lava', 'iis:oil', 'iis:oilmedium', 
 for x in FLUID_SEEDS:
     have.add('F:' + x)
 seeds = ['iis:rubber_log', 'iis:sticky_resin', 'iis:plant_ball']
+# --with=iis:dust_naquadah: pretend an item is available, to see what else a missing source hides (D112: naquadah waits for space, D17)
+for a_ in [x for x in sys.argv[1:] if x.startswith('--with=')]:
+    have.add(a_[7:])
+    sys.argv.remove(a_)
 
 
 def ok(item):

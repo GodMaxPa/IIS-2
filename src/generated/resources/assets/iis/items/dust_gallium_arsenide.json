@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/dust_gallium_arsenide",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 15129775
+      }
+    ]
+  }
+}

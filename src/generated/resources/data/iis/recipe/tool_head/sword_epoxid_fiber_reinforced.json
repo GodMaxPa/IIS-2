@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    "fPh"
+  ],
+  "key": {
+    "P": "#c:plates/epoxid_fiber_reinforced",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:sword_head_epoxid_fiber_reinforced"
+  }
+}

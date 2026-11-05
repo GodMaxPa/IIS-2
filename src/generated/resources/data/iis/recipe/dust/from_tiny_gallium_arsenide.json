@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/gallium_arsenide",
+    "#iis:tiny_dusts/gallium_arsenide",
+    "#iis:tiny_dusts/gallium_arsenide",
+    "#iis:tiny_dusts/gallium_arsenide",
+    "#iis:tiny_dusts/gallium_arsenide",
+    "#iis:tiny_dusts/gallium_arsenide",
+    "#iis:tiny_dusts/gallium_arsenide",
+    "#iis:tiny_dusts/gallium_arsenide",
+    "#iis:tiny_dusts/gallium_arsenide"
+  ],
+  "result": {
+    "id": "iis:dust_gallium_arsenide"
+  }
+}

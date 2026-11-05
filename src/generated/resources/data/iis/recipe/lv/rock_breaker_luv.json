@@ -13,7 +13,7 @@
     "P": "iis:electric_piston_luv",
     "C": "#c:circuits/master",
     "W": "#iis:cables/1x/niobium_titanium",
-    "G": "minecraft:glass"
+    "G": "iis:reinforced_glass"
   },
   "result": {
     "id": "iis:rock_breaker_luv"

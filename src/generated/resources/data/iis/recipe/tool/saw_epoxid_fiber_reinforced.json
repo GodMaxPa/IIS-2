@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/saw/epoxid_fiber_reinforced",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:saw_epoxid_fiber_reinforced"
+  }
+}

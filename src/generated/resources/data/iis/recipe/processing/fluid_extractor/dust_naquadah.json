@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/naquadah",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 103,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_naquadah",
+      "amount": 144
+    }
+  ]
+}

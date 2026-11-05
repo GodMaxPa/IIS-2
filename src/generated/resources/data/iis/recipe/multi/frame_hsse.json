@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "SwS",
+    "SSS"
+  ],
+  "key": {
+    "S": "#c:rods/hsse",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:frame_hsse",
+    "count": 2
+  }
+}

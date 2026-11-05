@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/indium_gallium_phosphide"
+  },
+  "result": {
+    "id": "iis:tiny_dust_indium_gallium_phosphide",
+    "count": 18
+  }
+}

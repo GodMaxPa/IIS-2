@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "iis:silicon_boule_naquadah",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:silicon_wafer_naquadah",
+      "count": 64
+    }
+  ],
+  "duration": 1600,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 960
+    }
+  ]
+}

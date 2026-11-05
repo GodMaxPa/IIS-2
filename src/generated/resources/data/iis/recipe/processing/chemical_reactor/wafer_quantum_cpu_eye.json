@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:wafer_nano_cpu",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:quantum_eye",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wafer_quantum_cpu",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 1920,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_galliumarsenide",
+      "amount": 288
+    }
+  ]
+}

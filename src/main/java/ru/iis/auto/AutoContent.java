@@ -41,8 +41,8 @@ public final class AutoContent {
 
     private static final List<Supplier<? extends Item>> TAB_ORDER = new ArrayList<>();
     private static final List<VoltageTier> LV_IV = List.of(VoltageTier.LV, VoltageTier.MV, VoltageTier.HV, VoltageTier.EV, VoltageTier.IV);
-    /** D110: автоматика и отпугиватели есть и в LuV. */
-    private static final List<VoltageTier> LV_LUV = List.of(VoltageTier.LV, VoltageTier.MV, VoltageTier.HV, VoltageTier.EV, VoltageTier.IV, VoltageTier.LUV);
+    /** D110, D112: автоматика и отпугиватели есть и в LuV, и в ZPM. */
+    private static final List<VoltageTier> LV_ZPM = List.of(VoltageTier.LV, VoltageTier.MV, VoltageTier.HV, VoltageTier.EV, VoltageTier.IV, VoltageTier.LUV, VoltageTier.ZPM);
 
     private static Block.Properties metal(Block.Properties p) {
         return p.mapColor(MapColor.METAL).sound(SoundType.METAL).strength(5.0f, 10.0f).requiresCorrectToolForDrops();
@@ -63,7 +63,7 @@ public final class AutoContent {
     static {
         for (AutomationType k : AutomationType.values()) {
             List<DeferredBlock<AutomationBlock>> l = new ArrayList<>();
-            for (VoltageTier v : LV_LUV) l.add(block(k.id + "_" + t(v), p -> new AutomationBlock(k, v, p)));
+            for (VoltageTier v : LV_ZPM) l.add(block(k.id + "_" + t(v), p -> new AutomationBlock(k, v, p)));
             AUTOMATION.put(k, l);
         }
     }
@@ -82,10 +82,10 @@ public final class AutoContent {
             .map(v -> block("miner_" + t(v), p -> new BasicDrillerBlock(false, v, p))).toList();
     public static final List<DeferredBlock<BasicDrillerBlock>> PUMPS = LV_IV.stream()
             .map(v -> block("pump_" + t(v), p -> new BasicDrillerBlock(true, v, p))).toList();
-    public static final List<DeferredBlock<AdjustableTransformerBlock>> ADJUSTABLE_TRANSFORMERS = List.of(VoltageTier.EV, VoltageTier.IV, VoltageTier.LUV).stream()
+    public static final List<DeferredBlock<AdjustableTransformerBlock>> ADJUSTABLE_TRANSFORMERS = List.of(VoltageTier.EV, VoltageTier.IV, VoltageTier.LUV, VoltageTier.ZPM).stream()
             .map(v -> block("adjustable_transformer_" + t(v), p -> new AdjustableTransformerBlock(v, p))).toList();
 
-    public static final List<DeferredBlock<MonsterRepellentBlock>> MONSTER_REPELLENTS = LV_LUV.stream()
+    public static final List<DeferredBlock<MonsterRepellentBlock>> MONSTER_REPELLENTS = LV_ZPM.stream()
             .map(v -> block("monster_repellent_" + t(v), p -> new MonsterRepellentBlock(v, p))).toList();
 
     public static final DeferredHolder<net.minecraft.core.component.DataComponentType<?>, net.minecraft.core.component.DataComponentType<QuantumChestBlockEntity.Content>> QUANTUM_CONTENT =

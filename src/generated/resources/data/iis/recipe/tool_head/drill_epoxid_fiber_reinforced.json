@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XSX",
+    "XSX",
+    "ShS"
+  ],
+  "key": {
+    "X": "#c:plates/epoxid_fiber_reinforced",
+    "S": "#c:plates/steel",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:drill_head_epoxid_fiber_reinforced"
+  }
+}

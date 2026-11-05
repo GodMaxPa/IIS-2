@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1042; hidden until their items are ported: 900; chapters: 35.
+Quests in IIS 1: 1943; written: 1117; hidden until their items are ported: 825; chapters: 35.
 
 ## Most needed unported items (task count)
 
@@ -17,14 +17,12 @@ Quests in IIS 1: 1943; written: 1042; hidden until their items are ported: 900; 
 - 2 × `gregtech:gt.metaitem.01:11070` Европиевый слиток
 - 2 × `EnderIO:itemSoulVessel:0` 
 - 2 × `GalacticraftCore:item.basicItem:14` 
-- 2 × `gregtech:gt.blockmachines:1186` Сборщик микросхем (ZPM)
 - 2 × `gregtech:gt.blockmachines:455` Разборочный станок (IV)
 - 2 × `gregtech:gt.blockmachines:451` Разборочный станок (LV)
 - 2 × `gregtech:gt.blockmachines:452` Разборочный станок (MV)
 - 2 × `gregtech:gt.blockmachines:453` Разборочный станок (HV)
 - 2 × `gregtech:gt.blockmachines:454` Разборочный станок (EV)
 - 2 × `gregtech:gt.blockmachines:501` Ферментёр (LV)
-- 2 × `gregtech:gt.blockmachines:577` Автоклав (ZPM)
 - 2 × `gregtech:gt.blockmachines:681` Органический репликатор (LV)
 - 2 × `gregtech:gt.blockmachines:461` Производитель материи (LV)
 - 2 × `gregtech:gt.blockmachines:331` Утилизатор (LV)
@@ -84,6 +82,8 @@ Quests in IIS 1: 1943; written: 1042; hidden until their items are ported: 900; 
 - 1 × `appliedenergistics2:tile.BlockQuantumRing:0` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:36` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:37` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:38` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:47` 
 
 ## Unported fluids
 
@@ -97,10 +97,10 @@ Quests in IIS 1: 1943; written: 1042; hidden until their items are ported: 900; 
 ## Dropped reward items
 
 - 456 × `('gregtech:gt.metaitem.01', 32000)`
-- 273 × `('gregtech:gt.metaitem.01', 32001)`
-- 17 × `('gregtech:gt.metaitem.01', 32002)`
+- 285 × `('gregtech:gt.metaitem.01', 32001)`
+- 36 × `('gregtech:gt.metaitem.01', 32002)`
 - 16 × `bq_standard:choice`
-- 6 × `('gregtech:gt.metaitem.01', 32003)`
+- 10 × `('gregtech:gt.metaitem.01', 32003)`
 - 1 × `('lootbags:lootbag', 7)`
 - 1 × `('gregtech:gt.metaitem.01', 32750)`
 - 1 × `('ChickenChunks:chickenChunkLoader', 0)`

@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/dust_aluminium_sulfite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13307903
+      }
+    ]
+  }
+}

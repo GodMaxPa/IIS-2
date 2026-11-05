@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IGI",
+    "IMI",
+    "CWC"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah",
+    "I": "#iis:wires/1x/osmium",
+    "G": "iis:reinforced_glass"
+  },
+  "result": {
+    "id": "iis:electrolyzer_zpm"
+  }
+}

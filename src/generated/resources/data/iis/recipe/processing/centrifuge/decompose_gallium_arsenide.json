@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/gallium_arsenide",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_arsenic",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_gallium",
+      "count": 1
+    }
+  ],
+  "duration": 576,
+  "eut": 10
+}

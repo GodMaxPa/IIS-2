@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/axe_head_hsse",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 3368448
+      }
+    ]
+  }
+}

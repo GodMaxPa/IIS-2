@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/epoxid_fiber_reinforced",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_epoxid_fiber_reinforced",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

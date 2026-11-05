@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/epoxid_fiber_reinforced",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_epoxid_fiber_reinforced",
+      "count": 1
+    }
+  ],
+  "duration": 6,
+  "eut": 24
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/epoxid_fiber_reinforced",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_epoxid",
+      "count": 1
+    }
+  ],
+  "duration": 24,
+  "eut": 5
+}

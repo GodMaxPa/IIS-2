@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IGI",
+    "IMI",
+    "CPC"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "P": "iis:electric_pump_zpm",
+    "C": "#c:circuits/ultimate",
+    "I": "#c:plates/hsse",
+    "G": "iis:reinforced_glass"
+  },
+  "result": {
+    "id": "iis:autoclave_zpm"
+  }
+}

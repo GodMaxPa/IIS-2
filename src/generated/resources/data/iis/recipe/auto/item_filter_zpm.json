@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " F ",
+    "CMV",
+    " X "
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "V": "iis:conveyor_module_zpm",
+    "C": "#c:chests/wooden",
+    "F": "iis:item_filter",
+    "X": "#c:circuits/basic"
+  },
+  "result": {
+    "id": "iis:item_filter_zpm"
+  }
+}

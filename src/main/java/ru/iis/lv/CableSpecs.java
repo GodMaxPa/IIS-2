@@ -31,7 +31,8 @@ public final class CableSpecs {
             {"tungsten", 2, 4, 2, 8192L},  // D99: сторона IV трансформатора EV
             {"tungsten_steel", 2, 4, 3, 8192L}, {"osmium", 2, 4, 4, 8192L},
             {"hssg", 2, 4, 4, 32768L}, {"niobium_titanium", 2, 4, 4, 32768L}, {"vanadium_gallium", 2, 4, 4, 32768L},
-            {"yttrium_barium_cuprate", 4, 8, 4, 32768L}};  // D110: уровень LuV
+            {"yttrium_barium_cuprate", 4, 8, 4, 32768L},  // D110: уровень LuV
+            {"naquadah", 2, 4, 2, 131072L}, {"superconductor", 1, 1, 4, 2147483647L}};  // D112: уровень ZPM; сверхпроводник — makeWires:1510, V[9]
             //  // D103: нагревательные катушки IV, провода GT уровня 5
     private static final int[] SIZES = {1, 2, 4, 8, 12, 16};
     /** Ширина GT: провод 0.125…0.75 блока, кабель 0.25…0.75 (в пикселях ×16); кабеля 16x в GT нет (закомментирован). */
@@ -43,7 +44,7 @@ public final class CableSpecs {
         for (Object[] w : WIRES) {
             for (int i = 0; i < SIZES.length; i++) {
                 for (boolean ins : new boolean[]{false, true}) {
-                    if (ins && THICK[i][1] == 0) continue;
+                    if (ins && (THICK[i][1] == 0 || w[0].equals("superconductor"))) continue;   // aAutoInsulated: только провод
                     String id = (ins ? "cable_" : "wire_") + w[0] + "_" + SIZES[i] + "x";
                     all.add(new Spec(id, (String) w[0], SIZES[i], ins, (Long) w[4], (long) (Integer) w[3] * SIZES[i],
                             ins ? (Integer) w[1] : (Integer) w[2], THICK[i][ins ? 1 : 0]));

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GCG",
+    "GMG",
+    "WPW"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "P": "iis:electric_pump_zpm",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah",
+    "G": "iis:reinforced_glass"
+  },
+  "result": {
+    "id": "iis:fluid_canner_zpm"
+  }
+}

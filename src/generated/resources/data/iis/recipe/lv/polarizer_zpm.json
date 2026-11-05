@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ZSZ",
+    "WMW",
+    "ZSZ"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "S": "#c:rods/vanadium_gallium",
+    "Z": "#iis:wires/8x/superconductor",
+    "W": "#iis:cables/1x/naquadah"
+  },
+  "result": {
+    "id": "iis:polarizer_zpm"
+  }
+}

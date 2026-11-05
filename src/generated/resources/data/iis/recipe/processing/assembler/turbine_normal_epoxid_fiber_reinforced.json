@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:turbine_blades/epoxid_fiber_reinforced",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:long_rods/titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:turbine_normal",
+      "count": 1,
+      "components": {
+        "iis:rotor_material": "epoxid_fiber_reinforced",
+        "minecraft:max_damage": 12800
+      }
+    }
+  ],
+  "duration": 320,
+  "eut": 400
+}

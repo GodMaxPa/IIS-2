@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/indium_gallium_phosphide"
+  ],
+  "result": {
+    "id": "iis:small_dust_indium_gallium_phosphide",
+    "count": 4
+  }
+}

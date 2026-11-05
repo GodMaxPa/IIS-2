@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "iis:circuit_elite",
-    "iis:circuit_elitenanocomputer"
+    "iis:circuit_elitenanocomputer",
+    "iis:circuit_quantumcomputer"
   ]
 }

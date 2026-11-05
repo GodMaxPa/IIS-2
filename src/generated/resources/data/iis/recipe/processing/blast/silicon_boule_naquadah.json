@@ -1,0 +1,28 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "iis:block_silicon",
+      "count": 16
+    },
+    {
+      "ingredient": "#c:ingots/naquadah",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:silicon_boule_naquadah",
+      "count": 1
+    }
+  ],
+  "duration": 1500,
+  "eut": 1920,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:argon",
+      "amount": 8000
+    }
+  ],
+  "temp": 5400
+}

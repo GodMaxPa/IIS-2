@@ -156,6 +156,18 @@
     "iis:wire_yttrium_barium_cuprate_4x",
     "iis:wire_yttrium_barium_cuprate_8x",
     "iis:wire_yttrium_barium_cuprate_12x",
-    "iis:wire_yttrium_barium_cuprate_16x"
+    "iis:wire_yttrium_barium_cuprate_16x",
+    "iis:wire_naquadah_1x",
+    "iis:wire_naquadah_2x",
+    "iis:wire_naquadah_4x",
+    "iis:wire_naquadah_8x",
+    "iis:wire_naquadah_12x",
+    "iis:wire_naquadah_16x",
+    "iis:wire_superconductor_1x",
+    "iis:wire_superconductor_2x",
+    "iis:wire_superconductor_4x",
+    "iis:wire_superconductor_8x",
+    "iis:wire_superconductor_12x",
+    "iis:wire_superconductor_16x"
   ]
 }

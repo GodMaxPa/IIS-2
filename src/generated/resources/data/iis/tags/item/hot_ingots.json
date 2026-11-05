@@ -2,9 +2,11 @@
   "replace": false,
   "values": [
     "iis:hot_ingot_black_bronze",
+    "iis:hot_ingot_hsse",
     "iis:hot_ingot_hssg",
     "iis:hot_ingot_iridium",
     "iis:hot_ingot_kanthal",
+    "iis:hot_ingot_naquadah",
     "iis:hot_ingot_nichrome",
     "iis:hot_ingot_niobium",
     "iis:hot_ingot_niobium_titanium",

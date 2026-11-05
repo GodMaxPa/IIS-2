@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/nugget_hsse",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 3368448
+      }
+    ]
+  }
+}

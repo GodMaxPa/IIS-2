@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/arsenic",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 46,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_arsenic",
+      "amount": 144
+    }
+  ]
+}

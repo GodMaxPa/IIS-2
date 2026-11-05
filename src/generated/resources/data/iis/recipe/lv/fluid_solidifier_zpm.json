@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PGP",
+    "WMW",
+    "CBC"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "P": "iis:electric_pump_zpm",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah",
+    "G": "iis:reinforced_glass",
+    "B": "#c:chests/wooden"
+  },
+  "result": {
+    "id": "iis:fluid_solidifier_zpm"
+  }
+}

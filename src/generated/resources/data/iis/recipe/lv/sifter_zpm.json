@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WFW",
+    "PMP",
+    "CFC"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "P": "iis:electric_piston_zpm",
+    "F": "iis:item_filter",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah"
+  },
+  "result": {
+    "id": "iis:sifter_zpm"
+  }
+}

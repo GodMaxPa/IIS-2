@@ -1,0 +1,59 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#c:frames/hsse",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:sensor_luv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:sensor_iv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:sensor_ev",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:circuits/elite",
+      "count": 7
+    },
+    {
+      "ingredient": "#iis:foils/platinum",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:foils/platinum",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:foils/platinum",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:cables/4x/vanadium_gallium",
+      "count": 7
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sensor_zpm",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 24000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 576
+    }
+  ],
+  "keep": [
+    "iis:sensor_luv"
+  ],
+  "temp": 144000
+}

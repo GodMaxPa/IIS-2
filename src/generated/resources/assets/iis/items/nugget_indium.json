@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/nugget_indium",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 4194432
+      }
+    ]
+  }
+}

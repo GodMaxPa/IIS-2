@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iis:block/hatch_muffler_zpm"
+    },
+    "facing=east": {
+      "model": "iis:block/hatch_muffler_zpm",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iis:block/hatch_muffler_zpm",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iis:block/hatch_muffler_zpm",
+      "y": 270
+    },
+    "facing=down": {
+      "model": "iis:block/hatch_muffler_zpm",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "iis:block/hatch_muffler_zpm",
+      "x": 270
+    }
+  }
+}

@@ -41,12 +41,16 @@ WIRES = [
     ('NiobiumTitanium', 2, 4, 4, 32768),   # :1501 (bEC), Tier.ELECTRIC[6] (D110)
     ('VanadiumGallium', 2, 4, 4, 32768),   # :1502 (bEC), LuV hull (D110)
     ('YttriumBariumCuprate', 4, 8, 4, 32768),   # :1503 (bEC), LuV parts (D110)
+    ('Naquadah', 2, 4, 2, 131072),   # :1505 (bEC), ZPM hull and machines (D112)
+    ('Superconductor', 1, 1, 4, 2147483647),   # :1510 V[9], insulated by itself: no cable forms (D112)
 ]
 # size, bare thickness, insulated thickness (GT makeWires; there is no 16x cable — commented out in GT), insulation ring
 # (GT_MetaPipeEntity_Cable#getTexture by thickness: <0.374 TINY, <0.499 SMALL, <0.624 MEDIUM, <0.749 MEDIUM_PLUS, <0.874 LARGE)
 WIRE_SIZES = [(1, 0.125, 0.25, 'INSULATION_TINY'), (2, 0.25, 0.375, 'INSULATION_SMALL'), (4, 0.375, 0.5, 'INSULATION_MEDIUM'),
               (8, 0.5, 0.625, 'INSULATION_MEDIUM_PLUS'), (12, 0.625, 0.75, 'INSULATION_LARGE'), (16, 0.75, None, None)]
-VOLTAGE_NAMES = {8: 'ULV', 32: 'LV', 128: 'MV', 512: 'HV', 2048: 'EV', 8192: 'IV', 32768: 'LuV'}
+VOLTAGE_NAMES = {8: 'ULV', 32: 'LV', 128: 'MV', 512: 'HV', 2048: 'EV', 8192: 'IV', 32768: 'LuV', 131072: 'ZPM', 2147483647: 'MAX'}
+# GT makeWires aAutoInsulated: the wire is the only form
+WIRE_BARE = ('Superconductor',)
 # ProcessingWire: insulation by material (the GT switch falls through: red alloy also takes the carpet and rubber recipes,
 # the carpet group also takes rubber)
 WIRE_PAPER = ('RedAlloy',)
@@ -159,6 +163,9 @@ IV_MACHINES = [m[:6] + (IV_OUTPUTS.get(m[0], m[6]), IV_TANKS.get(m[0], m[7])) + 
 # the mixer (48000 L), the fluid canner (96000 L) and the filter (56000 L)
 LUV_TANKS = {'mixer': 48000, 'fluid_canner': 96000, 'filter': 56000}
 LUV_MACHINES = [m[:7] + (LUV_TANKS.get(m[0], m[7]),) + m[8:] for m in IV_MACHINES]
+# ZPM basic machines (GT tier 7, D112): Machine_ZPM_*: as LuV except the mixer (56000 L) and the filter (64000 L)
+ZPM_TANKS = {'mixer': 56000, 'filter': 64000}
+ZPM_MACHINES = [m[:7] + (ZPM_TANKS.get(m[0], m[7]),) + m[8:] for m in LUV_MACHINES]
 # GT_MetaTileEntity_Scanner (D110): 1 input, 1 output, the data stick in the special slot; the assembly line research only
 SCANNER = ('scanner', 'scanner', 'SCANNER', 'Scanner', None, 1, 1, 0, 'Scanner')
 # GT_Loader_MetaTileEntities Machine_MV_* crafting: GT pattern letters; X.* resolved for tier 2 in lv.generate
@@ -298,6 +305,24 @@ ITEMS = [
     ('robot_arm_luv', 'gt:655', 'gt.metaitem.01.32655.name', 'Robot Arm (LuV)', 'Манипулятор (LuV)'),
     ('emitter_luv', 'gt:685', 'gt.metaitem.01.32685.name', 'Emitter (LuV)', 'Излучатель (LuV)'),
     ('sensor_luv', 'gt:695', 'gt.metaitem.01.32695.name', 'Sensor (LuV)', 'Сенсор (LuV)'),
+    # D112: Item_01:499-690 ZPM parts, Item_01:716 fibreglass board, Item_03 quantum chain, naquadah doped silicon
+    ('electric_motor_zpm', 'gt:607', 'gt.metaitem.01.32607.name', 'Electric Motor (ZPM)', 'Электродвигатель (ZPM)'),
+    ('electric_pump_zpm', 'gt:621', 'gt.metaitem.01.32621.name', 'Electric Pump (ZPM)', 'Электрическая помпа (ZPM)'),
+    ('conveyor_module_zpm', 'gt:637', 'gt.metaitem.01.32637.name', 'Conveyor Module (ZPM)', 'Конвейерный модуль (ZPM)'),
+    ('electric_piston_zpm', 'gt:646', 'gt.metaitem.01.32646.name', 'Electric Piston (ZPM)', 'Электропоршень (ZPM)'),
+    ('robot_arm_zpm', 'gt:656', 'gt.metaitem.01.32656.name', 'Robot Arm (ZPM)', 'Манипулятор (ZPM)'),
+    ('emitter_zpm', 'gt:686', 'gt.metaitem.01.32686.name', 'Emitter (ZPM)', 'Излучатель (ZPM)'),
+    ('sensor_zpm', 'gt:696', 'gt.metaitem.01.32696.name', 'Sensor (ZPM)', 'Сенсор (ZPM)'),
+    ('field_generator_luv', 'gt:675', 'gt.metaitem.01.32675.name', 'Field Generator (LuV)', 'Генератор поля (LuV)'),
+    ('circuit_board_fiberglass', 'gt:720', 'gt.metaitem.01.32720.name', 'Fiber-Reinforced Circuit Board', 'Армированная печатная плата'),
+    ('wafer_quantum_cpu', 'gt:wafer_quantum_cpu', 'gt.metaitem.03.32056.name', 'QBit Wafer', 'Пластина кубитов'),
+    ('chip_quantum_cpu', 'gt:chip_quantum_cpu', 'gt.metaitem.03.32057.name', 'QBit Processing Unit', 'Кубитный процессор'),
+    ('circuit_quantumprocessor', 'gt:quantumprocessor', 'gt.metaitem.03.32085.name', 'Quantumprocessor', 'Квантовый процессор'),
+    ('circuit_quantumcomputer', 'gt:quantumcomputer', 'gt.metaitem.03.32086.name', 'Quantumprocessor Assembly', 'Квантовая сборка'),
+    ('circuit_masterquantumcomputer', 'gt:masterquantumcomputer', 'gt.metaitem.03.32087.name', 'Master Quantumcomputer', 'Мастер-квантовый компьютер'),
+    ('circuit_quantummainframe', 'gt:quantummainframe', 'gt.metaitem.03.32088.name', 'Quantumprocessor Mainframe', 'Квантовый мейнфрейм'),
+    ('silicon_boule_naquadah', 'gt:silicon_boule_naquadah', 'gt.metaitem.03.32032.name', 'Naquadah doped Monocrystalline Silicon Boule', 'Кремниевая буля с наквадой'),
+    ('silicon_wafer_naquadah', 'gt:silicon_wafer_naquadah', 'gt.metaitem.03.32035.name', 'Naquadah doped Wafer', 'Пластина с наквадой'),
     ('data_stick', 'gt:708', 'gt.metaitem.01.32708.name', 'Data Stick', 'Флешка'),
     # D111: GT_MetaGenerated_Item_03:57
     ('glass_fiber', 'gt:glass_fiber', 'gt.metaitem.03.32021.name', 'Glass Fiber', 'Стекловолокно'),
@@ -689,6 +714,11 @@ def generate(g):
     add_item_tag('c:circuits/data', f'{NS}:circuit_nanocomputer')
     add_item_tag('c:circuits/elite', f'{NS}:circuit_elitenanocomputer')
     add_item_tag('c:circuits/master', f'{NS}:circuit_master')
+    # D112: Item_03:156-159 the quantum chain
+    add_item_tag('c:circuits/data', f'{NS}:circuit_quantumprocessor')
+    add_item_tag('c:circuits/elite', f'{NS}:circuit_quantumcomputer')
+    add_item_tag('c:circuits/master', f'{NS}:circuit_masterquantumcomputer')
+    add_item_tag('c:circuits/ultimate', f'{NS}:circuit_quantummainframe')
     name(f'item.{NS}.battery_lv.tooltip', 'Stores %s / %s EU', 'Запас: %s / %s EU')
 
     # creosote (Railcraft coke oven byproduct; GT Materials.Creosote, FuelType 3 = semifluid generator)
@@ -755,7 +785,7 @@ def generate(g):
         tinted.save(tex_out(f'block/cable/wire_{mid}.png'))
         for size, bare, ins, ring_name in WIRE_SIZES:
             for insulated in (False, True):
-                if insulated and ins is None:
+                if insulated and (ins is None or mat in WIRE_BARE):
                     continue
                 bid = f'{"cable" if insulated else "wire"}_{mid}_{size}x'
                 thick = (ins if insulated else bare) * 16
@@ -844,14 +874,16 @@ def generate(g):
     ic = os.path.join(LV, 'iconsets')
     for f in ('MACHINE_LV_SIDE', 'MACHINE_LV_TOP', 'MACHINE_LV_BOTTOM', 'MACHINE_MV_SIDE', 'MACHINE_MV_TOP', 'MACHINE_MV_BOTTOM',
               'MACHINE_HV_SIDE', 'MACHINE_HV_TOP', 'MACHINE_HV_BOTTOM', 'MACHINE_EV_SIDE', 'MACHINE_EV_TOP', 'MACHINE_EV_BOTTOM',
-              'MACHINE_IV_SIDE', 'MACHINE_IV_TOP', 'MACHINE_IV_BOTTOM', 'MACHINE_LuV_SIDE', 'MACHINE_LuV_TOP', 'MACHINE_LuV_BOTTOM'):
+              'MACHINE_IV_SIDE', 'MACHINE_IV_TOP', 'MACHINE_IV_BOTTOM', 'MACHINE_LuV_SIDE', 'MACHINE_LuV_TOP', 'MACHINE_LuV_BOTTOM',
+              'MACHINE_ZPM_SIDE', 'MACHINE_ZPM_TOP', 'MACHINE_ZPM_BOTTOM'):
         img(os.path.join(ic, f + '.png')).crop((0, 0, 16, 16)).save(tex_out(f'block/lv/{f.lower()}.png'))
     for bid, en, key in (('casing_lv', 'LV Machine Casing', 'gt.blockcasings.1.name'), ('hull_lv', 'LV Machine Hull', 'gt.blockmachines.hull.tier.01.name'),
                          ('casing_mv', 'MV Machine Casing', 'gt.blockcasings.2.name'), ('hull_mv', 'MV Machine Hull', 'gt.blockmachines.hull.tier.02.name'),
                          ('casing_hv', 'HV Machine Casing', 'gt.blockcasings.3.name'), ('hull_hv', 'HV Machine Hull', 'gt.blockmachines.hull.tier.03.name'),
                          ('casing_ev', 'EV Machine Casing', 'gt.blockcasings.4.name'), ('hull_ev', 'EV Machine Hull', 'gt.blockmachines.hull.tier.04.name'),
                          ('casing_iv', 'IV Machine Casing', 'gt.blockcasings.5.name'), ('hull_iv', 'IV Machine Hull', 'gt.blockmachines.hull.tier.05.name'),
-                         ('casing_luv', 'LuV Machine Casing', 'gt.blockcasings.6.name'), ('hull_luv', 'LuV Machine Hull', 'gt.blockmachines.hull.tier.06.name')):
+                         ('casing_luv', 'LuV Machine Casing', 'gt.blockcasings.6.name'), ('hull_luv', 'LuV Machine Hull', 'gt.blockmachines.hull.tier.06.name'),
+                         ('casing_zpm', 'ZPM Machine Casing', 'gt.blockcasings.7.name'), ('hull_zpm', 'ZPM Machine Hull', 'gt.blockmachines.hull.tier.07.name')):
         tr = bid.rsplit('_', 1)[1]
         side, top, bottom = (f'{NS}:block/lv/machine_{tr}_{x}' for x in ('side', 'top', 'bottom'))
         cube_model(bid, {'front': side, 'back': side, 'side': side, 'top': top, 'bottom': bottom})
@@ -884,6 +916,10 @@ def generate(g):
     shaped('lv/casing_luv', f'{NS}:casing_luv', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'Chrome')})
     shaped('lv/hull_luv', f'{NS}:hull_luv', 1, ['PHP', 'CMC'],
            {'P': tag_of('plate', 'Plastic'), 'H': tag_of('plate', 'Chrome'), 'C': C('VanadiumGallium'), 'M': f'{NS}:casing_luv'})
+    # D112: :58 Casing_ZPM (iridium), :178 Hull_ZPM "PHP/CMC" (naquadah cable, iridium + PTFE plates)
+    shaped('lv/casing_zpm', f'{NS}:casing_zpm', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'Iridium')})
+    shaped('lv/hull_zpm', f'{NS}:hull_zpm', 1, ['PHP', 'CMC'],
+           {'P': tag_of('plate', 'Polytetrafluoroethylene'), 'H': tag_of('plate', 'Iridium'), 'C': C('Naquadah'), 'M': f'{NS}:casing_zpm'})
 
     def machine_tex(bid, base_dir, faces_src):
         """faces_src: face -> (base iconset name, overlay path or None)."""
@@ -908,8 +944,8 @@ def generate(g):
     machine_list = []
     for (mid_, gtn, ov, gui, rmap, nin, nout, tank, en), tr in ([(m, 'lv') for m in MACHINES] + [(m, 'mv') for m in MV_MACHINES]
                                                               + [(m, 'hv') for m in HV_MACHINES] + [(m, 'ev') for m in EV_MACHINES]
-                                                              + [(m, 'iv') for m in IV_MACHINES] + [(m, 'luv') for m in LUV_MACHINES]
-                                                              + [(SCANNER, t_) for t_ in ('lv', 'mv', 'hv', 'ev', 'iv', 'luv')]):
+                                                              + [(m, 'iv') for m in IV_MACHINES] + [(m, 'luv') for m in LUV_MACHINES] + [(m, 'zpm') for m in ZPM_MACHINES]
+                                                              + [(SCANNER, t_) for t_ in ('lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm')]):
         bid = f'{mid_}_{tr}'
         odir = os.path.join(LV, 'basicmachines', ov.lower())
         T = 'LuV' if tr == 'luv' else tr.upper()
@@ -923,7 +959,7 @@ def generate(g):
             'top': (f'MACHINE_{T}_TOP', ovf('TOP')), 'bottom': (f'MACHINE_{T}_BOTTOM', ovf('BOTTOM'))})
         shutil.copy(os.path.join(LV, 'gui', gui + '.png'), tex_out(f'gui/lv/{gui.lower()}.png'))
         prefix, tier_n, volts, suffix = {'lv': ('Basic', '01', 32, ''), 'mv': ('Advanced', '02', 128, ''), 'hv': ('Advanced', '03', 512, ' II'),
-                                         'ev': ('Advanced', '04', 2048, ' III'), 'iv': ('Advanced', '05', 8192, ' IV'), 'luv': ('Advanced', '06', 32768, ' V')}[tr]
+                                         'ev': ('Advanced', '04', 2048, ' III'), 'iv': ('Advanced', '05', 8192, ' IV'), 'luv': ('Advanced', '06', 32768, ' V'), 'zpm': ('Advanced', '07', 131072, ' VI')}[tr]
         name(f'block.{NS}.{bid}', f'{prefix} {en}{suffix}', ru(f'gt.blockmachines.basicmachine.{gtn}.tier.{tier_n}.name', f'{prefix} {en}{suffix}'))
         tooltip_lines(bid, [(f'Voltage IN: {volts} EU/t ({T})', f'Входное напряжение: {volts} EU/t ({T})'),
                             ('Output: back; wrench sets item output, Ctrl + wrench fluid output', 'Выход: сзади; ключ — выход предметов, Ctrl + ключ — жидкостей'),
@@ -995,11 +1031,11 @@ def generate(g):
     # GT_MetaTileEntity_BasicBatteryBuffer: front = energy out, other sides plain casing
     # GT_Loader_MetaTileEntities:488-556: 1x1, 2x2, 3x3, 4x4 for LV (3x3/4x4 — D95), MV (D95), HV (D94)
     buffers = [(f'battery_buffer_{k}x{k}_{tr}', k * k, f'batterybuffer.{k * k:02d}.tier.{tn}', f'{k}by{k}')
-               for tr, tn in (('lv', '01'), ('mv', '02'), ('hv', '03'), ('ev', '04'), ('iv', '05'), ('luv', '06')) for k in (1, 2, 3, 4)]   # EV: D99, IV: D103, LuV: D110
+               for tr, tn in (('lv', '01'), ('mv', '02'), ('hv', '03'), ('ev', '04'), ('iv', '05'), ('luv', '06'), ('zpm', '07')) for k in (1, 2, 3, 4)]   # EV: D99, IV: D103, LuV: D110, ZPM: D112
     for bid, n, gtl, gui in buffers:
         BT = {'luv': 'LuV'}.get(bid.rsplit('_', 1)[1], bid.rsplit('_', 1)[1].upper())
         side_k = {1: '1x1', 4: '2x2', 9: '3x3', 16: '4x4'}[n]
-        volts = {'LV': 32, 'MV': 128, 'HV': 512, 'EV': 2048, 'IV': 8192, 'LuV': 32768}[BT]
+        volts = {'LV': 32, 'MV': 128, 'HV': 512, 'EV': 2048, 'IV': 8192, 'LuV': 32768, 'ZPM': 131072}[BT]
         for face, base, ov in (('front', f'MACHINE_{BT}_SIDE', os.path.join(ic, 'OVERLAY_ENERGY_OUT.png')), ('side', f'MACHINE_{BT}_SIDE', None),
                                ('top', f'MACHINE_{BT}_TOP', None), ('bottom', f'MACHINE_{BT}_BOTTOM', None)):
             im, _ = layer(os.path.join(ic, base + '.png'), ov)
@@ -1023,8 +1059,9 @@ def generate(g):
     for tr, lo, hi, n_ in (('ulv', 8, 32, '00'),                                                     # ULV: LV <-> ULV (D108)
                            ('lv', 32, 128, '01'), ('mv', 128, 512, '02'), ('hv', 512, 2048, '03'),   # HV: EV <-> HV (D94)
                            ('ev', 2048, 8192, '04'),                                                 # EV: IV <-> EV (D99)
-                           ('iv', 8192, 32768, '05')):                                               # IV: LuV <-> IV (D110)
-        bid, T, LO, HI = f'transformer_{tr}', tr.upper(), VOLTAGE_NAMES[lo], VOLTAGE_NAMES[hi]
+                           ('iv', 8192, 32768, '05'),                                                # IV: LuV <-> IV (D110)
+                           ('luv', 32768, 131072, '06')):                                            # LuV: ZPM <-> LuV (D112)
+        bid, T, LO, HI = f'transformer_{tr}', {'luv': 'LuV'}.get(tr, tr.upper()), VOLTAGE_NAMES[lo], VOLTAGE_NAMES[hi]
         for mode, front_ov, side_ov in (('', 'OVERLAY_ENERGY_IN_MULTI', 'OVERLAY_ENERGY_OUT'), ('_up', 'OVERLAY_ENERGY_OUT_MULTI', 'OVERLAY_ENERGY_IN')):
             for face, base, ov in (('front', f'MACHINE_{T}_SIDE', front_ov), ('side', f'MACHINE_{T}_SIDE', side_ov),
                                    ('top', f'MACHINE_{T}_TOP', side_ov), ('bottom', f'MACHINE_{T}_BOTTOM', side_ov)):
@@ -1496,15 +1533,26 @@ def generate(g):
     # --- LuV (D110): Tier.ELECTRIC[6] and GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330 for mTier 6: HS-G plates, high pressure pipes, 2x / 4x
     # HSS-G heating coils, 4x YBCO electric coils, chrome rotor, niobium-titanium cable, Master circuits (the better one, Ultimate, is not ported:
     # no recipe for the LuV circuit assembler yet)
-    XLUV = {'HULL': f'{NS}:hull_luv', 'CIRCUIT': '#c:circuits/master', 'WIRE': C('NiobiumTitanium'), 'WIRE4': C('NiobiumTitanium', 4), 'GLASS': 'minecraft:glass',
+    XLUV = {'HULL': f'{NS}:hull_luv', 'CIRCUIT': '#c:circuits/master', 'BETTER_CIRCUIT': '#c:circuits/ultimate', 'WIRE': C('NiobiumTitanium'), 'WIRE4': C('NiobiumTitanium', 4),
+            'GLASS': f'{NS}:reinforced_glass',   # D112: X.GLASS at tiers 6-8 is reinforced glass
             'PLATE': P('HSSG'), 'PIPE': f'{NS}:pipe_small_high_pressure', 'COIL_HEATING': W('HSSG', 2), 'COIL_HEATING_DOUBLE': W('HSSG', 4),
             'STICK_ELECTROMAGNETIC': R('VanadiumGallium'), 'COIL_ELECTRIC': W('YttriumBariumCuprate', 4), 'ROTOR': tag_of('rotor', 'Chrome'),
             'MOTOR': f'{NS}:electric_motor_luv', 'PISTON': f'{NS}:electric_piston_luv', 'PUMP': f'{NS}:electric_pump_luv', 'CONVEYOR': f'{NS}:conveyor_module_luv',
             'ROBOT_ARM': f'{NS}:robot_arm_luv', 'EMITTER': f'{NS}:emitter_luv', 'INDUSTRIAL_DIAMOND': 'minecraft:diamond', 'SILVER_WIRE': W('Osmium'),
             'FLUID_FILTER': f'{NS}:fluid_filter'}
     for mid_, (pattern, letters) in IV_CRAFT.items():
+        shaped(f'lv/{mid_}_luv', f'{NS}:{mid_}_luv', 1, pattern, {k: XLUV.get(v, v) for k, v in letters.items()})
+    # --- ZPM (D112): Tier.ELECTRIC[7] and GT_MetaTileEntity_BasicMachine_GT_Recipe for mTier 7: HSS-E plates, medium high pressure pipes, naquadah heating coils,
+    # 8x superconductor electric coils, iridium rotor, naquadah cable, Ultimate circuits (the better one, Superconductor, is not ported: no ZPM circuit assembler recipe)
+    XZPM = {'HULL': f'{NS}:hull_zpm', 'CIRCUIT': '#c:circuits/ultimate', 'WIRE': C('Naquadah'), 'WIRE4': C('Naquadah', 4), 'GLASS': f'{NS}:reinforced_glass',
+            'PLATE': P('HSSE'), 'PIPE': f'{NS}:pipe_medium_high_pressure', 'COIL_HEATING': W('Naquadah', 2), 'COIL_HEATING_DOUBLE': W('Naquadah', 4),
+            'STICK_ELECTROMAGNETIC': R('VanadiumGallium'), 'COIL_ELECTRIC': W('Superconductor', 8), 'ROTOR': tag_of('rotor', 'Iridium'),
+            'MOTOR': f'{NS}:electric_motor_zpm', 'PISTON': f'{NS}:electric_piston_zpm', 'PUMP': f'{NS}:electric_pump_zpm', 'CONVEYOR': f'{NS}:conveyor_module_zpm',
+            'ROBOT_ARM': f'{NS}:robot_arm_zpm', 'EMITTER': f'{NS}:emitter_zpm', 'INDUSTRIAL_DIAMOND': 'minecraft:diamond', 'SILVER_WIRE': W('Osmium'),
+            'FLUID_FILTER': f'{NS}:fluid_filter'}
+    for mid_, (pattern, letters) in IV_CRAFT.items():
         if mid_ != 'circuit_assembler':
-            shaped(f'lv/{mid_}_luv', f'{NS}:{mid_}_luv', 1, pattern, {k: XLUV.get(v, v) for k, v in letters.items()})
+            shaped(f'lv/{mid_}_zpm', f'{NS}:{mid_}_zpm', 1, pattern, {k: XZPM.get(v, v) for k, v in letters.items()})
     # GT_Loader_MetaTileEntities:206 MV transformer " BB/CM / BB": MV hull, gold cable, copper cables
     shaped('lv/transformer_mv', f'{NS}:transformer_mv', 1, [' BB', 'CM ', ' BB'], {'M': HULL_MV, 'C': C('Gold'), 'B': C('Copper')})
 
@@ -1582,6 +1630,12 @@ def generate(g):
                {'M': f'{NS}:hull_luv', 'W': W('VanadiumGallium', wsize), 'T': '#c:chests/wooden'})
     shaped('lv/transformer_iv', f'{NS}:transformer_iv', 1, ['KBB', 'CM ', 'KBB'],
            {'M': f'{NS}:hull_iv', 'C': C('VanadiumGallium'), 'B': C('Tungsten'), 'K': f'{NS}:chip_pic'})
+    # D112: ZPM battery buffers (:505-571, naquadah wires 1x-16x), ZPM <-> LuV transformer (:210: LuV hull, naquadah cable, vanadium-gallium cables, power chips)
+    for k, wsize in ((1, 1), (2, 4), (3, 8), (4, 16)):
+        shaped(f'lv/battery_buffer_{k}x{k}_zpm', f'{NS}:battery_buffer_{k}x{k}_zpm', 1, ['WTW', 'WMW'],
+               {'M': f'{NS}:hull_zpm', 'W': W('Naquadah', wsize), 'T': '#c:chests/wooden'})
+    shaped('lv/transformer_luv', f'{NS}:transformer_luv', 1, ['KBB', 'CM ', 'KBB'],
+           {'M': f'{NS}:hull_luv', 'C': C('Naquadah'), 'B': C('VanadiumGallium'), 'K': f'{NS}:chip_pic'})
     # GT_MachineRecipeLoader:481 small coil "WWW/WDW/WWW" (fine copper wire, steel bolt) -> 2; :483, :485 assembler 8 fine wires + bolt
     shaped('lv/coil_small', f'{NS}:coil_small', 2, ['WWW', 'WDW', 'WWW'], {'W': tag_of('wire_fine', 'Copper'), 'D': tag_of('bolt', 'Steel')})
 
@@ -1750,7 +1804,7 @@ def generate(g):
                          fin={'ingredient': f'{NS}:molten_{rub}', 'amount': mb * cost}, circuit=24)
                     mrec('assembler', f'cable_{mid}_{size}x_{rub}_pdms', [ing(W(mat, size)), ing(tag_of('small_dust', 'Polydimethylsiloxane'), cost)],
                          [out(f'{NS}:cable_{mid}_{size}x')], 100, 8, fin={'ingredient': f'{NS}:molten_{rub}', 'amount': 36 * cost})
-        elif mat not in WIRE_CARPET:
+        elif mat not in WIRE_CARPET and mat not in WIRE_BARE:
             # D110: ProcessingWire:155-168 (EasierIVPlusCables = false, the GT default): the wire + foil of the same material + circuit 24 + 72 L of silicone
             # per cost; or a small dust of the dielectric, the foil and 36 L of synthetic rubber. Polyphenylene sulfide foil and PVC are not ported
             for size, _b, ins, _r in WIRE_SIZES:
@@ -1810,7 +1864,7 @@ def generate(g):
     # GT_MachineRecipeLoader:1371-1372: assembler 8 plates + programmed circuit 8 -> machine casing (50 t, 16 EU/t); the hull
     # variant needs molten plastic (mHardMachineCasings) and waits for plastic
     for tr, mat in (('lv', 'Steel'), ('mv', 'Aluminium'), ('hv', 'StainlessSteel'), ('ev', 'Titanium'),
-                    ('iv', 'TungstenSteel'), ('luv', 'Chrome')):   # :1373 HV (D90), :1374 EV (D98), :1375 IV (D103), :1376 LuV (D110)
+                    ('iv', 'TungstenSteel'), ('luv', 'Chrome'), ('zpm', 'Iridium')):   # :1373 HV (D90), :1374 EV (D98), :1375 IV (D103), :1376 LuV (D110), :1377 ZPM (D112)
         mrec('assembler', f'casing_{tr}', [ing(tag_of('plate', mat), 8)], [out(f'{NS}:casing_{tr}')], 50, 16, circuit=8)
     # GT_MachineRecipeLoader:483, :485 small coil: 8 fine copper / annealed copper wires + steel bolt -> 2 (80 t, 8 EU/t, D94)
     for wm in ('Copper', 'AnnealedCopper'):
@@ -1872,7 +1926,7 @@ def generate(g):
 
     # misc lang
     for k, en, ruu in (('itemGroup.iis.lv', 'IIS 2.0: LV', 'ИИС 2.0: LV'), ('itemGroup.iis.mv', 'IIS 2.0: MV', 'ИИС 2.0: MV'),
-                       ('itemGroup.iis.hv', 'IIS 2.0: HV', 'ИИС 2.0: HV'), ('itemGroup.iis.ev', 'IIS 2.0: EV', 'ИИС 2.0: EV'), ('itemGroup.iis.iv', 'IIS 2.0: IV', 'ИИС 2.0: IV'), ('itemGroup.iis.luv', 'IIS 2.0: LuV', 'ИИС 2.0: LuV'),
+                       ('itemGroup.iis.hv', 'IIS 2.0: HV', 'ИИС 2.0: HV'), ('itemGroup.iis.ev', 'IIS 2.0: EV', 'ИИС 2.0: EV'), ('itemGroup.iis.iv', 'IIS 2.0: IV', 'ИИС 2.0: IV'), ('itemGroup.iis.luv', 'IIS 2.0: LuV', 'ИИС 2.0: LuV'), ('itemGroup.iis.zpm', 'IIS 2.0: ZPM', 'ИИС 2.0: ZPM'),
                        ('gui.iis.energy', 'Energy', 'Энергия'), ('gui.iis.eu', '%s / %s EU', '%s / %s EU'),
                        ('gui.iis.fluid', '%s: %s / %s L', '%s: %s / %s л'), ('gui.iis.no_energy', 'Not enough energy', 'Недостаточно энергии'),
                        ('gui.iis.empty', 'Empty', 'Пусто'),

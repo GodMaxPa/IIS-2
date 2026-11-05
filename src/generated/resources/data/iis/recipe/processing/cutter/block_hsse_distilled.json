@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/hsse",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_hsse",
+      "count": 9
+    }
+  ],
+  "duration": 1620,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 57
+    }
+  ]
+}

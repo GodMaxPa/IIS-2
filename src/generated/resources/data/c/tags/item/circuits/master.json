@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "iis:circuit_master"
+    "iis:circuit_master",
+    "iis:circuit_masterquantumcomputer"
   ]
 }

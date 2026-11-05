@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/pickaxe/epoxid_fiber_reinforced",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:pickaxe_epoxid_fiber_reinforced"
+  }
+}

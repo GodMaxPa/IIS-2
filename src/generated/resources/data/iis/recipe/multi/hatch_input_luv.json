@@ -7,7 +7,7 @@
   ],
   "key": {
     "M": "iis:hull_luv",
-    "G": "minecraft:glass"
+    "G": "iis:reinforced_glass"
   },
   "result": {
     "id": "iis:hatch_input_luv"

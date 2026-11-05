@@ -46,6 +46,21 @@ final class LuvGameTests {
 
     /** Форма из GT_MetaTileEntity_AssemblyLine#checkMachine: 5 столбцов, низ — стальные корпуса, люки ставит тест. */
     private static AssemblyLineBlockEntity line(GameTestHelper h) {
+        frame(h, HatchType.ENERGY_IV);
+        // порядок обхода GT: столбец за столбцом слева направо, в столбце — от контроллера назад
+        int[][] buses = {{8, 2}, {8, 3}, {8, 4}, {7, 2}, {7, 3}, {7, 4}, {6, 2}};
+        for (int[] b : buses) hatch(h, new BlockPos(b[0], 1, b[1]), HatchType.INPUT_BUS);
+        hatch(h, new BlockPos(6, 1, 3), HatchType.INPUT_HATCH);
+        hatch(h, new BlockPos(6, 1, 4), HatchType.INPUT_HATCH);
+        hatch(h, new BlockPos(5, 1, 2), HatchType.MAINTENANCE);
+        hatch(h, new BlockPos(5, 1, 3), HatchType.OUTPUT_BUS);
+        AssemblyLineBlockEntity e = h.getBlockEntity(CONTROLLER, AssemblyLineBlockEntity.class);
+        e.maintenance().setMask(63);
+        return e;
+    }
+
+    /** Корпус линии без шин и люков. */
+    private static void frame(GameTestHelper h, HatchType energyType) {
         for (int x = 4; x <= 8; x++) {
             for (int z = 2; z <= 4; z++) set(h, new BlockPos(x, 1, z), MultiContent.SOLID_STEEL_CASING.get());
             set(h, new BlockPos(x, 2, 2), MultiContent.REINFORCED_GLASS.get());
@@ -58,20 +73,10 @@ final class LuvGameTests {
         }
         h.setBlock(CONTROLLER, MultiContent.ASSEMBLY_LINE.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
         BlockPos energy = new BlockPos(6, 4, 3);
-        hatch(h, energy, HatchType.ENERGY_IV);
+        hatch(h, energy, energyType);
         h.onEachTick(() -> {
             if (h.getLevel().getBlockEntity(h.absolutePos(energy)) instanceof EnergyHatchBlockEntity e) e.energy.stored = e.energy.capacity;
         });
-        // порядок обхода GT: столбец за столбцом слева направо, в столбце — от контроллера назад
-        int[][] buses = {{8, 2}, {8, 3}, {8, 4}, {7, 2}, {7, 3}, {7, 4}, {6, 2}};
-        for (int[] b : buses) hatch(h, new BlockPos(b[0], 1, b[1]), HatchType.INPUT_BUS);
-        hatch(h, new BlockPos(6, 1, 3), HatchType.INPUT_HATCH);
-        hatch(h, new BlockPos(6, 1, 4), HatchType.INPUT_HATCH);
-        hatch(h, new BlockPos(5, 1, 2), HatchType.MAINTENANCE);
-        hatch(h, new BlockPos(5, 1, 3), HatchType.OUTPUT_BUS);
-        AssemblyLineBlockEntity e = h.getBlockEntity(CONTROLLER, AssemblyLineBlockEntity.class);
-        e.maintenance().setMask(63);
-        return e;
     }
 
     /** GT_MachineRecipeLoader:2046: всё для двигателя LuV — ингредиенты по шинам, жидкости по люкам. */
@@ -223,5 +228,92 @@ final class LuvGameTests {
         m.setItem(0, new ItemStack(Items.ENDER_EYE));
         m.tank().setAmount(GtFluids.get("radon").source().get(), 250);
         h.succeedWhen(() -> h.assertTrue(m.getItem(1).is(LvContent.QUANTUM_EYE.get()), "output " + m.getItem(1)));
+    }
+
+    // --- D112: уровень ZPM ---------------------------------------------------------------------------------------------
+
+    /** Двигатель ZPM (GT_MachineRecipeLoader:2058): девять шин, 24000 EU/t от люка LuV; в люках убыло 288 и 750 л. */
+    static void assemblyLineBuildsZpmMotor(GameTestHelper h) {
+        frame(h, HatchType.ENERGY_LUV);
+        int[][] buses = {{8, 2}, {8, 3}, {8, 4}, {7, 2}, {7, 3}, {7, 4}, {6, 2}, {6, 3}, {6, 4}};
+        for (int[] b : buses) hatch(h, new BlockPos(b[0], 1, b[1]), HatchType.INPUT_BUS);
+        hatch(h, new BlockPos(5, 1, 2), HatchType.INPUT_HATCH);
+        hatch(h, new BlockPos(5, 1, 3), HatchType.INPUT_HATCH);
+        hatch(h, new BlockPos(5, 1, 4), HatchType.MAINTENANCE);
+        hatch(h, new BlockPos(4, 1, 3), HatchType.OUTPUT_BUS);
+        AssemblyLineBlockEntity e = h.getBlockEntity(CONTROLLER, AssemblyLineBlockEntity.class);
+        e.maintenance().setMask(63);
+        e.setItem(0, DataStickItem.written(plan(h, "electric_motor_zpm")));
+        Object[][] in = {{"long_rod_neodymium_magnetic", 2}, {"long_rod_hsse", 4}, {"ring_hsse", 4}, {"round_hsse", 16}, {"wire_fine_platinum", 64}, {"wire_fine_platinum", 64},
+                {"wire_fine_platinum", 64}, {"wire_fine_platinum", 64}, {"cable_vanadium_gallium_4x", 2}};
+        for (int i = 0; i < in.length; i++) {
+            h.getBlockEntity(new BlockPos(buses[i][0], 1, buses[i][1]), ItemBusBlockEntity.class).setItem(0, new ItemStack(SelfTest.item((String) in[i][0]), (Integer) in[i][1]));
+        }
+        FluidHatchBlockEntity solder = h.getBlockEntity(new BlockPos(5, 1, 2), FluidHatchBlockEntity.class), lube = h.getBlockEntity(new BlockPos(5, 1, 3), FluidHatchBlockEntity.class);
+        solder.tank().setAmount(GtFluids.get("molten_solderingalloy").source().get(), 1000);
+        lube.tank().setAmount(GtFluids.get("lubricant").source().get(), 1000);
+        ItemBusBlockEntity out = h.getBlockEntity(new BlockPos(4, 1, 3), ItemBusBlockEntity.class);
+        h.succeedWhen(() -> {
+            h.assertTrue(out.stacks().stream().anyMatch(s -> s.is(LvContent.ELECTRIC_MOTOR_ZPM.get())), "output " + out.stacks());
+            h.assertTrue(solder.tank().amount() == 712 && lube.tank().amount() == 250, "fluids " + solder.tank().amount() + " " + lube.tank().amount());
+        });
+    }
+
+    /** Сканер ZPM: 144000 тиков на LV и шесть разгонов — 2250; из детали LuV пишет чертёж детали ZPM. */
+    static void scannerZpmResearchesLuvPart(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.SCANNER_ZPM);
+        m.setItem(0, new ItemStack(LvContent.ELECTRIC_MOTOR_LUV.get()));
+        m.setItem(2, new ItemStack(LvContent.DATA_STICK.get()));
+        h.runAtTickTime(30, () -> {
+            h.assertTrue(m.logic().maxProgress == 2250, "time " + m.logic().maxProgress);
+            m.logic().progress = m.logic().maxProgress - 2;
+        });
+        h.succeedWhen(() -> {
+            DataStickItem.Research r = m.getItem(1).get(LvContent.RESEARCH.get());
+            h.assertTrue(r != null && r.recipe().getPath().endsWith("assembly_line/electric_motor_zpm"), "plan " + r);
+        });
+    }
+
+    /** Квантовый процессор (GT_MachineRecipeLoader:585) в сборщике схем LuV, который теперь можно собрать. */
+    static void circuitAssemblerMakesQuantumProcessor(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.CIRCUIT_ASSEMBLER_LUV);
+        Object[][] in = {{"circuit_board_fiberglass", 1}, {"chip_quantum_cpu", 1}, {"chip_nano_cpu", 1}, {"capacitor_smd", 2}, {"transistor_smd", 2}, {"wire_fine_platinum", 2}};
+        for (int i = 0; i < in.length; i++) m.setItem(i, new ItemStack(SelfTest.item((String) in[i][0]), (Integer) in[i][1]));
+        m.tank().setAmount(GtFluids.get("molten_solderingalloy").source().get(), 72);
+        h.succeedWhen(() -> h.assertTrue(m.getItem(6).is(LvContent.CIRCUIT_QUANTUMPROCESSOR.get()), "output " + m.getItem(6)));
+    }
+
+    /** Кубитная пластина (:521): нанопластина, два квантовых ока, 288 л расплава арсенида галлия. */
+    static void reactorMakesQbitWafer(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.CHEMICAL_REACTOR_IV);
+        m.setItem(0, new ItemStack(SelfTest.item("wafer_nano_cpu")));
+        m.setItem(1, new ItemStack(LvContent.QUANTUM_EYE.get(), 2));
+        m.tank().setAmount(GtFluids.get("molten_galliumarsenide").source().get(), 288);
+        h.succeedWhen(() -> h.assertTrue(m.getItem(3).is(LvContent.WAFER_QUANTUM_CPU.get()), "output " + m.getItem(3)));
+    }
+
+    /** HSS-E плавится при 5400 K: катушка HSS-G тянет. */
+    static void ebfMeltsHsseOnHssgCoil(GameTestHelper h) {
+        EbfBlockEntity e = MultiGameTests.build(h, 1, HatchType.ENERGY_EV, MultiContent.COIL_HSSG.get(), true);
+        e.maintenance().setMask(63);
+        ItemBusBlockEntity in = h.getBlockEntity(new BlockPos(5, 1, 2), ItemBusBlockEntity.class);
+        in.setItem(0, new ItemStack(SelfTest.item("dust_hsse")));
+        h.succeedWhen(() -> {
+            h.assertTrue(e.heat() == EbfBlockEntity.HSSG_HEAT, "heat " + e.heat());
+            h.assertTrue(in.getItem(0).isEmpty(), "dust not taken");
+        });
+    }
+
+    /** Вольфрамосталь (4500 K) для HSS-E мала: пыль остаётся в шине. */
+    static void ebfRefusesHsseOnTungstensteelCoil(GameTestHelper h) {
+        EbfBlockEntity e = MultiGameTests.build(h, 1, HatchType.ENERGY_EV, MultiContent.COIL_TUNGSTENSTEEL.get(), true);
+        e.maintenance().setMask(63);
+        ItemBusBlockEntity in = h.getBlockEntity(new BlockPos(5, 1, 2), ItemBusBlockEntity.class);
+        in.setItem(0, new ItemStack(SelfTest.item("dust_hsse")));
+        h.runAtTickTime(120, () -> {
+            h.assertTrue(e.heat() == EbfBlockEntity.TUNGSTENSTEEL_HEAT, "heat " + e.heat());
+            h.assertTrue(in.getItem(0).getCount() == 1, "dust taken");
+            h.succeed();
+        });
     }
 }

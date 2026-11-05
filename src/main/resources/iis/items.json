@@ -145,6 +145,21 @@
     "material": "aluminium"
   },
   {
+    "id": "dust_aluminium_sulfite",
+    "prefix": "dust",
+    "material": "aluminium_sulfite"
+  },
+  {
+    "id": "small_dust_aluminium_sulfite",
+    "prefix": "small_dust",
+    "material": "aluminium_sulfite"
+  },
+  {
+    "id": "tiny_dust_aluminium_sulfite",
+    "prefix": "tiny_dust",
+    "material": "aluminium_sulfite"
+  },
+  {
     "id": "crushed_amber",
     "prefix": "crushed",
     "material": "amber"
@@ -438,6 +453,31 @@
     "id": "plate_apatite",
     "prefix": "plate",
     "material": "apatite"
+  },
+  {
+    "id": "dust_arsenic",
+    "prefix": "dust",
+    "material": "arsenic"
+  },
+  {
+    "id": "small_dust_arsenic",
+    "prefix": "small_dust",
+    "material": "arsenic"
+  },
+  {
+    "id": "tiny_dust_arsenic",
+    "prefix": "tiny_dust",
+    "material": "arsenic"
+  },
+  {
+    "id": "ingot_arsenic",
+    "prefix": "ingot",
+    "material": "arsenic"
+  },
+  {
+    "id": "nugget_arsenic",
+    "prefix": "nugget",
+    "material": "arsenic"
   },
   {
     "id": "dust_ash",
@@ -2640,6 +2680,66 @@
     "material": "epoxid"
   },
   {
+    "id": "dust_epoxid_fiber_reinforced",
+    "prefix": "dust",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "small_dust_epoxid_fiber_reinforced",
+    "prefix": "small_dust",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "tiny_dust_epoxid_fiber_reinforced",
+    "prefix": "tiny_dust",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "ingot_epoxid_fiber_reinforced",
+    "prefix": "ingot",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "nugget_epoxid_fiber_reinforced",
+    "prefix": "nugget",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "plate_epoxid_fiber_reinforced",
+    "prefix": "plate",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "double_plate_epoxid_fiber_reinforced",
+    "prefix": "double_plate",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "rod_epoxid_fiber_reinforced",
+    "prefix": "rod",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "bolt_epoxid_fiber_reinforced",
+    "prefix": "bolt",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "screw_epoxid_fiber_reinforced",
+    "prefix": "screw",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "long_rod_epoxid_fiber_reinforced",
+    "prefix": "long_rod",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "turbine_blade_epoxid_fiber_reinforced",
+    "prefix": "turbine_blade",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
     "id": "dust_ferrosilite",
     "prefix": "dust",
     "material": "ferrosilite"
@@ -2848,6 +2948,36 @@
     "id": "plate_gallium",
     "prefix": "plate",
     "material": "gallium"
+  },
+  {
+    "id": "dust_gallium_arsenide",
+    "prefix": "dust",
+    "material": "gallium_arsenide"
+  },
+  {
+    "id": "small_dust_gallium_arsenide",
+    "prefix": "small_dust",
+    "material": "gallium_arsenide"
+  },
+  {
+    "id": "tiny_dust_gallium_arsenide",
+    "prefix": "tiny_dust",
+    "material": "gallium_arsenide"
+  },
+  {
+    "id": "ingot_gallium_arsenide",
+    "prefix": "ingot",
+    "material": "gallium_arsenide"
+  },
+  {
+    "id": "nugget_gallium_arsenide",
+    "prefix": "nugget",
+    "material": "gallium_arsenide"
+  },
+  {
+    "id": "plate_gallium_arsenide",
+    "prefix": "plate",
+    "material": "gallium_arsenide"
   },
   {
     "id": "crushed_garnet_red",
@@ -3420,6 +3550,96 @@
     "material": "grossular"
   },
   {
+    "id": "dust_hsse",
+    "prefix": "dust",
+    "material": "hsse"
+  },
+  {
+    "id": "small_dust_hsse",
+    "prefix": "small_dust",
+    "material": "hsse"
+  },
+  {
+    "id": "tiny_dust_hsse",
+    "prefix": "tiny_dust",
+    "material": "hsse"
+  },
+  {
+    "id": "ingot_hsse",
+    "prefix": "ingot",
+    "material": "hsse"
+  },
+  {
+    "id": "hot_ingot_hsse",
+    "prefix": "hot_ingot",
+    "material": "hsse"
+  },
+  {
+    "id": "nugget_hsse",
+    "prefix": "nugget",
+    "material": "hsse"
+  },
+  {
+    "id": "plate_hsse",
+    "prefix": "plate",
+    "material": "hsse"
+  },
+  {
+    "id": "double_plate_hsse",
+    "prefix": "double_plate",
+    "material": "hsse"
+  },
+  {
+    "id": "rod_hsse",
+    "prefix": "rod",
+    "material": "hsse"
+  },
+  {
+    "id": "bolt_hsse",
+    "prefix": "bolt",
+    "material": "hsse"
+  },
+  {
+    "id": "screw_hsse",
+    "prefix": "screw",
+    "material": "hsse"
+  },
+  {
+    "id": "ring_hsse",
+    "prefix": "ring",
+    "material": "hsse"
+  },
+  {
+    "id": "round_hsse",
+    "prefix": "round",
+    "material": "hsse"
+  },
+  {
+    "id": "small_gear_hsse",
+    "prefix": "small_gear",
+    "material": "hsse"
+  },
+  {
+    "id": "rotor_hsse",
+    "prefix": "rotor",
+    "material": "hsse"
+  },
+  {
+    "id": "long_rod_hsse",
+    "prefix": "long_rod",
+    "material": "hsse"
+  },
+  {
+    "id": "turbine_blade_hsse",
+    "prefix": "turbine_blade",
+    "material": "hsse"
+  },
+  {
+    "id": "gear_hsse",
+    "prefix": "gear",
+    "material": "hsse"
+  },
+  {
     "id": "dust_hssg",
     "prefix": "dust",
     "material": "hssg"
@@ -3553,6 +3773,61 @@
     "id": "tiny_dust_ilmenite",
     "prefix": "tiny_dust",
     "material": "ilmenite"
+  },
+  {
+    "id": "dust_indium",
+    "prefix": "dust",
+    "material": "indium"
+  },
+  {
+    "id": "small_dust_indium",
+    "prefix": "small_dust",
+    "material": "indium"
+  },
+  {
+    "id": "tiny_dust_indium",
+    "prefix": "tiny_dust",
+    "material": "indium"
+  },
+  {
+    "id": "ingot_indium",
+    "prefix": "ingot",
+    "material": "indium"
+  },
+  {
+    "id": "nugget_indium",
+    "prefix": "nugget",
+    "material": "indium"
+  },
+  {
+    "id": "dust_indium_gallium_phosphide",
+    "prefix": "dust",
+    "material": "indium_gallium_phosphide"
+  },
+  {
+    "id": "small_dust_indium_gallium_phosphide",
+    "prefix": "small_dust",
+    "material": "indium_gallium_phosphide"
+  },
+  {
+    "id": "tiny_dust_indium_gallium_phosphide",
+    "prefix": "tiny_dust",
+    "material": "indium_gallium_phosphide"
+  },
+  {
+    "id": "ingot_indium_gallium_phosphide",
+    "prefix": "ingot",
+    "material": "indium_gallium_phosphide"
+  },
+  {
+    "id": "nugget_indium_gallium_phosphide",
+    "prefix": "nugget",
+    "material": "indium_gallium_phosphide"
+  },
+  {
+    "id": "plate_indium_gallium_phosphide",
+    "prefix": "plate",
+    "material": "indium_gallium_phosphide"
   },
   {
     "id": "dust_invar",
@@ -4865,6 +5140,101 @@
     "material": "monazite"
   },
   {
+    "id": "crushed_naquadah",
+    "prefix": "crushed",
+    "material": "naquadah"
+  },
+  {
+    "id": "purified_naquadah",
+    "prefix": "purified",
+    "material": "naquadah"
+  },
+  {
+    "id": "centrifuged_naquadah",
+    "prefix": "centrifuged",
+    "material": "naquadah"
+  },
+  {
+    "id": "impure_dust_naquadah",
+    "prefix": "impure_dust",
+    "material": "naquadah"
+  },
+  {
+    "id": "pure_dust_naquadah",
+    "prefix": "pure_dust",
+    "material": "naquadah"
+  },
+  {
+    "id": "dust_naquadah",
+    "prefix": "dust",
+    "material": "naquadah"
+  },
+  {
+    "id": "small_dust_naquadah",
+    "prefix": "small_dust",
+    "material": "naquadah"
+  },
+  {
+    "id": "tiny_dust_naquadah",
+    "prefix": "tiny_dust",
+    "material": "naquadah"
+  },
+  {
+    "id": "ingot_naquadah",
+    "prefix": "ingot",
+    "material": "naquadah"
+  },
+  {
+    "id": "hot_ingot_naquadah",
+    "prefix": "hot_ingot",
+    "material": "naquadah"
+  },
+  {
+    "id": "nugget_naquadah",
+    "prefix": "nugget",
+    "material": "naquadah"
+  },
+  {
+    "id": "plate_naquadah",
+    "prefix": "plate",
+    "material": "naquadah"
+  },
+  {
+    "id": "double_plate_naquadah",
+    "prefix": "double_plate",
+    "material": "naquadah"
+  },
+  {
+    "id": "rod_naquadah",
+    "prefix": "rod",
+    "material": "naquadah"
+  },
+  {
+    "id": "bolt_naquadah",
+    "prefix": "bolt",
+    "material": "naquadah"
+  },
+  {
+    "id": "screw_naquadah",
+    "prefix": "screw",
+    "material": "naquadah"
+  },
+  {
+    "id": "foil_naquadah",
+    "prefix": "foil",
+    "material": "naquadah"
+  },
+  {
+    "id": "long_rod_naquadah",
+    "prefix": "long_rod",
+    "material": "naquadah"
+  },
+  {
+    "id": "turbine_blade_naquadah",
+    "prefix": "turbine_blade",
+    "material": "naquadah"
+  },
+  {
     "id": "crushed_neodymium",
     "prefix": "crushed",
     "material": "neodymium"
@@ -5828,6 +6198,61 @@
     "id": "tiny_dust_pentlandite",
     "prefix": "tiny_dust",
     "material": "pentlandite"
+  },
+  {
+    "id": "crushed_phosphate",
+    "prefix": "crushed",
+    "material": "phosphate"
+  },
+  {
+    "id": "purified_phosphate",
+    "prefix": "purified",
+    "material": "phosphate"
+  },
+  {
+    "id": "centrifuged_phosphate",
+    "prefix": "centrifuged",
+    "material": "phosphate"
+  },
+  {
+    "id": "impure_dust_phosphate",
+    "prefix": "impure_dust",
+    "material": "phosphate"
+  },
+  {
+    "id": "pure_dust_phosphate",
+    "prefix": "pure_dust",
+    "material": "phosphate"
+  },
+  {
+    "id": "dust_phosphate",
+    "prefix": "dust",
+    "material": "phosphate"
+  },
+  {
+    "id": "small_dust_phosphate",
+    "prefix": "small_dust",
+    "material": "phosphate"
+  },
+  {
+    "id": "tiny_dust_phosphate",
+    "prefix": "tiny_dust",
+    "material": "phosphate"
+  },
+  {
+    "id": "dust_phosphorus",
+    "prefix": "dust",
+    "material": "phosphorus"
+  },
+  {
+    "id": "small_dust_phosphorus",
+    "prefix": "small_dust",
+    "material": "phosphorus"
+  },
+  {
+    "id": "tiny_dust_phosphorus",
+    "prefix": "tiny_dust",
+    "material": "phosphorus"
   },
   {
     "id": "crushed_pitchblende",
@@ -10110,6 +10535,51 @@
     "material": "epoxid"
   },
   {
+    "id": "sword_head_epoxid_fiber_reinforced",
+    "prefix": "sword_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "pickaxe_head_epoxid_fiber_reinforced",
+    "prefix": "pickaxe_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "shovel_head_epoxid_fiber_reinforced",
+    "prefix": "shovel_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "axe_head_epoxid_fiber_reinforced",
+    "prefix": "axe_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "hoe_head_epoxid_fiber_reinforced",
+    "prefix": "hoe_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "saw_head_epoxid_fiber_reinforced",
+    "prefix": "saw_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "drill_head_epoxid_fiber_reinforced",
+    "prefix": "drill_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "chainsaw_head_epoxid_fiber_reinforced",
+    "prefix": "chainsaw_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "wrench_head_epoxid_fiber_reinforced",
+    "prefix": "wrench_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
     "id": "sword_head_gold",
     "prefix": "sword_head",
     "material": "gold"
@@ -10153,6 +10623,51 @@
     "id": "wrench_head_gold",
     "prefix": "wrench_head",
     "material": "gold"
+  },
+  {
+    "id": "sword_head_hsse",
+    "prefix": "sword_head",
+    "material": "hsse"
+  },
+  {
+    "id": "pickaxe_head_hsse",
+    "prefix": "pickaxe_head",
+    "material": "hsse"
+  },
+  {
+    "id": "shovel_head_hsse",
+    "prefix": "shovel_head",
+    "material": "hsse"
+  },
+  {
+    "id": "axe_head_hsse",
+    "prefix": "axe_head",
+    "material": "hsse"
+  },
+  {
+    "id": "hoe_head_hsse",
+    "prefix": "hoe_head",
+    "material": "hsse"
+  },
+  {
+    "id": "saw_head_hsse",
+    "prefix": "saw_head",
+    "material": "hsse"
+  },
+  {
+    "id": "drill_head_hsse",
+    "prefix": "drill_head",
+    "material": "hsse"
+  },
+  {
+    "id": "chainsaw_head_hsse",
+    "prefix": "chainsaw_head",
+    "material": "hsse"
+  },
+  {
+    "id": "wrench_head_hsse",
+    "prefix": "wrench_head",
+    "material": "hsse"
   },
   {
     "id": "sword_head_hssg",
@@ -10558,6 +11073,51 @@
     "id": "wrench_head_molybdenum",
     "prefix": "wrench_head",
     "material": "molybdenum"
+  },
+  {
+    "id": "sword_head_naquadah",
+    "prefix": "sword_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "pickaxe_head_naquadah",
+    "prefix": "pickaxe_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "shovel_head_naquadah",
+    "prefix": "shovel_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "axe_head_naquadah",
+    "prefix": "axe_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "hoe_head_naquadah",
+    "prefix": "hoe_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "saw_head_naquadah",
+    "prefix": "saw_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "drill_head_naquadah",
+    "prefix": "drill_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "chainsaw_head_naquadah",
+    "prefix": "chainsaw_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "wrench_head_naquadah",
+    "prefix": "wrench_head",
+    "material": "naquadah"
   },
   {
     "id": "sword_head_neodymium",

@@ -177,6 +177,34 @@
       ]
     },
     {
+      "id": "1A000000000000C7",
+      "x": 23.5,
+      "y": 13.5,
+      "dependencies": [
+        "1A000000000000C1",
+        "1A00000000000723",
+        "1A000000000000C8",
+        "1A000000000000C2",
+        "1A000000000000BB"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:wafer_quantum_cpu",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wafer_quantum_cpu",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000C700"
+        }
+      ]
+    },
+    {
       "id": "1A000000000000C8",
       "x": 23.5,
       "y": 12.0,
@@ -943,6 +971,30 @@
       ]
     },
     {
+      "id": "1A00000000000229",
+      "x": 9.0,
+      "y": 18.5,
+      "dependencies": [
+        "1A00000000000169",
+        "1A00000000000224"
+      ],
+      "icon": {
+        "id": "iis:circuit_board_fiberglass",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_board_fiberglass",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022900"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000235",
       "x": 25.0,
       "y": 15.0,
@@ -993,6 +1045,75 @@
       ]
     },
     {
+      "id": "1A0000000000023F",
+      "x": 10.0,
+      "y": 12.5,
+      "dependencies": [
+        "1A00000000000250"
+      ],
+      "icon": {
+        "id": "iis:circuit_quantummainframe",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_quantummainframe",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000023F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000250",
+      "x": 9.5,
+      "y": 14.0,
+      "dependencies": [
+        "1A00000000000258"
+      ],
+      "icon": {
+        "id": "iis:circuit_masterquantumcomputer",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_masterquantumcomputer",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000025000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000258",
+      "x": 9.5,
+      "y": 15.5,
+      "dependencies": [
+        "1A0000000000025F"
+      ],
+      "icon": {
+        "id": "iis:circuit_quantumcomputer",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_quantumcomputer",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000025800"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000025E",
       "x": 15.5,
       "y": 2.5,
@@ -1017,6 +1138,31 @@
       ]
     },
     {
+      "id": "1A0000000000025F",
+      "x": 9.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000026A",
+        "1A0000000000026B",
+        "1A00000000000229"
+      ],
+      "icon": {
+        "id": "iis:circuit_quantumprocessor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_quantumprocessor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000025F00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000268",
       "x": 19.5,
       "y": 0.5,
@@ -1036,6 +1182,81 @@
           },
           "count": 1,
           "id": "1B00000000026800"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000028B",
+      "x": 21.5,
+      "y": 2.5,
+      "dependencies": [
+        "1A0000000000027D"
+      ],
+      "icon": {
+        "id": "iis:coil_naquadah",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:coil_naquadah",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000028B00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000290",
+      "x": 17.0,
+      "y": 4.0,
+      "dependencies": [
+        "1A00000000000291",
+        "1A0000000000027D",
+        "1A00000000000232",
+        "1A00000000000205",
+        "1A00000000000085",
+        "1A00000000000210"
+      ],
+      "icon": {
+        "id": "iis:hull_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hull_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002B2",
+      "x": 25.0,
+      "y": 16.5,
+      "dependencies": [
+        "1A000000000002B1",
+        "1A000000000002B3"
+      ],
+      "icon": {
+        "id": "iis:silicon_wafer_naquadah",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:silicon_wafer_naquadah",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002B200"
         }
       ]
     },
@@ -1132,6 +1353,29 @@
           },
           "count": 1,
           "id": "1B00000000035000"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000035A",
+      "x": 21.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000094"
+      ],
+      "icon": {
+        "id": "iis:coil_hssg",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:coil_hssg",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000035A00"
         }
       ]
     },
@@ -1266,6 +1510,34 @@
       ]
     },
     {
+      "id": "1A00000000000405",
+      "x": 14.0,
+      "y": 7.0,
+      "dependencies": [
+        "1A0000000000027D",
+        "1A00000000000232",
+        "1A00000000000205",
+        "1A00000000000249",
+        "1A0000000000026E",
+        "1A0000000000023A"
+      ],
+      "icon": {
+        "id": "iis:transformer_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:transformer_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000040500"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000040D",
       "x": 0.5,
       "y": 8.5,
@@ -1368,6 +1640,31 @@
           },
           "count": 1,
           "id": "1B00000000041000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000411",
+      "x": 11.0,
+      "y": 8.5,
+      "dependencies": [
+        "1A00000000000405",
+        "1A00000000000410",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:adjustable_transformer_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:adjustable_transformer_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000041100"
         }
       ]
     },

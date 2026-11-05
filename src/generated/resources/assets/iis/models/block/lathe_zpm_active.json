@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/lathe_zpm_side_active",
+    "north": "iis:block/lv/lathe_zpm_front_active",
+    "south": "iis:block/lv/lathe_zpm_back_active",
+    "east": "iis:block/lv/lathe_zpm_side_active",
+    "west": "iis:block/lv/lathe_zpm_side_active",
+    "up": "iis:block/lv/lathe_zpm_top_active",
+    "down": "iis:block/lv/lathe_zpm_bottom_active"
+  }
+}

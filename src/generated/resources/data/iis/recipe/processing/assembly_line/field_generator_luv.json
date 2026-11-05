@@ -1,0 +1,63 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#c:frames/hssg",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/hssg",
+      "count": 6
+    },
+    {
+      "ingredient": "iis:quantum_star",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:emitter_luv",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:circuit_masterquantumcomputer",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:cables/1x/yttrium_barium_cuprate",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:field_generator_luv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 6000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 576
+    }
+  ],
+  "keep": [
+    "iis:field_generator_iv"
+  ],
+  "temp": 144000
+}

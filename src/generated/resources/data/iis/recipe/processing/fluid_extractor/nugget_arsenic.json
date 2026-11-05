@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/arsenic",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 46,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_arsenic",
+      "amount": 16
+    }
+  ]
+}

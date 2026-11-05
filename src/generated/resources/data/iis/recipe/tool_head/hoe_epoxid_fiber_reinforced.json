@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PIh",
+    "f  "
+  ],
+  "key": {
+    "P": "#c:plates/epoxid_fiber_reinforced",
+    "I": "#c:ingots/epoxid_fiber_reinforced",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:hoe_head_epoxid_fiber_reinforced"
+  }
+}

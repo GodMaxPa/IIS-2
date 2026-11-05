@@ -130,6 +130,11 @@
     "iis:cable_yttrium_barium_cuprate_2x",
     "iis:cable_yttrium_barium_cuprate_4x",
     "iis:cable_yttrium_barium_cuprate_8x",
-    "iis:cable_yttrium_barium_cuprate_12x"
+    "iis:cable_yttrium_barium_cuprate_12x",
+    "iis:cable_naquadah_1x",
+    "iis:cable_naquadah_2x",
+    "iis:cable_naquadah_4x",
+    "iis:cable_naquadah_8x",
+    "iis:cable_naquadah_12x"
   ]
 }

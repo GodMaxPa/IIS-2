@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BCB",
+    "RMV",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "R": "iis:robot_arm_zpm",
+    "V": "iis:conveyor_module_zpm",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah",
+    "B": "#c:chests/wooden"
+  },
+  "result": {
+    "id": "iis:packager_zpm"
+  }
+}

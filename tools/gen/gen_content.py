@@ -172,6 +172,9 @@ names |= {'HSSG', 'Molybdenum', 'YttriumBariumCuprate', 'Yttrium', 'Barium', 'Ra
 # D111: borosilicate glass for glass fibre and the fluid filter (GT_MachineRecipeLoader:497, 2600; boron is a lepidolite byproduct), plutonium for radon
 # (:1829; uranium centrifuge :1890) and the quantum eye and star
 names |= {'Boron', 'BorosilicateGlass', 'Plutonium', 'Uranium235'}
+# D112 (ZPM): HSS-E (GT_CraftingRecipeLoader:409), naquadah (ore only off-world, D17) and superconductor wire (:334), fibre-reinforced epoxy for the fibreglass
+# board (GT_MachineRecipeLoader:450-452), indium (:425-426), gallium arsenide (:1053), indium gallium phosphide (:1791) for the QBit wafer (:520-521)
+names |= {'HSSE', 'Naquadah', 'Superconductor', 'EpoxidFiberReinforced', 'Indium', 'AluminiumSulfite', 'Arsenic', 'Phosphorus', 'Phosphate', 'GalliumArsenide', 'IndiumGalliumPhosphide'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64
@@ -962,6 +965,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_luv', os.path.join(ROOT, 'tools', 
 _luv = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_luv)
 lv_stats['luv'] = _luv.generate(globals())
+# ZPM: quantum circuits up to Ultimate, ZPM parts, field generator LuV, ZPM crafts (D112)
+_spec = _ilu.spec_from_file_location('iis_gen_zpm', os.path.join(ROOT, 'tools', 'gen', 'zpm.py'))
+_zpm = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_zpm)
+lv_stats['zpm'] = _zpm.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

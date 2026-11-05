@@ -12,7 +12,7 @@
     "O": "#iis:wires/4x/hssg",
     "C": "#c:circuits/master",
     "W": "#iis:cables/1x/niobium_titanium",
-    "G": "minecraft:glass"
+    "G": "iis:reinforced_glass"
   },
   "result": {
     "id": "iis:fluid_heater_luv"

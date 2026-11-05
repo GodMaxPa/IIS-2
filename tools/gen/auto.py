@@ -13,7 +13,7 @@ from PIL import Image
 NS = 'iis'
 GT = os.environ.get('IIS_GT5_TEXTURES', '/home/claude/ref/gt5/src/main/resources/assets/gregtech/textures')
 TIERS = ['lv', 'mv', 'hv', 'ev', 'iv']
-AUTO_TIERS = TIERS + ['luv']   # D110: automation and repellents go up to LuV, as in GT
+AUTO_TIERS = TIERS + ['luv', 'zpm']   # D110, D112: automation and repellents go up to ZPM, as in GT
 
 
 def generate(g):
@@ -102,7 +102,7 @@ def generate(g):
             r['keep'] = [keep]
         rec.setdefault(f'{rtype}/{rid}', r)
 
-    CIRC = {'lv': 'basic', 'mv': 'good', 'hv': 'advanced', 'ev': 'data', 'iv': 'elite', 'luv': 'master'}
+    CIRC = {'lv': 'basic', 'mv': 'good', 'hv': 'advanced', 'ev': 'data', 'iv': 'elite', 'luv': 'master', 'zpm': 'ultimate'}
     CABLE = {'lv': 'Tin', 'mv': 'Copper', 'hv': 'Gold', 'ev': 'Aluminium', 'iv': 'Tungsten'}
 
     # --- automation ---------------------------------------------------------------------------------------------------
@@ -238,7 +238,7 @@ def generate(g):
     shaped('lv/transformer_ulv', f'{NS}:transformer_ulv', 1, [' BB', 'CM ', ' BB'], {'M': f'{NS}:hull_ulv', 'C': tag_of_cable('Tin'), 'B': tag_of_cable('Lead')})
 
     shutil.copy(os.path.join(GT, 'gui', 'DigitalTransformer.png'), tex_out('gui/auto/digital_transformer.png'))
-    for i, t in enumerate(('ev', 'iv', 'luv')):
+    for i, t in enumerate(('ev', 'iv', 'luv', 'zpm')):
         bid = f'adjustable_transformer_{t}'
         base = first(os.path.join(BI, f'DIGITAL_TRANSFORMER_{ {"luv": "LuV"}.get(t, t.upper()) }.png'))
         norm = {'north': over(base, 'OVERLAY_ENERGY_IN_MULTI'), 'south': over(base, 'OVERLAY_ENERGY_OUT'), 'east': over(base, 'OVERLAY_ENERGY_OUT'), 'west': over(base, 'OVERLAY_ENERGY_OUT'),
@@ -257,6 +257,8 @@ def generate(g):
     # GT_MachineRecipeLoader:2904-2907
     mrec('assembler', 'adjustable_transformer_luv', [ing(f'{NS}:transformer_iv'), ing(f'{NS}:adjustable_transformer_iv'), ing('#c:circuits/master', 2)],
          [out(f'{NS}:adjustable_transformer_luv')], 50, 1920)
+    mrec('assembler', 'adjustable_transformer_zpm', [ing(f'{NS}:transformer_luv'), ing(f'{NS}:adjustable_transformer_luv'), ing('#c:circuits/ultimate', 2)],
+         [out(f'{NS}:adjustable_transformer_zpm')], 50, 1920)   # :2909-2912 (D112)
     # GT_MachineRecipeLoader:71: the processing array is finally craftable
     shaped('multi/processing_array', f'{NS}:processing_array', 1, ['CTC', 'FMF', 'CBC'],
            {'M': f'{NS}:hull_ev', 'B': f'{NS}:electric_pump_ev', 'C': '#c:circuits/elite', 'F': f'{NS}:robot_arm_ev', 'T': f'{NS}:adjustable_transformer_ev'})

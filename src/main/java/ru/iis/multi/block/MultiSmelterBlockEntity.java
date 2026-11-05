@@ -27,6 +27,7 @@ public class MultiSmelterBlockEntity extends RecipeMultiblockBlockEntity {
     private static final Set<HatchType> BOTTOM = Set.of(HatchType.MAINTENANCE, HatchType.INPUT_BUS, HatchType.OUTPUT_BUS, HatchType.ENERGY);
 
     private int level;
+    private int discount = 1;
 
     public MultiSmelterBlockEntity(BlockPos pos, BlockState state) {
         super(MultiContent.MULTI_SMELTER_BE.get(), pos, state);
@@ -38,7 +39,13 @@ public class MultiSmelterBlockEntity extends RecipeMultiblockBlockEntity {
         if (b == MultiContent.COIL_KANTHAL.get()) return 2;
         if (b == MultiContent.COIL_NICHROME.get()) return 4;
         if (b == MultiContent.COIL_TUNGSTENSTEEL.get()) return 8;
+        if (b == MultiContent.COIL_HSSG.get() || b == MultiContent.COIL_NAQUADAH.get()) return 16;
         return 0;
+    }
+
+    /** D112: GT mCostDiscount: HSS-G 2, наквада 4, остальные 1. */
+    public static int coilDiscount(Block b) {
+        return b == MultiContent.COIL_NAQUADAH.get() ? 4 : b == MultiContent.COIL_HSSG.get() ? 2 : 1;
     }
 
     public int level() {
@@ -81,6 +88,7 @@ public class MultiSmelterBlockEntity extends RecipeMultiblockBlockEntity {
             }
         }
         level = coilLevel(coil);
+        discount = coilDiscount(coil);
         return true;
     }
 
@@ -113,7 +121,7 @@ public class MultiSmelterBlockEntity extends RecipeMultiblockBlockEntity {
         int tier = Math.max(1, BlastLogic.tier(maxInputVoltage(sl)));
         efficiency = maintenance.maxEfficiency();
         efficiencyIncrease = 10000;
-        eut = 4 * (1 << (tier - 1)) * (1 << (tier - 1)) * level;
+        eut = 4 * (1 << (tier - 1)) * (1 << (tier - 1)) * level / discount;
         maxProgress = Math.max(1, 512 / (1 << (tier - 1)));
         progress = 0;
         pendingItems = out;

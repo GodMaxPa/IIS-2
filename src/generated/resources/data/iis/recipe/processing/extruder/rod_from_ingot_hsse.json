@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/hsse",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_hsse",
+      "count": 2
+    }
+  ],
+  "duration": 162,
+  "eut": 384,
+  "keep": [
+    "iis:shape_extruder_rod"
+  ]
+}

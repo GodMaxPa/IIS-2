@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CTC",
+    "WMW",
+    "CRC"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "T": "iis:emitter_luv",
+    "R": "iis:sensor_luv",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/vanadium_gallium"
+  },
+  "result": {
+    "id": "iis:scanner_luv"
+  }
+}

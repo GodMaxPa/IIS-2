@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/epoxid",
+    "iis:carbon_fiber"
+  ],
+  "result": {
+    "id": "iis:dust_epoxid_fiber_reinforced"
+  }
+}

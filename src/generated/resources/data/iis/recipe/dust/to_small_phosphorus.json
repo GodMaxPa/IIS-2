@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/phosphorus"
+  ],
+  "result": {
+    "id": "iis:small_dust_phosphorus",
+    "count": 4
+  }
+}

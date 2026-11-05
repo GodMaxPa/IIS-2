@@ -168,6 +168,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_epoxid_fiber_reinforced",
+    "tool": "sword",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "sword"
+  },
+  {
     "id": "sword_gold",
     "tool": "sword",
     "material": "gold",
@@ -177,6 +189,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_hsse",
+    "tool": "sword",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 10.0,
+    "quality": 4,
     "kind": "sword"
   },
   {
@@ -285,6 +309,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_naquadah",
+    "tool": "sword",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
     "kind": "sword"
   },
   {
@@ -720,6 +756,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_epoxid_fiber_reinforced",
+    "tool": "pickaxe",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_gold",
     "tool": "pickaxe",
     "material": "gold",
@@ -729,6 +777,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_hsse",
+    "tool": "pickaxe",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 10.0,
+    "quality": 4,
     "kind": "pickaxe"
   },
   {
@@ -837,6 +897,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_naquadah",
+    "tool": "pickaxe",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
     "kind": "pickaxe"
   },
   {
@@ -1272,6 +1344,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_epoxid_fiber_reinforced",
+    "tool": "shovel",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_gold",
     "tool": "shovel",
     "material": "gold",
@@ -1281,6 +1365,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_hsse",
+    "tool": "shovel",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 10.0,
+    "quality": 4,
     "kind": "shovel"
   },
   {
@@ -1389,6 +1485,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_naquadah",
+    "tool": "shovel",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
     "kind": "shovel"
   },
   {
@@ -1824,6 +1932,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_epoxid_fiber_reinforced",
+    "tool": "axe",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "axe"
+  },
+  {
     "id": "axe_gold",
     "tool": "axe",
     "material": "gold",
@@ -1833,6 +1953,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_hsse",
+    "tool": "axe",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 10.0,
+    "quality": 4,
     "kind": "axe"
   },
   {
@@ -1941,6 +2073,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_naquadah",
+    "tool": "axe",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
     "kind": "axe"
   },
   {
@@ -2376,6 +2520,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_epoxid_fiber_reinforced",
+    "tool": "hoe",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_gold",
     "tool": "hoe",
     "material": "gold",
@@ -2385,6 +2541,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_hsse",
+    "tool": "hoe",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 10.0,
+    "quality": 4,
     "kind": "hoe"
   },
   {
@@ -2493,6 +2661,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_naquadah",
+    "tool": "hoe",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
     "kind": "hoe"
   },
   {
@@ -2928,6 +3108,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_epoxid_fiber_reinforced",
+    "tool": "saw",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "axe"
+  },
+  {
     "id": "saw_gold",
     "tool": "saw",
     "material": "gold",
@@ -2937,6 +3129,18 @@
     "craftDamage": 4,
     "speed": 12.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_hsse",
+    "tool": "saw",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 10.0,
+    "quality": 4,
     "kind": "axe"
   },
   {
@@ -3045,6 +3249,18 @@
     "craftDamage": 4,
     "speed": 7.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_naquadah",
+    "tool": "saw",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 6.0,
+    "quality": 4,
     "kind": "axe"
   },
   {
@@ -3480,6 +3696,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_epoxid_fiber_reinforced",
+    "tool": "hammer",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 2.25,
+    "quality": 1,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_gold",
     "tool": "hammer",
     "material": "gold",
@@ -3489,6 +3717,18 @@
     "craftDamage": 8,
     "speed": 9.0,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_hsse",
+    "tool": "hammer",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 4,
     "kind": "pickaxe"
   },
   {
@@ -3597,6 +3837,18 @@
     "craftDamage": 8,
     "speed": 5.25,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_naquadah",
+    "tool": "hammer",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 4.5,
+    "quality": 4,
     "kind": "pickaxe"
   },
   {
@@ -4020,6 +4272,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_epoxid_fiber_reinforced",
+    "tool": "wrench",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_gold",
     "tool": "wrench",
     "material": "gold",
@@ -4029,6 +4293,18 @@
     "craftDamage": 16,
     "speed": 12.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_hsse",
+    "tool": "wrench",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 10.0,
+    "quality": 4,
     "kind": "wrench"
   },
   {
@@ -4137,6 +4413,18 @@
     "craftDamage": 16,
     "speed": 7.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_naquadah",
+    "tool": "wrench",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 4,
     "kind": "wrench"
   },
   {
@@ -4572,6 +4860,18 @@
     "kind": null
   },
   {
+    "id": "file_epoxid_fiber_reinforced",
+    "tool": "file",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": null
+  },
+  {
     "id": "file_gold",
     "tool": "file",
     "material": "gold",
@@ -4581,6 +4881,18 @@
     "craftDamage": 8,
     "speed": 12.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_hsse",
+    "tool": "file",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 10.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -4689,6 +5001,18 @@
     "craftDamage": 8,
     "speed": 7.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_naquadah",
+    "tool": "file",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -5124,6 +5448,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_epoxid_fiber_reinforced",
+    "tool": "screwdriver",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": null
+  },
+  {
     "id": "screwdriver_gold",
     "tool": "screwdriver",
     "material": "gold",
@@ -5133,6 +5469,18 @@
     "craftDamage": 8,
     "speed": 12.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_hsse",
+    "tool": "screwdriver",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 10.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -5241,6 +5589,18 @@
     "craftDamage": 8,
     "speed": 7.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_naquadah",
+    "tool": "screwdriver",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -5712,6 +6072,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_epoxid_fiber_reinforced",
+    "tool": "knife",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": "sword"
+  },
+  {
     "id": "knife_gold",
     "tool": "knife",
     "material": "gold",
@@ -5721,6 +6093,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_hsse",
+    "tool": "knife",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 10.0,
+    "quality": 4,
     "kind": "sword"
   },
   {
@@ -5829,6 +6213,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_naquadah",
+    "tool": "knife",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
     "kind": "sword"
   },
   {
@@ -6264,6 +6660,18 @@
     "kind": "wire_cutter"
   },
   {
+    "id": "wire_cutter_epoxid_fiber_reinforced",
+    "tool": "wire_cutter",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 3.75,
+    "quality": 1,
+    "kind": "wire_cutter"
+  },
+  {
     "id": "wire_cutter_gold",
     "tool": "wire_cutter",
     "material": "gold",
@@ -6273,6 +6681,18 @@
     "craftDamage": 8,
     "speed": 15.0,
     "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_hsse",
+    "tool": "wire_cutter",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 12.5,
+    "quality": 4,
     "kind": "wire_cutter"
   },
   {
@@ -6381,6 +6801,18 @@
     "craftDamage": 8,
     "speed": 8.75,
     "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_naquadah",
+    "tool": "wire_cutter",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 4,
     "kind": "wire_cutter"
   },
   {
@@ -6840,6 +7272,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_epoxid_fiber_reinforced",
+    "tool": "crowbar",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "wood",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
+    "kind": null
+  },
+  {
     "id": "crowbar_gold",
     "tool": "crowbar",
     "material": "gold",
@@ -6849,6 +7293,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "crowbar_hsse",
+    "tool": "crowbar",
+    "material": "hsse",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 10.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -6957,6 +7413,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "crowbar_naquadah",
+    "tool": "crowbar",
+    "material": "naquadah",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -7380,6 +7848,18 @@
     "kind": "drill"
   },
   {
+    "id": "drill_lv_epoxid_fiber_reinforced",
+    "tool": "drill_lv",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "stainless_steel",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 9.0,
+    "quality": 1,
+    "kind": "drill"
+  },
+  {
     "id": "drill_lv_gold",
     "tool": "drill_lv",
     "material": "gold",
@@ -7389,6 +7869,18 @@
     "craftDamage": 2,
     "speed": 36.0,
     "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_hsse",
+    "tool": "drill_lv",
+    "material": "hsse",
+    "handle": "stainless_steel",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 30.0,
+    "quality": 4,
     "kind": "drill"
   },
   {
@@ -7497,6 +7989,18 @@
     "craftDamage": 2,
     "speed": 21.0,
     "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_naquadah",
+    "tool": "drill_lv",
+    "material": "naquadah",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 18.0,
+    "quality": 4,
     "kind": "drill"
   },
   {
@@ -7932,6 +8436,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_epoxid_fiber_reinforced",
+    "tool": "chainsaw_lv",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "stainless_steel",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_gold",
     "tool": "chainsaw_lv",
     "material": "gold",
@@ -7941,6 +8457,18 @@
     "craftDamage": 16,
     "speed": 24.0,
     "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_hsse",
+    "tool": "chainsaw_lv",
+    "material": "hsse",
+    "handle": "stainless_steel",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 20.0,
+    "quality": 4,
     "kind": "chainsaw"
   },
   {
@@ -8049,6 +8577,18 @@
     "craftDamage": 16,
     "speed": 14.0,
     "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_naquadah",
+    "tool": "chainsaw_lv",
+    "material": "naquadah",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 12.0,
+    "quality": 4,
     "kind": "chainsaw"
   },
   {
@@ -8484,6 +9024,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_lv_epoxid_fiber_reinforced",
+    "tool": "wrench_lv",
+    "material": "epoxid_fiber_reinforced",
+    "handle": "stainless_steel",
+    "maxDamage": 128,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_lv_gold",
     "tool": "wrench_lv",
     "material": "gold",
@@ -8493,6 +9045,18 @@
     "craftDamage": 16,
     "speed": 24.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_hsse",
+    "tool": "wrench_lv",
+    "material": "hsse",
+    "handle": "stainless_steel",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 20.0,
+    "quality": 4,
     "kind": "wrench"
   },
   {
@@ -8601,6 +9165,18 @@
     "craftDamage": 16,
     "speed": 14.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_naquadah",
+    "tool": "wrench_lv",
+    "material": "naquadah",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 12.0,
+    "quality": 4,
     "kind": "wrench"
   },
   {

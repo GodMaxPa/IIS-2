@@ -32,8 +32,8 @@ import java.util.Map;
 @JeiPlugin
 public final class IISJeiPlugin implements IModPlugin {
     /** LV, MV, HV, EV, IV+: рецепт попадает в первую, где EU/t не больше напряжения. */
-    static final String[] TIERS = {"LV", "MV", "HV", "EV", "IV", "LuV"};
-    private static final long[] VOLTS = {32, 128, 512, 2048, 8192, Long.MAX_VALUE};
+    static final String[] TIERS = {"LV", "MV", "HV", "EV", "IV", "LuV", "ZPM"};
+    private static final long[] VOLTS = {32, 128, 512, 2048, 8192, 32768, Long.MAX_VALUE};
     private final Map<String, IRecipeHolderType<GtRecipe>> types = new HashMap<>();
 
     @Override

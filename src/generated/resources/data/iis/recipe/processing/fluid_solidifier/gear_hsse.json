@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:gear_hsse",
+      "count": 1
+    }
+  ],
+  "duration": 128,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_hsse",
+      "amount": 576
+    }
+  ],
+  "keep": [
+    "iis:mold_gear"
+  ]
+}

@@ -56,6 +56,7 @@ class LuvMachinesTest {
     @Test
     void luvCraftsFollowTheTierTable() throws IOException {
         assertEquals("iis:hull_luv", key("lv/macerator_luv", "M"));
+        assertEquals("iis:reinforced_glass", key("lv/electrolyzer_luv", "G"));   // D112: X.GLASS at tiers 6-8
         assertEquals("#iis:cables/1x/niobium_titanium", key("lv/macerator_luv", "W"));
         assertEquals("iis:electric_motor_luv", key("lv/macerator_luv", "E"));
         assertEquals("#c:circuits/master", key("lv/macerator_luv", "C"));
@@ -70,7 +71,7 @@ class LuvMachinesTest {
     void theIvCircuitAssemblerTakesMaster() throws IOException {
         assertEquals("#c:circuits/master", key("lv/circuit_assembler_iv", "C"));
         assertEquals("iis:hull_iv", key("lv/circuit_assembler_iv", "M"));
-        assertFalse(Files.exists(RECIPES.resolve("lv/circuit_assembler_luv.json")), "the Ultimate circuit is not ported");
+        assertEquals("#c:circuits/ultimate", key("lv/circuit_assembler_luv", "C"));   // D112
     }
 
     /** До D110 кабели платины и вольфрама нельзя было изолировать, и уровень IV не собирался. */

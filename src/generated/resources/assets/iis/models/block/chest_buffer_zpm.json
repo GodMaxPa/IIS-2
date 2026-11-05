@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "iis:block/auto/chest_buffer_zpm_north",
+    "south": "iis:block/auto/chest_buffer_zpm_south",
+    "east": "iis:block/auto/chest_buffer_zpm_east",
+    "west": "iis:block/auto/chest_buffer_zpm_west",
+    "up": "iis:block/auto/chest_buffer_zpm_up",
+    "down": "iis:block/auto/chest_buffer_zpm_down",
+    "particle": "iis:block/auto/chest_buffer_zpm_east"
+  }
+}

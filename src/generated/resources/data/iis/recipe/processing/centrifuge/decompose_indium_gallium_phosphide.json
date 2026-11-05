@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/indium_gallium_phosphide",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_indium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_gallium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_phosphorus",
+      "count": 1
+    }
+  ],
+  "duration": 852,
+  "eut": 15
+}

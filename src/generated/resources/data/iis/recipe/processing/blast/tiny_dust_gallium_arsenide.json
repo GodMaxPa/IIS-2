@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/gallium_arsenide",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_gallium_arsenide",
+      "count": 1
+    }
+  ],
+  "duration": 1200,
+  "eut": 120,
+  "temp": 1200
+}
