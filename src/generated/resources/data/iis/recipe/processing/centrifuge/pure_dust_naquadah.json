@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_naquadah",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_naquadah_enriched",
+      "count": 1
     }
   ],
-  "duration": 98,
+  "duration": 784,
   "eut": 5
 }

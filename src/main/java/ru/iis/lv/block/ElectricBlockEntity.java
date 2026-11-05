@@ -85,6 +85,12 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
     /** Работа блока за тик (до выдачи энергии). */
     protected abstract void work(ServerLevel level);
 
+    /** D117: солнечная панель заряжает машину прямо. */
+    @Override
+    public void addEu(long eu) {
+        energy.stored = Math.min(energy.capacity, energy.stored + eu);
+    }
+
     // --- тик ---------------------------------------------------------------------------------------------------
     @Override
     public final void serverTick() {

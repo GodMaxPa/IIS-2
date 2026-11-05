@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " T ",
+    "TWT",
+    " T "
+  ],
+  "key": {
+    "T": "#c:plates/tin",
+    "W": {
+      "neoforge:ingredient_type": "neoforge:components",
+      "items": "iis:capsule",
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "minecraft:water",
+          "amount": 1000
+        }
+      }
+    }
+  },
+  "result": {
+    "id": "iis:coolant_10k"
+  }
+}

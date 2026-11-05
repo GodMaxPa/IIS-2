@@ -2970,6 +2970,66 @@
     "thickness": 12.0
   },
   {
+    "id": "wire_graphene_1x",
+    "material": "graphene",
+    "size": 1,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 1,
+    "loss": 2,
+    "thickness": 2.0
+  },
+  {
+    "id": "wire_graphene_2x",
+    "material": "graphene",
+    "size": 2,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 2,
+    "loss": 2,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_graphene_4x",
+    "material": "graphene",
+    "size": 4,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 4,
+    "loss": 2,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_graphene_8x",
+    "material": "graphene",
+    "size": 8,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 8,
+    "loss": 2,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_graphene_12x",
+    "material": "graphene",
+    "size": 12,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 12,
+    "loss": 2,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_graphene_16x",
+    "material": "graphene",
+    "size": 16,
+    "insulated": false,
+    "voltage": 8192,
+    "amperage": 16,
+    "loss": 2,
+    "thickness": 12.0
+  },
+  {
     "id": "wire_superconductor_1x",
     "material": "superconductor",
     "size": 1,

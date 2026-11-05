@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/lutetium",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_lutetium",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

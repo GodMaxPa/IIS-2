@@ -1,0 +1,26 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_lv",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:iron_bars",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:foils/aluminium",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:reactor_vent",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 60,
+  "circuit": 1
+}

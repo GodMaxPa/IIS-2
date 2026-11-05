@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:reactor_condensator",
+    "#c:plates/red_alloy",
+    "#c:plates/red_alloy",
+    "#c:plates/red_alloy"
+  ],
+  "result": {
+    "id": "iis:reactor_condensator"
+  }
+}

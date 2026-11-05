@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#iis:small_dusts/lutetium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_lutetium",
+      "count": 1
+    }
+  ],
+  "duration": 7700,
+  "eut": 120,
+  "temp": 1925
+}

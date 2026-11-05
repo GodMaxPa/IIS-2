@@ -1,0 +1,33 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:reactor_vent",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:diamond",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:iron_bars",
+      "count": 10
+    },
+    {
+      "ingredient": "iis:electric_motor_lv",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/aluminium",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:reactor_vent_diamond",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 240
+}

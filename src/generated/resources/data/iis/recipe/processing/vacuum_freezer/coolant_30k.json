@@ -1,0 +1,20 @@
+{
+  "type": "iis:vacuum_freezer",
+  "inputs": [
+    {
+      "ingredient": "iis:coolant_30k",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:coolant_30k",
+      "count": 1,
+      "components": {
+        "minecraft:damage": 0
+      }
+    }
+  ],
+  "duration": 300,
+  "eut": 120
+}

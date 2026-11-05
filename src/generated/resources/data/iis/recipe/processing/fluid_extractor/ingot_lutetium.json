@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/lutetium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 62,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_lutetium",
+      "amount": 144
+    }
+  ]
+}

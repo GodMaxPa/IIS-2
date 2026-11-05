@@ -42,6 +42,7 @@ WIRES = [
     ('VanadiumGallium', 2, 4, 4, 32768),   # :1502 (bEC), LuV hull (D110)
     ('YttriumBariumCuprate', 4, 8, 4, 32768),   # :1503 (bEC), LuV parts (D110)
     ('Naquadah', 2, 4, 2, 131072),   # :1505 (bEC), ZPM hull and machines (D112)
+    ('Graphene', 1, 2, 1, 8192),   # :1494, the 8V and LV solar panels; insulated by itself (D117)
     ('Superconductor', 1, 1, 4, 2147483647),   # :1510 V[9], insulated by itself: no cable forms (D112)
 ]
 # size, bare thickness, insulated thickness (GT makeWires; there is no 16x cable — commented out in GT), insulation ring
@@ -50,7 +51,7 @@ WIRE_SIZES = [(1, 0.125, 0.25, 'INSULATION_TINY'), (2, 0.25, 0.375, 'INSULATION_
               (8, 0.5, 0.625, 'INSULATION_MEDIUM_PLUS'), (12, 0.625, 0.75, 'INSULATION_LARGE'), (16, 0.75, None, None)]
 VOLTAGE_NAMES = {8: 'ULV', 32: 'LV', 128: 'MV', 512: 'HV', 2048: 'EV', 8192: 'IV', 32768: 'LuV', 131072: 'ZPM', 2147483647: 'MAX'}
 # GT makeWires aAutoInsulated: the wire is the only form
-WIRE_BARE = ('Superconductor',)
+WIRE_BARE = ('Superconductor', 'Graphene')
 # ProcessingWire: insulation by material (the GT switch falls through: red alloy also takes the carpet and rubber recipes,
 # the carpet group also takes rubber)
 WIRE_PAPER = ('RedAlloy',)

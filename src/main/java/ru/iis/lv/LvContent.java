@@ -241,9 +241,6 @@ public final class LvContent {
     public static final DeferredItem<Item> CHIP_HPIC = item("chip_hpic");
     public static final DeferredItem<Item> IRIDIUM_ALLOY_INGOT = item("iridium_alloy_ingot");
     public static final DeferredItem<Item> IRIDIUM_ALLOY_PLATE = item("iridium_alloy_plate");
-    public static final DeferredItem<Item> REACTOR_REFLECTOR = item("reactor_reflector");
-    public static final DeferredItem<Item> REACTOR_REFLECTOR_THICK = item("reactor_reflector_thick");
-    public static final DeferredItem<Item> NEUTRON_REFLECTOR = item("neutron_reflector");
     // D112: детали ZPM, генератор поля LuV, квантовая цепочка до Ultimate, кремний с наквадой
     public static final DeferredItem<Item> ELECTRIC_MOTOR_ZPM = item("electric_motor_zpm");
     public static final DeferredItem<Item> ELECTRIC_PUMP_ZPM = item("electric_pump_zpm");
@@ -534,7 +531,7 @@ public final class LvContent {
             Map.entry("circuit_board_fiberglass", 5), Map.entry("wafer_quantum_cpu", 5), Map.entry("chip_quantum_cpu", 5), Map.entry("circuit_quantumprocessor", 5),
             Map.entry("circuit_quantumcomputer", 5), Map.entry("circuit_masterquantumcomputer", 5), Map.entry("circuit_quantummainframe", 6),
             Map.entry("silicon_boule_naquadah", 6), Map.entry("silicon_wafer_naquadah", 6),
-            Map.entry("wafer_hpic", 5), Map.entry("chip_hpic", 5), Map.entry("iridium_alloy_ingot", 5), Map.entry("iridium_alloy_plate", 5), Map.entry("reactor_reflector", 5), Map.entry("reactor_reflector_thick", 5), Map.entry("neutron_reflector", 5));
+            Map.entry("wafer_hpic", 5), Map.entry("chip_hpic", 5), Map.entry("iridium_alloy_ingot", 5), Map.entry("iridium_alloy_plate", 5));
 
     /** Уровень вкладки 0…6 (LV…ZPM): суффикс _lv/_mv/_hv/_ev/_iv/_luv/_zpm, у кабелей — напряжение, насадки экструдера — MV, иначе по таблице или LV. */
     public static int tabTier(Item item) {

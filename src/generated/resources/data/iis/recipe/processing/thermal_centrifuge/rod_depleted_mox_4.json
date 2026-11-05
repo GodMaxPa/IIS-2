@@ -1,0 +1,25 @@
+{
+  "type": "iis:thermal_centrifuge",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_depleted_mox_4",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_uranium",
+      "count": 16
+    },
+    {
+      "id": "iis:dust_plutonium",
+      "count": 4
+    },
+    {
+      "id": "iis:dust_iron",
+      "count": 4
+    }
+  ],
+  "duration": 500,
+  "eut": 48
+}

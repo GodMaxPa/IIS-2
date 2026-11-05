@@ -30,6 +30,8 @@
     "iis:file_meteoric_iron",
     "iis:file_molybdenum",
     "iis:file_naquadah",
+    "iis:file_naquadah_enriched",
+    "iis:file_naquadria",
     "iis:file_neodymium",
     "iis:file_neodymium_magnetic",
     "iis:file_nichrome",

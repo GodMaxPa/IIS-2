@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "iis:block/solar_panel_block"
+    }
+  }
+}

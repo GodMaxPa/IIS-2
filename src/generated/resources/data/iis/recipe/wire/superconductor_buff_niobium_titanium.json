@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "NPT",
+    "CCC",
+    "XPT"
+  ],
+  "key": {
+    "N": {
+      "neoforge:ingredient_type": "neoforge:components",
+      "items": "iis:capsule",
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:nitrogen",
+          "amount": 1000
+        }
+      }
+    },
+    "X": {
+      "neoforge:ingredient_type": "neoforge:components",
+      "items": "iis:capsule",
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:helium",
+          "amount": 1000
+        }
+      }
+    },
+    "P": "iis:electric_pump_mv",
+    "T": "iis:pipe_small_tungsten_steel",
+    "C": "#iis:wires/2x/niobium_titanium"
+  },
+  "result": {
+    "id": "iis:wire_superconductor_1x",
+    "count": 6
+  }
+}

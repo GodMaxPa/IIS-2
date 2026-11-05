@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "STS",
+    " S "
+  ],
+  "key": {
+    "S": "iis:solar_panel_mv",
+    "T": "iis:transformer_mv"
+  },
+  "result": {
+    "id": "iis:solar_panel_hv"
+  }
+}

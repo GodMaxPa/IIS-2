@@ -348,6 +348,30 @@
     "kind": "sword"
   },
   {
+    "id": "sword_naquadah_enriched",
+    "tool": "sword",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_naquadria",
+    "tool": "sword",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 1.0,
+    "quality": 4,
+    "kind": "sword"
+  },
+  {
     "id": "sword_neodymium",
     "tool": "sword",
     "material": "neodymium",
@@ -956,6 +980,30 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
+    "quality": 4,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_naquadah_enriched",
+    "tool": "pickaxe",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_naquadria",
+    "tool": "pickaxe",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.0,
     "quality": 4,
     "kind": "pickaxe"
   },
@@ -1572,6 +1620,30 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_naquadah_enriched",
+    "tool": "shovel",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_naquadria",
+    "tool": "shovel",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.0,
+    "quality": 4,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_neodymium",
     "tool": "shovel",
     "material": "neodymium",
@@ -2180,6 +2252,30 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 6.0,
+    "quality": 4,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_naquadah_enriched",
+    "tool": "axe",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_naquadria",
+    "tool": "axe",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.0,
     "quality": 4,
     "kind": "axe"
   },
@@ -2796,6 +2892,30 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_naquadah_enriched",
+    "tool": "hoe",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_naquadria",
+    "tool": "hoe",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.0,
+    "quality": 4,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_neodymium",
     "tool": "hoe",
     "material": "neodymium",
@@ -3404,6 +3524,30 @@
     "blockDamage": 1,
     "craftDamage": 4,
     "speed": 6.0,
+    "quality": 4,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_naquadah_enriched",
+    "tool": "saw",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 6.0,
+    "quality": 4,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_naquadria",
+    "tool": "saw",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 1.0,
     "quality": 4,
     "kind": "axe"
   },
@@ -4020,6 +4164,30 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_naquadah_enriched",
+    "tool": "hammer",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 4.5,
+    "quality": 4,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_naquadria",
+    "tool": "hammer",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 0.75,
+    "quality": 4,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_neodymium",
     "tool": "hammer",
     "material": "neodymium",
@@ -4616,6 +4784,30 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 6.0,
+    "quality": 4,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_naquadah_enriched",
+    "tool": "wrench",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 4,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_naquadria",
+    "tool": "wrench",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 1.0,
     "quality": 4,
     "kind": "wrench"
   },
@@ -5232,6 +5424,30 @@
     "kind": null
   },
   {
+    "id": "file_naquadah_enriched",
+    "tool": "file",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 4,
+    "kind": null
+  },
+  {
+    "id": "file_naquadria",
+    "tool": "file",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 1.0,
+    "quality": 4,
+    "kind": null
+  },
+  {
     "id": "file_neodymium",
     "tool": "file",
     "material": "neodymium",
@@ -5840,6 +6056,30 @@
     "blockDamage": 4,
     "craftDamage": 8,
     "speed": 6.0,
+    "quality": 4,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_naquadah_enriched",
+    "tool": "screwdriver",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 4,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_naquadria",
+    "tool": "screwdriver",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 1.0,
     "quality": 4,
     "kind": null
   },
@@ -6492,6 +6732,30 @@
     "kind": "sword"
   },
   {
+    "id": "knife_naquadah_enriched",
+    "tool": "knife",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_naquadria",
+    "tool": "knife",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 1.0,
+    "quality": 4,
+    "kind": "sword"
+  },
+  {
     "id": "knife_neodymium",
     "tool": "knife",
     "material": "neodymium",
@@ -7100,6 +7364,30 @@
     "blockDamage": 2,
     "craftDamage": 8,
     "speed": 7.5,
+    "quality": 4,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_naquadah_enriched",
+    "tool": "wire_cutter",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
+    "quality": 4,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_naquadria",
+    "tool": "wire_cutter",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 1.25,
     "quality": 4,
     "kind": "wire_cutter"
   },
@@ -7740,6 +8028,30 @@
     "kind": null
   },
   {
+    "id": "crowbar_naquadah_enriched",
+    "tool": "crowbar",
+    "material": "naquadah_enriched",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 4,
+    "kind": null
+  },
+  {
+    "id": "crowbar_naquadria",
+    "tool": "crowbar",
+    "material": "naquadria",
+    "handle": "wood",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 1.0,
+    "quality": 4,
+    "kind": null
+  },
+  {
     "id": "crowbar_neodymium",
     "tool": "crowbar",
     "material": "neodymium",
@@ -8336,6 +8648,30 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 18.0,
+    "quality": 4,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_naquadah_enriched",
+    "tool": "drill_lv",
+    "material": "naquadah_enriched",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 18.0,
+    "quality": 4,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_naquadria",
+    "tool": "drill_lv",
+    "material": "naquadria",
+    "handle": "stainless_steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
     "quality": 4,
     "kind": "drill"
   },
@@ -8952,6 +9288,30 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_naquadah_enriched",
+    "tool": "chainsaw_lv",
+    "material": "naquadah_enriched",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 12.0,
+    "quality": 4,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_naquadria",
+    "tool": "chainsaw_lv",
+    "material": "naquadria",
+    "handle": "stainless_steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 2.0,
+    "quality": 4,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_neodymium",
     "tool": "chainsaw_lv",
     "material": "neodymium",
@@ -9560,6 +9920,30 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 12.0,
+    "quality": 4,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_naquadah_enriched",
+    "tool": "wrench_lv",
+    "material": "naquadah_enriched",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 12.0,
+    "quality": 4,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_naquadria",
+    "tool": "wrench_lv",
+    "material": "naquadria",
+    "handle": "stainless_steel",
+    "maxDamage": 1024,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 2.0,
     "quality": 4,
     "kind": "wrench"
   },

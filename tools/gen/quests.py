@@ -112,6 +112,19 @@ GC_MAP.update({('GalacticraftCore:item.heavyPlating', 0): 'iis:heavy_plating', (
                # D116
                ('gregtech:gt.blockmachines', 1193): 'iis:fusion_computer_luv', ('gregtech:gt.blockcasings4', 7): 'iis:fusion_coil', ('gregtech:gt.neutronreflector', 0): 'iis:neutron_reflector',
                ('gregtech:gt.metaitem.03', 32052): 'iis:wafer_hpic', ('gregtech:gt.blockcasings', 15): 'iis:coil_superconductor'})
+# D117: the reactor, its parts and the solar panels are own items that stand for the IC2 and GT ones
+GC_MAP.update({('IC2:blockGenerator', 5): 'iis:nuclear_reactor', ('IC2:blockReactorChamber', 0): 'iis:reactor_chamber', ('IC2:itemUran', 0): 'iis:enriched_uranium',
+               ('IC2:itemFuelRod', 0): 'iis:fuel_rod_empty', ('IC2:reactorCondensatorLap', 1): 'iis:reactor_condensator_lap', ('IC2:reactorCoolantSimple', 1): 'iis:coolant_10k',
+               ('IC2:reactorCoolantTriple', 1): 'iis:coolant_30k', ('IC2:reactorCoolantSix', 1): 'iis:coolant_60k', ('IC2:reactorHeatSwitch', 1): 'iis:reactor_heat_switch',
+               ('IC2:reactorHeatSwitchDiamond', 1): 'iis:reactor_heat_switch_diamond', ('IC2:reactorHeatSwitchSpread', 1): 'iis:reactor_heat_switch_spread',
+               ('IC2:reactorPlating', 0): 'iis:reactor_plating', ('IC2:reactorPlatingHeat', 0): 'iis:reactor_plating_heat', ('IC2:reactorReflector', 1): 'iis:reactor_reflector',
+               ('IC2:reactorReflectorThick', 1): 'iis:reactor_reflector_thick', ('IC2:reactorVent', 1): 'iis:reactor_vent', ('IC2:reactorVentDiamond', 1): 'iis:reactor_vent_diamond',
+               ('gregtech:gt.Thoriumcell', 0): 'iis:rod_thorium_1', ('gregtech:gt.reactorUraniumSimple', 0): 'iis:rod_uranium_1',
+               ('IC2:itemPartCarbonMesh', 0): 'iis:carbon_mesh', ('IC2:itemPartCarbonPlate', 0): 'iis:carbon_plate',
+               ('gregtech:gt.metaitem.01', 32750): 'iis:solar_panel', ('gregtech:gt.metaitem.01', 32751): 'iis:solar_panel_8v', ('gregtech:gt.metaitem.01', 32752): 'iis:solar_panel_lv',
+               ('gregtech:gt.metaitem.01', 32753): 'iis:solar_panel_mv', ('gregtech:gt.metaitem.01', 32754): 'iis:solar_panel_hv', ('gregtech:gt.metaitem.01', 32755): 'iis:solar_panel_ev',
+               ('gregtech:gt.metaitem.01', 32756): 'iis:solar_panel_iv', ('gregtech:gt.metaitem.01', 32757): 'iis:solar_panel_luv', ('gregtech:gt.metaitem.01', 32758): 'iis:solar_panel_zpm',
+               ('gregtech:gt.metaitem.01', 32759): 'iis:solar_panel_uv'})
 RAILCRAFT_MAP = {
     ('detector', 0): 'detector_item', ('part.tie', 0): 'tie_wood', ('part.tie', 1): 'tie_stone', ('part.railbed', 0): 'railbed_wood',
     ('part.railbed', 1): 'railbed_stone', ('part.rail', 0): 'rail_standard', ('part.rail', 1): 'rail_advanced', ('part.rail', 2): 'rail_wooden',

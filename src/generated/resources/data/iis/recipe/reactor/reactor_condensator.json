@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RSR",
+    "RVR",
+    "RSR"
+  ],
+  "key": {
+    "R": "#c:plates/red_alloy",
+    "S": "iis:reactor_heat_switch_core",
+    "V": "iis:reactor_vent_core"
+  },
+  "result": {
+    "id": "iis:reactor_condensator"
+  }
+}

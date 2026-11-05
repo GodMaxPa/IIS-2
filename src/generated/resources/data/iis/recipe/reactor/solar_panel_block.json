@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GGG",
+    "DSD",
+    "CHC"
+  ],
+  "key": {
+    "G": "minecraft:glass",
+    "D": "#c:dusts/coal",
+    "S": "iis:silicon_wafer",
+    "C": "#c:circuits/basic",
+    "H": "iis:hull_lv"
+  },
+  "result": {
+    "id": "iis:solar_panel_block"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "UUU",
+    "NNN",
+    "UUU"
+  ],
+  "key": {
+    "U": "#c:ingots/uranium",
+    "N": "#c:nuggets/uranium235"
+  },
+  "result": {
+    "id": "iis:enriched_uranium"
+  }
+}

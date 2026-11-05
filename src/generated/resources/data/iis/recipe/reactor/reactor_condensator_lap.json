@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LVL",
+    "CLC",
+    "LSL"
+  ],
+  "key": {
+    "L": "#c:plates/lapis",
+    "V": "iis:reactor_vent_gold",
+    "C": "iis:reactor_condensator",
+    "S": "iis:reactor_heat_switch_spread"
+  },
+  "result": {
+    "id": "iis:reactor_condensator_lap"
+  }
+}

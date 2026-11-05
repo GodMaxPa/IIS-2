@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " O ",
+    "RGR",
+    "RBR"
+  ],
+  "key": {
+    "O": "#c:dyes/orange",
+    "R": "#c:plates/rubber",
+    "G": "minecraft:glass",
+    "B": "minecraft:iron_bars"
+  },
+  "result": {
+    "id": "iis:hazmat_helmet"
+  }
+}

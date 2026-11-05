@@ -1,0 +1,21 @@
+{
+  "type": "iis:canner",
+  "inputs": [
+    {
+      "ingredient": "iis:fuel_rod_empty",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:enriched_uranium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_uranium_1",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 2
+}

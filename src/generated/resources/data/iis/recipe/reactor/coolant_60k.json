@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TCT",
+    "TDT",
+    "TCT"
+  ],
+  "key": {
+    "T": "#c:plates/tin",
+    "C": "iis:coolant_30k",
+    "D": "iis:plate_dense_copper"
+  },
+  "result": {
+    "id": "iis:coolant_60k"
+  }
+}

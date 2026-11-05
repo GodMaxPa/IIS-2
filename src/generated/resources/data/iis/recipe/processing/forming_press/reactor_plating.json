@@ -1,0 +1,21 @@
+{
+  "type": "iis:forming_press",
+  "inputs": [
+    {
+      "ingredient": "iis:advanced_alloy_plate",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/lead",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:reactor_plating",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 480
+}

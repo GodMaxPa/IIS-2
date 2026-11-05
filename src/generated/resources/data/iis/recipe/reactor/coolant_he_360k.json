@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PCP",
+    "PDP",
+    "PCP"
+  ],
+  "key": {
+    "P": "#c:plates/tin",
+    "C": "iis:coolant_he_180k",
+    "D": "iis:plate_dense_copper"
+  },
+  "result": {
+    "id": "iis:coolant_he_360k"
+  }
+}

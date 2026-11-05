@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PCP",
+    "PCP",
+    "PCP"
+  ],
+  "key": {
+    "P": "#c:plates/tin",
+    "C": "iis:coolant_nak_60k"
+  },
+  "result": {
+    "id": "iis:coolant_nak_180k"
+  }
+}

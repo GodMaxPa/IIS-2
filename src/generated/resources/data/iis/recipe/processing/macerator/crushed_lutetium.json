@@ -1,0 +1,22 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/lutetium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:impure_dust_lutetium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_lutetium",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

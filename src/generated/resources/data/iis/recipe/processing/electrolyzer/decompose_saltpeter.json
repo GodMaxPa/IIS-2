@@ -1,0 +1,43 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/saltpeter",
+      "count": 5
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_potassium",
+      "count": 1
+    },
+    {
+      "id": "iis:capsule",
+      "count": 3,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:oxygen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 100,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:nitrogen",
+      "amount": 1000
+    }
+  ]
+}

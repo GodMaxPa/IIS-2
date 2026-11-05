@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/lutetium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_lutetium",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_lutetium",
+      "count": 1
+    }
+  ],
+  "duration": 1392,
+  "eut": 5
+}

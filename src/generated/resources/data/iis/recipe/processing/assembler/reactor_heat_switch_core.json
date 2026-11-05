@@ -1,0 +1,22 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:reactor_heat_switch",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/copper",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:reactor_heat_switch_core",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 60,
+  "circuit": 1
+}

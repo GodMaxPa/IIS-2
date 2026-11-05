@@ -1,0 +1,17 @@
+{
+  "type": "iis:vacuum_freezer",
+  "inputs": [
+    {
+      "ingredient": "#iis:hot_ingots/lutetium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_lutetium",
+      "count": 1
+    }
+  ],
+  "duration": 522,
+  "eut": 120
+}

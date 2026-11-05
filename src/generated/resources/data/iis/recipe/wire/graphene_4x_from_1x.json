@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/graphene",
+    "#iis:wires/1x/graphene",
+    "#iis:wires/1x/graphene",
+    "#iis:wires/1x/graphene"
+  ],
+  "result": {
+    "id": "iis:wire_graphene_4x"
+  }
+}

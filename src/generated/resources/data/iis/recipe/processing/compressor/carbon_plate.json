@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "iis:carbon_mesh",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:carbon_plate",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

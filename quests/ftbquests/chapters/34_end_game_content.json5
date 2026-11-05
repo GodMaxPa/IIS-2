@@ -156,11 +156,34 @@
       ]
     },
     {
+      "id": "1A000000000000DC",
+      "x": 9.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000000D9"
+      ],
+      "icon": {
+        "id": "iis:dust_potassium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_potassium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000DC00"
+        }
+      ]
+    },
+    {
       "id": "1A000000000000DD",
       "x": 9.0,
       "y": 6.5,
       "dependencies": [
-        "1A000000000000D9",
+        "1A000000000000DC",
         "1A00000000000293",
         "1A00000000000236",
         "1A000000000000CD",
@@ -236,6 +259,172 @@
           },
           "count": 1,
           "id": "1B00000000036C02"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000036D",
+      "x": 7.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000370"
+      ],
+      "icon": {
+        "id": "iis:ingot_naquadria",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_naquadria",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000036D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000370",
+      "x": 7.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000027D"
+      ],
+      "icon": {
+        "id": "iis:dust_naquadria",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_naquadria",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000037000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000381",
+      "x": 2.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000383",
+        "1A00000000000384"
+      ],
+      "icon": {
+        "id": "iis:reactor_plating_heat",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:reactor_plating_heat",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000038100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000382",
+      "x": 0.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000385"
+      ],
+      "icon": {
+        "id": "iis:coolant_60k",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:coolant_60k",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000038200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000383",
+      "x": 0.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000001BD",
+        "1A000000000000A4",
+        "1A0000000000004A",
+        "1A0000000000013F",
+        "1A00000000000387"
+      ],
+      "icon": {
+        "id": "iis:reactor_plating",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:reactor_plating",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000038300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000384",
+      "x": 3.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000FE"
+      ],
+      "icon": {
+        "id": "iis:plate_dense_copper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_dense_copper",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000038400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000385",
+      "x": -1.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000386"
+      ],
+      "icon": {
+        "id": "iis:coolant_30k",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:coolant_30k",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000038500"
         }
       ]
     },

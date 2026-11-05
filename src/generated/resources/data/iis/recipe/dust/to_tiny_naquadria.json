@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/naquadria"
+  },
+  "result": {
+    "id": "iis:tiny_dust_naquadria",
+    "count": 18
+  }
+}

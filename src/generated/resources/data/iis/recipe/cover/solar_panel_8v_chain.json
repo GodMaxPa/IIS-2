@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "STS",
+    "SSS"
+  ],
+  "key": {
+    "S": "iis:solar_panel",
+    "T": "#c:circuits/good"
+  },
+  "result": {
+    "id": "iis:solar_panel_8v"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "iis:thermal_centrifuge",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_depleted_thorium_4",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_lutetium",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_thorium",
+      "count": 4
+    },
+    {
+      "id": "iis:dust_iron",
+      "count": 6
+    }
+  ],
+  "duration": 500,
+  "eut": 48
+}

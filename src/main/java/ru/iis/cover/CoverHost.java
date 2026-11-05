@@ -50,6 +50,8 @@ public interface CoverHost {
     default long euCapacity() { return 0; }
 
     default void useEu(long eu) {}
+    /** Энергия от солнечной панели (GT injectEnergyUnits). */
+    default void addEu(long eu) {}
 
     default long avgEuIn() { return 0; }
 

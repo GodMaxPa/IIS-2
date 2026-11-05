@@ -382,10 +382,26 @@
     "Craft a furnace to smelt ores or cook food. Note! some quests contain two rewards: fixed and one more is variation. Variation you may choose in the bottom of this window by click arrow right."
   ],
   "quest.1A000000000000A7.title": "First Furnace",
+  "quest.1A000000000000A8.quest_desc": [
+    "It may be used in nuclear power."
+  ],
+  "quest.1A000000000000A8.title": "Neutron Reflector",
+  "quest.1A000000000000A9.quest_desc": [
+    "It may be used in nuclear power."
+  ],
+  "quest.1A000000000000A9.title": "Thick Neutron Reflector",
   "quest.1A000000000000AA.quest_desc": [
     "With a hammer or a bender."
   ],
   "quest.1A000000000000AA.title": "Double Beryllium Plate",
+  "quest.1A000000000000AB.quest_desc": [
+    "It may extend inner working area of a nuclear reactor."
+  ],
+  "quest.1A000000000000AB.title": "Reactor Chamber",
+  "quest.1A000000000000AC.quest_desc": [
+    "This is a complex multiblock. It may consist of a controller block and up to 6 reactor chambers (on each side of the reactor)."
+  ],
+  "quest.1A000000000000AC.title": "Nuclear Reactor",
   "quest.1A000000000000AD.quest_desc": [
     "An EV tier Robot Arm."
   ],
@@ -394,6 +410,10 @@
     "Height to search: 20 - 30 URANIUM vein (Uraninite, Uranium), 10 - 40 PITCHBLENDE vein (Pitchblende, Uraninite)."
   ],
   "quest.1A000000000000AE.title": "Uranium 238 Ingot",
+  "quest.1A000000000000B0.quest_desc": [
+    "Use an alloy smelter to get this from 6 uranium-238 ingots and 3 uranium-235 nuggets."
+  ],
+  "quest.1A000000000000B0.title": "Enriched Uranium Nuclear Fuel",
   "quest.1A000000000000B1.quest_desc": [
     "Height to search: 20 - 30. You may get uranium-235 as by-product only from uraninite and uranium ores."
   ],
@@ -402,6 +422,18 @@
     "For starters, you have to craft an Iron or Bronze pickaxe head. Then use a wooden stick to make a second level pickaxe. It can dig most of gregtech ores (but not all). Later you can craft a level 3 pickaxe from §9cobalt §for §bdiamonds§f."
   ],
   "quest.1A000000000000B2.title": "2 Level Pickaxe",
+  "quest.1A000000000000B3.quest_desc": [
+    "Put EUNF into an empty fuel rod with a canning machine."
+  ],
+  "quest.1A000000000000B3.title": "Fuel Rod (Uranium)",
+  "quest.1A000000000000B4.quest_desc": [
+    "You can craft this from an iron ingot in an extruder using a mold shape. Or just use a bending machine with a programmed circuit with the second configuration."
+  ],
+  "quest.1A000000000000B4.title": "Fuel Rod",
+  "quest.1A000000000000B6.quest_desc": [
+    "Put 3 thorium dusts to an empty fuel rod using a canning machine."
+  ],
+  "quest.1A000000000000B6.title": "Fuel Rod (Thorium)",
   "quest.1A000000000000B7.quest_desc": [
     "Height to search: 5 - 30. You can find it in a beryllium ore vein. Another way to get it - as by-product of coal, monazite, uraninite, uranium or pitchblende ores (look it up in NEI)."
   ],
@@ -410,6 +442,10 @@
     "Prepare at least 3 dusts to create a cycle between a furnace and a chemical reactor in order to produce Radon (gas)."
   ],
   "quest.1A000000000000B8.title": "Plutonium 239 Dust",
+  "quest.1A000000000000B9.quest_desc": [
+    "One of the two materials to fuse americium."
+  ],
+  "quest.1A000000000000B9.title": "Lutetium Dust",
   "quest.1A000000000000BA.quest_desc": [
     "This shit is an important part of most low tier conveyors."
   ],
@@ -522,6 +558,10 @@
     "To produce it, you have to use a Fusion reactor tier 3."
   ],
   "quest.1A000000000000DA.title": "Iron Plasma",
+  "quest.1A000000000000DC.quest_desc": [
+    "Use an electrolyzer to get potassium from rock salt."
+  ],
+  "quest.1A000000000000DC.title": "Potassium Dust",
   "quest.1A000000000000DD.quest_desc": [
     "To produce it, you have to use a Fusion reactor tier 3."
   ],
@@ -2262,6 +2302,14 @@
     "Put two aluminium plates to implosion compressor."
   ],
   "quest.1A0000000000031D.title": "Compressed Aluminum",
+  "quest.1A00000000000320.quest_desc": [
+    "Compress the raw carbon mesh to get this."
+  ],
+  "quest.1A00000000000320.title": "Carbon Plate",
+  "quest.1A00000000000321.quest_desc": [
+    "Use any tier assembler to make the raw carbon mesh from raw carbon fiber."
+  ],
+  "quest.1A00000000000321.title": "Raw Carbon Mesh",
   "quest.1A00000000000322.quest_desc": [
     "Put two tin plates to implosion compressor."
   ],
@@ -2426,6 +2474,42 @@
     "The way to craft the Gravi Star."
   ],
   "quest.1A0000000000036C.title": "Advanced Autoclave IV",
+  "quest.1A0000000000036D.quest_desc": [
+    "Put the naquadria dust to the EBF with the top coils (naquadah alloy coil blocks)."
+  ],
+  "quest.1A0000000000036D.title": "Naquadria Ingot",
+  "quest.1A00000000000370.quest_desc": [
+    "If you have the naquadah - you may get the naquadria from it. There few ways and you have to choose your favorite."
+  ],
+  "quest.1A00000000000370.title": "Naquadria Dust",
+  "quest.1A00000000000380.quest_desc": [
+    "You have to use the assembling machine HV+ tier. Put there common heat exchanger, LV circuit, lapis, copper and tin plates. (use NEI to get more info)."
+  ],
+  "quest.1A00000000000380.title": "Advanced Heat Exchanger",
+  "quest.1A00000000000381.quest_desc": [
+    "The part of cooling core. Also may be used in nuclear reactor."
+  ],
+  "quest.1A00000000000381.title": "Heat-Capacity Reactor Plating",
+  "quest.1A00000000000382.quest_desc": [
+    "The part of cooling core. Also may be used in nuclear reactor."
+  ],
+  "quest.1A00000000000382.title": "60k Coolant Cell",
+  "quest.1A00000000000383.quest_desc": [
+    "The part of heat-capacity reactor plating. may be created by HV+ forming press from lead plate and advanced alloy."
+  ],
+  "quest.1A00000000000383.title": "Reactor Plating",
+  "quest.1A00000000000384.quest_desc": [
+    "...from 9 ingots (or plates)"
+  ],
+  "quest.1A00000000000384.title": "Dense Copper Plate",
+  "quest.1A00000000000385.quest_desc": [
+    "The part of cooling core. Also may be used in nuclear reactor."
+  ],
+  "quest.1A00000000000385.title": "30k Coolant Cell",
+  "quest.1A00000000000386.quest_desc": [
+    "Coolant cell with tin plates by crafting table."
+  ],
+  "quest.1A00000000000386.title": "10k Coolant Cell",
   "quest.1A00000000000387.quest_desc": [
     "Better than common."
   ],
@@ -2438,6 +2522,22 @@
     "Use mixer to blend stone dust and clay dust. Or use quicklime dust instead of clay dust. By this action you will get wet concrete. Than you should use fluid solidifier with mold (block) to get light concrete block."
   ],
   "quest.1A00000000000397.title": "Light Concrete",
+  "quest.1A0000000000039A.quest_desc": [
+    "Use MV+ Assembling machine with Heat Exchanger and Gold Plate."
+  ],
+  "quest.1A0000000000039A.title": "Component Heat Exchanger",
+  "quest.1A0000000000039B.quest_desc": [
+    "Use MV+ Assembling machine with programmed circuit (config #1) to make from LV tier circuit, copper plate and tin plate the Heat Exchanger."
+  ],
+  "quest.1A0000000000039B.title": "Heat Exchanger",
+  "quest.1A000000000003A4.quest_desc": [
+    "It is like previous tier but with diamond and by HV+ tier assembling machine."
+  ],
+  "quest.1A000000000003A4.title": "Advanced Heat Vent",
+  "quest.1A000000000003A7.quest_desc": [
+    "Use the MV+ tier assembling machine to craft this from LV motor, iron bras and aluminium foil."
+  ],
+  "quest.1A000000000003A7.title": "Heat Vent",
   "quest.1A000000000003AA.quest_desc": [
     "Industrial diamond + iridium plates + advansed alloy plates"
   ],
@@ -2894,6 +2994,10 @@
     "This is a present - solar panel. You may place it as a cover on a top on any machine, battery buffer or even machine hull. In the last case it may be use as \"solar energy generator\". Just turn it energy output to direction you want."
   ],
   "quest.1A00000000000489.title": "Solar Panel",
+  "quest.1A0000000000048A.quest_desc": [
+    "You may combine 8 simple solar panels to get one 8V solar panel."
+  ],
+  "quest.1A0000000000048A.title": "Solar Panel (8V)",
   "quest.1A0000000000048B.quest_desc": [
     "It is used to keep a given area of Chunks constantly loaded into memory, allowing for the game's processes to go on, regardless if a Player is present or not. A Redstone signal will deactivate the Loader. It is important to always verify the coverage of the area loaded, using the Show Lasers feature, as some machines may operate in unintended ways if not loaded properly."
   ],

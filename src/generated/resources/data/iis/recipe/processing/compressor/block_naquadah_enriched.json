@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/naquadah_enriched",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_naquadah_enriched",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

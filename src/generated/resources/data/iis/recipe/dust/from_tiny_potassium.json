@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/potassium",
+    "#iis:tiny_dusts/potassium",
+    "#iis:tiny_dusts/potassium",
+    "#iis:tiny_dusts/potassium",
+    "#iis:tiny_dusts/potassium",
+    "#iis:tiny_dusts/potassium",
+    "#iis:tiny_dusts/potassium",
+    "#iis:tiny_dusts/potassium",
+    "#iis:tiny_dusts/potassium"
+  ],
+  "result": {
+    "id": "iis:dust_potassium"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:screws/naquadria",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 134,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_naquadria",
+      "amount": 16
+    }
+  ]
+}

@@ -183,6 +183,8 @@ names |= {'Boron', 'BorosilicateGlass', 'Plutonium', 'Uranium235'}
 # board (GT_MachineRecipeLoader:450-452), indium (:425-426), gallium arsenide (:1053), indium gallium phosphide (:1791) for the QBit wafer (:520-521)
 # D116: fusion Mark I: Plutonium 241 for the controller, europium and duranium are what it makes for the tier 2 rocket
 names |= {'Plutonium241', 'Europium', 'Duranium'}
+# D117: reactor and solar panels: thorium and naquadah rods give lutetium and naquadria, NaK coolant needs potassium, the 8V panel graphene
+names |= {'NaquadahEnriched', 'Naquadria', 'Lutetium', 'Potassium', 'Graphene'}
 names |= {'HSSE', 'Naquadah', 'Superconductor', 'EpoxidFiberReinforced', 'Indium', 'AluminiumSulfite', 'Arsenic', 'Phosphorus', 'Phosphate', 'GalliumArsenide', 'IndiumGalliumPhosphide'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
@@ -989,6 +991,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_fusion', os.path.join(ROOT, 'tools
 _fusion = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_fusion)
 lv_stats['fusion'] = _fusion.generate(globals())
+# Nuclear reactor as in IC2, solar panels (D117)
+_spec = _ilu.spec_from_file_location('iis_gen_reactor', os.path.join(ROOT, 'tools', 'gen', 'reactor.py'))
+_reactor = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_reactor)
+lv_stats['reactor'] = _reactor.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

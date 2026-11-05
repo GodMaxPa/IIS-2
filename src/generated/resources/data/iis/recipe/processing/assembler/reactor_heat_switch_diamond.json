@@ -1,0 +1,33 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:reactor_heat_switch",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/basic",
+      "count": 3
+    },
+    {
+      "ingredient": "#c:plates/lapis",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:plates/copper",
+      "count": 6
+    },
+    {
+      "ingredient": "#c:plates/tin",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:reactor_heat_switch_diamond",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 240
+}

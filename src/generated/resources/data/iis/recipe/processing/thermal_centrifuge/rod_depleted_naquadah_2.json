@@ -1,0 +1,25 @@
+{
+  "type": "iis:thermal_centrifuge",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_depleted_naquadah_2",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_naquadah",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_naquadria",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_iron",
+      "count": 3
+    }
+  ],
+  "duration": 500,
+  "eut": 48
+}

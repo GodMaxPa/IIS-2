@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:reactor_condensator_lap",
+    "#c:plates/lapis",
+    "#c:plates/lapis",
+    "#c:plates/lapis"
+  ],
+  "result": {
+    "id": "iis:reactor_condensator_lap"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DAD",
+    "CHC",
+    "TCT"
+  ],
+  "key": {
+    "D": "#c:circuits/data",
+    "A": "iis:robot_arm_ev",
+    "C": "iis:reactor_chamber",
+    "H": "iis:hull_ev",
+    "T": "iis:reactor_reflector_thick"
+  },
+  "result": {
+    "id": "iis:nuclear_reactor"
+  }
+}

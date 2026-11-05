@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:turbine_blades/naquadria",
+      "count": 12
+    },
+    {
+      "ingredient": "#iis:long_rods/tungsten_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:turbine_large",
+      "count": 1,
+      "components": {
+        "iis:rotor_material": "naquadria",
+        "minecraft:max_damage": 153600
+      }
+    }
+  ],
+  "duration": 640,
+  "eut": 1600
+}

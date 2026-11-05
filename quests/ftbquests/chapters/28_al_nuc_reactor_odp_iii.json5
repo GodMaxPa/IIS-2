@@ -575,6 +575,59 @@
       ]
     },
     {
+      "id": "1A000000000000A8",
+      "x": 12.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000A3",
+        "1A000000000000A6",
+        "1A0000000000051D"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:reactor_reflector",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:reactor_reflector",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000A800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000A9",
+      "x": 14.0,
+      "y": 2.5,
+      "dependencies": [
+        "1A00000000000356",
+        "1A000000000000A6",
+        "1A000000000000A8",
+        "1A000000000000AA"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:reactor_reflector_thick",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:reactor_reflector_thick",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000A900"
+        }
+      ]
+    },
+    {
       "id": "1A000000000000AA",
       "x": 9.5,
       "y": 4.0,
@@ -594,6 +647,55 @@
           },
           "count": 1,
           "id": "1B0000000000AA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000AB",
+      "x": 18.5,
+      "y": 1.0,
+      "dependencies": [
+        "1A0000000000001F"
+      ],
+      "icon": {
+        "id": "iis:reactor_chamber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:reactor_chamber",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000AB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000AC",
+      "x": 16.25,
+      "y": 3.25,
+      "size": 2.5,
+      "dependencies": [
+        "1A000000000000A9",
+        "1A000000000000AB",
+        "1A000000000000AD"
+      ],
+      "icon": {
+        "id": "iis:nuclear_reactor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:nuclear_reactor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000AC00"
         }
       ]
     },
@@ -622,6 +724,30 @@
       ]
     },
     {
+      "id": "1A000000000000B0",
+      "x": 15.5,
+      "y": 7.0,
+      "dependencies": [
+        "1A000000000000AE",
+        "1A000000000000B1"
+      ],
+      "icon": {
+        "id": "iis:enriched_uranium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:enriched_uranium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000B000"
+        }
+      ]
+    },
+    {
       "id": "1A000000000000B1",
       "x": 15.5,
       "y": 8.5,
@@ -642,6 +768,79 @@
           },
           "count": 1,
           "id": "1B0000000000B100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000B3",
+      "x": 15.5,
+      "y": 5.5,
+      "dependencies": [
+        "1A000000000000AC",
+        "1A000000000000B4",
+        "1A000000000000B0"
+      ],
+      "icon": {
+        "id": "iis:rod_uranium_1",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_uranium_1",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000B300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000B4",
+      "x": 17.0,
+      "y": 5.5,
+      "dependencies": [
+        "1A00000000000056"
+      ],
+      "icon": {
+        "id": "iis:fuel_rod_empty",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fuel_rod_empty",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000B400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000B6",
+      "x": 18.5,
+      "y": 4.0,
+      "dependencies": [
+        "1A000000000000AC",
+        "1A000000000000B4",
+        "1A000000000000B7"
+      ],
+      "icon": {
+        "id": "iis:rod_thorium_1",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_thorium_1",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000B600"
         }
       ]
     },
@@ -674,16 +873,7 @@
       "x": 14.0,
       "y": 7.0,
       "dependencies": [
-        "1A00000000000356",
-        "1A000000000000A6",
-        "1A000000000000A3",
-        "1A0000000000051D",
-        "1A000000000000AA",
-        "1A0000000000001F",
-        "1A000000000000AD",
-        "1A00000000000056",
-        "1A000000000000AE",
-        "1A000000000000B1"
+        "1A000000000000B3"
       ],
       "icon": {
         "id": "iis:dust_plutonium",
@@ -698,6 +888,29 @@
           },
           "count": 1,
           "id": "1B0000000000B800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000B9",
+      "x": 18.5,
+      "y": 5.5,
+      "dependencies": [
+        "1A000000000000B6"
+      ],
+      "icon": {
+        "id": "iis:dust_lutetium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_lutetium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000B900"
         }
       ]
     },
@@ -1004,5 +1217,9 @@
       "y": 8.5,
       "size": 1.0
     }
-  ]
+  ],
+  "icon": {
+    "id": "iis:nuclear_reactor",
+    "count": 1
+  }
 }

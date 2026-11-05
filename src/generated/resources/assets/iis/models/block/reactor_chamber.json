@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/reactor/reactor_chamber_side",
+    "north": "iis:block/reactor/reactor_chamber_side",
+    "south": "iis:block/reactor/reactor_chamber_side",
+    "east": "iis:block/reactor/reactor_chamber_side",
+    "west": "iis:block/reactor/reactor_chamber_side",
+    "up": "iis:block/reactor/reactor_chamber_top",
+    "down": "iis:block/reactor/reactor_chamber_side"
+  }
+}

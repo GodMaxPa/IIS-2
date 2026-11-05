@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SGS",
+    "CPC",
+    "R R"
+  ],
+  "key": {
+    "S": "iis:silicon_wafer_naquadah",
+    "G": "iis:reinforced_glass",
+    "C": "#c:circuits/advanced",
+    "P": "#iis:wires/4x/graphene",
+    "R": "#c:plates/indium_gallium_phosphide"
+  },
+  "result": {
+    "id": "iis:solar_panel_lv"
+  }
+}

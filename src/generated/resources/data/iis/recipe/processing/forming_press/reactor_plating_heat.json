@@ -1,0 +1,21 @@
+{
+  "type": "iis:forming_press",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_dense_copper",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:reactor_plating",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:reactor_plating_heat",
+      "count": 1
+    }
+  ],
+  "duration": 220,
+  "eut": 480
+}

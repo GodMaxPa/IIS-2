@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "iis:block/cable/wire_graphene",
+    "side": "iis:block/cable/wire_graphene",
+    "end": "iis:block/cable/wire_graphene"
+  },
+  "elements": [
+    {
+      "from": [
+        2.0,
+        2.0,
+        0
+      ],
+      "to": [
+        14.0,
+        14.0,
+        2.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#end",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "#side"
+        },
+        "west": {
+          "texture": "#side"
+        },
+        "up": {
+          "texture": "#side"
+        },
+        "down": {
+          "texture": "#side"
+        }
+      }
+    }
+  ]
+}

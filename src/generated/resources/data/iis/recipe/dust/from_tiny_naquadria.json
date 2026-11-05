@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/naquadria",
+    "#iis:tiny_dusts/naquadria",
+    "#iis:tiny_dusts/naquadria",
+    "#iis:tiny_dusts/naquadria",
+    "#iis:tiny_dusts/naquadria",
+    "#iis:tiny_dusts/naquadria",
+    "#iis:tiny_dusts/naquadria",
+    "#iis:tiny_dusts/naquadria",
+    "#iis:tiny_dusts/naquadria"
+  ],
+  "result": {
+    "id": "iis:dust_naquadria"
+  }
+}

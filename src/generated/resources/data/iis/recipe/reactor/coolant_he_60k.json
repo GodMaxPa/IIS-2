@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    "PCP",
+    " P "
+  ],
+  "key": {
+    "P": "#c:plates/tin",
+    "C": {
+      "neoforge:ingredient_type": "neoforge:components",
+      "items": "iis:capsule",
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:helium",
+          "amount": 1000
+        }
+      }
+    }
+  },
+  "result": {
+    "id": "iis:coolant_he_60k"
+  }
+}

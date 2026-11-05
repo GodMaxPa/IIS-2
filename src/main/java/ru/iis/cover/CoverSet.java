@@ -80,7 +80,7 @@ public final class CoverSet {
         int i = side.get3DDataValue();
         kind[i] = k;
         tier[i] = Math.max(0, Math.min(TIERS.length - 1, coverTier));
-        data[i] = k == CoverKind.ARM ? ARM_CONVERTED | (1 << 14) | ARM_EXPORT : k == CoverKind.ITEM_DETECTOR ? METER_CONVERTED : 0;
+        data[i] = k.solarVoltage > 0 ? -1 : k == CoverKind.ARM ? ARM_CONVERTED | (1 << 14) | ARM_EXPORT : k == CoverKind.ITEM_DETECTOR ? METER_CONVERTED : 0;
         redstone[i] = 0;
         filter[i] = null;
     }
@@ -205,7 +205,7 @@ public final class CoverSet {
             case ACTIVITY_DETECTOR, ITEM_DETECTOR, FLUID_DETECTOR -> 5;
             case ENERGY_DETECTOR -> 20;
             case DRAIN -> v < 3 ? 50 : 1;
-            case SHUTTER, CRAFTING, FLUID_FILTER -> 0;
+            default -> 0;
         };
     }
 
@@ -216,6 +216,10 @@ public final class CoverSet {
             int i = side.get3DDataValue();
             CoverKind k = kind[i];
             if (k == null) continue;
+            if (k.solarVoltage > 0) {
+                solar(h, level, side, i, k, timer);
+                continue;
+            }
             int rate = tickRate(k, data[i], tier[i]);
             if (rate <= 0 || timer % rate != 0) continue;
             int before = redstone[i];
@@ -235,6 +239,19 @@ public final class CoverSet {
             if (redstone[i] != before) redstoneChanged = true;
         }
         return redstoneChanged;
+    }
+
+    /** GT_Cover_SolarPanel: раз в 100 тиков решает режим: 0 нет, 1 полный, 2 раз в 8 тиков (ночь или дождь без темноты). */
+    private void solar(CoverHost h, ServerLevel level, Direction side, int i, CoverKind k, long timer) {
+        if (timer % 100 == 0 || data[i] < 0) {
+            if (side != Direction.UP || level.isThundering()) {
+                data[i] = 0;
+            } else {
+                boolean rain = level.isRainingAt(h.coverPos().above());
+                data[i] = rain && level.getSkyDarken() >= 4 || !level.canSeeSky(h.coverPos().above()) ? 0 : !rain && level.isBrightOutside() ? 1 : 2;
+            }
+        }
+        if (data[i] == 1 || (data[i] == 2 && timer % 8 == 0)) h.addEu(k.solarVoltage);
     }
 
     private static boolean exportsOrFreeSide(int v, Direction side) {

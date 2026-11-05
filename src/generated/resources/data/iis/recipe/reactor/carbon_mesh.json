@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "F",
+    "F"
+  ],
+  "key": {
+    "F": "iis:carbon_fiber"
+  },
+  "result": {
+    "id": "iis:carbon_mesh"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:impure_dusts/naquadria",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_naquadria",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_naquadria",
+      "count": 1
+    }
+  ],
+  "duration": 784,
+  "eut": 5
+}

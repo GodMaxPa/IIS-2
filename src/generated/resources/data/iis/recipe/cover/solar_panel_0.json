@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SGS",
+    "CPC"
+  ],
+  "key": {
+    "S": "iis:silicon_wafer",
+    "G": "minecraft:glass_pane",
+    "C": "#c:circuits/basic",
+    "P": "iis:carbon_plate"
+  },
+  "result": {
+    "id": "iis:solar_panel"
+  }
+}

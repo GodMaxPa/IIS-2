@@ -17,12 +17,22 @@ public enum CoverKind {
     DRAIN("drain"),                // GT_Cover_Drain
     CRAFTING("crafting"),          // GT_Cover_Crafting
     FLUID_REGULATOR("fluid_regulator"), // GT_Cover_FluidRegulator(32): ±32 л/тик, настраивается рукой и отвёрткой (D80)
-    FLUID_FILTER("fluid_filter");  // GT_Cover_Fluidfilter: одна жидкость, 8 режимов вход/выход (D80)
+    FLUID_FILTER("fluid_filter"),
+    // GT_Cover_SolarPanel (D117): только сверху, под открытым небом; ночью и в дождь — 1/8
+    SOLAR("solar_panel", 1), SOLAR_8V("solar_panel_8v", 8), SOLAR_LV("solar_panel_lv", 32), SOLAR_MV("solar_panel_mv", 128), SOLAR_HV("solar_panel_hv", 512),
+    SOLAR_EV("solar_panel_ev", 2048), SOLAR_IV("solar_panel_iv", 8192), SOLAR_LUV("solar_panel_luv", 32768), SOLAR_ZPM("solar_panel_zpm", 131072), SOLAR_UV("solar_panel_uv", 524288);  // GT_Cover_Fluidfilter: одна жидкость, 8 режимов вход/выход (D80)
 
     public final String id;
+    /** Напряжение солнечной панели; 0 у прочих покрытий. */
+    public final long solarVoltage;
 
     CoverKind(String id) {
+        this(id, 0);
+    }
+
+    CoverKind(String id, long solarVoltage) {
         this.id = id;
+        this.solarVoltage = solarVoltage;
     }
 
     /** Ключ перевода сообщения о режиме. */

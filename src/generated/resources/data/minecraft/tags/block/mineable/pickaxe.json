@@ -654,12 +654,15 @@
     "iis:block_kanthal",
     "iis:block_lanthanum",
     "iis:block_lead",
+    "iis:block_lutetium",
     "iis:block_magnalium",
     "iis:block_magnesium",
     "iis:block_manganese",
     "iis:block_meteoric_iron",
     "iis:block_molybdenum",
     "iis:block_naquadah",
+    "iis:block_naquadah_enriched",
+    "iis:block_naquadria",
     "iis:block_neodymium",
     "iis:block_neodymium_magnetic",
     "iis:block_nichrome",
@@ -727,6 +730,9 @@
     "iis:fuel_loader",
     "iis:nasa_workbench",
     "iis:fusion_coil",
-    "iis:fusion_computer_luv"
+    "iis:fusion_computer_luv",
+    "iis:nuclear_reactor",
+    "iis:reactor_chamber",
+    "iis:solar_panel_block"
   ]
 }

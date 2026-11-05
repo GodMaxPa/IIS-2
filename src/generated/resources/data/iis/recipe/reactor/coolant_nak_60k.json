@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TST",
+    "PCP",
+    "TST"
+  ],
+  "key": {
+    "T": "#c:plates/tin",
+    "S": "#c:dusts/sodium",
+    "P": "#c:dusts/potassium",
+    "C": "iis:coolant_10k"
+  },
+  "result": {
+    "id": "iis:coolant_nak_60k"
+  }
+}

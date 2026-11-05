@@ -1,0 +1,21 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/uranium",
+      "count": 6
+    },
+    {
+      "ingredient": "#c:ingots/plutonium",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:mox_fuel",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 48
+}

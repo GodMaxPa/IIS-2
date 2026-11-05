@@ -126,6 +126,7 @@ public final class IISClient {
         event.register(ru.iis.auto.AutoContent.ADJUSTABLE_TRANSFORMER_MENU.get(), ru.iis.auto.AutoScreens.Transformer::new);
         event.register(ru.iis.bio.BioContent.STATION_MENU.get(), ru.iis.bio.client.BioStationScreen::new);
         event.register(ru.iis.bio.BioContent.HEARTH_MENU.get(), ru.iis.bio.client.HearthScreen::new);
+        event.register(ru.iis.reactor.ReactorContent.REACTOR_MENU.get(), ru.iis.reactor.ReactorScreen::new);
         event.register(ru.iis.space.SpaceContent.NASA_MENU.get(), ru.iis.space.client.SpaceClient.NasaScreen::new);
         event.register(ru.iis.space.SpaceContent.ROCKET_MENU.get(), ru.iis.space.client.SpaceClient.RocketScreen::new);
         event.register(ru.iis.rail.RailContent.LOCO_MENU.get(), ru.iis.rail.client.LocomotiveScreen::new);

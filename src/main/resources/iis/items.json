@@ -3510,6 +3510,26 @@
     "material": "gold"
   },
   {
+    "id": "dust_graphene",
+    "prefix": "dust",
+    "material": "graphene"
+  },
+  {
+    "id": "small_dust_graphene",
+    "prefix": "small_dust",
+    "material": "graphene"
+  },
+  {
+    "id": "tiny_dust_graphene",
+    "prefix": "tiny_dust",
+    "material": "graphene"
+  },
+  {
+    "id": "turbine_blade_graphene",
+    "prefix": "turbine_blade",
+    "material": "graphene"
+  },
+  {
     "id": "crushed_graphite",
     "prefix": "crushed",
     "material": "graphite"
@@ -4790,6 +4810,61 @@
     "material": "lithium_chloride"
   },
   {
+    "id": "crushed_lutetium",
+    "prefix": "crushed",
+    "material": "lutetium"
+  },
+  {
+    "id": "purified_lutetium",
+    "prefix": "purified",
+    "material": "lutetium"
+  },
+  {
+    "id": "centrifuged_lutetium",
+    "prefix": "centrifuged",
+    "material": "lutetium"
+  },
+  {
+    "id": "impure_dust_lutetium",
+    "prefix": "impure_dust",
+    "material": "lutetium"
+  },
+  {
+    "id": "pure_dust_lutetium",
+    "prefix": "pure_dust",
+    "material": "lutetium"
+  },
+  {
+    "id": "dust_lutetium",
+    "prefix": "dust",
+    "material": "lutetium"
+  },
+  {
+    "id": "small_dust_lutetium",
+    "prefix": "small_dust",
+    "material": "lutetium"
+  },
+  {
+    "id": "tiny_dust_lutetium",
+    "prefix": "tiny_dust",
+    "material": "lutetium"
+  },
+  {
+    "id": "ingot_lutetium",
+    "prefix": "ingot",
+    "material": "lutetium"
+  },
+  {
+    "id": "hot_ingot_lutetium",
+    "prefix": "hot_ingot",
+    "material": "lutetium"
+  },
+  {
+    "id": "nugget_lutetium",
+    "prefix": "nugget",
+    "material": "lutetium"
+  },
+  {
     "id": "dust_magnalium",
     "prefix": "dust",
     "material": "magnalium"
@@ -5448,6 +5523,186 @@
     "id": "turbine_blade_naquadah",
     "prefix": "turbine_blade",
     "material": "naquadah"
+  },
+  {
+    "id": "crushed_naquadah_enriched",
+    "prefix": "crushed",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "purified_naquadah_enriched",
+    "prefix": "purified",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "centrifuged_naquadah_enriched",
+    "prefix": "centrifuged",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "impure_dust_naquadah_enriched",
+    "prefix": "impure_dust",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "pure_dust_naquadah_enriched",
+    "prefix": "pure_dust",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "dust_naquadah_enriched",
+    "prefix": "dust",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "small_dust_naquadah_enriched",
+    "prefix": "small_dust",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "tiny_dust_naquadah_enriched",
+    "prefix": "tiny_dust",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "ingot_naquadah_enriched",
+    "prefix": "ingot",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "hot_ingot_naquadah_enriched",
+    "prefix": "hot_ingot",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "nugget_naquadah_enriched",
+    "prefix": "nugget",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "plate_naquadah_enriched",
+    "prefix": "plate",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "double_plate_naquadah_enriched",
+    "prefix": "double_plate",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "rod_naquadah_enriched",
+    "prefix": "rod",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "bolt_naquadah_enriched",
+    "prefix": "bolt",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "screw_naquadah_enriched",
+    "prefix": "screw",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "long_rod_naquadah_enriched",
+    "prefix": "long_rod",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "turbine_blade_naquadah_enriched",
+    "prefix": "turbine_blade",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "crushed_naquadria",
+    "prefix": "crushed",
+    "material": "naquadria"
+  },
+  {
+    "id": "purified_naquadria",
+    "prefix": "purified",
+    "material": "naquadria"
+  },
+  {
+    "id": "centrifuged_naquadria",
+    "prefix": "centrifuged",
+    "material": "naquadria"
+  },
+  {
+    "id": "impure_dust_naquadria",
+    "prefix": "impure_dust",
+    "material": "naquadria"
+  },
+  {
+    "id": "pure_dust_naquadria",
+    "prefix": "pure_dust",
+    "material": "naquadria"
+  },
+  {
+    "id": "dust_naquadria",
+    "prefix": "dust",
+    "material": "naquadria"
+  },
+  {
+    "id": "small_dust_naquadria",
+    "prefix": "small_dust",
+    "material": "naquadria"
+  },
+  {
+    "id": "tiny_dust_naquadria",
+    "prefix": "tiny_dust",
+    "material": "naquadria"
+  },
+  {
+    "id": "ingot_naquadria",
+    "prefix": "ingot",
+    "material": "naquadria"
+  },
+  {
+    "id": "hot_ingot_naquadria",
+    "prefix": "hot_ingot",
+    "material": "naquadria"
+  },
+  {
+    "id": "nugget_naquadria",
+    "prefix": "nugget",
+    "material": "naquadria"
+  },
+  {
+    "id": "plate_naquadria",
+    "prefix": "plate",
+    "material": "naquadria"
+  },
+  {
+    "id": "double_plate_naquadria",
+    "prefix": "double_plate",
+    "material": "naquadria"
+  },
+  {
+    "id": "rod_naquadria",
+    "prefix": "rod",
+    "material": "naquadria"
+  },
+  {
+    "id": "bolt_naquadria",
+    "prefix": "bolt",
+    "material": "naquadria"
+  },
+  {
+    "id": "screw_naquadria",
+    "prefix": "screw",
+    "material": "naquadria"
+  },
+  {
+    "id": "long_rod_naquadria",
+    "prefix": "long_rod",
+    "material": "naquadria"
+  },
+  {
+    "id": "turbine_blade_naquadria",
+    "prefix": "turbine_blade",
+    "material": "naquadria"
   },
   {
     "id": "crushed_neodymium",
@@ -6893,6 +7148,31 @@
     "id": "turbine_blade_polytetrafluoroethylene",
     "prefix": "turbine_blade",
     "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "dust_potassium",
+    "prefix": "dust",
+    "material": "potassium"
+  },
+  {
+    "id": "small_dust_potassium",
+    "prefix": "small_dust",
+    "material": "potassium"
+  },
+  {
+    "id": "tiny_dust_potassium",
+    "prefix": "tiny_dust",
+    "material": "potassium"
+  },
+  {
+    "id": "ingot_potassium",
+    "prefix": "ingot",
+    "material": "potassium"
+  },
+  {
+    "id": "nugget_potassium",
+    "prefix": "nugget",
+    "material": "potassium"
   },
   {
     "id": "crushed_powellite",
@@ -11483,6 +11763,96 @@
     "id": "wrench_head_naquadah",
     "prefix": "wrench_head",
     "material": "naquadah"
+  },
+  {
+    "id": "sword_head_naquadah_enriched",
+    "prefix": "sword_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "pickaxe_head_naquadah_enriched",
+    "prefix": "pickaxe_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "shovel_head_naquadah_enriched",
+    "prefix": "shovel_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "axe_head_naquadah_enriched",
+    "prefix": "axe_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "hoe_head_naquadah_enriched",
+    "prefix": "hoe_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "saw_head_naquadah_enriched",
+    "prefix": "saw_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "drill_head_naquadah_enriched",
+    "prefix": "drill_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "chainsaw_head_naquadah_enriched",
+    "prefix": "chainsaw_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "wrench_head_naquadah_enriched",
+    "prefix": "wrench_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "sword_head_naquadria",
+    "prefix": "sword_head",
+    "material": "naquadria"
+  },
+  {
+    "id": "pickaxe_head_naquadria",
+    "prefix": "pickaxe_head",
+    "material": "naquadria"
+  },
+  {
+    "id": "shovel_head_naquadria",
+    "prefix": "shovel_head",
+    "material": "naquadria"
+  },
+  {
+    "id": "axe_head_naquadria",
+    "prefix": "axe_head",
+    "material": "naquadria"
+  },
+  {
+    "id": "hoe_head_naquadria",
+    "prefix": "hoe_head",
+    "material": "naquadria"
+  },
+  {
+    "id": "saw_head_naquadria",
+    "prefix": "saw_head",
+    "material": "naquadria"
+  },
+  {
+    "id": "drill_head_naquadria",
+    "prefix": "drill_head",
+    "material": "naquadria"
+  },
+  {
+    "id": "chainsaw_head_naquadria",
+    "prefix": "chainsaw_head",
+    "material": "naquadria"
+  },
+  {
+    "id": "wrench_head_naquadria",
+    "prefix": "wrench_head",
+    "material": "naquadria"
   },
   {
     "id": "sword_head_neodymium",

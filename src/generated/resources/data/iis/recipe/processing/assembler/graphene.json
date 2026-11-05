@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/graphite",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:foils/silicon",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_graphene",
+      "count": 1
+    }
+  ],
+  "duration": 480,
+  "eut": 240,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:glue",
+      "amount": 250
+    }
+  ]
+}

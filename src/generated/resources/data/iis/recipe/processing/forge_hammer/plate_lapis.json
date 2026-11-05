@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:lapis_lazuli",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_lapis",
+      "count": 1
+    }
+  ],
+  "duration": 28,
+  "eut": 16
+}

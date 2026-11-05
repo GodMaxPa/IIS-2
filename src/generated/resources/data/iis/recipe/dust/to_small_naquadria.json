@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/naquadria"
+  ],
+  "result": {
+    "id": "iis:small_dust_naquadria",
+    "count": 4
+  }
+}

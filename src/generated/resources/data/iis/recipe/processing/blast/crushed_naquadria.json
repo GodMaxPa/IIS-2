@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#iis:crushed_ores/naquadria",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_naquadria",
+      "count": 1
+    }
+  ],
+  "duration": 216000,
+  "eut": 120,
+  "temp": 9000
+}

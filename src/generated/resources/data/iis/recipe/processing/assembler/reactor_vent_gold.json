@@ -1,0 +1,22 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:reactor_vent_core",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/gold",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:reactor_vent_gold",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 60,
+  "circuit": 1
+}

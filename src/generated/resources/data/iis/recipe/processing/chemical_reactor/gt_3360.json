@@ -1,0 +1,40 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/potassium",
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:oxygen",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_saltpeter",
+      "count": 5
+    },
+    {
+      "id": "iis:capsule",
+      "count": 3
+    }
+  ],
+  "duration": 180,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:nitrogen",
+      "amount": 1000
+    }
+  ]
+}

@@ -77,6 +77,10 @@ def generate(g):
     for wire, bottom, extra in (('naquadah', 'NPT', {}), ('yttrium_barium_cuprate', 'NPT', {}), ('niobium_titanium', 'HPT', {'H': HE}), ('vanadium_gallium', 'HPT', {'H': HE})):
         shaped(f'wire/superconductor_{wire}', I('wire_superconductor_1x'), 3, ['NPT', 'CCC', bottom],
                dict({'N': N2, 'P': I('electric_pump_lv'), 'T': I('pipe_tiny_tungsten_steel'), 'C': f'#iis:wires/1x/{wire}'}, **extra))
+    # scripts/GT_IC2.zs:517-540 (D117): from 2x wires with MV pumps and small tungstensteel pipes, 6 wires: with the four above, the "eight recipes" of quest 162
+    for wire, cell in (('vanadium_gallium', HE), ('niobium_titanium', HE), ('yttrium_barium_cuprate', N2), ('naquadah', N2)):
+        shaped(f'wire/superconductor_buff_{wire}', I('wire_superconductor_1x'), 6, ['NPT', 'CCC', 'XPT'],
+               {'N': N2, 'X': cell, 'P': I('electric_pump_mv'), 'T': I('pipe_small_tungsten_steel'), 'C': f'#iis:wires/2x/{wire}'})
     # D114: air and argon. GT_MachineRecipeLoader:1833-1834 the compressor draws air (programmed circuit 0 or 1), :1231 the freezer liquefies a cell of it,
     # ProcessingCell: 53 cells of liquid air split by composition (Materials:494: 40 N, 11 O, Ar, noble gases), mass x 2 x 53 ticks
     for c, dur, eut in ((0, 300, 2), (1, 30, 30)):

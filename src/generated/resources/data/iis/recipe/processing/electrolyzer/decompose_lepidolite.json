@@ -1,0 +1,51 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/lepidolite",
+      "count": 20
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_potassium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_lithium",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_aluminium",
+      "count": 4
+    },
+    {
+      "id": "iis:capsule",
+      "count": 10,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:oxygen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 320,
+  "eut": 120,
+  "fluid_outputs": [
+    {
+      "id": "iis:fluorine",
+      "amount": 2000
+    }
+  ]
+}

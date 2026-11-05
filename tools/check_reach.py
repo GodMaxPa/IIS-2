@@ -110,6 +110,10 @@ for x in FLUID_SEEDS:
     have.add('F:' + x)
 seeds = ['iis:rubber_log', 'iis:sticky_resin', 'iis:plant_ball']
 have |= {'iis:moon_rock', 'iis:moon_dirt', 'iis:moon_turf'}   # mined on the Moon: the rocket itself is checked by rocket_t1 (D115)
+# a reactor burns a rod into its depleted form (D117)
+for f_ in ('uranium', 'mox', 'thorium', 'naquadah'):
+    for n_ in (1, 2, 4):
+        recipes.append((f'reactor/{f_}_{n_}', [['iis:nuclear_reactor'], [f'iis:rod_{f_}_{n_}']], [f'iis:rod_depleted_{f_}_{n_}']))
 # the NASA workbench is a menu, not a recipe (D115)
 recipes.append(('space/rocket_t1', [['iis:nasa_workbench'], ['iis:nose_cone'], ['iis:heavy_plating'], ['iis:rocket_fins'], ['iis:rocket_engine_t1']], ['iis:rocket_t1']))
 # --with=iis:dust_naquadah: pretend an item is available, to see what else a missing source hides (D112: naquadah waits for space, D17)

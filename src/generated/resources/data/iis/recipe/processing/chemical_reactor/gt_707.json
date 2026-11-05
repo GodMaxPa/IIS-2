@@ -1,0 +1,29 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/saltpeter",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_potassium",
+      "count": 1
+    }
+  ],
+  "duration": 640,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_naphtha",
+      "amount": 576
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_polycaprolactam",
+      "amount": 1296
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RPR",
+    "CPC",
+    "RPR"
+  ],
+  "key": {
+    "R": "iis:rod_thorium_1",
+    "P": "#c:plates/iron",
+    "C": "#c:plates/copper"
+  },
+  "result": {
+    "id": "iis:rod_thorium_4"
+  }
+}

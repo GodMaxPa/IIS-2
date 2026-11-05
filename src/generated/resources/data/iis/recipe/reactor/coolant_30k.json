@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TTT",
+    "CCC",
+    "TTT"
+  ],
+  "key": {
+    "T": "#c:plates/tin",
+    "C": "iis:coolant_10k"
+  },
+  "result": {
+    "id": "iis:coolant_30k"
+  }
+}

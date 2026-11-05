@@ -763,10 +763,24 @@
       "dependencies": [
         "1A00000000000488"
       ],
+      "icon": {
+        "id": "iis:solar_panel",
+        "count": 1
+      },
       "tasks": [
         {
           "type": "checkmark",
           "id": "1B00000000048900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:solar_panel",
+            "count": 1
+          },
+          "id": "1C00000000048900"
         }
       ]
     },

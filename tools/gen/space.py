@@ -247,8 +247,8 @@ def generate(g):
     shaped('space/air_vent', VENT, 1, ['BTB', 'TST', 'BTB'], {'B': 'minecraft:iron_bars', 'T': CT, 'S': CS})
     shaped('space/air_fan', FAN, 1, ['S S', 'RWR', 'S S'], {'S': tag_of('screw', 'Steel'), 'R': tag_of('rotor', 'Steel'), 'W': BW})
     shaped('space/oxygen_concentrator', CONC, 1, ['SVS', 'SFS', 'CPC'], {'S': CS, 'V': VENT, 'F': FAN, 'C': I('canister_tin'), 'P': I('electric_pump_lv')})
-    # zs: 8 reinforced glass around an IC2 hazmat helmet; IC2 is not ported (D5): an iron helmet instead
-    shaped('space/oxygen_mask', I('oxygen_mask'), 1, ['GGG', 'GHG', 'GGG'], {'G': I('reinforced_glass'), 'H': 'minecraft:iron_helmet'})
+    # zs: 8 reinforced glass around the hazmat helmet (our own since D117)
+    shaped('space/oxygen_mask', I('oxygen_mask'), 1, ['GGG', 'GHG', 'GGG'], {'G': I('reinforced_glass'), 'H': I('hazmat_helmet')})
     shaped('space/oxygen_gear', I('oxygen_gear'), 1, ['PPP', 'LCL', 'P P'], {'P': PIPE, 'L': I('electric_pump_lv'), 'C': CONC})
     empty_cell = {'neoforge:ingredient_type': 'neoforge:components', 'items': I('capsule'), 'components': {f'!{NS}:fluid_content': {}}}
     empty_tank = {'id': I('oxygen_tank_light'), 'count': 1, 'components': {'minecraft:damage': 900}}

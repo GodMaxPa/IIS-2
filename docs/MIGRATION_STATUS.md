@@ -94,3 +94,12 @@
 | Космос I: Луна, кислород, ракета 1-го уровня | Galacticraft 3.0.12 (`WorldProviderMoon`, `EntityTier1Rocket`, `config/Galacticraft`), `scripts/Galacticraft.zs`, `GT_MachineRecipeLoader:1096–1102, 3203–3219`, `ProcessingPlate:91` | `ru.iis.space.*`, `tools/gen/space.py` | перенесено частично (D115) | G, S |
 | Уровень ZPM: HSS-E, катушки HSS-G и наквадовая, квантовые схемы до Ultimate, детали и машины ZPM, генератор поля LuV (наквада без руды, D17) | `Tier.ELECTRIC[7]`, `GT_Loader_MetaTileEntities:58, 95–96, 178, 200, 232, 275, 286–414, 505–571, 754, 1748`, `GT_MachineRecipeLoader:425–426, 450–452, 516, 520–521, 585–588, 2058–2294, 2310–2323`, `GT_CraftingRecipeLoader:334, 409` | `lv.LvMachineType.*_ZPM`, `tools/gen/zpm.py`, `multi.block.EbfBlockEntity` | перенесено (D112), закрыто наквадой | G |
 | Уровень LuV: материалы, провода, схемы до Master, флешка, сканер, люк данных, сборочная линия, детали и машины LuV | `GT_MetaTileEntity_AssemblyLine`, `_Scanner`, `_Hatch_DataAccess`, `Tier.ELECTRIC[6]`, `GT_MachineRecipeLoader:402, 449, 468–519, 570–583, 1032, 1904, 2046–2281`, `GT_Loader_MetaTileEntities:83–86, 143–580, 1356` | `multi.block.AssemblyLineBlockEntity`, `lv.item.DataStickItem`, `lv.LvMachineType.*_LUV`, `tools/gen/luv.py`, `tools/check_reach.py` | перенесено (D110) | G |
+
+## Ядерный реактор и солнечные панели (D117)
+
+| Что | Доказательство |
+|---|---|
+| Логика реактора: тепло, энергия, отвод, обмен, капсулы, отражатели, взрыв | `ReactorCoreTest` (12) |
+| Реактор в мире: красный сигнал, столбцы, отработанные стержни, взрыв | `ReactorGameTests` |
+| Панели: крышка сверху, сбоку нет, блок-панель | `ReactorGameTests` |
+| Рецепты всех деталей и панелей | `tools/gen/reactor.py`, нет ошибок разбора в журналах, `check_reach.py` |

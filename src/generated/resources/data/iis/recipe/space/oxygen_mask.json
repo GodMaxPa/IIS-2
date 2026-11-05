@@ -8,7 +8,7 @@
   ],
   "key": {
     "G": "iis:reinforced_glass",
-    "H": "minecraft:iron_helmet"
+    "H": "iis:hazmat_helmet"
   },
   "result": {
     "id": "iis:oxygen_mask"

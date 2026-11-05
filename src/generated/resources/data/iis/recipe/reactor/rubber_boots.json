@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "R R",
+    "R R",
+    "RWR"
+  ],
+  "key": {
+    "R": "#c:plates/rubber",
+    "W": "#minecraft:wool"
+  },
+  "result": {
+    "id": "iis:rubber_boots"
+  }
+}

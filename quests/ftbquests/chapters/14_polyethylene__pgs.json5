@@ -513,6 +513,56 @@
       ]
     },
     {
+      "id": "1A00000000000320",
+      "x": 2.75,
+      "y": 4.25,
+      "size": 2.5,
+      "dependencies": [
+        "1A00000000000321"
+      ],
+      "icon": {
+        "id": "iis:carbon_plate",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:carbon_plate",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000321",
+      "x": 2.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000223",
+        "1A00000000000021",
+        "1A0000000000024C",
+        "1A000000000001E3"
+      ],
+      "icon": {
+        "id": "iis:carbon_mesh",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:carbon_mesh",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032100"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000346",
       "x": 12.5,
       "y": 6.5,
@@ -595,6 +645,30 @@
           },
           "count": 1,
           "id": "1B00000000034B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000048A",
+      "x": 0.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000320",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:solar_panel_8v",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:solar_panel_8v",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048A00"
         }
       ]
     },
