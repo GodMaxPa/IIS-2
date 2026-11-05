@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/plutonium241",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_plutonium241",
+      "count": 1
+    }
+  ],
+  "duration": 486,
+  "eut": 96
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/plutonium241"
+  ],
+  "result": {
+    "id": "iis:small_dust_plutonium241",
+    "count": 4
+  }
+}

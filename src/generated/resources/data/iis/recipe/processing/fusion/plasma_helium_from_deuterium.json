@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 16,
+  "eut": 2048,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:deuterium",
+      "amount": 125
+    },
+    {
+      "ingredient": "iis:helium_3",
+      "amount": 125
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:plasma_helium",
+      "amount": 125
+    }
+  ],
+  "temp": 60000000
+}

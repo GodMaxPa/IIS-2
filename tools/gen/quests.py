@@ -108,7 +108,10 @@ GC_MAP.update({('GalacticraftCore:item.heavyPlating', 0): 'iis:heavy_plating', (
                ('GalacticraftCore:item.canister', 0): 'iis:canister_tin', ('GalacticraftCore:item.airVent', 0): 'iis:air_vent',
                ('GalacticraftCore:item.airFan', 0): 'iis:air_fan', ('GalacticraftCore:item.oxygenGear', 0): 'iis:oxygen_gear',
                ('GalacticraftCore:tile.oxygenPipe', 0): 'iis:oxygen_pipe', ('GalacticraftCore:item.oxygenTankLightFull', 900): 'iis:oxygen_tank_light',
-               ('gregtech:gt.metaitem.01', 32462): 'iis:heavy_ingot_t1', ('gregtech:gt.metaitem.01', 32405): 'iis:large_steel_cell', ('gregtech:gt.metaitem.01', 32497): 'iis:schematic_3x3'})
+               ('gregtech:gt.metaitem.01', 32462): 'iis:heavy_ingot_t1', ('gregtech:gt.metaitem.01', 32405): 'iis:large_steel_cell', ('gregtech:gt.metaitem.01', 32497): 'iis:schematic_3x3',
+               # D116
+               ('gregtech:gt.blockmachines', 1193): 'iis:fusion_computer_luv', ('gregtech:gt.blockcasings4', 7): 'iis:fusion_coil', ('gregtech:gt.neutronreflector', 0): 'iis:neutron_reflector',
+               ('gregtech:gt.metaitem.03', 32052): 'iis:wafer_hpic', ('gregtech:gt.blockcasings', 15): 'iis:coil_superconductor'})
 RAILCRAFT_MAP = {
     ('detector', 0): 'detector_item', ('part.tie', 0): 'tie_wood', ('part.tie', 1): 'tie_stone', ('part.railbed', 0): 'railbed_wood',
     ('part.railbed', 1): 'railbed_stone', ('part.rail', 0): 'rail_standard', ('part.rail', 1): 'rail_advanced', ('part.rail', 2): 'rail_wooden',

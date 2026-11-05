@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 64,
+  "eut": 24576,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_neodymium",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:hydrogen",
+      "amount": 48
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_europium",
+      "amount": 16
+    }
+  ],
+  "temp": 150000000
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/europium",
+    "#iis:small_dusts/europium",
+    "#iis:small_dusts/europium",
+    "#iis:small_dusts/europium"
+  ],
+  "result": {
+    "id": "iis:dust_europium"
+  }
+}

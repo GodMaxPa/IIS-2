@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 64,
+  "eut": 24576,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_vanadium",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:hydrogen",
+      "amount": 125
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_chrome",
+      "amount": 16
+    }
+  ],
+  "temp": 140000000
+}

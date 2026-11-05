@@ -224,6 +224,23 @@ public final class MultiScreens {
         }
     }
 
+    /** Термоядерный реактор (D116): экран GT FusionComputer.png, запас в поле нагрева, тысячи EU. */
+    public static class Fusion extends MachineScreen<ControllerMenu> {
+        public Fusion(ControllerMenu menu, Inventory inventory, Component title) {
+            super(menu, inventory, title, "multi/fusion");
+        }
+
+        @Override
+        protected void extractGauges(GuiGraphicsExtractor g) {}
+
+        @Override
+        protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
+            int white = 0xFFFAFAFF;
+            g.text(font, font.plainSubstrByWidth(title.getString(), 150), 10, 8, white, false);
+            g.text(font, Component.translatable(menu.formed() ? "gui.iis.fusion.store" : "gui.iis.ebf.structure_bad", menu.data(6) / 1000, 160), 10, 18, menu.formed() ? white : 0xFFFF5555, false);
+        }
+    }
+
     /** Сборочная линия (D110): экран GT AssemblyLine.png со слотом флешки. */
     public static class AssemblyLine extends MachineScreen<ControllerMenu> {
         public AssemblyLine(ControllerMenu menu, Inventory inventory, Component title) {

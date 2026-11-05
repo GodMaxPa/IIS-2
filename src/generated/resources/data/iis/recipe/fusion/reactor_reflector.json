@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TGT",
+    "GSG",
+    "TGT"
+  ],
+  "key": {
+    "T": "#c:plates/tin",
+    "G": "#c:dusts/graphite",
+    "S": "#iis:double_plates/steel"
+  },
+  "result": {
+    "id": "iis:reactor_reflector"
+  }
+}

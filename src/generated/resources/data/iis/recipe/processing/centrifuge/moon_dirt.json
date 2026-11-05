@@ -1,0 +1,49 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "iis:moon_dirt",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:sand",
+      "count": 1,
+      "chance": 5000
+    },
+    {
+      "id": "iis:dust_aluminium",
+      "count": 1,
+      "chance": 400
+    },
+    {
+      "id": "iis:dust_calcite",
+      "count": 1,
+      "chance": 400
+    },
+    {
+      "id": "iis:dust_iron",
+      "count": 1,
+      "chance": 100
+    },
+    {
+      "id": "iis:dust_magnesium",
+      "count": 1,
+      "chance": 100
+    },
+    {
+      "id": "iis:dust_rutile",
+      "count": 1,
+      "chance": 100
+    }
+  ],
+  "duration": 400,
+  "eut": 8,
+  "fluid_outputs": [
+    {
+      "id": "iis:helium_3",
+      "amount": 33
+    }
+  ]
+}

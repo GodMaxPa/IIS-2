@@ -28,9 +28,16 @@ NS = 'iis'
 
 def write(path, obj):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, 'w', encoding='utf-8', newline='\n') as f:
-        json.dump(obj, f, ensure_ascii=False, indent=2)
-        f.write('\n')
+    for attempt in range(30):
+        try:
+            with open(path, 'w', encoding='utf-8', newline='\n') as f:
+                json.dump(obj, f, ensure_ascii=False, indent=2)
+                f.write('\n')
+            return
+        except OSError:   # the Gradle daemon's file watcher can hold a file for a moment on Windows
+            if attempt == 29:
+                raise
+            __import__('time').sleep(1)
 
 
 def snake(name):
@@ -174,6 +181,8 @@ names |= {'HSSG', 'Molybdenum', 'YttriumBariumCuprate', 'Yttrium', 'Barium', 'Ra
 names |= {'Boron', 'BorosilicateGlass', 'Plutonium', 'Uranium235'}
 # D112 (ZPM): HSS-E (GT_CraftingRecipeLoader:409), naquadah (ore only off-world, D17) and superconductor wire (:334), fibre-reinforced epoxy for the fibreglass
 # board (GT_MachineRecipeLoader:450-452), indium (:425-426), gallium arsenide (:1053), indium gallium phosphide (:1791) for the QBit wafer (:520-521)
+# D116: fusion Mark I: Plutonium 241 for the controller, europium and duranium are what it makes for the tier 2 rocket
+names |= {'Plutonium241', 'Europium', 'Duranium'}
 names |= {'HSSE', 'Naquadah', 'Superconductor', 'EpoxidFiberReinforced', 'Indium', 'AluminiumSulfite', 'Arsenic', 'Phosphorus', 'Phosphate', 'GalliumArsenide', 'IndiumGalliumPhosphide'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
@@ -975,6 +984,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_space', os.path.join(ROOT, 'tools'
 _space = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_space)
 lv_stats['space'] = _space.generate(globals())
+# Fusion reactor Mark I (D116)
+_spec = _ilu.spec_from_file_location('iis_gen_fusion', os.path.join(ROOT, 'tools', 'gen', 'fusion.py'))
+_fusion = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_fusion)
+lv_stats['fusion'] = _fusion.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

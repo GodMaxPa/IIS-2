@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:turbine_blades/duranium",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:long_rods/titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:turbine_normal",
+      "count": 1,
+      "components": {
+        "iis:rotor_material": "duranium",
+        "minecraft:max_damage": 1024000
+      }
+    }
+  ],
+  "duration": 320,
+  "eut": 400
+}

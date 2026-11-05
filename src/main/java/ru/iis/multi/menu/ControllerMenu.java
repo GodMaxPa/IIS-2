@@ -64,6 +64,15 @@ public class ControllerMenu extends MachineMenu {
     }
 
     /** Сборочная линия (D110): слот флешки, общие данные контроллера. */
+    public static ControllerMenu fusion(int id, Inventory inventory, Container container, ContainerData data) {
+        return new ControllerMenu(MultiContent.FUSION_MENU.get(), id, inventory, container, data);
+    }
+
+    public static ControllerMenu fusionClient(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
+        buf.readBlockPos();
+        return fusion(id, inventory, new SimpleContainer(0), new SimpleContainerData(10));
+    }
+
     public static ControllerMenu assemblyLine(int id, Inventory inventory, Container container, ContainerData data) {
         return new ControllerMenu(MultiContent.ASSEMBLY_LINE_MENU.get(), id, inventory, container, data);
     }

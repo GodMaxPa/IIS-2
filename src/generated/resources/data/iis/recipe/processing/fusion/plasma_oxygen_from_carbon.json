@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 32,
+  "eut": 4096,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_carbon",
+      "amount": 125
+    },
+    {
+      "ingredient": "iis:helium_3",
+      "amount": 125
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:plasma_oxygen",
+      "amount": 125
+    }
+  ],
+  "temp": 80000000
+}

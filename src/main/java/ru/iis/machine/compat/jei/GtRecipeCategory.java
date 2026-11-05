@@ -110,7 +110,10 @@ public class GtRecipeCategory extends AbstractRecipeCategory<RecipeHolder<GtReci
         }
         builder.addAnimatedRecipeArrowWidget(Math.max(20, r.duration() / 4)).setPosition(62, 19);
         String seconds = String.format(java.util.Locale.ROOT, "%.1f", r.duration() / 20.0);
-        if (map == GtRecipeMap.BLAST) {
+        if (map == GtRecipeMap.FUSION) {
+            builder.addText(List.of(Component.translatable("jei.iis.eut", r.eut(), 2 * r.eut()), Component.translatable("jei.iis.duration", seconds),
+                    Component.translatable("jei.iis.fusion_start", r.temperature() / 1000000)), 150, 30).setPosition(0, 46);
+        } else if (map == GtRecipeMap.BLAST) {
             builder.addText(List.of(Component.translatable("jei.iis.eut", r.eut(), 2 * r.eut()),
                     Component.translatable("jei.iis.duration", seconds), Component.translatable("jei.iis.temp", r.temperature())), 150, 30).setPosition(0, 46);
         } else if (map == GtRecipeMap.PRIMITIVE_BLAST || map == GtRecipeMap.COKE_OVEN) {

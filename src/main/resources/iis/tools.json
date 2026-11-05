@@ -144,6 +144,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_duranium",
+    "tool": "sword",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 5,
+    "kind": "sword"
+  },
+  {
     "id": "sword_electrum",
     "tool": "sword",
     "material": "electrum",
@@ -741,6 +753,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 1,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_duranium",
+    "tool": "pickaxe",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 5,
     "kind": "pickaxe"
   },
   {
@@ -1344,6 +1368,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_duranium",
+    "tool": "shovel",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 5,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_electrum",
     "tool": "shovel",
     "material": "electrum",
@@ -1941,6 +1977,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 1,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_duranium",
+    "tool": "axe",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 5,
     "kind": "axe"
   },
   {
@@ -2544,6 +2592,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_duranium",
+    "tool": "hoe",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 5,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_electrum",
     "tool": "hoe",
     "material": "electrum",
@@ -3141,6 +3201,18 @@
     "craftDamage": 4,
     "speed": 6.0,
     "quality": 1,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_duranium",
+    "tool": "saw",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 16.0,
+    "quality": 5,
     "kind": "axe"
   },
   {
@@ -3744,6 +3816,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_duranium",
+    "tool": "hammer",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 12.0,
+    "quality": 5,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_electrum",
     "tool": "hammer",
     "material": "electrum",
@@ -4329,6 +4413,18 @@
     "craftDamage": 16,
     "speed": 6.0,
     "quality": 1,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_duranium",
+    "tool": "wrench",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 16.0,
+    "quality": 5,
     "kind": "wrench"
   },
   {
@@ -4932,6 +5028,18 @@
     "kind": null
   },
   {
+    "id": "file_duranium",
+    "tool": "file",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 16.0,
+    "quality": 5,
+    "kind": null
+  },
+  {
     "id": "file_electrum",
     "tool": "file",
     "material": "electrum",
@@ -5529,6 +5637,18 @@
     "craftDamage": 8,
     "speed": 6.0,
     "quality": 1,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_duranium",
+    "tool": "screwdriver",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 16.0,
+    "quality": 5,
     "kind": null
   },
   {
@@ -6168,6 +6288,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_duranium",
+    "tool": "knife",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 5,
+    "kind": "sword"
+  },
+  {
     "id": "knife_electrum",
     "tool": "knife",
     "material": "electrum",
@@ -6765,6 +6897,18 @@
     "craftDamage": 8,
     "speed": 7.5,
     "quality": 1,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_duranium",
+    "tool": "wire_cutter",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 20.0,
+    "quality": 5,
     "kind": "wire_cutter"
   },
   {
@@ -7392,6 +7536,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_duranium",
+    "tool": "crowbar",
+    "material": "duranium",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 16.0,
+    "quality": 5,
+    "kind": null
+  },
+  {
     "id": "crowbar_electrum",
     "tool": "crowbar",
     "material": "electrum",
@@ -7977,6 +8133,18 @@
     "craftDamage": 2,
     "speed": 18.0,
     "quality": 1,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_duranium",
+    "tool": "drill_lv",
+    "material": "duranium",
+    "handle": "stainless_steel",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 48.0,
+    "quality": 5,
     "kind": "drill"
   },
   {
@@ -8580,6 +8748,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_duranium",
+    "tool": "chainsaw_lv",
+    "material": "duranium",
+    "handle": "stainless_steel",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 32.0,
+    "quality": 5,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_electrum",
     "tool": "chainsaw_lv",
     "material": "electrum",
@@ -9177,6 +9357,18 @@
     "craftDamage": 16,
     "speed": 12.0,
     "quality": 1,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_duranium",
+    "tool": "wrench_lv",
+    "material": "duranium",
+    "handle": "stainless_steel",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 32.0,
+    "quality": 5,
     "kind": "wrench"
   },
   {

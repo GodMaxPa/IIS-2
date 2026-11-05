@@ -81,7 +81,7 @@ for f in glob.glob(f'{R}/data/iis/recipe/**/*.json', recursive=True):
     if t.startswith('iis:'):
         m = t[4:]
         ctrl = {'blast': ['ebf'], 'vacuum_freezer': ['vacuum_freezer'], 'implosion': ['implosion_compressor'], 'pyrolyse': ['pyrolyse_oven'], 'distillation_tower': ['distillation_tower'],
-                'cracking': ['oil_cracker'], 'assembly_line': ['assembly_line'], 'primitive_blast': ['bricked_blast_furnace'], 'coke_oven': ['coke_oven']}.get(m)
+                'cracking': ['oil_cracker'], 'assembly_line': ['assembly_line'], 'fusion': ['fusion_computer_luv'], 'primitive_blast': ['bricked_blast_furnace'], 'coke_oven': ['coke_oven']}.get(m)
         if ctrl is None:
             eut = d.get('eut', 0)
             ctrl = [f'{m}_{tn}' for tn, v in (('lv', 32), ('mv', 128), ('hv', 512), ('ev', 2048), ('iv', 8192), ('luv', 32768), ('zpm', 131072)) if eut <= v] + ([f'steam_{m}_bronze', f'steam_{m}_steel', f'{m}_bronze', f'{m}_steel'] if eut <= 32 else [])
@@ -109,6 +109,7 @@ FLUID_SEEDS = ['minecraft:water', 'minecraft:lava', 'iis:oil', 'iis:oilmedium', 
 for x in FLUID_SEEDS:
     have.add('F:' + x)
 seeds = ['iis:rubber_log', 'iis:sticky_resin', 'iis:plant_ball']
+have |= {'iis:moon_rock', 'iis:moon_dirt', 'iis:moon_turf'}   # mined on the Moon: the rocket itself is checked by rocket_t1 (D115)
 # the NASA workbench is a menu, not a recipe (D115)
 recipes.append(('space/rocket_t1', [['iis:nasa_workbench'], ['iis:nose_cone'], ['iis:heavy_plating'], ['iis:rocket_fins'], ['iis:rocket_engine_t1']], ['iis:rocket_t1']))
 # --with=iis:dust_naquadah: pretend an item is available, to see what else a missing source hides (D112: naquadah waits for space, D17)

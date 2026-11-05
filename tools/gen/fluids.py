@@ -27,7 +27,9 @@ IC2_FLUIDS = [('distilled_water', 'Distilled Water', 'Дистиллирован
               ('superheated_steam', 'Superheated Steam', 'Перегретый пар', 2, 600, (230, 230, 240)),
               ('pahoehoe_lava', 'Pahoehoe Lava', 'Лава пахоэхоэ', 1, 1200, (140, 60, 30)),
               # D115: Materials.Dimethylhydrazine (a builder material, skipped by the extraction), rocket fuel
-              ('dimethylhydrazine', '1,1-Dimethylhydrazine', '1,1-диметилгидразин', 1, 295, (0, 0, 85))]
+              ('dimethylhydrazine', '1,1-Dimethylhydrazine', '1,1-диметилгидразин', 1, 295, (0, 0, 85)),
+              # D116: Materials.Helium_3, fusion and the Moon
+              ('helium_3', 'Helium-3', 'Гелий-3', 2, 295, (255, 255, 165))]
 STATES = ['gt_solid', 'gt_liquid', 'gt_gas', 'gt_plasma', 'gt_molten']
 
 # GT_Loader_MetaTileEntities#generateFluidPipes: material, base capacity, heat limit K, gas proof, colour, iconSet, en, ru (adjective)

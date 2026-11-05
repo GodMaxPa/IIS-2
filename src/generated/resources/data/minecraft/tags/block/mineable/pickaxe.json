@@ -643,7 +643,9 @@
     "iis:block_cobalt",
     "iis:block_cobalt_brass",
     "iis:block_cupronickel",
+    "iis:block_duranium",
     "iis:block_electrum",
+    "iis:block_europium",
     "iis:block_gallium",
     "iis:block_indium",
     "iis:block_invar",
@@ -668,6 +670,7 @@
     "iis:block_palladium",
     "iis:block_platinum",
     "iis:block_plutonium",
+    "iis:block_plutonium241",
     "iis:block_red_alloy",
     "iis:block_rose_gold",
     "iis:block_silicon",
@@ -722,6 +725,8 @@
     "iis:moon_rock",
     "iis:launch_pad",
     "iis:fuel_loader",
-    "iis:nasa_workbench"
+    "iis:nasa_workbench",
+    "iis:fusion_coil",
+    "iis:fusion_computer_luv"
   ]
 }

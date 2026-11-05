@@ -2,6 +2,7 @@ package ru.iis.machine.recipe;
 
 /** Карты рецептов GT5 (GT_Recipe.GT_Recipe_Map), перенесённые в эпоху пара. */
 public enum GtRecipeMap {
+    FUSION("fusion", 0, 0, 2, 1),   // D116: GT sFusionRecipes, только жидкости
     MACERATOR("macerator", 1, 3),
     FORGE_HAMMER("forge_hammer", 1, 1),
     COMPRESSOR("compressor", 1, 1),

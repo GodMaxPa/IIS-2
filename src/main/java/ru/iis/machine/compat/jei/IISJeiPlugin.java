@@ -43,7 +43,7 @@ public final class IISJeiPlugin implements IModPlugin {
 
     /** Карты без EU (кирпичная доменная печь, коксовая печь) не делятся. */
     static boolean tiered(GtRecipeMap m) {
-        return m != GtRecipeMap.PRIMITIVE_BLAST && m != GtRecipeMap.COKE_OVEN && m != GtRecipeMap.ASSEMBLY_LINE;
+        return m != GtRecipeMap.PRIMITIVE_BLAST && m != GtRecipeMap.COKE_OVEN && m != GtRecipeMap.ASSEMBLY_LINE && m != GtRecipeMap.FUSION;
     }
 
     static int recipeTier(GtRecipe r) {
@@ -77,6 +77,9 @@ public final class IISJeiPlugin implements IModPlugin {
         if (m == GtRecipeMap.VACUUM_FREEZER) {
             r.add(ru.iis.multi.MultiContent.VACUUM_FREEZER.get());
             return r;
+        }
+        if (m == GtRecipeMap.FUSION) {
+            r.add(ru.iis.multi.MultiContent.FUSION_COMPUTER_LUV.get());
         }
         if (m == GtRecipeMap.ASSEMBLY_LINE) {
             r.add(ru.iis.multi.MultiContent.ASSEMBLY_LINE.get());

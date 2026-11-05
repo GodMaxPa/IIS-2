@@ -366,6 +366,7 @@
     "iis:battery_charger_hv",
     "iis:monster_repellent_lv",
     "iis:monster_repellent_mv",
-    "iis:monster_repellent_hv"
+    "iis:monster_repellent_hv",
+    "iis:coil_superconductor"
   ]
 }

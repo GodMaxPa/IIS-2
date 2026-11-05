@@ -1,0 +1,19 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [],
+  "outputs": [],
+  "duration": 160,
+  "eut": 80,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:helium",
+      "amount": 80
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:helium_3",
+      "amount": 5
+    }
+  ]
+}

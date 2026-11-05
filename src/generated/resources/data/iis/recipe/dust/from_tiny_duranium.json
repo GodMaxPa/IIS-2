@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/duranium",
+    "#iis:tiny_dusts/duranium",
+    "#iis:tiny_dusts/duranium",
+    "#iis:tiny_dusts/duranium",
+    "#iis:tiny_dusts/duranium",
+    "#iis:tiny_dusts/duranium",
+    "#iis:tiny_dusts/duranium",
+    "#iis:tiny_dusts/duranium",
+    "#iis:tiny_dusts/duranium"
+  ],
+  "result": {
+    "id": "iis:dust_duranium"
+  }
+}

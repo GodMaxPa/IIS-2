@@ -281,7 +281,7 @@ public abstract class MultiblockControllerBlockEntity extends BaseContainerBlock
     }
 
     /** Выдача: предметы по одному в выходные шины (с последнего слота), жидкости — в выходные люки; лишнее пропадает (как в GT5). */
-    private void finish(ServerLevel sl) {
+    protected void finish(ServerLevel sl) {
         for (ItemStack st : pendingItems) {
             if (st.isEmpty()) continue;
             ItemStack s = st.copy();

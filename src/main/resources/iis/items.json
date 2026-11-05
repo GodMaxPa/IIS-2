@@ -2400,6 +2400,71 @@
     "material": "diamond"
   },
   {
+    "id": "dust_duranium",
+    "prefix": "dust",
+    "material": "duranium"
+  },
+  {
+    "id": "small_dust_duranium",
+    "prefix": "small_dust",
+    "material": "duranium"
+  },
+  {
+    "id": "tiny_dust_duranium",
+    "prefix": "tiny_dust",
+    "material": "duranium"
+  },
+  {
+    "id": "ingot_duranium",
+    "prefix": "ingot",
+    "material": "duranium"
+  },
+  {
+    "id": "nugget_duranium",
+    "prefix": "nugget",
+    "material": "duranium"
+  },
+  {
+    "id": "plate_duranium",
+    "prefix": "plate",
+    "material": "duranium"
+  },
+  {
+    "id": "double_plate_duranium",
+    "prefix": "double_plate",
+    "material": "duranium"
+  },
+  {
+    "id": "rod_duranium",
+    "prefix": "rod",
+    "material": "duranium"
+  },
+  {
+    "id": "bolt_duranium",
+    "prefix": "bolt",
+    "material": "duranium"
+  },
+  {
+    "id": "screw_duranium",
+    "prefix": "screw",
+    "material": "duranium"
+  },
+  {
+    "id": "foil_duranium",
+    "prefix": "foil",
+    "material": "duranium"
+  },
+  {
+    "id": "long_rod_duranium",
+    "prefix": "long_rod",
+    "material": "duranium"
+  },
+  {
+    "id": "turbine_blade_duranium",
+    "prefix": "turbine_blade",
+    "material": "duranium"
+  },
+  {
     "id": "dust_electrum",
     "prefix": "dust",
     "material": "electrum"
@@ -2738,6 +2803,71 @@
     "id": "turbine_blade_epoxid_fiber_reinforced",
     "prefix": "turbine_blade",
     "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "crushed_europium",
+    "prefix": "crushed",
+    "material": "europium"
+  },
+  {
+    "id": "purified_europium",
+    "prefix": "purified",
+    "material": "europium"
+  },
+  {
+    "id": "centrifuged_europium",
+    "prefix": "centrifuged",
+    "material": "europium"
+  },
+  {
+    "id": "impure_dust_europium",
+    "prefix": "impure_dust",
+    "material": "europium"
+  },
+  {
+    "id": "pure_dust_europium",
+    "prefix": "pure_dust",
+    "material": "europium"
+  },
+  {
+    "id": "dust_europium",
+    "prefix": "dust",
+    "material": "europium"
+  },
+  {
+    "id": "small_dust_europium",
+    "prefix": "small_dust",
+    "material": "europium"
+  },
+  {
+    "id": "tiny_dust_europium",
+    "prefix": "tiny_dust",
+    "material": "europium"
+  },
+  {
+    "id": "ingot_europium",
+    "prefix": "ingot",
+    "material": "europium"
+  },
+  {
+    "id": "nugget_europium",
+    "prefix": "nugget",
+    "material": "europium"
+  },
+  {
+    "id": "plate_europium",
+    "prefix": "plate",
+    "material": "europium"
+  },
+  {
+    "id": "rod_europium",
+    "prefix": "rod",
+    "material": "europium"
+  },
+  {
+    "id": "foil_europium",
+    "prefix": "foil",
+    "material": "europium"
   },
   {
     "id": "dust_ferrosilite",
@@ -6628,6 +6758,66 @@
     "id": "turbine_blade_plutonium",
     "prefix": "turbine_blade",
     "material": "plutonium"
+  },
+  {
+    "id": "dust_plutonium241",
+    "prefix": "dust",
+    "material": "plutonium241"
+  },
+  {
+    "id": "small_dust_plutonium241",
+    "prefix": "small_dust",
+    "material": "plutonium241"
+  },
+  {
+    "id": "tiny_dust_plutonium241",
+    "prefix": "tiny_dust",
+    "material": "plutonium241"
+  },
+  {
+    "id": "ingot_plutonium241",
+    "prefix": "ingot",
+    "material": "plutonium241"
+  },
+  {
+    "id": "nugget_plutonium241",
+    "prefix": "nugget",
+    "material": "plutonium241"
+  },
+  {
+    "id": "plate_plutonium241",
+    "prefix": "plate",
+    "material": "plutonium241"
+  },
+  {
+    "id": "double_plate_plutonium241",
+    "prefix": "double_plate",
+    "material": "plutonium241"
+  },
+  {
+    "id": "rod_plutonium241",
+    "prefix": "rod",
+    "material": "plutonium241"
+  },
+  {
+    "id": "bolt_plutonium241",
+    "prefix": "bolt",
+    "material": "plutonium241"
+  },
+  {
+    "id": "screw_plutonium241",
+    "prefix": "screw",
+    "material": "plutonium241"
+  },
+  {
+    "id": "long_rod_plutonium241",
+    "prefix": "long_rod",
+    "material": "plutonium241"
+  },
+  {
+    "id": "turbine_blade_plutonium241",
+    "prefix": "turbine_blade",
+    "material": "plutonium241"
   },
   {
     "id": "dust_polydimethylsiloxane",
@@ -10528,6 +10718,51 @@
     "id": "wrench_head_cupronickel",
     "prefix": "wrench_head",
     "material": "cupronickel"
+  },
+  {
+    "id": "sword_head_duranium",
+    "prefix": "sword_head",
+    "material": "duranium"
+  },
+  {
+    "id": "pickaxe_head_duranium",
+    "prefix": "pickaxe_head",
+    "material": "duranium"
+  },
+  {
+    "id": "shovel_head_duranium",
+    "prefix": "shovel_head",
+    "material": "duranium"
+  },
+  {
+    "id": "axe_head_duranium",
+    "prefix": "axe_head",
+    "material": "duranium"
+  },
+  {
+    "id": "hoe_head_duranium",
+    "prefix": "hoe_head",
+    "material": "duranium"
+  },
+  {
+    "id": "saw_head_duranium",
+    "prefix": "saw_head",
+    "material": "duranium"
+  },
+  {
+    "id": "drill_head_duranium",
+    "prefix": "drill_head",
+    "material": "duranium"
+  },
+  {
+    "id": "chainsaw_head_duranium",
+    "prefix": "chainsaw_head",
+    "material": "duranium"
+  },
+  {
+    "id": "wrench_head_duranium",
+    "prefix": "wrench_head",
+    "material": "duranium"
   },
   {
     "id": "sword_head_electrum",

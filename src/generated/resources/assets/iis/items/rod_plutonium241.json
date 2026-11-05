@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/rod_plutonium241",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 16401990
+      }
+    ]
+  }
+}

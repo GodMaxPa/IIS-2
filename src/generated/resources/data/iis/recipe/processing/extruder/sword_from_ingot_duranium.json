@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/duranium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sword_head_duranium",
+      "count": 1
+    }
+  ],
+  "duration": 196,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_sword"
+  ]
+}

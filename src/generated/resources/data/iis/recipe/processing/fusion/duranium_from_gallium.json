@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 64,
+  "eut": 16384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_gallium",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:radon",
+      "amount": 125
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_duranium",
+      "amount": 16
+    }
+  ],
+  "temp": 140000000
+}

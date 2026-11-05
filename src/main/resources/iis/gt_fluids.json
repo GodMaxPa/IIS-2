@@ -3229,5 +3229,11 @@
 "state": 1,
 "temperature": 295,
 "color": 85
+},
+{
+"id": "helium_3",
+"state": 2,
+"temperature": 295,
+"color": 16777125
 }
 ]

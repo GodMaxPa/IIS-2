@@ -51,6 +51,29 @@
       ]
     },
     {
+      "id": "1A0000000000025D",
+      "x": 3.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000257"
+      ],
+      "icon": {
+        "id": "iis:nugget_plutonium241",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:nugget_plutonium241",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000025D00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000260",
       "x": 5.0,
       "y": 6.5,

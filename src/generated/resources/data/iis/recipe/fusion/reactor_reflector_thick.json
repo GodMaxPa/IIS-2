@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " N ",
+    "NBN",
+    " N "
+  ],
+  "key": {
+    "B": "#iis:double_plates/beryllium",
+    "N": "iis:reactor_reflector"
+  },
+  "result": {
+    "id": "iis:reactor_reflector_thick"
+  }
+}

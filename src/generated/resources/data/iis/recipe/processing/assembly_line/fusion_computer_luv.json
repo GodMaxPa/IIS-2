@@ -1,0 +1,63 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:fusion_coil",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/ultimate",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/ultimate",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/ultimate",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/ultimate",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/plutonium241",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/nether_star",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:field_generator_iv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:wafer_hpic",
+      "count": 32
+    },
+    {
+      "ingredient": "#iis:wires/1x/superconductor",
+      "count": 32
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:fusion_computer_luv",
+      "count": 1
+    }
+  ],
+  "duration": 1000,
+  "eut": 30000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 2880
+    }
+  ],
+  "keep": [
+    "#iis:wires/1x/superconductor"
+  ],
+  "temp": 144000
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/duranium",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_duranium",
+      "count": 2
+    }
+  ],
+  "duration": 98,
+  "eut": 16
+}

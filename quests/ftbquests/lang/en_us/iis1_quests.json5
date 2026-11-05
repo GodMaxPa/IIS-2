@@ -474,6 +474,10 @@
     "This multiblock provides you with the convenient utilization of space and allows you to gain the working power of any sixteen GT machines operating simultaneously. Note that you have to feed it with power sufficient for all of the machines used. For example, if you put inside 16 LV electrolyzers to get gas products from water, you'll need 480 eu/t and an HV (or better) energy hatch (30 eu/t * 16 = 480 eu/t)."
   ],
   "quest.1A000000000000CA.title": "Processing Array",
+  "quest.1A000000000000CD.quest_desc": [
+    "... from the ingot using a metal bender."
+  ],
+  "quest.1A000000000000CD.title": "Europium Plate",
   "quest.1A000000000000CF.quest_desc": [
     "Can be created using an AL."
   ],
@@ -494,6 +498,10 @@
     "To produce it, you have to use a Fusion reactor tier 1."
   ],
   "quest.1A000000000000D4.title": "Helium Plasma",
+  "quest.1A000000000000D5.quest_desc": [
+    "Use an Assembly Line to craft this controller block. You also have to prepare other interfaces (all hatches must be at least of LuV tier). Required items: Fusion Coil block / 4 ZPM circuits (one per assembly line input bus) / Plutonium 241 plate / Nether star Plate / 2 Field Generator IV / 32 HPIC Wafers / 32 Superconductor wires / 20 molten ingots of soldering alloy (2880 L for input hatch) Also, an assembly line with a length of at least 11 blocks is required."
+  ],
+  "quest.1A000000000000D5.title": "Fusion Controll Computer Mark I",
   "quest.1A000000000000D6.quest_desc": [
     "To produce it, you have to use a Fusion reactor tier 1."
   ],
@@ -1658,10 +1666,26 @@
     "Use HV+ chemical reactor to make this from styrene and butadiene with help of oxygen. Also you may use the air instead of oxygen, but it is less profitable."
   ],
   "quest.1A00000000000232.title": "Raw Styrene-Butadiene Rubber",
+  "quest.1A00000000000233.quest_desc": [
+    "Use thick neutron reflector + iridium reinforced plate to craft the iridium neutron reflector."
+  ],
+  "quest.1A00000000000233.title": "Iridium Neutron Reflector",
   "quest.1A00000000000235.quest_desc": [
     "There 3 available blue lens to craft the PIC Wafer: Blue topaz, blue sapphire and opal. Than use precision laser HV+ tier with blue lens and glowstone doped wafer."
   ],
   "quest.1A00000000000235.title": "PIC Wafer",
+  "quest.1A00000000000236.quest_desc": [
+    "Use molten neodymium and hydrogen to synthesise the molten europium by fusion reactor."
+  ],
+  "quest.1A00000000000236.title": "Europium Ingot",
+  "quest.1A00000000000237.quest_desc": [
+    "PIC wafer + IGP dust + molten red alloy. Put all these to EV+ chemical reactor."
+  ],
+  "quest.1A00000000000237.title": "HPIC Wafer",
+  "quest.1A00000000000238.quest_desc": [
+    "Use 16 superconductor wires to craft this block."
+  ],
+  "quest.1A00000000000238.title": "Supreconducting Coil Block",
   "quest.1A00000000000239.quest_desc": [
     "May be used to insert up to 32k eu/t. to multiblocks"
   ],
@@ -1674,10 +1698,18 @@
     "Endereye dust + MV circuit + 2x osmium wire (by assembling machine MV+ tier)"
   ],
   "quest.1A0000000000023B.title": "Field Generator (MV)",
+  "quest.1A0000000000023C.quest_desc": [
+    "Prepare one plate of plutonium 241."
+  ],
+  "quest.1A0000000000023C.title": "Plutonium 241 Plate",
   "quest.1A0000000000023D.quest_desc": [
     "High tech component used as a part for crafting complex machines."
   ],
   "quest.1A0000000000023D.title": "Field Generator IV",
+  "quest.1A0000000000023E.quest_desc": [
+    "One of the main parts of Fusion Reactor."
+  ],
+  "quest.1A0000000000023E.title": "Fusion Coil Block",
   "quest.1A0000000000023F.quest_desc": [
     "ZPM tier circuit."
   ],
@@ -1742,6 +1774,10 @@
     "The main difference between previous tier conveyor modules and IV tier (and higher) is in requirement to use the silicon rubber sheet or styrene-butadiene rubber sheet."
   ],
   "quest.1A00000000000259.title": "Conveyor Module (IV)",
+  "quest.1A0000000000025D.quest_desc": [
+    "Use centrifuge HV+ tier to get the plutonium 241 from plutonium 239. Than smelt the tiny pile to get the nugget by common furance."
+  ],
+  "quest.1A0000000000025D.title": "Plutonium 241 nugget",
   "quest.1A0000000000025E.quest_desc": [
     "Height to search: 10-40 REDSTONE vein (Redstone, Ruby, Cinnabar). You may get Chrome Dust from ruby dust via advanced electrolyzer. Also ruby dust can be produced from redstone dust. As well as for aluminium you should use blast furnace to get Chrome Ingot from Chrome Dust."
   ],
@@ -1806,6 +1842,10 @@
     "May be created from tungsten rod"
   ],
   "quest.1A00000000000281.title": "Tungsten Bolt",
+  "quest.1A00000000000283.quest_desc": [
+    "Radon + molten galium by fusion ->> duranium"
+  ],
+  "quest.1A00000000000283.title": "Duranium Plate",
   "quest.1A00000000000286.quest_desc": [
     "Use bender to make the plate from ingot."
   ],
@@ -2398,6 +2438,10 @@
     "Use mixer to blend stone dust and clay dust. Or use quicklime dust instead of clay dust. By this action you will get wet concrete. Than you should use fluid solidifier with mold (block) to get light concrete block."
   ],
   "quest.1A00000000000397.title": "Light Concrete",
+  "quest.1A000000000003AA.quest_desc": [
+    "Industrial diamond + iridium plates + advansed alloy plates"
+  ],
+  "quest.1A000000000003AA.title": "Iridium Alloy Ingot",
   "quest.1A000000000003AC.quest_desc": [
     "Height to search: 20-40 MONAZITE vein (Bastnasite, Monazite, Neodymium)"
   ],

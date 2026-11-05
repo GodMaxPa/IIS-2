@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/europium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_europium",
+      "count": 1
+    }
+  ],
+  "duration": 3297,
+  "eut": 120,
+  "temp": 1099
+}

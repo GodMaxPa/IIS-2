@@ -1,0 +1,23 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/plutonium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_plutonium241",
+      "count": 1,
+      "chance": 2000
+    },
+    {
+      "id": "iis:tiny_dust_uranium",
+      "count": 1,
+      "chance": 3000
+    }
+  ],
+  "duration": 1600,
+  "eut": 320
+}

@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 32,
+  "eut": 32768,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_beryllium",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:molten_tungsten",
+      "amount": 16
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_platinum",
+      "amount": 16
+    }
+  ],
+  "temp": 150000000
+}

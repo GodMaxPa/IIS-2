@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RRR",
+    "RPR",
+    "RRR"
+  ],
+  "key": {
+    "R": "iis:reactor_reflector_thick",
+    "P": "iis:iridium_alloy_plate"
+  },
+  "result": {
+    "id": "iis:neutron_reflector"
+  }
+}
