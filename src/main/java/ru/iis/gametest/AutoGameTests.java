@@ -254,4 +254,73 @@ final class AutoGameTests {
             h.assertTrue(t.efficiency() > 10000, "speed " + t.efficiency());
         });
     }
+
+    /** Отпугиватель LV: без энергии радиус 16, с энергией 64; режимы запрещают нужные виды мобов. */
+    static void monsterRepellentModes(GameTestHelper h) {
+        h.setBlock(M, AutoContent.MONSTER_REPELLENTS.get(0).get());
+        MonsterRepellentBlockEntity r = h.getBlockEntity(M, MonsterRepellentBlockEntity.class);
+        h.assertTrue(r.denies(false, false) && !r.denies(true, false) && !r.denies(false, true), "hostiles mode");
+        r.mode = MonsterRepellentBlockEntity.Mode.HOSTILES_NEUTRALS;
+        h.assertTrue(r.denies(true, false) && !r.denies(false, true), "neutrals mode");
+        r.mode = MonsterRepellentBlockEntity.Mode.EVERYONE;
+        h.assertTrue(r.denies(false, true), "everyone mode");
+        h.runAtTickTime(5, () -> {
+            h.assertTrue(r.range() == 16, "unpowered range " + r.range());
+            r.energy.stored = r.energy.capacity;
+        });
+        h.runAtTickTime(10, () -> {
+            h.assertTrue(r.range() == 64, "powered range " + r.range());
+            h.succeed();
+        });
+    }
+
+    /** Микроволновка LV: картошка печётся за 32 тика, а железный слиток взрывает машину. */
+    static void microwaveBakesAndExplodes(GameTestHelper h) {
+        ElectricMachineBlockEntity food = LvGameTests.machine(h, new BlockPos(2, 1, 2), LvMachineType.MICROWAVE, Direction.NORTH);
+        h.onEachTick(() -> food.energy.stored = food.energy.capacity);
+        food.setItem(0, new ItemStack(Items.POTATO));
+        BlockPos metal = new BlockPos(7, 1, 7);
+        ElectricMachineBlockEntity m = LvGameTests.machine(h, metal, LvMachineType.MICROWAVE, Direction.NORTH);
+        m.setItem(0, new ItemStack(Items.RAW_IRON));
+        m.energy.stored = m.energy.capacity;
+        h.succeedWhen(() -> {
+            h.assertTrue(food.getItem(1).is(Items.BAKED_POTATO), "food " + food.getItem(1));
+            h.assertBlockNotPresent(LvContent.MACHINES.get(LvMachineType.MICROWAVE).get(), metal);
+        });
+    }
+
+    /** Большой дизель на 100 % КПД: 2048 EU/t в динамо-люк, топливо и смазка тратятся; без смазки стоит. */
+    static void combustionEngineRuns(GameTestHelper h) {
+        for (int x = 3; x <= 5; x++) for (int y = 1; y <= 3; y++) for (int z = 1; z <= 4; z++) {
+            h.setBlock(new BlockPos(x, y, z), z == 1 ? MultiContent.ENGINE_INTAKE_CASING.get() : MultiContent.STABLE_TITANIUM_CASING.get());
+        }
+        BlockPos ctrl = new BlockPos(4, 2, 1), fuelPos = new BlockPos(3, 2, 2), lubPos = new BlockPos(5, 2, 2), dynamo = new BlockPos(4, 2, 4);
+        h.setBlock(new BlockPos(4, 2, 2), MultiContent.GEAR_BOX_TITANIUM.get());
+        h.setBlock(new BlockPos(4, 2, 3), MultiContent.GEAR_BOX_TITANIUM.get());
+        h.setBlock(fuelPos, MultiGameTests.hatch(HatchType.INPUT_HATCH, Direction.WEST));
+        h.setBlock(lubPos, MultiGameTests.hatch(HatchType.INPUT_HATCH, Direction.EAST));
+        h.setBlock(new BlockPos(4, 1, 2), MultiGameTests.hatch(HatchType.MAINTENANCE, Direction.DOWN));
+        h.setBlock(new BlockPos(4, 3, 3), MultiGameTests.hatch(HatchType.MUFFLER, Direction.UP));
+        h.setBlock(dynamo, MultiGameTests.hatch(HatchType.DYNAMO_EV, Direction.SOUTH));
+        h.setBlock(ctrl, MultiContent.COMBUSTION_ENGINE.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
+        CombustionEngineBlockEntity e = h.getBlockEntity(ctrl, CombustionEngineBlockEntity.class);
+        e.maintenance().setMask(63);
+        FluidHatchBlockEntity fuel = h.getBlockEntity(fuelPos, FluidHatchBlockEntity.class), lub = h.getBlockEntity(lubPos, FluidHatchBlockEntity.class);
+        fuel.tank().setAmount(GtFluids.get("fuel").source().get(), 16000);
+        lub.tank().setAmount(GtFluids.get("lubricant").source().get(), 1000);
+        DynamoHatchBlockEntity dyn = h.getBlockEntity(dynamo, DynamoHatchBlockEntity.class);
+        boolean[] started = {false};
+        h.onEachTick(() -> {
+            if (!started[0] && e.maxProgress() > 0) {
+                started[0] = true;
+                e.forceEfficiency(10000);
+            }
+        });
+        h.succeedWhen(() -> {
+            h.assertTrue(e.formed(), "engine not formed");
+            h.assertTrue(e.output() == 2048, "output " + e.output());
+            h.assertTrue(dyn.energy.stored > DynamoHatchBlockEntity.MIN_STORED, "dynamo " + dyn.energy.stored);
+            h.assertTrue(fuel.tank().amount() < 16000 && lub.tank().amount() < 1000, "fuel " + fuel.tank().amount() + " lube " + lub.tank().amount());
+        });
+    }
 }

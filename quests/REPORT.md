@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 923; hidden until their items are ported: 1019; chapters: 35.
+Quests in IIS 1: 1943; written: 938; hidden until their items are ported: 1004; chapters: 35.
 
 ## Most needed unported items (task count)
 
@@ -38,18 +38,8 @@ Quests in IIS 1: 1943; written: 923; hidden until their items are ported: 1019; 
 - 2 × `gregtech:gt.blockmachines:461` Производитель материи (LV)
 - 2 × `gregtech:gt.blockmachines:331` Утилизатор (LV)
 - 2 × `gregtech:gt.blockmachines:471` Амплифабрикатор (LV)
-- 2 × `gregtech:gt.blockmachines:315` Микроволновая печь (IV)
-- 2 × `gregtech:gt.blockmachines:314` Микроволновая печь (EV)
-- 2 × `gregtech:gt.blockmachines:313` Микроволновая печь (HV)
-- 2 × `gregtech:gt.blockmachines:312` Микроволновая печь (MV)
-- 2 × `gregtech:gt.blockmachines:311` Микроволновая печь (LV)
 - 2 × `gregtech:gt.blockmachines:50` Входной люк (ULV)
 - 2 × `gregtech:gt.blockmachines:60` Выходной люк (ULV)
-- 2 × `gregtech:gt.blockmachines:1146` Отпугиватель монстров (LV)
-- 2 × `gregtech:gt.blockmachines:1147` Отпугиватель монстров (MV)
-- 2 × `gregtech:gt.blockmachines:1148` Отпугиватель монстров (HV)
-- 2 × `gregtech:gt.blockmachines:1149` Отпугиватель монстров (EV)
-- 2 × `gregtech:gt.blockmachines:1150` Отпугиватель монстров (IV)
 - 2 × `gregtech:gt.metaitem.01:32018` Базовый считыватель данных
 - 2 × `ProjRed|Fabrication:projectred.fabrication.icblueprint:0` 
 - 1 × `gregtech:gt.blockmachines:5162` 
@@ -84,6 +74,16 @@ Quests in IIS 1: 1943; written: 923; hidden until their items are ported: 1019; 
 - 1 × `appliedenergistics2:item.ItemBasicStorageCell.1k:0` 
 - 1 × `appliedenergistics2:tile.BlockDrive:0` 
 - 1 × `appliedenergistics2:item.ItemMultiPart:380` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:44` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:43` 
+- 1 × `appliedenergistics2:item.ItemMultiPart:180` 
+- 1 × `appliedenergistics2:tile.BlockController:0` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:24` 
+- 1 × `appliedenergistics2:item.ItemMultiPart:340` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:52` 
+- 1 × `appliedenergistics2:item.ItemMultiPart:480` 
+- 1 × `appliedenergistics2:item.ItemMultiPart:440` 
+- 1 × `gregtech:gt.metaitem.01:17811` Пластина светокамня
 
 ## Unported fluids
 
@@ -96,8 +96,8 @@ Quests in IIS 1: 1943; written: 923; hidden until their items are ported: 1019; 
 
 ## Dropped reward items
 
-- 446 × `('gregtech:gt.metaitem.01', 32000)`
-- 224 × `('gregtech:gt.metaitem.01', 32001)`
+- 448 × `('gregtech:gt.metaitem.01', 32000)`
+- 227 × `('gregtech:gt.metaitem.01', 32001)`
 - 16 × `bq_standard:choice`
 - 13 × `('gregtech:gt.metaitem.01', 32002)`
 - 6 × `('gregtech:gt.metaitem.01', 32003)`

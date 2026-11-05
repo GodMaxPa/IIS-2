@@ -351,6 +351,15 @@
     "gui": "lv/filter"
   },
   {
+    "id": "microwave_lv",
+    "type": "microwave",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/e_furnace"
+  },
+  {
     "id": "macerator_mv",
     "type": "macerator_mv",
     "recipeMap": "macerator",
@@ -691,6 +700,15 @@
     "outputs": 6,
     "tank": 24000,
     "gui": "lv/filter"
+  },
+  {
+    "id": "microwave_mv",
+    "type": "microwave_mv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/e_furnace"
   },
   {
     "id": "thermal_centrifuge_mv",
@@ -1044,6 +1062,15 @@
     "gui": "lv/filter"
   },
   {
+    "id": "microwave_hv",
+    "type": "microwave_hv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/e_furnace"
+  },
+  {
     "id": "thermal_centrifuge_hv",
     "type": "thermal_centrifuge_hv",
     "recipeMap": "thermal_centrifuge",
@@ -1395,6 +1422,15 @@
     "gui": "lv/filter"
   },
   {
+    "id": "microwave_ev",
+    "type": "microwave_ev",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/e_furnace"
+  },
+  {
     "id": "thermal_centrifuge_ev",
     "type": "thermal_centrifuge_ev",
     "recipeMap": "thermal_centrifuge",
@@ -1735,6 +1771,15 @@
     "outputs": 6,
     "tank": 48000,
     "gui": "lv/filter"
+  },
+  {
+    "id": "microwave_iv",
+    "type": "microwave_iv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/e_furnace"
   },
   {
     "id": "thermal_centrifuge_iv",

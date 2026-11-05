@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EEE",
+    " M ",
+    "CCC"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "E": "iis:emitter_ev",
+    "C": "#c:circuits/data"
+  },
+  "result": {
+    "id": "iis:monster_repellent_ev"
+  }
+}

@@ -111,6 +111,7 @@
     "iis:packager_lv",
     "iis:unpackager_lv",
     "iis:filter_lv",
+    "iis:microwave_lv",
     "iis:macerator_mv",
     "iis:electric_furnace_mv",
     "iis:alloy_smelter_mv",
@@ -149,6 +150,7 @@
     "iis:packager_mv",
     "iis:unpackager_mv",
     "iis:filter_mv",
+    "iis:microwave_mv",
     "iis:thermal_centrifuge_mv",
     "iis:macerator_hv",
     "iis:electric_furnace_hv",
@@ -188,6 +190,7 @@
     "iis:packager_hv",
     "iis:unpackager_hv",
     "iis:filter_hv",
+    "iis:microwave_hv",
     "iis:thermal_centrifuge_hv",
     "iis:steam_turbine_lv",
     "iis:diesel_generator_lv",
@@ -325,6 +328,9 @@
     "iis:hull_ulv",
     "iis:battery_charger_lv",
     "iis:battery_charger_mv",
-    "iis:battery_charger_hv"
+    "iis:battery_charger_hv",
+    "iis:monster_repellent_lv",
+    "iis:monster_repellent_mv",
+    "iis:monster_repellent_hv"
   ]
 }

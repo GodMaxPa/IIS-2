@@ -1958,14 +1958,26 @@
     "A part of Combustion Engine (multiblock)"
   ],
   "quest.1A000000000003B6.title": "Stable Titanium Machine Casing",
+  "quest.1A000000000003B7.quest_desc": [
+    "A part of Combustion Engine (multiblock)"
+  ],
+  "quest.1A000000000003B7.title": "Engine Intake Casing",
   "quest.1A000000000003B8.quest_desc": [
     "A part of Combustion Engine (multiblock)"
   ],
   "quest.1A000000000003B8.title": "Titanium Rotor",
+  "quest.1A000000000003B9.quest_desc": [
+    "A part of Combustion Engine (multiblock)"
+  ],
+  "quest.1A000000000003B9.title": "Titanium Gear box Casing",
   "quest.1A000000000003BA.quest_desc": [
     "A part of Combustion Engine (multiblock)"
   ],
   "quest.1A000000000003BA.title": "Titanium Gear",
+  "quest.1A000000000003BB.quest_desc": [
+    "Large engine that may use liquid fuels to produce energy. Require lubricant to work. You may boost it by oxygen, but in this case it will produce 6144 eu/t (IV dynamo hatch required)"
+  ],
+  "quest.1A000000000003BB.title": "Combustion Engine",
   "quest.1A000000000003BD.quest_desc": [
     "It may be used as source of energy for multiblock generators. It may output up to 8192 eu/t without blowing up."
   ],
@@ -2930,6 +2942,26 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000586.title": "[sb] Advanced Fluid Extractor IV",
+  "quest.1A0000000000058D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000058D.title": "[sb] Advanced Microwave IV",
+  "quest.1A0000000000058E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000058E.title": "[sb] Advanced Microwave III",
+  "quest.1A0000000000058F.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000058F.title": "[sb] Advanced Microwave II",
+  "quest.1A00000000000590.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000590.title": "[sb] Advanced Microwave",
+  "quest.1A00000000000591.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000591.title": "[sb] Basic Microwave",
   "quest.1A000000000005A2.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3406,6 +3438,10 @@
     "It is a small but useful multiblock, that will allow you to pump out a water from rivers without deleting water blocks while it works. Also it may work in ocean to get a salt water from it."
   ],
   "quest.1A0000000000068A.title": "Advanced Electric Water Pump IV",
+  "quest.1A0000000000068B.quest_desc": [
+    "To complete this quest you have to make any one microwave with tier between LV and IV."
+  ],
+  "quest.1A0000000000068B.title": "Microwave",
   "quest.1A0000000000068C.quest_desc": [
     "Use a hammer or a bending machine to make a plate from an lead ingot."
   ],
@@ -3418,6 +3454,30 @@
     "I gas you should know how to craft it at this progress level..."
   ],
   "quest.1A0000000000068E.title": "Titanium Plate",
+  "quest.1A0000000000068F.quest_desc": [
+    "This machine can work even without energy, but within a low range. By default it prevents monsters from spawning in 16 blocks range. But if you connect it to a source of energy, the range will be increased to 64 blocks. Energy consuming is 4 eu/t for LV tier, and each next tier it will be four times higher (16, 64, 256 and etc). To complete the quest, you have to craft a Repellator of LV - IV tier. A screwdriver can change the working mode."
+  ],
+  "quest.1A0000000000068F.title": "Monster Repellator",
+  "quest.1A00000000000690.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000690.title": "[sb] Basic Monster Repellator",
+  "quest.1A00000000000691.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000691.title": "[sb] Advanced Monster Repellator",
+  "quest.1A00000000000692.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000692.title": "[sb] Advanced Monster Repellator II",
+  "quest.1A00000000000693.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000693.title": "[sb] Advanced Monster Repellator III",
+  "quest.1A00000000000694.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000694.title": "[sb] Advanced Monster Repellator IV",
   "quest.1A0000000000069D.quest_desc": [
     "Cheap MV tier Battery."
   ],

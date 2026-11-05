@@ -195,6 +195,31 @@
       ]
     },
     {
+      "id": "1A000000000003B7",
+      "x": 10.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000003B6",
+        "1A000000000003B8",
+        "1A0000000000001F"
+      ],
+      "icon": {
+        "id": "iis:engine_intake_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:engine_intake_casing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003B700"
+        }
+      ]
+    },
+    {
       "id": "1A000000000003B8",
       "x": 9.0,
       "y": 5.0,
@@ -214,6 +239,30 @@
           },
           "count": 1,
           "id": "1B0000000003B800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003B9",
+      "x": 7.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000152",
+        "1A000000000003BA"
+      ],
+      "icon": {
+        "id": "iis:gear_box_titanium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gear_box_titanium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003B900"
         }
       ]
     },
@@ -500,6 +549,13 @@
       "linked_quest": "1A00000000000362",
       "x": 5.5,
       "y": 4.0,
+      "size": 2.0
+    },
+    {
+      "id": "1E000000012003BB",
+      "linked_quest": "1A000000000003BB",
+      "x": 10.0,
+      "y": 7.0,
       "size": 2.0
     },
     {

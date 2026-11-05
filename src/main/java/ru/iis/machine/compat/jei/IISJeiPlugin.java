@@ -157,6 +157,7 @@ public final class IISJeiPlugin implements IModPlugin {
                 ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_FURNACE_EV).get(),
                 ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_OVEN_EV).get(),
                 ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_FURNACE_IV).get(),
-                ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_OVEN_IV).get());
+                ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.ELECTRIC_OVEN_IV).get(),
+                ru.iis.lv.LvContent.MACHINES.get(ru.iis.lv.LvMachineType.MICROWAVE).get());
     }
 }

@@ -179,7 +179,7 @@ def generate(g):
         name(f'block.{NS}.{tid}', f'Quantum Tank {["I", "II", "III", "IV", "V"][i]}', ru(f'gt.blockmachines.quantum.tank.tier.0{i + 1}.name', f'Квантовый резервуар {["I", "II", "III", "IV", "V"][i]}'))
         if i < 3:
             shaped(f'auto/{tid}', f'{NS}:{tid}', 1, ['DGD', 'PMP', 'DPD'], {'M': frame, 'G': fg, 'D': circ, 'P': pl})
-    shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'MultiblockDisplay.png'), tex_out('gui/auto/quantum_chest.png'))
+    shutil.copy(os.path.join(GT, 'gui', 'BasicTank.png'), tex_out('gui/auto/quantum_chest.png'))
     name('gui.iis.quantum.stored', 'Stored:', 'Внутри:')
     name('gui.iis.quantum.max', 'Up to %s', 'До %s')
 
@@ -299,6 +299,45 @@ def generate(g):
     mrec('chemical_bath', 'quantum_star', [ing('minecraft:nether_star')], [out(f'{NS}:quantum_star')], 1920, 384, fin={'ingredient': f'{NS}:radon', 'amount': 1250})
     mrec('assembler', 'cover_screen', [ing(tag_of('plate', 'Glass')), ing(tag_of('foil', 'Aluminium'), 4), ing('#c:circuits/basic'), ing(tag_of('wire_fine', 'Copper'), 4)],
          [out(f'{NS}:cover_screen')], 50, 16)
+
+    # --- D109: monster repellents (:1272-1276 "EEE/ M /CCC") and the large combustion engine (:1359-1361) ---------------------------
+    for i, t in enumerate(TIERS):
+        bid = f'monster_repellent_{t}'
+        s, top, bot = casing(t, 'SIDE'), casing(t, 'TOP'), casing(t, 'BOTTOM')
+        machine(bid, {'north': s, 'south': s, 'east': s, 'west': s, 'up': over(top, 'OVERLAY_TELEPORTER'), 'down': bot})
+        name(f'block.{NS}.{bid}', f'{t.upper()} Monster Repellator', ru(f'gt.blockmachines.basicmachine.mobrep.tier.0{i + 1}.name', f'Отпугиватель монстров {t.upper()}'))
+        tier = i + 1
+        tooltip(bid, [(f'Mobs do not spawn within {4 + 12 * tier} blocks, {16 + 48 * tier} when powered', f'Мобы не появляются в {4 + 12 * tier} блоках, с энергией — в {16 + 48 * tier}'),
+                      ('Screwdriver: hostile, hostile and neutral, or everyone', 'Отвёртка: враждебные; с нейтральными; все')])
+        shaped(f'auto/{bid}', f'{NS}:{bid}', 1, ['EEE', ' M ', 'CCC'], {'M': f'{NS}:hull_{t}', 'E': f'{NS}:emitter_{t}', 'C': f'#c:circuits/{CIRC[t]}'})
+    for k, en, ruu in (('message.iis.mobrep.hostiles', 'Prevents spawn of hostile creatures', 'Не даёт появляться враждебным'),
+                       ('message.iis.mobrep.hostiles_neutrals', 'Prevents spawn of hostile and neutral creatures', 'Не даёт появляться враждебным и нейтральным'),
+                       ('message.iis.mobrep.everyone', 'Prevents spawn of all creatures', 'Не даёт появляться никому')):
+        name(k, en, ruu)
+
+    for bid, src, key, en in (('engine_intake_casing', 'MACHINE_CASING_ENGINE_INTAKE', 'gt.blockcasings4.13.name', 'Engine Intake Casing'),
+                              ('gear_box_titanium', 'MACHINE_CASING_GEARBOX_TITANIUM', 'gt.blockcasings2.4.name', 'Titanium Gear Box Casing')):
+        first(os.path.join(BI, src + '.png')).save(tex_out(f'block/multi/{bid}.png'))
+        write(os.path.join(A, 'models', 'block', bid + '.json'), {'parent': 'minecraft:block/cube_all', 'textures': {'all': f'{NS}:block/multi/{bid}'}})
+        write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': {'': {'model': f'{NS}:block/{bid}'}}})
+        write(os.path.join(A, 'items', bid + '.json'), {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/{bid}'}})
+        loot(bid)
+        name(f'block.{NS}.{bid}', en, ru(key, en))
+    shaped('multi/engine_intake_casing', f'{NS}:engine_intake_casing', 2, ['PhP', 'RFR', 'PwP'],
+           {'P': tag_of('rotor', 'Titanium'), 'R': f'{NS}:pipe_medium_titanium', 'F': f'{NS}:stable_titanium_casing'})
+    shaped('multi/gear_box_titanium', f'{NS}:gear_box_titanium', 2, ['PhP', 'GFG', 'PwP'],
+           {'P': tag_of('plate', 'Steel'), 'F': '#c:frames/titanium', 'G': tag_of('gear', 'Titanium')})
+    base = first(os.path.join(BI, 'MACHINE_CASING_STABLE_TITANIUM.png'))
+    machine('combustion_engine', {'north': over(base, 'OVERLAY_FRONT_DIESEL_ENGINE'), 'south': base, 'east': base, 'west': base, 'up': base, 'down': base},
+            {'north': over(base, 'OVERLAY_FRONT_DIESEL_ENGINE_ACTIVE'), 'south': base, 'east': base, 'west': base, 'up': base, 'down': base})
+    name(f'block.{NS}.combustion_engine', 'Combustion Engine', ru('gt.blockmachines.multimachine.dieselengine.name', 'Дизельный двигатель'))
+    tooltip('combustion_engine', [('3x3x4 on stable titanium casings; 8 engine intakes around the controller', 'Размер 3×3×4 на стабильных титановых корпусах; вокруг контроллера 8 заборных корпусов'),
+                                  ('Air in front of the intakes; 2 titanium gear boxes along the axis, dynamo at the back', 'Перед заборниками — воздух; по оси 2 титановые коробки передач, сзади динамо-люк'),
+                                  ('Hatches in the side centers; muffler at the top of the rear layer', 'Люки — в серединах сторон; глушитель — сверху на третьем слое'),
+                                  ('Diesel fuels and 1 L of lubricant per 72 ticks: 2048 EU/t', 'Дизельное топливо и 1 л смазки на 72 тика: 2048 EU/t'),
+                                  ('50 L/t of oxygen: up to 6144 EU/t, twice the fuel', 'Кислород 50 л/т: до 6144 EU/t, топлива вдвое больше')])
+    shaped('multi/combustion_engine', f'{NS}:combustion_engine', 1, ['PCP', 'EME', 'GWG'],
+           {'M': f'{NS}:hull_ev', 'P': f'{NS}:electric_piston_ev', 'E': f'{NS}:electric_motor_ev', 'C': '#c:circuits/elite', 'W': tag_of_cable('tungsten_steel'), 'G': tag_of('gear', 'Titanium')})
 
     # --- storage blocks: GT_Block_Metal, ProcessingBlock (IIS Recipes.cfg: no crafting either way) --------------------------
     wanted = json.load(open(os.path.join(REF, 'gt5_storage_blocks.json'), encoding='utf-8'))

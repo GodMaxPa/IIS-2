@@ -180,6 +180,11 @@ public final class MultiContent {
     public static final List<DeferredBlock<EbfBlock>> WATER_PUMPS = java.util.stream.Stream.of("ulv", "lv", "mv", "hv", "ev", "iv")
             .map(t -> block("water_pump_" + t, p -> new EbfBlock(p, WaterPumpBlockEntity::new), MultiContent::metal)).toList();
 
+    /** D109: GT_MetaTileEntity_DieselEngine; GT_Block_Casings4 meta 13 (заборный корпус), Casings2 meta 4 (титановая коробка передач). */
+    public static final DeferredBlock<EbfBlock> COMBUSTION_ENGINE = block("combustion_engine", p -> new EbfBlock(p, CombustionEngineBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<Block> ENGINE_INTAKE_CASING = block("engine_intake_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> GEAR_BOX_TITANIUM = block("gear_box_titanium", Block::new, MultiContent::metal);
+
     /** Номер блока контроллера в ряду уровней (I — 0); −1 — не из ряда. */
     public static int index(List<DeferredBlock<EbfBlock>> list, Block b) {
         for (int i = 0; i < list.size(); i++) if (list.get(i).get() == b) return i;
@@ -260,6 +265,8 @@ public final class MultiContent {
             () -> new BlockEntityType<>(CharcoalPileBlockEntity::new, CHARCOAL_PILE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CleanroomBlockEntity>> CLEANROOM_BE = BLOCK_ENTITIES.register("cleanroom",
             () -> new BlockEntityType<>(CleanroomBlockEntity::new, CLEANROOM.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CombustionEngineBlockEntity>> COMBUSTION_ENGINE_BE = BLOCK_ENTITIES.register("combustion_engine",
+            () -> new BlockEntityType<>(CombustionEngineBlockEntity::new, COMBUSTION_ENGINE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<WaterPumpBlockEntity>> WATER_PUMP_BE = BLOCK_ENTITIES.register("water_pump",
             () -> new BlockEntityType<>(WaterPumpBlockEntity::new, blocks(WATER_PUMPS)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<OilDrillBlockEntity>> OIL_DRILL_BE = BLOCK_ENTITIES.register("oil_drill",

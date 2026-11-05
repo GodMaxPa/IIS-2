@@ -2616,6 +2616,126 @@
       ]
     },
     {
+      "id": "1A0000000000058D",
+      "x": 39.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000006",
+        "1A0000000000016F"
+      ],
+      "icon": {
+        "id": "iis:microwave_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:microwave_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000058D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000058E",
+      "x": 39.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:microwave_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:microwave_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000058E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000058F",
+      "x": 39.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:microwave_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:microwave_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000058F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000590",
+      "x": 39.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:microwave_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:microwave_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000059000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000591",
+      "x": 39.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:microwave_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:microwave_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000059100"
+        }
+      ]
+    },
+    {
       "id": "1A000000000005A2",
       "x": 3.5,
       "y": 0.5,
@@ -5169,6 +5289,126 @@
           },
           "count": 1,
           "id": "1B00000000067200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000690",
+      "x": 33.5,
+      "y": 17.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:monster_repellent_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:monster_repellent_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000069000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000691",
+      "x": 33.5,
+      "y": 18.5,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:monster_repellent_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:monster_repellent_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000069100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000692",
+      "x": 33.5,
+      "y": 20.0,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:monster_repellent_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:monster_repellent_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000069200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000693",
+      "x": 33.5,
+      "y": 21.5,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:monster_repellent_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:monster_repellent_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000069300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000694",
+      "x": 33.5,
+      "y": 23.0,
+      "dependencies": [
+        "1A00000000000006",
+        "1A0000000000016F"
+      ],
+      "icon": {
+        "id": "iis:monster_repellent_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:monster_repellent_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000069400"
         }
       ]
     }

@@ -286,12 +286,27 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
             Optional<RecipeHolder<SmeltingRecipe>> r = sl.recipeAccess().getRecipeFor(RecipeType.SMELTING, input, sl);
             if (r.isEmpty()) return null;
             ItemStack result = r.get().value().assemble(input);
+            boolean microwave = t.id.equals("microwave");
+            if (microwave) {
+                // GT_Recipe_Map_Microwave: сперва вход, потом результат
+                for (ItemStack s : new ItemStack[]{in, result}) {
+                    Microwave.Hazard h = Microwave.hazard(sl, s);
+                    if (h == Microwave.Hazard.EXPLODE) {
+                        doExplosion(voltage * 4);
+                        return null;
+                    }
+                    if (h == Microwave.Hazard.BURN) {
+                        setOnFirePublic(sl);
+                        return null;
+                    }
+                }
+            }
             if (!fits(0, result)) return null;
             in.shrink(1);
             pending = List.of(result);
             setChanged();
-            // GT_Recipe_Map_Furnace: 4 EU/t, 128 тиков
-            Overclock.Result oc = Overclock.basicMachine(4, 128, t.tier, 1);
+            // GT_Recipe_Map_Furnace: 4 EU/t, 128 тиков; GT_Recipe_Map_Microwave: 4 EU/t, 32 тика
+            Overclock.Result oc = Overclock.basicMachine(4, microwave ? 32 : 128, t.tier, 1);
             return new int[]{(int) oc.euPerTick(), oc.durationTicks()};
         }
         FluidStack fluid = tank.amount() > 0 ? new FluidStack(tank.resource().getFluid(), tank.amount()) : FluidStack.EMPTY;

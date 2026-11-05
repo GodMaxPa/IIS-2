@@ -104,6 +104,8 @@ MACHINES = [
     ('unpackager',    'unboxinator',   'UNBOXINATOR',      'Unpackager',   'unpackager',    1, 2, 0,     'Unpackager'),
     # D107: GT_Loader_MetaTileEntities:1518 fluid filter (the programmed circuit is the only input, 6 outputs, water tank)
     ('filter',        'filter',        'FILTER',           'Filter',       'filter',        1, 6, 16000, 'Fluid Filter'),
+    # D109: :712 microwave (smelting, 32 t, 4 EU/t; metal explodes)
+    ('microwave',     'microwave',     'MICROWAVE',        'E_Furnace',    None,            1, 1, 0,     'Microwave'),
 ]
 # GT crafting of the D83 machines (both tiers, X.* resolved per tier like MV_CRAFT)
 NEW_CRAFT = {
@@ -126,6 +128,7 @@ NEW_CRAFT = {
     'unpackager': (['BCB', 'VMR', 'WCW'], {'M': 'HULL', 'R': 'ROBOT_ARM', 'V': 'CONVEYOR', 'C': 'CIRCUIT', 'W': 'WIRE', 'B': '#c:chests/wooden'}),
     # D107: :1519-1522 "CEC/CMC/WEW" (LV :1518 "CCC/CMC/WEW", below): simple fluid filters up to MV, fluid filters from HV
     'filter': (['CEC', 'CMC', 'WEW'], {'M': 'HULL', 'E': 'CIRCUIT', 'W': 'WIRE', 'C': 'FLUID_FILTER'}),
+    'microwave': (['LWC', 'LMR', 'LEC'], {'M': 'HULL', 'E': 'MOTOR', 'R': 'EMITTER', 'C': 'CIRCUIT', 'W': 'WIRE', 'L': '#c:plates/lead'}),   # :712 D109
 }
 # MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
 # outputs and tanks as LV except the mixer (16000 L, :1022); the compressor tank (LV 4000, MV 8000) stays 0 as at LV (D82)

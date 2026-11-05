@@ -220,7 +220,13 @@ public enum LvMachineType {
     FILTER_MV("filter", GtRecipeMap.FILTER, 1, 6, 24000, "filter", VoltageTier.MV),
     FILTER_HV("filter", GtRecipeMap.FILTER, 1, 6, 32000, "filter", VoltageTier.HV),
     FILTER_EV("filter", GtRecipeMap.FILTER, 1, 6, 40000, "filter", VoltageTier.EV),
-    FILTER_IV("filter", GtRecipeMap.FILTER, 1, 6, 48000, "filter", VoltageTier.IV);
+    FILTER_IV("filter", GtRecipeMap.FILTER, 1, 6, 48000, "filter", VoltageTier.IV),
+    // D109: :712-716 Machine_*_Microwave (1, 1; печь на ванильной плавке: 32 тика, 4 EU/t, металл взрывается)
+    MICROWAVE("microwave", null, 1, 1, 0, "e_furnace"),
+    MICROWAVE_MV("microwave", null, 1, 1, 0, "e_furnace", VoltageTier.MV),
+    MICROWAVE_HV("microwave", null, 1, 1, 0, "e_furnace", VoltageTier.HV),
+    MICROWAVE_EV("microwave", null, 1, 1, 0, "e_furnace", VoltageTier.EV),
+    MICROWAVE_IV("microwave", null, 1, 1, 0, "e_furnace", VoltageTier.IV);
 
     public final String id;
     public final GtRecipeMap recipeMap;

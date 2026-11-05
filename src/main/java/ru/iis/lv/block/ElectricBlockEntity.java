@@ -156,6 +156,11 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
     }
 
     /** GT_Utility#setCoordsOnFire: огонь на свободных соседних клетках. */
+    /** GT setOnFire для машин, которые поджигают сами (микроволновка, D109). */
+    protected void setOnFirePublic(ServerLevel sl) {
+        setOnFire(sl);
+    }
+
     private void setOnFire(ServerLevel sl) {
         for (Direction d : Direction.values()) {
             BlockPos p = worldPosition.relative(d);

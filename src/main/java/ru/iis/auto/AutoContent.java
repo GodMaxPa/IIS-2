@@ -83,6 +83,9 @@ public final class AutoContent {
     public static final List<DeferredBlock<AdjustableTransformerBlock>> ADJUSTABLE_TRANSFORMERS = List.of(VoltageTier.EV, VoltageTier.IV).stream()
             .map(v -> block("adjustable_transformer_" + t(v), p -> new AdjustableTransformerBlock(v, p))).toList();
 
+    public static final List<DeferredBlock<MonsterRepellentBlock>> MONSTER_REPELLENTS = LV_IV.stream()
+            .map(v -> block("monster_repellent_" + t(v), p -> new MonsterRepellentBlock(v, p))).toList();
+
     public static final DeferredHolder<net.minecraft.core.component.DataComponentType<?>, net.minecraft.core.component.DataComponentType<QuantumChestBlockEntity.Content>> QUANTUM_CONTENT =
             COMPONENTS.registerComponentType("quantum_content", b -> b.persistent(QuantumChestBlockEntity.Content.CODEC).networkSynchronized(QuantumChestBlockEntity.Content.STREAM_CODEC));
 
@@ -94,6 +97,9 @@ public final class AutoContent {
             () -> new BlockEntityType<>(BasicDrillerBlockEntity::new, java.util.stream.Stream.concat(MINERS.stream(), PUMPS.stream()).map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AdjustableTransformerBlockEntity>> ADJUSTABLE_TRANSFORMER_BE = BLOCK_ENTITIES.register("adjustable_transformer",
             () -> new BlockEntityType<>(AdjustableTransformerBlockEntity::new, ADJUSTABLE_TRANSFORMERS.stream().map(DeferredBlock::get).toArray(Block[]::new)));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MonsterRepellentBlockEntity>> MONSTER_REPELLENT_BE = BLOCK_ENTITIES.register("monster_repellent",
+            () -> new BlockEntityType<>(MonsterRepellentBlockEntity::new, MONSTER_REPELLENTS.stream().map(DeferredBlock::get).toArray(Block[]::new)));
 
     public static final DeferredHolder<MenuType<?>, MenuType<AutomationMenu>> AUTOMATION_MENU = MENUS.register("automation", () -> IMenuTypeExtension.create(AutomationMenu::client));
     public static final DeferredHolder<MenuType<?>, MenuType<QuantumChestMenu>> QUANTUM_CHEST_MENU = MENUS.register("quantum_chest", () -> IMenuTypeExtension.create(QuantumChestMenu::client));
@@ -114,6 +120,7 @@ public final class AutoContent {
         TABS.register(modBus);
         COMPONENTS.register(modBus);
         modBus.addListener(AutoContent::registerCapabilities);
+        net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(MonsterRepellentBlockEntity::onSpawnCheck);
     }
 
     private static void registerCapabilities(RegisterCapabilitiesEvent event) {

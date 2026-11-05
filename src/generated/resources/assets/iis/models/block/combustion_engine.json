@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "iis:block/auto/combustion_engine_north",
+    "south": "iis:block/auto/combustion_engine_south",
+    "east": "iis:block/auto/combustion_engine_east",
+    "west": "iis:block/auto/combustion_engine_west",
+    "up": "iis:block/auto/combustion_engine_up",
+    "down": "iis:block/auto/combustion_engine_down",
+    "particle": "iis:block/auto/combustion_engine_east"
+  }
+}
