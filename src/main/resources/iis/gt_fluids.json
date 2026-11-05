@@ -3223,5 +3223,11 @@
 "state": 1,
 "temperature": 1200,
 "color": 9190430
+},
+{
+"id": "dimethylhydrazine",
+"state": 1,
+"temperature": 295,
+"color": 85
 }
 ]

@@ -105,6 +105,8 @@
     "iis:ore_malachite",
     "iis:deepslate_ore_malachite",
     "iis:nether_ore_malachite",
+    "iis:ore_meteoric_iron",
+    "iis:deepslate_ore_meteoric_iron",
     "iis:ore_molybdenite",
     "iis:deepslate_ore_molybdenite",
     "iis:end_ore_molybdenite",
@@ -653,6 +655,7 @@
     "iis:block_magnalium",
     "iis:block_magnesium",
     "iis:block_manganese",
+    "iis:block_meteoric_iron",
     "iis:block_molybdenum",
     "iis:block_naquadah",
     "iis:block_neodymium",
@@ -715,6 +718,10 @@
     "iis:gear_box_tungsten_steel",
     "iis:assembler_casing",
     "iis:grate_casing",
-    "iis:assembly_line"
+    "iis:assembly_line",
+    "iis:moon_rock",
+    "iis:launch_pad",
+    "iis:fuel_loader",
+    "iis:nasa_workbench"
   ]
 }

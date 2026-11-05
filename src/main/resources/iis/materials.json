@@ -3422,6 +3422,45 @@
     "toolQuality": 0
   },
   {
+    "id": "meteoric_iron",
+    "gtName": "MeteoricIron",
+    "gtId": 340,
+    "en": "Meteoric Iron",
+    "ru": "Метеоритное железо",
+    "ruOre": "Метеоритное железо",
+    "color": 6566480,
+    "iconSet": "METALLIC",
+    "harvestLevel": 2,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление метеоритного железа",
+    "formula": "",
+    "types": 75,
+    "subTags": [
+      "BLASTFURNACE_CALCITE_TRIPLE",
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "meteoric_iron",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "iron",
+      "nickel",
+      "iridium",
+      "platinum"
+    ],
+    "toolDurability": 384,
+    "toolSpeed": 6.0,
+    "toolQuality": 2
+  },
+  {
     "id": "molybdenite",
     "gtName": "Molybdenite",
     "gtId": 942,

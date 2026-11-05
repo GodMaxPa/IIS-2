@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1117; hidden until their items are ported: 825; chapters: 35.
+Quests in IIS 1: 1943; written: 1146; hidden until their items are ported: 796; chapters: 35.
 
 ## Most needed unported items (task count)
 
@@ -16,7 +16,6 @@ Quests in IIS 1: 1943; written: 1117; hidden until their items are ported: 825; 
 - 2 × `gregtech:gt.blockmachines:325` Принтер (IV)
 - 2 × `gregtech:gt.metaitem.01:11070` Европиевый слиток
 - 2 × `EnderIO:itemSoulVessel:0` 
-- 2 × `GalacticraftCore:item.basicItem:14` 
 - 2 × `gregtech:gt.blockmachines:455` Разборочный станок (IV)
 - 2 × `gregtech:gt.blockmachines:451` Разборочный станок (LV)
 - 2 × `gregtech:gt.blockmachines:452` Разборочный станок (MV)
@@ -84,6 +83,7 @@ Quests in IIS 1: 1943; written: 1117; hidden until their items are ported: 825; 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:37` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:38` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:47` 
+- 1 × `appliedenergistics2:tile.BlockCondenser:0` 
 
 ## Unported fluids
 
@@ -96,9 +96,9 @@ Quests in IIS 1: 1943; written: 1117; hidden until their items are ported: 825; 
 
 ## Dropped reward items
 
-- 456 × `('gregtech:gt.metaitem.01', 32000)`
-- 285 × `('gregtech:gt.metaitem.01', 32001)`
-- 36 × `('gregtech:gt.metaitem.01', 32002)`
+- 460 × `('gregtech:gt.metaitem.01', 32000)`
+- 309 × `('gregtech:gt.metaitem.01', 32001)`
+- 37 × `('gregtech:gt.metaitem.01', 32002)`
 - 16 × `bq_standard:choice`
 - 10 × `('gregtech:gt.metaitem.01', 32003)`
 - 1 × `('lootbags:lootbag', 7)`

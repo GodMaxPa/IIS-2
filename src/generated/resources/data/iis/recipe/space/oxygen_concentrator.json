@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SVS",
+    "SFS",
+    "CPC"
+  ],
+  "key": {
+    "S": "iis:compressed_steel",
+    "V": "iis:air_vent",
+    "F": "iis:air_fan",
+    "C": "iis:canister_tin",
+    "P": "iis:electric_pump_lv"
+  },
+  "result": {
+    "id": "iis:oxygen_concentrator"
+  }
+}

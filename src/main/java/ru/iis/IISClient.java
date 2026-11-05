@@ -42,6 +42,7 @@ public final class IISClient {
                 e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "battery_charge"), ru.iis.lv.client.BatteryChargeProperty.CODEC));
         modBus.addListener(IISClient::registerFluidModels);
         modBus.addListener(IISClient::registerCoverRenderers);
+        modBus.addListener((net.neoforged.neoforge.client.event.EntityRenderersEvent.RegisterLayerDefinitions e) -> e.registerLayerDefinition(ru.iis.space.client.SpaceClient.ROCKET_LAYER, ru.iis.space.client.SpaceClient::rocketLayer));
         NeoForge.EVENT_BUS.addListener(IISClient::machineTooltips);
         NeoForge.EVENT_BUS.addListener(ru.iis.client.WrenchGrid::onExtract);
         // GT_Packet_Key: перед ПКМ гаечным ключом сообщить серверу, зажат ли Ctrl (выход жидкостей машины, D101)
@@ -87,6 +88,7 @@ public final class IISClient {
         event.registerBlockEntityRenderer(ru.iis.multi.MultiContent.FLUID_HATCH_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
         event.registerBlockEntityRenderer(ru.iis.multi.MultiContent.ENERGY_HATCH_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
         // локомотивы Railcraft (D102): вагонетка с блоком котла или буфера батарей
+        event.registerEntityRenderer(ru.iis.space.SpaceContent.ROCKET.get(), ru.iis.space.client.SpaceClient.RocketRenderer::new);
         event.registerEntityRenderer(ru.iis.rail.RailContent.STEAM_LOCO.get(),
                 c -> new net.minecraft.client.renderer.entity.MinecartRenderer(c, net.minecraft.client.model.geom.ModelLayers.MINECART));
         event.registerEntityRenderer(ru.iis.rail.RailContent.ELECTRIC_LOCO.get(),
@@ -123,6 +125,8 @@ public final class IISClient {
         event.register(ru.iis.auto.AutoContent.ADJUSTABLE_TRANSFORMER_MENU.get(), ru.iis.auto.AutoScreens.Transformer::new);
         event.register(ru.iis.bio.BioContent.STATION_MENU.get(), ru.iis.bio.client.BioStationScreen::new);
         event.register(ru.iis.bio.BioContent.HEARTH_MENU.get(), ru.iis.bio.client.HearthScreen::new);
+        event.register(ru.iis.space.SpaceContent.NASA_MENU.get(), ru.iis.space.client.SpaceClient.NasaScreen::new);
+        event.register(ru.iis.space.SpaceContent.ROCKET_MENU.get(), ru.iis.space.client.SpaceClient.RocketScreen::new);
         event.register(ru.iis.rail.RailContent.LOCO_MENU.get(), ru.iis.rail.client.LocomotiveScreen::new);
     }
 

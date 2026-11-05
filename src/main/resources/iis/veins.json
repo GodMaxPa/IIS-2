@@ -30,6 +30,7 @@
     "between": "iis:aluminium",
     "sporadic": "iis:ilmenite",
     "dimensions": [
+      "iis:moon",
       "overworld"
     ]
   },
@@ -104,6 +105,23 @@
     ]
   },
   {
+    "name": "custom.00",
+    "minY": -32,
+    "maxY": 16,
+    "legacyMinY": 20,
+    "legacyMaxY": 50,
+    "weight": 10,
+    "density": 2,
+    "size": 16,
+    "primary": "iis:sapphire",
+    "secondary": "iis:meteoric_iron",
+    "between": "iis:platinum",
+    "sporadic": "iis:iridium",
+    "dimensions": [
+      "iis:moon"
+    ]
+  },
+  {
     "name": "diamond",
     "minY": -56,
     "maxY": -32,
@@ -151,6 +169,7 @@
     "between": "iis:vanadium_magnetite",
     "sporadic": "iis:gold",
     "dimensions": [
+      "iis:moon",
       "overworld"
     ]
   },
@@ -187,6 +206,7 @@
     "sporadic": "iis:calcite",
     "dimensions": [
       "end",
+      "iis:moon",
       "overworld"
     ]
   },
@@ -275,6 +295,7 @@
     "between": "iis:monazite",
     "sporadic": "iis:neodymium",
     "dimensions": [
+      "iis:moon",
       "overworld"
     ]
   },
@@ -398,6 +419,7 @@
     "between": "iis:certus_quartz",
     "sporadic": "iis:certus_quartz",
     "dimensions": [
+      "iis:moon",
       "overworld"
     ]
   },
@@ -415,6 +437,7 @@
     "between": "iis:ruby",
     "sporadic": "iis:cinnabar",
     "dimensions": [
+      "iis:moon",
       "nether",
       "overworld"
     ]
@@ -520,6 +543,7 @@
     "sporadic": "iis:lithium",
     "dimensions": [
       "end",
+      "iis:moon",
       "overworld"
     ]
   },
@@ -537,6 +561,7 @@
     "between": "iis:uranium",
     "sporadic": "iis:uranium",
     "dimensions": [
+      "iis:moon",
       "overworld"
     ]
   }

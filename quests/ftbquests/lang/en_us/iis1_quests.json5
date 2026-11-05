@@ -1798,14 +1798,34 @@
     "Height to search (only on the Mars) 10 - 20 - unique mars vein (Naquadah, Europium)"
   ],
   "quest.1A0000000000027E.title": "Naquadah Dust",
+  "quest.1A0000000000027F.quest_desc": [
+    "Use Nasa Workbench to craft the rocket. You can put 3 chests (to workbench) as storage for resources and items. also you have to craft and build the launch pad as quad 3 by 3 (9 in total) And finaly - craft the parachute, to safe fall down."
+  ],
+  "quest.1A0000000000027F.title": "Tier 1 Rocket (use 3 chests)",
   "quest.1A00000000000281.quest_desc": [
     "May be created from tungsten rod"
   ],
   "quest.1A00000000000281.title": "Tungsten Bolt",
+  "quest.1A00000000000286.quest_desc": [
+    "Use bender to make the plate from ingot."
+  ],
+  "quest.1A00000000000286.title": "Meteoric Iron Plate",
+  "quest.1A00000000000287.quest_desc": [
+    "Height to search (only on the MOON): 20 - 50 There you can find the unique moon vein (Sapphire, Meteoric Iron, Platinum, Iridium)."
+  ],
+  "quest.1A00000000000287.title": "Meteoric Iron Ingot",
   "quest.1A00000000000288.quest_desc": [
     "Height to search: 40 - 50 PLATINUM vein (Sheldonite, Palladium, Platinum, Iridium). But you should know that the chance to find this vein of ore is very small. In this case you may to use other way to get it. And this way named \"Platinum Group Sludge Dust\" (or PGS dust). You may get the info how to get it in quest set #6 - \"Polyethylene & PGS\""
   ],
   "quest.1A00000000000288.title": "Iridium Dust",
+  "quest.1A00000000000289.quest_desc": [
+    "Use implosion compressor to make the Heavy-Duty Plate from heavy duty alloy ingot."
+  ],
+  "quest.1A00000000000289.title": "Heavy-Duty Plate (tier 1)",
+  "quest.1A0000000000028A.quest_desc": [
+    "The basic wafer you may craft from diamond plate and coated circuit board, with help of molten soldering alloy by assembler. Other items should be more easy in crafting. Tin canister you may create by bending machine or extruder from compressed tin."
+  ],
+  "quest.1A0000000000028A.title": "Oxygen Concentrator",
   "quest.1A0000000000028B.quest_desc": [
     "Use double wires from naquadah ingots. Then by wrench and 8 double wires make the coil block. Create 16 coil blocks in total."
   ],
@@ -2102,6 +2122,14 @@
     "Can produce energy from any gas fuel."
   ],
   "quest.1A000000000002FC.title": "Basic Gas Turbine",
+  "quest.1A000000000002FD.quest_desc": [
+    "Preparing to flying, spaceman!"
+  ],
+  "quest.1A000000000002FD.title": "Nasa Workbench",
+  "quest.1A000000000002FE.quest_desc": [
+    "You may craft this with help of assembling machine HV+ tier by diamond plate, epoxy circuit board and molten soldering alloy."
+  ],
+  "quest.1A000000000002FE.title": "Advanced Wafer",
   "quest.1A00000000000300.quest_desc": [
     "It is required for some recipes. Also you may use it with packager to combine small and tiny dust to get a dust with normal size. But you have to set a config \"dusts\" on it by screwdriver on crafting table."
   ],
@@ -2118,10 +2146,26 @@
     "You may get it via centrifuge by redstone or by cinnabar."
   ],
   "quest.1A00000000000305.title": "Mercury",
+  "quest.1A00000000000306.quest_desc": [
+    "HDP + compressed steel."
+  ],
+  "quest.1A00000000000306.title": "Rocket Fins",
+  "quest.1A00000000000307.quest_desc": [
+    "A raw material, that may be used in creating a rocket."
+  ],
+  "quest.1A00000000000307.title": "Heavy Duty Alloy Ingot",
   "quest.1A00000000000308.quest_desc": [
     "May be created frow two titanium plates."
   ],
   "quest.1A00000000000308.title": "Double Titanium Plate",
+  "quest.1A00000000000309.quest_desc": [
+    "Put 2 bronze plates to implosion compressor."
+  ],
+  "quest.1A00000000000309.title": "Compressed Bronze",
+  "quest.1A0000000000030A.quest_desc": [
+    "Put 2 steel plates to implosion compressor."
+  ],
+  "quest.1A0000000000030A.title": "Compressed Steel",
   "quest.1A0000000000030B.quest_desc": [
     "A part of Heavy Duty Alloy Ingot"
   ],
@@ -2130,10 +2174,66 @@
     "May be created from Stainless Steel rod."
   ],
   "quest.1A0000000000030C.title": "Stainless Steel Bolt",
+  "quest.1A0000000000030D.quest_desc": [
+    "The part of a rocket."
+  ],
+  "quest.1A0000000000030D.title": "Nose Cone",
+  "quest.1A0000000000030E.quest_desc": [
+    "The engine for 1 tier rocket."
+  ],
+  "quest.1A0000000000030E.title": "Tier 1 Rocket Engine",
+  "quest.1A0000000000030F.quest_desc": [
+    "It will allow you to fall down slowly and without breaking your legs."
+  ],
+  "quest.1A0000000000030F.title": "Parachute",
+  "quest.1A00000000000310.quest_desc": [
+    "The plates to build the rocket launch pad. Require 9 items in total."
+  ],
+  "quest.1A00000000000310.title": "Rocket Launch Pad",
+  "quest.1A00000000000311.quest_desc": [
+    "The important machine to pour the rocket fuel to fuel tank of the rocket."
+  ],
+  "quest.1A00000000000311.title": "Fuel Loader",
+  "quest.1A00000000000314.quest_desc": [
+    "Put it on yourself, before starting fly to the moon. But it is not enough. Also you have to craft other important things as parachute, oxygen gear and tank."
+  ],
+  "quest.1A00000000000314.title": "Oxygen Mask",
+  "quest.1A00000000000317.quest_desc": [
+    "The part of oxygen concentrator"
+  ],
+  "quest.1A00000000000317.title": "Tin Canister",
+  "quest.1A00000000000318.quest_desc": [
+    "The part of oxygen concentrator."
+  ],
+  "quest.1A00000000000318.title": "Oxygen Vent",
+  "quest.1A00000000000319.quest_desc": [
+    "The part of oxygen concentrator and few other G.C. machines."
+  ],
+  "quest.1A00000000000319.title": "Oxygen Fan",
+  "quest.1A0000000000031A.quest_desc": [
+    "Oxygen concentrator + 2 * LV electric pumps + 5 * oxygen pipes. You may wear it."
+  ],
+  "quest.1A0000000000031A.title": "Oxygen Gear",
+  "quest.1A0000000000031B.quest_desc": [
+    "The part of some G.C. machines."
+  ],
+  "quest.1A0000000000031B.title": "Oxygen Pipe",
+  "quest.1A0000000000031D.quest_desc": [
+    "Put two aluminium plates to implosion compressor."
+  ],
+  "quest.1A0000000000031D.title": "Compressed Aluminum",
+  "quest.1A00000000000322.quest_desc": [
+    "Put two tin plates to implosion compressor."
+  ],
+  "quest.1A00000000000322.title": "Compressed Tin",
   "quest.1A00000000000323.quest_desc": [
     "To fill an oxygen tank you have to craft and use at least MV (or better) Fluid Canner"
   ],
   "quest.1A00000000000323.title": "MV+ Fluid Canner",
+  "quest.1A00000000000324.quest_desc": [
+    "2 * diamond plates, 4 * coated circuit boards and molten soldering alloy"
+  ],
+  "quest.1A00000000000324.title": "Basic Wafer",
   "quest.1A00000000000325.quest_desc": [
     "A part of electric HV pumps."
   ],
@@ -2142,6 +2242,22 @@
     "It may help you to create oxygen pipe (for galactic craft)"
   ],
   "quest.1A00000000000326.title": "Extruder Shape (small pipe)",
+  "quest.1A00000000000327.quest_desc": [
+    "You may compress the oxygen to ut and wear. Also required the oxygen gear and oxygen mask to stay alive in the space and on surface of other planets or moon."
+  ],
+  "quest.1A00000000000327.title": "Light Oxygen Tank",
+  "quest.1A00000000000328.quest_desc": [
+    "Put two iron plates to implosion compressor to get the 1 compressed iron."
+  ],
+  "quest.1A00000000000328.title": "Compressed Iron",
+  "quest.1A00000000000329.quest_desc": [
+    "From sticks and strings."
+  ],
+  "quest.1A00000000000329.title": "Canvas",
+  "quest.1A0000000000032A.quest_desc": [
+    "Use the MV+ tier assembler to craft it from double steel plate and two steel rings."
+  ],
+  "quest.1A0000000000032A.title": "Large Steel Fluid Cell",
   "quest.1A0000000000032C.quest_desc": [
     "The part for rocket loader or unloader machines."
   ],

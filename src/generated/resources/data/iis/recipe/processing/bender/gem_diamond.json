@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "minecraft:diamond",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_diamond",
+      "count": 1
+    }
+  ],
+  "duration": 24,
+  "eut": 24
+}

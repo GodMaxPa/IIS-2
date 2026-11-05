@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/meteoric_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_meteoric_iron",
+      "count": 2
+    }
+  ],
+  "duration": 196,
+  "eut": 96,
+  "keep": [
+    "iis:shape_extruder_rod"
+  ]
+}

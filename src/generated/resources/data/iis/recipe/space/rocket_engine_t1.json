@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SHS",
+    "RFR",
+    "HPH"
+  ],
+  "key": {
+    "S": "iis:pipe_small_steel",
+    "H": "iis:heavy_plating",
+    "R": "iis:regulator_mv",
+    "F": "iis:titanium_firebox_casing",
+    "P": "iis:pipe_huge_titanium"
+  },
+  "result": {
+    "id": "iis:rocket_engine_t1"
+  }
+}

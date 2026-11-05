@@ -88,9 +88,9 @@ def handle_material(name):
 
 
 # ----------------------------------------------------------------------------------------------------------------
-# Veins (owner decision D11: y * 1.6 - 64). Moon/Mars/asteroid veins wait for the space slice (D17).
+# Veins (owner decision D11: y * 1.6 - 64). Moon: D115; Mars and asteroids wait for the next stages of the space slice (D17).
 # ----------------------------------------------------------------------------------------------------------------
-DIM_MAP = {'Overworld': 'overworld', 'Nether': 'nether', 'TheEnd': 'end'}
+DIM_MAP = {'Overworld': 'overworld', 'Nether': 'nether', 'TheEnd': 'end', 'Moon': 'iis:moon'}
 LAYERS = ('primary', 'secondary', 'between', 'sporadic')
 veins, ore_dims = [], {}
 for v in veins_src:
@@ -416,10 +416,10 @@ for n in sorted(names):
         rgba = [int(x) for x in str(pr['MatRGBA']).split(',') if x][:4]
     iset = str(m.get('iconSet', 'SET_DULL')).replace('SET_', '')
     dims = ore_dims.get(n, set())
-    hosts = (['stone', 'deepslate'] if 'overworld' in dims else []) + (['netherrack'] if 'nether' in dims else []) \
+    hosts = (['stone', 'deepslate'] if 'overworld' in dims or 'iis:moon' in dims else []) + (['netherrack'] if 'nether' in dims else []) \
         + (['end_stone'] if 'end' in dims else [])
     sdims = small_dims.get(n, set())
-    small_hosts = (['stone', 'deepslate'] if 'overworld' in sdims else []) + (['netherrack'] if 'nether' in sdims else []) \
+    small_hosts = (['stone', 'deepslate'] if 'overworld' in sdims or 'iis:moon' in sdims else []) + (['netherrack'] if 'nether' in sdims else []) \
         + (['end_stone'] if 'end' in sdims else [])
     formula = ru_meta.get(f"01.{2000 + m['id']}", {}).get('tooltip')
     ds = prop(n, 'MaterialDirectSmeltInto', n)
@@ -970,6 +970,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_zpm', os.path.join(ROOT, 'tools', 
 _zpm = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_zpm)
 lv_stats['zpm'] = _zpm.generate(globals())
+# Space, first stage: the Moon, oxygen, the tier 1 rocket (D115)
+_spec = _ilu.spec_from_file_location('iis_gen_space', os.path.join(ROOT, 'tools', 'gen', 'space.py'))
+_space = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_space)
+lv_stats['space'] = _space.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

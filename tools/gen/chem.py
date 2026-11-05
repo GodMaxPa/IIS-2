@@ -95,7 +95,8 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
         low = name.lower().replace('.', '_')
         if low in ('water', 'ic2water'):
             return 'minecraft:water'
-        for c in (low, f'liquid_{low}', f'solution_{low}', low.removeprefix('liquid_')):
+        snake_ = re.sub(r'(?<=[a-z0-9])([A-Z])', lambda m_: '_' + m_.group(1), name).lower()   # sRocketFuel -> rocket_fuel (D115)
+        for c in (low, snake_, f'liquid_{low}', f'solution_{low}', low.removeprefix('liquid_')):
             if c in fluids:
                 return f'{NS}:{c}'
         return None

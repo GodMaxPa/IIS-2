@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/meteoric_iron",
+    "#iis:small_dusts/meteoric_iron",
+    "#iis:small_dusts/meteoric_iron",
+    "#iis:small_dusts/meteoric_iron"
+  ],
+  "result": {
+    "id": "iis:dust_meteoric_iron"
+  }
+}

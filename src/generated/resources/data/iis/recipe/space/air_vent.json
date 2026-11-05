@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BTB",
+    "TST",
+    "BTB"
+  ],
+  "key": {
+    "B": "minecraft:iron_bars",
+    "T": "iis:compressed_tin",
+    "S": "iis:compressed_steel"
+  },
+  "result": {
+    "id": "iis:air_vent"
+  }
+}

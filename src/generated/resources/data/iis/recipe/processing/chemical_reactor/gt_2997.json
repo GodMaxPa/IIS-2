@@ -1,0 +1,51 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:ammonia",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:methanol",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 7
+    }
+  ],
+  "duration": 3600,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:chlorine",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:rocket_fuel",
+      "amount": 7000
+    }
+  ]
+}

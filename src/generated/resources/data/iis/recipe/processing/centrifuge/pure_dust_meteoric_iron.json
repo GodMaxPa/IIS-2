@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#iis:pure_dusts/meteoric_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_meteoric_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_nickel",
+      "count": 1
+    }
+  ],
+  "duration": 784,
+  "eut": 5
+}

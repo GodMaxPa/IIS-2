@@ -300,6 +300,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_meteoric_iron",
+    "tool": "sword",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "sword_molybdenum",
     "tool": "sword",
     "material": "molybdenum",
@@ -884,6 +896,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 7.0,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_meteoric_iron",
+    "tool": "pickaxe",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
     "quality": 2,
     "kind": "pickaxe"
   },
@@ -1476,6 +1500,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_meteoric_iron",
+    "tool": "shovel",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_molybdenum",
     "tool": "shovel",
     "material": "molybdenum",
@@ -2060,6 +2096,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_meteoric_iron",
+    "tool": "axe",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
     "quality": 2,
     "kind": "axe"
   },
@@ -2652,6 +2700,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_meteoric_iron",
+    "tool": "hoe",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_molybdenum",
     "tool": "hoe",
     "material": "molybdenum",
@@ -3236,6 +3296,18 @@
     "blockDamage": 1,
     "craftDamage": 4,
     "speed": 7.0,
+    "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_meteoric_iron",
+    "tool": "saw",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 6.0,
     "quality": 2,
     "kind": "axe"
   },
@@ -3828,6 +3900,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_meteoric_iron",
+    "tool": "hammer",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 4.5,
+    "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_molybdenum",
     "tool": "hammer",
     "material": "molybdenum",
@@ -4400,6 +4484,18 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 7.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_meteoric_iron",
+    "tool": "wrench",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
     "quality": 2,
     "kind": "wrench"
   },
@@ -4992,6 +5088,18 @@
     "kind": null
   },
   {
+    "id": "file_meteoric_iron",
+    "tool": "file",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "file_molybdenum",
     "tool": "file",
     "material": "molybdenum",
@@ -5576,6 +5684,18 @@
     "blockDamage": 4,
     "craftDamage": 8,
     "speed": 7.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_meteoric_iron",
+    "tool": "screwdriver",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 6.0,
     "quality": 2,
     "kind": null
   },
@@ -6204,6 +6324,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_meteoric_iron",
+    "tool": "knife",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": "sword"
+  },
+  {
     "id": "knife_molybdenum",
     "tool": "knife",
     "material": "molybdenum",
@@ -6788,6 +6920,18 @@
     "blockDamage": 2,
     "craftDamage": 8,
     "speed": 8.75,
+    "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_meteoric_iron",
+    "tool": "wire_cutter",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 7.5,
     "quality": 2,
     "kind": "wire_cutter"
   },
@@ -7404,6 +7548,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_meteoric_iron",
+    "tool": "crowbar",
+    "material": "meteoric_iron",
+    "handle": "wood",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 6.0,
+    "quality": 2,
+    "kind": null
+  },
+  {
     "id": "crowbar_molybdenum",
     "tool": "crowbar",
     "material": "molybdenum",
@@ -7976,6 +8132,18 @@
     "blockDamage": 1,
     "craftDamage": 2,
     "speed": 21.0,
+    "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_meteoric_iron",
+    "tool": "drill_lv",
+    "material": "meteoric_iron",
+    "handle": "stainless_steel",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 18.0,
     "quality": 2,
     "kind": "drill"
   },
@@ -8568,6 +8736,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_meteoric_iron",
+    "tool": "chainsaw_lv",
+    "material": "meteoric_iron",
+    "handle": "stainless_steel",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 12.0,
+    "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_molybdenum",
     "tool": "chainsaw_lv",
     "material": "molybdenum",
@@ -9152,6 +9332,18 @@
     "blockDamage": 1,
     "craftDamage": 16,
     "speed": 14.0,
+    "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_meteoric_iron",
+    "tool": "wrench_lv",
+    "material": "meteoric_iron",
+    "handle": "stainless_steel",
+    "maxDamage": 768,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 12.0,
     "quality": 2,
     "kind": "wrench"
   },

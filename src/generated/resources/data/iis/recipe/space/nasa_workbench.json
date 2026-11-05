@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TSV",
+    "AWB",
+    "MCE"
+  ],
+  "key": {
+    "T": "#c:plates/titanium",
+    "V": "#c:plates/titanium",
+    "S": "iis:schematic_3x3",
+    "A": "iis:robot_arm_ev",
+    "B": "iis:robot_arm_hv",
+    "W": "iis:wafer_advanced",
+    "M": "#c:circuits/master",
+    "C": "#iis:cables/4x/platinum",
+    "E": "#c:circuits/elite"
+  },
+  "result": {
+    "id": "iis:nasa_workbench"
+  }
+}

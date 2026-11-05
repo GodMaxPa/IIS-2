@@ -109,6 +109,8 @@ FLUID_SEEDS = ['minecraft:water', 'minecraft:lava', 'iis:oil', 'iis:oilmedium', 
 for x in FLUID_SEEDS:
     have.add('F:' + x)
 seeds = ['iis:rubber_log', 'iis:sticky_resin', 'iis:plant_ball']
+# the NASA workbench is a menu, not a recipe (D115)
+recipes.append(('space/rocket_t1', [['iis:nasa_workbench'], ['iis:nose_cone'], ['iis:heavy_plating'], ['iis:rocket_fins'], ['iis:rocket_engine_t1']], ['iis:rocket_t1']))
 # --with=iis:dust_naquadah: pretend an item is available, to see what else a missing source hides (D112: naquadah waits for space, D17)
 for a_ in [x for x in sys.argv[1:] if x.startswith('--with=')]:
     have.add(a_[7:])

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "APA",
+    "ACA",
+    "AAA"
+  ],
+  "key": {
+    "A": "iis:compressed_aluminium",
+    "P": "iis:oxygen_pipe",
+    "C": "iis:canister_tin"
+  },
+  "result": {
+    "id": "iis:oxygen_tank_light",
+    "count": 1,
+    "components": {
+      "minecraft:damage": 900
+    }
+  }
+}

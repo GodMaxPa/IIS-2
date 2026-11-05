@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SWS",
+    "PLM",
+    "APA"
+  ],
+  "key": {
+    "S": "iis:compressed_steel",
+    "W": "iis:wafer_basic",
+    "P": "iis:electric_pump_mv",
+    "L": "iis:large_steel_cell",
+    "M": "iis:electric_motor_mv",
+    "A": "iis:compressed_aluminium"
+  },
+  "result": {
+    "id": "iis:fuel_loader"
+  }
+}

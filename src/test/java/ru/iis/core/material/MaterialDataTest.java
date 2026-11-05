@@ -24,7 +24,7 @@ class MaterialDataTest {
     void everyVeinMaterialExistsWithHostForItsDimension() {
         Map<String, IISMaterial> byId = MaterialData.materials().stream().collect(Collectors.toMap(IISMaterial::id, m -> m));
         Map<String, Set<String>> hostsForDim = Map.of(
-                "overworld", Set.of("stone", "deepslate"), "nether", Set.of("netherrack"), "end", Set.of("end_stone"));
+                "overworld", Set.of("stone", "deepslate"), "nether", Set.of("netherrack"), "end", Set.of("end_stone"), "iis:moon", Set.of("stone"));
         for (VeinDefinition v : MaterialData.veins()) {
             for (String layer : Arrays.asList(v.primary(), v.secondary(), v.between(), v.sporadic())) {
                 if (layer == null) continue;

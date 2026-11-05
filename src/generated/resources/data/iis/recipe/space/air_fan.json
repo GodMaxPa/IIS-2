@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "S S",
+    "RWR",
+    "S S"
+  ],
+  "key": {
+    "S": "#iis:screws/steel",
+    "R": "#iis:rotors/steel",
+    "W": "iis:wafer_basic"
+  },
+  "result": {
+    "id": "iis:air_fan"
+  }
+}

@@ -5,6 +5,184 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A0000000000027F",
+      "x": 2.75,
+      "y": 4.25,
+      "size": 2.5,
+      "dependencies": [
+        "1A0000000000030E",
+        "1A000000000002FD",
+        "1A00000000000301",
+        "1A00000000000310",
+        "1A00000000000311",
+        "1A00000000000306",
+        "1A0000000000030D"
+      ],
+      "icon": {
+        "id": "iis:rocket_t1",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_t1",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027F00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_t1",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027F01"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_t1",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027F02"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_t1",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027F03"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000287",
+      "x": -0.25,
+      "y": 4.25,
+      "size": 2.5,
+      "dependencies": [
+        "1A0000000000027F"
+      ],
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_meteoric_iron",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000028700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000289",
+      "x": 3.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000307"
+      ],
+      "icon": {
+        "id": "iis:heavy_plating",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:heavy_plating",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000028900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000028A",
+      "x": 9.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000009C",
+        "1A00000000000317",
+        "1A00000000000318",
+        "1A00000000000319"
+      ],
+      "icon": {
+        "id": "iis:oxygen_concentrator",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:oxygen_concentrator",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000028A00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002FD",
+      "x": 0.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000092",
+        "1A000000000002FE",
+        "1A00000000000300"
+      ],
+      "icon": {
+        "id": "iis:nasa_workbench",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:nasa_workbench",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002FD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002FE",
+      "x": 0.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000161",
+        "1A0000000000009C",
+        "1A00000000000232",
+        "1A00000000000205",
+        "1A00000000000021"
+      ],
+      "icon": {
+        "id": "iis:wafer_advanced",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wafer_advanced",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002FE00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000301",
       "x": 3.5,
       "y": 6.5,
@@ -41,6 +219,58 @@
       ]
     },
     {
+      "id": "1A00000000000306",
+      "x": 3.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000289"
+      ],
+      "icon": {
+        "id": "iis:rocket_fins",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_fins",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000030600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000307",
+      "x": 3.5,
+      "y": -1.0,
+      "dependencies": [
+        "1A00000000000308",
+        "1A0000000000030B",
+        "1A0000000000030C",
+        "1A0000000000030A",
+        "1A00000000000309",
+        "1A00000000000322",
+        "1A0000000000031D"
+      ],
+      "icon": {
+        "id": "iis:heavy_ingot_t1",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:heavy_ingot_t1",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000030700"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000308",
       "x": 5.0,
       "y": -1.0,
@@ -60,6 +290,53 @@
           },
           "count": 1,
           "id": "1B00000000030800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000309",
+      "x": 9.5,
+      "y": -1.0,
+      "dependencies": [
+        "1A00000000000174"
+      ],
+      "icon": {
+        "id": "iis:compressed_bronze",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressed_bronze",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000030900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000030A",
+      "x": 6.5,
+      "y": -1.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A00000000000174"
+      ],
+      "icon": {
+        "id": "iis:compressed_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressed_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000030A00"
         }
       ]
     },
@@ -106,6 +383,338 @@
           },
           "count": 4,
           "id": "1B00000000030C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000030D",
+      "x": 2.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000002FE",
+        "1A0000000000001B",
+        "1A00000000000289"
+      ],
+      "icon": {
+        "id": "iis:nose_cone",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:nose_cone",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000030D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000030E",
+      "x": 5.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000289"
+      ],
+      "icon": {
+        "id": "iis:rocket_engine_t1",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_engine_t1",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000030E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000030F",
+      "x": 0.5,
+      "y": -1.0,
+      "dependencies": [
+        "1A00000000000329"
+      ],
+      "icon": {
+        "id": "iis:parachute",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:parachute",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000030F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000310",
+      "x": 2.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000001BD",
+        "1A000000000000A4",
+        "1A0000000000004A",
+        "1A000000000001CE",
+        "1A00000000000328"
+      ],
+      "icon": {
+        "id": "iis:launch_pad",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:launch_pad",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000031000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000311",
+      "x": 5.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000032A",
+        "1A00000000000324",
+        "1A0000000000030A",
+        "1A00000000000309",
+        "1A00000000000322",
+        "1A0000000000031D"
+      ],
+      "icon": {
+        "id": "iis:fuel_loader",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fuel_loader",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000031100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000314",
+      "x": 15.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000001BD",
+        "1A000000000000A4",
+        "1A0000000000004A",
+        "1A00000000000223",
+        "1A00000000000021",
+        "1A0000000000024C",
+        "1A000000000001E3",
+        "1A000000000001A3",
+        "1A000000000000BA"
+      ],
+      "icon": {
+        "id": "iis:oxygen_mask",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:oxygen_mask",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000031400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000317",
+      "x": 9.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000030A",
+        "1A00000000000309",
+        "1A00000000000322",
+        "1A0000000000031D"
+      ],
+      "icon": {
+        "id": "iis:canister_tin",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:canister_tin",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000031700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000318",
+      "x": 8.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000030A",
+        "1A00000000000309",
+        "1A00000000000322",
+        "1A0000000000031D"
+      ],
+      "icon": {
+        "id": "iis:air_vent",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:air_vent",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000031800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000319",
+      "x": 6.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000324"
+      ],
+      "icon": {
+        "id": "iis:air_fan",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:air_fan",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000031900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000031A",
+      "x": 11.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000028A",
+        "1A0000000000031B"
+      ],
+      "icon": {
+        "id": "iis:oxygen_gear",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:oxygen_gear",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000031A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000031B",
+      "x": 11.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000001BD",
+        "1A000000000000A4",
+        "1A0000000000004A",
+        "1A00000000000223",
+        "1A00000000000021",
+        "1A0000000000024C",
+        "1A000000000001E3",
+        "1A00000000000326"
+      ],
+      "icon": {
+        "id": "iis:oxygen_pipe",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:oxygen_pipe",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000031B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000031D",
+      "x": 9.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000174"
+      ],
+      "icon": {
+        "id": "iis:compressed_aluminium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressed_aluminium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000031D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000322",
+      "x": 8.0,
+      "y": -1.0,
+      "dependencies": [
+        "1A00000000000174"
+      ],
+      "icon": {
+        "id": "iis:compressed_tin",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressed_tin",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032200"
         }
       ]
     },
@@ -157,6 +766,32 @@
       ]
     },
     {
+      "id": "1A00000000000324",
+      "x": 6.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000190",
+        "1A0000000000009C",
+        "1A00000000000256",
+        "1A00000000000325"
+      ],
+      "icon": {
+        "id": "iis:wafer_basic",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wafer_basic",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032400"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000326",
       "x": 11.0,
       "y": 0.5,
@@ -176,6 +811,98 @@
           },
           "count": 1,
           "id": "1B00000000032600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000327",
+      "x": 12.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000031B"
+      ],
+      "icon": {
+        "id": "iis:oxygen_tank_light",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:oxygen_tank_light",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B00000000032700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000328",
+      "x": 0.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000001BA"
+      ],
+      "icon": {
+        "id": "iis:compressed_iron",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressed_iron",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000329",
+      "x": -1.0,
+      "y": -1.0,
+      "dependencies": [
+        "1A0000000000018E"
+      ],
+      "icon": {
+        "id": "iis:canvas",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:canvas",
+            "count": 1
+          },
+          "count": 3,
+          "id": "1B00000000032900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000032A",
+      "x": 5.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000256"
+      ],
+      "icon": {
+        "id": "iis:large_steel_cell",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:large_steel_cell",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032A00"
         }
       ]
     },
@@ -211,5 +938,9 @@
       "y": 2.0,
       "size": 1.0
     }
-  ]
+  ],
+  "icon": {
+    "id": "iis:nasa_workbench",
+    "count": 1
+  }
 }

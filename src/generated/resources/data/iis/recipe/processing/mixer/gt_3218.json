@@ -1,0 +1,38 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:dimethylhydrazine",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 2
+    }
+  ],
+  "duration": 60,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:rocket_fuel",
+      "amount": 3000
+    }
+  ]
+}

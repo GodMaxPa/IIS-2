@@ -1,0 +1,67 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:chloramine",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 4
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "minecraft:water",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 12,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:dimethylhydrazine",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 960,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dimethylamine",
+      "amount": 10000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dilutedhydrochloricacid_gt5u",
+      "amount": 5000
+    }
+  ]
+}

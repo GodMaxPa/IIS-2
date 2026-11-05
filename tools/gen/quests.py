@@ -94,6 +94,21 @@ IC2_MAP = {
     ('itemRubber', 0): f'{NS}:plate_rubber',
 }
 # Railcraft items ported in D102 (track items are told apart by their track id in the damage value)
+# D115: Galacticraft, first stage of the space slice: own items that stand for GC ones
+GC_MAP = {('GalacticraftCore:item.spaceship', d): 'iis:rocket_t1' for d in (0, 1, 2, 3)}
+GC_MAP.update({('GalacticraftCore:item.heavyPlating', 0): 'iis:heavy_plating', ('GalacticraftCore:item.oxygenConcentrator', 0): 'iis:oxygen_concentrator',
+               ('GalacticraftCore:tile.rocketWorkbench', 0): 'iis:nasa_workbench', ('GalacticraftCore:item.basicItem', 7): 'iis:compressed_tin',
+               ('GalacticraftCore:item.basicItem', 8): 'iis:compressed_aluminium', ('GalacticraftCore:item.basicItem', 9): 'iis:compressed_steel',
+               ('GalacticraftCore:item.basicItem', 10): 'iis:compressed_bronze', ('GalacticraftCore:item.basicItem', 11): 'iis:compressed_iron',
+               ('GalacticraftCore:item.basicItem', 13): 'iis:wafer_basic', ('GalacticraftCore:item.basicItem', 14): 'iis:wafer_advanced',
+               ('GalacticraftCore:item.rocketFins', 0): 'iis:rocket_fins', ('GalacticraftCore:item.noseCone', 0): 'iis:nose_cone',
+               ('GalacticraftCore:item.engine', 0): 'iis:rocket_engine_t1', ('GalacticraftCore:item.parachute', 0): 'iis:parachute',
+               ('GalacticraftCore:item.canvas', 0): 'iis:canvas', ('GalacticraftCore:tile.landingPad', 0): 'iis:launch_pad',
+               ('GalacticraftCore:tile.fuelLoader', 0): 'iis:fuel_loader', ('GalacticraftCore:item.oxygenMask', 0): 'iis:oxygen_mask',
+               ('GalacticraftCore:item.canister', 0): 'iis:canister_tin', ('GalacticraftCore:item.airVent', 0): 'iis:air_vent',
+               ('GalacticraftCore:item.airFan', 0): 'iis:air_fan', ('GalacticraftCore:item.oxygenGear', 0): 'iis:oxygen_gear',
+               ('GalacticraftCore:tile.oxygenPipe', 0): 'iis:oxygen_pipe', ('GalacticraftCore:item.oxygenTankLightFull', 900): 'iis:oxygen_tank_light',
+               ('gregtech:gt.metaitem.01', 32462): 'iis:heavy_ingot_t1', ('gregtech:gt.metaitem.01', 32405): 'iis:large_steel_cell', ('gregtech:gt.metaitem.01', 32497): 'iis:schematic_3x3'})
 RAILCRAFT_MAP = {
     ('detector', 0): 'detector_item', ('part.tie', 0): 'tie_wood', ('part.tie', 1): 'tie_stone', ('part.railbed', 0): 'railbed_wood',
     ('part.railbed', 1): 'railbed_stone', ('part.rail', 0): 'rail_standard', ('part.rail', 1): 'rail_advanced', ('part.rail', 2): 'rail_wooden',
@@ -147,7 +162,9 @@ class Mapper:
 
     def item(self, iid, dmg, oredict=''):
         mod, _, name = iid.partition(':')
-        r = None
+        r = GC_MAP.get((iid, dmg))
+        if r:
+            return r
         if mod == 'minecraft':
             r = MC_RENAMES.get((name, dmg))
             if r is None and dmg in (0, 32767) and name in self.vanilla:

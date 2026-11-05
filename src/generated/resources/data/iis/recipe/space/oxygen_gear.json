@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "LCL",
+    "P P"
+  ],
+  "key": {
+    "P": "iis:oxygen_pipe",
+    "L": "iis:electric_pump_lv",
+    "C": "iis:oxygen_concentrator"
+  },
+  "result": {
+    "id": "iis:oxygen_gear"
+  }
+}

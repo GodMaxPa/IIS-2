@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "APA",
+    "ACA",
+    "AAA"
+  ],
+  "key": {
+    "A": "iis:compressed_aluminium",
+    "P": "iis:oxygen_pipe",
+    "C": {
+      "neoforge:ingredient_type": "neoforge:components",
+      "items": "iis:capsule",
+      "components": {
+        "!iis:fluid_content": {}
+      }
+    }
+  },
+  "result": {
+    "id": "iis:oxygen_tank_light",
+    "count": 1,
+    "components": {
+      "minecraft:damage": 900
+    }
+  }
+}

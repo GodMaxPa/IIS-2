@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PIh",
+    "f  "
+  ],
+  "key": {
+    "P": "#c:plates/meteoric_iron",
+    "I": "#c:ingots/meteoric_iron",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:hoe_head_meteoric_iron"
+  }
+}

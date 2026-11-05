@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XXX",
+    "Y Y",
+    " Y "
+  ],
+  "key": {
+    "X": "iis:canvas",
+    "Y": "minecraft:string"
+  },
+  "result": {
+    "id": "iis:parachute"
+  }
+}

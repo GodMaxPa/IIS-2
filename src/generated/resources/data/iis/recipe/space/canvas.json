@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " XY",
+    "XXX",
+    "YX "
+  ],
+  "key": {
+    "X": "minecraft:string",
+    "Y": "#c:rods/wooden"
+  },
+  "result": {
+    "id": "iis:canvas"
+  }
+}

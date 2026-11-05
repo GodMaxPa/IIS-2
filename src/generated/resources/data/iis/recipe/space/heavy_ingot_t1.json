@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BTB",
+    "ChS",
+    "BPB"
+  ],
+  "key": {
+    "B": "#iis:bolts/stainless_steel",
+    "T": "#iis:double_plates/titanium",
+    "P": "#iis:double_plates/polytetrafluoroethylene",
+    "C": "iis:compressed_bronze",
+    "S": "iis:compressed_steel",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:heavy_ingot_t1"
+  }
+}

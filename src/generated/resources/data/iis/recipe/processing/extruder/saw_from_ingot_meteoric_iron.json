@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/meteoric_iron",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:saw_head_meteoric_iron",
+      "count": 1
+    }
+  ],
+  "duration": 196,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_saw"
+  ]
+}

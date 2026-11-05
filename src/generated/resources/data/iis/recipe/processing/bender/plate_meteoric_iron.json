@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/meteoric_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_meteoric_iron",
+      "count": 1
+    }
+  ],
+  "duration": 98,
+  "eut": 24
+}

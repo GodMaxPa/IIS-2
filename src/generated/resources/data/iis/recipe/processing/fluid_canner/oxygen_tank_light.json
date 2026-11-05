@@ -1,0 +1,32 @@
+{
+  "type": "iis:fluid_canner",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:oxygen_tank_light",
+        "components": {
+          "minecraft:damage": 900
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:oxygen_tank_light",
+      "count": 1,
+      "components": {
+        "minecraft:damage": 0
+      }
+    }
+  ],
+  "duration": 200,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 20000
+    }
+  ]
+}

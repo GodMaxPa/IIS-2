@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "AAA",
+    "BBB"
+  ],
+  "key": {
+    "I": "iis:compressed_iron",
+    "A": "iis:advanced_alloy_plate",
+    "B": "minecraft:iron_block"
+  },
+  "result": {
+    "id": "iis:launch_pad",
+    "count": 3
+  }
+}

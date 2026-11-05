@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "HSH",
+    "H H"
+  ],
+  "key": {
+    "H": "iis:heavy_plating",
+    "S": "iis:compressed_steel"
+  },
+  "result": {
+    "id": "iis:rocket_fins"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "#iis:tool_heads/wrench/meteoric_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_meteoric_iron",
+      "count": 4
+    }
+  ],
+  "duration": 392,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 392
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " H ",
+    "HEH",
+    "HCH"
+  ],
+  "key": {
+    "H": "iis:heavy_plating",
+    "E": "iis:sensor_ev",
+    "C": "#c:circuits/elite"
+  },
+  "result": {
+    "id": "iis:nose_cone"
+  }
+}

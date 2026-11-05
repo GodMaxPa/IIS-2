@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/meteoric_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 12,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_meteoriciron",
+      "amount": 72
+    }
+  ]
+}

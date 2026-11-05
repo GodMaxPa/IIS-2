@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:double_plates/steel",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:rings/steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:large_steel_cell",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 64
+}

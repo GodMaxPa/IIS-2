@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "iis:reinforced_glass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:oxygen_pipe",
+      "count": 2
+    }
+  ],
+  "duration": 120,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_pipe_small"
+  ]
+}

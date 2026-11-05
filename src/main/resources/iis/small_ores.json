@@ -28,6 +28,7 @@
     "amount": 8,
     "material": "iis:bismuth",
     "dimensions": [
+      "iis:moon",
       "nether",
       "overworld"
     ]
@@ -61,6 +62,7 @@
     "material": "iis:copper",
     "dimensions": [
       "end",
+      "iis:moon",
       "nether",
       "overworld"
     ]
@@ -72,6 +74,7 @@
     "amount": 2,
     "material": "iis:diamond",
     "dimensions": [
+      "iis:moon",
       "nether",
       "overworld"
     ]
@@ -128,6 +131,7 @@
     "material": "iis:gold",
     "dimensions": [
       "end",
+      "iis:moon",
       "nether",
       "overworld"
     ]
@@ -161,6 +165,7 @@
     "material": "iis:iron",
     "dimensions": [
       "end",
+      "iis:moon",
       "nether",
       "overworld"
     ]
@@ -183,6 +188,7 @@
     "amount": 4,
     "material": "iis:lapis",
     "dimensions": [
+      "iis:moon",
       "overworld"
     ]
   },
@@ -194,6 +200,7 @@
     "material": "iis:lead",
     "dimensions": [
       "end",
+      "iis:moon",
       "nether",
       "overworld"
     ]
@@ -216,6 +223,7 @@
     "material": "iis:nickel",
     "dimensions": [
       "end",
+      "iis:moon",
       "nether",
       "overworld"
     ]
@@ -259,6 +267,7 @@
     "amount": 8,
     "material": "iis:redstone",
     "dimensions": [
+      "iis:moon",
       "nether",
       "overworld"
     ]
@@ -303,6 +312,7 @@
     "material": "iis:silver",
     "dimensions": [
       "end",
+      "iis:moon",
       "nether",
       "overworld"
     ]
@@ -346,6 +356,7 @@
     "material": "iis:tin",
     "dimensions": [
       "end",
+      "iis:moon",
       "nether",
       "overworld"
     ]
@@ -369,6 +380,7 @@
     "material": "iis:zinc",
     "dimensions": [
       "end",
+      "iis:moon",
       "nether",
       "overworld"
     ]

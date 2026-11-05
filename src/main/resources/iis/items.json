@@ -4970,6 +4970,91 @@
     "material": "manganese"
   },
   {
+    "id": "crushed_meteoric_iron",
+    "prefix": "crushed",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "purified_meteoric_iron",
+    "prefix": "purified",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "centrifuged_meteoric_iron",
+    "prefix": "centrifuged",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "impure_dust_meteoric_iron",
+    "prefix": "impure_dust",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "pure_dust_meteoric_iron",
+    "prefix": "pure_dust",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "dust_meteoric_iron",
+    "prefix": "dust",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "small_dust_meteoric_iron",
+    "prefix": "small_dust",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "tiny_dust_meteoric_iron",
+    "prefix": "tiny_dust",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "ingot_meteoric_iron",
+    "prefix": "ingot",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "nugget_meteoric_iron",
+    "prefix": "nugget",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "plate_meteoric_iron",
+    "prefix": "plate",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "double_plate_meteoric_iron",
+    "prefix": "double_plate",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "rod_meteoric_iron",
+    "prefix": "rod",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "bolt_meteoric_iron",
+    "prefix": "bolt",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "screw_meteoric_iron",
+    "prefix": "screw",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "long_rod_meteoric_iron",
+    "prefix": "long_rod",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "turbine_blade_meteoric_iron",
+    "prefix": "turbine_blade",
+    "material": "meteoric_iron"
+  },
+  {
     "id": "crushed_molybdenite",
     "prefix": "crushed",
     "material": "molybdenite"
@@ -11028,6 +11113,51 @@
     "id": "wrench_head_manganese",
     "prefix": "wrench_head",
     "material": "manganese"
+  },
+  {
+    "id": "sword_head_meteoric_iron",
+    "prefix": "sword_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "pickaxe_head_meteoric_iron",
+    "prefix": "pickaxe_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "shovel_head_meteoric_iron",
+    "prefix": "shovel_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "axe_head_meteoric_iron",
+    "prefix": "axe_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "hoe_head_meteoric_iron",
+    "prefix": "hoe_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "saw_head_meteoric_iron",
+    "prefix": "saw_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "drill_head_meteoric_iron",
+    "prefix": "drill_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "chainsaw_head_meteoric_iron",
+    "prefix": "chainsaw_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "wrench_head_meteoric_iron",
+    "prefix": "wrench_head",
+    "material": "meteoric_iron"
   },
   {
     "id": "sword_head_molybdenum",

@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/diamond",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:circuit_board_epoxy",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wafer_advanced",
+      "count": 1
+    }
+  ],
+  "duration": 3200,
+  "eut": 256,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_tin",
+      "amount": 576
+    }
+  ]
+}

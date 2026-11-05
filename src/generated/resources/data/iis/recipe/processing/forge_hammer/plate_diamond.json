@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:diamond",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_diamond",
+      "count": 1
+    }
+  ],
+  "duration": 12,
+  "eut": 16
+}

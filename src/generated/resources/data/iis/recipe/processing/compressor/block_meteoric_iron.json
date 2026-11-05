@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/meteoric_iron",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_meteoric_iron",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}
