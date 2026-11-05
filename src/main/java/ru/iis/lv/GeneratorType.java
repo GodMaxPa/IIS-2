@@ -18,7 +18,13 @@ public enum GeneratorType {
     // GT_Loader_MetaTileEntities:1165, 1175, 1183 (mTier 3)
     STEAM_TURBINE_HV("steam_turbine_hv", 24000 * 3, "steam", VoltageTier.HV),
     DIESEL_HV("diesel_generator_hv", 16000, "diesel", VoltageTier.HV),
-    GAS_TURBINE_HV("gas_turbine_hv", 16000, "gas", VoltageTier.HV);
+    GAS_TURBINE_HV("gas_turbine_hv", 16000, "gas", VoltageTier.HV),
+    // D120: GT_Loader_MetaTileEntities:1189-1191, 1226-1227: mTier 4, 5, 6 и 4, 5; твёрдое топливо — болты в слоте
+    NAQUADAH_EV("naquadah_reactor_ev", 16000, "naquadah_solid", VoltageTier.EV),
+    NAQUADAH_IV("naquadah_reactor_iv", 16000, "naquadah_solid", VoltageTier.IV),
+    NAQUADAH_LUV("naquadah_reactor_luv", 16000, "naquadah_fluid", VoltageTier.LUV),
+    PLASMA_EV("plasma_generator_ev", 16000, "plasma", VoltageTier.EV),
+    PLASMA_IV("plasma_generator_iv", 16000, "plasma", VoltageTier.IV);
 
     public final String id;
     public final int tank;
@@ -31,6 +37,17 @@ public enum GeneratorType {
         this.tank = tank;
         this.fuelKind = fuelKind;
         this.tier = tier;
+    }
+
+    /** КПД топлива в процентах: GT PlasmaGenerator 10 + 10 × уровень, SolidNaquadah 40 + 10 × уровень, FluidNaquadah 100. */
+    public int efficiency() {
+        int t = tier.tier();
+        return switch (fuelKind) {
+            case "plasma" -> 10 + t * 10;
+            case "naquadah_solid" -> 40 + t * 10;
+            case "naquadah_fluid" -> 100;
+            default -> ru.iis.energy.logic.GeneratorLogic.combustionEfficiency(t);
+        };
     }
 
     public boolean steam() {

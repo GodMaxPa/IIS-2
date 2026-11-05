@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "UCU",
+    "FMF",
+    "WCW"
+  ],
+  "key": {
+    "U": "#c:rods/uranium235",
+    "C": "#c:circuits/elite",
+    "F": "iis:field_generator_ev",
+    "M": "iis:hull_ev",
+    "W": "#iis:cables/4x/aluminium"
+  },
+  "result": {
+    "id": "iis:naquadah_reactor_ev"
+  }
+}

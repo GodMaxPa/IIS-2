@@ -106,12 +106,30 @@ public class GeneratorBlockEntity extends ElectricBlockEntity {
         if (t.steam()) {
             return new long[]{GeneratorLogic.STEAM_TURBINE_EU_PER_OPERATION, GeneratorLogic.steamTurbineLitersPerOperation(t.tier.tier())};
         }
-        return new long[]{power * (long) GeneratorLogic.combustionEfficiency(t.tier.tier()) / 100, 1};
+        return new long[]{power * (long) t.efficiency() / 100, 1};
+    }
+
+    /** GT_FuelLoader:30: болт обогащённой наквады даёт 25000 EU × КПД и остаётся болтом наквады. */
+    private void burnSolidNaquadah() {
+        GeneratorType t = type();
+        if (!"naquadah_solid".equals(t.fuelKind)) return;
+        ItemStack in = items.get(0), out = items.get(1);
+        var fuel = net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.fromNamespaceAndPath(ru.iis.IIS.MODID, "bolt_naquadah_enriched"));
+        var spent = net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.fromNamespaceAndPath(ru.iis.IIS.MODID, "bolt_naquadah"));
+        long eu = 25000L * t.efficiency() / 100;
+        if (!in.is(fuel) || energy.stored + eu > energy.capacity) return;
+        if (!out.isEmpty() && (!out.is(spent) || out.getCount() >= out.getMaxStackSize())) return;
+        in.shrink(1);
+        if (out.isEmpty()) items.set(1, new ItemStack(spent));
+        else out.grow(1);
+        energy.stored += eu;
+        setChanged();
     }
 
     @Override
     protected void work(ServerLevel sl) {
         if (sl.getGameTime() % 10 == 0) {
+            burnSolidNaquadah();
             fillFromBucket();
             if (tank.amount() > 0) {
                 long[] f = fuel(tank.resource().getFluid());

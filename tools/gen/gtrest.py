@@ -111,6 +111,22 @@ def generate(g):
     for t, circuit, cable in (('lv', 'good', 'tin'), ('mv', 'advanced', 'copper'), ('hv', 'data', 'gold'), ('ev', 'elite', 'aluminium'), ('iv', 'master', 'platinum'), ('luv', 'ultimate', 'niobium_titanium'), ('zpm', 'superconductor', 'naquadah')):
         if os.path.exists(os.path.join(A, 'items', f'field_generator_{t}.json')):
             shaped(f'lv/massfab_{t}', I(f'massfab_{t}'), 1, ['CFC', 'WMW', 'CFC'], {'M': I(f'hull_{t}'), 'F': I(f'field_generator_{t}'), 'C': f'#c:circuits/{circuit}', 'W': f'#iis:cables/4x/{cable}'})
+    # --- D120: naquadah reactors and plasma generators: GT_Loader_MetaTileEntities:1193-1195, 1231-1232 ----------------------------------
+    R = lambda m: tag_of('rod', m)
+    cab = lambda m: f'#iis:cables/4x/{m}'
+    for bid, top, u, hull, field, circ, wire in (('naquadah_reactor_ev', 'UCU', R('Uranium235'), 'hull_ev', 'field_generator_ev', 'elite', cab('aluminium')),
+                                                 ('naquadah_reactor_iv', 'UCU', R('Plutonium241'), 'hull_iv', 'field_generator_iv', 'master', cab('tungsten')),
+                                                 ('naquadah_reactor_luv', 'UCU', R('NaquadahEnriched'), 'hull_luv', 'field_generator_luv', 'ultimate', cab('niobium_titanium')),
+                                                 ('plasma_generator_ev', 'UCU', R('Plutonium241'), 'hull_luv', 'field_generator_hv', 'elite', cab('tungsten')),
+                                                 ('plasma_generator_iv', 'UCU', R('Europium'), 'hull_zpm', 'field_generator_ev', 'master', '#iis:wires/4x/vanadium_gallium')):
+        shaped(f'lv/{bid}', I(bid), 1, [top, 'FMF', 'WCW'], {'U': u, 'C': f'#c:circuits/{circ}', 'F': I(field), 'M': I(hull), 'W': wire})
+    # fuels: GT_FuelLoader:32 enriched naquadah 1400000 EU per cell; ProcessingCell:95 plasma max(1024, 1024 x mass) per litre
+    fuels_path = os.path.join(g['RES'], NS, 'fuels.json')
+    fuels = json.load(open(fuels_path, encoding='utf-8'))
+    gt_fluids = json.load(open(os.path.join(g['RES'], NS, 'gt_fluids.json'), encoding='utf-8'))
+    fuels['naquadah_fluid'] = {f['id']: 1400 for f in gt_fluids if f['id'] == 'molten_naquadahenriched'}
+    fuels['plasma'] = {f['id']: max(1024, 1024 * g['mass'](f['material'])) for f in gt_fluids if f['id'].startswith('plasma_') and f.get('material')}
+    write(fuels_path, fuels)
     # --- recipes ---------------------------------------------------------------------------------------------------------------------
     # GT_Recipe_Map_Recycler: anything -> scrap at 12.5 %, 45 t, 1 EU/t: in code (ElectricMachineBlockEntity)
     # GT_MachineRecipeLoader:1012 addAmplifier(scrap x 9, 180 t, 1 mB) at 32 EU/t

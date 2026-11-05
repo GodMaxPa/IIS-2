@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "UCU",
+    "FMF",
+    "WCW"
+  ],
+  "key": {
+    "U": "#c:rods/europium",
+    "C": "#c:circuits/master",
+    "F": "iis:field_generator_ev",
+    "M": "iis:hull_zpm",
+    "W": "#iis:wires/4x/vanadium_gallium"
+  },
+  "result": {
+    "id": "iis:plasma_generator_iv"
+  }
+}

@@ -228,6 +228,12 @@ GENERATORS = [
     ('steam_turbine_hv', 'basicgenerator.steamturbine.tier.03', 'STEAM_TURBINE', 'Turbo Steam Turbine'),
     ('diesel_generator_hv', 'basicgenerator.diesel.tier.03', 'DIESEL_GENERATOR', 'Turbo Combustion Generator'),
     ('gas_turbine_hv', 'basicgenerator.gasturbine.tier.03', 'GAS_TURBINE', 'Turbo Gas Turbine'),
+    # D120: GT_Loader_MetaTileEntities:1189-1191, 1226-1227
+    ('naquadah_reactor_ev', 'basicgenerator.naquadah.tier.04', 'NAQUADAH_REACTOR_SOLID', 'Naquadah Reactor Mark I'),
+    ('naquadah_reactor_iv', 'basicgenerator.naquadah.tier.05', 'NAQUADAH_REACTOR_SOLID', 'Naquadah Reactor Mark II'),
+    ('naquadah_reactor_luv', 'basicgenerator.naquadah.tier.06', 'NAQUADAH_REACTOR_FLUID', 'Naquadah Reactor Mark III'),
+    ('plasma_generator_ev', 'basicgenerator.plasmagenerator.tier.05', 'GAS_TURBINE', 'Plasma Generator Mark I'),
+    ('plasma_generator_iv', 'basicgenerator.plasmagenerator.tier.06', 'GAS_TURBINE', 'Plasma Generator Mark II'),
 ]
 
 # Simple items: id, texture source ('gt:<file in lv/items>' or 'gen:<procedural kind>'), GT lang key, EN, RU fallback
@@ -989,7 +995,7 @@ def generate(g):
     # Generators, battery buffers, transformer
     # --------------------------------------------------------------------------------------------------------
     for bid, gtl, tp, en in GENERATORS:
-        GT_ = bid[-2:].upper()
+        GT_ = 'LuV' if bid.endswith('luv') else bid[-2:].upper()
 
         def gf(part):
             return lambda active: os.path.join(ic, f'{tp}_{part}{"_ACTIVE" if active else ""}.png')

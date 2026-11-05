@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "UCU",
+    "FMF",
+    "WCW"
+  ],
+  "key": {
+    "U": "#c:rods/plutonium241",
+    "C": "#c:circuits/master",
+    "F": "iis:field_generator_iv",
+    "M": "iis:hull_iv",
+    "W": "#iis:cables/4x/tungsten"
+  },
+  "result": {
+    "id": "iis:naquadah_reactor_iv"
+  }
+}

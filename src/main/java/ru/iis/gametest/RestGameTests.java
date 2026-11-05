@@ -29,6 +29,28 @@ final class RestGameTests {
         m.tank().setAmount(f, amount);
     }
 
+    /** Плазма в генераторе даёт энергию с КПД 50 %: гелий — 2048 EU на литр. */
+    static void plasmaGenerator(GameTestHelper h) {
+        h.setBlock(POS, ru.iis.lv.LvContent.GENERATORS.get(ru.iis.lv.GeneratorType.PLASMA_EV).get());
+        ru.iis.lv.block.GeneratorBlockEntity g = h.getBlockEntity(POS, ru.iis.lv.block.GeneratorBlockEntity.class);
+        var f = net.minecraft.core.registries.BuiltInRegistries.FLUID.getValue(net.minecraft.resources.Identifier.parse("iis:plasma_helium"));
+        g.tank().setAmount(f, 100);
+        h.assertTrue(ru.iis.lv.GeneratorType.PLASMA_EV.efficiency() == 50, "efficiency");
+        h.succeedWhen(() -> h.assertTrue(g.energy.stored > 1000, "stored " + g.energy.stored));
+    }
+
+    /** Болт обогащённой наквады сгорает в энергию и выходит болтом наквады. */
+    static void naquadahReactorBolt(GameTestHelper h) {
+        h.setBlock(POS, ru.iis.lv.LvContent.GENERATORS.get(ru.iis.lv.GeneratorType.NAQUADAH_EV).get());
+        ru.iis.lv.block.GeneratorBlockEntity g = h.getBlockEntity(POS, ru.iis.lv.block.GeneratorBlockEntity.class);
+        var fuel = net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.parse("iis:bolt_naquadah_enriched"));
+        g.setItem(0, new ItemStack(fuel));
+        h.succeedWhen(() -> {
+            h.assertTrue(g.energy.stored == 20000 || g.energy.stored > 0 && g.getItem(0).isEmpty(), "stored " + g.energy.stored);
+            h.assertTrue(!g.getItem(1).isEmpty(), "no spent bolt");
+        });
+    }
+
     /** Ферментёр: биомасса в сброженную биомассу, без предметов. */
     static void fermenterBiomass(GameTestHelper h) {
         ElectricMachineBlockEntity m = machine(h, LvMachineType.FERMENTER);

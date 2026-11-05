@@ -174,6 +174,8 @@ public final class IISGameTests {
             new Test("gear_laser_breaks_stone", 40, GearGameTests::laserBreaksStone),
             new Test("gear_laser_needs_charge", 40, GearGameTests::laserNeedsCharge),
             new Test("gear_laser_super_heat_smelts", 100, GearGameTests::laserSuperHeatSmelts),
+            new Test("rest_plasma_generator", 200, RestGameTests::plasmaGenerator),
+            new Test("rest_naquadah_reactor_bolt", 200, RestGameTests::naquadahReactorBolt),
             new Test("rest_fermenter_biomass", 400, RestGameTests::fermenterBiomass),
             new Test("rest_printer_paints_wool", 400, RestGameTests::printerPaintsWool),
             new Test("rest_recycler_takes_anything", 300, RestGameTests::recyclerTakesAnything),

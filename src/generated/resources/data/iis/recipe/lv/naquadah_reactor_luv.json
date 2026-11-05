@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "UCU",
+    "FMF",
+    "WCW"
+  ],
+  "key": {
+    "U": "#c:rods/naquadah_enriched",
+    "C": "#c:circuits/ultimate",
+    "F": "iis:field_generator_luv",
+    "M": "iis:hull_luv",
+    "W": "#iis:cables/4x/niobium_titanium"
+  },
+  "result": {
+    "id": "iis:naquadah_reactor_luv"
+  }
+}
