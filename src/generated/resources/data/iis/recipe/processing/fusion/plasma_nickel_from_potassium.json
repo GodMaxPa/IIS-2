@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 16,
+  "eut": 32768,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_potassium",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:fluorine",
+      "amount": 125
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:plasma_nickel",
+      "amount": 125
+    }
+  ],
+  "temp": 480000000
+}

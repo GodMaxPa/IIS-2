@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:turbine_blades/naquadah_alloy",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:long_rods/magnalium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:turbine_small",
+      "count": 1,
+      "components": {
+        "iis:rotor_material": "naquadah_alloy",
+        "minecraft:max_damage": 512000
+      }
+    }
+  ],
+  "duration": 160,
+  "eut": 100
+}

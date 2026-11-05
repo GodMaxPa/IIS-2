@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/neutronium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gear_neutronium",
+      "count": 1
+    }
+  ],
+  "duration": 500000,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_gear"
+  ]
+}

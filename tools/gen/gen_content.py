@@ -210,6 +210,8 @@ names |= {'Boron', 'BorosilicateGlass', 'Plutonium', 'Uranium235'}
 names |= {'Plutonium241', 'Europium', 'Duranium'}
 # D117: reactor and solar panels: thorium and naquadah rods give lutetium and naquadria, NaK coolant needs potassium, the 8V panel graphene
 names |= {'NaquadahEnriched', 'Naquadria', 'Lutetium', 'Potassium', 'Graphene'}
+# D121 (UV): osmiridium and naquadah alloy (GT_MachineRecipeLoader:1051-1052), what fusion makes (tritanium, americium, neutronium :1073-1085), raw meat dust for the growth medium (:457)
+names |= {'Osmiridium', 'NaquadahAlloy', 'Tritanium', 'Neutronium', 'Americium', 'MeatRaw'}
 names |= {'HSSE', 'Naquadah', 'Superconductor', 'EpoxidFiberReinforced', 'Indium', 'AluminiumSulfite', 'Arsenic', 'Phosphorus', 'Phosphate', 'GalliumArsenide', 'IndiumGalliumPhosphide'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
@@ -1031,6 +1033,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_gtrest', os.path.join(ROOT, 'tools
 _gtrest = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_gtrest)
 lv_stats['gtrest'] = _gtrest.generate(globals())
+# UV: crystal and wetware circuits, field generators ZPM and UV, UV parts (D121)
+_spec = _ilu.spec_from_file_location('iis_gen_uv', os.path.join(ROOT, 'tools', 'gen', 'uv.py'))
+_uv = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_uv)
+lv_stats['uv'] = _uv.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

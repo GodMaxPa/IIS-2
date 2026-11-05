@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 64,
+  "eut": 49152,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_naquadahenriched",
+      "amount": 15
+    },
+    {
+      "ingredient": "iis:radon",
+      "amount": 125
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_naquadria",
+      "amount": 3
+    }
+  ],
+  "temp": 400000000
+}

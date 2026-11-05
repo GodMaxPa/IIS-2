@@ -205,6 +205,255 @@
           "id": "1C00000000000500"
         }
       ]
+    },
+    {
+      "id": "1A00000000000012",
+      "x": 5.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000042F"
+      ],
+      "icon": {
+        "id": "iis:plate_tritanium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_tritanium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000001200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000001200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000015",
+      "x": 8.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000016"
+      ],
+      "icon": {
+        "id": "iis:plate_naquadah_alloy",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_naquadah_alloy",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000001500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000001500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000CC",
+      "x": 8.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000C9",
+        "1A000000000000CD",
+        "1A0000000000009E"
+      ],
+      "icon": {
+        "id": "iis:robust_hssg_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:robust_hssg_casing",
+            "count": 1
+          },
+          "count": 70,
+          "id": "1B0000000000CC00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C0000000000CC00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000042F",
+      "x": 3.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000013"
+      ],
+      "icon": {
+        "id": "iis:ingot_tritanium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_tritanium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000042F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 1
+          },
+          "id": "1C00000000042F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000430",
+      "x": 2.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000042F"
+      ],
+      "icon": {
+        "id": "iis:rod_tritanium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_tritanium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000043000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000431",
+      "x": 0.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000430"
+      ],
+      "icon": {
+        "id": "iis:frame_tritanium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frame_tritanium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000043100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000435",
+      "x": 2.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000082"
+      ],
+      "icon": {
+        "id": "iis:plate_osmiridium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_osmiridium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C00000000043500"
+        }
+      ]
+    }
+  ],
+  "quest_links": [
+    {
+      "id": "1E000000000000CE",
+      "linked_quest": "1A000000000000CE",
+      "x": 8.75,
+      "y": 5.75,
+      "size": 2.5
+    },
+    {
+      "id": "1E00000000000434",
+      "linked_quest": "1A00000000000434",
+      "x": 2.75,
+      "y": 2.75,
+      "size": 2.5
     }
   ]
 }

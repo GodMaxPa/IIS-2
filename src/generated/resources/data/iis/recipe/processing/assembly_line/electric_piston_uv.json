@@ -1,0 +1,59 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_uv",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/neutronium",
+      "count": 6
+    },
+    {
+      "ingredient": "#iis:rings/neutronium",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:rounds/neutronium",
+      "count": 32
+    },
+    {
+      "ingredient": "#c:rods/neutronium",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:gears/neutronium",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_gears/neutronium",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:cables/4x/niobium_titanium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_piston_uv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 100000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 1296
+    },
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 2000
+    }
+  ],
+  "keep": [
+    "iis:electric_piston_zpm"
+  ],
+  "temp": 288000
+}

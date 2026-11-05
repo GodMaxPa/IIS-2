@@ -1,0 +1,43 @@
+{
+  "type": "iis:circuit_assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:chip_neuro_cpu",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:chip_crystal_cpu",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:chip_nano_cpu",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:capacitor_smd",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:transistor_smd",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:fine_wires/yttrium_barium_cuprate",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_neuroprocessor",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 38400,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 72
+    }
+  ]
+}

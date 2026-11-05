@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IGI",
+    "IMI",
+    "CPC"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "P": "iis:electric_pump_uv",
+    "C": "#c:circuits/superconductor",
+    "I": "#c:plates/neutronium",
+    "G": "iis:reinforced_glass"
+  },
+  "result": {
+    "id": "iis:autoclave_uv"
+  }
+}

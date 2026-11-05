@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:bolts/neutronium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 3,
+  "eut": 141,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_neutronium",
+      "amount": 18
+    }
+  ]
+}

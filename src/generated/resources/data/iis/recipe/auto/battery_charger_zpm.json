@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WTW",
+    "WMW",
+    "BCB"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "W": "#iis:wires/16x/naquadah",
+    "T": "#c:chests/wooden",
+    "B": "iis:energy_orb_cluster",
+    "C": "#c:circuits/ultimate"
+  },
+  "result": {
+    "id": "iis:battery_charger_zpm"
+  }
+}

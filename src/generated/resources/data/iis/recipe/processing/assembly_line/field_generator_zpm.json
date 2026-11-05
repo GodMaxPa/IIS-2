@@ -1,0 +1,79 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#c:frames/hsse",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/hsse",
+      "count": 6
+    },
+    {
+      "ingredient": "iis:quantum_star",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:emitter_zpm",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:field_generator_zpm_circuits",
+      "count": 16
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:cables/4x/vanadium_gallium",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:field_generator_zpm",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 24000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 1152
+    }
+  ],
+  "keep": [
+    "iis:field_generator_luv"
+  ],
+  "temp": 144000
+}

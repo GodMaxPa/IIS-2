@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/assembler_uv_side",
+    "north": "iis:block/lv/assembler_uv_front",
+    "south": "iis:block/lv/assembler_uv_back",
+    "east": "iis:block/lv/assembler_uv_side",
+    "west": "iis:block/lv/assembler_uv_side",
+    "up": "iis:block/lv/assembler_uv_top",
+    "down": "iis:block/lv/assembler_uv_bottom"
+  }
+}

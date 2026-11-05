@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 64,
+  "eut": 32768,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_gold",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:mercury",
+      "amount": 16
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:radon",
+      "amount": 125
+    }
+  ],
+  "temp": 200000000
+}

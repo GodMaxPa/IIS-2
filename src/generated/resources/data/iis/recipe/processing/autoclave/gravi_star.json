@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "minecraft:nether_star",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gravi_star",
+      "count": 1
+    }
+  ],
+  "duration": 480,
+  "eut": 7680,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_neutronium",
+      "amount": 288
+    }
+  ]
+}

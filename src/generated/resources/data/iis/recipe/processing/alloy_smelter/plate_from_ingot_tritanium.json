@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tritanium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_tritanium",
+      "count": 1
+    }
+  ],
+  "duration": 196,
+  "eut": 32,
+  "keep": [
+    "iis:mold_plate"
+  ]
+}

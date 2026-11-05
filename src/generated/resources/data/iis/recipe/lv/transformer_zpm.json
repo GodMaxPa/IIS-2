@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "KBB",
+    "CM ",
+    "KBB"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "C": "#iis:wires/4x/naquadah_alloy",
+    "B": "#iis:cables/1x/naquadah",
+    "K": "iis:chip_hpic"
+  },
+  "result": {
+    "id": "iis:transformer_zpm"
+  }
+}

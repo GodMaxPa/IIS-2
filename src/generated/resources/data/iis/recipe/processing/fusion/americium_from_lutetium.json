@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 96,
+  "eut": 49152,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_lutetium",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:molten_chrome",
+      "amount": 16
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_americium",
+      "amount": 16
+    }
+  ],
+  "temp": 200000000
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "EME",
+    "CCC"
+  ],
+  "key": {
+    "M": "iis:ore_drill_3",
+    "W": "#c:frames/tritanium",
+    "E": "#c:circuits/ultimate",
+    "C": "iis:electric_motor_zpm"
+  },
+  "result": {
+    "id": "iis:ore_drill_4"
+  }
+}

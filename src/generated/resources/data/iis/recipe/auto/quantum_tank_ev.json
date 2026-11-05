@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DGD",
+    "PMP",
+    "DPD"
+  ],
+  "key": {
+    "M": "iis:hull_ev",
+    "G": "iis:field_generator_ev",
+    "D": "#c:circuits/master",
+    "P": "#c:plates/europium"
+  },
+  "result": {
+    "id": "iis:quantum_tank_ev"
+  }
+}

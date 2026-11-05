@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "EME",
+    "CCC"
+  ],
+  "key": {
+    "M": "iis:ore_drill_2",
+    "W": "#c:frames/osmiridium",
+    "E": "#c:circuits/master",
+    "C": "iis:electric_motor_luv"
+  },
+  "result": {
+    "id": "iis:ore_drill_3"
+  }
+}

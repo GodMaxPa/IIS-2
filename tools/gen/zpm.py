@@ -120,6 +120,8 @@ def generate(g):
         shaped(f'lv/scanner_{t}', I(f'scanner_{t}'), 1, ['CTC', 'WMW', 'CRC'],
                {'M': I(f'hull_{t}'), 'T': I(f'emitter_{t}'), 'R': I(f'sensor_{t}'), 'C': '#c:circuits/ultimate', 'W': f'#iis:cables/1x/{cable}'})
     shaped('auto/super_buffer_zpm', I('super_buffer_zpm'), 1, ['DMV', 'DDD'], {'M': I('hull_zpm'), 'V': I('conveyor_module_zpm'), 'D': I('data_stick')})
+    shaped('auto/super_buffer_uv', I('super_buffer_uv'), 1, ['DMV', 'DDD'], {'M': I('hull_uv'), 'V': I('conveyor_module_uv'), 'D': I('data_stick')})   # :1749 (D121)
+    shaped('lv/scanner_uv', I('scanner_uv'), 1, ['CTC', 'WMW', 'CRC'], {'M': I('hull_uv'), 'T': I('emitter_uv'), 'R': I('sensor_uv'), 'C': '#c:circuits/infinite', 'W': '#iis:cables/1x/naquadah_alloy'})   # :755 (D121)
 
     # --- ZPM parts on the assembly line: GT_MachineRecipeLoader:2058-2294; research 144000 ticks from the LuV part -----------------
     V = lambda n: ing('#iis:cables/4x/vanadium_gallium', n)

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/mining_osmiridium_casing",
+    "north": "iis:block/multi/ore_drill_4_front",
+    "south": "iis:block/multi/mining_osmiridium_casing",
+    "east": "iis:block/multi/mining_osmiridium_casing",
+    "west": "iis:block/multi/mining_osmiridium_casing",
+    "up": "iis:block/multi/mining_osmiridium_casing",
+    "down": "iis:block/multi/mining_osmiridium_casing"
+  }
+}

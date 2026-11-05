@@ -81,13 +81,15 @@ for f in glob.glob(f'{R}/data/iis/recipe/**/*.json', recursive=True):
     if t.startswith('iis:'):
         m = t[4:]
         ctrl = {'blast': ['ebf'], 'vacuum_freezer': ['vacuum_freezer'], 'implosion': ['implosion_compressor'], 'pyrolyse': ['pyrolyse_oven'], 'distillation_tower': ['distillation_tower'],
-                'cracking': ['oil_cracker'], 'assembly_line': ['assembly_line'], 'fusion': ['fusion_computer_luv'], 'primitive_blast': ['bricked_blast_furnace'], 'coke_oven': ['coke_oven']}.get(m)
+                'cracking': ['oil_cracker'], 'assembly_line': ['assembly_line'], 'fusion': [c for c, top in (('fusion_computer_luv', 160003000), ('fusion_computer_zpm', 320006000), ('fusion_computer_uv', 640010000)) if d.get('temp', 0) <= top], 'primitive_blast': ['bricked_blast_furnace'], 'coke_oven': ['coke_oven']}.get(m)
         if ctrl is None:
             eut = d.get('eut', 0)
-            ctrl = [f'{m}_{tn}' for tn, v in (('lv', 32), ('mv', 128), ('hv', 512), ('ev', 2048), ('iv', 8192), ('luv', 32768), ('zpm', 131072)) if eut <= v] + ([f'steam_{m}_bronze', f'steam_{m}_steel', f'{m}_bronze', f'{m}_steel'] if eut <= 32 else [])
+            ctrl = [f'{m}_{tn}' for tn, v in (('lv', 32), ('mv', 128), ('hv', 512), ('ev', 2048), ('iv', 8192), ('luv', 32768), ('zpm', 131072), ('uv', 524288)) if eut <= v] + ([f'steam_{m}_bronze', f'steam_{m}_steel', f'{m}_bronze', f'{m}_steel'] if eut <= 32 else [])
         ctrl = ['iis:' + c for c in ctrl if os.path.exists(f'{R}/assets/iis/items/{c}.json')]
         if ctrl:
             reqs.append(ctrl)
+        if m == 'fusion':   # D121: the reactor runs only on hatches of its tier: Mark II needs ZPM, so naquadah cannot come from fusion alone
+            reqs.append(['iis:' + h for h in (['hatch_energy_luv'] if d.get('temp', 0) <= 160003000 else []) + (['hatch_energy_zpm'] if d.get('temp', 0) <= 320006000 else []) + ['hatch_energy_uv']])
         if d.get('cleanroom'):
             reqs.append(['iis:cleanroom'])
     recipes.append((rid, reqs, outs))

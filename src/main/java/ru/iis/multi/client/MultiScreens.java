@@ -237,7 +237,7 @@ public final class MultiScreens {
         protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
             int white = 0xFFFAFAFF;
             g.text(font, font.plainSubstrByWidth(title.getString(), 150), 10, 8, white, false);
-            g.text(font, Component.translatable(menu.formed() ? "gui.iis.fusion.store" : "gui.iis.ebf.structure_bad", menu.data(6) / 1000, 160), 10, 18, menu.formed() ? white : 0xFFFF5555, false);
+            g.text(font, Component.translatable(menu.formed() ? "gui.iis.fusion.store" : "gui.iis.ebf.structure_bad", menu.data(6), menu.data(7)), 10, 18, menu.formed() ? white : 0xFFFF5555, false);
         }
     }
 

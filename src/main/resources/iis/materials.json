@@ -135,6 +135,36 @@
     "toolQuality": 2
   },
   {
+    "id": "americium",
+    "gtName": "Americium",
+    "gtId": 103,
+    "en": "Americium",
+    "ru": "Америций",
+    "ruOre": "Америциевая руда",
+    "color": 15754495,
+    "iconSet": "METALLIC",
+    "harvestLevel": 3,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление америциевой руды",
+    "formula": "Am",
+    "types": 35,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "americium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 3
+  },
+  {
     "id": "amethyst",
     "gtName": "Amethyst",
     "gtId": 509,
@@ -3510,6 +3540,36 @@
     "toolQuality": 2
   },
   {
+    "id": "meat_raw",
+    "gtName": "MeatRaw",
+    "gtId": 892,
+    "en": "Raw Meat",
+    "ru": "Сырое мясо",
+    "ruOre": null,
+    "color": 16737380,
+    "iconSet": "FINE",
+    "harvestLevel": 0,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "",
+    "types": 1,
+    "subTags": [
+      "FOOD",
+      "HAS_COLOR",
+      "NO_SMASHING"
+    ],
+    "directSmelting": "meat_raw",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 0
+  },
+  {
     "id": "mercury",
     "gtName": "Mercury",
     "gtId": 87,
@@ -3718,6 +3778,36 @@
     "toolDurability": 1280,
     "toolSpeed": 6.0,
     "toolQuality": 4
+  },
+  {
+    "id": "naquadah_alloy",
+    "gtName": "NaquadahAlloy",
+    "gtId": 325,
+    "en": "Naquadah Alloy",
+    "ru": "Сплав наквадаха",
+    "ruOre": "Руда сплава наквадаха",
+    "color": 2631720,
+    "iconSet": "METALLIC",
+    "harvestLevel": 5,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "",
+    "types": 195,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "naquadah_alloy",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 7200,
+    "byProducts": [],
+    "toolDurability": 5120,
+    "toolSpeed": 8.0,
+    "toolQuality": 5
   },
   {
     "id": "naquadah_enriched",
@@ -3953,6 +4043,38 @@
     "toolDurability": 0,
     "toolSpeed": 1.0,
     "toolQuality": 0
+  },
+  {
+    "id": "neutronium",
+    "gtName": "Neutronium",
+    "gtId": 129,
+    "en": "Neutronium",
+    "ru": "Нейтроний",
+    "ruOre": "Нейтрониевая руда",
+    "color": 16448250,
+    "iconSet": "SHINY",
+    "harvestLevel": 6,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление нейтрониевой руды",
+    "formula": "Nt",
+    "types": 227,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "neutronium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [
+      "neutronium"
+    ],
+    "toolDurability": 655360,
+    "toolSpeed": 24.0,
+    "toolQuality": 6
   },
   {
     "id": "nichrome",
@@ -4202,6 +4324,36 @@
     "toolDurability": 256,
     "toolSpeed": 7.0,
     "toolQuality": 2
+  },
+  {
+    "id": "osmiridium",
+    "gtName": "Osmiridium",
+    "gtId": 317,
+    "en": "Osmiridium",
+    "ru": "Осмиридий",
+    "ruOre": "Осмиридиевая руда",
+    "color": 6579455,
+    "iconSet": "METALLIC",
+    "harvestLevel": 3,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "Ir3Os",
+    "types": 195,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "osmiridium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 2500,
+    "byProducts": [],
+    "toolDurability": 1600,
+    "toolSpeed": 7.0,
+    "toolQuality": 3
   },
   {
     "id": "osmium",
@@ -6386,6 +6538,36 @@
     "toolDurability": 0,
     "toolSpeed": 1.0,
     "toolQuality": 2
+  },
+  {
+    "id": "tritanium",
+    "gtName": "Tritanium",
+    "gtId": 329,
+    "en": "Tritanium",
+    "ru": "Тритан",
+    "ruOre": "Тританиевая руда",
+    "color": 16777215,
+    "iconSet": "METALLIC",
+    "harvestLevel": 6,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "",
+    "types": 67,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "tritanium",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 10240,
+    "toolSpeed": 20.0,
+    "toolQuality": 6
   },
   {
     "id": "tungstate",

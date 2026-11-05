@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GCG",
+    "PME",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "E": "iis:electric_piston_uv",
+    "P": "iis:electric_pump_uv",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:wires/4x/naquadah_alloy",
+    "G": "iis:reinforced_glass"
+  },
+  "result": {
+    "id": "iis:fluid_extractor_uv"
+  }
+}

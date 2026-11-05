@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WTW",
+    "WMW",
+    "BCB"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "W": "#iis:wires/16x/tungsten",
+    "T": "#c:chests/wooden",
+    "B": "iis:energy_orb",
+    "C": "#c:circuits/elite"
+  },
+  "result": {
+    "id": "iis:battery_charger_iv"
+  }
+}

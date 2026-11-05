@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WTW",
+    "WMW",
+    "BCB"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "W": "#iis:wires/16x/naquadah_alloy",
+    "T": "#c:chests/wooden",
+    "B": "iis:ultimate_battery",
+    "C": "#c:circuits/superconductor"
+  },
+  "result": {
+    "id": "iis:battery_charger_uv"
+  }
+}

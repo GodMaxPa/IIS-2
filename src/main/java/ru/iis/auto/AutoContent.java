@@ -41,8 +41,8 @@ public final class AutoContent {
 
     private static final List<Supplier<? extends Item>> TAB_ORDER = new ArrayList<>();
     private static final List<VoltageTier> LV_IV = List.of(VoltageTier.LV, VoltageTier.MV, VoltageTier.HV, VoltageTier.EV, VoltageTier.IV);
-    /** D110, D112: автоматика и отпугиватели есть и в LuV, и в ZPM. */
-    private static final List<VoltageTier> LV_ZPM = List.of(VoltageTier.LV, VoltageTier.MV, VoltageTier.HV, VoltageTier.EV, VoltageTier.IV, VoltageTier.LUV, VoltageTier.ZPM);
+    /** D110, D112, D121: автоматика и отпугиватели есть до UV. */
+    private static final List<VoltageTier> LV_ZPM = List.of(VoltageTier.LV, VoltageTier.MV, VoltageTier.HV, VoltageTier.EV, VoltageTier.IV, VoltageTier.LUV, VoltageTier.ZPM, VoltageTier.UV);
 
     private static Block.Properties metal(Block.Properties p) {
         return p.mapColor(MapColor.METAL).sound(SoundType.METAL).strength(5.0f, 10.0f).requiresCorrectToolForDrops();
@@ -82,7 +82,7 @@ public final class AutoContent {
             .map(v -> block("miner_" + t(v), p -> new BasicDrillerBlock(false, v, p))).toList();
     public static final List<DeferredBlock<BasicDrillerBlock>> PUMPS = LV_IV.stream()
             .map(v -> block("pump_" + t(v), p -> new BasicDrillerBlock(true, v, p))).toList();
-    public static final List<DeferredBlock<AdjustableTransformerBlock>> ADJUSTABLE_TRANSFORMERS = List.of(VoltageTier.EV, VoltageTier.IV, VoltageTier.LUV, VoltageTier.ZPM).stream()
+    public static final List<DeferredBlock<AdjustableTransformerBlock>> ADJUSTABLE_TRANSFORMERS = List.of(VoltageTier.EV, VoltageTier.IV, VoltageTier.LUV, VoltageTier.ZPM, VoltageTier.UV).stream()
             .map(v -> block("adjustable_transformer_" + t(v), p -> new AdjustableTransformerBlock(v, p))).toList();
 
     public static final List<DeferredBlock<MonsterRepellentBlock>> MONSTER_REPELLENTS = LV_ZPM.stream()

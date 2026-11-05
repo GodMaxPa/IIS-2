@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BCB",
+    "VMR",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "R": "iis:robot_arm_uv",
+    "V": "iis:conveyor_module_uv",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:wires/4x/naquadah_alloy",
+    "B": "#c:chests/wooden"
+  },
+  "result": {
+    "id": "iis:unpackager_uv"
+  }
+}

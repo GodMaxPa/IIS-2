@@ -1,0 +1,43 @@
+{
+  "type": "iis:circuit_assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_board_wetware",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:circuit_wetwarecomputer",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:diode_smd",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:chip_nor",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:chip_ram",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:fine_wires/yttrium_barium_cuprate",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_wetwaresupercomputer",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 38400,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 144
+    }
+  ]
+}

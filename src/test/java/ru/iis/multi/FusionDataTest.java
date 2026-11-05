@@ -45,13 +45,16 @@ class FusionDataTest {
     }
 
     @Test
-    void everyFusionRecipeFitsMarkOne() throws IOException {
+    void everyFusionRecipeFitsSomeReactor() throws IOException {
+        int aboveMarkOne = 0;
         try (var files = Files.list(RECIPES.resolve("processing/fusion"))) {
             for (Path p : files.toList()) {
                 int start = JsonParser.parseString(Files.readString(p)).getAsJsonObject().get("temp").getAsInt();
-                assertTrue(start <= 160003000, p + " needs Mark II");
+                assertTrue(start <= 640010000, p + " is above Mark III");
+                if (start > 160003000) aboveMarkOne++;
             }
         }
+        assertEquals(15, aboveMarkOne);   // D121: GT_MachineRecipeLoader:1063-1089, всё, что выше Mark I
     }
 
     @Test

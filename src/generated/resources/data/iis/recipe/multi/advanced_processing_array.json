@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RRR",
+    "CPC",
+    "CPC"
+  ],
+  "key": {
+    "R": "iis:robot_arm_luv",
+    "C": "#c:circuits/master",
+    "P": "iis:processing_array"
+  },
+  "result": {
+    "id": "iis:advanced_processing_array"
+  }
+}

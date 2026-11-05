@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CPC",
+    "PMP",
+    "BPB"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "B": "iis:pipe_huge_tungsten_steel",
+    "C": "#c:circuits/master",
+    "P": "#c:gears/tungsten_steel"
+  },
+  "result": {
+    "id": "iis:large_plasma_turbine"
+  }
+}

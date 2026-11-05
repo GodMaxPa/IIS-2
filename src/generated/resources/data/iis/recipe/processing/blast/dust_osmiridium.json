@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/osmiridium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_osmiridium",
+      "count": 1
+    }
+  ],
+  "duration": 10000,
+  "eut": 120,
+  "temp": 2500
+}

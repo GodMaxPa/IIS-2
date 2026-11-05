@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EEE",
+    " M ",
+    "CCC"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "E": "iis:emitter_uv",
+    "C": "#c:circuits/superconductor"
+  },
+  "result": {
+    "id": "iis:monster_repellent_uv"
+  }
+}

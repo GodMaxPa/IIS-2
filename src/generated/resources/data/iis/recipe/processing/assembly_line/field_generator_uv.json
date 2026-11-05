@@ -1,0 +1,79 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#c:frames/neutronium",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/neutronium",
+      "count": 6
+    },
+    {
+      "ingredient": "iis:gravi_star",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:emitter_uv",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:circuits/master",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:fine_wires/osmium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:cables/4x/niobium_titanium",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:field_generator_uv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 100000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 2304
+    }
+  ],
+  "keep": [
+    "iis:field_generator_zpm"
+  ],
+  "temp": 288000
+}

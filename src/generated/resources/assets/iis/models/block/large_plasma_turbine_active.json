@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/turbine_casing_tungstensteel",
+    "north": "iis:block/multi/large_plasma_turbine_front_active",
+    "south": "iis:block/multi/turbine_casing_tungstensteel",
+    "east": "iis:block/multi/turbine_casing_tungstensteel",
+    "west": "iis:block/multi/turbine_casing_tungstensteel",
+    "up": "iis:block/multi/turbine_casing_tungstensteel",
+    "down": "iis:block/multi/turbine_casing_tungstensteel"
+  }
+}

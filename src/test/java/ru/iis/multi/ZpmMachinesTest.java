@@ -75,10 +75,10 @@ class ZpmMachinesTest {
         assertEquals("#iis:cables/1x/naquadah", key("multi/hatch_energy_zpm", "C"));
     }
 
-    /** Лучшая схема ZPM, Superconductor, не перенесена: ей нужны европий и кристальная цепочка. */
+    /** D121: лучшая схема ZPM, Superconductor, появилась с кристальной цепочкой. */
     @Test
-    void theZpmCircuitAssemblerWaitsForTheSuperconductorCircuit() {
-        assertFalse(Files.exists(RECIPES.resolve("lv/circuit_assembler_zpm.json")));
+    void theZpmCircuitAssemblerTakesTheSuperconductorCircuit() throws IOException {
+        assertEquals("#c:circuits/superconductor", key("lv/circuit_assembler_zpm", "C"));
     }
 
     /** D17: жилы наквады только на Марсе и астероидах, ждут среза «Космос». Руды и добычи нет, только рецепты; решение меняет владелец. */

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "iis:circuit_quantummainframe"
+    "iis:circuit_quantummainframe",
+    "iis:circuit_ultimatecrystalcomputer",
+    "iis:circuit_wetwarecomputer"
   ]
 }

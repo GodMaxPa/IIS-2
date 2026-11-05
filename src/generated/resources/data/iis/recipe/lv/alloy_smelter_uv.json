@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ECE",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "E": "#c:circuits/superconductor",
+    "W": "#iis:wires/4x/naquadah_alloy",
+    "C": "#iis:wires/4x/naquadah_alloy"
+  },
+  "result": {
+    "id": "iis:alloy_smelter_uv"
+  }
+}

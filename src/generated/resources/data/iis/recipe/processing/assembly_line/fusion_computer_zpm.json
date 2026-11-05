@@ -1,0 +1,59 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:fusion_coil",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/europium",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:field_generator_luv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:wafer_hpic",
+      "count": 48
+    },
+    {
+      "ingredient": "#iis:wires/2x/superconductor",
+      "count": 32
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:fusion_computer_zpm",
+      "count": 1
+    }
+  ],
+  "duration": 1000,
+  "eut": 60000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 2880
+    }
+  ],
+  "keep": [
+    "iis:block_europium"
+  ],
+  "temp": 288000
+}

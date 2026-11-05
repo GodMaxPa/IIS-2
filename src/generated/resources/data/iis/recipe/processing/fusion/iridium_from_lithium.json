@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 32,
+  "eut": 32768,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_lithium",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:molten_tungsten",
+      "amount": 16
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_iridium",
+      "amount": 16
+    }
+  ],
+  "temp": 300000000
+}

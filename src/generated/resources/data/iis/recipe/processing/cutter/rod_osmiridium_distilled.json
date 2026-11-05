@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#iis:long_rods/osmiridium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_osmiridium",
+      "count": 2
+    }
+  ],
+  "duration": 382,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 3
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "iis:block/robust_hssg_casing"
+    }
+  }
+}

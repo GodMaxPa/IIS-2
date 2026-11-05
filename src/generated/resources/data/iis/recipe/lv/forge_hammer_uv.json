@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "CMC",
+    "WAW"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "P": "iis:electric_piston_uv",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:wires/4x/naquadah_alloy",
+    "A": "minecraft:anvil"
+  },
+  "result": {
+    "id": "iis:forge_hammer_uv"
+  }
+}

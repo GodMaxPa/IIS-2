@@ -112,6 +112,23 @@ GC_MAP.update({('GalacticraftCore:item.heavyPlating', 0): 'iis:heavy_plating', (
                # D116
                ('gregtech:gt.blockmachines', 1193): 'iis:fusion_computer_luv', ('gregtech:gt.blockcasings4', 7): 'iis:fusion_coil', ('gregtech:gt.neutronreflector', 0): 'iis:neutron_reflector',
                ('gregtech:gt.metaitem.03', 32052): 'iis:wafer_hpic', ('gregtech:gt.blockcasings', 15): 'iis:coil_superconductor'})
+# D121: gem blocks: GT_Loader_Item_Block_And_Fluid:322-379
+GC_MAP.update({('gregtech:gt.blockgem1', 4): 'iis:block_blue_topaz', ('gregtech:gt.blockgem2', 12): 'iis:block_sapphire', ('gregtech:gt.blockgem2', 5): 'iis:block_opal', ('gregtech:gt.blockgem1', 7): 'iis:block_ender_eye'})
+# D121: UV tier: GT_Loader_MetaTileEntities ids and casings, GT_MetaGenerated_Item_01 and _03
+GC_MAP.update({('gregtech:gt.blockmachines', 1194): 'iis:fusion_computer_zpm', ('gregtech:gt.blockmachines', 1195): 'iis:fusion_computer_uv', ('gregtech:gt.blockmachines', 1153): 'iis:large_plasma_turbine',
+               ('gregtech:gt.blockmachines', 1188): 'iis:advanced_processing_array', ('gregtech:gt.blockmachines', 1178): 'iis:ore_drill_3', ('gregtech:gt.blockmachines', 1179): 'iis:ore_drill_4',
+               ('gregtech:gt.blockmachines', 1198): 'iis:plasma_generator_luv', ('gregtech:gt.blockcasings5', 6): 'iis:coil_naquadah_alloy', ('gregtech:gt.blockcasings4', 6): 'iis:casing_fusion',
+               ('gregtech:gt.blockcasings4', 8): 'iis:casing_fusion_2', ('gregtech:gt.blockcasings8', 2): 'iis:robust_hssg_casing', ('gregtech:gt.blockcasings4', 12): 'iis:turbine_casing_tungstensteel',
+               ('gregtech:gt.blockcasings8', 3): 'iis:mining_osmiridium_casing', ('gregtech:gt.blockcasings', 8): 'iis:casing_uv',
+               ('gregtech:gt.metaitem.01', 32608): 'iis:electric_motor_uv', ('gregtech:gt.metaitem.01', 32622): 'iis:electric_pump_uv', ('gregtech:gt.metaitem.01', 32638): 'iis:conveyor_module_uv',
+               ('gregtech:gt.metaitem.01', 32647): 'iis:electric_piston_uv', ('gregtech:gt.metaitem.01', 32657): 'iis:robot_arm_uv', ('gregtech:gt.metaitem.01', 32687): 'iis:emitter_uv',
+               ('gregtech:gt.metaitem.01', 32697): 'iis:sensor_uv', ('gregtech:gt.metaitem.01', 32676): 'iis:field_generator_zpm', ('gregtech:gt.metaitem.01', 32677): 'iis:field_generator_uv',
+               ('gregtech:gt.metaitem.01', 32726): 'iis:gravi_star', ('gregtech:gt.metaitem.01', 32712): 'iis:circuit_board_multifiberglass', ('gregtech:gt.metaitem.01', 32713): 'iis:crystal_chip_elite',
+               ('gregtech:gt.metaitem.01', 32313): 'iis:mold_cylinder', ('gregtech:gt.metaitem.03', 32069): 'iis:raw_crystal_chip', ('gregtech:gt.metaitem.03', 32070): 'iis:chip_crystal_cpu',
+               ('gregtech:gt.metaitem.03', 32072): 'iis:chip_neuro_cpu', ('gregtech:gt.metaitem.03', 32022): 'iis:petri_dish', ('gregtech:gt.metaitem.03', 32006): 'iis:circuit_board_wetware',
+               ('gregtech:gt.metaitem.03', 32089): 'iis:circuit_crystalprocessor', ('gregtech:gt.metaitem.03', 32096): 'iis:circuit_crystalcomputer', ('gregtech:gt.metaitem.03', 32090): 'iis:circuit_ultimatecrystalcomputer',
+               ('gregtech:gt.metaitem.03', 32091): 'iis:circuit_crystalmainframe', ('gregtech:gt.metaitem.03', 32092): 'iis:circuit_neuroprocessor', ('gregtech:gt.metaitem.03', 32093): 'iis:circuit_wetwarecomputer',
+               ('gregtech:gt.metaitem.03', 32094): 'iis:circuit_wetwaresupercomputer', ('gregtech:gt.metaitem.03', 32095): 'iis:circuit_wetwaremainframe'})
 # D117: the reactor, its parts and the solar panels are own items that stand for the IC2 and GT ones
 GC_MAP.update({('IC2:blockGenerator', 5): 'iis:nuclear_reactor', ('IC2:blockReactorChamber', 0): 'iis:reactor_chamber', ('IC2:itemUran', 0): 'iis:enriched_uranium',
                ('IC2:itemFuelRod', 0): 'iis:fuel_rod_empty', ('IC2:reactorCondensatorLap', 1): 'iis:reactor_condensator_lap', ('IC2:reactorCoolantSimple', 1): 'iis:coolant_10k',
@@ -169,7 +186,7 @@ RAILCRAFT_MAP = {
 }
 GT_TOOLS = {100: 'drill_lv', 110: 'chainsaw_lv', 120: 'wrench_lv', 0: 'sword', 2: 'pickaxe', 4: 'shovel', 6: 'axe', 8: 'hoe', 10: 'saw', 12: 'hammer', 14: 'soft_hammer', 16: 'wrench',
             18: 'file', 20: 'crowbar', 22: 'screwdriver', 24: 'mortar', 26: 'wire_cutter', 34: 'knife'}
-TIERS = {'01': 'lv', '02': 'mv', '03': 'hv', '04': 'ev', '05': 'iv', '06': 'luv', '07': 'zpm'}
+TIERS = {'01': 'lv', '02': 'mv', '03': 'hv', '04': 'ev', '05': 'iv', '06': 'luv', '07': 'zpm', '08': 'uv'}
 # GT_Loader_MetaTileEntities:1468-1510 makeWires: start + 0..5 wires 1x..16x, + 6..10 cables 1x..12x
 GT_WIRES = {2000: 'red_alloy', 1200: 'cobalt', 1220: 'lead', 1240: 'tin', 1260: 'zinc', 1280: 'soldering_alloy', 1300: 'iron', 1320: 'nickel', 1340: 'cupronickel', 1360: 'copper', 1380: 'annealed_copper',
             1400: 'kanthal', 1420: 'gold', 1440: 'electrum', 1460: 'silver', 1480: 'blue_alloy', 1500: 'nichrome', 1520: 'steel', 1540: 'black_steel', 1560: 'titanium', 1580: 'aluminium', 1600: 'graphene',

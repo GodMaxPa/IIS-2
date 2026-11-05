@@ -40,6 +40,20 @@ final class DrillGameTests {
         });
     }
 
+    /** D121: рудные буровые III и IV: формы на вольфрамостали и осмиридии, радиус и люки от EV и IV (GT_MetaTileEntity_OreDrillingPlant3, 4). */
+    static void oreDrillsThreeAndFourForm(GameTestHelper h) {
+        build(h, MultiContent.ORE_DRILLS.get(3).get(), MultiContent.MINING_OSMIRIDIUM_CASING.get(), MultiContent.FRAMES.get("osmiridium").get());
+        h.setBlock(COLUMN.west(), MultiGameTests.hatch(HatchType.ENERGY_IV, Direction.WEST));
+        h.setBlock(COLUMN.south().west(), MultiGameTests.hatch(HatchType.INPUT_HATCH, Direction.WEST));
+        h.setBlock(COLUMN.south().east(), MultiGameTests.hatch(HatchType.OUTPUT_BUS, Direction.EAST));
+        OreDrillBlockEntity e = h.getBlockEntity(CTRL, OreDrillBlockEntity.class);
+        e.maintenance().setMask(63);
+        h.succeedWhen(() -> {
+            h.assertTrue(e.formed(), "not formed");
+            h.assertTrue(e.radius() == 144, "radius " + e.radius());
+        });
+    }
+
     /** Нефтяная буровая I: труба до бедрока, потом жидкость поля (чанк под контроллером) — в выходной люк. */
     static void oilDrillPumpsField(GameTestHelper h) {
         build(h, MultiContent.OIL_DRILLS.get(0).get(), MultiContent.SOLID_STEEL_CASING.get(), MultiContent.FRAMES.get("steel").get());

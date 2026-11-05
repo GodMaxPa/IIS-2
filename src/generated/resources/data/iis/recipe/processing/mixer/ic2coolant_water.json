@@ -1,0 +1,24 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/lapis",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 256,
+  "eut": 48,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 125
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:ic2coolant",
+      "amount": 125
+    }
+  ]
+}

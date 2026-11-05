@@ -1,0 +1,28 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/naquadah",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:ingots/osmiridium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_naquadah_alloy",
+      "count": 2
+    }
+  ],
+  "duration": 500,
+  "eut": 30720,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:argon",
+      "amount": 1000
+    }
+  ],
+  "temp": 7200
+}

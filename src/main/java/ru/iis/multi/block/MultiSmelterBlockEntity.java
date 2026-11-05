@@ -39,13 +39,13 @@ public class MultiSmelterBlockEntity extends RecipeMultiblockBlockEntity {
         if (b == MultiContent.COIL_KANTHAL.get()) return 2;
         if (b == MultiContent.COIL_NICHROME.get()) return 4;
         if (b == MultiContent.COIL_TUNGSTENSTEEL.get()) return 8;
-        if (b == MultiContent.COIL_HSSG.get() || b == MultiContent.COIL_NAQUADAH.get()) return 16;
+        if (b == MultiContent.COIL_HSSG.get() || b == MultiContent.COIL_NAQUADAH.get() || b == MultiContent.COIL_NAQUADAH_ALLOY.get()) return 16;
         return 0;
     }
 
     /** D112: GT mCostDiscount: HSS-G 2, наквада 4, остальные 1. */
     public static int coilDiscount(Block b) {
-        return b == MultiContent.COIL_NAQUADAH.get() ? 4 : b == MultiContent.COIL_HSSG.get() ? 2 : 1;
+        return b == MultiContent.COIL_NAQUADAH_ALLOY.get() ? 8 : b == MultiContent.COIL_NAQUADAH.get() ? 4 : b == MultiContent.COIL_HSSG.get() ? 2 : 1;
     }
 
     public int level() {

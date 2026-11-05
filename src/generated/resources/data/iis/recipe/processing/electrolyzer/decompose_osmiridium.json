@@ -1,0 +1,21 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/osmiridium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iridium",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_osmium",
+      "count": 1
+    }
+  ],
+  "duration": 608,
+  "eut": 60
+}

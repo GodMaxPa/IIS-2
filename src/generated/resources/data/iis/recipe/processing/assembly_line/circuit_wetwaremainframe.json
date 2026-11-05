@@ -1,0 +1,67 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#c:frames/tritanium",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:circuit_wetwaresupercomputer",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:coil_small",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:capacitor_smd",
+      "count": 24
+    },
+    {
+      "ingredient": "iis:resistor_smd",
+      "count": 64
+    },
+    {
+      "ingredient": "iis:transistor_smd",
+      "count": 32
+    },
+    {
+      "ingredient": "iis:diode_smd",
+      "count": 16
+    },
+    {
+      "ingredient": "iis:chip_ram",
+      "count": 16
+    },
+    {
+      "ingredient": "#iis:wires/1x/superconductor",
+      "count": 32
+    },
+    {
+      "ingredient": "#iis:foils/silicone",
+      "count": 64
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_wetwaremainframe",
+      "count": 1
+    }
+  ],
+  "duration": 2000,
+  "eut": 300000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 2880
+    },
+    {
+      "ingredient": "iis:ic2coolant",
+      "amount": 10000
+    }
+  ],
+  "keep": [
+    "iis:circuit_wetwaresupercomputer"
+  ],
+  "temp": 288000
+}

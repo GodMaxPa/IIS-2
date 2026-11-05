@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:block_tritanium",
+      "count": 1
+    }
+  ],
+  "duration": 288,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_tritanium",
+      "amount": 1296
+    }
+  ],
+  "keep": [
+    "iis:mold_block"
+  ]
+}

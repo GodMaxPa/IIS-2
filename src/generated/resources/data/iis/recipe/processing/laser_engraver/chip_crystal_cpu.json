@@ -1,0 +1,21 @@
+{
+  "type": "iis:laser_engraver",
+  "inputs": [
+    {
+      "ingredient": "iis:crystal_chip_elite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:chip_crystal_cpu",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 10000,
+  "keep": [
+    "#iis:crafting_lens/green"
+  ],
+  "cleanroom": true
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:gems/fools_ruby",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_fools_ruby",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

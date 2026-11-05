@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/neutronium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_neutronium",
+      "count": 1
+    }
+  ],
+  "duration": 200000,
+  "eut": 96
+}

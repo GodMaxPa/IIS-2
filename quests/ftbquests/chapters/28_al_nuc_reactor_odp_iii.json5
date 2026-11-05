@@ -238,6 +238,41 @@
       ]
     },
     {
+      "id": "1A00000000000082",
+      "x": 8.0,
+      "y": 1.0,
+      "dependencies": [
+        "1A00000000000023",
+        "1A00000000000083",
+        "1A00000000000085"
+      ],
+      "icon": {
+        "id": "iis:ingot_osmiridium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_osmiridium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000008200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 5
+          },
+          "id": "1C00000000008200"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000083",
       "x": 6.5,
       "y": 1.0,
@@ -367,6 +402,39 @@
             "count": 1
           },
           "id": "1C00000000008700"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000008B",
+      "x": 8.0,
+      "y": 4.0,
+      "dependencies": [
+        "1A00000000000432"
+      ],
+      "icon": {
+        "id": "iis:frame_osmiridium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frame_osmiridium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000008B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 6
+          },
+          "id": "1C00000000008B00"
         }
       ]
     },
@@ -1688,6 +1756,39 @@
       ]
     },
     {
+      "id": "1A00000000000432",
+      "x": 8.0,
+      "y": 2.5,
+      "dependencies": [
+        "1A00000000000082"
+      ],
+      "icon": {
+        "id": "iis:rod_osmiridium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_osmiridium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 6
+          },
+          "id": "1C00000000043200"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000723",
       "x": 11.0,
       "y": 10.0,
@@ -1726,6 +1827,13 @@
       "id": "1E0000000020001A",
       "linked_quest": "1A0000000000001A",
       "x": 2.75,
+      "y": 3.25,
+      "size": 2.5
+    },
+    {
+      "id": "1E00000000200091",
+      "linked_quest": "1A00000000000091",
+      "x": 5.75,
       "y": 3.25,
       "size": 2.5
     },

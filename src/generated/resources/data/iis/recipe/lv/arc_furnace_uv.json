@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WGW",
+    "CMC",
+    "PPP"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "P": "#c:plates/neutronium",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:wires/1x/superconductor",
+    "G": "#c:dusts/graphite"
+  },
+  "result": {
+    "id": "iis:arc_furnace_uv"
+  }
+}

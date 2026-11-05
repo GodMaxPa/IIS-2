@@ -2970,6 +2970,116 @@
     "thickness": 12.0
   },
   {
+    "id": "wire_naquadah_alloy_1x",
+    "material": "naquadah_alloy",
+    "size": 1,
+    "insulated": false,
+    "voltage": 524288,
+    "amperage": 2,
+    "loss": 8,
+    "thickness": 2.0
+  },
+  {
+    "id": "cable_naquadah_alloy_1x",
+    "material": "naquadah_alloy",
+    "size": 1,
+    "insulated": true,
+    "voltage": 524288,
+    "amperage": 2,
+    "loss": 4,
+    "thickness": 4.0
+  },
+  {
+    "id": "wire_naquadah_alloy_2x",
+    "material": "naquadah_alloy",
+    "size": 2,
+    "insulated": false,
+    "voltage": 524288,
+    "amperage": 4,
+    "loss": 8,
+    "thickness": 4.0
+  },
+  {
+    "id": "cable_naquadah_alloy_2x",
+    "material": "naquadah_alloy",
+    "size": 2,
+    "insulated": true,
+    "voltage": 524288,
+    "amperage": 4,
+    "loss": 4,
+    "thickness": 6.0
+  },
+  {
+    "id": "wire_naquadah_alloy_4x",
+    "material": "naquadah_alloy",
+    "size": 4,
+    "insulated": false,
+    "voltage": 524288,
+    "amperage": 8,
+    "loss": 8,
+    "thickness": 6.0
+  },
+  {
+    "id": "cable_naquadah_alloy_4x",
+    "material": "naquadah_alloy",
+    "size": 4,
+    "insulated": true,
+    "voltage": 524288,
+    "amperage": 8,
+    "loss": 4,
+    "thickness": 8.0
+  },
+  {
+    "id": "wire_naquadah_alloy_8x",
+    "material": "naquadah_alloy",
+    "size": 8,
+    "insulated": false,
+    "voltage": 524288,
+    "amperage": 16,
+    "loss": 8,
+    "thickness": 8.0
+  },
+  {
+    "id": "cable_naquadah_alloy_8x",
+    "material": "naquadah_alloy",
+    "size": 8,
+    "insulated": true,
+    "voltage": 524288,
+    "amperage": 16,
+    "loss": 4,
+    "thickness": 10.0
+  },
+  {
+    "id": "wire_naquadah_alloy_12x",
+    "material": "naquadah_alloy",
+    "size": 12,
+    "insulated": false,
+    "voltage": 524288,
+    "amperage": 24,
+    "loss": 8,
+    "thickness": 10.0
+  },
+  {
+    "id": "cable_naquadah_alloy_12x",
+    "material": "naquadah_alloy",
+    "size": 12,
+    "insulated": true,
+    "voltage": 524288,
+    "amperage": 24,
+    "loss": 4,
+    "thickness": 12.0
+  },
+  {
+    "id": "wire_naquadah_alloy_16x",
+    "material": "naquadah_alloy",
+    "size": 16,
+    "insulated": false,
+    "voltage": 524288,
+    "amperage": 32,
+    "loss": 8,
+    "thickness": 12.0
+  },
+  {
     "id": "wire_graphene_1x",
     "material": "graphene",
     "size": 1,

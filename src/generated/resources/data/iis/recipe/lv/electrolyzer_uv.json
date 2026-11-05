@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IGI",
+    "IMI",
+    "CWC"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:wires/4x/naquadah_alloy",
+    "I": "#iis:wires/1x/osmium",
+    "G": "iis:reinforced_glass"
+  },
+  "result": {
+    "id": "iis:electrolyzer_uv"
+  }
+}

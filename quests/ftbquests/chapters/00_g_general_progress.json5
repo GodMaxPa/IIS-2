@@ -1474,6 +1474,41 @@
       ]
     },
     {
+      "id": "1A00000000000220",
+      "x": 11.0,
+      "y": 18.0,
+      "dependencies": [
+        "1A00000000000229",
+        "1A00000000000117",
+        "1A0000000000020F"
+      ],
+      "icon": {
+        "id": "iis:circuit_board_multifiberglass",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_board_multifiberglass",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000000022000"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000229",
       "x": 9.0,
       "y": 18.5,
@@ -1955,6 +1990,39 @@
       ]
     },
     {
+      "id": "1A0000000000028E",
+      "x": 21.5,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000000016"
+      ],
+      "icon": {
+        "id": "iis:coil_naquadah_alloy",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:coil_naquadah_alloy",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000028E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000028E00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000290",
       "x": 17.0,
       "y": 4.0,
@@ -2026,6 +2094,142 @@
       ]
     },
     {
+      "id": "1A00000000000295",
+      "x": 12.0,
+      "y": 12.0,
+      "dependencies": [
+        "1A00000000000298",
+        "1A000000000000A2"
+      ],
+      "icon": {
+        "id": "iis:circuit_crystalmainframe",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_crystalmainframe",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 6
+          },
+          "id": "1C00000000029500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000298",
+      "x": 11.5,
+      "y": 13.5,
+      "dependencies": [
+        "1A00000000000299"
+      ],
+      "icon": {
+        "id": "iis:circuit_ultimatecrystalcomputer",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_ultimatecrystalcomputer",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 5
+          },
+          "id": "1C00000000029800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000299",
+      "x": 11.5,
+      "y": 15.0,
+      "dependencies": [
+        "1A0000000000029A",
+        "1A0000000000029B"
+      ],
+      "icon": {
+        "id": "iis:circuit_crystalcomputer",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_crystalcomputer",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000029900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000029A",
+      "x": 11.5,
+      "y": 16.5,
+      "dependencies": [
+        "1A0000000000029C",
+        "1A0000000000029D",
+        "1A00000000000220"
+      ],
+      "icon": {
+        "id": "iis:circuit_crystalprocessor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_crystalprocessor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 3
+          },
+          "id": "1C00000000029A00"
+        }
+      ]
+    },
+    {
       "id": "1A000000000002B2",
       "x": 25.0,
       "y": 16.5,
@@ -2056,6 +2260,177 @@
             "count": 4
           },
           "id": "1C0000000002B200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002B5",
+      "x": 13.0,
+      "y": 18.0,
+      "dependencies": [
+        "1A000000000002B6",
+        "1A0000000000021E",
+        "1A00000000000295"
+      ],
+      "icon": {
+        "id": "iis:chip_neuro_cpu",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chip_neuro_cpu",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002B500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C0000000002B500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002B8",
+      "x": 13.5,
+      "y": 16.5,
+      "dependencies": [
+        "1A000000000002AF",
+        "1A000000000002B5"
+      ],
+      "icon": {
+        "id": "iis:circuit_neuroprocessor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_neuroprocessor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002B800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 1
+          },
+          "id": "1C0000000002B800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002B9",
+      "x": 13.5,
+      "y": 15.0,
+      "dependencies": [
+        "1A000000000002B8"
+      ],
+      "icon": {
+        "id": "iis:circuit_wetwarecomputer",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_wetwarecomputer",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002B900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 2
+          },
+          "id": "1C0000000002B900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002BA",
+      "x": 13.5,
+      "y": 13.5,
+      "dependencies": [
+        "1A000000000002B9"
+      ],
+      "icon": {
+        "id": "iis:circuit_wetwaresupercomputer",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_wetwaresupercomputer",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002BA00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 3
+          },
+          "id": "1C0000000002BA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002C1",
+      "x": 19.5,
+      "y": 4.0,
+      "dependencies": [
+        "1A000000000002C0",
+        "1A00000000000023",
+        "1A00000000000400",
+        "1A00000000000210"
+      ],
+      "icon": {
+        "id": "iis:hull_uv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hull_uv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002C100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 6
+          },
+          "id": "1C0000000002C100"
         }
       ]
     },
@@ -2262,6 +2637,40 @@
       ]
     },
     {
+      "id": "1A00000000000365",
+      "x": 14.0,
+      "y": 12.0,
+      "dependencies": [
+        "1A000000000002BA",
+        "1A00000000000012"
+      ],
+      "icon": {
+        "id": "iis:circuit_wetwaremainframe",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_wetwaremainframe",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000036500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 2
+          },
+          "id": "1C00000000036500"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000390",
       "x": 17.5,
       "y": 16.5,
@@ -2395,6 +2804,39 @@
             "count": 2
           },
           "id": "1C0000000003FE00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000400",
+      "x": 18.0,
+      "y": 5.5,
+      "dependencies": [
+        "1A00000000000016"
+      ],
+      "icon": {
+        "id": "iis:wire_naquadah_alloy_4x",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_naquadah_alloy_4x",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000040000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000040000"
         }
       ]
     },
@@ -2537,6 +2979,78 @@
             "count": 2
           },
           "id": "1C00000000040500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000406",
+      "x": 16.5,
+      "y": 7.0,
+      "dependencies": [
+        "1A00000000000290",
+        "1A00000000000237",
+        "1A00000000000292",
+        "1A00000000000400"
+      ],
+      "icon": {
+        "id": "iis:transformer_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:transformer_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000040600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 5
+          },
+          "id": "1C00000000040600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000408",
+      "x": 19.0,
+      "y": 7.0,
+      "dependencies": [
+        "1A000000000002C1",
+        "1A00000000000400",
+        "1A00000000000237",
+        "1A000000000000A2"
+      ],
+      "icon": {
+        "id": "iis:transformer_uv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:transformer_uv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000040800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 6
+          },
+          "id": "1C00000000040800"
         }
       ]
     },
@@ -2715,6 +3229,41 @@
             "count": 4
           },
           "id": "1C00000000041100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000412",
+      "x": 13.5,
+      "y": 8.5,
+      "dependencies": [
+        "1A00000000000406",
+        "1A00000000000411",
+        "1A00000000000295"
+      ],
+      "icon": {
+        "id": "iis:adjustable_transformer_uv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:adjustable_transformer_uv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000041200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 5
+          },
+          "id": "1C00000000041200"
         }
       ]
     },

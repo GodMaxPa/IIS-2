@@ -135,6 +135,11 @@
     "iis:cable_naquadah_2x",
     "iis:cable_naquadah_4x",
     "iis:cable_naquadah_8x",
-    "iis:cable_naquadah_12x"
+    "iis:cable_naquadah_12x",
+    "iis:cable_naquadah_alloy_1x",
+    "iis:cable_naquadah_alloy_2x",
+    "iis:cable_naquadah_alloy_4x",
+    "iis:cable_naquadah_alloy_8x",
+    "iis:cable_naquadah_alloy_12x"
   ]
 }

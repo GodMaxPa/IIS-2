@@ -1,0 +1,59 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#c:frames/neutronium",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:emitter_zpm",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:emitter_luv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:emitter_iv",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:circuits/master",
+      "count": 7
+    },
+    {
+      "ingredient": "#iis:foils/osmiridium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:foils/osmiridium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:foils/osmiridium",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:cables/4x/niobium_titanium",
+      "count": 7
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:emitter_uv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 100000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 576
+    }
+  ],
+  "keep": [
+    "iis:emitter_zpm"
+  ],
+  "temp": 288000
+}

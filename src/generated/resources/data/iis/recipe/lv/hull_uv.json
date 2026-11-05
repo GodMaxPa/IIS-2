@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PHP",
+    "CMC"
+  ],
+  "key": {
+    "P": "#c:plates/polytetrafluoroethylene",
+    "H": "#c:plates/osmium",
+    "C": "#iis:wires/4x/naquadah_alloy",
+    "M": "iis:casing_uv"
+  },
+  "result": {
+    "id": "iis:hull_uv"
+  }
+}

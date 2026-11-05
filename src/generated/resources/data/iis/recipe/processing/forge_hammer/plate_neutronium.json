@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/neutronium",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_neutronium",
+      "count": 2
+    }
+  ],
+  "duration": 100000,
+  "eut": 16
+}

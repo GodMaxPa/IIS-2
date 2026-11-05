@@ -1,0 +1,59 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:fusion_coil",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/americium",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:field_generator_zpm",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:wafer_hpic",
+      "count": 64
+    },
+    {
+      "ingredient": "#iis:wires/4x/superconductor",
+      "count": 32
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:fusion_computer_uv",
+      "count": 1
+    }
+  ],
+  "duration": 1000,
+  "eut": 90000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 2880
+    }
+  ],
+  "keep": [
+    "iis:block_americium"
+  ],
+  "temp": 432000
+}

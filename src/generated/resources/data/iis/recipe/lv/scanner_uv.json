@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CTC",
+    "WMW",
+    "CRC"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "T": "iis:emitter_uv",
+    "R": "iis:sensor_uv",
+    "C": "#c:circuits/infinite",
+    "W": "#iis:cables/1x/naquadah_alloy"
+  },
+  "result": {
+    "id": "iis:scanner_uv"
+  }
+}

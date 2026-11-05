@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:turbine_blades/neutronium",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:long_rods/titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:turbine_normal",
+      "count": 1,
+      "components": {
+        "iis:rotor_material": "neutronium",
+        "minecraft:max_damage": 131072000
+      }
+    }
+  ],
+  "duration": 320,
+  "eut": 400
+}

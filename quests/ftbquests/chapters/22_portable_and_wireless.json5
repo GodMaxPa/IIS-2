@@ -5,12 +5,45 @@
   "default_quest_shape": "",
   "quests": [
     {
-      "id": "1A0000000000004B",
-      "x": 7.5,
+      "id": "1A00000000000049",
+      "x": 9.0,
       "y": 0.5,
       "dependencies": [
         "1A0000000000004A",
         "1A00000000000046"
+      ],
+      "icon": {
+        "id": "iis:block_ender_eye",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_ender_eye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000004900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000004B",
+      "x": 7.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000049"
       ],
       "icon": {
         "id": "iis:plate_ender_eye",

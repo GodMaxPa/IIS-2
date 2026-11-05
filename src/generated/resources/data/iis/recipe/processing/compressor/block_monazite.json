@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:gems/monazite",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_monazite",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

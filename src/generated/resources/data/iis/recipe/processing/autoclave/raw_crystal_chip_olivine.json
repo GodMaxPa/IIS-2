@@ -1,0 +1,25 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:gem_exquisite_olivine",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:raw_crystal_chip",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 12000,
+  "eut": 320,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_europium",
+      "amount": 16
+    }
+  ],
+  "cleanroom": true
+}

@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1417; hidden until their items are ported: 525; chapters: 35.
+Quests in IIS 1: 1943; written: 1521; hidden until their items are ported: 421; chapters: 35.
 
 ## Most needed unported items (task count)
 
@@ -17,18 +17,10 @@ Quests in IIS 1: 1943; written: 1417; hidden until their items are ported: 525; 
 - 1 × `GalacticraftMars:item.itemBasicAsteroids:0` 
 - 1 × `gregtech:gt.blockmachines:5165` 
 - 1 × `gregtech:gt.metaitem.01:32619` Жидкостный регулятор (IV)
-- 1 × `gregtech:gt.metaitem.01:11103` Америциевый слиток
-- 1 × `gregtech:gt.metaitem.01:17329` Тританиевая пластина
-- 1 × `gregtech:gt.blockmachines:1194` Блок управления термоядерным реактором II (ZPM)
 - 1 × `gregtech:gt.metaitem.01:32464` Сверхпрочный слиток T3
-- 1 × `gregtech:gt.metaitem.01:17325` Пластина сплава наквадаха
-- 1 × `gregtech:gt.metaitem.01:11325` Слиток сплава наквадаха
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:14` 
 - 1 × `gregtech:gt.metaitem.01:22305` Плотная стальная пластина
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:13` 
-- 1 × `gregtech:gt.blockgem2:12` Сапфировый блок
-- 1 × `gregtech:gt.blockgem1:4` Блок синего топаза
-- 1 × `gregtech:gt.blockgem2:5` Опаловый блок
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:19` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:15` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:35` 
@@ -52,7 +44,6 @@ Quests in IIS 1: 1943; written: 1417; hidden until their items are ported: 525; 
 - 1 × `appliedenergistics2:tile.BlockEnergyCell:0` 
 - 1 × `appliedenergistics2:tile.BlockEnergyAcceptor:0` 
 - 1 × `appliedenergistics2:tile.BlockFluix:0` 
-- 1 × `gregtech:gt.blockgem1:7` Блок из ока Края
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:9` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:12` 
 - 1 × `appliedenergistics2:tile.BlockQuantumLinkChamber:0` 
@@ -82,15 +73,23 @@ Quests in IIS 1: 1943; written: 1417; hidden until their items are ported: 525; 
 - 1 × `appliedenergistics2:item.ItemMultiPart:260` 
 - 1 × `EnderIO:itemYetaWrench:0` 
 - 1 × `gregtech:gt.blockmachines:132` Улучшенный люк доступа к данным
-- 1 × `gregtech:gt.metaitem.01:11317` Осмиридиевый слиток
-- 1 × `gregtech:gt.blockmachines:4413` 
+- 1 × `gregtech:gt.metaitem.02:8500` 
+- 1 × `GraviSuite:advDDrill:1` 
+- 1 × `extracells:certustank:0` 
+- 1 × `gregtech:gt.blockreinforced:2` Пластиковая стена
+- 1 × `gregtech:gt.metaitem.01:2612` Железная смесь
+- 1 × `gregtech:gt.metaitem.01:26613` Болт из никель-цинкового феррита
+- 1 × `gregtech:gt.metaitem.01:32703` Сборка интегральных процессоров
+- 1 × `Railcraft:tool.steel.shears:0` 
+- 1 × `gregtech:gt.metaitem.01:28879` Бумажное кольцо
+- 1 × `EnderIO:blockReservoir:0` 
+- 1 × `EnderIO:blockFusedQuartz:0` 
 
 ## Unported fluids
 
 - 1 × `helium-3`
 - 1 × `1,1dimethylhydrazine`
 - 1 × `potion.poison.strong`
-- 1 × `ic2coolant`
 - 1 × `ic2distilledwater`
 
 ## Dropped reward items
@@ -99,8 +98,6 @@ Quests in IIS 1: 1943; written: 1417; hidden until their items are ported: 525; 
 - 2 × `('gregtech:gt.metaitem.02', 25802)`
 - 1 × `('lootbags:lootbag', 7)`
 - 1 × `('ChickenChunks:chickenChunkLoader', 0)`
-- 1 × `('gregtech:gt.blockmachines', 18)`
-- 1 × `('gregtech:gt.metaitem.03', 32091)`
 - 1 × `('gregtech:gt.metaitem.02', 26347)`
 - 1 × `('gregtech:gt.blockores', 4522)`
 - 1 × `('gregtech:gt.blockores', 1022)`

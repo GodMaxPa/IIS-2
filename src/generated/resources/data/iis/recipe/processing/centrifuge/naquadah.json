@@ -1,0 +1,23 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/naquadah",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_naquadah_enriched",
+      "count": 1,
+      "chance": 5000
+    },
+    {
+      "id": "iis:tiny_dust_naquadria",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 3200,
+  "eut": 320
+}

@@ -1,0 +1,24 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/lapis",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 256,
+  "eut": 48,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:ic2coolant",
+      "amount": 1000
+    }
+  ]
+}

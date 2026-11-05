@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MC"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "C": "#iis:wires/4x/naquadah_alloy"
+  },
+  "result": {
+    "id": "iis:hatch_dynamo_uv"
+  }
+}

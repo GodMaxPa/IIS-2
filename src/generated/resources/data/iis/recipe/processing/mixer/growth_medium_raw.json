@@ -1,0 +1,32 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:sugar",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:dusts/meat_raw",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:tiny_dusts/salt",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 160,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 4000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:growthmediumraw",
+      "amount": 4000
+    }
+  ]
+}

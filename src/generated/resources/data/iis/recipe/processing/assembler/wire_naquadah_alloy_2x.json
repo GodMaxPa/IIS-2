@@ -1,0 +1,18 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/naquadah_alloy",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_naquadah_alloy_2x",
+      "count": 1
+    }
+  ],
+  "duration": 150,
+  "eut": 8,
+  "circuit": 2
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CEC",
+    "OMO",
+    "WEW"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "E": "iis:electric_motor_uv",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:wires/4x/naquadah_alloy",
+    "O": "#iis:wires/4x/naquadah_alloy"
+  },
+  "result": {
+    "id": "iis:thermal_centrifuge_uv"
+  }
+}

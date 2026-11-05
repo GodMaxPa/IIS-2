@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 32,
+  "eut": 24576,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silver",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:molten_lithium",
+      "amount": 16
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_indium",
+      "amount": 16
+    }
+  ],
+  "temp": 380000000
+}

@@ -259,6 +259,68 @@ final class LuvGameTests {
         });
     }
 
+    // --- D121: уровень UV ---------------------------------------------------------------------------------------------
+
+    /** Двигатель UV (GT_MachineRecipeLoader:2070): девять шин, 100000 EU/t от люка ZPM; расход жидкостей 1296 и 2000 л. */
+    static void assemblyLineBuildsUvMotor(GameTestHelper h) {
+        frame(h, HatchType.ENERGY_ZPM);
+        int[][] buses = {{8, 2}, {8, 3}, {8, 4}, {7, 2}, {7, 3}, {7, 4}, {6, 2}, {6, 3}, {6, 4}};
+        for (int[] b : buses) hatch(h, new BlockPos(b[0], 1, b[1]), HatchType.INPUT_BUS);
+        hatch(h, new BlockPos(5, 1, 2), HatchType.INPUT_HATCH_ZPM);
+        hatch(h, new BlockPos(5, 1, 3), HatchType.INPUT_HATCH_ZPM);
+        hatch(h, new BlockPos(5, 1, 4), HatchType.MAINTENANCE);
+        hatch(h, new BlockPos(4, 1, 3), HatchType.OUTPUT_BUS);
+        AssemblyLineBlockEntity e = h.getBlockEntity(CONTROLLER, AssemblyLineBlockEntity.class);
+        e.maintenance().setMask(63);
+        e.setItem(0, DataStickItem.written(plan(h, "electric_motor_uv")));
+        Object[][] in = {{"block_neodymium_magnetic", 1}, {"long_rod_neutronium", 4}, {"ring_neutronium", 4}, {"round_neutronium", 16}, {"wire_superconductor_1x", 64}, {"wire_superconductor_1x", 64},
+                {"wire_superconductor_1x", 64}, {"wire_superconductor_1x", 64}, {"cable_niobium_titanium_4x", 2}};
+        for (int i = 0; i < in.length; i++) {
+            h.getBlockEntity(new BlockPos(buses[i][0], 1, buses[i][1]), ItemBusBlockEntity.class).setItem(0, new ItemStack(SelfTest.item((String) in[i][0]), (Integer) in[i][1]));
+        }
+        FluidHatchBlockEntity solder = h.getBlockEntity(new BlockPos(5, 1, 2), FluidHatchBlockEntity.class), lube = h.getBlockEntity(new BlockPos(5, 1, 3), FluidHatchBlockEntity.class);
+        solder.tank().setAmount(GtFluids.get("molten_solderingalloy").source().get(), 2000);
+        lube.tank().setAmount(GtFluids.get("lubricant").source().get(), 3000);
+        ItemBusBlockEntity out = h.getBlockEntity(new BlockPos(4, 1, 3), ItemBusBlockEntity.class);
+        h.succeedWhen(() -> {
+            h.assertTrue(out.stacks().stream().anyMatch(s -> s.is(LvContent.ELECTRIC_MOTOR_UV.get())), "output " + out.stacks());
+            h.assertTrue(solder.tank().amount() == 704 && lube.tank().amount() == 1000, "fluids " + solder.tank().amount() + " " + lube.tank().amount());
+        });
+    }
+
+    /** Кристаллопроцессор (:590) в сборщике схем LuV. */
+    static void circuitAssemblerMakesCrystalProcessor(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.CIRCUIT_ASSEMBLER_LUV);
+        Object[][] in = {{"circuit_board_multifiberglass", 1}, {"chip_crystal_cpu", 1}, {"chip_nano_cpu", 1}, {"capacitor_smd", 2}, {"transistor_smd", 2}, {"wire_fine_niobium_titanium", 2}};
+        for (int i = 0; i < in.length; i++) m.setItem(i, new ItemStack(SelfTest.item((String) in[i][0]), (Integer) in[i][1]));
+        m.tank().setAmount(GtFluids.get("molten_solderingalloy").source().get(), 72);
+        h.succeedWhen(() -> h.assertTrue(m.getItem(6).is(LvContent.CIRCUIT_CRYSTALPROCESSOR.get()), "output " + m.getItem(6)));
+    }
+
+    /** Биопроцессор (:595) только в сборщике ZPM: 38400 EU/t выше напряжения LuV. */
+    static void circuitAssemblerZpmMakesNeuroprocessor(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.CIRCUIT_ASSEMBLER_ZPM);
+        Object[][] in = {{"chip_neuro_cpu", 1}, {"chip_crystal_cpu", 1}, {"chip_nano_cpu", 1}, {"capacitor_smd", 2}, {"transistor_smd", 2}, {"wire_fine_yttrium_barium_cuprate", 2}};
+        for (int i = 0; i < in.length; i++) m.setItem(i, new ItemStack(SelfTest.item((String) in[i][0]), (Integer) in[i][1]));
+        m.tank().setAmount(GtFluids.get("molten_solderingalloy").source().get(), 72);
+        h.succeedWhen(() -> h.assertTrue(m.getItem(6).is(LvContent.CIRCUIT_NEUROPROCESSOR.get()), "output " + m.getItem(6)));
+    }
+
+    /** Гравитационная звезда (:1192): звезда Нижнего мира и 288 л нейтрония. */
+    static void autoclaveMakesGraviStar(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.AUTOCLAVE_UV);
+        m.setItem(0, new ItemStack(net.minecraft.world.item.Items.NETHER_STAR));
+        m.tank().setAmount(GtFluids.get("molten_neutronium").source().get(), 288);
+        h.succeedWhen(() -> h.assertTrue(m.getItem(1).is(LvContent.GRAVI_STAR.get()), "output " + m.getItem(1)));
+    }
+
+    /** Катушка из сплава наквады (9001 K) — её тепла хватает и для сплава наквады (7200 K). */
+    static void ebfOnNaquadahAlloyCoil(GameTestHelper h) {
+        EbfBlockEntity e = MultiGameTests.build(h, 1, HatchType.ENERGY_EV, MultiContent.COIL_NAQUADAH_ALLOY.get(), true);
+        e.maintenance().setMask(63);
+        h.succeedWhen(() -> h.assertTrue(e.heat() == EbfBlockEntity.NAQUADAH_ALLOY_HEAT, "heat " + e.heat()));
+    }
+
     /** Сканер ZPM: 144000 тиков на LV и шесть разгонов — 2250; из детали LuV пишет чертёж детали ZPM. */
     static void scannerZpmResearchesLuvPart(GameTestHelper h) {
         ElectricMachineBlockEntity m = powered(h, LvMachineType.SCANNER_ZPM);

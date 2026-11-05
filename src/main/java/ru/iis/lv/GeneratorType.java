@@ -24,7 +24,9 @@ public enum GeneratorType {
     NAQUADAH_IV("naquadah_reactor_iv", 16000, "naquadah_solid", VoltageTier.IV),
     NAQUADAH_LUV("naquadah_reactor_luv", 16000, "naquadah_fluid", VoltageTier.LUV),
     PLASMA_EV("plasma_generator_ev", 16000, "plasma", VoltageTier.EV),
-    PLASMA_IV("plasma_generator_iv", 16000, "plasma", VoltageTier.IV);
+    PLASMA_IV("plasma_generator_iv", 16000, "plasma", VoltageTier.IV),
+    // D121: GT_Loader_MetaTileEntities:1229, mTier 6; крафт на корпусе UV
+    PLASMA_LUV("plasma_generator_luv", 16000, "plasma", VoltageTier.LUV);
 
     public final String id;
     public final int tank;

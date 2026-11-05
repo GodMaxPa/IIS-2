@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/robust_hssg_casing",
+    "north": "iis:block/multi/advanced_processing_array_front",
+    "south": "iis:block/multi/robust_hssg_casing",
+    "east": "iis:block/multi/robust_hssg_casing",
+    "west": "iis:block/multi/robust_hssg_casing",
+    "up": "iis:block/multi/robust_hssg_casing",
+    "down": "iis:block/multi/robust_hssg_casing"
+  }
+}

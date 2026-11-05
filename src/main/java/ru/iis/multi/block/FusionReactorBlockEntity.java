@@ -24,15 +24,16 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Термоядерный реактор Mark I (GT_MetaTileEntity_FusionComputer, _FusionComputer1).
+ * Термоядерный реактор Mark I, II и III (GT_MetaTileEntity_FusionComputer, _FusionComputer1, 2, 3; вторые два — D121): больше запас, больше отдача люков,
+ * катушки и корпуса свои, люки от ZPM и UV; рецепты с дешёвым зажиганием на них идут быстрее (GT overclock: EU/t и скорость ×2 и ×4).
  * Особенности GT: нет обслуживания и поломок; запас контроллера 160003000 EU × люки / 16, каждый люк отдаёт в него до 2048 EU за тик;
  * зажигание разом снимает со запаса mSpecialValue (в рецепте — temp), дальше EU/t рецепта; следующая порция без перерыва зажигания не платит;
  * простаивающий реактор ищет рецепт раз в 100 тиков.
  * Отличия: центр кольца за спиной контроллера, а не перед лицом (иначе лицо смотрит внутрь кольца); входы тратятся, только если запаса хватает на зажигание: в GT они сгорали впустую.
  */
 public class FusionReactorBlockEntity extends RecipeMultiblockBlockEntity {
-    public static final long STORE_MARK1 = 160003000L, HATCH_INPUT = 2048;
-    public static final int RING = 5, HATCH_TIER = 6, IDLE_CHECK = 100;
+    public static final long STORE_MARK1 = 160003000L, STORE_MARK2 = 320006000L, STORE_MARK3 = 640010000L, HATCH_INPUT = 2048;
+    public static final int RING = 5, IDLE_CHECK = 100;
 
     private long stored;
     private int recheck;
@@ -54,15 +55,51 @@ public class FusionReactorBlockEntity extends RecipeMultiblockBlockEntity {
         stored = eu;
     }
 
-    /** GT maxEUStore. */
-    public long capacity() {
-        return STORE_MARK1 * Math.min(16, parts.energy.size()) / 16;
+    /** 1, 2 или 3: по блоку контроллера. */
+    public int mark() {
+        Block b = getBlockState().getBlock();
+        return b == MultiContent.FUSION_COMPUTER_UV.get() ? 3 : b == MultiContent.FUSION_COMPUTER_ZPM.get() ? 2 : 1;
     }
 
-    /** На экране в поле нагрева: запас, тысячи EU. */
+    /** GT tier(): уровень люков. */
+    private int hatchTier() {
+        return 5 + mark();
+    }
+
+    /** GT tierOverclock(): 1, 2, 4. */
+    private int tierOverclock() {
+        return 1 << (mark() - 1);
+    }
+
+    /** GT maxEUStore. */
+    public long capacity() {
+        long store = switch (mark()) {
+            case 3 -> STORE_MARK3;
+            case 2 -> STORE_MARK2;
+            default -> STORE_MARK1;
+        };
+        return store * Math.min(16, parts.energy.size()) / 16;
+    }
+
+    /** GT overclock(mStartEnergy). */
+    public int overclock(long start) {
+        return switch (mark()) {
+            case 3 -> start < 160000000L ? 4 : start < 320000000L ? 2 : 1;
+            case 2 -> start < 160000000L ? 2 : 1;
+            default -> 1;
+        };
+    }
+
+    /** На экране в поле нагрева: запас, миллионы EU (данные окна — 16 бит). */
     @Override
     public int heat() {
-        return (int) (stored / 1000);
+        return (int) (stored / 1000000L);
+    }
+
+    /** На экране в поле напряжения: вместимость, миллионы EU. */
+    @Override
+    protected long maxInputVoltage(ServerLevel sl) {
+        return capacity() / 1000000L;
     }
 
     /** Центр кольца. */
@@ -74,29 +111,30 @@ public class FusionReactorBlockEntity extends RecipeMultiblockBlockEntity {
     boolean checkStructure(ServerLevel sl) {
         parts.clear();
         BlockPos c = center();
-        Block casing = LvContent.CASING_LUV.get(), coil = MultiContent.COIL_SUPERCONDUCTOR.get();
+        int mark = mark();
+        Block casing = mark == 3 ? MultiContent.CASING_FUSION_2.get() : mark == 2 ? MultiContent.CASING_FUSION.get() : LvContent.CASING_LUV.get();
+        Block coil = mark == 1 ? MultiContent.COIL_SUPERCONDUCTOR.get() : MultiContent.FUSION_COIL.get();
         for (int[] d : FusionShape.COILS) if (!sl.getBlockState(c.offset(d[0], d[1], d[2])).is(coil)) return false;
         for (int[] d : FusionShape.CASINGS) {
             BlockPos p = c.offset(d[0], d[1], d[2]);
             if (!p.equals(worldPosition) && !sl.getBlockState(p).is(casing)) return false;
         }
-        if (!part(sl, c, FusionShape.ENERGY, Set.of(HatchType.ENERGY_LUV, HatchType.ENERGY_ZPM), parts.energy, casing)) return false;
+        if (!part(sl, c, FusionShape.ENERGY, Set.of(), parts.energy, casing)) return false;
         if (!part(sl, c, FusionShape.OUTPUT, Set.of(HatchType.OUTPUT_HATCH), parts.outputHatches, casing)) return false;
         if (!part(sl, c, FusionShape.INPUT, Set.of(HatchType.INPUT_HATCH), parts.inputHatches, casing)) return false;
         return !parts.energy.isEmpty() && !parts.outputHatches.isEmpty() && parts.inputHatches.size() >= 2;
     }
 
-    /** GT addIf…: корпус или люк нужного вида уровня LuV и выше. */
+    /** GT addIf…: корпус или люк нужного вида уровня реактора и выше; пустой набор — энергетический люк. */
     private boolean part(ServerLevel sl, BlockPos c, int[][] cells, Set<HatchType> kinds, List<BlockPos> into, Block casing) {
         for (int[] d : cells) {
             BlockPos p = c.offset(d[0], d[1], d[2]);
             BlockState s = sl.getBlockState(p);
             if (s.is(casing)) continue;
             if (!(s.getBlock() instanceof HatchBlock h)) return false;
-            boolean energy = h.type == HatchType.ENERGY_LUV || h.type == HatchType.ENERGY_ZPM;
-            if (kinds.contains(h.type) && energy) into.add(p);
-            else if (kinds.contains(h.type.kind()) && h.type.tier >= HATCH_TIER) into.add(p);
-            else return false;
+            boolean match = kinds.isEmpty() ? h.type.energy() && !h.type.dynamo() : kinds.contains(h.type.kind());
+            if (!match || h.type.tier < hatchTier()) return false;
+            into.add(p);
         }
         return true;
     }
@@ -110,10 +148,11 @@ public class FusionReactorBlockEntity extends RecipeMultiblockBlockEntity {
             formed = checkStructure(sl);
         }
         if (formed) {
+            long in = HATCH_INPUT * tierOverclock();
             for (BlockPos p : parts.energy) {
-                if (sl.getBlockEntity(p) instanceof EnergyHatchBlockEntity e && stored + HATCH_INPUT < capacity() && e.energy.stored >= HATCH_INPUT) {
-                    e.energy.stored -= HATCH_INPUT;
-                    stored += HATCH_INPUT;
+                if (sl.getBlockEntity(p) instanceof EnergyHatchBlockEntity e && stored + in < capacity() && e.energy.stored >= in) {
+                    e.energy.stored -= in;
+                    stored += in;
                 }
             }
             if (maxProgress > 0) {
@@ -151,8 +190,9 @@ public class FusionReactorBlockEntity extends RecipeMultiblockBlockEntity {
             if (pick == null || r.temperature() > capacity() || (ignite && r.temperature() > stored)) continue;
             drainFluids(sl, r, pick);
             if (ignite) stored -= r.temperature();
-            eut = r.eut();
-            maxProgress = r.duration();
+            int oc = overclock(r.temperature());
+            eut = r.eut() * oc;
+            maxProgress = Math.max(1, r.duration() / oc);
             progress = 0;
             efficiency = 10000;
             efficiencyIncrease = 10000;

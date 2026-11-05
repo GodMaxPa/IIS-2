@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/hssg",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:plates/europium",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:robust_tungstensteel_casing",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:robust_hssg_casing",
+      "count": 2
+    }
+  ],
+  "duration": 50,
+  "eut": 16
+}

@@ -28,7 +28,7 @@ import java.util.List;
 public class OreDrillBlockEntity extends DrillerBlockEntity {
     /** MachineStats.cfg ИИС: OreDrillingPlant.dFluidPerOperation. */
     public static final int FLUID_PER_OPERATION = 2000;
-    private static final int[] RADIUS_CHUNKS = {3, 4}, MIN_TIER = {2, 3}, BASE_TIME = {960, 800};
+    private static final int[] RADIUS_CHUNKS = {3, 4, 6, 9}, MIN_TIER = {2, 3, 4, 5}, BASE_TIME = {960, 800, 640, 480};
     private final List<BlockPos> ores = new ArrayList<>();
 
     public OreDrillBlockEntity(BlockPos pos, BlockState state) {
@@ -42,12 +42,22 @@ public class OreDrillBlockEntity extends DrillerBlockEntity {
 
     @Override
     protected Block casing() {
-        return level() == 0 ? MultiContent.SOLID_STEEL_CASING.get() : MultiContent.STABLE_TITANIUM_CASING.get();
+        return switch (level()) {
+            case 0 -> MultiContent.SOLID_STEEL_CASING.get();
+            case 1 -> MultiContent.STABLE_TITANIUM_CASING.get();
+            case 2 -> MultiContent.ROBUST_TUNGSTENSTEEL_CASING.get();
+            default -> MultiContent.MINING_OSMIRIDIUM_CASING.get();
+        };
     }
 
     @Override
     protected Block frame() {
-        return MultiContent.FRAMES.get(level() == 0 ? "steel" : "titanium").get();
+        return MultiContent.FRAMES.get(switch (level()) {
+            case 0 -> "steel";
+            case 1 -> "titanium";
+            case 2 -> "tungsten_steel";
+            default -> "osmiridium";
+        }).get();
     }
 
     @Override

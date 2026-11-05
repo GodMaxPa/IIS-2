@@ -63,7 +63,7 @@ public final class MultiContent {
     }
 
     public static final List<String> FRAME_MATERIALS = List.of("invar", "steel", "iron", "bronze", "aluminium", "blue_steel", "titanium", "tungsten_steel", "stainless_steel", "polytetrafluoroethylene",
-            "black_steel", "hssg", "hsse");
+            "black_steel", "hssg", "hsse", "osmiridium", "tritanium", "neutronium");
     public static final Map<String, DeferredBlock<Block>> FRAMES = new LinkedHashMap<>();
     static {
         for (String m : FRAME_MATERIALS) {
@@ -81,6 +81,8 @@ public final class MultiContent {
     /** D112: GT_Block_Casings5 мета 4 и 5: для HSS-E и наквады (5400 K), и выше. */
     public static final DeferredBlock<Block> COIL_HSSG = block("coil_hssg", Block::new, MultiContent::metal);
     public static final DeferredBlock<Block> COIL_NAQUADAH = block("coil_naquadah", Block::new, MultiContent::metal);
+    /** D121: GT_Block_Casings5 мета 6: 9001 K. */
+    public static final DeferredBlock<Block> COIL_NAQUADAH_ALLOY = block("coil_naquadah_alloy", Block::new, MultiContent::metal);
     /** D116: GT_Block_Casings1 мета 15, GT_Block_Casings4 мета 7. */
     public static final DeferredBlock<Block> COIL_SUPERCONDUCTOR = block("coil_superconductor", Block::new, MultiContent::metal);
     public static final DeferredBlock<Block> FUSION_COIL = block("fusion_coil", Block::new, MultiContent::metal);
@@ -140,6 +142,9 @@ public final class MultiContent {
     /** D104: GT_MetaTileEntity_LargeTurbine_Gas и GT_Block_Casings4 meta 10 (турбинный корпус из нержавеющей стали). */
     public static final DeferredBlock<EbfBlock> LARGE_GAS_TURBINE = block("large_gas_turbine", p -> new EbfBlock(p, LargeGasTurbineBlockEntity::new), MultiContent::metal);
     public static final DeferredBlock<Block> TURBINE_CASING_STAINLESS = block("turbine_casing_stainless", Block::new, MultiContent::metal);
+    /** D121: GT_MetaTileEntity_LargeTurbine_Plasma, GT_Block_Casings4 мета 12. */
+    public static final DeferredBlock<EbfBlock> LARGE_PLASMA_TURBINE = block("large_plasma_turbine", p -> new EbfBlock(p, ru.iis.multi.block.LargePlasmaTurbineBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<Block> TURBINE_CASING_TUNGSTENSTEEL = block("turbine_casing_tungstensteel", Block::new, MultiContent::metal);
     /** D105: GT_MetaTileEntity_LargeTurbine_HPSteam и GT_Block_Casings4 meta 11 (титановый турбинный корпус). */
     public static final DeferredBlock<EbfBlock> LARGE_HP_TURBINE = block("large_hp_steam_turbine", p -> new EbfBlock(p, LargeHpTurbineBlockEntity::new), MultiContent::metal);
     public static final DeferredBlock<Block> TURBINE_CASING_TITANIUM = block("turbine_casing_titanium", Block::new, MultiContent::metal);
@@ -147,8 +152,16 @@ public final class MultiContent {
     public static final DeferredBlock<EbfBlock> HEAT_EXCHANGER = block("heat_exchanger", p -> new EbfBlock(p, HeatExchangerBlockEntity::new), MultiContent::metal);
     /** D105: GT_MetaTileEntity_ProcessingArray (на прочных вольфрамостальных корпусах). */
     public static final DeferredBlock<EbfBlock> PROCESSING_ARRAY = block("processing_array", p -> new EbfBlock(p, ProcessingArrayBlockEntity::new), MultiContent::metal);
+    /** D121: GT_MetaTileEntity_AdvancedProcessingArray, Casing_RobustHSSG. */
+    public static final DeferredBlock<EbfBlock> ADVANCED_PROCESSING_ARRAY = block("advanced_processing_array", p -> new EbfBlock(p, ProcessingArrayBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<Block> ROBUST_HSSG_CASING = block("robust_hssg_casing", Block::new, MultiContent::metal);
     /** D116: GT_MetaTileEntity_FusionComputer1. */
     public static final DeferredBlock<EbfBlock> FUSION_COMPUTER_LUV = block("fusion_computer_luv", p -> new EbfBlock(p, ru.iis.multi.block.FusionReactorBlockEntity::new), MultiContent::metal);
+    /** D121: GT_MetaTileEntity_FusionComputer2 и 3, их корпуса GT_Block_Casings4 меты 6 и 8. */
+    public static final DeferredBlock<EbfBlock> FUSION_COMPUTER_ZPM = block("fusion_computer_zpm", p -> new EbfBlock(p, ru.iis.multi.block.FusionReactorBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<EbfBlock> FUSION_COMPUTER_UV = block("fusion_computer_uv", p -> new EbfBlock(p, ru.iis.multi.block.FusionReactorBlockEntity::new), MultiContent::metal);
+    public static final DeferredBlock<Block> CASING_FUSION = block("casing_fusion", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> CASING_FUSION_2 = block("casing_fusion_2", Block::new, MultiContent::metal);
     /** D110: GT_MetaTileEntity_AssemblyLine. */
     public static final DeferredBlock<EbfBlock> ASSEMBLY_LINE = block("assembly_line", p -> new EbfBlock(p, AssemblyLineBlockEntity::new), MultiContent::metal);
     /** GT_Block_Casings2 meta 5 («Assembling Line Casing», GT зовёт её Casing_Gearbox_TungstenSteel), meta 9; Casings3 meta 10. */
@@ -187,7 +200,11 @@ public final class MultiContent {
             block("oil_drill_3", p -> new EbfBlock(p, OilDrillBlockEntity::new), MultiContent::metal));
     public static final List<DeferredBlock<EbfBlock>> ORE_DRILLS = List.of(
             block("ore_drill_1", p -> new EbfBlock(p, OreDrillBlockEntity::new), MultiContent::metal),
-            block("ore_drill_2", p -> new EbfBlock(p, OreDrillBlockEntity::new), MultiContent::metal));
+            block("ore_drill_2", p -> new EbfBlock(p, OreDrillBlockEntity::new), MultiContent::metal),
+            block("ore_drill_3", p -> new EbfBlock(p, OreDrillBlockEntity::new), MultiContent::metal),
+            block("ore_drill_4", p -> new EbfBlock(p, OreDrillBlockEntity::new), MultiContent::metal));
+    /** D121: GT_OreDrillingPlant4, Casing_MiningOsmiridium. */
+    public static final DeferredBlock<Block> MINING_OSMIRIDIUM_CASING = block("mining_osmiridium_casing", Block::new, MultiContent::metal);
     public static final List<DeferredBlock<EbfBlock>> BACKFILLERS = List.of(
             block("concrete_backfiller_1", p -> new EbfBlock(p, BackfillerBlockEntity::new), MultiContent::metal),
             block("concrete_backfiller_2", p -> new EbfBlock(p, BackfillerBlockEntity::new), MultiContent::metal));
@@ -244,7 +261,7 @@ public final class MultiContent {
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EnergyHatchBlockEntity>> ENERGY_HATCH_BE = BLOCK_ENTITIES.register("energy_hatch",
-            () -> new BlockEntityType<>(EnergyHatchBlockEntity::new, hatches(HatchType.ENERGY, HatchType.ENERGY_MV, HatchType.ENERGY_HV, HatchType.ENERGY_EV, HatchType.ENERGY_IV, HatchType.ENERGY_LUV, HatchType.ENERGY_ZPM)));
+            () -> new BlockEntityType<>(EnergyHatchBlockEntity::new, hatches(HatchType.ENERGY, HatchType.ENERGY_MV, HatchType.ENERGY_HV, HatchType.ENERGY_EV, HatchType.ENERGY_IV, HatchType.ENERGY_LUV, HatchType.ENERGY_ZPM, HatchType.ENERGY_UV)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemBusBlockEntity>> ITEM_BUS_BE = BLOCK_ENTITIES.register("item_bus",
             () -> new BlockEntityType<>(ItemBusBlockEntity::new, hatches(HatchType.INPUT_BUS, HatchType.OUTPUT_BUS, HatchType.DATA_ACCESS)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluidHatchBlockEntity>> FLUID_HATCH_BE = BLOCK_ENTITIES.register("fluid_hatch",
@@ -270,17 +287,19 @@ public final class MultiContent {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeBoilerBlockEntity>> LARGE_BOILER_BE = BLOCK_ENTITIES.register("large_boiler",
             () -> new BlockEntityType<>(LargeBoilerBlockEntity::new, LARGE_BOILERS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DynamoHatchBlockEntity>> DYNAMO_HATCH_BE = BLOCK_ENTITIES.register("dynamo_hatch",
-            () -> new BlockEntityType<>(DynamoHatchBlockEntity::new, hatches(HatchType.DYNAMO, HatchType.DYNAMO_MV, HatchType.DYNAMO_HV, HatchType.DYNAMO_EV, HatchType.DYNAMO_IV, HatchType.DYNAMO_LUV, HatchType.DYNAMO_ZPM)));
+            () -> new BlockEntityType<>(DynamoHatchBlockEntity::new, hatches(HatchType.DYNAMO, HatchType.DYNAMO_MV, HatchType.DYNAMO_HV, HatchType.DYNAMO_EV, HatchType.DYNAMO_IV, HatchType.DYNAMO_LUV, HatchType.DYNAMO_ZPM, HatchType.DYNAMO_UV)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeTurbineBlockEntity>> LARGE_TURBINE_BE = BLOCK_ENTITIES.register("large_steam_turbine",
             () -> new BlockEntityType<>(LargeTurbineBlockEntity::new, LARGE_STEAM_TURBINE.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ru.iis.multi.block.LargePlasmaTurbineBlockEntity>> LARGE_PLASMA_TURBINE_BE = BLOCK_ENTITIES.register("large_plasma_turbine",
+            () -> new BlockEntityType<>(ru.iis.multi.block.LargePlasmaTurbineBlockEntity::new, LARGE_PLASMA_TURBINE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeGasTurbineBlockEntity>> LARGE_GAS_TURBINE_BE = BLOCK_ENTITIES.register("large_gas_turbine",
             () -> new BlockEntityType<>(LargeGasTurbineBlockEntity::new, LARGE_GAS_TURBINE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LargeHpTurbineBlockEntity>> LARGE_HP_TURBINE_BE = BLOCK_ENTITIES.register("large_hp_steam_turbine",
             () -> new BlockEntityType<>(LargeHpTurbineBlockEntity::new, LARGE_HP_TURBINE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ProcessingArrayBlockEntity>> PROCESSING_ARRAY_BE = BLOCK_ENTITIES.register("processing_array",
-            () -> new BlockEntityType<>(ProcessingArrayBlockEntity::new, PROCESSING_ARRAY.get()));
+            () -> new BlockEntityType<>(ProcessingArrayBlockEntity::new, PROCESSING_ARRAY.get(), ADVANCED_PROCESSING_ARRAY.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ru.iis.multi.block.FusionReactorBlockEntity>> FUSION_BE = BLOCK_ENTITIES.register("fusion_computer",
-            () -> new BlockEntityType<>(ru.iis.multi.block.FusionReactorBlockEntity::new, FUSION_COMPUTER_LUV.get()));
+            () -> new BlockEntityType<>(ru.iis.multi.block.FusionReactorBlockEntity::new, FUSION_COMPUTER_LUV.get(), FUSION_COMPUTER_ZPM.get(), FUSION_COMPUTER_UV.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AssemblyLineBlockEntity>> ASSEMBLY_LINE_BE = BLOCK_ENTITIES.register("assembly_line",
             () -> new BlockEntityType<>(AssemblyLineBlockEntity::new, ASSEMBLY_LINE.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CharcoalPileBlockEntity>> CHARCOAL_PILE_BE = BLOCK_ENTITIES.register("charcoal_pile",

@@ -3241,5 +3241,11 @@
 "state": 2,
 "temperature": 295,
 "color": 16777125
+},
+{
+"id": "ic2coolant",
+"state": 1,
+"temperature": 295,
+"color": 2004670
 }
 ]

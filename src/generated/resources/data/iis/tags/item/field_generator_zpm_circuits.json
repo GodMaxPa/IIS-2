@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "iis:circuit_crystalcomputer",
+    "iis:circuit_neuroprocessor"
+  ]
+}

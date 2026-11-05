@@ -1,0 +1,47 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_uv",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/neutronium",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:rings/neutronium",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:rounds/neutronium",
+      "count": 32
+    },
+    {
+      "ingredient": "#iis:cables/4x/niobium_titanium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:conveyor_module_uv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 100000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_styrenebutadienerubber",
+      "amount": 2880
+    },
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 2000
+    }
+  ],
+  "keep": [
+    "iis:conveyor_module_zpm"
+  ],
+  "temp": 288000
+}

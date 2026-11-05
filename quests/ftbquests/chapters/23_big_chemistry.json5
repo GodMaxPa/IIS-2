@@ -513,11 +513,81 @@
       ]
     },
     {
+      "id": "1A0000000000021E",
+      "x": 3.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000021F",
+        "1A00000000000220",
+        "1A00000000000221",
+        "1A00000000000222"
+      ],
+      "icon": {
+        "id": "iis:circuit_board_wetware",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_board_wetware",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000021E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000021E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000021F",
+      "x": 2.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000022A",
+        "1A00000000000210"
+      ],
+      "icon": {
+        "id": "iis:petri_dish",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:petri_dish",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000021F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000021F00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000222",
       "x": 2.0,
       "y": 5.0,
       "dependencies": [
-        "1A00000000000187",
+        "1A0000000000022B",
         "1A0000000000022C",
         "1A0000000000022D"
       ],
@@ -672,6 +742,72 @@
             "count": 4
           },
           "id": "1C00000000022800"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000022A",
+      "x": 0.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:mold_cylinder",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mold_cylinder",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000022A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000022B",
+      "x": 0.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000187"
+      ],
+      "icon": {
+        "id": "iis:dust_meat_raw",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_meat_raw",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000022B00"
         }
       ]
     },
@@ -933,6 +1069,13 @@
       "x": 5.75,
       "y": 2.75,
       "size": 2.5
+    },
+    {
+      "id": "1E00000000B00220",
+      "linked_quest": "1A00000000000220",
+      "x": 5.0,
+      "y": 6.5,
+      "size": 1.0
     },
     {
       "id": "1E00000000B00229",

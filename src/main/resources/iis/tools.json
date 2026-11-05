@@ -348,6 +348,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_naquadah_alloy",
+    "tool": "sword",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 5,
+    "kind": "sword"
+  },
+  {
     "id": "sword_naquadah_enriched",
     "tool": "sword",
     "material": "naquadah_enriched",
@@ -417,6 +429,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_osmiridium",
+    "tool": "sword",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "sword"
   },
   {
@@ -597,6 +621,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_tritanium",
+    "tool": "sword",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 20.0,
+    "quality": 6,
     "kind": "sword"
   },
   {
@@ -984,6 +1020,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_naquadah_alloy",
+    "tool": "pickaxe",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 5,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_naquadah_enriched",
     "tool": "pickaxe",
     "material": "naquadah_enriched",
@@ -1053,6 +1101,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_osmiridium",
+    "tool": "pickaxe",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "pickaxe"
   },
   {
@@ -1233,6 +1293,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_tritanium",
+    "tool": "pickaxe",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 20.0,
+    "quality": 6,
     "kind": "pickaxe"
   },
   {
@@ -1620,6 +1692,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_naquadah_alloy",
+    "tool": "shovel",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 5,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_naquadah_enriched",
     "tool": "shovel",
     "material": "naquadah_enriched",
@@ -1689,6 +1773,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_osmiridium",
+    "tool": "shovel",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "shovel"
   },
   {
@@ -1869,6 +1965,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_tritanium",
+    "tool": "shovel",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 20.0,
+    "quality": 6,
     "kind": "shovel"
   },
   {
@@ -2256,6 +2364,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_naquadah_alloy",
+    "tool": "axe",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 5,
+    "kind": "axe"
+  },
+  {
     "id": "axe_naquadah_enriched",
     "tool": "axe",
     "material": "naquadah_enriched",
@@ -2325,6 +2445,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_osmiridium",
+    "tool": "axe",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "axe"
   },
   {
@@ -2505,6 +2637,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_tritanium",
+    "tool": "axe",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 20.0,
+    "quality": 6,
     "kind": "axe"
   },
   {
@@ -2892,6 +3036,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_naquadah_alloy",
+    "tool": "hoe",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 5,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_naquadah_enriched",
     "tool": "hoe",
     "material": "naquadah_enriched",
@@ -2961,6 +3117,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_osmiridium",
+    "tool": "hoe",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "hoe"
   },
   {
@@ -3141,6 +3309,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_tritanium",
+    "tool": "hoe",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 20.0,
+    "quality": 6,
     "kind": "hoe"
   },
   {
@@ -3528,6 +3708,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_naquadah_alloy",
+    "tool": "saw",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 8.0,
+    "quality": 5,
+    "kind": "axe"
+  },
+  {
     "id": "saw_naquadah_enriched",
     "tool": "saw",
     "material": "naquadah_enriched",
@@ -3597,6 +3789,18 @@
     "craftDamage": 4,
     "speed": 6.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_osmiridium",
+    "tool": "saw",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "axe"
   },
   {
@@ -3777,6 +3981,18 @@
     "craftDamage": 4,
     "speed": 7.0,
     "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_tritanium",
+    "tool": "saw",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 20.0,
+    "quality": 6,
     "kind": "axe"
   },
   {
@@ -4164,6 +4380,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_naquadah_alloy",
+    "tool": "hammer",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 6.0,
+    "quality": 5,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_naquadah_enriched",
     "tool": "hammer",
     "material": "naquadah_enriched",
@@ -4233,6 +4461,18 @@
     "craftDamage": 8,
     "speed": 4.5,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_osmiridium",
+    "tool": "hammer",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 5.25,
+    "quality": 3,
     "kind": "pickaxe"
   },
   {
@@ -4401,6 +4641,18 @@
     "craftDamage": 8,
     "speed": 5.25,
     "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_tritanium",
+    "tool": "hammer",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 15.0,
+    "quality": 6,
     "kind": "pickaxe"
   },
   {
@@ -4788,6 +5040,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_naquadah_alloy",
+    "tool": "wrench",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 8.0,
+    "quality": 5,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_naquadah_enriched",
     "tool": "wrench",
     "material": "naquadah_enriched",
@@ -4857,6 +5121,18 @@
     "craftDamage": 16,
     "speed": 6.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_osmiridium",
+    "tool": "wrench",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "wrench"
   },
   {
@@ -5037,6 +5313,18 @@
     "craftDamage": 16,
     "speed": 7.0,
     "quality": 3,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_tritanium",
+    "tool": "wrench",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 20.0,
+    "quality": 6,
     "kind": "wrench"
   },
   {
@@ -5424,6 +5712,18 @@
     "kind": null
   },
   {
+    "id": "file_naquadah_alloy",
+    "tool": "file",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 8.0,
+    "quality": 5,
+    "kind": null
+  },
+  {
     "id": "file_naquadah_enriched",
     "tool": "file",
     "material": "naquadah_enriched",
@@ -5493,6 +5793,18 @@
     "craftDamage": 8,
     "speed": 6.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_osmiridium",
+    "tool": "file",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
     "kind": null
   },
   {
@@ -5673,6 +5985,18 @@
     "craftDamage": 8,
     "speed": 7.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "file_tritanium",
+    "tool": "file",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 20.0,
+    "quality": 6,
     "kind": null
   },
   {
@@ -6060,6 +6384,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_naquadah_alloy",
+    "tool": "screwdriver",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 8.0,
+    "quality": 5,
+    "kind": null
+  },
+  {
     "id": "screwdriver_naquadah_enriched",
     "tool": "screwdriver",
     "material": "naquadah_enriched",
@@ -6129,6 +6465,18 @@
     "craftDamage": 8,
     "speed": 6.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_osmiridium",
+    "tool": "screwdriver",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 7.0,
+    "quality": 3,
     "kind": null
   },
   {
@@ -6309,6 +6657,18 @@
     "craftDamage": 8,
     "speed": 7.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_tritanium",
+    "tool": "screwdriver",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 20.0,
+    "quality": 6,
     "kind": null
   },
   {
@@ -6732,6 +7092,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_naquadah_alloy",
+    "tool": "knife",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 5,
+    "kind": "sword"
+  },
+  {
     "id": "knife_naquadah_enriched",
     "tool": "knife",
     "material": "naquadah_enriched",
@@ -6801,6 +7173,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_osmiridium",
+    "tool": "knife",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": "sword"
   },
   {
@@ -6981,6 +7365,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_tritanium",
+    "tool": "knife",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 20.0,
+    "quality": 6,
     "kind": "sword"
   },
   {
@@ -7368,6 +7764,18 @@
     "kind": "wire_cutter"
   },
   {
+    "id": "wire_cutter_naquadah_alloy",
+    "tool": "wire_cutter",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 10.0,
+    "quality": 5,
+    "kind": "wire_cutter"
+  },
+  {
     "id": "wire_cutter_naquadah_enriched",
     "tool": "wire_cutter",
     "material": "naquadah_enriched",
@@ -7437,6 +7845,18 @@
     "craftDamage": 8,
     "speed": 7.5,
     "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_osmiridium",
+    "tool": "wire_cutter",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 8.75,
+    "quality": 3,
     "kind": "wire_cutter"
   },
   {
@@ -7617,6 +8037,18 @@
     "craftDamage": 8,
     "speed": 8.75,
     "quality": 3,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_tritanium",
+    "tool": "wire_cutter",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 25.0,
+    "quality": 6,
     "kind": "wire_cutter"
   },
   {
@@ -8028,6 +8460,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_naquadah_alloy",
+    "tool": "crowbar",
+    "material": "naquadah_alloy",
+    "handle": "wood",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 8.0,
+    "quality": 5,
+    "kind": null
+  },
+  {
     "id": "crowbar_naquadah_enriched",
     "tool": "crowbar",
     "material": "naquadah_enriched",
@@ -8097,6 +8541,18 @@
     "craftDamage": 2,
     "speed": 6.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "crowbar_osmiridium",
+    "tool": "crowbar",
+    "material": "osmiridium",
+    "handle": "steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 7.0,
+    "quality": 3,
     "kind": null
   },
   {
@@ -8265,6 +8721,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "crowbar_tritanium",
+    "tool": "crowbar",
+    "material": "tritanium",
+    "handle": "wood",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 20.0,
+    "quality": 6,
     "kind": null
   },
   {
@@ -8652,6 +9120,18 @@
     "kind": "drill"
   },
   {
+    "id": "drill_lv_naquadah_alloy",
+    "tool": "drill_lv",
+    "material": "naquadah_alloy",
+    "handle": "stainless_steel",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 24.0,
+    "quality": 5,
+    "kind": "drill"
+  },
+  {
     "id": "drill_lv_naquadah_enriched",
     "tool": "drill_lv",
     "material": "naquadah_enriched",
@@ -8721,6 +9201,18 @@
     "craftDamage": 2,
     "speed": 18.0,
     "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_osmiridium",
+    "tool": "drill_lv",
+    "material": "osmiridium",
+    "handle": "stainless_steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 21.0,
+    "quality": 3,
     "kind": "drill"
   },
   {
@@ -8901,6 +9393,18 @@
     "craftDamage": 2,
     "speed": 21.0,
     "quality": 3,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_tritanium",
+    "tool": "drill_lv",
+    "material": "tritanium",
+    "handle": "stainless_steel",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 60.0,
+    "quality": 6,
     "kind": "drill"
   },
   {
@@ -9288,6 +9792,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_naquadah_alloy",
+    "tool": "chainsaw_lv",
+    "material": "naquadah_alloy",
+    "handle": "stainless_steel",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 16.0,
+    "quality": 5,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_naquadah_enriched",
     "tool": "chainsaw_lv",
     "material": "naquadah_enriched",
@@ -9357,6 +9873,18 @@
     "craftDamage": 16,
     "speed": 12.0,
     "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_osmiridium",
+    "tool": "chainsaw_lv",
+    "material": "osmiridium",
+    "handle": "stainless_steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 14.0,
+    "quality": 3,
     "kind": "chainsaw"
   },
   {
@@ -9537,6 +10065,18 @@
     "craftDamage": 16,
     "speed": 14.0,
     "quality": 3,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_tritanium",
+    "tool": "chainsaw_lv",
+    "material": "tritanium",
+    "handle": "stainless_steel",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 40.0,
+    "quality": 6,
     "kind": "chainsaw"
   },
   {
@@ -9924,6 +10464,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_lv_naquadah_alloy",
+    "tool": "wrench_lv",
+    "material": "naquadah_alloy",
+    "handle": "stainless_steel",
+    "maxDamage": 10240,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 16.0,
+    "quality": 5,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_lv_naquadah_enriched",
     "tool": "wrench_lv",
     "material": "naquadah_enriched",
@@ -9993,6 +10545,18 @@
     "craftDamage": 16,
     "speed": 12.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_osmiridium",
+    "tool": "wrench_lv",
+    "material": "osmiridium",
+    "handle": "stainless_steel",
+    "maxDamage": 3200,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 14.0,
+    "quality": 3,
     "kind": "wrench"
   },
   {
@@ -10173,6 +10737,18 @@
     "craftDamage": 16,
     "speed": 14.0,
     "quality": 3,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_tritanium",
+    "tool": "wrench_lv",
+    "material": "tritanium",
+    "handle": "stainless_steel",
+    "maxDamage": 20480,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 40.0,
+    "quality": 6,
     "kind": "wrench"
   },
   {

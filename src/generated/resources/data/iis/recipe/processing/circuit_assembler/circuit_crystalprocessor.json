@@ -1,0 +1,43 @@
+{
+  "type": "iis:circuit_assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_board_multifiberglass",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:chip_crystal_cpu",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:chip_nano_cpu",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:capacitor_smd",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:transistor_smd",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:fine_wires/niobium_titanium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_crystalprocessor",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 9600,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 72
+    }
+  ]
+}

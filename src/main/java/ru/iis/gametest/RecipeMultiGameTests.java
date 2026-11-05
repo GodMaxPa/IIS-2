@@ -288,6 +288,59 @@ final class RecipeMultiGameTests {
         });
     }
 
+    // --- D121 --------------------------------------------------------------------------------------------------------------
+
+    /** Большой плазменный генератор на гелии: плазма горит, остывший гелий уходит в выходной люк, энергия — в динамо. */
+    static void plasmaTurbineBurnsHelium(GameTestHelper h) {
+        for (int x = 3; x <= 5; x++) for (int y = 1; y <= 3; y++) for (int z = 1; z <= 4; z++)
+            h.setBlock(new BlockPos(x, y, z), MultiContent.TURBINE_CASING_TUNGSTENSTEEL.get());
+        h.setBlock(new BlockPos(4, 2, 2), net.minecraft.world.level.block.Blocks.AIR);
+        h.setBlock(new BlockPos(4, 2, 3), net.minecraft.world.level.block.Blocks.AIR);
+        BlockPos fuelPos = new BlockPos(4, 3, 2), spentPos = new BlockPos(4, 3, 3), dynamo = new BlockPos(4, 2, 4), ctrl = new BlockPos(4, 2, 1);
+        h.setBlock(fuelPos, MultiGameTests.hatch(HatchType.INPUT_HATCH, Direction.UP));
+        h.setBlock(spentPos, MultiGameTests.hatch(HatchType.OUTPUT_HATCH, Direction.UP));
+        h.setBlock(new BlockPos(4, 1, 3), MultiGameTests.hatch(HatchType.MAINTENANCE, Direction.DOWN));
+        h.setBlock(dynamo, MultiGameTests.hatch(HatchType.DYNAMO_LUV, Direction.SOUTH));
+        h.setBlock(ctrl, MultiContent.LARGE_PLASMA_TURBINE.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
+        ru.iis.multi.block.LargePlasmaTurbineBlockEntity t = h.getBlockEntity(ctrl, ru.iis.multi.block.LargePlasmaTurbineBlockEntity.class);
+        t.maintenance().setMask(63);
+        t.setItem(0, MultiContent.ROTORS.get(ru.iis.multi.logic.LargeTurbineLogic.Size.SMALL).get().create("steel"));
+        FluidHatchBlockEntity fuel = h.getBlockEntity(fuelPos, FluidHatchBlockEntity.class), spent = h.getBlockEntity(spentPos, FluidHatchBlockEntity.class);
+        fuel.tank().setAmount(fluid("plasma_helium"), 16000);
+        DynamoHatchBlockEntity dyn = h.getBlockEntity(dynamo, DynamoHatchBlockEntity.class);
+        h.succeedWhen(() -> {
+            h.assertTrue(t.formed(), "not formed");
+            h.assertTrue(t.eut() > 0, "turbine EU/t " + t.eut());
+            h.assertTrue(dyn.energy.stored > DynamoHatchBlockEntity.MIN_STORED, "dynamo got " + dyn.energy.stored);
+            h.assertTrue(spent.tank().amount() > 0 && spent.tank().resource().getFluid() == fluid("helium"), "cooled " + spent.tank().amount());
+        });
+    }
+
+    /** Улучшенный массив: куб 5×5×5 из корпусов HSS-G, 32 измельчителя LV и 40 слитков: сразу 32. Обычный массив взял бы 16. */
+    static void advancedArrayRuns32Machines(GameTestHelper h) {
+        BlockPos ctrl = new BlockPos(6, 2, 2), c = ctrl.south(2).above();
+        for (int dx = -2; dx <= 2; dx++) for (int dy = -2; dy <= 2; dy++) for (int dz = -2; dz <= 2; dz++) {
+            boolean inner = Math.abs(dx) < 2 && Math.abs(dy) < 2 && Math.abs(dz) < 2;
+            h.setBlock(c.offset(dx, dy, dz), inner ? net.minecraft.world.level.block.Blocks.AIR : MultiContent.ROBUST_HSSG_CASING.get());
+        }
+        BlockPos energy = c.below(2), input = c.west(2), output = c.east(2), maint = c.above(2);
+        h.setBlock(energy, MultiGameTests.hatch(HatchType.ENERGY, Direction.DOWN));
+        h.setBlock(input, MultiGameTests.hatch(HatchType.INPUT_BUS, Direction.WEST));
+        h.setBlock(output, MultiGameTests.hatch(HatchType.OUTPUT_BUS, Direction.EAST));
+        h.setBlock(maint, MultiGameTests.hatch(HatchType.MAINTENANCE, Direction.UP));
+        h.setBlock(ctrl, MultiContent.ADVANCED_PROCESSING_ARRAY.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
+        ProcessingArrayBlockEntity e = h.getBlockEntity(ctrl, ProcessingArrayBlockEntity.class);
+        e.maintenance().setMask(63);
+        e.setItem(0, new ItemStack(LvContent.MACHINES.get(ru.iis.lv.LvMachineType.MACERATOR).get(), 32));
+        powered(h, energy);
+        ItemBusBlockEntity in = h.getBlockEntity(input, ItemBusBlockEntity.class);
+        in.setItem(0, new ItemStack(Items.IRON_INGOT, 40));
+        h.succeedWhen(() -> {
+            h.assertTrue(e.formed() && e.parallel() == 32, "formed " + e.formed() + " parallel " + e.parallel());
+            h.assertTrue(count(in, Items.IRON_INGOT) == 8, "ingots left " + count(in, Items.IRON_INGOT));
+        });
+    }
+
     /** Обрабатывающий массив с 4 измельчителями LV: 6 железных слитков — 4 сразу (8 EU/t, 400 тиков), потом остальные 2. */
     static void processingArrayRunsFourMacerators(GameTestHelper h) {
         BlockPos c = new BlockPos(4, 2, 2);

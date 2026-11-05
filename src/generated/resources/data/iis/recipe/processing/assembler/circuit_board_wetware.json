@@ -1,0 +1,39 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_board_multifiberglass",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:petri_dish",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:electric_pump_lv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:sensor_lv",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/good",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_board_wetware",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:growthmediumsterilized",
+      "amount": 250
+    }
+  ]
+}

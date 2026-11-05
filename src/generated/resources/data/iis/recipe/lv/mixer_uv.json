@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GRG",
+    "GEG",
+    "CMC"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "E": "iis:electric_motor_uv",
+    "R": "#iis:rotors/osmium",
+    "C": "#c:circuits/superconductor",
+    "G": "iis:reinforced_glass"
+  },
+  "result": {
+    "id": "iis:mixer_uv"
+  }
+}

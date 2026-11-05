@@ -1,0 +1,28 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/iridium",
+      "count": 3
+    },
+    {
+      "ingredient": "#c:ingots/osmium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_osmiridium",
+      "count": 4
+    }
+  ],
+  "duration": 500,
+  "eut": 1920,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:helium",
+      "amount": 1000
+    }
+  ],
+  "temp": 2900
+}

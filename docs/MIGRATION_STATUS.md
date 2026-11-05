@@ -125,3 +125,13 @@
 |---|---|
 | Плазменный генератор, твёрдый наквадовый реактор | `RestGameTests` |
 | Рецепты и топливо | `tools/gen/gtrest.py`, `fuels.json` |
+
+## Уровень UV, термояд II и III (D121)
+
+| Что | Доказательство |
+|---|---|
+| Машины, рецепты, цепочки UV | `UvMachinesTest`, `LuvGameTests` |
+| Термояд II и III | `FusionGameTests`, `FusionDataTest` |
+| Большой плазменный генератор, улучшенный массив | `RecipeMultiGameTests` |
+| Рудные буровые III и IV | `DrillGameTests`: только сборка формы и радиус |
+| Достижимость | `tools/check_reach.py --with=iis:dust_naquadah --all` |

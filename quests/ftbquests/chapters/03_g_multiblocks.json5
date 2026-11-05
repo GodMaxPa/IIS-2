@@ -5,6 +5,46 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A00000000000013",
+      "x": 8.0,
+      "y": 7.25,
+      "size": 3.0,
+      "dependencies": [
+        "1A00000000000293",
+        "1A00000000000236",
+        "1A000000000000CD",
+        "1A00000000000295",
+        "1A00000000000296",
+        "1A00000000000297",
+        "1A000000000000D5"
+      ],
+      "icon": {
+        "id": "iis:fusion_computer_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fusion_computer_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000001300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 2
+          },
+          "id": "1C00000000001300"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000001A",
       "x": 12.5,
       "y": 0.5,
@@ -80,6 +120,43 @@
       ]
     },
     {
+      "id": "1A00000000000091",
+      "x": 8.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000008B",
+        "1A0000000000008C",
+        "1A00000000000092",
+        "1A00000000000084",
+        "1A00000000000362"
+      ],
+      "icon": {
+        "id": "iis:ore_drill_3",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ore_drill_3",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000009100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000009100"
+        }
+      ]
+    },
+    {
       "id": "1A000000000000CA",
       "x": 8.0,
       "y": 2.0,
@@ -114,6 +191,42 @@
             "count": 2
           },
           "id": "1C0000000000CA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000CE",
+      "x": 9.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000CA",
+        "1A000000000000CC",
+        "1A000000000000CF",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:advanced_processing_array",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:advanced_processing_array",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000CE00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 3
+          },
+          "id": "1C0000000000CE00"
         }
       ]
     },
@@ -154,6 +267,44 @@
             "count": 1
           },
           "id": "1C0000000000D500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000DB",
+      "x": 11.5,
+      "y": 7.25,
+      "size": 3.0,
+      "dependencies": [
+        "1A00000000000010",
+        "1A000000000002BD",
+        "1A0000000000036F",
+        "1A00000000000013",
+        "1A000000000002BA"
+      ],
+      "icon": {
+        "id": "iis:fusion_computer_uv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fusion_computer_uv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000DB00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_platinum",
+            "count": 1
+          },
+          "id": "1C0000000000DB00"
         }
       ]
     },
@@ -836,6 +987,78 @@
             "count": 5
           },
           "id": "1C00000000042400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000426",
+      "x": 8.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000002C1",
+        "1A0000000000042A",
+        "1A00000000000429"
+      ],
+      "icon": {
+        "id": "iis:large_plasma_turbine",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:large_plasma_turbine",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000042600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 2
+          },
+          "id": "1C00000000042600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000434",
+      "x": 9.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000008B",
+        "1A00000000000435",
+        "1A00000000000431",
+        "1A0000000000007D",
+        "1A00000000000091"
+      ],
+      "icon": {
+        "id": "iis:ore_drill_4",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ore_drill_4",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 3
+          },
+          "id": "1C00000000043400"
         }
       ]
     },

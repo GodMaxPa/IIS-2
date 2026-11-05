@@ -47,7 +47,6 @@ def spot(col, accent, seed):
 def generate(g):
     write, A, D, lang, shaped, shapeless, tag_of, ref = g['write'], g['A'], g['D'], g['lang'], g['shaped'], g['shapeless'], g['tag_of'], g['ref']
     rec = {}
-    g['item_tags'].setdefault('c:circuits/superconductor', [])   # filled by the UV tier: recipes that need it stay closed until then
 
     def name(key, en, ru):
         lang['en_us'][key] = en
@@ -108,7 +107,7 @@ def generate(g):
          fins=[fl('lubricant', 500)], keep=I('hatch_maintenance_semiauto'), temp=288000)
 
     # GT_Loader_MetaTileEntities:894-900 mass fabricator "CFC/WMW/CFC" (the other machines are in lv.py NEW_CRAFT)
-    for t, circuit, cable in (('lv', 'good', 'tin'), ('mv', 'advanced', 'copper'), ('hv', 'data', 'gold'), ('ev', 'elite', 'aluminium'), ('iv', 'master', 'platinum'), ('luv', 'ultimate', 'niobium_titanium'), ('zpm', 'superconductor', 'naquadah')):
+    for t, circuit, cable in (('lv', 'good', 'tin'), ('mv', 'advanced', 'copper'), ('hv', 'data', 'gold'), ('ev', 'elite', 'aluminium'), ('iv', 'master', 'platinum'), ('luv', 'ultimate', 'niobium_titanium'), ('zpm', 'superconductor', 'naquadah'), ('uv', 'infinite', 'naquadah_alloy')):
         if os.path.exists(os.path.join(A, 'items', f'field_generator_{t}.json')):
             shaped(f'lv/massfab_{t}', I(f'massfab_{t}'), 1, ['CFC', 'WMW', 'CFC'], {'M': I(f'hull_{t}'), 'F': I(f'field_generator_{t}'), 'C': f'#c:circuits/{circuit}', 'W': f'#iis:cables/4x/{cable}'})
     # --- D120: naquadah reactors and plasma generators: GT_Loader_MetaTileEntities:1193-1195, 1231-1232 ----------------------------------
@@ -118,7 +117,8 @@ def generate(g):
                                                  ('naquadah_reactor_iv', 'UCU', R('Plutonium241'), 'hull_iv', 'field_generator_iv', 'master', cab('tungsten')),
                                                  ('naquadah_reactor_luv', 'UCU', R('NaquadahEnriched'), 'hull_luv', 'field_generator_luv', 'ultimate', cab('niobium_titanium')),
                                                  ('plasma_generator_ev', 'UCU', R('Plutonium241'), 'hull_luv', 'field_generator_hv', 'elite', cab('tungsten')),
-                                                 ('plasma_generator_iv', 'UCU', R('Europium'), 'hull_zpm', 'field_generator_ev', 'master', '#iis:wires/4x/vanadium_gallium')):
+                                                 ('plasma_generator_iv', 'UCU', R('Europium'), 'hull_zpm', 'field_generator_ev', 'master', '#iis:wires/4x/vanadium_gallium'),
+                                                 ('plasma_generator_luv', 'UCU', R('Americium'), 'hull_uv', 'field_generator_iv', 'ultimate', '#iis:wires/4x/naquadah')):   # :1233 (D121)
         shaped(f'lv/{bid}', I(bid), 1, [top, 'FMF', 'WCW'], {'U': u, 'C': f'#c:circuits/{circ}', 'F': I(field), 'M': I(hull), 'W': wire})
     # fuels: GT_FuelLoader:32 enriched naquadah 1400000 EU per cell; ProcessingCell:95 plasma max(1024, 1024 x mass) per litre
     fuels_path = os.path.join(g['RES'], NS, 'fuels.json')

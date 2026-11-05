@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "iis:block/auto/regulator_uv_north",
+    "south": "iis:block/auto/regulator_uv_south",
+    "east": "iis:block/auto/regulator_uv_east",
+    "west": "iis:block/auto/regulator_uv_west",
+    "up": "iis:block/auto/regulator_uv_up",
+    "down": "iis:block/auto/regulator_uv_down",
+    "particle": "iis:block/auto/regulator_uv_east"
+  }
+}

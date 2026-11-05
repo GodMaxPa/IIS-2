@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GPG",
+    "WMW",
+    "CBC"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "P": "iis:electric_pump_uv",
+    "B": "minecraft:blaze_rod",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:wires/4x/naquadah_alloy",
+    "G": "iis:reinforced_glass"
+  },
+  "result": {
+    "id": "iis:brewery_uv"
+  }
+}

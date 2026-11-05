@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:bolts/naquadah_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 3,
+  "eut": 120,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_naquadahalloy",
+      "amount": 18
+    }
+  ]
+}

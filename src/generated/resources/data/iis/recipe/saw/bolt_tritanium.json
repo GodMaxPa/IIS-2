@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:rods/tritanium",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:bolt_tritanium",
+    "count": 2
+  }
+}

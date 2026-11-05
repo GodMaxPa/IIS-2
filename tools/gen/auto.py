@@ -13,7 +13,7 @@ from PIL import Image
 NS = 'iis'
 GT = os.environ.get('IIS_GT5_TEXTURES', '/home/claude/ref/gt5/src/main/resources/assets/gregtech/textures')
 TIERS = ['lv', 'mv', 'hv', 'ev', 'iv']
-AUTO_TIERS = TIERS + ['luv', 'zpm']   # D110, D112: automation and repellents go up to ZPM, as in GT
+AUTO_TIERS = TIERS + ['luv', 'zpm', 'uv']   # D110, D112, D121: automation and repellents go up to UV, as in GT
 
 
 def generate(g):
@@ -102,7 +102,7 @@ def generate(g):
             r['keep'] = [keep]
         rec.setdefault(f'{rtype}/{rid}', r)
 
-    CIRC = {'lv': 'basic', 'mv': 'good', 'hv': 'advanced', 'ev': 'data', 'iv': 'elite', 'luv': 'master', 'zpm': 'ultimate'}
+    CIRC = {'lv': 'basic', 'mv': 'good', 'hv': 'advanced', 'ev': 'data', 'iv': 'elite', 'luv': 'master', 'zpm': 'ultimate', 'uv': 'superconductor'}
     CABLE = {'lv': 'Tin', 'mv': 'Copper', 'hv': 'Gold', 'ev': 'Aluminium', 'iv': 'Tungsten'}
 
     # --- automation ---------------------------------------------------------------------------------------------------
@@ -238,7 +238,7 @@ def generate(g):
     shaped('lv/transformer_ulv', f'{NS}:transformer_ulv', 1, [' BB', 'CM ', ' BB'], {'M': f'{NS}:hull_ulv', 'C': tag_of_cable('Tin'), 'B': tag_of_cable('Lead')})
 
     shutil.copy(os.path.join(GT, 'gui', 'DigitalTransformer.png'), tex_out('gui/auto/digital_transformer.png'))
-    for i, t in enumerate(('ev', 'iv', 'luv', 'zpm')):
+    for i, t in enumerate(('ev', 'iv', 'luv', 'zpm', 'uv')):
         bid = f'adjustable_transformer_{t}'
         base = first(os.path.join(BI, f'DIGITAL_TRANSFORMER_{ {"luv": "LuV"}.get(t, t.upper()) }.png'))
         norm = {'north': over(base, 'OVERLAY_ENERGY_IN_MULTI'), 'south': over(base, 'OVERLAY_ENERGY_OUT'), 'east': over(base, 'OVERLAY_ENERGY_OUT'), 'west': over(base, 'OVERLAY_ENERGY_OUT'),
@@ -259,6 +259,8 @@ def generate(g):
          [out(f'{NS}:adjustable_transformer_luv')], 50, 1920)
     mrec('assembler', 'adjustable_transformer_zpm', [ing(f'{NS}:transformer_luv'), ing(f'{NS}:adjustable_transformer_luv'), ing('#c:circuits/ultimate', 2)],
          [out(f'{NS}:adjustable_transformer_zpm')], 50, 1920)   # :2909-2912 (D112)
+    mrec('assembler', 'adjustable_transformer_uv', [ing(f'{NS}:transformer_zpm'), ing(f'{NS}:adjustable_transformer_zpm'), ing('#c:circuits/superconductor', 2)],
+         [out(f'{NS}:adjustable_transformer_uv')], 50, 1920)   # :2914-2917 (D121)
     # GT_MachineRecipeLoader:71: the processing array is finally craftable
     shaped('multi/processing_array', f'{NS}:processing_array', 1, ['CTC', 'FMF', 'CBC'],
            {'M': f'{NS}:hull_ev', 'B': f'{NS}:electric_pump_ev', 'C': '#c:circuits/elite', 'F': f'{NS}:robot_arm_ev', 'T': f'{NS}:adjustable_transformer_ev'})
@@ -281,19 +283,23 @@ def generate(g):
         name(f'gui.iis.auto.type.{k}', en, ruu)
 
     # --- battery chargers: :586-591 "WTW/WMW/BCB" -------------------------------------------------------------------------
-    BAT = {'lv': f'{NS}:battery_lithium_lv', 'mv': f'{NS}:battery_lithium_mv', 'hv': f'{NS}:battery_lithium_hv'}
-    for i, t in enumerate(TIERS):
+    # D121: EV and IV had no recipe since D108: their batteries came with the IC2 gear (D118); LuV, ZPM and UV added with the orb cluster and the ultimate battery
+    BAT = {'lv': f'{NS}:battery_lithium_lv', 'mv': f'{NS}:battery_lithium_mv', 'hv': f'{NS}:battery_lithium_hv', 'ev': '#iis:batteries/master', 'iv': f'{NS}:energy_orb',
+           'luv': f'{NS}:energy_orb_cluster', 'zpm': f'{NS}:energy_orb_cluster', 'uv': f'{NS}:ultimate_battery'}
+    CHARGER_WIRE = dict(CABLE, luv='vanadium_gallium', zpm='naquadah', uv='naquadah_alloy')
+    for i, t in enumerate(AUTO_TIERS):
         bid = f'battery_charger_{t}'
         s, top, bot = casing(t, 'SIDE'), casing(t, 'TOP'), casing(t, 'BOTTOM')
         machine(bid, {'north': over(s, 'OVERLAY_ENERGY_OUT'), 'south': s, 'east': s, 'west': s, 'up': top, 'down': bot})
         v = 32 << (2 * i)
-        name(f'block.{NS}.{bid}', f'{t.upper()} Battery Charger', ru(f'gt.blockmachines.batterycharger.16.tier.0{i + 1}.name', f'Зарядник {t.upper()}'))
+        TN = 'LuV' if t == 'luv' else t.upper()
+        name(f'block.{NS}.{bid}', f'{TN} Battery Charger', ru(f'gt.blockmachines.batterycharger.16.tier.0{i + 1}.name', f'Зарядник {TN}'))
         tooltip(bid, [(f'16 slots: charges batteries and tools at up to {v * 15} EU/t each', f'16 слотов: заряжает батарейки и инструменты, до {v * 15} EU/t на предмет'),
                       (f'Output: {v} EU/t, 4 A per battery', f'Выход: {v} EU/t, 4 А на батарейку')])
         b = BAT.get(t)
         if b:
             shaped(f'auto/{bid}', f'{NS}:{bid}', 1, ['WTW', 'WMW', 'BCB'],
-                   {'M': f'{NS}:hull_{t}', 'W': tag_of_wire(CABLE[t], 16), 'T': '#c:chests/wooden', 'B': b, 'C': f'#c:circuits/{CIRC[t]}'})
+                   {'M': f'{NS}:hull_{t}', 'W': tag_of_wire(CHARGER_WIRE[t], 16), 'T': '#c:chests/wooden', 'B': b, 'C': f'#c:circuits/{CIRC[t]}'})
 
     # --- field generators and quantum items: GT_MachineRecipeLoader:409-413, 1190-1191, 674 --------------------------------
     mrec('assembler', 'field_generator_lv', [ing(tag_of('dust', 'EnderPearl')), ing('#iis:wires/1x/osmium', 4), ing('#c:circuits/basic', 4)], [out(f'{NS}:field_generator_lv')], 1800, 30)
@@ -375,6 +381,9 @@ def generate(g):
         tag = f'#c:storage_blocks/{mid}'
         if ingot:
             mrec('compressor', f'block_{mid}', [ing(tag_of('ingot', n), 9)], [out(f'{NS}:{bid}')], 300, 2)
+        elif gem:
+            # D121: GT_ModHandler compression of a gem into its block: without it the plates of olivine and ruby, cut from the block, had no source
+            mrec('compressor', f'block_{mid}', [ing(tag_of('gem', n), 9)], [out(f'{NS}:{bid}')], 300, 2)
         plate = g['ref']('plate', n)
         if plate:
             dur = max(mass(n) * 10, 1)

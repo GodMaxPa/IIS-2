@@ -564,7 +564,7 @@
       "x": 18.0,
       "y": 10.5,
       "dependencies": [
-        "1A000000000004CA"
+        "1A000000000003A5"
       ],
       "icon": {
         "id": "iis:coolant_10k",
@@ -936,6 +936,34 @@
             "count": 2
           },
           "id": "1C0000000003A400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003A5",
+      "x": 19.5,
+      "y": 9.0,
+      "dependencies": [
+        "1A000000000004CA"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:ic2coolant",
+            "amount": 1
+          },
+          "id": "1B0000000003A500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000003A500"
         }
       ]
     },

@@ -250,6 +250,46 @@
     "material": "amber"
   },
   {
+    "id": "dust_americium",
+    "prefix": "dust",
+    "material": "americium"
+  },
+  {
+    "id": "small_dust_americium",
+    "prefix": "small_dust",
+    "material": "americium"
+  },
+  {
+    "id": "tiny_dust_americium",
+    "prefix": "tiny_dust",
+    "material": "americium"
+  },
+  {
+    "id": "ingot_americium",
+    "prefix": "ingot",
+    "material": "americium"
+  },
+  {
+    "id": "nugget_americium",
+    "prefix": "nugget",
+    "material": "americium"
+  },
+  {
+    "id": "plate_americium",
+    "prefix": "plate",
+    "material": "americium"
+  },
+  {
+    "id": "rod_americium",
+    "prefix": "rod",
+    "material": "americium"
+  },
+  {
+    "id": "long_rod_americium",
+    "prefix": "long_rod",
+    "material": "americium"
+  },
+  {
     "id": "crushed_amethyst",
     "prefix": "crushed",
     "material": "amethyst"
@@ -5175,6 +5215,21 @@
     "material": "manganese"
   },
   {
+    "id": "dust_meat_raw",
+    "prefix": "dust",
+    "material": "meat_raw"
+  },
+  {
+    "id": "small_dust_meat_raw",
+    "prefix": "small_dust",
+    "material": "meat_raw"
+  },
+  {
+    "id": "tiny_dust_meat_raw",
+    "prefix": "tiny_dust",
+    "material": "meat_raw"
+  },
+  {
     "id": "crushed_meteoric_iron",
     "prefix": "crushed",
     "material": "meteoric_iron"
@@ -5523,6 +5578,76 @@
     "id": "turbine_blade_naquadah",
     "prefix": "turbine_blade",
     "material": "naquadah"
+  },
+  {
+    "id": "dust_naquadah_alloy",
+    "prefix": "dust",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "small_dust_naquadah_alloy",
+    "prefix": "small_dust",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "tiny_dust_naquadah_alloy",
+    "prefix": "tiny_dust",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "ingot_naquadah_alloy",
+    "prefix": "ingot",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "hot_ingot_naquadah_alloy",
+    "prefix": "hot_ingot",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "nugget_naquadah_alloy",
+    "prefix": "nugget",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "plate_naquadah_alloy",
+    "prefix": "plate",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "double_plate_naquadah_alloy",
+    "prefix": "double_plate",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "rod_naquadah_alloy",
+    "prefix": "rod",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "bolt_naquadah_alloy",
+    "prefix": "bolt",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "screw_naquadah_alloy",
+    "prefix": "screw",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "foil_naquadah_alloy",
+    "prefix": "foil",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "long_rod_naquadah_alloy",
+    "prefix": "long_rod",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "turbine_blade_naquadah_alloy",
+    "prefix": "turbine_blade",
+    "material": "naquadah_alloy"
   },
   {
     "id": "crushed_naquadah_enriched",
@@ -5963,6 +6088,91 @@
     "id": "tiny_dust_netherrack",
     "prefix": "tiny_dust",
     "material": "netherrack"
+  },
+  {
+    "id": "dust_neutronium",
+    "prefix": "dust",
+    "material": "neutronium"
+  },
+  {
+    "id": "small_dust_neutronium",
+    "prefix": "small_dust",
+    "material": "neutronium"
+  },
+  {
+    "id": "tiny_dust_neutronium",
+    "prefix": "tiny_dust",
+    "material": "neutronium"
+  },
+  {
+    "id": "ingot_neutronium",
+    "prefix": "ingot",
+    "material": "neutronium"
+  },
+  {
+    "id": "nugget_neutronium",
+    "prefix": "nugget",
+    "material": "neutronium"
+  },
+  {
+    "id": "plate_neutronium",
+    "prefix": "plate",
+    "material": "neutronium"
+  },
+  {
+    "id": "double_plate_neutronium",
+    "prefix": "double_plate",
+    "material": "neutronium"
+  },
+  {
+    "id": "rod_neutronium",
+    "prefix": "rod",
+    "material": "neutronium"
+  },
+  {
+    "id": "bolt_neutronium",
+    "prefix": "bolt",
+    "material": "neutronium"
+  },
+  {
+    "id": "screw_neutronium",
+    "prefix": "screw",
+    "material": "neutronium"
+  },
+  {
+    "id": "ring_neutronium",
+    "prefix": "ring",
+    "material": "neutronium"
+  },
+  {
+    "id": "round_neutronium",
+    "prefix": "round",
+    "material": "neutronium"
+  },
+  {
+    "id": "small_gear_neutronium",
+    "prefix": "small_gear",
+    "material": "neutronium"
+  },
+  {
+    "id": "rotor_neutronium",
+    "prefix": "rotor",
+    "material": "neutronium"
+  },
+  {
+    "id": "long_rod_neutronium",
+    "prefix": "long_rod",
+    "material": "neutronium"
+  },
+  {
+    "id": "turbine_blade_neutronium",
+    "prefix": "turbine_blade",
+    "material": "neutronium"
+  },
+  {
+    "id": "gear_neutronium",
+    "prefix": "gear",
+    "material": "neutronium"
   },
   {
     "id": "dust_nichrome",
@@ -6413,6 +6623,76 @@
     "id": "gem_exquisite_opal",
     "prefix": "gem_exquisite",
     "material": "opal"
+  },
+  {
+    "id": "dust_osmiridium",
+    "prefix": "dust",
+    "material": "osmiridium"
+  },
+  {
+    "id": "small_dust_osmiridium",
+    "prefix": "small_dust",
+    "material": "osmiridium"
+  },
+  {
+    "id": "tiny_dust_osmiridium",
+    "prefix": "tiny_dust",
+    "material": "osmiridium"
+  },
+  {
+    "id": "ingot_osmiridium",
+    "prefix": "ingot",
+    "material": "osmiridium"
+  },
+  {
+    "id": "hot_ingot_osmiridium",
+    "prefix": "hot_ingot",
+    "material": "osmiridium"
+  },
+  {
+    "id": "nugget_osmiridium",
+    "prefix": "nugget",
+    "material": "osmiridium"
+  },
+  {
+    "id": "plate_osmiridium",
+    "prefix": "plate",
+    "material": "osmiridium"
+  },
+  {
+    "id": "double_plate_osmiridium",
+    "prefix": "double_plate",
+    "material": "osmiridium"
+  },
+  {
+    "id": "rod_osmiridium",
+    "prefix": "rod",
+    "material": "osmiridium"
+  },
+  {
+    "id": "bolt_osmiridium",
+    "prefix": "bolt",
+    "material": "osmiridium"
+  },
+  {
+    "id": "screw_osmiridium",
+    "prefix": "screw",
+    "material": "osmiridium"
+  },
+  {
+    "id": "foil_osmiridium",
+    "prefix": "foil",
+    "material": "osmiridium"
+  },
+  {
+    "id": "long_rod_osmiridium",
+    "prefix": "long_rod",
+    "material": "osmiridium"
+  },
+  {
+    "id": "turbine_blade_osmiridium",
+    "prefix": "turbine_blade",
+    "material": "osmiridium"
   },
   {
     "id": "crushed_osmium",
@@ -9545,6 +9825,66 @@
     "material": "tricalcium_phosphate"
   },
   {
+    "id": "dust_tritanium",
+    "prefix": "dust",
+    "material": "tritanium"
+  },
+  {
+    "id": "small_dust_tritanium",
+    "prefix": "small_dust",
+    "material": "tritanium"
+  },
+  {
+    "id": "tiny_dust_tritanium",
+    "prefix": "tiny_dust",
+    "material": "tritanium"
+  },
+  {
+    "id": "ingot_tritanium",
+    "prefix": "ingot",
+    "material": "tritanium"
+  },
+  {
+    "id": "nugget_tritanium",
+    "prefix": "nugget",
+    "material": "tritanium"
+  },
+  {
+    "id": "plate_tritanium",
+    "prefix": "plate",
+    "material": "tritanium"
+  },
+  {
+    "id": "double_plate_tritanium",
+    "prefix": "double_plate",
+    "material": "tritanium"
+  },
+  {
+    "id": "rod_tritanium",
+    "prefix": "rod",
+    "material": "tritanium"
+  },
+  {
+    "id": "bolt_tritanium",
+    "prefix": "bolt",
+    "material": "tritanium"
+  },
+  {
+    "id": "screw_tritanium",
+    "prefix": "screw",
+    "material": "tritanium"
+  },
+  {
+    "id": "long_rod_tritanium",
+    "prefix": "long_rod",
+    "material": "tritanium"
+  },
+  {
+    "id": "turbine_blade_tritanium",
+    "prefix": "turbine_blade",
+    "material": "tritanium"
+  },
+  {
     "id": "crushed_tungstate",
     "prefix": "crushed",
     "material": "tungstate"
@@ -11765,6 +12105,51 @@
     "material": "naquadah"
   },
   {
+    "id": "sword_head_naquadah_alloy",
+    "prefix": "sword_head",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "pickaxe_head_naquadah_alloy",
+    "prefix": "pickaxe_head",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "shovel_head_naquadah_alloy",
+    "prefix": "shovel_head",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "axe_head_naquadah_alloy",
+    "prefix": "axe_head",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "hoe_head_naquadah_alloy",
+    "prefix": "hoe_head",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "saw_head_naquadah_alloy",
+    "prefix": "saw_head",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "drill_head_naquadah_alloy",
+    "prefix": "drill_head",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "chainsaw_head_naquadah_alloy",
+    "prefix": "chainsaw_head",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "wrench_head_naquadah_alloy",
+    "prefix": "wrench_head",
+    "material": "naquadah_alloy"
+  },
+  {
     "id": "sword_head_naquadah_enriched",
     "prefix": "sword_head",
     "material": "naquadah_enriched"
@@ -12033,6 +12418,51 @@
     "id": "wrench_head_nickel",
     "prefix": "wrench_head",
     "material": "nickel"
+  },
+  {
+    "id": "sword_head_osmiridium",
+    "prefix": "sword_head",
+    "material": "osmiridium"
+  },
+  {
+    "id": "pickaxe_head_osmiridium",
+    "prefix": "pickaxe_head",
+    "material": "osmiridium"
+  },
+  {
+    "id": "shovel_head_osmiridium",
+    "prefix": "shovel_head",
+    "material": "osmiridium"
+  },
+  {
+    "id": "axe_head_osmiridium",
+    "prefix": "axe_head",
+    "material": "osmiridium"
+  },
+  {
+    "id": "hoe_head_osmiridium",
+    "prefix": "hoe_head",
+    "material": "osmiridium"
+  },
+  {
+    "id": "saw_head_osmiridium",
+    "prefix": "saw_head",
+    "material": "osmiridium"
+  },
+  {
+    "id": "drill_head_osmiridium",
+    "prefix": "drill_head",
+    "material": "osmiridium"
+  },
+  {
+    "id": "chainsaw_head_osmiridium",
+    "prefix": "chainsaw_head",
+    "material": "osmiridium"
+  },
+  {
+    "id": "wrench_head_osmiridium",
+    "prefix": "wrench_head",
+    "material": "osmiridium"
   },
   {
     "id": "sword_head_osmium",
@@ -12708,6 +13138,51 @@
     "id": "wrench_head_titanium",
     "prefix": "wrench_head",
     "material": "titanium"
+  },
+  {
+    "id": "sword_head_tritanium",
+    "prefix": "sword_head",
+    "material": "tritanium"
+  },
+  {
+    "id": "pickaxe_head_tritanium",
+    "prefix": "pickaxe_head",
+    "material": "tritanium"
+  },
+  {
+    "id": "shovel_head_tritanium",
+    "prefix": "shovel_head",
+    "material": "tritanium"
+  },
+  {
+    "id": "axe_head_tritanium",
+    "prefix": "axe_head",
+    "material": "tritanium"
+  },
+  {
+    "id": "hoe_head_tritanium",
+    "prefix": "hoe_head",
+    "material": "tritanium"
+  },
+  {
+    "id": "saw_head_tritanium",
+    "prefix": "saw_head",
+    "material": "tritanium"
+  },
+  {
+    "id": "drill_head_tritanium",
+    "prefix": "drill_head",
+    "material": "tritanium"
+  },
+  {
+    "id": "chainsaw_head_tritanium",
+    "prefix": "chainsaw_head",
+    "material": "tritanium"
+  },
+  {
+    "id": "wrench_head_tritanium",
+    "prefix": "wrench_head",
+    "material": "tritanium"
   },
   {
     "id": "sword_head_tungsten",

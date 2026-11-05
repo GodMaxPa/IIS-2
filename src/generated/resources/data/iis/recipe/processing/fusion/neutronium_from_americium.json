@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 1200,
+  "eut": 98304,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_americium",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:molten_naquadria",
+      "amount": 16
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_neutronium",
+      "amount": 1
+    }
+  ],
+  "temp": 600000000
+}

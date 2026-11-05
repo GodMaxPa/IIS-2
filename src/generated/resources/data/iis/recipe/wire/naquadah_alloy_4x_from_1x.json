@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:wires/1x/naquadah_alloy",
+    "#iis:wires/1x/naquadah_alloy",
+    "#iis:wires/1x/naquadah_alloy",
+    "#iis:wires/1x/naquadah_alloy"
+  ],
+  "result": {
+    "id": "iis:wire_naquadah_alloy_4x"
+  }
+}

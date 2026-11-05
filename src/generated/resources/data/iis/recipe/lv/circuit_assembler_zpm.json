@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ACE",
+    "VMV",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "V": "iis:conveyor_module_zpm",
+    "A": "iis:robot_arm_zpm",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:cables/1x/naquadah",
+    "E": "iis:emitter_zpm"
+  },
+  "result": {
+    "id": "iis:circuit_assembler_zpm"
+  }
+}

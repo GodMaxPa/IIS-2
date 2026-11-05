@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/osmiridium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_osmiridium",
+      "count": 4
+    }
+  ],
+  "duration": 191,
+  "eut": 24
+}

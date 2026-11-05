@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CFC",
+    "WMW",
+    "CFC"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "F": "iis:field_generator_uv",
+    "C": "#c:circuits/infinite",
+    "W": "#iis:cables/4x/naquadah_alloy"
+  },
+  "result": {
+    "id": "iis:massfab_uv"
+  }
+}

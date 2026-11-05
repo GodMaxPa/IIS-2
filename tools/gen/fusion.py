@@ -22,7 +22,23 @@ RECIPES = [('deuterium', 125, 'tritium', 125, 'plasma_helium', 125, 16, 4096, 40
            ('molten_tungsten', 16, 'helium', 16, 'molten_osmium', 16, 64, 24578, 150000000),
            ('molten_manganese', 16, 'hydrogen', 16, 'molten_iron', 16, 64, 8192, 120000000),
            ('molten_vanadium', 16, 'hydrogen', 125, 'molten_chrome', 16, 64, 24576, 140000000),
-           ('molten_gallium', 16, 'radon', 125, 'molten_duranium', 16, 64, 16384, 140000000)]
+           ('molten_gallium', 16, 'radon', 125, 'molten_duranium', 16, 64, 16384, 140000000),
+           # D121: Mark II and III (GT_MachineRecipeLoader:1063, 1067-1070, 1073-1075, 1080-1082, 1085-1086, 1088-1089): the store of the reactor decides which it can run
+           ('molten_lithium', 16, 'molten_tungsten', 16, 'molten_iridium', 16, 32, 32768, 300000000),
+           ('molten_aluminium', 16, 'molten_lithium', 16, 'plasma_sulfur', 125, 32, 10240, 240000000),
+           ('molten_beryllium', 16, 'deuterium', 375, 'plasma_nitrogen', 175, 16, 16384, 180000000),
+           ('molten_silicon', 16, 'molten_magnesium', 16, 'plasma_iron', 125, 32, 8192, 360000000),
+           ('molten_potassium', 16, 'fluorine', 125, 'plasma_nickel', 125, 16, 32768, 480000000),
+           ('molten_lutetium', 16, 'molten_chrome', 16, 'molten_americium', 16, 96, 49152, 200000000),
+           ('molten_plutonium', 16, 'molten_thorium', 16, 'molten_naquadah', 16, 64, 32768, 300000000),
+           ('molten_americium', 16, 'molten_naquadria', 16, 'molten_neutronium', 1, 1200, 98304, 600000000),
+           ('mercury', 16, 'molten_magnesium', 16, 'molten_uranium', 16, 64, 49152, 240000000),
+           ('molten_gold', 16, 'molten_aluminium', 16, 'molten_uranium', 16, 64, 49152, 240000000),
+           ('molten_uranium', 16, 'helium', 16, 'molten_plutonium', 16, 128, 49152, 480000000),
+           ('molten_titanium', 48, 'molten_duranium', 32, 'molten_tritanium', 16, 64, 32768, 200000000),
+           ('molten_gold', 16, 'mercury', 16, 'radon', 125, 64, 32768, 200000000),
+           ('molten_silver', 16, 'molten_lithium', 16, 'molten_indium', 16, 32, 24576, 380000000),
+           ('molten_naquadahenriched', 15, 'radon', 125, 'molten_naquadria', 3, 64, 49152, 400000000)]
 
 
 def spot(base, accent, seed):
@@ -162,6 +178,45 @@ def generate(g):
     mrec('assembly_line', bid, [ing(I('fusion_coil')), ing('#c:circuits/ultimate'), ing('#c:circuits/ultimate'), ing('#c:circuits/ultimate'), ing('#c:circuits/ultimate'), ing(P('Plutonium241')), ing(P('NetherStar')),
                                 ing(I('field_generator_iv'), 2), ing(I('wafer_hpic'), 32), ing('#iis:wires/1x/superconductor', 32)], [out(I(bid))], 1000, 30000,
          fins=[fl('molten_solderingalloy', 2880)], keep='#iis:wires/1x/superconductor', temp=144000)
+    # --- D121: Mark II and III: GT_MetaTileEntity_FusionComputer2, _FusionComputer3 --------------------------------------------------------
+    for cid, tx, en, ru in (('casing_fusion', 'MACHINE_CASING_FUSION', 'Fusion Machine Casing', 'Корпус термоядерного реактора'), ('casing_fusion_2', 'MACHINE_CASING_FUSION_2', 'Fusion Machine Casing MK II', 'Корпус термоядерного реактора II')):
+        block(cid, en, ru, first(os.path.join(BI, tx + '.png')))
+    # GT_Loader_MetaTileEntities:1219-1220, GT_MachineRecipeLoader:1395
+    shaped('multi/casing_fusion', I('casing_fusion'), 1, ['PhP', 'PFP', 'PwP'], {'P': P('TungstenSteel'), 'F': I('casing_luv')})
+    mrec('assembler', 'casing_fusion', [ing(P('TungstenSteel'), 6), ing(I('casing_luv'))], [out(I('casing_fusion'))], 50, 16)
+    shaped('multi/casing_fusion_2', I('casing_fusion_2'), 1, ['PhP', 'PFP', 'PwP'], {'P': P('Americium'), 'F': I('casing_fusion')})
+    for fid, tx, ovl, en, ru, volt, hatch_in, store, casing_n, ru_casing in (
+            ('fusion_computer_zpm', 'MACHINE_CASING_FUSION', 'OVERLAY_FUSION2', 'Fusion Control Computer Mark II', 'Блок управления термоядерным реактором II', 'ZPM', 4096, 20, 'fusion machine casings', 'корпусов термоядерного реактора'),
+            ('fusion_computer_uv', 'MACHINE_CASING_FUSION_2', 'OVERLAY_FUSION3', 'Fusion Control Computer Mark III', 'Блок управления термоядерным реактором III', 'UV', 8192, 40, 'fusion machine casings MK II', 'корпусов термоядерного реактора II')):
+        base = first(os.path.join(BI, tx + '.png'))
+        ovim = first(os.path.join(BI, ovl + '.png'))
+        Image.alpha_composite(base, ovim).save(tex(f'block/multi/{fid}_front.png'))
+        base.save(tex(f'block/multi/{fid}_side.png'))
+        s_ = f'{NS}:block/multi/{fid}_side'
+        for suf in ('', '_active'):
+            write(os.path.join(A, 'models', 'block', fid + suf + '.json'), {'parent': 'minecraft:block/cube', 'textures': {
+                'particle': s_, 'north': f'{NS}:block/multi/{fid}_front', 'south': s_, 'east': s_, 'west': s_, 'up': s_, 'down': s_}})
+        vs = {}
+        for facing, y in (('north', 0), ('east', 90), ('south', 180), ('west', 270)):
+            for active in (False, True):
+                v = {'model': f'{NS}:block/{fid}' + ('_active' if active else '')}
+                if y:
+                    v['y'] = y
+                vs[f'facing={facing},active={str(active).lower()}'] = v
+        write(os.path.join(A, 'blockstates', fid + '.json'), {'variants': vs})
+        write(os.path.join(A, 'items', fid + '.json'), {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/{fid}'}})
+        loot(fid)
+        name(f'block.{NS}.{fid}', en, ru)
+        for k, (ent, rut) in enumerate(((f'Ring of {casing_n} around 32 fusion coils; the back of the controller looks at the centre, 5 blocks away', f'Кольцо {ru_casing} вокруг 32 катушек термоядерного реактора; центр кольца за спиной контроллера, в 5 блоках'),
+                                        (f'2-16 input hatches, 1-16 output hatches, 1-16 energy hatches, all {volt} or better, in place of casings', f'2–16 входных люков, 1–16 выходных, 1–16 энергетических, все {volt} и выше, вместо корпусов'),
+                                        (f'Each energy hatch: {hatch_in} EU/t in, {store} million EU of store; ignition takes the start energy at once', f'Каждый энергетический люк: {hatch_in} EU/t на вход и {store} млн EU запаса; зажигание сразу забирает стартовую энергию'))):
+            name(f'block.{NS}.{fid}.tooltip.{k}', ent, rut)
+    # GT_MachineRecipeLoader:2566-2593: the Superconductor circuit is one per slot
+    SC = [ing('#c:circuits/superconductor')] * 4
+    mrec('assembly_line', 'fusion_computer_zpm', [ing(I('fusion_coil'))] + SC + [ing(P('Europium'), 4), ing(I('field_generator_luv'), 2), ing(I('wafer_hpic'), 48), ing('#iis:wires/2x/superconductor', 32)], [out(I('fusion_computer_zpm'))], 1000, 60000,
+         fins=[fl('molten_solderingalloy', 2880)], keep=I('block_europium'), temp=288000)
+    mrec('assembly_line', 'fusion_computer_uv', [ing(I('fusion_coil'))] + SC + [ing(P('Americium'), 4), ing(I('field_generator_zpm'), 2), ing(I('wafer_hpic'), 64), ing('#iis:wires/4x/superconductor', 32)], [out(I('fusion_computer_uv'))], 1000, 90000,
+         fins=[fl('molten_solderingalloy', 2880)], keep=I('block_americium'), temp=432000)
     for a, na, b, nb, o, no, dur, eut, start in RECIPES:
         mrec('fusion', o.replace('molten_', '').replace('plasma_', 'plasma_') + '_from_' + a.replace('molten_', ''), [], [], dur, eut, fins=[fl(a, na), fl(b, nb)], fout=[{'id': I(o), 'amount': no}], temp=start)
     for key, r in rec.items():

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:chip_crystal_cpu"
+  ],
+  "result": {
+    "id": "iis:raw_crystal_chip",
+    "count": 9
+  }
+}

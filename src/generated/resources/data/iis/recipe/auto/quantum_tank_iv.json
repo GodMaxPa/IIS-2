@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DGD",
+    "PMP",
+    "DPD"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "G": "iis:field_generator_iv",
+    "D": "#c:circuits/ultimate",
+    "P": "#c:plates/americium"
+  },
+  "result": {
+    "id": "iis:quantum_tank_iv"
+  }
+}

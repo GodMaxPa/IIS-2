@@ -70,10 +70,30 @@
     "Use sulfur with polydimethylsiloxane to get molten silicon rubber - then you may cast it into sheets."
   ],
   "quest.1A00000000000008.title": "Silicone Rubber Sheet",
+  "quest.1A00000000000010.quest_desc": [
+    "Can be created from molten chrome and molten lutecium in a tier 2 fusion reactor."
+  ],
+  "quest.1A00000000000010.title": "Americium Ingot",
   "quest.1A00000000000011.quest_desc": [
     "High-tech sensor"
   ],
   "quest.1A00000000000011.title": "Sensor (LuV)",
+  "quest.1A00000000000012.quest_desc": [
+    "Can be created from molten titanium and molten duranium in a tier 2 fusion reactor."
+  ],
+  "quest.1A00000000000012.title": "Tritanium Plate",
+  "quest.1A00000000000013.quest_desc": [
+    "To assemble it, you'll need an assembly line with a ZPM (or better) energy hatch. You'll also need to prepare at least 32 fusion coil blocks and nearly 4 times more fusion machine casings."
+  ],
+  "quest.1A00000000000013.title": "Fusion Control Computer Mark II",
+  "quest.1A00000000000015.quest_desc": [
+    "Can be created from the ingot."
+  ],
+  "quest.1A00000000000015.title": "Naquadah Alloy Plate",
+  "quest.1A00000000000016.quest_desc": [
+    "Use an EBF with naquadah coil blocks and with a LuV energy hatch to smelt next things: naquadah ingot + osmiridium ingot + argon gas, in order to get two naquadah alloy ingots."
+  ],
+  "quest.1A00000000000016.title": "Naquadah Alloy Ingot",
   "quest.1A00000000000017.quest_desc": [
     "Screw, rotor and pipe are different, other parts are the same as those for other pumps."
   ],
@@ -130,6 +150,10 @@
     "Use a Lathe to produce the lens from the exquisite gem."
   ],
   "quest.1A00000000000026.title": "Yellow Garnet Lens",
+  "quest.1A00000000000028.quest_desc": [
+    "Use a compressor to create one of these: Sapphire, Opal or Blue Topaz Block."
+  ],
+  "quest.1A00000000000028.title": "Blue (compressed) Block",
   "quest.1A0000000000002A.quest_desc": [
     "Prepare 9 blue gems such as: Sapphire, Blue Topaz or Opal."
   ],
@@ -166,6 +190,10 @@
     "Go to hell, bastard! Sorry, I mean, you just have to go to the Nether in order to find a blaze and obtain blaze rods."
   ],
   "quest.1A00000000000048.title": "Blaze Rod",
+  "quest.1A00000000000049.quest_desc": [
+    "Use a Compressor to produce this block from 9 items."
+  ],
+  "quest.1A00000000000049.title": "Block of Endereye",
   "quest.1A0000000000004A.quest_desc": [
     "Compressor can... yeah, compress! :)"
   ],
@@ -274,6 +302,10 @@
     "Height to search: 40 - 50 PLATINUM vein (Sheldonite, Palladium, Platinum, Iridium), 10 - 40 SOAPSTONE vein (Soapstone, Talc, Glauconite, Pentlandite), 10 - 40 NICKEL vein (Garnierite, Nickel, Cobaltite, Pentlandite), 10 - 30 COPPER vein (Chalcopyrite, Iron, Pyrite, Copper). All these veins can be a source of osmium. Just process Iridium, Pentlandite or Chalcopyrite ores to get an osmium as by-product."
   ],
   "quest.1A00000000000081.title": "Osmium Dust",
+  "quest.1A00000000000082.quest_desc": [
+    "Use an EBF with an EV energy hatch to get osmiridium alloy. It consists of osmium, iridium and helium (as a catalyst)."
+  ],
+  "quest.1A00000000000082.title": "Osmiridium Ingot",
   "quest.1A00000000000083.quest_desc": [
     "Use a fluid extractor MV+ tier to get helium from monazite."
   ],
@@ -306,6 +338,10 @@
     "A part of high tech machines."
   ],
   "quest.1A0000000000008A.title": "Sensor (MV)",
+  "quest.1A0000000000008B.quest_desc": [
+    "A part of an Ore Drilling Plant III."
+  ],
+  "quest.1A0000000000008B.title": "Osmiridium Frame Box",
   "quest.1A0000000000008C.quest_desc": [
     "Requires an assembly line which will be used to craft the LuV motor. But before that, you have to scan the previous tier motor (IV) with a scanner to write the info to a data stick which then will be used by an assembly line to assemble the LuV motor."
   ],
@@ -326,6 +362,10 @@
     "Use the same wire isolation as for other IV+ tier cables."
   ],
   "quest.1A00000000000090.title": "Yttrium Barium Cuprate Cable",
+  "quest.1A00000000000091.quest_desc": [
+    "The controller of a wonderful multiblock that allows you to rest instead of digging ores. This machine can do your digging work for you, but you need to feed it with mining pipes and ore drilling fluid."
+  ],
+  "quest.1A00000000000091.title": "Ore Drilling Plant III",
   "quest.1A00000000000092.quest_desc": [
     "An LuV Tier Circuit."
   ],
@@ -538,10 +578,18 @@
     "The 8 k eu\\t battery"
   ],
   "quest.1A000000000000CB.title": "Lapotronic Energy Orb",
+  "quest.1A000000000000CC.quest_desc": [
+    "A part of an Advanced Processing Array multiblock."
+  ],
+  "quest.1A000000000000CC.title": "Robust HSS-G Machine Casing",
   "quest.1A000000000000CD.quest_desc": [
     "... from the ingot using a metal bender."
   ],
   "quest.1A000000000000CD.title": "Europium Plate",
+  "quest.1A000000000000CE.quest_desc": [
+    "This multiblock provides you with the convenient utilization of space and allows you to gain the working power of any 64 GT machines operating simultaneously. Note that you have to feed it with power sufficient for all of the machines used. For example, if you put inside 64 LV electrolyzers to get gas products from water, you'll need 1920 eu/t and an EV (or better) energy hatch (30 eu/t * 64 =1920 eu/t)."
+  ],
+  "quest.1A000000000000CE.title": "Advanced Processing Array",
   "quest.1A000000000000CF.quest_desc": [
     "Can be created using an AL."
   ],
@@ -586,6 +634,10 @@
     "To produce it, you have to use a Fusion reactor tier 3."
   ],
   "quest.1A000000000000DA.title": "Iron Plasma",
+  "quest.1A000000000000DB.quest_desc": [
+    "To assemble it you'll need an assembly line with a UV (or better) energy hatch. You'll also need to prepare at least 32 fusion coil blocks and nearly 4 times more fusion machine casings MK2."
+  ],
+  "quest.1A000000000000DB.title": "Fusion Control Computer Mark III",
   "quest.1A000000000000DC.quest_desc": [
     "Use an electrolyzer to get potassium from rock salt."
   ],
@@ -1770,6 +1822,18 @@
     "Use MV+ distillery for wood vinegar"
   ],
   "quest.1A0000000000021D.title": "Acetone",
+  "quest.1A0000000000021E.quest_desc": [
+    "One of the best stuff to craft the high-end circuits."
+  ],
+  "quest.1A0000000000021E.title": "Wetware Lifesupport c.b.",
+  "quest.1A0000000000021F.quest_desc": [
+    "The part of WLCB"
+  ],
+  "quest.1A0000000000021F.title": "Petri Dish",
+  "quest.1A00000000000220.quest_desc": [
+    "Required for IV+ circuits."
+  ],
+  "quest.1A00000000000220.title": "Multilayer Fiber-Reinforced c.b",
   "quest.1A00000000000221.quest_desc": [
     "Rare to use detail of some machines."
   ],
@@ -1806,6 +1870,14 @@
     "Required for EV+ circuits or batteries with voltage 8+ k.v."
   ],
   "quest.1A00000000000229.title": "Fiber-Reinforced circuit board",
+  "quest.1A0000000000022A.quest_desc": [
+    "Use blank mold and NEI."
+  ],
+  "quest.1A0000000000022A.title": "Mold (Cylinder)",
+  "quest.1A0000000000022B.quest_desc": [
+    "Drop any raw meat to macerator"
+  ],
+  "quest.1A0000000000022B.title": "Mince Meat",
   "quest.1A0000000000022C.quest_desc": [
     "It can boil water. But it dosn't mean that you have to do this. You may create LV - IV machine to complete this quest."
   ],
@@ -2062,6 +2134,10 @@
     "Collect the 53 cells with liquid air and put them to centrifuge. Among other things you will get the cell with argon."
   ],
   "quest.1A0000000000028C.title": "Argon Gas",
+  "quest.1A0000000000028E.quest_desc": [
+    "Use double wires from naquadah alloy ingots.Then by wrench and 8 double wires make the coil block. Create 16 coil blocks in total."
+  ],
+  "quest.1A0000000000028E.title": "Naquadah Alloy Coil Block",
   "quest.1A00000000000290.quest_desc": [
     "The main part of all ZPM machines (monoblocks)."
   ],
@@ -2078,18 +2154,46 @@
     "Required for Fusion Reactor tier 2."
   ],
   "quest.1A00000000000293.title": "ZPM Energy Hatch",
+  "quest.1A00000000000295.quest_desc": [
+    "UV tier circuit"
+  ],
+  "quest.1A00000000000295.title": "Crystalprocessor Mainframe",
   "quest.1A00000000000296.quest_desc": [
     "May be created by AL."
   ],
   "quest.1A00000000000296.title": "Field Generator (LuV)",
+  "quest.1A00000000000297.quest_desc": [
+    "It is LuV machine casing with additional tungstensteel plates."
+  ],
+  "quest.1A00000000000297.title": "Fusion Machine Casing",
+  "quest.1A00000000000298.quest_desc": [
+    "ZPM tier circuit"
+  ],
+  "quest.1A00000000000298.title": "Ultimate Crystalcomputer",
+  "quest.1A00000000000299.quest_desc": [
+    "LuV tier circuit"
+  ],
+  "quest.1A00000000000299.title": "Crystalprocessor Assembly",
+  "quest.1A0000000000029A.quest_desc": [
+    "IV tier circuit"
+  ],
+  "quest.1A0000000000029A.title": "Crystalprocessor",
   "quest.1A0000000000029B.quest_desc": [
     "Put niobium and titanium ingots to EBF to make new alloy. Then use a wiremill to make a wires."
   ],
   "quest.1A0000000000029B.title": "Fine Niobium-Titanium Wire",
+  "quest.1A0000000000029C.quest_desc": [
+    "An important part of most top circuits"
+  ],
+  "quest.1A0000000000029C.title": "Crystal Processing Unit",
   "quest.1A0000000000029D.quest_desc": [
     "To create circuits up to UV tier"
   ],
   "quest.1A0000000000029D.title": "Advanced Circuit Assembling V",
+  "quest.1A0000000000029E.quest_desc": [
+    "Use EBF with HSS-G coil blocks (or better), olivine/emerald plate and helium gas to make the ECC (Engraved Crystal Chip)."
+  ],
+  "quest.1A0000000000029E.title": "Engraved Crystal Chip",
   "quest.1A0000000000029F.quest_desc": [
     "Prepare Emerald Lens to get ability to create the CPU (crystal processing unit) You may create it from Exquisite Emerald gem by Lathe. Or from 9 emeralds by compressing them to get a block, then cut it on cutting machine to get a plate and finaly process an emerald plate on lathe 512 v."
   ],
@@ -2098,6 +2202,10 @@
     "It will help you to create a Crystal Processor Unit."
   ],
   "quest.1A000000000002A0.title": "Advanced Precission Laser V",
+  "quest.1A000000000002A1.quest_desc": [
+    "Prepare in your inventory next items: 1) 16 Aluminium ingots 2) 24 Iron ingots 3) 32 Tin ingots 4) 1 Advanced Wafer These are items you need to create the spaсe station. To do it, just fly up with help of any rocket from any planet. But before you create and visit it, prepare all machines what you need to craft your first Raw Crystal Chip. It is the only one way to craft the first chip if you don't have one yet."
+  ],
+  "quest.1A000000000002A1.title": "Space Station & First RCC",
   "quest.1A000000000002A2.quest_desc": [
     "May be created by AL."
   ],
@@ -2170,6 +2278,10 @@
     "The main part of cutting machine."
   ],
   "quest.1A000000000002B4.title": "Diamond Sawblade",
+  "quest.1A000000000002B5.quest_desc": [
+    "Put to the scanner the Crystalprocessor Mainframe."
+  ],
+  "quest.1A000000000002B5.title": "Neuro Processing Unit",
   "quest.1A000000000002B6.quest_desc": [
     "Use disassembler to get it from eggs with a very low chance."
   ],
@@ -2178,6 +2290,34 @@
     "You have to craft an any tier Disassembler (LV - IV) to complete this quest. Note that an IV tier Disassembler may disassemble tools and machines with 100%% efficiency. Also each new tier has more efficient and may give you a stemcells with higher chance. But if you want you may use even LV tier."
   ],
   "quest.1A000000000002B7.title": "Disassembler",
+  "quest.1A000000000002B8.quest_desc": [
+    "LuV tier circuit."
+  ],
+  "quest.1A000000000002B8.title": "Wetwareprocessor",
+  "quest.1A000000000002B9.quest_desc": [
+    "ZPM tier circuit"
+  ],
+  "quest.1A000000000002B9.title": "Wetwareprocessor Assembly",
+  "quest.1A000000000002BA.quest_desc": [
+    "UV tier circuit"
+  ],
+  "quest.1A000000000002BA.title": "Wetware Supercomputer",
+  "quest.1A000000000002BD.quest_desc": [
+    "A part of some ZPM machines."
+  ],
+  "quest.1A000000000002BD.title": "Field Generator (ZPM)",
+  "quest.1A000000000002BF.quest_desc": [
+    "May be used to insert up to 524k eu/t to multiblocks"
+  ],
+  "quest.1A000000000002BF.title": "UV Energy Hatch",
+  "quest.1A000000000002C0.quest_desc": [
+    "It is a main part of all UV machines."
+  ],
+  "quest.1A000000000002C0.title": "UV Machine Casing",
+  "quest.1A000000000002C1.quest_desc": [
+    "The main part of all UV machines"
+  ],
+  "quest.1A000000000002C1.title": "UV Machine Hull",
   "quest.1A000000000002C2.quest_desc": [
     "I hope this machine don't need a description. Just push inside different stuff for experiment or use NEI if you don't like adventures."
   ],
@@ -2702,6 +2842,38 @@
     "The controller of wonderful multiblock that will give you ability to have a rest instead digging ores. This machine may dig instead of you. But you have to feed it with mining pipes and by ore drilling fluid."
   ],
   "quest.1A00000000000362.title": "Ore Drilling Plant II",
+  "quest.1A00000000000364.quest_desc": [
+    "May be created by Assembly Line that has ZPM energy hatch."
+  ],
+  "quest.1A00000000000364.title": "Field Generator (UV)",
+  "quest.1A00000000000365.quest_desc": [
+    "The Max tier circuit"
+  ],
+  "quest.1A00000000000365.title": "Wetware Mainframe",
+  "quest.1A00000000000366.quest_desc": [
+    "Use bender, as always. Or use fluid solidifier, if you can compare producing time."
+  ],
+  "quest.1A00000000000366.title": "Neutronium Plate",
+  "quest.1A00000000000367.quest_desc": [
+    "May be created by Assembly Line that has ZPM energy hatch."
+  ],
+  "quest.1A00000000000367.title": "Emitter (UV)",
+  "quest.1A00000000000368.quest_desc": [
+    "From rods by wrench or assembler (with circuit #4)."
+  ],
+  "quest.1A00000000000368.title": "Neutronium Frame Box",
+  "quest.1A00000000000369.quest_desc": [
+    "Pour 288 L of molten Neutronium (it is equal with 2 ingots) to the IV tier (or better) autoclave and put there nether star."
+  ],
+  "quest.1A00000000000369.title": "Gravi Star",
+  "quest.1A0000000000036A.quest_desc": [
+    "Nice stuff to craft the Hoe. (it is joke)."
+  ],
+  "quest.1A0000000000036A.title": "Neutronium Ingot",
+  "quest.1A0000000000036B.quest_desc": [
+    "By lathe or extruder. But don't use file, please! =)"
+  ],
+  "quest.1A0000000000036B.title": "Neutronium Rod",
   "quest.1A0000000000036C.quest_desc": [
     "The way to craft the Gravi Star."
   ],
@@ -2710,6 +2882,10 @@
     "Put the naquadria dust to the EBF with the top coils (naquadah alloy coil blocks)."
   ],
   "quest.1A0000000000036D.title": "Naquadria Ingot",
+  "quest.1A0000000000036F.quest_desc": [
+    "You may create this from Fusion Machine Casing and 6 americium plates with help of hammer and wrench."
+  ],
+  "quest.1A0000000000036F.title": "Fusion Machine Casing MK II",
   "quest.1A00000000000370.quest_desc": [
     "If you have the naquadah - you may get the naquadria from it. There few ways and you have to choose your favorite."
   ],
@@ -2838,6 +3014,10 @@
     "It is like previous tier but with diamond and by HV+ tier assembling machine."
   ],
   "quest.1A000000000003A4.title": "Advanced Heat Vent",
+  "quest.1A000000000003A5.quest_desc": [
+    "You may use common water (deprecated) or distil water (recommended) in mixer with lapis dust to prepare this fluid. This may be used for liquid nuclear reactor."
+  ],
+  "quest.1A000000000003A5.title": "IC2 Coolant",
   "quest.1A000000000003A7.quest_desc": [
     "Use the MV+ tier assembling machine to craft this from LV motor, iron bras and aluminium foil."
   ],
@@ -3070,6 +3250,10 @@
     "Height to search: 20 - 50 TUNGSTATE vein (Scheelite, Tungstate, Lithium). But Low-level way is to get it a Lithium dust from lepidolite ore: Height for search: 50-60 SALTS vein (Rock Salt, Salt, Lepidolite, Spodumene). These are a raw source of Sodium and Lithium. To get 2 lithium dusts, you have to crush 9 lepidolite ores and process them in a washing plant. It will give you tiny lithium dusts as by-product. Salt is needed to get sodium, use an electrolyzer. Also, in order to get lithium dust, you may process spodumene ore. In this case, to get lithium as by-product, you have to crush it, purify, then crush again and send to a centrifuge."
   ],
   "quest.1A000000000003FF.title": "Lithium Dust",
+  "quest.1A00000000000400.quest_desc": [
+    ""
+  ],
+  "quest.1A00000000000400.title": "4x Naquadah Alloy Wire",
   "quest.1A00000000000402.quest_desc": [
     "May convert voltage between 128 and 512 eu/t to both sides."
   ],
@@ -3086,6 +3270,14 @@
     "May convert voltage between 32768 and 131072 eu/t to both sides."
   ],
   "quest.1A00000000000405.title": "Ludicrous Transformer",
+  "quest.1A00000000000406.quest_desc": [
+    "May convert voltage between 131072 and 524288 eu/t to both sides."
+  ],
+  "quest.1A00000000000406.title": "ZPM Voltage Transformer",
+  "quest.1A00000000000408.quest_desc": [
+    "May convert voltage between 524288 and 2147483647 eu/t to both sides."
+  ],
+  "quest.1A00000000000408.title": "Ultimate Transformer",
   "quest.1A00000000000409.quest_desc": [
     "Height to search: 40 - 60 - APATITE vein (Apatite, Phosphorus, Pyrochlore), 20 - 30 MANGANESE vein (Grossular, Spessartine, Pyrolusite,Tantalite). You may get a niobium dust as subproduct of Pyrochlore, Pyrolusite and Tantalite."
   ],
@@ -3122,6 +3314,10 @@
     "May convert voltage between 8 and 131072 eu/t to both sides."
   ],
   "quest.1A00000000000411.title": "ZPM Adjustable Transformer",
+  "quest.1A00000000000412.quest_desc": [
+    "May convert voltage between 8 and 524288 eu/t to both sides."
+  ],
+  "quest.1A00000000000412.title": "UV Adjustable Transformer",
   "quest.1A00000000000414.quest_desc": [
     "May be created from common titanium rod."
   ],
@@ -3186,6 +3382,10 @@
     "A part of heat exchanger."
   ],
   "quest.1A00000000000425.title": "Titanium Pipe Casing",
+  "quest.1A00000000000426.quest_desc": [
+    "The most powerful energy generator in a game. It consuming plasma to generate a lot of energy."
+  ],
+  "quest.1A00000000000426.title": "Large Plasma Generator",
   "quest.1A00000000000427.quest_desc": [
     "Allow you to make pipes with size Huge"
   ],
@@ -3194,6 +3394,10 @@
     "Use wiremill, than merge 4 wires to one 4x."
   ],
   "quest.1A00000000000428.title": "4x Kanthal Wire",
+  "quest.1A00000000000429.quest_desc": [
+    "A part of large plasma generator."
+  ],
+  "quest.1A00000000000429.title": "Tungstensteel Turbine Casing",
   "quest.1A0000000000042A.quest_desc": [
     "May be used as part of some machines or standalone."
   ],
@@ -3210,6 +3414,30 @@
     "Better and faster then previuos version."
   ],
   "quest.1A0000000000042D.title": "Advanced Wiremill",
+  "quest.1A0000000000042F.quest_desc": [
+    "You may get it by fusion reactor tier 2 from titanium and duranium."
+  ],
+  "quest.1A0000000000042F.title": "Tritanium Ingot",
+  "quest.1A00000000000430.quest_desc": [
+    "Use extruder or lathe to make it from ingot."
+  ],
+  "quest.1A00000000000430.title": "Tritanium Rod",
+  "quest.1A00000000000431.quest_desc": [
+    "May be created from rods"
+  ],
+  "quest.1A00000000000431.title": "Tritanium Frame Box",
+  "quest.1A00000000000432.quest_desc": [
+    "Use extruder or lathe"
+  ],
+  "quest.1A00000000000432.title": "Osmiridium Rod",
+  "quest.1A00000000000434.quest_desc": [
+    "The best choice to excavate ores."
+  ],
+  "quest.1A00000000000434.title": "Ore Drilling Plant IV",
+  "quest.1A00000000000435.quest_desc": [
+    "Use Bending machine to make a plate"
+  ],
+  "quest.1A00000000000435.title": "Osmiridium Plate",
   "quest.1A00000000000438.quest_desc": [
     "May be crafted from Empty Shape Plate by hammer"
   ],
@@ -3454,6 +3682,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000494.title": "[sb] Repurpoused Laundary Washer (ZPM)",
+  "quest.1A00000000000495.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000495.title": "[sb] Blend-O-Matic (UV)",
   "quest.1A00000000000496.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3478,6 +3710,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000049B.title": "[sb] Repurpoused Laundary Washer (LuV)",
+  "quest.1A0000000000049C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000049C.title": "[sb] Repurpoused Laundary Washer (UV)",
   "quest.1A0000000000049E.quest_desc": [
     "You may craft it from 4 clay balls."
   ],
@@ -3658,6 +3894,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000004E0.title": "[sb] Molecular Cyclone (ZPM)",
+  "quest.1A000000000004E1.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004E1.title": "[sb] Molecular Cyclone (UV)",
   "quest.1A000000000004E2.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3686,6 +3926,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000004E8.title": "[sb] Blaze Sweatshop T-6350 (ZPM)",
+  "quest.1A000000000004E9.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004E9.title": "[sb] Blaze Sweatshop T-6350 (UV)",
   "quest.1A000000000004EA.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3714,6 +3958,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000004F0.title": "[sb] Advanced Sifting Machine VI",
+  "quest.1A000000000004F1.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004F1.title": "[sb] Advanced Sifting Machine VII",
   "quest.1A000000000004F2.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3742,6 +3990,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000004F8.title": "[sb] Advanced Electromagnetic Separator VI",
+  "quest.1A000000000004F9.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000004F9.title": "[sb] Advanced Electromagnetic Separator VII",
   "quest.1A000000000004FA.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3770,6 +4022,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000500.title": "[sb] Advanced Chemical Bath VI",
+  "quest.1A00000000000501.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000501.title": "[sb] Advanced Chemical Bath VII",
   "quest.1A00000000000502.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3798,6 +4054,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000508.title": "[sb] Molecular Disintegrator E-4908 (ZPM)",
+  "quest.1A00000000000509.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000509.title": "[sb] Molecular Disintegrator E-4908 (UV)",
   "quest.1A0000000000050A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3826,6 +4086,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000510.title": "[sb] Advanced Forge Hammer VI",
+  "quest.1A00000000000511.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000511.title": "[sb] Advanced Forge Hammer VII",
   "quest.1A00000000000512.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3862,6 +4126,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000051A.title": "[sb] Advanced Bending Machine VI",
+  "quest.1A0000000000051B.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000051B.title": "[sb] Advanced Bending Machine VII",
   "quest.1A0000000000051D.quest_desc": [
     "A part of neutronium reflector."
   ],
@@ -3894,6 +4162,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000528.title": "[sb] Advanced Wiremill VI",
+  "quest.1A00000000000529.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000529.title": "[sb] Advanced Wiremill VII",
   "quest.1A0000000000052A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3922,6 +4194,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000530.title": "[sb] Advanced Lathe VI",
+  "quest.1A00000000000531.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000531.title": "[sb] Advanced Lathe VII",
   "quest.1A00000000000532.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3950,6 +4226,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000538.title": "[sb] Advanced Extruder VI",
+  "quest.1A00000000000539.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000539.title": "[sb] Advanced Extruder VII",
   "quest.1A0000000000053A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3978,6 +4258,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000540.title": "[sb] Molecular Exitement Processor (ZPM)",
+  "quest.1A00000000000541.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000541.title": "[sb] Molecular Exitement Processor (UV)",
   "quest.1A00000000000542.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4006,6 +4290,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000548.title": "[sb] The Oblitterator (ZPM)",
+  "quest.1A00000000000549.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000549.title": "[sb] The Oblitterator (UV)",
   "quest.1A0000000000054A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4034,6 +4322,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000550.title": "[sb] Boxinator (ZPM)",
+  "quest.1A00000000000551.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000551.title": "[sb] Boxinator (UV)",
   "quest.1A00000000000552.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4062,6 +4354,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000558.title": "[sb] Unboxinator (ZPM)",
+  "quest.1A00000000000559.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000559.title": "[sb] Unboxinator (UV)",
   "quest.1A0000000000055A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4090,6 +4386,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000560.title": "[sb] Cryogenic Magma Solidifier R-8200 (ZPM)",
+  "quest.1A00000000000561.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000561.title": "[sb] Cryogenic Magma Solidifier R-8200 (UV)",
   "quest.1A00000000000562.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4118,6 +4418,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000568.title": "[sb] Advanced Cutting Machine VI",
+  "quest.1A00000000000569.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000569.title": "[sb] Advanced Cutting Machine VII",
   "quest.1A0000000000056A.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4146,6 +4450,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000570.title": "[sb] Advanced Assembling Machine VI",
+  "quest.1A00000000000571.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000571.title": "[sb] Advanced Assembling Machine VII",
   "quest.1A00000000000572.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4174,6 +4482,14 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000578.title": "[sb] Advanced Circuit Assembling Machine VI",
+  "quest.1A00000000000579.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000579.title": "[sb] Advanced Circuit Assembling Machine VII",
+  "quest.1A0000000000057A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000057A.title": "[sb] Advanced Disassembler VII",
   "quest.1A0000000000057B.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4230,6 +4546,14 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000588.title": "[sb] Advanced Fluid Extractor VI",
+  "quest.1A00000000000589.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000589.title": "[sb] Advanced Fluid Extractor VII",
+  "quest.1A0000000000058A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000058A.title": "[sb] Advanced Microwave VII",
   "quest.1A0000000000058B.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4286,6 +4610,14 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000598.title": "[sb] Advanced Printer VI",
+  "quest.1A00000000000599.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000599.title": "[sb] Advanced Printer VII",
+  "quest.1A0000000000059A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000059A.title": "[sb] Advanced Scanner VII",
   "quest.1A0000000000059B.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4342,6 +4674,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005A8.title": "[sb] Advanced Chemical Reactor VI",
+  "quest.1A000000000005A9.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005A9.title": "[sb] Advanced Chemical Reactor VII",
   "quest.1A000000000005AA.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4378,6 +4714,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005B2.title": "[sb] Advanced Alloy Smelter VI",
+  "quest.1A000000000005B3.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005B3.title": "[sb] Advanced Alloy Smelter VII",
   "quest.1A000000000005B4.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4406,6 +4746,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005BA.title": "[sb] Singularity Compressor (ZPM)",
+  "quest.1A000000000005BB.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005BB.title": "[sb] Singularity Compressor (UV)",
   "quest.1A000000000005BC.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4462,6 +4806,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005C9.title": "[sb] Vacuum Extractor (ZPM)",
+  "quest.1A000000000005CA.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005CA.title": "[sb] Vacuum Extractor (UV)",
   "quest.1A000000000005CB.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4798,6 +5146,54 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000062C.title": "[sb] Advanced Forming Press VI",
+  "quest.1A0000000000062D.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000062D.title": "[sb] Instant Fluid Canner (UV)",
+  "quest.1A0000000000062E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000062E.title": "[sb] Advanced Mass Fabricator VII",
+  "quest.1A0000000000062F.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000062F.title": "[sb] Advanced Amplifabricator VII",
+  "quest.1A00000000000632.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000632.title": "[sb] Advanced Brewery VII",
+  "quest.1A00000000000633.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000633.title": "[sb] Advanced Fermenter VII",
+  "quest.1A00000000000634.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000634.title": "[sb] Advanced Fluid Solidifier VII",
+  "quest.1A00000000000635.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000635.title": "[sb] Advanced Distillery VII",
+  "quest.1A00000000000636.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000636.title": "[sb] Advanced Polarizer VII",
+  "quest.1A00000000000637.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000637.title": "[sb] Advanced Autoclave VII",
+  "quest.1A00000000000638.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000638.title": "[sb] Advanced Mixer VII",
+  "quest.1A00000000000639.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000639.title": "[sb] Advanced Precision Laser Engraver VII",
+  "quest.1A0000000000063A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000063A.title": "[sb] Advanced Forming Press VII",
   "quest.1A0000000000063B.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5018,6 +5414,22 @@
     "A part of Electric Water Pump."
   ],
   "quest.1A00000000000680.title": "Simple Pump Filter",
+  "quest.1A00000000000681.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000681.title": "[sb] Advanced Fluid Heater VII",
+  "quest.1A00000000000683.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000683.title": "[sb] Advanced Arc Furnace VII",
+  "quest.1A00000000000684.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000684.title": "[sb] Advanced Plasma Arc Furnace VII",
+  "quest.1A00000000000685.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000685.title": "[sb] Advanced Electric Oven VII",
   "quest.1A00000000000686.quest_desc": [
     "It is a small but useful multiblock, that will allow you to pump out a water from rivers without deleting water blocks while it works. Also it may work in ocean to get a salt water from it. It require a ULV (or better) energy hatch."
   ],
@@ -5086,6 +5498,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000696.title": "[sb] Advanced Monster Repellator VI",
+  "quest.1A00000000000697.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000697.title": "[sb] Advanced Monster Repellator VII",
   "quest.1A0000000000069B.quest_desc": [
     "Use a cutting machine to get it with top efficient."
   ],

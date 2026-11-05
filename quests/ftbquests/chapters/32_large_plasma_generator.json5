@@ -5,6 +5,39 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A00000000000010",
+      "x": 2.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000013"
+      ],
+      "icon": {
+        "id": "iis:ingot_americium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_americium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000001000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 1
+          },
+          "id": "1C00000000001000"
+        }
+      ]
+    },
+    {
       "id": "1A000000000002A7",
       "x": 9.5,
       "y": 0.5,
@@ -484,6 +517,106 @@
       ]
     },
     {
+      "id": "1A000000000002BD",
+      "x": 5.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000251",
+        "1A000000000002AE"
+      ],
+      "icon": {
+        "id": "iis:field_generator_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:field_generator_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002BD00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 2
+          },
+          "id": "1C0000000002BD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002BF",
+      "x": 6.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000002C1"
+      ],
+      "icon": {
+        "id": "iis:hatch_energy_uv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hatch_energy_uv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002BF00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 6
+          },
+          "id": "1C0000000002BF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002C0",
+      "x": 8.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000023"
+      ],
+      "icon": {
+        "id": "iis:casing_uv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:casing_uv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002C000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C0000000002C000"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000427",
       "x": 11.0,
       "y": 0.5,
@@ -513,6 +646,40 @@
             "count": 3
           },
           "id": "1C00000000042700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000429",
+      "x": 9.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000003CA",
+        "1A00000000000074"
+      ],
+      "icon": {
+        "id": "iis:turbine_casing_tungstensteel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turbine_casing_tungstensteel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000042900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 6
+          },
+          "id": "1C00000000042900"
         }
       ]
     },
@@ -587,10 +754,59 @@
   ],
   "quest_links": [
     {
+      "id": "1E0000000200028E",
+      "linked_quest": "1A0000000000028E",
+      "x": 6.5,
+      "y": 5.0,
+      "size": 1.0
+    },
+    {
       "id": "1E000000020002B2",
       "linked_quest": "1A000000000002B2",
       "x": 0.5,
       "y": 5.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E000000020002B5",
+      "linked_quest": "1A000000000002B5",
+      "x": 2.0,
+      "y": 0.5,
+      "size": 1.0
+    },
+    {
+      "id": "1E000000020002B8",
+      "linked_quest": "1A000000000002B8",
+      "x": 3.5,
+      "y": 2.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E000000020002B9",
+      "linked_quest": "1A000000000002B9",
+      "x": 3.5,
+      "y": 3.5,
+      "size": 1.0
+    },
+    {
+      "id": "1E000000020002BA",
+      "linked_quest": "1A000000000002BA",
+      "x": 2.0,
+      "y": 2.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E000000020002C1",
+      "linked_quest": "1A000000000002C1",
+      "x": 8.0,
+      "y": 5.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000002000400",
+      "linked_quest": "1A00000000000400",
+      "x": 9.5,
+      "y": 6.5,
       "size": 1.0
     },
     {
@@ -601,11 +817,43 @@
       "size": 1.0
     },
     {
+      "id": "1E00000002000406",
+      "linked_quest": "1A00000000000406",
+      "x": 11.0,
+      "y": 6.5,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000002000408",
+      "linked_quest": "1A00000000000408",
+      "x": 8.0,
+      "y": 6.5,
+      "size": 1.0
+    },
+    {
       "id": "1E00000002000411",
       "linked_quest": "1A00000000000411",
       "x": 12.5,
       "y": 3.5,
       "size": 1.0
+    },
+    {
+      "id": "1E00000002000412",
+      "linked_quest": "1A00000000000412",
+      "x": 12.5,
+      "y": 5.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000002000426",
+      "linked_quest": "1A00000000000426",
+      "x": 10.25,
+      "y": 4.25,
+      "size": 2.5
     }
-  ]
+  ],
+  "icon": {
+    "id": "iis:large_plasma_turbine",
+    "count": 1
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/shovel/osmiridium",
+    "#c:rods/steel"
+  ],
+  "result": {
+    "id": "iis:shovel_osmiridium"
+  }
+}

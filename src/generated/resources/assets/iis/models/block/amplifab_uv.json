@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/amplifab_uv_side",
+    "north": "iis:block/lv/amplifab_uv_front",
+    "south": "iis:block/lv/amplifab_uv_back",
+    "east": "iis:block/lv/amplifab_uv_side",
+    "west": "iis:block/lv/amplifab_uv_side",
+    "up": "iis:block/lv/amplifab_uv_top",
+    "down": "iis:block/lv/amplifab_uv_bottom"
+  }
+}

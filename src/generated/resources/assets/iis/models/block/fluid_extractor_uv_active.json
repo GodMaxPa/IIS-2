@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/fluid_extractor_uv_side_active",
+    "north": "iis:block/lv/fluid_extractor_uv_front_active",
+    "south": "iis:block/lv/fluid_extractor_uv_back_active",
+    "east": "iis:block/lv/fluid_extractor_uv_side_active",
+    "west": "iis:block/lv/fluid_extractor_uv_side_active",
+    "up": "iis:block/lv/fluid_extractor_uv_top_active",
+    "down": "iis:block/lv/fluid_extractor_uv_bottom_active"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#iis:long_rods/neutronium",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:gears/neutronium",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_gears/neutronium",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:electric_motor_uv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:electric_piston_uv",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/master",
+      "count": 8
+    },
+    {
+      "ingredient": "#c:circuits/elite",
+      "count": 8
+    },
+    {
+      "ingredient": "#c:circuits/data",
+      "count": 24
+    },
+    {
+      "ingredient": "#iis:cables/4x/niobium_titanium",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:robot_arm_uv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 100000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 2304
+    },
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 2000
+    }
+  ],
+  "keep": [
+    "iis:robot_arm_zpm"
+  ],
+  "temp": 288000
+}

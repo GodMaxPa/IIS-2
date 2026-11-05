@@ -1,0 +1,28 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/naquadah_alloy",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/naquadah_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_naquadah_alloy_1x",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silicone",
+      "amount": 72
+    }
+  ],
+  "circuit": 24
+}

@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "iis:circuit_master",
-    "iis:circuit_masterquantumcomputer"
+    "iis:circuit_masterquantumcomputer",
+    "iis:circuit_crystalcomputer",
+    "iis:circuit_neuroprocessor"
   ]
 }

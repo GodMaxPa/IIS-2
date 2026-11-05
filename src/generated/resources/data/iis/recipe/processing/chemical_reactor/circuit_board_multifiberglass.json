@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_board_fiberglass",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/electrum",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_board_multifiberglass",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:sulfuricacid",
+      "amount": 250
+    }
+  ]
+}

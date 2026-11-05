@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RGR",
+    "CEC",
+    "WMW"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "R": "#iis:rotors/osmium",
+    "E": "iis:electric_motor_uv",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:wires/4x/naquadah_alloy",
+    "G": "iis:reinforced_glass"
+  },
+  "result": {
+    "id": "iis:ore_washer_uv"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/tritanium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_tritanium",
+      "amount": 16
+    }
+  ]
+}

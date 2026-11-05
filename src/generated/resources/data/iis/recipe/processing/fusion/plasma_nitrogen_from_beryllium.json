@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 16,
+  "eut": 16384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_beryllium",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:deuterium",
+      "amount": 375
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:plasma_nitrogen",
+      "amount": 175
+    }
+  ],
+  "temp": 180000000
+}

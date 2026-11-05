@@ -41,6 +41,8 @@ import java.util.List;
  */
 public class ProcessingArrayBlockEntity extends RecipeMultiblockBlockEntity {
     public static final int MIN_CASINGS = 16, MAX_MACHINES = 16;
+    /** D121: улучшенный массив (GT_MetaTileEntity_AdvancedProcessingArray): куб 5×5×5, не меньше 70 корпусов HSS-G, до 64 машин. */
+    public static final int ADVANCED_MIN_CASINGS = 70, ADVANCED_MAX_MACHINES = 64;
 
     private NonNullList<ItemStack> items = NonNullList.withSize(1, ItemStack.EMPTY);
     private int parallel;
@@ -77,10 +79,37 @@ public class ProcessingArrayBlockEntity extends RecipeMultiblockBlockEntity {
         return machine() != null;
     }
 
+    public boolean advanced() {
+        return getBlockState().is(MultiContent.ADVANCED_PROCESSING_ARRAY.get());
+    }
+
+    /** GT checkMachine улучшенного массива: центр на 2 блока за контроллером и на 1 выше, внутри 3×3×3 пусто. */
+    private boolean checkAdvanced(ServerLevel sl) {
+        BlockPos c = worldPosition.relative(back(), 2).above();
+        int casings = 0;
+        for (int dx = -2; dx <= 2; dx++) {
+            for (int dy = -2; dy <= 2; dy++) {
+                for (int dz = -2; dz <= 2; dz++) {
+                    BlockPos p = c.offset(dx, dy, dz);
+                    if (p.equals(worldPosition)) continue;
+                    if (Math.abs(dx) < 2 && Math.abs(dy) < 2 && Math.abs(dz) < 2) {
+                        if (!sl.getBlockState(p).isAir()) return false;
+                        continue;
+                    }
+                    if (addPart(sl, p, ALL_IO)) continue;
+                    if (!is(sl, p, MultiContent.ROBUST_HSSG_CASING.get())) return false;
+                    casings++;
+                }
+            }
+        }
+        return casings >= ADVANCED_MIN_CASINGS && basicParts();
+    }
+
     // --- форма --------------------------------------------------------------------------------------------------------
     @Override
     boolean checkStructure(ServerLevel sl) {
         parts.clear();
+        if (advanced()) return checkAdvanced(sl);
         Direction back = back();
         BlockPos c = worldPosition.relative(back);
         if (!sl.getBlockState(c).isAir()) return false;
@@ -107,7 +136,7 @@ public class ProcessingArrayBlockEntity extends RecipeMultiblockBlockEntity {
         if (m == null) return false;
         int tier = BlastLogic.machineTier(m.voltage());
         long vmax = BlastLogic.V[tier];
-        int machines = Math.min(MAX_MACHINES, items.get(0).getCount());
+        int machines = Math.min(advanced() ? ADVANCED_MAX_MACHINES : MAX_MACHINES, items.get(0).getCount());
         List<ItemStack> slots = inputSlots(sl);
         List<FluidStack> fluids = storedFluids(sl);
         if (slots.stream().allMatch(ItemStack::isEmpty) && fluids.isEmpty()) return false;

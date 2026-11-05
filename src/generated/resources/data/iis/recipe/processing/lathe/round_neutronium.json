@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/neutronium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:round_neutronium",
+      "count": 1
+    }
+  ],
+  "duration": 25000,
+  "eut": 8
+}

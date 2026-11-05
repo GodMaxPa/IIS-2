@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/tritanium"
+  ],
+  "result": {
+    "id": "iis:small_dust_tritanium",
+    "count": 4
+  }
+}

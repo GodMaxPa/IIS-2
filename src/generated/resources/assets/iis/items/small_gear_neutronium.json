@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/small_gear_neutronium",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 16448250
+      }
+    ]
+  }
+}

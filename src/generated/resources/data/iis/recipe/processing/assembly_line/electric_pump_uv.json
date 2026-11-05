@@ -1,0 +1,55 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_uv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:pipe_large_high_pressure",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/neutronium",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:screws/neutronium",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:rings/silicone",
+      "count": 16
+    },
+    {
+      "ingredient": "#iis:rotors/neutronium",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:cables/4x/niobium_titanium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_pump_uv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 100000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 1296
+    },
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 2000
+    }
+  ],
+  "keep": [
+    "iis:electric_pump_zpm"
+  ],
+  "temp": 288000
+}

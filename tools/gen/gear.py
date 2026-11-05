@@ -108,6 +108,7 @@ def generate(g):
             ('lapotron_crystal', 'Lapotron Crystal', 'Лазуротроновый кристалл', 'crystal', (30, 50, 170), (90, 140, 250)),
             ('energy_orb', 'Lapotronic Energy Orb', 'Лазуротроновая энергетическая сфера', 'ball', (30, 50, 170), (130, 190, 255)),
             ('energy_orb_cluster', 'Lapotronic Energy Orb Cluster', 'Кластер лазуротроновых энергетических сфер', 'ball', (70, 30, 170), (200, 150, 255)),
+            ('ultimate_battery', 'Ultimate Battery', 'Предельный аккумулятор', 'ball', (120, 30, 120), (240, 180, 255)),
             ('charging_battery_re', 'Charging RE-Battery', 'Заряжающий аккумулятор', 'battery', (90, 150, 60), (210, 60, 50)),
             ('charging_battery_adv', 'Advanced Charging Battery', 'Продвинутый заряжающий аккумулятор', 'battery', (90, 150, 60), (225, 200, 80)),
             ('charging_energy_crystal', 'Charging Energy Crystal', 'Заряжающий энергетический кристалл', 'crystal', (90, 150, 60), (240, 70, 70)),

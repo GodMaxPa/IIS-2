@@ -30,7 +30,9 @@ IC2_FLUIDS = [('distilled_water', 'Distilled Water', 'Дистиллирован
               # D115: Materials.Dimethylhydrazine (a builder material, skipped by the extraction), rocket fuel
               ('dimethylhydrazine', '1,1-Dimethylhydrazine', '1,1-диметилгидразин', 1, 295, (0, 0, 85)),
               # D116: Materials.Helium_3, fusion and the Moon
-              ('helium_3', 'Helium-3', 'Гелий-3', 2, 295, (255, 255, 165))]
+              ('helium_3', 'Helium-3', 'Гелий-3', 2, 295, (255, 255, 165)),
+              # D121: ic2coolant for the wetware circuits (GT_MachineRecipeLoader:122-123, 2448, 2463)
+              ('ic2coolant', 'Coolant', 'Хладагент', 1, 295, (30, 150, 190))]
 STATES = ['gt_solid', 'gt_liquid', 'gt_gas', 'gt_plasma', 'gt_molten']
 
 # GT_Loader_MetaTileEntities#generateFluidPipes: material, base capacity, heat limit K, gas proof, colour, iconSet, en, ru (adjective)

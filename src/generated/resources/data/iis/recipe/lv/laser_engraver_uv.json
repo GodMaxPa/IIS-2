@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PEP",
+    "CMC",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "E": "iis:emitter_uv",
+    "P": "iis:electric_piston_uv",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:wires/4x/naquadah_alloy"
+  },
+  "result": {
+    "id": "iis:laser_engraver_uv"
+  }
+}

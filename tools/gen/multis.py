@@ -239,6 +239,20 @@ def generate(g):
     shaped('multi/large_gas_turbine', f'{NS}:large_gas_turbine', 1, ['CPC', 'PMP', 'BPB'],
            {'M': f'{NS}:hull_ev', 'B': f'{NS}:pipe_large_stainless_steel', 'C': '#c:circuits/data', 'P': tag_of('gear', 'StainlessSteel')})
 
+    # --- D121: large plasma generator: GT_MetaTileEntity_LargeTurbine_Plasma, on tungstensteel turbine casings (GT_Loader_MetaTileEntities:74, GT_MachineRecipeLoader:1399) ---------
+    casing('turbine_casing_tungstensteel', 'MACHINE_CASING_ROBUST_TUNGSTENSTEEL', 'gt.blockcasings4.12.name', 'Tungstensteel Turbine Casing')
+    name(f'block.{NS}.turbine_casing_tungstensteel', 'Tungstensteel Turbine Casing', 'Вольфрамостальной турбинный корпус')
+    shaped('multi/turbine_casing_tungstensteel', f'{NS}:turbine_casing_tungstensteel', 2, ['PhP', 'PFP', 'PwP'], {'P': tag_of('plate', 'TungstenSteel'), 'F': f'{NS}:turbine_casing'})
+    mrec('assembler', 'turbine_casing_tungstensteel', [ing(tag_of('plate', 'TungstenSteel'), 6), ing(f'{NS}:turbine_casing')], [out(f'{NS}:turbine_casing_tungstensteel', 2)], 50, 16)
+    controller('large_plasma_turbine', 'turbine_casing_tungstensteel', 'LARGETURBINE_TU5', 'gt.blockmachines.multimachine.largeplasmaturbine.name', 'Large Plasma Generator', [
+        ('Shape of the large steam turbine on tungstensteel turbine casings', 'Форма большой паровой турбины на турбинных корпусах из вольфрамостали'),
+        ('Burns plasma from input hatches; a rotor in the controller', 'Сжигает плазму из входных люков; ротор — в контроллере'),
+        ('Optimal flow = rotor optimum x 40 / EU per litre, up to 125 %', 'Оптимальный поток = оптимум ротора × 40 / EU на литр, до 125 %'),
+        ('The cooled fluid goes to the output hatch', 'Остывшая жидкость уходит в выходной люк')], active='LARGETURBINE_TU_ACTIVE5')
+    name(f'block.{NS}.large_plasma_turbine', 'Large Plasma Generator', 'Большой плазменный генератор')
+    shaped('multi/large_plasma_turbine', f'{NS}:large_plasma_turbine', 1, ['CPC', 'PMP', 'BPB'],   # :1251
+           {'M': f'{NS}:hull_uv', 'B': f'{NS}:pipe_huge_tungsten_steel', 'C': '#c:circuits/master', 'P': tag_of('gear', 'TungstenSteel')})
+
     fluids = json.load(open(os.path.join(g['RES'], NS, 'gt_fluids.json'), encoding='utf-8'))
     fluid_ids = {f['id'] for f in fluids}
     by_mat = {}
@@ -432,6 +446,19 @@ def generate(g):
                    ('At least 16 robust tungstensteel casings; the rest: hatches', 'Не меньше 16 прочных вольфрамостальных корпусов; остальное — люки'),
                    ('Put up to 16 single-block machines of one kind into the controller', 'В контроллер — до 16 одноблочных машин одного вида'),
                    ('Runs their recipes at their voltage, as many at once as machines', 'Работает по их рецептам и напряжению, столько сразу, сколько машин')])
+    # D121: GT_MetaTileEntity_AdvancedProcessingArray; Casing_RobustHSSG: GT_Loader_MetaTileEntities:69, GT_MachineRecipeLoader:1881; craft :1238
+    casing('robust_hssg_casing', 'MACHINE_CASING_ROBUST_HSSG', 'gt.blockcasings8.2.name', 'Robust HSS-G Machine Casing')
+    name(f'block.{NS}.robust_hssg_casing', 'Robust HSS-G Machine Casing', 'Прочный корпус из HSS-G')
+    shaped('multi/robust_hssg_casing', f'{NS}:robust_hssg_casing', 2, ['PhP', 'EFE', 'PwP'], {'P': tag_of('plate', 'HSSG'), 'E': tag_of('plate', 'Europium'), 'F': f'{NS}:robust_tungstensteel_casing'})
+    mrec('assembler', 'robust_hssg_casing', [ing(tag_of('plate', 'HSSG'), 4), ing(tag_of('plate', 'Europium'), 2), ing(f'{NS}:robust_tungstensteel_casing')], [out(f'{NS}:robust_hssg_casing', 2)], 50, 16)
+    controller('advanced_processing_array', 'robust_hssg_casing', 'OVERLAY_FRONT_PROCESSING_ARRAY', 'gt.blockmachines.multimachine.advancedprocessingarray.name',
+               'Advanced Processing Array', [
+                   ('5x5x5 hollow, controller in the middle of the front of the second layer', 'Куб 5×5×5, пустой внутри; контроллер — в середине передней стенки, на втором слое'),
+                   ('At least 70 robust HSS-G casings; the rest: hatches', 'Не меньше 70 прочных корпусов из HSS-G; остальное — люки'),
+                   ('Put up to 64 single-block machines of one kind into the controller', 'В контроллер — до 64 одноблочных машин одного вида'),
+                   ('Runs their recipes at their voltage, as many at once as machines', 'Работает по их рецептам и напряжению, столько сразу, сколько машин')])
+    name(f'block.{NS}.advanced_processing_array', 'Advanced Processing Array', 'Улучшенный обрабатывающий массив')
+    shaped('multi/advanced_processing_array', f'{NS}:advanced_processing_array', 1, ['RRR', 'CPC', 'CPC'], {'R': f'{NS}:robot_arm_luv', 'C': '#c:circuits/master', 'P': f'{NS}:processing_array'})
     # GT_MachineRecipeLoader:71 needs the EV digital transformer (not ported yet) - the controller has no recipe for now
     shutil.copy(os.path.join(GT, 'gui', 'multimachines', 'ProcessingArray.png'), tex_out('gui/multi/processing_array.png'))
     name('gui.iis.processing_array.no_machine', 'Insert single-block machines', 'Вставьте одноблочные машины')
@@ -554,11 +581,17 @@ def generate(g):
         (f'Bottom: {casing_en} or hatches; a pillar of 3 casings in the middle', f'Низ: {casing_ru} или люки; в центре — столб из 3 корпусов'),
         (f'{frame_en} frame boxes around the pillar and 3 on top', f'{frame_ru} — вокруг столба и 3 сверху'),
         ('Lowers mining pipes from the controller slot down to bedrock', 'Опускает шахтные трубы из слота контроллера до бедрока')]
+    # D121: Casing_MiningOsmiridium: GT_Loader_MetaTileEntities:70, GT_MachineRecipeLoader:1394
+    casing('mining_osmiridium_casing', 'MACHINE_CASING_MINING_OSMIRIDIUM', 'gt.blockcasings8.3.name', 'Mining Osmiridium Casing')
+    name(f'block.{NS}.mining_osmiridium_casing', 'Mining Osmiridium Casing', 'Горный осмиридиевый корпус')
+    shaped('multi/mining_osmiridium_casing', f'{NS}:mining_osmiridium_casing', 2, ['PhP', 'PFP', 'PwP'], {'P': tag_of('plate', 'Osmiridium'), 'F': '#c:frames/osmiridium'})
+    mrec('assembler', 'mining_osmiridium_casing', [ing(tag_of('plate', 'Osmiridium'), 6), ing('#c:frames/osmiridium')], [out(f'{NS}:mining_osmiridium_casing', 2)], 50, 16)
     tiers = [('solid_steel_casing', 'solid steel casings', 'прочные стальные корпуса', 'Steel', 'Стальные рамки'),
              ('stable_titanium_casing', 'stable titanium casings', 'стабильные титановые корпуса', 'Titanium', 'Титановые рамки'),
              ('robust_tungstensteel_casing', 'robust tungstensteel casings', 'прочные вольфрамостальные корпуса', 'Tungstensteel',
-              'Вольфрамостальные рамки')]
-    roman = ['I', 'II', 'III']
+              'Вольфрамостальные рамки'),
+             ('mining_osmiridium_casing', 'mining osmiridium casings', 'горные осмиридиевые корпуса', 'Osmiridium', 'Осмиридиевые рамки')]
+    roman = ['I', 'II', 'III', 'IV']
     volts = ['MV', 'HV', 'EV', 'IV']
     # oil drilling rigs: GT_Loader_MetaTileEntities:1314-1316 "WWW/EME/CCC"
     oil_craft = [('hull_mv', 'steel', '#c:circuits/good', 'electric_motor_mv'), ('oil_drill_1', 'titanium', '#c:circuits/advanced', 'electric_motor_hv'),
@@ -573,8 +606,9 @@ def generate(g):
         shaped(f'multi/oil_drill_{i + 1}', f'{NS}:oil_drill_{i + 1}', 1, ['WWW', 'EME', 'CCC'],
                {'M': f'{NS}:{m}', 'W': f'#c:frames/{frame}', 'E': circ, 'C': f'{NS}:{motor}'})
     # ore drilling plants: :1323-1327
-    ore_craft = [('hull_ev', 'titanium', '#c:circuits/data', 'electric_motor_ev'), ('ore_drill_1', 'tungsten_steel', '#c:circuits/elite', 'electric_motor_iv')]
-    for i, (rad, mt) in enumerate(((48, 'MV'), (64, 'HV'))):
+    ore_craft = [('hull_ev', 'titanium', '#c:circuits/data', 'electric_motor_ev'), ('ore_drill_1', 'tungsten_steel', '#c:circuits/elite', 'electric_motor_iv'),
+                 ('ore_drill_2', 'osmiridium', '#c:circuits/master', 'electric_motor_luv'), ('ore_drill_3', 'tritanium', '#c:circuits/ultimate', 'electric_motor_zpm')]   # :1330, :1333 (D121)
+    for i, (rad, mt) in enumerate(((48, 'MV'), (64, 'HV'), (96, 'EV'), (144, 'IV'))):
         cas, cen, cru, fen, fru = tiers[i]
         controller(f'ore_drill_{i + 1}', cas, 'OVERLAY_FRONT_ORE_DRILL', f'gt.blockmachines.multimachine.oredrill{i + 1}.name', f'Ore Drilling Plant {roman[i]}',
                    base_lines(cen, cru, fen, fru) + [

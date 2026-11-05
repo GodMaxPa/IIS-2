@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "iis:circuit_crystalmainframe",
+    "iis:circuit_wetwaresupercomputer"
+  ]
 }

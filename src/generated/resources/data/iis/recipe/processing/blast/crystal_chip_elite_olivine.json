@@ -1,0 +1,28 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "iis:raw_crystal_chip",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/olivine",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crystal_chip_elite",
+      "count": 1
+    }
+  ],
+  "duration": 900,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:helium",
+      "amount": 1000
+    }
+  ],
+  "temp": 5000
+}

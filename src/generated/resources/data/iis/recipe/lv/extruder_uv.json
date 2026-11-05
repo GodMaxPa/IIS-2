@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCE",
+    "XMP",
+    "CCE"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "X": "iis:electric_piston_uv",
+    "E": "#c:circuits/superconductor",
+    "P": "iis:pipe_large_high_pressure",
+    "C": "#iis:wires/4x/naquadah_alloy"
+  },
+  "result": {
+    "id": "iis:extruder_uv"
+  }
+}

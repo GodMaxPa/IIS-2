@@ -1,0 +1,59 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_board_wetware",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:stem_cell",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:glass_tube",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:pipe_tiny_plastic",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:item_casing_gold",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:foils/silicone",
+      "count": 64
+    },
+    {
+      "ingredient": "#c:plates/stainless_steel",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:chip_neuro_cpu",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 80000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:growthmediumsterilized",
+      "amount": 250
+    },
+    {
+      "ingredient": "iis:uumatter",
+      "amount": 100
+    },
+    {
+      "ingredient": "iis:ic2coolant",
+      "amount": 1000
+    }
+  ],
+  "keep": [
+    "iis:circuit_crystalmainframe"
+  ],
+  "temp": 72000
+}

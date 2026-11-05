@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/naquadah_alloy",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_naquadah_alloy",
+      "count": 1
+    }
+  ],
+  "duration": 196,
+  "eut": 96
+}

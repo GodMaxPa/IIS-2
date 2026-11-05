@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 64,
+  "eut": 32768,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_titanium",
+      "amount": 48
+    },
+    {
+      "ingredient": "iis:molten_duranium",
+      "amount": 32
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_tritanium",
+      "amount": 16
+    }
+  ],
+  "temp": 200000000
+}

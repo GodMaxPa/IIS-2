@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/microwave_uv_side_active",
+    "north": "iis:block/lv/microwave_uv_front_active",
+    "south": "iis:block/lv/microwave_uv_back_active",
+    "east": "iis:block/lv/microwave_uv_side_active",
+    "west": "iis:block/lv/microwave_uv_side_active",
+    "up": "iis:block/lv/microwave_uv_top_active",
+    "down": "iis:block/lv/microwave_uv_bottom_active"
+  }
+}

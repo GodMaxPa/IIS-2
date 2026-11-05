@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/naquadah_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_naquadah_alloy",
+      "count": 8
+    }
+  ],
+  "duration": 196,
+  "eut": 512,
+  "keep": [
+    "iis:shape_extruder_bolt"
+  ]
+}

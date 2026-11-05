@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "KBB",
+    "CM ",
+    "KBB"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "C": "#iis:wires/1x/superconductor",
+    "B": "#iis:wires/4x/naquadah_alloy",
+    "K": "iis:chip_hpic"
+  },
+  "result": {
+    "id": "iis:transformer_uv"
+  }
+}

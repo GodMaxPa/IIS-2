@@ -1,0 +1,24 @@
+{
+  "type": "iis:fusion",
+  "inputs": [],
+  "outputs": [],
+  "duration": 32,
+  "eut": 10240,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_aluminium",
+      "amount": 16
+    },
+    {
+      "ingredient": "iis:molten_lithium",
+      "amount": 16
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:plasma_sulfur",
+      "amount": 125
+    }
+  ],
+  "temp": 240000000
+}

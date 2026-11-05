@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "PMP",
+    "CPC"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "P": "iis:electric_pump_uv",
+    "C": "#c:circuits/infinite",
+    "W": "#iis:wires/1x/superconductor"
+  },
+  "result": {
+    "id": "iis:amplifab_uv"
+  }
+}

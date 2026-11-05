@@ -1,0 +1,20 @@
+{
+  "type": "iis:fluid_heater",
+  "inputs": [],
+  "outputs": [],
+  "duration": 60,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:growthmediumraw",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:growthmediumsterilized",
+      "amount": 1000
+    }
+  ],
+  "circuit": 1
+}

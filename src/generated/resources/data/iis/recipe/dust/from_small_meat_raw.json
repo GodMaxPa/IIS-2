@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/meat_raw",
+    "#iis:small_dusts/meat_raw",
+    "#iis:small_dusts/meat_raw",
+    "#iis:small_dusts/meat_raw"
+  ],
+  "result": {
+    "id": "iis:dust_meat_raw"
+  }
+}
