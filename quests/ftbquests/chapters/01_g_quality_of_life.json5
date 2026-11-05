@@ -145,6 +145,54 @@
       ]
     },
     {
+      "id": "1A00000000000316",
+      "x": 0.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000001A3",
+        "1A000000000000BA"
+      ],
+      "icon": {
+        "id": "iis:hazmat_helmet",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hazmat_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000031600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003A8",
+      "x": 0.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000016E",
+        "1A000000000000A1"
+      ],
+      "icon": {
+        "id": "iis:mining_laser",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mining_laser",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003A800"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000475",
       "x": 3.5,
       "y": 2.0,
@@ -187,6 +235,75 @@
           },
           "count": 1,
           "id": "1B00000000047800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000482",
+      "x": 0.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000BA"
+      ],
+      "icon": {
+        "id": "iis:hazmat_chestplate",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hazmat_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000483",
+      "x": 0.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000BA"
+      ],
+      "icon": {
+        "id": "iis:hazmat_leggings",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hazmat_leggings",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000484",
+      "x": 0.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000000BA"
+      ],
+      "icon": {
+        "id": "iis:rubber_boots",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rubber_boots",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048400"
         }
       ]
     },

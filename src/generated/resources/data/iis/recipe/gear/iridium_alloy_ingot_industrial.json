@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IAI",
+    "ADA",
+    "IAI"
+  ],
+  "key": {
+    "I": "#c:plates/iridium",
+    "A": "iis:advanced_alloy_plate",
+    "D": "iis:industrial_diamond"
+  },
+  "result": {
+    "id": "iis:iridium_alloy_ingot"
+  }
+}

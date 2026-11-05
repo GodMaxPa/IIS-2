@@ -125,6 +125,25 @@ GC_MAP.update({('IC2:blockGenerator', 5): 'iis:nuclear_reactor', ('IC2:blockReac
                ('gregtech:gt.metaitem.01', 32753): 'iis:solar_panel_mv', ('gregtech:gt.metaitem.01', 32754): 'iis:solar_panel_hv', ('gregtech:gt.metaitem.01', 32755): 'iis:solar_panel_ev',
                ('gregtech:gt.metaitem.01', 32756): 'iis:solar_panel_iv', ('gregtech:gt.metaitem.01', 32757): 'iis:solar_panel_luv', ('gregtech:gt.metaitem.01', 32758): 'iis:solar_panel_zpm',
                ('gregtech:gt.metaitem.01', 32759): 'iis:solar_panel_uv'})
+# D118: IC2 gear and parts, own items too; damage values differ between charged and empty forms in the quests
+for _id, _to in (('itemAdvBat', 'battery_adv'), ('itemBatRE', 'battery_re'), ('itemBatREDischarged', 'battery_re'), ('itemBatCrystal', 'energy_crystal'), ('itemBatLamaCrystal', 'lapotron_crystal'),
+                 ('itemBatChargeRE', 'charging_battery_re'), ('itemBatChargeAdv', 'charging_battery_adv'), ('itemBatChargeCrystal', 'charging_energy_crystal'), ('itemBatChargeLamaCrystal', 'charging_lapotron_crystal'),
+                 ('itemArmorNanoHelmet', 'nano_helmet'), ('itemArmorNanoChestplate', 'nano_chestplate'), ('itemArmorNanoLegs', 'nano_leggings'), ('itemArmorNanoBoots', 'nano_boots'),
+                 ('itemArmorQuantumHelmet', 'quantum_helmet'), ('itemArmorQuantumChestplate', 'quantum_chestplate'), ('itemArmorQuantumLegs', 'quantum_leggings'), ('itemArmorQuantumBoots', 'quantum_boots'),
+                 ('itemNightvisionGoggles', 'nightvision_goggles'), ('itemArmorJetpackElectric', 'jetpack'), ('itemArmorBatpack', 'batpack'), ('itemArmorAdvBatpack', 'adv_batpack'),
+                 ('itemArmorEnergypack', 'energy_pack'), ('itemArmorLappack', 'lappack'), ('itemToolMiningLaser', 'mining_laser'), ('itemNanoSaber', 'nano_saber')):
+    for _d in (0, 1, 26, 27):
+        GC_MAP[('IC2:' + _id, _d)] = 'iis:' + _to
+GC_MAP.update({('IC2:itemArmorHazmatHelmet', 0): 'iis:hazmat_helmet', ('IC2:itemArmorHazmatChestplate', 0): 'iis:hazmat_chestplate', ('IC2:itemArmorHazmatLeggings', 0): 'iis:hazmat_leggings',
+               ('IC2:itemArmorRubBoots', 0): 'iis:rubber_boots'})
+GC_MAP.update({('IC2:blockElectric', 0): 'iis:batbox', ('IC2:blockElectric', 7): 'iis:cesu', ('IC2:blockElectric', 1): 'iis:mfe', ('IC2:blockElectric', 2): 'iis:mfsu',
+               ('IC2:blockElectric', 3): 'iis:transformer_lv', ('IC2:blockElectric', 4): 'iis:transformer_mv', ('IC2:blockElectric', 5): 'iis:transformer_hv', ('IC2:blockElectric', 6): 'iis:transformer_ev',
+               ('IC2:itemDust2', 2): 'iis:energium_dust', ('IC2:itemCasing', 0): 'iis:item_casing_copper', ('IC2:itemCasing', 1): 'iis:item_casing_tin', ('IC2:itemCasing', 2): 'iis:item_casing_bronze',
+               ('IC2:itemCasing', 3): 'iis:item_casing_gold', ('IC2:itemCasing', 4): 'iis:item_casing_iron', ('IC2:itemCasing', 5): 'iis:steel_item_casing', ('IC2:itemCasing', 6): 'iis:item_casing_lead',
+               ('IC2:itemPartCoalBall', 0): 'iis:coal_ball', ('IC2:itemPartCoalBlock', 0): 'iis:compressed_coal_ball', ('IC2:itemPartCoalChunk', 0): 'iis:coal_chunk', ('IC2:itemPartIndustrialDiamond', 0): 'iis:industrial_diamond',
+               ('IC2:itemPartCarbonFibre', 0): 'iis:carbon_fiber', ('IC2:itemPartAlloy', 0): 'iis:advanced_alloy_plate', ('IC2:itemIngot', 4): 'iis:mixed_metal_ingot', ('IC2:itemPartIridium', 0): 'iis:iridium_alloy_plate',
+               ('IC2:blockAlloyGlass', 0): 'iis:reinforced_glass', ('IC2:blockMiningPipe', 0): 'iis:mining_pipe', ('IC2:blockScaffold', 0): 'minecraft:scaffolding',
+               ('gregtech:gt.metaitem.01', 32597): 'iis:energy_orb', ('gregtech:gt.metaitem.01', 32599): 'iis:energy_orb_cluster'})
 RAILCRAFT_MAP = {
     ('detector', 0): 'detector_item', ('part.tie', 0): 'tie_wood', ('part.tie', 1): 'tie_stone', ('part.railbed', 0): 'railbed_wood',
     ('part.railbed', 1): 'railbed_stone', ('part.rail', 0): 'rail_standard', ('part.rail', 1): 'rail_advanced', ('part.rail', 2): 'rail_wooden',
@@ -142,9 +161,25 @@ RAILCRAFT_MAP = {
     # the IC2 MFE cart is not ported: the electric locomotive takes an MV 2x2 battery buffer instead (PORTING_NOTES, D102)
     ('cart.energy.mfe', 0): 'battery_buffer_2x2_mv',
 }
-GT_TOOLS = {0: 'sword', 2: 'pickaxe', 4: 'shovel', 6: 'axe', 8: 'hoe', 10: 'saw', 12: 'hammer', 14: 'soft_hammer', 16: 'wrench',
+GT_TOOLS = {100: 'drill_lv', 110: 'chainsaw_lv', 120: 'wrench_lv', 0: 'sword', 2: 'pickaxe', 4: 'shovel', 6: 'axe', 8: 'hoe', 10: 'saw', 12: 'hammer', 14: 'soft_hammer', 16: 'wrench',
             18: 'file', 20: 'crowbar', 22: 'screwdriver', 24: 'mortar', 26: 'wire_cutter', 34: 'knife'}
-TIERS = {'01': 'lv', '02': 'mv', '03': 'hv', '04': 'ev', '05': 'iv'}
+TIERS = {'01': 'lv', '02': 'mv', '03': 'hv', '04': 'ev', '05': 'iv', '06': 'luv', '07': 'zpm'}
+# GT_Loader_MetaTileEntities:1468-1510 makeWires: start + 0..5 wires 1x..16x, + 6..10 cables 1x..12x
+GT_WIRES = {2000: 'red_alloy', 1200: 'cobalt', 1220: 'lead', 1240: 'tin', 1260: 'zinc', 1280: 'soldering_alloy', 1300: 'iron', 1320: 'nickel', 1340: 'cupronickel', 1360: 'copper', 1380: 'annealed_copper',
+            1400: 'kanthal', 1420: 'gold', 1440: 'electrum', 1460: 'silver', 1480: 'blue_alloy', 1500: 'nichrome', 1520: 'steel', 1540: 'black_steel', 1560: 'titanium', 1580: 'aluminium', 1600: 'graphene',
+            1620: 'osmium', 1640: 'platinum', 1660: 'tungsten_steel', 1680: 'tungsten', 1700: 'hssg', 1720: 'niobium_titanium', 1740: 'vanadium_gallium', 1760: 'yttrium_barium_cuprate', 1780: 'naquadah',
+            1800: 'naquadah_alloy', 1820: 'duranium', 2020: 'superconductor'}
+WIRE_FORMS = ('wire_{}_1x', 'wire_{}_2x', 'wire_{}_4x', 'wire_{}_8x', 'wire_{}_12x', 'wire_{}_16x', 'cable_{}_1x', 'cable_{}_2x', 'cable_{}_4x', 'cable_{}_8x', 'cable_{}_12x')
+# :1540-1579 fluid pipes: start + 0..4 tiny, small, medium, large, huge
+GT_PIPES = {5100: 'wood', 5110: 'copper', 5120: 'bronze', 5130: 'steel', 5140: 'stainless_steel', 5150: 'titanium', 5160: 'tungsten_steel', 5170: 'plastic', 5175: 'polytetrafluoroethylene'}
+PIPE_SIZES = ('tiny', 'small', 'medium', 'large', 'huge')
+# GT_MetaGenerated_Item_01 and _02: damage // 1000 is the prefix, damage % 1000 the material
+META01_FORMS = {0: 'tiny_dust', 1: 'small_dust', 2: 'dust', 3: 'impure_dust', 4: 'pure_dust', 5: 'crushed', 6: 'purified', 7: 'centrifuged', 8: 'gem', 9: 'nugget', 11: 'ingot', 12: 'hot_ingot',
+                17: 'plate', 18: 'double_plate', 23: 'rod', 24: 'lens', 25: 'round', 26: 'bolt', 27: 'screw', 28: 'ring', 29: 'foil'}
+META02_FORMS = {0: 'sword_head', 1: 'pickaxe_head', 2: 'shovel_head', 3: 'axe_head', 4: 'hoe_head', 7: 'saw_head', 8: 'drill_head', 9: 'chainsaw_head', 10: 'wrench_head', 22: 'long_rod', 31: 'small_gear'}
+VANILLA_FORMS = {('ingot', 'iron'): 'iron_ingot', ('ingot', 'gold'): 'gold_ingot', ('ingot', 'copper'): 'copper_ingot', ('nugget', 'iron'): 'iron_nugget', ('nugget', 'gold'): 'gold_nugget',
+                 ('nugget', 'copper'): 'copper_nugget', ('gem', 'diamond'): 'diamond', ('gem', 'emerald'): 'emerald', ('gem', 'coal'): 'coal', ('gem', 'charcoal'): 'charcoal', ('gem', 'quartz'): 'quartz',
+                 ('dust', 'redstone'): 'redstone', ('dust', 'glowstone'): 'glowstone_dust', ('dust', 'gunpowder'): 'gunpowder', ('dust', 'blaze'): 'blaze_powder', ('dust', 'sugar'): 'sugar'}
 # OreDict prefixes (GT OrePrefixes names) -> our item id prefix
 OREDICT_PREFIXES = ['ingot', 'dust', 'plate', 'gem', 'nugget', 'block', 'gear', 'stick', 'ring', 'bolt', 'screw', 'wire', 'cable', 'ore']
 OREDICT_OUR = {'stick': 'rod'}
@@ -170,6 +205,13 @@ class Mapper:
         for t in json.load(open(os.path.join(ROOT, 'src', 'main', 'resources', NS, 'tools.json'), encoding='utf-8')):
             self.tools[t['tool']].append(t['id'])
         self.fluids = {k.split('.', 2)[2] for k in lang if k.startswith(f'fluid_type.{NS}.')}
+        # GT material id -> our material id
+        ours_mats = {x['material'] for x in json.load(open(os.path.join(ROOT, 'src', 'main', 'resources', NS, 'items.json'), encoding='utf-8')) if x.get('material')}
+        norm = {m.replace('_', ''): m for m in ours_mats}
+        self.gt_mat = {}
+        for m in json.load(open(os.path.join(ROOT, 'reference', 'original', 'gt5_materials.json'), encoding='utf-8')):
+            key = m['name'].replace('_', '').lower()
+            self.gt_mat[m['id']] = norm.get(key, key)
 
     @staticmethod
     def pick(cands):
@@ -201,7 +243,37 @@ class Mapper:
         ok = path in self.ours if ns == NS else path in self.vanilla
         return r if ok else None
 
+    def structural(self, name, dmg):
+        """Ids the GT loader makes in loops: wires, cables, frames, fluid pipes, material items (D119)."""
+        if name == 'gt.integrated_circuit':
+            return f'{NS}:programmed_circuit'
+        if name == 'gt.metatool.01' and dmg == 160:
+            return f'{NS}:soldering_iron_lv'
+        if name == 'gt.blockmachines':
+            for base, mat in GT_WIRES.items():
+                if base <= dmg <= base + 10:
+                    return f'{NS}:' + WIRE_FORMS[dmg - base].format(mat)
+            if 4096 <= dmg < 5096 and self.gt_mat.get(dmg - 4096):
+                return f'{NS}:frame_{self.gt_mat[dmg - 4096]}'
+            for base, mat in GT_PIPES.items():
+                if base <= dmg < base + 5:
+                    return f'{NS}:pipe_{PIPE_SIZES[dmg - base]}_{mat}'
+            return None
+        forms = {'gt.metaitem.01': META01_FORMS, 'gt.metaitem.02': META02_FORMS}.get(name)
+        if forms and dmg < 32000 and dmg // 1000 in forms:
+            form, mat = forms[dmg // 1000], self.gt_mat.get(dmg % 1000)
+            if not mat:
+                return None
+            if f'{form}_{mat}' in self.ours:
+                return f'{NS}:{form}_{mat}'
+            if (form, mat) in VANILLA_FORMS:
+                return 'minecraft:' + VANILLA_FORMS[(form, mat)]
+        return None
+
     def gregtech(self, name, dmg):
+        r = self.structural(name, dmg)
+        if r:
+            return r
         if name == 'gt.metatool.01':
             kind = GT_TOOLS.get(dmg)
             ids = self.tools.get(kind, [])

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "iis:batpack"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "iis:batpack"
+      }
+    ]
+  }
+}

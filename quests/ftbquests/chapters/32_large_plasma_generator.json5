@@ -143,11 +143,34 @@
       ]
     },
     {
+      "id": "1A000000000002AD",
+      "x": 6.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000004C1"
+      ],
+      "icon": {
+        "id": "iis:frame_hsse",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frame_hsse",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002AD00"
+        }
+      ]
+    },
+    {
       "id": "1A000000000002AE",
       "x": 5.0,
       "y": 3.5,
       "dependencies": [
-        "1A000000000004C1",
+        "1A000000000002AD",
         "1A000000000002A2"
       ],
       "icon": {
@@ -259,6 +282,31 @@
           },
           "count": 1,
           "id": "1B00000000042700"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000042A",
+      "x": 11.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000427",
+        "1A00000000000006",
+        "1A0000000000042B"
+      ],
+      "icon": {
+        "id": "iis:pipe_huge_tungsten_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pipe_huge_tungsten_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000042A00"
         }
       ]
     },

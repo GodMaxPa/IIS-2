@@ -56,10 +56,8 @@
       "y": 2.0,
       "dependencies": [
         "1A00000000000355",
-        "1A00000000000232",
-        "1A00000000000205",
-        "1A00000000000356",
-        "1A00000000000095"
+        "1A0000000000035C",
+        "1A0000000000035E"
       ],
       "icon": {
         "id": "iis:electric_motor_iv",
@@ -107,7 +105,7 @@
       "y": 5.0,
       "dependencies": [
         "1A00000000000074",
-        "1A00000000000355"
+        "1A0000000000035F"
       ],
       "icon": {
         "id": "iis:robust_tungstensteel_casing",
@@ -198,6 +196,52 @@
       ]
     },
     {
+      "id": "1A00000000000359",
+      "x": 2.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A000000000006F9"
+      ],
+      "icon": {
+        "id": "iis:wire_tungsten_steel_2x",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_tungsten_steel_2x",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000035900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000035B",
+      "x": 0.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A00000000000094"
+      ],
+      "icon": {
+        "id": "iis:wire_hssg_2x",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_hssg_2x",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000035B00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000035D",
       "x": 0.5,
       "y": 3.5,
@@ -222,11 +266,80 @@
       ]
     },
     {
+      "id": "1A0000000000035E",
+      "x": 3.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000095"
+      ],
+      "icon": {
+        "id": "iis:wire_annealed_copper_16x",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_annealed_copper_16x",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000035E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000035F",
+      "x": 3.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000355"
+      ],
+      "icon": {
+        "id": "iis:frame_tungsten_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frame_tungsten_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000035F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000360",
+      "x": 7.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000152"
+      ],
+      "icon": {
+        "id": "iis:frame_titanium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frame_titanium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000036000"
+        }
+      ]
+    },
+    {
       "id": "1A000000000003B6",
       "x": 10.5,
       "y": 3.5,
       "dependencies": [
-        "1A00000000000152"
+        "1A00000000000360"
       ],
       "icon": {
         "id": "iis:stable_titanium_casing",
@@ -251,7 +364,7 @@
       "dependencies": [
         "1A000000000003B6",
         "1A000000000003B8",
-        "1A0000000000001F"
+        "1A0000000000014A"
       ],
       "icon": {
         "id": "iis:engine_intake_casing",
@@ -297,7 +410,7 @@
       "x": 7.5,
       "y": 6.5,
       "dependencies": [
-        "1A00000000000152",
+        "1A00000000000360",
         "1A000000000003BA"
       ],
       "icon": {
@@ -324,14 +437,14 @@
         "1A0000000000001F"
       ],
       "icon": {
-        "id": "iis:gear_titanium",
+        "id": "iis:small_gear_titanium",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:gear_titanium",
+            "id": "iis:small_gear_titanium",
             "count": 1
           },
           "count": 1,
@@ -344,9 +457,7 @@
       "x": 12.5,
       "y": 10.0,
       "dependencies": [
-        "1A00000000000232",
-        "1A00000000000205",
-        "1A00000000000356"
+        "1A0000000000035C"
       ],
       "icon": {
         "id": "iis:hatch_dynamo_iv",
@@ -438,14 +549,14 @@
         "1A000000000000F7"
       ],
       "icon": {
-        "id": "iis:gear_stainless_steel",
+        "id": "iis:small_gear_stainless_steel",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:gear_stainless_steel",
+            "id": "iis:small_gear_stainless_steel",
             "count": 1
           },
           "count": 4,
@@ -501,6 +612,29 @@
       ]
     },
     {
+      "id": "1A00000000000422",
+      "x": 3.5,
+      "y": 9.5,
+      "dependencies": [
+        "1A0000000000001F"
+      ],
+      "icon": {
+        "id": "iis:pipe_large_titanium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pipe_large_titanium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000042200"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000423",
       "x": 3.5,
       "y": 6.5,
@@ -530,7 +664,8 @@
       "y": 2.0,
       "dependencies": [
         "1A0000000000001F",
-        "1A00000000000152"
+        "1A00000000000360",
+        "1A0000000000014A"
       ],
       "icon": {
         "id": "iis:titanium_pipe_casing",

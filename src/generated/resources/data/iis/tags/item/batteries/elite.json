@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "iis:energy_crystal",
+    "iis:battery_sodium_hv",
+    "iis:battery_cadmium_hv",
+    "iis:battery_lithium_hv",
+    "iis:battery_acid_hv",
+    "iis:battery_mercury_hv"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LCL",
+    "LEL",
+    "LCL"
+  ],
+  "key": {
+    "L": "#c:dusts/lapis",
+    "C": "#c:circuits/advanced",
+    "E": "iis:energy_crystal"
+  },
+  "result": {
+    "id": "iis:lapotron_crystal"
+  }
+}

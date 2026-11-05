@@ -61,14 +61,14 @@
       "x": 15.0,
       "y": 6.5,
       "icon": {
-        "id": "iis:ore_rock_salt",
+        "id": "iis:dust_rock_salt",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:ore_rock_salt",
+            "id": "iis:dust_rock_salt",
             "count": 1
           },
           "count": 1,
@@ -171,6 +171,29 @@
       ]
     },
     {
+      "id": "1A0000000000012C",
+      "x": 15.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000043C"
+      ],
+      "icon": {
+        "id": "iis:frame_invar",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frame_invar",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012C00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000012D",
       "x": 16.5,
       "y": 5.0,
@@ -224,7 +247,7 @@
       "x": 15.0,
       "y": 3.5,
       "dependencies": [
-        "1A0000000000043C",
+        "1A0000000000012C",
         "1A0000000000012D"
       ],
       "icon": {
@@ -336,12 +359,36 @@
       ]
     },
     {
+      "id": "1A00000000000139",
+      "x": 4.5,
+      "y": 5.5,
+      "dependencies": [
+        "1A0000000000013D",
+        "1A000000000000BA"
+      ],
+      "icon": {
+        "id": "iis:soldering_iron_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:soldering_iron_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000013900"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000013A",
       "x": 12.0,
       "y": -1.0,
       "dependencies": [
         "1A00000000000128",
-        "1A000000000000EB"
+        "1A000000000003C6"
       ],
       "icon": {
         "id": "iis:electrolyzer_lv",
@@ -717,7 +764,7 @@
       "y": 8.0,
       "dependencies": [
         "1A00000000000128",
-        "1A0000000000011C"
+        "1A0000000000072D"
       ],
       "icon": {
         "id": "iis:ore_washer_lv",
@@ -794,14 +841,14 @@
         "1A0000000000009B"
       ],
       "icon": {
-        "id": "iis:gear_steel",
+        "id": "iis:small_gear_steel",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:gear_steel",
+            "id": "iis:small_gear_steel",
             "count": 1
           },
           "count": 1,
@@ -833,7 +880,7 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:lens_ruby",
+            "id": "iis:lens_fools_ruby",
             "count": 1
           },
           "count": 1,
@@ -913,8 +960,7 @@
       "y": 0.5,
       "dependencies": [
         "1A00000000000128",
-        "1A0000000000011B",
-        "1A00000000000149",
+        "1A000000000004AB",
         "1A0000000000011F"
       ],
       "icon": {
@@ -930,6 +976,29 @@
           },
           "count": 1,
           "id": "1B0000000002E200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003C6",
+      "x": 13.5,
+      "y": -1.0,
+      "dependencies": [
+        "1A000000000000EB"
+      ],
+      "icon": {
+        "id": "iis:wire_gold_1x",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_gold_1x",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003C600"
         }
       ]
     },
@@ -954,6 +1023,30 @@
           },
           "count": 1,
           "id": "1B0000000003D100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003D2",
+      "x": 13.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000003D1",
+        "1A000000000001D9"
+      ],
+      "icon": {
+        "id": "iis:wire_cupronickel_2x",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_cupronickel_2x",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003D200"
         }
       ]
     },
@@ -1050,6 +1143,29 @@
       ]
     },
     {
+      "id": "1A000000000004AB",
+      "x": 15.0,
+      "y": -1.0,
+      "dependencies": [
+        "1A000000000004B5"
+      ],
+      "icon": {
+        "id": "iis:wire_tin_2x",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_tin_2x",
+            "count": 1
+          },
+          "count": 4,
+          "id": "1B0000000004AB00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000729",
       "x": 10.5,
       "y": -1.0,
@@ -1069,6 +1185,29 @@
           },
           "count": 2,
           "id": "1B00000000072900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000072D",
+      "x": 12.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:programmed_circuit",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:programmed_circuit",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072D00"
         }
       ]
     }

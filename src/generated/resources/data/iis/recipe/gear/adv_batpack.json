@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BCB",
+    "BIB"
+  ],
+  "key": {
+    "B": "iis:battery_sodium_mv",
+    "C": "#c:circuits/basic",
+    "I": "iis:item_casing_bronze"
+  },
+  "result": {
+    "id": "iis:adv_batpack"
+  }
+}

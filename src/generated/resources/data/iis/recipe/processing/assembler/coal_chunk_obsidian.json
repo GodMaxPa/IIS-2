@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:compressed_coal_ball",
+      "count": 8
+    },
+    {
+      "ingredient": "minecraft:obsidian",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:coal_chunk",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TGT",
+    "XEC",
+    "SLd"
+  ],
+  "key": {
+    "T": "#c:plates/titanium",
+    "G": "#c:plates/gallium",
+    "X": "#iis:exquisite_gems/garnet_red",
+    "E": "iis:emitter_ev",
+    "C": "#c:circuits/elite",
+    "S": "#iis:screws/titanium",
+    "L": "iis:charging_lapotron_crystal",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:mining_laser"
+  }
+}

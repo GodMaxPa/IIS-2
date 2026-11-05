@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AXA",
+    "RBR",
+    "SdS"
+  ],
+  "key": {
+    "A": "iis:reactor_heat_switch_diamond",
+    "X": "#iis:screws/stainless_steel",
+    "B": "#iis:bolts/stainless_steel",
+    "R": "#iis:rings/stainless_steel",
+    "S": "#iis:lenses/olivine",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:nightvision_goggles"
+  }
+}

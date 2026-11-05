@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BCB",
+    "B B",
+    "BCB"
+  ],
+  "key": {
+    "B": "iis:lapotron_crystal",
+    "C": "#c:circuits/data"
+  },
+  "result": {
+    "id": "iis:charging_lapotron_crystal"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ICI",
+    "IBI",
+    "G G"
+  ],
+  "key": {
+    "I": "iis:item_casing_iron",
+    "C": "#c:circuits/advanced",
+    "B": "iis:battery_lv",
+    "G": "#c:dusts/glowstone"
+  },
+  "result": {
+    "id": "iis:jetpack"
+  }
+}

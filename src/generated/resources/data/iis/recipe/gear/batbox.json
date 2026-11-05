@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "BHB",
+    "CBC"
+  ],
+  "key": {
+    "W": "#iis:wires/1x/tin",
+    "P": "#c:plates/steel",
+    "B": "#iis:batteries/basic",
+    "C": "#c:circuits/basic",
+    "H": "iis:hull_lv"
+  },
+  "result": {
+    "id": "iis:batbox"
+  }
+}

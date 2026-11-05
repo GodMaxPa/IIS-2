@@ -1,0 +1,39 @@
+{
+  "type": "iis:circuit_assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_board_fiberglass",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:chip_pic",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:crystal_chip_master",
+      "count": 18
+    },
+    {
+      "ingredient": "iis:chip_nano_cpu",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:fine_wires/platinum",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:energy_orb",
+      "count": 1
+    }
+  ],
+  "duration": 512,
+  "eut": 1024,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 144
+    }
+  ]
+}

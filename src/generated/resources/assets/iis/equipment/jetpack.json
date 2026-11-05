@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "iis:jetpack"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "iis:jetpack"
+      }
+    ]
+  }
+}

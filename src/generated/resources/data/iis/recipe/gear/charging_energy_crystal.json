@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BCB",
+    "B B",
+    "BCB"
+  ],
+  "key": {
+    "B": "iis:energy_crystal",
+    "C": "#c:circuits/advanced"
+  },
+  "result": {
+    "id": "iis:charging_energy_crystal"
+  }
+}

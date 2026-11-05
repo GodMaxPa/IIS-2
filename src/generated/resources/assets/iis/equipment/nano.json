@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "iis:nano"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "iis:nano"
+      }
+    ]
+  }
+}

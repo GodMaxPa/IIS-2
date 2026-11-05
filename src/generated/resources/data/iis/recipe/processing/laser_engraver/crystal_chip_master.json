@@ -1,0 +1,21 @@
+{
+  "type": "iis:laser_engraver",
+  "inputs": [
+    {
+      "ingredient": "iis:lapotron_crystal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crystal_chip_master",
+      "count": 3
+    }
+  ],
+  "duration": 256,
+  "eut": 480,
+  "keep": [
+    "#iis:crafting_lens/blue"
+  ],
+  "cleanroom": true
+}

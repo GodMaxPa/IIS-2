@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1183; hidden until their items are ported: 759; chapters: 35.
+Quests in IIS 1: 1943; written: 1293; hidden until their items are ported: 649; chapters: 35.
 
 ## Most needed unported items (task count)
 
@@ -29,7 +29,6 @@ Quests in IIS 1: 1943; written: 1183; hidden until their items are ported: 759; 
 - 2 × `gregtech:gt.blockmachines:60` Выходной люк (ULV)
 - 2 × `gregtech:gt.metaitem.01:32018` Базовый считыватель данных
 - 2 × `ProjRed|Fabrication:projectred.fabrication.icblueprint:0` 
-- 1 × `gregtech:gt.blockmachines:5162` 
 - 1 × `GalacticraftMars:item.itemTier3Rocket:3` 
 - 1 × `GalacticraftMars:item.itemBasicAsteroids:1` 
 - 1 × `GalacticraftMars:item.itemBasicAsteroids:2` 
@@ -43,7 +42,6 @@ Quests in IIS 1: 1943; written: 1183; hidden until their items are ported: 759; 
 - 1 × `gregtech:gt.metaitem.01:32464` Сверхпрочный слиток T3
 - 1 × `gregtech:gt.metaitem.01:17325` Пластина сплава наквадаха
 - 1 × `gregtech:gt.metaitem.01:11325` Слиток сплава наквадаха
-- 1 × `gregtech:gt.blockmachines:4468` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:14` 
 - 1 × `gregtech:gt.metaitem.01:22305` Плотная стальная пластина
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:13` 
@@ -84,6 +82,8 @@ Quests in IIS 1: 1943; written: 1183; hidden until their items are ported: 759; 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:47` 
 - 1 × `appliedenergistics2:tile.BlockCondenser:0` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:48` 
+- 1 × `gregtech:gt.blockgem3:2` Блок жёлтого граната
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:16` 
 
 ## Unported fluids
 
@@ -96,11 +96,11 @@ Quests in IIS 1: 1943; written: 1183; hidden until their items are ported: 759; 
 
 ## Dropped reward items
 
-- 463 × `('gregtech:gt.metaitem.01', 32000)`
-- 336 × `('gregtech:gt.metaitem.01', 32001)`
-- 43 × `('gregtech:gt.metaitem.01', 32002)`
+- 519 × `('gregtech:gt.metaitem.01', 32000)`
+- 381 × `('gregtech:gt.metaitem.01', 32001)`
+- 48 × `('gregtech:gt.metaitem.01', 32002)`
 - 16 × `bq_standard:choice`
-- 11 × `('gregtech:gt.metaitem.01', 32003)`
+- 15 × `('gregtech:gt.metaitem.01', 32003)`
 - 1 × `('lootbags:lootbag', 7)`
 - 1 × `('ChickenChunks:chickenChunkLoader', 0)`
 - 1 × `('gregtech:gt.metaitem.02', 25802)`

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BCB",
+    "BPB",
+    "BWB"
+  ],
+  "key": {
+    "B": "#iis:batteries/basic",
+    "C": "#c:circuits/basic",
+    "P": "#c:plates/aluminium",
+    "W": "#iis:wires/1x/tin"
+  },
+  "result": {
+    "id": "iis:batpack"
+  }
+}

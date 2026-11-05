@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_canner",
+  "inputs": [
+    {
+      "ingredient": "iis:battery_hull_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:battery_re",
+      "count": 1
+    }
+  ],
+  "duration": 4,
+  "eut": 1,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_redstone",
+      "amount": 288
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "iis:coal_ball",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:compressed_coal_ball",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

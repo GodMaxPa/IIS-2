@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "iis:coal_chunk",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:industrial_diamond",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

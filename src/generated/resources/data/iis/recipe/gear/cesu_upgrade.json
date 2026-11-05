@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "BHB",
+    "CBC"
+  ],
+  "key": {
+    "W": "#iis:wires/1x/copper",
+    "P": "#c:plates/bronze",
+    "B": "#iis:batteries/advanced",
+    "C": "#c:circuits/good",
+    "H": "iis:batbox"
+  },
+  "result": {
+    "id": "iis:cesu"
+  }
+}

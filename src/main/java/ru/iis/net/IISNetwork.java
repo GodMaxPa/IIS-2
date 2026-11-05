@@ -32,9 +32,21 @@ public final class IISNetwork {
         }
     }
 
+    /** Клавиша ночного зрения (D118). */
+    public record NightVisionKey() implements CustomPacketPayload {
+        public static final Type<NightVisionKey> TYPE = new Type<>(Identifier.fromNamespaceAndPath(IIS.MODID, "night_vision_key"));
+        public static final StreamCodec<ByteBuf, NightVisionKey> CODEC = StreamCodec.unit(new NightVisionKey());
+
+        @Override
+        public Type<? extends CustomPacketPayload> type() {
+            return TYPE;
+        }
+    }
+
     public static void register(IEventBus modBus) {
         modBus.addListener((RegisterPayloadHandlersEvent e) -> e.registrar("1")
-                .playToServer(WrenchKeys.TYPE, WrenchKeys.CODEC, (msg, ctx) -> setCtrl(ctx.player(), msg.ctrl())));
+                .playToServer(WrenchKeys.TYPE, WrenchKeys.CODEC, (msg, ctx) -> setCtrl(ctx.player(), msg.ctrl()))
+                .playToServer(NightVisionKey.TYPE, NightVisionKey.CODEC, (msg, ctx) -> ru.iis.gear.GearEvents.toggleNightVision(ctx.player())));
     }
 
     public static void setCtrl(Player player, boolean ctrl) {

@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:energium_dust",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:energy_crystal",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 256,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

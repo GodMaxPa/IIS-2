@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BCB",
+    "B B",
+    "BCB"
+  ],
+  "key": {
+    "B": "iis:battery_re",
+    "C": "#c:circuits/basic"
+  },
+  "result": {
+    "id": "iis:charging_battery_re"
+  }
+}

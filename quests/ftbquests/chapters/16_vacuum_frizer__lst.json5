@@ -265,7 +265,7 @@
       "x": 12.5,
       "y": 0.5,
       "dependencies": [
-        "1A000000000000F4"
+        "1A00000000000340"
       ],
       "icon": {
         "id": "iis:frost_proof_casing",
@@ -470,6 +470,29 @@
       ]
     },
     {
+      "id": "1A00000000000340",
+      "x": 11.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000000F4"
+      ],
+      "icon": {
+        "id": "iis:frame_aluminium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frame_aluminium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034000"
+        }
+      ]
+    },
+    {
       "id": "1A000000000003C7",
       "x": 0.5,
       "y": 2.0,
@@ -519,11 +542,34 @@
       ]
     },
     {
+      "id": "1A000000000003C9",
+      "x": 5.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000041E"
+      ],
+      "icon": {
+        "id": "iis:frame_blue_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frame_blue_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003C900"
+        }
+      ]
+    },
+    {
       "id": "1A000000000003CA",
       "x": 6.5,
       "y": 2.0,
       "dependencies": [
-        "1A0000000000041E",
+        "1A000000000003C9",
         "1A000000000003CC"
       ],
       "icon": {
@@ -562,6 +608,29 @@
           },
           "count": 1,
           "id": "1B0000000003CC00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000417",
+      "x": 6.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:pipe_large_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pipe_large_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000041700"
         }
       ]
     },

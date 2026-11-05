@@ -26,6 +26,31 @@ TEX = os.path.join(ROOT, 'tools', 'gen', 'textures')
 NS = 'iis'
 
 
+# Windows sometimes refuses a file for a moment (OSError 22) while something watches the tree: every copy and image save retries
+import shutil as _shutil_retry
+import time as _time_retry
+
+
+def _with_retry(f):
+    def run(*a, **k):
+        for attempt in range(8):
+            try:
+                return f(*a, **k)
+            except OSError:
+                if attempt == 7:
+                    raise
+                _time_retry.sleep(0.5)
+    return run
+
+
+_shutil_retry.copyfile = _with_retry(_shutil_retry.copyfile)
+try:
+    from PIL import Image as _Image_retry
+    _Image_retry.Image.save = _with_retry(_Image_retry.Image.save)
+except ImportError:
+    pass
+
+
 def write(path, obj):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     for attempt in range(30):
@@ -996,6 +1021,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_reactor', os.path.join(ROOT, 'tool
 _reactor = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_reactor)
 lv_stats['reactor'] = _reactor.generate(globals())
+# IC2 gear (D118)
+_spec = _ilu.spec_from_file_location('iis_gen_gear', os.path.join(ROOT, 'tools', 'gen', 'gear.py'))
+_gear = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_gear)
+lv_stats['gear'] = _gear.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

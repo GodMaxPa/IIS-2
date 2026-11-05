@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/coal",
+      "count": 8
+    },
+    {
+      "ingredient": "minecraft:flint",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:coal_ball",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

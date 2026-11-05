@@ -410,8 +410,7 @@
       "x": 3.5,
       "y": 9.5,
       "dependencies": [
-        "1A000000000003E3",
-        "1A000000000001B3"
+        "1A000000000001F1"
       ],
       "icon": {
         "id": "iis:grinder_diamond",
@@ -426,6 +425,75 @@
           },
           "count": 1,
           "id": "1B0000000001F000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F1",
+      "x": 3.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A000000000001F2"
+      ],
+      "icon": {
+        "id": "iis:industrial_diamond",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:industrial_diamond",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F2",
+      "x": 2.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A000000000001F3"
+      ],
+      "icon": {
+        "id": "iis:coal_chunk",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:coal_chunk",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F3",
+      "x": 2.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A000000000001F6"
+      ],
+      "icon": {
+        "id": "iis:compressed_coal_ball",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressed_coal_ball",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F300"
         }
       ]
     },
@@ -478,6 +546,53 @@
           },
           "count": 1,
           "id": "1B0000000001F500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F6",
+      "x": 0.5,
+      "y": 9.5,
+      "dependencies": [
+        "1A000000000003E3",
+        "1A000000000001B3"
+      ],
+      "icon": {
+        "id": "iis:coal_ball",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:coal_ball",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F8",
+      "x": 0.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000001D9"
+      ],
+      "icon": {
+        "id": "iis:mining_pipe",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mining_pipe",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F800"
         }
       ]
     },
@@ -815,9 +930,7 @@
       "y": 5.0,
       "dependencies": [
         "1A000000000001E3",
-        "1A00000000000197",
-        "1A00000000000073",
-        "1A000000000000FE",
+        "1A000000000004D8",
         "1A00000000000223",
         "1A00000000000193"
       ],
@@ -834,6 +947,31 @@
           },
           "count": 1,
           "id": "1B0000000004D700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004D8",
+      "x": 8.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000197",
+        "1A00000000000073",
+        "1A000000000000FE"
+      ],
+      "icon": {
+        "id": "iis:pipe_small_copper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pipe_small_copper",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D800"
         }
       ]
     },
@@ -989,6 +1127,13 @@
       "size": 2.5
     },
     {
+      "id": "1E00000000A001E5",
+      "linked_quest": "1A000000000001E5",
+      "x": 5.0,
+      "y": 5.0,
+      "size": 1.0
+    },
+    {
       "id": "1E00000000A001E9",
       "linked_quest": "1A000000000001E9",
       "x": 5.0,
@@ -1000,6 +1145,13 @@
       "linked_quest": "1A000000000002E1",
       "x": 3.5,
       "y": 3.5,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000000A003FE",
+      "linked_quest": "1A000000000003FE",
+      "x": 3.5,
+      "y": 5.0,
       "size": 1.0
     },
     {

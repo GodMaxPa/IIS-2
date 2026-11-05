@@ -475,6 +475,30 @@
       ]
     },
     {
+      "id": "1A00000000000673",
+      "x": 11.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000192",
+        "1A00000000000136"
+      ],
+      "icon": {
+        "id": "iis:pipe_medium_wood",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pipe_medium_wood",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000067300"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000067C",
       "x": 2.0,
       "y": -1.0,

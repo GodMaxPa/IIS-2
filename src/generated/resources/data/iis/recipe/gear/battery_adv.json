@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CBC",
+    "BSB",
+    "BLB"
+  ],
+  "key": {
+    "C": "#iis:cables/1x/annealed_copper",
+    "B": "iis:item_casing_bronze",
+    "S": "#c:dusts/sulfur",
+    "L": "#c:dusts/lead"
+  },
+  "result": {
+    "id": "iis:battery_adv"
+  }
+}

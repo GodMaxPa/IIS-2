@@ -80,7 +80,7 @@
       "y": 1.0,
       "dependencies": [
         "1A0000000000007F",
-        "1A0000000000009B"
+        "1A000000000003F5"
       ],
       "icon": {
         "id": "iis:grate_casing",
@@ -279,9 +279,7 @@
         "1A0000000000008D",
         "1A0000000000008E",
         "1A0000000000008F",
-        "1A00000000000096",
-        "1A00000000000232",
-        "1A00000000000205"
+        "1A00000000000090"
       ],
       "icon": {
         "id": "iis:electric_motor_luv",
@@ -342,6 +340,31 @@
           },
           "count": 1,
           "id": "1B00000000008E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000090",
+      "x": 6.5,
+      "y": 7.0,
+      "dependencies": [
+        "1A00000000000096",
+        "1A00000000000232",
+        "1A00000000000205"
+      ],
+      "icon": {
+        "id": "iis:cable_yttrium_barium_cuprate_1x",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cable_yttrium_barium_cuprate_1x",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000009000"
         }
       ]
     },
@@ -506,6 +529,29 @@
           },
           "count": 1,
           "id": "1B0000000000A000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000A2",
+      "x": 8.0,
+      "y": 8.5,
+      "dependencies": [
+        "1A00000000000090"
+      ],
+      "icon": {
+        "id": "iis:wire_superconductor_1x",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_superconductor_1x",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000A200"
         }
       ]
     },
@@ -704,8 +750,10 @@
       "x": 17.0,
       "y": 7.0,
       "dependencies": [
-        "1A000000000001A3",
-        "1A000000000000BA"
+        "1A00000000000316",
+        "1A00000000000482",
+        "1A00000000000483",
+        "1A00000000000484"
       ],
       "icon": {
         "id": "iis:ingot_uranium",
@@ -752,8 +800,10 @@
       "x": 15.5,
       "y": 8.5,
       "dependencies": [
-        "1A000000000001A3",
-        "1A000000000000BA"
+        "1A00000000000316",
+        "1A00000000000482",
+        "1A00000000000483",
+        "1A00000000000484"
       ],
       "icon": {
         "id": "iis:nugget_uranium235",
@@ -1023,14 +1073,14 @@
       ],
       "dependency_requirement": "one_completed",
       "icon": {
-        "id": "iis:ore_cobaltite",
+        "id": "iis:dust_cobaltite",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:ore_cobaltite",
+            "id": "iis:dust_cobaltite",
             "count": 1
           },
           "count": 1,
@@ -1142,14 +1192,14 @@
         "1A00000000000442"
       ],
       "icon": {
-        "id": "iis:gem_monazite",
+        "id": "iis:dust_monazite",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:gem_monazite",
+            "id": "iis:dust_monazite",
             "count": 1
           },
           "count": 1,
@@ -1197,6 +1247,13 @@
       "size": 1.0
     },
     {
+      "id": "1E00000000200316",
+      "linked_quest": "1A00000000000316",
+      "x": 18.5,
+      "y": 7.0,
+      "size": 1.0
+    },
+    {
       "id": "1E000000002003F7",
       "linked_quest": "1A000000000003F7",
       "x": 8.75,
@@ -1215,6 +1272,27 @@
       "linked_quest": "1A0000000000040F",
       "x": 5.0,
       "y": 8.5,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000000200482",
+      "linked_quest": "1A00000000000482",
+      "x": 18.5,
+      "y": 8.5,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000000200483",
+      "linked_quest": "1A00000000000483",
+      "x": 17.0,
+      "y": 10.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000000200484",
+      "linked_quest": "1A00000000000484",
+      "x": 15.5,
+      "y": 10.0,
       "size": 1.0
     }
   ],

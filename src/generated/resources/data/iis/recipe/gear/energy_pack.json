@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CAC",
+    "EIE",
+    "E E"
+  ],
+  "key": {
+    "C": "#c:circuits/advanced",
+    "A": "iis:advanced_alloy_plate",
+    "E": "iis:energy_crystal",
+    "I": "iis:item_casing_iron"
+  },
+  "result": {
+    "id": "iis:energy_pack"
+  }
+}

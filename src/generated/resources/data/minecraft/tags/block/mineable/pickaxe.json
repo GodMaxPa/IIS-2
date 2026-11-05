@@ -733,6 +733,10 @@
     "iis:fusion_computer_luv",
     "iis:nuclear_reactor",
     "iis:reactor_chamber",
-    "iis:solar_panel_block"
+    "iis:solar_panel_block",
+    "iis:batbox",
+    "iis:cesu",
+    "iis:mfe",
+    "iis:mfsu"
   ]
 }

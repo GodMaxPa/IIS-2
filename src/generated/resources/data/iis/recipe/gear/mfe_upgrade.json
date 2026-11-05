@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "BHB",
+    "CBC"
+  ],
+  "key": {
+    "W": "#iis:cables/1x/silver",
+    "P": "#iis:batteries/elite",
+    "B": "#iis:batteries/elite",
+    "C": "#c:circuits/advanced",
+    "H": "iis:cesu"
+  },
+  "result": {
+    "id": "iis:mfe"
+  }
+}

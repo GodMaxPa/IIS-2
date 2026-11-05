@@ -1,0 +1,26 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:carbon_plate",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:energy_crystal",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:nightvision_goggles",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nano_helmet",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 120,
+  "circuit": 0
+}

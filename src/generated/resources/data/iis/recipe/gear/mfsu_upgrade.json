@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WPW",
+    "BHB",
+    "CBC"
+  ],
+  "key": {
+    "W": "#iis:cables/1x/tungsten_steel",
+    "P": "iis:lapotron_crystal",
+    "B": "iis:lapotron_crystal",
+    "C": "#c:circuits/data",
+    "H": "iis:mfe"
+  },
+  "result": {
+    "id": "iis:mfsu"
+  }
+}

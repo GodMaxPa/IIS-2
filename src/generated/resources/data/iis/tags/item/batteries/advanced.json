@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "iis:battery_adv",
+    "iis:battery_sodium_mv",
+    "iis:battery_cadmium_mv",
+    "iis:battery_lithium_mv",
+    "iis:battery_acid_mv",
+    "iis:battery_mercury_mv"
+  ]
+}

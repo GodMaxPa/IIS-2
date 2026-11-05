@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/redstone",
+      "count": 5
+    },
+    {
+      "ingredient": "#c:dusts/ruby",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:energium_dust",
+      "count": 9
+    }
+  ],
+  "duration": 900,
+  "eut": 8
+}

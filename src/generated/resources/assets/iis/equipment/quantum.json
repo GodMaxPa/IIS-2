@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "iis:quantum"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "iis:quantum"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GA ",
+    "GA ",
+    "CEC"
+  ],
+  "key": {
+    "G": "#c:dusts/glowstone",
+    "A": "iis:advanced_alloy_plate",
+    "C": "iis:carbon_plate",
+    "E": "iis:energy_crystal"
+  },
+  "result": {
+    "id": "iis:nano_saber"
+  }
+}

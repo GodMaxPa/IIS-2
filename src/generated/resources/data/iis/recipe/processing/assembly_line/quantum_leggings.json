@@ -1,0 +1,55 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "iis:nano_leggings",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/master",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:iridium_alloy_plate",
+      "count": 6
+    },
+    {
+      "ingredient": "iis:energy_orb",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:field_generator_hv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:electric_motor_iv",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:screws/tungsten",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:quantum_leggings",
+      "count": 1
+    }
+  ],
+  "duration": 1500,
+  "eut": 4096,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 2304
+    },
+    {
+      "ingredient": "iis:molten_titanium",
+      "amount": 1440
+    }
+  ],
+  "keep": [
+    "iis:nano_leggings"
+  ],
+  "temp": 144000
+}

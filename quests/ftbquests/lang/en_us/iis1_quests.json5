@@ -46,6 +46,10 @@
     "Required for the IV or higher tier pump."
   ],
   "quest.1A00000000000002.title": "Silicone Rubber Ring",
+  "quest.1A00000000000003.quest_desc": [
+    "A part of the IV tier pump."
+  ],
+  "quest.1A00000000000003.title": "Tungstensteel Fluid Pipe",
   "quest.1A00000000000004.quest_desc": [
     "A part of the IV tier pump."
   ],
@@ -74,6 +78,10 @@
     "Screw, rotor and pipe are different, other parts are the same as those for other pumps."
   ],
   "quest.1A00000000000017.title": "Electric Pump (EV)",
+  "quest.1A00000000000018.quest_desc": [
+    "Can be created from HSS-G rods with a wrench or using an assembling machine."
+  ],
+  "quest.1A00000000000018.title": "HSS-G Frame box",
   "quest.1A00000000000019.quest_desc": [
     "A part of some HV machines."
   ],
@@ -310,6 +318,10 @@
     "Use a wiremill..."
   ],
   "quest.1A0000000000008F.title": "Fine Annealed Copper Wire",
+  "quest.1A00000000000090.quest_desc": [
+    "Use the same wire isolation as for other IV+ tier cables."
+  ],
+  "quest.1A00000000000090.title": "Yttrium Barium Cuprate Cable",
   "quest.1A00000000000092.quest_desc": [
     "An LuV Tier Circuit."
   ],
@@ -362,6 +374,14 @@
     "HSS-G ingot >> plate >> small gear (using a hammer)."
   ],
   "quest.1A000000000000A0.title": "Small HSS-G Gear",
+  "quest.1A000000000000A1.quest_desc": [
+    "You may get it from the previous charging item using an advanced heat exchanger and a lapotron crystal."
+  ],
+  "quest.1A000000000000A1.title": "Charging Lapotron Crystal",
+  "quest.1A000000000000A2.quest_desc": [
+    "This cable may use any voltage, but it is limited in maximum amperes like other cables. Use NEI to find and apply one of the eight recipes."
+  ],
+  "quest.1A000000000000A2.title": "Superconductor Wire",
   "quest.1A000000000000A3.quest_desc": [
     "To make a tin alloy ingot you have to smelt iron and tin 1-to-1 in an alloy smelter. Then use a bender to make the plate."
   ],
@@ -510,6 +530,10 @@
     "This multiblock provides you with the convenient utilization of space and allows you to gain the working power of any sixteen GT machines operating simultaneously. Note that you have to feed it with power sufficient for all of the machines used. For example, if you put inside 16 LV electrolyzers to get gas products from water, you'll need 480 eu/t and an HV (or better) energy hatch (30 eu/t * 16 = 480 eu/t)."
   ],
   "quest.1A000000000000CA.title": "Processing Array",
+  "quest.1A000000000000CB.quest_desc": [
+    "The 8 k eu\\t battery"
+  ],
+  "quest.1A000000000000CB.title": "Lapotronic Energy Orb",
   "quest.1A000000000000CD.quest_desc": [
     "... from the ingot using a metal bender."
   ],
@@ -706,6 +730,10 @@
     "Height for search: 10-40 NICKEL vein (Garnierite, Nickel, Cobaltite, Pentlandite). Find and smelt nickel ore (or Pentlandite or Garnierite) to get a nickel ingot."
   ],
   "quest.1A00000000000100.title": "Nickel",
+  "quest.1A00000000000102.quest_desc": [
+    "You may craft it from rods."
+  ],
+  "quest.1A00000000000102.title": "Black Steel Frame Box",
   "quest.1A00000000000103.quest_desc": [
     "Height for search: 5-20 DIAMOND vein (Graphite, Diamond, Coal). You have to sift purified diamond ore to find an exquisite diamond - it would be a nice raw stuff to create the diamond lens."
   ],
@@ -818,6 +846,10 @@
     "It is time to craft an Electric motor (LV). You will find a lot of items where it can be used."
   ],
   "quest.1A00000000000120.title": "Electric Motor (LV)",
+  "quest.1A00000000000121.quest_desc": [
+    "Craft a Tin Cable. It is a basic cable for LV tier."
+  ],
+  "quest.1A00000000000121.title": "1x Tin Cable",
   "quest.1A00000000000122.quest_desc": [
     "Can convert voltage between 512 and 2048 eu/t both ways."
   ],
@@ -854,6 +886,10 @@
     "You can use this to make rods more efficiently. Now it will return you 1 dust from 2 ingots of any metal."
   ],
   "quest.1A0000000000012B.title": "Basic Lathe",
+  "quest.1A0000000000012C.quest_desc": [
+    "Main Frame material for an electric blast furnace."
+  ],
+  "quest.1A0000000000012C.title": "Invar Frame Box",
   "quest.1A0000000000012D.quest_desc": [
     "Craft 6 items to continue your industrialization."
   ],
@@ -894,6 +930,10 @@
     "Just craft it after making wooden planks."
   ],
   "quest.1A00000000000137.title": "Crafting Table",
+  "quest.1A00000000000139.quest_desc": [
+    "This is one of the tools that can help you in maintenance of your multiblocks. To complete a quest you have to charge it a bit."
+  ],
+  "quest.1A00000000000139.title": "Soldering Iron",
   "quest.1A0000000000013A.quest_desc": [
     "It can disintegrate most chemical compounds to simple substances."
   ],
@@ -946,6 +986,10 @@
     "You may use most of metals to craft a wire cutter. Early in the game it may be used to craft wires from plates or fine wire from foil. Also it can help you to dismantle wires placed at your base."
   ],
   "quest.1A00000000000149.title": "Wire Cutter (gregtech)",
+  "quest.1A0000000000014A.quest_desc": [
+    "Recipe is the same as for other pipes, but the difference is the material of the plates - use titanium."
+  ],
+  "quest.1A0000000000014A.title": "Titanium Fluid Pipe",
   "quest.1A0000000000014B.quest_desc": [
     "Same recipe as for other screws."
   ],
@@ -954,6 +998,10 @@
     "An EV tier Motor."
   ],
   "quest.1A0000000000014C.title": "Electric Motor (EV)",
+  "quest.1A0000000000014D.quest_desc": [
+    "Can be used as a part of a distillation tower."
+  ],
+  "quest.1A0000000000014D.title": "Large Stainless Steel fluid Pipe",
   "quest.1A0000000000014E.quest_desc": [
     "Many times better, but much more expensive than the regular single block distillery. The main feature is that it can distill one fluid to obtain multiple different liquids at same time."
   ],
@@ -974,6 +1022,18 @@
     "Use an extruder and a rod shape."
   ],
   "quest.1A00000000000152.title": "Titanium Rod",
+  "quest.1A00000000000153.quest_desc": [
+    "A part of EV tier machines, and the best type of cable to transfer EV tier energy. But don't forget about amperes!"
+  ],
+  "quest.1A00000000000153.title": "Aluminium Cable",
+  "quest.1A00000000000154.quest_desc": [
+    "For EV+ tier motors you have to use annealed copper only."
+  ],
+  "quest.1A00000000000154.title": "8x Annealed Copper Wire",
+  "quest.1A00000000000155.quest_desc": [
+    "A part of an EV tier chemical reactor."
+  ],
+  "quest.1A00000000000155.title": "Large Plastic Fluid Pipe",
   "quest.1A00000000000157.quest_desc": [
     "Place the block into a cutting saw, and then send one of the plates into an HV+ tier lathe."
   ],
@@ -1038,6 +1098,10 @@
     "The stuff to craft a circuit."
   ],
   "quest.1A00000000000166.title": "SMD Capacitor",
+  "quest.1A00000000000167.quest_desc": [
+    "Carbon dust can be converted into raw carbon fiber using platinum, palladium or lutetium."
+  ],
+  "quest.1A00000000000167.title": "Raw Carbon Fiber",
   "quest.1A00000000000169.quest_desc": [
     "...with a hammer or a metal bender."
   ],
@@ -1198,6 +1262,10 @@
     "Use a mortar to obtain Chad from Sugar Canes."
   ],
   "quest.1A00000000000195.title": "Chad",
+  "quest.1A00000000000196.quest_desc": [
+    "Craft the reinforced iron item casing from a steel plate and a hammer."
+  ],
+  "quest.1A00000000000196.title": "Refined Iron Item Casing",
   "quest.1A00000000000197.quest_desc": [
     "Create a hammer with 6 iron ingots and a stick. Or you may use bronze ingots instead of iron ingots. The main application of a hammer is making plates from ingots (but with a horribly low efficiency - 2-to-1). An additional ability is to find ores around you by clicking RMB on a stone block while you hold the hammer in your hand."
   ],
@@ -1234,6 +1302,10 @@
     "One copper and 4 redstone dust may be used to get a red alloy ingot - use an alloy smelter."
   ],
   "quest.1A0000000000019F.title": "Red alloy",
+  "quest.1A000000000001A0.quest_desc": [
+    "Use paper to make the cable from wire."
+  ],
+  "quest.1A000000000001A0.title": "Red Alloy Cable",
   "quest.1A000000000001A2.quest_desc": [
     "An important part of a Computer Monitor."
   ],
@@ -1250,6 +1322,10 @@
     "Craft a mortar from stone and flint."
   ],
   "quest.1A000000000001A5.title": "Mortar",
+  "quest.1A000000000001A6.quest_desc": [
+    "Use a wire cutter on a copper plate."
+  ],
+  "quest.1A000000000001A6.title": "1x Copper Wire",
   "quest.1A000000000001A7.quest_desc": [
     "Use Paper and Leather to craft an Empty Book."
   ],
@@ -1270,6 +1346,10 @@
     "Use a hammer, a file and 4 steel plates to craft this shape."
   ],
   "quest.1A000000000001AD.title": "Empty Shape Plate",
+  "quest.1A000000000001AE.quest_desc": [
+    "Make the red alloy plate (with a hammer or a forge hammer) to create the wire from it by a wire cutter."
+  ],
+  "quest.1A000000000001AE.title": "Red Alloy Wire",
   "quest.1A000000000001AF.quest_desc": [
     "You may create it from an empty mold using a wire cutter. It may give you the ability to create 4 rings per 1 rubber pulp (or bar). An extruder machine is required (LV or higher)."
   ],
@@ -1378,6 +1458,10 @@
     "You have to craft §a32§f of them, but you should know that they are crafted in two items per one crafting operation, so you need to do it only 16 times. Also, these blocks may be used to build a §6Large Bronze Boiler§f - it requires at least §a24§f blocks."
   ],
   "quest.1A000000000001CB.title": "Bronze Plated Bricks",
+  "quest.1A000000000001CD.quest_desc": [
+    "Pipes can be used to supply steam to other steam machines. There are many different pipes with different heat resistance and different transfer rate. Also they can be used as parts of (but not limited to) steam machines."
+  ],
+  "quest.1A000000000001CD.title": "Bronze Fluid Pipes",
   "quest.1A000000000001CE.quest_desc": [
     "Use a steam compressor to make the block of iron from 9 iron ingots."
   ],
@@ -1402,6 +1486,10 @@
     "Craft at least one chest and one door. Build any... basically any box, but with a door to protect yourself from night monsters."
   ],
   "quest.1A000000000001D3.title": "Home, sweet home...",
+  "quest.1A000000000001D4.quest_desc": [
+    "This is a very useful block that can be used as a ladder. Moreover, if they are placed on each other like a tower, you can easily bring them all down just by breaking the bottom block."
+  ],
+  "quest.1A000000000001D4.title": "Scaffold",
   "quest.1A000000000001D5.quest_desc": [
     "Craft a flint shovel."
   ],
@@ -1466,6 +1554,10 @@
     "A material for an LV emitter or for item pipes. It is an alloy of zinc(1) and copper(3)."
   ],
   "quest.1A000000000001E4.title": "Brass Ingot",
+  "quest.1A000000000001E5.quest_desc": [
+    "This cable can use voltage of 128 eu/t. And this is the base for MV tier. To craft it you have to smelt rubber with a fluid extractor and pour it into an assembler. Then add there copper wire and a programmed circuit with configuration 24. Use NEI to find the recipe."
+  ],
+  "quest.1A000000000001E5.title": "1x Copper Cable",
   "quest.1A000000000001E6.quest_desc": [
     "The unique part of the sifting machine"
   ],
@@ -1510,6 +1602,18 @@
     "An important part of a macerator and a rock breaker."
   ],
   "quest.1A000000000001F0.title": "Diamond Grinding Head",
+  "quest.1A000000000001F1.quest_desc": [
+    "Better than a regular diamond. At least because it can be used for any recipes instead of natural diamond, but not vice versa."
+  ],
+  "quest.1A000000000001F1.title": "Industrial Diamond",
+  "quest.1A000000000001F2.quest_desc": [
+    "Coal chunk is almost an industrial diamond, just compress it. To get the coal chunk you have to prepare 64 items of coal (not charcoal) dust and 8 flints. Then compress coal balls and put them into an assembler with a bricks block."
+  ],
+  "quest.1A000000000001F2.title": "Coal Chunk",
+  "quest.1A000000000001F3.quest_desc": [
+    "Use a compressor to compress. You need 8 items of it."
+  ],
+  "quest.1A000000000001F3.title": "Compressed Coal Ball",
   "quest.1A000000000001F4.quest_desc": [
     "This is a wonderful machine. You can check it, when place water cell and lava into. Also programmed circiut is required. Then connect it to electricity and enjoy of infinite generation of cobblestone. Also it may produce obsidian from redstone dust, yeah."
   ],
@@ -1518,14 +1622,26 @@
     "The base for high level electronic circuit"
   ],
   "quest.1A000000000001F5.title": "Monocrystalline Silicon Boule",
+  "quest.1A000000000001F6.quest_desc": [
+    "...from flint and coal dust. You need 8 items of it."
+  ],
+  "quest.1A000000000001F6.title": "Coal Ball",
   "quest.1A000000000001F7.quest_desc": [
     "This is a part of some machines."
   ],
   "quest.1A000000000001F7.title": "Steel Gear",
+  "quest.1A000000000001F8.quest_desc": [
+    "Pipes for single block miners, ore drilling plants, and oil drilling rigs. The most profiable way to craft it - by tiny steel fluid pipes via wiremill. So you may to wait until you have got the MV tier extruder."
+  ],
+  "quest.1A000000000001F8.title": "Mining Pipe",
   "quest.1A000000000001F9.quest_desc": [
     "It is time to work with bauxite. Universal macerator allow you to get gallium dust as sub product. Use NEI for more info."
   ],
   "quest.1A000000000001F9.title": "Basic Thermal Centrifuge",
+  "quest.1A000000000001FA.quest_desc": [
+    "May be created from common copper wire."
+  ],
+  "quest.1A000000000001FA.title": "4x Copper Wire",
   "quest.1A000000000001FB.quest_desc": [
     "By this machine with help of oxygen you may quickly convert iron to wrought iron, copper to annealed copper and etc."
   ],
@@ -1610,6 +1726,10 @@
     "It have both advantages and lacks in comparison with common single block chemical reactor. It is much more expensive, but it can do more recipes and don't consume more energy if you connect higher voltage. So you may greatly grow processes speed without any negative effects."
   ],
   "quest.1A00000000000211.title": "Large Chemical Reactor",
+  "quest.1A00000000000212.quest_desc": [
+    "An important part of Large Chemical Reactor. Also may be used standalone."
+  ],
+  "quest.1A00000000000212.title": "Large PTFE Fluid Pipe",
   "quest.1A00000000000214.quest_desc": [
     "Distil wood tar to get benzene. Use distillery MV+ tier."
   ],
@@ -1710,6 +1830,10 @@
     "Use thick neutron reflector + iridium reinforced plate to craft the iridium neutron reflector."
   ],
   "quest.1A00000000000233.title": "Iridium Neutron Reflector",
+  "quest.1A00000000000234.quest_desc": [
+    "Use the implosion compressor to make Iridium Reinforced Plate from Iridium Alloy Ingot"
+  ],
+  "quest.1A00000000000234.title": "Iridium Reinforced Plate",
   "quest.1A00000000000235.quest_desc": [
     "There 3 available blue lens to craft the PIC Wafer: Blue topaz, blue sapphire and opal. Than use precision laser HV+ tier with blue lens and glowstone doped wafer."
   ],
@@ -1766,6 +1890,10 @@
     "Use 8 chrome plates."
   ],
   "quest.1A00000000000247.title": "LuV Machine Casing",
+  "quest.1A00000000000248.quest_desc": [
+    "Use an isolation for 8k+ eu/t wires type."
+  ],
+  "quest.1A00000000000248.title": "Vanadium Gallium Cable",
   "quest.1A00000000000249.quest_desc": [
     "Use 3 vanadium ingots and 1 gallium ingot to smelt them to get a new alloy."
   ],
@@ -1854,10 +1982,22 @@
     "The main part of some energy components."
   ],
   "quest.1A0000000000026E.title": "Power IC",
+  "quest.1A0000000000026F.quest_desc": [
+    "Use lapis/lazurite/sodalite rods and plates, with energy crystal and EV circuits to craft the Lapotron Crystal. Also you may craft it by exquisite sapphire (use NEI)"
+  ],
+  "quest.1A0000000000026F.title": "Lapotron Crystal",
   "quest.1A00000000000273.quest_desc": [
     "Go to the nether and find it."
   ],
   "quest.1A00000000000273.title": "Soul Sand",
+  "quest.1A00000000000274.quest_desc": [
+    "It is nice machine to keep an ocean of your energy. To complete this quest you may craft a buffer with 4 - 16 slots for batteries."
+  ],
+  "quest.1A00000000000274.title": "LuV Battery Buffer (4-16 slots)",
+  "quest.1A00000000000275.quest_desc": [
+    "The 32 k eu\\t battery"
+  ],
+  "quest.1A00000000000275.title": "Lapotronic Energy Orb Cluster",
   "quest.1A00000000000276.quest_desc": [
     "Configure the empty steel shape by hammer on the crafting table, to get the desired result."
   ],
@@ -1922,6 +2062,10 @@
     "Use the iridium plates to assemble this."
   ],
   "quest.1A00000000000291.title": "ZPM Machine Casing",
+  "quest.1A00000000000292.quest_desc": [
+    "You may get it by isolating naquadah wire as other 8k eu/t wires."
+  ],
+  "quest.1A00000000000292.title": "Naquadah Cable",
   "quest.1A00000000000293.quest_desc": [
     "Required for Fusion Reactor tier 2."
   ],
@@ -1990,6 +2134,10 @@
     "May be created by Assembly Line that has LuV energy hatch."
   ],
   "quest.1A000000000002AC.title": "Robot Arm (ZPM)",
+  "quest.1A000000000002AD.quest_desc": [
+    "May be created from HSS-E rods"
+  ],
+  "quest.1A000000000002AD.title": "HSS-E Frame Box",
   "quest.1A000000000002AE.quest_desc": [
     "May be created by Assembly Line that has LuV energy hatch."
   ],
@@ -2122,6 +2270,10 @@
     "Works the same as Basic Steam Turbine but produce the 128 eu/t. You have to use copper wires or cables to transfer energy. DO NOT connect this turbine to LV machines, or it may call explosion."
   ],
   "quest.1A000000000002DF.title": "Advanced Steam Turbine",
+  "quest.1A000000000002E0.quest_desc": [
+    "Better than bronze fluid pipe"
+  ],
+  "quest.1A000000000002E0.title": "Steel Fluid Pipe",
   "quest.1A000000000002E1.quest_desc": [
     "Main Container for all MV machines"
   ],
@@ -2158,6 +2310,10 @@
     "A part of ULV machine hull"
   ],
   "quest.1A000000000002EF.title": "ULV machine casings",
+  "quest.1A000000000002F0.quest_desc": [
+    "May be used as part of some machines."
+  ],
+  "quest.1A000000000002F0.title": "4x Cupronickel Wire",
   "quest.1A000000000002F1.quest_desc": [
     "Can accept 128 eu/t (and two ampers). It will be convenient to use it instead of 2 (or 3) lv energy hatches for Electric Blast Furnace."
   ],
@@ -2210,6 +2366,10 @@
     "You may craft this with help of assembling machine HV+ tier by diamond plate, epoxy circuit board and molten soldering alloy."
   ],
   "quest.1A000000000002FE.title": "Advanced Wafer",
+  "quest.1A000000000002FF.quest_desc": [
+    "To get the platinum wire is easy in comparison with crafting the platinum cable."
+  ],
+  "quest.1A000000000002FF.title": "4x Platinum Cable",
   "quest.1A00000000000300.quest_desc": [
     "It is required for some recipes. Also you may use it with packager to combine small and tiny dust to get a dust with normal size. But you have to set a config \"dusts\" on it by screwdriver on crafting table."
   ],
@@ -2274,10 +2434,26 @@
     "The important machine to pour the rocket fuel to fuel tank of the rocket."
   ],
   "quest.1A00000000000311.title": "Fuel Loader",
+  "quest.1A00000000000312.quest_desc": [
+    "Compress the mixed metall ingot to get this."
+  ],
+  "quest.1A00000000000312.title": "Advanced Alloy",
+  "quest.1A00000000000313.quest_desc": [
+    "There a lot of recipes. Use the NEI to choose what you like."
+  ],
+  "quest.1A00000000000313.title": "Mixed Metall Ingot",
   "quest.1A00000000000314.quest_desc": [
     "Put it on yourself, before starting fly to the moon. But it is not enough. Also you have to craft other important things as parachute, oxygen gear and tank."
   ],
   "quest.1A00000000000314.title": "Oxygen Mask",
+  "quest.1A00000000000315.quest_desc": [
+    "You may create in on the crafting table, but better way is to use the alloy smelter."
+  ],
+  "quest.1A00000000000315.title": "Reinforced Glass",
+  "quest.1A00000000000316.quest_desc": [
+    "The part of oxygen mask. Also it is a part of scuba set, that may give you protection against radiation."
+  ],
+  "quest.1A00000000000316.title": "Scuba Helmet",
   "quest.1A00000000000317.quest_desc": [
     "The part of oxygen concentrator"
   ],
@@ -2394,6 +2570,14 @@
     "Better than previous models. It may craft up to IV circuits."
   ],
   "quest.1A0000000000033F.title": "Advanced Circuit Assembling II",
+  "quest.1A00000000000340.quest_desc": [
+    "Base for Mainframe circuit"
+  ],
+  "quest.1A00000000000340.title": "Aluminium Frame Box",
+  "quest.1A00000000000341.quest_desc": [
+    "Use wiremill..."
+  ],
+  "quest.1A00000000000341.title": "Annealed Copper Wire",
   "quest.1A00000000000342.quest_desc": [
     "Create it by bending machine."
   ],
@@ -2454,14 +2638,38 @@
     "Use EV+ Chemical Reactor to make the tungstig acid dust from the tungstate or scheelite dust."
   ],
   "quest.1A00000000000357.title": "Tungstig Acid Dust",
+  "quest.1A00000000000359.quest_desc": [
+    "May be used as part of coil block"
+  ],
+  "quest.1A00000000000359.title": "2x Tungstensteel Wire",
   "quest.1A0000000000035A.quest_desc": [
     "Crafting recipe is the same as for previous coil block tiers, but you have to use the HSS-G ingots as root stuff."
   ],
   "quest.1A0000000000035A.title": "HSS-G Coil Block",
+  "quest.1A0000000000035B.quest_desc": [
+    "May be used as part of coil block"
+  ],
+  "quest.1A0000000000035B.title": "2x HSS-G Wire",
+  "quest.1A0000000000035C.quest_desc": [
+    "Polyphenylene Suflide Foil + molten silicone rubber (small pile by fluid extractor MV tier or better) + small pile of Polyvinyl Chloride Pulp. Use assembling machine for crafting any 8192 eu/t cable from 8192 eu/t wire."
+  ],
+  "quest.1A0000000000035C.title": "Tungsten Cable",
   "quest.1A0000000000035D.quest_desc": [
     "Height to search: 20 - 50 MOLYBDENUM vein (Wulfenite, Molybdenite, Molybdenum, Powellite). Very rare vein of ore. Other way to get it - as subproduct of scheelite or tungsten ore."
   ],
   "quest.1A0000000000035D.title": "Molybdenum Dust",
+  "quest.1A0000000000035E.quest_desc": [
+    "The part of IV tier motors"
+  ],
+  "quest.1A0000000000035E.title": "16x Annealed Copper Wire",
+  "quest.1A0000000000035F.quest_desc": [
+    "Can be crafted from tungstensteel rods."
+  ],
+  "quest.1A0000000000035F.title": "Tungstensteel Frame Box",
+  "quest.1A00000000000360.quest_desc": [
+    "Use titanium rods to craft the titanium framebox."
+  ],
+  "quest.1A00000000000360.title": "Titanium Frame Box",
   "quest.1A00000000000361.quest_desc": [
     "The controller of wonderful multiblock that will give you ability to have a rest instead digging ores. This machine may dig instead of you. But you have to feed it with mining pipes and by ore drilling fluid."
   ],
@@ -2482,6 +2690,34 @@
     "If you have the naquadah - you may get the naquadria from it. There few ways and you have to choose your favorite."
   ],
   "quest.1A00000000000370.title": "Naquadria Dust",
+  "quest.1A00000000000375.quest_desc": [
+    "May be created by assembly line. Require the IV+ energy hatch."
+  ],
+  "quest.1A00000000000375.title": "QuantumSuit Bodyarmor",
+  "quest.1A00000000000378.quest_desc": [
+    "May be created by assembly line. Require the IV+ energy hatch."
+  ],
+  "quest.1A00000000000378.title": "QuantumSuit Helmet",
+  "quest.1A00000000000379.quest_desc": [
+    "One of four parts of high-tech armor."
+  ],
+  "quest.1A00000000000379.title": "NanoSuit Helmet",
+  "quest.1A0000000000037A.quest_desc": [
+    "May be created by assembly line. Require the IV+ energy hatch."
+  ],
+  "quest.1A0000000000037A.title": "QuantumSuit Leggings",
+  "quest.1A0000000000037B.quest_desc": [
+    "One of four parts of high-tech armor."
+  ],
+  "quest.1A0000000000037B.title": "NanoSuit Leggings",
+  "quest.1A0000000000037C.quest_desc": [
+    "May be created by assembly line. Require the IV+ energy hatch."
+  ],
+  "quest.1A0000000000037C.title": "QuantumSuit Boots",
+  "quest.1A0000000000037D.quest_desc": [
+    "One of four parts of high-tech armor."
+  ],
+  "quest.1A0000000000037D.title": "NanoSuit Boots",
   "quest.1A00000000000380.quest_desc": [
     "You have to use the assembling machine HV+ tier. Put there common heat exchanger, LV circuit, lapis, copper and tin plates. (use NEI to get more info)."
   ],
@@ -2514,14 +2750,38 @@
     "Better than common."
   ],
   "quest.1A00000000000387.title": "Advanced Forming Press II",
+  "quest.1A0000000000038F.quest_desc": [
+    "Ruby and Redstone mix"
+  ],
+  "quest.1A0000000000038F.title": "Energium Dust",
+  "quest.1A00000000000390.quest_desc": [
+    "Use HV+ Autoclave to make crystal from energium dust"
+  ],
+  "quest.1A00000000000390.title": "Energy Crystal",
   "quest.1A00000000000391.quest_desc": [
     "Like previous, but you may process more recipes with it."
   ],
   "quest.1A00000000000391.title": "Advanced Autoclave II",
+  "quest.1A00000000000392.quest_desc": [
+    "Nice device to visit WC room at night without turning light on."
+  ],
+  "quest.1A00000000000392.title": "Nightvision Goggles",
+  "quest.1A00000000000393.quest_desc": [
+    "One of four parts of high-tech armor."
+  ],
+  "quest.1A00000000000393.title": "NanoSuit Bodyarmor",
+  "quest.1A00000000000395.quest_desc": [
+    "Like MV tier battery, but worse."
+  ],
+  "quest.1A00000000000395.title": "Advanced RE-Batter",
   "quest.1A00000000000397.quest_desc": [
     "Use mixer to blend stone dust and clay dust. Or use quicklime dust instead of clay dust. By this action you will get wet concrete. Than you should use fluid solidifier with mold (block) to get light concrete block."
   ],
   "quest.1A00000000000397.title": "Light Concrete",
+  "quest.1A00000000000399.quest_desc": [
+    "If you place it to your inventory - it will charging your electric tools in your hands, including nano armor, if you place it to hot keys slots."
+  ],
+  "quest.1A00000000000399.title": "Charging Energy Crystal",
   "quest.1A0000000000039A.quest_desc": [
     "Use MV+ Assembling machine with Heat Exchanger and Gold Plate."
   ],
@@ -2530,6 +2790,26 @@
     "Use MV+ Assembling machine with programmed circuit (config #1) to make from LV tier circuit, copper plate and tin plate the Heat Exchanger."
   ],
   "quest.1A0000000000039B.title": "Heat Exchanger",
+  "quest.1A0000000000039C.quest_desc": [
+    "It may charge your LV and MV electric tools in your hands (on hot keys slots)"
+  ],
+  "quest.1A0000000000039C.title": "Advanced Charging battery",
+  "quest.1A0000000000039D.quest_desc": [
+    "Like LV battery. But in times more worse. You have to pour the molten redston of 2 dusts to the fluid canner to fill the LV battery hull."
+  ],
+  "quest.1A0000000000039D.title": "RE-Battery",
+  "quest.1A0000000000039E.quest_desc": [
+    "It may charge your LV electric tools in your hands (on hot keys slots)"
+  ],
+  "quest.1A0000000000039E.title": "Charging RE Batter",
+  "quest.1A0000000000039F.quest_desc": [
+    "If you wear this backpack instead of you body armor - it will charging your electric tools in your hands, including nano armor, if you place it to hot keys slots."
+  ],
+  "quest.1A0000000000039F.title": "Energypack",
+  "quest.1A000000000003A2.quest_desc": [
+    "Karlsson. If you don't know hwo is he - use google =)"
+  ],
+  "quest.1A000000000003A2.title": "Electric Jetpack",
   "quest.1A000000000003A4.quest_desc": [
     "It is like previous tier but with diamond and by HV+ tier assembling machine."
   ],
@@ -2538,10 +2818,22 @@
     "Use the MV+ tier assembling machine to craft this from LV motor, iron bras and aluminium foil."
   ],
   "quest.1A000000000003A7.title": "Heat Vent",
+  "quest.1A000000000003A8.quest_desc": [
+    "The most expensive parts are: lapotron charging crystal, EV emitter, IV circuit and Exquisite gem. (look recipe in NEI)"
+  ],
+  "quest.1A000000000003A8.title": "Mining Laser",
+  "quest.1A000000000003A9.quest_desc": [
+    "Charge it and click RMB to activate it. In active state it has greater damage."
+  ],
+  "quest.1A000000000003A9.title": "Nano Saber",
   "quest.1A000000000003AA.quest_desc": [
     "Industrial diamond + iridium plates + advansed alloy plates"
   ],
   "quest.1A000000000003AA.title": "Iridium Alloy Ingot",
+  "quest.1A000000000003AB.quest_desc": [
+    "The trash in comparison with simple GT battery buffer with 8 slots."
+  ],
+  "quest.1A000000000003AB.title": "BatBox",
   "quest.1A000000000003AC.quest_desc": [
     "Height to search: 20-40 MONAZITE vein (Bastnasite, Monazite, Neodymium)"
   ],
@@ -2610,6 +2902,10 @@
     "A part of large turbine"
   ],
   "quest.1A000000000003C5.title": "Stainless Steel Gear",
+  "quest.1A000000000003C6.quest_desc": [
+    "May be created from gold ingot by wiremill"
+  ],
+  "quest.1A000000000003C6.title": "Gold Wire",
   "quest.1A000000000003C7.quest_desc": [
     "A mix of gold and copper dusts"
   ],
@@ -2618,6 +2914,10 @@
     "A complex mix of ferrous and non-ferrous metall dusts."
   ],
   "quest.1A000000000003C8.title": "Blue Steel Dust",
+  "quest.1A000000000003C9.quest_desc": [
+    "A part of Turbine Casing. Use wrench or assembling machine to craft this from blue steel rods."
+  ],
+  "quest.1A000000000003C9.title": "Blue Steel Frame Box",
   "quest.1A000000000003CA.quest_desc": [
     "A part of turbine."
   ],
@@ -2646,6 +2946,10 @@
     "An alloy of copper and nickel. Can be produced by alloy smelter. You have to prepare a full stacks of §6copper§r and §bnickel§r ingots ar dusts (one per each material) to go forward."
   ],
   "quest.1A000000000003D1.title": "Cupronickel",
+  "quest.1A000000000003D2.quest_desc": [
+    "Use Wiremill to make wires with maximum consuming resources efficiency."
+  ],
+  "quest.1A000000000003D2.title": "2x Cupronickel Wire",
   "quest.1A000000000003D3.quest_desc": [
     "May be crafted from 6 glass blocks"
   ],
@@ -2666,6 +2970,10 @@
     "Multiblocks usually produce more than 512 eu/t. So they require at least EV dynamo hatch. Usually, but not always. You may use it for any multiblock generators, that produce less than 512 eu/t"
   ],
   "quest.1A000000000003E1.title": "HV Dynamo hatch",
+  "quest.1A000000000003E2.quest_desc": [
+    "With help of arc furnace you may very fast convert common iron to wrought iron. And finally, then you may make a steel from wrought iron by blast furnace with low energy consuming and high smelting speed. §aBut now - on the low level of development§f you have only one way to get a wrought iron. Smelt an iron ingot to §biron nuggets§f by furnace. Then smelt each §biron nugget§f to get a §dwhought iron nugget§f. The third step is to smelt wrouht iron nuggets by §6steam alloy smelter§f with Mold (ingot)."
+  ],
+  "quest.1A000000000003E2.title": "Wrought Iron Ingot",
   "quest.1A000000000003E3.quest_desc": [
     "Height to search: 50 - 80 COAL vein (Coal, Lignite). You have to collect 40 items in total in you inventory."
   ],
@@ -2686,6 +2994,10 @@
     "Multiblock, that may pump fluids out from under bedrock space, in case if there are not void."
   ],
   "quest.1A000000000003F4.title": "Oil Drilling Rig",
+  "quest.1A000000000003F5.quest_desc": [
+    "May be crafted from steel rods by wrench"
+  ],
+  "quest.1A000000000003F5.title": "Steel Frame Box",
   "quest.1A000000000003F6.quest_desc": [
     "Same as common but may work in larger area."
   ],
@@ -2706,6 +3018,10 @@
     "To get it, just put sticky resin to centrifuge."
   ],
   "quest.1A000000000003FD.title": "Glue",
+  "quest.1A000000000003FE.quest_desc": [
+    "May be created from gold wire and molten rubber by basic assembler."
+  ],
+  "quest.1A000000000003FE.title": "Gold Cable",
   "quest.1A000000000003FF.quest_desc": [
     "Height to search: 20 - 50 TUNGSTATE vein (Scheelite, Tungstate, Lithium). But Low-level way is to get it a Lithium dust from lepidolite ore: Height for search: 50-60 SALTS vein (Rock Salt, Salt, Lepidolite, Spodumene). These are a raw source of Sodium and Lithium. To get 2 lithium dusts, you have to crush 9 lepidolite ores and process them in a washing plant. It will give you tiny lithium dusts as by-product. Salt is needed to get sodium, use an electrolyzer. Also, in order to get lithium dust, you may process spodumene ore. In this case, to get lithium as by-product, you have to crush it, purify, then crush again and send to a centrifuge."
   ],
@@ -2730,6 +3046,14 @@
     "Height to search: 40 - 60 - APATITE vein (Apatite, Phosphorus, Pyrochlore), 20 - 30 MANGANESE vein (Grossular, Spessartine, Pyrolusite,Tantalite). You may get a niobium dust as subproduct of Pyrochlore, Pyrolusite and Tantalite."
   ],
   "quest.1A00000000000409.title": "Niobium Dust",
+  "quest.1A0000000000040A.quest_desc": [
+    "Analog for tin cable, but with larger energy losing. Also it is a part of ULV machines."
+  ],
+  "quest.1A0000000000040A.title": "Lead Cable",
+  "quest.1A0000000000040B.quest_desc": [
+    "Analog for tin wire, but with larger energy losing."
+  ],
+  "quest.1A0000000000040B.title": "Lead Wire",
   "quest.1A0000000000040C.quest_desc": [
     "A base of all ULV machines. From it you can also create a cheapest input/output hatches/busses for your multiblock machines. But note that them will have the lowest capacity."
   ],
@@ -2762,10 +3086,18 @@
     "Multiblock generator. Require any turbine (rotor) and optimal steam flow to work with max efficiently."
   ],
   "quest.1A00000000000416.title": "Large Steam Turbine",
+  "quest.1A00000000000417.quest_desc": [
+    "May be created on MV (or better) extruder."
+  ],
+  "quest.1A00000000000417.title": "Large Steel Fluid Pipe",
   "quest.1A00000000000418.quest_desc": [
     "May be created in precision laser engraver from wafer with help of ruby lens."
   ],
   "quest.1A00000000000418.title": "Integrated Logic Circuit (wafer)",
+  "quest.1A00000000000419.quest_desc": [
+    "Use wiremill on ingot."
+  ],
+  "quest.1A00000000000419.title": "Naquadah Wire",
   "quest.1A0000000000041A.quest_desc": [
     "Put aluminium and magnesium dust or ingot to alloy smelter, to get magnaluim ingots"
   ],
@@ -2794,6 +3126,10 @@
     "Require superheated steam to work."
   ],
   "quest.1A00000000000421.title": "Large HP Steam Turbine",
+  "quest.1A00000000000422.quest_desc": [
+    "May be used as part of some machines or standalone."
+  ],
+  "quest.1A00000000000422.title": "Large Titanium Fliud Pipe",
   "quest.1A00000000000423.quest_desc": [
     "A part of large HP steam turbine."
   ],
@@ -2810,10 +3146,22 @@
     "Allow you to make pipes with size Huge"
   ],
   "quest.1A00000000000427.title": "Extruder Shape (Huge Pipe)",
+  "quest.1A00000000000428.quest_desc": [
+    "Use wiremill, than merge 4 wires to one 4x."
+  ],
+  "quest.1A00000000000428.title": "4x Kanthal Wire",
+  "quest.1A0000000000042A.quest_desc": [
+    "May be used as part of some machines or standalone."
+  ],
+  "quest.1A0000000000042A.title": "Huge Tungstensteel Fluid Pipe",
   "quest.1A0000000000042B.quest_desc": [
     "Better then previous (it works faster)"
   ],
   "quest.1A0000000000042B.title": "Advanced Extruder II",
+  "quest.1A0000000000042C.quest_desc": [
+    "May be used as part of some machines or standalone."
+  ],
+  "quest.1A0000000000042C.title": "Stainless Steel Fluid Pipe",
   "quest.1A0000000000042D.quest_desc": [
     "Better and faster then previuos version."
   ],
@@ -2826,6 +3174,10 @@
     "May be created with help of assembling machine from tin item casing and glass pane. It is nice stuff to complete §dfluid quests§f. To do that, you have to pour fluid to it by right mouse click with §3§f§buniversal fluid cell§f in hand on machine that contain fluid. This will pull liquid from machine to your cell."
   ],
   "quest.1A00000000000439.title": "Universal Fluid Cell",
+  "quest.1A0000000000043B.quest_desc": [
+    "May be crafter from tin plate with help of hammer"
+  ],
+  "quest.1A0000000000043B.title": "Tin Item Casing",
   "quest.1A0000000000043C.quest_desc": [
     "Use Lathe to make an invar rod from invar ingot"
   ],
@@ -2898,10 +3250,18 @@
     "A part of LBB (large bronze boiler)."
   ],
   "quest.1A00000000000451.title": "Bronze Pipe Casing",
+  "quest.1A00000000000452.quest_desc": [
+    "A part of LBB (large bronze boiler)."
+  ],
+  "quest.1A00000000000452.title": "Bronze Frame Box",
   "quest.1A00000000000453.quest_desc": [
     "Just a bronze stick. It may be used as a part of some machines."
   ],
   "quest.1A00000000000453.title": "Bronze Rod",
+  "quest.1A00000000000454.quest_desc": [
+    "It is a HV energy storage."
+  ],
+  "quest.1A00000000000454.title": "MFE",
   "quest.1A00000000000455.quest_desc": [
     "You may put a MFE to a Minecart to get transportable energy storage. Also, later, you may pull it out with help of crafting grid."
   ],
@@ -2978,6 +3338,18 @@
     "Simple sign that allow you to write some text."
   ],
   "quest.1A00000000000478.title": "Sign",
+  "quest.1A00000000000482.quest_desc": [
+    "A part of scuba set."
+  ],
+  "quest.1A00000000000482.title": "Hazmat Suit",
+  "quest.1A00000000000483.quest_desc": [
+    "A part of scuba set."
+  ],
+  "quest.1A00000000000483.title": "Hazmat Suit Leggings",
+  "quest.1A00000000000484.quest_desc": [
+    "A part of scuba set."
+  ],
+  "quest.1A00000000000484.title": "Rubber Boots",
   "quest.1A00000000000485.quest_desc": [
     "One of many single-block machines."
   ],
@@ -3110,6 +3482,10 @@
     "Use file or lathe (or MV extruder, if you have it) to make a steel rod from steel ingot."
   ],
   "quest.1A000000000004AA.title": "Steel Rod",
+  "quest.1A000000000004AB.quest_desc": [
+    "May be crafted from two 1x Tin Wire."
+  ],
+  "quest.1A000000000004AB.title": "2x Tin Wire",
   "quest.1A000000000004AD.quest_desc": [
     "Nice machine that may do useful work for you. As an example: cut wood to planks, cut steel plate to casings, cut wool to carpet, cut rod to bolts and other else. So it may process your stuff with more efficient (in most cases)."
   ],
@@ -3130,6 +3506,10 @@
     "Use a saw on any wood planks to get wooden slabs."
   ],
   "quest.1A000000000004B3.title": "Wooden Slab",
+  "quest.1A000000000004B5.quest_desc": [
+    "Use Wire Cutter on Tin Plate"
+  ],
+  "quest.1A000000000004B5.title": "1x Tin Wire",
   "quest.1A000000000004B9.quest_desc": [
     "Use Cutting Machine to make a plate from a block."
   ],
@@ -3198,6 +3578,10 @@
     "A part of fluid filter machine."
   ],
   "quest.1A000000000004D7.title": "Simple Fluid Filter",
+  "quest.1A000000000004D8.quest_desc": [
+    "A part of simple fluid filter. Also you may use it standalone as a pipe to transport fluids."
+  ],
+  "quest.1A000000000004D8.title": "Small Copper Fluid Pipe",
   "quest.1A000000000004D9.quest_desc": [
     "Used together with an ore washing plant, to get common water and a bit of by-products. Also you can just filter water without by-products. Use a programmed circuit to set the working mode."
   ],
@@ -3910,6 +4294,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005BF.title": "[sb] Steam Furnace",
+  "quest.1A000000000005C0.quest_desc": [
+    "Use an extruder or a wiremill to get a wire from the ingot."
+  ],
+  "quest.1A000000000005C0.title": "1x Vanadium-Gallium Wire",
   "quest.1A000000000005C1.quest_desc": [
     "One of many single-block machines."
   ],
@@ -4346,6 +4734,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000672.title": "[sb] High Pressure Lava Boiler",
+  "quest.1A00000000000673.quest_desc": [
+    "Nice choose to transport a water. It is a cheapest way for fluids. But don't try to use these pipes for steam."
+  ],
+  "quest.1A00000000000673.title": "Wooden Fluid Pipe",
   "quest.1A00000000000674.quest_desc": [
     "As an other plates you may do it from 2 ingots by hammer."
   ],
@@ -4454,10 +4846,22 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000696.title": "[sb] Advanced Monster Repellator VI",
+  "quest.1A0000000000069B.quest_desc": [
+    "Use a cutting machine to get it with top efficient."
+  ],
+  "quest.1A0000000000069B.title": "Bronze Item Casing",
   "quest.1A0000000000069D.quest_desc": [
     "Cheap MV tier Battery."
   ],
   "quest.1A0000000000069D.title": "Medium Sodium Battery",
+  "quest.1A0000000000069E.quest_desc": [
+    "Good choose is to take it with you to dig an ores in mine if you have an electric drill."
+  ],
+  "quest.1A0000000000069E.title": "Adv.Batpack",
+  "quest.1A0000000000069F.quest_desc": [
+    "Now, when you have stainless steel, you may craft your first electric mining tool - a drill. To complete this quest you may craft any LV tier drill with any drill tip and with any lv battery (sodium/cadmium/lithium)"
+  ],
+  "quest.1A0000000000069F.title": "Drill (LV)",
   "quest.1A000000000006A4.quest_desc": [
     "This item may allow you to view signal lines between two linked signal blocks. To activate this function you have to take this goggles to your hand and do RMB until in chat you see \"Current Aura: Signalling\". Then you may weare it to see signal lines."
   ],
@@ -4526,6 +4930,14 @@
     "Height to search: 20 - 50 TUNGSTATE vein (Scheelite, Tungstate, Lithium). But it wil be hard to find. So you may use centrifuge MV+ tier to separate lava to get few type of resources including the small pile of tangstate dust with a tiny chance (only 2.5%% per every 100 mb)."
   ],
   "quest.1A000000000006C7.title": "Scheelite Dust",
+  "quest.1A000000000006C8.quest_desc": [
+    "User wiremill to make a wire."
+  ],
+  "quest.1A000000000006C8.title": "1x Tungsten Wire",
+  "quest.1A000000000006C9.quest_desc": [
+    "EV tier battery buffer."
+  ],
+  "quest.1A000000000006C9.title": "MFSU",
   "quest.1A000000000006CB.quest_desc": [
     "There are few ways how to craft it."
   ],
@@ -4550,6 +4962,10 @@
     "Use EV+ Chemical Reactor to make the tungsten trioxide dust from the tungstate or scheelite dust."
   ],
   "quest.1A000000000006E5.title": "Tungsten Trioxide Dust",
+  "quest.1A000000000006E6.quest_desc": [
+    "You can create it from plate by hammer. Note that this is the most easy and fast way, but completely not profitable. Use a NEI to find other recipes."
+  ],
+  "quest.1A000000000006E6.title": "Copper Item Casing",
   "quest.1A000000000006E7.quest_desc": [
     "Craft it from steel. Most profit way is to use extruder to get 2 rods from 1 ingot, then cut them by cutting machine to get 4 bolts per each rod. Then use lathe or file to get screws from bolts. Other way to get directly bolts from ingot is to user extruder with bolt shape."
   ],
@@ -4558,6 +4974,10 @@
     "Most of stone is fine to create stone brick that are suitable to craft farm blocks from them."
   ],
   "quest.1A000000000006E8.title": "Stone Bricks",
+  "quest.1A000000000006EA.quest_desc": [
+    "A part of casing for pyrolyse oven."
+  ],
+  "quest.1A000000000006EA.title": "Iron Frame Box",
   "quest.1A000000000006ED.quest_desc": [
     "You may craft it from plate by hammer. But if you have MV (or better) extruder, you can use it  to make small gears directly from ingot."
   ],
@@ -4598,6 +5018,18 @@
     "This is easy way to craft a small coil. Other way is to use nikel-zink ferrite bolt instead of steel bolt to get more coils."
   ],
   "quest.1A000000000006F7.title": "Small Coil - easy way",
+  "quest.1A000000000006F9.quest_desc": [
+    "Use a wiremil to craft it."
+  ],
+  "quest.1A000000000006F9.title": "Tungstensteel Wire",
+  "quest.1A000000000006FA.quest_desc": [
+    "Use an isolation for 8k+ eu/t wires type."
+  ],
+  "quest.1A000000000006FA.title": "Tungstensteel Cable",
+  "quest.1A000000000006FB.quest_desc": [
+    "An energy storage. It can take any voltage and give out MV voltage (128 eu/t)."
+  ],
+  "quest.1A000000000006FB.title": "CESU",
   "quest.1A000000000006FE.quest_desc": [
     "Use a wiremill to craft it from an ingot."
   ],
@@ -4606,6 +5038,10 @@
     "Currently you can only make 2 planks from 1 wood log by crafting. But later you may use cutting tools or machines to increase output result."
   ],
   "quest.1A00000000000705.title": "Wood Planks",
+  "quest.1A0000000000070C.quest_desc": [
+    "A stuff to create a red wire from Project Red mod."
+  ],
+  "quest.1A0000000000070C.title": "2x Red Alloy Wire",
   "quest.1A0000000000070E.quest_desc": [
     "No Description"
   ],
@@ -4654,6 +5090,10 @@
     "Common stone button, can be crafted from stone and stone from cobblestone by furnace."
   ],
   "quest.1A0000000000072C.title": "A Button",
+  "quest.1A0000000000072D.quest_desc": [
+    "It used in some machines to change recipe output."
+  ],
+  "quest.1A0000000000072D.title": "Programmed Circuit",
   "quest.1A00000000000733.quest_desc": [
     "Common bowl, that you can craft by knife from wood plank, or by lathe from wood slab."
   ],

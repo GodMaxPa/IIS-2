@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LCL",
+    "LEL",
+    "L L"
+  ],
+  "key": {
+    "L": "iis:lapotron_crystal",
+    "C": "#c:circuits/data",
+    "E": "iis:energy_pack"
+  },
+  "result": {
+    "id": "iis:lappack"
+  }
+}
