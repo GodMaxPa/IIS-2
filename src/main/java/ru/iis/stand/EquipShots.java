@@ -46,8 +46,42 @@ public final class EquipShots {
     private static boolean built;
 
     public static void init() {
+        if (System.getProperty("iis.quest.shots") != null) {
+            NeoForge.EVENT_BUS.addListener(EquipShots::questTick);
+            return;
+        }
         if (System.getProperty("iis.equip.shots") == null) return;
         NeoForge.EVENT_BUS.addListener(EquipShots::tick);
+    }
+
+    private static int questStep;
+
+    /** Глава квестов D129 в настоящем окне книги: FTB Quests подключён только в разработке и в игре, поэтому через отражение. */
+    private static void questTick(ClientTickEvent.Post event) {
+        Minecraft mc = Minecraft.getInstance();
+        mc.options.pauseOnLostFocus = false;
+        if (mc.player == null || mc.getSingleplayerServer() == null) {
+            if (mc.screen != null) StandShots.proceed(mc.screen);
+            return;
+        }
+        if (--wait > 0) return;
+        wait = 100;
+        try {
+            Class<?> file = Class.forName("dev.ftb.mods.ftbquests.client.ClientQuestFile");
+            switch (questStep++) {
+                case 0 -> file.getMethod("openBookToQuestObject", long.class).invoke(null, 0x1D00000000001000L);
+                case 1 -> shot(mc, "q_chapter");
+                case 2 -> {
+                    file.getMethod("openBookToQuestObject", long.class).invoke(null, 0x1A00000000100000L);
+                    wait = 60;
+                }
+                case 3 -> shot(mc, "q_quest");
+                default -> mc.stop();
+            }
+        } catch (ReflectiveOperationException e) {
+            IIS.LOGGER.error("[IIS] quest shots", e);
+            mc.stop();
+        }
     }
 
     private static void shot(Minecraft mc, String name) {

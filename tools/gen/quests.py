@@ -525,6 +525,12 @@ def main():
         text(f'chapter.{cid}', lp.get('name:8', ''), 'title')
         write(os.path.join(OUT, 'chapters', fname + '.json5'), ch)
         chapters += 1
+    # D129: our own chapter after the book of IIS 1
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import quests_equipment
+    own, _ = quests_equipment.add_chapter(os.path.join(OUT, 'chapters'), tr, len(lines), write, hexid,
+                                          lambda i: os.path.exists(os.path.join(GEN, 'items', i.split(':', 1)[1] + '.json')))
+    chapters += 1
     # BaseQuestFile#readData: these keys are required (orElseThrow) in file version 13
     write(os.path.join(OUT, 'data.json5'), {'version': 13, 'default_reward_team': False, 'default_consume_items': False,
                                             'default_autoclaim_rewards': 'disabled', 'default_quest_shape': 'circle',
@@ -536,7 +542,7 @@ def main():
         write(os.path.join(OUT, 'lang', loc, 'iis1_quests.json5'), dict(sorted(table.items())))
 
     rep = [f'# IIS 1 quests -> FTB Quests (D101)', '',
-           f'Quests in IIS 1: {len(quests)}; written: {len(placed)}; hidden until their items are ported: {len(hidden)}; chapters: {chapters}.', '',
+           f'Quests in IIS 1: {len(quests)}; written: {len(placed)}; hidden until their items are ported: {len(hidden)}; chapters: {chapters}, one of them ours (D129, {own} quests).', '',
            '## Most needed unported items (task count)', '']
     for (i, d), c in missing_items.most_common(80):
         label = mp.gtl.get(f'gt.blockmachines.{mp.mte.get(d)}.name') if i == 'gregtech:gt.blockmachines' else mp.gtl.get(f'{i.split(":", 1)[1]}.{d}.name', '')
@@ -545,7 +551,7 @@ def main():
     rep += ['', '## Dropped reward items', ''] + [f'- {c} × `{k}`' for k, c in dropped_rewards.most_common(30)]
     with open(os.path.join(ROOT, 'quests', 'REPORT.md'), 'w', encoding='utf-8', newline='\n') as fh:
         fh.write('\n'.join(rep) + '\n')
-    print(f'quests: {len(quests)} total, {len(placed)} written, {len(hidden)} hidden, {chapters} chapters')
+    print(f'quests: {len(quests)} total, {len(placed)} written, {len(hidden)} hidden, {chapters} chapters, {own} of our own')
 
 
 def write(path, obj):

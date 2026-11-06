@@ -1,0 +1,1723 @@
+{
+  "id": "1D00000000001000",
+  "filename": "35_weapons_and_vehicles",
+  "order_index": 35,
+  "default_quest_shape": "",
+  "icon": {
+    "id": "iis:assault_rifle",
+    "count": 1
+  },
+  "quests": [
+    {
+      "id": "1A00000000100000",
+      "x": -3.0,
+      "y": 6.0,
+      "icon": {
+        "id": "iis:assault_rifle",
+        "count": 1
+      },
+      "size": 1.5,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000010000000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100001",
+      "x": 0.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000100000"
+      ],
+      "icon": {
+        "id": "iis:powder_cartridge",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:powder_cartridge",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000010000100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100002",
+      "x": 0.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000100001"
+      ],
+      "icon": {
+        "id": "iis:flintlock_pistol",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:flintlock_pistol",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000010000200"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:powder_cartridge",
+            "count": 8
+          },
+          "id": "1C00000010000201"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100003",
+      "x": 0.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000100002"
+      ],
+      "icon": {
+        "id": "iis:musket",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:musket",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000010000300"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:powder_cartridge",
+            "count": 8
+          },
+          "id": "1C00000010000301"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100004",
+      "x": 2.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000100003"
+      ],
+      "icon": {
+        "id": "iis:rifled_musket",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rifled_musket",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000010000400"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:powder_cartridge",
+            "count": 8
+          },
+          "id": "1C00000010000401"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100005",
+      "x": 2.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000100003"
+      ],
+      "icon": {
+        "id": "iis:blunderbuss",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:blunderbuss",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000010000500"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:powder_cartridge",
+            "count": 8
+          },
+          "id": "1C00000010000501"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100006",
+      "x": 4.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000100004"
+      ],
+      "icon": {
+        "id": "iis:pistol_round",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pistol_round",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000010000600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100007",
+      "x": 4.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000100006"
+      ],
+      "icon": {
+        "id": "iis:pistol",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pistol",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000010000700"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pistol_round",
+            "count": 24
+          },
+          "id": "1C00000010000701"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100008",
+      "x": 4.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000100007"
+      ],
+      "icon": {
+        "id": "iis:smg",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:smg",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000010000800"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pistol_round",
+            "count": 48
+          },
+          "id": "1C00000010000801"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100009",
+      "x": 6.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000100008"
+      ],
+      "icon": {
+        "id": "iis:rifle_round",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rifle_round",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000010000900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010000A",
+      "x": 6.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000100009"
+      ],
+      "icon": {
+        "id": "iis:assault_rifle",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assault_rifle",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000010000A00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rifle_round",
+            "count": 32
+          },
+          "id": "1C00000010000A01"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010000B",
+      "x": 6.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000100008"
+      ],
+      "icon": {
+        "id": "iis:shotgun",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:shotgun",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000B00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:shotgun_shell",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000B01"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000010000B00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:shotgun_shell",
+            "count": 16
+          },
+          "id": "1C00000010000B01"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010000C",
+      "x": 6.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A0000000010000B"
+      ],
+      "icon": {
+        "id": "iis:grenade_launcher",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:grenade_launcher",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000C00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:grenade_round",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000C01"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000010000C00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:grenade_round",
+            "count": 8
+          },
+          "id": "1C00000010000C01"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010000D",
+      "x": 8.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A0000000010000A"
+      ],
+      "icon": {
+        "id": "iis:sniper_rifle",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sniper_rifle",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000010000D00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rifle_round",
+            "count": 16
+          },
+          "id": "1C00000010000D01"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010000E",
+      "x": 8.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A0000000010000D"
+      ],
+      "icon": {
+        "id": "iis:machine_gun",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:machine_gun",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000010000E00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rifle_round",
+            "count": 64
+          },
+          "id": "1C00000010000E01"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010000F",
+      "x": 8.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A0000000010000C"
+      ],
+      "icon": {
+        "id": "iis:rocket_launcher",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_launcher",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000F00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_round",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010000F01"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000010000F00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_round",
+            "count": 4
+          },
+          "id": "1C00000010000F01"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100010",
+      "x": 8.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A0000000010000F"
+      ],
+      "icon": {
+        "id": "iis:laser_pistol",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_pistol",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000010001000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100011",
+      "x": 10.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000100010"
+      ],
+      "icon": {
+        "id": "iis:laser_rifle",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_rifle",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000010001100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100012",
+      "x": 12.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000100011"
+      ],
+      "icon": {
+        "id": "iis:laser_cannon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_cannon",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000010001200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100013",
+      "x": 14.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000100012"
+      ],
+      "icon": {
+        "id": "iis:plasma_rifle",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plasma_rifle",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000010001300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100014",
+      "x": 16.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000100013"
+      ],
+      "icon": {
+        "id": "iis:plasma_cannon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plasma_cannon",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 1
+          },
+          "id": "1C00000010001400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100015",
+      "x": 0.0,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000100000"
+      ],
+      "icon": {
+        "id": "iis:musketeer_chestplate",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:musketeer_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001500"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:musketeer_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001501"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:musketeer_leggings",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001502"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:musketeer_boots",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001503"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000010001500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100016",
+      "x": 4.0,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000100015"
+      ],
+      "icon": {
+        "id": "iis:ballistic_chestplate",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ballistic_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001600"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ballistic_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001601"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ballistic_leggings",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001602"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ballistic_boots",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001603"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000010001600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100017",
+      "x": 8.0,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000100016"
+      ],
+      "icon": {
+        "id": "iis:assault_chestplate",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assault_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001700"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assault_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001701"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assault_leggings",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001702"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assault_boots",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001703"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000010001700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100018",
+      "x": 10.0,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000100017"
+      ],
+      "icon": {
+        "id": "iis:power_armor_chestplate",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:power_armor_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001800"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:power_armor_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001801"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:power_armor_leggings",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001802"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:power_armor_boots",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001803"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000010001800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100019",
+      "x": 14.0,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000100018"
+      ],
+      "icon": {
+        "id": "iis:plasma_armor_chestplate",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plasma_armor_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001900"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plasma_armor_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001901"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plasma_armor_leggings",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001902"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plasma_armor_boots",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001903"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000010001900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010001A",
+      "x": 0.0,
+      "y": 13.5,
+      "dependencies": [
+        "1A00000000100000"
+      ],
+      "icon": {
+        "id": "iis:wheel_wood",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wheel_wood",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000010001A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010001B",
+      "x": 0.0,
+      "y": 15.0,
+      "dependencies": [
+        "1A0000000010001A"
+      ],
+      "icon": {
+        "id": "iis:engine_steam",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:engine_steam",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000010001B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010001C",
+      "x": 0.0,
+      "y": 16.5,
+      "dependencies": [
+        "1A0000000010001B"
+      ],
+      "icon": {
+        "id": "iis:vehicle_steam_car",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vehicle_steam_car",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000010001C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010001D",
+      "x": 2.0,
+      "y": 13.5,
+      "dependencies": [
+        "1A0000000010001A"
+      ],
+      "icon": {
+        "id": "iis:wheel_rubber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wheel_rubber",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000010001D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010001E",
+      "x": 2.0,
+      "y": 15.0,
+      "dependencies": [
+        "1A0000000010001B",
+        "1A0000000010001D"
+      ],
+      "icon": {
+        "id": "iis:engine_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:engine_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000010001E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010001F",
+      "x": 2.0,
+      "y": 16.5,
+      "dependencies": [
+        "1A0000000010001E"
+      ],
+      "icon": {
+        "id": "iis:vehicle_quad",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vehicle_quad",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010001F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000010001F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100020",
+      "x": 4.0,
+      "y": 15.0,
+      "dependencies": [
+        "1A0000000010001E"
+      ],
+      "icon": {
+        "id": "iis:engine_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:engine_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000010002000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100021",
+      "x": 3.2,
+      "y": 17.25,
+      "dependencies": [
+        "1A00000000100020"
+      ],
+      "icon": {
+        "id": "iis:vehicle_motorbike",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vehicle_motorbike",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000010002100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100022",
+      "x": 4.0,
+      "y": 18.75,
+      "dependencies": [
+        "1A00000000100020"
+      ],
+      "icon": {
+        "id": "iis:vehicle_car",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vehicle_car",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000010002200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100023",
+      "x": 4.8,
+      "y": 17.25,
+      "dependencies": [
+        "1A00000000100020"
+      ],
+      "icon": {
+        "id": "iis:vehicle_boat",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vehicle_boat",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000010002300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100024",
+      "x": 6.0,
+      "y": 15.0,
+      "dependencies": [
+        "1A00000000100020"
+      ],
+      "icon": {
+        "id": "iis:engine_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:engine_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000010002400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100025",
+      "x": 6.0,
+      "y": 18.75,
+      "dependencies": [
+        "1A00000000100024"
+      ],
+      "icon": {
+        "id": "iis:vehicle_truck",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vehicle_truck",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000010002500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100026",
+      "x": 6.8,
+      "y": 17.25,
+      "dependencies": [
+        "1A00000000100024"
+      ],
+      "icon": {
+        "id": "iis:vehicle_plane",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vehicle_plane",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000010002600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100027",
+      "x": 8.0,
+      "y": 15.0,
+      "dependencies": [
+        "1A00000000100024"
+      ],
+      "icon": {
+        "id": "iis:engine_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:engine_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000010002700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100028",
+      "x": 8.8,
+      "y": 17.25,
+      "dependencies": [
+        "1A00000000100027"
+      ],
+      "icon": {
+        "id": "iis:vehicle_helicopter",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vehicle_helicopter",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000010002800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100029",
+      "x": 8.0,
+      "y": 18.75,
+      "dependencies": [
+        "1A00000000100027"
+      ],
+      "icon": {
+        "id": "iis:vehicle_tank",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vehicle_tank",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002900"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:tank_shell",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002901"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000010002900"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:tank_shell",
+            "count": 8
+          },
+          "id": "1C00000010002901"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010002A",
+      "x": 10.0,
+      "y": 15.0,
+      "dependencies": [
+        "1A00000000100027"
+      ],
+      "icon": {
+        "id": "iis:jet_turbine",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:jet_turbine",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000010002A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010002B",
+      "x": 10.0,
+      "y": 16.5,
+      "dependencies": [
+        "1A0000000010002A"
+      ],
+      "icon": {
+        "id": "iis:vehicle_jet",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vehicle_jet",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000010002B00"
+        }
+      ]
+    }
+  ]
+}

@@ -34,6 +34,7 @@
   "chapter.1D00000000000020.title": "Large Plasma Generator",
   "chapter.1D00000000000021.title": "Project Red",
   "chapter.1D00000000000022.title": "[Rewards List]",
+  "chapter.1D00000000001000.title": "Weapons and vehicles",
   "quest.1A00000000000000.quest_desc": [
     "A part of some IV tier machines."
   ],
@@ -6413,5 +6414,185 @@
   "quest.1A00000000000799.quest_desc": [
     "Common wooden ladder, that can help you to climb up."
   ],
-  "quest.1A00000000000799.title": "Ladder"
+  "quest.1A00000000000799.title": "Ladder",
+  "quest.1A00000000100000.quest_desc": [
+    "This chapter runs beside the main book and locks nothing in it. Columns are epochs. Guns and ammunition on top, armour in the middle, vehicles below.",
+    "",
+    "Guns: right click shoots, hold for a burst, R reloads, sneak aims.",
+    "",
+    "Vehicles: right click to get in, or to refuel with fuel in hand; sneak and right click for the window; sneak to get out."
+  ],
+  "quest.1A00000000100000.title": "Weapons and vehicles",
+  "quest.1A00000000100001.quest_desc": [
+    "Powder and a lead ball in paper: all that the guns of the steam age need. Made on a crafting table."
+  ],
+  "quest.1A00000000100001.title": "Paper cartridge",
+  "quest.1A00000000100002.quest_desc": [
+    "One shot, then a long reload. A cloud of smoke stays behind."
+  ],
+  "quest.1A00000000100002.title": "Flintlock pistol",
+  "quest.1A00000000100003.quest_desc": [
+    "Hits harder and further than the pistol and reloads even longer. Sneak to halve the spread."
+  ],
+  "quest.1A00000000100003.title": "Musket",
+  "quest.1A00000000100004.quest_desc": [
+    "A rifled steel barrel: an accurate shot at long range."
+  ],
+  "quest.1A00000000100004.title": "Rifled musket",
+  "quest.1A00000000100005.quest_desc": [
+    "A wide muzzle and a handful of shot: terrible up close, useless far away."
+  ],
+  "quest.1A00000000100005.title": "Blunderbuss",
+  "quest.1A00000000100006.quest_desc": [
+    "The first cartridge with a case: an assembler makes it from brass, powder and lead."
+  ],
+  "quest.1A00000000100006.title": "Pistol rounds",
+  "quest.1A00000000100007.quest_desc": [
+    "Twelve shots in the magazine. After powder it feels like a miracle."
+  ],
+  "quest.1A00000000100007.title": "Pistol",
+  "quest.1A00000000100008.quest_desc": [
+    "Hold right click for a burst. It takes the same rounds as the pistol and eats them fast."
+  ],
+  "quest.1A00000000100008.title": "Submachine gun",
+  "quest.1A00000000100009.quest_desc": [
+    "A long case and a steel bullet. The sniper rifle and the machine gun take them too."
+  ],
+  "quest.1A00000000100009.title": "Rifle rounds",
+  "quest.1A0000000010000A.quest_desc": [
+    "Accurate and fast: the main gun of the HV age."
+  ],
+  "quest.1A0000000010000A.title": "Assault rifle",
+  "quest.1A0000000010000B.quest_desc": [
+    "Needs the gun and its shells. The shot spreads wide: up close nothing of this age hits harder."
+  ],
+  "quest.1A0000000010000B.title": "Pump shotgun",
+  "quest.1A0000000010000C.quest_desc": [
+    "A grenade flies in an arc and bursts on impact. It breaks no blocks but will hurt you too, by half."
+  ],
+  "quest.1A0000000010000C.title": "Grenade launcher",
+  "quest.1A0000000010000D.quest_desc": [
+    "Sneak and the scope brings the target four times closer. The bullet goes through the first target."
+  ],
+  "quest.1A0000000010000D.title": "Sniper rifle",
+  "quest.1A0000000010000E.quest_desc": [
+    "A hundred rounds on the belt and a long reload. You walk slower with it."
+  ],
+  "quest.1A0000000010000E.title": "Machine gun",
+  "quest.1A0000000010000F.quest_desc": [
+    "The rocket flies straight and bursts wide. One shot, a long reload."
+  ],
+  "quest.1A0000000010000F.title": "Rocket launcher",
+  "quest.1A00000000100010.quest_desc": [
+    "No more cartridges: it fires its charge. It charges in machines and from packs, like an electric tool. The target catches fire."
+  ],
+  "quest.1A00000000100010.title": "Laser pistol",
+  "quest.1A00000000100011.quest_desc": [
+    "A beam in bursts, through one target."
+  ],
+  "quest.1A00000000100011.title": "Laser rifle",
+  "quest.1A00000000100012.quest_desc": [
+    "One heavy beam goes through a whole row of enemies."
+  ],
+  "quest.1A00000000100012.title": "Laser cannon",
+  "quest.1A00000000100013.quest_desc": [
+    "Bolts of plasma: damage on impact and a small blast, targets burn. Needs naquadah."
+  ],
+  "quest.1A00000000100013.title": "Plasma rifle",
+  "quest.1A00000000100014.quest_desc": [
+    "The strongest gun in the game: one shot eats over a million EU."
+  ],
+  "quest.1A00000000100014.title": "Plasma cannon",
+  "quest.1A00000000100015.quest_desc": [
+    "Leather and bronze, all four pieces. It protects like iron and lasts longer."
+  ],
+  "quest.1A00000000100015.title": "Musketeer uniform",
+  "quest.1A00000000100016.quest_desc": [
+    "Aluminium and rubber: protection like diamond armour."
+  ],
+  "quest.1A00000000100016.title": "Ballistic armour",
+  "quest.1A00000000100017.quest_desc": [
+    "Titanium and carbon plates: like netherite, with less knockback."
+  ],
+  "quest.1A00000000100017.title": "Assault armour",
+  "quest.1A00000000100018.quest_desc": [
+    "Absorbs all damage for charge while it lasts. Fireproof, faster running, steps up a block, night vision on N."
+  ],
+  "quest.1A00000000100018.title": "Power armor",
+  "quest.1A00000000100019.quest_desc": [
+    "As power armor, cheaper per point of damage and with more charge. It also gives air and removes poison and radiation."
+  ],
+  "quest.1A00000000100019.title": "Plasma armor",
+  "quest.1A0000000010001A.quest_desc": [
+    "Wood and a bronze rim."
+  ],
+  "quest.1A0000000010001A.title": "Wooden wheel",
+  "quest.1A0000000010001B.quest_desc": [
+    "The heart of the first self-moving machine."
+  ],
+  "quest.1A0000000010001B.title": "Steam engine",
+  "quest.1A0000000010001C.quest_desc": [
+    "Not fast, but no longer on foot. It burns what a furnace burns: right click it with coal. W and S to drive, A and D to steer, space to brake."
+  ],
+  "quest.1A0000000010001C.title": "Steam tractor",
+  "quest.1A0000000010001D.quest_desc": [
+    "Rubber and a steel ring. Nearly every vehicle takes it."
+  ],
+  "quest.1A0000000010001D.title": "Rubber wheel",
+  "quest.1A0000000010001E.quest_desc": [
+    "Steel, pistons and a motor of its age."
+  ],
+  "quest.1A0000000010001E.title": "LV engine",
+  "quest.1A0000000010001F.quest_desc": [
+    "Liquid fuel: a bucket or capsule of what a combustion generator burns. Right click the vehicle with it."
+  ],
+  "quest.1A0000000010001F.title": "Quad bike",
+  "quest.1A00000000100020.quest_desc": [
+    "Several vehicles run on it."
+  ],
+  "quest.1A00000000100020.title": "MV engine",
+  "quest.1A00000000100021.quest_desc": [
+    "The fastest on land, but one rider and no cargo."
+  ],
+  "quest.1A00000000100021.title": "Motorcycle",
+  "quest.1A00000000100022.quest_desc": [
+    "Four seats and a little cargo: sneak and right click. Running over a mob hurts it, hitting a wall hurts the car."
+  ],
+  "quest.1A00000000100022.title": "Car",
+  "quest.1A00000000100023.quest_desc": [
+    "Goes on water and only on water. Four seats."
+  ],
+  "quest.1A00000000100023.title": "Motor boat",
+  "quest.1A00000000100024.quest_desc": [
+    "Enough for a truck and for an airplane."
+  ],
+  "quest.1A00000000100024.title": "HV engine",
+  "quest.1A00000000100025.quest_desc": [
+    "Slow, but with 54 slots of cargo."
+  ],
+  "quest.1A00000000100025.title": "Truck",
+  "quest.1A00000000100026.quest_desc": [
+    "W and S move the throttle, it flies where you look. It needs a run-up: below stall speed it sinks. Hitting the ground at speed is dangerous for the pilot too."
+  ],
+  "quest.1A00000000100026.title": "Airplane",
+  "quest.1A00000000100027.quest_desc": [
+    "Titanium and EV parts."
+  ],
+  "quest.1A00000000100027.title": "EV engine",
+  "quest.1A00000000100028.quest_desc": [
+    "Space goes up, Ctrl down, W A S D move, the mouse turns. The rotor takes a few seconds to spin up. Out of fuel it comes down gently."
+  ],
+  "quest.1A00000000100028.title": "Helicopter",
+  "quest.1A00000000100029.quest_desc": [
+    "Turns on the spot, the turret looks where you look. Shells go in the cargo, G fires. Bullets do nothing to it."
+  ],
+  "quest.1A00000000100029.title": "Tank",
+  "quest.1A0000000010002A.quest_desc": [
+    "Tungstensteel and IV motors."
+  ],
+  "quest.1A0000000010002A.title": "Jet turbine",
+  "quest.1A0000000010002B.quest_desc": [
+    "The highest speed in the game and a long run-up. Watch the fuel: it burns fast."
+  ],
+  "quest.1A0000000010002B.title": "Jet fighter"
 }

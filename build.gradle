@@ -85,6 +85,11 @@ neoForge {
                 programArguments.addAll '--quickPlaySingleplayer', 'IIS2_Stand', '--width', '1600', '--height', '900'
                 systemProperty 'iis.equip.shots', '1'
             }
+            // gradlew runClient -Pquestshots: opens the quest chapter of weapons and vehicles (D129), takes a picture and exits
+            if (project.hasProperty('questshots')) {
+                programArguments.addAll '--quickPlaySingleplayer', 'IIS2_Stand', '--width', '1600', '--height', '900'
+                systemProperty 'iis.quest.shots', '1000000000000000'
+            }
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
