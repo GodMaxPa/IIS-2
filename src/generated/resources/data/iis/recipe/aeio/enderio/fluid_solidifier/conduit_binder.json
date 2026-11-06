@@ -1,0 +1,27 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "enderio:conduit_binder",
+      "count": 1
+    }
+  ],
+  "duration": 20,
+  "eut": 4,
+  "keep": [
+    "iis:mold_ball"
+  ],
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_concrete",
+      "amount": 36
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

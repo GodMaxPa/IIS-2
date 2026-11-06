@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "ABA"
+  ],
+  "key": {
+    "A": "#c:plates/titanium",
+    "B": "ae2:fluix_glass_cable",
+    "C": "ae2:fluix_dust",
+    "D": "ae2:fluix_crystal"
+  },
+  "result": {
+    "id": "ae2:spatial_pylon",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

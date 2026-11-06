@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/pulsating_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_pulsatingiron",
+      "amount": 144
+    }
+  ]
+}

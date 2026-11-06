@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/electrical_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_electricalsteel",
+      "amount": 144
+    }
+  ]
+}

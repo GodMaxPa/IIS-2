@@ -1,0 +1,17 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:quartz_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_nether_quartz",
+      "count": 4
+    }
+  ],
+  "duration": 800,
+  "eut": 30
+}

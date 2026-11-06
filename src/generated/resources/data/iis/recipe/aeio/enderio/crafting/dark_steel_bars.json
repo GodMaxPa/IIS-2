@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "BBB",
+    "BBB"
+  ],
+  "key": {
+    "A": "#iis:tools/wrench",
+    "B": "#c:rods/dark_steel"
+  },
+  "result": {
+    "id": "enderio:dark_steel_bars",
+    "count": 8
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

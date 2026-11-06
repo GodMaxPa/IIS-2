@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/pickaxe/end_steel",
+    "#c:rods/steel"
+  ],
+  "result": {
+    "id": "iis:pickaxe_end_steel"
+  }
+}

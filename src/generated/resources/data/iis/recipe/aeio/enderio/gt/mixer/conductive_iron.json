@@ -1,0 +1,26 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/redstone_alloy",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/iron",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/silver",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_conductive_iron",
+      "count": 3
+    }
+  ],
+  "duration": 300,
+  "eut": 8,
+  "circuit": 3
+}

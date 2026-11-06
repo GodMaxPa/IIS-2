@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "BCD",
+    " A "
+  ],
+  "key": {
+    "A": "iis:plate_glowstone",
+    "B": "#c:plates/aluminium",
+    "C": "#c:plates/red_alloy",
+    "D": "iis:cover_screen"
+  },
+  "result": {
+    "id": "ae2:semi_dark_monitor",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

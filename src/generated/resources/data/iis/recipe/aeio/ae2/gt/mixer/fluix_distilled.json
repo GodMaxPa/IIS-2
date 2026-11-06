@@ -1,0 +1,37 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "ae2:charged_certus_quartz_crystal",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/redstone",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:gems/nether_quartz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:fluix_crystal",
+      "count": 2
+    }
+  ],
+  "duration": 20,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 500
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

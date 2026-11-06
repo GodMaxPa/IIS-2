@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:screws/end_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 43,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_endsteel",
+      "amount": 16
+    }
+  ]
+}

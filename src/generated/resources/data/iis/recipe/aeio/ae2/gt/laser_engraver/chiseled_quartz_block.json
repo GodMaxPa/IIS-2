@@ -1,0 +1,26 @@
+{
+  "type": "iis:laser_engraver",
+  "inputs": [
+    {
+      "ingredient": "ae2:quartz_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:chiseled_quartz_block",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 16,
+  "keep": [
+    "#iis:crafting_lens/white"
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

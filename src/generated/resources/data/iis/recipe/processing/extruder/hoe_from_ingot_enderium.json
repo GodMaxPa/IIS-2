@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/enderium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hoe_head_enderium",
+      "count": 1
+    }
+  ],
+  "duration": 154,
+  "eut": 512,
+  "keep": [
+    "iis:shape_extruder_hoe"
+  ]
+}

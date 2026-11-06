@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/electrical_steel",
+    "#iis:small_dusts/electrical_steel",
+    "#iis:small_dusts/electrical_steel",
+    "#iis:small_dusts/electrical_steel"
+  ],
+  "result": {
+    "id": "iis:dust_electrical_steel"
+  }
+}

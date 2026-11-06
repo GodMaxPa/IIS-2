@@ -1,0 +1,33 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "ae2:fluix_glass_cable",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:small_dust_polydimethylsiloxane",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:fluix_covered_cable",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_silicone",
+      "amount": 72
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

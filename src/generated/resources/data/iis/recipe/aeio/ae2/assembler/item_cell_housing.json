@@ -1,0 +1,40 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_certus_quartz",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/glass",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/aluminium",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:screws/quartzite",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/stainless_steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:item_cell_housing",
+      "count": 1
+    }
+  ],
+  "duration": 90,
+  "eut": 20,
+  "circuit": 6,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

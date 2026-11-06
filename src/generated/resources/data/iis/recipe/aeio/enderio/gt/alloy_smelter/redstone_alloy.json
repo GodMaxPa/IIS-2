@@ -1,0 +1,21 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/redstone",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:ingots/silicon",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_redstone_alloy",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 24
+}

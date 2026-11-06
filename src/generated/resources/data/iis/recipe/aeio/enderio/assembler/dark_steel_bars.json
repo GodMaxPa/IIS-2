@@ -1,0 +1,24 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/dark_steel",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "enderio:dark_steel_bars",
+      "count": 4
+    }
+  ],
+  "duration": 300,
+  "eut": 4,
+  "circuit": 3,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:pipe_medium_stainless_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "enderio:clear_glass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "enderio:conduit",
+      "count": 1,
+      "components": {
+        "enderio:conduit": "enderio:vibrant_fluid"
+      }
+    }
+  ],
+  "duration": 100,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_enderium",
+      "amount": 16
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

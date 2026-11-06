@@ -145,6 +145,7 @@ public final class StandBuilder {
         b.spaceHall();
         b.railHall();
         b.bioHall();
+        b.aeioHall();
         int left = b.leftoversHall();
         b.avenue();
         StandData.mark(level);
@@ -1558,6 +1559,72 @@ public final class StandBuilder {
         UniversalTankBlockEntity t = be(p, UniversalTankBlockEntity.class);
         if (t != null && f != Fluids.EMPTY) insert(t.tank, f, amount);
         return t;
+    }
+
+    // --- AE2 и Ender IO (D125) ---------------------------------------------------------------------------------------------
+    private BlockState modBlock(String id) {
+        return net.minecraft.core.registries.BuiltInRegistries.BLOCK.getValue(net.minecraft.resources.Identifier.parse(id)).defaultBlockState();
+    }
+
+    private ItemStack modItem(String id) {
+        return new ItemStack(net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.parse(id)));
+    }
+
+    /** Проводник Ender IO: один предмет, вид задаёт компонент. Зависимости от мода при сборке нет, поэтому через кодек. */
+    private ItemStack conduit(String type) {
+        var json = com.google.gson.JsonParser.parseString("{\"id\":\"enderio:conduit\",\"components\":{\"enderio:conduit\":\"enderio:" + type + "\"}}");
+        return ItemStack.CODEC.parse(level.registryAccess().createSerializationContext(com.mojang.serialization.JsonOps.INSTANCE), json).result().orElse(ItemStack.EMPTY);
+    }
+
+    private void aeioHall() {
+        if (!net.neoforged.fml.ModList.get().isLoaded("ae2") || !net.neoforged.fml.ModList.get().isLoaded("enderio")) return;
+        beginHall("AE2 и Ender IO", "Готовые моды по правилам ИИС 1: рецепты через машины GT, питание от проводов EU. Лишнее скрыто");
+        // живая сеть: панель HV → провод EU → приёмник → контроллер, диски и сундук касаются друг друга
+        BlockPos panel = at(2, 0, 6);
+        set(panel, LvContent.BATTERY_BUFFERS_HV.get(1).get().defaultBlockState().setValue(MachineBlock.FACING, Direction.WEST));
+        BatteryBufferBlockEntity b = be(panel, BatteryBufferBlockEntity.class);
+        b.covers().attach(Direction.UP, CoverKind.SOLAR_HV);
+        for (int k = 0; k < 4; k++) {
+            ItemStack bat = new ItemStack(LvContent.BATTERY_LITHIUM_HV.get());
+            BatteryItem.setCharge(bat, ((BatteryItem) bat.getItem()).capacity);
+            b.setItem(k, bat);
+        }
+        b.energy.stored = b.energy.capacity;
+        for (int x = 3; x <= 5; x++) cable(x, 6, "cable_gold_4x");
+        paintLine(3, 6, 5, 6, Blocks.YELLOW_CONCRETE);
+        set(at(6, 0, 6), modBlock("ae2:energy_acceptor"));
+        set(at(7, 0, 6), modBlock("ae2:controller"));
+        set(at(8, 0, 6), modBlock("ae2:drive"));
+        set(at(9, 0, 6), modBlock("ae2:me_chest"));
+        set(at(10, 0, 6), modBlock("ae2:dense_energy_cell"));
+        set(at(11, 0, 6), modBlock("ae2:molecular_assembler"));
+        String[][] signs = {{"2", "Панель HV на буфере"}, {"6", "Приёмник энергии"}, {"7", "Контроллер МЭ"}, {"8", "Дисковод"}, {"9", "МЭ-сундук"}, {"10", "Плотная ячейка энергии"}, {"11", "Молекулярный сборщик"}};
+        for (String[] s : signs) sign(at(Integer.parseInt(s[0]), 0, 7), s[1]);
+        labelAt(6, 3.0, 6, "Живая МЭ-сеть\nПровод EU питает приёмник: 1 EU = 2 AE, как в ИИС 1", "aqua", 1.0);
+
+        String[][] ae = {{"ae2:terminal", "Терминал"}, {"ae2:crafting_terminal", "Терминал создания"}, {"ae2:pattern_encoding_terminal", "Терминал шаблонов"}, {"ae2:pattern_access_terminal", "Терминал интерфейсов"},
+                {"ae2:wireless_terminal", "Беспроводной терминал"}, {"ae2:fluix_glass_cable", "Кабель МЭ"}, {"ae2:fluix_covered_cable", "Кабель с оплёткой"}, {"ae2:fluix_smart_cable", "Умный кабель"},
+                {"ae2:fluix_smart_dense_cable", "Плотный кабель"}, {"ae2:import_bus", "Шина импорта"}, {"ae2:export_bus", "Шина экспорта"}, {"ae2:storage_bus", "Шина хранилища"},
+                {"ae2:interface", "Интерфейс"}, {"ae2:pattern_provider", "Поставщик шаблонов"}, {"ae2:item_storage_cell_1k", "Диск 1K"}, {"ae2:item_storage_cell_4k", "Диск 4K"},
+                {"ae2:item_storage_cell_16k", "Диск 16K"}, {"ae2:item_storage_cell_64k", "Диск 64K"}, {"ae2:logic_processor", "Логический процессор"}, {"ae2:calculation_processor", "Вычислительный процессор"},
+                {"ae2:engineering_processor", "Инженерный процессор"}, {"ae2:fluix_crystal", "Кристалл флюикса"}, {"ae2:charged_certus_quartz_crystal", "Заряженный кварц"}, {"ae2:fluix_pearl", "Жемчуг флюикса"},
+                {"iis:crystal_seed_certus", "Семя кварца"}, {"iis:crystal_pure_certus", "Чистый кварц"}, {"iis:crystal_pure_fluix", "Чистый флюикс"}, {"iis:plate_dense_steel", "Плотная сталь"}};
+        for (int i = 0; i < ae.length; i++) itemCell(2 + (i % 7) * 3, 11 + (i / 7) * 3, modItem(ae[i][0]), ae[i][1]);
+        int z = 11 + (ae.length / 7 + 1) * 3 + 1;
+        labelAt(2, 3.0, z, "Ender IO: только то, что оставила ИИС 1", "green", 1.0);
+        String[][] eio = {{"enderio:slice_and_splice", "Резка и сращивание"}, {"enderio:soul_binder", "Связыватель душ"}, {"enderio:painting_machine", "Покраска"}, {"enderio:crafter", "Автокрафтер"},
+                {"enderio:farming_station", "Ферма"}, {"enderio:powered_spawner", "Спавнер"}, {"enderio:xp_obelisk", "Обелиск опыта"}, {"enderio:attractor_obelisk", "Обелиск приманки"},
+                {"enderio:travel_anchor", "Якорь перемещения"}, {"enderio:vacuum_chest", "Вакуумный сундук"}, {"enderio:reinforced_obsidian_block", "Прочный обсидиан"}, {"enderio:fused_quartz", "Плавленый кварц"}, {"enderio:clear_glass", "Чистое стекло"}};
+        for (int i = 0; i < eio.length; i++) {
+            set(at(2 + (i % 7) * 3, 0, z + (i / 7) * 3), modBlock(eio[i][0]));
+            sign(at(2 + (i % 7) * 3, 0, z + 1 + (i / 7) * 3), eio[i][1]);
+        }
+        z += (eio.length / 7 + 1) * 3 + 1;
+        String[][] pipes = {{"energy", "Энергопровод"}, {"item", "Предметный"}, {"fluid", "Жидкостный"}, {"energetic_fluid", "Жидкостный 2"}, {"vibrant_fluid", "Жидкостный 3"}, {"redstone", "Красный"}};
+        for (int i = 0; i < pipes.length; i++) itemCell(2 + i * 3, z, conduit(pipes[i][0]), pipes[i][1]);
+        String[][] parts = {{"enderio:yeta_wrench", "Жёлтый ключ"}, {"enderio:conduit_probe", "Щуп"}, {"enderio:basic_capacitor", "Конденсатор"}, {"enderio:vibrant_crystal", "Вибрирующий кристалл"}, {"enderio:pulsating_crystal", "Пульсирующий кристалл"}, {"enderio:void_chassis", "Шасси"}};
+        for (int i = 0; i < parts.length; i++) itemCell(2 + i * 3, z + 3, modItem(parts[i][0]), parts[i][1]);
+        endHall(Blocks.LIGHT_BLUE_TERRACOTTA);
     }
 
     // --- 16. Прочее ---------------------------------------------------------------------------------------------------

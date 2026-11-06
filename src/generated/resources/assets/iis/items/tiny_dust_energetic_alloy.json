@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/tiny_dust_energetic_alloy",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 16755281
+      }
+    ]
+  }
+}

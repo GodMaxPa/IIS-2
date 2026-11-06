@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/glowstone"
+  },
+  "result": {
+    "id": "iis:tiny_dust_glowstone",
+    "count": 18
+  }
+}

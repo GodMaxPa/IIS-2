@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/dark_steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:saw_head_dark_steel",
+      "count": 1
+    }
+  ],
+  "duration": 42,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_saw"
+  ]
+}

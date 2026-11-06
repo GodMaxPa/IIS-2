@@ -5,6 +5,74 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A00000000000024",
+      "x": 3.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000025",
+        "1A00000000000026",
+        "1A0000000000015A"
+      ],
+      "icon": {
+        "id": "ae2:engineering_processor_press",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:engineering_processor_press",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000002400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000002400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000025",
+      "x": 5.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000004BB"
+      ],
+      "icon": {
+        "id": "iis:plate_dense_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_dense_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000002500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 7
+          },
+          "id": "1C00000000002500"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000026",
       "x": 2.0,
       "y": 3.5,
@@ -37,6 +105,41 @@
             "count": 1
           },
           "id": "1C00000000002600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000027",
+      "x": 8.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000025",
+        "1A000000000003B0",
+        "1A0000000000015A"
+      ],
+      "icon": {
+        "id": "ae2:calculation_processor_press",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:calculation_processor_press",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000002700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000002700"
         }
       ]
     },
@@ -145,6 +248,180 @@
       ]
     },
     {
+      "id": "1A0000000000002B",
+      "x": 5.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000025",
+        "1A0000000000002C",
+        "1A0000000000002D",
+        "1A0000000000015A"
+      ],
+      "icon": {
+        "id": "ae2:silicon_press",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:silicon_press",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000002B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000002B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000002E",
+      "x": 6.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000025",
+        "1A0000000000002F",
+        "1A0000000000015A"
+      ],
+      "icon": {
+        "id": "ae2:logic_processor_press",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:logic_processor_press",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000002E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000002E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000031",
+      "x": 7.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000005E",
+        "1A0000000000005D"
+      ],
+      "icon": {
+        "id": "ae2:logic_processor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:logic_processor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000003100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000039",
+      "x": 1.25,
+      "y": 5.75,
+      "size": 2.5,
+      "dependencies": [
+        "1A0000000000003A",
+        "1A0000000000001F"
+      ],
+      "icon": {
+        "id": "ae2:controller",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:controller",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000003900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000003A",
+      "x": 3.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000005D",
+        "1A0000000000005F"
+      ],
+      "icon": {
+        "id": "ae2:engineering_processor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:engineering_processor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000003A00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000057",
       "x": 2.0,
       "y": 0.5,
@@ -226,6 +503,177 @@
             "count": 1
           },
           "id": "1C00000000005900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000005B",
+      "x": 8.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000027",
+        "1A00000000000346"
+      ],
+      "icon": {
+        "id": "ae2:printed_calculation_processor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:printed_calculation_processor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000005B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000005C",
+      "x": 7.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000005B",
+        "1A0000000000005D"
+      ],
+      "icon": {
+        "id": "ae2:calculation_processor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:calculation_processor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000005C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000005D",
+      "x": 5.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000002B",
+        "1A00000000000346"
+      ],
+      "icon": {
+        "id": "ae2:printed_silicon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:printed_silicon",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000005D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000005E",
+      "x": 7.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000002E",
+        "1A00000000000346"
+      ],
+      "icon": {
+        "id": "ae2:printed_logic_processor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:printed_logic_processor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000005E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000005F",
+      "x": 3.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000024",
+        "1A00000000000346",
+        "1A0000000000009C"
+      ],
+      "icon": {
+        "id": "ae2:printed_engineering_processor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:printed_engineering_processor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000005F00"
         }
       ]
     },
@@ -319,12 +767,45 @@
       ]
     },
     {
+      "id": "1A000000000003D7",
+      "x": 9.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000040",
+        "1A0000000000004A"
+      ],
+      "icon": {
+        "id": "ae2:quartz_block",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:quartz_block",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003D700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000003D700"
+        }
+      ]
+    },
+    {
       "id": "1A000000000003D8",
       "x": 9.5,
       "y": 5.0,
       "dependencies": [
-        "1A00000000000040",
-        "1A0000000000004A",
+        "1A000000000003D7",
         "1A000000000002DD"
       ],
       "icon": {
@@ -491,5 +972,9 @@
         }
       ]
     }
-  ]
+  ],
+  "icon": {
+    "id": "ae2:controller",
+    "count": 1
+  }
 }

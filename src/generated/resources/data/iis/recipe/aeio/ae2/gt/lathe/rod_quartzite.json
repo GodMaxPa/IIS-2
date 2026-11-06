@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:gems/quartzite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_quartzite",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_quartzite",
+      "count": 2
+    }
+  ],
+  "duration": 20,
+  "eut": 16
+}

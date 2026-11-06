@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:crystal_seed_certus",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crystal_pure_certus",
+      "count": 1
+    }
+  ],
+  "duration": 2000,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 200
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/dark_steel",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_dark_steel",
+      "count": 2
+    }
+  ],
+  "duration": 21,
+  "eut": 16
+}

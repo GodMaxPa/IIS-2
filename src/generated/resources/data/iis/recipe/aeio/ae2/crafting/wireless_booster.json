@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABC",
+    "DDD"
+  ],
+  "key": {
+    "A": "ae2:fluix_dust",
+    "B": "#c:gems/certus_quartz",
+    "C": "#c:plates/ender_pearl",
+    "D": "#c:plates/aluminium"
+  },
+  "result": {
+    "id": "ae2:wireless_booster",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/nether_quartz",
+      "count": 1
+    },
+    {
+      "ingredient": "#minecraft:sand",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crystal_seed_nether",
+      "count": 2
+    }
+  ],
+  "duration": 64,
+  "eut": 8
+}

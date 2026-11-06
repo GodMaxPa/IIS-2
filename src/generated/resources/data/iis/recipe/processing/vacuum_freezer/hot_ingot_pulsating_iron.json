@@ -1,0 +1,17 @@
+{
+  "type": "iis:vacuum_freezer",
+  "inputs": [
+    {
+      "ingredient": "#iis:hot_ingots/pulsating_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_pulsating_iron",
+      "count": 1
+    }
+  ],
+  "duration": 111,
+  "eut": 120
+}

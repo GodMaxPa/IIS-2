@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/enderium",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_enderium",
+      "count": 1
+    }
+  ],
+  "duration": 4500,
+  "eut": 120,
+  "temp": 4500
+}

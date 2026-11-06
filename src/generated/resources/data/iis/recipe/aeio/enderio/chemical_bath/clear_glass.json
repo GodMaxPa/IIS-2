@@ -1,0 +1,29 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "minecraft:glass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "enderio:clear_glass",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:chlorine",
+      "amount": 50
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

@@ -68,7 +68,8 @@ public final class WorldEnergy {
 
         @Override
         public long insert(BlockPos sink, int face, long voltage, long amperes) {
-            return level.getBlockEntity(sink) instanceof EuNode node ? node.injectEnergy(BY_FACE[face], voltage, amperes) : 0;
+            if (level.getBlockEntity(sink) instanceof EuNode node) return node.injectEnergy(BY_FACE[face], voltage, amperes);
+            return FeBridge.insert(level, sink, BY_FACE[face], voltage, amperes);
         }
     }
 

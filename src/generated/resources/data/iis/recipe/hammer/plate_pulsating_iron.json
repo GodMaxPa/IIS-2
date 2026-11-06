@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "h",
+    "X",
+    "X"
+  ],
+  "key": {
+    "X": "#c:ingots/pulsating_iron",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:plate_pulsating_iron"
+  }
+}

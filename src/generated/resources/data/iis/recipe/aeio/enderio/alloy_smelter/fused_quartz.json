@@ -1,0 +1,27 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_glass",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:dust_certus_quartz",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "enderio:fused_quartz",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 16,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/end_steel",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_dark_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_tungsten",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_endstone",
+      "count": 1
+    }
+  ],
+  "duration": 1200,
+  "eut": 15
+}

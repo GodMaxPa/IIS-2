@@ -1,0 +1,26 @@
+{
+  "type": "iis:laser_engraver",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_dense_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:logic_processor_press",
+      "count": 1
+    }
+  ],
+  "duration": 6000,
+  "eut": 480,
+  "keep": [
+    "iis:lens_green_sapphire"
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

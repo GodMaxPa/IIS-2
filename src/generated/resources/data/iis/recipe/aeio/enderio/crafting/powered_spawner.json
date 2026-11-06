@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "ACA",
+    "DED"
+  ],
+  "key": {
+    "A": "#c:plates/electrical_steel",
+    "B": "iis:emitter_iv",
+    "C": "enderio:void_chassis",
+    "D": "enderio:vibrant_crystal",
+    "E": "#c:circuits/elite"
+  },
+  "result": {
+    "id": "enderio:powered_spawner",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

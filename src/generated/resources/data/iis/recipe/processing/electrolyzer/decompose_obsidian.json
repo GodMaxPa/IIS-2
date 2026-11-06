@@ -1,0 +1,31 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/obsidian",
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_magnesium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 2
+    }
+  ],
+  "duration": 240,
+  "eut": 90,
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 8000
+    }
+  ]
+}

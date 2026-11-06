@@ -23,6 +23,8 @@ def expand(i):
             out += expand(x)
         return out
     if isinstance(i, dict):
+        if 'conduit_type' in i:
+            return ['conduit:' + i['conduit_type']]
         if 'items' in i:
             return expand(i['items'])
         if 'item' in i:
@@ -34,7 +36,7 @@ def expand(i):
         t = i[1:]
         if t in tags:
             return expand(tags[t])
-        if t.startswith('minecraft:') or t.startswith('c:'):
+        if t.startswith('minecraft:') or t.startswith('c:') or t.startswith(('ae2:', 'enderio:')):
             return ['minecraft:__world__' + t]
         return ['MISSING_TAG:' + t]
     return [i]
@@ -54,6 +56,8 @@ for f in glob.glob(f'{R}/data/iis/recipe/**/*.json', recursive=True):
             if k in pat:
                 reqs.append(expand(v))
         outs.append(d['result']['id'])
+        if 'enderio:conduit' in d['result'].get('components', {}):
+            outs.append('conduit:' + d['result']['components']['enderio:conduit'])
     elif 'ingredients' in d:
         for v in d['ingredients']:
             reqs.append(expand(v))
@@ -70,6 +74,7 @@ for f in glob.glob(f'{R}/data/iis/recipe/**/*.json', recursive=True):
             ing = x['ingredient']
             reqs.append(['F:' + (ing if isinstance(ing, str) else ing.get('fluid', str(ing)))])
         outs += [x['id'] for x in d.get('outputs', [])]
+        outs += ['conduit:' + x['components']['enderio:conduit'] for x in d.get('outputs', []) if 'enderio:conduit' in x.get('components', {})]
         # a capsule of gas is that gas: any canner pours it out and back (D114)
         outs += ['F:' + x['components']['iis:fluid_content']['fluid'] for x in d.get('outputs', []) if 'iis:fluid_content' in x.get('components', {})]
         outs += ['F:' + x['id'] for x in d.get('fluid_outputs', [])]
@@ -93,6 +98,12 @@ for f in glob.glob(f'{R}/data/iis/recipe/**/*.json', recursive=True):
         if d.get('cleanroom'):
             reqs.append(['iis:cleanroom'])
     recipes.append((rid, reqs, outs))
+# D125: recipes of AE2 and Ender IO that stay on (the list of the jars minus the switched-off files of the override pack)
+_mods = json.load(open('reference/original/aeio_mods.json', encoding='utf-8'))
+for _ns in ('ae2', 'enderio'):
+    for _p, _e in _mods[_ns]['recipes'].items():
+        if _e['out'] and not os.path.exists(f'{R}/packs/iis_overrides/data/{_ns}/recipe/{_p}.json'):
+            recipes.append((f'{_ns}/{_p}', [expand(i) for i in _e['in']], ['conduit:' + _e['conduit'] if _e.get('conduit') else _e['out']]))
 print(len(recipes), 'recipes')
 
 have = set()
@@ -170,7 +181,7 @@ def why(item, depth=0):
 
 
 for t in targets:
-    i = 'iis:' + t
+    i = t if ':' in t else 'iis:' + t
     if i in have:
         print('OK ', t)
     else:

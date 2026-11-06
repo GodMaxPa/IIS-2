@@ -1,0 +1,23 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "ae2:fluix_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:fluix_dust",
+      "count": 4
+    }
+  ],
+  "duration": 400,
+  "eut": 2,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

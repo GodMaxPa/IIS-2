@@ -2,6 +2,11 @@
   "replace": false,
   "values": [
     "iis:hot_ingot_black_bronze",
+    "iis:hot_ingot_dark_steel",
+    "iis:hot_ingot_end_steel",
+    "iis:hot_ingot_enderium",
+    "iis:hot_ingot_enderium_base",
+    "iis:hot_ingot_energetic_alloy",
     "iis:hot_ingot_hsse",
     "iis:hot_ingot_hssg",
     "iis:hot_ingot_iridium",
@@ -17,11 +22,13 @@
     "iis:hot_ingot_osmiridium",
     "iis:hot_ingot_osmium",
     "iis:hot_ingot_palladium",
+    "iis:hot_ingot_pulsating_iron",
     "iis:hot_ingot_titanium",
     "iis:hot_ingot_tungsten",
     "iis:hot_ingot_tungsten_steel",
     "iis:hot_ingot_vanadium",
     "iis:hot_ingot_vanadium_gallium",
+    "iis:hot_ingot_vibrant_alloy",
     "iis:hot_ingot_yttrium",
     "iis:hot_ingot_yttrium_barium_cuprate"
   ]

@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "iis:gem_certus_quartz",
+    "iis:crystal_pure_certus"
+  ]
+}

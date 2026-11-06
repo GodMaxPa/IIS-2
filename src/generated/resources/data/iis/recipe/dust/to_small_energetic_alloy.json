@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/energetic_alloy"
+  ],
+  "result": {
+    "id": "iis:small_dust_energetic_alloy",
+    "count": 4
+  }
+}

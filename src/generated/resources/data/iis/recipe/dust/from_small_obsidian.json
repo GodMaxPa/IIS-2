@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/obsidian",
+    "#iis:small_dusts/obsidian",
+    "#iis:small_dusts/obsidian",
+    "#iis:small_dusts/obsidian"
+  ],
+  "result": {
+    "id": "iis:dust_obsidian"
+  }
+}

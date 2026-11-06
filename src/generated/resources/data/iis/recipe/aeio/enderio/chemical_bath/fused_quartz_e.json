@@ -1,0 +1,29 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "enderio:fused_quartz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "enderio:fused_quartz_e",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_glowstone",
+      "amount": 576
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

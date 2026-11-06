@@ -1,0 +1,33 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:battery_hull_lv",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:gold_ingot",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "enderio:basic_capacitor",
+      "count": 1
+    }
+  ],
+  "duration": 64,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_redstone",
+      "amount": 288
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

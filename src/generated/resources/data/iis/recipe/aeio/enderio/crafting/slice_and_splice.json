@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "EEE"
+  ],
+  "key": {
+    "A": "#iis:wires/1x/copper",
+    "B": "iis:electric_motor_mv",
+    "C": "#c:circuits/good",
+    "D": "enderio:void_chassis",
+    "E": "#c:plates/soularium"
+  },
+  "result": {
+    "id": "enderio:slice_and_splice",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

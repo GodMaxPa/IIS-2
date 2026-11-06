@@ -1381,6 +1381,10 @@
         "1A000000000000D0",
         "1A00000000000391"
       ],
+      "icon": {
+        "id": "enderio:vibrant_crystal",
+        "count": 1
+      },
       "tasks": [
         {
           "type": "item",

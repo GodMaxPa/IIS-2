@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AB ",
+    "CDB",
+    "AB "
+  ],
+  "key": {
+    "A": "#c:plates/gold",
+    "B": "#c:plates/aluminium",
+    "C": "#c:plates/red_alloy",
+    "D": "ae2:calculation_processor"
+  },
+  "result": {
+    "id": "ae2:basic_card",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

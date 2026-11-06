@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/enderium",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 77,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_enderium",
+      "amount": 144
+    }
+  ]
+}

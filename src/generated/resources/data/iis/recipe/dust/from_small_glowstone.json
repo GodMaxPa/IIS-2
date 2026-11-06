@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/glowstone",
+    "#iis:small_dusts/glowstone",
+    "#iis:small_dusts/glowstone",
+    "#iis:small_dusts/glowstone"
+  ],
+  "result": {
+    "id": "minecraft:glowstone_dust"
+  }
+}

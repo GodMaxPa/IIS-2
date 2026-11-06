@@ -1,0 +1,22 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/electrical_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/obsidian",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_dark_steel",
+      "count": 1
+    }
+  ],
+  "duration": 4000,
+  "eut": 120,
+  "temp": 2000
+}

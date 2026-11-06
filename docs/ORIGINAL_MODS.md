@@ -17,14 +17,14 @@
 | Railcraft | 9.12.2.0 | Железная дорога, коксовая печь, паровые машины | **A** — ж/д (решение владельца) |
 | GalacticraftCore + Planets, MicdoodleCore | 3.0.12.504 | Космос | **A** — космос (решение владельца) |
 | SGCraft | 1.9.5 | Звёздные врата | C — может стать частью космоса |
-| appliedenergistics2 (II), ExtraCells (II), NotEnoughEnergistics | rv3 | Цифровое хранение | B 🟡 AE2 |
+| appliedenergistics2 (II), ExtraCells (II), NotEnoughEnergistics | rv3 | Цифровое хранение | **B** — AE2 26.1.13-beta с правилами ИИС 1 (D125); ExtraCells ещё нет |
 | NotEnoughItems (II), NEIIntegration, neiaddons | — | Просмотр рецептов | B — JEI или EMI 🟡 |
 | Waila, WailaHarvestability, WAILAPlugins | — | Подсказка о блоке | B — Jade 26.1.12 (D87) |
 | MapWriter (II) | 2.1.21 | Карта | B — JourneyMap / Xaero 🟡 |
 | BetterQuesting | 3.0.320 | Квесты | B — FTB Quests или аналог 🟡; контент из Ideal-Industrial-Quests |
 | forestry (II), gendustry | 4.2.26 | Пчёлы, деревья | C — владелец: не интересно |
 | buildcraft (core, builders, silicon, transport), buildcraft-compat | 7.1.17 | Трубы, строители | C — пересекается с GT |
-| EnderIO, EnderCore | 2.3.0 | Машины, трубы | C — пересекается с GT |
+| EnderIO, EnderCore | 2.3.0 | Машины, трубы | **B** — Ender IO 9.0.6-alpha с правилами ИИС 1 (D125) |
 | ProjectRed (Base, Compat, Fabrication, Integration, Lighting) | 4.7.0 | Редстоун, логика | C — пересекается с современным редстоуном |
 | Flans-Mod, HMG (handmadeguns) | — | Оружие и техника | C → идеи для «промышленного снаряжения» (свои реализации) |
 | openmodularturrets | 2.3.7 | Турели | C → возможно, часть снаряжения |

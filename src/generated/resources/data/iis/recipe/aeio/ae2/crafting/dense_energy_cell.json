@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AAA",
+    "BCB",
+    "ADA"
+  ],
+  "key": {
+    "A": "ae2:energy_cell",
+    "B": "#c:circuits/advanced",
+    "C": "ae2:engineering_processor",
+    "D": "iis:battery_lithium_mv"
+  },
+  "result": {
+    "id": "ae2:dense_energy_cell",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

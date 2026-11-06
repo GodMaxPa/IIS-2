@@ -1,0 +1,36 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:wire_annealed_copper_1x",
+      "count": 1
+    },
+    {
+      "ingredient": "enderio:conduit_binder",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "enderio:conduit",
+      "count": 1,
+      "components": {
+        "enderio:conduit": "enderio:energy"
+      }
+    }
+  ],
+  "duration": 50,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_conductiveiron",
+      "amount": 144
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    " C ",
+    " A "
+  ],
+  "key": {
+    "A": "#c:ingots/pulsating_iron",
+    "B": "#iis:tools/hammer",
+    "C": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "enderio:yeta_wrench",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

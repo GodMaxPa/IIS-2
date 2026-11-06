@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDE",
+    "FBF"
+  ],
+  "key": {
+    "A": "#c:glass_blocks",
+    "B": "#c:circuits/good",
+    "C": "iis:conveyor_module_mv",
+    "D": "enderio:void_chassis",
+    "E": "iis:electric_pump_mv",
+    "F": "#iis:wires/1x/copper"
+  },
+  "result": {
+    "id": "enderio:painting_machine",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

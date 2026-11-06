@@ -150,10 +150,22 @@
     "Use an EBF with nichrome coil blocks (or better) to smelt the dust into the ingot."
   ],
   "quest.1A00000000000023.title": "Osmium Ingot",
+  "quest.1A00000000000024.quest_desc": [
+    "A form for crafting Engineering Processors."
+  ],
+  "quest.1A00000000000024.title": "Inscriber Engineering Press",
+  "quest.1A00000000000025.quest_desc": [
+    "You may create it from 9 steel ingots."
+  ],
+  "quest.1A00000000000025.title": "Dense Steel Plate",
   "quest.1A00000000000026.quest_desc": [
     "Use a Lathe to produce the lens from the exquisite gem."
   ],
   "quest.1A00000000000026.title": "Yellow Garnet Lens",
+  "quest.1A00000000000027.quest_desc": [
+    "A form for crafting a Calculation Processor."
+  ],
+  "quest.1A00000000000027.title": "Inscriber Calculation Press",
   "quest.1A00000000000028.quest_desc": [
     "Use a compressor to create one of these: Sapphire, Opal or Blue Topaz Block."
   ],
@@ -162,6 +174,10 @@
     "Prepare 9 blue gems such as: Sapphire, Blue Topaz or Opal."
   ],
   "quest.1A0000000000002A.title": "Nine Blue Gems",
+  "quest.1A0000000000002B.quest_desc": [
+    "A form for crafting a Printed Silicon."
+  ],
+  "quest.1A0000000000002B.title": "Inscriber Silicon Press",
   "quest.1A0000000000002C.quest_desc": [
     "A cheap alternative for a Diamond Lens. You can make it from a glass pane. Look it up in NEI."
   ],
@@ -170,18 +186,102 @@
     "Put an Exquisite Gem into a Lathe."
   ],
   "quest.1A0000000000002D.title": "Diamond Lens",
+  "quest.1A0000000000002E.quest_desc": [
+    "A form for crafting a Logic Processor."
+  ],
+  "quest.1A0000000000002E.title": "Inscriber Logic Press",
   "quest.1A0000000000002F.quest_desc": [
     "Put an Exquisite Gem into a Lathe."
   ],
   "quest.1A0000000000002F.title": "Green Sapphire Lens",
+  "quest.1A00000000000030.quest_desc": [
+    "The storage weight shows how much data (items) you can store on it. 1k - the smallest one."
+  ],
+  "quest.1A00000000000030.title": "1k ME Storage Component",
+  "quest.1A00000000000031.quest_desc": [
+    "Use an assembling machine (of any tier)."
+  ],
+  "quest.1A00000000000031.title": "Logic Processor",
+  "quest.1A00000000000032.quest_desc": [
+    "Use a macerator."
+  ],
+  "quest.1A00000000000032.title": "Fluix Dust",
+  "quest.1A00000000000033.quest_desc": [
+    "It is a box with an interface to connect it to a ME chest or to a ME Drive."
+  ],
+  "quest.1A00000000000033.title": "ME Storage Housing",
+  "quest.1A00000000000034.quest_desc": [
+    "It is like a flash card - it can store your items. Also it is ready to be plugged into a ME chest / ME Drive."
+  ],
+  "quest.1A00000000000034.title": "1k ME Storage Cell",
+  "quest.1A00000000000035.quest_desc": [
+    "A multistorage for ME storage cells. But it doesn't have its own interface, so you have to create an ME terminal first."
+  ],
+  "quest.1A00000000000035.title": "ME Drive",
+  "quest.1A00000000000036.quest_desc": [
+    "The \"window\" through which you can see what items do you have in this network."
+  ],
+  "quest.1A00000000000036.title": "ME Terminal",
+  "quest.1A00000000000037.quest_desc": [
+    "Certus or nether quartz rods + pure fluix crystal + logic processor."
+  ],
+  "quest.1A00000000000037.title": "Cores",
+  "quest.1A00000000000038.quest_desc": [
+    "An AE2 display. It can show the number of items for selected item in your ME network. Also it can be just a component for crafting."
+  ],
+  "quest.1A00000000000038.title": "Illuminated Panel",
+  "quest.1A00000000000039.quest_desc": [
+    "The heart of your network. It can provide 32 channels to each side of it. Also you may extend it by adding several more blocks. Limit is 7 blocks in each direction."
+  ],
+  "quest.1A00000000000039.title": "ME Controller",
+  "quest.1A0000000000003A.quest_desc": [
+    "Use an assembling machine (of any tier)."
+  ],
+  "quest.1A0000000000003A.title": "Engineering Processor",
+  "quest.1A0000000000003B.quest_desc": [
+    "It shows you what recipes have already been added to an autocraft config."
+  ],
+  "quest.1A0000000000003B.title": "ME Pattern Terminal",
+  "quest.1A0000000000003C.quest_desc": [
+    "You may setup a pattern of any recipe to configure autocraft. Even if it doesn't use crafting table and has to be processed by any machine of gregtech."
+  ],
+  "quest.1A0000000000003C.title": "Blank Pattern",
+  "quest.1A0000000000003D.quest_desc": [
+    "It will show you what patterns are already used, and where, but with low accuracy."
+  ],
+  "quest.1A0000000000003D.title": "ME Interface Terminal",
+  "quest.1A0000000000003E.quest_desc": [
+    "It is the same as the block version, but it doesn't take additional space and it can be placed as a cover on ME cables."
+  ],
+  "quest.1A0000000000003E.title": "ME Interface (cover)",
+  "quest.1A0000000000003F.quest_desc": [
+    "Glowstone + fluid extractor --> molten glowstone + Mold Plate + Solidifier --> Glowstone Plate."
+  ],
+  "quest.1A0000000000003F.title": "Glowstone Plate",
   "quest.1A00000000000040.quest_desc": [
     "Height to search: 40 - 80 QUARTZ vein (Quartzite, Barite, Certus Quartz). Certus Quartz is important stuff for most machines of AE2."
   ],
   "quest.1A00000000000040.title": "Certus Quartz",
+  "quest.1A00000000000041.quest_desc": [
+    "Combine it with any storage component to get the crafting storage. Then connect it to your ME network. Without this block(s) you can't order items to autocraft them."
+  ],
+  "quest.1A00000000000041.title": "Crafting Unit",
   "quest.1A00000000000042.quest_desc": [
     "The main difference from previous tier, in addition to the higher speed, is the ability to get by-products."
   ],
   "quest.1A00000000000042.title": "Universal Macerator",
+  "quest.1A00000000000043.quest_desc": [
+    "Can store AE2 energy inside of it. Usually used as a small buffer between gregtech energy and AE2 energy systems. This energy cell cannot take energy directly from GT cables, so you'll have to use an energy acceptor."
+  ],
+  "quest.1A00000000000043.title": "Energy Cell",
+  "quest.1A00000000000044.quest_desc": [
+    "The only way to transform Gregtech energy into AE2 energy. Can consume any voltage."
+  ],
+  "quest.1A00000000000044.title": "Energy Acceptor",
+  "quest.1A00000000000045.quest_desc": [
+    "Use a Compressor."
+  ],
+  "quest.1A00000000000045.title": "Fluix Block",
   "quest.1A00000000000046.quest_desc": [
     "A mix of an Ender Pearl and Blaze Powder."
   ],
@@ -206,6 +306,46 @@
     "Use a cutting machine to split the block into plates."
   ],
   "quest.1A0000000000004B.title": "Endereye Plate",
+  "quest.1A0000000000004C.quest_desc": [
+    "4 * pure fluix crystal + 4 * endereye plate + ender pearl."
+  ],
+  "quest.1A0000000000004C.title": "Fluix Pearl",
+  "quest.1A0000000000004D.quest_desc": [
+    "You can craft it from a common fluix crystal by crushing it with a hammer. Then put Fluix dust into a chemical reactor with sand to get fluix seeds. The last step is autoclave."
+  ],
+  "quest.1A0000000000004D.title": "Pure Fluix Crystal",
+  "quest.1A0000000000004E.quest_desc": [
+    "This is a multiblock that allows you to connect two parts of a ME network that are placed far away from each other (even on different planets), but only if you have enough channels and the ME controller is in one place. BUT... first you have to get a Quantum Entangled Singularity."
+  ],
+  "quest.1A0000000000004E.title": "ME Quantum Link Chamber",
+  "quest.1A0000000000004F.quest_desc": [
+    "A part of a Quantum ring multiblock."
+  ],
+  "quest.1A0000000000004F.title": "ME Quantum Ring",
+  "quest.1A00000000000050.quest_desc": [
+    "Can be crafted from 4 * 1K ME storage component."
+  ],
+  "quest.1A00000000000050.title": "4k ME Storage Component",
+  "quest.1A00000000000051.quest_desc": [
+    "Can be crafted from 4k ME storage components."
+  ],
+  "quest.1A00000000000051.title": "16k ME Storage Component",
+  "quest.1A00000000000052.quest_desc": [
+    "Can be crafted from 16k ME storage components."
+  ],
+  "quest.1A00000000000052.title": "64k ME Storage Component",
+  "quest.1A00000000000053.quest_desc": [
+    "Use a matter condenser - put the 64k ME storage component in its top slot, then provide them with 256k of any trash items or liquids - it will produce the Singularity for you."
+  ],
+  "quest.1A00000000000053.title": "Singularity",
+  "quest.1A00000000000054.quest_desc": [
+    "A non-electric machine that can be used as a simple unlimited waste box."
+  ],
+  "quest.1A00000000000054.title": "Matter Condenser",
+  "quest.1A00000000000055.quest_desc": [
+    "To make a pair of it, prepare any explosives. Then, drop the singularity and 1 enderpearl (not endereye) dust near (not on top) the explosives block, and make the bang."
+  ],
+  "quest.1A00000000000055.title": "Quantum Entangled Singularity",
   "quest.1A00000000000056.quest_desc": [
     "Is it okay to create 1 plate from 2 ingots with a hand-held hammer? Of course not! Is it more profitable to use 3 ingots to create 2 plates via steam forge hammer? Not bad, but with this bending machine you will craft one-to-one, ingot-to-plate."
   ],
@@ -222,6 +362,26 @@
     "You can produce it with a sifting machine from purified crushed ore. Another way is to use an implosion compressor to get the output from low level gems or even gem dust."
   ],
   "quest.1A00000000000059.title": "Exquisite Blue Gem",
+  "quest.1A0000000000005B.quest_desc": [
+    "Use an Inscriber Calculation Press with a certus quartz plate or with a Pure certus quartz crystal (latter one is cheaper)."
+  ],
+  "quest.1A0000000000005B.title": "Printed Calculation Circuit",
+  "quest.1A0000000000005C.quest_desc": [
+    "Use an assembling machine (of any tier)."
+  ],
+  "quest.1A0000000000005C.title": "Calculation Processor",
+  "quest.1A0000000000005D.quest_desc": [
+    "Use an Inscriber Silicon Press with a Silicone Plate."
+  ],
+  "quest.1A0000000000005D.title": "Printed Silicon",
+  "quest.1A0000000000005E.quest_desc": [
+    "Use an Inscriber Logic Press with a Gold Plate."
+  ],
+  "quest.1A0000000000005E.title": "Printed Logic Circuit",
+  "quest.1A0000000000005F.quest_desc": [
+    "Use an Inscriber Engineering Press with a Diamond Plate."
+  ],
+  "quest.1A0000000000005F.title": "Engineering Circuit",
   "quest.1A00000000000060.quest_desc": [
     "Use a lathe to create the rod from nether quartz."
   ],
@@ -234,6 +394,14 @@
     "You may produce it with a sifting machine from purified crushed ore. Another way is to use an implosion compressor to get the output from low level gems."
   ],
   "quest.1A00000000000062.title": "Exquisite Yellow Garnet",
+  "quest.1A00000000000063.quest_desc": [
+    "This block is some kind of a connector between an ME network and outside world. You can input any items into this block, and if it is connected to a ME chest or drive with storage components with enough free space, the items will be stored in there..."
+  ],
+  "quest.1A00000000000063.title": "ME Interface",
+  "quest.1A00000000000065.quest_desc": [
+    "Charged certus quartz crystal + redstone + nether quartz in a mixer with water will give you Fluix Crystal."
+  ],
+  "quest.1A00000000000065.title": "Fluix Crystal",
   "quest.1A00000000000066.quest_desc": [
     "Stick + redstone"
   ],
@@ -242,10 +410,42 @@
     "Redstone quests chain. Height for search: 10-40 REDSTONE vein (Redstone, Ruby and Cinnabar)."
   ],
   "quest.1A00000000000067.title": "Real Redstone",
+  "quest.1A00000000000068.quest_desc": [
+    "Calc. processor + redstone torch. You may place this item onto a glass cable and configure it to emit redstone signal depending on the number of certain items. It can help you to automatically start/stop some production processes."
+  ],
+  "quest.1A00000000000068.title": "ME Level Emitter",
+  "quest.1A00000000000069.quest_desc": [
+    "It is an empty card that may be used as a part of other cards."
+  ],
+  "quest.1A00000000000069.title": "Basic Card",
   "quest.1A0000000000006A.quest_desc": [
     "Copper + redstone (using an alloy smelter) to get a red alloy ingot. Then create a plate from it."
   ],
   "quest.1A0000000000006A.title": "Red Alloy Plate",
+  "quest.1A0000000000006B.quest_desc": [
+    "Can be used to add more filter options for a storage/import/export bus."
+  ],
+  "quest.1A0000000000006B.title": "Capacity Card",
+  "quest.1A0000000000006C.quest_desc": [
+    "Advanced Card version"
+  ],
+  "quest.1A0000000000006C.title": "Advanced Card",
+  "quest.1A0000000000006D.quest_desc": [
+    "Increases work rate rate of import/export buses."
+  ],
+  "quest.1A0000000000006D.title": "Acceleration Card",
+  "quest.1A0000000000006E.quest_desc": [
+    "This card is almost useless by itself but is necessary as a part of some other items."
+  ],
+  "quest.1A0000000000006E.title": "Fuzzy Card",
+  "quest.1A00000000000070.quest_desc": [
+    "It exports selected item(s) to a selected chest/machine."
+  ],
+  "quest.1A00000000000070.title": "ME Export Bus",
+  "quest.1A00000000000071.quest_desc": [
+    "It is a very helpful tool that allows you to control and configure most of the items and blocks of your ME network."
+  ],
+  "quest.1A00000000000071.title": "Yeta Wrench",
   "quest.1A00000000000072.quest_desc": [
     "With this multiblock machine you will be able to produce steel faster. Also you may smelt there other refractory metals. For the first run on LV tier use 3 LV energy hatches and connect to them a battery buffer with at least 5 small LV batteries to send 5 amperes (via 8x Tin cable). Or you may use only 2 LV energy hatches with a battery buffer with at less 2 small LV batteries closely connected to each hatch. Note that energy losses at LV tier are high, so don't use long wire connections (in any cases)."
   ],
@@ -1042,6 +1242,10 @@
     "Don't craft this unless you have a voracious power tool."
   ],
   "quest.1A00000000000143.title": "Batpack - for what?",
+  "quest.1A00000000000145.quest_desc": [
+    "Put glass with quartzite dust into an alloy smelter."
+  ],
+  "quest.1A00000000000145.title": "Fused Quartz",
   "quest.1A00000000000147.quest_desc": [
     "This machine can be used to get alloys such as bronze more profitably. Moreover, you don't need to use dusts only, you can create bronze from tin and copper ingots."
   ],
@@ -1994,10 +2198,18 @@
     "Do you think that this is completely useless stuff? Not quite..."
   ],
   "quest.1A00000000000241.title": "Stone Dust",
+  "quest.1A00000000000242.quest_desc": [
+    "Can be used for crafting the most of conduit types."
+  ],
+  "quest.1A00000000000242.title": "Conduit Binder",
   "quest.1A00000000000243.quest_desc": [
     "This machine looks simple. But in fact it may do a lot of useful things. For example: concrete, industrial biomass, drilling fluid and some other things."
   ],
   "quest.1A00000000000243.title": "Basic Mixer",
+  "quest.1A00000000000245.quest_desc": [
+    "Use EBF to get a Pulsating Iron Ingot from Pulsating Iron Dust."
+  ],
+  "quest.1A00000000000245.title": "Pulsating Iron",
   "quest.1A00000000000246.quest_desc": [
     "By itself it is useless. But you may use this to craft the item conduit."
   ],
@@ -2014,6 +2226,10 @@
     "Use 3 vanadium ingots and 1 gallium ingot to smelt them to get a new alloy."
   ],
   "quest.1A00000000000249.title": "Vanadium-Gallium Ingot",
+  "quest.1A0000000000024B.quest_desc": [
+    "Prepare diamond dust, and put it to autoclave. Also pour to autoclave the molten pulsating iron."
+  ],
+  "quest.1A0000000000024B.title": "Pulsating Crystal",
   "quest.1A0000000000024C.quest_desc": [
     "Can molten more materials with more high heat proof than basic machine. For example now you may get molten glass from glass (block or panel), which you may use to craft the tin electron tube."
   ],
@@ -2042,6 +2258,14 @@
     "Prepare a few liters of coffee (in real), because now you have to kill a thouthands of wither skeletons to collect at least the 27 of them heads."
   ],
   "quest.1A00000000000253.title": "Wither Skeleton Skull",
+  "quest.1A00000000000254.quest_desc": [
+    "Use assembling machine MV+ to make the Double-Layer Capacitor from 2 basic capacitors, pulsating crystal and 2 molten glowstone dusts. It is the light upgrade for powered spawner, that greatly up the working speed, but it consume a little more energy."
+  ],
+  "quest.1A00000000000254.title": "Double-Layer Capacitor",
+  "quest.1A00000000000255.quest_desc": [
+    "Small battery hull + 4 gold ingots + 2 molten redstone dusts. Put all this to assembling machine to craft the basic capacitor. This is the basic component for IO machine upgrades."
+  ],
+  "quest.1A00000000000255.title": "Basic Capacitor",
   "quest.1A00000000000256.quest_desc": [
     "Can do a lot of useful different things."
   ],
@@ -2058,6 +2282,18 @@
     "The main difference between previous tier conveyor modules and IV tier (and higher) is in requirement to use the silicon rubber sheet or styrene-butadiene rubber sheet."
   ],
   "quest.1A00000000000259.title": "Conveyor Module (IV)",
+  "quest.1A0000000000025A.quest_desc": [
+    "You may build the punishment cell to close there the wither. Because this blocks are fully explosion resist against attacks of wither."
+  ],
+  "quest.1A0000000000025A.title": "Reinforced Obsidian",
+  "quest.1A0000000000025B.quest_desc": [
+    "Use the dark steel to craft the dark steel frame box."
+  ],
+  "quest.1A0000000000025B.title": "Dark Steel Frame Box",
+  "quest.1A0000000000025C.quest_desc": [
+    "For a first, you have to craft the powered spawner - it will be empty. Than, with help of anvil, you should join to it the broken spawner which should be the \"Skeleton\" type."
+  ],
+  "quest.1A0000000000025C.title": "Powered Spawner (Skeleton)",
   "quest.1A0000000000025D.quest_desc": [
     "Use centrifuge HV+ tier to get the plutonium 241 from plutonium 239. Than smelt the tiny pile to get the nugget by common furance."
   ],
@@ -2074,10 +2310,30 @@
     "Emitter IV tier."
   ],
   "quest.1A00000000000260.title": "Emitter (IV)",
+  "quest.1A00000000000261.quest_desc": [
+    "An important part of powered spawner."
+  ],
+  "quest.1A00000000000261.title": "Vibrant Crystal",
+  "quest.1A00000000000262.quest_desc": [
+    "Dark steel frame box + dark steel plates, with help of wrench and hammer."
+  ],
+  "quest.1A00000000000262.title": "Machine Chassis",
+  "quest.1A00000000000263.quest_desc": [
+    "This machine can change the type of broken spawners. To work it require any broken spawner, soul vial with any catched mob and the player should have at least 15 level. Also it require the energy to work (use gregtech cables to connect)"
+  ],
+  "quest.1A00000000000263.title": "Soul Binder",
+  "quest.1A00000000000264.quest_desc": [
+    "Use assembling machine HV+ to make the octadic capacitor from 2 double-layer capacitors, vibrant crystal and 2 molten energetic alloy ingots. It is the great upgrade for powered spawner, that greatly up the working speed, but it consume more energy."
+  ],
+  "quest.1A00000000000264.title": "Octadic Capacitor",
   "quest.1A00000000000265.quest_desc": [
     "A part of some HV machines"
   ],
   "quest.1A00000000000265.title": "Field Generator (HV)",
+  "quest.1A00000000000266.quest_desc": [
+    "It is a mix of gold dust, soul sand and ashes. Use the mixer to make it."
+  ],
+  "quest.1A00000000000266.title": "Soularium Ingot",
   "quest.1A00000000000268.quest_desc": [
     "Crafting recipe is the same as for previous coil block tiers, but you have to use the tungstensteel ingots as root stuff."
   ],
@@ -2094,6 +2350,14 @@
     "This circuit assembling machine may create circuits up to (and including) ZPM tier."
   ],
   "quest.1A0000000000026B.title": "Advanced Circuit Assembling IV",
+  "quest.1A0000000000026C.quest_desc": [
+    "Energetic Alloy + Enderpearl"
+  ],
+  "quest.1A0000000000026C.title": "Vibrant Alloy",
+  "quest.1A0000000000026D.quest_desc": [
+    "Gold ingot + glowstone + molten redstone ->> to EBF."
+  ],
+  "quest.1A0000000000026D.title": "Energetic Alloy",
   "quest.1A0000000000026E.quest_desc": [
     "The main part of some energy components."
   ],
@@ -2102,6 +2366,18 @@
     "Use lapis/lazurite/sodalite rods and plates, with energy crystal and EV circuits to craft the Lapotron Crystal. Also you may craft it by exquisite sapphire (use NEI)"
   ],
   "quest.1A0000000000026F.title": "Lapotron Crystal",
+  "quest.1A00000000000270.quest_desc": [
+    "You have to put electrical steel ingot to the EBF with obsidian dust to get the alloy named Dark steel."
+  ],
+  "quest.1A00000000000270.title": "Dark Steel",
+  "quest.1A00000000000271.quest_desc": [
+    "This is just the alloy of steel(3) and silicon(1) ingots. Use EBF to create it."
+  ],
+  "quest.1A00000000000271.title": "Electrical Steel",
+  "quest.1A00000000000272.quest_desc": [
+    "Just go the nether and find the nether fortress. There you have to find the \"Skeleton\" - it looks like nig... hmmm... black, and with sword instead of bow. You shouldn't to kill him or even hit him. You target is use the empty Soul Vial on him by RMB to catch him."
+  ],
+  "quest.1A00000000000272.title": "Soul Vial (full)",
   "quest.1A00000000000273.quest_desc": [
     "Go to the nether and find it."
   ],
@@ -2122,6 +2398,10 @@
     "Use Mold (Bottle) to make from glass dust the glass bottle with help of alloy smelter. Glass dust you may get just by broken the glass block in forge hammer."
   ],
   "quest.1A00000000000277.title": "Glass Bottle",
+  "quest.1A00000000000278.quest_desc": [
+    "Use fluid extractor (MV+) to pour the molten soularium to the chemical bath. Than put there the glass bottle to get the soul Vial. With help of it you may catch any mob."
+  ],
+  "quest.1A00000000000278.title": "Soul Vial",
   "quest.1A0000000000027D.quest_desc": [
     "Use EBF with HSS-G coil blocks to make te ingot from dust."
   ],
@@ -2746,6 +3026,26 @@
     "This coil block is for Blast Furnace / pyrolyse oven / multi smelter."
   ],
   "quest.1A00000000000332.title": "Kanthal Coil Block",
+  "quest.1A00000000000333.quest_desc": [
+    "The main stuff to connect AE2 machines together."
+  ],
+  "quest.1A00000000000333.title": "ME Glass Cable",
+  "quest.1A00000000000334.quest_desc": [
+    "The simple cable of AE2 that can transfer only AE2 energy (without any channels). So it may be used for separating network."
+  ],
+  "quest.1A00000000000334.title": "Quartz Fiber",
+  "quest.1A00000000000335.quest_desc": [
+    "Use lathe to create the rod from quartzite"
+  ],
+  "quest.1A00000000000335.title": "Quartzite Rod",
+  "quest.1A00000000000336.quest_desc": [
+    "Use electrolyzer."
+  ],
+  "quest.1A00000000000336.title": "Charged Certus Quartz Crystal",
+  "quest.1A00000000000337.quest_desc": [
+    "Better than common chest. But only if you know how to use it. For it work it needs 2 conditions: it should be connected to power (energy acceptor is not required). And a second - it should have the ME storage cell inside it."
+  ],
+  "quest.1A00000000000337.title": "ME Chest",
   "quest.1A00000000000339.quest_desc": [
     "May be used as part of HV machines. Also may be used standalone."
   ],
@@ -2762,6 +3062,10 @@
     "...to view some info."
   ],
   "quest.1A0000000000033C.title": "Computer Monitor",
+  "quest.1A0000000000033D.quest_desc": [
+    "Can transfer up to 32 channels."
+  ],
+  "quest.1A0000000000033D.title": "ME Dense Cable",
   "quest.1A0000000000033E.quest_desc": [
     "Better than previous models."
   ],
@@ -2814,6 +3118,10 @@
     "It may be used as container for MV batteries."
   ],
   "quest.1A0000000000034B.title": "Medium Battery Hull",
+  "quest.1A0000000000034F.quest_desc": [
+    "It is cheaper to use pure certus quartz crystal instead of common certus quartz (for some recipes)"
+  ],
+  "quest.1A0000000000034F.title": "Pure Certus Quartz Crystal",
   "quest.1A00000000000350.quest_desc": [
     "The #3 tier of coil block which you may use in EBF construction."
   ],
@@ -3198,10 +3506,26 @@
     "May be crafted from 6 glass blocks"
   ],
   "quest.1A000000000003D3.title": "Glass Pane (for windows)",
+  "quest.1A000000000003D5.quest_desc": [
+    "Use endereye on lathe"
+  ],
+  "quest.1A000000000003D5.title": "Endereye Rod",
+  "quest.1A000000000003D6.quest_desc": [
+    "A component that may be used as part of other machines or items."
+  ],
+  "quest.1A000000000003D6.title": "Wireless Reciver",
+  "quest.1A000000000003D7.quest_desc": [
+    "You may get it by compressing 4 certus quartz"
+  ],
+  "quest.1A000000000003D7.title": "Certus Quartz Block",
   "quest.1A000000000003D8.quest_desc": [
     "Just use a cutting saw on certus quartz block"
   ],
   "quest.1A000000000003D8.title": "Certus Quartz Plate",
+  "quest.1A000000000003D9.quest_desc": [
+    "Advanced energy cell"
+  ],
+  "quest.1A000000000003D9.title": "Dense Energy Cell",
   "quest.1A000000000003DA.quest_desc": [
     "You may get it by compressing 4 nether quartz"
   ],
@@ -3210,6 +3534,14 @@
     "Just use a cutting saw on nether quartz block"
   ],
   "quest.1A000000000003DB.title": "Nether Quartz Plate",
+  "quest.1A000000000003DC.quest_desc": [
+    "It will give you ability to open your terminal in some radius of ME wireless access point"
+  ],
+  "quest.1A000000000003DC.title": "Wireless Terminal",
+  "quest.1A000000000003E0.quest_desc": [
+    "It is like an additional bag. You may put and take out your items to keep free place in your inventory. You have to charge it sometimes to keep it in working state. Note that there are portable cells with 2k, 8k, 32k storage value."
+  ],
+  "quest.1A000000000003E0.title": "Portable Cell",
   "quest.1A000000000003E1.quest_desc": [
     "Multiblocks usually produce more than 512 eu/t. So they require at least EV dynamo hatch. Usually, but not always. You may use it for any multiblock generators, that produce less than 512 eu/t"
   ],
@@ -3254,6 +3586,14 @@
     "May be produced from UU amplifier by mass fabricator. Use OSS to pour there liquid."
   ],
   "quest.1A000000000003EC.title": "UU-Matter",
+  "quest.1A000000000003F1.quest_desc": [
+    "Use bender to make it from ingot"
+  ],
+  "quest.1A000000000003F1.title": "Electrical Steel Plate",
+  "quest.1A000000000003F2.quest_desc": [
+    "Place two of them not far between together and you will see a magic, if you stay on one and press shift while looking on other travel anchor."
+  ],
+  "quest.1A000000000003F2.title": "Travel Anchor",
   "quest.1A000000000003F4.quest_desc": [
     "Multiblock, that may pump fluids out from under bedrock space, in case if there are not void."
   ],
@@ -3478,6 +3818,10 @@
     "Use Bending machine to make a plate"
   ],
   "quest.1A00000000000435.title": "Osmiridium Plate",
+  "quest.1A00000000000437.quest_desc": [
+    "Use alloy smelter to get a quartz glass from common glass and nether or certus quartz."
+  ],
+  "quest.1A00000000000437.title": "Quartz Glass",
   "quest.1A00000000000438.quest_desc": [
     "May be crafted from Empty Shape Plate by hammer"
   ],
@@ -3610,6 +3954,14 @@
     "It is required MFE cart (or cart with other energy storage) to pull it as energy source to working."
   ],
   "quest.1A0000000000045E.title": "Electric Locomotive",
+  "quest.1A00000000000460.quest_desc": [
+    "Use a mixer to make this dust from redstone coal and silicon dusts"
+  ],
+  "quest.1A00000000000460.title": "Redstone Alloy Dust",
+  "quest.1A00000000000461.quest_desc": [
+    "Put a dust to EBF to get an ingot."
+  ],
+  "quest.1A00000000000461.title": "Redstone Alloy Ingot",
   "quest.1A00000000000462.quest_desc": [
     "It is a part of some railcraft items or machines."
   ],
@@ -3626,6 +3978,26 @@
     "It may emit wireless redstone signal that may be received by Signal Receiver Box, that was linked with this block by signal tuner."
   ],
   "quest.1A00000000000466.title": "Signal Controller Box",
+  "quest.1A00000000000467.quest_desc": [
+    "It may be used as a frame of space that you want to \"cut\" from real world to place it to another place. Minimum pillars required - 2 (that placed by opposite corners). But for most efficient (by energy) usage it is recommended to use 4 , placed by conners of space that you want to cut. Pillars height should by +1 blocks of top and bottom of space to transport. Also you require to connect all pillars together by any ME cable and you should use lever or button or other redstone signal source on use spatial OI port (with spatial storage cell inside) to make spatial cutting or to it placing."
+  ],
+  "quest.1A00000000000467.title": "Spatian Pylon",
+  "quest.1A00000000000468.quest_desc": [
+    "A simplest component that may be used as a part of spatial storage cell or as a part of better spatial components."
+  ],
+  "quest.1A00000000000468.title": "2*3 Spatial Component",
+  "quest.1A00000000000469.quest_desc": [
+    "It is a \"controller\" for spatial pylons. Place it near one of them, put spatial storage cell inside, and send redstore signal to activate. In case if you have enought energy inside you ME network, process will be finished successfully. To place the cutted spatial area back to world repeat this actions with filled storage cell."
+  ],
+  "quest.1A00000000000469.title": "Spatial IO Port",
+  "quest.1A0000000000046A.quest_desc": [
+    "Very useful AE2 machine that allow you to unload items from ME (item or fluid) Storage Cells to your ME network."
+  ],
+  "quest.1A0000000000046A.title": "ME IO Port",
+  "quest.1A0000000000046B.quest_desc": [
+    "It may keep inside it a spatial with size 2 by 2 by 2 blocks."
+  ],
+  "quest.1A0000000000046B.title": "2*3 Spatial Storage Cell",
   "quest.1A0000000000046D.quest_desc": [
     "Create a nether portal. Now you can do it."
   ],
@@ -3650,6 +4022,10 @@
     "Simple sign that allow you to write some text."
   ],
   "quest.1A00000000000478.title": "Sign",
+  "quest.1A0000000000047F.quest_desc": [
+    "A small item, that can be used to store, copy, and paste settings. Shift + Right Click on a configurable object to save the settings onto the memory card (a click on air will clear settings), then right click on any other block of the same type to paste the settings. They are also used to link the input P2P Tunnel to the correct output P2P Tunnels."
+  ],
+  "quest.1A0000000000047F.title": "Memory Card",
   "quest.1A00000000000482.quest_desc": [
     "A part of scuba set."
   ],
@@ -3866,6 +4242,14 @@
     "Prepare 9 emeralds. And one more requirement to went by this quest branch is to own a lathe HV tier."
   ],
   "quest.1A000000000004C6.title": "Nine emeralds",
+  "quest.1A000000000004C7.quest_desc": [
+    "May be created from hopper and paper. You may place it as upgrade to item conduit to setup items to filter on import and/or export."
+  ],
+  "quest.1A000000000004C7.title": "Basic Item Filter",
+  "quest.1A000000000004C8.quest_desc": [
+    "Better than basic item filter. You may set up to 10 items to filter (instead of 5 for basic item filter basic)."
+  ],
+  "quest.1A000000000004C8.title": "Advanced Item Filter",
   "quest.1A000000000004C9.quest_desc": [
     "It is a part of Cargo Loader or Unloader. Also you may use it standalone."
   ],
@@ -5634,6 +6018,10 @@
     "You may use it to get a raw rubber from a sticky resin. Or to get dyes from flowers with more efficient. But it is §cstrongly recommended§r to use exactly §acentrifuge§r to produce a raw rubber, because it will give you also a glue."
   ],
   "quest.1A000000000006AF.title": "Steam Extractor",
+  "quest.1A000000000006B0.quest_desc": [
+    "Use any one of ways you know to make a plate from an ingot."
+  ],
+  "quest.1A000000000006B0.title": "Redstone Alloy Plate",
   "quest.1A000000000006B1.quest_desc": [
     "Prepare one of blue plates, as Lapis, Lazurite, Sodalite. Use compressor to get a block and then cut it to get plates"
   ],
@@ -5662,6 +6050,38 @@
     "It may be useful for some recipes such as for some ender io ingots. There are many ways to get it (use NEI)"
   ],
   "quest.1A000000000006BA.title": "Ashes",
+  "quest.1A000000000006BB.quest_desc": [
+    "Use mixer to get this dust from soulsand, gold dust and ashes."
+  ],
+  "quest.1A000000000006BB.title": "Soularium Dust",
+  "quest.1A000000000006BC.quest_desc": [
+    "Use mixer to make a dust from steel, coal and silicon dusts."
+  ],
+  "quest.1A000000000006BC.title": "Electrical Steel Dust",
+  "quest.1A000000000006BD.quest_desc": [
+    "It is a mix of Electrical Steel, Coal and Obsidian dusts (use mixer)"
+  ],
+  "quest.1A000000000006BD.title": "Dark Steel Dust",
+  "quest.1A000000000006BE.quest_desc": [
+    "Put a Crushed Obsidian back to macerator to get a dust."
+  ],
+  "quest.1A000000000006BE.title": "Obsidian Dust",
+  "quest.1A000000000006C0.quest_desc": [
+    "A mix of redstone alloy, enderpearl and iron dusts (use mixer)"
+  ],
+  "quest.1A000000000006C0.title": "Pulsating Iron Dust",
+  "quest.1A000000000006C1.quest_desc": [
+    "A mix of endereye, chrome and Energetic Alloy Dust (use a mixer)"
+  ],
+  "quest.1A000000000006C1.title": "Vibrant Alloy Dust",
+  "quest.1A000000000006C2.quest_desc": [
+    "A mix of Conductive Iron, gold and black steel dusts (use a mixer)"
+  ],
+  "quest.1A000000000006C2.title": "Energetic Alloy Dust",
+  "quest.1A000000000006C3.quest_desc": [
+    "A mix of Redstone Alloy, Iron and Silver dusts (use mixer)"
+  ],
+  "quest.1A000000000006C3.title": "Conductive Iron Dust",
   "quest.1A000000000006C7.quest_desc": [
     "Height to search: 20 - 50 TUNGSTATE vein (Scheelite, Tungstate, Lithium). But it wil be hard to find. So you may use centrifuge MV+ tier to separate lava to get few type of resources including the small pile of tangstate dust with a tiny chance (only 2.5%% per every 100 mb)."
   ],
@@ -5786,6 +6206,10 @@
     "This is  the best choose to completely forgot about any problems with your multiblock."
   ],
   "quest.1A00000000000700.title": "Auto Maintenance Hatch",
+  "quest.1A00000000000703.quest_desc": [
+    "Good way to rename ME interface. New name of renamed ME interface will be visible in ME terminal."
+  ],
+  "quest.1A00000000000703.title": "Quartz Cutting Knife",
   "quest.1A00000000000705.quest_desc": [
     "Currently you can only make 2 planks from 1 wood log by crafting. But later you may use cutting tools or machines to increase output result."
   ],
@@ -5810,6 +6234,10 @@
     "If you found a horse it will be useful."
   ],
   "quest.1A0000000000071E.title": "Saddle",
+  "quest.1A0000000000071F.quest_desc": [
+    "Very useful chest. It can pull to himself dropped items near him and put them inside."
+  ],
+  "quest.1A0000000000071F.title": "Vacuum Chest",
   "quest.1A00000000000721.quest_desc": [
     "You have to craft any electric compressor between LV and IV tier."
   ],

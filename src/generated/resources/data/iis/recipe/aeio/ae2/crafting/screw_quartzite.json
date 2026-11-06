@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FB",
+    "B "
+  ],
+  "key": {
+    "F": "#iis:tools/file",
+    "B": "iis:bolt_quartzite"
+  },
+  "result": {
+    "id": "iis:screw_quartzite",
+    "count": 1
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    " C ",
+    "DED"
+  ],
+  "key": {
+    "A": "ae2:quartz_fiber",
+    "B": "ae2:fluix_pearl",
+    "C": "#c:rods/ender_eye",
+    "D": "iis:plate_certus_quartz",
+    "E": "#c:circuits/advanced"
+  },
+  "result": {
+    "id": "ae2:wireless_receiver",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

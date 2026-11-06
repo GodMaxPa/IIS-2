@@ -5,6 +5,421 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A00000000000030",
+      "x": 9.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000031",
+        "1A00000000000032"
+      ],
+      "icon": {
+        "id": "ae2:cell_component_1k",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:cell_component_1k",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000003000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000032",
+      "x": 9.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000065"
+      ],
+      "icon": {
+        "id": "ae2:fluix_dust",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:fluix_dust",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000003200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000033",
+      "x": 11.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000030"
+      ],
+      "icon": {
+        "id": "ae2:item_cell_housing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:item_cell_housing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000003300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000034",
+      "x": 12.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000033"
+      ],
+      "icon": {
+        "id": "ae2:item_storage_cell_1k",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:item_storage_cell_1k",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000003400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000035",
+      "x": 2.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000036",
+        "1A0000000000001F"
+      ],
+      "icon": {
+        "id": "ae2:drive",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:drive",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000000003500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000036",
+      "x": 3.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000037",
+        "1A00000000000038"
+      ],
+      "icon": {
+        "id": "ae2:terminal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:terminal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000000003600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000037",
+      "x": 3.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000031",
+        "1A00000000000060",
+        "1A00000000000061",
+        "1A0000000000004D"
+      ],
+      "icon": {
+        "id": "ae2:formation_core",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:annihilation_core",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003700"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:formation_core",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003701"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000000003700"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000003B",
+      "x": 5.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000003C",
+        "1A00000000000036"
+      ],
+      "icon": {
+        "id": "ae2:pattern_encoding_terminal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:pattern_encoding_terminal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000000003B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000003C",
+      "x": 3.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000003F",
+        "1A00000000000040"
+      ],
+      "icon": {
+        "id": "ae2:blank_pattern",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:blank_pattern",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000003C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000003D",
+      "x": 2.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000003E",
+        "1A00000000000036"
+      ],
+      "icon": {
+        "id": "ae2:pattern_access_terminal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:pattern_access_terminal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000000003D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000003E",
+      "x": 2.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000063"
+      ],
+      "icon": {
+        "id": "ae2:cable_interface",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:cable_interface",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000003E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000041",
+      "x": 3.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000037",
+        "1A00000000000042"
+      ],
+      "icon": {
+        "id": "ae2:crafting_unit",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:crafting_unit",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000000004100"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000046",
       "x": 9.5,
       "y": 5.0,
@@ -70,6 +485,444 @@
           "id": "1C00000000004700"
         }
       ]
+    },
+    {
+      "id": "1A00000000000050",
+      "x": 9.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000030"
+      ],
+      "icon": {
+        "id": "ae2:cell_component_4k",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:cell_component_4k",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000005000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000051",
+      "x": 11.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000050"
+      ],
+      "icon": {
+        "id": "ae2:cell_component_16k",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:cell_component_16k",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000000005100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000052",
+      "x": 12.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000051"
+      ],
+      "icon": {
+        "id": "ae2:cell_component_64k",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:cell_component_64k",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000005200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000063",
+      "x": 2.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000037"
+      ],
+      "icon": {
+        "id": "ae2:interface",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:interface",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000006300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000000006300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000068",
+      "x": 11.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000005C",
+        "1A00000000000066"
+      ],
+      "icon": {
+        "id": "ae2:level_emitter",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:level_emitter",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000006800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000006800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000069",
+      "x": 5.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000005C",
+        "1A0000000000006A"
+      ],
+      "icon": {
+        "id": "ae2:basic_card",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:basic_card",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000006900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000006900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000006B",
+      "x": 6.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000069"
+      ],
+      "icon": {
+        "id": "ae2:capacity_card",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:capacity_card",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000006B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000006B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000006C",
+      "x": 8.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000031",
+        "1A0000000000003A",
+        "1A00000000000021"
+      ],
+      "icon": {
+        "id": "ae2:advanced_card",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:advanced_card",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000006C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000006C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000006D",
+      "x": 8.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000006C"
+      ],
+      "icon": {
+        "id": "ae2:speed_card",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:speed_card",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000006D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000006D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000006E",
+      "x": 6.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000006D"
+      ],
+      "icon": {
+        "id": "ae2:fuzzy_card",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:fuzzy_card",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000006E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000006E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000070",
+      "x": 5.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000036"
+      ],
+      "icon": {
+        "id": "ae2:export_bus",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:export_bus",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000007000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000007000"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000047F",
+      "x": 11.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000005C"
+      ],
+      "icon": {
+        "id": "ae2:memory_card",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:memory_card",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000047F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000047F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000703",
+      "x": 0.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000040",
+        "1A000000000001BA"
+      ],
+      "icon": {
+        "id": "ae2:certus_quartz_cutting_knife",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:certus_quartz_cutting_knife",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000070300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000070300"
+        }
+      ]
     }
-  ]
+  ],
+  "icon": {
+    "id": "ae2:terminal",
+    "count": 1
+  }
 }

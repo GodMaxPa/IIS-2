@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "BCB"
+  ],
+  "key": {
+    "A": "ae2:annihilation_core",
+    "B": "#c:plates/aluminium",
+    "C": "minecraft:sticky_piston"
+  },
+  "result": {
+    "id": "ae2:import_bus",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

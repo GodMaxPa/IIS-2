@@ -5,6 +5,74 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A00000000000043",
+      "x": 2.0,
+      "y": 5.5,
+      "dependencies": [
+        "1A00000000000045",
+        "1A00000000000032",
+        "1A00000000000061"
+      ],
+      "icon": {
+        "id": "ae2:energy_cell",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:energy_cell",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000004300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000045",
+      "x": 0.5,
+      "y": 5.5,
+      "dependencies": [
+        "1A00000000000065"
+      ],
+      "icon": {
+        "id": "ae2:fluix_block",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:fluix_block",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000004500"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000049",
       "x": 9.0,
       "y": 0.5,
@@ -70,6 +138,505 @@
           "id": "1C00000000004B00"
         }
       ]
+    },
+    {
+      "id": "1A0000000000004C",
+      "x": 6.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000004B",
+        "1A0000000000004D"
+      ],
+      "icon": {
+        "id": "ae2:fluix_pearl",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:fluix_pearl",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000004C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000004E",
+      "x": 6.0,
+      "y": 4.0,
+      "dependencies": [
+        "1A0000000000004C",
+        "1A0000000000001F"
+      ],
+      "icon": {
+        "id": "ae2:quantum_link",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:quantum_link",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000000004E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000004F",
+      "x": 6.0,
+      "y": 5.5,
+      "dependencies": [
+        "1A00000000000043",
+        "1A00000000000030",
+        "1A0000000000001F"
+      ],
+      "icon": {
+        "id": "ae2:quantum_ring",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:quantum_ring",
+            "count": 1
+          },
+          "count": 16,
+          "id": "1B00000000004F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000004F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000053",
+      "x": 10.5,
+      "y": 4.0,
+      "dependencies": [
+        "1A00000000000052",
+        "1A00000000000054"
+      ],
+      "icon": {
+        "id": "ae2:singularity",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:singularity",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000005300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000055",
+      "x": 10.5,
+      "y": 5.5,
+      "dependencies": [
+        "1A00000000000053"
+      ],
+      "icon": {
+        "id": "ae2:quantum_entangled_singularity",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:quantum_entangled_singularity",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B00000000005500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000005500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003D5",
+      "x": 6.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000046",
+        "1A0000000000012B"
+      ],
+      "icon": {
+        "id": "iis:rod_ender_eye",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_ender_eye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003D500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000003D500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003D6",
+      "x": 4.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000EC",
+        "1A00000000000334",
+        "1A0000000000004C",
+        "1A000000000003D8",
+        "1A000000000003D5"
+      ],
+      "icon": {
+        "id": "ae2:wireless_receiver",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:wireless_receiver",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003D600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C0000000003D600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003D9",
+      "x": 2.0,
+      "y": 4.0,
+      "dependencies": [
+        "1A000000000000EC",
+        "1A00000000000043",
+        "1A0000000000003A",
+        "1A0000000000034A"
+      ],
+      "icon": {
+        "id": "ae2:dense_energy_cell",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:dense_energy_cell",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003D900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C0000000003D900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003E0",
+      "x": 4.0,
+      "y": 4.0,
+      "size": 2.0,
+      "dependencies": [
+        "1A00000000000337",
+        "1A00000000000034",
+        "1A00000000000043"
+      ],
+      "icon": {
+        "id": "ae2:portable_item_cell_1k",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:portable_item_cell_1k",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003E000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C0000000003E000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000467",
+      "x": 0.5,
+      "y": 4.0,
+      "dependencies": [
+        "1A00000000000032",
+        "1A00000000000333",
+        "1A0000000000001F"
+      ],
+      "icon": {
+        "id": "ae2:spatial_pylon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:spatial_pylon",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000046700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000468",
+      "x": 7.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000004C",
+        "1A0000000000003F",
+        "1A0000000000003A"
+      ],
+      "icon": {
+        "id": "ae2:spatial_cell_component_2",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:spatial_cell_component_2",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000046800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000469",
+      "x": 10.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000046A",
+        "1A0000000000003A"
+      ],
+      "icon": {
+        "id": "ae2:spatial_io_port",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:spatial_io_port",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000000046900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000046A",
+      "x": 10.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000001A2",
+        "1A00000000000035",
+        "1A00000000000031"
+      ],
+      "icon": {
+        "id": "ae2:io_port",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:io_port",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000046A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000046B",
+      "x": 9.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000468",
+        "1A00000000000033"
+      ],
+      "icon": {
+        "id": "ae2:spatial_storage_cell_2",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:spatial_storage_cell_2",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000046B00"
+        }
+      ]
     }
-  ]
+  ],
+  "quest_links": [
+    {
+      "id": "1E000000015003DC",
+      "linked_quest": "1A000000000003DC",
+      "x": 1.0,
+      "y": 1.0,
+      "size": 2.0
+    }
+  ],
+  "icon": {
+    "id": "ae2:wireless_terminal",
+    "count": 1
+  }
 }

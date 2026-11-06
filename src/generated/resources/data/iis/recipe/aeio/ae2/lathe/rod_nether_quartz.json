@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:crystal_pure_nether",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_nether_quartz",
+      "count": 1
+    }
+  ],
+  "duration": 98,
+  "eut": 16
+}

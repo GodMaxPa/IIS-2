@@ -1,0 +1,21 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:soul_sand",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:ingots/gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_soularium",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 24
+}

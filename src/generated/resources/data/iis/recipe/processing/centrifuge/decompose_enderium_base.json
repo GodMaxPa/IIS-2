@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/enderium_base",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_tin",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_silver",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_platinum",
+      "count": 1
+    }
+  ],
+  "duration": 2144,
+  "eut": 15
+}

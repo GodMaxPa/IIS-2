@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/dark_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_dark_steel",
+      "count": 1
+    }
+  ],
+  "duration": 21,
+  "eut": 24
+}

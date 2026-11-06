@@ -1,0 +1,26 @@
+{
+  "type": "iis:forming_press",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/certus_quartz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:printed_calculation_processor",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 16,
+  "keep": [
+    "ae2:calculation_processor_press"
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

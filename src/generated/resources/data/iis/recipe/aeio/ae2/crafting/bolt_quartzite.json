@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "S ",
+    " R"
+  ],
+  "key": {
+    "S": "#iis:tools/saw",
+    "R": "iis:rod_quartzite"
+  },
+  "result": {
+    "id": "iis:bolt_quartzite",
+    "count": 2
+  }
+}

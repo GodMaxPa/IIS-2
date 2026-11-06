@@ -1,0 +1,24 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "ae2:fluix_smart_cable",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:fluix_smart_dense_cable",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 96,
+  "circuit": 24,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

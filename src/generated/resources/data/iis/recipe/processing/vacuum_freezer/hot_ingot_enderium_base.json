@@ -1,0 +1,17 @@
+{
+  "type": "iis:vacuum_freezer",
+  "inputs": [
+    {
+      "ingredient": "#iis:hot_ingots/enderium_base",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_enderium_base",
+      "count": 1
+    }
+  ],
+  "duration": 402,
+  "eut": 120
+}

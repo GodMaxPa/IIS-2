@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "EFE"
+  ],
+  "key": {
+    "A": "#c:plates/electrical_steel",
+    "B": "#iis:wires/1x/copper",
+    "C": "minecraft:glass_pane",
+    "D": "minecraft:comparator",
+    "E": "#c:plates/silicon",
+    "F": {
+      "neoforge:ingredient_type": "enderio:conduit",
+      "conduit_type": "enderio:redstone"
+    }
+  },
+  "result": {
+    "id": "enderio:conduit_probe",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

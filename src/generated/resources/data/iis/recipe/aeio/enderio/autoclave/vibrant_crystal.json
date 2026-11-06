@@ -1,0 +1,30 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_emerald",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "enderio:vibrant_crystal",
+      "count": 1,
+      "chance": 8500
+    }
+  ],
+  "duration": 1000,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_vibrantalloy",
+      "amount": 144
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

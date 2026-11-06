@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/energetic_alloy"
+  },
+  "result": {
+    "id": "iis:tiny_dust_energetic_alloy",
+    "count": 18
+  }
+}

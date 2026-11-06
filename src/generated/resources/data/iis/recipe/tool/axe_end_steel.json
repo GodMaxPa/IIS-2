@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/axe/end_steel",
+    "#c:rods/steel"
+  ],
+  "result": {
+    "id": "iis:axe_end_steel"
+  }
+}

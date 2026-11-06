@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    " B ",
+    "CDC"
+  ],
+  "key": {
+    "A": "enderio:experience_rod",
+    "B": "iis:field_generator_mv",
+    "C": "#c:plates/soularium",
+    "D": "enderio:void_chassis"
+  },
+  "result": {
+    "id": "enderio:xp_obelisk",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

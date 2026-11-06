@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDE",
+    "FBF"
+  ],
+  "key": {
+    "A": "iis:robot_arm_mv",
+    "B": "#c:circuits/good",
+    "C": "iis:cover_crafting",
+    "D": "enderio:void_chassis",
+    "E": "iis:conveyor_module_mv",
+    "F": "#iis:wires/1x/copper"
+  },
+  "result": {
+    "id": "enderio:crafter",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

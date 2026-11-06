@@ -608,6 +608,10 @@
       "dependencies": [
         "1A0000000000009B"
       ],
+      "icon": {
+        "id": "enderio:iron_gear",
+        "count": 1
+      },
       "tasks": [
         {
           "type": "item",

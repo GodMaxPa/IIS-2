@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "BCB",
+    "DED"
+  ],
+  "key": {
+    "A": "enderio:enticing_crystal",
+    "B": "#c:plates/energetic_alloy",
+    "C": "iis:field_generator_mv",
+    "D": "#c:plates/soularium",
+    "E": "enderio:void_chassis"
+  },
+  "result": {
+    "id": "enderio:attractor_obelisk",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

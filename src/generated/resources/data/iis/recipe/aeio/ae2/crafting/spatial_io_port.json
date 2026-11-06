@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": "#c:plates/titanium",
+    "B": "#c:plates/glass",
+    "C": "ae2:fluix_glass_cable",
+    "D": "ae2:io_port",
+    "E": "ae2:engineering_processor"
+  },
+  "result": {
+    "id": "ae2:spatial_io_port",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

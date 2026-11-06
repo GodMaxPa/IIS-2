@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ABA"
+  ],
+  "key": {
+    "A": "#c:plates/ender_eye",
+    "B": "ae2:spatial_cell_component_16",
+    "C": "ae2:engineering_processor"
+  },
+  "result": {
+    "id": "ae2:spatial_cell_component_128",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

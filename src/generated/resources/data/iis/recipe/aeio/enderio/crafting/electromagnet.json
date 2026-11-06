@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABB",
+    "  C",
+    "ABB"
+  ],
+  "key": {
+    "A": "#c:plates/neodymium_magnetic",
+    "B": "#c:plates/conductive_iron",
+    "C": "enderio:vibrant_crystal"
+  },
+  "result": {
+    "id": "enderio:electromagnet",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

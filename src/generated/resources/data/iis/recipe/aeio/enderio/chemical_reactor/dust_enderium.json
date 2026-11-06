@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_ender_pearl",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_enderium",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_enderiumbase",
+      "amount": 144
+    }
+  ]
+}

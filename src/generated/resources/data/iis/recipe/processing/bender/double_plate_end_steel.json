@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/end_steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_end_steel",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 96
+}

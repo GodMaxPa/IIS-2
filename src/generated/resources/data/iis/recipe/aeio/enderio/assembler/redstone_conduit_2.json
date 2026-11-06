@@ -1,0 +1,33 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "enderio:conduit",
+        "conduit_type": "enderio:redstone"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": "enderio:conduit_binder",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "enderio:conduit",
+      "count": 1,
+      "components": {
+        "enderio:conduit": "enderio:redstone"
+      }
+    }
+  ],
+  "duration": 100,
+  "eut": 120,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

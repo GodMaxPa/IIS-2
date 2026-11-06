@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDE",
+    "ABA"
+  ],
+  "key": {
+    "A": "#c:plates/titanium",
+    "B": "ae2:logic_processor",
+    "C": "ae2:engineering_processor",
+    "D": "ae2:energy_cell",
+    "E": "ae2:fluix_glass_cable"
+  },
+  "result": {
+    "id": "ae2:quantum_ring",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

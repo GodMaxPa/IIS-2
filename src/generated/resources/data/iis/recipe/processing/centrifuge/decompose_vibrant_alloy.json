@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/vibrant_alloy",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_energetic_alloy",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_ender_eye",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_chrome",
+      "count": 1
+    }
+  ],
+  "duration": 756,
+  "eut": 15
+}

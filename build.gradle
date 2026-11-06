@@ -162,6 +162,11 @@ dependencies {
         localRuntime "maven.modrinth:journeymap:26.1.2-6.0.10+neoforge"
     }
 
+    // D125: AE2 and Ender IO: not a dependency of the jar, IIS 2 still loads without them; in the dev runs they are there, so the tests see them
+    localRuntime "maven.modrinth:ae2:${ae2_version}"
+    localRuntime "maven.modrinth:guideme:${guideme_version}"
+    localRuntime "maven.modrinth:enderio:${enderio_version}"
+
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"

@@ -11,7 +11,7 @@ from PIL import Image
 
 # GT5 textures: the cloud checkout, or locally a checkout of IdealIndustrial/GT5Unofficial@00021e3 given by IIS_GT5_TEXTURES
 GT = os.environ.get('IIS_GT5_TEXTURES', '/home/claude/ref/gt5/src/main/resources/assets/gregtech/textures')
-FRAMES = ['Invar', 'Steel', 'Iron', 'Bronze', 'Aluminium', 'BlueSteel', 'Titanium', 'TungstenSteel', 'StainlessSteel', 'Polytetrafluoroethylene', 'BlackSteel', 'HSSG', 'HSSE', 'Osmiridium', 'Tritanium', 'Neutronium']  # blue steel: D90; titanium: D97; D98; D104; plascrete D105
+FRAMES = ['DarkSteel', 'Invar', 'Steel', 'Iron', 'Bronze', 'Aluminium', 'BlueSteel', 'Titanium', 'TungstenSteel', 'StainlessSteel', 'Polytetrafluoroethylene', 'BlackSteel', 'HSSG', 'HSSE', 'Osmiridium', 'Tritanium', 'Neutronium']  # blue steel: D90; titanium: D97; D98; D104; plascrete D105
 HATCHES = [
     # id, overlay, GT lang key, EN
     ('hatch_energy_lv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.01.name', 'LV Energy Hatch'),

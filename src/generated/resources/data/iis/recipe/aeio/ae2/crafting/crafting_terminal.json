@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABC",
+    "DED",
+    "FGF"
+  ],
+  "key": {
+    "A": "#iis:tools/screwdriver",
+    "B": "ae2:terminal",
+    "C": "#iis:tools/soft_hammer",
+    "D": "#iis:screws/certus_quartz",
+    "E": "minecraft:crafting_table",
+    "F": "iis:plate_nether_quartz",
+    "G": "ae2:engineering_processor"
+  },
+  "result": {
+    "id": "ae2:crafting_terminal",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

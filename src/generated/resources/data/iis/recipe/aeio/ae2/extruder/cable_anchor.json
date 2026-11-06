@@ -1,0 +1,26 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:cable_anchor",
+      "count": 1
+    }
+  ],
+  "duration": 60,
+  "eut": 24,
+  "keep": [
+    "iis:shape_extruder_rod"
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

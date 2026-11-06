@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "ABA"
+  ],
+  "key": {
+    "A": "#c:plates/tungsten_steel",
+    "B": "enderio:pulsating_crystal",
+    "C": "iis:plate_obsidian",
+    "D": "minecraft:chest"
+  },
+  "result": {
+    "id": "enderio:vacuum_chest",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

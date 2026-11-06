@@ -1,0 +1,31 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/ender_pearl",
+      "count": 3
+    },
+    {
+      "ingredient": "ae2:spatial_cell_component_2",
+      "count": 4
+    },
+    {
+      "ingredient": "ae2:engineering_processor",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:spatial_cell_component_16",
+      "count": 1
+    }
+  ],
+  "duration": 180,
+  "eut": 1920,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

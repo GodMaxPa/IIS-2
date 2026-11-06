@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "BCB",
+    " A "
+  ],
+  "key": {
+    "A": "#c:plates/red_alloy",
+    "B": "ae2:fluix_glass_cable",
+    "C": "minecraft:lever"
+  },
+  "result": {
+    "id": "ae2:toggle_bus",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

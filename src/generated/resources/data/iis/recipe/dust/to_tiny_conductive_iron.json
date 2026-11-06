@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/conductive_iron"
+  },
+  "result": {
+    "id": "iis:tiny_dust_conductive_iron",
+    "count": 18
+  }
+}

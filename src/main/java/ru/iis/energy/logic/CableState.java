@@ -15,6 +15,8 @@ public final class CableState {
     private long last20Start = Long.MIN_VALUE;
     /** Провод перегрелся — его нужно сжечь. */
     public boolean burnt;
+    /** GT5 GT_MetaPipeEntity_Cable#mRestRF: остаток пакета, который приёмник FE не взял (D125). Не сохраняется, как и в GT. */
+    public long feRest;
 
     /** Тик последнего пакета через провод. */
     public long lastTick() {

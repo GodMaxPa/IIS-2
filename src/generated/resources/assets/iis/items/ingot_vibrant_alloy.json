@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/ingot_vibrant_alloy",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 10337333
+      }
+    ]
+  }
+}

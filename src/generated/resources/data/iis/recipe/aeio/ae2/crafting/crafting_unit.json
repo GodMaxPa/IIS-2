@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": "#c:plates/stainless_steel",
+    "B": "ae2:logic_processor",
+    "C": "#c:circuits/advanced",
+    "D": "ae2:engineering_processor",
+    "E": "ae2:calculation_processor"
+  },
+  "result": {
+    "id": "ae2:crafting_unit",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/pulsating_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_pulsating_iron",
+      "count": 1
+    }
+  ],
+  "duration": 37,
+  "eut": 24
+}

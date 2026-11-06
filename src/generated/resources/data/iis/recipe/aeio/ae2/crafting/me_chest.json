@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "ABA"
+  ],
+  "key": {
+    "A": "#c:plates/stainless_steel",
+    "B": "#c:circuits/good",
+    "C": "ae2:fluix_glass_cable",
+    "D": "minecraft:chest"
+  },
+  "result": {
+    "id": "ae2:me_chest",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

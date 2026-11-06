@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "A B",
+    "CB ",
+    "DDE"
+  ],
+  "key": {
+    "A": "#iis:tools/file",
+    "B": "minecraft:stick",
+    "C": "#c:plates/iron",
+    "D": "#c:gems/certus_quartz",
+    "E": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "ae2:certus_quartz_cutting_knife",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

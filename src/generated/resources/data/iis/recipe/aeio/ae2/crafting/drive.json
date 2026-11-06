@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": "#c:plates/titanium",
+    "B": "ae2:engineering_processor",
+    "C": "ae2:fluix_glass_cable",
+    "D": "ae2:me_chest",
+    "E": "#c:circuits/advanced"
+  },
+  "result": {
+    "id": "ae2:drive",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

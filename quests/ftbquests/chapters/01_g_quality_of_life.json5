@@ -309,6 +309,82 @@
       ]
     },
     {
+      "id": "1A000000000003DC",
+      "x": 8.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000036",
+        "1A000000000003D9",
+        "1A0000000000003A",
+        "1A000000000003DB",
+        "1A000000000003D6",
+        "1A00000000000333",
+        "1A0000000000005C",
+        "1A00000000000337",
+        "1A00000000000051"
+      ],
+      "icon": {
+        "id": "ae2:wireless_terminal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:wireless_terminal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003DC00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C0000000003DC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003F2",
+      "x": 8.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000003F1",
+        "1A0000000000024B",
+        "1A00000000000242"
+      ],
+      "icon": {
+        "id": "enderio:travel_anchor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "enderio:travel_anchor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003F200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C0000000003F200"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000475",
       "x": 3.5,
       "y": 2.0,

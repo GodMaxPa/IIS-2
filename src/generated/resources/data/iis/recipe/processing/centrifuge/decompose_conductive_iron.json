@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/conductive_iron",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_redstone_alloy",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_silver",
+      "count": 1
+    }
+  ],
+  "duration": 816,
+  "eut": 15
+}

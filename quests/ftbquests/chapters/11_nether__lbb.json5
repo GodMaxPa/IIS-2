@@ -326,6 +326,41 @@
       ]
     },
     {
+      "id": "1A00000000000437",
+      "x": 6.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F1",
+        "1A00000000000040"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "ae2:quartz_glass",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:quartz_glass",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000043700"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000438",
       "x": 3.5,
       "y": 0.5,

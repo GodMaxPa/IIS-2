@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "BCB",
+    "DDD"
+  ],
+  "key": {
+    "A": "ae2:quartz_glass",
+    "B": "iis:plate_glowstone",
+    "C": "#iis:item_certus_quartz",
+    "D": "#c:plates/aluminium"
+  },
+  "result": {
+    "id": "ae2:blank_pattern",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

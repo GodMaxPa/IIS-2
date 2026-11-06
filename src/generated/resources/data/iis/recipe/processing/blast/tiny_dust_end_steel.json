@@ -1,0 +1,18 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/end_steel",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_end_steel",
+      "count": 1
+    }
+  ],
+  "duration": 7200,
+  "eut": 120,
+  "temp": 3600
+}

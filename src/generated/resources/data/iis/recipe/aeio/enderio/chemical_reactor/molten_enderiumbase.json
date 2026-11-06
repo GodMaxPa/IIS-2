@@ -1,0 +1,28 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_silver",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:dust_platinum",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 100,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_tin",
+      "amount": 288
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_enderiumbase",
+      "amount": 576
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/dark_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/endstone",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/tungsten",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_end_steel",
+      "count": 3
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "circuit": 3
+}

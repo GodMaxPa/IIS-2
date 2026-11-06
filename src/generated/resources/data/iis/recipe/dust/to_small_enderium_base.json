@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/enderium_base"
+  ],
+  "result": {
+    "id": "iis:small_dust_enderium_base",
+    "count": 4
+  }
+}

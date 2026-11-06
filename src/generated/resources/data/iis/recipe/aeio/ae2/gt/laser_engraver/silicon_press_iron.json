@@ -1,0 +1,26 @@
+{
+  "type": "iis:laser_engraver",
+  "inputs": [
+    {
+      "ingredient": "minecraft:iron_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:silicon_press",
+      "count": 1
+    }
+  ],
+  "duration": 2000,
+  "eut": 1920,
+  "keep": [
+    "#iis:crafting_lens/white"
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

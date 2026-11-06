@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/dark_steel",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_electrical_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_coal",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_obsidian",
+      "count": 1
+    }
+  ],
+  "duration": 252,
+  "eut": 15
+}

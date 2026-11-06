@@ -91,7 +91,7 @@ public class CableBlock extends Block implements EntityBlock, EnergyConnectable 
         BlockState s = defaultBlockState();
         for (Direction d : Direction.values()) {
             BlockState n = ctx.getLevel().getBlockState(ctx.getClickedPos().relative(d));
-            s = s.setValue(PROPS.get(d), canConnect(n, d.getOpposite()));
+            s = s.setValue(PROPS.get(d), canConnect(n, d.getOpposite()) || ru.iis.energy.FeBridge.connects(ctx.getLevel(), ctx.getClickedPos().relative(d), n, d.getOpposite()));
         }
         return s;
     }
@@ -99,7 +99,19 @@ public class CableBlock extends Block implements EntityBlock, EnergyConnectable 
     @Override
     protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos, Direction dir,
                                      BlockPos neighbourPos, BlockState neighbour, RandomSource random) {
-        return state.setValue(PROPS.get(dir), canConnect(neighbour, dir.getOpposite()));
+        return state.setValue(PROPS.get(dir), canConnect(neighbour, dir.getOpposite()) || ru.iis.energy.FeBridge.connects(level, neighbourPos, neighbour, dir.getOpposite()));
+    }
+
+    /** D125: деталь AE2 на кабеле появляется без смены блока, поэтому связь с приёмником FE проверяем и при обновлении соседа. */
+    @Override
+    protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighbourBlock, net.minecraft.world.level.redstone.@Nullable Orientation orientation, boolean movedByPiston) {
+        BlockState s = state;
+        for (Direction d : Direction.values()) {
+            BlockPos np = pos.relative(d);
+            BlockState n = level.getBlockState(np);
+            s = s.setValue(PROPS.get(d), canConnect(n, d.getOpposite()) || ru.iis.energy.FeBridge.connects(level, np, n, d.getOpposite()));
+        }
+        if (s != state) level.setBlock(pos, s, Block.UPDATE_CLIENTS);
     }
 
     /** GT5 onEntityCollidedWithBlock + GT_Utility#applyElectricityDamage: только голые провода. */

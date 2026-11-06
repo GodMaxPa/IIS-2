@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "ACA",
+    "ADA"
+  ],
+  "key": {
+    "A": "#c:plates/dark_steel",
+    "B": "#iis:tools/hammer",
+    "C": "#c:frames/dark_steel",
+    "D": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "enderio:void_chassis",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

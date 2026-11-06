@@ -157,3 +157,14 @@
 |---|---|
 | Сеть работает, структуры собраны | строки `STAND_CHECK` при `runStand` |
 | Вид, подписи | снимки клиентом `-Pstandshots` |
+
+## AE2 и Ender IO (D125)
+
+| Что | Доказательство |
+|---|---|
+| Рецепты ИИС 1 загружаются, входы не пустые | GameTest `aeio_recipes_loaded` |
+| Рецепты модов выключены, предметы скрыты, сплавы в тегах | GameTest `aeio_mod_recipes_off`, `aeio_hidden_tag`, `aeio_alloy_tags` |
+| Провод EU питает AE2 и Ender IO | GameTest `aeio_cable_feeds_ae2`, `aeio_cable_feeds_enderio`, unit `FeTransferTest` |
+| Цепочка достижима в выживании | `tools/check_reach.py ae2:terminal ...` |
+| Контроллер МЭ загорается от провода EU | GameTest `aeio_cable_feeds_ae2`, снимок зала стенда |
+| Сборка сети, терминалы и автокрафт руками | не проверено |

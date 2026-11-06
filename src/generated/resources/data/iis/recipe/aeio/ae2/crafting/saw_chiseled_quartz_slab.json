@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SB"
+  ],
+  "key": {
+    "S": "#iis:tools/saw",
+    "B": "ae2:chiseled_quartz_block"
+  },
+  "result": {
+    "id": "ae2:chiseled_quartz_slab",
+    "count": 2
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

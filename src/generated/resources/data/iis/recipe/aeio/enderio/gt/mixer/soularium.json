@@ -1,0 +1,26 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:soul_sand",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/gold",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/ash",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_soularium",
+      "count": 3
+    }
+  ],
+  "duration": 300,
+  "eut": 8,
+  "circuit": 3
+}

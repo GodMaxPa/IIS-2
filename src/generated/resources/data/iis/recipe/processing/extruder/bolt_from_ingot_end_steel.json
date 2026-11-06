@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/end_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_end_steel",
+      "count": 8
+    }
+  ],
+  "duration": 200,
+  "eut": 512,
+  "keep": [
+    "iis:shape_extruder_bolt"
+  ]
+}

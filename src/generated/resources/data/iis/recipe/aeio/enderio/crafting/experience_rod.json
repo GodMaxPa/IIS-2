@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " AB",
+    " C ",
+    "B  "
+  ],
+  "key": {
+    "A": "#iis:tools/file",
+    "B": "#c:plates/soularium",
+    "C": "#c:plates/energetic_alloy"
+  },
+  "result": {
+    "id": "enderio:experience_rod",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

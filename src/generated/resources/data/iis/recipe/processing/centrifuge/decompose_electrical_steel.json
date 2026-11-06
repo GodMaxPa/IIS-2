@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/electrical_steel",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_coal",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 1
+    }
+  ],
+  "duration": 372,
+  "eut": 15
+}

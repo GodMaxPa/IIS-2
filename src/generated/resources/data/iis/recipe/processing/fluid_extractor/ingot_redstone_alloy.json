@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/redstone_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 36,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_redstonealloy",
+      "amount": 144
+    }
+  ]
+}

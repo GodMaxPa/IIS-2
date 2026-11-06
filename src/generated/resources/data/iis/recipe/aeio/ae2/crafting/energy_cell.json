@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": "#c:rods/certus_quartz",
+    "B": "ae2:fluix_dust",
+    "C": "#c:circuits/good",
+    "D": "ae2:fluix_block",
+    "E": "iis:battery_lithium_lv"
+  },
+  "result": {
+    "id": "ae2:energy_cell",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:crystal_pure_certus",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_certus_quartz",
+      "count": 1
+    }
+  ],
+  "duration": 98,
+  "eut": 16
+}

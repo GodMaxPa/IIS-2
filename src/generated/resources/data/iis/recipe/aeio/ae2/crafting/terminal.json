@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABC",
+    "DEF",
+    "AGH"
+  ],
+  "key": {
+    "A": "#c:rods/nether_quartz",
+    "B": "#iis:screws/quartzite",
+    "C": "ae2:formation_core",
+    "D": "ae2:semi_dark_monitor",
+    "E": "#c:circuits/good",
+    "F": "iis:plate_certus_quartz",
+    "G": "#iis:tools/screwdriver",
+    "H": "ae2:annihilation_core"
+  },
+  "result": {
+    "id": "ae2:terminal",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

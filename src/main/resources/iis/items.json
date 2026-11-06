@@ -2170,6 +2170,36 @@
     "material": "cobaltite"
   },
   {
+    "id": "dust_conductive_iron",
+    "prefix": "dust",
+    "material": "conductive_iron"
+  },
+  {
+    "id": "small_dust_conductive_iron",
+    "prefix": "small_dust",
+    "material": "conductive_iron"
+  },
+  {
+    "id": "tiny_dust_conductive_iron",
+    "prefix": "tiny_dust",
+    "material": "conductive_iron"
+  },
+  {
+    "id": "ingot_conductive_iron",
+    "prefix": "ingot",
+    "material": "conductive_iron"
+  },
+  {
+    "id": "nugget_conductive_iron",
+    "prefix": "nugget",
+    "material": "conductive_iron"
+  },
+  {
+    "id": "plate_conductive_iron",
+    "prefix": "plate",
+    "material": "conductive_iron"
+  },
+  {
     "id": "crushed_cooperite",
     "prefix": "crushed",
     "material": "cooperite"
@@ -2350,6 +2380,71 @@
     "material": "dark_ash"
   },
   {
+    "id": "dust_dark_steel",
+    "prefix": "dust",
+    "material": "dark_steel"
+  },
+  {
+    "id": "small_dust_dark_steel",
+    "prefix": "small_dust",
+    "material": "dark_steel"
+  },
+  {
+    "id": "tiny_dust_dark_steel",
+    "prefix": "tiny_dust",
+    "material": "dark_steel"
+  },
+  {
+    "id": "ingot_dark_steel",
+    "prefix": "ingot",
+    "material": "dark_steel"
+  },
+  {
+    "id": "hot_ingot_dark_steel",
+    "prefix": "hot_ingot",
+    "material": "dark_steel"
+  },
+  {
+    "id": "nugget_dark_steel",
+    "prefix": "nugget",
+    "material": "dark_steel"
+  },
+  {
+    "id": "plate_dark_steel",
+    "prefix": "plate",
+    "material": "dark_steel"
+  },
+  {
+    "id": "double_plate_dark_steel",
+    "prefix": "double_plate",
+    "material": "dark_steel"
+  },
+  {
+    "id": "rod_dark_steel",
+    "prefix": "rod",
+    "material": "dark_steel"
+  },
+  {
+    "id": "bolt_dark_steel",
+    "prefix": "bolt",
+    "material": "dark_steel"
+  },
+  {
+    "id": "screw_dark_steel",
+    "prefix": "screw",
+    "material": "dark_steel"
+  },
+  {
+    "id": "long_rod_dark_steel",
+    "prefix": "long_rod",
+    "material": "dark_steel"
+  },
+  {
+    "id": "turbine_blade_dark_steel",
+    "prefix": "turbine_blade",
+    "material": "dark_steel"
+  },
+  {
     "id": "crushed_diamond",
     "prefix": "crushed",
     "material": "diamond"
@@ -2503,6 +2598,36 @@
     "id": "turbine_blade_duranium",
     "prefix": "turbine_blade",
     "material": "duranium"
+  },
+  {
+    "id": "dust_electrical_steel",
+    "prefix": "dust",
+    "material": "electrical_steel"
+  },
+  {
+    "id": "small_dust_electrical_steel",
+    "prefix": "small_dust",
+    "material": "electrical_steel"
+  },
+  {
+    "id": "tiny_dust_electrical_steel",
+    "prefix": "tiny_dust",
+    "material": "electrical_steel"
+  },
+  {
+    "id": "ingot_electrical_steel",
+    "prefix": "ingot",
+    "material": "electrical_steel"
+  },
+  {
+    "id": "nugget_electrical_steel",
+    "prefix": "nugget",
+    "material": "electrical_steel"
+  },
+  {
+    "id": "plate_electrical_steel",
+    "prefix": "plate",
+    "material": "electrical_steel"
   },
   {
     "id": "dust_electrum",
@@ -2660,6 +2785,71 @@
     "material": "emerald"
   },
   {
+    "id": "dust_end_steel",
+    "prefix": "dust",
+    "material": "end_steel"
+  },
+  {
+    "id": "small_dust_end_steel",
+    "prefix": "small_dust",
+    "material": "end_steel"
+  },
+  {
+    "id": "tiny_dust_end_steel",
+    "prefix": "tiny_dust",
+    "material": "end_steel"
+  },
+  {
+    "id": "ingot_end_steel",
+    "prefix": "ingot",
+    "material": "end_steel"
+  },
+  {
+    "id": "hot_ingot_end_steel",
+    "prefix": "hot_ingot",
+    "material": "end_steel"
+  },
+  {
+    "id": "nugget_end_steel",
+    "prefix": "nugget",
+    "material": "end_steel"
+  },
+  {
+    "id": "plate_end_steel",
+    "prefix": "plate",
+    "material": "end_steel"
+  },
+  {
+    "id": "double_plate_end_steel",
+    "prefix": "double_plate",
+    "material": "end_steel"
+  },
+  {
+    "id": "rod_end_steel",
+    "prefix": "rod",
+    "material": "end_steel"
+  },
+  {
+    "id": "bolt_end_steel",
+    "prefix": "bolt",
+    "material": "end_steel"
+  },
+  {
+    "id": "screw_end_steel",
+    "prefix": "screw",
+    "material": "end_steel"
+  },
+  {
+    "id": "long_rod_end_steel",
+    "prefix": "long_rod",
+    "material": "end_steel"
+  },
+  {
+    "id": "turbine_blade_end_steel",
+    "prefix": "turbine_blade",
+    "material": "end_steel"
+  },
+  {
     "id": "dust_ender_eye",
     "prefix": "dust",
     "material": "ender_eye"
@@ -2677,6 +2867,11 @@
   {
     "id": "plate_ender_eye",
     "prefix": "plate",
+    "material": "ender_eye"
+  },
+  {
+    "id": "rod_ender_eye",
+    "prefix": "rod",
     "material": "ender_eye"
   },
   {
@@ -2710,6 +2905,101 @@
     "material": "ender_pearl"
   },
   {
+    "id": "dust_enderium",
+    "prefix": "dust",
+    "material": "enderium"
+  },
+  {
+    "id": "small_dust_enderium",
+    "prefix": "small_dust",
+    "material": "enderium"
+  },
+  {
+    "id": "tiny_dust_enderium",
+    "prefix": "tiny_dust",
+    "material": "enderium"
+  },
+  {
+    "id": "ingot_enderium",
+    "prefix": "ingot",
+    "material": "enderium"
+  },
+  {
+    "id": "hot_ingot_enderium",
+    "prefix": "hot_ingot",
+    "material": "enderium"
+  },
+  {
+    "id": "nugget_enderium",
+    "prefix": "nugget",
+    "material": "enderium"
+  },
+  {
+    "id": "plate_enderium",
+    "prefix": "plate",
+    "material": "enderium"
+  },
+  {
+    "id": "double_plate_enderium",
+    "prefix": "double_plate",
+    "material": "enderium"
+  },
+  {
+    "id": "rod_enderium",
+    "prefix": "rod",
+    "material": "enderium"
+  },
+  {
+    "id": "bolt_enderium",
+    "prefix": "bolt",
+    "material": "enderium"
+  },
+  {
+    "id": "screw_enderium",
+    "prefix": "screw",
+    "material": "enderium"
+  },
+  {
+    "id": "long_rod_enderium",
+    "prefix": "long_rod",
+    "material": "enderium"
+  },
+  {
+    "id": "turbine_blade_enderium",
+    "prefix": "turbine_blade",
+    "material": "enderium"
+  },
+  {
+    "id": "dust_enderium_base",
+    "prefix": "dust",
+    "material": "enderium_base"
+  },
+  {
+    "id": "small_dust_enderium_base",
+    "prefix": "small_dust",
+    "material": "enderium_base"
+  },
+  {
+    "id": "tiny_dust_enderium_base",
+    "prefix": "tiny_dust",
+    "material": "enderium_base"
+  },
+  {
+    "id": "ingot_enderium_base",
+    "prefix": "ingot",
+    "material": "enderium_base"
+  },
+  {
+    "id": "hot_ingot_enderium_base",
+    "prefix": "hot_ingot",
+    "material": "enderium_base"
+  },
+  {
+    "id": "nugget_enderium_base",
+    "prefix": "nugget",
+    "material": "enderium_base"
+  },
+  {
     "id": "dust_endstone",
     "prefix": "dust",
     "material": "endstone"
@@ -2723,6 +3013,41 @@
     "id": "tiny_dust_endstone",
     "prefix": "tiny_dust",
     "material": "endstone"
+  },
+  {
+    "id": "dust_energetic_alloy",
+    "prefix": "dust",
+    "material": "energetic_alloy"
+  },
+  {
+    "id": "small_dust_energetic_alloy",
+    "prefix": "small_dust",
+    "material": "energetic_alloy"
+  },
+  {
+    "id": "tiny_dust_energetic_alloy",
+    "prefix": "tiny_dust",
+    "material": "energetic_alloy"
+  },
+  {
+    "id": "ingot_energetic_alloy",
+    "prefix": "ingot",
+    "material": "energetic_alloy"
+  },
+  {
+    "id": "hot_ingot_energetic_alloy",
+    "prefix": "hot_ingot",
+    "material": "energetic_alloy"
+  },
+  {
+    "id": "nugget_energetic_alloy",
+    "prefix": "nugget",
+    "material": "energetic_alloy"
+  },
+  {
+    "id": "plate_energetic_alloy",
+    "prefix": "plate",
+    "material": "energetic_alloy"
   },
   {
     "id": "dust_epoxid",
@@ -3458,6 +3783,16 @@
     "id": "tiny_dust_glauconite",
     "prefix": "tiny_dust",
     "material": "glauconite"
+  },
+  {
+    "id": "small_dust_glowstone",
+    "prefix": "small_dust",
+    "material": "glowstone"
+  },
+  {
+    "id": "tiny_dust_glowstone",
+    "prefix": "tiny_dust",
+    "material": "glowstone"
   },
   {
     "id": "crushed_gold",
@@ -6405,6 +6740,21 @@
     "material": "niobium_titanium"
   },
   {
+    "id": "dust_obsidian",
+    "prefix": "dust",
+    "material": "obsidian"
+  },
+  {
+    "id": "small_dust_obsidian",
+    "prefix": "small_dust",
+    "material": "obsidian"
+  },
+  {
+    "id": "tiny_dust_obsidian",
+    "prefix": "tiny_dust",
+    "material": "obsidian"
+  },
+  {
     "id": "crushed_oilsands",
     "prefix": "crushed",
     "material": "oilsands"
@@ -7550,6 +7900,41 @@
     "material": "powellite"
   },
   {
+    "id": "dust_pulsating_iron",
+    "prefix": "dust",
+    "material": "pulsating_iron"
+  },
+  {
+    "id": "small_dust_pulsating_iron",
+    "prefix": "small_dust",
+    "material": "pulsating_iron"
+  },
+  {
+    "id": "tiny_dust_pulsating_iron",
+    "prefix": "tiny_dust",
+    "material": "pulsating_iron"
+  },
+  {
+    "id": "ingot_pulsating_iron",
+    "prefix": "ingot",
+    "material": "pulsating_iron"
+  },
+  {
+    "id": "hot_ingot_pulsating_iron",
+    "prefix": "hot_ingot",
+    "material": "pulsating_iron"
+  },
+  {
+    "id": "nugget_pulsating_iron",
+    "prefix": "nugget",
+    "material": "pulsating_iron"
+  },
+  {
+    "id": "plate_pulsating_iron",
+    "prefix": "plate",
+    "material": "pulsating_iron"
+  },
+  {
     "id": "crushed_pyrite",
     "prefix": "crushed",
     "material": "pyrite"
@@ -7755,6 +8140,26 @@
     "material": "quartzite"
   },
   {
+    "id": "plate_quartzite",
+    "prefix": "plate",
+    "material": "quartzite"
+  },
+  {
+    "id": "rod_quartzite",
+    "prefix": "rod",
+    "material": "quartzite"
+  },
+  {
+    "id": "bolt_quartzite",
+    "prefix": "bolt",
+    "material": "quartzite"
+  },
+  {
+    "id": "screw_quartzite",
+    "prefix": "screw",
+    "material": "quartzite"
+  },
+  {
     "id": "dust_rare_earth",
     "prefix": "dust",
     "material": "rare_earth"
@@ -7868,6 +8273,36 @@
     "id": "tiny_dust_redstone",
     "prefix": "tiny_dust",
     "material": "redstone"
+  },
+  {
+    "id": "dust_redstone_alloy",
+    "prefix": "dust",
+    "material": "redstone_alloy"
+  },
+  {
+    "id": "small_dust_redstone_alloy",
+    "prefix": "small_dust",
+    "material": "redstone_alloy"
+  },
+  {
+    "id": "tiny_dust_redstone_alloy",
+    "prefix": "tiny_dust",
+    "material": "redstone_alloy"
+  },
+  {
+    "id": "ingot_redstone_alloy",
+    "prefix": "ingot",
+    "material": "redstone_alloy"
+  },
+  {
+    "id": "nugget_redstone_alloy",
+    "prefix": "nugget",
+    "material": "redstone_alloy"
+  },
+  {
+    "id": "plate_redstone_alloy",
+    "prefix": "plate",
+    "material": "redstone_alloy"
   },
   {
     "id": "crushed_rock_salt",
@@ -8683,6 +9118,36 @@
     "id": "wire_fine_soldering_alloy",
     "prefix": "wire_fine",
     "material": "soldering_alloy"
+  },
+  {
+    "id": "dust_soularium",
+    "prefix": "dust",
+    "material": "soularium"
+  },
+  {
+    "id": "small_dust_soularium",
+    "prefix": "small_dust",
+    "material": "soularium"
+  },
+  {
+    "id": "tiny_dust_soularium",
+    "prefix": "tiny_dust",
+    "material": "soularium"
+  },
+  {
+    "id": "ingot_soularium",
+    "prefix": "ingot",
+    "material": "soularium"
+  },
+  {
+    "id": "nugget_soularium",
+    "prefix": "nugget",
+    "material": "soularium"
+  },
+  {
+    "id": "plate_soularium",
+    "prefix": "plate",
+    "material": "soularium"
   },
   {
     "id": "crushed_spessartine",
@@ -10605,6 +11070,41 @@
     "material": "vanadium_steel"
   },
   {
+    "id": "dust_vibrant_alloy",
+    "prefix": "dust",
+    "material": "vibrant_alloy"
+  },
+  {
+    "id": "small_dust_vibrant_alloy",
+    "prefix": "small_dust",
+    "material": "vibrant_alloy"
+  },
+  {
+    "id": "tiny_dust_vibrant_alloy",
+    "prefix": "tiny_dust",
+    "material": "vibrant_alloy"
+  },
+  {
+    "id": "ingot_vibrant_alloy",
+    "prefix": "ingot",
+    "material": "vibrant_alloy"
+  },
+  {
+    "id": "hot_ingot_vibrant_alloy",
+    "prefix": "hot_ingot",
+    "material": "vibrant_alloy"
+  },
+  {
+    "id": "nugget_vibrant_alloy",
+    "prefix": "nugget",
+    "material": "vibrant_alloy"
+  },
+  {
+    "id": "plate_vibrant_alloy",
+    "prefix": "plate",
+    "material": "vibrant_alloy"
+  },
+  {
     "id": "dust_wheat",
     "prefix": "dust",
     "material": "wheat"
@@ -11455,6 +11955,51 @@
     "material": "cupronickel"
   },
   {
+    "id": "sword_head_dark_steel",
+    "prefix": "sword_head",
+    "material": "dark_steel"
+  },
+  {
+    "id": "pickaxe_head_dark_steel",
+    "prefix": "pickaxe_head",
+    "material": "dark_steel"
+  },
+  {
+    "id": "shovel_head_dark_steel",
+    "prefix": "shovel_head",
+    "material": "dark_steel"
+  },
+  {
+    "id": "axe_head_dark_steel",
+    "prefix": "axe_head",
+    "material": "dark_steel"
+  },
+  {
+    "id": "hoe_head_dark_steel",
+    "prefix": "hoe_head",
+    "material": "dark_steel"
+  },
+  {
+    "id": "saw_head_dark_steel",
+    "prefix": "saw_head",
+    "material": "dark_steel"
+  },
+  {
+    "id": "drill_head_dark_steel",
+    "prefix": "drill_head",
+    "material": "dark_steel"
+  },
+  {
+    "id": "chainsaw_head_dark_steel",
+    "prefix": "chainsaw_head",
+    "material": "dark_steel"
+  },
+  {
+    "id": "wrench_head_dark_steel",
+    "prefix": "wrench_head",
+    "material": "dark_steel"
+  },
+  {
     "id": "sword_head_duranium",
     "prefix": "sword_head",
     "material": "duranium"
@@ -11543,6 +12088,96 @@
     "id": "wrench_head_electrum",
     "prefix": "wrench_head",
     "material": "electrum"
+  },
+  {
+    "id": "sword_head_end_steel",
+    "prefix": "sword_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "pickaxe_head_end_steel",
+    "prefix": "pickaxe_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "shovel_head_end_steel",
+    "prefix": "shovel_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "axe_head_end_steel",
+    "prefix": "axe_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "hoe_head_end_steel",
+    "prefix": "hoe_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "saw_head_end_steel",
+    "prefix": "saw_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "drill_head_end_steel",
+    "prefix": "drill_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "chainsaw_head_end_steel",
+    "prefix": "chainsaw_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "wrench_head_end_steel",
+    "prefix": "wrench_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "sword_head_enderium",
+    "prefix": "sword_head",
+    "material": "enderium"
+  },
+  {
+    "id": "pickaxe_head_enderium",
+    "prefix": "pickaxe_head",
+    "material": "enderium"
+  },
+  {
+    "id": "shovel_head_enderium",
+    "prefix": "shovel_head",
+    "material": "enderium"
+  },
+  {
+    "id": "axe_head_enderium",
+    "prefix": "axe_head",
+    "material": "enderium"
+  },
+  {
+    "id": "hoe_head_enderium",
+    "prefix": "hoe_head",
+    "material": "enderium"
+  },
+  {
+    "id": "saw_head_enderium",
+    "prefix": "saw_head",
+    "material": "enderium"
+  },
+  {
+    "id": "drill_head_enderium",
+    "prefix": "drill_head",
+    "material": "enderium"
+  },
+  {
+    "id": "chainsaw_head_enderium",
+    "prefix": "chainsaw_head",
+    "material": "enderium"
+  },
+  {
+    "id": "wrench_head_enderium",
+    "prefix": "wrench_head",
+    "material": "enderium"
   },
   {
     "id": "sword_head_epoxid",

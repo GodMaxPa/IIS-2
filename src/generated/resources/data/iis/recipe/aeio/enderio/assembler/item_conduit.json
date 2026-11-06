@@ -1,0 +1,36 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:item_pipe_medium_electrum",
+      "count": 1
+    },
+    {
+      "ingredient": "enderio:conduit_binder",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "enderio:conduit",
+      "count": 1,
+      "components": {
+        "enderio:conduit": "enderio:item"
+      }
+    }
+  ],
+  "duration": 20,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_pulsatingiron",
+      "amount": 16
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

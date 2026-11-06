@@ -1,0 +1,21 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_certus_quartz",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:sand",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:crystal_seed_certus",
+      "count": 2
+    }
+  ],
+  "duration": 100,
+  "eut": 30
+}

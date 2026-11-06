@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/enderium_base",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 2,
+  "eut": 77,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_enderiumbase",
+      "amount": 16
+    }
+  ]
+}

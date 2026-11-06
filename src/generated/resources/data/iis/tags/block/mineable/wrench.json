@@ -329,6 +329,7 @@
     "iis:transformer_lv",
     "iis:transformer_mv",
     "iis:transformer_hv",
+    "iis:frame_dark_steel",
     "iis:frame_invar",
     "iis:frame_steel",
     "iis:frame_iron",

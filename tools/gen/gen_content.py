@@ -216,6 +216,8 @@ names |= {'Osmiridium', 'NaquadahAlloy', 'Tritanium', 'Neutronium', 'Americium',
 names |= {'VanadiumSteel'}
 # D123: PVC for its item pipes (GT_Loader_MetaTileEntities:1624; polymerization GT_MachineRecipeLoader:3021+)
 names |= {'PolyvinylChloride'}
+# D125: Ender IO alloys of GT (GT_MachineRecipeLoader:1020-1027, 1800-1809), obsidian and glowstone plates of AE2.zs / EnderIO.zs
+names |= {'DarkSteel', 'ElectricalSteel', 'ConductiveIron', 'EnergeticAlloy', 'VibrantAlloy', 'PulsatingIron', 'RedstoneAlloy', 'Soularium', 'EndSteel', 'Enderium', 'EnderiumBase', 'Obsidian', 'Glowstone'}
 names |= {'HSSE', 'Naquadah', 'Superconductor', 'EpoxidFiberReinforced', 'Indium', 'AluminiumSulfite', 'Arsenic', 'Phosphorus', 'Phosphate', 'GalliumArsenide', 'IndiumGalliumPhosphide'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
@@ -279,6 +281,7 @@ HEADS = [
 ELECTRIC_HEADS = ('drill_head', 'chainsaw_head', 'wrench_head')
 # GT5 mNotGeneratedItems + modern vanilla items that take the place of GT items
 VANILLA = {
+    ('dust', 'Glowstone'): 'minecraft:glowstone_dust',
     ('ingot', 'Iron'): 'minecraft:iron_ingot', ('nugget', 'Iron'): 'minecraft:iron_nugget',
     ('ingot', 'Gold'): 'minecraft:gold_ingot', ('nugget', 'Gold'): 'minecraft:gold_nugget',
     ('ingot', 'Copper'): 'minecraft:copper_ingot', ('nugget', 'Copper'): 'minecraft:copper_nugget',
@@ -330,7 +333,14 @@ COMPONENTS = json.load(open(os.path.join(REF, 'gt5_components.json'), encoding='
 GT_PREFIX = {p[0]: p[1] for p in PREFIXES}  # our prefix id -> GT prefix
 
 
+# D125: forms the scripts of IIS 1 use by name; "do not remove this line <ore:plateVibrantAlloy>" in EnderIO.zs made them appear in the pack
+COMPONENTS_EXTRA = {'plate': {'ElectricalSteel', 'ConductiveIron', 'EnergeticAlloy', 'VibrantAlloy', 'PulsatingIron', 'Soularium', 'DarkSteel', 'Quartzite'},
+                    'stick': {'DarkSteel', 'Quartzite', 'EnderEye', 'CertusQuartz', 'NetherQuartz'}, 'screw': {'Quartzite', 'CertusQuartz', 'NetherQuartz'}, 'bolt': {'Quartzite', 'CertusQuartz', 'NetherQuartz'}}
+
+
 def component_allowed(prefix, name):
+    if name in COMPONENTS_EXTRA.get(GT_PREFIX.get(prefix, prefix), ()):
+        return True
     rule = COMPONENTS.get(GT_PREFIX.get(prefix, prefix))
     if rule is None:
         return True
@@ -1052,6 +1062,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_itempipes', os.path.join(ROOT, 'to
 _itempipes = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_itempipes)
 lv_stats['itempipes'] = _itempipes.generate(globals())
+
+_spec = _ilu.spec_from_file_location('iis_gen_aeio', os.path.join(ROOT, 'tools', 'gen', 'aeio.py'))
+_aeio = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_aeio)
+lv_stats['aeio'] = _aeio.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "ae2:basic_card",
+    "ae2:calculation_processor",
+    "ae2:calculation_processor",
+    "minecraft:crafting_table"
+  ],
+  "result": {
+    "id": "ae2:crafting_card",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

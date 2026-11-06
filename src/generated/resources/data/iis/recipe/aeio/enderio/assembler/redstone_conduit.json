@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:pipe_tiny_plastic",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/redstone_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "enderio:conduit",
+      "count": 1,
+      "components": {
+        "enderio:conduit": "enderio:redstone"
+      }
+    }
+  ],
+  "duration": 50,
+  "eut": 30,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

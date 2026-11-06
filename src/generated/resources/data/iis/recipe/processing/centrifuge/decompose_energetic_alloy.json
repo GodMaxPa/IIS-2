@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/energetic_alloy",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_conductive_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_gold",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_black_steel",
+      "count": 1
+    }
+  ],
+  "duration": 1308,
+  "eut": 15
+}
