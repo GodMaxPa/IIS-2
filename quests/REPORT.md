@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1648; hidden until their items are ported: 294; chapters: 35.
+Quests in IIS 1: 1943; written: 1652; hidden until their items are ported: 289; chapters: 35.
 
 ## Most needed unported items (task count)
 
@@ -74,7 +74,6 @@ Quests in IIS 1: 1943; written: 1648; hidden until their items are ported: 294; 
 - 1 × `GalacticraftCore:tile.cargo:0` 
 - 1 × `GalacticraftCore:tile.cargo:4` 
 - 1 × `IronChest:BlockIronChest:4` 
-- 1 × `IronChest:BlockIronChest:3` 
 - 1 × `IC2:itemGrinPowder:0` 
 - 1 × `IC2:itemWeedEx:0` 
 - 1 × `gregtech:gt.metaitem.01:32605` Ультимативная батарея
@@ -84,6 +83,7 @@ Quests in IIS 1: 1943; written: 1648; hidden until their items are ported: 294; 
 - 1 × `GraviSuite:itemSimpleItem:2` 
 - 1 × `GraviSuite:graviChestPlate:1` 
 - 1 × `GraviSuite:ultimateLappack:27` 
+- 1 × `GraviSuite:advNanoChestPlate:1` 
 
 ## Unported fluids
 
@@ -97,7 +97,7 @@ Quests in IIS 1: 1943; written: 1648; hidden until their items are ported: 294; 
 - 16 × `bq_standard:choice`
 - 2 × `('gregtech:gt.metaitem.02', 25802)`
 - 1 × `('lootbags:lootbag', 7)`
-- 1 × `('ChickenChunks:chickenChunkLoader', 0)`
+- 1 × `('lootbags:lootbag', 5)`
 - 1 × `('gregtech:gt.metaitem.02', 26347)`
 - 1 × `('gregtech:gt.blockores', 4522)`
 - 1 × `('gregtech:gt.blockores', 1022)`

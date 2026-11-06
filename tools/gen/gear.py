@@ -5,8 +5,12 @@ IC2 is closed (D5): what those sources do not give comes from memory of how IC2 
 """
 import os
 import random
+import sys
 
 from PIL import Image
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import gear_art as art
 
 NS = 'iis'
 I = lambda x: f'{NS}:{x}'
@@ -51,9 +55,9 @@ def mask_icon(shape, base, accent, seed):
             if ch == '.':
                 continue
             c = accent if ch == '+' else base
-            v = rnd.randint(-6, 6)
+            v = rnd.randint(-3, 3)
             im.putpixel((x, y), (max(0, min(255, c[0] + v)), max(0, min(255, c[1] + v)), max(0, min(255, c[2] + v)), 255))
-    return im
+    return art.shade(im)
 
 
 def generate(g):
@@ -101,19 +105,27 @@ def generate(g):
     WIRE = lambda m: f'#iis:wires/1x/{m}'
 
     # --- batteries ---------------------------------------------------------------------------------------------------------------
-    for iid, en, ru, shape, b, a in (
-            ('battery_re', 'RE-Battery', 'Аккумулятор', 'battery', (150, 60, 50), (210, 60, 50)),
-            ('battery_adv', 'Advanced RE-Battery', 'Продвинутый аккумулятор', 'battery', (150, 110, 60), (225, 200, 80)),
-            ('energy_crystal', 'Energy Crystal', 'Энергетический кристалл', 'crystal', (150, 30, 30), (240, 70, 70)),
-            ('lapotron_crystal', 'Lapotron Crystal', 'Лазуротроновый кристалл', 'crystal', (30, 50, 170), (90, 140, 250)),
-            ('energy_orb', 'Lapotronic Energy Orb', 'Лазуротроновая энергетическая сфера', 'ball', (30, 50, 170), (130, 190, 255)),
-            ('energy_orb_cluster', 'Lapotronic Energy Orb Cluster', 'Кластер лазуротроновых энергетических сфер', 'ball', (70, 30, 170), (200, 150, 255)),
-            ('ultimate_battery', 'Ultimate Battery', 'Предельный аккумулятор', 'ball', (120, 30, 120), (240, 180, 255)),
-            ('charging_battery_re', 'Charging RE-Battery', 'Заряжающий аккумулятор', 'battery', (90, 150, 60), (210, 60, 50)),
-            ('charging_battery_adv', 'Advanced Charging Battery', 'Продвинутый заряжающий аккумулятор', 'battery', (90, 150, 60), (225, 200, 80)),
-            ('charging_energy_crystal', 'Charging Energy Crystal', 'Заряжающий энергетический кристалл', 'crystal', (90, 150, 60), (240, 70, 70)),
-            ('charging_lapotron_crystal', 'Charging Lapotron Crystal', 'Заряжающий лазуротроновый кристалл', 'crystal', (90, 150, 60), (90, 140, 250))):
-        item(iid, en, ru, mask_icon(shape, b, a, hash(iid) % 1000))
+    def gem(a, v, l, h, g):
+        return dict(art.P_QUANTUM, A=a, V=v, L=l, H=h, G=g)
+
+    RED = gem((190, 40, 40), (110, 16, 16), (240, 90, 90), (255, 190, 180), (255, 240, 230))
+    BLUE = gem((40, 70, 190), (20, 30, 110), (90, 130, 240), (190, 215, 255), (240, 250, 255))
+    VIOLET = gem((110, 50, 190), (60, 24, 110), (170, 110, 240), (225, 195, 255), (250, 240, 255))
+    PINK = gem((160, 50, 160), (90, 24, 90), (225, 110, 225), (250, 195, 250), (255, 240, 255))
+    GREEN_CASE = dict(art.P_NANO, A=(70, 180, 70), G=(190, 255, 170))
+    for iid, en, ru, pic, pal in (
+            ('battery_re', 'RE-Battery', 'Аккумулятор', art.I_BATTERY, art.P_BATPACK),
+            ('battery_adv', 'Advanced RE-Battery', 'Продвинутый аккумулятор', art.I_BATTERY, art.P_ADV_BATPACK),
+            ('energy_crystal', 'Energy Crystal', 'Энергетический кристалл', art.I_CRYSTAL, RED),
+            ('lapotron_crystal', 'Lapotron Crystal', 'Лазуротроновый кристалл', art.I_CRYSTAL, BLUE),
+            ('energy_orb', 'Lapotronic Energy Orb', 'Лазуротроновая энергетическая сфера', art.I_ORB, BLUE),
+            ('energy_orb_cluster', 'Lapotronic Energy Orb Cluster', 'Кластер лазуротроновых энергетических сфер', art.I_ORB, VIOLET),
+            ('ultimate_battery', 'Ultimate Battery', 'Предельный аккумулятор', art.I_ORB, PINK),
+            ('charging_battery_re', 'Charging RE-Battery', 'Заряжающий аккумулятор', art.I_BATTERY, GREEN_CASE),
+            ('charging_battery_adv', 'Advanced Charging Battery', 'Продвинутый заряжающий аккумулятор', art.I_BATTERY, dict(GREEN_CASE, A=(214, 180, 60), G=(255, 236, 140))),
+            ('charging_energy_crystal', 'Charging Energy Crystal', 'Заряжающий энергетический кристалл', art.I_CRYSTAL, dict(RED, K=(20, 60, 24))),
+            ('charging_lapotron_crystal', 'Charging Lapotron Crystal', 'Заряжающий лазуротроновый кристалл', art.I_CRYSTAL, dict(BLUE, K=(20, 60, 24)))):
+        item(iid, en, ru, art.icon(pic, pal))
     for tag, ids in (('basic', ('battery_re', 'battery_lv', 'battery_cadmium_lv', 'battery_lithium_lv', 'battery_acid_lv', 'battery_mercury_lv')),
                      ('advanced', ('battery_adv', 'battery_sodium_mv', 'battery_cadmium_mv', 'battery_lithium_mv', 'battery_acid_mv', 'battery_mercury_mv')),
                      ('elite', ('energy_crystal', 'battery_sodium_hv', 'battery_cadmium_hv', 'battery_lithium_hv', 'battery_acid_hv', 'battery_mercury_hv')),   # GT_Loader_OreDictionary:128
@@ -166,34 +178,34 @@ def generate(g):
     shaped('gear/iridium_alloy_ingot_industrial', I('iridium_alloy_ingot'), 1, ['IAI', 'ADA', 'IAI'], {'I': P('Iridium'), 'A': I('advanced_alloy_plate'), 'D': I('industrial_diamond')})
 
     # --- armour ---------------------------------------------------------------------------------------------------------------------
-    def suit(asset, col):
-        im = Image.new('RGBA', (64, 32), col + (255,))
-        rnd = random.Random(asset)
-        for _ in range(300):
-            x, y = rnd.randrange(64), rnd.randrange(32)
-            v = rnd.randint(-22, 22)
-            im.putpixel((x, y), (max(0, col[0] + v), max(0, col[1] + v), max(0, col[2] + v), 255))
-        im.save(tex(f'entity/equipment/humanoid/{asset}.png'))
-        im.save(tex(f'entity/equipment/humanoid_leggings/{asset}.png'))
-        write(os.path.join(A, 'equipment', f'{asset}.json'), {'layers': {'humanoid': [{'texture': I(asset)}], 'humanoid_leggings': [{'texture': I(asset)}]}})
+    def suit(asset, main, legs=None):
+        main.save(tex(f'entity/equipment/humanoid/{asset}.png'))
+        layers = {'humanoid': [{'texture': I(asset)}]}
+        if legs is not None:
+            legs.save(tex(f'entity/equipment/humanoid_leggings/{asset}.png'))
+            layers['humanoid_leggings'] = [{'texture': I(asset)}]
+        write(os.path.join(A, 'equipment', f'{asset}.json'), {'layers': layers})
 
-    suit('nano', (70, 75, 85))
-    suit('quantum', (55, 80, 150))
-    suit('goggles', (40, 60, 40))
-    suit('jetpack', (150, 150, 155))
-    suit('batpack', (150, 110, 60))
-    pieces = (('helmet', 'Helmet', 'шлем', 'helmet'), ('chestplate', 'Bodyarmor', 'кираса', 'chest'), ('leggings', 'Leggings', 'поножи', 'legs'), ('boots', 'Boots', 'ботинки', 'boots'))
-    for p, en, ru, shape in pieces:
-        item(f'nano_{p}', f'NanoSuit {en}', f'Нано-{ru}', mask_icon(shape, (70, 75, 85), (110, 200, 120), 40))
-        item(f'quantum_{p}', f'QuantumSuit {en}', f'Квантовый {ru}' if p == 'helmet' else ('Квантовая кираса' if p == 'chestplate' else f'Квантовые {ru}'), mask_icon(shape, (55, 80, 150), (120, 220, 250), 41))
-    item('nightvision_goggles', 'Nightvision Goggles', 'Прибор ночного видения', mask_icon('goggles', (40, 60, 40), (110, 230, 110), 42))
-    item('jetpack', 'Electric Jetpack', 'Электрический реактивный ранец', mask_icon('jet', (150, 150, 155), (240, 150, 60), 43))
-    item('batpack', 'BatPack', 'Аккумуляторный ранец', mask_icon('pack', (110, 75, 40), (210, 60, 50), 44))
-    item('adv_batpack', 'Advanced BatPack', 'Продвинутый аккумуляторный ранец', mask_icon('pack', (110, 75, 40), (225, 200, 80), 45))
-    item('energy_pack', 'EnergyPack', 'Энергетический ранец', mask_icon('pack', (120, 40, 40), (240, 70, 70), 46))
-    item('lappack', 'LapPack', 'Лазуротроновый ранец', mask_icon('pack', (35, 50, 130), (90, 140, 250), 47))
-    item('mining_laser', 'Mining Laser', 'Лазерный бур', mask_icon('laser', (120, 120, 130), (240, 70, 70), 48))
-    item('nano_saber', 'Nano Saber', 'Нано-сабля', mask_icon('saber', (70, 75, 85), (120, 240, 140), 49))
+    suit('nano', *art.nano())
+    suit('quantum', *art.quantum())
+    suit('goggles', art.goggles())
+    suit('jetpack', art.jet_harness())
+    for asset, pal in (('batpack', art.P_BATPACK), ('adv_batpack', art.P_ADV_BATPACK), ('energy_pack', art.P_ENERGY_PACK), ('lappack', art.P_LAPPACK)):
+        suit(asset, art.harness(pal))
+        art.pack_model(pal).save(tex(f'entity/gear/{asset}.png'))
+    art.jet_model().save(tex('entity/gear/jetpack.png'))
+    pieces = (('helmet', 'Helmet', 'шлем', art.I_HELMET), ('chestplate', 'Bodyarmor', 'кираса', art.I_CHEST), ('leggings', 'Leggings', 'поножи', art.I_LEGS), ('boots', 'Boots', 'ботинки', art.I_BOOTS))
+    for p, en, ru, pic in pieces:
+        item(f'nano_{p}', f'NanoSuit {en}', f'Нано-{ru}', art.icon(pic, art.P_NANO))
+        item(f'quantum_{p}', f'QuantumSuit {en}', f'Квантовый {ru}' if p == 'helmet' else ('Квантовая кираса' if p == 'chestplate' else f'Квантовые {ru}'), art.icon(pic, art.P_QUANTUM))
+    item('nightvision_goggles', 'Nightvision Goggles', 'Прибор ночного видения', art.icon(art.I_GOGGLES, art.P_NANO))
+    item('jetpack', 'Electric Jetpack', 'Электрический реактивный ранец', art.icon(art.I_JET, art.P_STEEL))
+    item('batpack', 'BatPack', 'Аккумуляторный ранец', art.icon(art.I_PACK, art.P_BATPACK))
+    item('adv_batpack', 'Advanced BatPack', 'Продвинутый аккумуляторный ранец', art.icon(art.I_PACK, art.P_ADV_BATPACK))
+    item('energy_pack', 'EnergyPack', 'Энергетический ранец', art.icon(art.I_PACK, art.P_ENERGY_PACK))
+    item('lappack', 'LapPack', 'Лазуротроновый ранец', art.icon(art.I_PACK, art.P_LAPPACK))
+    item('mining_laser', 'Mining Laser', 'Лазерный бур', art.icon(art.I_LASER, art.P_STEEL))
+    item('nano_saber', 'Nano Saber', 'Нано-сабля', art.icon(art.I_SABER, art.P_NANO))
 
     # GT_IndustialCraftRecipesLoader:270
     shaped('gear/nightvision_goggles', I('nightvision_goggles'), 1, ['AXA', 'RBR', 'SdS'],

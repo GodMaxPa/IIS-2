@@ -80,7 +80,8 @@ public final class GearContent {
                 1, SoundEvents.ARMOR_EQUIP_IRON, 0F, 0F, ItemTags.REPAIRS_IRON_ARMOR, key);
     }
 
-    private static final ArmorMaterial NANO = material("nano"), QUANTUM = material("quantum"), GOGGLES = material("goggles"), JET = material("jetpack"), PACK = material("batpack");
+    private static final ArmorMaterial NANO = material("nano"), QUANTUM = material("quantum"), GOGGLES = material("goggles"), JET = material("jetpack"), PACK = material("batpack"),
+            ADV_PACK = material("adv_batpack"), ENERGY_PACK_M = material("energy_pack"), LAPPACK_M = material("lappack");
 
     private static DeferredItem<GearArmorItem> armor(String id, ArmorMaterial m, ArmorType type, long capacity, long transfer, int tier, double ratio, long euPerDamage, boolean battery) {
         DeferredItem<GearArmorItem> i = ITEMS.registerItem(id, p -> new GearArmorItem(capacity, transfer, tier, ratio, euPerDamage, battery,
@@ -144,9 +145,9 @@ public final class GearContent {
     public static final DeferredItem<GearArmorItem> NIGHTVISION_GOGGLES = armor("nightvision_goggles", GOGGLES, ArmorType.HELMET, 200_000, 256, 1, 0, 0, false);
     public static final DeferredItem<GearArmorItem> JETPACK = armor("jetpack", JET, ArmorType.CHESTPLATE, 30_000, 64, 1, 0, 0, false);
     public static final DeferredItem<GearArmorItem> BATPACK = armor("batpack", PACK, ArmorType.CHESTPLATE, 60_000, 100, 1, 0, 0, true);
-    public static final DeferredItem<GearArmorItem> ADV_BATPACK = armor("adv_batpack", PACK, ArmorType.CHESTPLATE, 600_000, 1000, 2, 0, 0, true);
-    public static final DeferredItem<GearArmorItem> ENERGY_PACK = armor("energy_pack", PACK, ArmorType.CHESTPLATE, 2_000_000, 2048, 3, 0, 0, true);
-    public static final DeferredItem<GearArmorItem> LAPPACK = armor("lappack", PACK, ArmorType.CHESTPLATE, 10_000_000, 8192, 4, 0, 0, true);
+    public static final DeferredItem<GearArmorItem> ADV_BATPACK = armor("adv_batpack", ADV_PACK, ArmorType.CHESTPLATE, 600_000, 1000, 2, 0, 0, true);
+    public static final DeferredItem<GearArmorItem> ENERGY_PACK = armor("energy_pack", ENERGY_PACK_M, ArmorType.CHESTPLATE, 2_000_000, 2048, 3, 0, 0, true);
+    public static final DeferredItem<GearArmorItem> LAPPACK = armor("lappack", LAPPACK_M, ArmorType.CHESTPLATE, 10_000_000, 8192, 4, 0, 0, true);
 
     public static final DeferredItem<MiningLaserItem> MINING_LASER = register("mining_laser", MiningLaserItem::new);
     public static final DeferredItem<NanoSaberItem> NANO_SABER = register("nano_saber", NanoSaberItem::new);

@@ -1079,10 +1079,24 @@
       "dependencies": [
         "1A00000000000189"
       ],
+      "icon": {
+        "id": "chunkloaders:basic_chunk_loader",
+        "count": 1
+      },
       "tasks": [
         {
           "type": "checkmark",
           "id": "1B00000000048B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "chunkloaders:basic_chunk_loader",
+            "count": 1
+          },
+          "id": "1C00000000048B00"
         }
       ]
     },

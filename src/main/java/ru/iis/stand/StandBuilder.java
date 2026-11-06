@@ -146,6 +146,7 @@ public final class StandBuilder {
         b.railHall();
         b.bioHall();
         b.aeioHall();
+        b.modsHall();
         int left = b.leftoversHall();
         b.avenue();
         StandData.mark(level);
@@ -1200,7 +1201,7 @@ public final class StandBuilder {
             for (int i = 0; i < layout.length && i < r.getContainerSize(); i++) r.setItem(i, stack(layout[i], 1));
         }
         labelAt(rx, 5.0, rz, "Ядерный реактор\nЯдро в окружении 6 камер: 54 ячейки. Внутри показана сборка. Без красного камня не работает", "green", 0.9);
-        sign(at(rx, 0, rz - 3), "Откройте ядро");
+        sign(at(rx, 0, rz - 3), "Откройте любую камеру");
         items(rx - 5, rz + 5, List.of("rod_uranium_1", "rod_uranium_2", "rod_uranium_4", "rod_mox_1", "rod_mox_2", "rod_mox_4", "rod_thorium_1", "rod_thorium_2", "rod_thorium_4", "rod_naquadah_1", "rod_naquadah_2", "rod_naquadah_4",
                 "reactor_vent", "reactor_vent_core", "reactor_vent_gold", "reactor_vent_diamond", "reactor_vent_spread", "reactor_heat_switch", "reactor_heat_switch_core", "reactor_heat_switch_spread", "reactor_heat_switch_diamond",
                 "coolant_10k", "coolant_30k", "coolant_60k", "reactor_condensator", "reactor_condensator_lap", "reactor_plating", "reactor_plating_heat", "reactor_plating_explosive", "reactor_reflector", "reactor_reflector_thick", "neutron_reflector"), 6);
@@ -1625,6 +1626,28 @@ public final class StandBuilder {
         String[][] parts = {{"enderio:yeta_wrench", "Жёлтый ключ"}, {"enderio:conduit_probe", "Щуп"}, {"enderio:basic_capacitor", "Конденсатор"}, {"enderio:vibrant_crystal", "Вибрирующий кристалл"}, {"enderio:pulsating_crystal", "Пульсирующий кристалл"}, {"enderio:void_chassis", "Шасси"}};
         for (int i = 0; i < parts.length; i++) itemCell(2 + i * 3, z + 3, modItem(parts[i][0]), parts[i][1]);
         endHall(Blocks.LIGHT_BLUE_TERRACOTTA);
+    }
+
+    // --- Другие готовые моды (D127) ---------------------------------------------------------------------------------------
+    private void modsHall() {
+        if (!net.neoforged.fml.ModList.get().isLoaded("ironchest")) return;
+        beginHall("Другие готовые моды", "Сундуки, чанклоадеры, жезлы и декор. Там, где у ИИС 1 был скрипт, рецепты из него");
+        String[][] blocks = {{"ironchest:copper_chest", "Медный сундук"}, {"ironchest:iron_chest", "Железный сундук"}, {"ironchest:gold_chest", "Золотой сундук"}, {"ironchest:diamond_chest", "Алмазный сундук"},
+                {"ironchest:crystal_chest", "Кристальный сундук"}, {"ironchest:obsidian_chest", "Обсидиановый сундук"}, {"ironchest:dirt_chest", "Земляной сундук"},
+                {"chunkloaders:single_chunk_loader", "Малый чанклоадер"}, {"chunkloaders:basic_chunk_loader", "Чанклоадер"}, {"chunkloaders:advanced_chunk_loader", "Продвинутый"}, {"chunkloaders:ultimate_chunk_loader", "Предельный"},
+                {"storagedrawers:oak_full_drawers_1", "Ящик на 1"}, {"storagedrawers:oak_full_drawers_2", "Ящик на 2"}, {"storagedrawers:oak_full_drawers_4", "Ящик на 4"},
+                {"framedblocks:framed_cube", "Обшивочный блок"}, {"framedblocks:framed_slab", "Обшивочная плита"}, {"framedblocks:framed_stairs", "Обшивочная лестница"},
+                {"bibliocraft:oak_bookcase", "Книжный шкаф"}, {"bibliocraft:oak_shelf", "Полка"}, {"bibliocraft:oak_table", "Стол"}, {"bibliocraft:oak_potion_shelf", "Полка зелий"}};
+        for (int i = 0; i < blocks.length; i++) {
+            set(at(2 + (i % 7) * 3, 0, 4 + (i / 7) * 3), modBlock(blocks[i][0]));
+            sign(at(2 + (i % 7) * 3, 0, 5 + (i / 7) * 3), blocks[i][1]);
+        }
+        int z = 4 + (blocks.length / 7 + 1) * 3 + 1;
+        String[][] tools = {{"constructionwand:stone_wand", "Каменный жезл"}, {"constructionwand:iron_wand", "Железный жезл"}, {"constructionwand:diamond_wand", "Алмазный жезл"}, {"constructionwand:infinity_wand", "Неразрушимый жезл"},
+                {"chisel:chisel", "Стамеска"}, {"framedblocks:framed_hammer", "Молоток обшивки"}, {"ae2wtlib:wireless_universal_terminal", "Универсальный терминал"},
+                {"ae2:item_storage_cell_256k", "Ячейка 256K"}, {"iis:cell_housing_advanced", "Продвинутый корпус"}, {"ae2:cell_component_256k", "Компонент 256K"}};
+        for (int i = 0; i < tools.length; i++) itemCell(2 + (i % 7) * 3, z + (i / 7) * 3, modItem(tools[i][0]), tools[i][1]);
+        endHall(Blocks.BROWN_TERRACOTTA);
     }
 
     // --- 16. Прочее ---------------------------------------------------------------------------------------------------

@@ -56,6 +56,47 @@ final class ReactorGameTests {
         h.succeed();
     }
 
+    /** Через камеру детали попадают в реактор: воронка или труба могут стоять у камеры. */
+    static void chamberGivesItems(GameTestHelper h) {
+        NuclearReactorBlockEntity r = reactor(h, false);
+        BlockPos chamber = POS.east();
+        h.setBlock(chamber, ReactorContent.REACTOR_CHAMBER.get());
+        var handler = h.getLevel().getCapability(net.neoforged.neoforge.capabilities.Capabilities.Item.BLOCK, h.absolutePos(chamber), Direction.UP);
+        h.assertTrue(handler != null, "no item access through the chamber");
+        try (var tx = net.neoforged.neoforge.transfer.transaction.Transaction.openRoot()) {
+            int n = handler.insert(net.neoforged.neoforge.transfer.item.ItemResource.of(part("rod_uranium_1")), 1, tx);
+            tx.commit();
+            h.assertTrue(n == 1, "inserted " + n);
+        }
+        h.assertTrue(!r.getItem(0).isEmpty(), "the reactor did not get the rod");
+        h.assertTrue(ReactorChamberBlock.reactor(h.getLevel(), h.absolutePos(chamber)) == r, "the chamber does not find its reactor");
+        h.succeed();
+    }
+
+    /** Провод у камеры получает энергию реактора, хотя к самому реактору ничего не подведено. */
+    static void chamberGivesEnergy(GameTestHelper h) {
+        BlockPos chamber = POS.east(), cable = POS.east(2), sink = POS.east(3);
+        h.setBlock(cable, ru.iis.lv.LvContent.CABLES.get("cable_tin_1x").get());
+        h.setBlock(sink, ru.iis.lv.LvContent.MACHINES.get(LvMachineType.MACERATOR).get());
+        NuclearReactorBlockEntity r = reactor(h, true);
+        h.setBlock(chamber, ReactorContent.REACTOR_CHAMBER.get());
+        r.setItem(0, part("rod_uranium_1"));
+        ElectricMachineBlockEntity m = h.getBlockEntity(sink, ElectricMachineBlockEntity.class);
+        h.succeedWhen(() -> h.assertTrue(m.energy.stored > 0, "no energy through the chamber"));
+    }
+
+    /** Камеру убрали: деталь из исчезнувшего столбца выпадает, а не пропадает внутри. */
+    static void dropsUnfitting(GameTestHelper h) {
+        NuclearReactorBlockEntity r = reactor(h, false);
+        h.setBlock(POS.east(), ReactorContent.REACTOR_CHAMBER.get());
+        r.setItem(3, part("rod_uranium_1"));
+        h.setBlock(POS.east(), Blocks.AIR);
+        h.succeedWhen(() -> {
+            h.assertTrue(r.getItem(3).isEmpty(), "still inside");
+            h.assertItemEntityPresent(ReactorContent.PARTS.get("rod_uranium_1").get(), POS.above(), 2.0);
+        });
+    }
+
     /** Перегрев: реактора нет, блоки вокруг разрушены. */
     static void overheatExplodes(GameTestHelper h) {
         NuclearReactorBlockEntity r = reactor(h, true);

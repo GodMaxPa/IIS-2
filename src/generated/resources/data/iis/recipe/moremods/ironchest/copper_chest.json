@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AAA",
+    "ACA",
+    "AAA"
+  ],
+  "key": {
+    "A": "#c:plates/copper",
+    "C": "minecraft:chest"
+  },
+  "result": {
+    "id": "ironchest:copper_chest",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ironchest"
+    }
+  ]
+}

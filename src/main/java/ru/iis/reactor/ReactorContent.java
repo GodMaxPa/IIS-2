@@ -70,7 +70,7 @@ public final class ReactorContent {
     }
 
     public static final DeferredBlock<NuclearReactorBlock> NUCLEAR_REACTOR = block("nuclear_reactor", NuclearReactorBlock::new);
-    public static final DeferredBlock<Block> REACTOR_CHAMBER = block("reactor_chamber", Block::new);
+    public static final DeferredBlock<ReactorChamberBlock> REACTOR_CHAMBER = block("reactor_chamber", ReactorChamberBlock::new);
     public static final DeferredBlock<SolarPanelBlock> SOLAR_PANEL_BLOCK = block("solar_panel_block", SolarPanelBlock::new);
 
     public static final DeferredItem<Item> FUEL_ROD_EMPTY = item("fuel_rod_empty");
@@ -139,6 +139,10 @@ public final class ReactorContent {
 
     private static void capabilities(RegisterCapabilitiesEvent event) {
         event.registerBlockEntity(Capabilities.Item.BLOCK, REACTOR_BE.get(), (be, side) -> ru.iis.cover.Covers.items(be, side, be.itemHandler(side)));
+        event.registerBlock(Capabilities.Item.BLOCK, (level, pos, state, be, side) -> {
+            NuclearReactorBlockEntity r = ReactorChamberBlock.reactor(level, pos);
+            return r == null ? null : r.itemHandler(side);
+        }, REACTOR_CHAMBER.get());
     }
 
     public static void register(IEventBus modBus) {

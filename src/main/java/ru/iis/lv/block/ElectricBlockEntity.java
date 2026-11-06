@@ -119,11 +119,17 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
         if (usable <= 0) return;
         List<Direction> sides = Arrays.stream(Direction.values()).filter(d -> outputsEnergyTo(d) && covers.letsEnergyOut(this, d)).toList();
         long used = WorldEnergy.emit(sl, worldPosition, sides, v, usable);
+        if (used < usable) used += emitElsewhere(sl, v, usable - used);
         if (used > 0) {
             euOutWindow += used * v;
             energy.stored = Math.max(0, energy.stored - used * cost);
             setChanged();
         }
+    }
+
+    /** Выдача через соседние блоки (камеры реактора). Возвращает использованные амперы. */
+    protected long emitElsewhere(ServerLevel sl, long voltage, long amperes) {
+        return 0;
     }
 
     private void hazards(ServerLevel sl) {

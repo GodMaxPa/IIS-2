@@ -36,6 +36,7 @@ public final class IISClient {
         modBus.addListener(IISClient::registerScreens);
         ru.iis.gear.GearClient.register(modBus);
         ru.iis.stand.StandShots.init();
+        ru.iis.stand.GuiShots.init();
         modBus.addListener((net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.ItemTintSources e) -> {
             e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "fluid_content"), ru.iis.fluid.client.FluidContentTint.CODEC);
             e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "rotor_material"), ru.iis.multi.client.RotorTint.CODEC);

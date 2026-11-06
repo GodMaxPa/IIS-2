@@ -21,9 +21,20 @@ import ru.iis.multi.menu.ItemBusMenu;
 public final class MultiScreens {
     private MultiScreens() {}
 
+    /** Строка экрана контроллера: не шире чёрного поля. */
+    static void line(GuiGraphicsExtractor g, net.minecraft.client.gui.Font font, Component text, int x, int y, int color, boolean shadow) {
+        line(g, font, text.getString(), x, y, color, shadow);
+    }
+
+    static void line(GuiGraphicsExtractor g, net.minecraft.client.gui.Font font, String text, int x, int y, int color, boolean shadow) {
+        int room = 138;
+        String t = font.width(text) <= room ? text : font.plainSubstrByWidth(text, room - font.width("...")) + "...";
+        g.text(font, t, x, y, color, shadow);
+    }
+
     public static class Bus extends MachineScreen<ItemBusMenu> {
         public Bus(ItemBusMenu menu, Inventory inventory, Component title) {
-            super(menu, inventory, title, menu.slots.size() - 36 <= 4 ? "lv/2by2" : menu.slots.size() - 36 <= 9 ? "lv/3by3" : "lv/4by4");
+            super(menu, inventory, title, menu.slots.size() - 36 <= 1 ? "lv/1by1" : menu.slots.size() - 36 <= 4 ? "lv/2by2" : menu.slots.size() - 36 <= 9 ? "lv/3by3" : "lv/4by4");
         }
 
         @Override
@@ -49,8 +60,8 @@ public final class MultiScreens {
         protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
             super.extractLabels(g, mouseX, mouseY);
             Fluid f = fluid();
-            g.text(font, f == Fluids.EMPTY ? Component.translatable("gui.iis.empty") : f.getFluidType().getDescription(), 10, 20, 0xFFFAFAFF, false);
-            g.text(font, Component.literal(menu.amount() + " / " + menu.capacity() + " L"), 10, 30, 0xFFFAFAFF, false);
+            line(g, font, f == Fluids.EMPTY ? Component.translatable("gui.iis.empty") : f.getFluidType().getDescription(), 10, 20, 0xFFFAFAFF, false);
+            line(g, font, Component.literal(menu.amount() + " / " + menu.capacity() + " L"), 10, 30, 0xFFFAFAFF, false);
         }
     }
 
@@ -63,50 +74,53 @@ public final class MultiScreens {
             super(menu, inventory, title, texture);
         }
 
+        /** На дисплее GT нарисован слот (152,5), у этих контроллеров он не нужен: закрываем панелью, чтобы не обманывал. */
         @Override
-        protected void extractGauges(GuiGraphicsExtractor g) {}
+        protected void extractGauges(GuiGraphicsExtractor g) {
+            g.fill(leftPos + 151, topPos + 4, leftPos + 169, topPos + 22, 0xFFC6C6C6);
+        }
 
         @Override
         protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
             int y = 8, white = 0xFFFAFAFF, red = 0xFFFF5555;
-            g.text(font, font.plainSubstrByWidth(title.getString(), 136), 10, y, white, false);
+            line(g, font, font.plainSubstrByWidth(title.getString(), 136), 10, y, white, false);
             y += 10;
             if (!menu.formed()) {
-                g.text(font, Component.translatable("gui.iis.ebf.structure_bad"), 10, y, red, false);
+                line(g, font, Component.translatable("gui.iis.ebf.structure_bad"), 10, y, red, false);
                 return;
             }
             int problems = Maintenance.IDEAL - Integer.bitCount(menu.okMask());
-            g.text(font, Component.translatable("gui.iis.ebf.problems", problems), 10, y, problems > 0 ? red : white, false);
+            line(g, font, Component.translatable("gui.iis.ebf.problems", problems), 10, y, problems > 0 ? red : white, false);
             y += 10;
             if (problems > 0) {
                 for (Maintenance.Problem p : Maintenance.Problem.values()) {
                     if ((menu.okMask() & (1 << p.ordinal())) != 0) continue;
-                    g.text(font, Component.literal("- ").append(MaintenanceHatchBlockEntity.problemName(p)).withStyle(ChatFormatting.RED), 10, y, red, false);
+                    line(g, font, Component.literal("- ").append(MaintenanceHatchBlockEntity.problemName(p)).withStyle(ChatFormatting.RED), 10, y, red, false);
                     y += 9;
                     if (y > 70) break;
                 }
             }
             if (!menu.works()) {
-                g.text(font, Component.translatable("gui.iis.ebf.disabled"), 10, y, red, false);
+                line(g, font, Component.translatable("gui.iis.ebf.disabled"), 10, y, red, false);
                 y += 10;
-                g.text(font, Component.translatable("gui.iis.ebf.disabled_hint"), 10, y, red, false);
+                line(g, font, Component.translatable("gui.iis.ebf.disabled_hint"), 10, y, red, false);
                 y += 10;
             }
             if (menu.mufflerBlocked()) {
-                g.text(font, Component.translatable("gui.iis.ebf.muffler"), 10, y, red, false);
+                line(g, font, Component.translatable("gui.iis.ebf.muffler"), 10, y, red, false);
                 y += 10;
             }
             if (y > 70) return;
             if (menu.heat() > 0) {
-                g.text(font, Component.translatable("gui.iis.ebf.heat", menu.heat()), 10, y, white, false);
+                line(g, font, Component.translatable("gui.iis.ebf.heat", menu.heat()), 10, y, white, false);
                 y += 10;
             }
-            g.text(font, Component.translatable("gui.iis.ebf.voltage", menu.voltage()), 10, y, white, false);
+            line(g, font, Component.translatable("gui.iis.ebf.voltage", menu.voltage()), 10, y, white, false);
             y += 10;
             if (menu.maxProgress() > 0 && y <= 70) {
-                g.text(font, Component.translatable("gui.iis.ebf.progress", menu.progress(), menu.maxProgress()), 10, y, white, false);
+                line(g, font, Component.translatable("gui.iis.ebf.progress", menu.progress(), menu.maxProgress()), 10, y, white, false);
                 y += 10;
-                if (y <= 70) g.text(font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
+                if (y <= 70) line(g, font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
             }
         }
     }
@@ -118,31 +132,31 @@ public final class MultiScreens {
     static int statusLines(GuiGraphicsExtractor g, net.minecraft.client.gui.Font font, Component title, boolean formed, int okMask,
                            boolean works, boolean mufflerBlocked) {
         int y = 8, white = 0xFFFAFAFF, red = 0xFFFF5555;
-        g.text(font, font.plainSubstrByWidth(title.getString(), 136), 10, y, white, false);
+        line(g, font, font.plainSubstrByWidth(title.getString(), 136), 10, y, white, false);
         y += 10;
         if (!formed) {
-            g.text(font, Component.translatable("gui.iis.ebf.structure_bad"), 10, y, red, false);
+            line(g, font, Component.translatable("gui.iis.ebf.structure_bad"), 10, y, red, false);
             return -1;
         }
         int problems = Maintenance.IDEAL - Integer.bitCount(okMask);
-        g.text(font, Component.translatable("gui.iis.ebf.problems", problems), 10, y, problems > 0 ? red : white, false);
+        line(g, font, Component.translatable("gui.iis.ebf.problems", problems), 10, y, problems > 0 ? red : white, false);
         y += 10;
         if (problems > 0) {
             for (Maintenance.Problem p : Maintenance.Problem.values()) {
                 if ((okMask & (1 << p.ordinal())) != 0) continue;
-                g.text(font, Component.literal("- ").append(MaintenanceHatchBlockEntity.problemName(p)).withStyle(ChatFormatting.RED), 10, y, red, false);
+                line(g, font, Component.literal("- ").append(MaintenanceHatchBlockEntity.problemName(p)).withStyle(ChatFormatting.RED), 10, y, red, false);
                 y += 9;
                 if (y > 70) return -1;
             }
         }
         if (!works) {
-            g.text(font, Component.translatable("gui.iis.ebf.disabled"), 10, y, red, false);
+            line(g, font, Component.translatable("gui.iis.ebf.disabled"), 10, y, red, false);
             y += 10;
-            g.text(font, Component.translatable("gui.iis.ebf.disabled_hint"), 10, y, red, false);
+            line(g, font, Component.translatable("gui.iis.ebf.disabled_hint"), 10, y, red, false);
             y += 10;
         }
         if (mufflerBlocked) {
-            g.text(font, Component.translatable("gui.iis.ebf.muffler"), 10, y, red, false);
+            line(g, font, Component.translatable("gui.iis.ebf.muffler"), 10, y, red, false);
             y += 10;
         }
         return y > 70 ? -1 : y;
@@ -162,13 +176,13 @@ public final class MultiScreens {
             int y = statusLines(g, font, title, menu.formed(), menu.okMask(), menu.works(), menu.mufflerBlocked());
             if (y < 0) return;
             int white = 0xFFFAFAFF;
-            g.text(font, Component.translatable(menu.extra(3) != 0 ? "gui.iis.boiler.sh_steam" : "gui.iis.boiler.steam", menu.extra(0)), 10, y, white, false);
+            line(g, font, Component.translatable(menu.extra(3) != 0 ? "gui.iis.boiler.sh_steam" : "gui.iis.boiler.steam", menu.extra(0)), 10, y, white, false);
             y += 10;
-            g.text(font, Component.translatable("gui.iis.boiler.efficiency", menu.efficiency()), 10, y, white, false);
+            line(g, font, Component.translatable("gui.iis.boiler.efficiency", menu.efficiency()), 10, y, white, false);
             y += 10;
-            if (y <= 70) g.text(font, Component.translatable("gui.iis.boiler.fuel", menu.extra(1)), 10, y, white, false);
+            if (y <= 70) line(g, font, Component.translatable("gui.iis.boiler.fuel", menu.extra(1)), 10, y, white, false);
             y += 10;
-            if (y <= 70 && menu.extra(2) > 0) g.text(font, Component.translatable("gui.iis.boiler.circuit", menu.extra(2)), 10, y, white, false);
+            if (y <= 70 && menu.extra(2) > 0) line(g, font, Component.translatable("gui.iis.boiler.circuit", menu.extra(2)), 10, y, white, false);
         }
     }
 
@@ -187,16 +201,16 @@ public final class MultiScreens {
             if (y < 0) return;
             int white = 0xFFFAFAFF, red = 0xFFFF5555;
             if (menu.extra(4) == 0) {
-                g.text(font, Component.translatable("gui.iis.turbine.no_rotor"), 10, y, red, false);
+                line(g, font, Component.translatable("gui.iis.turbine.no_rotor"), 10, y, red, false);
                 return;
             }
-            g.text(font, Component.translatable("gui.iis.turbine.output", menu.extra(0)), 10, y, white, false);
+            line(g, font, Component.translatable("gui.iis.turbine.output", menu.extra(0)), 10, y, white, false);
             y += 10;
-            g.text(font, Component.translatable("gui.iis.turbine.flow", menu.extra(1)), 10, y, white, false);
+            line(g, font, Component.translatable("gui.iis.turbine.flow", menu.extra(1)), 10, y, white, false);
             y += 10;
-            if (y <= 70) g.text(font, Component.translatable("gui.iis.turbine.speed", menu.efficiency(), menu.extra(2)), 10, y, white, false);
+            if (y <= 70) line(g, font, Component.translatable("gui.iis.turbine.speed", menu.efficiency(), menu.extra(2)), 10, y, white, false);
             y += 10;
-            if (y <= 70) g.text(font, Component.translatable("gui.iis.turbine.damage", menu.extra(3)), 10, y, white, false);
+            if (y <= 70) line(g, font, Component.translatable("gui.iis.turbine.damage", menu.extra(3)), 10, y, white, false);
         }
     }
 
@@ -214,13 +228,13 @@ public final class MultiScreens {
             int y = statusLines(g, font, title, menu.formed(), menu.okMask(), menu.works(), menu.mufflerBlocked());
             if (y < 0) return;
             int white = 0xFFFAFAFF;
-            g.text(font, Component.translatable(menu.extra(1) != 0 ? "gui.iis.boiler.sh_steam" : "gui.iis.boiler.steam", menu.extra(0)), 10, y, white, false);
+            line(g, font, Component.translatable(menu.extra(1) != 0 ? "gui.iis.boiler.sh_steam" : "gui.iis.boiler.steam", menu.extra(0)), 10, y, white, false);
             y += 10;
-            g.text(font, Component.translatable("gui.iis.boiler.efficiency", menu.efficiency()), 10, y, white, false);
+            line(g, font, Component.translatable("gui.iis.boiler.efficiency", menu.efficiency()), 10, y, white, false);
             y += 10;
-            if (y <= 70) g.text(font, Component.translatable("gui.iis.heat_exchanger.threshold", menu.extra(2)), 10, y, white, false);
+            if (y <= 70) line(g, font, Component.translatable("gui.iis.heat_exchanger.threshold", menu.extra(2)), 10, y, white, false);
             y += 10;
-            if (y <= 70 && menu.extra(3) > 0) g.text(font, Component.translatable("gui.iis.boiler.circuit", menu.extra(3)), 10, y, white, false);
+            if (y <= 70 && menu.extra(3) > 0) line(g, font, Component.translatable("gui.iis.boiler.circuit", menu.extra(3)), 10, y, white, false);
         }
     }
 
@@ -236,8 +250,8 @@ public final class MultiScreens {
         @Override
         protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
             int white = 0xFFFAFAFF;
-            g.text(font, font.plainSubstrByWidth(title.getString(), 150), 10, 8, white, false);
-            g.text(font, Component.translatable(menu.formed() ? "gui.iis.fusion.store" : "gui.iis.ebf.structure_bad", menu.data(6), menu.data(7)), 10, 18, menu.formed() ? white : 0xFFFF5555, false);
+            line(g, font, font.plainSubstrByWidth(title.getString(), 150), 10, 8, white, false);
+            line(g, font, Component.translatable(menu.formed() ? "gui.iis.fusion.store" : "gui.iis.ebf.structure_bad", menu.data(6), menu.data(7)), 10, 18, menu.formed() ? white : 0xFFFF5555, false);
         }
     }
 
@@ -271,12 +285,12 @@ public final class MultiScreens {
             if (y < 0) return;
             int white = 0xFFFAFAFF, red = 0xFFFF5555;
             if (menu.extra(1) == 0) {
-                g.text(font, Component.translatable("gui.iis.processing_array.no_machine"), 10, y, red, false);
+                line(g, font, Component.translatable("gui.iis.processing_array.no_machine"), 10, y, red, false);
                 return;
             }
-            g.text(font, Component.translatable("gui.iis.processing_array.parallel", menu.extra(0)), 10, y, white, false);
+            line(g, font, Component.translatable("gui.iis.processing_array.parallel", menu.extra(0)), 10, y, white, false);
             y += 10;
-            if (menu.eut() > 0) g.text(font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
+            if (menu.eut() > 0) line(g, font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
         }
     }
 
@@ -286,19 +300,22 @@ public final class MultiScreens {
             super(menu, inventory, title, "multi/drill");
         }
 
+        /** Слот шахтных труб есть, а на DrillingRig.png рамки нет. */
         @Override
-        protected void extractGauges(GuiGraphicsExtractor g) {}
+        protected void extractGauges(GuiGraphicsExtractor g) {
+            slotFrame(g, 151, 4);
+        }
 
         @Override
         protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
             int y = statusLines(g, font, title, menu.formed(), menu.okMask(), menu.works(), menu.mufflerBlocked());
             if (y < 0) return;
             int white = 0xFFFAFAFF;
-            g.text(font, Component.translatable("gui.iis.drill.state." + Math.max(0, Math.min(2, menu.extra(1)))), 10, y, white, false);
+            line(g, font, Component.translatable("gui.iis.drill.state." + Math.max(0, Math.min(2, menu.extra(1)))), 10, y, white, false);
             y += 10;
-            g.text(font, Component.translatable("gui.iis.drill.depth", menu.extra(0), menu.extra(2)), 10, y, white, false);
+            line(g, font, Component.translatable("gui.iis.drill.depth", menu.extra(0), menu.extra(2)), 10, y, white, false);
             y += 10;
-            if (y <= 70 && menu.eut() > 0) g.text(font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
+            if (y <= 70 && menu.eut() > 0) line(g, font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
         }
     }
 
@@ -313,11 +330,11 @@ public final class MultiScreens {
             int y = statusLines(g, font, title, menu.formed(), menu.okMask(), menu.works(), menu.mufflerBlocked());
             if (y < 0) return;
             int white = 0xFFFAFAFF;
-            g.text(font, Component.translatable("gui.iis.cleanroom.cleanliness", menu.efficiency()), 10, y, white, false);
+            line(g, font, Component.translatable("gui.iis.cleanroom.cleanliness", menu.efficiency()), 10, y, white, false);
             y += 10;
-            g.text(font, Component.translatable("gui.iis.ebf.voltage", menu.voltage()), 10, y, white, false);
+            line(g, font, Component.translatable("gui.iis.ebf.voltage", menu.voltage()), 10, y, white, false);
             y += 10;
-            if (y <= 70 && menu.eut() > 0) g.text(font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
+            if (y <= 70 && menu.eut() > 0) line(g, font, Component.translatable("gui.iis.ebf.eut", menu.eut()), 10, y, white, false);
         }
     }
 

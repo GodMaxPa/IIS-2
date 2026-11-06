@@ -1048,6 +1048,10 @@ def generate(g):
                             ('Shift + wrench turns the front', 'Shift + ключ — повернуть лицевую сторону')])
         machine_list.append({'id': bid, 'type': mid_ if tr == 'lv' else f'{mid_}_{tr}', 'recipeMap': rmap, 'inputs': nin, 'outputs': nout,
                              'tank': tank, 'gui': f'lv/{gui.lower()}'})
+    # macerators of higher tiers: Macerator2-4.png with more output slots
+    for m in machine_list:
+        if m['gui'] == 'lv/macerator1' and m['outputs'] > 1:
+            m['gui'] = f"lv/macerator{m['outputs']}"
     write(os.path.join(g['RES'], NS, 'lv_machines.json'), machine_list)
     stats['machines'] = len(machine_list)
 
@@ -1100,6 +1104,9 @@ def generate(g):
     for bid in ('steam_turbine_mv', 'diesel_generator_mv', 'gas_turbine_mv'):
         name(f'block.{NS}.{bid}.tooltip.1', 'Output: 128 EU/t, 1 A from the front', 'Выход: 128 EU/t, 1 А спереди')
     shutil.copy(os.path.join(LV, 'gui', 'BasicTank.png'), tex_out('gui/lv/basictank.png'))
+    # macerators of higher tiers have more output slots and their own textures in GT
+    for k in (2, 3, 4):
+        shutil.copy(os.path.join(LV, 'gui', f'Macerator{k}.png'), tex_out(f'gui/lv/macerator{k}.png'))
     # D101: output-side overlays (GT Textures.BlockIcons.OVERLAY_PIPE_OUT / OVERLAY_FLUID_OUT), wrench messages
     for ovn in ('PIPE_OUT', 'FLUID_OUT'):
         im = img(os.path.join(ic, f'OVERLAY_{ovn}.png')).crop((0, 0, 16, 16))

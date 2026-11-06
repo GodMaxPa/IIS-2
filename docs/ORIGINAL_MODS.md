@@ -17,7 +17,7 @@
 | Railcraft | 9.12.2.0 | Железная дорога, коксовая печь, паровые машины | **A** — ж/д (решение владельца) |
 | GalacticraftCore + Planets, MicdoodleCore | 3.0.12.504 | Космос | **A** — космос (решение владельца) |
 | SGCraft | 1.9.5 | Звёздные врата | C — может стать частью космоса |
-| appliedenergistics2 (II), ExtraCells (II), NotEnoughEnergistics | rv3 | Цифровое хранение | **B** — AE2 26.1.13-beta с правилами ИИС 1 (D125); ExtraCells ещё нет |
+| appliedenergistics2 (II), ExtraCells (II), NotEnoughEnergistics | rv3 | Цифровое хранение | **B** — AE2 26.1.13-beta с правилами ИИС 1 (D125); ExtraCells на 26.1 нет, ячейка 256K и беспроводные терминалы AE2 Wireless Terminals (D127) |
 | NotEnoughItems (II), NEIIntegration, neiaddons | — | Просмотр рецептов | B — JEI или EMI 🟡 |
 | Waila, WailaHarvestability, WAILAPlugins | — | Подсказка о блоке | B — Jade 26.1.12 (D87) |
 | MapWriter (II) | 2.1.21 | Карта | B — JourneyMap / Xaero 🟡 |
@@ -31,11 +31,11 @@
 | CustomOreGen | 1.2.24 | Генерация руд | C — заменяется рудными жилами GT |
 | undergroundBiomes | 0.8 | Каменные породы | C |
 | RTG | 1.1.1.7 | Ландшафт | C — современный ландшафт лучше |
-| Chisel, Carpenter's Blocks, BiblioCraft, malisisdoors | — | Строительство, декор | B — двери: MalisisDoorsReborn 1.0.5 (D87); остальное — аналоги 🟡 |
-| betterbuilderswands | 0.8.0 | Строительный жезл | B 🟡 |
-| ironchest, Jabba | — | Хранение | B 🟡 |
-| ChickenChunks | 1.3.4 | Чанклоадеры | B 🟡 |
-| InventoryTweaks, Stackie | — | Удобства | B 🟡 |
+| Chisel, Carpenter's Blocks, BiblioCraft, malisisdoors | — | Строительство, декор | **B** — двери: MalisisDoorsReborn 1.0.5 (D87); Chisel 2.2.1, FramedBlocks 11.4.0, BiblioCraft Legacy 1.7.1 (D127) |
+| betterbuilderswands | 0.8.0 | Строительный жезл | **B** — Construction Wand 2.17.5 с рецептами ИИС 1 (D127) |
+| ironchest, Jabba | — | Хранение | **B** — Iron Chests 16.7.5 с рецептами ИИС 1, Storage Drawers 26.1.0.2 вместо JABBA (D127) |
+| ChickenChunks | 1.3.4 | Чанклоадеры | **B** — Chunk Loaders 1.2.9 с рецептом ИИС 1 (D127) |
+| InventoryTweaks, Stackie | — | Удобства | **B** — Mouse Tweaks 2.31; сортировки нет: Inventory Profiles Next мешал окнам (D127) |
 | Treecapitator, FastLeafDecay | — | Удобства | **A** — своя валка (D56) и опадание листвы (D87) |
 | LootBags | 2.0.17 | Мешки с лутом (награды квестов) | B/C |
 | InGameInfoXML | 2.8.1 | HUD | C |

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AAA",
+    "ACA",
+    "AAA"
+  ],
+  "key": {
+    "A": "minecraft:glass_pane",
+    "C": "ironchest:diamond_chest"
+  },
+  "result": {
+    "id": "ironchest:crystal_chest",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ironchest"
+    }
+  ]
+}

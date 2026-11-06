@@ -45,8 +45,20 @@ public class NuclearReactorBlock extends Block implements EntityBlock, EnergyCon
         return InteractionResult.SUCCESS;
     }
 
+    /** Камеры рядом отдают предметы от имени реактора: их возможности меняются вместе с ним. */
+    private static void refreshChambers(Level level, BlockPos pos) {
+        for (Direction d : Direction.values()) level.invalidateCapabilities(pos.relative(d));
+    }
+
+    @Override
+    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState old, boolean moved) {
+        super.onPlace(state, level, pos, old, moved);
+        refreshChambers(level, pos);
+    }
+
     @Override
     protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level, BlockPos pos, boolean moved) {
         super.affectNeighborsAfterRemoval(state, level, pos, moved);
+        refreshChambers(level, pos);
     }
 }

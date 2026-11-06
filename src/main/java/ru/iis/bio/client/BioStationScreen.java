@@ -91,10 +91,13 @@ public class BioStationScreen extends AbstractContainerScreen<BioStationMenu> {
 
     @Override
     protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
-        g.text(font, title, 8, 4, TEXT, false);
+        int room = st().modes > 1 ? MODE_X - 10 : imageWidth - 16;
+        String name = title.getString();
+        g.text(font, font.width(name) <= room ? name : font.plainSubstrByWidth(name, room - font.width("...")) + "...", 8, 4, TEXT, false);
         if (st().modes > 1) {
-            Component mode = Component.translatable("gui.iis.bio." + st().id + ".mode." + menu.mode());
-            g.text(font, mode, MODE_X + 3, MODE_Y + 2, TEXT, false);
+            String mode = Component.translatable("gui.iis.bio." + st().id + ".mode." + menu.mode()).getString();
+            int w = MODE_W - 6;
+            g.text(font, font.width(mode) <= w ? mode : font.plainSubstrByWidth(mode, w - font.width("...")) + "...", MODE_X + 3, MODE_Y + 2, TEXT, false);
         }
         StationLogic.Status s = menu.status();
         int color = switch (s) {
@@ -117,6 +120,11 @@ public class BioStationScreen extends AbstractContainerScreen<BioStationMenu> {
                         : isOutputTank(k) ? "gui.iis.bio.tank.output" : "gui.iis.bio.tank.input";
                 g.setTooltipForNextFrame(Component.translatable(key, name, menu.tankAmount(k), capacity(k)), mouseX, mouseY);
             }
+        }
+        if (st().modes > 1 && isHovering(MODE_X, MODE_Y, MODE_W, MODE_H, mouseX, mouseY)) {
+            g.setTooltipForNextFrame(Component.translatable("gui.iis.bio." + st().id + ".mode." + menu.mode()), mouseX, mouseY);
+        } else if (font.width(title) > (st().modes > 1 ? MODE_X - 10 : imageWidth - 16) && isHovering(8, 3, 100, 10, mouseX, mouseY)) {
+            g.setTooltipForNextFrame(title, mouseX, mouseY);
         }
         if (isHovering(8, 64, 104, 4, mouseX, mouseY)) {
             g.setTooltipForNextFrame(Component.translatable("gui.iis.bio.progress", menu.progressPermille() / 10), mouseX, mouseY);

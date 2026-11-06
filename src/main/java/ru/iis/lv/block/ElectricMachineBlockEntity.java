@@ -88,12 +88,17 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
 
     private static int slotCount(BlockState state) {
         LvMachineType t = type(state);
-        return t.inputs + t.outputs + 1;
+        return t.inputs + t.outputs + 2;
     }
 
     /** Слот батарейки (GT: питание машины от батарейки, 32 EU/t). */
     public int batterySlot() {
-        return items.size() - 1;
+        return items.size() - 2;
+    }
+
+    /** GT getSpecialSlot, в окне (125,63): флешка или сфера данных. Флешка, положенная в старых версиях в слот батарейки, тоже читается. */
+    public int specialSlot() {
+        return items.get(items.size() - 1).isEmpty() && (items.get(batterySlot()).getItem() instanceof ru.iis.lv.item.DataStickItem || items.get(batterySlot()).getItem() == LvContent.DATA_ORB.get()) ? batterySlot() : items.size() - 1;
     }
 
     public LvMachineType type() {
@@ -366,7 +371,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
 
     /** D122: GT_MetaTileEntity_SeismicProspector и _AdvSeismicProspector#checkRecipe: ТНТ на входе и флешка в особом слоте; разведка сразу, флешка выходит по окончании. */
     private int @Nullable [] prospect(ServerLevel sl, LvMachineType t) {
-        ItemStack in = items.get(0), stick = items.get(t.inputs + t.outputs);
+        ItemStack in = items.get(0), stick = items.get(specialSlot());
         boolean adv = t.tier != ru.iis.energy.VoltageTier.LV;
         int tnt = ru.iis.lv.item.Prospection.explosives(in, adv);
         if (tnt == 0 || in.getCount() < tnt || !(stick.getItem() instanceof ru.iis.lv.item.DataStickItem) || stick.getCount() != 1 || !items.get(t.inputs).isEmpty()) return null;
@@ -381,7 +386,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
 
     /** GT_MetaTileEntity_Scanner#checkRecipe, ветка сборочной линии: предмет и пустая флешка → флешка с чертежом, 30 EU/t с разгоном, mResearchTime тиков. */
     private int @Nullable [] scan(ServerLevel sl, LvMachineType t) {
-        ItemStack in = items.get(0), stick = items.get(t.inputs + t.outputs);
+        ItemStack in = items.get(0), stick = items.get(specialSlot());
         // D122: GT_MetaTileEntity_Scanner:173-182: сырые данные разведки: 1000 / 2^(уровень − 1) тиков, 32 × 4^(уровень − 1) EU/t, особый слот пуст
         // D122: :103-122: сфера в особом слоте: копия сферы (512 тиков) или скан элемента (масса × 8192 тиков)
         if (stick.getItem() == LvContent.DATA_ORB.get() && !in.isEmpty() && items.get(t.inputs).isEmpty()) {

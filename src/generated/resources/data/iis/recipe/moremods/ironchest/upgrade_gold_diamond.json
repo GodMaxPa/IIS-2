@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GGG",
+    "DCD",
+    "GGG"
+  ],
+  "key": {
+    "G": "minecraft:glass_pane",
+    "D": "#c:plates/diamond",
+    "C": "#c:plates/gold"
+  },
+  "result": {
+    "id": "ironchest:gold_to_diamond_chest_upgrade",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ironchest"
+    }
+  ]
+}

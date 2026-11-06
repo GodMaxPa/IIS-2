@@ -20,8 +20,8 @@ public class ItemBusMenu extends MachineMenu {
     public ItemBusMenu(int id, Inventory inventory, Container container, boolean input) {
         super(MultiContent.ITEM_BUS_MENU.get(), id, container, new SimpleContainerData(0));
         this.input = input;
-        int n = Math.min(16, container.getContainerSize()), side = n <= 4 ? 2 : n <= 9 ? 3 : 4;
-        int x0 = side == 2 ? 71 : side == 3 ? 62 : 53, y0 = side == 2 ? 26 : side == 3 ? 17 : 8;
+        int n = Math.min(16, container.getContainerSize()), side = n <= 1 ? 1 : n <= 4 ? 2 : n <= 9 ? 3 : 4;
+        int x0 = side == 1 ? 80 : side == 2 ? 71 : side == 3 ? 62 : 53, y0 = side == 1 ? 35 : side == 2 ? 26 : side == 3 ? 17 : 8;
         for (int i = 0; i < side * side; i++) {
             int x = x0 + 18 * (i % side), y = y0 + 18 * (i / side);
             addSlot(input ? new Slot(container, i, x, y) : new OutputSlot(container, i, x, y));

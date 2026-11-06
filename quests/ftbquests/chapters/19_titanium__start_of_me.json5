@@ -655,7 +655,7 @@
       "y": 2.0,
       "dependencies": [
         "1A00000000000333",
-        "1A000000000000FE",
+        "1A00000000000348",
         "1A000000000001D7"
       ],
       "icon": {
@@ -980,6 +980,39 @@
             "count": 1
           },
           "id": "1C00000000034700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000348",
+      "x": 5.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000FE"
+      ],
+      "icon": {
+        "id": "ironchest:copper_chest",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ironchest:copper_chest",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000034800"
         }
       ]
     },

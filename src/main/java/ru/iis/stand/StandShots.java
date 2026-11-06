@@ -44,7 +44,7 @@ public final class StandShots {
     }
 
     /** Вопрос при открытии мира (резервная копия, экспериментальные настройки): снимкам ответ безразличен. */
-    private static void proceed(net.minecraft.client.gui.screens.Screen screen) {
+    static void proceed(net.minecraft.client.gui.screens.Screen screen) {
         String name = screen.getClass().getSimpleName();
         if (!name.equals(lastScreen)) {
             lastScreen = name;

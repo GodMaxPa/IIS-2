@@ -32,7 +32,8 @@ public class ControllerMenu extends MachineMenu {
 
     public ControllerMenu(MenuType<?> type, int id, Inventory inventory, Container container, ContainerData data) {
         super(type, id, container, data);
-        addSlot(new Slot(container, 0, 152, 5));
+        // у термоядерного компьютера слота нет
+        if (container.getContainerSize() > 0) addSlot(new Slot(container, 0, 152, 5));
         finish(inventory);
     }
 

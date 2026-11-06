@@ -1,0 +1,97 @@
+"""Ready mods with the rules of IIS 1 (D127): Iron Chests, Chunk Loaders, Construction Wand.
+
+The mods themselves are listed in gradle.properties and docs/ORIGINAL_MODS.md. Here only what scripts of IIS 1 change:
+  scripts/IronChests.zs, ChickenChunks.zs, BetterRuildersWands.zs. Each recipe carries a neoforge:mod_loaded condition, IIS 2 loads without the mods.
+Mods without a script of their own (BiblioCraft, FramedBlocks, Storage Drawers, Chisel, AE2 wireless terminals, Mouse Tweaks) keep their recipes.
+Differences are in docs/PORTING_NOTES.md.
+"""
+import json
+import os
+
+NS = 'iis'
+I = lambda x: f'{NS}:{x}'
+# recipes of the mods that the scripts replace
+OFF = {
+    'ironchest': ['chests/copper_iron_chest', 'chests/diamond_crystal_chest', 'chests/diamond_obsidian_chest', 'chests/gold_diamond_chest', 'chests/iron_gold_chest', 'chests/vanilla_copper_chest', 'chests/vanilla_dirt_chest',
+                  'chests/vanilla_iron_chest', 'upgrades/copper_to_iron_chest_upgrade', 'upgrades/diamond_to_crystal_chest_upgrade', 'upgrades/diamond_to_obsidian_chest_upgrade', 'upgrades/gold_to_diamond_chest_upgrade',
+                  'upgrades/iron_to_gold_chest_upgrade', 'upgrades/wood_to_copper_chest_upgrade', 'upgrades/wood_to_iron_chest_upgrade'],
+    'chunkloaders': ['basic_chunk_loader'],
+    'constructionwand': ['iron_wand', 'diamond_wand', 'infinity_wand'],
+}
+# nothing makes these any more: IronChests.zs removes them and adds no recipe
+HIDDEN = ['ironchest:copper_to_iron_chest_upgrade']
+
+
+def generate(g):
+    write, D, GEN, RES = g['write'], g['D'], g['GEN'], g['RES']
+    tag_of, ref = g['tag_of'], g['ref']
+    recipes = {}
+    PANE, CHEST = 'minecraft:glass_pane', 'minecraft:chest'
+    P = lambda m: tag_of('plate', m)
+    OBS = I('plate_obsidian')
+
+    def ring(rid, out, around, centre):
+        recipes[rid] = {'type': 'minecraft:crafting_shaped', 'category': 'misc', 'pattern': ['AAA', 'ACA', 'AAA'], 'key': {'A': around, 'C': centre}, 'result': {'id': out, 'count': 1}}
+
+    def rows(rid, out, pattern, key):
+        recipes[rid] = {'type': 'minecraft:crafting_shaped', 'category': 'misc', 'pattern': pattern, 'key': key, 'result': {'id': out, 'count': 1}}
+
+    # --- Iron Chests: IronChests.zs:51-97 chests, :100-157 upgrades ---------------------------------------------------------
+    ring('ironchest/copper_chest', 'ironchest:copper_chest', P('Copper'), CHEST)
+    ring('ironchest/iron_chest', 'ironchest:iron_chest', P('Iron'), CHEST)
+    ring('ironchest/gold_chest', 'ironchest:gold_chest', P('Gold'), 'ironchest:iron_chest')
+    rows('ironchest/diamond_chest', 'ironchest:diamond_chest', ['GGG', 'DCD', 'GGG'], {'G': PANE, 'D': P('Diamond'), 'C': 'ironchest:gold_chest'})
+    ring('ironchest/crystal_chest', 'ironchest:crystal_chest', PANE, 'ironchest:diamond_chest')
+    ring('ironchest/obsidian_chest', 'ironchest:obsidian_chest', OBS, 'ironchest:diamond_chest')
+    ring('ironchest/dirt_chest', 'ironchest:dirt_chest', 'minecraft:dirt', CHEST)
+    ring('ironchest/upgrade_wood_copper', 'ironchest:wood_to_copper_chest_upgrade', P('Copper'), '#minecraft:planks')
+    ring('ironchest/upgrade_wood_iron', 'ironchest:wood_to_iron_chest_upgrade', P('Iron'), '#minecraft:planks')
+    ring('ironchest/upgrade_iron_gold', 'ironchest:iron_to_gold_chest_upgrade', P('Gold'), P('Iron'))
+    rows('ironchest/upgrade_gold_diamond', 'ironchest:gold_to_diamond_chest_upgrade', ['GGG', 'DCD', 'GGG'], {'G': PANE, 'D': P('Diamond'), 'C': P('Gold')})
+    ring('ironchest/upgrade_diamond_crystal', 'ironchest:diamond_to_crystal_chest_upgrade', PANE, OBS)
+    ring('ironchest/upgrade_diamond_obsidian', 'ironchest:diamond_to_obsidian_chest_upgrade', OBS, PANE)
+
+    # IronChests.zs:161-168: the arc furnace takes chests apart, oxygen 488 L, 1200 ticks, 96 EU/t
+    def arc(rid, chest, outs):
+        recipes[f'ironchest/arc_{rid}'] = {'type': f'{NS}:arc_furnace', 'inputs': [{'ingredient': chest, 'count': 1}], 'outputs': [{'id': i, 'count': c} for i, c in outs],
+                                           'duration': 1200, 'eut': 96, 'fluid_inputs': [{'ingredient': I('oxygen'), 'amount': 488}]}
+
+    COPPER, WROUGHT, GOLD = ref('ingot', 'AnnealedCopper'), ref('ingot', 'WroughtIron'), 'minecraft:gold_ingot'
+    GRAPHITE = ref('dust', 'Graphite')
+    arc('copper', 'ironchest:copper_chest', [(COPPER, 8)])
+    arc('iron', 'ironchest:iron_chest', [(WROUGHT, 8)])
+    arc('gold', 'ironchest:gold_chest', [(WROUGHT, 8), (GOLD, 8)])
+    arc('diamond', 'ironchest:diamond_chest', [(WROUGHT, 8), (GOLD, 8), ('minecraft:glass', 2), (GRAPHITE, 16)])
+    arc('crystal', 'ironchest:crystal_chest', [(WROUGHT, 8), (GOLD, 8), ('minecraft:glass', 5), (GRAPHITE, 16)])
+    arc('obsidian', 'ironchest:obsidian_chest', [(WROUGHT, 8), (GOLD, 8), ('minecraft:obsidian', 8), (GRAPHITE, 16)])
+
+    # --- Chunk Loaders: ChickenChunks.zs:9-11 is the recipe of the big loader, it goes to the block that does the same -------
+    rows('chunkloaders/basic_chunk_loader', 'chunkloaders:basic_chunk_loader', [' E ', 'GGG', 'ODO'], {'E': 'minecraft:ender_pearl', 'G': P('Gold'), 'O': OBS, 'D': I('industrial_diamond')})
+
+    # --- Construction Wand: BetterRuildersWands.zs:4-20, wands of Better Builder's Wands ----------------------------------------
+    for wand, plate, core in (('iron_wand', P('WroughtIron'), tag_of('ingot', 'WroughtIron')), ('diamond_wand', P('Diamond'), 'minecraft:diamond'), ('infinity_wand', P('NetherStar'), 'minecraft:nether_star')):
+        rows(f'constructionwand/{wand}', f'constructionwand:{wand}', [' S ', 'FS ', 'PCH'], {'S': 'minecraft:stick', 'F': '#iis:tools/file', 'P': plate, 'C': core, 'H': '#iis:tools/hammer'})
+
+    # --- writing ---------------------------------------------------------------------------------------------------------------
+    for key, r in recipes.items():
+        need = sorted({m for m in OFF if f'"{m}:' in json.dumps(r)})
+        out = dict(r)
+        if need:
+            out['neoforge:conditions'] = [{'type': 'neoforge:mod_loaded', 'modid': m} for m in need]
+        write(os.path.join(D, NS, 'recipe', 'moremods', key + '.json'), out)
+    with open(os.path.join(g['ROOT'], 'src', 'main', 'resources', NS, 'moremods_recipes.json'), 'w', encoding='utf-8', newline=chr(10)) as f:
+        json.dump(sorted(f'{NS}:moremods/{k}' for k in recipes), f, indent=0)
+    OVR = os.path.join(GEN, 'packs', 'iis_overrides', 'data')
+    n = 0
+    for ns, paths in OFF.items():
+        for path in paths:
+            write(os.path.join(OVR, ns, 'recipe', path + '.json'), {'neoforge:conditions': [{'type': 'neoforge:never'}]})
+            n += 1
+    tag = os.path.join(D, 'c', 'tags', 'item', 'hidden_from_recipe_viewers.json')
+    data = json.load(open(tag, encoding='utf-8'))
+    data['values'] += [{'id': i, 'required': False} for i in HIDDEN]
+    # Extra-Cells.zs gives the 256K cell a recipe: it must be seen
+    shown = {'ae2:item_storage_cell_256k', 'ae2:cell_component_256k'}
+    data['values'] = [v for v in data['values'] if (v['id'] if isinstance(v, dict) else v) not in shown]
+    write(tag, data)
+    return {'recipes': len(recipes), 'off': n}

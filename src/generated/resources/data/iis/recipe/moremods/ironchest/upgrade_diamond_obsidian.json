@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AAA",
+    "ACA",
+    "AAA"
+  ],
+  "key": {
+    "A": "iis:plate_obsidian",
+    "C": "minecraft:glass_pane"
+  },
+  "result": {
+    "id": "ironchest:diamond_to_obsidian_chest_upgrade",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ironchest"
+    }
+  ]
+}

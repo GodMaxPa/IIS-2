@@ -11,7 +11,7 @@
     "B": "iis:plate_certus_quartz",
     "C": "#iis:screws/quartzite",
     "D": "#c:plates/stainless_steel",
-    "E": "iis:plate_glass",
+    "E": "#c:plates/glass",
     "F": "#c:plates/aluminium",
     "G": "#iis:tools/hammer"
   },

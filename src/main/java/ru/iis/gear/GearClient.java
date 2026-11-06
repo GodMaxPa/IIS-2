@@ -18,6 +18,7 @@ public final class GearClient {
     private static final KeyMapping NIGHT_VISION = new KeyMapping("key.iis.night_vision", InputConstants.KEY_N, KeyMapping.Category.GAMEPLAY);
 
     public static void register(IEventBus modBus) {
+        modBus.addListener(GearPackLayer::addToPlayers);
         GearEvents.clientJump = p -> p instanceof LocalPlayer lp && lp.input.keyPresses.jump();
         modBus.addListener((RegisterKeyMappingsEvent e) -> e.register(NIGHT_VISION));
         NeoForge.EVENT_BUS.addListener((ClientTickEvent.Post e) -> {

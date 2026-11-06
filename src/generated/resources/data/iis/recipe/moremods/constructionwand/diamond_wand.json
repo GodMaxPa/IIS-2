@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "FS ",
+    "PCH"
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "F": "#iis:tools/file",
+    "P": "#c:plates/diamond",
+    "C": "minecraft:diamond",
+    "H": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "constructionwand:diamond_wand",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "constructionwand"
+    }
+  ]
+}

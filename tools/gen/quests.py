@@ -278,14 +278,14 @@ class Mapper:
             r = f'{NS}:{r}' if r else None
         elif mod == 'gregtech':
             r = self.gregtech(name, dmg)
-        elif mod in ('appliedenergistics2', 'EnderIO'):
+        elif mod in ('appliedenergistics2', 'EnderIO', 'IronChest', 'ChickenChunks', 'betterbuilderswands', 'chisel', 'extracells'):
             r = self.aeio.quest_item(mod, name, dmg)
         if r is None and oredict:
             r = self.oredict(oredict)
         if r is None:
             return None
         ns, _, path = r.partition(':')
-        ok = path in self.ours if ns == NS else (path in self.mod_items[ns] if ns in self.mod_items else path in self.vanilla)
+        ok = path in self.ours if ns == NS else (path in self.mod_items[ns] if ns in self.mod_items else ns in ('ironchest', 'chunkloaders', 'constructionwand', 'chisel') or path in self.vanilla)
         return r if ok else None
 
     def structural(self, name, dmg):

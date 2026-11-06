@@ -47,9 +47,9 @@ public final class AutoScreens {
                 int[] xs = {120, 137, 155}, ys = {9, 26, 43};
                 for (int i = 0; i < 9; i++) g.text(font, String.valueOf(menu.targetSlot(i)), xs[i % 3], ys[i / 3], 0xFFFAFAFF, false);
             } else if (menu.kind == AutomationType.TYPE_FILTER) {
-                g.text(font, Component.translatable("gui.iis.auto.type." + AutomationBlockEntity.TYPE_PREFIXES.get(menu.typeIndex())), 18, 24, 0xFFFAFAFF, false);
+                g.text(font, clip(Component.translatable("gui.iis.auto.type." + AutomationBlockEntity.TYPE_PREFIXES.get(menu.typeIndex())).getString(), 90), 8, 6, 0xFF404040, false);
             } else if (menu.kind == AutomationType.SUPER_BUFFER) {
-                g.text(font, title, 8, 8, 0xFF404040, false);
+                drawTitle(g, 8, 8, 0xFF404040, 56);
             }
         }
 
@@ -98,10 +98,18 @@ public final class AutoScreens {
 
         @Override
         protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
-            g.text(font, title, 8, 4, 0xFFFAFAFF, false);
-            g.text(font, Component.translatable("gui.iis.quantum.stored"), 8, 16, 0xFFFAFAFF, false);
-            g.text(font, String.valueOf(menu.count()), 8, 26, 0xFFFAFAFF, false);
-            g.text(font, Component.translatable("gui.iis.quantum.max", menu.capacity()), 8, 72, 0xFFFAFAFF, false);
+            drawTitle(g, 8, 4, 0xFF404040, 160);
+            g.text(font, Component.translatable("gui.iis.quantum.stored"), 10, 20, 0xFFFAFAFF, false);
+            g.text(font, String.valueOf(menu.count()), 10, 30, 0xFFFAFAFF, false);
+            g.text(font, Component.translatable("gui.iis.quantum.max", menu.capacity()), 8, 72, 0xFF404040, false);
+        }
+
+        @Override
+        public void extractRenderState(GuiGraphicsExtractor g, int mouseX, int mouseY, float a) {
+            super.extractRenderState(g, mouseX, mouseY, a);
+            if (menu.count() > 0 && hovering(59, 42, 16, 16, mouseX, mouseY)) {
+                g.setTooltipForNextFrame(new ItemStack(BuiltInRegistries.ITEM.byId(menu.itemId())).getHoverName().copy().append(": " + menu.count()), mouseX, mouseY);
+            }
         }
     }
 
@@ -149,7 +157,7 @@ public final class AutoScreens {
         @Override
         protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
             int white = 0xFFFAFAFF;
-            g.text(font, title, 8, 6, white, false);
+            drawTitle(g, 8, 6, white, 122);
             g.text(font, Component.translatable("gui.iis.dtransformer.in", menu.voltage(), menu.iAmp()), 8, 28, white, false);
             g.text(font, Component.translatable("gui.iis.dtransformer.tier", menu.oVoltage()), 8, 46, white, false);
             g.text(font, Component.translatable("gui.iis.dtransformer.out", menu.oAmp()), 8, 64, white, false);

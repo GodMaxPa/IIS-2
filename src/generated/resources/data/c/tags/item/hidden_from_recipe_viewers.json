@@ -14,10 +14,6 @@
       "required": false
     },
     {
-      "id": "ae2:cell_component_256k",
-      "required": false
-    },
-    {
       "id": "ae2:certus_quartz_axe",
       "required": false
     },
@@ -155,10 +151,6 @@
     },
     {
       "id": "ae2:item_p2p_tunnel",
-      "required": false
-    },
-    {
-      "id": "ae2:item_storage_cell_256k",
       "required": false
     },
     {
@@ -3591,6 +3583,10 @@
     },
     {
       "id": "enderio:xp_vacuum",
+      "required": false
+    },
+    {
+      "id": "ironchest:copper_to_iron_chest_upgrade",
       "required": false
     }
   ]

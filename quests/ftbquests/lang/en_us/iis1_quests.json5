@@ -3106,6 +3106,10 @@
     "This is the subprodust of titanium ingots. What sould you do with this? Put it to chemical reactor HV+ with sodium to get back part of resources."
   ],
   "quest.1A00000000000347.title": "Magnesiumchloride Dust",
+  "quest.1A00000000000348.quest_desc": [
+    "Better than common chest."
+  ],
+  "quest.1A00000000000348.title": "Copper Chest",
   "quest.1A00000000000349.quest_desc": [
     "Nice stuff to debug anything around you. This is the most important thing to work with plants to grow them and select some of them with better params to crossbreed them. Instead of cronalyzer, it may show you params of growing plant while it growing, and it don't require to get seeds as first step, to know plant characteristics. So it may greatly help you and up a speed of you crosbreeding work."
   ],
@@ -4022,10 +4026,22 @@
     "Simple sign that allow you to write some text."
   ],
   "quest.1A00000000000478.title": "Sign",
+  "quest.1A0000000000047B.quest_desc": [
+    "Building tool.  It can be used to place blocks by right-clicking on a side of the same block."
+  ],
+  "quest.1A0000000000047B.title": "Iron Wand",
+  "quest.1A0000000000047C.quest_desc": [
+    "Better than iron wand. Has vertical building mod."
+  ],
+  "quest.1A0000000000047C.title": "Diamond Wand",
   "quest.1A0000000000047F.quest_desc": [
     "A small item, that can be used to store, copy, and paste settings. Shift + Right Click on a configurable object to save the settings onto the memory card (a click on air will clear settings), then right click on any other block of the same type to paste the settings. They are also used to link the input P2P Tunnel to the correct output P2P Tunnels."
   ],
   "quest.1A0000000000047F.title": "Memory Card",
+  "quest.1A00000000000481.quest_desc": [
+    "Nice tool to decoration most blocks in the Minecraft. Also there are diamond and obsidian chisels, that have same functionality, but with larger durability."
+  ],
+  "quest.1A00000000000481.title": "Chisel",
   "quest.1A00000000000482.quest_desc": [
     "A part of scuba set."
   ],

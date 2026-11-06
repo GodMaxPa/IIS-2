@@ -870,7 +870,7 @@
     "inputs": 1,
     "outputs": 2,
     "tank": 0,
-    "gui": "lv/macerator1"
+    "gui": "lv/macerator2"
   },
   {
     "id": "electric_furnace_hv",
@@ -1302,7 +1302,7 @@
     "inputs": 1,
     "outputs": 3,
     "tank": 0,
-    "gui": "lv/macerator1"
+    "gui": "lv/macerator3"
   },
   {
     "id": "electric_furnace_ev",
@@ -1734,7 +1734,7 @@
     "inputs": 1,
     "outputs": 4,
     "tank": 0,
-    "gui": "lv/macerator1"
+    "gui": "lv/macerator4"
   },
   {
     "id": "electric_furnace_iv",
@@ -2166,7 +2166,7 @@
     "inputs": 1,
     "outputs": 4,
     "tank": 0,
-    "gui": "lv/macerator1"
+    "gui": "lv/macerator4"
   },
   {
     "id": "electric_furnace_luv",
@@ -2598,7 +2598,7 @@
     "inputs": 1,
     "outputs": 4,
     "tank": 0,
-    "gui": "lv/macerator1"
+    "gui": "lv/macerator4"
   },
   {
     "id": "electric_furnace_zpm",
@@ -3030,7 +3030,7 @@
     "inputs": 1,
     "outputs": 4,
     "tank": 0,
-    "gui": "lv/macerator1"
+    "gui": "lv/macerator4"
   },
   {
     "id": "electric_furnace_uv",

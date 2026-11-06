@@ -1067,6 +1067,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_aeio', os.path.join(ROOT, 'tools',
 _aeio = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_aeio)
 lv_stats['aeio'] = _aeio.generate(globals())
+# Other ready mods with the rules of IIS 1 (D127)
+_spec = _ilu.spec_from_file_location('iis_gen_moremods', os.path.join(ROOT, 'tools', 'gen', 'moremods.py'))
+_moremods = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_moremods)
+lv_stats['moremods'] = _moremods.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

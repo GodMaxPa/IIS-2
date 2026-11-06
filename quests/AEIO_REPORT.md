@@ -1,23 +1,68 @@
 # AE2 и Ender IO: что из ИИС 1 не перенеслось (D125)
 
-Рецептов ИИС 1 записано: 225. Выключено рецептов модов: AE2 210, Ender IO 1097. Скрыто предметов: 898.
+Рецептов ИИС 1 записано: 230. Выключено рецептов модов: AE2 205, Ender IO 1097. Скрыто предметов: 898.
 
+- нет в новых модах: <extracells:storage.component:1>: 4
+  - `Extra-Cells.zs: recipes.addShapedMirrored(StorageComponent1024K, [ [DataControlCircuit, StorageComponent256K, DataControlCircuit], [StorageComponent256K)`
+  - `Extra-Cells.zs: Assembler.addRecipe(StorageComponent1024K, [DataControlCircuit*3, StorageComponent256K*4, DiamondCircuit], null, 180, 1920)`
+  - `Extra-Cells.zs: Assembler.addRecipe(StorageComponent4096K, [EFlow*3, StorageComponent1024K*4, DiamondCircuit], null, 180, 1920)`
+  - `Extra-Cells.zs: Assembler.addRecipe(StorageComponent4096K, [EFlow*3, StorageComponent1024K*3, ASoCchip], mEuropuim * 36, 30, 30720)`
 - нет в ИИС 2: <gregtech:gt.metaitem.03:32047>: 3
   - `AE2.zs: Assembler.addRecipe(StorageComponent16K, [RAMchip*32, FluixDust*32, SoCchip], mEuropuim * 36, 30, 30720)`
   - `AE2.zs: Assembler.addRecipe(StorageComponent64K, [AdvCircuit*3, StorageComponent16K*3, SoCchip], mEuropuim * 36, 30, 30720)`
   - `AE2.zs: Assembler.addRecipe(<appliedenergistics2:item.ItemMultiMaterial:33>, [<ore:plateEnderPearl>*3, <appliedenergistics2:item.ItemMulti)`
-- непонятное выражение в скрипте: 2
+- нет в ИИС 2: <gregtech:gt.metaitem.03:32049>: 3
+  - `AE2.zs: Assembler.addRecipe(<appliedenergistics2:item.ItemMultiMaterial:34>, [<ore:plateEnderEye>*3, <appliedenergistics2:item.ItemMultiMa)`
+  - `Extra-Cells.zs: Assembler.addRecipe(StorageComponent256K, [DataCircuit*3, StorageComponent64K*3, ASoCchip], mEuropuim * 36, 30, 30720)`
+  - `Extra-Cells.zs: Assembler.addRecipe(StorageComponent1024K, [DataControlCircuit*3, StorageComponent256K*3, ASoCchip], mEuropuim * 36, 30, 30720)`
+- непонятное выражение в скрипте: 3
   - `AE2.zs: recipes.remove(slab)`
   - `AE2.zs: recipes.addShaped(slab * 2, [[<ore:craftingToolSaw>, blocks[i]]])`
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:terminal.universal.wireless>.withTag({modules:3}), [AnyWirelessTerminal, AnyWirelessFluidTerminal])`
+- нет в новых модах: <extracells:storage.component:6>: 3
+  - `Extra-Cells.zs: recipes.addShapedMirrored(FluidSComponent16K, [ [GoodCircuit, FluidSComponent4K, GoodCircuit], [FluidSComponent4K, <extracells:certustan)`
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent64K, [AdvCircuit*3, FluidSComponent16K*4, <extracells:certustank>], null, 180, 1920)`
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent64K, [AdvCircuit*3, FluidSComponent16K*3, SoCchip], mEuropuim * 36, 30, 30720)`
+- нет в новых модах: <extracells:storage.component:7>: 3
+  - `Extra-Cells.zs: recipes.addShapedMirrored(FluidSComponent64K, [ [AdvCircuit, FluidSComponent16K, AdvCircuit], [FluidSComponent16K, <extracells:certustan)`
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent256K, [DataCircuit*3, FluidSComponent64K*4, <extracells:certustank>], null, 180, 1920)`
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent256K, [DataCircuit*3, FluidSComponent64K*3, ASoCchip], mEuropuim * 36, 30, 30720)`
+- нет в новых модах: <extracells:storage.component:8>: 3
+  - `Extra-Cells.zs: recipes.addShapedMirrored(FluidSComponent256K, [ [DataCircuit, FluidSComponent64K, DataCircuit], [FluidSComponent64K, <extracells:certus)`
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent1024K, [DataControlCircuit*3, FluidSComponent256K*4, <extracells:certustank>], null, 180, 1920)`
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent1024K, [DataControlCircuit*3, FluidSComponent256K*3, ASoCchip], mEuropuim * 36, 30, 30720)`
+- нет в новых модах: <extracells:storage.component:9>: 3
+  - `Extra-Cells.zs: recipes.addShapedMirrored(FluidSComponent1024K, [ [DataControlCircuit, FluidSComponent256K, DataControlCircuit], [FluidSComponent256K, <)`
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent4096K, [EFlow*3, FluidSComponent1024K*4, <extracells:certustank>], null, 180, 1920)`
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent4096K, [EFlow*3, FluidSComponent1024K*3, ASoCchip], mEuropuim * 36, 30, 30720)`
 - нет в новом Ender IO: <EnderIO:blockElectricLight>: 2
   - `EnderIO.zs: recipes.addShaped(<EnderIO:blockElectricLight>, [[null, null, null], [null, fusedQuartz, null], [<ore:plateIron>, <ore:springSma)`
   - `EnderIO.zs: recipes.addShaped(<EnderIO:blockElectricLight> * 2, [[null, null, null], [null, fusedQuartz, null], [<ore:plateIron>, <ore:sprin)`
+- нет соответствия <ore:circuitUltimate>: 2
+  - `Extra-Cells.zs: Assembler.addRecipe(StorageComponent16384K, [DataOrb*3, StorageComponent4096K*4, DiamondCircuit], null, 180, 1920)`
+  - `Extra-Cells.zs: Assembler.addRecipe(StorageComponent16384K, [DataOrb*3, StorageComponent4096K*3, ASoCchip], mEuropuim * 36, 30, 30720)`
+- нет в новых модах: <extracells:storage.component:4>: 2
+  - `Extra-Cells.zs: recipes.addShapedMirrored(FluidSComponent1K, [ [RAMchip, <ore:dyeBlue>, RAMchip], [<ore:dyeBlue>, <extracells:certustank>, <ore:dyeBlue>)`
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent4K, [BasicCircuit*3, FluidSComponent1K*4, <extracells:certustank>], null, 180, 1920)`
+- нет соответствия <ore:dyeBlue>: 2
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent1K, [RAMchip*3, <ore:dyeBlue>*4, <extracells:certustank>], null, 180, 1920)`
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent16K, [RAMchip*32, <ore:dyeBlue>*32, SoCchip], mEuropuim * 36, 30, 30720)`
+- нет в новых модах: <extracells:storage.component:5>: 2
+  - `Extra-Cells.zs: recipes.addShapedMirrored(FluidSComponent4K, [ [BasicCircuit, FluidSComponent1K, BasicCircuit], [FluidSComponent1K, <extracells:certusta)`
+  - `Extra-Cells.zs: Assembler.addRecipe(FluidSComponent16K, [GoodCircuit*3, FluidSComponent4K*4, <extracells:certustank>], null, 180, 1920)`
+- нет в новых модах: <extracells:storage.casing:1>: 2
+  - `Extra-Cells.zs: recipes.addShapedMirrored(UFluidStorageHousing, [ [HHammer, CertusPlate, NQuartzScrew], [AlPlate, GlassPane, AlPlate], [NQuartzScrew, St)`
+  - `Extra-Cells.zs: recipes.addShapedMirrored(UFluidStorageHousing, [ [Screwdriver, CertusPlate, NQuartzScrew], [AlPlate, GlassPane, AlPlate], [NQuartzScrew)`
+- нет в новых модах: <extracells:part.base:2>: 2
+  - `Extra-Cells.zs: recipes.addShaped(<extracells:part.base:2>, [ [<appliedenergistics2:item.ItemMultiPart:440>, <minecraft:piston>, <minecraft:stic)`
+  - `Extra-Cells.zs: recipes.addShaped(<extracells:part.base:2>, [ [<appliedenergistics2:tile.BlockInterface>, <minecraft:piston>, <minecraft:sticky_)`
+- нет в новых модах: <extracells:ecbaseblock:0>: 2
+  - `Extra-Cells.zs: recipes.addShapeless(FluidInt, [Int, <ore:dyeBlue>])`
+  - `Extra-Cells.zs: recipes.addShapeless(FluidInt, [FluidIntPanel])`
 - нет в новом AE2: <appliedenergistics2:tile.BlockSecurity>: 1
   - `AE2.zs: recipes.addShaped(<appliedenergistics2:tile.BlockSecurity>, [ [AlPlate, <appliedenergistics2:tile.BlockChest>, AlPlate], [FluixG)`
 - нет в новом AE2: <appliedenergistics2:item.ToolBiometricCard>: 1
   - `AE2.zs: recipes.addShaped(<appliedenergistics2:item.ToolBiometricCard>, [ [DiamondCircuit, AlPlate, AlPlate], [<ore:plateGold>, <ore:pla)`
-- нет в ИИС 2: <gregtech:gt.metaitem.03:32049>: 1
-  - `AE2.zs: Assembler.addRecipe(<appliedenergistics2:item.ItemMultiMaterial:34>, [<ore:plateEnderEye>*3, <appliedenergistics2:item.ItemMultiMa)`
 - мода нет в ИИС 2: <IC2:blockITNT>: 1
   - `AE2.zs: Centrifuge.addRecipe([TinyTNT, TinyTNT], ITNT, 0, 600)`
 - нет в ИИС 2: <gregtech:gt.metaitem.01:24515>: 1
@@ -46,18 +91,76 @@
   - `EnderIO.zs: Assembler.addRecipe(<EnderIO:itemExtractSpeedUpgrade>, [<ore:plateElectricalSteel>, <ore:plateAluminium>, <ore:circuitBasic>], nul)`
 - нет в новом Ender IO: <EnderIO:itemExtractSpeedUpgrade:1>: 1
   - `EnderIO.zs: Assembler.addRecipe(<EnderIO:itemExtractSpeedUpgrade:1>, [<ore:plateElectricalSteel>, <ore:plateRedAlloy>, <ore:circuitBasic>], nu)`
+- нет в новых модах: <extracells:storage.physical:1>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:storage.physical:1>, [<extracells:storage.component:1>, <extracells:storage.casing:0>])`
+- нет в новых модах: <extracells:storage.physical:2>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:storage.physical:2>, [<extracells:storage.component:2>, <extracells:storage.casing:0>])`
+- нет в новых модах: <extracells:storage.physical:3>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:storage.physical:3>, [<extracells:storage.component:3>, <extracells:storage.casing:0>])`
+- нет в новых модах: <extracells:storage.component:2>: 1
+  - `Extra-Cells.zs: recipes.addShapedMirrored(StorageComponent4096K, [ [EFlow, StorageComponent1024K, EFlow], [StorageComponent1024K, DiamondCircuit, Storag)`
+- нет в новых модах: <extracells:storage.component:3>: 1
+  - `Extra-Cells.zs: recipes.addShapedMirrored(StorageComponent16384K, [ [DataOrb, StorageComponent4096K, DataOrb], [StorageComponent4096K, DiamondCircuit, S)`
+- нет в новых модах: <extracells:storage.fluid:0>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:storage.fluid:0>, [<extracells:storage.component:4>, <extracells:storage.casing:1>])`
+- нет в новых модах: <extracells:storage.fluid:1>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:storage.fluid:1>, [<extracells:storage.component:5>, <extracells:storage.casing:1>])`
+- нет в новых модах: <extracells:storage.fluid:2>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:storage.fluid:2>, [<extracells:storage.component:6>, <extracells:storage.casing:1>])`
+- нет в новых модах: <extracells:storage.fluid:3>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:storage.fluid:3>, [<extracells:storage.component:7>, <extracells:storage.casing:1>])`
+- нет в новых модах: <extracells:storage.fluid:4>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:storage.fluid:4>, [<extracells:storage.component:8>, <extracells:storage.casing:1>])`
+- нет в новых модах: <extracells:storage.fluid:5>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:storage.fluid:5>, [<extracells:storage.component:9>, <extracells:storage.casing:1>])`
+- нет в новых модах: <extracells:storage.fluid:6>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:storage.fluid:6>, [<extracells:storage.component:10>, <extracells:storage.casing:1>])`
+- нет в новых модах: <extracells:storage.component:10>: 1
+  - `Extra-Cells.zs: recipes.addShapedMirrored(FluidSComponent4096K, [ [EFlow, FluidSComponent1024K, EFlow], [FluidSComponent1024K, <extracells:certustank>, )`
+- нет в ИИС 2: <gregtech:gt.metaitem.01:27522>: 1
+  - `Extra-Cells.zs: Assembler.addRecipe(UFluidStorageHousing, [CertusPlate, GlassPane, AlPlate * 2, <gregtech:gt.metaitem.01:27522> * 2, StainlessPlat)`
+- нет в ИИС 2: <gregtech:gt.metaitem.01:32308>: 1
+  - `Extra-Cells.zs: AlloySmelter.addRecipe(<extracells:certustank>, <appliedenergistics2:tile.BlockQuartzGlass> * 8, <gregtech:gt.metaitem.01:32308> * 0,)`
+- нет в новых модах: <extracells:pattern.fluid>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:pattern.fluid>, [<extracells:storage.casing:1>, <ore:bucketEmpty>])`
+- нет в новых модах: <extracells:part.base>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:part.base>, [<appliedenergistics2:item.ItemMultiPart:260>, <ore:plateLapis>, <ore:plateLapis>, <or)`
+- нет в новых модах: <extracells:part.base:1>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:part.base:1>, [<appliedenergistics2:item.ItemMultiPart:240>, <ore:plateLapis>, <ore:plateLapis>, <)`
+- нет в новых модах: <extracells:part.base:3>: 1
+  - `Extra-Cells.zs: recipes.addShaped(FluidTerminal, [ [<ore:stickLapis>, QuartziteScrew, <appliedenergistics2:item.ItemMultiMaterial:43>], [<ore:it)`
+- нет в новых модах: <extracells:terminal.fluid.wireless>: 1
+  - `Extra-Cells.zs: recipes.addShaped(WirelessFluidTerminal, [ [WirelessReceiver, FluidTerminal, WirelessReceiver], [<ore:plateNetherQuartz>, Diamon)`
+- нет в новых модах: <extracells:part.base:4>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:part.base:4>, [<appliedenergistics2:item.ItemMultiPart:280>, <ore:plateLapis>])`
+- нет в новых модах: <extracells:part.base:5>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:part.base:5>, [<appliedenergistics2:item.ItemMultiPart:300>, <ore:plateLapis>, <ore:plateLapis>, <)`
+- нет в новых модах: <extracells:part.base:6>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:part.base:6>, [<appliedenergistics2:item.ItemMultiPart:320>, <ore:plateLapis>, <ore:plateLapis>, <)`
+- нет в новых модах: <extracells:part.base:7>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:part.base:7>, [<appliedenergistics2:tile.BlockDrive>, <ore:plateIron>, <ore:plateIron>, <ore:plate)`
+- нет в новых модах: <extracells:part.base:8>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:part.base:8>, [<appliedenergistics2:tile.BlockEnergyCell>, <ore:plateIron>, <ore:plateIron>, <ore:)`
+- нет в новых модах: <extracells:part.base:9>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(FluidIntPanel, [FluidInt])`
+- нет в новых модах: <extracells:storage.physical:4>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(BlockContainer, [StorageComponent64K, UStorageHousing, FormationCore])`
+- нет в новых модах: <extracells:storage.fluid.portable>: 1
+  - `Extra-Cells.zs: recipes.addShapeless(<extracells:storage.fluid.portable>, [MEChest, FluidStorage1K, DEnergyCell])`
 
 ## Выключенные рецепты по причинам
 
-- ae2: recipes.remove в AE2.zs: 106
-- ae2: выключено в настройках ИИС 1 или нет в ИИС 1: 24
-- ae2: нельзя получить ae2:cell_component_256k: 20
+- ae2: recipes.remove в AE2.zs: 109
+- ae2: выключено в настройках ИИС 1 или нет в ИИС 1: 21
 - ae2: пресс и зарядник скрыты в AE2.zs, путь идёт через машины GT: 18
 - ae2: нельзя получить ae2:smooth_sky_stone_block: 10
 - ae2: нельзя получить ae2:sky_stone_block: 9
 - ae2: нельзя получить ae2:sky_stone_brick: 7
 - ae2: в ИИС 1 нет выращивания кварца в мире: рецепты GT: 6
 - ae2: нельзя получить ae2:sky_stone_small_brick: 6
+- ae2: нельзя получить ae2:fluid_storage_cell_256k: 5
+- ae2: нельзя получить ae2:portable_fluid_cell_256k: 5
+- ae2: нельзя получить ae2:portable_item_cell_256k: 5
 - ae2: кремний делает GT: 2
 - ae2: нельзя получить ae2:sky_dust: 1
 - ae2: нельзя получить ae2:256k_crafting_storage: 1

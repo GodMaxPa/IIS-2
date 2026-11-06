@@ -75,6 +75,11 @@ neoForge {
                 programArguments.addAll '--quickPlaySingleplayer', 'IIS2_Stand', '--width', '1600', '--height', '900'
                 systemProperty 'iis.stand.shots', 'stand_views.txt'
             }
+            // gradlew runClient -Pguishots: opens every machine window, records its slots in gui_report.txt, takes one picture of each kind and exits
+            if (project.hasProperty('guishots')) {
+                programArguments.addAll '--quickPlaySingleplayer', 'IIS2_Stand', '--width', '1600', '--height', '900'
+                systemProperty 'iis.gui.shots', 'gui_report.txt'
+            }
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
@@ -166,6 +171,19 @@ dependencies {
     localRuntime "maven.modrinth:ae2:${ae2_version}"
     localRuntime "maven.modrinth:guideme:${guideme_version}"
     localRuntime "maven.modrinth:enderio:${enderio_version}"
+    // D127: other ready mods
+    localRuntime "maven.modrinth:iron-chests:${ironchest_version}"
+    localRuntime "maven.modrinth:chunk-loaders:${chunkloaders_version}"
+    localRuntime "maven.modrinth:supermartijn642s-core-lib:${smcorelib_version}"
+    localRuntime "maven.modrinth:supermartijn642s-config-lib:${smconfiglib_version}"
+    localRuntime "maven.modrinth:construction-wand-kots:${constructionwand_version}"
+    localRuntime "maven.modrinth:chisel-reborn:${chisel_version}"
+    localRuntime "maven.modrinth:cryonicconfig:${cryonicconfig_version}"
+    localRuntime "maven.modrinth:framedblocks:${framedblocks_version}"
+    localRuntime "maven.modrinth:bibliocraft-legacy:${bibliocraft_version}"
+    localRuntime "maven.modrinth:storagedrawers:${storagedrawers_version}"
+    localRuntime "maven.modrinth:applied-energistics-2-wireless-terminals:${ae2wtlib_version}"
+    localRuntime "maven.modrinth:mouse-tweaks:${mousetweaks_version}"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

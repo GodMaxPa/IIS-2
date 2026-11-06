@@ -451,6 +451,105 @@
       ]
     },
     {
+      "id": "1A0000000000047B",
+      "x": 5.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000129"
+      ],
+      "icon": {
+        "id": "constructionwand:iron_wand",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "constructionwand:iron_wand",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000047B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000047B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000047C",
+      "x": 6.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000188"
+      ],
+      "icon": {
+        "id": "constructionwand:diamond_wand",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "constructionwand:diamond_wand",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000047C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000047C00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000481",
+      "x": 3.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000129"
+      ],
+      "icon": {
+        "id": "chisel:chisel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "chisel:chisel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000048100"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000482",
       "x": 0.5,
       "y": 2.0,

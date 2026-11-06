@@ -80,7 +80,7 @@ AE_OFF = ('nether_quartz_', 'certus_quartz_axe', 'certus_quartz_hoe', 'certus_qu
 EIO_KEEP_OLD = ('filter', 'facade', 'silent_', 'dark_steel_ladder', 'dark_steel_door', 'soul_chain', 'block_detector', 'resetting_lever', 'location_printout', 'painted_')
 TOOLS = {'craftingToolFile': 'file', 'craftingToolHardHammer': 'hammer', 'craftingToolSaw': 'saw', 'craftingToolScrewdriver': 'screwdriver', 'craftingToolSoftHammer': 'soft_hammer', 'craftingToolWrench': 'wrench'}
 ORE_PREFIX = {'plate': 'plate', 'stick': 'rod', 'screw': 'screw', 'ingot': 'ingot', 'dust': 'dust', 'gem': 'gem', 'nugget': 'nugget', 'frameGt': 'frame'}
-GT_MANUAL = {'gt.metaitem.01:17523': ('plate', 'Quartzite'), 'gt.metaitem.01:23523': ('rod', 'Quartzite'), 'gt.metaitem.01:2321': ('dust', 'Enderium'), 'gt.metaitem.01:23364': ('rod', 'DarkSteel')}
+GT_MANUAL = {'gt.metaitem.01:17890': ('plate', 'Glass'), 'gt.metaitem.01:17523': ('plate', 'Quartzite'), 'gt.metaitem.01:23523': ('rod', 'Quartzite'), 'gt.metaitem.01:2321': ('dust', 'Enderium'), 'gt.metaitem.01:23364': ('rod', 'DarkSteel')}
 GT_ITEMS = {'gt.blockcasings:2': 'casing_mv', 'gt.blockmachines:12': 'hull_mv', 'gt.blockmachines:13': 'hull_hv', 'gt.blockmachines:1380': 'wire_annealed_copper_1x', 'gt.blockmachines:194': 'battery_buffer_4x4_ev',
             'gt.blockmachines:212': 'assembler_mv', 'gt.blockmachines:372': 'electrolyzer_mv', 'gt.blockmachines:42': 'hatch_energy_mv', 'gt.blockmachines:5122': 'pipe_medium_bronze', 'gt.blockmachines:5132': 'pipe_medium_steel',
             'gt.blockmachines:5142': 'pipe_medium_stainless_steel', 'gt.blockmachines:5170': 'pipe_tiny_plastic', 'gt.blockmachines:5612': 'item_pipe_medium_electrum', 'gt.metaitem.01:1633': 'small_dust_polydimethylsiloxane',
@@ -118,6 +118,18 @@ def quest_item(mod, name, dmg):
     if mod == 'EnderIO':
         r = EIO.get(f'{name}:{dmg}' if dmg else name)
         return f'enderio:{r}' if r else None
+    # D127: other ready mods
+    if mod == 'IronChest' and name == 'BlockIronChest':
+        r = {0: 'iron_chest', 1: 'gold_chest', 2: 'diamond_chest', 3: 'copper_chest', 5: 'crystal_chest', 6: 'obsidian_chest', 7: 'dirt_chest'}.get(dmg)
+        return f'ironchest:{r}' if r else None
+    if mod == 'ChickenChunks' and name == 'chickenChunkLoader':
+        return 'chunkloaders:basic_chunk_loader' if dmg == 0 else 'chunkloaders:single_chunk_loader'
+    if mod == 'betterbuilderswands':
+        return {'wandIron': 'constructionwand:iron_wand', 'wandDiamond': 'constructionwand:diamond_wand', 'wandUnbreakable': 'constructionwand:infinity_wand', 'wandStone': 'constructionwand:stone_wand'}.get(name)
+    if mod == 'chisel' and name == 'chisel':
+        return 'chisel:chisel'
+    if mod == 'extracells':
+        return {'storage.physical': 'ae2:item_storage_cell_256k', 'storage.component': 'ae2:cell_component_256k', 'storage.casing': f'{NS}:cell_housing_advanced'}.get(name) if dmg == 0 else None
     return None
 
 
@@ -163,10 +175,10 @@ class Script:
     def __init__(self, path):
         self.text = strip_comments(open(path, encoding='cp1251', errors='replace').read())
         self.vars = {}
-        for m in re.finditer(r'^\s*var (\w+)\s*=\s*(<[^;]+>(?:\s*\*\s*\d+)?)\s*;', self.text, re.M):
+        for m in re.finditer(r'^\s*(?:var|val) (\w+)\s*=\s*(<[^;]+>(?:\s*\*\s*\d+)?)\s*;', self.text, re.M):
             self.vars[m.group(1)] = self.value(m.group(2))
         self.calls = []
-        for m in re.finditer(r'^\s*(recipes|furnace|NEI|\w+)\.(remove|removeShapeless|removeShaped|addShaped|addShapeless|addRecipe|hide)\((.*?)\);', self.text, re.M | re.S):
+        for m in re.finditer(r'^\s*(recipes|furnace|NEI|\w+)\.(remove|removeShapeless|removeShaped|addShapedMirrored|addShaped|addShapeless|addRecipe|hide)\((.*?)\);', self.text, re.M | re.S):
             self.calls.append((m.group(1), m.group(2), m.group(3)))
 
     def value(self, s):
@@ -187,6 +199,16 @@ class Script:
         if s in self.vars:
             return self.vars[s]
         return ('?', s)
+
+
+def _advanced_housing():
+    import sys
+    from PIL import Image
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import gear_art as art
+    rows = ['................', '...KKKKKKKKKK...', '..KHHLLLLLLLBK..', '..KHKKKKKKKKDK..', '..KLKVVVVVVKDK..', '..KLKVGGGGVKDK..', '..KLKVVVVVVKDK..', '..KLKKKKKKKKDK..', '..KLLBBSSBBBDK..', '..KLBBBSSBBBDK..', '..KLBBBBBBBBDK..', '..KBBBBBBBBDDK..',
+            '..KDDDDDDDDDDK..', '...KKKKKKKKKK...', '................', '................']
+    return art.icon(rows, dict(art.P_STEEL, V=(30, 50, 70), G=(120, 220, 240)))
 
 
 def generate(g):
@@ -244,6 +266,7 @@ def generate(g):
             v = -30 if x in (2, 13) or y in (2, 13) else ((x + y) % 5) * 3
             im.putpixel((x, y), tuple(c + v for c in steel) + (255,))
     item('plate_dense_steel', 'Dense Steel Plate', 'Плотная стальная пластина', im)
+    item('cell_housing_advanced', 'Advanced Storage Housing', 'Продвинутый корпус ячейки', _advanced_housing())
     for iid, en, ru, c in (('plate_glowstone', 'Glowstone Plate', 'Светокаменная пластина', (225, 195, 90)), ('plate_obsidian', 'Obsidian Plate', 'Обсидиановая пластина', (60, 45, 85))):
         im = Image.new('RGBA', (16, 16), (0, 0, 0, 0))
         for y in range(2, 14):
@@ -302,6 +325,11 @@ def generate(g):
         if mod == 'appliedenergistics2':
             r, known = old_ae(body)
             return r, None if r else (f'нет в новом AE2: <{ref}>' if known else f'нет соответствия <{ref}>')
+        if mod == 'extracells':
+            # D127: AE2 has its own 256K cell, the bigger ones and the separate fluid components are not in it
+            r = {'storage.component': 'ae2:cell_component_256k', 'storage.component:0': 'ae2:cell_component_256k', 'storage.physical': 'ae2:item_storage_cell_256k', 'storage.physical:0': 'ae2:item_storage_cell_256k', 'storage.casing': I('cell_housing_advanced'),
+                 'storage.casing:0': I('cell_housing_advanced')}.get(body)
+            return r, None if r else f'нет в новых модах: <{ref}>'
         if mod == 'EnderIO':
             if body in CONDUITS:
                 c = CONDUITS[body]
@@ -486,7 +514,7 @@ def generate(g):
                 t, _ = trans(args[0])
                 if isinstance(t, str) and not t.startswith('#'):
                     hidden.add(t)
-            elif obj == 'recipes' and meth == 'addShaped':
+            elif obj == 'recipes' and meth in ('addShaped', 'addShapedMirrored'):
                 t, why = trans(args[0])
                 if t is None:
                     report[why].append(what)
@@ -522,6 +550,7 @@ def generate(g):
 
     run_script('AE2.zs', 'ae2')
     run_script('EnderIO.zs', 'enderio')
+    run_script('Extra-Cells.zs', 'ae2')
     # Slabs: the loop at the end of AE2.zs
     for full, slab in (('chiseled_quartz_block', 'chiseled_quartz_slab'), ('quartz_pillar', 'quartz_pillar_slab'), ('quartz_block', 'quartz_slab')):
         recipes[f'ae2/crafting/saw_{slab}'] = {'type': 'minecraft:crafting_shaped', 'category': 'misc', 'pattern': ['SB'], 'key': {'S': '#iis:tools/saw', 'B': f'ae2:{full}'}, 'result': out_stack(f'ae2:{slab}', 2)}

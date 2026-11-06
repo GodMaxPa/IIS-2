@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 
 /** Сетка реактора 9 × 6; столбцы без камеры закрыты. */
 public class ReactorMenu extends AbstractContainerMenu {
-    public static final int WIDTH = 176, HEIGHT = 222, GRID_Y = 30, INV_Y = 140;
+    public static final int WIDTH = 176, HEIGHT = 240, GRID_Y = 18, INV_Y = 158;
     private final ContainerData data;
     private final Container container;
 
@@ -46,7 +46,7 @@ public class ReactorMenu extends AbstractContainerMenu {
     }
 
     public static ReactorMenu client(int id, Inventory inventory) {
-        return new ReactorMenu(id, inventory, new SimpleContainer(NuclearReactorBlockEntity.SLOTS), new SimpleContainerData(5));
+        return new ReactorMenu(id, inventory, new SimpleContainer(NuclearReactorBlockEntity.SLOTS), new SimpleContainerData(6));
     }
 
     public int heat() {
@@ -67,6 +67,11 @@ public class ReactorMenu extends AbstractContainerMenu {
 
     public boolean active() {
         return data.get(4) != 0;
+    }
+
+    /** Изменение нагрева за последнюю секунду. */
+    public int heatDelta() {
+        return data.get(5);
     }
 
     @Override

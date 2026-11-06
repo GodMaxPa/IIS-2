@@ -15,7 +15,7 @@ import ru.iis.lv.block.ElectricMachineBlock;
 import ru.iis.lv.item.BatteryItem;
 import ru.iis.machine.menu.MachineMenu;
 
-/** GT_Container_BasicMachine: входы, выходы, слот батарейки (80,63). */
+/** GT_Container_BasicMachine: входы, выходы, слот батарейки (80,63), особый слот (125,63): флешка, сфера данных. */
 public class ElectricMachineMenu extends MachineMenu {
     public final LvMachineType type;
 
@@ -28,21 +28,23 @@ public class ElectricMachineMenu extends MachineMenu {
         addSlot(new Slot(container, type.inputs + type.outputs, 80, 63) {
             @Override
             public boolean mayPlace(ItemStack stack) {
-                return stack.getItem() instanceof BatteryItem || stack.getItem() instanceof ru.iis.lv.item.DataStickItem;
+                return stack.getItem() instanceof BatteryItem;
             }
         });
+        addSlot(new Slot(container, type.inputs + type.outputs + 1, 125, 63));
         finish(inventory);
     }
 
     public static ElectricMachineMenu client(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
         BlockPos pos = buf.readBlockPos();
         LvMachineType type = inventory.player.level().getBlockState(pos).getBlock() instanceof ElectricMachineBlock b ? b.type : LvMachineType.MACERATOR;
-        return new ElectricMachineMenu(id, inventory, new SimpleContainer(type.inputs + type.outputs + 1), new SimpleContainerData(12), type);
+        return new ElectricMachineMenu(id, inventory, new SimpleContainer(type.inputs + type.outputs + 2), new SimpleContainerData(12), type);
     }
 
     @Override
     protected boolean acceptsShiftClick(int slot, ItemStack stack) {
-        if (stack.getItem() instanceof BatteryItem || stack.getItem() instanceof ru.iis.lv.item.DataStickItem) return slot == type.inputs + type.outputs;
+        if (stack.getItem() instanceof BatteryItem) return slot == type.inputs + type.outputs;
+        if (stack.getItem() instanceof ru.iis.lv.item.DataStickItem || stack.getItem() == LvContent.DATA_ORB.get()) return slot == type.inputs + type.outputs + 1;
         return slot < type.inputs;
     }
 

@@ -38,6 +38,8 @@ public final class AeioContent {
     public static final DeferredItem<Item> PURE_NETHER = item("crystal_pure_nether");
     public static final DeferredItem<Item> PURE_FLUIX = item("crystal_pure_fluix");
     public static final DeferredItem<Item> PLATE_DENSE_STEEL = item("plate_dense_steel");
+    /** D127: Extra-Cells.zs, корпус ячеек 256K. */
+    public static final DeferredItem<Item> CELL_HOUSING_ADVANCED = item("cell_housing_advanced");
     public static final DeferredItem<Item> PLATE_GLOWSTONE = item("plate_glowstone");
     public static final DeferredItem<Item> PLATE_OBSIDIAN = item("plate_obsidian");
 

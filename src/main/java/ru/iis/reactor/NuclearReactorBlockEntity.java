@@ -24,6 +24,7 @@ import ru.iis.lv.block.ElectricBlockEntity;
 
 /**
  * Реактор: блок, сетка 3 столбца по 6 ячеек и ещё столбец за каждую камеру рядом (до 54 ячеек, IC2). Работает при сигнале красного камня на реакторе или камере.
+ * Камера — продолжение реактора: открывает его окно, принимает и отдаёт детали, выдаёт энергию ({@link ReactorChamberBlock}).
  * Раз в секунду считает {@link ReactorCore}, EU отдаёт в провода. Перегрев: IC2 calculateHeatEffects: от 40 % пламя, от 50 % вода испаряется, от 70 % радиация вокруг,
  * от 85 % лава, на 100 % взрыв с разрушением блоков.
  */
@@ -35,6 +36,7 @@ public class NuclearReactorBlockEntity extends ElectricBlockEntity {
     private final ReactorCore core = new ReactorCore();
     private float euPerTick;
     private int tick;
+    private int heatDelta;
 
     public final ContainerData reactorData = new ContainerData() {
         @Override
@@ -45,6 +47,7 @@ public class NuclearReactorBlockEntity extends ElectricBlockEntity {
                 case 2 -> Math.round(euPerTick);
                 case 3 -> columns();
                 case 4 -> core.active ? 1 : 0;
+                case 5 -> heatDelta;
                 default -> 0;
             };
         }
@@ -54,7 +57,7 @@ public class NuclearReactorBlockEntity extends ElectricBlockEntity {
 
         @Override
         public int getCount() {
-            return 5;
+            return 6;
         }
     };
 
@@ -89,6 +92,15 @@ public class NuclearReactorBlockEntity extends ElectricBlockEntity {
         return Math.min(n, ReactorCore.WIDTH);
     }
 
+    /** Деталь в столбце, которого больше нет (камеру убрали), выпадает: иначе её не достать. */
+    private void dropUnfitting(ServerLevel sl, int columns) {
+        for (int i = 0; i < SLOTS; i++) {
+            if (i % ReactorCore.WIDTH < columns || items.get(i).isEmpty()) continue;
+            Containers.dropItemStack(sl, worldPosition.getX() + 0.5, worldPosition.getY() + 1.1, worldPosition.getZ() + 0.5, items.get(i));
+            items.set(i, ItemStack.EMPTY);
+        }
+    }
+
     private boolean powered() {
         if (level.hasNeighborSignal(worldPosition)) return true;
         for (Direction d : Direction.values()) {
@@ -121,6 +133,20 @@ public class NuclearReactorBlockEntity extends ElectricBlockEntity {
         return v <= 0 ? 0 : Math.max(1, (long) Math.ceil(euPerTick / v));
     }
 
+    /** Энергия идёт и через камеры: провод можно подвести к любой. */
+    @Override
+    protected long emitElsewhere(ServerLevel sl, long voltage, long amperes) {
+        long used = 0;
+        for (Direction d : Direction.values()) {
+            if (used >= amperes) break;
+            BlockPos chamber = worldPosition.relative(d);
+            if (!sl.getBlockState(chamber).is(ReactorContent.REACTOR_CHAMBER.get())) continue;
+            java.util.List<Direction> sides = java.util.Arrays.stream(Direction.values()).filter(o -> o != d.getOpposite()).toList();
+            used += ru.iis.energy.WorldEnergy.emit(sl, chamber, sides, voltage, amperes - used);
+        }
+        return used;
+    }
+
     @Override
     protected void work(ServerLevel sl) {
         energy.stored = Math.min(energy.capacity, energy.stored + Math.round(euPerTick));
@@ -132,7 +158,9 @@ public class NuclearReactorBlockEntity extends ElectricBlockEntity {
     /** Секунда реактора: предметы → расчёт → предметы, затем последствия нагрева. */
     public void step(ServerLevel sl) {
         core.columns = columns();
+        dropUnfitting(sl, core.columns);
         core.active = powered();
+        int heatBefore = core.heat;
         for (int i = 0; i < SLOTS; i++) {
             ItemStack s = items.get(i);
             core.cells[i] = s.getItem() instanceof ReactorPartItem p ? new ReactorCore.Cell(BuiltInRegistries.ITEM.getKey(s.getItem()).getPath(), p.part, s.getDamageValue()) : null;
@@ -146,6 +174,7 @@ public class NuclearReactorBlockEntity extends ElectricBlockEntity {
             else if (c.part.capacity() > 0) items.get(i).setDamageValue(Math.min(c.damage, c.part.capacity()));
         }
         core.heat = Math.max(0, core.heat);
+        heatDelta = core.heat - heatBefore;
         setChanged();
         heatEffects(sl);
     }

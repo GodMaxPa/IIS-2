@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABC",
+    "DED",
+    "CFG"
+  ],
+  "key": {
+    "A": "#iis:tools/screwdriver",
+    "B": "#c:plates/glass",
+    "C": "#iis:screws/certus_quartz",
+    "D": "#c:plates/chrome",
+    "E": "ae2:item_cell_housing",
+    "F": "#c:plates/tungsten_steel",
+    "G": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:cell_housing_advanced",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

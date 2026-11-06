@@ -10,6 +10,11 @@ import shutil
 
 from PIL import Image
 
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import gear_art as art
+
 NS = 'iis'
 I = lambda x: f'{NS}:{x}'
 GT = os.environ.get('IIS_GT5_TEXTURES', '/home/claude/ref/gt5/src/main/resources/assets/gregtech/textures')
@@ -32,9 +37,9 @@ def icon(base, accent, seed, shape='rod'):
                 continue
             edge = {'rod': y <= 2 or y >= 13, 'dual': y <= 2 or y >= 13, 'quad': y in (1, 6, 9, 14), 'plate': x in (2, 13) or y in (2, 13), 'grid': x % 3 == 1 and y % 3 == 1, 'round': (x + y) % 4 == 0}[shape]
             c = accent if edge else base
-            v = rnd.randint(-7, 7)
+            v = rnd.randint(-4, 4)
             im.putpixel((x, y), (max(0, min(255, c[0] + v)), max(0, min(255, c[1] + v)), max(0, min(255, c[2] + v)), 255))
-    return im
+    return art.shade(im)
 
 
 def generate(g):
@@ -201,12 +206,9 @@ def generate(g):
                 c = 18 if x in (0, 15) or y in (0, 15) else rnd.randint(-5, 5)
                 im.putpixel((x, y), tuple(max(0, min(255, col[k] + (c if c < 10 else -40))) for k in range(3)) + (255,))
         return im
-    top = base((90, 95, 100), 1)
-    for k in range(3, 13):
-        for j in range(3, 13):
-            top.putpixel((k, j), (80, 170, 80, 255) if (k + j) % 3 else (50, 110, 50, 255))
-    block('nuclear_reactor', 'Nuclear Reactor', 'Ядерный реактор', {'side': base((90, 95, 100), 2), 'top': top})
-    block('reactor_chamber', 'Reactor Chamber', 'Реакторная камера', {'side': base((120, 125, 130), 3), 'top': base((120, 125, 130), 4)})
+    block('nuclear_reactor', 'Nuclear Reactor', 'Ядерный реактор', {'side': art.reactor_side(), 'top': art.reactor_top()})
+    block('reactor_chamber', 'Reactor Chamber', 'Реакторная камера', {'side': art.chamber_side(), 'top': art.chamber_side()})
+    art.reactor_gui().save(tex('gui/reactor/reactor.png'))
     sun = Image.open(os.path.join(BI, 'SOLARPANEL.png')).convert('RGBA').crop((0, 0, 16, 16))
     block('solar_panel_block', 'Solar Panel', 'Солнечная панель', {'side': base((110, 110, 120), 5), 'top': Image.alpha_composite(base((110, 110, 120), 6), sun)})
     # zs:350-355; the chamber is from memory of IC2 (lead plates around a machine hull)
@@ -216,17 +218,16 @@ def generate(g):
 
     # --- hazmat suit: zs:372-392 ------------------------------------------------------------------------------------------------
     R, O = P('Rubber'), '#c:dyes/orange'
-    armor_col = (225, 130, 40)
-    for iid, en, ru, shape in (('hazmat_helmet', 'Hazmat Helmet', 'Шлем радиационно-защитного костюма', 'round'), ('hazmat_chestplate', 'Hazmat Chestplate', 'Куртка радиационно-защитного костюма', 'plate'),
+    for iid, en, ru, pic in (('hazmat_helmet', 'Hazmat Helmet', 'Шлем радиационно-защитного костюма', 'round'), ('hazmat_chestplate', 'Hazmat Chestplate', 'Куртка радиационно-защитного костюма', 'plate'),
                                ('hazmat_leggings', 'Hazmat Leggings', 'Поножи радиационно-защитного костюма', 'dual'), ('rubber_boots', 'Rubber Boots', 'Резиновые ботинки', 'quad')):
-        item(iid, en, ru, icon(armor_col, (70, 70, 75), hash(iid) % 1000 if False else len(iid), shape))
+        item(iid, en, ru, art.icon({'round': art.I_HAZ_HELMET, 'plate': art.I_HAZ_CHEST, 'dual': art.I_HAZ_LEGS}.get(pic, art.I_RUBBER_BOOTS), art.P_HAZMAT))
     shaped('reactor/hazmat_helmet', I('hazmat_helmet'), 1, [' O ', 'RGR', 'RBR'], {'O': O, 'R': R, 'G': 'minecraft:glass', 'B': BARS})
     shaped('reactor/hazmat_chestplate', I('hazmat_chestplate'), 1, ['ROR', 'RRR', 'RRR'], {'O': O, 'R': R})
     shaped('reactor/hazmat_leggings', I('hazmat_leggings'), 1, ['RRR', 'ROR', 'R R'], {'O': O, 'R': R})
     shaped('reactor/rubber_boots', I('rubber_boots'), 1, ['R R', 'R R', 'RWR'], {'R': R, 'W': '#minecraft:wool'})
-    suit = Image.new('RGBA', (64, 32), armor_col + (255,))
+    suit, suit_legs = art.hazmat()
     suit.save(tex('entity/equipment/humanoid/hazmat.png'))
-    suit.save(tex('entity/equipment/humanoid_leggings/hazmat.png'))
+    suit_legs.save(tex('entity/equipment/humanoid_leggings/hazmat.png'))
     write(os.path.join(A, 'equipment', 'hazmat.json'), {'layers': {'humanoid': [{'texture': I('hazmat')}], 'humanoid_leggings': [{'texture': I('hazmat')}]}})
 
     # --- solar panels: covers ---------------------------------------------------------------------------------------------------
@@ -258,6 +259,14 @@ def generate(g):
                       ('item.iis.reactor.vent', 'From the hull %s/s, into the air %s/s', 'Из корпуса %s в секунду, в воздух %s в секунду'), ('item.iis.reactor.switch', 'With neighbours %s/s, with the hull %s/s', 'С соседями %s в секунду, с корпусом %s в секунду'),
                       ('block.iis.nuclear_reactor.tooltip.0', '3 columns of 6 cells and one more for every reactor chamber beside it', '3 столбца по 6 ячеек и ещё столбец за каждую реакторную камеру рядом'),
                       ('block.iis.nuclear_reactor.tooltip.1', 'Works while it or a chamber gets a redstone signal; overheating destroys everything around', 'Работает при сигнале красного камня на нём или на камере; перегрев разрушает всё вокруг'),
+                      ('gui.iis.reactor.heat_short', 'Heat %s%% (%s/s)', 'Нагрев %s%% (%s/с)'), ('gui.iis.reactor.stopped', 'Stopped', 'Остановлен'), ('gui.iis.reactor.running', 'Running', 'Работает'),
+                      ('gui.iis.reactor.locked', 'Closed: put a reactor chamber next to the reactor', 'Закрыто: поставьте реакторную камеру рядом с реактором'),
+                      ('gui.iis.reactor.chamber_alone', 'This chamber does not touch a reactor', 'Камера не примыкает к реактору'),
+                      ('gui.iis.reactor.mark.40', 'From 40%: fire around the reactor', 'С 40 %: вокруг вспыхивает огонь'), ('gui.iis.reactor.mark.50', 'From 50%: water nearby boils away', 'С 50 %: вода рядом выкипает'),
+                      ('gui.iis.reactor.mark.70', 'From 70%: radiation around', 'С 70 %: радиация вокруг'), ('gui.iis.reactor.mark.85', 'From 85%: blocks melt into lava', 'С 85 %: блоки плавятся в лаву'),
+                      ('gui.iis.reactor.mark.100', 'At 100%: explosion', 'На 100 %: взрыв'),
+                      ('block.iis.reactor_chamber.tooltip.0', 'Adds a column of cells to the reactor beside it', 'Добавляет столбец ячеек реактору рядом'),
+                      ('block.iis.reactor_chamber.tooltip.1', 'Opens the reactor, takes and gives parts, gives energy', 'Открывает окно реактора, принимает и отдаёт детали, выдаёт энергию'),
                       ('block.iis.solar_panel_block.tooltip.0', '1 EU/t by day under an open sky', '1 EU/t днём под открытым небом')):
         name(k, en, ru)
     write(os.path.join(D, NS, 'damage_type', 'radiation.json'), {'message_id': 'iis.radiation', 'exhaustion': 0.0, 'scaling': 'never'})
