@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PEG",
+    "BCd",
+    "W h"
+  ],
+  "key": {
+    "P": "#c:plates/titanium",
+    "E": "iis:emitter_ev",
+    "G": "#iis:lenses/ruby",
+    "B": "iis:energy_crystal",
+    "C": "#c:circuits/data",
+    "W": "#c:plates/plastic",
+    "d": "#iis:tools/screwdriver",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:laser_pistol"
+  }
+}

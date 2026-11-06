@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PEE",
+    "BCE",
+    "PPh"
+  ],
+  "key": {
+    "P": "#c:plates/hsse",
+    "E": "iis:emitter_luv",
+    "B": "iis:energy_orb",
+    "C": "#c:circuits/master",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:laser_cannon"
+  }
+}

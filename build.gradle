@@ -80,6 +80,11 @@ neoForge {
                 programArguments.addAll '--quickPlaySingleplayer', 'IIS2_Stand', '--width', '1600', '--height', '900'
                 systemProperty 'iis.gui.shots', 'gui_report.txt'
             }
+            // gradlew runClient -Pequipshots: pictures of vehicles, trains, guns and armour, a ride and a shot (D128), then exits
+            if (project.hasProperty('equipshots')) {
+                programArguments.addAll '--quickPlaySingleplayer', 'IIS2_Stand', '--width', '1600', '--height', '900'
+                systemProperty 'iis.equip.shots', '1'
+            }
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }

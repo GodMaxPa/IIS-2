@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/plasma_rifle",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "plasma_rifle"
+    }
+  },
+  "hand_animation_on_swap": false
+}

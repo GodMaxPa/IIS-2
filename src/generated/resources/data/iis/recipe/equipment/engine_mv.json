@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PMP",
+    "NCN",
+    "PWP"
+  ],
+  "key": {
+    "P": "#c:plates/aluminium",
+    "M": "iis:electric_motor_mv",
+    "N": "iis:electric_piston_mv",
+    "C": "#c:circuits/good",
+    "W": "#c:gears/aluminium"
+  },
+  "result": {
+    "id": "iis:engine_mv"
+  }
+}

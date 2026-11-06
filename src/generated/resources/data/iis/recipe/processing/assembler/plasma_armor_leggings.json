@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/naquadah_alloy",
+      "count": 7
+    },
+    {
+      "ingredient": "iis:energy_orb_cluster",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:electric_motor_zpm",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/ultimate",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plasma_armor_leggings",
+      "count": 1
+    }
+  ],
+  "duration": 1200,
+  "eut": 30720,
+  "circuit": 2
+}

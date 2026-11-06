@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WRW",
+    "RGR",
+    "WRW"
+  ],
+  "key": {
+    "W": "#minecraft:planks",
+    "R": "#c:rods/wrought_iron",
+    "G": "#iis:rings/bronze"
+  },
+  "result": {
+    "id": "iis:wheel_wood"
+  }
+}

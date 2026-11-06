@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MPM",
+    "M M",
+    "M M"
+  ],
+  "key": {
+    "M": "#c:plates/aluminium",
+    "P": "#c:plates/rubber"
+  },
+  "result": {
+    "id": "iis:ballistic_leggings"
+  }
+}

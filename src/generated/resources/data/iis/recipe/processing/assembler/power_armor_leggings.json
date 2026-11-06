@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/tungsten_steel",
+      "count": 7
+    },
+    {
+      "ingredient": "iis:energy_orb",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:electric_motor_iv",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/elite",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:power_armor_leggings",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 1920,
+  "circuit": 2
+}

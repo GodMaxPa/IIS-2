@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/rifle_round",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "rifle_round"
+    }
+  },
+  "hand_animation_on_swap": false
+}

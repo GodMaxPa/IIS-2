@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RRR",
+    "RGR",
+    "RRR"
+  ],
+  "key": {
+    "R": "#c:plates/rubber",
+    "G": "#iis:rings/steel"
+  },
+  "result": {
+    "id": "iis:wheel_rubber"
+  }
+}

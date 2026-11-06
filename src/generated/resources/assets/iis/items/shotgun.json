@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/shotgun",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "shotgun"
+    }
+  },
+  "hand_animation_on_swap": false
+}

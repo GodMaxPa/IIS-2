@@ -135,7 +135,7 @@ public final class TrainLinks {
         if (len < 1.0e-6) return;
         ux /= len;
         uz /= len;
-        double stretch = dist - 2 * OPTIMAL_DISTANCE;
+        double stretch = dist - halfLength(a) - halfLength(b);
         double sx = limit(STIFFNESS * stretch * ux), sz = limit(STIFFNESS * stretch * uz);
         Vec3 va = a.getDeltaMovement().add(sx, 0, sz), vb = b.getDeltaMovement().subtract(sx, 0, sz);
         double dot = (vb.x - va.x) * ux + (vb.z - va.z) * uz;
@@ -143,6 +143,14 @@ public final class TrainLinks {
         double dx = limit(damping * dot * ux), dz = limit(damping * dot * uz);
         a.setDeltaMovement(va.add(dx, 0, dz));
         b.setDeltaMovement(vb.subtract(dx, 0, dz));
+    }
+
+    /** Половина длины модели вдоль пути (D128): у Railcraft вся вагонетка 2 × 0.78, а локомотивы и машины длиннее и наезжали бы на соседа. */
+    public static double halfLength(AbstractMinecart cart) {
+        if (cart instanceof Locomotive) return 1.45;
+        if (cart instanceof TunnelBore) return 1.3;
+        if (cart instanceof TrackLayerCart) return 1.05;
+        return 0.92;
     }
 
     private static double limit(double f) {

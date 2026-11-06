@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPR",
+    "MCG",
+    "WPh"
+  ],
+  "key": {
+    "P": "#c:plates/aluminium",
+    "R": "#c:rods/steel",
+    "C": "#c:circuits/good",
+    "G": "#iis:small_gears/steel",
+    "M": "iis:electric_piston_lv",
+    "W": "#c:plates/rubber",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:smg"
+  }
+}

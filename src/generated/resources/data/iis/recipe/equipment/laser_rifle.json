@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PEE",
+    "BCG",
+    "WPh"
+  ],
+  "key": {
+    "P": "#c:plates/tungsten_steel",
+    "E": "iis:emitter_iv",
+    "G": "#iis:lenses/olivine",
+    "B": "iis:lapotron_crystal",
+    "C": "#c:circuits/elite",
+    "W": "#c:plates/plastic",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:laser_rifle"
+  }
+}

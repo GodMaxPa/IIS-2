@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/vehicle_truck",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "truck"
+    }
+  },
+  "hand_animation_on_swap": false
+}

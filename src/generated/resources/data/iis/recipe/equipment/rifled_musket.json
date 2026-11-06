@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FRR",
+    "SPR",
+    "WWf"
+  ],
+  "key": {
+    "F": "minecraft:flint",
+    "R": "#c:rods/steel",
+    "S": "#iis:screws/steel",
+    "P": "#c:plates/steel",
+    "W": "#minecraft:planks",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:rifled_musket"
+  }
+}

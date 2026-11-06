@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/laser_pistol",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "laser_pistol"
+    }
+  },
+  "hand_animation_on_swap": false
+}

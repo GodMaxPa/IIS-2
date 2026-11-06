@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PFF",
+    "BCE",
+    "PPh"
+  ],
+  "key": {
+    "P": "#c:plates/neutronium",
+    "F": "iis:field_generator_uv",
+    "E": "iis:emitter_uv",
+    "B": "iis:energy_orb_cluster",
+    "C": "#c:circuits/superconductor",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:plasma_cannon"
+  }
+}

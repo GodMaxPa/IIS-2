@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P G",
+    "PEP",
+    "PPP"
+  ],
+  "key": {
+    "G": "#c:glass_panes",
+    "P": "#c:plates/aluminium",
+    "E": "iis:engine_mv"
+  },
+  "result": {
+    "id": "iis:vehicle_boat"
+  }
+}

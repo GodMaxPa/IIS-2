@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/rifled_musket",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "rifled_musket"
+    }
+  },
+  "hand_animation_on_swap": false
+}

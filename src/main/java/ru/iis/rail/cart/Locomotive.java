@@ -55,6 +55,9 @@ public abstract class Locomotive extends AbstractMinecart {
     private static final EntityDataAccessor<Integer> DATA_MODE = SynchedEntityData.defineId(Locomotive.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Integer> DATA_SPEED = SynchedEntityData.defineId(Locomotive.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Boolean> DATA_FUEL = SynchedEntityData.defineId(Locomotive.class, EntityDataSerializers.BOOLEAN);
+    /** Курс для модели на клиенте (D128): куда смотрит перед. */
+    private static final EntityDataAccessor<Float> DATA_HEAD_X = SynchedEntityData.defineId(Locomotive.class, EntityDataSerializers.FLOAT);
+    private static final EntityDataAccessor<Float> DATA_HEAD_Z = SynchedEntityData.defineId(Locomotive.class, EntityDataSerializers.FLOAT);
 
     /** Направление «вперёд» вдоль пути (единичный горизонтальный вектор). */
     protected Vec3 heading = Vec3.ZERO;
@@ -71,6 +74,8 @@ public abstract class Locomotive extends AbstractMinecart {
         data.define(DATA_MODE, Mode.SHUTDOWN.ordinal());
         data.define(DATA_SPEED, Speed.MAX.ordinal());
         data.define(DATA_FUEL, false);
+        data.define(DATA_HEAD_X, 1F);
+        data.define(DATA_HEAD_Z, 0F);
     }
 
     public Mode mode() {
@@ -95,6 +100,14 @@ public abstract class Locomotive extends AbstractMinecart {
 
     public boolean isRunning() {
         return fuel > 0 && mode() == Mode.RUNNING;
+    }
+
+    public float syncedHeadingX() {
+        return entityData.get(DATA_HEAD_X);
+    }
+
+    public float syncedHeadingZ() {
+        return entityData.get(DATA_HEAD_Z);
     }
 
     public Vec3 heading() {
@@ -143,6 +156,8 @@ public abstract class Locomotive extends AbstractMinecart {
             fuel += more;
         }
         entityData.set(DATA_FUEL, fuel > 0);
+        entityData.set(DATA_HEAD_X, (float) heading.x);
+        entityData.set(DATA_HEAD_Z, (float) heading.z);
         if (isRunning()) hitEntities(sl);
     }
 

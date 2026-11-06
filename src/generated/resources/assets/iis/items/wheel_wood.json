@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/wheel_wood",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "wheel_wood"
+    }
+  },
+  "hand_animation_on_swap": false
+}

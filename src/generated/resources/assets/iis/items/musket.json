@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/musket",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "musket"
+    }
+  },
+  "hand_animation_on_swap": false
+}

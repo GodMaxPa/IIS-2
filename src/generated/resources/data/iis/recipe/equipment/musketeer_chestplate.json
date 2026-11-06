@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P P",
+    "MPM",
+    "MMM"
+  ],
+  "key": {
+    "M": "minecraft:leather",
+    "P": "#c:plates/bronze"
+  },
+  "result": {
+    "id": "iis:musketeer_chestplate"
+  }
+}

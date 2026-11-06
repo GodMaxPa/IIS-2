@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PMP",
+    "FCF",
+    "PMP"
+  ],
+  "key": {
+    "P": "#c:plates/tungsten_steel",
+    "M": "iis:electric_motor_iv",
+    "F": "iis:electric_pump_iv",
+    "C": "#c:circuits/elite"
+  },
+  "result": {
+    "id": "iis:jet_turbine"
+  }
+}

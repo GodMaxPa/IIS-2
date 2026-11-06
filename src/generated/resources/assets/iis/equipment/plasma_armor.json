@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "iis:plasma_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "iis:plasma_armor"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PMP",
+    "NCN",
+    "PWP"
+  ],
+  "key": {
+    "P": "#c:plates/stainless_steel",
+    "M": "iis:electric_motor_hv",
+    "N": "iis:electric_piston_hv",
+    "C": "#c:circuits/advanced",
+    "W": "#c:gears/stainless_steel"
+  },
+  "result": {
+    "id": "iis:engine_hv"
+  }
+}

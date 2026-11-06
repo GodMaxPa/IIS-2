@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PRR",
+    "MCP",
+    "W h"
+  ],
+  "key": {
+    "P": "#c:plates/stainless_steel",
+    "R": "#iis:rings/stainless_steel",
+    "C": "#c:circuits/advanced",
+    "M": "iis:electric_piston_mv",
+    "W": "#c:plates/plastic",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:grenade_launcher"
+  }
+}

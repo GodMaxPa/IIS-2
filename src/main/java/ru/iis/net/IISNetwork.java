@@ -43,10 +43,45 @@ public final class IISNetwork {
         }
     }
 
+    /** Клавиши оружия и машины: 0 — перезарядка, 1 — пушка машины (D128). */
+    public record GunKey(int action) implements CustomPacketPayload {
+        public static final Type<GunKey> TYPE = new Type<>(Identifier.fromNamespaceAndPath(IIS.MODID, "gun_key"));
+        public static final StreamCodec<ByteBuf, GunKey> CODEC = ByteBufCodecs.VAR_INT.map(GunKey::new, GunKey::action);
+
+        @Override
+        public Type<? extends CustomPacketPayload> type() {
+            return TYPE;
+        }
+    }
+
+    /** След выстрела: кто стрелял и откуда куда (D128). */
+    public record ShotFx(int shooter, int weapon, float x0, float y0, float z0, float x1, float y1, float z1, boolean kick) implements CustomPacketPayload {
+        public static final Type<ShotFx> TYPE = new Type<>(Identifier.fromNamespaceAndPath(IIS.MODID, "shot_fx"));
+        public static final StreamCodec<ByteBuf, ShotFx> CODEC = StreamCodec.of((buf, m) -> {
+            ByteBufCodecs.VAR_INT.encode(buf, m.shooter);
+            ByteBufCodecs.VAR_INT.encode(buf, m.weapon);
+            for (float f : new float[]{m.x0, m.y0, m.z0, m.x1, m.y1, m.z1}) buf.writeFloat(f);
+            buf.writeBoolean(m.kick);
+        }, buf -> new ShotFx(ByteBufCodecs.VAR_INT.decode(buf), ByteBufCodecs.VAR_INT.decode(buf), buf.readFloat(), buf.readFloat(), buf.readFloat(), buf.readFloat(), buf.readFloat(), buf.readFloat(), buf.readBoolean()));
+
+        @Override
+        public Type<? extends CustomPacketPayload> type() {
+            return TYPE;
+        }
+    }
+
+    private static void gunKey(Player player, int action) {
+        if (!(player instanceof net.minecraft.server.level.ServerPlayer sp)) return;
+        if (action == 0) ru.iis.equipment.GunActions.reloadKey(sp);
+        else if (action == 1 && sp.getRootVehicle() instanceof ru.iis.equipment.vehicle.Driveable d) d.fireMainGun(sp);
+    }
+
     public static void register(IEventBus modBus) {
         modBus.addListener((RegisterPayloadHandlersEvent e) -> e.registrar("1")
                 .playToServer(WrenchKeys.TYPE, WrenchKeys.CODEC, (msg, ctx) -> setCtrl(ctx.player(), msg.ctrl()))
-                .playToServer(NightVisionKey.TYPE, NightVisionKey.CODEC, (msg, ctx) -> ru.iis.gear.GearEvents.toggleNightVision(ctx.player())));
+                .playToServer(NightVisionKey.TYPE, NightVisionKey.CODEC, (msg, ctx) -> ru.iis.gear.GearEvents.toggleNightVision(ctx.player()))
+                .playToServer(GunKey.TYPE, GunKey.CODEC, (msg, ctx) -> gunKey(ctx.player(), msg.action()))
+                .playToClient(ShotFx.TYPE, ShotFx.CODEC, (msg, ctx) -> ru.iis.equipment.client.ShotFxClient.accept(msg)));
     }
 
     public static void setCtrl(Player player, boolean ctrl) {

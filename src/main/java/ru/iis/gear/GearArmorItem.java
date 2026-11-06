@@ -22,6 +22,11 @@ public class GearArmorItem extends BatteryItem {
         return battery;
     }
 
+    /** Шлем видит в темноте, когда прибор включён. */
+    public boolean nightVision() {
+        return false;
+    }
+
     /** Включён ли прибор (ночное зрение). */
     public static boolean on(ItemStack stack) {
         return stack.getOrDefault(GearContent.MODE.get(), 0) != 0;

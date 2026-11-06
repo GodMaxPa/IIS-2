@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FRR",
+    "dSP",
+    "W h"
+  ],
+  "key": {
+    "F": "minecraft:flint",
+    "R": "#c:rods/wrought_iron",
+    "S": "#iis:screws/wrought_iron",
+    "P": "#c:plates/wrought_iron",
+    "W": "#minecraft:planks",
+    "d": "#iis:tools/screwdriver",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:flintlock_pistol"
+  }
+}

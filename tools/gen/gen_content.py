@@ -501,8 +501,23 @@ write(os.path.join(RES, NS, 'forms.json'), {f'{p}/{mat_id(n)}': iid for (p, n), 
 # ----------------------------------------------------------------------------------------------------------------
 # Assets
 # ----------------------------------------------------------------------------------------------------------------
+# a file may be held for a moment by a scanner on Windows: wait and try that file again
+
+
+def _retry_remove(func, path, _exc):
+    import time as _t
+    for _ in range(20):
+        _t.sleep(0.25)
+        try:
+            func(path)
+            return
+        except OSError:
+            pass
+    func(path)
+
+
 if os.path.isdir(GEN):
-    shutil.rmtree(GEN)
+    shutil.rmtree(GEN, onerror=_retry_remove)
 A, D = os.path.join(GEN, 'assets', NS), os.path.join(GEN, 'data')
 
 
@@ -1072,6 +1087,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_moremods', os.path.join(ROOT, 'too
 _moremods = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_moremods)
 lv_stats['moremods'] = _moremods.generate(globals())
+# Weapons, armour and vehicles of the Cyber path (D128)
+_spec = _ilu.spec_from_file_location('iis_gen_equipment', os.path.join(ROOT, 'tools', 'gen', 'equipment.py'))
+_equipment = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_equipment)
+lv_stats['equipment'] = _equipment.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

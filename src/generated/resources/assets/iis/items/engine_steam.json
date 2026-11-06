@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/engine_steam",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "engine_steam"
+    }
+  },
+  "hand_animation_on_swap": false
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "WEW",
+    "WPW"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "W": "iis:wheel_rubber",
+    "E": "iis:engine_lv"
+  },
+  "result": {
+    "id": "iis:vehicle_quad"
+  }
+}

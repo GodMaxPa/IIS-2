@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/sniper_rifle",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "sniper_rifle"
+    }
+  },
+  "hand_animation_on_swap": false
+}

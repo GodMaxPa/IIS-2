@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PRR",
+    "WCG",
+    "Wdh"
+  ],
+  "key": {
+    "P": "#c:plates/stainless_steel",
+    "R": "#c:rods/stainless_steel",
+    "C": "#c:circuits/advanced",
+    "G": "#iis:small_gears/stainless_steel",
+    "W": "#minecraft:planks",
+    "d": "#iis:tools/screwdriver",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:shotgun"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/wheel_rubber",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "wheel_rubber"
+    }
+  },
+  "hand_animation_on_swap": false
+}

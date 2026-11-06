@@ -62,6 +62,20 @@ public class SteamLocomotive extends Locomotive {
         data.define(DATA_BURNING, false);
     }
 
+    /** Дым из трубы и пар от цилиндров, пока идёт огонь (D128). */
+    private void smoke() {
+        if (!entityData.get(DATA_BURNING)) return;
+        float head = (float) Math.atan2(-syncedHeadingX(), syncedHeadingZ());
+        net.minecraft.world.phys.Vec3 stack = position().add(new net.minecraft.world.phys.Vec3(0, 1.65, 0.95).yRot(-head));
+        if (tickCount % 2 == 0) level().addParticle(net.minecraft.core.particles.ParticleTypes.LARGE_SMOKE, stack.x, stack.y, stack.z, 0, 0.08, 0);
+        if (isRunning() || getDeltaMovement().horizontalDistanceSqr() > 0.01) {
+            if (tickCount % 6 == 0) {
+                net.minecraft.world.phys.Vec3 cyl = position().add(new net.minecraft.world.phys.Vec3(random.nextBoolean() ? 0.45 : -0.45, 0.25, 0.95).yRot(-head));
+                level().addParticle(net.minecraft.core.particles.ParticleTypes.CLOUD, cyl.x, cyl.y, cyl.z, 0, 0.02, 0);
+            }
+        }
+    }
+
     public int water() {
         return water;
     }
@@ -99,7 +113,10 @@ public class SteamLocomotive extends Locomotive {
     @Override
     public void tick() {
         super.tick();
-        if (!(level() instanceof ServerLevel sl)) return;
+        if (!(level() instanceof ServerLevel sl)) {
+            smoke();
+            return;
+        }
         if (water <= 0) setMode(Mode.SHUTDOWN);
         if (STEAM_CAPACITY - steam >= STEAM_PER_WATER || mode() == Mode.SHUTDOWN) {
             boilerTick();

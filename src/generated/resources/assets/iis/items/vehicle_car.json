@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/vehicle_car",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "car"
+    }
+  },
+  "hand_animation_on_swap": false
+}

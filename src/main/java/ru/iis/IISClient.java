@@ -35,8 +35,10 @@ public final class IISClient {
         modBus.addListener(IISClient::registerBlockTints);
         modBus.addListener(IISClient::registerScreens);
         ru.iis.gear.GearClient.register(modBus);
+        ru.iis.equipment.client.EquipmentClient.register(modBus);
         ru.iis.stand.StandShots.init();
         ru.iis.stand.GuiShots.init();
+        ru.iis.stand.EquipShots.init();
         modBus.addListener((net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.ItemTintSources e) -> {
             e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "fluid_content"), ru.iis.fluid.client.FluidContentTint.CODEC);
             e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "rotor_material"), ru.iis.multi.client.RotorTint.CODEC);
@@ -96,14 +98,6 @@ public final class IISClient {
         event.registerBlockEntityRenderer(ru.iis.multi.MultiContent.ENERGY_HATCH_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
         // локомотивы Railcraft (D102): вагонетка с блоком котла или буфера батарей
         event.registerEntityRenderer(ru.iis.space.SpaceContent.ROCKET.get(), ru.iis.space.client.SpaceClient.RocketRenderer::new);
-        event.registerEntityRenderer(ru.iis.rail.RailContent.STEAM_LOCO.get(),
-                c -> new net.minecraft.client.renderer.entity.MinecartRenderer(c, net.minecraft.client.model.geom.ModelLayers.MINECART));
-        event.registerEntityRenderer(ru.iis.rail.RailContent.ELECTRIC_LOCO.get(),
-                c -> new net.minecraft.client.renderer.entity.MinecartRenderer(c, net.minecraft.client.model.geom.ModelLayers.MINECART));
-        event.registerEntityRenderer(ru.iis.rail.RailContent.TRACK_LAYER_CART.get(),
-                c -> new net.minecraft.client.renderer.entity.MinecartRenderer(c, net.minecraft.client.model.geom.ModelLayers.MINECART));
-        event.registerEntityRenderer(ru.iis.rail.RailContent.TUNNEL_BORE_CART.get(),
-                c -> new net.minecraft.client.renderer.entity.MinecartRenderer(c, net.minecraft.client.model.geom.ModelLayers.MINECART));
     }
 
     private static void registerScreens(RegisterMenuScreensEvent event) {

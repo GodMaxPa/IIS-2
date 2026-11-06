@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PMP",
+    "NCN",
+    "PWP"
+  ],
+  "key": {
+    "P": "#c:plates/titanium",
+    "M": "iis:electric_motor_ev",
+    "N": "iis:electric_piston_ev",
+    "C": "#c:circuits/data",
+    "W": "#c:gears/titanium"
+  },
+  "result": {
+    "id": "iis:engine_ev"
+  }
+}

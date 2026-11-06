@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "SCM",
+    "PPP"
+  ],
+  "key": {
+    "P": "#c:plates/titanium",
+    "S": "iis:sensor_hv",
+    "C": "#c:circuits/data",
+    "M": "iis:electric_piston_ev"
+  },
+  "result": {
+    "id": "iis:rocket_launcher"
+  }
+}

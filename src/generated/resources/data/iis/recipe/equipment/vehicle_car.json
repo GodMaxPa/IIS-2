@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GGG",
+    "PEP",
+    "WPW"
+  ],
+  "key": {
+    "G": "#c:glass_panes",
+    "P": "#c:plates/aluminium",
+    "W": "iis:wheel_rubber",
+    "E": "iis:engine_mv"
+  },
+  "result": {
+    "id": "iis:vehicle_car"
+  }
+}

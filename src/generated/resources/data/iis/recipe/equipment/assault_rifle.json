@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPR",
+    "MCG",
+    "WPh"
+  ],
+  "key": {
+    "P": "#c:plates/stainless_steel",
+    "R": "#c:rods/stainless_steel",
+    "C": "#c:circuits/advanced",
+    "G": "#iis:small_gears/stainless_steel",
+    "M": "iis:electric_piston_mv",
+    "W": "#c:plates/plastic",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:assault_rifle"
+  }
+}

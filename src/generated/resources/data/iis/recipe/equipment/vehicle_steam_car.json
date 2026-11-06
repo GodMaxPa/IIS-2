@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BPB",
+    "WEW",
+    "WPW"
+  ],
+  "key": {
+    "B": "#minecraft:planks",
+    "P": "#c:plates/bronze",
+    "W": "iis:wheel_wood",
+    "E": "iis:engine_steam"
+  },
+  "result": {
+    "id": "iis:vehicle_steam_car"
+  }
+}

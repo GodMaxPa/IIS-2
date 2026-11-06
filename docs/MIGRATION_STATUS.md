@@ -179,3 +179,14 @@
 | Вид окон и снаряжения на игроке | снимки `-Pguishots`: окна на русском, контроллеры с данными, броня спереди и сзади |
 | Рецепты других модов загружаются, рецепты модов сняты | GameTest `moremods_recipes_loaded` |
 | Руками в игре | не проверено |
+
+## Оружие, броня, транспорт, вид поездов (D128)
+| Что | Чем подтверждено |
+|---|---|
+| Числа эпох, урон с расстоянием, физика машин, сваливание, раскрутка винта, удар | unit `EquipmentLogicTest` |
+| Пуля, стена, магазин и перезарядка, заряд лазера, снаряд и радиус взрыва | GameTest `equip_bullet_hits`, `equip_wall_stops_bullet`, `equip_magazine_reload`, `equip_laser_charge`, `equip_shell_explodes`, `equip_blast_falls_off` |
+| Машина на топливе, ценность топлива, воздух, катер на воде, разбитая машина, удар о стену, броня танка | GameTest `equip_car_drives`, `equip_fuel_values`, `equip_aircraft`, `equip_boat_floats`, `equip_wreck_drops`, `equip_crash_hurts`, `equip_tank_armor` |
+| Силовая броня, рецепты всего | GameTest `equip_powered_armor`, `equip_recipes` |
+| Получается в выживании | `tools/check_reach.py`: всё до LuV и реактивный самолёт; плазма с `--with=iis:dust_naquadah` |
+| Вид и езда на клиенте | снимки `-Pequipshots`; автомобиль, вертолёт и самолёт с настоящих нажатий клавиш |
+| Руками в игре | не проверено |

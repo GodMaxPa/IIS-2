@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/vehicle_quad",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "quad"
+    }
+  },
+  "hand_animation_on_swap": false
+}

@@ -76,6 +76,11 @@ public class TunnelBore extends AbstractMinecartContainer {
         return fuel;
     }
 
+    /** Для модели: крутится ли голова. */
+    public boolean isDrilling() {
+        return getDeltaMovement().horizontalDistanceSqr() > 1e-5;
+    }
+
     public boolean moving() {
         return moving;
     }

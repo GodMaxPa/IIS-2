@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/laser_cannon",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "laser_cannon"
+    }
+  },
+  "hand_animation_on_swap": false
+}

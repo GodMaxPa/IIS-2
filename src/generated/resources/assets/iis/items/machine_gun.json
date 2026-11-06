@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/machine_gun",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "machine_gun"
+    }
+  },
+  "hand_animation_on_swap": false
+}

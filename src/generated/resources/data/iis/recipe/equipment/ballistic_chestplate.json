@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P P",
+    "MPM",
+    "MMM"
+  ],
+  "key": {
+    "M": "#c:plates/aluminium",
+    "P": "#c:plates/rubber"
+  },
+  "result": {
+    "id": "iis:ballistic_chestplate"
+  }
+}

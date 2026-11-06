@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/powder_cartridge",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "powder_cartridge"
+    }
+  },
+  "hand_animation_on_swap": false
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PRR",
+    "MCK",
+    "WPh"
+  ],
+  "key": {
+    "P": "#c:plates/titanium",
+    "R": "#c:rods/titanium",
+    "C": "#c:circuits/data",
+    "M": "iis:electric_motor_ev",
+    "K": "iis:conveyor_module_hv",
+    "W": "#c:plates/plastic",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:machine_gun"
+  }
+}

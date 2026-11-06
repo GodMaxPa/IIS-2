@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/rocket_launcher",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "rocket_launcher"
+    }
+  },
+  "hand_animation_on_swap": false
+}

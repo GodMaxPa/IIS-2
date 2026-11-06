@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/steel",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:plates/brass",
+      "count": 2
+    },
+    {
+      "ingredient": "minecraft:tnt",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tank_shell",
+      "count": 2
+    }
+  ],
+  "duration": 200,
+  "eut": 120
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  R",
+    "PEP",
+    "W W"
+  ],
+  "key": {
+    "R": "#c:rods/aluminium",
+    "P": "#c:plates/aluminium",
+    "W": "iis:wheel_rubber",
+    "E": "iis:engine_mv"
+  },
+  "result": {
+    "id": "iis:vehicle_motorbike"
+  }
+}

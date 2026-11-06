@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/jet_turbine",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "jet_turbine"
+    }
+  },
+  "hand_animation_on_swap": false
+}

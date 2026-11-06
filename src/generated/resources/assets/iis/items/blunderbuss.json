@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/blunderbuss",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "blunderbuss"
+    }
+  },
+  "hand_animation_on_swap": false
+}

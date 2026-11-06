@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/vehicle_steam_car",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "steam_car"
+    }
+  },
+  "hand_animation_on_swap": false
+}

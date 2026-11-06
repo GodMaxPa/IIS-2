@@ -147,6 +147,7 @@ public final class StandBuilder {
         b.bioHall();
         b.aeioHall();
         b.modsHall();
+        b.equipHall();
         int left = b.leftoversHall();
         b.avenue();
         StandData.mark(level);
@@ -1648,6 +1649,85 @@ public final class StandBuilder {
                 {"ae2:item_storage_cell_256k", "Ячейка 256K"}, {"iis:cell_housing_advanced", "Продвинутый корпус"}, {"ae2:cell_component_256k", "Компонент 256K"}};
         for (int i = 0; i < tools.length; i++) itemCell(2 + (i % 7) * 3, z + (i / 7) * 3, modItem(tools[i][0]), tools[i][1]);
         endHall(Blocks.BROWN_TERRACOTTA);
+    }
+
+    // --- Оружие, броня, транспорт, поезда (D128) -----------------------------------------------------------------------
+    private void parkVehicle(ru.iis.equipment.vehicle.VehicleKind k, int x, int dy, int z, String label) {
+        var v = ru.iis.equipment.EquipmentContent.VEHICLE_TYPES.get(k).get().create(level, EntitySpawnReason.TRIGGERED);
+        if (v == null) return;
+        BlockPos p = at(x, dy, z);
+        v.setPos(p.getX() + 0.5, p.getY(), p.getZ() + 0.5);
+        v.setFuel(k.tank);
+        level.addFreshEntity(v);
+        sign(at(x, 0, z - (int) Math.ceil(k.width / 2) - 3), label);
+    }
+
+    private void equipHall() {
+        beginHall("Оружие и транспорт", "ПКМ стрелять, R перезарядка, присесть прицел. По машине: ПКМ сесть, Shift+ПКМ окно. Заправлены, садитесь и езжайте");
+        stand(2, 4, "Мушкетёр: пар и LV", "musketeer_helmet", "musketeer_chestplate", "musketeer_leggings", "musketeer_boots");
+        stand(6, 4, "Бронежилет: MV и HV", "ballistic_helmet", "ballistic_chestplate", "ballistic_leggings", "ballistic_boots");
+        stand(10, 4, "Штурмовая броня: EV", "assault_helmet", "assault_chestplate", "assault_leggings", "assault_boots");
+        stand(14, 4, "Силовая броня: IV и LuV", "power_armor_helmet", "power_armor_chestplate", "power_armor_leggings", "power_armor_boots");
+        stand(18, 4, "Плазменная броня: ZPM и UV", "plasma_armor_helmet", "plasma_armor_chestplate", "plasma_armor_leggings", "plasma_armor_boots");
+        labelAt(10, 2.8, 7, "Порох: пар и LV. Патроны: MV, HV, EV. Лазер: EV, IV, LuV. Плазма: ZPM и UV", "gold", 1.0);
+        List<String> guns = new ArrayList<>();
+        for (ru.iis.equipment.Weapon w : ru.iis.equipment.Weapon.values()) guns.add(w.id);
+        int z = items(2, 9, guns, 9);
+        List<String> ammo = new ArrayList<>();
+        for (ru.iis.equipment.Weapon.Ammo a : ru.iis.equipment.Weapon.Ammo.values()) ammo.add(a.id);
+        z = items(2, z + 1, ammo, 9);
+        z = items(2, z + 1, List.of("wheel_wood", "wheel_rubber", "engine_steam", "engine_lv", "engine_mv", "engine_hv", "engine_ev", "jet_turbine"), 9);
+        // на земле
+        z += 8;
+        labelAt(26, 4.0, z - 6, "Наземный транспорт: W, S газ и тормоз, A, D руль, пробел ручной тормоз, Shift выйти", "aqua", 1.1);
+        parkVehicle(ru.iis.equipment.vehicle.VehicleKind.STEAM_CAR, 3, 0, z, "Паровой тягач");
+        parkVehicle(ru.iis.equipment.vehicle.VehicleKind.QUAD, 10, 0, z, "Квадроцикл");
+        parkVehicle(ru.iis.equipment.vehicle.VehicleKind.MOTORBIKE, 16, 0, z, "Мотоцикл");
+        parkVehicle(ru.iis.equipment.vehicle.VehicleKind.CAR, 23, 0, z, "Автомобиль");
+        parkVehicle(ru.iis.equipment.vehicle.VehicleKind.TRUCK, 32, 0, z, "Грузовик");
+        parkVehicle(ru.iis.equipment.vehicle.VehicleKind.TANK, 43, 0, z, "Танк: G стреляет");
+        // бассейн для катера
+        int px = 54;
+        for (int x = px - 4; x <= px + 4; x++) {
+            for (int zz = z - 5; zz <= z + 5; zz++) {
+                boolean edge = x == px - 4 || x == px + 4 || zz == z - 5 || zz == z + 5;
+                set(at(x, 0, zz), (edge ? Blocks.SMOOTH_QUARTZ : Blocks.WATER).defaultBlockState());
+            }
+        }
+        parkVehicle(ru.iis.equipment.vehicle.VehicleKind.BOAT, px, 1, z, "Катер");
+        // в воздухе: простор нужен, поэтому отдельным рядом
+        z += 18;
+        labelAt(26, 4.0, z - 8, "Самолёт: W, S газ, мышь куда лететь. Вертолёт: пробел вверх, Ctrl вниз, W A S D, винт раскручивается не сразу", "aqua", 1.1);
+        parkVehicle(ru.iis.equipment.vehicle.VehicleKind.PLANE, 8, 0, z, "Самолёт");
+        parkVehicle(ru.iis.equipment.vehicle.VehicleKind.HELICOPTER, 26, 0, z, "Вертолёт");
+        parkVehicle(ru.iis.equipment.vehicle.VehicleKind.JET, 44, 0, z, "Реактивный самолёт");
+        // состав
+        z += 12;
+        labelAt(26, 4.0, z - 3, "Поезд: паровоз, вагоны; рядом электровоз, путеукладчик и бур", "aqua", 1.1);
+        for (int x = 0; x <= 56; x++) {
+            set(at(x, 0, z), Blocks.RAIL.defaultBlockState().setValue(net.minecraft.world.level.block.RailBlock.SHAPE, net.minecraft.world.level.block.state.properties.RailShape.EAST_WEST));
+        }
+        String[][] cars = {{"iis:tunnel_bore", "Тоннельный бур"}, {"iis:track_layer", "Путеукладчик"}, {"iis:loco_electric", "Электровоз"}, {"minecraft:furnace_minecart", "Угольный тепловозик"},
+                {"minecraft:minecart", "Пассажирский вагон"}, {"minecraft:hopper_minecart", "Хоппер"}, {"minecraft:chest_minecart", "Крытый вагон"}, {"iis:loco_steam", "Паровоз"}};
+        net.minecraft.world.entity.vehicle.minecart.AbstractMinecart last = null;
+        int cx = 4;
+        for (int i = 0; i < cars.length; i++) {
+            var type = BuiltInRegistries.ENTITY_TYPE.getValue(net.minecraft.resources.Identifier.parse(cars[i][0]));
+            var e = type.create(level, EntitySpawnReason.TRIGGERED);
+            if (e == null) continue;
+            // первые четыре стоят поодиночке, состав из четырёх сцеплен
+            cx += i <= 4 ? 6 : 3;
+            BlockPos p = at(cx, 0, z);
+            e.setPos(p.getX() + 0.5, p.getY() + 0.0625, p.getZ() + 0.5);
+            level.addFreshEntity(e);
+            sign(at(cx, 0, z - 2), cars[i][1]);
+            if (e instanceof ru.iis.rail.cart.Locomotive loco) loco.setHeading(new net.minecraft.world.phys.Vec3(1, 0, 0));
+            if (i >= 4 && e instanceof net.minecraft.world.entity.vehicle.minecart.AbstractMinecart cart) {
+                if (last != null) ru.iis.rail.cart.TrainLinks.createLink(last, cart);
+                last = cart;
+            }
+        }
+        endHall(Blocks.GRAY_TERRACOTTA);
     }
 
     // --- 16. Прочее ---------------------------------------------------------------------------------------------------

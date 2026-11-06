@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/engine_ev",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "engine_ev"
+    }
+  },
+  "hand_animation_on_swap": false
+}

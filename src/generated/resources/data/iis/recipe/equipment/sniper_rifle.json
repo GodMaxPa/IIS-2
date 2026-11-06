@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SRR",
+    "MCP",
+    "WPh"
+  ],
+  "key": {
+    "S": "iis:sensor_ev",
+    "R": "#c:rods/titanium",
+    "C": "#c:circuits/data",
+    "M": "iis:electric_piston_hv",
+    "P": "#c:plates/titanium",
+    "W": "#c:plates/plastic",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:sniper_rifle"
+  }
+}

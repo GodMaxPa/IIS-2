@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PMP",
+    "NCN",
+    "PWP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "M": "iis:electric_motor_lv",
+    "N": "iis:electric_piston_lv",
+    "C": "#c:circuits/basic",
+    "W": "#c:gears/steel"
+  },
+  "result": {
+    "id": "iis:engine_lv"
+  }
+}

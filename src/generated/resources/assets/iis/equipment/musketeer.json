@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "iis:musketeer"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "iis:musketeer"
+      }
+    ]
+  }
+}

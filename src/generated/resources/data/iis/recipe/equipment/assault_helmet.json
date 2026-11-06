@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MPM",
+    "M M"
+  ],
+  "key": {
+    "M": "#c:plates/titanium",
+    "P": "iis:carbon_plate"
+  },
+  "result": {
+    "id": "iis:assault_helmet"
+  }
+}

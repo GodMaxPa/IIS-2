@@ -117,7 +117,7 @@ public final class GearEvents {
 
     private static void helmet(Player p, ItemStack head) {
         long c = BatteryItem.charge(head);
-        boolean sees = head.is(GearContent.NIGHTVISION_GOGGLES.get()) || head.is(GearContent.NANO_HELMET.get()) || head.is(GearContent.QUANTUM_HELMET.get());
+        boolean sees = head.is(GearContent.NIGHTVISION_GOGGLES.get()) || head.is(GearContent.NANO_HELMET.get()) || head.is(GearContent.QUANTUM_HELMET.get()) || (head.getItem() instanceof GearArmorItem g && g.nightVision());
         if (sees && GearArmorItem.on(head) && c > 0) {
             BatteryItem.setCharge(head, c - 1);
             p.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 300, 0, true, false));
@@ -166,7 +166,7 @@ public final class GearEvents {
     public static void toggleNightVision(Entity entity) {
         if (!(entity instanceof Player p)) return;
         ItemStack head = p.getItemBySlot(EquipmentSlot.HEAD);
-        if (!(head.is(GearContent.NIGHTVISION_GOGGLES.get()) || head.is(GearContent.NANO_HELMET.get()) || head.is(GearContent.QUANTUM_HELMET.get()))) return;
+        if (!(head.is(GearContent.NIGHTVISION_GOGGLES.get()) || head.is(GearContent.NANO_HELMET.get()) || head.is(GearContent.QUANTUM_HELMET.get()) || (head.getItem() instanceof GearArmorItem g && g.nightVision()))) return;
         boolean on = !GearArmorItem.on(head);
         head.set(GearContent.MODE.get(), on ? 1 : 0);
         if (!on) p.removeEffect(MobEffects.NIGHT_VISION);

@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/vehicle_jet",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "jet"
+    }
+  },
+  "hand_animation_on_swap": false
+}

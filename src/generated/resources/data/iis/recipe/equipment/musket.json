@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FRR",
+    "SPR",
+    "WWh"
+  ],
+  "key": {
+    "F": "minecraft:flint",
+    "R": "#c:rods/wrought_iron",
+    "S": "#iis:screws/wrought_iron",
+    "P": "#c:plates/wrought_iron",
+    "W": "#minecraft:planks",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:musket"
+  }
+}

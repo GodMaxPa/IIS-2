@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "M M",
+    "P P"
+  ],
+  "key": {
+    "M": "#c:plates/titanium",
+    "P": "iis:carbon_plate"
+  },
+  "result": {
+    "id": "iis:assault_boots"
+  }
+}

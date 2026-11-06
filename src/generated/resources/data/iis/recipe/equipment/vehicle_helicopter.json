@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RMR",
+    "GEP",
+    "PPP"
+  ],
+  "key": {
+    "R": "#c:rods/titanium",
+    "M": "iis:electric_motor_ev",
+    "G": "#c:glass_panes",
+    "P": "#c:plates/titanium",
+    "E": "iis:engine_ev"
+  },
+  "result": {
+    "id": "iis:vehicle_helicopter"
+  }
+}
