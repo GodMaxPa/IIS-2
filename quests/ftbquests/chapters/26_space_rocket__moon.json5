@@ -1275,6 +1275,39 @@
       ]
     },
     {
+      "id": "1A0000000000032B",
+      "x": 14.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000001E4"
+      ],
+      "icon": {
+        "id": "iis:item_pipe_medium_brass",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:item_pipe_medium_brass",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000032B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000032B00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000032C",
       "x": 12.5,
       "y": 5.0,

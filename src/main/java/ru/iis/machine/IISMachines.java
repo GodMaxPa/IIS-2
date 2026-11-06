@@ -96,6 +96,15 @@ public final class IISMachines {
         }
     }
 
+    /** D123: предметные трубы GT. */
+    public static final Map<String, DeferredBlock<ru.iis.machine.block.ItemPipeBlock>> ITEM_PIPES = new LinkedHashMap<>();
+    static {
+        for (ru.iis.machine.block.ItemPipeBlock.Spec s : ru.iis.machine.block.ItemPipeBlock.SPECS) {
+            ITEM_PIPES.put(s.id(), block(s.id(), p -> new ru.iis.machine.block.ItemPipeBlock(s, p),
+                    p -> p.mapColor(MapColor.METAL).sound(SoundType.METAL).strength(3.0f, 6.0f).requiresCorrectToolForDrops().noOcclusion()));
+        }
+    }
+
     // --- предметы ------------------------------------------------------------------------------------------------
     public static final DeferredItem<Item> COMPRESSED_FIRECLAY = ITEMS.registerSimpleItem("compressed_fireclay");
     public static final DeferredItem<Item> FIREBRICK = ITEMS.registerSimpleItem("firebrick");
@@ -111,6 +120,8 @@ public final class IISMachines {
             () -> new BlockEntityType<>(SteamMachineBlockEntity::new, STEAM_MACHINES.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BbfBlockEntity>> BBF_BE = BLOCK_ENTITIES.register("bricked_blast_furnace",
             () -> new BlockEntityType<>(BbfBlockEntity::new, BRICKED_BLAST_FURNACE.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ru.iis.machine.block.ItemPipeBlockEntity>> ITEM_PIPE_BE = BLOCK_ENTITIES.register("item_pipe",
+            () -> new BlockEntityType<>(ru.iis.machine.block.ItemPipeBlockEntity::new, ITEM_PIPES.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PipeBlockEntity>> PIPE_BE = BLOCK_ENTITIES.register("fluid_pipe",
             () -> new BlockEntityType<>(PipeBlockEntity::new, PIPES.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
 
@@ -144,5 +155,6 @@ public final class IISMachines {
         event.registerBlockEntity(Capabilities.Item.BLOCK, STEAM_MACHINE_BE.get(), SteamMachineBlockEntity::itemHandler);
         event.registerBlockEntity(Capabilities.Item.BLOCK, BBF_BE.get(), BbfBlockEntity::itemHandler);
         event.registerBlockEntity(Capabilities.Fluid.BLOCK, PIPE_BE.get(), PipeBlockEntity::fluidHandler);
+        event.registerBlockEntity(Capabilities.Item.BLOCK, ITEM_PIPE_BE.get(), ru.iis.machine.block.ItemPipeBlockEntity::itemHandler);
     }
 }

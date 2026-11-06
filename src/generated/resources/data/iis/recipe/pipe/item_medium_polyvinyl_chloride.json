@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "w h",
+    "PPP"
+  ],
+  "key": {
+    "P": "#c:plates/polyvinyl_chloride",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:item_pipe_medium_polyvinyl_chloride",
+    "count": 2
+  }
+}

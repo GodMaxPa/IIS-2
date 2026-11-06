@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/platinum",
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:item_pipe_huge_platinum",
+      "count": 1
+    }
+  ],
+  "duration": 96,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_pipe_huge"
+  ]
+}

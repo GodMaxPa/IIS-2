@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/polyvinyl_chloride",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hoe_head_polyvinyl_chloride",
+      "count": 1
+    }
+  ],
+  "duration": 20,
+  "eut": 32,
+  "keep": [
+    "iis:shape_extruder_hoe"
+  ]
+}

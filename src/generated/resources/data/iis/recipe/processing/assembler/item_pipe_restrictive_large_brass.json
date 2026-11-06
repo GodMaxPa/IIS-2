@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:item_pipe_large_brass",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:rings/steel",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:item_pipe_restrictive_large_brass",
+      "count": 1
+    }
+  ],
+  "duration": 1600,
+  "eut": 4
+}

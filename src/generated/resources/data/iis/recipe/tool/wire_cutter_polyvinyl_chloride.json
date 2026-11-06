@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PfP",
+    "hPd",
+    "STS"
+  ],
+  "key": {
+    "P": "#c:plates/polyvinyl_chloride",
+    "S": "#c:rods/polyvinyl_chloride",
+    "T": "#iis:screws/polyvinyl_chloride",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:wire_cutter_polyvinyl_chloride"
+  }
+}

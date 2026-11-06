@@ -70,6 +70,10 @@ public final class IISClient {
             int rgb = m != null ? m.color() : b.get().spec.color();
             event.register(List.of(BlockTintSources.constant(0xFF000000 | rgb)), b.get());
         });
+        IISMachines.ITEM_PIPES.values().forEach(b -> {
+            IISMaterial m = OreBlocks.material(b.get().spec.material());
+            event.register(List.of(BlockTintSources.constant(0xFF000000 | (m != null ? m.color() : 0xC8C8C8))), b.get());
+        });
         event.register(List.of(BlockTintSources.constant(0xFF5F8F3F)), ru.iis.lv.LvContent.RUBBER_LEAVES.get());
         // пути Railcraft (D102): ванильные текстуры рельсов, окрашенные по типу пути
         ru.iis.rail.RailContent.TRACKS.values().forEach(b -> event.register(

@@ -7430,6 +7430,61 @@
     "material": "polytetrafluoroethylene"
   },
   {
+    "id": "dust_polyvinyl_chloride",
+    "prefix": "dust",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "small_dust_polyvinyl_chloride",
+    "prefix": "small_dust",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "tiny_dust_polyvinyl_chloride",
+    "prefix": "tiny_dust",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "ingot_polyvinyl_chloride",
+    "prefix": "ingot",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "nugget_polyvinyl_chloride",
+    "prefix": "nugget",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "plate_polyvinyl_chloride",
+    "prefix": "plate",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "rod_polyvinyl_chloride",
+    "prefix": "rod",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "bolt_polyvinyl_chloride",
+    "prefix": "bolt",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "screw_polyvinyl_chloride",
+    "prefix": "screw",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "foil_polyvinyl_chloride",
+    "prefix": "foil",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "long_rod_polyvinyl_chloride",
+    "prefix": "long_rod",
+    "material": "polyvinyl_chloride"
+  },
+  {
     "id": "dust_potassium",
     "prefix": "dust",
     "material": "potassium"
@@ -12748,6 +12803,51 @@
     "id": "wrench_head_polytetrafluoroethylene",
     "prefix": "wrench_head",
     "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "sword_head_polyvinyl_chloride",
+    "prefix": "sword_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "pickaxe_head_polyvinyl_chloride",
+    "prefix": "pickaxe_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "shovel_head_polyvinyl_chloride",
+    "prefix": "shovel_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "axe_head_polyvinyl_chloride",
+    "prefix": "axe_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "hoe_head_polyvinyl_chloride",
+    "prefix": "hoe_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "saw_head_polyvinyl_chloride",
+    "prefix": "saw_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "drill_head_polyvinyl_chloride",
+    "prefix": "drill_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "chainsaw_head_polyvinyl_chloride",
+    "prefix": "chainsaw_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "wrench_head_polyvinyl_chloride",
+    "prefix": "wrench_head",
+    "material": "polyvinyl_chloride"
   },
   {
     "id": "sword_head_rose_gold",

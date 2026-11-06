@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/polyvinyl_chloride",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 24,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_polyvinylchloride",
+      "amount": 144
+    }
+  ]
+}

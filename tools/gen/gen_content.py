@@ -214,6 +214,8 @@ names |= {'NaquadahEnriched', 'Naquadria', 'Lutetium', 'Potassium', 'Graphene'}
 names |= {'Osmiridium', 'NaquadahAlloy', 'Tritanium', 'Neutronium', 'Americium', 'MeatRaw'}
 # D122: vanadium steel for the advanced seismic prospector (GT_CraftingRecipeLoader:407)
 names |= {'VanadiumSteel'}
+# D123: PVC for its item pipes (GT_Loader_MetaTileEntities:1624; polymerization GT_MachineRecipeLoader:3021+)
+names |= {'PolyvinylChloride'}
 names |= {'HSSE', 'Naquadah', 'Superconductor', 'EpoxidFiberReinforced', 'Indium', 'AluminiumSulfite', 'Arsenic', 'Phosphorus', 'Phosphate', 'GalliumArsenide', 'IndiumGalliumPhosphide'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
@@ -1045,6 +1047,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_gtlast', os.path.join(ROOT, 'tools
 _gtlast = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_gtlast)
 lv_stats['gtlast'] = _gtlast.generate(globals())
+# Item pipes (D123)
+_spec = _ilu.spec_from_file_location('iis_gen_itempipes', os.path.join(ROOT, 'tools', 'gen', 'itempipes.py'))
+_itempipes = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_itempipes)
+lv_stats['itempipes'] = _itempipes.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

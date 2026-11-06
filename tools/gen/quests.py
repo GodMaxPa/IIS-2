@@ -202,6 +202,9 @@ WIRE_FORMS = ('wire_{}_1x', 'wire_{}_2x', 'wire_{}_4x', 'wire_{}_8x', 'wire_{}_1
 # :1540-1579 fluid pipes: start + 0..4 tiny, small, medium, large, huge
 GT_PIPES = {5100: 'wood', 5110: 'copper', 5120: 'bronze', 5130: 'steel', 5140: 'stainless_steel', 5150: 'titanium', 5160: 'tungsten_steel', 5170: 'plastic', 5175: 'polytetrafluoroethylene'}
 PIPE_SIZES = ('tiny', 'small', 'medium', 'large', 'huge')
+# :1620-1628 item pipes (D123): start + 0..2 medium, large, huge, + 3..5 restrictive
+GT_ITEM_PIPES = {5602: 'brass', 5612: 'electrum', 5622: 'platinum', 5632: 'osmium', 5640: 'polyvinyl_chloride', 5646: 'wrought_iron', 5652: 'nickel', 5658: 'cobalt', 5664: 'aluminium'}
+ITEM_PIPE_FORMS = ('item_pipe_medium_{}', 'item_pipe_large_{}', 'item_pipe_huge_{}', 'item_pipe_restrictive_medium_{}', 'item_pipe_restrictive_large_{}', 'item_pipe_restrictive_huge_{}')
 # GT_MetaGenerated_Item_01 and _02: damage // 1000 is the prefix, damage % 1000 the material
 META01_FORMS = {0: 'tiny_dust', 1: 'small_dust', 2: 'dust', 3: 'impure_dust', 4: 'pure_dust', 5: 'crushed', 6: 'purified', 7: 'centrifuged', 8: 'gem', 9: 'nugget', 11: 'ingot', 12: 'hot_ingot',
                 17: 'plate', 18: 'double_plate', 23: 'rod', 24: 'lens', 25: 'round', 26: 'bolt', 27: 'screw', 28: 'ring', 29: 'foil'}
@@ -284,6 +287,9 @@ class Mapper:
                     return f'{NS}:' + WIRE_FORMS[dmg - base].format(mat)
             if 4096 <= dmg < 5096 and self.gt_mat.get(dmg - 4096):
                 return f'{NS}:frame_{self.gt_mat[dmg - 4096]}'
+            for base, mat in GT_ITEM_PIPES.items():
+                if base <= dmg < base + 6:
+                    return f'{NS}:' + ITEM_PIPE_FORMS[dmg - base].format(mat)
             for base, mat in GT_PIPES.items():
                 if base <= dmg < base + 5:
                     return f'{NS}:pipe_{PIPE_SIZES[dmg - base]}_{mat}'

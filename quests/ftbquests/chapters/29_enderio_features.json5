@@ -38,6 +38,39 @@
       ]
     },
     {
+      "id": "1A00000000000246",
+      "x": 12.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000000EA"
+      ],
+      "icon": {
+        "id": "iis:item_pipe_medium_electrum",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:item_pipe_medium_electrum",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000024600"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000257",
       "x": 2.0,
       "y": 6.5,

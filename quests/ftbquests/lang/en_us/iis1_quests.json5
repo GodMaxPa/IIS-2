@@ -1746,6 +1746,10 @@
     "...by hammer or metal bender."
   ],
   "quest.1A000000000001FF.title": "Aluminium Foil",
+  "quest.1A00000000000200.quest_desc": [
+    "...by hammer or metal bender."
+  ],
+  "quest.1A00000000000200.title": "Thin Polyvinyl Chloride Sheet",
   "quest.1A00000000000201.quest_desc": [
     "Height to search: 50 - 60. the main source of chlorine may be salt ores (common or rock salt)"
   ],
@@ -1782,6 +1786,10 @@
     "Almost the plastic, it just few steps left."
   ],
   "quest.1A00000000000209.title": "Ethylene",
+  "quest.1A0000000000020A.quest_desc": [
+    "Vinyl chloride + oxygen to get polyvinyl chloride - then just solidify it to be plate with help of plate mold."
+  ],
+  "quest.1A0000000000020A.title": "Polyvinyl Chloride Sheet",
   "quest.1A0000000000020B.quest_desc": [
     "Chlorine + Methane (by chemical reactor)"
   ],
@@ -1990,6 +1998,10 @@
     "This machine looks simple. But in fact it may do a lot of useful things. For example: concrete, industrial biomass, drilling fluid and some other things."
   ],
   "quest.1A00000000000243.title": "Basic Mixer",
+  "quest.1A00000000000246.quest_desc": [
+    "By itself it is useless. But you may use this to craft the item conduit."
+  ],
+  "quest.1A00000000000246.title": "Electrum Item Pipe",
   "quest.1A00000000000247.quest_desc": [
     "Use 8 chrome plates."
   ],
@@ -2706,6 +2718,10 @@
     "Use the MV+ tier assembler to craft it from double steel plate and two steel rings."
   ],
   "quest.1A0000000000032A.title": "Large Steel Fluid Cell",
+  "quest.1A0000000000032B.quest_desc": [
+    "It is a part of Cargo Loader or Unloader. Also you may use it standalone."
+  ],
+  "quest.1A0000000000032B.title": "Brass Item Pipe",
   "quest.1A0000000000032C.quest_desc": [
     "The part for rocket loader or unloader machines."
   ],

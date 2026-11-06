@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1537; hidden until their items are ported: 405; chapters: 35.
+Quests in IIS 1: 1943; written: 1541; hidden until their items are ported: 401; chapters: 35.
 
 ## Most needed unported items (task count)
 

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/polyvinyl_chloride"
+  ],
+  "result": {
+    "id": "iis:small_dust_polyvinyl_chloride",
+    "count": 4
+  }
+}

@@ -4815,6 +4815,38 @@
     "toolQuality": 1
   },
   {
+    "id": "polyvinyl_chloride",
+    "gtName": "PolyvinylChloride",
+    "gtId": 649,
+    "en": "PolyvinylChloride",
+    "ru": "Поливинилхлорид",
+    "ruOre": null,
+    "color": 14149350,
+    "iconSet": "DULL",
+    "harvestLevel": 1,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "C2H3Cl",
+    "types": 195,
+    "subTags": [
+      "BOUNCY",
+      "FLAMMABLE",
+      "HAS_COLOR",
+      "NO_SMASHING",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "polyvinyl_chloride",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 32,
+    "toolSpeed": 3.0,
+    "toolQuality": 1
+  },
+  {
     "id": "potassium",
     "gtName": "Potassium",
     "gtId": 25,

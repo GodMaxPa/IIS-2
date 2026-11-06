@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/polyvinyl_chloride",
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:item_pipe_huge_polyvinyl_chloride",
+      "count": 1
+    }
+  ],
+  "duration": 96,
+  "eut": 32,
+  "keep": [
+    "iis:shape_extruder_pipe_huge"
+  ]
+}
