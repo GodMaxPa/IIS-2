@@ -359,32 +359,43 @@ final class FluidGameTests {
         });
     }
 
-    /** Стенд-эталон (D74), построенный в небе тестового мира, работает: обе сети сосудов, медная линия, места Био, LV-органы, пар. */
+    /** Стенд (D74, D124), построенный в небе тестового мира: все структуры собраны, все круги рабочей сети идут, в зале Био работают обе сети сосудов и места. */
     static void standWorks(GameTestHelper h) {
         int y0 = 150;
         var level = h.getLevel();
-        ru.iis.stand.StandBuilder.build(level, y0);
+        var stand = ru.iis.stand.StandBuilder.build(level, y0);
+        BlockPos o = stand.bioOrigin();
+        var net = stand.network();
         h.succeedWhen(() -> {
-            var ulvTank = (ru.iis.bio.block.LivingTankBlockEntity) level.getBlockEntity(new BlockPos(11, y0, 28));
-            var lvTank = (ru.iis.bio.block.LivingTankBlockEntity) level.getBlockEntity(new BlockPos(9, y0, 34));
-            var pipeTank = (UniversalTankBlockEntity) level.getBlockEntity(new BlockPos(42, y0, 32));
-            var probe = (VesselBlockEntity) level.getBlockEntity(new BlockPos(10, y0, 28));
+            for (BlockPos p : stand.controllers()) {
+                if (level.getBlockEntity(p) instanceof ru.iis.multi.block.MultiblockControllerBlockEntity m) h.assertTrue(m.formed(), "stand structure at " + p + " not formed: " + level.getBlockState(p).getBlock());
+            }
+            var extractor = (ru.iis.lv.block.ElectricMachineBlockEntity) level.getBlockEntity(net.machines().get(3));
+            var solidifier = (ru.iis.lv.block.ElectricMachineBlockEntity) level.getBlockEntity(net.machines().get(4));
+            var macerator = (ru.iis.lv.block.ElectricMachineBlockEntity) level.getBlockEntity(net.machines().get(6));
+            var furnace = (ru.iis.lv.block.ElectricMachineBlockEntity) level.getBlockEntity(net.machines().get(7));
+            h.assertTrue(extractor.getItem(0).getCount() < 32 && extractor.logic().progress > 0, "extractor idle: " + extractor.getItem(0));
+            h.assertTrue(solidifier.logic().progress > 0, "solidifier idle");
+            h.assertTrue(macerator.getItem(0).getCount() < 24 && macerator.logic().progress > 0, "LV macerator idle: " + macerator.getItem(0));
+            h.assertTrue(furnace.logic().progress > 0, "furnace idle");
+            var ebf = (ru.iis.multi.block.MultiblockControllerBlockEntity) level.getBlockEntity(net.ebf());
+            h.assertTrue(ebf.progress() > 0, "ebf idle");
+            var ulvTank = (ru.iis.bio.block.LivingTankBlockEntity) level.getBlockEntity(o.offset(11, 0, 28));
+            var lvTank = (ru.iis.bio.block.LivingTankBlockEntity) level.getBlockEntity(o.offset(9, 0, 34));
+            var probe = (VesselBlockEntity) level.getBlockEntity(o.offset(10, 0, 28));
             h.assertTrue(ulvTank != null && ulvTank.tank().amount() > 0, "ULV network → living tank: "
                     + (probe == null || probe.summary == null ? "no summary" : probe.summary.describe().getString() + " p=" + probe.pressure)
                     + " tank=" + (ulvTank == null ? "missing" : ulvTank.describe().getString()));
-            var probe2 = (VesselBlockEntity) level.getBlockEntity(new BlockPos(7, y0, 34));
+            var probe2 = (VesselBlockEntity) level.getBlockEntity(o.offset(7, 0, 34));
             h.assertTrue(lvTank != null && lvTank.tank().amount() > 0, "LV pump network → living tank: "
                     + (probe2 == null || probe2.summary == null ? "no summary" : probe2.summary.describe().getString()));
-            h.assertTrue(pipeTank != null && pipeTank.tank.amount() > 0, "copper pipe line → tank");
-            for (BlockPos p : new BlockPos[]{new BlockPos(2, y0, 14), new BlockPos(5, y0, 14), new BlockPos(8, y0 + 1, 14), new BlockPos(11, y0, 14),
-                    new BlockPos(14, y0, 14), new BlockPos(17, y0, 14), new BlockPos(2, y0, 20), new BlockPos(6, y0, 20), new BlockPos(10, y0, 20),
-                    new BlockPos(7, y0, 6), new BlockPos(9, y0, 6)}) {
+            for (BlockPos p : new BlockPos[]{o.offset(2, 0, 14), o.offset(5, 0, 14), o.offset(8, 1, 14), o.offset(11, 0, 14),
+                    o.offset(14, 0, 14), o.offset(17, 0, 14), o.offset(2, 0, 20), o.offset(6, 0, 20), o.offset(10, 0, 20),
+                    o.offset(7, 0, 6), o.offset(9, 0, 6)}) {
                 StationBlockEntity st = (StationBlockEntity) level.getBlockEntity(p);
                 h.assertTrue(st != null && (st.logic.busy() || produced(st)),
                         "stand station at " + p + " must be working: " + (st == null ? "missing" : st.logic.status()));
             }
-            var mac = (ru.iis.machine.block.SteamMachineBlockEntity) level.getBlockEntity(new BlockPos(68, y0 + 1, 2));
-            h.assertTrue(mac != null && !mac.getItem(mac.getContainerSize() - 1).isEmpty(), "steam macerator output");
         });
     }
 

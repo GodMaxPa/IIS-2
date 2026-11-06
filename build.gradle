@@ -70,6 +70,11 @@ neoForge {
             if (project.hasProperty('showcase')) {
                 programArguments.addAll '--quickPlaySingleplayer', 'showcase', '--width', '1600', '--height', '900'
             }
+            // D124: gradlew runClient -Pstandshots: opens the stand world, takes pictures from stand_views.txt and exits
+            if (project.hasProperty('standshots')) {
+                programArguments.addAll '--quickPlaySingleplayer', 'IIS2_Stand', '--width', '1600', '--height', '900'
+                systemProperty 'iis.stand.shots', 'stand_views.txt'
+            }
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
