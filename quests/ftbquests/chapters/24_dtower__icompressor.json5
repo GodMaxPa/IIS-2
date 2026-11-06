@@ -732,6 +732,42 @@
       ]
     },
     {
+      "id": "1A00000000000168",
+      "x": 0.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000161",
+        "1A00000000000160",
+        "1A00000000000793"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:data_orb",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:data_orb",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000016800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000016800"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000016B",
       "x": 5.0,
       "y": 0.5,
@@ -901,12 +937,77 @@
       ]
     },
     {
+      "id": "1A00000000000176",
+      "x": 15.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000180"
+      ],
+      "icon": {
+        "id": "iis:industrial_tnt",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:industrial_tnt",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000017600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000017600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000177",
+      "x": 12.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000181"
+      ],
+      "icon": {
+        "id": "iis:dynamite",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dynamite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000017700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000017700"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000178",
       "x": 14.0,
       "y": 5.0,
       "dependencies": [
-        "1A0000000000017D",
-        "1A0000000000017E",
+        "1A00000000000179",
         "1A0000000000017A"
       ],
       "icon": {
@@ -932,6 +1033,40 @@
             "count": 1
           },
           "id": "1C00000000017800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000179",
+      "x": 15.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000017D",
+        "1A0000000000017E"
+      ],
+      "icon": {
+        "id": "iis:gelled_toluene",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gelled_toluene",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000017900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000017900"
         }
       ]
     },

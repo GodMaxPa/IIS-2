@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/vanadium_steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_vanadium_steel",
+      "count": 1
+    }
+  ],
+  "duration": 108,
+  "eut": 96
+}

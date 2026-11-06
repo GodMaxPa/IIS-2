@@ -408,6 +408,18 @@ public enum LvMachineType {
     CIRCUIT_ASSEMBLER_ZPM("circuit_assembler", GtRecipeMap.CIRCUIT_ASSEMBLER, 6, 1, 16000, "circuitassembler", VoltageTier.ZPM),
     CIRCUIT_ASSEMBLER_UV("circuit_assembler", GtRecipeMap.CIRCUIT_ASSEMBLER, 6, 1, 16000, "circuitassembler", VoltageTier.UV),
     // D110: GT_MetaTileEntity_Scanner: 1 вход, 1 выход, флешка — в особом слоте; только исследования сборочной линии
+    // D122: GT_MetaTileEntity_Replicator: сфера с элементом в особом слоте, UU-материя в баке, на выходе пыль; напряжение уровня и масса × 512 / 2^(уровень − 1) тиков
+    REPLICATOR("replicator", null, 1, 1, 16000, "replicator"),
+    REPLICATOR_MV("replicator", null, 1, 1, 16000, "replicator", VoltageTier.MV),
+    REPLICATOR_HV("replicator", null, 1, 1, 16000, "replicator", VoltageTier.HV),
+    REPLICATOR_EV("replicator", null, 1, 1, 16000, "replicator", VoltageTier.EV),
+    REPLICATOR_IV("replicator", null, 1, 1, 16000, "replicator", VoltageTier.IV),
+    REPLICATOR_LUV("replicator", null, 1, 1, 16000, "replicator", VoltageTier.LUV),
+    REPLICATOR_ZPM("replicator", null, 1, 1, 16000, "replicator", VoltageTier.ZPM),
+    REPLICATOR_UV("replicator", null, 1, 1, 16000, "replicator", VoltageTier.UV),
+    // D122: GT_Loader_MetaTileEntities:1306-1307: взрывчатка на входе, флешка в особом слоте, без энергии; флешка выходит с данными
+    SEISMIC_PROSPECTOR("seismic_prospector", null, 1, 1, 0, "seismicprospector"),
+    SEISMIC_PROSPECTOR_EV("seismic_prospector", null, 1, 1, 0, "seismicprospector", VoltageTier.EV),
     SCANNER("scanner", null, 1, 1, 0, "scanner"),
     SCANNER_MV("scanner", null, 1, 1, 0, "scanner", VoltageTier.MV),
     SCANNER_HV("scanner", null, 1, 1, 0, "scanner", VoltageTier.HV),

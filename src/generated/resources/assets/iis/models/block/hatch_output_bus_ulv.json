@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/hatch_ulv_side",
+    "north": "iis:block/multi/hatch_output_bus_ulv_front",
+    "south": "iis:block/multi/hatch_ulv_side",
+    "east": "iis:block/multi/hatch_ulv_side",
+    "west": "iis:block/multi/hatch_ulv_side",
+    "up": "iis:block/multi/hatch_ulv_side",
+    "down": "iis:block/multi/hatch_ulv_side"
+  }
+}

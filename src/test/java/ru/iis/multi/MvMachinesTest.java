@@ -27,7 +27,7 @@ class MvMachinesTest {
     @Test
     void everyLvMachineHasAnMvTwin() {
         for (LvMachineType lv : LvMachineType.values()) {
-            if (lv.tier != VoltageTier.LV) continue;
+            if (lv.tier != VoltageTier.LV || lv.id.equals("seismic_prospector")) continue;   // D122: только LV и EV
             LvMachineType mv = LvMachineType.valueOf(lv.name() + "_MV");
             assertEquals(VoltageTier.MV, mv.tier, mv.name());
             assertEquals(lv.id + "_mv", mv.blockId());

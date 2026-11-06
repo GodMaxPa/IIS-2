@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PBP",
+    "CSC",
+    "PWP"
+  ],
+  "key": {
+    "P": "#c:plates/aluminium",
+    "W": "#iis:cables/1x/copper",
+    "B": "iis:battery_lithium_mv",
+    "S": "iis:cover_screen",
+    "C": "#c:circuits/good"
+  },
+  "result": {
+    "id": "iis:data_reader_mv"
+  }
+}

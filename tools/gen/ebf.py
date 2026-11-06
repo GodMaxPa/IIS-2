@@ -43,10 +43,20 @@ HATCHES = [
     ('hatch_dynamo_zpm', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.07.name', 'ZPM Dynamo Hatch'),
     ('hatch_energy_uv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.08.name', 'UV Energy Hatch'),   # D121
     ('hatch_dynamo_uv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.08.name', 'UV Dynamo Hatch'),
+    ('hatch_energy_max', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.09.name', 'Max Energy Hatch'),   # D122
+    ('hatch_dynamo_max', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.09.name', 'Max Dynamo Hatch'),
+    ('hatch_data_access_luv', 'OVERLAY_DATA_ACCESS', 'gt.blockmachines.hatch.dataaccess.adv.name', 'Advanced Data Access Hatch'),   # D122
+    # D122: ULV hatches and buses: GT_Loader_MetaTileEntities:214-383; GT has no ULV muffler
+    ('hatch_energy_ulv', 'OVERLAY_ENERGY_IN_MULTI', 'gt.blockmachines.hatch.energy.tier.00.name', 'ULV Energy Hatch'),
+    ('hatch_dynamo_ulv', 'OVERLAY_ENERGY_OUT_MULTI', 'gt.blockmachines.hatch.dynamo.tier.00.name', 'ULV Dynamo Hatch'),
+    ('hatch_input_bus_ulv', 'OVERLAY_PIPE_IN', 'gt.blockmachines.hatch.input_bus.tier.00.name', 'ULV Input Bus'),
+    ('hatch_output_bus_ulv', 'OVERLAY_PIPE_OUT', 'gt.blockmachines.hatch.output_bus.tier.00.name', 'ULV Output Bus'),
+    ('hatch_input_ulv', 'OVERLAY_PIPE_IN', 'gt.blockmachines.hatch.input.tier.00.name', 'ULV Input Hatch'),
+    ('hatch_output_ulv', 'OVERLAY_PIPE_OUT', 'gt.blockmachines.hatch.output.tier.00.name', 'ULV Output Hatch'),
     ('hatch_data_access_ev', 'OVERLAY_DATA_ACCESS', 'gt.blockmachines.hatch.dataaccess.name', 'Data Access Hatch'),   # GT_Loader_MetaTileEntities:402 (D110)
 ]
 # D103: buses, fluid hatches and mufflers MV-IV (GT_Loader_MetaTileEntities:294-422)
-for _tr, _tn in (('mv', '02'), ('hv', '03'), ('ev', '04'), ('iv', '05'), ('luv', '06'), ('zpm', '07'), ('uv', '08')):   # LuV: D110, ZPM: D112, UV: D121
+for _tr, _tn in (('mv', '02'), ('hv', '03'), ('ev', '04'), ('iv', '05'), ('luv', '06'), ('zpm', '07'), ('uv', '08'), ('max', '09')):   # LuV: D110, ZPM: D112, UV: D121, MAX: D122
     _T = 'LuV' if _tr == 'luv' else _tr.upper()
     HATCHES += [(f'hatch_input_bus_{_tr}', 'OVERLAY_PIPE_IN', f'gt.blockmachines.hatch.input_bus.tier.{_tn}.name', f'{_T} Input Bus'),
                 (f'hatch_output_bus_{_tr}', 'OVERLAY_PIPE_OUT', f'gt.blockmachines.hatch.output_bus.tier.{_tn}.name', f'{_T} Output Bus'),
@@ -166,11 +176,13 @@ def generate(g):
 
     # --- hatches (front overlay over the LV casing; any of 6 facings) -----------------------------------------------
     sides = {}
-    for tr in ('lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv'):
+    for tr in ('lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'max'):
         sides[tr] = first(os.path.join(LVI, f'MACHINE_{"LuV" if tr == "luv" else tr.upper()}_SIDE.png'))
         sides[tr].save(tex_out(f'block/multi/hatch_{tr}_side.png'))
+    sides['ulv'] = first(os.path.join(BI, 'MACHINE_8V_SIDE.png'))   # D122
+    sides['ulv'].save(tex_out('block/multi/hatch_ulv_side.png'))
     for bid, ov, key, en in HATCHES:
-        tr = bid.rsplit('_', 1)[1] if bid.rsplit('_', 1)[1] in ('mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv') else 'lv'
+        tr = bid.rsplit('_', 1)[1] if bid.rsplit('_', 1)[1] in ('ulv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'max') else 'lv'
         ovp = os.path.join(BI, ov + '.png')
         if not os.path.exists(ovp):
             ovp = os.path.join(LVI, ov + '.png')
@@ -246,6 +258,18 @@ def generate(g):
     # D112: :275 "CM", :232 " MC": ZPM hull, naquadah cable
     shaped('multi/hatch_energy_zpm', f'{NS}:hatch_energy_zpm', 1, ['CM'], {'M': f'{NS}:hull_zpm', 'C': '#iis:cables/1x/naquadah'})
     shaped('multi/hatch_dynamo_zpm', f'{NS}:hatch_dynamo_zpm', 1, ['MC'], {'M': f'{NS}:hull_zpm', 'C': '#iis:cables/1x/naquadah'})
+    # D122: :277, :234 MAX: superconductor wire
+    shaped('multi/hatch_energy_max', f'{NS}:hatch_energy_max', 1, ['CM'], {'M': f'{NS}:hull_max', 'C': '#iis:wires/1x/superconductor'})
+    shaped('multi/hatch_dynamo_max', f'{NS}:hatch_dynamo_max', 1, ['MC'], {'M': f'{NS}:hull_max', 'C': '#iis:wires/1x/superconductor'})
+    # D122: :268, :225, :292, :315, :361, :383 ULV: lead cable, ULV hull; :406 advanced data access
+    UH = f'{NS}:hull_ulv'
+    shaped('multi/hatch_energy_ulv', f'{NS}:hatch_energy_ulv', 1, ['CM'], {'M': UH, 'C': '#iis:cables/1x/lead'})
+    shaped('multi/hatch_dynamo_ulv', f'{NS}:hatch_dynamo_ulv', 1, ['MC'], {'M': UH, 'C': '#iis:cables/1x/lead'})
+    shaped('multi/hatch_input_ulv', f'{NS}:hatch_input_ulv', 1, ['G', 'M'], {'M': UH, 'G': 'minecraft:glass'})
+    shaped('multi/hatch_output_ulv', f'{NS}:hatch_output_ulv', 1, ['M', 'G'], {'M': UH, 'G': 'minecraft:glass'})
+    shaped('multi/hatch_input_bus_ulv', f'{NS}:hatch_input_bus_ulv', 1, ['C', 'M'], {'M': UH, 'C': '#c:chests/wooden'})
+    shaped('multi/hatch_output_bus_ulv', f'{NS}:hatch_output_bus_ulv', 1, ['M', 'C'], {'M': UH, 'C': '#c:chests/wooden'})
+    shaped('multi/hatch_data_access_luv', f'{NS}:hatch_data_access_luv', 1, ['COC', 'OMO', 'COC'], {'M': f'{NS}:hull_luv', 'O': f'{NS}:data_orb', 'C': '#c:circuits/ultimate'})
     # D121: :276 "CM", :233 " MC": UV hull, 4x naquadah alloy wire
     shaped('multi/hatch_energy_uv', f'{NS}:hatch_energy_uv', 1, ['CM'], {'M': f'{NS}:hull_uv', 'C': '#iis:wires/4x/naquadah_alloy'})
     shaped('multi/hatch_dynamo_uv', f'{NS}:hatch_dynamo_uv', 1, ['MC'], {'M': f'{NS}:hull_uv', 'C': '#iis:wires/4x/naquadah_alloy'})
@@ -256,9 +280,9 @@ def generate(g):
     shaped('multi/hatch_maintenance', f'{NS}:hatch_maintenance', 1, ['dwx', 'hMc', 'fsr'], {'M': HULL})
     shaped('multi/hatch_muffler_lv', f'{NS}:hatch_muffler_lv', 1, ['M', 'P'], {'M': HULL, 'P': f'{NS}:pipe_medium_steel'})
     # D103: :294-422 the same patterns on the MV-IV hulls (the muffler always takes a medium steel pipe)
-    for tr in ('mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv'):
+    for tr in ('mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'max'):
         H = f'{NS}:hull_{tr}'
-        GL = f'{NS}:reinforced_glass' if tr in ('luv', 'zpm', 'uv') else 'minecraft:glass'   # :298-299, :321-322 (D112)
+        GL = f'{NS}:reinforced_glass' if tr in ('luv', 'zpm', 'uv', 'max') else 'minecraft:glass'   # :298-299, :321-322 (D112)
         shaped(f'multi/hatch_input_{tr}', f'{NS}:hatch_input_{tr}', 1, ['G', 'M'], {'M': H, 'G': GL})
         shaped(f'multi/hatch_output_{tr}', f'{NS}:hatch_output_{tr}', 1, ['M', 'G'], {'M': H, 'G': GL})
         shaped(f'multi/hatch_input_bus_{tr}', f'{NS}:hatch_input_bus_{tr}', 1, ['C', 'M'], {'M': H, 'C': '#c:chests/wooden'})

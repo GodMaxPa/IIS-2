@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EFE",
+    "CMC",
+    "EWE"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "F": "iis:field_generator_uv",
+    "E": "iis:emitter_uv",
+    "C": "#c:circuits/infinite",
+    "W": "#iis:cables/4x/naquadah_alloy"
+  },
+  "result": {
+    "id": "iis:replicator_uv"
+  }
+}

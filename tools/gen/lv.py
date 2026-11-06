@@ -124,6 +124,7 @@ MACHINES = [
     ('massfab',       'massfab',       'MASSFAB',          'Massfabricator', 'massfab',     1, 1, 1000,  'Mass Fabricator'),
     ('plasma_arc_furnace', 'plasmaarcfurnace', 'PLASMA_ARC_FURNACE', 'PlasmaArcFurnace', 'plasma_arc_furnace', 1, 6, 1000, 'Plasma Arc Furnace'),
     ('disassembler',  'disassembler',  'DISASSEMBLER',     'Disassembler', 'disassembler',  1, 9, 0,     'Disassembler'),
+    ('replicator',    'replicator',    'REPLICATOR',       'Replicator',   None,            1, 1, 16000, 'Replicator'),   # D122
 ]
 # GT crafting of the D83 machines (both tiers, X.* resolved per tier like MV_CRAFT)
 NEW_CRAFT = {
@@ -188,6 +189,8 @@ UV_TANKS = {'compressor': 32000, 'mixer': 64000, 'fluid_canner': 80000, 'filter'
 UV_MACHINES = [m[:7] + (UV_TANKS.get(m[0], m[7]),) + m[8:] for m in ZPM_MACHINES]
 # GT_MetaTileEntity_Scanner (D110): 1 input, 1 output, the data stick in the special slot; the assembly line research only
 SCANNER = ('scanner', 'scanner', 'SCANNER', 'Scanner', None, 1, 1, 0, 'Scanner')
+# GT_MetaTileEntity_SeismicProspector, _AdvSeismicProspector (D122): rock breaker look, LV and EV only
+SEISMIC = ('seismic_prospector', 'seismicprospector', 'ROCK_BREAKER', 'SeismicProspector', None, 1, 1, 0, 'Seismic Prospector')
 # GT_Loader_MetaTileEntities Machine_MV_* crafting: GT pattern letters; X.* resolved for tier 2 in lv.generate
 # (GT_MetaTileEntity_BasicMachine_GT_Recipe:57-330, Tier.ELECTRIC[2]); other values are literal ingredients
 MV_CRAFT = {
@@ -377,6 +380,12 @@ ITEMS = [
     ('silicon_boule_naquadah', 'gt:silicon_boule_naquadah', 'gt.metaitem.03.32032.name', 'Naquadah doped Monocrystalline Silicon Boule', 'Кремниевая буля с наквадой'),
     ('silicon_wafer_naquadah', 'gt:silicon_wafer_naquadah', 'gt.metaitem.03.32035.name', 'Naquadah doped Wafer', 'Пластина с наквадой'),
     ('data_stick', 'gt:708', 'gt.metaitem.01.32708.name', 'Data Stick', 'Флешка'),
+    # D122: Item_01:701, 78-84, 810
+    ('data_orb', 'gt:707', 'gt.metaitem.01.32707.name', 'Data Orb', 'Сфера данных'),
+    ('gelled_toluene', 'gt:gelled_toluene', 'gt.metaitem.02.32010.name', 'Gelled Toluene', 'Гелеобразный толуол'),
+    ('data_reader_mv', 'gt:18', 'gt.metaitem.01.32018.name', 'Basic Data Reader', 'Базовый считыватель данных'),
+    ('data_reader_ev', 'gt:19', 'gt.metaitem.01.32019.name', 'Advanced Data Reader', 'Улучшенный считыватель данных'),
+    ('portable_scanner', 'gt:762', 'gt.metaitem.01.32762.name', 'Portable Scanner', 'Портативный сканер'),
     # D111: GT_MetaGenerated_Item_03:57
     ('glass_fiber', 'gt:glass_fiber', 'gt.metaitem.03.32021.name', 'Glass Fiber', 'Стекловолокно'),
     # IC2 is not ported (D5): our own items with the GT recipes that make them (GT_CraftingRecipeLoader:269, ProcessingPlate:182, GT_MachineRecipeLoader:402)
@@ -938,7 +947,7 @@ def generate(g):
     for f in ('MACHINE_LV_SIDE', 'MACHINE_LV_TOP', 'MACHINE_LV_BOTTOM', 'MACHINE_MV_SIDE', 'MACHINE_MV_TOP', 'MACHINE_MV_BOTTOM',
               'MACHINE_HV_SIDE', 'MACHINE_HV_TOP', 'MACHINE_HV_BOTTOM', 'MACHINE_EV_SIDE', 'MACHINE_EV_TOP', 'MACHINE_EV_BOTTOM',
               'MACHINE_IV_SIDE', 'MACHINE_IV_TOP', 'MACHINE_IV_BOTTOM', 'MACHINE_LuV_SIDE', 'MACHINE_LuV_TOP', 'MACHINE_LuV_BOTTOM',
-              'MACHINE_ZPM_SIDE', 'MACHINE_ZPM_TOP', 'MACHINE_ZPM_BOTTOM', 'MACHINE_UV_SIDE', 'MACHINE_UV_TOP', 'MACHINE_UV_BOTTOM'):
+              'MACHINE_ZPM_SIDE', 'MACHINE_ZPM_TOP', 'MACHINE_ZPM_BOTTOM', 'MACHINE_UV_SIDE', 'MACHINE_UV_TOP', 'MACHINE_UV_BOTTOM', 'MACHINE_MAX_SIDE', 'MACHINE_MAX_TOP', 'MACHINE_MAX_BOTTOM'):
         img(os.path.join(ic, f + '.png')).crop((0, 0, 16, 16)).save(tex_out(f'block/lv/{f.lower()}.png'))
     for bid, en, key in (('casing_lv', 'LV Machine Casing', 'gt.blockcasings.1.name'), ('hull_lv', 'LV Machine Hull', 'gt.blockmachines.hull.tier.01.name'),
                          ('casing_mv', 'MV Machine Casing', 'gt.blockcasings.2.name'), ('hull_mv', 'MV Machine Hull', 'gt.blockmachines.hull.tier.02.name'),
@@ -947,7 +956,8 @@ def generate(g):
                          ('casing_iv', 'IV Machine Casing', 'gt.blockcasings.5.name'), ('hull_iv', 'IV Machine Hull', 'gt.blockmachines.hull.tier.05.name'),
                          ('casing_luv', 'LuV Machine Casing', 'gt.blockcasings.6.name'), ('hull_luv', 'LuV Machine Hull', 'gt.blockmachines.hull.tier.06.name'),
                          ('casing_zpm', 'ZPM Machine Casing', 'gt.blockcasings.7.name'), ('hull_zpm', 'ZPM Machine Hull', 'gt.blockmachines.hull.tier.07.name'),
-                         ('casing_uv', 'UV Machine Casing', 'gt.blockcasings.8.name'), ('hull_uv', 'UV Machine Hull', 'gt.blockmachines.hull.tier.08.name')):
+                         ('casing_uv', 'UV Machine Casing', 'gt.blockcasings.8.name'), ('hull_uv', 'UV Machine Hull', 'gt.blockmachines.hull.tier.08.name'),
+                         ('casing_max', 'MAX Machine Casing', 'gt.blockcasings.9.name'), ('hull_max', 'Max Machine Hull', 'gt.blockmachines.hull.tier.09.name')):
         tr = bid.rsplit('_', 1)[1]
         side, top, bottom = (f'{NS}:block/lv/machine_{tr}_{x}' for x in ('side', 'top', 'bottom'))
         cube_model(bid, {'front': side, 'back': side, 'side': side, 'top': top, 'bottom': bottom})
@@ -984,6 +994,10 @@ def generate(g):
     shaped('lv/casing_zpm', f'{NS}:casing_zpm', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'Iridium')})
     shaped('lv/hull_zpm', f'{NS}:hull_zpm', 1, ['PHP', 'CMC'],
            {'P': tag_of('plate', 'Polytetrafluoroethylene'), 'H': tag_of('plate', 'Iridium'), 'C': C('Naquadah'), 'M': f'{NS}:casing_zpm'})
+    # D122: :60 Casing_MAX (neutronium), :180 Hull_MAX "PHP/CMC" (superconductor wire, neutronium + PTFE plates)
+    shaped('lv/casing_max', f'{NS}:casing_max', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'Neutronium')})
+    shaped('lv/hull_max', f'{NS}:hull_max', 1, ['PHP', 'CMC'],
+           {'P': tag_of('plate', 'Polytetrafluoroethylene'), 'H': tag_of('plate', 'Neutronium'), 'C': W('Superconductor'), 'M': f'{NS}:casing_max'})
     # D121: :59 Casing_UV (osmium), :179 Hull_UV "PHP/CMC" (4x naquadah alloy wire, osmium + PTFE plates)
     shaped('lv/casing_uv', f'{NS}:casing_uv', 1, ['PPP', 'PwP', 'PPP'], {'P': tag_of('plate', 'Osmium')})
     shaped('lv/hull_uv', f'{NS}:hull_uv', 1, ['PHP', 'CMC'],
@@ -1013,7 +1027,7 @@ def generate(g):
     for (mid_, gtn, ov, gui, rmap, nin, nout, tank, en), tr in ([(m, 'lv') for m in MACHINES] + [(m, 'mv') for m in MV_MACHINES]
                                                               + [(m, 'hv') for m in HV_MACHINES] + [(m, 'ev') for m in EV_MACHINES]
                                                               + [(m, 'iv') for m in IV_MACHINES] + [(m, 'luv') for m in LUV_MACHINES] + [(m, 'zpm') for m in ZPM_MACHINES] + [(m, 'uv') for m in UV_MACHINES]
-                                                              + [(SCANNER, t_) for t_ in ('lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv')]):
+                                                              + [(SCANNER, t_) for t_ in ('lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv')] + [(SEISMIC, 'lv'), (SEISMIC, 'ev')]):
         bid = f'{mid_}_{tr}'
         odir = os.path.join(LV, 'basicmachines', ov.lower())
         T = 'LuV' if tr == 'luv' else tr.upper()
@@ -1099,11 +1113,11 @@ def generate(g):
     # GT_MetaTileEntity_BasicBatteryBuffer: front = energy out, other sides plain casing
     # GT_Loader_MetaTileEntities:488-556: 1x1, 2x2, 3x3, 4x4 for LV (3x3/4x4 — D95), MV (D95), HV (D94)
     buffers = [(f'battery_buffer_{k}x{k}_{tr}', k * k, f'batterybuffer.{k * k:02d}.tier.{tn}', f'{k}by{k}')
-               for tr, tn in (('lv', '01'), ('mv', '02'), ('hv', '03'), ('ev', '04'), ('iv', '05'), ('luv', '06'), ('zpm', '07'), ('uv', '08')) for k in (1, 2, 3, 4)]   # EV: D99, IV: D103, LuV: D110, ZPM: D112
+               for tr, tn in (('lv', '01'), ('mv', '02'), ('hv', '03'), ('ev', '04'), ('iv', '05'), ('luv', '06'), ('zpm', '07'), ('uv', '08'), ('max', '09')) for k in (1, 2, 3, 4)]   # EV: D99, IV: D103, LuV: D110, ZPM: D112
     for bid, n, gtl, gui in buffers:
         BT = {'luv': 'LuV'}.get(bid.rsplit('_', 1)[1], bid.rsplit('_', 1)[1].upper())
         side_k = {1: '1x1', 4: '2x2', 9: '3x3', 16: '4x4'}[n]
-        volts = {'LV': 32, 'MV': 128, 'HV': 512, 'EV': 2048, 'IV': 8192, 'LuV': 32768, 'ZPM': 131072, 'UV': 524288}[BT]
+        volts = {'LV': 32, 'MV': 128, 'HV': 512, 'EV': 2048, 'IV': 8192, 'LuV': 32768, 'ZPM': 131072, 'UV': 524288, 'MAX': 2147483647}[BT]
         for face, base, ov in (('front', f'MACHINE_{BT}_SIDE', os.path.join(ic, 'OVERLAY_ENERGY_OUT.png')), ('side', f'MACHINE_{BT}_SIDE', None),
                                ('top', f'MACHINE_{BT}_TOP', None), ('bottom', f'MACHINE_{BT}_BOTTOM', None)):
             im, _ = layer(os.path.join(ic, base + '.png'), ov)
@@ -1713,6 +1727,10 @@ def generate(g):
                {'M': f'{NS}:hull_zpm', 'W': W('Naquadah', wsize), 'T': '#c:chests/wooden'})
     shaped('lv/transformer_luv', f'{NS}:transformer_luv', 1, ['KBB', 'CM ', 'KBB'],
            {'M': f'{NS}:hull_luv', 'C': C('Naquadah'), 'B': C('VanadiumGallium'), 'K': f'{NS}:chip_pic'})
+    # D122: MAX battery buffers (:507-573, superconductor wires 1x-16x)
+    for k, wsize in ((1, 1), (2, 4), (3, 8), (4, 16)):
+        shaped(f'lv/battery_buffer_{k}x{k}_max', f'{NS}:battery_buffer_{k}x{k}_max', 1, ['WTW', 'WMW'],
+               {'M': f'{NS}:hull_max', 'W': W('Superconductor', wsize), 'T': '#c:chests/wooden'})
     # D121: UV battery buffers (:506-572, naquadah alloy wires 1x-16x), UV <-> ZPM transformer (:211: ZPM hull, 4x naquadah alloy wire, naquadah cables, HPIC), MAX <-> UV (:212)
     for k, wsize in ((1, 1), (2, 4), (3, 8), (4, 16)):
         shaped(f'lv/battery_buffer_{k}x{k}_uv', f'{NS}:battery_buffer_{k}x{k}_uv', 1, ['WTW', 'WMW'],
@@ -1949,7 +1967,7 @@ def generate(g):
     # GT_MachineRecipeLoader:1371-1372: assembler 8 plates + programmed circuit 8 -> machine casing (50 t, 16 EU/t); the hull
     # variant needs molten plastic (mHardMachineCasings) and waits for plastic
     for tr, mat in (('lv', 'Steel'), ('mv', 'Aluminium'), ('hv', 'StainlessSteel'), ('ev', 'Titanium'),
-                    ('iv', 'TungstenSteel'), ('luv', 'Chrome'), ('zpm', 'Iridium'), ('uv', 'Osmium')):   # :1373 HV (D90), :1374 EV (D98), :1375 IV (D103), :1376 LuV (D110), :1377 ZPM (D112)
+                    ('iv', 'TungstenSteel'), ('luv', 'Chrome'), ('zpm', 'Iridium'), ('uv', 'Osmium'), ('max', 'Neutronium')):   # :1373 HV (D90), :1374 EV (D98), :1375 IV (D103), :1376 LuV (D110), :1377 ZPM (D112)
         mrec('assembler', f'casing_{tr}', [ing(tag_of('plate', mat), 8)], [out(f'{NS}:casing_{tr}')], 50, 16, circuit=8)
     # GT_MachineRecipeLoader:483, :485 small coil: 8 fine copper / annealed copper wires + steel bolt -> 2 (80 t, 8 EU/t, D94)
     for wm in ('Copper', 'AnnealedCopper'):

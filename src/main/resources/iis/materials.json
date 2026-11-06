@@ -6923,6 +6923,36 @@
     "toolQuality": 2
   },
   {
+    "id": "vanadium_steel",
+    "gtName": "VanadiumSteel",
+    "gtId": 371,
+    "en": "Vanadiumsteel",
+    "ru": "Ванадиевая сталь",
+    "ruOre": "Руда ванадиевой стали",
+    "color": 12632256,
+    "iconSet": "METALLIC",
+    "harvestLevel": 3,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "VCr(Fe50C)7",
+    "types": 195,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "vanadium_steel",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 1453,
+    "byProducts": [],
+    "toolDurability": 1920,
+    "toolSpeed": 3.0,
+    "toolQuality": 3
+  },
+  {
     "id": "wheat",
     "gtName": "Wheat",
     "gtId": 881,

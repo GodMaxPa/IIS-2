@@ -1,0 +1,18 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/neutronium",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:casing_max",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 16,
+  "circuit": 8
+}

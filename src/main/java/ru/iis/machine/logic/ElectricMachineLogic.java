@@ -40,7 +40,11 @@ public final class ElectricMachineLogic {
         return voltage * 64;
     }
 
+    /** D122: сейсморазведчик работает без энергии (GT getMinimumStoredEU = 0). */
+    public boolean noMinimum;
+
     public long minimumStored() {
+        if (noMinimum) return 0;
         return voltage * 16;
     }
 

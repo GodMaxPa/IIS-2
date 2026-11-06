@@ -56,6 +56,12 @@ public class DataStickItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag flag) {
+        Prospection p = stack.get(LvContent.PROSPECTION.get());
+        if (p != null) {
+            builder.accept(Component.translatable(p.analyzed() ? "item.iis.prospection.analyzed" : "item.iis.prospection.raw").withStyle(net.minecraft.ChatFormatting.GRAY));
+            if (p.analyzed()) p.report().forEach(c -> builder.accept(c.copy().withStyle(net.minecraft.ChatFormatting.GRAY)));
+            return;
+        }
         Research r = stack.get(LvContent.RESEARCH.get());
         if (r == null) {
             builder.accept(Component.translatable("item.iis.data_stick.empty").withStyle(net.minecraft.ChatFormatting.GRAY));

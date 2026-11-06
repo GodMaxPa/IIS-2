@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PBP",
+    "CSC",
+    "PWP"
+  ],
+  "key": {
+    "P": "#c:plates/titanium",
+    "W": "#iis:cables/1x/aluminium",
+    "B": "#iis:batteries/master",
+    "S": "iis:cover_screen",
+    "C": "#c:circuits/data"
+  },
+  "result": {
+    "id": "iis:data_reader_ev"
+  }
+}

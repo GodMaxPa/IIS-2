@@ -84,7 +84,7 @@ public class ItemBusBlockEntity extends BaseContainerBlockEntity implements Worl
 
     /** GT_MetaTileEntity_Hatch_DataAccess (D110): флешки кладёт только игрок. */
     public boolean isDataAccess() {
-        return getBlockState().getBlock() instanceof HatchBlock h && h.type == HatchType.DATA_ACCESS;
+        return getBlockState().getBlock() instanceof HatchBlock h && h.type.kind() == HatchType.DATA_ACCESS;
     }
 
     public NonNullList<ItemStack> stacks() {

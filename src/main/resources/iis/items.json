@@ -10490,6 +10490,66 @@
     "material": "vanadium_magnetite"
   },
   {
+    "id": "dust_vanadium_steel",
+    "prefix": "dust",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "small_dust_vanadium_steel",
+    "prefix": "small_dust",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "tiny_dust_vanadium_steel",
+    "prefix": "tiny_dust",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "ingot_vanadium_steel",
+    "prefix": "ingot",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "nugget_vanadium_steel",
+    "prefix": "nugget",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "plate_vanadium_steel",
+    "prefix": "plate",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "double_plate_vanadium_steel",
+    "prefix": "double_plate",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "rod_vanadium_steel",
+    "prefix": "rod",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "bolt_vanadium_steel",
+    "prefix": "bolt",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "screw_vanadium_steel",
+    "prefix": "screw",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "long_rod_vanadium_steel",
+    "prefix": "long_rod",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "turbine_blade_vanadium_steel",
+    "prefix": "turbine_blade",
+    "material": "vanadium_steel"
+  },
+  {
     "id": "dust_wheat",
     "prefix": "dust",
     "material": "wheat"
@@ -13273,6 +13333,51 @@
     "id": "wrench_head_tungsten_steel",
     "prefix": "wrench_head",
     "material": "tungsten_steel"
+  },
+  {
+    "id": "sword_head_vanadium_steel",
+    "prefix": "sword_head",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "pickaxe_head_vanadium_steel",
+    "prefix": "pickaxe_head",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "shovel_head_vanadium_steel",
+    "prefix": "shovel_head",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "axe_head_vanadium_steel",
+    "prefix": "axe_head",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "hoe_head_vanadium_steel",
+    "prefix": "hoe_head",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "saw_head_vanadium_steel",
+    "prefix": "saw_head",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "drill_head_vanadium_steel",
+    "prefix": "drill_head",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "chainsaw_head_vanadium_steel",
+    "prefix": "chainsaw_head",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "wrench_head_vanadium_steel",
+    "prefix": "wrench_head",
+    "material": "vanadium_steel"
   },
   {
     "id": "sword_head_wrought_iron",

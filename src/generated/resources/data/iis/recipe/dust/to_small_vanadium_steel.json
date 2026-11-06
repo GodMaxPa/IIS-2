@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/vanadium_steel"
+  ],
+  "result": {
+    "id": "iis:small_dust_vanadium_steel",
+    "count": 4
+  }
+}

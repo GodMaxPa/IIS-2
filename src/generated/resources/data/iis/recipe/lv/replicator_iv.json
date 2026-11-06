@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EFE",
+    "CMC",
+    "EWE"
+  ],
+  "key": {
+    "M": "iis:hull_iv",
+    "F": "iis:field_generator_iv",
+    "E": "iis:emitter_iv",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/4x/platinum"
+  },
+  "result": {
+    "id": "iis:replicator_iv"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/turbine_blade_vanadium_steel",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 12632256
+      }
+    ]
+  }
+}

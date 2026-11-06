@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "COC",
+    "OMO",
+    "COC"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "O": "iis:data_orb",
+    "C": "#c:circuits/ultimate"
+  },
+  "result": {
+    "id": "iis:hatch_data_access_luv"
+  }
+}

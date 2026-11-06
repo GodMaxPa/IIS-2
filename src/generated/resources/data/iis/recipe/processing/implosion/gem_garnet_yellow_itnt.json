@@ -1,0 +1,25 @@
+{
+  "type": "iis:implosion",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/garnet_yellow",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:industrial_tnt",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_garnet_yellow",
+      "count": 3
+    },
+    {
+      "id": "iis:tiny_dust_dark_ash",
+      "count": 8
+    }
+  ],
+  "duration": 20,
+  "eut": 30
+}

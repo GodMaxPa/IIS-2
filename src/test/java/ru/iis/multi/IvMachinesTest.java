@@ -31,7 +31,7 @@ class IvMachinesTest {
     @Test
     void everyEvMachineHasAnIvTwin() {
         for (LvMachineType ev : LvMachineType.values()) {
-            if (ev.tier != VoltageTier.EV) continue;
+            if (ev.tier != VoltageTier.EV || ev.id.equals("seismic_prospector")) continue;   // D122: только LV и EV
             String ivName = ev.name().replace("_EV", "_IV");
             LvMachineType iv = LvMachineType.valueOf(ivName);
             assertEquals(VoltageTier.IV, iv.tier, iv.name());

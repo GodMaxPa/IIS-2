@@ -1,0 +1,24 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:gem_exquisite_emerald",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:data_orb",
+      "count": 1,
+      "chance": 500
+    }
+  ],
+  "duration": 12000,
+  "eut": 160,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:tritium",
+      "amount": 1000
+    }
+  ]
+}

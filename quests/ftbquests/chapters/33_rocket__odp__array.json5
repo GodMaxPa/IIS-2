@@ -207,6 +207,40 @@
       ]
     },
     {
+      "id": "1A0000000000000E",
+      "x": 9.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000017",
+        "1A00000000000003"
+      ],
+      "icon": {
+        "id": "iis:pipe_small_high_pressure",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pipe_small_high_pressure",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000000E00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000012",
       "x": 5.0,
       "y": 0.5,

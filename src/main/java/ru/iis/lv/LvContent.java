@@ -133,6 +133,9 @@ public final class LvContent {
     // D121: GT_Block_Casings1 meta 8, Hull_UV (осмий, ПТФЭ, провод из сплава наквады)
     public static final DeferredBlock<Block> CASING_UV = block("casing_uv", Block::new, LvContent::metal);
     public static final DeferredBlock<Block> HULL_UV = block("hull_uv", Block::new, LvContent::metal);
+    // D122: GT_Block_Casings1 meta 9, Hull_MAX (нейтроний, ПТФЭ, сверхпроводник)
+    public static final DeferredBlock<Block> CASING_MAX = block("casing_max", Block::new, LvContent::metal);
+    public static final DeferredBlock<Block> HULL_MAX = block("hull_max", Block::new, LvContent::metal);
 
     // --- машины, генераторы, буферы, трансформатор ----------------------------------------------------------------
     public static final Map<LvMachineType, DeferredBlock<ElectricMachineBlock>> MACHINES = new EnumMap<>(LvMachineType.class);
@@ -171,6 +174,10 @@ public final class LvContent {
     /** GT_Loader_MetaTileEntities:506, 528, 550, 572 Battery_Buffer_*_UV (D121). */
     public static final java.util.List<DeferredBlock<BatteryBufferBlock>> BATTERY_BUFFERS_UV = java.util.stream.IntStream.of(1, 2, 3, 4)
             .mapToObj(n -> block("battery_buffer_" + n + "x" + n + "_uv", p -> new BatteryBufferBlock(n * n, VoltageTier.UV, p), LvContent::metal))
+            .toList();
+    /** GT_Loader_MetaTileEntities:507, 529, 551, 573 Battery_Buffer_*_MAX (D122). */
+    public static final java.util.List<DeferredBlock<BatteryBufferBlock>> BATTERY_BUFFERS_MAX = java.util.stream.IntStream.of(1, 2, 3, 4)
+            .mapToObj(n -> block("battery_buffer_" + n + "x" + n + "_max", p -> new BatteryBufferBlock(n * n, VoltageTier.MAX, p), LvContent::metal))
             .toList();
     /** GT_Loader_MetaTileEntities:490, 512, 534, 556 Battery_Buffer_*_HV (D94). */
     public static final java.util.List<DeferredBlock<BatteryBufferBlock>> BATTERY_BUFFERS_HV = java.util.stream.IntStream.of(1, 2, 3, 4)
@@ -301,7 +308,28 @@ public final class LvContent {
     public static final DeferredItem<Item> GLASS_FIBER = item("glass_fiber");
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<ru.iis.lv.item.DataStickItem.Research>> RESEARCH = COMPONENTS.registerComponentType("research",
             b -> b.persistent(ru.iis.lv.item.DataStickItem.Research.CODEC).networkSynchronized(ru.iis.lv.item.DataStickItem.Research.STREAM_CODEC));
+    /** D122: данные разведки на флешке. */
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<ru.iis.lv.item.Prospection>> PROSPECTION = COMPONENTS.registerComponentType("prospection",
+            b -> b.persistent(ru.iis.lv.item.Prospection.CODEC).networkSynchronized(ru.iis.lv.item.Prospection.STREAM_CODEC));
     public static final DeferredItem<ru.iis.lv.item.DataStickItem> DATA_STICK = registerDataStick();
+    /** D122: скан элемента в сфере данных. */
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<ru.iis.lv.item.DataOrbItem.ElementScan>> ELEMENT_SCAN = COMPONENTS.registerComponentType("element_scan",
+            b -> b.persistent(ru.iis.lv.item.DataOrbItem.ElementScan.CODEC).networkSynchronized(ru.iis.lv.item.DataOrbItem.ElementScan.STREAM_CODEC));
+    public static final DeferredItem<ru.iis.lv.item.DataOrbItem> DATA_ORB = ITEMS.registerItem("data_orb", ru.iis.lv.item.DataOrbItem::new);
+    /** D122: GT GelledToluene, IC2 dynamite и industrialTnt: взрывчатка для имплозии и разведки. */
+    public static final DeferredItem<Item> GELLED_TOLUENE = item("gelled_toluene");
+    public static final DeferredItem<Item> DYNAMITE = item("dynamite");
+    public static final DeferredItem<Item> INDUSTRIAL_TNT = item("industrial_tnt");
+    /** D122: GT_MetaGenerated_Item_01:78-84, 810-811. */
+    public static final DeferredItem<ru.iis.lv.item.DataReaderItem> DATA_READER_MV = ITEMS.registerItem("data_reader_mv", p -> new ru.iis.lv.item.DataReaderItem(400000, 128, 2, p), p -> p.stacksTo(1));
+    public static final DeferredItem<ru.iis.lv.item.DataReaderItem> DATA_READER_EV = ITEMS.registerItem("data_reader_ev", p -> new ru.iis.lv.item.DataReaderItem(10000000, 2048, 4, p), p -> p.stacksTo(1));
+    public static final DeferredItem<ru.iis.lv.item.PortableScannerItem> PORTABLE_SCANNER = ITEMS.registerItem("portable_scanner", p -> new ru.iis.lv.item.PortableScannerItem(400000, 128, 2, p), p -> p.stacksTo(1));
+    static {
+        TAB_ORDER.add(DATA_ORB);
+        TAB_ORDER.add(DATA_READER_MV);
+        TAB_ORDER.add(DATA_READER_EV);
+        TAB_ORDER.add(PORTABLE_SCANNER);
+    }
 
     private static DeferredItem<ru.iis.lv.item.DataStickItem> registerDataStick() {
         DeferredItem<ru.iis.lv.item.DataStickItem> i = ITEMS.registerItem("data_stick", ru.iis.lv.item.DataStickItem::new);
@@ -495,7 +523,7 @@ public final class LvContent {
             () -> new BlockEntityType<>(GeneratorBlockEntity::new, GENERATORS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BatteryBufferBlockEntity>> BATTERY_BUFFER_BE = BLOCK_ENTITIES.register("battery_buffer",
             () -> new BlockEntityType<>(BatteryBufferBlockEntity::new, java.util.stream.Stream.of(java.util.stream.Stream.of(BATTERY_BUFFER_1X1, BATTERY_BUFFER_2X2, BATTERY_BUFFER_3X3,
-                    BATTERY_BUFFER_4X4), BATTERY_BUFFERS_MV.stream(), BATTERY_BUFFERS_HV.stream(), BATTERY_BUFFERS_EV.stream(), BATTERY_BUFFERS_IV.stream(), BATTERY_BUFFERS_LUV.stream(), BATTERY_BUFFERS_ZPM.stream(), BATTERY_BUFFERS_UV.stream(), BATTERY_CHARGERS.stream()).flatMap(x -> x)
+                    BATTERY_BUFFER_4X4), BATTERY_BUFFERS_MV.stream(), BATTERY_BUFFERS_HV.stream(), BATTERY_BUFFERS_EV.stream(), BATTERY_BUFFERS_IV.stream(), BATTERY_BUFFERS_LUV.stream(), BATTERY_BUFFERS_ZPM.stream(), BATTERY_BUFFERS_UV.stream(), BATTERY_BUFFERS_MAX.stream(), BATTERY_CHARGERS.stream()).flatMap(x -> x)
                     .map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TransformerBlockEntity>> TRANSFORMER_BE = BLOCK_ENTITIES.register("transformer",
             () -> new BlockEntityType<>(TransformerBlockEntity::new, TRANSFORMER_ULV.get(), TRANSFORMER.get(), TRANSFORMER_MV.get(), TRANSFORMER_HV.get(), TRANSFORMER_EV.get(), TRANSFORMER_IV.get(), TRANSFORMER_LUV.get(), TRANSFORMER_ZPM.get(), TRANSFORMER_UV.get()));
@@ -581,6 +609,7 @@ public final class LvContent {
     }
 
     public static int tabTier(String id) {
+        if (id.endsWith("_max")) return 7;   // D122: уровня MAX своей вкладки нет
         for (CableSpecs.Spec s : CableSpecs.ALL) {
             if (s.id().equals(id)) return s.voltage() <= 32 ? 0 : s.voltage() <= 128 ? 1 : s.voltage() <= 512 ? 2 : s.voltage() <= 2048 ? 3 : s.voltage() <= 8192 ? 4 : s.voltage() <= 32768 ? 5 : s.voltage() <= 131072 ? 6 : 7;
         }

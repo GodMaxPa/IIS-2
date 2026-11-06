@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iis:block/hatch_data_access_luv"
+    },
+    "facing=east": {
+      "model": "iis:block/hatch_data_access_luv",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iis:block/hatch_data_access_luv",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iis:block/hatch_data_access_luv",
+      "y": 270
+    },
+    "facing=down": {
+      "model": "iis:block/hatch_data_access_luv",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "iis:block/hatch_data_access_luv",
+      "x": 270
+    }
+  }
+}

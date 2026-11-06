@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:sugar",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:tiny_dusts/plastic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gelled_toluene",
+      "count": 2
+    }
+  ],
+  "duration": 140,
+  "eut": 192,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_toluene",
+      "amount": 133
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:gelled_toluene",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:industrial_tnt",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_nitrationmixture",
+      "amount": 200
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dilutedsulfuricacid",
+      "amount": 200
+    }
+  ]
+}

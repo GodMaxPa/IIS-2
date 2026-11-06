@@ -23,6 +23,19 @@ public class GtToolItem extends Item {
 
     public String toolType() { return def.tool(); }
 
+    /** D122: молот разведывает (GT_Tool_HardHammer:141, Behaviour_Prospecting(1, 1000)): единица прочности за стук. */
+    @Override
+    public net.minecraft.world.InteractionResult useOn(net.minecraft.world.item.context.UseOnContext ctx) {
+        if (!toolType().equals("hammer") || ctx.getPlayer() == null) return super.useOn(ctx);
+        if (!(ctx.getLevel() instanceof net.minecraft.server.level.ServerLevel sl)) return net.minecraft.world.InteractionResult.SUCCESS;
+        java.util.List<net.minecraft.network.chat.Component> lines = HammerProspecting.knock(sl, ctx.getClickedPos(), ctx.getClickedFace(), def.quality());
+        if (lines == null) return super.useOn(ctx);
+        lines.forEach(c -> ctx.getPlayer().sendSystemMessage(c));
+        ctx.getItemInHand().hurtAndBreak(1, ctx.getPlayer(), ctx.getHand());
+        sl.playSound(null, ctx.getClickedPos(), net.minecraft.sounds.SoundEvents.ANVIL_PLACE, net.minecraft.sounds.SoundSource.BLOCKS, 0.3f, 1.5f);
+        return net.minecraft.world.InteractionResult.CONSUME;
+    }
+
     @Override
     public ItemStackTemplate getCraftingRemainder(ItemInstance instance) {
         if (!(instance instanceof ItemStack stack) || stack.isEmpty()) return null;

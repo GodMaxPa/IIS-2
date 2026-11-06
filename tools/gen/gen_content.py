@@ -212,6 +212,8 @@ names |= {'Plutonium241', 'Europium', 'Duranium'}
 names |= {'NaquadahEnriched', 'Naquadria', 'Lutetium', 'Potassium', 'Graphene'}
 # D121 (UV): osmiridium and naquadah alloy (GT_MachineRecipeLoader:1051-1052), what fusion makes (tritanium, americium, neutronium :1073-1085), raw meat dust for the growth medium (:457)
 names |= {'Osmiridium', 'NaquadahAlloy', 'Tritanium', 'Neutronium', 'Americium', 'MeatRaw'}
+# D122: vanadium steel for the advanced seismic prospector (GT_CraftingRecipeLoader:407)
+names |= {'VanadiumSteel'}
 names |= {'HSSE', 'Naquadah', 'Superconductor', 'EpoxidFiberReinforced', 'Indium', 'AluminiumSulfite', 'Arsenic', 'Phosphorus', 'Phosphate', 'GalliumArsenide', 'IndiumGalliumPhosphide'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
@@ -1038,6 +1040,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_uv', os.path.join(ROOT, 'tools', '
 _uv = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_uv)
 lv_stats['uv'] = _uv.generate(globals())
+# GT tools: seismic prospectors, data readers, portable scanner, data orb (D122)
+_spec = _ilu.spec_from_file_location('iis_gen_gtlast', os.path.join(ROOT, 'tools', 'gen', 'gtlast.py'))
+_gtlast = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_gtlast)
+lv_stats['gtlast'] = _gtlast.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

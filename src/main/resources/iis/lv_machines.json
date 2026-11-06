@@ -423,6 +423,15 @@
     "gui": "lv/disassembler"
   },
   {
+    "id": "replicator_lv",
+    "type": "replicator",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/replicator"
+  },
+  {
     "id": "macerator_mv",
     "type": "macerator_mv",
     "recipeMap": "macerator",
@@ -835,6 +844,15 @@
     "outputs": 9,
     "tank": 0,
     "gui": "lv/disassembler"
+  },
+  {
+    "id": "replicator_mv",
+    "type": "replicator_mv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/replicator"
   },
   {
     "id": "thermal_centrifuge_mv",
@@ -1260,6 +1278,15 @@
     "gui": "lv/disassembler"
   },
   {
+    "id": "replicator_hv",
+    "type": "replicator_hv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/replicator"
+  },
+  {
     "id": "thermal_centrifuge_hv",
     "type": "thermal_centrifuge_hv",
     "recipeMap": "thermal_centrifuge",
@@ -1681,6 +1708,15 @@
     "outputs": 9,
     "tank": 0,
     "gui": "lv/disassembler"
+  },
+  {
+    "id": "replicator_ev",
+    "type": "replicator_ev",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/replicator"
   },
   {
     "id": "thermal_centrifuge_ev",
@@ -2106,6 +2142,15 @@
     "gui": "lv/disassembler"
   },
   {
+    "id": "replicator_iv",
+    "type": "replicator_iv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/replicator"
+  },
+  {
     "id": "thermal_centrifuge_iv",
     "type": "thermal_centrifuge_iv",
     "recipeMap": "thermal_centrifuge",
@@ -2527,6 +2572,15 @@
     "outputs": 9,
     "tank": 0,
     "gui": "lv/disassembler"
+  },
+  {
+    "id": "replicator_luv",
+    "type": "replicator_luv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/replicator"
   },
   {
     "id": "thermal_centrifuge_luv",
@@ -2952,6 +3006,15 @@
     "gui": "lv/disassembler"
   },
   {
+    "id": "replicator_zpm",
+    "type": "replicator_zpm",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/replicator"
+  },
+  {
     "id": "thermal_centrifuge_zpm",
     "type": "thermal_centrifuge_zpm",
     "recipeMap": "thermal_centrifuge",
@@ -3375,6 +3438,15 @@
     "gui": "lv/disassembler"
   },
   {
+    "id": "replicator_uv",
+    "type": "replicator_uv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/replicator"
+  },
+  {
     "id": "thermal_centrifuge_uv",
     "type": "thermal_centrifuge_uv",
     "recipeMap": "thermal_centrifuge",
@@ -3454,5 +3526,23 @@
     "outputs": 1,
     "tank": 0,
     "gui": "lv/scanner"
+  },
+  {
+    "id": "seismic_prospector_lv",
+    "type": "seismic_prospector",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/seismicprospector"
+  },
+  {
+    "id": "seismic_prospector_ev",
+    "type": "seismic_prospector_ev",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/seismicprospector"
   }
 ]

@@ -1,0 +1,25 @@
+{
+  "type": "iis:implosion",
+  "inputs": [
+    {
+      "ingredient": "iis:iridium_alloy_ingot",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:dynamite",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:iridium_alloy_plate",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_dark_ash",
+      "count": 4
+    }
+  ],
+  "duration": 20,
+  "eut": 30
+}

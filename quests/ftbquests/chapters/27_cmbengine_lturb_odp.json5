@@ -71,6 +71,50 @@
       ]
     },
     {
+      "id": "1A0000000000007E",
+      "x": 10.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000086",
+        "1A000000000003CE",
+        "1A0000000000016F"
+      ],
+      "icon": {
+        "id": "iis:hatch_data_access_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hatch_data_access_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000007E00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hatch_data_access_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000007E01"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000007E00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000080",
       "x": 3.5,
       "y": 2.0,

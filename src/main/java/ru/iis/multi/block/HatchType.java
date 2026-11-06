@@ -5,6 +5,9 @@ package ru.iis.multi.block;
  * (выход) V[mTier], у остальных 0.
  */
 public enum HatchType {
+    /** D122: GT_Loader_MetaTileEntities:214, 236 Hatch_Dynamo_ULV, Hatch_Energy_ULV. */
+    ENERGY_ULV("hatch_energy_ulv", 8),
+    DYNAMO_ULV("hatch_dynamo_ulv", 8),
     ENERGY("hatch_energy_lv", 32),
     /** GT_Loader_MetaTileEntities:238 Hatch_Energy_MV (D82). */
     ENERGY_MV("hatch_energy_mv", 128),
@@ -29,6 +32,9 @@ public enum HatchType {
     /** GT_Loader_MetaTileEntities:276, :233 Hatch_Energy_UV, Hatch_Dynamo_UV (D121). */
     ENERGY_UV("hatch_energy_uv", 524288),
     DYNAMO_UV("hatch_dynamo_uv", 524288),
+    /** D122: GT_Loader_MetaTileEntities:245, :223 Hatch_Energy_MAX, Hatch_Dynamo_MAX. */
+    ENERGY_MAX("hatch_energy_max", Integer.MAX_VALUE),
+    DYNAMO_MAX("hatch_dynamo_max", Integer.MAX_VALUE),
     INPUT_BUS("hatch_input_bus_lv"),
     OUTPUT_BUS("hatch_output_bus_lv"),
     INPUT_HATCH("hatch_input_lv"),
@@ -53,6 +59,13 @@ public enum HatchType {
     /** D121: GT_Loader_MetaTileEntities:287–415, UV. */
     INPUT_BUS_UV("hatch_input_bus_uv", "INPUT_BUS", 8), OUTPUT_BUS_UV("hatch_output_bus_uv", "OUTPUT_BUS", 8), INPUT_HATCH_UV("hatch_input_uv", "INPUT_HATCH", 8),
     OUTPUT_HATCH_UV("hatch_output_uv", "OUTPUT_HATCH", 8), MUFFLER_UV("hatch_muffler_uv", "MUFFLER", 8),
+    /** D122: GT_Loader_MetaTileEntities:288–416, MAX. */
+    INPUT_BUS_MAX("hatch_input_bus_max", "INPUT_BUS", 9), OUTPUT_BUS_MAX("hatch_output_bus_max", "OUTPUT_BUS", 9), INPUT_HATCH_MAX("hatch_input_max", "INPUT_HATCH", 9),
+    OUTPUT_HATCH_MAX("hatch_output_max", "OUTPUT_HATCH", 9), MUFFLER_MAX("hatch_muffler_max", "MUFFLER", 9),
+    /** D122: :279, 303, 350, 372 шины и люки ULV: 1 слот, 8000 л. */
+    INPUT_BUS_ULV("hatch_input_bus_ulv", "INPUT_BUS", 0), OUTPUT_BUS_ULV("hatch_output_bus_ulv", "OUTPUT_BUS", 0), INPUT_HATCH_ULV("hatch_input_ulv", "INPUT_HATCH", 0), OUTPUT_HATCH_ULV("hatch_output_ulv", "OUTPUT_HATCH", 0),
+    /** D122: GT_Loader_MetaTileEntities:403 Hatch_DataAccess_LuV: 16 слотов. */
+    DATA_ACCESS_LUV("hatch_data_access_luv", "DATA_ACCESS", 6),
     /** GT_Loader_MetaTileEntities:402 Hatch_DataAccess_EV (D110): 4 флешки для сборочной линии. */
     DATA_ACCESS("hatch_data_access_ev");
 
@@ -87,6 +100,7 @@ public enum HatchType {
 
     /** GT_MetaTileEntity_Hatch#getSlots: (уровень + 1)² — LV 4, MV 9, HV 16, EV 25, IV 36. */
     public int slots() {
+        if (this == DATA_ACCESS_LUV) return 16;
         return (tier + 1) * (tier + 1);
     }
 
@@ -101,7 +115,7 @@ public enum HatchType {
     }
 
     public boolean dynamo() {
-        return this == DYNAMO || this == DYNAMO_MV || this == DYNAMO_HV || this == DYNAMO_EV || this == DYNAMO_IV || this == DYNAMO_LUV || this == DYNAMO_ZPM || this == DYNAMO_UV;
+        return this == DYNAMO_ULV || this == DYNAMO || this == DYNAMO_MV || this == DYNAMO_HV || this == DYNAMO_EV || this == DYNAMO_IV || this == DYNAMO_LUV || this == DYNAMO_ZPM || this == DYNAMO_UV || this == DYNAMO_MAX;
     }
 
     /** GT_MetaTileEntity_Hatch#getSlots: LV — 2×2. */

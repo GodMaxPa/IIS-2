@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/vanadium_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_vanadium_steel",
+      "count": 9
+    }
+  ],
+  "duration": 540,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 12
+    }
+  ]
+}

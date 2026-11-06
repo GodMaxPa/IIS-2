@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MC"
+  ],
+  "key": {
+    "M": "iis:hull_max",
+    "C": "#iis:wires/1x/superconductor"
+  },
+  "result": {
+    "id": "iis:hatch_dynamo_max"
+  }
+}

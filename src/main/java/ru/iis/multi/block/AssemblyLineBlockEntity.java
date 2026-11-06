@@ -52,7 +52,7 @@ public class AssemblyLineBlockEntity extends RecipeMultiblockBlockEntity {
     /** GT validateControllerLayerBlocks: решётка или люк данных. */
     private boolean controllerLayer(ServerLevel sl, BlockPos p) {
         if (is(sl, p, MultiContent.GRATE_CASING.get())) return true;
-        if (sl.getBlockState(p).getBlock() instanceof HatchBlock h && h.type == HatchType.DATA_ACCESS) {
+        if (sl.getBlockState(p).getBlock() instanceof HatchBlock h && h.type.kind() == HatchType.DATA_ACCESS) {
             dataHatches.add(p.immutable());
             return true;
         }

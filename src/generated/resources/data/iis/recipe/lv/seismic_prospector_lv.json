@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "EME",
+    "CCC"
+  ],
+  "key": {
+    "M": "iis:hull_steel",
+    "W": "#iis:double_plates/steel",
+    "E": "#c:circuits/basic",
+    "C": "iis:sensor_lv"
+  },
+  "result": {
+    "id": "iis:seismic_prospector_lv"
+  }
+}

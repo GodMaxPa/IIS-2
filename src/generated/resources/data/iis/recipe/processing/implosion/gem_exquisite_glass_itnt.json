@@ -1,0 +1,25 @@
+{
+  "type": "iis:implosion",
+  "inputs": [
+    {
+      "ingredient": "#iis:flawless_gems/glass",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:industrial_tnt",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_exquisite_glass",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_dark_ash",
+      "count": 2
+    }
+  ],
+  "duration": 20,
+  "eut": 30
+}

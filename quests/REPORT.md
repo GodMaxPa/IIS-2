@@ -1,21 +1,17 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1521; hidden until their items are ported: 421; chapters: 35.
+Quests in IIS 1: 1943; written: 1537; hidden until their items are ported: 405; chapters: 35.
 
 ## Most needed unported items (task count)
 
 - 2 × `EnderIO:itemSoulVessel:0` 
 - 2 × `gregtech:gt.blockmachines:681` Органический репликатор (LV)
-- 2 × `gregtech:gt.blockmachines:50` Входной люк (ULV)
-- 2 × `gregtech:gt.blockmachines:60` Выходной люк (ULV)
-- 2 × `gregtech:gt.metaitem.01:32018` Базовый считыватель данных
 - 2 × `ProjRed|Fabrication:projectred.fabrication.icblueprint:0` 
 - 1 × `GalacticraftMars:item.itemTier3Rocket:3` 
 - 1 × `GalacticraftMars:item.itemBasicAsteroids:1` 
 - 1 × `GalacticraftMars:item.itemBasicAsteroids:2` 
 - 1 × `GalacticraftMars:item.heavyNoseCone:0` 
 - 1 × `GalacticraftMars:item.itemBasicAsteroids:0` 
-- 1 × `gregtech:gt.blockmachines:5165` 
 - 1 × `gregtech:gt.metaitem.01:32619` Жидкостный регулятор (IV)
 - 1 × `gregtech:gt.metaitem.01:32464` Сверхпрочный слиток T3
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:14` 
@@ -72,7 +68,6 @@ Quests in IIS 1: 1943; written: 1521; hidden until their items are ported: 421; 
 - 1 × `extracells:part.base:12` 
 - 1 × `appliedenergistics2:item.ItemMultiPart:260` 
 - 1 × `EnderIO:itemYetaWrench:0` 
-- 1 × `gregtech:gt.blockmachines:132` Улучшенный люк доступа к данным
 - 1 × `gregtech:gt.metaitem.02:8500` 
 - 1 × `GraviSuite:advDDrill:1` 
 - 1 × `extracells:certustank:0` 
@@ -84,6 +79,11 @@ Quests in IIS 1: 1943; written: 1521; hidden until their items are ported: 421; 
 - 1 × `gregtech:gt.metaitem.01:28879` Бумажное кольцо
 - 1 × `EnderIO:blockReservoir:0` 
 - 1 × `EnderIO:blockFusedQuartz:0` 
+- 1 × `IC2:itemFertilizer:0` 
+- 1 × `gregtech:gt.blockgem1:8` Блок из жемчуга Края
+- 1 × `gregtech:gt.metaitem.01:2685` Гидроксид натрия
+- 1 × `gregtech:gt.blockreinforced:5` Пороховая бочка
+- 1 × `Railcraft:machine.beta:0` 
 
 ## Unported fluids
 

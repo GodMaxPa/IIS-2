@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:paper",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:string",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dynamite",
+      "count": 1
+    }
+  ],
+  "duration": 160,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:glyceryl",
+      "amount": 125
+    }
+  ]
+}

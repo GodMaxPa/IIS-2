@@ -660,6 +660,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_vanadium_steel",
+    "tool": "sword",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 3,
+    "kind": "sword"
+  },
+  {
     "id": "sword_wrought_iron",
     "tool": "sword",
     "material": "wrought_iron",
@@ -1329,6 +1341,18 @@
     "craftDamage": 2,
     "speed": 8.0,
     "quality": 4,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_vanadium_steel",
+    "tool": "pickaxe",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 3,
     "kind": "pickaxe"
   },
   {
@@ -2004,6 +2028,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_vanadium_steel",
+    "tool": "shovel",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 3,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_wrought_iron",
     "tool": "shovel",
     "material": "wrought_iron",
@@ -2673,6 +2709,18 @@
     "craftDamage": 2,
     "speed": 8.0,
     "quality": 4,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_vanadium_steel",
+    "tool": "axe",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 3,
     "kind": "axe"
   },
   {
@@ -3348,6 +3396,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_vanadium_steel",
+    "tool": "hoe",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 3,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_wrought_iron",
     "tool": "hoe",
     "material": "wrought_iron",
@@ -4020,6 +4080,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_vanadium_steel",
+    "tool": "saw",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 3.0,
+    "quality": 3,
+    "kind": "axe"
+  },
+  {
     "id": "saw_wrought_iron",
     "tool": "saw",
     "material": "wrought_iron",
@@ -4677,6 +4749,18 @@
     "craftDamage": 8,
     "speed": 6.0,
     "quality": 4,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_vanadium_steel",
+    "tool": "hammer",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 2.25,
+    "quality": 3,
     "kind": "pickaxe"
   },
   {
@@ -5352,6 +5436,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_vanadium_steel",
+    "tool": "wrench",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 3.0,
+    "quality": 3,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_wrought_iron",
     "tool": "wrench",
     "material": "wrought_iron",
@@ -6024,6 +6120,18 @@
     "kind": null
   },
   {
+    "id": "file_vanadium_steel",
+    "tool": "file",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
     "id": "file_wrought_iron",
     "tool": "file",
     "material": "wrought_iron",
@@ -6693,6 +6801,18 @@
     "craftDamage": 8,
     "speed": 8.0,
     "quality": 4,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_vanadium_steel",
+    "tool": "screwdriver",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 3,
     "kind": null
   },
   {
@@ -7404,6 +7524,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_vanadium_steel",
+    "tool": "knife",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 3,
+    "kind": "sword"
+  },
+  {
     "id": "knife_wrought_iron",
     "tool": "knife",
     "material": "wrought_iron",
@@ -8073,6 +8205,18 @@
     "craftDamage": 8,
     "speed": 10.0,
     "quality": 4,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_vanadium_steel",
+    "tool": "wire_cutter",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 3.75,
+    "quality": 3,
     "kind": "wire_cutter"
   },
   {
@@ -8760,6 +8904,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_vanadium_steel",
+    "tool": "crowbar",
+    "material": "vanadium_steel",
+    "handle": "wood",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 3,
+    "kind": null
+  },
+  {
     "id": "crowbar_wrought_iron",
     "tool": "crowbar",
     "material": "wrought_iron",
@@ -9429,6 +9585,18 @@
     "craftDamage": 2,
     "speed": 24.0,
     "quality": 4,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_vanadium_steel",
+    "tool": "drill_lv",
+    "material": "vanadium_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 9.0,
+    "quality": 3,
     "kind": "drill"
   },
   {
@@ -10104,6 +10272,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_vanadium_steel",
+    "tool": "chainsaw_lv",
+    "material": "vanadium_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 3,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_wrought_iron",
     "tool": "chainsaw_lv",
     "material": "wrought_iron",
@@ -10773,6 +10953,18 @@
     "craftDamage": 16,
     "speed": 16.0,
     "quality": 4,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_vanadium_steel",
+    "tool": "wrench_lv",
+    "material": "vanadium_steel",
+    "handle": "stainless_steel",
+    "maxDamage": 3840,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 3,
     "kind": "wrench"
   },
   {

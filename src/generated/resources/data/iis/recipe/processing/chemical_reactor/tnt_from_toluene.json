@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:gelled_toluene",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:tnt",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:sulfuricacid",
+      "amount": 250
+    }
+  ]
+}

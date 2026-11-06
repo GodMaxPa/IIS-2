@@ -56,6 +56,7 @@
     "iis:saw_tritanium",
     "iis:saw_tungsten",
     "iis:saw_tungsten_steel",
+    "iis:saw_vanadium_steel",
     "iis:saw_wrought_iron",
     "iis:chainsaw_lv_aluminium",
     "iis:chainsaw_lv_beryllium",
@@ -112,6 +113,7 @@
     "iis:chainsaw_lv_tritanium",
     "iis:chainsaw_lv_tungsten",
     "iis:chainsaw_lv_tungsten_steel",
+    "iis:chainsaw_lv_vanadium_steel",
     "iis:chainsaw_lv_wrought_iron"
   ]
 }

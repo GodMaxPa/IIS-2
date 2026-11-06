@@ -112,6 +112,12 @@ GC_MAP.update({('GalacticraftCore:item.heavyPlating', 0): 'iis:heavy_plating', (
                # D116
                ('gregtech:gt.blockmachines', 1193): 'iis:fusion_computer_luv', ('gregtech:gt.blockcasings4', 7): 'iis:fusion_coil', ('gregtech:gt.neutronreflector', 0): 'iis:neutron_reflector',
                ('gregtech:gt.metaitem.03', 32052): 'iis:wafer_hpic', ('gregtech:gt.blockcasings', 15): 'iis:coil_superconductor'})
+# D122
+GC_MAP.update({('gregtech:gt.metaitem.01', 32018): 'iis:data_reader_mv', ('gregtech:gt.metaitem.01', 32019): 'iis:data_reader_ev', ('gregtech:gt.metaitem.01', 32762): 'iis:portable_scanner', ('gregtech:gt.metaitem.01', 32707): 'iis:data_orb',
+               ('gregtech:gt.blockmachines', 1156): 'iis:seismic_prospector_lv', ('gregtech:gt.blockmachines', 1173): 'iis:seismic_prospector_ev', ('gregtech:gt.blockmachines', 132): 'iis:hatch_data_access_luv', ('gregtech:gt.blockmachines', 5165): 'iis:pipe_small_high_pressure',
+               ('gregtech:gt.blockmachines', 30): 'iis:hatch_dynamo_ulv', ('gregtech:gt.blockmachines', 40): 'iis:hatch_energy_ulv', ('gregtech:gt.blockmachines', 50): 'iis:hatch_input_ulv', ('gregtech:gt.blockmachines', 60): 'iis:hatch_output_ulv',
+               ('gregtech:gt.metaitem.02', 32010): 'iis:gelled_toluene', ('gregtech:gt.blockcasings', 9): 'iis:casing_max', ('IC2:itemDynamite', 0): 'iis:dynamite', ('IC2:blockITNT', 0): 'iis:industrial_tnt',
+               ('gregtech:gt.blockmachines', 70): 'iis:hatch_input_bus_ulv', ('gregtech:gt.blockmachines', 80): 'iis:hatch_output_bus_ulv'})
 # D121: gem blocks: GT_Loader_Item_Block_And_Fluid:322-379
 GC_MAP.update({('gregtech:gt.blockgem1', 4): 'iis:block_blue_topaz', ('gregtech:gt.blockgem2', 12): 'iis:block_sapphire', ('gregtech:gt.blockgem2', 5): 'iis:block_opal', ('gregtech:gt.blockgem1', 7): 'iis:block_ender_eye'})
 # D121: UV tier: GT_Loader_MetaTileEntities ids and casings, GT_MetaGenerated_Item_01 and _03
@@ -186,7 +192,7 @@ RAILCRAFT_MAP = {
 }
 GT_TOOLS = {100: 'drill_lv', 110: 'chainsaw_lv', 120: 'wrench_lv', 0: 'sword', 2: 'pickaxe', 4: 'shovel', 6: 'axe', 8: 'hoe', 10: 'saw', 12: 'hammer', 14: 'soft_hammer', 16: 'wrench',
             18: 'file', 20: 'crowbar', 22: 'screwdriver', 24: 'mortar', 26: 'wire_cutter', 34: 'knife'}
-TIERS = {'01': 'lv', '02': 'mv', '03': 'hv', '04': 'ev', '05': 'iv', '06': 'luv', '07': 'zpm', '08': 'uv'}
+TIERS = {'00': 'ulv', '09': 'max', '01': 'lv', '02': 'mv', '03': 'hv', '04': 'ev', '05': 'iv', '06': 'luv', '07': 'zpm', '08': 'uv'}
 # GT_Loader_MetaTileEntities:1468-1510 makeWires: start + 0..5 wires 1x..16x, + 6..10 cables 1x..12x
 GT_WIRES = {2000: 'red_alloy', 1200: 'cobalt', 1220: 'lead', 1240: 'tin', 1260: 'zinc', 1280: 'soldering_alloy', 1300: 'iron', 1320: 'nickel', 1340: 'cupronickel', 1360: 'copper', 1380: 'annealed_copper',
             1400: 'kanthal', 1420: 'gold', 1440: 'electrum', 1460: 'silver', 1480: 'blue_alloy', 1500: 'nichrome', 1520: 'steel', 1540: 'black_steel', 1560: 'titanium', 1580: 'aluminium', 1600: 'graphene',

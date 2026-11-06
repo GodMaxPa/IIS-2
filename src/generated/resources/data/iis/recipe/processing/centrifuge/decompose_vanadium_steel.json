@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/vanadium_steel",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_vanadium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_chrome",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_steel",
+      "count": 7
+    }
+  ],
+  "duration": 1944,
+  "eut": 15
+}

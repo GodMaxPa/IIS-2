@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EFE",
+    "CMC",
+    "EWE"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "F": "iis:field_generator_zpm",
+    "E": "iis:emitter_zpm",
+    "C": "#c:circuits/superconductor",
+    "W": "#iis:cables/4x/naquadah"
+  },
+  "result": {
+    "id": "iis:replicator_zpm"
+  }
+}

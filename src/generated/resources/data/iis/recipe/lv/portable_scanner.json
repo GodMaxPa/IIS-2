@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EPR",
+    "CSC",
+    "PBP"
+  ],
+  "key": {
+    "C": "#c:circuits/advanced",
+    "P": "#c:plates/aluminium",
+    "E": "iis:emitter_mv",
+    "R": "iis:sensor_mv",
+    "S": "iis:cover_screen",
+    "B": "iis:battery_lithium_mv"
+  },
+  "result": {
+    "id": "iis:portable_scanner"
+  }
+}

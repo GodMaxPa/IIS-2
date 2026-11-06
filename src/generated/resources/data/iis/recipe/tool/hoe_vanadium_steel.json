@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/hoe/vanadium_steel",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:hoe_vanadium_steel"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/hatch_max_side",
+    "north": "iis:block/multi/hatch_dynamo_max_front",
+    "south": "iis:block/multi/hatch_max_side",
+    "east": "iis:block/multi/hatch_max_side",
+    "west": "iis:block/multi/hatch_max_side",
+    "up": "iis:block/multi/hatch_max_side",
+    "down": "iis:block/multi/hatch_max_side"
+  }
+}

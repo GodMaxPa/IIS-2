@@ -1,0 +1,25 @@
+{
+  "type": "iis:implosion",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/green_sapphire",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:industrial_tnt",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_green_sapphire",
+      "count": 3
+    },
+    {
+      "id": "iis:tiny_dust_dark_ash",
+      "count": 12
+    }
+  ],
+  "duration": 20,
+  "eut": 30
+}

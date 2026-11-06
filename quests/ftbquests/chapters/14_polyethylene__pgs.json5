@@ -1128,6 +1128,50 @@
       ]
     },
     {
+      "id": "1A000000000006B4",
+      "x": 12.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000033C",
+        "1A0000000000034A",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:data_reader_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:data_reader_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006B400"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:data_reader_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006B401"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000006B400"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000721",
       "x": 12.5,
       "y": 2.0,

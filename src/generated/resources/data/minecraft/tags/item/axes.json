@@ -56,6 +56,7 @@
     "iis:axe_tritanium",
     "iis:axe_tungsten",
     "iis:axe_tungsten_steel",
+    "iis:axe_vanadium_steel",
     "iis:axe_wrought_iron",
     "iis:saw_aluminium",
     "iis:saw_beryllium",
@@ -112,6 +113,7 @@
     "iis:saw_tritanium",
     "iis:saw_tungsten",
     "iis:saw_tungsten_steel",
+    "iis:saw_vanadium_steel",
     "iis:saw_wrought_iron"
   ]
 }

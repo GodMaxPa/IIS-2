@@ -56,6 +56,7 @@
     "iis:file_tritanium",
     "iis:file_tungsten",
     "iis:file_tungsten_steel",
+    "iis:file_vanadium_steel",
     "iis:file_wrought_iron"
   ]
 }

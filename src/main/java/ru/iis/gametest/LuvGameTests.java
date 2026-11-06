@@ -259,6 +259,156 @@ final class LuvGameTests {
         });
     }
 
+    // --- D122: разведка ---------------------------------------------------------------------------------------------
+
+    private static final BlockPos PROSPECTOR = new BlockPos(4, 3, 4);
+
+    private static String ore() {
+        return ru.iis.lv.item.Prospection.oreKey(ru.iis.world.ore.OreBlocks.get("copper", ru.iis.world.ore.OreHost.values()[0]));
+    }
+
+    /** Сейсморазведчик: 4 ТНТ и флешка, без энергии; руда в колонне 5×5 под машиной попадает на флешку, малая руда нет. */
+    static void seismicFindsOreBelow(GameTestHelper h) {
+        h.setBlock(PROSPECTOR.offset(2, -2, 2), ru.iis.world.ore.OreBlocks.get("copper", ru.iis.world.ore.OreHost.values()[0]));
+        h.setBlock(PROSPECTOR, LvContent.MACHINES.get(LvMachineType.SEISMIC_PROSPECTOR).get());
+        ElectricMachineBlockEntity m = h.getBlockEntity(PROSPECTOR, ElectricMachineBlockEntity.class);
+        m.setItem(0, new ItemStack(net.minecraft.world.item.Items.TNT, 5));
+        m.setItem(2, new ItemStack(LvContent.DATA_STICK.get()));
+        h.succeedWhen(() -> {
+            ru.iis.lv.item.Prospection p = m.getItem(1).get(LvContent.PROSPECTION.get());
+            h.assertTrue(p != null && p.near().contains(ore()) && !p.analyzed(), "data " + p);
+            h.assertTrue(m.getItem(0).getCount() == 1, "tnt " + m.getItem(0));
+            h.assertTrue(m.energy.stored == 0, "energy " + m.energy.stored);
+        });
+    }
+
+    /** Без четырёх ТНТ машина не работает, флешка остаётся в слоте. */
+    static void seismicNeedsFourTnt(GameTestHelper h) {
+        h.setBlock(PROSPECTOR, LvContent.MACHINES.get(LvMachineType.SEISMIC_PROSPECTOR).get());
+        ElectricMachineBlockEntity m = h.getBlockEntity(PROSPECTOR, ElectricMachineBlockEntity.class);
+        m.setItem(0, new ItemStack(net.minecraft.world.item.Items.TNT, 3));
+        m.setItem(2, new ItemStack(LvContent.DATA_STICK.get()));
+        h.runAtTickTime(60, () -> {
+            h.assertTrue(m.getItem(0).getCount() == 3 && !m.getItem(2).isEmpty() && m.logic().maxProgress == 0, "started");
+            h.succeed();
+        });
+    }
+
+    /** Улучшенный сейсморазведчик: 32 ТНТ, 800 тиков; руда в 3 блоках — ближняя зона, 9 полей нефти. */
+    static void advancedSeismicZones(GameTestHelper h) {
+        h.setBlock(PROSPECTOR.offset(1, -2, 1), ru.iis.world.ore.OreBlocks.get("copper", ru.iis.world.ore.OreHost.values()[0]));   // скважины через 4 от -95: 1 попадает
+        h.setBlock(PROSPECTOR, LvContent.MACHINES.get(LvMachineType.SEISMIC_PROSPECTOR_EV).get());
+        ElectricMachineBlockEntity m = h.getBlockEntity(PROSPECTOR, ElectricMachineBlockEntity.class);
+        m.setItem(0, new ItemStack(net.minecraft.world.item.Items.TNT, 32));
+        m.setItem(2, new ItemStack(LvContent.DATA_STICK.get()));
+        h.runAtTickTime(30, () -> {
+            h.assertTrue(m.logic().maxProgress == ru.iis.lv.item.Prospection.ADVANCED_TICKS, "time " + m.logic().maxProgress);
+            m.logic().progress = m.logic().maxProgress - 2;
+        });
+        h.succeedWhen(() -> {
+            ru.iis.lv.item.Prospection p = m.getItem(1).get(LvContent.PROSPECTION.get());
+            h.assertTrue(p != null && p.near().contains(ore()), "data " + p);
+            h.assertTrue(p.oils().size() == 9, "oils " + p.oils());
+        });
+    }
+
+    /** Сканер обрабатывает сырые данные: 1000 тиков на LV, 32 EU/t. */
+    static void scannerAnalyzesProspection(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.SCANNER);
+        ItemStack stick = new ItemStack(LvContent.DATA_STICK.get());
+        stick.set(LvContent.PROSPECTION.get(), new ru.iis.lv.item.Prospection(1, 2, 3, "minecraft:overworld", 1, java.util.List.of(), java.util.List.of(ore()), java.util.List.of(), java.util.List.of(), false));
+        m.setItem(0, stick);
+        h.runAtTickTime(30, () -> {
+            h.assertTrue(m.logic().maxProgress == 1000, "time " + m.logic().maxProgress);
+            m.logic().progress = m.logic().maxProgress - 2;
+        });
+        h.succeedWhen(() -> {
+            ru.iis.lv.item.Prospection p = m.getItem(1).get(LvContent.PROSPECTION.get());
+            h.assertTrue(p != null && p.analyzed(), "output " + m.getItem(1));
+        });
+    }
+
+    private static String key(net.minecraft.network.chat.Component c) {
+        return c.getContents() instanceof net.minecraft.network.chat.contents.TranslatableContents t ? t.getKey() : "";
+    }
+
+    /** Молот: по руде — «здесь руда», по камню в плотной меди — следы, по камню среди воздуха — воздух и пусто (GT Behaviour_Prospecting). */
+    static void hammerProspects(GameTestHelper h) {
+        BlockPos c = new BlockPos(6, 3, 6);
+        net.minecraft.server.level.ServerLevel sl = h.getLevel();
+        net.minecraft.world.level.block.state.BlockState ore = ru.iis.world.ore.OreBlocks.get("copper", ru.iis.world.ore.OreHost.values()[0]);
+        h.setBlock(c, ore);
+        var here = ru.iis.tool.HammerProspecting.knock(sl, h.absolutePos(c), Direction.UP, 1);
+        h.assertTrue(here != null && key(here.get(0)).equals("item.iis.prospect.here"), "here " + here);
+        h.setBlock(c, net.minecraft.world.level.block.Blocks.STONE);
+        var empty = ru.iis.tool.HammerProspecting.knock(sl, h.absolutePos(c), Direction.UP, 1);
+        h.assertTrue(empty != null && empty.stream().anyMatch(x -> key(x).equals("item.iis.prospect.air")) && key(empty.get(empty.size() - 1)).equals("item.iis.prospect.nothing"), "empty " + empty);
+        for (int dx = -5; dx <= 5; dx++) for (int dy = -2; dy <= 5; dy++) for (int dz = -5; dz <= 5; dz++) if (dx != 0 || dy != 0 || dz != 0) h.setBlock(c.offset(dx, dy, dz), ore);
+        var found = ru.iis.tool.HammerProspecting.knock(sl, h.absolutePos(c), Direction.UP, 1);
+        h.assertTrue(found != null && key(found.get(found.size() - 1)).equals("item.iis.prospect.found"), "found " + found);
+        h.setBlock(c, net.minecraft.world.level.block.Blocks.OAK_PLANKS);
+        h.assertTrue(ru.iis.tool.HammerProspecting.knock(sl, h.absolutePos(c), Direction.UP, 1) == null, "planks are not knockable");
+        h.succeed();
+    }
+
+    /** Портативный сканер: про машину пишет энергию и берёт цену; считыватель обрабатывает флешку за свою энергию. */
+    static void portableScannerReadsMachine(GameTestHelper h) {
+        ElectricMachineBlockEntity m = powered(h, LvMachineType.MACERATOR);
+        var r = ru.iis.lv.item.PortableScannerItem.scan(h.getLevel(), m.getBlockPos());
+        h.assertTrue(r.cost() >= 300 && r.lines().stream().anyMatch(x -> key(x).equals("item.iis.portable_scanner.energy")), "scan " + r);
+        h.assertTrue(LvContent.DATA_READER_MV.get().analyzeCost() == 8000 && LvContent.DATA_READER_EV.get().analyzeCost() == 32000, "reader cost");
+        h.succeed();
+    }
+
+    /** Сканер пишет элемент в сферу: железо, масса × 8192 тиков на LV; репликатор делает пыль за массу UU-материи (D122). */
+    static void scannerAndReplicator(GameTestHelper h) {
+        ElectricMachineBlockEntity scanner = powered(h, LvMachineType.SCANNER);
+        scanner.setItem(0, new ItemStack(SelfTest.item("dust_iron")));
+        scanner.setItem(2, new ItemStack(LvContent.DATA_ORB.get()));
+        h.runAtTickTime(30, () -> {
+            h.assertTrue(scanner.logic().maxProgress == 56 * 8192, "scan time " + scanner.logic().maxProgress);
+            scanner.logic().progress = scanner.logic().maxProgress - 2;
+        });
+        h.runAtTickTime(60, () -> {
+            ItemStack orb = scanner.getItem(1);
+            h.assertTrue(orb.get(LvContent.ELEMENT_SCAN.get()) != null && orb.get(LvContent.ELEMENT_SCAN.get()).mass() == 56, "orb " + orb);
+            scanner.setItem(1, ItemStack.EMPTY);
+            h.setBlock(scanner.getBlockPos().subtract(h.absolutePos(BlockPos.ZERO)), LvContent.MACHINES.get(LvMachineType.REPLICATOR).get());
+            ElectricMachineBlockEntity rep = h.getBlockEntity(scanner.getBlockPos().subtract(h.absolutePos(BlockPos.ZERO)), ElectricMachineBlockEntity.class);
+            rep.energy.stored = rep.energy.capacity;
+            rep.setItem(2, orb);
+            rep.tank().setAmount(GtFluids.get("uumatter").source().get(), 100);
+            h.runAtTickTime(90, () -> {
+                h.assertTrue(rep.logic().maxProgress == 56 * 512, "time " + rep.logic().maxProgress);
+                h.assertTrue(rep.tank().amount() == 44, "uu " + rep.tank().amount());
+                rep.logic().progress = rep.logic().maxProgress - 2;
+            });
+            h.runAtTickTime(120, () -> {
+                h.assertTrue(rep.getItem(1).is(SelfTest.item("dust_iron")), "output " + rep.getItem(1));
+                h.assertTrue(!rep.getItem(2).isEmpty(), "orb consumed");
+                h.succeed();
+            });
+        });
+    }
+
+    /** Промышленный ТНТ в сейсморазведчике: хватает двух (D122). */
+    static void seismicTakesIndustrialTnt(GameTestHelper h) {
+        h.setBlock(PROSPECTOR, LvContent.MACHINES.get(LvMachineType.SEISMIC_PROSPECTOR).get());
+        ElectricMachineBlockEntity m = h.getBlockEntity(PROSPECTOR, ElectricMachineBlockEntity.class);
+        m.setItem(0, new ItemStack(LvContent.INDUSTRIAL_TNT.get(), 2));
+        m.setItem(2, new ItemStack(LvContent.DATA_STICK.get()));
+        h.succeedWhen(() -> h.assertTrue(m.getItem(0).isEmpty() && m.logic().maxProgress > 0, "not started"));
+    }
+
+    /** Люк ULV: бак 8000 л, шина на 1 слот, люк данных LuV годится сборочной линии по виду. */
+    static void ulvHatches(GameTestHelper h) {
+        h.setBlock(PROSPECTOR, MultiGameTests.hatch(HatchType.INPUT_HATCH_ULV, Direction.UP));
+        FluidHatchBlockEntity in = h.getBlockEntity(PROSPECTOR, FluidHatchBlockEntity.class);
+        h.assertTrue(HatchType.INPUT_HATCH_ULV.tank() == 8000 && HatchType.INPUT_BUS_ULV.slots() == 1 && in != null, "ulv");
+        h.assertTrue(HatchType.DATA_ACCESS_LUV.kind() == HatchType.DATA_ACCESS && HatchType.DATA_ACCESS_LUV.slots() == 16, "data");
+        h.succeed();
+    }
+
     // --- D121: уровень UV ---------------------------------------------------------------------------------------------
 
     /** Двигатель UV (GT_MachineRecipeLoader:2070): девять шин, 100000 EU/t от люка ZPM; расход жидкостей 1296 и 2000 л. */

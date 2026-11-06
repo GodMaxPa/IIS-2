@@ -65,7 +65,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         LvMachineType t = type(state);
         this.voltage = t.voltage();
         this.logic = new ElectricMachineLogic(voltage);
-        this.tank = new FluidTank(Math.max(1, t.tank), f -> t.tank > 0 && t.recipeMap != null
+        this.tank = new FluidTank(Math.max(1, t.tank), f -> t.id.equals("replicator") ? f == ru.iis.fluid.GtFluids.get("uumatter").source().get() : t.tank > 0 && t.recipeMap != null
                 && level instanceof ServerLevel sl && GtRecipes.acceptsFluid(sl, t.recipeMap, f), true, this::markDirty);
         this.outTank = new FluidTank(Math.max(1, t.tank), f -> false, true, this::markDirty);
         this.fluids = new net.neoforged.neoforge.transfer.CombinedResourceHandler<>(tank, outTank);
@@ -155,6 +155,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
 
     @Override
     protected void work(ServerLevel sl) {
+        logic.noMinimum = type().id.equals("seismic_prospector");
         ItemStack bat = items.get(batterySlot());
         if (bat.getItem() instanceof ru.iis.lv.item.BatteryItem b && b.isBattery() && energy.stored < energy.capacity) {
             energy.stored += b.discharge(bat, Math.min(voltage, energy.capacity - energy.stored));
@@ -280,6 +281,8 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         LvMachineType t = type();
         List<ItemStack> inputs = new ArrayList<>(items.subList(0, t.inputs));
         if (t.id.equals("scanner")) return scan(sl, t);
+        if (t.id.equals("seismic_prospector")) return prospect(sl, t);
+        if (t.id.equals("replicator")) return replicate(sl, t);
         if (t.id.equals("recycler")) {
             // GT_Recipe_Map_Recycler: всё, кроме самого утиля, в утиль с шансом 12,5 %, 45 тиков, 1 EU/t (D119)
             ItemStack in = inputs.get(0);
@@ -348,9 +351,68 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         return new int[]{(int) oc.euPerTick(), oc.durationTicks()};
     }
 
+    /** D122: GT_MetaTileEntity_Replicator#checkRecipe: сфера с элементом не тратится, UU-материи уходит по массе, пыль на выходе. */
+    private int @Nullable [] replicate(ServerLevel sl, LvMachineType t) {
+        ItemStack orb = items.get(t.inputs + t.outputs);
+        ru.iis.lv.item.DataOrbItem.ElementScan e = orb.get(LvContent.ELEMENT_SCAN.get());
+        if (e == null || tank.amount() < e.mass()) return null;
+        ItemStack dust = new ItemStack(net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(e.dust()));
+        if (!fits(0, dust)) return null;
+        tank.drainInternal(e.mass());
+        pending = List.of(dust);
+        setChanged();
+        return new int[]{(int) voltage, Math.max(1, e.mass() * 512 >> (t.tier.tier() - 1))};
+    }
+
+    /** D122: GT_MetaTileEntity_SeismicProspector и _AdvSeismicProspector#checkRecipe: ТНТ на входе и флешка в особом слоте; разведка сразу, флешка выходит по окончании. */
+    private int @Nullable [] prospect(ServerLevel sl, LvMachineType t) {
+        ItemStack in = items.get(0), stick = items.get(t.inputs + t.outputs);
+        boolean adv = t.tier != ru.iis.energy.VoltageTier.LV;
+        int tnt = ru.iis.lv.item.Prospection.explosives(in, adv);
+        if (tnt == 0 || in.getCount() < tnt || !(stick.getItem() instanceof ru.iis.lv.item.DataStickItem) || stick.getCount() != 1 || !items.get(t.inputs).isEmpty()) return null;
+        in.shrink(tnt);
+        ItemStack written = new ItemStack(stick.getItem());
+        written.set(LvContent.PROSPECTION.get(), adv ? ru.iis.lv.item.Prospection.advanced(sl, worldPosition) : ru.iis.lv.item.Prospection.basic(sl, worldPosition));
+        stick.shrink(1);
+        pending = List.of(written);
+        setChanged();
+        return new int[]{0, adv ? ru.iis.lv.item.Prospection.ADVANCED_TICKS : ru.iis.lv.item.Prospection.BASIC_TICKS};
+    }
+
     /** GT_MetaTileEntity_Scanner#checkRecipe, ветка сборочной линии: предмет и пустая флешка → флешка с чертежом, 30 EU/t с разгоном, mResearchTime тиков. */
     private int @Nullable [] scan(ServerLevel sl, LvMachineType t) {
         ItemStack in = items.get(0), stick = items.get(t.inputs + t.outputs);
+        // D122: GT_MetaTileEntity_Scanner:173-182: сырые данные разведки: 1000 / 2^(уровень − 1) тиков, 32 × 4^(уровень − 1) EU/t, особый слот пуст
+        // D122: :103-122: сфера в особом слоте: копия сферы (512 тиков) или скан элемента (масса × 8192 тиков)
+        if (stick.getItem() == LvContent.DATA_ORB.get() && !in.isEmpty() && items.get(t.inputs).isEmpty()) {
+            int up = t.tier.tier() - 1;
+            ru.iis.lv.item.DataOrbItem.ElementScan e = ru.iis.lv.item.DataOrbItem.scanOf(in);
+            if (in.getItem() == LvContent.DATA_ORB.get()) {
+                pending = List.of(in.copyWithCount(1));
+                in.shrink(1);
+                setChanged();
+                return new int[]{32 << (2 * up), Math.max(1, 512 >> up)};
+            }
+            if (e != null) {
+                ItemStack done = new ItemStack(LvContent.DATA_ORB.get());
+                done.set(LvContent.ELEMENT_SCAN.get(), e);
+                in.shrink(1);
+                stick.shrink(1);
+                pending = List.of(done);
+                setChanged();
+                return new int[]{32 << (2 * up), Math.max(1, e.mass() * 8192 >> up)};
+            }
+        }
+        ru.iis.lv.item.Prospection raw = in.get(LvContent.PROSPECTION.get());
+        if (raw != null && !raw.analyzed() && stick.isEmpty() && items.get(t.inputs).isEmpty()) {
+            ItemStack done = in.copyWithCount(1);
+            done.set(LvContent.PROSPECTION.get(), raw.withAnalyzed());
+            in.shrink(1);
+            pending = List.of(done);
+            setChanged();
+            int up = t.tier.tier() - 1;
+            return new int[]{32 << (2 * up), Math.max(1, 1000 >> up)};
+        }
         if (in.isEmpty() || !(stick.getItem() instanceof ru.iis.lv.item.DataStickItem) || !items.get(t.inputs).isEmpty()) return null;
         for (var h : GtRecipes.all(sl.recipeAccess().recipeMap(), ru.iis.machine.recipe.GtRecipeMap.ASSEMBLY_LINE)) {
             if (h.value().keep().isEmpty() || !h.value().keep().getFirst().test(in)) continue;
