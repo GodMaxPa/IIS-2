@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "iis:moon_rock",
-    "iis:mars_rock"
+    "iis:mars_rock",
+    "iis:asteroid_rock"
   ]
 }

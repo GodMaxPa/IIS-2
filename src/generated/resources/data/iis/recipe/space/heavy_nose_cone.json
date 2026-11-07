@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " N ",
+    "ASA",
+    "ACA"
+  ],
+  "key": {
+    "N": "iis:nose_cone",
+    "A": "#c:plates/americium",
+    "S": "iis:sensor_luv",
+    "C": "#c:circuits/master"
+  },
+  "result": {
+    "id": "iis:heavy_nose_cone"
+  }
+}

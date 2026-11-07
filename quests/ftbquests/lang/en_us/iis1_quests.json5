@@ -71,6 +71,26 @@
     "Use sulfur with polydimethylsiloxane to get molten silicon rubber - then you may cast it into sheets."
   ],
   "quest.1A00000000000008.title": "Silicone Rubber Sheet",
+  "quest.1A00000000000009.quest_desc": [
+    "You may transfer your body to the asteroids by this flying box. But don't forget about all the required stuff that could help you to stay alive."
+  ],
+  "quest.1A00000000000009.title": "Tier 3 Rocket (with 3 chests)",
+  "quest.1A0000000000000A.quest_desc": [
+    "A part of tier 3 rocket."
+  ],
+  "quest.1A0000000000000A.title": "Heavy Rocket Engine",
+  "quest.1A0000000000000B.quest_desc": [
+    "A part of tier 3 rocket."
+  ],
+  "quest.1A0000000000000B.title": "Heavy rocket fins",
+  "quest.1A0000000000000C.quest_desc": [
+    "A part of tier 3 rocket."
+  ],
+  "quest.1A0000000000000C.title": "Heavy Nose Cone",
+  "quest.1A0000000000000D.quest_desc": [
+    "A part of tier 3 rocket."
+  ],
+  "quest.1A0000000000000D.title": "Heavy Duty Plate",
   "quest.1A0000000000000E.quest_desc": [
     "A pipe with a huge liquid transfer rate."
   ],
@@ -95,6 +115,10 @@
     "To assemble it, you'll need an assembly line with a ZPM (or better) energy hatch. You'll also need to prepare at least 32 fusion coil blocks and nearly 4 times more fusion machine casings."
   ],
   "quest.1A00000000000013.title": "Fusion Control Computer Mark II",
+  "quest.1A00000000000014.quest_desc": [
+    "A raw part of tier 3 rocket"
+  ],
+  "quest.1A00000000000014.title": "Heavy Duty Alloy Ingot T3",
   "quest.1A00000000000015.quest_desc": [
     "Can be created from the ingot."
   ],
@@ -2479,6 +2503,10 @@
     "Put the heavy duty alloy ingot t2 to implosion compressor, to get this."
   ],
   "quest.1A0000000000027B.title": "Heavy-Duty Plate (tier 2)",
+  "quest.1A0000000000027C.quest_desc": [
+    "This is the part of Rocket tier 2"
+  ],
+  "quest.1A0000000000027C.title": "Tier 1 Booster",
   "quest.1A0000000000027D.quest_desc": [
     "Use EBF with HSS-G coil blocks to make te ingot from dust."
   ],
@@ -3075,10 +3103,18 @@
     "The part of some G.C. machines."
   ],
   "quest.1A0000000000031B.title": "Oxygen Pipe",
+  "quest.1A0000000000031C.quest_desc": [
+    "It consume oxygen from leaves around it in 5 block radius. So before you start to fly to moon, you have to prepare and take some important things: dirt, hoe, edible plants (carrot, potato or etc.). any tree saplings to grow them there. Also take at least the stack of bone meal, to speed up the growing process. The best placement for trees and oxygen collector, is next schema, where you place 8 saplings as quad, and then place the oxygen collector in the center of it, but above the ground by 5 blocks up."
+  ],
+  "quest.1A0000000000031C.title": "Oxygen Collector",
   "quest.1A0000000000031D.quest_desc": [
     "Put two aluminium plates to implosion compressor."
   ],
   "quest.1A0000000000031D.title": "Compressed Aluminum",
+  "quest.1A0000000000031F.quest_desc": [
+    "All these machines require the oxygen which you may pour to them directly or by oxygen pipes. The difference between them is that the oxygen bubble distributor don't require the closed area, but consume more oxygen and has smaller radius than oxygen sealer. But currently, it will be enough for you to craft only bubble distributer."
+  ],
+  "quest.1A0000000000031F.title": "Oxygen Bubble Distributor",
   "quest.1A00000000000320.quest_desc": [
     "Compress the raw carbon mesh to get this."
   ],
@@ -3131,6 +3167,10 @@
     "The part for rocket loader or unloader machines."
   ],
   "quest.1A0000000000032C.title": "Medium Voltage Chest Buffer",
+  "quest.1A0000000000032D.quest_desc": [
+    "The G.C. machines that will allow you to load or unload your items for rocket. But don't forget to craft your rocket with 3 chests to have enough space for your luggage."
+  ],
+  "quest.1A0000000000032D.title": "Cargo Loader/Unloader",
   "quest.1A0000000000032E.quest_desc": [
     "Height for search: 50-90 BAUXITE vein (Bauxite, Aluminium, Ilmenite). Look at NEI to find a way to get it from Bauxite or Ilmenite ores."
   ],

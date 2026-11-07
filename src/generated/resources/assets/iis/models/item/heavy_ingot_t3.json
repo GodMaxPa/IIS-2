@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "iis:item/heavy_ingot_t3"
+  }
+}

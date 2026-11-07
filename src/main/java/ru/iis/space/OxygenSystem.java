@@ -21,13 +21,14 @@ public final class OxygenSystem {
     public static final float DAMAGE = 1.0f;
 
     public static boolean airless(ResourceKey<Level> dim) {
-        return dim == SpaceContent.MOON || dim == SpaceContent.MARS;
+        return dim == SpaceContent.MOON || dim == SpaceContent.MARS || dim == SpaceContent.ASTEROIDS;
     }
 
     public static void onPlayerTick(PlayerTickEvent.Post event) {
         if (!(event.getEntity() instanceof ServerPlayer player) || player.tickCount % 20 != 0) return;
         if (!airless(player.level().dimension()) || player.isCreative() || player.isSpectator()) return;
         if (player.getVehicle() instanceof RocketEntity) return;   // в ракете дышат её воздухом
+        if (SpaceMachineBlockEntity.inBubble(player.level(), player.getEyePosition())) return;   // D134: пузырь распределителя
         int left = breathe(player);
         if (left < 0) {
             player.sendOverlayMessage(Component.translatable("message.iis.oxygen.none"));

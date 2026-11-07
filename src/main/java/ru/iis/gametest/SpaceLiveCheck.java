@@ -26,17 +26,19 @@ public final class SpaceLiveCheck {
 
     /** IIS_SPACE_CHECK=mars: полёт ракеты 2-го уровня на Марс вместо Луны (D131). */
     private static final boolean MARS = "mars".equals(System.getenv("IIS_SPACE_CHECK"));
+    /** IIS_SPACE_CHECK=asteroids: ракета 3-го уровня на астероиды (D134): садится на породу, вокруг есть астероиды и руда. */
+    private static final boolean ROCKS = "asteroids".equals(System.getenv("IIS_SPACE_CHECK"));
 
     private static final Logger LOG = LogUtils.getLogger();
     private static int ticks;
 
     public static void init() {
-        if ("1".equals(System.getenv("IIS_SPACE_CHECK")) || MARS) NeoForge.EVENT_BUS.addListener(SpaceLiveCheck::tick);
+        if ("1".equals(System.getenv("IIS_SPACE_CHECK")) || MARS || ROCKS) NeoForge.EVENT_BUS.addListener(SpaceLiveCheck::tick);
     }
 
     private static void tick(ServerTickEvent.Post event) {
         MinecraftServer server = event.getServer();
-        ServerLevel moon = server.getLevel(MARS ? SpaceContent.MARS : SpaceContent.MOON), earth = server.getLevel(Level.OVERWORLD);
+        ServerLevel moon = server.getLevel(ROCKS ? SpaceContent.ASTEROIDS : MARS ? SpaceContent.MARS : SpaceContent.MOON), earth = server.getLevel(Level.OVERWORLD);
         ticks++;
         if (ticks == 40) {
             if (moon == null) {
@@ -48,7 +50,11 @@ public final class SpaceLiveCheck {
             RocketEntity r = SpaceContent.ROCKET.get().create(earth, EntitySpawnReason.TRIGGERED);
             r.setPos(0.5, RocketEntity.ARRIVAL_ALTITUDE - 20, 0.5);
             if (MARS) r.setTier(2);
-            r.setup(new RocketItem.Stored(18, MARS ? RocketEntity.CAPACITY_T2 : RocketEntity.CAPACITY_T1));
+            if (ROCKS) {
+                r.setTier(3);
+                r.setTarget(RocketEntity.TARGET_ASTEROIDS);
+            }
+            r.setup(new RocketItem.Stored(18, ROCKS ? RocketEntity.CAPACITY_T3 : MARS ? RocketEntity.CAPACITY_T2 : RocketEntity.CAPACITY_T1));
             r.setState(RocketEntity.FLYING);
             earth.addFreshEntity(r);
             LOG.info("SPACE_CHECK rocket launched");
@@ -57,21 +63,36 @@ public final class SpaceLiveCheck {
             if (!found.isEmpty() && found.getFirst().state() == RocketEntity.IDLE) {
                 RocketEntity r = found.getFirst();
                 int y = moon.getHeight(Heightmap.Types.WORLD_SURFACE, 0, 0) - 1;
-                String top = BuiltInRegistries.BLOCK.getKey(moon.getBlockState(new BlockPos(0, y, 0)).getBlock()).toString();
+                int topX = 0, topZ = 0;
+                // ракета шире блока: садится на самый высокий из столбцов под ней (на астероидах они разные)
+                for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) {
+                    int h = moon.getHeight(Heightmap.Types.WORLD_SURFACE, dx, dz) - 1;
+                    if (h > y) { y = h; topX = dx; topZ = dz; }
+                }
+                String top = BuiltInRegistries.BLOCK.getKey(moon.getBlockState(new BlockPos(topX, y, topZ)).getBlock()).toString();
                 int ores = 0;
                 for (int cx = -8; cx <= 8; cx++) {
                     for (int cz = -8; cz <= 8; cz++) {
                         LevelChunk c = moon.getChunk(cx, cz);
                         for (int x = 0; x < 16; x += 1) {
                             for (int z = 0; z < 16; z += 1) {
-                                for (int yy = -60; yy < 60; yy += 1) {
+                                for (int yy = ROCKS ? 0 : -60; yy < (ROCKS ? 180 : 60); yy += 1) {
                                     if (BuiltInRegistries.BLOCK.getKey(c.getBlockState(new BlockPos(x, yy, z)).getBlock()).getPath().contains("ore_")) ores++;
                                 }
                             }
                         }
                     }
                 }
-                boolean ok = top.equals(MARS ? "iis:mars_turf" : "iis:moon_turf") && r.fuel() > 0 && r.getY() <= y + 2 && ores > 0;
+                int rock = 0;
+                if (ROCKS) {
+                    for (int cx = -8; cx <= 8; cx++) for (int cz = -8; cz <= 8; cz++) {
+                        LevelChunk c = moon.getChunk(cx, cz);
+                        for (int yy = 0; yy < 180; yy += 2) for (int x = 0; x < 16; x += 2) for (int z = 0; z < 16; z += 2)
+                            if (c.getBlockState(new BlockPos(x, yy, z)).is(SpaceContent.ASTEROID_ROCK.get())) rock++;
+                    }
+                }
+                boolean ok = top.equals(ROCKS ? "iis:asteroid_rock" : MARS ? "iis:mars_turf" : "iis:moon_turf") && r.fuel() > 0 && r.getY() <= y + 2 && ores > 0 && (!ROCKS || rock > 1000);
+                if (ROCKS) top += " rock=" + rock;
                 finish(server, (ok ? "PASSED" : "FAILED") + " surface y=" + y + " top=" + top + " rocket y=" + r.getY() + " fuel=" + r.fuel() + " cargo=" + r.cargoSlots() + " ores=" + ores);
             } else if (ticks > 2400) {
                 finish(server, "FAILED no landed rocket after " + ticks + " ticks; on the moon: " + found.size());

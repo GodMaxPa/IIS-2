@@ -14,7 +14,8 @@ COMPRESSED = (('iron', 'Iron', (190, 190, 195), 'Compressed Iron', 'Сжатое
               ('aluminium', 'Aluminium', (150, 205, 225), 'Compressed Aluminium', 'Сжатый алюминий'), ('tin', 'Tin', (215, 215, 225), 'Compressed Tin', 'Сжатое олово'),
               ('copper', 'Copper', (225, 130, 70), 'Compressed Copper', 'Сжатая медь'), ('bronze', 'Bronze', (210, 150, 60), 'Compressed Bronze', 'Сжатая бронза'),
               ('titanium', 'Titanium', (210, 165, 215), 'Compressed Titanium', 'Сжатый титан'),
-              ('meteoric_iron', 'MeteoricIron', (105, 80, 85), 'Compressed Meteoric Iron', 'Сжатое метеоритное железо'))
+              ('meteoric_iron', 'MeteoricIron', (105, 80, 85), 'Compressed Meteoric Iron', 'Сжатое метеоритное железо'),
+              ('desh', 'Desh', (60, 60, 64), 'Compressed Desh', 'Сжатый деш'))
 # id, EN, RU, base colour, accent colour, shape
 ITEMS = [('heavy_plating', 'Heavy Duty Plate', 'Сверхпрочное покрытие', (95, 100, 110), (150, 155, 165), 'plate'),
          ('heavy_plating_t2', 'Heavy Duty Plate T2', 'Сверхпрочное покрытие Т2', (120, 85, 60), (195, 145, 95), 'plate'),
@@ -32,7 +33,13 @@ ITEMS = [('heavy_plating', 'Heavy Duty Plate', 'Сверхпрочное пок�
          ('canister_tin', 'Tin Canister', 'Оловянная канистра', (205, 205, 215), (130, 130, 140), 'can'),
          ('large_steel_cell', 'Large Steel Fluid Cell', 'Большая стальная канистра', (120, 120, 128), (70, 70, 78), 'can'),
          ('oxygen_mask', 'Oxygen Mask', 'Кислородная маска', (210, 225, 235), (70, 90, 110), 'mask'),
-         ('oxygen_gear', 'Oxygen Gear', 'Кислородное оборудование', (110, 115, 125), (190, 225, 245), 'grid')]
+         ('oxygen_gear', 'Oxygen Gear', 'Кислородное оборудование', (110, 115, 125), (190, 225, 245), 'grid'),
+         # D134: the third tier (GalacticraftMars itemBasicAsteroids 0-2, heavyNoseCone, GalacticraftCore engine:1)
+         ('heavy_plating_t3', 'Heavy Duty Plate T3', 'Сверхпрочное покрытие Т3', (60, 70, 95), (120, 140, 190), 'plate'),
+         ('heavy_rocket_engine', 'Heavy Rocket Engine', 'Тяжёлый ракетный двигатель', (60, 62, 72), (90, 150, 230), 'engine'),
+         ('heavy_rocket_fins', 'Heavy Rocket Fins', 'Тяжёлый ракетный стабилизатор', (55, 60, 80), (200, 200, 210), 'fins'),
+         ('heavy_nose_cone', 'Heavy Nose Cone', 'Тяжёлый головной обтекатель', (75, 80, 100), (190, 60, 50), 'cone'),
+         ('rocket_booster', 'Tier 1 Booster', 'Ускоритель 1-го уровня', (150, 150, 160), (230, 160, 40), 'engine')]
 
 
 def draw(shape, base, accent, seed):
@@ -145,6 +152,19 @@ def generate(g):
     item('rocket_t2', 'Tier 2 Rocket', 'Ракета 2-го уровня', draw('cone', (70, 72, 82), (215, 110, 40), 304))
     item('schematic_3x3', 'Schematic (3x3)', 'Схема (3×3)', Image.open(os.path.join(g['ROOT'], 'tools', 'gen', 'textures', 'lv', 'items', '497.png')).convert('RGBA'))
     item('rocket_t1', 'Tier 1 Rocket', 'Ракета 1-го уровня', draw('cone', (225, 225, 230), (190, 40, 40), 302))
+    item('heavy_ingot_t3', 'Heavy Duty Alloy Ingot T3', 'Сверхпрочный слиток Т3', draw('plate', (60, 70, 95), (30, 35, 50), 305))
+    item('rocket_t3', 'Tier 3 Rocket', 'Ракета 3-го уровня', draw('cone', (60, 70, 95), (90, 150, 230), 306))
+    for k, en, ru in (('gui.iis.rocket.target.asteroids', 'Target: asteroids', 'Цель: астероиды'),
+                      ('gui.iis.nasa.rocket_t3', 'Tier 3 rocket: heavy nose, 8 T3 plates, 4 heavy fins, heavy engine, 2 boosters', 'Ракета 3-го уровня: тяжёлый обтекатель, 8 покрытий Т3, 4 тяжёлых стабилизатора, тяжёлый двигатель, 2 ускорителя'),
+                      ('block.iis.oxygen_collector.tooltip.0', 'Collects oxygen into its tank: from the air on planets with air, from plants nearby elsewhere', 'Собирает кислород в бак: из воздуха там, где он есть, иначе от растений вокруг'),
+                      ('block.iis.oxygen_collector.tooltip.1', 'Pipes take the oxygen out', 'Кислород забирается трубами'),
+                      ('block.iis.oxygen_distributor.tooltip.0', 'Takes oxygen by pipe and keeps a bubble of air around it, up to 10 blocks', 'Принимает кислород по трубе и держит вокруг пузырь воздуха до 10 блоков'),
+                      ('block.iis.oxygen_distributor.tooltip.1', 'Inside the bubble nobody uses the tank', 'Внутри пузыря баллон не тратится'),
+                      ('block.iis.cargo_loader.tooltip.0', 'Moves items from the chest beside it into a rocket on the pad next to it', 'Перекладывает предметы из соседнего сундука в ракету на соседней площадке'),
+                      ('block.iis.cargo_unloader.tooltip.0', 'Moves the cargo of a rocket on the pad next to it into the chest beside it', 'Выгружает груз ракеты с соседней площадки в соседний сундук'),
+                      ('message.iis.oxygen_collector', 'Oxygen: %s / %s L, %s L/s', 'Кислород: %s / %s л, %s л/с'),
+                      ('message.iis.oxygen_distributor', 'Oxygen: %s / %s L, bubble %s blocks', 'Кислород: %s / %s л, пузырь %s блоков')):
+        name(k, en, ru)
     for k, en, ru in (('item.iis.rocket.cargo', 'Cargo: %s slots', 'Груз: %s ячеек'), ('item.iis.rocket.fuel', 'Fuel: %s L', 'Топливо: %s л'),
                       ('item.iis.rocket_t1.hint', 'Place on the middle of a 3x3 launch pad', 'Ставится на середину взлётной площадки 3×3'),
                       ('item.iis.oxygen.hint', 'Keep in your inventory: mask, gear and a tank with oxygen let you breathe off Earth', 'Держи в инвентаре: маска, оборудование и баллон с кислородом дают дышать вне Земли'),
@@ -175,6 +195,19 @@ def generate(g):
     block('mars_dirt', 'Mars Soil', 'Марсианский грунт', tinted(125, 8, (1.25, 0.78, 0.55)), tool='shovel')
     block('mars_turf', 'Mars Dust', 'Марсианская пыль', tinted(150, 9, (1.3, 0.72, 0.45)), tool='shovel')
     block_tags['minecraft:stone_ore_replaceables'].append(I('mars_rock'))
+    block('asteroid_rock', 'Asteroid Rock', 'Астероидная порода', tinted(80, 10, (0.85, 0.85, 0.95)))
+    block_tags['minecraft:stone_ore_replaceables'].append(I('asteroid_rock'))
+    # D134: oxygen machines and cargo loaders (own art)
+    for bid, en, ru, col, acc in (('oxygen_collector', 'Oxygen Collector', 'Кислородный сборщик', 140, (60, 140, 210)),
+                                  ('oxygen_distributor', 'Oxygen Bubble Distributor', 'Распределитель кислородного пузыря', 145, (90, 190, 230)),
+                                  ('cargo_loader', 'Cargo Loader', 'Загрузчик груза', 125, (210, 160, 40)),
+                                  ('cargo_unloader', 'Cargo Unloader', 'Разгрузчик груза', 125, (160, 110, 40))):
+        im = rock(col, 20 + len(bid))
+        for x in range(16):
+            for y in range(16):
+                if 3 <= x <= 12 and 3 <= y <= 12 and (x in (3, 12) or y in (3, 12) or (x + y) % 5 == 0):
+                    im.putpixel((x, y), acc + (255,))
+        block(bid, en, ru, im)
     pad = rock(95, 4)
     for k in range(16):
         for x, y in ((k, 0), (k, 15), (0, k), (15, k)):
@@ -210,6 +243,14 @@ def generate(g):
             if y >= 40:
                 heavy.putpixel((x, y), (215, 110, 40, 255))
     heavy.save(tex('entity/rocket_t2.png'))
+    t3 = Image.new('RGBA', (64, 64), (60, 70, 95, 255))
+    for y in range(64):
+        for x in range(64):
+            if y % 12 == 0:
+                t3.putpixel((x, y), (30, 35, 50, 255))
+            if y >= 40:
+                t3.putpixel((x, y), (90, 150, 230, 255))
+    t3.save(tex('entity/rocket_t3.png'))
 
     # --- the Moon ------------------------------------------------------------------------------------------------------------
     # GT_Worldgen veins are stretched by D11 (y * 1.6 - 64), so the Moon keeps the overworld's height; surface near y = 70
@@ -278,6 +319,32 @@ def generate(g):
             {'type': 'minecraft:condition', 'if_true': {'type': 'minecraft:stone_depth', 'add_surface_depth': False, 'offset': 3, 'secondary_depth_range': 0, 'surface_type': 'floor'},
              'then_run': {'type': 'minecraft:block', 'result_state': {'Name': I('mars_dirt')}}}]}})
     write(os.path.join(D, NS, 'dimension', 'mars.json'), {'type': I('mars'), 'generator': {'type': 'minecraft:noise', 'settings': I('mars'), 'biome_source': {'type': 'minecraft:fixed', 'biome': I('mars')}}})
+    # --- asteroids (D134): no ground, rocks in the void; GC WorldProviderAsteroids for gravity and fuel (LowGravity, RocketEntity) -------------------------
+    write(os.path.join(D, NS, 'dimension_type', 'asteroids.json'), {
+        'ambient_light': 0.05, 'attributes': {
+            'minecraft:gameplay/bed_rule': {'can_set_spawn': 'never', 'can_sleep': 'never', 'explodes': False},
+            'minecraft:gameplay/respawn_anchor_works': False,
+            'minecraft:visual/fog_color': '#000000', 'minecraft:visual/sky_color': '#000000', 'minecraft:visual/cloud_height': 2000.0},
+        'coordinate_scale': 1.0, 'has_ceiling': False, 'has_ender_dragon_fight': False, 'has_fixed_time': False, 'has_skylight': True, 'height': 384,
+        'infiniburn': '#minecraft:infiniburn_overworld', 'logical_height': 384, 'min_y': -64, 'monster_spawn_block_light_limit': 0,
+        'monster_spawn_light_level': {'type': 'minecraft:uniform', 'max_inclusive': 7, 'min_inclusive': 0}, 'skybox': 'overworld', 'timelines': []})
+    write(os.path.join(D, NS, 'worldgen', 'biome', 'asteroids.json'), {
+        'attributes': {'minecraft:visual/sky_color': '#000000', 'minecraft:visual/fog_color': '#000000'}, 'carvers': [], 'downfall': 0.0, 'effects': {'water_color': '#3f76e4'},
+        'features': [[], [], [], [], [], [], [I('gt_ore_veins')], [], [], [], []], 'has_precipitation': False, 'spawn_costs': {},
+        'spawners': {'ambient': [], 'axolotls': [], 'creature': [], 'misc': [], 'underground_water_creature': [], 'water_ambient': [], 'water_creature': [], 'monster': []},
+        'temperature': 0.5})
+    # blobs of 3D noise between y = 0 and y = 180, thinning out at the edges of the band
+    rocks = {'type': 'minecraft:add', 'argument1': -0.42,
+             'argument2': {'type': 'minecraft:noise', 'noise': 'minecraft:cave_cheese', 'xz_scale': 1.2, 'y_scale': 1.6}}
+    band = {'type': 'minecraft:min', 'argument1': {'type': 'minecraft:y_clamped_gradient', 'from_y': -10, 'to_y': 30, 'from_value': -1.0, 'to_value': 1.0},
+            'argument2': {'type': 'minecraft:y_clamped_gradient', 'from_y': 150, 'to_y': 190, 'from_value': 1.0, 'to_value': -1.0}}
+    asteroids = {'type': 'minecraft:min', 'argument1': rocks, 'argument2': band}
+    write(os.path.join(D, NS, 'worldgen', 'noise_settings', 'asteroids.json'), {
+        'aquifers_enabled': False, 'default_block': {'Name': I('asteroid_rock')}, 'default_fluid': {'Name': 'minecraft:air'}, 'disable_mob_generation': True, 'legacy_random_source': False,
+        'noise': {'height': 384, 'min_y': -64, 'size_horizontal': 1, 'size_vertical': 2},
+        'noise_router': dict(zero, final_density=asteroids, initial_density_without_jaggedness=asteroids),
+        'ore_veins_enabled': False, 'sea_level': -63, 'spawn_target': [], 'surface_rule': {'type': 'minecraft:sequence', 'sequence': []}})
+    write(os.path.join(D, NS, 'dimension', 'asteroids.json'), {'type': I('asteroids'), 'generator': {'type': 'minecraft:noise', 'settings': I('asteroids'), 'biome_source': {'type': 'minecraft:fixed', 'biome': I('asteroids')}}})
     write(os.path.join(D, NS, 'damage_type', 'oxygen_suffocation.json'), {'message_id': 'iis.oxygen_suffocation', 'exhaustion': 0.0, 'scaling': 'never'})
 
     # --- recipes: scripts/Galacticraft.zs ------------------------------------------------------------------------------------
@@ -331,6 +398,19 @@ def generate(g):
                                                                                     'M': '#c:circuits/master', 'C': '#iis:cables/4x/platinum', 'E': '#c:circuits/elite'})
     shaped('space/launch_pad', I('launch_pad'), 3, ['III', 'AAA', 'BBB'], {'I': CI, 'A': I('advanced_alloy_plate'), 'B': 'minecraft:iron_block'})
     shaped('space/fuel_loader', I('fuel_loader'), 1, ['SWS', 'PLM', 'APA'], {'S': CS, 'W': BW, 'P': I('electric_pump_mv'), 'L': I('large_steel_cell'), 'M': I('electric_motor_mv'), 'A': CA})
+    # --- D134: the third tier. GT_MachineRecipeLoader:1098, 1102 for the ingot and the plate, scripts/Galacticraft.zs for the parts and machines ---------
+    shaped('space/heavy_ingot_t3', I('heavy_ingot_t3'), 1, [' BB', 'hPC', ' BB'], {'B': tag_of('bolt', 'TungstenSteel'), 'P': I('heavy_plating_t2'), 'C': I('compressed_desh'), 'h': '#iis:tools/hammer'})
+    mrec('implosion', 'heavy_plating_t3', [ing(I('heavy_ingot_t3')), ing('minecraft:tnt', 4)], [out(I('heavy_plating_t3')), out(ref('tiny_dust', 'TungstenSteel'), 2)], 20, 30)
+    T3P = I('heavy_plating_t3')
+    shaped('space/heavy_rocket_engine', I('heavy_rocket_engine'), 1, ['PUP', 'PRP', 'EEE'], {'P': T3P, 'U': I('pipe_small_high_pressure'), 'R': I('fluid_regulator_iv'), 'E': I('rocket_engine_t1')})
+    shaped('space/heavy_nose_cone', I('heavy_nose_cone'), 1, [' N ', 'ASA', 'ACA'], {'N': I('nose_cone'), 'A': tag_of('plate', 'Americium'), 'S': I('sensor_luv'), 'C': '#c:circuits/master'})
+    # the GC recipe of the heavy fins is removed in the script without a replacement; GC shape with tungstensteel rods (D134, AI)
+    shaped('space/heavy_rocket_fins', I('heavy_rocket_fins'), 1, [' Y ', 'XYX', 'X X'], {'X': T3P, 'Y': tag_of('long_rod', 'TungstenSteel')})
+    shaped('space/rocket_booster', I('rocket_booster'), 1, ['EEE', 'HSH', 'HVH'], {'E': tag_of('plate', 'Europium'), 'H': HP, 'S': I('emitter_iv'), 'V': VENT})
+    shaped('space/oxygen_collector', I('oxygen_collector'), 1, ['ACA', 'VFM', 'SWS'], {'A': CA, 'C': CONC, 'V': VENT, 'F': FAN, 'M': I('electric_motor_lv'), 'S': CS, 'W': I('cable_aluminium_2x')})
+    shaped('space/oxygen_distributor', I('oxygen_distributor'), 1, ['AFA', 'VMV', 'SFS'], {'A': CA, 'F': FAN, 'V': VENT, 'M': I('electric_motor_lv'), 'S': CS})
+    shaped('space/cargo_loader', I('cargo_loader'), 1, ['AHA', 'CBC', 'SPS'], {'A': CA, 'H': 'minecraft:hopper', 'C': I('conveyor_module_mv'), 'B': I('chest_buffer_mv'), 'S': CS, 'P': I('item_pipe_medium_brass')})
+    shaped('space/cargo_unloader', I('cargo_unloader'), 1, ['SPS', 'CBC', 'AHA'], {'A': CA, 'H': 'minecraft:hopper', 'C': I('conveyor_module_mv'), 'B': I('chest_buffer_mv'), 'S': CS, 'P': I('item_pipe_medium_brass')})
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     return {'recipes': len(rec)}

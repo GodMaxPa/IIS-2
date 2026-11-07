@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SPS",
+    "CBC",
+    "AHA"
+  ],
+  "key": {
+    "A": "iis:compressed_aluminium",
+    "H": "minecraft:hopper",
+    "C": "iis:conveyor_module_mv",
+    "B": "iis:chest_buffer_mv",
+    "S": "iis:compressed_steel",
+    "P": "iis:item_pipe_medium_brass"
+  },
+  "result": {
+    "id": "iis:cargo_unloader"
+  }
+}

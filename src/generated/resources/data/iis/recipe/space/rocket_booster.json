@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EEE",
+    "HSH",
+    "HVH"
+  ],
+  "key": {
+    "E": "#c:plates/europium",
+    "H": "iis:heavy_plating",
+    "S": "iis:emitter_iv",
+    "V": "iis:air_vent"
+  },
+  "result": {
+    "id": "iis:rocket_booster"
+  }
+}

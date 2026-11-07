@@ -48,6 +48,7 @@ public final class SpaceContent {
 
     public static final ResourceKey<Level> MOON = ResourceKey.create(Registries.DIMENSION, Identifier.fromNamespaceAndPath(IIS.MODID, "moon"));
     public static final ResourceKey<Level> MARS = ResourceKey.create(Registries.DIMENSION, Identifier.fromNamespaceAndPath(IIS.MODID, "mars"));
+    public static final ResourceKey<Level> ASTEROIDS = ResourceKey.create(Registries.DIMENSION, Identifier.fromNamespaceAndPath(IIS.MODID, "asteroids"));
     public static final ResourceKey<DamageType> OXYGEN_SUFFOCATION = ResourceKey.create(Registries.DAMAGE_TYPE, Identifier.fromNamespaceAndPath(IIS.MODID, "oxygen_suffocation"));
 
     private static final List<Supplier<? extends Item>> TAB_ORDER = new ArrayList<>();
@@ -85,6 +86,12 @@ public final class SpaceContent {
     public static final DeferredBlock<LaunchPadBlock> LAUNCH_PAD = block("launch_pad", LaunchPadBlock::new, p -> metal(p).noOcclusion());
     public static final DeferredBlock<FuelLoaderBlock> FUEL_LOADER = block("fuel_loader", FuelLoaderBlock::new, SpaceContent::metal);
     public static final DeferredBlock<NasaWorkbenchBlock> NASA_WORKBENCH = block("nasa_workbench", NasaWorkbenchBlock::new, SpaceContent::metal);
+    // D134: астероиды и машины третьего этапа
+    public static final DeferredBlock<Block> ASTEROID_ROCK = block("asteroid_rock", Block::new, SpaceContent::rock);
+    public static final DeferredBlock<SpaceMachineBlock> OXYGEN_COLLECTOR = block("oxygen_collector", p -> new SpaceMachineBlock(SpaceMachineBlock.Kind.COLLECTOR, p), SpaceContent::metal);
+    public static final DeferredBlock<SpaceMachineBlock> OXYGEN_DISTRIBUTOR = block("oxygen_distributor", p -> new SpaceMachineBlock(SpaceMachineBlock.Kind.DISTRIBUTOR, p), SpaceContent::metal);
+    public static final DeferredBlock<SpaceMachineBlock> CARGO_LOADER = block("cargo_loader", p -> new SpaceMachineBlock(SpaceMachineBlock.Kind.LOADER, p), SpaceContent::metal);
+    public static final DeferredBlock<SpaceMachineBlock> CARGO_UNLOADER = block("cargo_unloader", p -> new SpaceMachineBlock(SpaceMachineBlock.Kind.UNLOADER, p), SpaceContent::metal);
 
     public static final DeferredItem<Item> SCHEMATIC_3X3 = item("schematic_3x3");
     public static final DeferredItem<Item> COMPRESSED_IRON = item("compressed_iron");
@@ -95,6 +102,13 @@ public final class SpaceContent {
     public static final DeferredItem<Item> COMPRESSED_BRONZE = item("compressed_bronze");
     public static final DeferredItem<Item> COMPRESSED_TITANIUM = item("compressed_titanium");
     public static final DeferredItem<Item> COMPRESSED_METEORIC_IRON = item("compressed_meteoric_iron");
+    public static final DeferredItem<Item> COMPRESSED_DESH = item("compressed_desh");
+    public static final DeferredItem<Item> HEAVY_INGOT_T3 = item("heavy_ingot_t3");
+    public static final DeferredItem<Item> HEAVY_PLATING_T3 = item("heavy_plating_t3");
+    public static final DeferredItem<Item> HEAVY_ROCKET_ENGINE = item("heavy_rocket_engine");
+    public static final DeferredItem<Item> HEAVY_ROCKET_FINS = item("heavy_rocket_fins");
+    public static final DeferredItem<Item> HEAVY_NOSE_CONE = item("heavy_nose_cone");
+    public static final DeferredItem<Item> ROCKET_BOOSTER = item("rocket_booster");
     public static final DeferredItem<Item> HEAVY_INGOT_T1 = item("heavy_ingot_t1");
     public static final DeferredItem<Item> HEAVY_PLATING = item("heavy_plating");
     public static final DeferredItem<Item> HEAVY_INGOT_T2 = item("heavy_ingot_t2");
@@ -127,12 +141,20 @@ public final class SpaceContent {
             COMPONENTS.registerComponentType("rocket_data", b -> b.persistent(RocketItem.Stored.CODEC).networkSynchronized(RocketItem.Stored.STREAM_CODEC));
     public static final DeferredItem<RocketItem> ROCKET_T1 = register("rocket_t1", p -> new RocketItem(1, p.stacksTo(1)));
     public static final DeferredItem<RocketItem> ROCKET_T2 = register("rocket_t2", p -> new RocketItem(2, p.stacksTo(1)));
+    public static final DeferredItem<RocketItem> ROCKET_T3 = register("rocket_t3", p -> new RocketItem(3, p.stacksTo(1)));
+
+    public static Item rocketItem(int tier) {
+        return tier >= 3 ? ROCKET_T3.get() : tier == 2 ? ROCKET_T2.get() : ROCKET_T1.get();
+    }
 
     public static final DeferredHolder<EntityType<?>, EntityType<RocketEntity>> ROCKET = ENTITIES.registerEntityType("rocket", RocketEntity::new, MobCategory.MISC,
             b -> b.noLootTable().sized(1.6f, 6.0f).passengerAttachments(1.5f).clientTrackingRange(16).updateInterval(1));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FuelLoaderBlockEntity>> FUEL_LOADER_BE = BLOCK_ENTITIES.register("fuel_loader",
             () -> new BlockEntityType<>(FuelLoaderBlockEntity::new, FUEL_LOADER.get()));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SpaceMachineBlockEntity>> SPACE_MACHINE_BE = BLOCK_ENTITIES.register("space_machine",
+            () -> new BlockEntityType<>(SpaceMachineBlockEntity::new, OXYGEN_COLLECTOR.get(), OXYGEN_DISTRIBUTOR.get(), CARGO_LOADER.get(), CARGO_UNLOADER.get()));
 
     public static final DeferredHolder<MenuType<?>, MenuType<NasaWorkbenchMenu>> NASA_MENU = MENUS.register("nasa_workbench",
             () -> new MenuType<>(NasaWorkbenchMenu::new, net.minecraft.world.flag.FeatureFlags.DEFAULT_FLAGS));
@@ -147,6 +169,7 @@ public final class SpaceContent {
 
     private static void capabilities(RegisterCapabilitiesEvent event) {
         event.registerBlockEntity(Capabilities.Fluid.BLOCK, FUEL_LOADER_BE.get(), (be, side) -> be.tank);
+        event.registerBlockEntity(Capabilities.Fluid.BLOCK, SPACE_MACHINE_BE.get(), (be, side) -> be.kind() == SpaceMachineBlock.Kind.COLLECTOR || be.kind() == SpaceMachineBlock.Kind.DISTRIBUTOR ? be.tank : null);
     }
 
     public static void register(IEventBus modBus) {

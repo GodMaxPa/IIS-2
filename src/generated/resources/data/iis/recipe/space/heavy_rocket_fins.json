@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " Y ",
+    "XYX",
+    "X X"
+  ],
+  "key": {
+    "X": "iis:heavy_plating_t3",
+    "Y": "#iis:long_rods/tungsten_steel"
+  },
+  "result": {
+    "id": "iis:heavy_rocket_fins"
+  }
+}

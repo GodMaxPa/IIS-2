@@ -1,0 +1,11 @@
+{
+  "type": "iis:asteroids",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "iis:asteroids",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "iis:asteroids"
+    }
+  }
+}

@@ -2594,7 +2594,10 @@
     "color": 14474495,
     "iconSet": "SHINY",
     "harvestLevel": 2,
-    "hosts": [],
+    "hosts": [
+      "stone",
+      "deepslate"
+    ],
     "smallHosts": [],
     "ruSmallOre": "Вкрапление галлиевой руды",
     "formula": "Ga",
@@ -3838,7 +3841,10 @@
     "color": 16777215,
     "iconSet": "METALLIC",
     "harvestLevel": 2,
-    "hosts": [],
+    "hosts": [
+      "stone",
+      "deepslate"
+    ],
     "smallHosts": [],
     "ruSmallOre": "Вкрапление лютециевой руды",
     "formula": "Lu",
@@ -4402,7 +4408,10 @@
     "color": 3289650,
     "iconSet": "METALLIC",
     "harvestLevel": 4,
-    "hosts": [],
+    "hosts": [
+      "stone",
+      "deepslate"
+    ],
     "smallHosts": [],
     "ruSmallOre": "Вкрапление руды обогащённого наквадаха",
     "formula": "Nq+",

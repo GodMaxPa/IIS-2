@@ -18,6 +18,8 @@
     "iis:end_ore_iridium",
     "iis:ore_naquadah",
     "iis:deepslate_ore_naquadah",
+    "iis:ore_naquadah_enriched",
+    "iis:deepslate_ore_naquadah_enriched",
     "iis:ore_pitchblende",
     "iis:deepslate_ore_pitchblende",
     "iis:ore_scheelite",

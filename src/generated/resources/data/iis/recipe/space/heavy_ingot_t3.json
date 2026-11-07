@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " BB",
+    "hPC",
+    " BB"
+  ],
+  "key": {
+    "B": "#iis:bolts/tungsten_steel",
+    "P": "iis:heavy_plating_t2",
+    "C": "iis:compressed_desh",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:heavy_ingot_t3"
+  }
+}

@@ -19,6 +19,8 @@ public final class LowGravity {
     public static final double MOON_GRAVITY = 0.062, VANILLA_GRAVITY = 0.08, MOON_FALL = 0.18;
     /** GC WorldProviderMars: getGravity 0.058, getFallDamageModifier 0.38. */
     public static final double MARS_GRAVITY = 0.058, MARS_FALL = 0.38;
+    /** GC WorldProviderAsteroids (по памяти, в сборке ИИС 1 чисел нет): getGravity 0.072, падение почти без урона, 0.1. */
+    public static final double ASTEROID_GRAVITY = 0.072, ASTEROID_FALL = 0.1;
     private static final Identifier GRAVITY_ID = Identifier.fromNamespaceAndPath(IIS.MODID, "moon_gravity");
     private static final Identifier FALL_ID = Identifier.fromNamespaceAndPath(IIS.MODID, "moon_fall");
 
@@ -32,9 +34,10 @@ public final class LowGravity {
 
     public static void apply(Entity entity, net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> dim) {
         if (!(entity instanceof LivingEntity living)) return;
-        boolean moon = dim == SpaceContent.MOON, mars = dim == SpaceContent.MARS;
-        set(living.getAttribute(Attributes.GRAVITY), GRAVITY_ID, moon || mars, -(mars ? MARS_GRAVITY : MOON_GRAVITY) / VANILLA_GRAVITY);
-        set(living.getAttribute(Attributes.FALL_DAMAGE_MULTIPLIER), FALL_ID, moon || mars, (mars ? MARS_FALL : MOON_FALL) - 1);
+        boolean moon = dim == SpaceContent.MOON, mars = dim == SpaceContent.MARS, rocks = dim == SpaceContent.ASTEROIDS;
+        double g = mars ? MARS_GRAVITY : rocks ? ASTEROID_GRAVITY : MOON_GRAVITY, fall = mars ? MARS_FALL : rocks ? ASTEROID_FALL : MOON_FALL;
+        set(living.getAttribute(Attributes.GRAVITY), GRAVITY_ID, moon || mars || rocks, -g / VANILLA_GRAVITY);
+        set(living.getAttribute(Attributes.FALL_DAMAGE_MULTIPLIER), FALL_ID, moon || mars || rocks, fall - 1);
     }
 
     private static void set(AttributeInstance a, Identifier id, boolean on, double value) {

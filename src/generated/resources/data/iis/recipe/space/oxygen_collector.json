@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ACA",
+    "VFM",
+    "SWS"
+  ],
+  "key": {
+    "A": "iis:compressed_aluminium",
+    "C": "iis:oxygen_concentrator",
+    "V": "iis:air_vent",
+    "F": "iis:air_fan",
+    "M": "iis:electric_motor_lv",
+    "S": "iis:compressed_steel",
+    "W": "iis:cable_aluminium_2x"
+  },
+  "result": {
+    "id": "iis:oxygen_collector"
+  }
+}

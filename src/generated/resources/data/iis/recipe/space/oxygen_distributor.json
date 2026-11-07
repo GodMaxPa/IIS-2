@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AFA",
+    "VMV",
+    "SFS"
+  ],
+  "key": {
+    "A": "iis:compressed_aluminium",
+    "F": "iis:air_fan",
+    "V": "iis:air_vent",
+    "M": "iis:electric_motor_lv",
+    "S": "iis:compressed_steel"
+  },
+  "result": {
+    "id": "iis:oxygen_distributor"
+  }
+}

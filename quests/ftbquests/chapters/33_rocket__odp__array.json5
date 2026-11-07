@@ -207,6 +207,177 @@
       ]
     },
     {
+      "id": "1A00000000000009",
+      "x": 5.75,
+      "y": 4.25,
+      "size": 2.5,
+      "dependencies": [
+        "1A0000000000000A",
+        "1A0000000000000B",
+        "1A0000000000000C"
+      ],
+      "icon": {
+        "id": "iis:rocket_t3",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_t3",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 3
+          },
+          "id": "1C00000000000900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000000A",
+      "x": 8.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000000D",
+        "1A0000000000000E",
+        "1A0000000000000F"
+      ],
+      "icon": {
+        "id": "iis:heavy_rocket_engine",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:heavy_rocket_engine",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 7
+          },
+          "id": "1C00000000000A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000000B",
+      "x": 5.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000000D"
+      ],
+      "icon": {
+        "id": "iis:heavy_rocket_fins",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:heavy_rocket_fins",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 7
+          },
+          "id": "1C00000000000B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000000C",
+      "x": 3.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000010",
+        "1A00000000000011"
+      ],
+      "icon": {
+        "id": "iis:heavy_nose_cone",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:heavy_nose_cone",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000000C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000000D",
+      "x": 6.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000014"
+      ],
+      "icon": {
+        "id": "iis:heavy_plating_t3",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:heavy_plating_t3",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 7
+          },
+          "id": "1C00000000000D00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000000E",
       "x": 9.5,
       "y": 0.5,
@@ -303,6 +474,40 @@
             "count": 4
           },
           "id": "1C00000000001200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000014",
+      "x": 6.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000012",
+        "1A00000000000015"
+      ],
+      "icon": {
+        "id": "iis:heavy_ingot_t3",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:heavy_ingot_t3",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000001400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 6
+          },
+          "id": "1C00000000001400"
         }
       ]
     },
@@ -556,5 +761,9 @@
       "y": 2.75,
       "size": 2.5
     }
-  ]
+  ],
+  "icon": {
+    "id": "iis:rocket_t3",
+    "count": 1
+  }
 }

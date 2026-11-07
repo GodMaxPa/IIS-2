@@ -20,6 +20,7 @@ import net.minecraft.world.entity.MoverType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.portal.TeleportTransition;
 import net.minecraft.world.level.storage.ValueInput;
@@ -36,7 +37,7 @@ import java.util.Map;
  * цель определяется уровнем и измерением: у 1-го уровня она одна, 2-й с Земли летит на Марс или Луну по кнопке в окне груза, без карты планет (D131).
  */
 public class RocketEntity extends Entity {
-    public static final int FUEL_FACTOR = 200, CAPACITY_T1 = 1000 * FUEL_FACTOR, CAPACITY_T2 = 1500 * FUEL_FACTOR, COUNTDOWN = 400, ARRIVAL_ALTITUDE = 1200, LANDING_ALTITUDE = 260;
+    public static final int FUEL_FACTOR = 200, CAPACITY_T1 = 1000 * FUEL_FACTOR, CAPACITY_T2 = 1500 * FUEL_FACTOR, CAPACITY_T3 = 2000 * FUEL_FACTOR, COUNTDOWN = 400, ARRIVAL_ALTITUDE = 1200, LANDING_ALTITUDE = 260;
     public static final int IDLE = 0, IGNITION = 1, FLYING = 2, LANDING = 3;
     private static final double MAX_SPEED = 2.0, ACCELERATION = 0.02, LANDING_SPEED = -0.8;
     /** Куда летит ракета 1-го уровня. */
@@ -46,7 +47,7 @@ public class RocketEntity extends Entity {
     private static final EntityDataAccessor<Integer> FUEL = SynchedEntityData.defineId(RocketEntity.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Integer> TIER = SynchedEntityData.defineId(RocketEntity.class, EntityDataSerializers.INT);
     /** Цель 2-го уровня с Земли. */
-    public static final int TARGET_MARS = 0, TARGET_MOON = 1;
+    public static final int TARGET_MARS = 0, TARGET_MOON = 1, TARGET_ASTEROIDS = 2;
 
     private int timer, cargoSlots, target = TARGET_MARS;
     private SimpleContainer cargo = new SimpleContainer(0);
@@ -96,7 +97,7 @@ public class RocketEntity extends Entity {
 
     /** GC: бак 1-го уровня 1000, 2-го 1500 единиц, умноженных на rocketFuelFactor. */
     public int capacity() {
-        return tier() >= 2 ? CAPACITY_T2 : CAPACITY_T1;
+        return tier() >= 3 ? CAPACITY_T3 : tier() == 2 ? CAPACITY_T2 : CAPACITY_T1;
     }
 
     public int target() {
@@ -117,7 +118,7 @@ public class RocketEntity extends Entity {
 
     /** GC getFuelUsageMultiplier: Земля 1, Луна 0.7, Марс 0.9. */
     public static double fuelMultiplier(ResourceKey<Level> dim) {
-        return dim == SpaceContent.MOON ? 0.7 : dim == SpaceContent.MARS ? 0.9 : 1.0;
+        return dim == SpaceContent.MOON ? 0.7 : dim == SpaceContent.MARS || dim == SpaceContent.ASTEROIDS ? 0.9 : 1.0;
     }
 
     public static double fuelMultiplierMoon() {
@@ -134,8 +135,8 @@ public class RocketEntity extends Entity {
     public ResourceKey<Level> destination() {
         ResourceKey<Level> here = level().dimension();
         if (tier() < 2) return ROUTES_T1.get(here);
-        if (here == Level.OVERWORLD) return target == TARGET_MOON ? SpaceContent.MOON : SpaceContent.MARS;
-        return here == SpaceContent.MOON || here == SpaceContent.MARS ? Level.OVERWORLD : null;
+        if (here == Level.OVERWORLD) return target == TARGET_MOON ? SpaceContent.MOON : target == TARGET_ASTEROIDS && tier() >= 3 ? SpaceContent.ASTEROIDS : SpaceContent.MARS;
+        return here == SpaceContent.MOON || here == SpaceContent.MARS || here == SpaceContent.ASTEROIDS ? Level.OVERWORLD : null;
     }
 
     @Override
@@ -211,8 +212,22 @@ public class RocketEntity extends Entity {
         setState(LANDING);
         teleporting = true;
         Vec3 pos = new Vec3(getX(), LANDING_ALTITUDE, getZ());
+        if (to == SpaceContent.ASTEROIDS) landingRock(target, BlockPos.containing(getX(), 0, getZ()));
         teleport(new TeleportTransition(target, pos, new Vec3(0, LANDING_SPEED, 0), getYRot(), getXRot(), TeleportTransition.DO_NOTHING));
         teleporting = false;
+    }
+
+    /** У астероидов нет земли: если под местом посадки пусто, ракета садится на насыпанную площадку из породы 7 × 7 (у GC — стартовый астероид). */
+    public static void landingRock(ServerLevel level, BlockPos column) {
+        BlockPos top = level.getHeightmapPos(Heightmap.Types.MOTION_BLOCKING, column);
+        if (top.getY() > level.getMinY() + 1) return;
+        BlockState rock = SpaceContent.ASTEROID_ROCK.get().defaultBlockState();
+        for (int dx = -3; dx <= 3; dx++) for (int dz = -3; dz <= 3; dz++) {
+            for (int dy = -2; dy <= 0; dy++) {
+                if (dy < 0 && Math.abs(dx) + Math.abs(dz) > 3 - dy) continue;
+                level.setBlock(new BlockPos(column.getX() + dx, 64 + dy, column.getZ() + dz), rock, 3);
+            }
+        }
     }
 
     private void tickLanding() {
@@ -260,7 +275,7 @@ public class RocketEntity extends Entity {
     @Override
     public boolean hurtServer(ServerLevel level, DamageSource source, float amount) {
         if (state() != IDLE || !(source.getEntity() instanceof Player) || !getPassengers().isEmpty()) return false;
-        ItemStack stack = new ItemStack(tier() >= 2 ? SpaceContent.ROCKET_T2.get() : SpaceContent.ROCKET_T1.get());
+        ItemStack stack = new ItemStack(SpaceContent.rocketItem(tier()));
         stack.set(SpaceContent.ROCKET_DATA.get(), new RocketItem.Stored(cargoSlots, fuel()));
         spawnAtLocation(level, stack);
         Containers.dropContents(level, BlockPos.containing(position()), cargo);

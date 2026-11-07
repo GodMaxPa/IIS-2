@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PUP",
+    "PRP",
+    "EEE"
+  ],
+  "key": {
+    "P": "iis:heavy_plating_t3",
+    "U": "iis:pipe_small_high_pressure",
+    "R": "iis:fluid_regulator_iv",
+    "E": "iis:rocket_engine_t1"
+  },
+  "result": {
+    "id": "iis:heavy_rocket_engine"
+  }
+}

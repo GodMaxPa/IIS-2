@@ -538,6 +538,15 @@ public final class EquipShots {
             });
         });
         add(100, mc -> shot(mc, "m_mars"));
+        // D134: астероиды — глыбы в пустоте
+        add(2, mc -> server(mc, p -> {
+            ServerLevel rocks = p.level().getServer().getLevel(ru.iis.space.SpaceContent.ASTEROIDS);
+            if (rocks == null) return;
+            p.getAbilities().flying = true;
+            p.onUpdateAbilities();
+            p.teleportTo(rocks, 0.5, 100, 0.5, Set.of(), 45, 10, true);
+        }));
+        add(140, mc -> shot(mc, "m_asteroids"));
         add(2, Minecraft::stop);
     }
 

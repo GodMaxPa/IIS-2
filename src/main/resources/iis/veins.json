@@ -173,6 +173,23 @@
     ]
   },
   {
+    "name": "custom.04",
+    "minY": -32,
+    "maxY": 256,
+    "legacyMinY": 20,
+    "legacyMaxY": 200,
+    "weight": 30,
+    "density": 8,
+    "size": 24,
+    "primary": "iis:lutetium",
+    "secondary": "iis:naquadah",
+    "between": "iis:gallium",
+    "sporadic": "iis:naquadah_enriched",
+    "dimensions": [
+      "iis:asteroids"
+    ]
+  },
+  {
     "name": "diamond",
     "minY": -56,
     "maxY": -32,
@@ -352,6 +369,23 @@
       "iis:mars",
       "iis:moon",
       "overworld"
+    ]
+  },
+  {
+    "name": "naquadah",
+    "minY": -48,
+    "maxY": 32,
+    "legacyMinY": 10,
+    "legacyMaxY": 60,
+    "weight": 10,
+    "density": 5,
+    "size": 32,
+    "primary": "iis:naquadah",
+    "secondary": "iis:naquadah",
+    "between": "iis:naquadah",
+    "sporadic": "iis:naquadah_enriched",
+    "dimensions": [
+      "iis:asteroids"
     ]
   },
   {

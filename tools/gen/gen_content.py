@@ -126,7 +126,7 @@ def handle_material(name):
 # ----------------------------------------------------------------------------------------------------------------
 # Veins (owner decision D11: y * 1.6 - 64). Moon: D115; Mars: D131; asteroids wait for the next stage of the space slice (D17).
 # ----------------------------------------------------------------------------------------------------------------
-DIM_MAP = {'Overworld': 'overworld', 'Nether': 'nether', 'TheEnd': 'end', 'Moon': 'iis:moon', 'Mars': 'iis:mars'}
+DIM_MAP = {'Overworld': 'overworld', 'Nether': 'nether', 'TheEnd': 'end', 'Moon': 'iis:moon', 'Mars': 'iis:mars', 'Asteroid': 'iis:asteroids'}
 LAYERS = ('primary', 'secondary', 'between', 'sporadic')
 veins, ore_dims = [], {}
 for v in veins_src:
@@ -476,10 +476,10 @@ for n in sorted(names):
         rgba = [int(x) for x in str(pr['MatRGBA']).split(',') if x][:4]
     iset = str(m.get('iconSet', 'SET_DULL')).replace('SET_', '')
     dims = ore_dims.get(n, set())
-    hosts = (['stone', 'deepslate'] if 'overworld' in dims or 'iis:moon' in dims or 'iis:mars' in dims else []) + (['netherrack'] if 'nether' in dims else []) \
+    hosts = (['stone', 'deepslate'] if 'overworld' in dims or 'iis:moon' in dims or 'iis:mars' in dims or 'iis:asteroids' in dims else []) + (['netherrack'] if 'nether' in dims else []) \
         + (['end_stone'] if 'end' in dims else [])
     sdims = small_dims.get(n, set())
-    small_hosts = (['stone', 'deepslate'] if 'overworld' in sdims or 'iis:moon' in sdims or 'iis:mars' in sdims else []) + (['netherrack'] if 'nether' in sdims else []) \
+    small_hosts = (['stone', 'deepslate'] if 'overworld' in sdims or 'iis:moon' in sdims or 'iis:mars' in sdims or 'iis:asteroids' in sdims else []) + (['netherrack'] if 'nether' in sdims else []) \
         + (['end_stone'] if 'end' in sdims else [])
     formula = ru_meta.get(f"01.{2000 + m['id']}", {}).get('tooltip')
     ds = prop(n, 'MaterialDirectSmeltInto', n)

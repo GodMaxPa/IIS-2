@@ -1,17 +1,11 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1727; hidden until their items are ported: 213; chapters: 36, one of them ours (D129, 49 quests).
+Quests in IIS 1: 1943; written: 1737; hidden until their items are ported: 203; chapters: 36, one of them ours (D129, 49 quests).
 
 ## Most needed unported items (task count)
 
 - 2 × `gregtech:gt.blockmachines:681` Органический репликатор (LV)
 - 2 × `ProjRed|Fabrication:projectred.fabrication.icblueprint:0` 
-- 1 × `GalacticraftMars:item.itemTier3Rocket:3` 
-- 1 × `GalacticraftMars:item.itemBasicAsteroids:1` 
-- 1 × `GalacticraftMars:item.itemBasicAsteroids:2` 
-- 1 × `GalacticraftMars:item.heavyNoseCone:0` 
-- 1 × `GalacticraftMars:item.itemBasicAsteroids:0` 
-- 1 × `gregtech:gt.metaitem.01:32464` Сверхпрочный слиток T3
 - 1 × `extracells:ecbaseblock:0` 
 - 1 × `extracells:part.base:12` 
 - 1 × `gregtech:gt.metaitem.02:8500` 
@@ -29,7 +23,6 @@ Quests in IIS 1: 1943; written: 1727; hidden until their items are ported: 213; 
 - 1 × `EnderIO:itemItemConduit:0` 
 - 1 × `EnderIO:itemBrokenSpawner:0` 
 - 1 × `GalacticraftCore:item.schematic:1` 
-- 1 × `GalacticraftCore:item.engine:1` 
 - 1 × `IC2:itemCellEmpty:5` 
 - 1 × `IC2:blockCrop:0` 
 - 1 × `IC2:itemCropnalyzer:26` 
@@ -39,10 +32,6 @@ Quests in IIS 1: 1943; written: 1727; hidden until their items are ported: 213; 
 - 1 × `Forestry:ffarm:2` 
 - 1 × `Forestry:ffarm:4` 
 - 1 × `Forestry:ffarm:3` 
-- 1 × `GalacticraftCore:tile.oxygenCollector:0` 
-- 1 × `GalacticraftCore:tile.distributor:0` 
-- 1 × `GalacticraftCore:tile.cargo:0` 
-- 1 × `GalacticraftCore:tile.cargo:4` 
 - 1 × `IronChest:BlockIronChest:4` 
 - 1 × `IC2:itemGrinPowder:0` 
 - 1 × `IC2:itemWeedEx:0` 

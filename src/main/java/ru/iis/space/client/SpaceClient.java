@@ -32,6 +32,7 @@ public final class SpaceClient {
     public static final ModelLayerLocation ROCKET_LAYER = new ModelLayerLocation(Identifier.fromNamespaceAndPath(IIS.MODID, "rocket"), "main");
     private static final Identifier ROCKET_TEXTURE = Identifier.fromNamespaceAndPath(IIS.MODID, "textures/entity/rocket_t1.png");
     private static final Identifier ROCKET_T2_TEXTURE = Identifier.fromNamespaceAndPath(IIS.MODID, "textures/entity/rocket_t2.png");
+    private static final Identifier ROCKET_T3_TEXTURE = Identifier.fromNamespaceAndPath(IIS.MODID, "textures/entity/rocket_t3.png");
 
     public static final class RocketState extends EntityRenderState {
         int tier = 1;
@@ -74,7 +75,7 @@ public final class SpaceClient {
         public void submit(RocketState state, PoseStack pose, SubmitNodeCollector collector, CameraRenderState camera) {
             pose.pushPose();
             pose.scale(-1, -1, 1);
-            collector.submitModelPart(model, pose, RenderTypes.entitySolid(state.tier >= 2 ? ROCKET_T2_TEXTURE : ROCKET_TEXTURE), state.lightCoords, OverlayTexture.NO_OVERLAY, null);
+            collector.submitModelPart(model, pose, RenderTypes.entitySolid(state.tier >= 3 ? ROCKET_T3_TEXTURE : state.tier == 2 ? ROCKET_T2_TEXTURE : ROCKET_TEXTURE), state.lightCoords, OverlayTexture.NO_OVERLAY, null);
             pose.popPose();
             super.submit(state, pose, collector, camera);
         }
@@ -120,7 +121,7 @@ public final class SpaceClient {
         private net.minecraft.client.gui.components.Button targetButton;
 
         private Component targetLabel() {
-            return Component.translatable(menu.target() == RocketEntity.TARGET_MOON ? "gui.iis.rocket.target.moon" : "gui.iis.rocket.target.mars");
+            return Component.translatable(menu.target() == RocketEntity.TARGET_MOON ? "gui.iis.rocket.target.moon" : menu.target() == RocketEntity.TARGET_ASTEROIDS ? "gui.iis.rocket.target.asteroids" : "gui.iis.rocket.target.mars");
         }
 
         @Override

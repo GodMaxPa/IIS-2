@@ -59,7 +59,8 @@ public class RocketMenu extends AbstractContainerMenu {
     @Override
     public boolean clickMenuButton(Player player, int id) {
         if (tier < 2) return false;
-        target.set(target.get() == RocketEntity.TARGET_MARS ? RocketEntity.TARGET_MOON : RocketEntity.TARGET_MARS);
+        // D134: у 3-го уровня третья цель — астероиды
+        target.set((target.get() + 1) % (tier >= 3 ? 3 : 2));
         return true;
     }
 

@@ -6,6 +6,7 @@
     "amount": 1,
     "material": "iis:amber",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -18,6 +19,7 @@
     "amount": 1,
     "material": "iis:amethyst",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -43,6 +45,7 @@
     "amount": 1,
     "material": "iis:blue_topaz",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -79,6 +82,7 @@
     "amount": 2,
     "material": "iis:diamond",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "iis:moon",
       "nether",
@@ -92,6 +96,7 @@
     "amount": 1,
     "material": "iis:emerald",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -104,6 +109,7 @@
     "amount": 1,
     "material": "iis:fools_ruby",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -116,6 +122,7 @@
     "amount": 1,
     "material": "iis:garnet_red",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -128,6 +135,7 @@
     "amount": 1,
     "material": "iis:garnet_yellow",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -141,6 +149,7 @@
     "material": "iis:gold",
     "dimensions": [
       "end",
+      "iis:asteroids",
       "iis:mars",
       "iis:moon",
       "nether",
@@ -154,6 +163,7 @@
     "amount": 1,
     "material": "iis:green_sapphire",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -167,6 +177,7 @@
     "material": "iis:iridium",
     "dimensions": [
       "end",
+      "iis:asteroids",
       "iis:mars"
     ]
   },
@@ -191,6 +202,7 @@
     "amount": 1,
     "material": "iis:jasper",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -203,6 +215,7 @@
     "amount": 4,
     "material": "iis:lapis",
     "dimensions": [
+      "iis:asteroids",
       "iis:moon",
       "overworld"
     ]
@@ -215,6 +228,7 @@
     "material": "iis:lead",
     "dimensions": [
       "end",
+      "iis:asteroids",
       "iis:mars",
       "iis:moon",
       "nether",
@@ -239,6 +253,7 @@
     "material": "iis:nickel",
     "dimensions": [
       "end",
+      "iis:asteroids",
       "iis:mars",
       "iis:moon",
       "nether",
@@ -252,6 +267,7 @@
     "amount": 1,
     "material": "iis:olivine",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -264,6 +280,7 @@
     "amount": 1,
     "material": "iis:opal",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -277,6 +294,7 @@
     "material": "iis:platinum",
     "dimensions": [
       "end",
+      "iis:asteroids",
       "iis:mars"
     ]
   },
@@ -287,6 +305,7 @@
     "amount": 8,
     "material": "iis:redstone",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "iis:moon",
       "nether",
@@ -300,6 +319,7 @@
     "amount": 1,
     "material": "iis:ruby",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -322,6 +342,7 @@
     "amount": 1,
     "material": "iis:sapphire",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -335,6 +356,7 @@
     "material": "iis:silver",
     "dimensions": [
       "end",
+      "iis:asteroids",
       "iis:mars",
       "iis:moon",
       "nether",
@@ -368,6 +390,7 @@
     "amount": 1,
     "material": "iis:tanzanite",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
@@ -381,6 +404,7 @@
     "material": "iis:tin",
     "dimensions": [
       "end",
+      "iis:asteroids",
       "iis:mars",
       "iis:moon",
       "nether",
@@ -394,6 +418,7 @@
     "amount": 1,
     "material": "iis:topaz",
     "dimensions": [
+      "iis:asteroids",
       "iis:mars",
       "nether",
       "overworld"
