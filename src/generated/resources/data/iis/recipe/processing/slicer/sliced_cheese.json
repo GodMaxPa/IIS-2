@@ -1,0 +1,20 @@
+{
+  "type": "iis:slicer",
+  "inputs": [
+    {
+      "ingredient": "iis:cheese",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sliced_cheese",
+      "count": 4
+    }
+  ],
+  "duration": 64,
+  "eut": 4,
+  "keep": [
+    "iis:slicer_blade_flat"
+  ]
+}

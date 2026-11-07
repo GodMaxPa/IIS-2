@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "iis:block/auto/well_north",
+    "south": "iis:block/auto/well_south",
+    "east": "iis:block/auto/well_east",
+    "west": "iis:block/auto/well_west",
+    "up": "iis:block/auto/well_up",
+    "down": "iis:block/auto/well_down",
+    "particle": "iis:block/auto/well_east"
+  }
+}

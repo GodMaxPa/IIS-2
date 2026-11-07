@@ -2,11 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "Ps"
+    "P ",
+    " f"
   ],
   "key": {
-    "P": "minecraft:stone",
-    "s": "#iis:tools/saw"
+    "P": "minecraft:smooth_stone",
+    "f": "#iis:tools/file"
   },
   "result": {
     "id": "iis:small_gear_stone"

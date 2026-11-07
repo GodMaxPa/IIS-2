@@ -1,0 +1,18 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:sliced_bread",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sliced_breads",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 4,
+  "circuit": 2
+}

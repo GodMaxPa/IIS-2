@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:block/primitive_mine_digger"
+  }
+}

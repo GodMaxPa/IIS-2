@@ -1,0 +1,33 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:prospector_zpm",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:sensor_uv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:emitter_uv",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/americium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:prospector_uv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 122880
+}

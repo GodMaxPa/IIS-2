@@ -82,7 +82,7 @@ public final class AutoContent {
             .map(v -> block("miner_" + t(v), p -> new BasicDrillerBlock(false, v, p))).toList();
     public static final List<DeferredBlock<BasicDrillerBlock>> PUMPS = LV_IV.stream()
             .map(v -> block("pump_" + t(v), p -> new BasicDrillerBlock(true, v, p))).toList();
-    public static final List<DeferredBlock<AdjustableTransformerBlock>> ADJUSTABLE_TRANSFORMERS = List.of(VoltageTier.EV, VoltageTier.IV, VoltageTier.LUV, VoltageTier.ZPM, VoltageTier.UV).stream()
+    public static final List<DeferredBlock<AdjustableTransformerBlock>> ADJUSTABLE_TRANSFORMERS = List.of(VoltageTier.EV, VoltageTier.IV, VoltageTier.LUV, VoltageTier.ZPM, VoltageTier.UV, VoltageTier.MAX).stream()
             .map(v -> block("adjustable_transformer_" + t(v), p -> new AdjustableTransformerBlock(v, p))).toList();
 
     public static final List<DeferredBlock<MonsterRepellentBlock>> MONSTER_REPELLENTS = LV_ZPM.stream()
@@ -99,6 +99,16 @@ public final class AutoContent {
             () -> new BlockEntityType<>(BasicDrillerBlockEntity::new, java.util.stream.Stream.concat(MINERS.stream(), PUMPS.stream()).map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AdjustableTransformerBlockEntity>> ADJUSTABLE_TRANSFORMER_BE = BLOCK_ENTITIES.register("adjustable_transformer",
             () -> new BlockEntityType<>(AdjustableTransformerBlockEntity::new, ADJUSTABLE_TRANSFORMERS.stream().map(DeferredBlock::get).toArray(Block[]::new)));
+
+    // D133: колодец и машины на мускульной силе
+    public static final DeferredBlock<WellBlock> WELL = block("well", WellBlock::new);
+    public static final DeferredBlock<MuscleBlock> PRIMITIVE_MINE_DIGGER = block("primitive_mine_digger", p -> new MuscleBlock(true, p));
+    public static final DeferredBlock<MuscleBlock> PRIMITIVE_SMALL_ORE_MINER = block("primitive_small_ore_miner", p -> new MuscleBlock(false, p));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<WellBlockEntity>> WELL_BE = BLOCK_ENTITIES.register("well",
+            () -> new BlockEntityType<>(WellBlockEntity::new, WELL.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MuscleBlockEntity>> MUSCLE_BE = BLOCK_ENTITIES.register("muscle_machine",
+            () -> new BlockEntityType<>(MuscleBlockEntity::new, PRIMITIVE_MINE_DIGGER.get(), PRIMITIVE_SMALL_ORE_MINER.get()));
+    public static final DeferredHolder<MenuType<?>, MenuType<MuscleMenu>> MUSCLE_MENU = MENUS.register("muscle_machine", () -> IMenuTypeExtension.create(MuscleMenu::client));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MonsterRepellentBlockEntity>> MONSTER_REPELLENT_BE = BLOCK_ENTITIES.register("monster_repellent",
             () -> new BlockEntityType<>(MonsterRepellentBlockEntity::new, MONSTER_REPELLENTS.stream().map(DeferredBlock::get).toArray(Block[]::new)));

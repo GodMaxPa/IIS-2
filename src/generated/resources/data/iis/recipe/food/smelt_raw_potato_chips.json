@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "ingredient": "iis:raw_potato_chips",
+  "result": {
+    "id": "iis:potato_chips"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "kX"
+  ],
+  "key": {
+    "X": "minecraft:potato",
+    "k": "#iis:tools/knife"
+  },
+  "result": {
+    "id": "iis:raw_potato_chips"
+  }
+}

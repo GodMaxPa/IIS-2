@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " Fh",
+    "FFF",
+    "FF "
+  ],
+  "key": {
+    "F": "minecraft:flint",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:primitive_drill"
+  }
+}

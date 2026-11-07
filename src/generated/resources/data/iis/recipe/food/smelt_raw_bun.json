@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "ingredient": "iis:raw_bun",
+  "result": {
+    "id": "iis:baked_bun"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

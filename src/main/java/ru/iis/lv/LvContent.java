@@ -514,6 +514,32 @@ public final class LvContent {
     public static final DeferredItem<Item> SMALL_GEAR_WOOD = item("small_gear_wood");
     public static final DeferredItem<Item> SMALL_GEAR_STONE = item("small_gear_stone");
     public static final DeferredItem<Item> ARROW_HEAD_FLINT = item("arrow_head_flint");
+    // D133: машины GT из книги квестов
+    public static final DeferredItem<Item> GEAR_STONE = item("gear_stone");
+    public static final DeferredItem<Item> GEAR_WOOD = item("gear_wood");
+    /** GT Flint_Drill_Head: прочность кремня 64 × 100, шахтокопатель снимает 12 за слой, добытчик 25 за руду. */
+    public static final DeferredItem<Item> PRIMITIVE_DRILL = ITEMS.registerSimpleItem("primitive_drill", p -> p.durability(6400));
+    public static final DeferredItem<Item> SLICER_BLADE_FLAT = item("slicer_blade_flat");
+    public static final DeferredItem<Item> SLICER_BLADE_STRIPES = item("slicer_blade_stripes");
+    public static final DeferredItem<ru.iis.lv.item.ProspectorScannerItem> PROSPECTOR_LUV = ITEMS.registerItem("prospector_luv", p -> new ru.iis.lv.item.ProspectorScannerItem(2, 10_000_000L, 32768, 6, p.stacksTo(1)));
+    public static final DeferredItem<ru.iis.lv.item.ProspectorScannerItem> PROSPECTOR_ZPM = ITEMS.registerItem("prospector_zpm", p -> new ru.iis.lv.item.ProspectorScannerItem(3, 40_000_000L, 131072, 7, p.stacksTo(1)));
+    public static final DeferredItem<ru.iis.lv.item.ProspectorScannerItem> PROSPECTOR_UV = ITEMS.registerItem("prospector_uv", p -> new ru.iis.lv.item.ProspectorScannerItem(4, 160_000_000L, 524288, 8, p.stacksTo(1)));
+    /** Еда GT (GT_MetaGenerated_Item_02, GT_FoodStat: сытость и насыщение). */
+    public static final java.util.Map<String, DeferredItem<Item>> FOODS = new java.util.LinkedHashMap<>();
+    static {
+        Object[][] foods = {{"dough", 1, 0.1F}, {"dough_chocolate", 1, 0.1F}, {"raw_cookie", 1, 0.1F}, {"raw_bun", 1, 0.1F}, {"raw_bread", 1, 0.2F}, {"raw_baguette", 1, 0.3F},
+                {"baked_bun", 3, 0.5F}, {"baked_baguette", 8, 0.5F}, {"sliced_bun", 1, 0.3F}, {"sliced_bread", 2, 0.3F}, {"sliced_baguette", 4, 0.3F},
+                {"sliced_buns", 3, 0.5F}, {"sliced_breads", 5, 0.6F}, {"sliced_baguettes", 8, 0.5F}, {"cheese", 3, 0.6F}, {"sliced_cheese", 1, 0.1F},
+                {"raw_potato_chips", 1, 0.3F}, {"potato_chips", 7, 0.5F}, {"raw_fries", 1, 0.3F}, {"fries", 7, 0.5F}};
+        for (Object[] f : foods) {
+            String id = (String) f[0];
+            int n = (Integer) f[1];
+            float s = (Float) f[2];
+            DeferredItem<Item> i = ITEMS.registerSimpleItem(id, p -> p.food(new net.minecraft.world.food.FoodProperties.Builder().nutrition(n).saturationModifier(s).build()));
+            TAB_ORDER.add(i);
+            FOODS.put(id, i);
+        }
+    }
     public static final DeferredItem<Item> COVER_FLUID_FILTER = item("cover_fluid_filter");
     public static final DeferredItem<ru.iis.lv.item.MultimeterItem> MULTIMETER = ITEMS.registerItem("multimeter", ru.iis.lv.item.MultimeterItem::new, p -> p.stacksTo(1));
     public static final DeferredItem<TreetapItem> TREETAP = ITEMS.registerItem("treetap", TreetapItem::new, p -> p.durability(16));

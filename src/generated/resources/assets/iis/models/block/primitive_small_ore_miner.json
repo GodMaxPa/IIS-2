@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "iis:block/auto/primitive_small_ore_miner_north",
+    "south": "iis:block/auto/primitive_small_ore_miner_south",
+    "east": "iis:block/auto/primitive_small_ore_miner_east",
+    "west": "iis:block/auto/primitive_small_ore_miner_west",
+    "up": "iis:block/auto/primitive_small_ore_miner_up",
+    "down": "iis:block/auto/primitive_small_ore_miner_down",
+    "particle": "iis:block/auto/primitive_small_ore_miner_east"
+  }
+}

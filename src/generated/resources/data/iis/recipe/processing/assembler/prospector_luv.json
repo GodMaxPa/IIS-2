@@ -1,0 +1,33 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:portable_scanner",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:sensor_luv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:emitter_luv",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/master",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/osmiridium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:prospector_luv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 7680
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GBG",
+    "BPB",
+    "IBI"
+  ],
+  "key": {
+    "G": "iis:gear_stone",
+    "B": "#c:plates/bronze",
+    "P": "minecraft:piston",
+    "I": "minecraft:iron_bars"
+  },
+  "result": {
+    "id": "iis:primitive_small_ore_miner"
+  }
+}

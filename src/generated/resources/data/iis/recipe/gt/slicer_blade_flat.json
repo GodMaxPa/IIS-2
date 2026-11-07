@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "hXS",
+    " P ",
+    "fXd"
+  ],
+  "key": {
+    "P": "iis:shape_extruder_block",
+    "X": "#c:plates/stainless_steel",
+    "S": "#iis:screws/stainless_steel",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:slicer_blade_flat"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "iis:slicer",
+  "inputs": [
+    {
+      "ingredient": "iis:dough_chocolate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:raw_cookie",
+      "count": 4
+    }
+  ],
+  "duration": 128,
+  "eut": 4,
+  "keep": [
+    "iis:slicer_blade_flat"
+  ]
+}

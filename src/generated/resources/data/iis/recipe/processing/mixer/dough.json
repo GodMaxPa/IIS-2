@@ -1,0 +1,23 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/wheat",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dough",
+      "count": 2
+    }
+  ],
+  "duration": 32,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

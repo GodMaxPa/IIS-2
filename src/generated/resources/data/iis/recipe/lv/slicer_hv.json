@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCW",
+    "PMV",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_hv",
+    "P": "iis:electric_piston_hv",
+    "V": "iis:conveyor_module_hv",
+    "C": "#c:circuits/advanced",
+    "W": "#iis:cables/1x/gold"
+  },
+  "result": {
+    "id": "iis:slicer_hv"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "iis:block/auto/primitive_mine_digger_north",
+    "south": "iis:block/auto/primitive_mine_digger_south",
+    "east": "iis:block/auto/primitive_mine_digger_east",
+    "west": "iis:block/auto/primitive_mine_digger_west",
+    "up": "iis:block/auto/primitive_mine_digger_up",
+    "down": "iis:block/auto/primitive_mine_digger_down",
+    "particle": "iis:block/auto/primitive_mine_digger_east"
+  }
+}

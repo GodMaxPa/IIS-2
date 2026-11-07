@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "iis:raw_fries",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:fries",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hotfryingoil",
+      "amount": 10
+    }
+  ]
+}

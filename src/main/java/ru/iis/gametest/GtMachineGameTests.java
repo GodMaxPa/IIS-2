@@ -1,0 +1,119 @@
+package ru.iis.gametest;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.gametest.framework.GameTestHelper;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ChunkPos;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluid;
+import ru.iis.auto.AutoContent;
+import ru.iis.auto.MuscleBlockEntity;
+import ru.iis.auto.WellBlockEntity;
+import ru.iis.lv.LvContent;
+import ru.iis.lv.item.ProspectorScannerItem;
+import ru.iis.machine.block.MachineBlock;
+import ru.iis.world.UndergroundFluids;
+import ru.iis.world.ore.OreBlocks;
+import ru.iis.world.ore.OreHost;
+
+/** Машины GT из книги квестов ИИС 1 (D133): колодец, шахтокопатель, добытчик малых руд, сканер старателя, ломтерезка, трансформатор MAX. */
+final class GtMachineGameTests {
+    private GtMachineGameTests() {}
+
+    private static void stone(GameTestHelper h, int y0, int y1) {
+        for (int x = 0; x <= 8; x++) for (int z = 0; z <= 8; z++) for (int y = y0; y <= y1; y++) h.setBlock(new BlockPos(x, y, z), Blocks.STONE);
+    }
+
+    /** Колодец берёт жидкость месторождения чанка, если это вода или нефть; иначе остаётся пустым. */
+    static void wellFills(GameTestHelper h) {
+        BlockPos at = new BlockPos(4, 2, 4);
+        ChunkPos cp = ChunkPos.containing(h.absolutePos(at));
+        Fluid f = UndergroundFluids.prime(h.getLevel(), cp, 5_000_000);
+        h.setBlock(at, AutoContent.WELL.get());
+        boolean allowed = f != null && WellBlockEntity.allowed(f);
+        h.runAtTickTime(200, () -> {
+            var be = (WellBlockEntity) h.getBlockEntity(at, WellBlockEntity.class);
+            var tag = be.saveWithoutMetadata(h.getLevel().registryAccess());
+            int amount = tag.getIntOr("Amount", 0);
+            h.assertTrue(allowed ? amount > 0 : amount == 0, "колодец: жидкость " + f + ", набрано " + amount);
+            h.succeed();
+        });
+    }
+
+    /** Шахтокопатель на силе 64 копает ствол под собой и перед собой, ставит лестницу, булыжник уходит в выход. */
+    static void diggerDigs(GameTestHelper h) {
+        stone(h, 1, 6);
+        BlockPos m = new BlockPos(4, 7, 4);
+        h.setBlock(m, AutoContent.PRIMITIVE_MINE_DIGGER.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
+        var be = (MuscleBlockEntity) h.getBlockEntity(m, MuscleBlockEntity.class);
+        be.setItem(0, new ItemStack(LvContent.PRIMITIVE_DRILL.get()));
+        be.setItem(1, new ItemStack(Items.LADDER, 16));
+        be.setItem(2, new ItemStack(Items.COBBLESTONE, 16));
+        h.runAtTickTime(1, () -> {
+            for (int i = 0; i < 8; i++) be.work(h.makeMockPlayer(net.minecraft.world.level.GameType.CREATIVE));
+        });
+        h.runAtTickTime(120, () -> {
+            BlockPos below = m.below(), front = m.north().below();
+            h.assertTrue(h.getBlockState(below).isAir(), "под машиной не выкопано: " + h.getBlockState(below));
+            h.assertTrue(h.getBlockState(front).is(Blocks.LADDER), "нет лестницы перед машиной: " + h.getBlockState(front));
+            int cobble = 0;
+            for (int i = MuscleBlockEntity.INPUTS; i < MuscleBlockEntity.SLOTS; i++) if (be.getItem(i).is(Items.COBBLESTONE)) cobble += be.getItem(i).getCount();
+            h.assertTrue(cobble > 0, "камень не попал в выход");
+            h.assertTrue(be.getItem(0).getDamageValue() > 0, "бур не изнашивается");
+            h.succeed();
+        });
+    }
+
+    /** Добытчик малых руд находит малую руду в квадрате 7 × 7 под собой и заделывает дыру булыжником. */
+    static void minerFindsSmallOre(GameTestHelper h) {
+        stone(h, 1, 6);
+        String mat = OreBlocks.allSmall().keySet().iterator().next();
+        BlockState small = OreBlocks.getSmall(mat, OreHost.STONE);
+        BlockPos ore = new BlockPos(6, 4, 2);
+        h.setBlock(ore, small);
+        BlockPos m = new BlockPos(4, 7, 4);
+        h.setBlock(m, AutoContent.PRIMITIVE_SMALL_ORE_MINER.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
+        var be = (MuscleBlockEntity) h.getBlockEntity(m, MuscleBlockEntity.class);
+        be.setItem(0, new ItemStack(LvContent.PRIMITIVE_DRILL.get()));
+        be.setItem(1, new ItemStack(Items.COBBLESTONE, 8));
+        h.runAtTickTime(1, () -> {
+            for (int i = 0; i < 8; i++) be.work(h.makeMockPlayer(net.minecraft.world.level.GameType.CREATIVE));
+        });
+        h.runAtTickTime(300, () -> {
+            h.assertTrue(h.getBlockState(ore).is(Blocks.COBBLESTONE), "малая руда не добыта: " + h.getBlockState(ore));
+            boolean got = false;
+            for (int i = MuscleBlockEntity.INPUTS; i < MuscleBlockEntity.SLOTS; i++) got |= !be.getItem(i).isEmpty();
+            h.assertTrue(got, "выход пуст");
+            h.succeed();
+        });
+    }
+
+    /** Сканер старателя видит руду в своём чанке. */
+    static void prospectorSeesOre(GameTestHelper h) {
+        String mat = OreBlocks.all().keySet().iterator().next();
+        BlockPos ore = new BlockPos(2, 2, 2);
+        h.setBlock(ore, OreBlocks.get(mat, OreHost.STONE));
+        var lines = ProspectorScannerItem.scanOres(h.getLevel(), h.absolutePos(ore), 0);
+        h.assertTrue(lines.size() >= 2 && !lines.get(1).getString().equals(net.minecraft.network.chat.Component.translatable("item.iis.prospector.nothing").getString()), "сканер: " + lines);
+        h.succeed();
+    }
+
+    /** Ломтерезка и трансформатор MAX есть, рецепты разобрались. */
+    static void slicerAndMaxTransformer(GameTestHelper h) {
+        for (String id : new String[]{"slicer_lv", "slicer_uv", "adjustable_transformer_max", "well", "primitive_mine_digger", "primitive_small_ore_miner"}) {
+            h.assertTrue(BuiltInRegistries.BLOCK.containsKey(Identifier.fromNamespaceAndPath("iis", id)), "нет блока " + id);
+        }
+        var recipes = h.getLevel().getServer().getRecipeManager();
+        for (String id : new String[]{"processing/slicer/sliced_bread", "processing/slicer/raw_fries", "processing/assembler/adjustable_transformer_max", "processing/assembler/prospector_uv",
+                "auto/well", "auto/primitive_mine_digger", "auto/primitive_small_ore_miner", "gt/primitive_drill", "gt/gear_stone", "gt/slicer_blade_flat", "food/dough", "processing/fluid_solidifier/cheese"}) {
+            var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.RECIPE, Identifier.fromNamespaceAndPath("iis", id));
+            h.assertTrue(recipes.byKey(key).isPresent(), "нет рецепта " + id);
+        }
+        h.succeed();
+    }
+}

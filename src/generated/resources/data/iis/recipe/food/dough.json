@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:water_bucket",
+    "#c:dusts/wheat"
+  ],
+  "result": {
+    "id": "iis:dough"
+  }
+}

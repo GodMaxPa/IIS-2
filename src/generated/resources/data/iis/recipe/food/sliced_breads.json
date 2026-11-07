@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:sliced_bread",
+    "iis:sliced_bread"
+  ],
+  "result": {
+    "id": "iis:sliced_breads"
+  }
+}

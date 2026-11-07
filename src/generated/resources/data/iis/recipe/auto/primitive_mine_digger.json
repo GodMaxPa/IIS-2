@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SPS",
+    "LHL",
+    "SPS"
+  ],
+  "key": {
+    "S": "iis:gear_stone",
+    "P": "minecraft:piston",
+    "H": "iis:hull_bronze",
+    "L": "minecraft:ladder"
+  },
+  "result": {
+    "id": "iis:primitive_mine_digger"
+  }
+}

@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1713; hidden until their items are ported: 227; chapters: 36, one of them ours (D129, 49 quests).
+Quests in IIS 1: 1943; written: 1727; hidden until their items are ported: 213; chapters: 36, one of them ours (D129, 49 quests).
 
 ## Most needed unported items (task count)
 
@@ -72,8 +72,6 @@ Quests in IIS 1: 1943; written: 1713; hidden until their items are ported: 227; 
 - 1 × `IC2:blockMachine2:2` 
 - 1 × `EnderIO:itemLiquidConduit:0` 
 - 1 × `Forestry:woodPulp:0` 
-- 1 × `gregtech:gt.blockmachines:12188` Настраиваемый трансформатор (MAX)
-- 1 × `gregtech:gt.blockmachines:12189` Колодец
 - 1 × `IC2:itemWeedingTrowel:0` 
 - 1 × `BiblioCraft:BiblioLabel:0` 
 - 1 × `BiblioCraft:BiblioFancySign:0` 
@@ -93,21 +91,13 @@ Quests in IIS 1: 1943; written: 1713; hidden until their items are ported: 227; 
 - 1 × `gregtech:gt.blockmachines:686` Органический репликатор (LuV)
 - 1 × `gregtech:gt.blockmachines:687` Органический репликатор (ZPM)
 - 1 × `gregtech:gt.blockmachines:688` Органический репликатор (UV)
-- 1 × `gregtech:gt.blockmachines:631` Ломтерезка (LV)
 - 1 × `gregtech:gt.blockmachines:1127` Абсорбер магической энергии новичка
-- 1 × `gregtech:gt.blockmachines:632` Ломтерезка (MV)
 - 1 × `gregtech:gt.blockmachines:1128` Абсорбер магической энергии любителя
-- 1 × `gregtech:gt.blockmachines:633` Ломтерезка (HV)
 - 1 × `gregtech:gt.blockmachines:1129` Абсорбер магической энергии мастера
-- 1 × `gregtech:gt.blockmachines:634` Ломтерезка (EV)
 - 1 × `gregtech:gt.blockmachines:1123` Конвертер магической энергии новичка
 - 1 × `gregtech:gt.blockmachines:1124` Конвертер магической энергии любителя
 - 1 × `gregtech:gt.blockmachines:1125` Конвертер магической энергии мастера
-- 1 × `gregtech:gt.blockmachines:635` Ломтерезка (IV)
 - 1 × `gregtech:gt.blockmachines:1130` Абсорбер магической энергии профессионала
-- 1 × `gregtech:gt.blockmachines:636` Ломтерезка (LuV)
-- 1 × `gregtech:gt.blockmachines:637` Ломтерезка (ZPM)
-- 1 × `gregtech:gt.blockmachines:638` Ломтерезка (UV)
 - 1 × `JABBA:upgradeCore:0` 
 - 1 × `Railcraft:cube:4` 
 - 1 × `JABBA:upgradeCore:4` 
@@ -127,9 +117,6 @@ Quests in IIS 1: 1943; written: 1713; hidden until their items are ported: 227; 
 - 1 × `JABBA:upgradeStructural:9` 
 - 1 × `JABBA:upgradeStructural:10` 
 - 1 × `ic2cropstools:itemLens:0` 
-- 1 × `gregtech:gt.metaitem.01:32375` Сканер старателя (LuV)
-- 1 × `gregtech:gt.metaitem.01:32376` Сканер старателя (ZPM)
-- 1 × `gregtech:gt.metaitem.01:32377` Сканер старателя (UV)
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:55` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:54` 
 - 1 × `appliedenergistics2:item.ItemMultiPart:500` 
@@ -149,9 +136,6 @@ Quests in IIS 1: 1943; written: 1713; hidden until their items are ported: 227; 
 - 1 × `IC2NuclearControl:ItemUpgrade:0` 
 - 1 × `IC2NuclearControl:blockNuclearControlMain:10` 
 - 1 × `IC2NuclearControl:blockNuclearControlMain:5` 
-- 1 × `gregtech:gt.blockmachines:1216` 
-- 1 × `gregtech:gt.blockmachines:1215` 
-- 1 × `gregtech:gt.metatool.01:180` 
 
 ## Unported fluids
 

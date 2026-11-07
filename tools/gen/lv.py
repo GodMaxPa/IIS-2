@@ -116,6 +116,8 @@ MACHINES = [
     ('filter',        'filter',        'FILTER',           'Filter',       'filter',        1, 6, 16000, 'Fluid Filter'),
     # D109: :712 microwave (smelting, 32 t, 4 EU/t; metal explodes)
     ('microwave',     'microwave',     'MICROWAVE',        'E_Furnace',    None,            1, 1, 0,     'Microwave'),
+    # D133: :1066-1073 slicer (food and a blade that stays)
+    ('slicer',        'slicer',        'SLICER',           'Slicer',       'slicer',        2, 1, 0,     'Slicing Machine'),
     # D119: :721, 730, 903, 885, 949, 1093, 867 (recycler in code, disassembler: eggs only)
     ('fermenter',     'fermenter',     'FERMENTER',        'Fermenter',    'fermenter',     1, 1, 1000,  'Fermenter'),
     ('printer',       'printer',       'PRINTER',          'Printer',      'printer',       1, 1, 16000, 'Printer'),
@@ -158,6 +160,7 @@ NEW_CRAFT = {
     'plasma_arc_furnace': (['WGW', 'CMC', 'TPT'], {'M': 'HULL', 'P': 'PLATE', 'C': 'BETTER_CIRCUIT', 'W': 'WIRE4', 'T': 'PUMP', 'G': '#c:dusts/graphite'}),
     'disassembler': (['ACA', 'WMW', 'ACA'], {'M': 'HULL', 'A': 'ROBOT_ARM', 'C': 'CIRCUIT', 'W': 'WIRE'}),
     'microwave': (['LWC', 'LMR', 'LEC'], {'M': 'HULL', 'E': 'MOTOR', 'R': 'EMITTER', 'C': 'CIRCUIT', 'W': 'WIRE', 'L': '#c:plates/lead'}),   # :712 D109
+    'slicer': (['WCW', 'PMV', 'WCW'], {'M': 'HULL', 'P': 'PISTON', 'V': 'CONVEYOR', 'C': 'CIRCUIT', 'W': 'WIRE'}),   # :1066 D133
 }
 # MV basic machines (GT tier 2, "Advanced ..."): same columns. GT_Loader_MetaTileEntities Machine_MV_*: the same inputs,
 # outputs and tanks as LV except the mixer (16000 L, :1022); the compressor tank (LV 4000, MV 8000) stays 0 as at LV (D82)

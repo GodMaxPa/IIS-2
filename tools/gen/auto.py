@@ -238,7 +238,7 @@ def generate(g):
     shaped('lv/transformer_ulv', f'{NS}:transformer_ulv', 1, [' BB', 'CM ', ' BB'], {'M': f'{NS}:hull_ulv', 'C': tag_of_cable('Tin'), 'B': tag_of_cable('Lead')})
 
     shutil.copy(os.path.join(GT, 'gui', 'DigitalTransformer.png'), tex_out('gui/auto/digital_transformer.png'))
-    for i, t in enumerate(('ev', 'iv', 'luv', 'zpm', 'uv')):
+    for i, t in enumerate(('ev', 'iv', 'luv', 'zpm', 'uv', 'max')):
         bid = f'adjustable_transformer_{t}'
         base = first(os.path.join(BI, f'DIGITAL_TRANSFORMER_{ {"luv": "LuV"}.get(t, t.upper()) }.png'))
         norm = {'north': over(base, 'OVERLAY_ENERGY_IN_MULTI'), 'south': over(base, 'OVERLAY_ENERGY_OUT'), 'east': over(base, 'OVERLAY_ENERGY_OUT'), 'west': over(base, 'OVERLAY_ENERGY_OUT'),
@@ -261,6 +261,78 @@ def generate(g):
          [out(f'{NS}:adjustable_transformer_zpm')], 50, 1920)   # :2909-2912 (D112)
     mrec('assembler', 'adjustable_transformer_uv', [ing(f'{NS}:transformer_zpm'), ing(f'{NS}:adjustable_transformer_zpm'), ing('#c:circuits/superconductor', 2)],
          [out(f'{NS}:adjustable_transformer_uv')], 50, 1920)   # :2914-2917 (D121)
+    mrec('assembler', 'adjustable_transformer_max', [ing(f'{NS}:transformer_uv'), ing(f'{NS}:adjustable_transformer_uv'), ing('#c:circuits/infinite', 2)],
+         [out(f'{NS}:adjustable_transformer_max')], 50, 1920)   # :2919-2922 (D133)
+
+    # --- D133: well (GT_MetaTileEntity_Well, GT_CraftingRecipeLoader:491) and the muscle machines (GT_MetaTileEntity_PrimitiveMineDigger, _PrimitiveMiner)
+    WM = os.path.join(GT, 'blocks', 'basicmachines', 'well')
+    def well_face(part, active):
+        im = casing('ulv', 'SIDE' if part in ('FRONT', 'SIDE') else part)
+        return Image.alpha_composite(im, first(os.path.join(WM, f'OVERLAY_{part}{"_ACTIVE" if active else ""}.png')))
+    machine('well', {'north': well_face('FRONT', False), 'south': well_face('SIDE', False), 'east': well_face('SIDE', False), 'west': well_face('SIDE', False), 'up': well_face('TOP', False), 'down': well_face('BOTTOM', False)},
+            {'north': well_face('FRONT', True), 'south': well_face('SIDE', True), 'east': well_face('SIDE', True), 'west': well_face('SIDE', True), 'up': well_face('TOP', True), 'down': well_face('BOTTOM', True)})
+    name(f'block.{NS}.well', 'Well', ru('gt.blockmachines.basicmachine.well.name', 'Колодец'))
+    tooltip('well', [('Draws the fluid from under bedrock: water or oil, 1000 L at most', 'Достаёт жидкость из-под коренной породы: воду или нефть, не больше 1000 л'),
+                     ('Fill rate depends on the field in this chunk', 'Скорость зависит от месторождения в этом чанке'),
+                     ('Right click with a bucket or a capsule when it is full', 'Когда полон — ПКМ ведром или капсулой')])
+    shaped('auto/well', f'{NS}:well', 1, ['SPS', 'WQW', 'BVB'], {'S': f'{NS}:gear_wood', 'P': 'minecraft:stick', 'W': '#minecraft:planks',
+                                                                'Q': 'minecraft:string', 'B': '#c:cobblestones', 'V': 'minecraft:bucket'})
+    bricks = first(os.path.join(BI, 'MACHINE_BRONZEPLATEDBRICKS.png'))
+    for bid, ov, en, ruu, lines in (
+            ('primitive_mine_digger', 'OVERLAY_PRIMITIVE_MINE_DIGGER', 'Primitive Mine Digger', 'Примитивный шахтокопатель', [
+                ('Digs a shaft down with your muscle power: work it with the button in the window', 'Копает шахту вниз вашей силой: кнопка в окне'),
+                ('Needs a primitive drill and ladders; cobblestone shores up the walls, torches go in at the end', 'Нужны примитивный бур и лестницы; булыжник крепит стены, факелы ставятся в конце'),
+                ('Stops at an ore vein or bedrock and digs to the bottom of the vein', 'Останавливается у рудной жилы или коренной породы, жилу проходит до дна'),
+                ('Take out everything but cobblestone and it climbs back picking up the ladders', 'Оставьте во входах только булыжник — поднимется, собирая лестницы'),
+                ('Hard work: you will get hungry', 'Тяжёлая работа: вы проголодаетесь')]),
+            ('primitive_small_ore_miner', 'OVERLAY_PRIMITIVE_MINER', 'Primitive Small Ore Miner', 'Примитивный добытчик малых руд', [
+                ('Finds and digs small ores only, 7 x 7 under it, with your muscle power', 'Ищет и добывает только малые руды, 7 × 7 под собой, вашей силой'),
+                ('Needs a primitive drill and cobblestone or dirt to fill the holes', 'Нужны примитивный бур и булыжник или земля для заделки'),
+                ('Hard work: you will get hungry', 'Тяжёлая работа: вы проголодаетесь')])):
+        front = over(bricks, ov)
+        machine(bid, {'north': front, 'south': bricks, 'east': bricks, 'west': bricks, 'up': bricks, 'down': bricks},
+                {'north': over(bricks, ov + '_DRILL'), 'south': bricks, 'east': bricks, 'west': bricks, 'up': bricks, 'down': bricks})
+        name(f'block.{NS}.{bid}', en, ruu)
+        tooltip(bid, lines)
+    # GT_Loader_MetaTileEntities:1297, 1301
+    shaped('auto/primitive_mine_digger', f'{NS}:primitive_mine_digger', 1, ['SPS', 'LHL', 'SPS'], {'S': f'{NS}:gear_stone', 'P': 'minecraft:piston', 'H': f'{NS}:hull_bronze', 'L': 'minecraft:ladder'})
+    shaped('auto/primitive_small_ore_miner', f'{NS}:primitive_small_ore_miner', 1, ['GBG', 'BPB', 'IBI'], {'G': f'{NS}:gear_stone', 'B': '#c:plates/bronze', 'P': 'minecraft:piston', 'I': 'minecraft:iron_bars'})
+    # the window of the muscle machines is drawn: GT PrimitiveMiner.png is not among the sources
+    gui = Image.new('RGBA', (256, 256), (0, 0, 0, 0))
+    gp = gui.load()
+    def rect(x0, y0, x1, y1, c):
+        for yy in range(y0, y1):
+            for xx in range(x0, x1):
+                gp[xx, yy] = c
+    rect(0, 0, 176, 166, (198, 198, 198, 255))
+    rect(0, 0, 176, 1, (255, 255, 255, 255)); rect(0, 0, 1, 166, (255, 255, 255, 255))
+    rect(0, 165, 176, 166, (85, 85, 85, 255)); rect(175, 0, 176, 166, (85, 85, 85, 255))
+    def slot(x, y, w=18, h=18):
+        rect(x - 1, y - 1, x - 1 + w, y - 1 + h, (139, 139, 139, 255))
+        rect(x - 1, y - 1, x - 1 + w, y, (55, 55, 55, 255)); rect(x - 1, y - 1, x, y - 1 + h, (55, 55, 55, 255))
+        rect(x - 1, y - 2 + h, x - 1 + w, y - 1 + h, (255, 255, 255, 255)); rect(x - 2 + w, y - 1, x - 1 + w, y - 1 + h, (255, 255, 255, 255))
+    for i in range(4):
+        slot(8, 8 + i * 18)
+    for yy in range(4):
+        for xx in range(6):
+            slot(62 + xx * 18, 8 + yy * 18)
+    for yy in range(3):
+        for xx in range(9):
+            slot(8 + xx * 18, 84 + yy * 18)
+    for xx in range(9):
+        slot(8 + xx * 18, 142)
+    # the button (31,8) 26x22 raised; the strength (31,34) and work (31,44) bars sunk
+    rect(31, 8, 57, 30, (170, 170, 170, 255)); rect(31, 8, 57, 9, (255, 255, 255, 255)); rect(31, 8, 32, 30, (255, 255, 255, 255))
+    rect(31, 29, 57, 30, (85, 85, 85, 255)); rect(56, 8, 57, 30, (85, 85, 85, 255))
+    for yb in (34, 44):
+        slot(32, yb + 1, 24, 6)
+    gui.save(tex_out('gui/auto/muscle.png'))
+    for k, en, ruu in (('gui.iis.muscle.work', 'Work', 'Работать'), ('gui.iis.muscle.power', 'Strength %s / %s', 'Сила %s / %s'),
+                       ('gui.iis.muscle.depth', 'Depth %s', 'Глубина %s'), ('gui.iis.muscle.done', 'Done', 'Готово'),
+                       ('gui.iis.muscle.pickup', 'Climbing back', 'Поднимается'), ('gui.iis.muscle.tired', 'Too tired: the strength bar is full', 'Сила и так полна'),
+                       ('message.iis.well.empty', 'Nothing yet: %s L of %s', 'Пока пусто: %s л из %s'), ('message.iis.well.state', '%s: %s L of 1000', '%s: %s л из 1000'),
+                       ('message.iis.well.not_full', 'Wait until it is full', 'Подождите, пока наполнится')):
+        name(k, en, ruu)
     # GT_MachineRecipeLoader:71: the processing array is finally craftable
     shaped('multi/processing_array', f'{NS}:processing_array', 1, ['CTC', 'FMF', 'CBC'],
            {'M': f'{NS}:hull_ev', 'B': f'{NS}:electric_pump_ev', 'C': '#c:circuits/elite', 'F': f'{NS}:robot_arm_ev', 'T': f'{NS}:adjustable_transformer_ev'})

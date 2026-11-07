@@ -360,6 +360,15 @@
     "gui": "lv/e_furnace"
   },
   {
+    "id": "slicer_lv",
+    "type": "slicer",
+    "recipeMap": "slicer",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/slicer"
+  },
+  {
     "id": "fermenter_lv",
     "type": "fermenter",
     "recipeMap": "fermenter",
@@ -790,6 +799,15 @@
     "outputs": 1,
     "tank": 0,
     "gui": "lv/e_furnace"
+  },
+  {
+    "id": "slicer_mv",
+    "type": "slicer_mv",
+    "recipeMap": "slicer",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/slicer"
   },
   {
     "id": "fermenter_mv",
@@ -1233,6 +1251,15 @@
     "gui": "lv/e_furnace"
   },
   {
+    "id": "slicer_hv",
+    "type": "slicer_hv",
+    "recipeMap": "slicer",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/slicer"
+  },
+  {
     "id": "fermenter_hv",
     "type": "fermenter_hv",
     "recipeMap": "fermenter",
@@ -1672,6 +1699,15 @@
     "outputs": 1,
     "tank": 0,
     "gui": "lv/e_furnace"
+  },
+  {
+    "id": "slicer_ev",
+    "type": "slicer_ev",
+    "recipeMap": "slicer",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/slicer"
   },
   {
     "id": "fermenter_ev",
@@ -2115,6 +2151,15 @@
     "gui": "lv/e_furnace"
   },
   {
+    "id": "slicer_iv",
+    "type": "slicer_iv",
+    "recipeMap": "slicer",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/slicer"
+  },
+  {
     "id": "fermenter_iv",
     "type": "fermenter_iv",
     "recipeMap": "fermenter",
@@ -2554,6 +2599,15 @@
     "outputs": 1,
     "tank": 0,
     "gui": "lv/e_furnace"
+  },
+  {
+    "id": "slicer_luv",
+    "type": "slicer_luv",
+    "recipeMap": "slicer",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/slicer"
   },
   {
     "id": "fermenter_luv",
@@ -2997,6 +3051,15 @@
     "gui": "lv/e_furnace"
   },
   {
+    "id": "slicer_zpm",
+    "type": "slicer_zpm",
+    "recipeMap": "slicer",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/slicer"
+  },
+  {
     "id": "fermenter_zpm",
     "type": "fermenter_zpm",
     "recipeMap": "fermenter",
@@ -3436,6 +3499,15 @@
     "outputs": 1,
     "tank": 0,
     "gui": "lv/e_furnace"
+  },
+  {
+    "id": "slicer_uv",
+    "type": "slicer_uv",
+    "recipeMap": "slicer",
+    "inputs": 2,
+    "outputs": 1,
+    "tank": 0,
+    "gui": "lv/slicer"
   },
   {
     "id": "fermenter_uv",

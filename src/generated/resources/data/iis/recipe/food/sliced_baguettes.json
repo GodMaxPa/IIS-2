@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:sliced_baguette",
+    "iis:sliced_baguette"
+  ],
+  "result": {
+    "id": "iis:sliced_baguettes"
+  }
+}

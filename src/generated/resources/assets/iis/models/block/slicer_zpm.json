@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/slicer_zpm_side",
+    "north": "iis:block/lv/slicer_zpm_front",
+    "south": "iis:block/lv/slicer_zpm_back",
+    "east": "iis:block/lv/slicer_zpm_side",
+    "west": "iis:block/lv/slicer_zpm_side",
+    "up": "iis:block/lv/slicer_zpm_top",
+    "down": "iis:block/lv/slicer_zpm_bottom"
+  }
+}

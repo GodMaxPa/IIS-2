@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SPS",
+    "PfP",
+    "SPS"
+  ],
+  "key": {
+    "P": "minecraft:smooth_stone",
+    "S": "minecraft:stone_button",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:gear_stone"
+  }
+}

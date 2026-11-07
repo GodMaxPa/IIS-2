@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:dough",
+    "minecraft:cocoa_beans"
+  ],
+  "result": {
+    "id": "iis:dough_chocolate",
+    "count": 2
+  }
+}

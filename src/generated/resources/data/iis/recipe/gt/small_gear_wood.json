@@ -2,10 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "Ps"
+    "P ",
+    " s"
   ],
   "key": {
-    "P": "#c:plates/wood",
+    "P": "#minecraft:planks",
     "s": "#iis:tools/saw"
   },
   "result": {

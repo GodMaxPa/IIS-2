@@ -1,0 +1,20 @@
+{
+  "type": "iis:slicer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:bread",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sliced_bread",
+      "count": 2
+    }
+  ],
+  "duration": 128,
+  "eut": 4,
+  "keep": [
+    "iis:slicer_blade_flat"
+  ]
+}

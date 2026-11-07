@@ -3859,6 +3859,10 @@
     "May convert voltage between 8 and 524288 eu/t to both sides."
   ],
   "quest.1A00000000000412.title": "UV Adjustable Transformer",
+  "quest.1A00000000000413.quest_desc": [
+    "May convert voltage between 8 and 2147483647 eu/t to both sides."
+  ],
+  "quest.1A00000000000413.title": "MAX Adjustable Transformer",
   "quest.1A00000000000414.quest_desc": [
     "May be created from common titanium rod."
   ],
@@ -4195,6 +4199,10 @@
     "A part of well"
   ],
   "quest.1A00000000000472.title": "Wood Gear",
+  "quest.1A00000000000473.quest_desc": [
+    "It is a nice block that allows you to extract water. It require not much materials to craft. It may pump out fluids from under-bedrock. Yes, it's may be not only water, and you may find even an oil! Btw, there is a chance that the area where you place a well, will be empty. So, a nice choose will be if you find a water for a first, and only then place you base near."
+  ],
+  "quest.1A00000000000473.title": "Well",
   "quest.1A00000000000474.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5867,6 +5875,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000063B.title": "[sb] Basic Fluid Heater",
+  "quest.1A0000000000063C.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000063C.title": "[sb] Basic Slicing Machine",
   "quest.1A0000000000063D.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5899,6 +5911,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000645.title": "[sb] Advanced Fluid Heater",
+  "quest.1A00000000000646.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000646.title": "[sb] Advanced Slicing Machine",
   "quest.1A00000000000647.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5931,6 +5947,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000064F.title": "[sb] Advanced Fluid Heater II",
+  "quest.1A00000000000650.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000650.title": "[sb] Advanced Slicing Machine II",
   "quest.1A00000000000651.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5963,6 +5983,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000659.title": "[sb] Advanced Fluid Heater III",
+  "quest.1A0000000000065A.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000065A.title": "[sb] Advanced Slicing Machine III",
   "quest.1A0000000000065B.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5987,6 +6011,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000663.title": "[sb] Advanced Fluid Heater IV",
+  "quest.1A00000000000664.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000664.title": "[sb] Advanced Slicing Machine IV",
   "quest.1A00000000000665.quest_desc": [
     "One of many single-block machines."
   ],
@@ -6019,6 +6047,10 @@
     "One of many single-block machines."
   ],
   "quest.1A0000000000066D.title": "[sb] Advanced Fluid Heater V",
+  "quest.1A0000000000066E.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A0000000000066E.title": "[sb] Advanced Slicing Machine V",
   "quest.1A0000000000066F.quest_desc": [
     "One of many single-block machines."
   ],
@@ -6055,6 +6087,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000677.title": "[sb] Advanced Fluid Heater VI",
+  "quest.1A00000000000678.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000678.title": "[sb] Advanced Slicing Machine VI",
   "quest.1A00000000000679.quest_desc": [
     "One of many single-block machines."
   ],
@@ -6091,6 +6127,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000681.title": "[sb] Advanced Fluid Heater VII",
+  "quest.1A00000000000682.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000682.title": "[sb] Advanced Slicing Machine VII",
   "quest.1A00000000000683.quest_desc": [
     "One of many single-block machines."
   ],
@@ -6403,6 +6443,10 @@
     "This is easy way to craft a small coil. Other way is to use nikel-zink ferrite bolt instead of steel bolt to get more coils."
   ],
   "quest.1A000000000006F7.title": "Small Coil - easy way",
+  "quest.1A000000000006F8.quest_desc": [
+    "Wonderful tool to find ore veins or under-bedrock fluids. It have few working configs, that you may change by clicking Shift+RMB by air.  Note that there are two more Scanners higher tier (ZPM and UV)."
+  ],
+  "quest.1A000000000006F8.title": "LuV Prospector's Scanner",
   "quest.1A000000000006F9.quest_desc": [
     "Use a wiremil to craft it."
   ],
@@ -6515,6 +6559,14 @@
     "It used in some machines to change recipe output."
   ],
   "quest.1A0000000000072D.title": "Programmed Circuit",
+  "quest.1A00000000000731.quest_desc": [
+    "Your first semi-automatic miner. It will greatly help you to find and dig small ores."
+  ],
+  "quest.1A00000000000731.title": "Primitive Small Ore Miner",
+  "quest.1A00000000000732.quest_desc": [
+    "Very convenient and fast machine to dig holes down. You can use it to quick find ore veins."
+  ],
+  "quest.1A00000000000732.title": "Primitive Mine Digger",
   "quest.1A00000000000733.quest_desc": [
     "Common bowl, that you can craft by knife from wood plank, or by lathe from wood slab."
   ],
@@ -6655,6 +6707,10 @@
     "A part of flint arrow, that can be cheap and efficient ammo for bow"
   ],
   "quest.1A00000000000797.title": "Flint Arrow Head",
+  "quest.1A00000000000798.quest_desc": [
+    "A consumable item for two important primitive machines: Primitive small ore miner and Primitive mine digger."
+  ],
+  "quest.1A00000000000798.title": "Primitive drill head",
   "quest.1A00000000000799.quest_desc": [
     "Common wooden ladder, that can help you to climb up."
   ],

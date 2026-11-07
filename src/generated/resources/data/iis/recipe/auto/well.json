@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SPS",
+    "WQW",
+    "BVB"
+  ],
+  "key": {
+    "S": "iis:gear_wood",
+    "P": "minecraft:stick",
+    "W": "#minecraft:planks",
+    "Q": "minecraft:string",
+    "B": "#c:cobblestones",
+    "V": "minecraft:bucket"
+  },
+  "result": {
+    "id": "iis:well"
+  }
+}

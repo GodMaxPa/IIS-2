@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "iis:block/auto/adjustable_transformer_max_north",
+    "south": "iis:block/auto/adjustable_transformer_max_south",
+    "east": "iis:block/auto/adjustable_transformer_max_east",
+    "west": "iis:block/auto/adjustable_transformer_max_west",
+    "up": "iis:block/auto/adjustable_transformer_max_up",
+    "down": "iis:block/auto/adjustable_transformer_max_down",
+    "particle": "iis:block/auto/adjustable_transformer_max_east"
+  }
+}

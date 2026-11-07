@@ -134,6 +134,10 @@ GC_MAP.update({('gregtech:gt.blockmachines', 1171): 'iis:combustion_engine', ('g
                ('gregtech:gt.metatool.01', 28): 'iis:scoop', ('gregtech:gt.metaitem.01', 32471): 'iis:match', ('gregtech:gt.metaitem.01', 32402): 'iis:empty_spray', ('gregtech:gt.metaitem.01', 32100): 'iis:minecart_wheels_iron',
                ('gregtech:gt.metaitem.01', 32101): 'iis:minecart_wheels_steel', ('gregtech:gt.metaitem.01', 32485): 'iis:punch_card', ('gregtech:gt.metaitem.01', 32409): 'iis:small_gunpowder_bundle',
                ('gregtech:gt.metaitem.01', 32020): 'iis:compact_disc', ('gregtech:gt.metaitem.01', 32017): 'iis:waterproof_kit', ('gregtech:gt.metaitem.01', 32619): 'iis:fluid_regulator_iv',
+               ('gregtech:gt.blockmachines', 12188): 'iis:adjustable_transformer_max', ('gregtech:gt.blockmachines', 12189): 'iis:well',
+               ('gregtech:gt.blockmachines', 1215): 'iis:primitive_mine_digger', ('gregtech:gt.blockmachines', 1216): 'iis:primitive_small_ore_miner', ('gregtech:gt.metatool.01', 180): 'iis:primitive_drill',
+               ('gregtech:gt.metaitem.01', 32375): 'iis:prospector_luv', ('gregtech:gt.metaitem.01', 32376): 'iis:prospector_zpm', ('gregtech:gt.metaitem.01', 32377): 'iis:prospector_uv',
+               ('gregtech:gt.metaitem.01', 32398): 'iis:slicer_blade_flat', ('gregtech:gt.metaitem.01', 32399): 'iis:slicer_blade_stripes',
                ('gregtech:gt.Volumetric_Flask', 0): 'iis:volumetric_flask', ('gregtech:gt.metaitem.02', 14802): 'iis:arrow_head_flint', ('gregtech:gt.metaitem.01', 30865): 'iis:dust_graphite'})
 GC_MAP.update({('gregtech:gt.blockgem1', 4): 'iis:block_blue_topaz', ('gregtech:gt.blockgem2', 12): 'iis:block_sapphire', ('gregtech:gt.blockgem2', 5): 'iis:block_opal', ('gregtech:gt.blockgem1', 7): 'iis:block_ender_eye'})
 # D121: UV tier: GT_Loader_MetaTileEntities ids and casings, GT_MetaGenerated_Item_01 and _03

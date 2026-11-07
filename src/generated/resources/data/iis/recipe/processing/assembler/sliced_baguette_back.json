@@ -1,0 +1,18 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:sliced_baguettes",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sliced_baguette",
+      "count": 2
+    }
+  ],
+  "duration": 16,
+  "eut": 4,
+  "circuit": 1
+}

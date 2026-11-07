@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:sliced_bun",
+    "iis:sliced_bun"
+  ],
+  "result": {
+    "id": "iis:sliced_buns"
+  }
+}

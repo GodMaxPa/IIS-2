@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCW",
+    "PMV",
+    "WCW"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "P": "iis:electric_piston_luv",
+    "V": "iis:conveyor_module_luv",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/1x/niobium_titanium"
+  },
+  "result": {
+    "id": "iis:slicer_luv"
+  }
+}

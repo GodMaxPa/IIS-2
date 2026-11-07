@@ -3439,6 +3439,41 @@
       ]
     },
     {
+      "id": "1A00000000000413",
+      "x": 16.0,
+      "y": 8.5,
+      "dependencies": [
+        "1A00000000000365",
+        "1A00000000000412",
+        "1A00000000000408"
+      ],
+      "icon": {
+        "id": "iis:adjustable_transformer_max",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:adjustable_transformer_max",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000041300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 3
+          },
+          "id": "1C00000000041300"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000418",
       "x": 25.0,
       "y": 10.5,

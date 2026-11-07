@@ -223,6 +223,15 @@ public enum LvMachineType {
     FILTER_IV("filter", GtRecipeMap.FILTER, 1, 6, 48000, "filter", VoltageTier.IV),
     // D109: :712-716 Machine_*_Microwave (1, 1; печь на ванильной плавке: 32 тика, 4 EU/t, металл взрывается)
     MICROWAVE("microwave", null, 1, 1, 0, "e_furnace"),
+    // D133: GT_Loader_MetaTileEntities:1066-1073 Slicer (2, 1)
+    SLICER("slicer", GtRecipeMap.SLICER, 2, 1, 0, "slicer"),
+    SLICER_MV("slicer", GtRecipeMap.SLICER, 2, 1, 0, "slicer", VoltageTier.MV),
+    SLICER_HV("slicer", GtRecipeMap.SLICER, 2, 1, 0, "slicer", VoltageTier.HV),
+    SLICER_EV("slicer", GtRecipeMap.SLICER, 2, 1, 0, "slicer", VoltageTier.EV),
+    SLICER_IV("slicer", GtRecipeMap.SLICER, 2, 1, 0, "slicer", VoltageTier.IV),
+    SLICER_LUV("slicer", GtRecipeMap.SLICER, 2, 1, 0, "slicer", VoltageTier.LUV),
+    SLICER_ZPM("slicer", GtRecipeMap.SLICER, 2, 1, 0, "slicer", VoltageTier.ZPM),
+    SLICER_UV("slicer", GtRecipeMap.SLICER, 2, 1, 0, "slicer", VoltageTier.UV),
     MICROWAVE_MV("microwave", null, 1, 1, 0, "e_furnace", VoltageTier.MV),
     MICROWAVE_HV("microwave", null, 1, 1, 0, "e_furnace", VoltageTier.HV),
     MICROWAVE_EV("microwave", null, 1, 1, 0, "e_furnace", VoltageTier.EV),
