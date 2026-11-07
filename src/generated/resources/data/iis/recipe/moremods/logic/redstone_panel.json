@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RRR",
+    "iii",
+    "SSS"
+  ],
+  "key": {
+    "R": "#c:plates/red_alloy",
+    "i": "tinyredstone:silicon",
+    "S": "minecraft:smooth_stone_slab"
+  },
+  "result": {
+    "id": "tinyredstone:redstone_panel",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tinyredstone"
+    }
+  ]
+}

@@ -127,6 +127,22 @@ final class GtMachineGameTests {
         });
     }
 
+    /** D136: компактная логика вместо Project Red: моды загружены, рецепты ИИС 1 на их детали разобрались, свои рецепты заменены. */
+    static void compactLogic(GameTestHelper h) {
+        var mods = net.neoforged.fml.ModList.get();
+        for (String m : new String[]{"tinyredstone", "tinygates", "little_big_redstone"}) h.assertTrue(mods.isLoaded(m), "мод не загружен: " + m);
+        var recipes = h.getLevel().getServer().getRecipeManager();
+        for (String id : new String[]{"iis:moremods/logic/tiny_silicon", "iis:moremods/logic/redstone_panel", "iis:moremods/logic/redstone_circuit_board"}) {
+            var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.RECIPE, Identifier.parse(id));
+            h.assertTrue(recipes.byKey(key).isPresent(), "нет рецепта " + id);
+        }
+        for (String id : new String[]{"tinyredstone:silicon_compound", "tinyredstone:redstone_panel", "little_big_redstone:redstone_circuit_board"}) {
+            var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.RECIPE, Identifier.parse(id));
+            h.assertTrue(recipes.byKey(key).isEmpty(), "рецепт мода не выключен: " + id);
+        }
+        h.succeed();
+    }
+
     /** Ломтерезка и трансформатор MAX есть, рецепты разобрались. */
     static void slicerAndMaxTransformer(GameTestHelper h) {
         for (String id : new String[]{"slicer_lv", "slicer_uv", "adjustable_transformer_max", "well", "primitive_mine_digger", "primitive_small_ore_miner"}) {

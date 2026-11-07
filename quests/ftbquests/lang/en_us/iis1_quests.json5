@@ -6539,6 +6539,26 @@
     "Currently you can only make 2 planks from 1 wood log by crafting. But later you may use cutting tools or machines to increase output result."
   ],
   "quest.1A00000000000705.title": "Wood Planks",
+  "quest.1A00000000000706.quest_desc": [
+    "A template of you logic. It can be changed and reused."
+  ],
+  "quest.1A00000000000706.title": "IC Blueprint",
+  "quest.1A00000000000707.quest_desc": [
+    "A circuit to keep your redstone logic inside. To write a logic to it you will need a printer."
+  ],
+  "quest.1A00000000000707.title": "IC Chip",
+  "quest.1A00000000000708.quest_desc": [
+    "A table to work with IC Blueprints. Here you can write your clever redstone logic."
+  ],
+  "quest.1A00000000000708.title": "IC Workbench",
+  "quest.1A00000000000709.quest_desc": [
+    "Put here you IC Blueprint, Empty IC Chip and other required stuff to run this printer. In result you will get a Chip with ready logic. But it still will not ready to use. In final step you should craft an IC gate on crafting table with 8 circuit plates around and IC gate in the center of crafting grid."
+  ],
+  "quest.1A00000000000709.title": "IC Printer",
+  "quest.1A0000000000070A.quest_desc": [
+    "A part of most items of Project Red mod."
+  ],
+  "quest.1A0000000000070A.title": "Circuit Plate",
   "quest.1A0000000000070B.quest_desc": [
     "A plato from concrate. You can create it from liquid concrete by fluid solidifier."
   ],
@@ -6547,6 +6567,10 @@
     "A stuff to create a red wire from Project Red mod."
   ],
   "quest.1A0000000000070C.title": "2x Red Alloy Wire",
+  "quest.1A0000000000070D.quest_desc": [
+    "Red Alloy Wire from Project Red mod. It works like redstone if you place it on the ground, But instead of common redstone line you may place it on walls or even on a ceil."
+  ],
+  "quest.1A0000000000070D.title": "Red Alloy Wire (PR)",
   "quest.1A0000000000070E.quest_desc": [
     "No Description"
   ],
@@ -6555,10 +6579,26 @@
     "A part of Energy Detector."
   ],
   "quest.1A0000000000070F.title": "EU-Reader",
+  "quest.1A00000000000710.quest_desc": [
+    "A part of most IC Gates."
+  ],
+  "quest.1A00000000000710.title": "Conductive Plate",
   "quest.1A00000000000711.quest_desc": [
     "A part of most IC Gates. You may create it from gold ingot via common furnace."
   ],
   "quest.1A00000000000711.title": "Gold Nugget",
+  "quest.1A00000000000712.quest_desc": [
+    "A part of most IC Gates."
+  ],
+  "quest.1A00000000000712.title": "Anode",
+  "quest.1A00000000000713.quest_desc": [
+    "No Description"
+  ],
+  "quest.1A00000000000713.title": "Cathode",
+  "quest.1A00000000000715.quest_desc": [
+    "If you want, you can get an example of IC Blueprint with ready logic to control your energy generators such as Large Boler. On the down side is input for analog redstone signal. You should place this side to the battery buffer side with attached Energy Detector cover. In the example Blueprint settings will read the power of emitted redstone signal of Energy Detector and depending on that will send (or will not) out  a signal to turn on your generators. The range currently set between 6%% and 100%%. It means that if an energy level in your battery buffer will reduce lower than 6%% it will start to emit signal out until your buffer charged up to 100%%. NOTE, that after you set an Energy Detector on your battery buffer you have to set on it the config named \"Normal Electricity Storage (Including Batteries)\". Only in this mode it will works fine in pair with IC Gate contained this logic."
+  ],
+  "quest.1A00000000000715.title": "I want to get example",
   "quest.1A0000000000071E.quest_desc": [
     "If you found a horse it will be useful."
   ],

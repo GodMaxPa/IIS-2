@@ -25,7 +25,7 @@
 | forestry (II), gendustry | 4.2.26 | Пчёлы, деревья | C — владелец: не интересно |
 | buildcraft (core, builders, silicon, transport), buildcraft-compat | 7.1.17 | Трубы, строители | C — пересекается с GT; для 26.1 на Modrinth версий нет (проверено 07.11.2026) |
 | EnderIO, EnderCore | 2.3.0 | Машины, трубы | **B** — Ender IO 9.0.6-alpha с правилами ИИС 1 (D125) |
-| ProjectRed (Base, Compat, Fabrication, Integration, Lighting) | 4.7.0 | Редстоун, логика | C — пересекается с современным редстоуном |
+| ProjectRed (Base, Compat, Fabrication, Integration, Lighting) | 4.7.0 | Редстоун, логика | **B** — Little Big Redstone 1.9.11, Tiny Redstone 7.0.5, Tiny Gates 6.0.2 с рецептами по Project-Red.zs (D136) |
 | Flans-Mod, HMG (handmadeguns) | — | Оружие и техника | C → идеи для «промышленного снаряжения» (свои реализации) |
 | openmodularturrets | 2.3.7 | Турели | C → возможно, часть снаряжения |
 | CustomOreGen | 1.2.24 | Генерация руд | C — заменяется рудными жилами GT |

@@ -24,5 +24,8 @@
 "iis:moremods/ironchest/upgrade_gold_diamond",
 "iis:moremods/ironchest/upgrade_iron_gold",
 "iis:moremods/ironchest/upgrade_wood_copper",
-"iis:moremods/ironchest/upgrade_wood_iron"
+"iis:moremods/ironchest/upgrade_wood_iron",
+"iis:moremods/logic/redstone_circuit_board",
+"iis:moremods/logic/redstone_panel",
+"iis:moremods/logic/tiny_silicon"
 ]

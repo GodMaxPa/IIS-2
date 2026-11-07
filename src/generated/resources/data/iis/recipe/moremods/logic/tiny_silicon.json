@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:plate_concrete"
+  ],
+  "result": {
+    "id": "tinyredstone:silicon",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tinyredstone"
+    }
+  ]
+}

@@ -1,11 +1,10 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1740; hidden until their items are ported: 200; chapters: 36, one of them ours (D129, 49 quests).
+Quests in IIS 1: 1943; written: 1750; hidden until their items are ported: 190; chapters: 36, one of them ours (D129, 49 quests).
 
 ## Most needed unported items (task count)
 
 - 2 × `gregtech:gt.blockmachines:681` Органический репликатор (LV)
-- 2 × `ProjRed|Fabrication:projectred.fabrication.icblueprint:0` 
 - 1 × `extracells:ecbaseblock:0` 
 - 1 × `extracells:part.base:12` 
 - 1 × `gregtech:gt.metaitem.02:8500` 
@@ -106,14 +105,6 @@ Quests in IIS 1: 1943; written: 1740; hidden until their items are ported: 200; 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:55` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:54` 
 - 1 × `appliedenergistics2:item.ItemMultiPart:500` 
-- 1 × `ProjRed|Fabrication:projectred.fabrication.icchip:0` 
-- 1 × `ProjRed|Fabrication:projectred.integration.icblock:0` 
-- 1 × `ProjRed|Fabrication:projectred.integration.icblock:1` 
-- 1 × `ProjRed|Core:projectred.core.part:0` 
-- 1 × `ProjRed|Transmission:projectred.transmission.wire:0` 
-- 1 × `ProjRed|Core:projectred.core.part:1` 
-- 1 × `ProjRed|Core:projectred.core.part:4` 
-- 1 × `ProjRed|Core:projectred.core.part:5` 
 - 1 × `IC2NuclearControl:blockNuclearControlMain:9` 
 - 1 × `IC2NuclearControl:blockNuclearControlMain:4` 
 - 1 × `gregtech:gt.metaitem.01:32763` Набор с датчиком GregTech

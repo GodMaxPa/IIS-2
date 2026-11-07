@@ -243,6 +243,182 @@
       ]
     },
     {
+      "id": "1A00000000000706",
+      "x": 3.5,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000000193",
+        "1A00000000000067"
+      ],
+      "icon": {
+        "id": "tinyredstone:blueprint",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "tinyredstone:blueprint",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000070600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000070600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000707",
+      "x": 0.5,
+      "y": 4.5,
+      "dependencies": [
+        "1A000000000000F5",
+        "1A000000000001E3"
+      ],
+      "icon": {
+        "id": "little_big_redstone:white_microchip",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "little_big_redstone:white_microchip",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000070700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000070700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000708",
+      "x": 2.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A000000000001E3",
+        "1A000000000001A7",
+        "1A000000000001D3",
+        "1A00000000000706"
+      ],
+      "icon": {
+        "id": "tinyredstone:redstone_panel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "tinyredstone:redstone_panel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000070800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000070800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000709",
+      "x": 2.75,
+      "y": 3.75,
+      "size": 2.5,
+      "dependencies": [
+        "1A0000000000033C",
+        "1A000000000001E3",
+        "1A000000000001FD",
+        "1A000000000001EE",
+        "1A00000000000707",
+        "1A00000000000708"
+      ],
+      "icon": {
+        "id": "little_big_redstone:redstone_circuit_board",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "little_big_redstone:redstone_circuit_board",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000070900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 7
+          },
+          "id": "1C00000000070900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000070A",
+      "x": 11.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A0000000000070B"
+      ],
+      "icon": {
+        "id": "tinyredstone:silicon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "tinyredstone:silicon",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000070A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000070A00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000070B",
       "x": 11.0,
       "y": 3.0,
@@ -306,6 +482,40 @@
             "count": 1
           },
           "id": "1C00000000070C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000070D",
+      "x": 6.5,
+      "y": 1.5,
+      "dependencies": [
+        "1A0000000000070C",
+        "1A000000000001D9"
+      ],
+      "icon": {
+        "id": "tinyredstone:tiny_redstone",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "tinyredstone:tiny_redstone",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000070D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000070D00"
         }
       ]
     },
@@ -378,6 +588,42 @@
       ]
     },
     {
+      "id": "1A00000000000710",
+      "x": 9.5,
+      "y": 4.5,
+      "dependencies": [
+        "1A000000000001E3",
+        "1A0000000000070A",
+        "1A00000000000184",
+        "1A0000000000024C"
+      ],
+      "icon": {
+        "id": "tinyredstone:redstone_panel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "tinyredstone:redstone_panel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000071000"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000711",
       "x": 5.0,
       "y": 3.0,
@@ -407,6 +653,122 @@
             "count": 2
           },
           "id": "1C00000000071100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000712",
+      "x": 9.5,
+      "y": 3.0,
+      "dependencies": [
+        "1A000000000001E3",
+        "1A0000000000070A"
+      ],
+      "icon": {
+        "id": "tinyredstone:tiny_redstone",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "tinyredstone:tiny_redstone",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000071200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000713",
+      "x": 9.5,
+      "y": 6.0,
+      "dependencies": [
+        "1A0000000000070A",
+        "1A00000000000066",
+        "1A000000000001E3"
+      ],
+      "icon": {
+        "id": "tinyredstone:tiny_redstone_torch",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "tinyredstone:tiny_redstone_torch",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000071300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000715",
+      "x": 10.0,
+      "y": 1.0,
+      "size": 2.0,
+      "dependencies": [
+        "1A00000000000709",
+        "1A0000000000070D",
+        "1A0000000000045C",
+        "1A00000000000711",
+        "1A00000000000713",
+        "1A00000000000712",
+        "1A00000000000710",
+        "1A0000000000070E"
+      ],
+      "hide_until_deps_visible": true,
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "tinyredstone:blueprint",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": true,
+          "id": "1B00000000071500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "tinyredstone:blueprint",
+            "count": 1
+          },
+          "id": "1C00000000071500"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000071501"
         }
       ]
     }

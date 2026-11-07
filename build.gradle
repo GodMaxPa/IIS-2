@@ -197,6 +197,10 @@ dependencies {
     localRuntime "maven.modrinth:bigger-ae2:${bigger_ae2_version}"
     localRuntime "maven.modrinth:inventory-essentials:${inventory_essentials_version}"
     localRuntime "maven.modrinth:balm:${balm_version}"
+    localRuntime "maven.modrinth:little-big-redstone:${little_big_redstone_version}"
+    localRuntime "maven.modrinth:tesseract-api:${tesseract_api_version}"
+    localRuntime "maven.modrinth:tiny-redstone:${tiny_redstone_version}"
+    localRuntime "maven.modrinth:tiny-gates:${tiny_gates_version}"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
