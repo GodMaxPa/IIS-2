@@ -1,0 +1,10 @@
+{
+  "gives": {
+    "id": "minecraft:iron_pickaxe"
+  },
+  "max_uses": 1.0,
+  "reputation_discount": 0.2,
+  "wants": {
+    "id": "minecraft:emerald"
+  }
+}

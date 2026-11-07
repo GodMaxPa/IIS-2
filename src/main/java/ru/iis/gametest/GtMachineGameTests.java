@@ -143,6 +143,41 @@ final class GtMachineGameTests {
         h.succeed();
     }
 
+    /** D137: магии нет. Библиотека крепости даёт книги без чар и без зачарованных книг; рецепта стола нет; у библиотекаря нет книжных сделок; зомби с зачарованным мечом его теряет. */
+    static void noMagic(GameTestHelper h) {
+        var level = h.getLevel();
+        var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.LOOT_TABLE, Identifier.parse("minecraft:chests/stronghold_library"));
+        var table = level.getServer().reloadableRegistries().getLootTable(key);
+        var params = new net.minecraft.world.level.storage.loot.LootParams.Builder(level)
+                .withParameter(net.minecraft.world.level.storage.loot.parameters.LootContextParams.ORIGIN, h.absoluteVec(new net.minecraft.world.phys.Vec3(1, 2, 1)))
+                .create(net.minecraft.world.level.storage.loot.parameters.LootContextParamSets.CHEST);
+        int items = 0;
+        for (int i = 0; i < 40; i++) {
+            for (ItemStack s : table.getRandomItems(params)) {
+                items++;
+                h.assertTrue(!ru.iis.world.NoMagic.magic(s), "в добыче магия: " + s);
+                h.assertTrue(!s.has(net.minecraft.core.component.DataComponents.ENCHANTMENTS) || s.get(net.minecraft.core.component.DataComponents.ENCHANTMENTS).isEmpty(), "в добыче чары: " + s);
+            }
+        }
+        h.assertTrue(items > 0, "библиотека пуста");
+        var recipe = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.RECIPE, Identifier.parse("minecraft:enchanting_table"));
+        h.assertTrue(level.getServer().getRecipeManager().byKey(recipe).isEmpty(), "рецепт стола зачарования остался");
+        var tag = net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.VILLAGER_TRADE, Identifier.parse("minecraft:librarian/level_1"));
+        var trades = level.registryAccess().lookupOrThrow(net.minecraft.core.registries.Registries.VILLAGER_TRADE).get(tag);
+        h.assertTrue(trades.isPresent(), "нет списка сделок библиотекаря");
+        for (var t : trades.get()) h.assertTrue(!t.getRegisteredName().contains("enchanted_book"), "сделка с зачарованной книгой: " + t.getRegisteredName());
+        var zombie = net.minecraft.world.entity.EntityType.ZOMBIE.create(level, net.minecraft.world.entity.EntitySpawnReason.TRIGGERED);
+        ItemStack sword = new ItemStack(net.minecraft.world.item.Items.IRON_SWORD);
+        var sharp = level.registryAccess().lookupOrThrow(net.minecraft.core.registries.Registries.ENCHANTMENT).getOrThrow(net.minecraft.world.item.enchantment.Enchantments.SHARPNESS);
+        sword.enchant(sharp, 3);
+        zombie.setItemSlot(net.minecraft.world.entity.EquipmentSlot.MAINHAND, sword);
+        zombie.setPos(h.absoluteVec(new net.minecraft.world.phys.Vec3(4, 2, 4)));
+        level.addFreshEntity(zombie);
+        h.assertTrue(zombie.getMainHandItem().getEnchantments().isEmpty(), "у зомби остались чары");
+        zombie.discard();
+        h.succeed();
+    }
+
     /** Ломтерезка и трансформатор MAX есть, рецепты разобрались. */
     static void slicerAndMaxTransformer(GameTestHelper h) {
         for (String id : new String[]{"slicer_lv", "slicer_uv", "adjustable_transformer_max", "well", "primitive_mine_digger", "primitive_small_ore_miner"}) {

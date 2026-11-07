@@ -1,0 +1,7 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:fletcher/5/tripwire_hook_emerald",
+    "minecraft:fletcher/5/emerald_enchanted_crossbow"
+  ]
+}

@@ -49,6 +49,7 @@ public final class IIS {
         ru.iis.equipment.EquipmentContent.register(modEventBus);
         ru.iis.shop.ShopContent.register(modEventBus);
         ru.iis.compat.AeioContent.register(modEventBus);
+        ru.iis.world.NoMagic.register(modEventBus);
         GtRecipes.register(modEventBus, NeoForge.EVENT_BUS);
         ru.iis.net.IISNetwork.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(ru.iis.lv.block.ElectricMachineBlock::onRightClickBlock);

@@ -13662,6 +13662,7 @@
   "message.iis.mobrep.everyone": "Prevents spawn of all creatures",
   "message.iis.mobrep.hostiles": "Prevents spawn of hostile creatures",
   "message.iis.mobrep.hostiles_neutrals": "Prevents spawn of hostile and neutral creatures",
+  "message.iis.no_magic": "There is no magic in this world",
   "message.iis.output.fluids": "Fluid output: %s",
   "message.iis.output.items": "Item output: %s",
   "message.iis.oxygen.low": "Oxygen is running out: %s s",

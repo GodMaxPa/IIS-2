@@ -3,6 +3,7 @@
 Обновлено: 2026-11-06 — после D124. Ветка `feature/bio-fluids-lv3`, работа идёт локально (Claude Code на ПК владельца); push — только по просьбе владельца.
 
 ## Где мы
+- **Магии нет (D137):** `tools/gen/nomagic.py` переписывает сделки торговцев из ванильного JAR, `world.NoMagic` — добыча и мобы. В NeoForge 26.1 каждый файл в `loot_modifiers` — отдельный модификатор, общего списка нет.
 - **Космос, третий этап (D134):** астероиды, ракета 3-го уровня, `space.SpaceMachineBlock(Entity)` — кислород и груз. Проверка полёта: `IIS_SPACE_CHECK=asteroids gradlew runServer`.
 - **Машины GT из квестов (D133):** колодец и машины на мускульной силе — `ru.iis.auto.Well*`, `Muscle*`; сканер старателя — `lv.item.ProspectorScannerItem`; ломтерезка — строка в `lv.py` и `LvMachineType`. Текстуры новых обычных машин надо положить в `tools/gen/textures/lv` (`basicmachines/<вид>`, `gui/<окно>.png`), генератор берёт их оттуда.
 - **Винт вертолёта, центр выстрела, предметы GT из квестов (D132):** `tools/gen/gtclose.py`, таблицы блоков в `reference/original/gt5_metal_blocks.json`. Полный список недостающего — `quests/REPORT.md`, он теперь без обрезки. В ИИС 1 `EnableZPMandUVBatteries` включена: перед тем как брать ветку GT по умолчанию, смотреть `forServerClient/config/GregTech`.

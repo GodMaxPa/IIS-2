@@ -200,3 +200,4 @@
 | Космос, третий этап D134 | GameTest `rocket_tier3`, `oxygen_machines`, `cargo_loader`; `IIS_SPACE_CHECK=asteroids gradlew runServer` |
 | Ender IO: сверка с ИИС 1 D135 | GameTest `eio_legacy_blocks`; рецепты всех 37 вещей Ender IO, что крафтились в ИИС 1 |
 | Компактная логика D136 | GameTest `compact_logic` |
+| Магии нет D137 | GameTest `no_magic` |

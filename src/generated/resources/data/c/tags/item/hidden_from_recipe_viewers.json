@@ -3628,6 +3628,50 @@
     {
       "id": "bigger_ae2:digital_singularity_item_storage_cell",
       "required": false
+    },
+    {
+      "id": "minecraft:enchanting_table",
+      "required": false
+    },
+    {
+      "id": "minecraft:brewing_stand",
+      "required": false
+    },
+    {
+      "id": "minecraft:beacon",
+      "required": false
+    },
+    {
+      "id": "minecraft:conduit",
+      "required": false
+    },
+    {
+      "id": "minecraft:enchanted_book",
+      "required": false
+    },
+    {
+      "id": "minecraft:splash_potion",
+      "required": false
+    },
+    {
+      "id": "minecraft:lingering_potion",
+      "required": false
+    },
+    {
+      "id": "minecraft:tipped_arrow",
+      "required": false
+    },
+    {
+      "id": "minecraft:experience_bottle",
+      "required": false
+    },
+    {
+      "id": "minecraft:totem_of_undying",
+      "required": false
+    },
+    {
+      "id": "minecraft:enchanted_golden_apple",
+      "required": false
     }
   ]
 }

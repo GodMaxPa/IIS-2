@@ -13662,6 +13662,7 @@
   "message.iis.mobrep.everyone": "Не даёт появляться никому",
   "message.iis.mobrep.hostiles": "Не даёт появляться враждебным",
   "message.iis.mobrep.hostiles_neutrals": "Не даёт появляться враждебным и нейтральным",
+  "message.iis.no_magic": "Магии в этом мире нет",
   "message.iis.output.fluids": "Выход жидкостей: %s",
   "message.iis.output.items": "Выход предметов: %s",
   "message.iis.oxygen.low": "Кислород кончается: %s с",

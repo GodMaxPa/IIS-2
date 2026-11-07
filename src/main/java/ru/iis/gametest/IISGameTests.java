@@ -227,6 +227,7 @@ public final class IISGameTests {
             new Test("gt_slicer_max_transformer", 20, GtMachineGameTests::slicerAndMaxTransformer),
             new Test("eio_legacy_blocks", 30, GtMachineGameTests::eioLegacyBlocks),
             new Test("compact_logic", 20, GtMachineGameTests::compactLogic),
+            new Test("no_magic", 20, GtMachineGameTests::noMagic),
             new Test("equip_boat_floats", 100, EquipmentGameTests::boatFloats),
             new Test("equip_wreck_drops", 20, EquipmentGameTests::wreckDropsItem),
             new Test("equip_tank_armor", 20, EquipmentGameTests::tankShrugsBullets),
