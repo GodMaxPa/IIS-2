@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:nugget_desh",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_desh",
+      "amount": 16
+    }
+  ],
+  "keep": [
+    "iis:mold_nugget"
+  ]
+}

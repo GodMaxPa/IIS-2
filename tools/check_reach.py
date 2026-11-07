@@ -122,6 +122,19 @@ FLUID_SEEDS = ['minecraft:water', 'minecraft:lava', 'iis:oil', 'iis:oilmedium', 
 for x in FLUID_SEEDS:
     have.add('F:' + x)
 seeds = ['iis:rubber_log', 'iis:sticky_resin', 'iis:plant_ball']
+# --no-mars: what can be made before the first flight to Mars: its ore and rock are out (D131)
+if '--no-mars' in sys.argv:
+    sys.argv.remove('--no-mars')
+    _veins = json.load(open('src/main/resources/iis/veins.json', encoding='utf-8'))
+    _dims = {}
+    for _v in (_veins if isinstance(_veins, list) else _veins['veins']):
+        for _k in ('primary', 'secondary', 'between', 'sporadic'):
+            if _v.get(_k):
+                _dims.setdefault(_v[_k].split(':')[1], set()).update(_v['dimensions'])
+    _only = {k for k, d in _dims.items() if d == {'iis:mars'}}
+    have = {h for h in have if not any(h.endswith('ore_' + m) or h.endswith('_ore_' + m) for m in _only)}
+else:
+    have |= {'iis:mars_rock', 'iis:mars_dirt', 'iis:mars_turf'}   # mined on Mars: the way there is rocket_t2 (D131)
 have |= {'iis:moon_rock', 'iis:moon_dirt', 'iis:moon_turf'}   # mined on the Moon: the rocket itself is checked by rocket_t1 (D115)
 # a reactor burns a rod into its depleted form (D117)
 for f_ in ('uranium', 'mox', 'thorium', 'naquadah'):
@@ -129,6 +142,7 @@ for f_ in ('uranium', 'mox', 'thorium', 'naquadah'):
         recipes.append((f'reactor/{f_}_{n_}', [['iis:nuclear_reactor'], [f'iis:rod_{f_}_{n_}']], [f'iis:rod_depleted_{f_}_{n_}']))
 # the NASA workbench is a menu, not a recipe (D115)
 recipes.append(('space/rocket_t1', [['iis:nasa_workbench'], ['iis:nose_cone'], ['iis:heavy_plating'], ['iis:rocket_fins'], ['iis:rocket_engine_t1']], ['iis:rocket_t1']))
+recipes.append(('space/rocket_t2', [['iis:nasa_workbench'], ['iis:nose_cone'], ['iis:heavy_plating_t2'], ['iis:rocket_fins'], ['iis:rocket_engine_t1']], ['iis:rocket_t2']))
 # --with=iis:dust_naquadah: pretend an item is available, to see what else a missing source hides (D112: naquadah waits for space, D17)
 for a_ in [x for x in sys.argv[1:] if x.startswith('--with=')]:
     have.add(a_[7:])

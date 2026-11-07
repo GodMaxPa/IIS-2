@@ -47,6 +47,7 @@ public final class SpaceContent {
     public static final DeferredRegister.DataComponents COMPONENTS = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, IIS.MODID);
 
     public static final ResourceKey<Level> MOON = ResourceKey.create(Registries.DIMENSION, Identifier.fromNamespaceAndPath(IIS.MODID, "moon"));
+    public static final ResourceKey<Level> MARS = ResourceKey.create(Registries.DIMENSION, Identifier.fromNamespaceAndPath(IIS.MODID, "mars"));
     public static final ResourceKey<DamageType> OXYGEN_SUFFOCATION = ResourceKey.create(Registries.DAMAGE_TYPE, Identifier.fromNamespaceAndPath(IIS.MODID, "oxygen_suffocation"));
 
     private static final List<Supplier<? extends Item>> TAB_ORDER = new ArrayList<>();
@@ -78,6 +79,9 @@ public final class SpaceContent {
     public static final DeferredBlock<Block> MOON_ROCK = block("moon_rock", Block::new, SpaceContent::rock);
     public static final DeferredBlock<Block> MOON_DIRT = block("moon_dirt", Block::new, SpaceContent::soil);
     public static final DeferredBlock<Block> MOON_TURF = block("moon_turf", Block::new, SpaceContent::soil);
+    public static final DeferredBlock<Block> MARS_ROCK = block("mars_rock", Block::new, SpaceContent::rock);
+    public static final DeferredBlock<Block> MARS_DIRT = block("mars_dirt", Block::new, SpaceContent::soil);
+    public static final DeferredBlock<Block> MARS_TURF = block("mars_turf", Block::new, SpaceContent::soil);
     public static final DeferredBlock<LaunchPadBlock> LAUNCH_PAD = block("launch_pad", LaunchPadBlock::new, p -> metal(p).noOcclusion());
     public static final DeferredBlock<FuelLoaderBlock> FUEL_LOADER = block("fuel_loader", FuelLoaderBlock::new, SpaceContent::metal);
     public static final DeferredBlock<NasaWorkbenchBlock> NASA_WORKBENCH = block("nasa_workbench", NasaWorkbenchBlock::new, SpaceContent::metal);
@@ -90,8 +94,11 @@ public final class SpaceContent {
     public static final DeferredItem<Item> COMPRESSED_COPPER = item("compressed_copper");
     public static final DeferredItem<Item> COMPRESSED_BRONZE = item("compressed_bronze");
     public static final DeferredItem<Item> COMPRESSED_TITANIUM = item("compressed_titanium");
+    public static final DeferredItem<Item> COMPRESSED_METEORIC_IRON = item("compressed_meteoric_iron");
     public static final DeferredItem<Item> HEAVY_INGOT_T1 = item("heavy_ingot_t1");
     public static final DeferredItem<Item> HEAVY_PLATING = item("heavy_plating");
+    public static final DeferredItem<Item> HEAVY_INGOT_T2 = item("heavy_ingot_t2");
+    public static final DeferredItem<Item> HEAVY_PLATING_T2 = item("heavy_plating_t2");
     public static final DeferredItem<Item> ROCKET_ENGINE_T1 = item("rocket_engine_t1");
     public static final DeferredItem<Item> ROCKET_FINS = item("rocket_fins");
     public static final DeferredItem<Item> NOSE_CONE = item("nose_cone");
@@ -119,6 +126,7 @@ public final class SpaceContent {
     public static final DeferredHolder<net.minecraft.core.component.DataComponentType<?>, net.minecraft.core.component.DataComponentType<RocketItem.Stored>> ROCKET_DATA =
             COMPONENTS.registerComponentType("rocket_data", b -> b.persistent(RocketItem.Stored.CODEC).networkSynchronized(RocketItem.Stored.STREAM_CODEC));
     public static final DeferredItem<RocketItem> ROCKET_T1 = register("rocket_t1", p -> new RocketItem(1, p.stacksTo(1)));
+    public static final DeferredItem<RocketItem> ROCKET_T2 = register("rocket_t2", p -> new RocketItem(2, p.stacksTo(1)));
 
     public static final DeferredHolder<EntityType<?>, EntityType<RocketEntity>> ROCKET = ENTITIES.registerEntityType("rocket", RocketEntity::new, MobCategory.MISC,
             b -> b.noLootTable().sized(1.6f, 6.0f).passengerAttachments(1.5f).clientTrackingRange(16).updateInterval(1));

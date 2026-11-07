@@ -64,6 +64,9 @@ class SpaceDataTest {
         String veins = Files.readString(Path.of("src/main/resources/iis/veins.json"));
         assertTrue(veins.contains("iis:moon"));
         assertTrue(Files.exists(GEN.resolve("assets/iis/items/ore_meteoric_iron.json")));
-        assertFalse(Files.exists(GEN.resolve("assets/iis/items/ore_naquadah.json")), "naquadah lies on Mars and asteroids");
+        assertTrue(Files.exists(GEN.resolve("data/iis/dimension/mars.json")));
+        assertTrue(veins.contains("iis:mars"));
+        assertTrue(Files.exists(GEN.resolve("assets/iis/items/ore_naquadah.json")), "naquadah lies on Mars");
+        assertTrue(Files.exists(GEN.resolve("assets/iis/items/ore_desh.json")), "desh lies on Mars");
     }
 }

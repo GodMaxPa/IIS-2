@@ -15,7 +15,7 @@
 | IC2-Crops-Tools | 0.0.2 | Селекция культур IC2 | C |
 | GraviSuite | 2.0.3 | Топ-броня и инструменты | **A** — войдёт в «промышленное снаряжение» |
 | Railcraft | 9.12.2.0 | Железная дорога, коксовая печь, паровые машины | **A** — ж/д (решение владельца) |
-| GalacticraftCore + Planets, MicdoodleCore | 3.0.12.504 | Космос | **A** — космос (решение владельца) |
+| GalacticraftCore + Planets, MicdoodleCore | 3.0.12.504 | Космос | **A** — космос (решение владельца): Луна D115, Марс и ракета 2-го уровня D131; астероиды и 3-й уровень впереди |
 | SGCraft | 1.9.5 | Звёздные врата | C — может стать частью космоса |
 | appliedenergistics2 (II), ExtraCells (II), NotEnoughEnergistics | rv3 | Цифровое хранение | **B** — AE2 26.1.13-beta с правилами ИИС 1 (D125); ExtraCells на 26.1 нет, ячейка 256K и беспроводные терминалы AE2 Wireless Terminals (D127), квантовая ячейка Bigger AE2 2.2.1 вместо 16384K (D130) |
 | NotEnoughItems (II), NEIIntegration, neiaddons | — | Просмотр рецептов | B — JEI или EMI 🟡 |

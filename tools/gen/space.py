@@ -13,9 +13,11 @@ I = lambda x: f'{NS}:{x}'
 COMPRESSED = (('iron', 'Iron', (190, 190, 195), 'Compressed Iron', 'Сжатое железо'), ('steel', 'Steel', (120, 120, 128), 'Compressed Steel', 'Сжатая сталь'),
               ('aluminium', 'Aluminium', (150, 205, 225), 'Compressed Aluminium', 'Сжатый алюминий'), ('tin', 'Tin', (215, 215, 225), 'Compressed Tin', 'Сжатое олово'),
               ('copper', 'Copper', (225, 130, 70), 'Compressed Copper', 'Сжатая медь'), ('bronze', 'Bronze', (210, 150, 60), 'Compressed Bronze', 'Сжатая бронза'),
-              ('titanium', 'Titanium', (210, 165, 215), 'Compressed Titanium', 'Сжатый титан'))
+              ('titanium', 'Titanium', (210, 165, 215), 'Compressed Titanium', 'Сжатый титан'),
+              ('meteoric_iron', 'MeteoricIron', (105, 80, 85), 'Compressed Meteoric Iron', 'Сжатое метеоритное железо'))
 # id, EN, RU, base colour, accent colour, shape
 ITEMS = [('heavy_plating', 'Heavy Duty Plate', 'Сверхпрочное покрытие', (95, 100, 110), (150, 155, 165), 'plate'),
+         ('heavy_plating_t2', 'Heavy Duty Plate T2', 'Сверхпрочное покрытие Т2', (120, 85, 60), (195, 145, 95), 'plate'),
          ('rocket_engine_t1', 'Tier 1 Rocket Engine', 'Ракетный двигатель 1-го уровня', (90, 90, 100), (230, 120, 40), 'engine'),
          ('rocket_fins', 'Rocket Fins', 'Ракетный стабилизатор', (170, 40, 40), (220, 220, 225), 'fins'),
          ('nose_cone', 'Nose Cone', 'Головной обтекатель', (215, 215, 220), (190, 40, 40), 'cone'),
@@ -78,6 +80,15 @@ def rock(base, seed):
     return im
 
 
+def tinted(base, seed, tint):
+    im = rock(base, seed)
+    for y in range(16):
+        for x in range(16):
+            r, gg, b, a = im.getpixel((x, y))
+            im.putpixel((x, y), (min(255, int(r * tint[0])), min(255, int(gg * tint[1])), min(255, int(b * tint[2])), a))
+    return im
+
+
 def generate(g):
     write, A, D, lang, shaped, tag_of, block_tags, ref = g['write'], g['A'], g['D'], g['lang'], g['shaped'], g['tag_of'], g['block_tags'], g['ref']
     rec = {}
@@ -130,6 +141,8 @@ def generate(g):
         item(iid, en, ru, draw(shape, base, acc, 200 + k))
     item('oxygen_tank_light', 'Light Oxygen Tank', 'Малый кислородный баллон', draw('tank', (90, 170, 90), (60, 110, 60), 300))
     item('heavy_ingot_t1', 'Heavy Duty Alloy Ingot T1', 'Сверхпрочный слиток Т1', draw('plate', (85, 85, 95), (40, 40, 50), 301))
+    item('heavy_ingot_t2', 'Heavy Duty Alloy Ingot T2', 'Сверхпрочный слиток Т2', draw('plate', (110, 80, 60), (55, 40, 30), 303))
+    item('rocket_t2', 'Tier 2 Rocket', 'Ракета 2-го уровня', draw('cone', (70, 72, 82), (215, 110, 40), 304))
     item('schematic_3x3', 'Schematic (3x3)', 'Схема (3×3)', Image.open(os.path.join(g['ROOT'], 'tools', 'gen', 'textures', 'lv', 'items', '497.png')).convert('RGBA'))
     item('rocket_t1', 'Tier 1 Rocket', 'Ракета 1-го уровня', draw('cone', (225, 225, 230), (190, 40, 40), 302))
     for k, en, ru in (('item.iis.rocket.cargo', 'Cargo: %s slots', 'Груз: %s ячеек'), ('item.iis.rocket.fuel', 'Fuel: %s L', 'Топливо: %s л'),
@@ -144,6 +157,8 @@ def generate(g):
                       ('message.iis.rocket.ready', 'Press jump to launch', 'Нажми прыжок для старта'),
                       ('message.iis.rocket.pad', 'A rocket needs a complete 3x3 launch pad', 'Ракете нужна целая взлётная площадка 3×3'),
                       ('message.iis.fuel_loader', 'Rocket fuel: %s / %s L', 'Ракетное топливо: %s / %s л'),
+                      ('gui.iis.rocket.target.mars', 'Target: Mars', 'Цель: Марс'), ('gui.iis.rocket.target.moon', 'Target: the Moon', 'Цель: Луна'),
+                      ('gui.iis.nasa.rocket_t2', 'Tier 2 rocket: the same parts with T2 plates', 'Ракета 2-го уровня: те же детали, покрытия Т2'),
                       ('entity.iis.rocket', 'Rocket', 'Ракета'), ('itemGroup.iis.space', 'IIS 2.0: Space', 'ИИС 2.0: космос'),
                       ('death.attack.iis.oxygen_suffocation', '%s ran out of oxygen', '%s задохнулся без кислорода'),
                       ('gui.iis.nasa.rocket_t1', 'Tier 1 rocket: nose, 8 plates, 4 fins, engine; chests add cargo', 'Ракета 1-го уровня: обтекатель, 8 покрытий, 4 стабилизатора, двигатель; сундуки дают груз'),
@@ -156,6 +171,10 @@ def generate(g):
     block('moon_dirt', 'Moon Dirt', 'Лунный грунт', rock(135, 2), tool='shovel')
     block('moon_turf', 'Moon Regolith', 'Лунный реголит', rock(165, 3), tool='shovel')
     block_tags.setdefault('minecraft:stone_ore_replaceables', []).append(I('moon_rock'))   # GT ore on the Moon sits on the plain stone form, as in GT5
+    block('mars_rock', 'Mars Rock', 'Марсианский камень', tinted(115, 7, (1.15, 0.72, 0.55)))
+    block('mars_dirt', 'Mars Soil', 'Марсианский грунт', tinted(125, 8, (1.25, 0.78, 0.55)), tool='shovel')
+    block('mars_turf', 'Mars Dust', 'Марсианская пыль', tinted(150, 9, (1.3, 0.72, 0.45)), tool='shovel')
+    block_tags['minecraft:stone_ore_replaceables'].append(I('mars_rock'))
     pad = rock(95, 4)
     for k in range(16):
         for x, y in ((k, 0), (k, 15), (0, k), (15, k)):
@@ -183,6 +202,14 @@ def generate(g):
         for x in range(0, 64):
             body.putpixel((x, y), (185, 45, 45, 255))
     body.save(tex('entity/rocket_t1.png'))
+    heavy = Image.new('RGBA', (64, 64), (72, 74, 84, 255))
+    for y in range(64):
+        for x in range(64):
+            if y % 12 == 0:
+                heavy.putpixel((x, y), (40, 42, 50, 255))
+            if y >= 40:
+                heavy.putpixel((x, y), (215, 110, 40, 255))
+    heavy.save(tex('entity/rocket_t2.png'))
 
     # --- the Moon ------------------------------------------------------------------------------------------------------------
     # GT_Worldgen veins are stretched by D11 (y * 1.6 - 64), so the Moon keeps the overworld's height; surface near y = 70
@@ -218,6 +245,39 @@ def generate(g):
             {'type': 'minecraft:condition', 'if_true': {'type': 'minecraft:stone_depth', 'add_surface_depth': False, 'offset': 3, 'secondary_depth_range': 0, 'surface_type': 'floor'},
              'then_run': {'type': 'minecraft:block', 'result_state': {'Name': I('moon_dirt')}}}]}})
     write(os.path.join(D, NS, 'dimension', 'moon.json'), {'type': I('moon'), 'generator': {'type': 'minecraft:noise', 'settings': I('moon'), 'biome_source': {'type': 'minecraft:fixed', 'biome': I('moon')}}})
+
+    # --- Mars (D131): the same height as the Moon, rolling hills, ore on the plain stone form. GC WorldProviderMars for the numbers (LowGravity, RocketEntity) ----------
+    write(os.path.join(D, NS, 'dimension_type', 'mars.json'), {
+        'ambient_light': 0.05, 'attributes': {
+            'minecraft:gameplay/bed_rule': {'can_set_spawn': 'never', 'can_sleep': 'never', 'explodes': False},
+            'minecraft:gameplay/respawn_anchor_works': False,
+            'minecraft:visual/fog_color': '#c48a62', 'minecraft:visual/sky_color': '#b5764c', 'minecraft:visual/cloud_height': 2000.0},
+        'coordinate_scale': 1.0, 'has_ceiling': False, 'has_ender_dragon_fight': False, 'has_fixed_time': False, 'has_skylight': True, 'height': 384,
+        'infiniburn': '#minecraft:infiniburn_overworld', 'logical_height': 384, 'min_y': -64, 'monster_spawn_block_light_limit': 0,
+        'monster_spawn_light_level': {'type': 'minecraft:uniform', 'max_inclusive': 7, 'min_inclusive': 0}, 'skybox': 'overworld', 'timelines': []})
+    write(os.path.join(D, NS, 'worldgen', 'biome', 'mars.json'), {
+        'attributes': {'minecraft:visual/sky_color': '#b5764c', 'minecraft:visual/fog_color': '#c48a62'}, 'carvers': [], 'downfall': 0.0, 'effects': {'water_color': '#3f76e4'},
+        'features': [[], [], [], [], [], [], [I('gt_ore_veins')], [], [], [], []], 'has_precipitation': False, 'spawn_costs': {},
+        'spawners': {'ambient': [], 'axolotls': [], 'creature': [], 'misc': [], 'underground_water_creature': [], 'water_ambient': [], 'water_creature': [],
+                     'monster': [{'type': 'minecraft:zombie', 'weight': 100, 'minCount': 2, 'maxCount': 4}, {'type': 'minecraft:skeleton', 'weight': 100, 'minCount': 2, 'maxCount': 4},
+                                 {'type': 'minecraft:spider', 'weight': 50, 'minCount': 1, 'maxCount': 2}, {'type': 'minecraft:creeper', 'weight': 50, 'minCount': 1, 'maxCount': 2}]},
+        'temperature': 0.5})
+    hills = {'type': 'minecraft:add',
+             'argument1': {'type': 'minecraft:y_clamped_gradient', 'from_y': -64, 'to_y': 320, 'from_value': 2.09375, 'to_value': -3.90625},
+             'argument2': {'type': 'minecraft:mul', 'argument1': 0.45, 'argument2': {'type': 'minecraft:noise', 'noise': 'minecraft:surface', 'xz_scale': 0.25, 'y_scale': 0.0}}}
+    write(os.path.join(D, NS, 'worldgen', 'noise_settings', 'mars.json'), {
+        'aquifers_enabled': False, 'default_block': {'Name': I('mars_rock')}, 'default_fluid': {'Name': 'minecraft:air'}, 'disable_mob_generation': False, 'legacy_random_source': False,
+        'noise': {'height': 384, 'min_y': -64, 'size_horizontal': 1, 'size_vertical': 2},
+        'noise_router': dict(zero, final_density=hills, initial_density_without_jaggedness=hills),
+        'ore_veins_enabled': False, 'sea_level': -63, 'spawn_target': [],
+        'surface_rule': {'type': 'minecraft:sequence', 'sequence': [
+            {'type': 'minecraft:condition', 'if_true': {'type': 'minecraft:vertical_gradient', 'random_name': 'iis:mars_bedrock', 'true_at_and_below': {'above_bottom': 0}, 'false_at_and_above': {'above_bottom': 5}},
+             'then_run': {'type': 'minecraft:block', 'result_state': {'Name': 'minecraft:bedrock'}}},
+            {'type': 'minecraft:condition', 'if_true': {'type': 'minecraft:stone_depth', 'add_surface_depth': False, 'offset': 0, 'secondary_depth_range': 0, 'surface_type': 'floor'},
+             'then_run': {'type': 'minecraft:block', 'result_state': {'Name': I('mars_turf')}}},
+            {'type': 'minecraft:condition', 'if_true': {'type': 'minecraft:stone_depth', 'add_surface_depth': False, 'offset': 3, 'secondary_depth_range': 0, 'surface_type': 'floor'},
+             'then_run': {'type': 'minecraft:block', 'result_state': {'Name': I('mars_dirt')}}}]}})
+    write(os.path.join(D, NS, 'dimension', 'mars.json'), {'type': I('mars'), 'generator': {'type': 'minecraft:noise', 'settings': I('mars'), 'biome_source': {'type': 'minecraft:fixed', 'biome': I('mars')}}})
     write(os.path.join(D, NS, 'damage_type', 'oxygen_suffocation.json'), {'message_id': 'iis.oxygen_suffocation', 'exhaustion': 0.0, 'scaling': 'never'})
 
     # --- recipes: scripts/Galacticraft.zs ------------------------------------------------------------------------------------
@@ -228,6 +288,10 @@ def generate(g):
     for cid, mat, *_ in COMPRESSED:
         mrec('implosion', f'compressed_{cid}', [ing(tag_of('plate', mat), 4), ing('minecraft:tnt', 2)], [out(I(f'compressed_{cid}'), 2), out(dark, 2)], 20, 30)
     mrec('implosion', 'heavy_plating', [ing(I('heavy_ingot_t1')), ing('minecraft:tnt', 4)], [out(HP), out(ref('tiny_dust', 'StainlessSteel'), 2)], 20, 30)   # GT :1100
+    # GT :1101 and Galacticraft.zs: tungsten bolts, duranium, europium, HSS-S, the T1 plate and compressed meteoric iron from the Moon
+    mrec('implosion', 'heavy_plating_t2', [ing(I('heavy_ingot_t2')), ing('minecraft:tnt', 4)], [out(I('heavy_plating_t2')), out(ref('tiny_dust', 'Tungsten'), 2)], 20, 30)
+    shaped('space/heavy_ingot_t2', I('heavy_ingot_t2'), 1, ['BBB', 'DhE', 'SPM'], {'B': tag_of('bolt', 'Tungsten'), 'D': tag_of('plate', 'Duranium'), 'E': tag_of('plate', 'Europium'), 'S': tag_of('plate', 'HSSS'),
+                                                                                    'P': HP, 'M': I('compressed_meteoric_iron'), 'h': '#iis:tools/hammer'})
     # zs: bolts, double titanium, double PTFE, compressed bronze and steel with a hammer
     shaped('space/heavy_ingot_t1', I('heavy_ingot_t1'), 1, ['BTB', 'ChS', 'BPB'], {'B': tag_of('bolt', 'StainlessSteel'), 'T': tag_of('double_plate', 'Titanium'), 'P': tag_of('double_plate', 'Polytetrafluoroethylene'),
                                                                                     'C': I('compressed_bronze'), 'S': CS, 'h': '#iis:tools/hammer'})

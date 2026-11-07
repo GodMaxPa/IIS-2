@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/hsss",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_hsss",
+      "count": 1
+    }
+  ],
+  "duration": 129,
+  "eut": 24
+}

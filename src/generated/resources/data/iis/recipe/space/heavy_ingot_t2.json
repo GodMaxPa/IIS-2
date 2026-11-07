@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBB",
+    "DhE",
+    "SPM"
+  ],
+  "key": {
+    "B": "#iis:bolts/tungsten",
+    "D": "#c:plates/duranium",
+    "E": "#c:plates/europium",
+    "S": "#c:plates/hsss",
+    "P": "iis:heavy_plating",
+    "M": "iis:compressed_meteoric_iron",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:heavy_ingot_t2"
+  }
+}

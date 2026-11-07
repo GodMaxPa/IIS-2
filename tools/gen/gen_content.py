@@ -124,9 +124,9 @@ def handle_material(name):
 
 
 # ----------------------------------------------------------------------------------------------------------------
-# Veins (owner decision D11: y * 1.6 - 64). Moon: D115; Mars and asteroids wait for the next stages of the space slice (D17).
+# Veins (owner decision D11: y * 1.6 - 64). Moon: D115; Mars: D131; asteroids wait for the next stage of the space slice (D17).
 # ----------------------------------------------------------------------------------------------------------------
-DIM_MAP = {'Overworld': 'overworld', 'Nether': 'nether', 'TheEnd': 'end', 'Moon': 'iis:moon'}
+DIM_MAP = {'Overworld': 'overworld', 'Nether': 'nether', 'TheEnd': 'end', 'Moon': 'iis:moon', 'Mars': 'iis:mars'}
 LAYERS = ('primary', 'secondary', 'between', 'sporadic')
 veins, ore_dims = [], {}
 for v in veins_src:
@@ -224,7 +224,7 @@ names |= {'VanadiumSteel'}
 names |= {'PolyvinylChloride'}
 # D125: Ender IO alloys of GT (GT_MachineRecipeLoader:1020-1027, 1800-1809), obsidian and glowstone plates of AE2.zs / EnderIO.zs
 names |= {'DarkSteel', 'ElectricalSteel', 'ConductiveIron', 'EnergeticAlloy', 'VibrantAlloy', 'PulsatingIron', 'RedstoneAlloy', 'Soularium', 'EndSteel', 'Enderium', 'EnderiumBase', 'Obsidian', 'Glowstone'}
-names |= {'HSSE', 'Naquadah', 'Superconductor', 'EpoxidFiberReinforced', 'Indium', 'AluminiumSulfite', 'Arsenic', 'Phosphorus', 'Phosphate', 'GalliumArsenide', 'IndiumGalliumPhosphide'}
+names |= {'HSSE', 'HSSS', 'Iridium', 'Osmium', 'Naquadah', 'Superconductor', 'EpoxidFiberReinforced', 'Indium', 'AluminiumSulfite', 'Arsenic', 'Phosphorus', 'Phosphate', 'GalliumArsenide', 'IndiumGalliumPhosphide'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
 B_DUST, B_METAL, B_GEM, B_ORE, B_TOOL = 1, 2, 4, 8, 64
@@ -474,10 +474,10 @@ for n in sorted(names):
         rgba = [int(x) for x in str(pr['MatRGBA']).split(',') if x][:4]
     iset = str(m.get('iconSet', 'SET_DULL')).replace('SET_', '')
     dims = ore_dims.get(n, set())
-    hosts = (['stone', 'deepslate'] if 'overworld' in dims or 'iis:moon' in dims else []) + (['netherrack'] if 'nether' in dims else []) \
+    hosts = (['stone', 'deepslate'] if 'overworld' in dims or 'iis:moon' in dims or 'iis:mars' in dims else []) + (['netherrack'] if 'nether' in dims else []) \
         + (['end_stone'] if 'end' in dims else [])
     sdims = small_dims.get(n, set())
-    small_hosts = (['stone', 'deepslate'] if 'overworld' in sdims or 'iis:moon' in sdims else []) + (['netherrack'] if 'nether' in sdims else []) \
+    small_hosts = (['stone', 'deepslate'] if 'overworld' in sdims or 'iis:moon' in sdims or 'iis:mars' in sdims else []) + (['netherrack'] if 'nether' in sdims else []) \
         + (['end_stone'] if 'end' in sdims else [])
     formula = ru_meta.get(f"01.{2000 + m['id']}", {}).get('tooltip')
     ds = prop(n, 'MaterialDirectSmeltInto', n)

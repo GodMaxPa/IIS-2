@@ -2475,6 +2475,91 @@
     "material": "dark_steel"
   },
   {
+    "id": "crushed_desh",
+    "prefix": "crushed",
+    "material": "desh"
+  },
+  {
+    "id": "purified_desh",
+    "prefix": "purified",
+    "material": "desh"
+  },
+  {
+    "id": "centrifuged_desh",
+    "prefix": "centrifuged",
+    "material": "desh"
+  },
+  {
+    "id": "impure_dust_desh",
+    "prefix": "impure_dust",
+    "material": "desh"
+  },
+  {
+    "id": "pure_dust_desh",
+    "prefix": "pure_dust",
+    "material": "desh"
+  },
+  {
+    "id": "dust_desh",
+    "prefix": "dust",
+    "material": "desh"
+  },
+  {
+    "id": "small_dust_desh",
+    "prefix": "small_dust",
+    "material": "desh"
+  },
+  {
+    "id": "tiny_dust_desh",
+    "prefix": "tiny_dust",
+    "material": "desh"
+  },
+  {
+    "id": "ingot_desh",
+    "prefix": "ingot",
+    "material": "desh"
+  },
+  {
+    "id": "nugget_desh",
+    "prefix": "nugget",
+    "material": "desh"
+  },
+  {
+    "id": "plate_desh",
+    "prefix": "plate",
+    "material": "desh"
+  },
+  {
+    "id": "double_plate_desh",
+    "prefix": "double_plate",
+    "material": "desh"
+  },
+  {
+    "id": "rod_desh",
+    "prefix": "rod",
+    "material": "desh"
+  },
+  {
+    "id": "bolt_desh",
+    "prefix": "bolt",
+    "material": "desh"
+  },
+  {
+    "id": "screw_desh",
+    "prefix": "screw",
+    "material": "desh"
+  },
+  {
+    "id": "long_rod_desh",
+    "prefix": "long_rod",
+    "material": "desh"
+  },
+  {
+    "id": "turbine_blade_desh",
+    "prefix": "turbine_blade",
+    "material": "desh"
+  },
+  {
     "id": "crushed_diamond",
     "prefix": "crushed",
     "material": "diamond"
@@ -4318,6 +4403,71 @@
     "id": "gear_hssg",
     "prefix": "gear",
     "material": "hssg"
+  },
+  {
+    "id": "dust_hsss",
+    "prefix": "dust",
+    "material": "hsss"
+  },
+  {
+    "id": "small_dust_hsss",
+    "prefix": "small_dust",
+    "material": "hsss"
+  },
+  {
+    "id": "tiny_dust_hsss",
+    "prefix": "tiny_dust",
+    "material": "hsss"
+  },
+  {
+    "id": "ingot_hsss",
+    "prefix": "ingot",
+    "material": "hsss"
+  },
+  {
+    "id": "hot_ingot_hsss",
+    "prefix": "hot_ingot",
+    "material": "hsss"
+  },
+  {
+    "id": "nugget_hsss",
+    "prefix": "nugget",
+    "material": "hsss"
+  },
+  {
+    "id": "plate_hsss",
+    "prefix": "plate",
+    "material": "hsss"
+  },
+  {
+    "id": "double_plate_hsss",
+    "prefix": "double_plate",
+    "material": "hsss"
+  },
+  {
+    "id": "rod_hsss",
+    "prefix": "rod",
+    "material": "hsss"
+  },
+  {
+    "id": "bolt_hsss",
+    "prefix": "bolt",
+    "material": "hsss"
+  },
+  {
+    "id": "screw_hsss",
+    "prefix": "screw",
+    "material": "hsss"
+  },
+  {
+    "id": "long_rod_hsss",
+    "prefix": "long_rod",
+    "material": "hsss"
+  },
+  {
+    "id": "turbine_blade_hsss",
+    "prefix": "turbine_blade",
+    "material": "hsss"
   },
   {
     "id": "dust_hydrated_coal",
@@ -12215,6 +12365,51 @@
     "material": "dark_steel"
   },
   {
+    "id": "sword_head_desh",
+    "prefix": "sword_head",
+    "material": "desh"
+  },
+  {
+    "id": "pickaxe_head_desh",
+    "prefix": "pickaxe_head",
+    "material": "desh"
+  },
+  {
+    "id": "shovel_head_desh",
+    "prefix": "shovel_head",
+    "material": "desh"
+  },
+  {
+    "id": "axe_head_desh",
+    "prefix": "axe_head",
+    "material": "desh"
+  },
+  {
+    "id": "hoe_head_desh",
+    "prefix": "hoe_head",
+    "material": "desh"
+  },
+  {
+    "id": "saw_head_desh",
+    "prefix": "saw_head",
+    "material": "desh"
+  },
+  {
+    "id": "drill_head_desh",
+    "prefix": "drill_head",
+    "material": "desh"
+  },
+  {
+    "id": "chainsaw_head_desh",
+    "prefix": "chainsaw_head",
+    "material": "desh"
+  },
+  {
+    "id": "wrench_head_desh",
+    "prefix": "wrench_head",
+    "material": "desh"
+  },
+  {
     "id": "sword_head_duranium",
     "prefix": "sword_head",
     "material": "duranium"
@@ -12618,6 +12813,51 @@
     "id": "wrench_head_hssg",
     "prefix": "wrench_head",
     "material": "hssg"
+  },
+  {
+    "id": "sword_head_hsss",
+    "prefix": "sword_head",
+    "material": "hsss"
+  },
+  {
+    "id": "pickaxe_head_hsss",
+    "prefix": "pickaxe_head",
+    "material": "hsss"
+  },
+  {
+    "id": "shovel_head_hsss",
+    "prefix": "shovel_head",
+    "material": "hsss"
+  },
+  {
+    "id": "axe_head_hsss",
+    "prefix": "axe_head",
+    "material": "hsss"
+  },
+  {
+    "id": "hoe_head_hsss",
+    "prefix": "hoe_head",
+    "material": "hsss"
+  },
+  {
+    "id": "saw_head_hsss",
+    "prefix": "saw_head",
+    "material": "hsss"
+  },
+  {
+    "id": "drill_head_hsss",
+    "prefix": "drill_head",
+    "material": "hsss"
+  },
+  {
+    "id": "chainsaw_head_hsss",
+    "prefix": "chainsaw_head",
+    "material": "hsss"
+  },
+  {
+    "id": "wrench_head_hsss",
+    "prefix": "wrench_head",
+    "material": "hsss"
   },
   {
     "id": "sword_head_invar",

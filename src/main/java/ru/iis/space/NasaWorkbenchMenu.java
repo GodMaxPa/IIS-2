@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
 /**
- * Сборка ракеты 1-го уровня (GC SchematicRocketT1): обтекатель, 8 сверхпрочных покрытий, 4 стабилизатора, двигатель;
+ * Сборка ракет (GC SchematicRocketT1): обтекатель, 8 сверхпрочных покрытий (Т2 дают ракету 2-го уровня), 4 стабилизатора, двигатель;
  * до трёх сундуков дают по 18 ячеек груза. Детали берутся из слотов целиком при сборке.
  */
 public class NasaWorkbenchMenu extends AbstractContainerMenu {
@@ -39,7 +39,7 @@ public class NasaWorkbenchMenu extends AbstractContainerMenu {
             addSlot(new Slot(parts, i, POS[i][0], POS[i][1]) {
                 @Override
                 public boolean mayPlace(ItemStack stack) {
-                    return stack.is(required(slot));
+                    return stack.is(required(slot)) || slot >= PLATES && slot < FINS && stack.is(SpaceContent.HEAVY_PLATING_T2.get());
                 }
 
                 @Override
@@ -75,15 +75,17 @@ public class NasaWorkbenchMenu extends AbstractContainerMenu {
     /** Что собирается из этих деталей; пусто, если не хватает обязательных. */
     public static ItemStack assemble(Container parts) {
         int chests = 0;
+        // D131: восемь покрытий Т2 вместо обычных дают ракету 2-го уровня; вперемешку не собирается
+        boolean t2 = parts.getItem(PLATES).is(SpaceContent.HEAVY_PLATING_T2.get());
         for (int i = 0; i < PARTS; i++) {
-            boolean ok = parts.getItem(i).is(required(i));
+            boolean ok = i >= PLATES && i < FINS && t2 ? parts.getItem(i).is(SpaceContent.HEAVY_PLATING_T2.get()) : parts.getItem(i).is(required(i));
             if (i >= CHESTS) {
                 if (ok) chests++;
             } else if (!ok) {
                 return ItemStack.EMPTY;
             }
         }
-        ItemStack rocket = new ItemStack(SpaceContent.ROCKET_T1.get());
+        ItemStack rocket = new ItemStack(t2 ? SpaceContent.ROCKET_T2.get() : SpaceContent.ROCKET_T1.get());
         rocket.set(SpaceContent.ROCKET_DATA.get(), new RocketItem.Stored(chests * 18, 0));
         return rocket;
     }

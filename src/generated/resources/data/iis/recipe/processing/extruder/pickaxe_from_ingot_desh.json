@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/desh",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pickaxe_head_desh",
+      "count": 1
+    }
+  ],
+  "duration": 294,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_pickaxe"
+  ]
+}

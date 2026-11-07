@@ -72,6 +72,82 @@
       ]
     },
     {
+      "id": "1A00000000000279",
+      "x": 12.25,
+      "y": 4.25,
+      "size": 2.5,
+      "dependencies": [
+        "1A0000000000027F",
+        "1A0000000000027B",
+        "1A00000000000289",
+        "1A0000000000028A",
+        "1A00000000000260",
+        "1A000000000000CD"
+      ],
+      "icon": {
+        "id": "iis:rocket_t2",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_t2",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000027900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000027B",
+      "x": 11.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000281",
+        "1A00000000000282",
+        "1A000000000000CD",
+        "1A00000000000283",
+        "1A00000000000284"
+      ],
+      "icon": {
+        "id": "iis:heavy_plating_t2",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:heavy_plating_t2",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000027B00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000027D",
       "x": 7.75,
       "y": 4.25,
@@ -110,16 +186,7 @@
       "x": 10.0,
       "y": 3.5,
       "dependencies": [
-        "1A0000000000027F",
-        "1A00000000000281",
-        "1A00000000000286",
-        "1A000000000000CD",
-        "1A00000000000283",
-        "1A00000000000288",
-        "1A00000000000081",
-        "1A00000000000289",
-        "1A0000000000028A",
-        "1A00000000000260"
+        "1A00000000000279"
       ],
       "icon": {
         "id": "iis:dust_naquadah",
@@ -181,6 +248,39 @@
       ]
     },
     {
+      "id": "1A00000000000282",
+      "x": 11.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A00000000000286"
+      ],
+      "icon": {
+        "id": "iis:compressed_meteoric_iron",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressed_meteoric_iron",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000028200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C00000000028200"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000283",
       "x": 8.5,
       "y": 8.0,
@@ -210,6 +310,73 @@
             "count": 1
           },
           "id": "1C00000000028300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000284",
+      "x": 10.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A00000000000285"
+      ],
+      "icon": {
+        "id": "iis:plate_meteoric_iron",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_hsss",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000028400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C00000000028400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000285",
+      "x": 11.5,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000288",
+        "1A00000000000081"
+      ],
+      "icon": {
+        "id": "iis:dust_hsss",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_hsss",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000028500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 6
+          },
+          "id": "1C00000000028500"
         }
       ]
     },

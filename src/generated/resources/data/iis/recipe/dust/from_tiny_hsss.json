@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/hsss",
+    "#iis:tiny_dusts/hsss",
+    "#iis:tiny_dusts/hsss",
+    "#iis:tiny_dusts/hsss",
+    "#iis:tiny_dusts/hsss",
+    "#iis:tiny_dusts/hsss",
+    "#iis:tiny_dusts/hsss",
+    "#iis:tiny_dusts/hsss",
+    "#iis:tiny_dusts/hsss"
+  ],
+  "result": {
+    "id": "iis:dust_hsss"
+  }
+}

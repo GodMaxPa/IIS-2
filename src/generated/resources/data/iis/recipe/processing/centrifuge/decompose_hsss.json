@@ -1,0 +1,25 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/hsss",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_hssg",
+      "count": 6
+    },
+    {
+      "id": "iis:dust_iridium",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_osmium",
+      "count": 1
+    }
+  ],
+  "duration": 4644,
+  "eut": 15
+}

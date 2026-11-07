@@ -33,7 +33,7 @@ public class FuelLoaderBlockEntity extends BlockEntity {
         List<RocketEntity> rockets = level.getEntitiesOfClass(RocketEntity.class, new AABB(pos).inflate(3, 2, 3), r -> r.state() == RocketEntity.IDLE);
         if (rockets.isEmpty()) return;
         RocketEntity rocket = rockets.getFirst();
-        int moved = Math.min(RATE, Math.min(be.tank.amount(), RocketEntity.CAPACITY_T1 - rocket.fuel()));
+        int moved = Math.min(RATE, Math.min(be.tank.amount(), rocket.capacity() - rocket.fuel()));
         if (moved <= 0) return;
         rocket.setFuel(rocket.fuel() + moved);
         be.tank.setAmount(rocketFuel(), be.tank.amount() - moved);

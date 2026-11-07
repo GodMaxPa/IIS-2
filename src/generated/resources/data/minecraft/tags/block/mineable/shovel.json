@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "iis:moon_dirt",
-    "iis:moon_turf"
+    "iis:moon_turf",
+    "iis:mars_dirt",
+    "iis:mars_turf"
   ]
 }

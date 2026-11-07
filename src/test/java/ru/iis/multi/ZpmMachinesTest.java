@@ -81,10 +81,10 @@ class ZpmMachinesTest {
         assertEquals("#c:circuits/superconductor", key("lv/circuit_assembler_zpm", "C"));
     }
 
-    /** D17: жилы наквады только на Марсе и астероидах, ждут среза «Космос». Руды и добычи нет, только рецепты; решение меняет владелец. */
+    /** D17, D131: жилы наквады на Марсе, руда теперь есть. */
     @Test
-    void naquadahHasNoOreYet() {
-        assertFalse(Files.exists(GEN.resolve("assets/iis/items/ore_naquadah.json")));
+    void naquadahOreComesWithMars() {
+        assertTrue(Files.exists(GEN.resolve("assets/iis/items/ore_naquadah.json")));
         assertTrue(Files.exists(GEN.resolve("assets/iis/items/ingot_naquadah.json")));
     }
 

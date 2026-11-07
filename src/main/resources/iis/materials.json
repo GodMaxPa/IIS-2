@@ -1817,6 +1817,39 @@
     "toolQuality": 3
   },
   {
+    "id": "desh",
+    "gtName": "Desh",
+    "gtId": 884,
+    "en": "Desh",
+    "ru": "Дэш",
+    "ruOre": "Дэш",
+    "color": 2631720,
+    "iconSet": "DULL",
+    "harvestLevel": 3,
+    "hosts": [
+      "stone",
+      "deepslate"
+    ],
+    "smallHosts": [],
+    "ruSmallOre": "Вкрапление дэша",
+    "formula": "",
+    "types": 203,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "desh",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 1280,
+    "toolSpeed": 1.0,
+    "toolQuality": 3
+  },
+  {
     "id": "diamond",
     "gtName": "Diamond",
     "gtId": 500,
@@ -2281,7 +2314,10 @@
     "color": 16777215,
     "iconSet": "METALLIC",
     "harvestLevel": 2,
-    "hosts": [],
+    "hosts": [
+      "stone",
+      "deepslate"
+    ],
     "smallHosts": [],
     "ruSmallOre": "Вкрапление европиевой руды",
     "formula": "Eu",
@@ -3053,6 +3089,36 @@
     "toolQuality": 3
   },
   {
+    "id": "hsss",
+    "gtName": "HSSS",
+    "gtId": 374,
+    "en": "HSS-S",
+    "ru": "HSS-S",
+    "ruOre": "Руда HSS-S",
+    "color": 6684723,
+    "iconSet": "METALLIC",
+    "harvestLevel": 4,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "((Fe50CW)5CrMo2V)6Ir2Os",
+    "types": 195,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "hsss",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 5400,
+    "byProducts": [],
+    "toolDurability": 3000,
+    "toolSpeed": 14.0,
+    "toolQuality": 4
+  },
+  {
     "id": "hydrated_coal",
     "gtName": "HydratedCoal",
     "gtId": 818,
@@ -3221,6 +3287,8 @@
       "end_stone"
     ],
     "smallHosts": [
+      "stone",
+      "deepslate",
       "end_stone"
     ],
     "ruSmallOre": "Вкрапление иридиевой руды",
@@ -4185,7 +4253,10 @@
     "color": 3289650,
     "iconSet": "METALLIC",
     "harvestLevel": 4,
-    "hosts": [],
+    "hosts": [
+      "stone",
+      "deepslate"
+    ],
     "smallHosts": [],
     "ruSmallOre": "Вкрапление наквадаховой руды",
     "formula": "Nq",
@@ -5130,6 +5201,8 @@
       "end_stone"
     ],
     "smallHosts": [
+      "stone",
+      "deepslate",
       "end_stone"
     ],
     "ruSmallOre": "Вкрапление платиновой руды",
@@ -7217,7 +7290,10 @@
     "color": 14459120,
     "iconSet": "METALLIC",
     "harvestLevel": 3,
-    "hosts": [],
+    "hosts": [
+      "stone",
+      "deepslate"
+    ],
     "smallHosts": [],
     "ruSmallOre": "Вкрапление титановой руды",
     "formula": "Ti",
@@ -7393,7 +7469,10 @@
     "color": 3289650,
     "iconSet": "METALLIC",
     "harvestLevel": 3,
-    "hosts": [],
+    "hosts": [
+      "stone",
+      "deepslate"
+    ],
     "smallHosts": [],
     "ruSmallOre": "Вкрапление вольфрамовой руды",
     "formula": "W",
@@ -7614,7 +7693,10 @@
     "color": 3289650,
     "iconSet": "METALLIC",
     "harvestLevel": 2,
-    "hosts": [],
+    "hosts": [
+      "stone",
+      "deepslate"
+    ],
     "smallHosts": [],
     "ruSmallOre": "Вкрапление ванадиевой руды",
     "formula": "V",

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/hssg",
+    "#c:dusts/hssg",
+    "#c:dusts/hssg",
+    "#c:dusts/hssg",
+    "#c:dusts/hssg",
+    "#c:dusts/hssg",
+    "#c:dusts/iridium",
+    "#c:dusts/iridium",
+    "#c:dusts/osmium"
+  ],
+  "result": {
+    "id": "iis:dust_hsss",
+    "count": 9
+  }
+}

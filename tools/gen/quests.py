@@ -96,6 +96,9 @@ IC2_MAP = {
 # Railcraft items ported in D102 (track items are told apart by their track id in the damage value)
 # D115: Galacticraft, first stage of the space slice: own items that stand for GC ones
 GC_MAP = {('GalacticraftCore:item.spaceship', d): 'iis:rocket_t1' for d in (0, 1, 2, 3)}
+# D131: Mars and the tier 2 rocket
+GC_MAP.update({('GalacticraftMars:item.spaceshipTier2', d): 'iis:rocket_t2' for d in (0, 1, 2, 3)})
+GC_MAP.update({('GalacticraftMars:item.null', 3): 'iis:heavy_plating_t2', ('GalacticraftCore:item.meteoricIronIngot', 1): 'iis:compressed_meteoric_iron'})
 GC_MAP.update({('GalacticraftCore:item.heavyPlating', 0): 'iis:heavy_plating', ('GalacticraftCore:item.oxygenConcentrator', 0): 'iis:oxygen_concentrator',
                ('GalacticraftCore:tile.rocketWorkbench', 0): 'iis:nasa_workbench', ('GalacticraftCore:item.basicItem', 7): 'iis:compressed_tin',
                ('GalacticraftCore:item.basicItem', 8): 'iis:compressed_aluminium', ('GalacticraftCore:item.basicItem', 9): 'iis:compressed_steel',

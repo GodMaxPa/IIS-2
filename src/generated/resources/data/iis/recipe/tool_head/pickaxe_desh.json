@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PII",
+    "f h"
+  ],
+  "key": {
+    "P": "#c:plates/desh",
+    "I": "#c:ingots/desh",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:pickaxe_head_desh"
+  }
+}

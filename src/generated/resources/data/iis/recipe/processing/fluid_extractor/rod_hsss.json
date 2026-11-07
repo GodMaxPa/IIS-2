@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/hsss",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 12,
+  "eut": 103,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_hsss",
+      "amount": 72
+    }
+  ]
+}

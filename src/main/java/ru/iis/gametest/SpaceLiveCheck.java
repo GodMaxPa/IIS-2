@@ -24,16 +24,19 @@ import ru.iis.space.SpaceContent;
 public final class SpaceLiveCheck {
     private SpaceLiveCheck() {}
 
+    /** IIS_SPACE_CHECK=mars: полёт ракеты 2-го уровня на Марс вместо Луны (D131). */
+    private static final boolean MARS = "mars".equals(System.getenv("IIS_SPACE_CHECK"));
+
     private static final Logger LOG = LogUtils.getLogger();
     private static int ticks;
 
     public static void init() {
-        if ("1".equals(System.getenv("IIS_SPACE_CHECK"))) NeoForge.EVENT_BUS.addListener(SpaceLiveCheck::tick);
+        if ("1".equals(System.getenv("IIS_SPACE_CHECK")) || MARS) NeoForge.EVENT_BUS.addListener(SpaceLiveCheck::tick);
     }
 
     private static void tick(ServerTickEvent.Post event) {
         MinecraftServer server = event.getServer();
-        ServerLevel moon = server.getLevel(SpaceContent.MOON), earth = server.getLevel(Level.OVERWORLD);
+        ServerLevel moon = server.getLevel(MARS ? SpaceContent.MARS : SpaceContent.MOON), earth = server.getLevel(Level.OVERWORLD);
         ticks++;
         if (ticks == 40) {
             if (moon == null) {
@@ -44,7 +47,8 @@ public final class SpaceLiveCheck {
             moon.setChunkForced(0, 0, true);
             RocketEntity r = SpaceContent.ROCKET.get().create(earth, EntitySpawnReason.TRIGGERED);
             r.setPos(0.5, RocketEntity.ARRIVAL_ALTITUDE - 20, 0.5);
-            r.setup(new RocketItem.Stored(18, RocketEntity.CAPACITY_T1));
+            if (MARS) r.setTier(2);
+            r.setup(new RocketItem.Stored(18, MARS ? RocketEntity.CAPACITY_T2 : RocketEntity.CAPACITY_T1));
             r.setState(RocketEntity.FLYING);
             earth.addFreshEntity(r);
             LOG.info("SPACE_CHECK rocket launched");
@@ -67,7 +71,7 @@ public final class SpaceLiveCheck {
                         }
                     }
                 }
-                boolean ok = top.equals("iis:moon_turf") && r.fuel() > 0 && r.getY() <= y + 2 && ores > 0;
+                boolean ok = top.equals(MARS ? "iis:mars_turf" : "iis:moon_turf") && r.fuel() > 0 && r.getY() <= y + 2 && ores > 0;
                 finish(server, (ok ? "PASSED" : "FAILED") + " surface y=" + y + " top=" + top + " rocket y=" + r.getY() + " fuel=" + r.fuel() + " cargo=" + r.cargoSlots() + " ores=" + ores);
             } else if (ticks > 2400) {
                 finish(server, "FAILED no landed rocket after " + ticks + " ticks; on the moon: " + found.size());

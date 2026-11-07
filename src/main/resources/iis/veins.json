@@ -122,6 +122,57 @@
     ]
   },
   {
+    "name": "custom.01",
+    "minY": 16,
+    "maxY": 128,
+    "legacyMinY": 50,
+    "legacyMaxY": 120,
+    "weight": 50,
+    "density": 3,
+    "size": 16,
+    "primary": "iis:titanium",
+    "secondary": "iis:tungsten",
+    "between": "iis:neodymium",
+    "sporadic": "iis:vanadium",
+    "dimensions": [
+      "iis:mars"
+    ]
+  },
+  {
+    "name": "custom.02",
+    "minY": -56,
+    "maxY": 0,
+    "legacyMinY": 5,
+    "legacyMaxY": 40,
+    "weight": 20,
+    "density": 2,
+    "size": 16,
+    "primary": "iis:graphite",
+    "secondary": "iis:ruby",
+    "between": "iis:desh",
+    "sporadic": "iis:diamond",
+    "dimensions": [
+      "iis:mars"
+    ]
+  },
+  {
+    "name": "custom.03",
+    "minY": -48,
+    "maxY": -32,
+    "legacyMinY": 10,
+    "legacyMaxY": 20,
+    "weight": 10,
+    "density": 2,
+    "size": 16,
+    "primary": "iis:naquadah",
+    "secondary": "iis:europium",
+    "between": "iis:naquadah",
+    "sporadic": "iis:naquadah",
+    "dimensions": [
+      "iis:mars"
+    ]
+  },
+  {
     "name": "diamond",
     "minY": -56,
     "maxY": -32,
@@ -169,6 +220,7 @@
     "between": "iis:vanadium_magnetite",
     "sporadic": "iis:gold",
     "dimensions": [
+      "iis:mars",
       "iis:moon",
       "overworld"
     ]
@@ -187,6 +239,7 @@
     "between": "iis:banded_iron",
     "sporadic": "iis:malachite",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -241,6 +294,7 @@
     "between": "iis:iron",
     "sporadic": "iis:vanadium_magnetite",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -295,6 +349,7 @@
     "between": "iis:monazite",
     "sporadic": "iis:neodymium",
     "dimensions": [
+      "iis:mars",
       "iis:moon",
       "overworld"
     ]
@@ -402,6 +457,7 @@
     "sporadic": "iis:iridium",
     "dimensions": [
       "end",
+      "iis:mars",
       "overworld"
     ]
   },
@@ -437,6 +493,7 @@
     "between": "iis:ruby",
     "sporadic": "iis:cinnabar",
     "dimensions": [
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"

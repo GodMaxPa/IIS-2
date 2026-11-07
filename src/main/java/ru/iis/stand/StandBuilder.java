@@ -1332,6 +1332,17 @@ public final class StandBuilder {
             level.addFreshEntity(r);
         }
         labelAt(cx, 12.0, cz, "Ракета первого уровня\nЗаправлена: садитесь и летите на Луну", "aqua", 1.2);
+        int mx = cx - 7;
+        for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) set(at(mx + dx, 0, cz + dz), SpaceContent.LAUNCH_PAD.get().defaultBlockState());
+        RocketEntity r2 = SpaceContent.ROCKET.get().create(level, EntitySpawnReason.TRIGGERED);
+        if (r2 != null) {
+            BlockPos p = at(mx, 1, cz);
+            r2.setPos(p.getX() + 0.5, p.getY(), p.getZ() + 0.5);
+            r2.setTier(2);
+            r2.setup(new RocketItem.Stored(18, RocketEntity.CAPACITY_T2));
+            level.addFreshEntity(r2);
+        }
+        labelAt(mx, 12.0, cz, "Ракета второго уровня\nЦель выбирается в окне груза (Shift+ПКМ): Марс или Луна", "aqua", 1.2);
         sign(at(cx, 0, cz - 2), "Стартовая площадка");
         List<Block> rest = new ArrayList<>();
         SpaceContent.BLOCKS.getEntries().forEach(h -> {

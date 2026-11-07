@@ -6,6 +6,7 @@
     "amount": 1,
     "material": "iis:amber",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -17,6 +18,7 @@
     "amount": 1,
     "material": "iis:amethyst",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -28,6 +30,7 @@
     "amount": 8,
     "material": "iis:bismuth",
     "dimensions": [
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"
@@ -40,6 +43,7 @@
     "amount": 1,
     "material": "iis:blue_topaz",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -62,6 +66,7 @@
     "material": "iis:copper",
     "dimensions": [
       "end",
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"
@@ -74,6 +79,7 @@
     "amount": 2,
     "material": "iis:diamond",
     "dimensions": [
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"
@@ -86,6 +92,7 @@
     "amount": 1,
     "material": "iis:emerald",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -97,6 +104,7 @@
     "amount": 1,
     "material": "iis:fools_ruby",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -108,6 +116,7 @@
     "amount": 1,
     "material": "iis:garnet_red",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -119,6 +128,7 @@
     "amount": 1,
     "material": "iis:garnet_yellow",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -131,6 +141,7 @@
     "material": "iis:gold",
     "dimensions": [
       "end",
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"
@@ -143,6 +154,7 @@
     "amount": 1,
     "material": "iis:green_sapphire",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -154,7 +166,8 @@
     "amount": 8,
     "material": "iis:iridium",
     "dimensions": [
-      "end"
+      "end",
+      "iis:mars"
     ]
   },
   {
@@ -165,6 +178,7 @@
     "material": "iis:iron",
     "dimensions": [
       "end",
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"
@@ -177,6 +191,7 @@
     "amount": 1,
     "material": "iis:jasper",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -200,6 +215,7 @@
     "material": "iis:lead",
     "dimensions": [
       "end",
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"
@@ -223,6 +239,7 @@
     "material": "iis:nickel",
     "dimensions": [
       "end",
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"
@@ -235,6 +252,7 @@
     "amount": 1,
     "material": "iis:olivine",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -246,6 +264,7 @@
     "amount": 1,
     "material": "iis:opal",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -257,7 +276,8 @@
     "amount": 8,
     "material": "iis:platinum",
     "dimensions": [
-      "end"
+      "end",
+      "iis:mars"
     ]
   },
   {
@@ -267,6 +287,7 @@
     "amount": 8,
     "material": "iis:redstone",
     "dimensions": [
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"
@@ -279,6 +300,7 @@
     "amount": 1,
     "material": "iis:ruby",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -300,6 +322,7 @@
     "amount": 1,
     "material": "iis:sapphire",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -312,6 +335,7 @@
     "material": "iis:silver",
     "dimensions": [
       "end",
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"
@@ -344,6 +368,7 @@
     "amount": 1,
     "material": "iis:tanzanite",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -356,6 +381,7 @@
     "material": "iis:tin",
     "dimensions": [
       "end",
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"
@@ -368,6 +394,7 @@
     "amount": 1,
     "material": "iis:topaz",
     "dimensions": [
+      "iis:mars",
       "nether",
       "overworld"
     ]
@@ -380,6 +407,7 @@
     "material": "iis:zinc",
     "dimensions": [
       "end",
+      "iis:mars",
       "iis:moon",
       "nether",
       "overworld"

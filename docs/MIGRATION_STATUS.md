@@ -194,3 +194,4 @@
 | Проходимость и багажники D130 | unit `EquipmentLogicTest`; GameTest `equip_crushes_leaves`, `equip_cargo_kit`; настоящая езда по ступеням и лестнице в `-Pequipshots` (строки `climb` в журнале) |
 | Магазины, плазма, заправщик D130 | GameTest `equip_loose_reload`, `equip_magazine_swap`, `equip_plasma_gun`, `equip_fuel_pump`, `equip_fuel_values` |
 | Магазин наград D130 | unit `ShopLogicTest`; GameTest `shop_prices`; окно снято в `-Pequipshots` |
+| Марс и ракета 2-го уровня D131 | GameTest `mars_gravity`, `mars_terrain`, `rocket_tier2`; `IIS_SPACE_CHECK=mars gradlew runServer`; `tools/check_reach.py --no-mars`; снимки `-Pequipshots` |

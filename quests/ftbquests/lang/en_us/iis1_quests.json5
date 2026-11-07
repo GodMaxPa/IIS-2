@@ -2411,6 +2411,14 @@
     "Use fluid extractor (MV+) to pour the molten soularium to the chemical bath. Than put there the glass bottle to get the soul Vial. With help of it you may catch any mob."
   ],
   "quest.1A00000000000278.title": "Soul Vial",
+  "quest.1A00000000000279.quest_desc": [
+    "The second tier of the rocket - it may fly to the Mars. There you will have to find the Naquadah ore!"
+  ],
+  "quest.1A00000000000279.title": "Tier 2 Rocket",
+  "quest.1A0000000000027B.quest_desc": [
+    "Put the heavy duty alloy ingot t2 to implosion compressor, to get this."
+  ],
+  "quest.1A0000000000027B.title": "Heavy-Duty Plate (tier 2)",
   "quest.1A0000000000027D.quest_desc": [
     "Use EBF with HSS-G coil blocks to make te ingot from dust."
   ],
@@ -2427,10 +2435,22 @@
     "May be created from tungsten rod"
   ],
   "quest.1A00000000000281.title": "Tungsten Bolt",
+  "quest.1A00000000000282.quest_desc": [
+    "Use implosion compressor to get this from meteoric iron plate"
+  ],
+  "quest.1A00000000000282.title": "Compressed Meteoric Iron",
   "quest.1A00000000000283.quest_desc": [
     "Radon + molten galium by fusion ->> duranium"
   ],
   "quest.1A00000000000283.title": "Duranium Plate",
+  "quest.1A00000000000284.quest_desc": [
+    "Use a HSS-S ingot to make a plate from it by bending machine."
+  ],
+  "quest.1A00000000000284.title": "HSS-S Plate",
+  "quest.1A00000000000285.quest_desc": [
+    "6 hss-g + 2 iridium + 1 osmium dusts ->> 9 hss-s dusts"
+  ],
+  "quest.1A00000000000285.title": "HSS-S Dust",
   "quest.1A00000000000286.quest_desc": [
     "Use bender to make the plate from ingot."
   ],

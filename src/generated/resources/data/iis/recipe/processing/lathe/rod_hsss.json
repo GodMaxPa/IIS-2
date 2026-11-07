@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/hsss",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_hsss",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_hsss",
+      "count": 2
+    }
+  ],
+  "duration": 645,
+  "eut": 16
+}

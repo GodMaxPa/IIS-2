@@ -170,6 +170,7 @@ def generate(g):
     mrec('centrifuge', 'plutonium', [ing(tag_of('dust', 'Plutonium'))], [out(ref('tiny_dust', 'Plutonium241'), 1, 2000), out(ref('tiny_dust', 'Uranium'), 1, 3000)], 1600, 320)
     # :1104-1105 the Moon's helium-3: rock grinds to dirt, dirt centrifuges
     mrec('macerator', 'moon_rock', [ing(I('moon_rock'))], [out(I('moon_dirt'))], 400, 2)
+    mrec('macerator', 'mars_rock', [ing(I('mars_rock'))], [out(I('mars_dirt'))], 400, 2)   # D131: the same as the Moon's, GT has nothing for it
     mrec('centrifuge', 'moon_dirt', [ing(I('moon_dirt'))], [out('minecraft:sand', 1, 5000), out(ref('dust', 'Aluminium'), 1, 400), out(ref('dust', 'Calcite'), 1, 400), out(ref('dust', 'Iron'), 1, 100),
                                                              out(ref('dust', 'Magnesium'), 1, 100), out(ref('dust', 'Rutile'), 1, 100)], 400, 8, fout=[{'id': I('helium_3'), 'amount': 33}])
     # GT_ModHandler compression of a gem into its block (300 t, 2 EU/t): vanilla nether stars have no generated recipe; a plate is then cut from the block (quest 591)

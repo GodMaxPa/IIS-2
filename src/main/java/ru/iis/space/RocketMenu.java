@@ -14,13 +14,30 @@ import javax.annotation.Nullable;
 
 /** Груз ракеты: 0, 18, 36 или 54 ячейки. */
 public class RocketMenu extends AbstractContainerMenu {
-    public final int rows;
+    public final int rows, tier;
     private final int cargoSlots;
+    private final net.minecraft.world.inventory.DataSlot target;
     @Nullable private final Entity rocket;
 
     public RocketMenu(int id, Inventory inventory, Container cargo, @Nullable Entity rocket) {
+        this(id, inventory, cargo, rocket, rocket instanceof RocketEntity r ? r.tier() : 1);
+    }
+
+    private RocketMenu(int id, Inventory inventory, Container cargo, @Nullable Entity rocket, int tier) {
         super(SpaceContent.ROCKET_MENU.get(), id);
         this.rocket = rocket;
+        this.tier = tier;
+        target = addDataSlot(rocket instanceof RocketEntity r ? new net.minecraft.world.inventory.DataSlot() {
+            @Override
+            public int get() {
+                return r.target();
+            }
+
+            @Override
+            public void set(int value) {
+                r.setTarget(value);
+            }
+        } : net.minecraft.world.inventory.DataSlot.standalone());
         cargoSlots = cargo.getContainerSize();
         rows = cargoSlots / 9;
         for (int r = 0; r < rows; r++) {
@@ -30,7 +47,20 @@ public class RocketMenu extends AbstractContainerMenu {
     }
 
     public static RocketMenu client(int id, Inventory inventory, RegistryFriendlyByteBuf buf) {
-        return new RocketMenu(id, inventory, new SimpleContainer(buf.readVarInt()), null);
+        int cargo = buf.readVarInt();
+        return new RocketMenu(id, inventory, new SimpleContainer(cargo), null, buf.readVarInt());
+    }
+
+    public int target() {
+        return target.get();
+    }
+
+    /** Кнопка окна: цель 2-го уровня с Земли. */
+    @Override
+    public boolean clickMenuButton(Player player, int id) {
+        if (tier < 2) return false;
+        target.set(target.get() == RocketEntity.TARGET_MARS ? RocketEntity.TARGET_MOON : RocketEntity.TARGET_MARS);
+        return true;
     }
 
     @Override

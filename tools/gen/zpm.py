@@ -53,9 +53,11 @@ def generate(g):
 
     # --- materials -----------------------------------------------------------------------------------------------------
     # GT_CraftingRecipeLoader:409 HSS-E: 6 HSS-G, cobalt, manganese, silicon -> 9
+    # D131: HSS-S: the T2 heavy ingot needs its plate (Galacticraft.zs), GT_CraftingRecipeLoader has it next to HSS-E
+    shapeless('dust/mix_hsss', ref('dust', 'HSSS'), 9, [tag_of('dust', 'HSSG')] * 6 + [tag_of('dust', 'Iridium')] * 2 + [tag_of('dust', 'Osmium')])
     shapeless('dust/mix_hsse', ref('dust', 'HSSE'), 9, [tag_of('dust', 'HSSG')] * 6 + [tag_of('dust', 'Cobalt'), tag_of('dust', 'Manganese'), tag_of('dust', 'Silicon')])
     # ProcessingDust:41-44: dust -> ingot in the EBF, hot above 1750 K
-    for m in ('HSSE', 'Naquadah', 'GalliumArsenide'):
+    for m in ('HSSE', 'HSSS', 'Naquadah', 'GalliumArsenide'):
         t = prop(m, 'BlastFurnaceTemp', 0) or g['code'][m]['blastFurnaceTemp']
         result = ref('hot_ingot', m) if t > 1750 else ref('ingot', m)
         mrec('blast', f'dust_{mat_id(m)}', [ing(tag_of('dust', m))], [out(result)], max(mass(m) // 40, 1) * t, 120, temp=t)

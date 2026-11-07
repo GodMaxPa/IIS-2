@@ -195,9 +195,9 @@ class UvMachinesTest {
         assertEquals(16000, fluidIn(recipe("processing/assembly_line/ultimate_battery"), 1));
     }
 
-    /** D113: наквады в выживании всё ещё нет: руда не появилась, UV закрыт ею. */
+    /** D131: наквада в выживании с Марса: жилы custom.03 и naquadah ИИС 1. */
     @Test
-    void naquadahStillHasNoOre() {
-        assertFalse(Files.exists(GEN.resolve("assets/iis/items/ore_naquadah.json")));
+    void naquadahOreComesWithMars() {
+        assertTrue(Files.exists(GEN.resolve("assets/iis/items/ore_naquadah.json")));
     }
 }

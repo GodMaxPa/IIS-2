@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1653; hidden until their items are ported: 288; chapters: 36, one of them ours (D129, 49 quests).
+Quests in IIS 1: 1943; written: 1658; hidden until their items are ported: 283; chapters: 36, one of them ours (D129, 49 quests).
 
 ## Most needed unported items (task count)
 
@@ -43,14 +43,9 @@ Quests in IIS 1: 1943; written: 1653; hidden until their items are ported: 288; 
 - 1 × `gregtech:gt.metaitem.01:32714` Выгравированный лазуротроновый чип
 - 1 × `gregtech:gt.blockgem3:3` Блок адской звезды
 - 1 × `EnderIO:itemBrokenSpawner:0` 
-- 1 × `GalacticraftMars:item.spaceshipTier2:3` 
 - 1 × `GalacticraftCore:item.schematic:1` 
-- 1 × `GalacticraftMars:item.null:3` 
 - 1 × `GalacticraftCore:item.engine:1` 
 - 1 × `gregtech:gt.metaitem.01:32463` Сверхпрочный слиток T2
-- 1 × `GalacticraftCore:item.meteoricIronIngot:1` 
-- 1 × `gregtech:gt.metaitem.01:17374` Пластина HSS-S
-- 1 × `gregtech:gt.metaitem.01:2374` Пыль HSS-S
 - 1 × `gregtech:gt.metaitem.01:30495` Капсула со сжиженным воздухом
 - 1 × `IC2:itemCellEmpty:5` 
 - 1 × `gregtech:gt.blockmetal3:3` Европиевый блок
@@ -84,6 +79,11 @@ Quests in IIS 1: 1943; written: 1653; hidden until their items are ported: 288; 
 - 1 × `GraviSuite:advNanoChestPlate:1` 
 - 1 × `GraviSuite:advLappack:1` 
 - 1 × `GraviSuite:itemSimpleItem:0` 
+- 1 × `SGCraft:ic2PowerUnit:0` 
+- 1 × `SGCraft:stargateRing:0` 
+- 1 × `SGCraft:stargateRing:1` 
+- 1 × `SGCraft:stargateBase:0` 
+- 1 × `SGCraft:stargateController:0` 
 
 ## Unported fluids
 

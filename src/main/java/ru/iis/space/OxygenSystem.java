@@ -21,7 +21,7 @@ public final class OxygenSystem {
     public static final float DAMAGE = 1.0f;
 
     public static boolean airless(ResourceKey<Level> dim) {
-        return dim == SpaceContent.MOON;
+        return dim == SpaceContent.MOON || dim == SpaceContent.MARS;
     }
 
     public static void onPlayerTick(PlayerTickEvent.Post event) {

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "iis:moon_rock"
+    "iis:moon_rock",
+    "iis:mars_rock"
   ]
 }

@@ -31,6 +31,11 @@ public final class SpaceClient {
 
     public static final ModelLayerLocation ROCKET_LAYER = new ModelLayerLocation(Identifier.fromNamespaceAndPath(IIS.MODID, "rocket"), "main");
     private static final Identifier ROCKET_TEXTURE = Identifier.fromNamespaceAndPath(IIS.MODID, "textures/entity/rocket_t1.png");
+    private static final Identifier ROCKET_T2_TEXTURE = Identifier.fromNamespaceAndPath(IIS.MODID, "textures/entity/rocket_t2.png");
+
+    public static final class RocketState extends EntityRenderState {
+        int tier = 1;
+    }
 
     public static LayerDefinition rocketLayer() {
         MeshDefinition mesh = new MeshDefinition();
@@ -46,7 +51,7 @@ public final class SpaceClient {
         return LayerDefinition.create(mesh, 64, 64);
     }
 
-    public static final class RocketRenderer extends EntityRenderer<RocketEntity, EntityRenderState> {
+    public static final class RocketRenderer extends EntityRenderer<RocketEntity, RocketState> {
         private final ModelPart model;
 
         public RocketRenderer(EntityRendererProvider.Context context) {
@@ -55,15 +60,21 @@ public final class SpaceClient {
         }
 
         @Override
-        public EntityRenderState createRenderState() {
-            return new EntityRenderState();
+        public RocketState createRenderState() {
+            return new RocketState();
         }
 
         @Override
-        public void submit(EntityRenderState state, PoseStack pose, SubmitNodeCollector collector, CameraRenderState camera) {
+        public void extractRenderState(RocketEntity rocket, RocketState state, float partial) {
+            super.extractRenderState(rocket, state, partial);
+            state.tier = rocket.tier();
+        }
+
+        @Override
+        public void submit(RocketState state, PoseStack pose, SubmitNodeCollector collector, CameraRenderState camera) {
             pose.pushPose();
             pose.scale(-1, -1, 1);
-            collector.submitModelPart(model, pose, RenderTypes.entitySolid(ROCKET_TEXTURE), state.lightCoords, OverlayTexture.NO_OVERLAY, null);
+            collector.submitModelPart(model, pose, RenderTypes.entitySolid(state.tier >= 2 ? ROCKET_T2_TEXTURE : ROCKET_TEXTURE), state.lightCoords, OverlayTexture.NO_OVERLAY, null);
             pose.popPose();
             super.submit(state, pose, collector, camera);
         }
@@ -104,6 +115,27 @@ public final class SpaceClient {
         public RocketScreen(RocketMenu menu, Inventory inventory, Component title) {
             super(menu, inventory, title, 176, 114 + menu.rows * 18);
             inventoryLabelY = 21 + menu.rows * 18;
+        }
+
+        private net.minecraft.client.gui.components.Button targetButton;
+
+        private Component targetLabel() {
+            return Component.translatable(menu.target() == RocketEntity.TARGET_MOON ? "gui.iis.rocket.target.moon" : "gui.iis.rocket.target.mars");
+        }
+
+        @Override
+        protected void init() {
+            super.init();
+            if (menu.tier >= 2) {
+                targetButton = addRenderableWidget(net.minecraft.client.gui.components.Button.builder(targetLabel(), b -> minecraft.gameMode.handleInventoryButtonClick(menu.containerId, 0))
+                        .bounds(leftPos + 92, topPos + 3, 78, 12).build());
+            }
+        }
+
+        @Override
+        protected void containerTick() {
+            super.containerTick();
+            if (targetButton != null) targetButton.setMessage(targetLabel());
         }
 
         @Override

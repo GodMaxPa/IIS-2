@@ -477,6 +477,47 @@ public final class EquipShots {
             if (mc.player.containerMenu != mc.player.inventoryMenu) mc.player.closeContainer();
             mc.setScreen(null);
         });
+        // ракета 2-го уровня, её окно с выбором цели и поверхность Марса (D131)
+        add(2, mc -> server(mc, p -> {
+            clearEntities(p);
+            ServerLevel l = p.level();
+            for (Entity e : l.getAllEntities()) if (e instanceof ru.iis.space.RocketEntity) e.discard();
+            BlockPos pad = POS.offset(0, 1, 6);
+            for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) l.setBlock(pad.offset(dx, 0, dz), ru.iis.space.SpaceContent.LAUNCH_PAD.get().defaultBlockState(), 2 | 16);
+            ru.iis.space.RocketEntity r = ru.iis.space.SpaceContent.ROCKET.get().create(l, EntitySpawnReason.COMMAND);
+            r.setPos(pad.getX() + 0.5, pad.getY() + 0.2, pad.getZ() + 0.5);
+            r.setTier(2);
+            r.setup(new ru.iis.space.RocketItem.Stored(18, ru.iis.space.RocketEntity.CAPACITY_T2));
+            l.addFreshEntity(r);
+            view(p, pad.getX() + 6.5, pad.getY() + 4, pad.getZ() + 6.5, 135, 14);
+        }));
+        add(12, mc -> shot(mc, "m_rocket_t2"));
+        add(2, mc -> server(mc, p -> {
+            for (Entity e : p.level().getAllEntities()) {
+                if (e instanceof ru.iis.space.RocketEntity r) {
+                    p.setShiftKeyDown(true);
+                    r.interact(p, net.minecraft.world.InteractionHand.MAIN_HAND, Vec3.ZERO);
+                    p.setShiftKeyDown(false);
+                    break;
+                }
+            }
+        }));
+        add(10, mc -> shot(mc, "w_rocket_t2"));
+        add(2, mc -> {
+            if (mc.player.containerMenu != mc.player.inventoryMenu) mc.player.closeContainer();
+            mc.setScreen(null);
+            server(mc, p -> {
+                ServerLevel mars = p.level().getServer().getLevel(ru.iis.space.SpaceContent.MARS);
+                if (mars == null) {
+                    IIS.LOGGER.error("[IIS] equip shots: no Mars");
+                    return;
+                }
+                mars.getChunk(0, 0);
+                int y = mars.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.WORLD_SURFACE, 0, 0);
+                p.teleportTo(mars, 0.5, y + 6, 0.5, Set.of(), 30, 15, true);
+            });
+        });
+        add(100, mc -> shot(mc, "m_mars"));
         add(2, Minecraft::stop);
     }
 

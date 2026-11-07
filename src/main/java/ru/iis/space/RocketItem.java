@@ -60,6 +60,7 @@ public class RocketItem extends Item {
         RocketEntity rocket = SpaceContent.ROCKET.get().create((ServerLevel) level, EntitySpawnReason.SPAWN_ITEM_USE);
         if (rocket == null) return InteractionResult.FAIL;
         rocket.setPos(pos.getX() + 0.5, pos.getY() + LaunchPadBlock.HEIGHT, pos.getZ() + 0.5);
+        rocket.setTier(tier);
         rocket.setup(context.getItemInHand().getOrDefault(SpaceContent.ROCKET_DATA.get(), Stored.EMPTY));
         level.addFreshEntity(rocket);
         context.getItemInHand().shrink(1);
