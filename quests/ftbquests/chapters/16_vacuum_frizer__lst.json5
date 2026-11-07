@@ -278,8 +278,7 @@
       "x": 9.5,
       "y": 3.5,
       "dependencies": [
-        "1A0000000000010E",
-        "1A00000000000100",
+        "1A0000000000010D",
         "1A000000000006F7"
       ],
       "dependency_requirement": "one_completed",
@@ -306,6 +305,58 @@
             "count": 6
           },
           "id": "1C00000000010C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000010D",
+      "x": 8.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000010E",
+        "1A00000000000100"
+      ],
+      "icon": {
+        "id": "iis:dust_ferrite_mixture",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_ferrite_mixture",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000010D00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bolt_nickel_zinc_ferrite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000010D01"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_fine_copper",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000010D02"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000010D00"
         }
       ]
     },
@@ -1136,6 +1187,40 @@
       ]
     },
     {
+      "id": "1A00000000000420",
+      "x": 2.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000041F",
+        "1A00000000000256"
+      ],
+      "icon": {
+        "id": "iis:turbine_small",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turbine_small",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000042000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000042000"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000470",
       "x": 6.5,
       "y": 6.5,
@@ -1231,6 +1316,13 @@
       "id": "1E0000000050010A",
       "linked_quest": "1A0000000000010A",
       "x": 9.5,
+      "y": 5.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E0000000050010F",
+      "linked_quest": "1A0000000000010F",
+      "x": 11.0,
       "y": 5.0,
       "size": 1.0
     },

@@ -225,6 +225,36 @@
       ]
     },
     {
+      "id": "1A000000000002ED",
+      "x": 3.5,
+      "y": 2.0,
+      "icon": {
+        "id": "iis:match",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:match",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002ED00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000002ED00"
+        }
+      ]
+    },
+    {
       "id": "1A000000000002EE",
       "x": 2.0,
       "y": 2.0,
@@ -537,6 +567,7 @@
       "dependencies": [
         "1A00000000000175",
         "1A000000000002EE",
+        "1A000000000002ED",
         "1A0000000000046F"
       ],
       "dependency_requirement": "one_completed",
@@ -592,6 +623,39 @@
             "count": 1
           },
           "id": "1C00000000046F00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004AF",
+      "x": 0.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000004B0"
+      ],
+      "icon": {
+        "id": "iis:minecart_wheels_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:minecart_wheels_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004AF00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000004AF00"
         }
       ]
     },

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PfP",
+    "hPd",
+    "STS"
+  ],
+  "key": {
+    "P": "#c:plates/nickel_zinc_ferrite",
+    "S": "#c:rods/nickel_zinc_ferrite",
+    "T": "#iis:screws/nickel_zinc_ferrite",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:wire_cutter_nickel_zinc_ferrite"
+  }
+}

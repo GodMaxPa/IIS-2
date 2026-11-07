@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/nickel_zinc_ferrite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_nickel_zinc_ferrite",
+      "count": 8
+    }
+  ],
+  "duration": 66,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_bolt"
+  ]
+}

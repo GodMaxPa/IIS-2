@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/garnet_red",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_garnet_red",
+      "count": 9
+    }
+  ],
+  "duration": 460,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 16
+    }
+  ]
+}

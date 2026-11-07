@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:scoop",
+    "minecraft:gravel"
+  ],
+  "result": {
+    "id": "minecraft:flint"
+  }
+}

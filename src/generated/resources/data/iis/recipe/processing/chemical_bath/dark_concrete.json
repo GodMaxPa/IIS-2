@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "iis:light_concrete",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dark_concrete",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 250
+    }
+  ]
+}

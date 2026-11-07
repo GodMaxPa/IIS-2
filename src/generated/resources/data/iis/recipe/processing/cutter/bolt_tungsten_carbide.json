@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/tungsten_carbide",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_tungsten_carbide",
+      "count": 4
+    }
+  ],
+  "duration": 388,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 4
+    }
+  ]
+}

@@ -17,6 +17,7 @@ public enum CoverKind {
     DRAIN("drain"),                // GT_Cover_Drain
     CRAFTING("crafting"),          // GT_Cover_Crafting
     FLUID_REGULATOR("fluid_regulator"), // GT_Cover_FluidRegulator(32): ±32 л/тик, настраивается рукой и отвёрткой (D80)
+    FLUID_REGULATOR_IV("fluid_regulator_iv"),
     FLUID_FILTER("fluid_filter"),
     // GT_Cover_SolarPanel (D117): только сверху, под открытым небом; ночью и в дождь — 1/8
     SOLAR("solar_panel", 1), SOLAR_8V("solar_panel_8v", 8), SOLAR_LV("solar_panel_lv", 32), SOLAR_MV("solar_panel_mv", 128), SOLAR_HV("solar_panel_hv", 512),

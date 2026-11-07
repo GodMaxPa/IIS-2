@@ -194,6 +194,11 @@ public final class MultiContent {
             p -> p.mapColor(MapColor.METAL).sound(SoundType.METAL).strength(1.0f, 6.0f).noOcclusion());
     public static final DeferredBlock<Block> LIGHT_CONCRETE = block("light_concrete", Block::new,
             p -> p.mapColor(MapColor.STONE).sound(SoundType.STONE).strength(1.5f, 6.0f).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> DARK_CONCRETE = block("dark_concrete", Block::new,
+            p -> p.mapColor(MapColor.STONE).sound(SoundType.STONE).strength(1.5f, 6.0f).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> PYROLYSE_CASING = block("pyrolyse_casing", Block::new, MultiContent::metal);
+    public static final DeferredBlock<Block> POWDER_BARREL = block("powder_barrel", Block::new,
+            p -> p.mapColor(MapColor.WOOD).sound(SoundType.WOOD).strength(2.5f, 2.0f).ignitedByLava());
     public static final List<DeferredBlock<EbfBlock>> OIL_DRILLS = List.of(
             block("oil_drill_1", p -> new EbfBlock(p, OilDrillBlockEntity::new), MultiContent::metal),
             block("oil_drill_2", p -> new EbfBlock(p, OilDrillBlockEntity::new), MultiContent::metal),

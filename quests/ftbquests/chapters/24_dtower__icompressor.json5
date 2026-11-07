@@ -564,6 +564,40 @@
       ]
     },
     {
+      "id": "1A00000000000156",
+      "x": -1.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000004A",
+        "1A00000000000020"
+      ],
+      "icon": {
+        "id": "iis:block_ender_pearl",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_ender_pearl",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000015600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000015600"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000157",
       "x": 3.5,
       "y": 8.0,
@@ -601,8 +635,7 @@
       "x": 0.5,
       "y": 3.5,
       "dependencies": [
-        "1A0000000000004A",
-        "1A00000000000020"
+        "1A00000000000156"
       ],
       "icon": {
         "id": "iis:lens_ender_pearl",
@@ -1303,6 +1336,40 @@
             "count": 3
           },
           "id": "1C00000000041400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000415",
+      "x": 8.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000414",
+        "1A0000000000033E"
+      ],
+      "icon": {
+        "id": "iis:turbine_normal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turbine_normal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000041500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000041500"
         }
       ]
     },

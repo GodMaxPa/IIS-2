@@ -507,6 +507,40 @@
       ]
     },
     {
+      "id": "1A0000000000005A",
+      "x": 0.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000057",
+        "1A0000000000004A"
+      ],
+      "icon": {
+        "id": "iis:block_garnet_yellow",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_garnet_yellow",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 7
+          },
+          "id": "1C00000000005A00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000005B",
       "x": 8.5,
       "y": 6.5,
@@ -907,8 +941,7 @@
       "x": 0.5,
       "y": 2.0,
       "dependencies": [
-        "1A00000000000057",
-        "1A0000000000004A",
+        "1A0000000000005A",
         "1A000000000002DD",
         "1A000000000004AD"
       ],

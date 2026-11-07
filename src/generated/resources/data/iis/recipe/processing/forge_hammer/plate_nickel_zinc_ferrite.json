@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/nickel_zinc_ferrite",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_nickel_zinc_ferrite",
+      "count": 2
+    }
+  ],
+  "duration": 33,
+  "eut": 16
+}

@@ -1170,11 +1170,6 @@
 "why": "GT_OreDictUnificator.get(tPrefix, Materials.Indium, 1L)"
 },
 {
-"line": 1796,
-"method": "addMixerRecipe",
-"why": "GT_OreDictUnificator.getDust(Materials.FerriteMixture, 6L * 3628800)"
-},
-{
 "line": 1797,
 "method": "addMixerRecipe",
 "why": "GT_OreDictUnificator.get(tPrefix, Materials.Boron, 1L)"

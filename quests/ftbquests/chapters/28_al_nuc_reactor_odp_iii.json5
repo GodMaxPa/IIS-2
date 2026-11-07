@@ -969,7 +969,7 @@
       "x": 14.0,
       "y": 2.5,
       "dependencies": [
-        "1A00000000000356",
+        "1A0000000000051E",
         "1A000000000000A6",
         "1A000000000000A8",
         "1A000000000000AA"
@@ -1522,7 +1522,7 @@
       "x": 9.5,
       "y": 10.0,
       "dependencies": [
-        "1A000000000000C0"
+        "1A00000000000722"
       ],
       "icon": {
         "id": "iis:ingot_arsenic",
@@ -1784,6 +1784,105 @@
             "count": 6
           },
           "id": "1C00000000043200"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000051E",
+      "x": 15.5,
+      "y": 1.0,
+      "dependencies": [
+        "1A0000000000051F"
+      ],
+      "icon": {
+        "id": "iis:plate_tungsten_carbide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_tungsten_carbide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000051E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 5
+          },
+          "id": "1C00000000051E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000051F",
+      "x": 17.0,
+      "y": 1.0,
+      "dependencies": [
+        "1A00000000000356"
+      ],
+      "icon": {
+        "id": "iis:ingot_tungsten_carbide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_tungsten_carbide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000051F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 5
+          },
+          "id": "1C00000000051F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000722",
+      "x": 9.5,
+      "y": 8.5,
+      "dependencies": [
+        "1A000000000000C0"
+      ],
+      "icon": {
+        "id": "iis:dust_arsenic_trioxide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_arsenic_trioxide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000072200"
         }
       ]
     },

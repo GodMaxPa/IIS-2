@@ -520,6 +520,21 @@
     "material": "arsenic"
   },
   {
+    "id": "dust_arsenic_trioxide",
+    "prefix": "dust",
+    "material": "arsenic_trioxide"
+  },
+  {
+    "id": "small_dust_arsenic_trioxide",
+    "prefix": "small_dust",
+    "material": "arsenic_trioxide"
+  },
+  {
+    "id": "tiny_dust_arsenic_trioxide",
+    "prefix": "tiny_dust",
+    "material": "arsenic_trioxide"
+  },
+  {
     "id": "dust_ash",
     "prefix": "dust",
     "material": "ash"
@@ -2160,6 +2175,21 @@
     "material": "cobalt_brass"
   },
   {
+    "id": "dust_cobalt_oxide",
+    "prefix": "dust",
+    "material": "cobalt_oxide"
+  },
+  {
+    "id": "small_dust_cobalt_oxide",
+    "prefix": "small_dust",
+    "material": "cobalt_oxide"
+  },
+  {
+    "id": "tiny_dust_cobalt_oxide",
+    "prefix": "tiny_dust",
+    "material": "cobalt_oxide"
+  },
+  {
     "id": "crushed_cobaltite",
     "prefix": "crushed",
     "material": "cobaltite"
@@ -3348,6 +3378,21 @@
     "id": "foil_europium",
     "prefix": "foil",
     "material": "europium"
+  },
+  {
+    "id": "dust_ferrite_mixture",
+    "prefix": "dust",
+    "material": "ferrite_mixture"
+  },
+  {
+    "id": "small_dust_ferrite_mixture",
+    "prefix": "small_dust",
+    "material": "ferrite_mixture"
+  },
+  {
+    "id": "tiny_dust_ferrite_mixture",
+    "prefix": "tiny_dust",
+    "material": "ferrite_mixture"
   },
   {
     "id": "dust_ferrosilite",
@@ -6905,6 +6950,66 @@
     "material": "nickel"
   },
   {
+    "id": "dust_nickel_zinc_ferrite",
+    "prefix": "dust",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "small_dust_nickel_zinc_ferrite",
+    "prefix": "small_dust",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "tiny_dust_nickel_zinc_ferrite",
+    "prefix": "tiny_dust",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "ingot_nickel_zinc_ferrite",
+    "prefix": "ingot",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "nugget_nickel_zinc_ferrite",
+    "prefix": "nugget",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "plate_nickel_zinc_ferrite",
+    "prefix": "plate",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "double_plate_nickel_zinc_ferrite",
+    "prefix": "double_plate",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "rod_nickel_zinc_ferrite",
+    "prefix": "rod",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "bolt_nickel_zinc_ferrite",
+    "prefix": "bolt",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "screw_nickel_zinc_ferrite",
+    "prefix": "screw",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "long_rod_nickel_zinc_ferrite",
+    "prefix": "long_rod",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "turbine_blade_nickel_zinc_ferrite",
+    "prefix": "turbine_blade",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
     "id": "dust_niobium",
     "prefix": "dust",
     "material": "niobium"
@@ -7973,6 +8078,71 @@
     "id": "tiny_dust_polydimethylsiloxane",
     "prefix": "tiny_dust",
     "material": "polydimethylsiloxane"
+  },
+  {
+    "id": "dust_polyphenylene_sulfide",
+    "prefix": "dust",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "small_dust_polyphenylene_sulfide",
+    "prefix": "small_dust",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "tiny_dust_polyphenylene_sulfide",
+    "prefix": "tiny_dust",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "ingot_polyphenylene_sulfide",
+    "prefix": "ingot",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "nugget_polyphenylene_sulfide",
+    "prefix": "nugget",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "plate_polyphenylene_sulfide",
+    "prefix": "plate",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "double_plate_polyphenylene_sulfide",
+    "prefix": "double_plate",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "rod_polyphenylene_sulfide",
+    "prefix": "rod",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "bolt_polyphenylene_sulfide",
+    "prefix": "bolt",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "screw_polyphenylene_sulfide",
+    "prefix": "screw",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "foil_polyphenylene_sulfide",
+    "prefix": "foil",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "long_rod_polyphenylene_sulfide",
+    "prefix": "long_rod",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "turbine_blade_polyphenylene_sulfide",
+    "prefix": "turbine_blade",
+    "material": "polyphenylene_sulfide"
   },
   {
     "id": "dust_polytetrafluoroethylene",
@@ -10905,6 +11075,71 @@
     "material": "tungsten"
   },
   {
+    "id": "dust_tungsten_carbide",
+    "prefix": "dust",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "small_dust_tungsten_carbide",
+    "prefix": "small_dust",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "tiny_dust_tungsten_carbide",
+    "prefix": "tiny_dust",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "ingot_tungsten_carbide",
+    "prefix": "ingot",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "hot_ingot_tungsten_carbide",
+    "prefix": "hot_ingot",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "nugget_tungsten_carbide",
+    "prefix": "nugget",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "plate_tungsten_carbide",
+    "prefix": "plate",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "double_plate_tungsten_carbide",
+    "prefix": "double_plate",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "rod_tungsten_carbide",
+    "prefix": "rod",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "bolt_tungsten_carbide",
+    "prefix": "bolt",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "screw_tungsten_carbide",
+    "prefix": "screw",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "long_rod_tungsten_carbide",
+    "prefix": "long_rod",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "turbine_blade_tungsten_carbide",
+    "prefix": "turbine_blade",
+    "material": "tungsten_carbide"
+  },
+  {
     "id": "dust_tungsten_steel",
     "prefix": "dust",
     "material": "tungsten_steel"
@@ -13625,6 +13860,51 @@
     "material": "nickel"
   },
   {
+    "id": "sword_head_nickel_zinc_ferrite",
+    "prefix": "sword_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "pickaxe_head_nickel_zinc_ferrite",
+    "prefix": "pickaxe_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "shovel_head_nickel_zinc_ferrite",
+    "prefix": "shovel_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "axe_head_nickel_zinc_ferrite",
+    "prefix": "axe_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "hoe_head_nickel_zinc_ferrite",
+    "prefix": "hoe_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "saw_head_nickel_zinc_ferrite",
+    "prefix": "saw_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "drill_head_nickel_zinc_ferrite",
+    "prefix": "drill_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "chainsaw_head_nickel_zinc_ferrite",
+    "prefix": "chainsaw_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "wrench_head_nickel_zinc_ferrite",
+    "prefix": "wrench_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
     "id": "sword_head_osmiridium",
     "prefix": "sword_head",
     "material": "osmiridium"
@@ -13848,6 +14128,51 @@
     "id": "wrench_head_platinum",
     "prefix": "wrench_head",
     "material": "platinum"
+  },
+  {
+    "id": "sword_head_polyphenylene_sulfide",
+    "prefix": "sword_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "pickaxe_head_polyphenylene_sulfide",
+    "prefix": "pickaxe_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "shovel_head_polyphenylene_sulfide",
+    "prefix": "shovel_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "axe_head_polyphenylene_sulfide",
+    "prefix": "axe_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "hoe_head_polyphenylene_sulfide",
+    "prefix": "hoe_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "saw_head_polyphenylene_sulfide",
+    "prefix": "saw_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "drill_head_polyphenylene_sulfide",
+    "prefix": "drill_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "chainsaw_head_polyphenylene_sulfide",
+    "prefix": "chainsaw_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "wrench_head_polyphenylene_sulfide",
+    "prefix": "wrench_head",
+    "material": "polyphenylene_sulfide"
   },
   {
     "id": "sword_head_polytetrafluoroethylene",
@@ -14478,6 +14803,51 @@
     "id": "wrench_head_tungsten",
     "prefix": "wrench_head",
     "material": "tungsten"
+  },
+  {
+    "id": "sword_head_tungsten_carbide",
+    "prefix": "sword_head",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "pickaxe_head_tungsten_carbide",
+    "prefix": "pickaxe_head",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "shovel_head_tungsten_carbide",
+    "prefix": "shovel_head",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "axe_head_tungsten_carbide",
+    "prefix": "axe_head",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "hoe_head_tungsten_carbide",
+    "prefix": "hoe_head",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "saw_head_tungsten_carbide",
+    "prefix": "saw_head",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "drill_head_tungsten_carbide",
+    "prefix": "drill_head",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "chainsaw_head_tungsten_carbide",
+    "prefix": "chainsaw_head",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "wrench_head_tungsten_carbide",
+    "prefix": "wrench_head",
+    "material": "tungsten_carbide"
   },
   {
     "id": "sword_head_tungsten_steel",

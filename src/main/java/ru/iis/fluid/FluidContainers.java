@@ -58,6 +58,8 @@ public final class FluidContainers {
     public static final DeferredItem<Item> CAPSULE = ITEMS.registerItem("capsule", p -> new CapsuleItem(false, p));
     /** Универсальная капсула (IC2 Cell_Universal_Fluid): любые порции до 1 000 мБ. */
     public static final DeferredItem<Item> UNIVERSAL_CAPSULE = ITEMS.registerItem("universal_capsule", p -> new CapsuleItem(true, p.stacksTo(16)));
+    /** GT_VolumetricFlask: те же 1000 л и любая жидкость, стекло из боросиликата (D132). Отмерять по литру нельзя: это делает регулятор. */
+    public static final DeferredItem<Item> VOLUMETRIC_FLASK = ITEMS.registerItem("volumetric_flask", p -> new CapsuleItem(true, p.stacksTo(16)));
 
     /** Исполнения резервуара: id, ёмкость мБ (временные числа, D72). */
     public static final Map<String, DeferredBlock<UniversalTankBlock>> TANKS = new LinkedHashMap<>();

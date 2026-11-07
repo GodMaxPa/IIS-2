@@ -338,11 +338,44 @@
       ]
     },
     {
+      "id": "1A000000000002B0",
+      "x": 3.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000015F"
+      ],
+      "icon": {
+        "id": "iis:block_silicon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_silicon",
+            "count": 1
+          },
+          "count": 16,
+          "id": "1B0000000002B000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000002B000"
+        }
+      ]
+    },
+    {
       "id": "1A000000000002B1",
       "x": 2.0,
       "y": 6.5,
       "dependencies": [
-        "1A0000000000015F",
+        "1A000000000002B0",
         "1A0000000000035A",
         "1A0000000000028C"
       ],
@@ -793,6 +826,27 @@
       "linked_quest": "1A000000000002BA",
       "x": 2.0,
       "y": 2.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E000000020002BB",
+      "linked_quest": "1A000000000002BB",
+      "x": 3.5,
+      "y": 5.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E000000020002BC",
+      "linked_quest": "1A000000000002BC",
+      "x": 2.0,
+      "y": 3.5,
+      "size": 1.0
+    },
+    {
+      "id": "1E000000020002BE",
+      "linked_quest": "1A000000000002BE",
+      "x": 5.0,
+      "y": 6.5,
       "size": 1.0
     },
     {

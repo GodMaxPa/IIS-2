@@ -280,7 +280,7 @@
       "x": 3.5,
       "y": 6.5,
       "dependencies": [
-        "1A00000000000304"
+        "1A00000000000303"
       ],
       "tasks": [
         {
@@ -300,6 +300,34 @@
             "count": 1
           },
           "id": "1C00000000030100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000303",
+      "x": 5.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000304"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:dimethylhydrazine",
+            "amount": 1
+          },
+          "id": "1B00000000030300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000030300"
         }
       ]
     },

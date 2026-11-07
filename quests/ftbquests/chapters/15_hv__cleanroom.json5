@@ -691,6 +691,40 @@
       ]
     },
     {
+      "id": "1A00000000000101",
+      "x": 0.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000102",
+        "1A00000000000256"
+      ],
+      "icon": {
+        "id": "iis:plascrete",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plascrete",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000010100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000000010100"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000102",
       "x": 0.5,
       "y": 3.5,
@@ -1058,6 +1092,40 @@
             "count": 4
           },
           "id": "1C0000000003A200"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000045F",
+      "x": 0.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000101",
+        "1A000000000001A2"
+      ],
+      "icon": {
+        "id": "iis:plascrete_window",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plascrete_window",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000000045F00"
         }
       ]
     },

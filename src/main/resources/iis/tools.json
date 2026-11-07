@@ -492,6 +492,18 @@
     "kind": "sword"
   },
   {
+    "id": "sword_nickel_zinc_ferrite",
+    "tool": "sword",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 0,
+    "kind": "sword"
+  },
+  {
     "id": "sword_osmiridium",
     "tool": "sword",
     "material": "osmiridium",
@@ -549,6 +561,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_polyphenylene_sulfide",
+    "tool": "sword",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "sword"
   },
   {
@@ -717,6 +741,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "sword"
+  },
+  {
+    "id": "sword_tungsten_carbide",
+    "tool": "sword",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 4,
+    "craftDamage": 2,
+    "speed": 14.0,
+    "quality": 4,
     "kind": "sword"
   },
   {
@@ -1248,6 +1284,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "pickaxe_nickel_zinc_ferrite",
+    "tool": "pickaxe",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 0,
+    "kind": "pickaxe"
+  },
+  {
     "id": "pickaxe_osmiridium",
     "tool": "pickaxe",
     "material": "osmiridium",
@@ -1305,6 +1353,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_polyphenylene_sulfide",
+    "tool": "pickaxe",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "pickaxe"
   },
   {
@@ -1473,6 +1533,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "pickaxe_tungsten_carbide",
+    "tool": "pickaxe",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 14.0,
+    "quality": 4,
     "kind": "pickaxe"
   },
   {
@@ -2004,6 +2076,18 @@
     "kind": "shovel"
   },
   {
+    "id": "shovel_nickel_zinc_ferrite",
+    "tool": "shovel",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 0,
+    "kind": "shovel"
+  },
+  {
     "id": "shovel_osmiridium",
     "tool": "shovel",
     "material": "osmiridium",
@@ -2061,6 +2145,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_polyphenylene_sulfide",
+    "tool": "shovel",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "shovel"
   },
   {
@@ -2229,6 +2325,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "shovel"
+  },
+  {
+    "id": "shovel_tungsten_carbide",
+    "tool": "shovel",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 14.0,
+    "quality": 4,
     "kind": "shovel"
   },
   {
@@ -2760,6 +2868,18 @@
     "kind": "axe"
   },
   {
+    "id": "axe_nickel_zinc_ferrite",
+    "tool": "axe",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 0,
+    "kind": "axe"
+  },
+  {
     "id": "axe_osmiridium",
     "tool": "axe",
     "material": "osmiridium",
@@ -2817,6 +2937,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_polyphenylene_sulfide",
+    "tool": "axe",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "axe"
   },
   {
@@ -2985,6 +3117,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "axe_tungsten_carbide",
+    "tool": "axe",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 14.0,
+    "quality": 4,
     "kind": "axe"
   },
   {
@@ -3516,6 +3660,18 @@
     "kind": "hoe"
   },
   {
+    "id": "hoe_nickel_zinc_ferrite",
+    "tool": "hoe",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 0,
+    "kind": "hoe"
+  },
+  {
     "id": "hoe_osmiridium",
     "tool": "hoe",
     "material": "osmiridium",
@@ -3573,6 +3729,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_polyphenylene_sulfide",
+    "tool": "hoe",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "hoe"
   },
   {
@@ -3741,6 +3909,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "hoe"
+  },
+  {
+    "id": "hoe_tungsten_carbide",
+    "tool": "hoe",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 14.0,
+    "quality": 4,
     "kind": "hoe"
   },
   {
@@ -4272,6 +4452,18 @@
     "kind": "axe"
   },
   {
+    "id": "saw_nickel_zinc_ferrite",
+    "tool": "saw",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 3.0,
+    "quality": 0,
+    "kind": "axe"
+  },
+  {
     "id": "saw_osmiridium",
     "tool": "saw",
     "material": "osmiridium",
@@ -4329,6 +4521,18 @@
     "craftDamage": 4,
     "speed": 12.0,
     "quality": 2,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_polyphenylene_sulfide",
+    "tool": "saw",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "axe"
   },
   {
@@ -4497,6 +4701,18 @@
     "craftDamage": 4,
     "speed": 7.0,
     "quality": 3,
+    "kind": "axe"
+  },
+  {
+    "id": "saw_tungsten_carbide",
+    "tool": "saw",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 4,
+    "speed": 14.0,
+    "quality": 4,
     "kind": "axe"
   },
   {
@@ -5028,6 +5244,18 @@
     "kind": "pickaxe"
   },
   {
+    "id": "hammer_nickel_zinc_ferrite",
+    "tool": "hammer",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 2.25,
+    "quality": 0,
+    "kind": "pickaxe"
+  },
+  {
     "id": "hammer_osmiridium",
     "tool": "hammer",
     "material": "osmiridium",
@@ -5085,6 +5313,18 @@
     "craftDamage": 8,
     "speed": 9.0,
     "quality": 2,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_polyphenylene_sulfide",
+    "tool": "hammer",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 2.25,
+    "quality": 1,
     "kind": "pickaxe"
   },
   {
@@ -5241,6 +5481,18 @@
     "craftDamage": 8,
     "speed": 5.25,
     "quality": 3,
+    "kind": "pickaxe"
+  },
+  {
+    "id": "hammer_tungsten_carbide",
+    "tool": "hammer",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 10.5,
+    "quality": 4,
     "kind": "pickaxe"
   },
   {
@@ -5772,6 +6024,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_nickel_zinc_ferrite",
+    "tool": "wrench",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 3.0,
+    "quality": 0,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_osmiridium",
     "tool": "wrench",
     "material": "osmiridium",
@@ -5829,6 +6093,18 @@
     "craftDamage": 16,
     "speed": 12.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_polyphenylene_sulfide",
+    "tool": "wrench",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "wrench"
   },
   {
@@ -5997,6 +6273,18 @@
     "craftDamage": 16,
     "speed": 7.0,
     "quality": 3,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_tungsten_carbide",
+    "tool": "wrench",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 14.0,
+    "quality": 4,
     "kind": "wrench"
   },
   {
@@ -6528,6 +6816,18 @@
     "kind": null
   },
   {
+    "id": "file_nickel_zinc_ferrite",
+    "tool": "file",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 0,
+    "kind": null
+  },
+  {
     "id": "file_osmiridium",
     "tool": "file",
     "material": "osmiridium",
@@ -6585,6 +6885,18 @@
     "craftDamage": 8,
     "speed": 12.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "file_polyphenylene_sulfide",
+    "tool": "file",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
     "kind": null
   },
   {
@@ -6753,6 +7065,18 @@
     "craftDamage": 8,
     "speed": 7.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "file_tungsten_carbide",
+    "tool": "file",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 8,
+    "speed": 14.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -7284,6 +7608,18 @@
     "kind": null
   },
   {
+    "id": "screwdriver_nickel_zinc_ferrite",
+    "tool": "screwdriver",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 0,
+    "kind": null
+  },
+  {
     "id": "screwdriver_osmiridium",
     "tool": "screwdriver",
     "material": "osmiridium",
@@ -7341,6 +7677,18 @@
     "craftDamage": 8,
     "speed": 12.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_polyphenylene_sulfide",
+    "tool": "screwdriver",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 3.0,
+    "quality": 1,
     "kind": null
   },
   {
@@ -7509,6 +7857,18 @@
     "craftDamage": 8,
     "speed": 7.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "screwdriver_tungsten_carbide",
+    "tool": "screwdriver",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 4,
+    "craftDamage": 8,
+    "speed": 14.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -8076,6 +8436,18 @@
     "kind": "sword"
   },
   {
+    "id": "knife_nickel_zinc_ferrite",
+    "tool": "knife",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 0,
+    "kind": "sword"
+  },
+  {
     "id": "knife_osmiridium",
     "tool": "knife",
     "material": "osmiridium",
@@ -8133,6 +8505,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_polyphenylene_sulfide",
+    "tool": "knife",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": "sword"
   },
   {
@@ -8301,6 +8685,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": "sword"
+  },
+  {
+    "id": "knife_tungsten_carbide",
+    "tool": "knife",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 2,
+    "craftDamage": 2,
+    "speed": 14.0,
+    "quality": 4,
     "kind": "sword"
   },
   {
@@ -8832,6 +9228,18 @@
     "kind": "wire_cutter"
   },
   {
+    "id": "wire_cutter_nickel_zinc_ferrite",
+    "tool": "wire_cutter",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 3.75,
+    "quality": 0,
+    "kind": "wire_cutter"
+  },
+  {
     "id": "wire_cutter_osmiridium",
     "tool": "wire_cutter",
     "material": "osmiridium",
@@ -8889,6 +9297,18 @@
     "craftDamage": 8,
     "speed": 15.0,
     "quality": 2,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_polyphenylene_sulfide",
+    "tool": "wire_cutter",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 3.75,
+    "quality": 1,
     "kind": "wire_cutter"
   },
   {
@@ -9057,6 +9477,18 @@
     "craftDamage": 8,
     "speed": 8.75,
     "quality": 3,
+    "kind": "wire_cutter"
+  },
+  {
+    "id": "wire_cutter_tungsten_carbide",
+    "tool": "wire_cutter",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 2,
+    "craftDamage": 8,
+    "speed": 17.5,
+    "quality": 4,
     "kind": "wire_cutter"
   },
   {
@@ -9612,6 +10044,18 @@
     "kind": null
   },
   {
+    "id": "crowbar_nickel_zinc_ferrite",
+    "tool": "crowbar",
+    "material": "nickel_zinc_ferrite",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 0,
+    "kind": null
+  },
+  {
     "id": "crowbar_osmiridium",
     "tool": "crowbar",
     "material": "osmiridium",
@@ -9669,6 +10113,18 @@
     "craftDamage": 2,
     "speed": 12.0,
     "quality": 2,
+    "kind": null
+  },
+  {
+    "id": "crowbar_polyphenylene_sulfide",
+    "tool": "crowbar",
+    "material": "polyphenylene_sulfide",
+    "handle": "wood",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 3.0,
+    "quality": 1,
     "kind": null
   },
   {
@@ -9825,6 +10281,18 @@
     "craftDamage": 2,
     "speed": 7.0,
     "quality": 3,
+    "kind": null
+  },
+  {
+    "id": "crowbar_tungsten_carbide",
+    "tool": "crowbar",
+    "material": "tungsten_carbide",
+    "handle": "wood",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 14.0,
+    "quality": 4,
     "kind": null
   },
   {
@@ -10356,6 +10824,18 @@
     "kind": "drill"
   },
   {
+    "id": "drill_lv_nickel_zinc_ferrite",
+    "tool": "drill_lv",
+    "material": "nickel_zinc_ferrite",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 9.0,
+    "quality": 0,
+    "kind": "drill"
+  },
+  {
     "id": "drill_lv_osmiridium",
     "tool": "drill_lv",
     "material": "osmiridium",
@@ -10413,6 +10893,18 @@
     "craftDamage": 2,
     "speed": 36.0,
     "quality": 2,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_polyphenylene_sulfide",
+    "tool": "drill_lv",
+    "material": "polyphenylene_sulfide",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 9.0,
+    "quality": 1,
     "kind": "drill"
   },
   {
@@ -10581,6 +11073,18 @@
     "craftDamage": 2,
     "speed": 21.0,
     "quality": 3,
+    "kind": "drill"
+  },
+  {
+    "id": "drill_lv_tungsten_carbide",
+    "tool": "drill_lv",
+    "material": "tungsten_carbide",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 2,
+    "speed": 42.0,
+    "quality": 4,
     "kind": "drill"
   },
   {
@@ -11112,6 +11616,18 @@
     "kind": "chainsaw"
   },
   {
+    "id": "chainsaw_lv_nickel_zinc_ferrite",
+    "tool": "chainsaw_lv",
+    "material": "nickel_zinc_ferrite",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 0,
+    "kind": "chainsaw"
+  },
+  {
     "id": "chainsaw_lv_osmiridium",
     "tool": "chainsaw_lv",
     "material": "osmiridium",
@@ -11169,6 +11685,18 @@
     "craftDamage": 16,
     "speed": 24.0,
     "quality": 2,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_polyphenylene_sulfide",
+    "tool": "chainsaw_lv",
+    "material": "polyphenylene_sulfide",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
     "kind": "chainsaw"
   },
   {
@@ -11337,6 +11865,18 @@
     "craftDamage": 16,
     "speed": 14.0,
     "quality": 3,
+    "kind": "chainsaw"
+  },
+  {
+    "id": "chainsaw_lv_tungsten_carbide",
+    "tool": "chainsaw_lv",
+    "material": "tungsten_carbide",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 28.0,
+    "quality": 4,
     "kind": "chainsaw"
   },
   {
@@ -11868,6 +12408,18 @@
     "kind": "wrench"
   },
   {
+    "id": "wrench_lv_nickel_zinc_ferrite",
+    "tool": "wrench_lv",
+    "material": "nickel_zinc_ferrite",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 0,
+    "kind": "wrench"
+  },
+  {
     "id": "wrench_lv_osmiridium",
     "tool": "wrench_lv",
     "material": "osmiridium",
@@ -11925,6 +12477,18 @@
     "craftDamage": 16,
     "speed": 24.0,
     "quality": 2,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_polyphenylene_sulfide",
+    "tool": "wrench_lv",
+    "material": "polyphenylene_sulfide",
+    "handle": "stainless_steel",
+    "maxDamage": 64,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 6.0,
+    "quality": 1,
     "kind": "wrench"
   },
   {
@@ -12093,6 +12657,18 @@
     "craftDamage": 16,
     "speed": 14.0,
     "quality": 3,
+    "kind": "wrench"
+  },
+  {
+    "id": "wrench_lv_tungsten_carbide",
+    "tool": "wrench_lv",
+    "material": "tungsten_carbide",
+    "handle": "stainless_steel",
+    "maxDamage": 2560,
+    "blockDamage": 1,
+    "craftDamage": 16,
+    "speed": 28.0,
+    "quality": 4,
     "kind": "wrench"
   },
   {

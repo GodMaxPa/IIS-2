@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1658; hidden until their items are ported: 283; chapters: 36, one of them ours (D129, 49 quests).
+Quests in IIS 1: 1943; written: 1713; hidden until their items are ported: 227; chapters: 36, one of them ours (D129, 49 quests).
 
 ## Most needed unported items (task count)
 
@@ -11,48 +11,26 @@ Quests in IIS 1: 1943; written: 1658; hidden until their items are ported: 283; 
 - 1 × `GalacticraftMars:item.itemBasicAsteroids:2` 
 - 1 × `GalacticraftMars:item.heavyNoseCone:0` 
 - 1 × `GalacticraftMars:item.itemBasicAsteroids:0` 
-- 1 × `gregtech:gt.metaitem.01:32619` Жидкостный регулятор (IV)
 - 1 × `gregtech:gt.metaitem.01:32464` Сверхпрочный слиток T3
-- 1 × `gregtech:gt.blockgem3:2` Блок жёлтого граната
 - 1 × `extracells:ecbaseblock:0` 
 - 1 × `extracells:part.base:12` 
 - 1 × `gregtech:gt.metaitem.02:8500` 
 - 1 × `GraviSuite:advDDrill:1` 
 - 1 × `extracells:certustank:0` 
-- 1 × `gregtech:gt.blockreinforced:2` Пластиковая стена
-- 1 × `gregtech:gt.metaitem.01:2612` Железная смесь
-- 1 × `gregtech:gt.metaitem.01:26613` Болт из никель-цинкового феррита
-- 1 × `gregtech:gt.metaitem.01:32703` Сборка интегральных процессоров
 - 1 × `Railcraft:tool.steel.shears:0` 
-- 1 × `gregtech:gt.metaitem.01:28879` Бумажное кольцо
 - 1 × `EnderIO:blockReservoir:0` 
 - 1 × `IC2:itemFertilizer:0` 
-- 1 × `gregtech:gt.blockgem1:8` Блок из жемчуга Края
-- 1 × `gregtech:gt.blockreinforced:5` Пороховая бочка
 - 1 × `Railcraft:machine.beta:0` 
 - 1 × `Railcraft:machine.beta:1` 
 - 1 × `Railcraft:machine.beta:2` 
 - 1 × `Forestry:factory2:2` 
 - 1 × `Railcraft:machine.alpha:14` 
-- 1 × `gregtech:gt.blockmachines:108` Примитивная бронзовая доменная печь
-- 1 × `gregtech:gt.blockgem3:4` Блок древесного угля
-- 1 × `gregtech:gt.metaitem.01:17631` Пластина полифениленсульфида
-- 1 × `gregtech:gt.metaitem.01:29631` Фольга из полифениленсульфида
 - 1 × `gregtech:gt.metaitem.01:2676` Смесь металлов
 - 1 × `EnderIO:itemItemConduit:0` 
-- 1 × `gregtech:gt.metaitem.01:32714` Выгравированный лазуротроновый чип
-- 1 × `gregtech:gt.blockgem3:3` Блок адской звезды
 - 1 × `EnderIO:itemBrokenSpawner:0` 
 - 1 × `GalacticraftCore:item.schematic:1` 
 - 1 × `GalacticraftCore:item.engine:1` 
-- 1 × `gregtech:gt.metaitem.01:32463` Сверхпрочный слиток T2
-- 1 × `gregtech:gt.metaitem.01:30495` Капсула со сжиженным воздухом
 - 1 × `IC2:itemCellEmpty:5` 
-- 1 × `gregtech:gt.blockmetal3:3` Европиевый блок
-- 1 × `gregtech:gt.blockmetal6:9` Кремниевый блок
-- 1 × `gregtech:gt.metaitem.01:32736` Энергетический модуль
-- 1 × `gregtech:gt.metaitem.03:32048` Улучшенная система на чипе (Кремниевая вафля)
-- 1 × `gregtech:gt.metaitem.01:32737` Энергетический кластер
 - 1 × `IC2:blockCrop:0` 
 - 1 × `IC2:itemCropnalyzer:26` 
 - 1 × `Forestry:thermionicTubes:1` 
@@ -61,7 +39,6 @@ Quests in IIS 1: 1943; written: 1658; hidden until their items are ported: 283; 
 - 1 × `Forestry:ffarm:2` 
 - 1 × `Forestry:ffarm:4` 
 - 1 × `Forestry:ffarm:3` 
-- 1 × `gregtech:gt.metaitem.01:32471` Спичка
 - 1 × `GalacticraftCore:tile.oxygenCollector:0` 
 - 1 × `GalacticraftCore:tile.distributor:0` 
 - 1 × `GalacticraftCore:tile.cargo:0` 
@@ -69,8 +46,6 @@ Quests in IIS 1: 1943; written: 1658; hidden until their items are ported: 283; 
 - 1 × `IronChest:BlockIronChest:4` 
 - 1 × `IC2:itemGrinPowder:0` 
 - 1 × `IC2:itemWeedEx:0` 
-- 1 × `gregtech:gt.metaitem.01:32605` Ультимативная батарея
-- 1 × `gregtech:gt.blockmetal1:2` Америциевый блок
 - 1 × `GraviSuite:itemSimpleItem:3` 
 - 1 × `GraviSuite:itemSimpleItem:1` 
 - 1 × `GraviSuite:itemSimpleItem:2` 
@@ -84,20 +59,112 @@ Quests in IIS 1: 1943; written: 1658; hidden until their items are ported: 283; 
 - 1 × `SGCraft:stargateRing:1` 
 - 1 × `SGCraft:stargateBase:0` 
 - 1 × `SGCraft:stargateController:0` 
+- 1 × `SGCraft:sgIrisUpgrade:0` 
+- 1 × `SGCraft:sgIrisBlade:0` 
+- 1 × `GraviSuite:advJetpack:1` 
+- 1 × `GraviSuite:itemSimpleItem:6` 
+- 1 × `IC2:upgradeModule:0` 
+- 1 × `BuildCraft|Core:wrenchItem:0` 
+- 1 × `appliedenergistics2:tile.BlockWireless:0` 
+- 1 × `appliedenergistics2:tile.BlockSecurity:0` 
+- 1 × `appliedenergistics2:item.ToolBiometricCard:0` 
+- 1 × `IC2:blockMachine3:7` 
+- 1 × `IC2:blockMachine2:2` 
+- 1 × `EnderIO:itemLiquidConduit:0` 
+- 1 × `Forestry:woodPulp:0` 
+- 1 × `gregtech:gt.blockmachines:12188` Настраиваемый трансформатор (MAX)
+- 1 × `gregtech:gt.blockmachines:12189` Колодец
+- 1 × `IC2:itemWeedingTrowel:0` 
+- 1 × `BiblioCraft:BiblioLabel:0` 
+- 1 × `BiblioCraft:BiblioFancySign:0` 
+- 1 × `ForgeMicroblock:sawStone:0` 
+- 1 × `ForgeMicroblock:sawIron:0` 
+- 1 × `ForgeMicroblock:sawDiamond:0` 
+- 1 × `CarpentersBlocks:itemCarpentersHammer:0` 
+- 1 × `JABBA:mover:0` 
+- 1 × `JABBA:barrel:0` 
+- 1 × `chisel:concrete:10` 
+- 1 × `gregtech:gt.metaitem.02:32513` UUA-ягода
+- 1 × `gregtech:gt.metaitem.02:32512` UUM-ягода
+- 1 × `gregtech:gt.blockmachines:682` Органический репликатор (MV)
+- 1 × `gregtech:gt.blockmachines:683` Органический репликатор (HV)
+- 1 × `gregtech:gt.blockmachines:684` Органический репликатор (EV)
+- 1 × `gregtech:gt.blockmachines:685` Органический репликатор (IV)
+- 1 × `gregtech:gt.blockmachines:686` Органический репликатор (LuV)
+- 1 × `gregtech:gt.blockmachines:687` Органический репликатор (ZPM)
+- 1 × `gregtech:gt.blockmachines:688` Органический репликатор (UV)
+- 1 × `gregtech:gt.blockmachines:631` Ломтерезка (LV)
+- 1 × `gregtech:gt.blockmachines:1127` Абсорбер магической энергии новичка
+- 1 × `gregtech:gt.blockmachines:632` Ломтерезка (MV)
+- 1 × `gregtech:gt.blockmachines:1128` Абсорбер магической энергии любителя
+- 1 × `gregtech:gt.blockmachines:633` Ломтерезка (HV)
+- 1 × `gregtech:gt.blockmachines:1129` Абсорбер магической энергии мастера
+- 1 × `gregtech:gt.blockmachines:634` Ломтерезка (EV)
+- 1 × `gregtech:gt.blockmachines:1123` Конвертер магической энергии новичка
+- 1 × `gregtech:gt.blockmachines:1124` Конвертер магической энергии любителя
+- 1 × `gregtech:gt.blockmachines:1125` Конвертер магической энергии мастера
+- 1 × `gregtech:gt.blockmachines:635` Ломтерезка (IV)
+- 1 × `gregtech:gt.blockmachines:1130` Абсорбер магической энергии профессионала
+- 1 × `gregtech:gt.blockmachines:636` Ломтерезка (LuV)
+- 1 × `gregtech:gt.blockmachines:637` Ломтерезка (ZPM)
+- 1 × `gregtech:gt.blockmachines:638` Ломтерезка (UV)
+- 1 × `JABBA:upgradeCore:0` 
+- 1 × `Railcraft:cube:4` 
+- 1 × `JABBA:upgradeCore:4` 
+- 1 × `JABBA:upgradeCore:5` 
+- 1 × `JABBA:upgradeCore:6` 
+- 1 × `JABBA:upgradeCore:8` 
+- 1 × `JABBA:upgradeCore:9` 
+- 1 × `JABBA:upgradeStructural:0` 
+- 1 × `JABBA:upgradeStructural:1` 
+- 1 × `JABBA:upgradeStructural:2` 
+- 1 × `JABBA:upgradeStructural:3` 
+- 1 × `JABBA:upgradeStructural:4` 
+- 1 × `JABBA:upgradeStructural:5` 
+- 1 × `JABBA:upgradeStructural:6` 
+- 1 × `JABBA:upgradeStructural:7` 
+- 1 × `JABBA:upgradeStructural:8` 
+- 1 × `JABBA:upgradeStructural:9` 
+- 1 × `JABBA:upgradeStructural:10` 
+- 1 × `ic2cropstools:itemLens:0` 
+- 1 × `gregtech:gt.metaitem.01:32375` Сканер старателя (LuV)
+- 1 × `gregtech:gt.metaitem.01:32376` Сканер старателя (ZPM)
+- 1 × `gregtech:gt.metaitem.01:32377` Сканер старателя (UV)
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:55` 
+- 1 × `appliedenergistics2:item.ItemMultiMaterial:54` 
+- 1 × `appliedenergistics2:item.ItemMultiPart:500` 
+- 1 × `ProjRed|Fabrication:projectred.fabrication.icchip:0` 
+- 1 × `ProjRed|Fabrication:projectred.integration.icblock:0` 
+- 1 × `ProjRed|Fabrication:projectred.integration.icblock:1` 
+- 1 × `ProjRed|Core:projectred.core.part:0` 
+- 1 × `ProjRed|Transmission:projectred.transmission.wire:0` 
+- 1 × `ProjRed|Core:projectred.core.part:1` 
+- 1 × `ProjRed|Core:projectred.core.part:4` 
+- 1 × `ProjRed|Core:projectred.core.part:5` 
+- 1 × `IC2NuclearControl:blockNuclearControlMain:9` 
+- 1 × `IC2NuclearControl:blockNuclearControlMain:4` 
+- 1 × `gregtech:gt.metaitem.01:32763` Набор с датчиком GregTech
+- 1 × `IC2NuclearControl:ItemUpgrade:1` 
+- 1 × `IC2:itemFreq:0` 
+- 1 × `IC2NuclearControl:ItemUpgrade:0` 
+- 1 × `IC2NuclearControl:blockNuclearControlMain:10` 
+- 1 × `IC2NuclearControl:blockNuclearControlMain:5` 
+- 1 × `gregtech:gt.blockmachines:1216` 
+- 1 × `gregtech:gt.blockmachines:1215` 
+- 1 × `gregtech:gt.metatool.01:180` 
 
 ## Unported fluids
 
-- 1 × `helium-3`
-- 1 × `1,1dimethylhydrazine`
 - 1 × `potion.poison.strong`
-- 1 × `ic2distilledwater`
 
 ## Dropped reward items
 
 - 16 × `bq_standard:choice`
 - 2 × `('gregtech:gt.metaitem.02', 25802)`
 - 1 × `('lootbags:lootbag', 7)`
+- 1 × `('gregtech:gt.metaitem.01', 32598)`
 - 1 × `('lootbags:lootbag', 5)`
+- 1 × `('lootbags:lootbag', 11)`
 - 1 × `('gregtech:gt.metaitem.02', 26347)`
 - 1 × `('gregtech:gt.blockores', 4522)`
 - 1 × `('gregtech:gt.blockores', 1022)`

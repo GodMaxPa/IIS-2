@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "fPh",
+    " S "
+  ],
+  "key": {
+    "P": "#c:plates/polyphenylene_sulfide",
+    "S": "#c:rods/polyphenylene_sulfide",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:knife_polyphenylene_sulfide"
+  }
+}

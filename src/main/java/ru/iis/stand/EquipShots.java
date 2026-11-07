@@ -221,6 +221,26 @@ public final class EquipShots {
             });
             add(4, mc -> shot(mc, "g_" + w.id + "_3p"));
         }
+        // прицеливание: ствол и след выстрела посередине (просьба владельца, D132)
+        for (Weapon w : new Weapon[]{Weapon.LASER_CANNON, Weapon.LASER_RIFLE, Weapon.ASSAULT_RIFLE, Weapon.PISTOL}) {
+            add(2, mc -> {
+                mc.options.hideGui = false;
+                mc.options.setCameraType(CameraType.FIRST_PERSON);
+                mc.player.setYRot(0);
+                mc.player.setXRot(0);
+                mc.options.keyShift.setDown(true);
+                server(mc, p -> {
+                    ItemStack gun = new ItemStack(EquipmentContent.GUNS.get(w).get());
+                    if (w.electric()) ru.iis.lv.item.BatteryItem.setCharge(gun, w.capacity);
+                    else gun.set(EquipmentContent.GUN_AMMO.get(), w.magazine);
+                    p.setItemSlot(EquipmentSlot.MAINHAND, gun);
+                });
+            });
+            add(12, mc -> shot(mc, "a_" + w.id));
+            add(1, mc -> server(mc, p -> ru.iis.equipment.GunActions.fire(p.level(), p, w)));
+            add(1, mc -> shot(mc, "af_" + w.id));
+        }
+        add(2, mc -> mc.options.keyShift.setDown(false));
         // значки в окне инвентаря
         add(2, mc -> {
             mc.options.setCameraType(CameraType.FIRST_PERSON);

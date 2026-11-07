@@ -1,0 +1,34 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/cobaltite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_cobalt_oxide",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_arsenic_trioxide",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 3000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:sulfurdioxide",
+      "amount": 1000
+    }
+  ],
+  "temp": 1200
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:stick",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/phosphorus",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:match",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 16
+}

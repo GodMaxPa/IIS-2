@@ -120,6 +120,8 @@ def generate(g):
             ('lapotron_crystal', 'Lapotron Crystal', 'Лазуротроновый кристалл', art.I_CRYSTAL, BLUE),
             ('energy_orb', 'Lapotronic Energy Orb', 'Лазуротроновая энергетическая сфера', art.I_ORB, BLUE),
             ('energy_orb_cluster', 'Lapotronic Energy Orb Cluster', 'Кластер лазуротроновых энергетических сфер', art.I_ORB, VIOLET),
+            ('energy_module', 'Energy Module', 'Энергетический модуль', art.I_ORB, BLUE),
+            ('energy_cluster', 'Energy Cluster', 'Энергетический кластер', art.I_ORB, VIOLET),
             ('ultimate_battery', 'Ultimate Battery', 'Предельный аккумулятор', art.I_ORB, PINK),
             ('charging_battery_re', 'Charging RE-Battery', 'Заряжающий аккумулятор', art.I_BATTERY, GREEN_CASE),
             ('charging_battery_adv', 'Advanced Charging Battery', 'Продвинутый заряжающий аккумулятор', art.I_BATTERY, dict(GREEN_CASE, A=(214, 180, 60), G=(255, 236, 140))),

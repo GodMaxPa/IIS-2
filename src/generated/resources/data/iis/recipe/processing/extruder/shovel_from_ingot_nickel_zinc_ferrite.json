@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/nickel_zinc_ferrite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:shovel_head_nickel_zinc_ferrite",
+      "count": 1
+    }
+  ],
+  "duration": 33,
+  "eut": 128,
+  "keep": [
+    "iis:shape_extruder_shovel"
+  ]
+}

@@ -34,6 +34,9 @@ public final class ShotFxClient {
         Vec3 from = new Vec3(fx.x0(), fx.y0(), fx.z0()), to = new Vec3(fx.x1(), fx.y1(), fx.z1());
         Entity shooter = mc.level.getEntity(fx.shooter());
         boolean mine = mc.player != null && shooter == mc.player;
+        boolean hasTrace = from.distanceToSqr(to) >= 0.01;
+        // свой выстрел: от дула там, где оно сейчас на экране (пакет приходит на тик позже, и сервер мог ещё не знать о прицеливании)
+        if (mine) from = ru.iis.equipment.GunActions.muzzle(mc.player);
         if (fx.kick()) {
             if (mine) {
                 kick = 1F;
@@ -42,7 +45,7 @@ public final class ShotFxClient {
             }
             flash(mc, from, w);
         }
-        if (from.distanceToSqr(to) < 0.01) return;
+        if (!hasTrace) return;
         switch (w.kind) {
             case LASER -> {
                 int c = w == Weapon.LASER_PISTOL ? 0xFFFF4030 : w == Weapon.LASER_RIFLE ? 0xFF50FF70 : 0xFF5090FF;

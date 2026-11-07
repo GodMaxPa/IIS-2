@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "fPd",
+    "SPS",
+    " P "
+  ],
+  "key": {
+    "P": "#iis:double_plates/nickel_zinc_ferrite",
+    "S": "#iis:screws/nickel_zinc_ferrite",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:turbine_blade_nickel_zinc_ferrite"
+  }
+}

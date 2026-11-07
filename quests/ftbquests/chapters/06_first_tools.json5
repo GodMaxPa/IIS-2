@@ -565,6 +565,40 @@
       ]
     },
     {
+      "id": "1A00000000000394",
+      "x": 10.0,
+      "y": -1.0,
+      "dependencies": [
+        "1A0000000000072C",
+        "1A00000000000129"
+      ],
+      "icon": {
+        "id": "iis:small_gear_stone",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:small_gear_stone",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000039400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000039400"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000445",
       "x": 5.0,
       "y": -1.0,
@@ -628,6 +662,39 @@
             "count": 1
           },
           "id": "1C00000000045300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000472",
+      "x": 8.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000192"
+      ],
+      "icon": {
+        "id": "iis:small_gear_wood",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:small_gear_wood",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000047200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000047200"
         }
       ]
     },
@@ -796,6 +863,41 @@
             "count": 1
           },
           "id": "1C00000000072C00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000740",
+      "x": 0.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A00000000000741",
+        "1A00000000000137",
+        "1A000000000004CF"
+      ],
+      "icon": {
+        "id": "iis:scoop",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:scoop",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000074000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000074000"
         }
       ]
     },

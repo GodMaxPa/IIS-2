@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PII",
+    "f h"
+  ],
+  "key": {
+    "P": "#c:plates/nickel_zinc_ferrite",
+    "I": "#c:ingots/nickel_zinc_ferrite",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:pickaxe_head_nickel_zinc_ferrite"
+  }
+}

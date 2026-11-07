@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WSW",
+    "GGG",
+    "WGW"
+  ],
+  "key": {
+    "W": "#minecraft:planks",
+    "S": "minecraft:string",
+    "G": "minecraft:gunpowder"
+  },
+  "result": {
+    "id": "iis:powder_barrel"
+  }
+}

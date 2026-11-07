@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " h ",
+    "RSR",
+    " w "
+  ],
+  "key": {
+    "R": "#iis:rings/iron",
+    "S": "#c:rods/iron",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:minecart_wheels_iron"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/rubber",
+      "count": 6
+    },
+    {
+      "ingredient": "#c:rods/rubber",
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:waterproof_kit",
+      "count": 1
+    }
+  ],
+  "duration": 800,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:glue",
+      "amount": 300
+    }
+  ]
+}

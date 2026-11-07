@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/ferrite_mixture",
+    "#iis:tiny_dusts/ferrite_mixture",
+    "#iis:tiny_dusts/ferrite_mixture",
+    "#iis:tiny_dusts/ferrite_mixture",
+    "#iis:tiny_dusts/ferrite_mixture",
+    "#iis:tiny_dusts/ferrite_mixture",
+    "#iis:tiny_dusts/ferrite_mixture",
+    "#iis:tiny_dusts/ferrite_mixture",
+    "#iis:tiny_dusts/ferrite_mixture"
+  ],
+  "result": {
+    "id": "iis:dust_ferrite_mixture"
+  }
+}

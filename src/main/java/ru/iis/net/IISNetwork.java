@@ -84,7 +84,7 @@ public final class IISNetwork {
     private static void gunKey(Player player, int action) {
         if (!(player instanceof net.minecraft.server.level.ServerPlayer sp)) return;
         if (action == 0) ru.iis.equipment.GunActions.reloadKey(sp);
-        else if (action == 1 && sp.getRootVehicle() instanceof ru.iis.equipment.vehicle.Driveable d) d.fireMainGun(sp);
+        else if (action == 1 && sp.getRootVehicle() instanceof ru.iis.equipment.vehicle.Driveable d) d.vehicleKey(sp);
     }
 
     public static void register(IEventBus modBus) {

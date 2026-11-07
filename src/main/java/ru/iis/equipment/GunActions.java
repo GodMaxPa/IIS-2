@@ -215,7 +215,7 @@ public final class GunActions {
         RandomSource rnd = level.getRandom();
         boolean aim = shooter.isShiftKeyDown();
         double spread = Math.toRadians(w.spreadDegrees(aim));
-        Vec3 muzzle = muzzle(shooter, eye, look);
+        Vec3 muzzle = muzzle(shooter);
         Vec3 end = muzzle;
         if (w.projectile()) {
             Vec3 d = jitter(look, spread, rnd);
@@ -243,11 +243,19 @@ public final class GunActions {
         }
     }
 
-    private static Vec3 muzzle(LivingEntity shooter, Vec3 eye, Vec3 look) {
+    /** Где дуло: от бедра сбоку на стороне руки, при прицеливании посередине под взглядом, там же, где ствол на экране. Смещения по осям камеры: так и при взгляде вверх или вниз. */
+    public static Vec3 muzzle(LivingEntity shooter) {
+        Vec3 look = shooter.getLookAngle();
         Vec3 right = look.cross(new Vec3(0, 1, 0));
         right = right.lengthSqr() < 1e-4 ? new Vec3(1, 0, 0) : right.normalize();
-        return eye.add(look.scale(0.9)).add(right.scale(0.28)).add(0, -0.22, 0);
+        Vec3 up = right.cross(look).normalize();
+        Vec3 at = shooter.getEyePosition().add(look.scale(0.9));
+        if (shooter.isShiftKeyDown()) return at.subtract(up.scale(AIM_DROP));
+        int side = shooter.getMainArm() == net.minecraft.world.entity.HumanoidArm.LEFT ? -1 : 1;
+        return at.add(right.scale(0.28 * side)).subtract(up.scale(0.22));
     }
+
+    private static final double AIM_DROP = 0.12;
 
     private static Vec3 jitter(Vec3 dir, double radians, RandomSource rnd) {
         if (radians <= 0) return dir;

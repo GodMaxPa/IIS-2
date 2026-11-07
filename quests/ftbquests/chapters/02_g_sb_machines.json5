@@ -6136,6 +6136,30 @@
       ]
     },
     {
+      "id": "1A000000000005CE",
+      "x": 9.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:replicator_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:replicator_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005CE00"
+        }
+      ]
+    },
+    {
       "id": "1A000000000005D0",
       "x": 12.5,
       "y": 0.5,

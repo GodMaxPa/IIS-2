@@ -1,0 +1,22 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/tungsten",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/carbon",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hot_ingot_tungsten_carbide",
+      "count": 2
+    }
+  ],
+  "duration": 4920,
+  "eut": 480,
+  "temp": 2460
+}

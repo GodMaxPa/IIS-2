@@ -727,7 +727,7 @@ def generate(g):
                             ('item_detector', 'MV', 'ITEMDETECTOR'), ('fluid_detector', 'MV', 'FLUIDDETECTOR'),
                             ('energy_detector', 'MV', 'ENERGYDETECTOR'), ('drain', 'LV', 'DRAIN'), ('crafting', 'LV', 'CRAFTING'),
                             # GT_MetaGenerated_Item_01:525, :532: LV casing + pump / shutter overlay
-                            ('fluid_regulator', 'LV', 'PUMP'), ('fluid_filter', 'LV', 'SHUTTER')):
+                            ('fluid_regulator', 'LV', 'PUMP'), ('fluid_regulator_iv', 'IV', 'PUMP'), ('fluid_filter', 'LV', 'SHUTTER')):
         icd = os.path.join(LV, 'iconsets')
         im, _ = layer(os.path.join(icd, f'MACHINE_{casing}_SIDE.png'), os.path.join(icd, f'OVERLAY_{ov}.png'))
         im.crop((0, 0, 16, 16)).save(tex_out(f'block/cover/{cid}.png'))

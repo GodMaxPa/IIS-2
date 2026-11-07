@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    "PWP",
+    " B "
+  ],
+  "key": {
+    "P": "minecraft:paper",
+    "W": "minecraft:gunpowder",
+    "B": "minecraft:bowl"
+  },
+  "result": {
+    "id": "iis:small_gunpowder_bundle"
+  }
+}

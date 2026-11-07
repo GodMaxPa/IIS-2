@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/polyphenylene_sulfide",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_polyphenylene_sulfide",
+      "count": 4
+    }
+  ],
+  "duration": 18,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 1
+    }
+  ]
+}

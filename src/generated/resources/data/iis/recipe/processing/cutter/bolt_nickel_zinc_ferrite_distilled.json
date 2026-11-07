@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/nickel_zinc_ferrite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_nickel_zinc_ferrite",
+      "count": 4
+    }
+  ],
+  "duration": 132,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 3
+    }
+  ]
+}

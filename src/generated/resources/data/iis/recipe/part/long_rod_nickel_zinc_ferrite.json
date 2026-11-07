@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ShS"
+  ],
+  "key": {
+    "S": "#c:rods/nickel_zinc_ferrite",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:long_rod_nickel_zinc_ferrite"
+  }
+}

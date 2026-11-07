@@ -37,6 +37,8 @@ public final class CoverSet {
     public static final String[] TIERS = {"lv", "mv", "hv", "ev", "iv"};
     /** GT_MetaGenerated_Item_01:525 FluidRegulator_LV: new GT_Cover_FluidRegulator(32). */
     public static final int REGULATOR_RATE = 32;
+    /** GT_MetaGenerated_Item_01:523 FluidRegulator_IV: до 163840 л/с (D132). */
+    public static final int REGULATOR_RATE_IV = 8192;
 
     private final @Nullable CoverKind[] kind = new CoverKind[6];
     /** GT_Cover_Fluidfilter: жидкость фильтра (в GT — номер жидкости в старших битах данных). */
@@ -153,7 +155,7 @@ public final class CoverSet {
             case PUMP -> !(v > 1 && condBlocks(h, v)) && (v >= 6 || v % 2 != 0);
             case SHUTTER -> shutter(h, v, true);
             case DRAIN -> (!h.isMachine() || h.allowedToWork()) == (v < 2);
-            case CRAFTING, FLUID_REGULATOR -> false;
+            case CRAFTING, FLUID_REGULATOR, FLUID_REGULATOR_IV -> false;
             case FLUID_FILTER -> FluidFilterLogic.in(v & 7, fluid != null, matches(filterFluid(side), fluid));
             default -> true;
         };
@@ -166,7 +168,7 @@ public final class CoverSet {
         return switch (k) {
             case PUMP -> !(v > 1 && condBlocks(h, v)) && (v >= 6 || v % 2 == 0);
             case SHUTTER -> shutter(h, v, false);
-            case DRAIN, CRAFTING, FLUID_REGULATOR -> false;
+            case DRAIN, CRAFTING, FLUID_REGULATOR, FLUID_REGULATOR_IV -> false;
             case FLUID_FILTER -> FluidFilterLogic.out(v & 7, fluid != null, matches(filterFluid(side), fluid));
             default -> true;
         };
@@ -201,7 +203,7 @@ public final class CoverSet {
     private static int tickRate(CoverKind k, int v, int t) {
         return switch (k) {
             case CONVEYOR, ARM -> CONVEYOR_TICKS[t];
-            case PUMP, CONTROLLER, FLUID_REGULATOR -> 1;
+            case PUMP, CONTROLLER, FLUID_REGULATOR, FLUID_REGULATOR_IV -> 1;
             case ACTIVITY_DETECTOR, ITEM_DETECTOR, FLUID_DETECTOR -> 5;
             case ENERGY_DETECTOR -> 20;
             case DRAIN -> v < 3 ? 50 : 1;
@@ -233,7 +235,7 @@ public final class CoverSet {
                 case FLUID_DETECTOR -> redstone[i] = fluidMeter(h, data[i]);
                 case ENERGY_DETECTOR -> redstone[i] = euMeter(h, data[i]);
                 case DRAIN -> drain(h, level, side, data[i]);
-                case FLUID_REGULATOR -> regulator(h, level, side, data[i]);
+                case FLUID_REGULATOR, FLUID_REGULATOR_IV -> regulator(h, level, side, data[i]);
                 default -> {}
             }
             if (redstone[i] != before) redstoneChanged = true;
@@ -527,7 +529,8 @@ public final class CoverSet {
                 }
             }
             case ARM -> { v = armStep(v, right ? (sneak ? 256 : 16) : (sneak ? -256 : -16)); msg = armMsg(v); }
-            case FLUID_REGULATOR -> { v = clampRate(v + (right ? 1 : -1) * (sneak ? 256 : 16)); msg = regulatorMsg(v); }
+            case FLUID_REGULATOR -> { v = clampRate(v + (right ? 1 : -1) * (sneak ? 256 : 16), REGULATOR_RATE); msg = regulatorMsg(v); }
+            case FLUID_REGULATOR_IV -> { v = clampRate(v + (right ? 1 : -1) * (sneak ? 256 : 16), REGULATOR_RATE_IV); msg = regulatorMsg(v); }
             case FLUID_FILTER -> { v = (v & ~7) | cycle(v & 7, sneak, 8); msg = filterModeMsg(v & 7); }
             default -> { return Component.empty(); }
         }
@@ -538,7 +541,7 @@ public final class CoverSet {
     /** Пустая рука по регулятору: ±1 л/тик (GT_Cover_FluidRegulator.onCoverRightclick). */
     public Component regulatorClick(Direction side, boolean right) {
         int i = side.get3DDataValue();
-        data[i] = clampRate(data[i] + (right ? 1 : -1));
+        data[i] = clampRate(data[i] + (right ? 1 : -1), kind[i] == CoverKind.FLUID_REGULATOR_IV ? REGULATOR_RATE_IV : REGULATOR_RATE);
         return regulatorMsg(data[i]);
     }
 
@@ -548,8 +551,8 @@ public final class CoverSet {
         return Component.translatable(CoverKind.msg(47)).append(" ").append(fluid.getFluidType().getDescription());
     }
 
-    private static int clampRate(int v) {
-        return Math.max(-REGULATOR_RATE, Math.min(REGULATOR_RATE, v));
+    private static int clampRate(int v, int limit) {
+        return Math.max(-limit, Math.min(limit, v));
     }
 
     /** Interaction_DESCRIPTION_Index_048–050: «Скорость насоса: N л/тик, 20·N л/с». */

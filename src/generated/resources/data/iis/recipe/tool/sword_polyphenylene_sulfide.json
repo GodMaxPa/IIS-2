@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/sword/polyphenylene_sulfide",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:sword_polyphenylene_sulfide"
+  }
+}

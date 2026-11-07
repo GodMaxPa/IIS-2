@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/powder_barrel",
+    "north": "iis:block/multi/powder_barrel",
+    "south": "iis:block/multi/powder_barrel",
+    "east": "iis:block/multi/powder_barrel",
+    "west": "iis:block/multi/powder_barrel",
+    "up": "iis:block/multi/powder_barrel",
+    "down": "iis:block/multi/powder_barrel"
+  }
+}

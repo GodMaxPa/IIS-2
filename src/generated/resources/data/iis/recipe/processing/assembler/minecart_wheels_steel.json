@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/steel",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:rings/steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:minecart_wheels_steel",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

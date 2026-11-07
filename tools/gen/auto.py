@@ -366,7 +366,8 @@ def generate(g):
             continue
         mid = mat_id(n)
         bid = f'block_{mid}'
-        p = os.path.join(BI, f'BLOCK_{n.upper()}.png')
+        # the gem blocks of garnet are named the other way round in GT (D132)
+        p = os.path.join(BI, 'BLOCK_' + {'GarnetYellow': 'YELLOWGARNET', 'GarnetRed': 'REDGARNET'}.get(n, n.upper()) + '.png')
         if not os.path.exists(p):
             continue
         first(p).save(tex_out(f'block/storage/{mid}.png'))

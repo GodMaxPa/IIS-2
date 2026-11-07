@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/tungsten_carbide"
+  ],
+  "result": {
+    "id": "iis:small_dust_tungsten_carbide",
+    "count": 4
+  }
+}

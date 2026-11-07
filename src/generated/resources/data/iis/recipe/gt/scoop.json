@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SWS",
+    "SPS",
+    " S "
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "S": "minecraft:stick",
+    "W": "#minecraft:wool"
+  },
+  "result": {
+    "id": "iis:scoop"
+  }
+}

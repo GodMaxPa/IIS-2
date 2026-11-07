@@ -106,6 +106,9 @@ public final class GearContent {
     /** GT_MetaGenerated_Item_01:473, 479. */
     public static final DeferredItem<BatteryItem> ENERGY_ORB = battery("energy_orb", 100_000_000L, 8192, 5);
     public static final DeferredItem<BatteryItem> ENERGY_ORB_CLUSTER = battery("energy_orb_cluster", 1_000_000_000L, 32768, 6);
+    /** D132: GT_MetaGenerated_Item_01:843-847, ветка EnableZPMandUVBatteries: 10 и 100 млрд EU, ZPM и UV. */
+    public static final DeferredItem<BatteryItem> ENERGY_MODULE = battery("energy_module", 10_000_000_000L, 131072, 7);
+    public static final DeferredItem<BatteryItem> ENERGY_CLUSTER = battery("energy_cluster", 100_000_000_000L, 524288, 8);
     /** D121: GT ZPM2, Item_01:849-850 Long.MAX_VALUE, V[8], уровень 8; поведение Behaviour_UB (достижение) не перенесено. */
     public static final DeferredItem<BatteryItem> ULTIMATE_BATTERY = battery("ultimate_battery", Long.MAX_VALUE, 524288, 8);
     public static final DeferredItem<ChargingBatteryItem> CHARGING_RE = charging("charging_battery_re", 40_000, 128, 1);

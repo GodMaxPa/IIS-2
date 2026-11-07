@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PIh",
+    "P  ",
+    "f  "
+  ],
+  "key": {
+    "P": "#c:plates/polyphenylene_sulfide",
+    "I": "#c:ingots/polyphenylene_sulfide",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:axe_head_polyphenylene_sulfide"
+  }
+}

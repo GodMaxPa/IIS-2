@@ -195,3 +195,4 @@
 | Магазины, плазма, заправщик D130 | GameTest `equip_loose_reload`, `equip_magazine_swap`, `equip_plasma_gun`, `equip_fuel_pump`, `equip_fuel_values` |
 | Магазин наград D130 | unit `ShopLogicTest`; GameTest `shop_prices`; окно снято в `-Pequipshots` |
 | Марс и ракета 2-го уровня D131 | GameTest `mars_gravity`, `mars_terrain`, `rocket_tier2`; `IIS_SPACE_CHECK=mars gradlew runServer`; `tools/check_reach.py --no-mars`; снимки `-Pequipshots` |
+| Винт вертолёта, центр выстрела, предметы GT из квестов D132 | GameTest `equip_helicopter_rotor`, `equip_muzzle_centred`, `gt_quest_items`; `tools/check_reach.py`; снимки `-Pequipshots` (`eq_af_*`) |

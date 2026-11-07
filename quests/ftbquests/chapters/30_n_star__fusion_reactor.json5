@@ -487,6 +487,73 @@
       ]
     },
     {
+      "id": "1A0000000000024A",
+      "x": 6.5,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000026E",
+        "1A0000000000026F"
+      ],
+      "icon": {
+        "id": "iis:crystal_chip_master",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:crystal_chip_master",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 5
+          },
+          "id": "1C00000000024A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000024D",
+      "x": 5.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000024E"
+      ],
+      "icon": {
+        "id": "iis:block_nether_star",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_nether_star",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000024D00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000024E",
       "x": 3.5,
       "y": 8.0,
@@ -524,7 +591,7 @@
       "x": 6.5,
       "y": 8.0,
       "dependencies": [
-        "1A0000000000024E"
+        "1A0000000000024D"
       ],
       "icon": {
         "id": "iis:plate_nether_star",
@@ -872,6 +939,39 @@
             "count": 7
           },
           "id": "1C0000000002A200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000407",
+      "x": 11.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000237"
+      ],
+      "icon": {
+        "id": "iis:chip_hpic",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chip_hpic",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000040700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 6
+          },
+          "id": "1C00000000040700"
         }
       ]
     },

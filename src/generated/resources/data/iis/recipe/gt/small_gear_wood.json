@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "Ps"
+  ],
+  "key": {
+    "P": "#c:plates/wood",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:small_gear_wood"
+  }
+}

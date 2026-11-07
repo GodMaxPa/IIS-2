@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PfP",
+    "hPd",
+    "STS"
+  ],
+  "key": {
+    "P": "#c:plates/tungsten_carbide",
+    "S": "#c:rods/tungsten_carbide",
+    "T": "#iis:screws/tungsten_carbide",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:wire_cutter_tungsten_carbide"
+  }
+}

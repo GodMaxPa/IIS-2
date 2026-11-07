@@ -350,6 +350,7 @@ final class EquipmentGameTests {
         plane.setFuel(0);
         heli.setFuel(1_000_000);
         heli.physics().rotor = 1;
+        heli.setRotorOn(true);
         heli.setTestInput(new VehiclePhysics.Input(false, false, false, false, false, false, 0, 0, true, true));
         double py = plane.getY(), hy = heli.getY();
         h.runAtTickTime(40, () -> {
@@ -359,6 +360,60 @@ final class EquipmentGameTests {
             heli.discard();
             h.succeed();
         });
+    }
+
+    /** Включённый винт жжёт топливо и без пилота и крутится; выключенный не тратит и останавливается (просьба владельца). */
+    static void helicopterRotorSwitch(GameTestHelper h) {
+        floor(h);
+        Driveable on = vehicle(h, VehicleKind.HELICOPTER, 2.5, 2, 2.5, 0);
+        Driveable off = vehicle(h, VehicleKind.HELICOPTER, 8.5, 2, 8.5, 0);
+        Driveable dry = vehicle(h, VehicleKind.HELICOPTER, 2.5, 2, 8.5, 0);
+        on.setFuel(1_000_000);
+        off.setFuel(1_000_000);
+        off.physics().rotor = 0.2;
+        on.setRotorOn(true);
+        dry.setFuel(1);
+        dry.setRotorOn(true);
+        h.runAtTickTime(70, () -> {
+            h.assertTrue(on.engineOn(), "двигатель не работает при включённом винте");
+            h.assertTrue(on.fuel() < 1_000_000, "включённый винт не жжёт топливо");
+            h.assertTrue(on.physics().rotor > 0.4, "винт не раскручивается: " + on.physics().rotor);
+            h.assertTrue(!off.engineOn() && off.fuel() == 1_000_000, "выключенный винт тратит топливо");
+            h.assertTrue(off.physics().rotor == 0, "выключенный винт не остановился: " + off.physics().rotor);
+            h.assertTrue(!dry.rotorOn(), "без топлива выключатель не упал");
+            on.discard();
+            off.discard();
+            dry.discard();
+            h.succeed();
+        });
+    }
+
+    /** При прицеливании дуло посередине: на оси взгляда по горизонтали; от бедра на стороне руки (просьба владельца). */
+    static void muzzleCentredWhenAiming(GameTestHelper h) {
+        var p = h.makeMockPlayer(net.minecraft.world.level.GameType.SURVIVAL);
+        p.setYRot(0);
+        p.setXRot(-30);
+        p.setShiftKeyDown(false);
+        Vec3 hip = ru.iis.equipment.GunActions.muzzle(p);
+        h.assertTrue(hip.x < p.getX() - 0.2, "от бедра дуло не справа: " + (hip.x - p.getX()));
+        p.setShiftKeyDown(true);
+        Vec3 aim = ru.iis.equipment.GunActions.muzzle(p);
+        h.assertTrue(Math.abs(aim.x - p.getX()) < 1e-6, "при прицеливании дуло сбоку: " + (aim.x - p.getX()));
+        Vec3 fromEye = aim.subtract(p.getEyePosition());
+        h.assertTrue(fromEye.normalize().dot(p.getLookAngle()) > 0.98, "дуло далеко от взгляда");
+        h.succeed();
+    }
+
+    /** Предметы D132: рецепт разобрался (ошибка разбора сама по себе тесты не роняет). Ветка аккумуляторов как в конфиге ИИС 1. */
+    static void questItemsHaveRecipes(GameTestHelper h) {
+        var recipes = h.getLevel().getServer().getRecipeManager();
+        for (String id : new String[]{"processing/assembler/match", "processing/assembler/waterproof_kit", "processing/assembler/fluid_regulator_iv", "processing/blast/nickel_zinc_ferrite", "processing/blast/tungsten_carbide",
+                "processing/chemical_reactor/polyphenylene_sulfide", "processing/blast/cobaltite_roast", "processing/fluid_solidifier/volumetric_flask", "processing/laser_engraver/wafer_soc2",
+                "processing/assembly_line/energy_module", "processing/assembly_line/energy_cluster", "processing/assembly_line/ultimate_battery", "processing/chemical_bath/dark_concrete", "multi/powder_barrel", "multi/pyrolyse_casing", "processing/fluid_solidifier/light_concrete", "gt/scoop"}) {
+            var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.RECIPE, net.minecraft.resources.Identifier.fromNamespaceAndPath("iis", id));
+            h.assertTrue(recipes.byKey(key).isPresent(), "нет рецепта " + id);
+        }
+        h.succeed();
     }
 
     /** Катер держится на воде, на суше не едет. */

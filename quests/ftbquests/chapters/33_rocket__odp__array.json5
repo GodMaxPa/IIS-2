@@ -241,6 +241,39 @@
       ]
     },
     {
+      "id": "1A0000000000000F",
+      "x": 9.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000000"
+      ],
+      "icon": {
+        "id": "iis:fluid_regulator_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_regulator_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000000F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 6
+          },
+          "id": "1C00000000000F00"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000012",
       "x": 5.0,
       "y": 0.5,
@@ -437,6 +470,40 @@
             "count": 4
           },
           "id": "1C00000000043100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000433",
+      "x": 0.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000008B",
+        "1A00000000000435"
+      ],
+      "icon": {
+        "id": "iis:mining_osmiridium_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mining_osmiridium_casing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000043300"
         }
       ]
     },

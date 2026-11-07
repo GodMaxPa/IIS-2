@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PhP",
+    "PFP",
+    "PwP"
+  ],
+  "key": {
+    "P": "#c:plates/wrought_iron",
+    "F": "#c:frames/iron",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:pyrolyse_casing",
+    "count": 2
+  }
+}

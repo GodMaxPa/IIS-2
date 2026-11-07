@@ -4,7 +4,7 @@ Sources: GT_MachineRecipeLoader:122-123, 453, 455-461, 523-524, 531-533, 590-597
 ProcessingCrafting:66; ProcessingDust:41-44; GT_Loader_ItemData:165.
 
 Everything here needs naquadah or fusion Mark II at some point, and naquadah waits for space (D113), so survival cannot reach it until then. `python -I tools/check_reach.py --with=iis:dust_naquadah` shows the rest.
-Not ported: lapotronic orb stages above the cluster (Energy_Module, Energy_Cluster, ZPM2): their config is off by default and the chargers that need them are not here (Battery_Charger_UV).
+The lapotronic orb stages above the cluster (Energy_Module, Energy_Cluster, ZPM2) follow the "EnableZPMandUVBatteries" branch: IIS 1 has it on (D132).
 """
 import os
 
@@ -132,10 +132,14 @@ def generate(g):
         q = {'M': I(f'hull_{t}'), 'G': I(f'field_generator_{t}'), 'D': f'#c:circuits/{circ}', 'P': tag_of('plate', plate)}
         shaped(f'auto/quantum_chest_{t}', I(f'quantum_chest_{t}'), 1, ['DPD', 'PMP', 'DGD'], q)
         shaped(f'auto/quantum_tank_{t}', I(f'quantum_tank_{t}'), 1, ['DGD', 'PMP', 'DPD'], q)
-    # :2536-2553 the ultimate battery (ZPM2); the "EnableZPMandUVBatteries" branch is off by default and is not ported
-    HP = ing(I('wafer_hpic'), 64)
-    mrec('assembly_line', 'ultimate_battery', [N('plate', 16)] + [ing('#c:circuits/infinite')] * 4 + [ing(I('energy_orb_cluster'), 8), ing(I('field_generator_uv'), 2), HP, HP, ing(I('diode_smd'), 16), ing('#iis:wires/1x/superconductor', 32)],
-         [out(I('ultimate_battery'))], 2000, 300000, fins=[SOL(2880), fl('ic2coolant', 16000)], keep=I('energy_orb_cluster'), temp=288000)
+    # :2482-2533 the "EnableZPMandUVBatteries" branch: IIS 1 has it on in config/GregTech/OverpoweredStuff.cfg (D132; D121 took the default branch by mistake)
+    ASOC, HP, NEURO = ing(I('wafer_soc2'), 64), ing(I('wafer_hpic'), 64), ing(I('circuit_neuroprocessor'), 64)
+    mrec('assembly_line', 'energy_module', [ing(tag_of('plate', 'Europium'), 16)] + [ing('#c:circuits/ultimate')] * 4 + [ing(I('energy_orb_cluster'), 8), ing(I('field_generator_luv'), 2), ASOC, ASOC, ing(I('diode_smd'), 8), ing(I('cable_naquadah_1x'), 32)],
+         [out(I('energy_module'))], 2000, 100000, fins=[SOL(2880), fl('ic2coolant', 16000)], keep=I('energy_orb_cluster'), temp=288000)
+    mrec('assembly_line', 'energy_cluster', [ing(tag_of('plate', 'Americium'), 16)] + [ing('#c:circuits/superconductor')] * 4 + [ing(I('energy_module'), 8), ing(I('field_generator_zpm'), 2), HP, HP, ing(I('diode_smd'), 16), ing(I('cable_naquadah_alloy_1x'), 32)],
+         [out(I('energy_cluster'))], 2000, 200000, fins=[SOL(2880), fl('ic2coolant', 16000)], keep=I('energy_module'), temp=288000)
+    mrec('assembly_line', 'ultimate_battery', [N('plate', 16)] + [ing('#c:circuits/infinite')] * 4 + [ing(I('energy_cluster'), 8), ing(I('field_generator_uv'), 2), NEURO, NEURO, ing(I('diode_smd'), 16), ing('#iis:wires/1x/superconductor', 32)],
+         [out(I('ultimate_battery'))], 2000, 300000, fins=[SOL(2880), fl('ic2coolant', 16000), fl('molten_naquadria', 1152)], keep=I('energy_cluster'), temp=288000)
 
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)

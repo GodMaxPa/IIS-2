@@ -408,6 +408,40 @@
       ]
     },
     {
+      "id": "1A00000000000216",
+      "x": 12.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000213",
+        "1A00000000000217"
+      ],
+      "icon": {
+        "id": "iis:plate_polyphenylene_sulfide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_polyphenylene_sulfide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000021600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000021600"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000217",
       "x": 14.0,
       "y": 3.5,
@@ -432,6 +466,39 @@
             "count": 6
           },
           "id": "1C00000000021700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000218",
+      "x": 14.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000216"
+      ],
+      "icon": {
+        "id": "iis:foil_polyphenylene_sulfide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:foil_polyphenylene_sulfide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000021800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000021800"
         }
       ]
     },
@@ -1125,6 +1192,40 @@
             "count": 3
           },
           "id": "1C00000000030500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003F0",
+      "x": 11.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000227",
+        "1A0000000000017E"
+      ],
+      "icon": {
+        "id": "iis:volumetric_flask",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:volumetric_flask",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003F000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000003F000"
         }
       ]
     }

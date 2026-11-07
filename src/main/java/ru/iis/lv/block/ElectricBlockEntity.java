@@ -147,12 +147,24 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
                 break;
             }
         }
-        if (exploded || !exposedToRain(sl)) return;
+        if (exploded || waterproof || !exposedToRain(sl)) return;
         if (sl.isRaining() && rainPossible(sl)) {
             if (rnd.nextInt(10) == 0) doEnergyExplosion();
             else if (energy.stored > 0) setOnFire(sl);   // D101 (владелец): поджигает только машина с зарядом; GT — любая
         }
         if (!exploded && sl.isThundering() && rainPossible(sl) && rnd.nextInt(3) == 0) doEnergyExplosion();
+    }
+
+    /** Комплект влагозащиты (D132, GT mWaterProof): дождь и гроза больше не вредят. */
+    private boolean waterproof;
+
+    public boolean isWaterproof() {
+        return waterproof;
+    }
+
+    public void setWaterproof() {
+        waterproof = true;
+        setChanged();
     }
 
     /** GT: над блоком (или над соседними столбцами на его высоте) нет крыши. */
@@ -356,6 +368,7 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
     protected void saveAdditional(ValueOutput out) {
         super.saveAdditional(out);
         ContainerHelper.saveAllItems(out, items);
+        out.putBoolean("Waterproof", waterproof);
         out.putLong("eu", energy.stored);
         covers.save(out);
     }
@@ -363,6 +376,7 @@ public abstract class ElectricBlockEntity extends BaseContainerBlockEntity imple
     @Override
     protected void loadAdditional(ValueInput in) {
         super.loadAdditional(in);
+        waterproof = in.getBooleanOr("Waterproof", false);
         items = NonNullList.withSize(items.size(), ItemStack.EMPTY);
         ContainerHelper.loadAllItems(in, items);
         energy.stored = in.getLongOr("eu", 0L);

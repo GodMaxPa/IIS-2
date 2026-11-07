@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/wrought_iron",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:rings/wrought_iron",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:minecart_wheels_iron",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

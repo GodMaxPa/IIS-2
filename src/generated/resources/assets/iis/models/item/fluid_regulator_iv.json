@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "iis:item/fluid_regulator_iv"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:laser_engraver",
+  "inputs": [
+    {
+      "ingredient": "iis:silicon_wafer_naquadah",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wafer_soc2",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 1920,
+  "keep": [
+    "#iis:crafting_lens/orange"
+  ],
+  "cleanroom": true
+}

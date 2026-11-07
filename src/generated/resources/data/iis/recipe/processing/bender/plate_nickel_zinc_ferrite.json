@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/nickel_zinc_ferrite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_nickel_zinc_ferrite",
+      "count": 1
+    }
+  ],
+  "duration": 33,
+  "eut": 24
+}

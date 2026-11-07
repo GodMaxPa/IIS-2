@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/nickel_zinc_ferrite"
+  },
+  "result": {
+    "id": "iis:tiny_dust_nickel_zinc_ferrite",
+    "count": 18
+  }
+}

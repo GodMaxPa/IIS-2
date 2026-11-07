@@ -181,6 +181,7 @@ public final class EquipmentClient {
         Component second;
         if (d.fuel() <= 0) second = Component.translatable("hud.iis.vehicle.no_fuel").withStyle(ChatFormatting.RED);
         else if (d.kind.move == VehicleKind.Move.PLANE) second = Component.translatable("hud.iis.vehicle.throttle", (int) (d.physics().throttle * 100), (int) d.getY());
+        else if (d.kind.move == VehicleKind.Move.HELICOPTER && !d.rotorOn()) second = Component.translatable("hud.iis.vehicle.rotor_off", VEHICLE_FIRE.getTranslatedKeyMessage(), (int) (d.physics().rotor * 100));
         else if (d.kind.move == VehicleKind.Move.HELICOPTER) second = Component.translatable("hud.iis.vehicle.rotor", (int) (d.physics().rotor * 100), (int) d.getY());
         else second = Component.translatable("hud.iis.vehicle.fuel", 100 * d.fuel() / d.kind.tank);
         g.text(mc.font, second, x, y + 23, 0xFFD0D0D0, true);

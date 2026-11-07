@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/nickel",
+    "#c:dusts/zinc",
+    "#c:dusts/iron",
+    "#c:dusts/iron",
+    "#c:dusts/iron",
+    "#c:dusts/iron"
+  ],
+  "result": {
+    "id": "iis:dust_ferrite_mixture",
+    "count": 6
+  }
+}

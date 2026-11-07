@@ -426,6 +426,41 @@
       ]
     },
     {
+      "id": "1A0000000000044D",
+      "x": 3.5,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000000197",
+        "1A00000000000073",
+        "1A00000000000450"
+      ],
+      "icon": {
+        "id": "iis:minecart_wheels_iron",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:minecart_wheels_iron",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000044D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000044D00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000044E",
       "x": 1.0,
       "y": 2.0,
@@ -468,9 +503,7 @@
       "y": 11.5,
       "size": 2.0,
       "dependencies": [
-        "1A00000000000197",
-        "1A00000000000073",
-        "1A00000000000450"
+        "1A0000000000044D"
       ],
       "icon": {
         "id": "minecraft:minecart",

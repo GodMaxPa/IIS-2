@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "h",
+    "X",
+    "X"
+  ],
+  "key": {
+    "X": "#c:ingots/nickel_zinc_ferrite",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:plate_nickel_zinc_ferrite"
+  }
+}

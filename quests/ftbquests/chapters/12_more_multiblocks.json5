@@ -1331,6 +1331,40 @@
       ]
     },
     {
+      "id": "1A00000000000398",
+      "x": -54.0,
+      "y": -7.5,
+      "dependencies": [
+        "1A00000000000397",
+        "1A00000000000226"
+      ],
+      "icon": {
+        "id": "iis:dark_concrete",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dark_concrete",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000039800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000039800"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000460",
       "x": -39.0,
       "y": -8.0,
@@ -1658,6 +1692,39 @@
             "count": 2
           },
           "id": "1C0000000006EA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006EB",
+      "x": -54.0,
+      "y": -6.0,
+      "dependencies": [
+        "1A000000000006EA"
+      ],
+      "icon": {
+        "id": "iis:pyrolyse_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:pyrolyse_casing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006EB00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000006EB00"
         }
       ]
     },

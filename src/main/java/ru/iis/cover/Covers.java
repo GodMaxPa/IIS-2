@@ -58,6 +58,7 @@ public final class Covers {
             Map.entry("cover_drain", CoverKind.DRAIN),
             Map.entry("cover_crafting", CoverKind.CRAFTING),
             Map.entry("fluid_regulator_lv", CoverKind.FLUID_REGULATOR),
+            Map.entry("fluid_regulator_iv", CoverKind.FLUID_REGULATOR_IV),
             Map.entry("cover_fluid_filter", CoverKind.FLUID_FILTER),
             Map.entry("solar_panel", CoverKind.SOLAR), Map.entry("solar_panel_8v", CoverKind.SOLAR_8V), Map.entry("solar_panel_lv", CoverKind.SOLAR_LV), Map.entry("solar_panel_mv", CoverKind.SOLAR_MV),
             Map.entry("solar_panel_hv", CoverKind.SOLAR_HV), Map.entry("solar_panel_ev", CoverKind.SOLAR_EV), Map.entry("solar_panel_iv", CoverKind.SOLAR_IV), Map.entry("solar_panel_luv", CoverKind.SOLAR_LUV),
@@ -178,7 +179,7 @@ public final class Covers {
             }
         }
         if (stack.isEmpty()) {
-            if (present == CoverKind.FLUID_REGULATOR) {
+            if (present == CoverKind.FLUID_REGULATOR || present == CoverKind.FLUID_REGULATOR_IV) {
                 if (!level.isClientSide()) {
                     player.sendOverlayMessage(covers.regulatorClick(side, right));
                     host.coversChanged();

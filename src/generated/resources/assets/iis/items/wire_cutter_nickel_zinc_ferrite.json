@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/wire_cutter_nickel_zinc_ferrite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 3947580
+      }
+    ]
+  }
+}

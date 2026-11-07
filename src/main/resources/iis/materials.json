@@ -337,6 +337,34 @@
     "toolQuality": 2
   },
   {
+    "id": "arsenic_trioxide",
+    "gtName": "ArsenicTrioxide",
+    "gtId": 615,
+    "en": "ArsenicTrioxide",
+    "ru": "Триоксид мышьяка",
+    "ruOre": null,
+    "color": 16777215,
+    "iconSet": "SHINY",
+    "harvestLevel": 0,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "As2O3",
+    "types": 1,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "arsenic_trioxide",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 0
+  },
+  {
     "id": "ash",
     "gtName": "Ash",
     "gtId": 815,
@@ -1578,6 +1606,34 @@
     "toolQuality": 2
   },
   {
+    "id": "cobalt_oxide",
+    "gtName": "CobaltOxide",
+    "gtId": 616,
+    "en": "CobaltOxide",
+    "ru": "Оксид кобальта",
+    "ruOre": null,
+    "color": 6717440,
+    "iconSet": "DULL",
+    "harvestLevel": 0,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "CoO",
+    "types": 1,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "cobalt_oxide",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 0
+  },
+  {
     "id": "cobaltite",
     "gtName": "Cobaltite",
     "gtId": 827,
@@ -2336,6 +2392,34 @@
     "toolDurability": 0,
     "toolSpeed": 1.0,
     "toolQuality": 2
+  },
+  {
+    "id": "ferrite_mixture",
+    "gtName": "FerriteMixture",
+    "gtId": 612,
+    "en": "FerriteMixture",
+    "ru": "Ферритовая смесь",
+    "ruOre": null,
+    "color": 11842740,
+    "iconSet": "METALLIC",
+    "harvestLevel": 0,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "NiZnFe4",
+    "types": 1,
+    "subTags": [
+      "HAS_COLOR"
+    ],
+    "directSmelting": "ferrite_mixture",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 0,
+    "toolSpeed": 1.0,
+    "toolQuality": 0
   },
   {
     "id": "ferrosilite",
@@ -4653,6 +4737,35 @@
     "toolQuality": 2
   },
   {
+    "id": "nickel_zinc_ferrite",
+    "gtName": "NickelZincFerrite",
+    "gtId": 613,
+    "en": "NickelZincFerrite",
+    "ru": "Никель-цинковый феррит",
+    "ruOre": null,
+    "color": 3947580,
+    "iconSet": "ROUGH",
+    "harvestLevel": 0,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "NiZnFe4O8",
+    "types": 195,
+    "subTags": [
+      "HAS_COLOR",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "nickel_zinc_ferrite",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 1500,
+    "byProducts": [],
+    "toolDurability": 32,
+    "toolSpeed": 3.0,
+    "toolQuality": 0
+  },
+  {
     "id": "niobium",
     "gtName": "Niobium",
     "gtId": 47,
@@ -5345,6 +5458,35 @@
     "toolDurability": 0,
     "toolSpeed": 1.0,
     "toolQuality": 0
+  },
+  {
+    "id": "polyphenylene_sulfide",
+    "gtName": "PolyphenyleneSulfide",
+    "gtId": 631,
+    "en": "PolyphenyleneSulfide",
+    "ru": "Полифениленсульфид",
+    "ruOre": null,
+    "color": 11175936,
+    "iconSet": "DULL",
+    "harvestLevel": 1,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "C6H4S",
+    "types": 195,
+    "subTags": [
+      "HAS_COLOR",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "polyphenylene_sulfide",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": false,
+    "blastFurnaceTemp": 0,
+    "byProducts": [],
+    "toolDurability": 32,
+    "toolSpeed": 3.0,
+    "toolQuality": 1
   },
   {
     "id": "polytetrafluoroethylene",
@@ -7494,6 +7636,36 @@
     "toolDurability": 2560,
     "toolSpeed": 7.0,
     "toolQuality": 3
+  },
+  {
+    "id": "tungsten_carbide",
+    "gtName": "TungstenCarbide",
+    "gtId": 370,
+    "en": "Tungstencarbide",
+    "ru": "Карбид вольфрама",
+    "ruOre": "Руда карбида вольфрама",
+    "color": 3342438,
+    "iconSet": "METALLIC",
+    "harvestLevel": 4,
+    "hosts": [],
+    "smallHosts": [],
+    "ruSmallOre": null,
+    "formula": "WC",
+    "types": 195,
+    "subTags": [
+      "HAS_COLOR",
+      "METAL",
+      "SMELTING_TO_FLUID"
+    ],
+    "directSmelting": "tungsten_carbide",
+    "oreMultiplier": 1,
+    "smeltingMultiplier": 1,
+    "blastFurnaceRequired": true,
+    "blastFurnaceTemp": 2460,
+    "byProducts": [],
+    "toolDurability": 1280,
+    "toolSpeed": 14.0,
+    "toolQuality": 4
   },
   {
     "id": "tungsten_steel",

@@ -224,6 +224,8 @@ names |= {'VanadiumSteel'}
 names |= {'PolyvinylChloride'}
 # D125: Ender IO alloys of GT (GT_MachineRecipeLoader:1020-1027, 1800-1809), obsidian and glowstone plates of AE2.zs / EnderIO.zs
 names |= {'DarkSteel', 'ElectricalSteel', 'ConductiveIron', 'EnergeticAlloy', 'VibrantAlloy', 'PulsatingIron', 'RedstoneAlloy', 'Soularium', 'EndSteel', 'Enderium', 'EnderiumBase', 'Obsidian', 'Glowstone'}
+# D132: materials of IIS 1 quests (GT_MachineRecipeLoader:1030, 1054, 3034, 3724)
+names |= {'FerriteMixture', 'NickelZincFerrite', 'TungstenCarbide', 'PolyphenyleneSulfide', 'ArsenicTrioxide', 'CobaltOxide'}
 names |= {'HSSE', 'HSSS', 'Iridium', 'Osmium', 'Naquadah', 'Superconductor', 'EpoxidFiberReinforced', 'Indium', 'AluminiumSulfite', 'Arsenic', 'Phosphorus', 'Phosphate', 'GalliumArsenide', 'IndiumGalliumPhosphide'}
 
 # Forms (GT5 OrePrefixes): name, generation bits, meta-item index (gt.metaitem.01/02.<index*1000+id>), EN template, tag
@@ -1078,6 +1080,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_gtlast', os.path.join(ROOT, 'tools
 _gtlast = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_gtlast)
 lv_stats['gtlast'] = _gtlast.generate(globals())
+# GT items that only the IIS 1 quest book still waited for (D132)
+_spec = _ilu.spec_from_file_location('iis_gen_gtclose', os.path.join(ROOT, 'tools', 'gen', 'gtclose.py'))
+_gtclose = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_gtclose)
+lv_stats['gtclose'] = _gtclose.generate(globals())
 # Item pipes (D123)
 _spec = _ilu.spec_from_file_location('iis_gen_itempipes', os.path.join(ROOT, 'tools', 'gen', 'itempipes.py'))
 _itempipes = _ilu.module_from_spec(_spec)

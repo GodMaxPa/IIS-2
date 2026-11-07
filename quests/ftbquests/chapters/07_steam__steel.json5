@@ -405,6 +405,40 @@
       ]
     },
     {
+      "id": "1A0000000000018D",
+      "x": 17.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000000018B",
+        "1A0000000000018E"
+      ],
+      "icon": {
+        "id": "iis:powder_barrel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:powder_barrel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000018D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000018D00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000018F",
       "x": 20.0,
       "y": 0.5,
@@ -737,6 +771,40 @@
             "count": 3
           },
           "id": "1C0000000001CB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001CC",
+      "x": 8.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000004A",
+        "1A000000000001C4"
+      ],
+      "icon": {
+        "id": "iis:block_charcoal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_charcoal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001CC00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000001CC00"
         }
       ]
     },
@@ -1564,6 +1632,13 @@
       "linked_quest": "1A00000000000136",
       "x": 2.0,
       "y": 5.0,
+      "size": 1.0
+    },
+    {
+      "id": "1E00000001B001C8",
+      "linked_quest": "1A000000000001C8",
+      "x": 14.0,
+      "y": 9.0,
       "size": 1.0
     },
     {

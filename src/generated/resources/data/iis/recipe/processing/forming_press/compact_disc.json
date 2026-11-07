@@ -1,0 +1,21 @@
+{
+  "type": "iis:forming_press",
+  "inputs": [
+    {
+      "ingredient": "#iis:foils/aluminium",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:foils/plastic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:compact_disc",
+      "count": 4
+    }
+  ],
+  "duration": 480,
+  "eut": 16
+}

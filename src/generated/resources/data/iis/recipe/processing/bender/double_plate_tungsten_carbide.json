@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/tungsten_carbide",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_tungsten_carbide",
+      "count": 1
+    }
+  ],
+  "duration": 194,
+  "eut": 96
+}

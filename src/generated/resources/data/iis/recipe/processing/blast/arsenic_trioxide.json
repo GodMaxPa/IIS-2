@@ -1,0 +1,28 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/arsenic_trioxide",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:dusts/carbon",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_arsenic",
+      "count": 1
+    }
+  ],
+  "duration": 240,
+  "eut": 120,
+  "fluid_outputs": [
+    {
+      "id": "iis:carbondioxide",
+      "amount": 1000
+    }
+  ],
+  "temp": 1200
+}

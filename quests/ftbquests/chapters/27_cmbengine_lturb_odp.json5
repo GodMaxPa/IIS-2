@@ -816,6 +816,40 @@
       ]
     },
     {
+      "id": "1A000000000003C3",
+      "x": 2.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000003C4",
+        "1A000000000003C2"
+      ],
+      "icon": {
+        "id": "iis:turbine_large",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turbine_large",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003C300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C0000000003C300"
+        }
+      ]
+    },
+    {
       "id": "1A000000000003C5",
       "x": 14.0,
       "y": 10.0,
@@ -1088,6 +1122,13 @@
       "size": 2.0
     },
     {
+      "id": "1E000000012003BB",
+      "linked_quest": "1A000000000003BB",
+      "x": 10.0,
+      "y": 7.0,
+      "size": 2.0
+    },
+    {
       "id": "1E000000012003C1",
       "linked_quest": "1A000000000003C1",
       "x": 12.5,
@@ -1115,5 +1156,9 @@
       "y": 2.0,
       "size": 2.0
     }
-  ]
+  ],
+  "icon": {
+    "id": "iis:turbine_large",
+    "count": 1
+  }
 }

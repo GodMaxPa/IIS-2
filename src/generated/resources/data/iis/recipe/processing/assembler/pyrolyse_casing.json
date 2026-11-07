@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/wrought_iron",
+      "count": 6
+    },
+    {
+      "ingredient": "#c:frames/iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pyrolyse_casing",
+      "count": 2
+    }
+  ],
+  "duration": 50,
+  "eut": 16
+}

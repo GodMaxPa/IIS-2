@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/ferrite_mixture"
+  },
+  "result": {
+    "id": "iis:tiny_dust_ferrite_mixture",
+    "count": 18
+  }
+}

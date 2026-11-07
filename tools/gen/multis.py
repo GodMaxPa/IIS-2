@@ -575,6 +575,26 @@ def generate(g):
     first(os.path.join(BI, 'CONCRETE_LIGHT_STONE.png')).save(tex_out('block/multi/light_concrete.png'))
     cube_block('light_concrete', f'{NS}:block/multi/light_concrete')
     name(f'block.{NS}.light_concrete', 'Light Concrete', ru('gt.blockconcretes.8.name', 'Светлый бетон'))
+    # D132: GT_Block_Concretes:0, GT_MachineRecipeLoader:327; GT_Block_Casings6:0, :2043, GT_Loader_MetaTileEntities:66; GT_Block_Reinforced:5
+    first(os.path.join(BI, 'CONCRETE_DARK_STONE.png')).save(tex_out('block/multi/dark_concrete.png'))
+    cube_block('dark_concrete', f'{NS}:block/multi/dark_concrete')
+    name(f'block.{NS}.dark_concrete', 'Dark Concrete', 'Тёмный бетон')
+    mrec('chemical_bath', 'dark_concrete', [ing(f'{NS}:light_concrete')], [out(f'{NS}:dark_concrete')], 200, 4, fin={'ingredient': 'minecraft:water', 'amount': 250})
+    casing('pyrolyse_casing', 'MACHINE_CASING_PYROLYSE', 'gt.blockcasings6.0.name', 'Pyrolyse Casing')
+    name(f'block.{NS}.pyrolyse_casing', 'Pyrolyse Casing', 'Корпус пиролизной печи')
+    shaped('multi/pyrolyse_casing', f'{NS}:pyrolyse_casing', 2, ['PhP', 'PFP', 'PwP'], {'P': tag_of('plate', 'WroughtIron'), 'F': '#c:frames/iron'})
+    mrec('assembler', 'pyrolyse_casing', [ing(tag_of('plate', 'WroughtIron'), 6), ing('#c:frames/iron')], [out(f'{NS}:pyrolyse_casing', 2)], 50, 16)
+    _barrel = Image.new('RGBA', (16, 16), (92, 62, 34, 255))
+    for _y in range(16):
+        for _x in range(16):
+            if _y in (0, 7, 8, 15):
+                _barrel.putpixel((_x, _y), (58, 38, 20, 255))
+            elif _x in (0, 15):
+                _barrel.putpixel((_x, _y), (70, 48, 26, 255))
+    _barrel.save(tex_out('block/multi/powder_barrel.png'))
+    cube_block('powder_barrel', f'{NS}:block/multi/powder_barrel')
+    name(f'block.{NS}.powder_barrel', 'Powderbarrel', 'Пороховая бочка')
+    shaped('multi/powder_barrel', f'{NS}:powder_barrel', 1, ['WSW', 'GGG', 'WGW'], {'W': '#minecraft:planks', 'S': 'minecraft:string', 'G': 'minecraft:gunpowder'})
 
     base_lines = lambda casing_en, casing_ru, frame_en, frame_ru: [
         ('3x7x3; controller in the middle of the front of the bottom 3x3', 'Размер 3×7×3; контроллер — в середине передней стороны нижней площадки 3×3'),

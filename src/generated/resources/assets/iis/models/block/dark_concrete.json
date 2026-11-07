@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/dark_concrete",
+    "north": "iis:block/multi/dark_concrete",
+    "south": "iis:block/multi/dark_concrete",
+    "east": "iis:block/multi/dark_concrete",
+    "west": "iis:block/multi/dark_concrete",
+    "up": "iis:block/multi/dark_concrete",
+    "down": "iis:block/multi/dark_concrete"
+  }
+}

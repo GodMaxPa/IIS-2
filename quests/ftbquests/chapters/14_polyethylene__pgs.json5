@@ -1127,6 +1127,41 @@
       ]
     },
     {
+      "id": "1A000000000006B3",
+      "x": 12.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000006B2",
+        "1A000000000001FF",
+        "1A00000000000346"
+      ],
+      "icon": {
+        "id": "iis:compact_disc",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compact_disc",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006B300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C0000000006B300"
+        }
+      ]
+    },
+    {
       "id": "1A000000000006B4",
       "x": 12.5,
       "y": 8.0,

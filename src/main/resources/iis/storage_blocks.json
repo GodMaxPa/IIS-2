@@ -78,6 +78,7 @@
   "yttrium",
   "yttrium_barium_cuprate",
   "zinc",
+  "tungsten_carbide",
   "vanadium_steel",
   "hssg",
   "hsse",
@@ -97,11 +98,13 @@
   "olivine",
   "opal",
   "quartzite",
+  "garnet_red",
   "ruby",
   "sapphire",
   "sodalite",
   "tanzanite",
   "topaz",
+  "garnet_yellow",
   "nether_star",
   "charcoal"
 ]

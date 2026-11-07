@@ -728,10 +728,7 @@
       "y": 9.5,
       "dependencies": [
         "1A000000000001F0",
-        "1A00000000000726",
-        "1A000000000000BA",
-        "1A000000000003FD",
-        "1A000000000001E3"
+        "1A00000000000728"
       ],
       "icon": {
         "id": "iis:rock_breaker_lv",
@@ -1558,6 +1555,42 @@
       ]
     },
     {
+      "id": "1A00000000000728",
+      "x": 5.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A00000000000726",
+        "1A000000000000BA",
+        "1A000000000003FD",
+        "1A000000000001E3"
+      ],
+      "icon": {
+        "id": "iis:waterproof_kit",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:waterproof_kit",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000072800"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000733",
       "x": 12.5,
       "y": 6.5,
@@ -1589,6 +1622,109 @@
             "count": 1
           },
           "id": "1C00000000073300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000734",
+      "x": 12.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000733",
+        "1A0000000000018B",
+        "1A00000000000193"
+      ],
+      "icon": {
+        "id": "iis:small_gunpowder_bundle",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:small_gunpowder_bundle",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000073400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000073400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000735",
+      "x": 6.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000001E3",
+        "1A000000000003FD"
+      ],
+      "icon": {
+        "id": "iis:double_plate_paper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:double_plate_paper",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000073500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000073500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000736",
+      "x": 8.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000735",
+        "1A000000000001AB"
+      ],
+      "icon": {
+        "id": "iis:punch_card",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:punch_card",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000073600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000073600"
         }
       ]
     }

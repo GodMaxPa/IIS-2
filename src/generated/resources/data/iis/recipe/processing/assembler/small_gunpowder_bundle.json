@@ -1,0 +1,31 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:bowl",
+      "count": 5
+    },
+    {
+      "ingredient": "minecraft:gunpowder",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:paper",
+      "count": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_gunpowder_bundle",
+      "count": 5
+    }
+  ],
+  "duration": 320,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:glue",
+      "amount": 500
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:volumetric_flask",
+      "count": 1
+    }
+  ],
+  "duration": 44,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_borosilicateglass",
+      "amount": 144
+    }
+  ],
+  "keep": [
+    "iis:mold_ball"
+  ]
+}

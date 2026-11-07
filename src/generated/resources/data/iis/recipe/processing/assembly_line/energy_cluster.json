@@ -1,0 +1,71 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/americium",
+      "count": 16
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/superconductor",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:energy_module",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:field_generator_zpm",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:wafer_hpic",
+      "count": 64
+    },
+    {
+      "ingredient": "iis:wafer_hpic",
+      "count": 64
+    },
+    {
+      "ingredient": "iis:diode_smd",
+      "count": 16
+    },
+    {
+      "ingredient": "iis:cable_naquadah_alloy_1x",
+      "count": 32
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:energy_cluster",
+      "count": 1
+    }
+  ],
+  "duration": 2000,
+  "eut": 200000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 2880
+    },
+    {
+      "ingredient": "iis:ic2coolant",
+      "amount": 16000
+    }
+  ],
+  "keep": [
+    "iis:energy_module"
+  ],
+  "temp": 288000
+}

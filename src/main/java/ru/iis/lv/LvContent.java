@@ -496,6 +496,24 @@ public final class LvContent {
     public static final DeferredItem<Item> COVER_SHUTTER = item("cover_shutter");
     // GT_MetaGenerated_Item_01:519, :531 — регулятор и фильтр жидкости (D80)
     public static final DeferredItem<Item> FLUID_REGULATOR_LV = item("fluid_regulator_lv");
+    public static final DeferredItem<Item> FLUID_REGULATOR_IV = item("fluid_regulator_iv");
+    // D132: предметы GT, которых ждала книга квестов ИИС 1
+    public static final DeferredItem<ru.iis.lv.item.MatchItem> MATCH = ITEMS.registerItem("match", ru.iis.lv.item.MatchItem::new);
+    public static final DeferredItem<ru.iis.lv.item.WaterproofKitItem> WATERPROOF_KIT = ITEMS.registerItem("waterproof_kit", ru.iis.lv.item.WaterproofKitItem::new);
+    public static final DeferredItem<Item> EMPTY_SPRAY = item("empty_spray");
+    public static final DeferredItem<Item> MINECART_WHEELS_IRON = item("minecart_wheels_iron");
+    public static final DeferredItem<Item> MINECART_WHEELS_STEEL = item("minecart_wheels_steel");
+    public static final DeferredItem<Item> PUNCH_CARD = item("punch_card");
+    public static final DeferredItem<Item> SMALL_GUNPOWDER_BUNDLE = item("small_gunpowder_bundle");
+    public static final DeferredItem<Item> COMPACT_DISC = item("compact_disc");
+    public static final DeferredItem<Item> WAFER_SOC2 = item("wafer_soc2");
+    public static final DeferredItem<Item> SCOOP = item("scoop");
+    public static final DeferredItem<Item> DOUBLE_PLATE_PAPER = item("double_plate_paper");
+    public static final DeferredItem<Item> RING_PAPER = item("ring_paper");
+    public static final DeferredItem<Item> PLATE_CONCRETE = item("plate_concrete");
+    public static final DeferredItem<Item> SMALL_GEAR_WOOD = item("small_gear_wood");
+    public static final DeferredItem<Item> SMALL_GEAR_STONE = item("small_gear_stone");
+    public static final DeferredItem<Item> ARROW_HEAD_FLINT = item("arrow_head_flint");
     public static final DeferredItem<Item> COVER_FLUID_FILTER = item("cover_fluid_filter");
     public static final DeferredItem<ru.iis.lv.item.MultimeterItem> MULTIMETER = ITEMS.registerItem("multimeter", ru.iis.lv.item.MultimeterItem::new, p -> p.stacksTo(1));
     public static final DeferredItem<TreetapItem> TREETAP = ITEMS.registerItem("treetap", TreetapItem::new, p -> p.durability(16));

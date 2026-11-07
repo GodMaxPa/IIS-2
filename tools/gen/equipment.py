@@ -376,7 +376,7 @@ def generate(g):
     # --- messages --------------------------------------------------------------------------------------------------------------------
     for k, en, ru in (
             ('itemGroup.iis.equipment', 'IIS 2.0: Weapons and Vehicles', 'ИИС 2.0: оружие и транспорт'),
-            ('key.iis.reload', 'Reload', 'Перезарядка'), ('key.iis.vehicle_fire', 'Vehicle gun', 'Пушка машины'),
+            ('key.iis.reload', 'Reload', 'Перезарядка'), ('key.iis.vehicle_fire', 'Vehicle: tank gun, helicopter rotor', 'Машина: пушка танка, винт вертолёта'),
             ('tooltip.iis.gun.damage', 'Damage %s, range %s, shots per second %s', 'Урон %s, дальность %s, выстрелов в секунду %s'),
             ('tooltip.iis.gun.blast', 'Blast radius %s, does not break blocks', 'Радиус взрыва %s, блоки не ломает'),
             ('tooltip.iis.gun.pierce', 'Goes through %s targets', 'Пробивает целей: %s'),
@@ -409,7 +409,9 @@ def generate(g):
             ('tooltip.iis.vehicle.fuel', 'Tank: %s%%', 'В баке: %s%%'), ('tooltip.iis.vehicle.cargo', 'Cargo: %s slots', 'Груз: %s слотов'),
             ('tooltip.iis.vehicle.help', 'Right click: get in, or refuel with fuel in hand. Sneak + right click: window', 'ПКМ — сесть, с топливом в руке — заправить. Shift+ПКМ — окно'),
             ('message.iis.vehicle.plane', 'W and S: throttle, mouse: where to fly, Shift: get out', 'W и S — газ, мышь — куда лететь, Shift — выйти'),
-            ('message.iis.vehicle.helicopter', 'Space: up, Ctrl: down, W A S D: move, wait for the rotor to spin up', 'Пробел — вверх, Ctrl — вниз, W A S D — движение, винт раскручивается не сразу'),
+            ('message.iis.vehicle.helicopter', 'Space: up, Ctrl: down, W A S D: move, wait for the rotor to spin up. G: rotor off, it burns fuel while on', 'Пробел — вверх, Ctrl — вниз, W A S D — движение, винт раскручивается не сразу. G — выключить винт: пока он включён, топливо идёт'),
+            ('message.iis.vehicle.rotor_on', 'Rotor on: burns fuel until switched off', 'Винт включён: топливо идёт, пока не выключите'), ('message.iis.vehicle.rotor_off', 'Rotor off', 'Винт выключен'),
+            ('hud.iis.vehicle.rotor_off', 'Off (%s), rotor %s%%', 'Выключен (%s), винт %s%%'),
             ('message.iis.vehicle.tank_full', 'The tank has no room for that', 'В баке нет места'), ('message.iis.vehicle.no_shells', 'No shells in the cargo', 'В грузе нет снарядов'),
             ('message.iis.vehicle.needs_water', 'A boat goes on water', 'Катер ставится на воду'), ('message.iis.vehicle.no_room', 'No room here', 'Здесь не поместится'),
             ('hud.iis.vehicle.speed', '%s km/h', '%s км/ч'), ('hud.iis.vehicle.no_fuel', 'No fuel', 'Нет топлива'), ('hud.iis.vehicle.fuel', 'Fuel %s%%', 'Топливо %s%%'),

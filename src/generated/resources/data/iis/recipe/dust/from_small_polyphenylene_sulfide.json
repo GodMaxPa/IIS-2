@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/polyphenylene_sulfide",
+    "#iis:small_dusts/polyphenylene_sulfide",
+    "#iis:small_dusts/polyphenylene_sulfide",
+    "#iis:small_dusts/polyphenylene_sulfide"
+  ],
+  "result": {
+    "id": "iis:dust_polyphenylene_sulfide"
+  }
+}

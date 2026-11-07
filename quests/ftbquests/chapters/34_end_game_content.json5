@@ -5,6 +5,34 @@
   "default_quest_shape": "",
   "quests": [
     {
+      "id": "1A000000000000D2",
+      "x": 12.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000083"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:helium_3",
+            "amount": 1
+          },
+          "id": "1B0000000000D200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000000D200"
+        }
+      ]
+    },
+    {
       "id": "1A000000000000D4",
       "x": 11.0,
       "y": 5.0,
@@ -12,7 +40,7 @@
         "1A000000000000D1",
         "1A000000000000D5",
         "1A000000000000D0",
-        "1A00000000000083"
+        "1A000000000000D2"
       ],
       "tasks": [
         {
@@ -40,7 +68,7 @@
       "x": 12.5,
       "y": 0.5,
       "dependencies": [
-        "1A00000000000083",
+        "1A000000000000D2",
         "1A000000000000D5"
       ],
       "tasks": [
@@ -531,6 +559,39 @@
       ]
     },
     {
+      "id": "1A0000000000036E",
+      "x": 11.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A00000000000010"
+      ],
+      "icon": {
+        "id": "iis:block_americium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_americium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000036E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 1
+          },
+          "id": "1C00000000036E00"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000036F",
       "x": 11.0,
       "y": 6.5,
@@ -967,11 +1028,22 @@
       "size": 1.0
     },
     {
+      "id": "1E00000001300363",
+      "linked_quest": "1A00000000000363",
+      "x": 5.75,
+      "y": 2.75,
+      "size": 2.5
+    },
+    {
       "id": "1E00000001300365",
       "linked_quest": "1A00000000000365",
       "x": 3.5,
       "y": 5.0,
       "size": 1.0
     }
-  ]
+  ],
+  "icon": {
+    "id": "iis:ultimate_battery",
+    "count": 1
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/sword/tungsten_carbide",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:sword_tungsten_carbide"
+  }
+}

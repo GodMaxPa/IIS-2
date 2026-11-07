@@ -1,0 +1,17 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "iis:double_plate_paper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:punch_card",
+      "count": 3
+    }
+  ],
+  "duration": 16,
+  "eut": 4
+}

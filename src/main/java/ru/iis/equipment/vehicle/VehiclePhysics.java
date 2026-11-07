@@ -13,6 +13,8 @@ public final class VehiclePhysics {
     /** Что нажато у водителя и куда он смотрит. */
     public record Input(boolean forward, boolean back, boolean left, boolean right, boolean up, boolean down, float lookYaw, float lookPitch, boolean fuel, boolean occupied) {
         public static final Input NONE = new Input(false, false, false, false, false, false, 0, 0, false, false);
+        /** Двигатель работает, а за рулём никого: вертолёт с включённым винтом. */
+        public static final Input IDLING = new Input(false, false, false, false, false, false, 0, 0, true, false);
     }
 
     public static final class State {
@@ -148,9 +150,15 @@ public final class VehiclePhysics {
         return motion(s, Math.cos(pitch));
     }
 
+    /** Обороты винта: разгон за шесть секунд, выбег за двенадцать. */
+    public static void spool(State s, boolean running) {
+        s.rotor = running ? Math.min(1, s.rotor + 0.008) : Math.max(0, s.rotor - 0.004);
+    }
+
     private static double[] helicopter(VehicleKind k, State s, Input in) {
+        spool(s, in.fuel);
+        // без пилота винт крутится, но машина не слушается: на земле стоит, в воздухе садится на оборотах
         boolean engine = in.fuel && in.occupied;
-        s.rotor = engine ? Math.min(1, s.rotor + 0.008) : Math.max(0, s.rotor - 0.004);
         double power = s.rotor < 0.6 ? 0 : (s.rotor - 0.6) / 0.4;
         double climb = 0;
         if (engine) {

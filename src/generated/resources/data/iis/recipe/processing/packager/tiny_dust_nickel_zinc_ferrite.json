@@ -1,0 +1,20 @@
+{
+  "type": "iis:packager",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/nickel_zinc_ferrite",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_nickel_zinc_ferrite",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 4,
+  "keep": [
+    "iis:schematic_dust"
+  ]
+}

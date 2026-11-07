@@ -22,7 +22,7 @@
       "count": 1
     },
     {
-      "ingredient": "iis:energy_orb_cluster",
+      "ingredient": "iis:energy_cluster",
       "count": 8
     },
     {
@@ -30,11 +30,11 @@
       "count": 2
     },
     {
-      "ingredient": "iis:wafer_hpic",
+      "ingredient": "iis:circuit_neuroprocessor",
       "count": 64
     },
     {
-      "ingredient": "iis:wafer_hpic",
+      "ingredient": "iis:circuit_neuroprocessor",
       "count": 64
     },
     {
@@ -62,10 +62,14 @@
     {
       "ingredient": "iis:ic2coolant",
       "amount": 16000
+    },
+    {
+      "ingredient": "iis:molten_naquadria",
+      "amount": 1152
     }
   ],
   "keep": [
-    "iis:energy_orb_cluster"
+    "iis:energy_cluster"
   ],
   "temp": 288000
 }

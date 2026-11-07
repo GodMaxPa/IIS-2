@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/wrought_iron",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:minecart_wheels_iron",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:minecart",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

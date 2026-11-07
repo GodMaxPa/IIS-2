@@ -968,6 +968,34 @@
       ]
     },
     {
+      "id": "1A000000000003A6",
+      "x": 18.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000000017C"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:distilled_water",
+            "amount": 1
+          },
+          "id": "1B0000000003A600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000003A600"
+        }
+      ]
+    },
+    {
       "id": "1A000000000003A7",
       "x": 16.5,
       "y": 9.0,
@@ -1583,8 +1611,7 @@
       "x": 18.0,
       "y": 6.0,
       "dependencies": [
-        "1A000000000006CC",
-        "1A0000000000004A"
+        "1A000000000006D0"
       ],
       "icon": {
         "id": "iis:plate_olivine",
@@ -1609,6 +1636,40 @@
             "count": 4
           },
           "id": "1C0000000006CF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006D0",
+      "x": 19.5,
+      "y": 6.0,
+      "dependencies": [
+        "1A000000000006CC",
+        "1A0000000000004A"
+      ],
+      "icon": {
+        "id": "iis:block_olivine",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_olivine",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006D000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000006D000"
         }
       ]
     },

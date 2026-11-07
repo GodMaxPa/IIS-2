@@ -86,6 +86,7 @@ MC_RENAMES = {
     ('stained_hardened_clay', 0): 'white_terracotta', ('hardened_clay', 0): 'terracotta', ('melon_block', 0): 'melon',
     ('lit_pumpkin', 0): 'jack_o_lantern', ('noteblock', 0): 'note_block', ('web', 0): 'cobweb', ('sapling', 0): 'oak_sapling',
 }
+CELL_FLUIDS = {('gregtech:gt.metaitem.01', 30495): 'liquidair'}
 # IC2 items that IIS 2 has an own counterpart for (D74: cells are capsules; D92: IC2 circuits are GT circuits)
 IC2_MAP = {
     ('itemCellEmpty', 0): f'{NS}:capsule', ('itemFluidCell', 0): f'{NS}:universal_capsule', ('itemHarz', 0): f'{NS}:sticky_resin',
@@ -122,6 +123,18 @@ GC_MAP.update({('gregtech:gt.metaitem.01', 32018): 'iis:data_reader_mv', ('gregt
                ('gregtech:gt.metaitem.02', 32010): 'iis:gelled_toluene', ('gregtech:gt.blockcasings', 9): 'iis:casing_max', ('IC2:itemDynamite', 0): 'iis:dynamite', ('IC2:blockITNT', 0): 'iis:industrial_tnt',
                ('gregtech:gt.blockmachines', 70): 'iis:hatch_input_bus_ulv', ('gregtech:gt.blockmachines', 80): 'iis:hatch_output_bus_ulv'})
 # D121: gem blocks: GT_Loader_Item_Block_And_Fluid:322-379
+# D132: what is here under another name or id
+GC_MAP.update({('gregtech:gt.blockmachines', 1171): 'iis:combustion_engine', ('gregtech:gt.metaitem.01', 32463): 'iis:heavy_ingot_t2', ('gregtech:gt.metaitem.01', 32703): 'iis:circuit_advanced',
+               ('gregtech:gt.metaitem.01', 32714): 'iis:crystal_chip_master', ('gregtech:gt.metaitem.03', 32053): 'iis:chip_hpic', ('gregtech:gt.metaitem.01', 32605): 'iis:ultimate_battery',
+               ('gregtech:gt.metaitem.01', 32736): 'iis:energy_module', ('gregtech:gt.metaitem.01', 32737): 'iis:energy_cluster', ('gregtech:gt.metaitem.03', 32048): 'iis:wafer_soc2',
+               ('gregtech:gt.blockmachines', 481): 'iis:replicator_lv', ('gregtech:gt.blockmachines', 108): 'iis:bricked_blast_furnace', ('gregtech:gt.blockreinforced', 2): 'iis:plascrete',
+               ('gregtech:gt.blockreinforced', 5): 'iis:powder_barrel', ('gregtech:gt.blockglass', 0): 'iis:plascrete_window', ('gregtech:gt.blockconcretes', 0): 'iis:dark_concrete',
+               ('gregtech:gt.blockcasings6', 0): 'iis:pyrolyse_casing', ('gregtech:gt.blockcasings4', 14): 'iis:mining_osmiridium_casing',
+               ('gregtech:gt.metatool.01', 170): 'iis:turbine_small', ('gregtech:gt.metatool.01', 172): 'iis:turbine_normal', ('gregtech:gt.metatool.01', 174): 'iis:turbine_large', ('gregtech:gt.metatool.01', 176): 'iis:turbine_huge',
+               ('gregtech:gt.metatool.01', 28): 'iis:scoop', ('gregtech:gt.metaitem.01', 32471): 'iis:match', ('gregtech:gt.metaitem.01', 32402): 'iis:empty_spray', ('gregtech:gt.metaitem.01', 32100): 'iis:minecart_wheels_iron',
+               ('gregtech:gt.metaitem.01', 32101): 'iis:minecart_wheels_steel', ('gregtech:gt.metaitem.01', 32485): 'iis:punch_card', ('gregtech:gt.metaitem.01', 32409): 'iis:small_gunpowder_bundle',
+               ('gregtech:gt.metaitem.01', 32020): 'iis:compact_disc', ('gregtech:gt.metaitem.01', 32017): 'iis:waterproof_kit', ('gregtech:gt.metaitem.01', 32619): 'iis:fluid_regulator_iv',
+               ('gregtech:gt.Volumetric_Flask', 0): 'iis:volumetric_flask', ('gregtech:gt.metaitem.02', 14802): 'iis:arrow_head_flint', ('gregtech:gt.metaitem.01', 30865): 'iis:dust_graphite'})
 GC_MAP.update({('gregtech:gt.blockgem1', 4): 'iis:block_blue_topaz', ('gregtech:gt.blockgem2', 12): 'iis:block_sapphire', ('gregtech:gt.blockgem2', 5): 'iis:block_opal', ('gregtech:gt.blockgem1', 7): 'iis:block_ender_eye'})
 # D121: UV tier: GT_Loader_MetaTileEntities ids and casings, GT_MetaGenerated_Item_01 and _03
 GC_MAP.update({('gregtech:gt.blockmachines', 1194): 'iis:fusion_computer_zpm', ('gregtech:gt.blockmachines', 1195): 'iis:fusion_computer_uv', ('gregtech:gt.blockmachines', 1153): 'iis:large_plasma_turbine',
@@ -254,9 +267,12 @@ class Mapper:
         # GT material id -> our material id
         ours_mats = {x['material'] for x in json.load(open(os.path.join(ROOT, 'src', 'main', 'resources', NS, 'items.json'), encoding='utf-8')) if x.get('material')}
         norm = {m.replace('_', ''): m for m in ours_mats}
+        # GT storage blocks: the tables of GT_Loader_Item_Block_And_Fluid (D132)
+        self.gt_blocks = json.load(open(os.path.join(ROOT, 'reference', 'original', 'gt5_metal_blocks.json'), encoding='utf-8'))
+        self.block_ids = {i[len('block_'):].replace('_', ''): f'{NS}:{i}' for i in self.ours if i.startswith('block_')}
         self.gt_mat = {}
         for m in json.load(open(os.path.join(ROOT, 'reference', 'original', 'gt5_materials.json'), encoding='utf-8')):
-            key = m['name'].replace('_', '').lower()
+            key = re.sub(r'[ _-]', '', m['name']).lower()
             self.gt_mat[m['id']] = norm.get(key, key)
 
     @staticmethod
@@ -293,6 +309,8 @@ class Mapper:
 
     def structural(self, name, dmg):
         """Ids the GT loader makes in loops: wires, cables, frames, fluid pipes, material items (D119)."""
+        if name in self.gt_blocks and dmg < len(self.gt_blocks[name]):
+            return self.block_ids.get(re.sub(r'[ _-]', '', self.gt_blocks[name][dmg]).lower())
         if name == 'gt.integrated_circuit':
             return f'{NS}:programmed_circuit'
         if name == 'gt.metatool.01' and dmg == 160:
@@ -362,7 +380,7 @@ class Mapper:
     def fluid(self, name):
         if name in ('water', 'lava'):
             return f'minecraft:{name}'
-        for c in (name, name.replace('liquid_', ''), name.replace('_gt5u', ''), name.replace('.', '_'), name.replace('ic2', '')):
+        for c in (name, name.replace('liquid_', ''), name.replace('_gt5u', ''), name.replace('.', '_'), name.replace('ic2', ''), {'helium-3': 'helium_3', '1,1dimethylhydrazine': 'dimethylhydrazine', 'ic2distilledwater': 'distilled_water'}.get(name, name)):
             if c in self.fluids:
                 return f'{NS}:{c}'
         return None
@@ -393,6 +411,11 @@ def main():
             tid = t['taskID:8']
             if tid == 'bq_standard:retrieval':
                 for it in bq_items(t):
+                    # a GT cell of a fluid is a fluid task here: capsules keep their fluid in a component (D132)
+                    cell = CELL_FLUIDS.get((it['id:8'], it.get('Damage:2', 0)))
+                    if cell and mp.fluid(cell):
+                        tasks.append({'type': 'fluid', 'fluid': {'fluid': mp.fluid(cell), 'amount': 1000 * max(1, it.get('Count:3', 1))}})
+                        continue
                     m = mp.item(it['id:8'], it.get('Damage:2', 0), it.get('OreDict:8', ''))
                     if m is None:
                         missing_items[(it['id:8'], it.get('Damage:2', 0))] += 1
@@ -547,7 +570,7 @@ def main():
     rep = [f'# IIS 1 quests -> FTB Quests (D101)', '',
            f'Quests in IIS 1: {len(quests)}; written: {len(placed)}; hidden until their items are ported: {len(hidden)}; chapters: {chapters}, one of them ours (D129, {own} quests).', '',
            '## Most needed unported items (task count)', '']
-    for (i, d), c in missing_items.most_common(80):
+    for (i, d), c in missing_items.most_common():
         label = mp.gtl.get(f'gt.blockmachines.{mp.mte.get(d)}.name') if i == 'gregtech:gt.blockmachines' else mp.gtl.get(f'{i.split(":", 1)[1]}.{d}.name', '')
         rep.append(f'- {c} × `{i}:{d}` {label or ""}')
     rep += ['', '## Unported fluids', ''] + [f'- {c} × `{f}`' for f, c in missing_fluids.most_common()]

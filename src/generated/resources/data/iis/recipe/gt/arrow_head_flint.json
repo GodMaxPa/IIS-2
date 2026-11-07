@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "Xf"
+  ],
+  "key": {
+    "X": "minecraft:flint",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:arrow_head_flint"
+  }
+}

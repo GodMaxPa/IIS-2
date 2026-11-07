@@ -1,0 +1,71 @@
+{
+  "type": "iis:assembly_line",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/europium",
+      "count": 16
+    },
+    {
+      "ingredient": "#c:circuits/ultimate",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/ultimate",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/ultimate",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/ultimate",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:energy_orb_cluster",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:field_generator_luv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:wafer_soc2",
+      "count": 64
+    },
+    {
+      "ingredient": "iis:wafer_soc2",
+      "count": 64
+    },
+    {
+      "ingredient": "iis:diode_smd",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:cable_naquadah_1x",
+      "count": 32
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:energy_module",
+      "count": 1
+    }
+  ],
+  "duration": 2000,
+  "eut": 100000,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 2880
+    },
+    {
+      "ingredient": "iis:ic2coolant",
+      "amount": 16000
+    }
+  ],
+  "keep": [
+    "iis:energy_orb_cluster"
+  ],
+  "temp": 288000
+}

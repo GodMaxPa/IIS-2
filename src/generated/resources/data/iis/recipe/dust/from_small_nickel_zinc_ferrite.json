@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/nickel_zinc_ferrite",
+    "#iis:small_dusts/nickel_zinc_ferrite",
+    "#iis:small_dusts/nickel_zinc_ferrite",
+    "#iis:small_dusts/nickel_zinc_ferrite"
+  ],
+  "result": {
+    "id": "iis:dust_nickel_zinc_ferrite"
+  }
+}

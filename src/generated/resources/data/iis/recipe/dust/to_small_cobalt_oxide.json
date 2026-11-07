@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/cobalt_oxide"
+  ],
+  "result": {
+    "id": "iis:small_dust_cobalt_oxide",
+    "count": 4
+  }
+}

@@ -61,6 +61,8 @@ public class Driveable extends VehicleEntity {
     private static final EntityDataAccessor<Float> DATA_HEALTH = SynchedEntityData.defineId(Driveable.class, EntityDataSerializers.FLOAT);
     private static final EntityDataAccessor<Boolean> DATA_ENGINE = SynchedEntityData.defineId(Driveable.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Boolean> DATA_KIT = SynchedEntityData.defineId(Driveable.class, EntityDataSerializers.BOOLEAN);
+    /** Выключатель винта вертолёта: включён — крутится и жжёт топливо, даже когда пилот вышел. */
+    private static final EntityDataAccessor<Boolean> DATA_ROTOR = SynchedEntityData.defineId(Driveable.class, EntityDataSerializers.BOOLEAN);
 
     /** Задаёт клиент: что нажал местный игрок. На сервере не вызывается. */
     public static Function<Player, VehiclePhysics.Input> clientInput = p -> VehiclePhysics.Input.NONE;
@@ -98,6 +100,7 @@ public class Driveable extends VehicleEntity {
         data.define(DATA_HEALTH, 40F);
         data.define(DATA_ENGINE, false);
         data.define(DATA_KIT, false);
+        data.define(DATA_ROTOR, false);
     }
 
     public long fuel() {
@@ -130,6 +133,23 @@ public class Driveable extends VehicleEntity {
 
     public boolean engineOn() {
         return entityData.get(DATA_ENGINE);
+    }
+
+    public boolean rotorOn() {
+        return entityData.get(DATA_ROTOR);
+    }
+
+    public void setRotorOn(boolean on) {
+        entityData.set(DATA_ROTOR, on);
+    }
+
+    private boolean isHelicopter() {
+        return kind.move == VehicleKind.Move.HELICOPTER;
+    }
+
+    /** Может ли двигатель тянуть: есть топливо, а у вертолёта ещё и включён винт. */
+    private boolean canRun() {
+        return fuel() > 0 && (!isHelicopter() || rotorOn());
     }
 
     public VehiclePhysics.State physics() {
@@ -201,7 +221,8 @@ public class Driveable extends VehicleEntity {
             if (getControllingPassenger() instanceof Player p && level().isClientSide()) in = clientInput.apply(p);
             else if (testInput != null) in = testInput;
             else in = VehiclePhysics.Input.NONE;
-            if (in != VehiclePhysics.Input.NONE) in = new VehiclePhysics.Input(in.forward(), in.back(), in.left(), in.right(), in.up(), in.down(), in.lookYaw(), in.lookPitch(), fuel() > 0, in.occupied());
+            if (in != VehiclePhysics.Input.NONE) in = new VehiclePhysics.Input(in.forward(), in.back(), in.left(), in.right(), in.up(), in.down(), in.lookYaw(), in.lookPitch(), canRun(), in.occupied());
+            else if (isHelicopter() && canRun()) in = VehiclePhysics.Input.IDLING;
             double[] m = VehiclePhysics.step(kind, state, in);
             setYRot(state.yaw);
             if (kind.flies()) setXRot(state.pitch);
@@ -212,6 +233,8 @@ public class Driveable extends VehicleEntity {
             state.climbed = getY() - y0 > 0.3;
         } else {
             setDeltaMovement(Vec3.ZERO);
+            // обороты считает и та сторона, что не управляет: иначе пилот, севший в раскрученный вертолёт, ждал бы раскрутки заново
+            if (isHelicopter()) VehiclePhysics.spool(state, canRun());
         }
         deltaYaw = Mth.wrapDegrees(getYRot() - lastYaw);
         if (level() instanceof ServerLevel sl) serverTick(sl);
@@ -220,7 +243,9 @@ public class Driveable extends VehicleEntity {
 
     private void serverTick(ServerLevel level) {
         boolean driven = getControllingPassenger() != null || testInput != null;
-        boolean on = driven && fuel() > 0;
+        // вертолёт: пока винт включён, работает и без пилота; топливо кончилось — выключатель сам падает
+        if (isHelicopter() && rotorOn() && fuel() <= 0) setRotorOn(false);
+        boolean on = isHelicopter() ? canRun() : driven && fuel() > 0;
         entityData.set(DATA_ENGINE, on);
         // расход: на холостых мало, под нагрузкой полностью
         if (on) {
@@ -324,7 +349,8 @@ public class Driveable extends VehicleEntity {
         double yaw = Math.toRadians(getYRot());
         double along = -Math.sin(yaw) * dx + Math.cos(yaw) * dz;
         if (Math.abs(along) < 8) distance += (float) along;
-        float spin = engineOn() ? 1F : (kind.move == VehicleKind.Move.HELICOPTER ? 0.2F : 0F);
+        // винт вертолёта разгоняется и останавливается вместе с оборотами
+        float spin = isHelicopter() ? (float) state.rotor : engineOn() ? 1F : 0F;
         propAngle += spin * 0.7F;
         // крен и руль модели — из скорости поворота: и у водителя, и у тех, кто смотрит со стороны
         float target = Mth.clamp(deltaYaw * (kind.flies() ? 8F : 3F), -35F, 35F);
@@ -467,6 +493,8 @@ public class Driveable extends VehicleEntity {
             player.setYRot(getYRot());
             player.setXRot(0);
             player.startRiding(this);
+            // пилот сел: винт запускается сам, глушит его клавиша машины
+            if (isHelicopter() && getControllingPassenger() == player && fuel() > 0) setRotorOn(true);
             if (kind.flies() && player instanceof ServerPlayer sp) sp.sendOverlayMessage(Component.translatable(kind.move == VehicleKind.Move.PLANE ? "message.iis.vehicle.plane" : "message.iis.vehicle.helicopter"));
         }
         return InteractionResult.CONSUME;
@@ -568,6 +596,20 @@ public class Driveable extends VehicleEntity {
         }
     }
 
+    // --- клавиша машины ---------------------------------------------------------------------------------------------------
+    /** Клавиша машины: у вертолёта выключатель винта, у танка выстрел. */
+    public void vehicleKey(ServerPlayer player) {
+        if (getControllingPassenger() != player) return;
+        if (isHelicopter()) {
+            boolean next = !rotorOn() && fuel() > 0;
+            setRotorOn(next);
+            player.sendOverlayMessage(Component.translatable(next ? "message.iis.vehicle.rotor_on" : "message.iis.vehicle.rotor_off"));
+            playSound(next ? SoundEvents.PISTON_EXTEND : SoundEvents.PISTON_CONTRACT, 0.7F, 0.7F);
+        } else {
+            fireMainGun(player);
+        }
+    }
+
     // --- пушка танка -----------------------------------------------------------------------------------------------------
     /** Клавиша выстрела: у танка снаряд из груза, туда, куда смотрит водитель. */
     public void fireMainGun(ServerPlayer player) {
@@ -645,6 +687,7 @@ public class Driveable extends VehicleEntity {
         out.putFloat("Health", vehicleHealth());
         out.putDouble("Throttle", state.throttle);
         out.putBoolean("Kit", hasKit());
+        out.putBoolean("Rotor", rotorOn());
         ContainerHelper.saveAllItems(out, cargo.getItems());
     }
 
@@ -654,6 +697,7 @@ public class Driveable extends VehicleEntity {
         setVehicleHealth(in.getFloatOr("Health", kind.health));
         state.throttle = in.getDoubleOr("Throttle", 0);
         setKit(in.getBooleanOr("Kit", false));
+        setRotorOn(in.getBooleanOr("Rotor", false));
         ContainerHelper.loadAllItems(in, cargo.getItems());
     }
 }

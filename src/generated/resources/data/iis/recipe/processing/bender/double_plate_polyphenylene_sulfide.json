@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/polyphenylene_sulfide",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_polyphenylene_sulfide",
+      "count": 1
+    }
+  ],
+  "duration": 18,
+  "eut": 96
+}
