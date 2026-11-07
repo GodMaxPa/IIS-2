@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:melon_seeds",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 32,
+  "eut": 2,
+  "fluid_outputs": [
+    {
+      "id": "iis:seedoil",
+      "amount": 10
+    }
+  ]
+}

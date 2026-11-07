@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/wing",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "wing"
+    }
+  },
+  "hand_animation_on_swap": false
+}

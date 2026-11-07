@@ -1,0 +1,18 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/monazite",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 64,
+  "eut": 64,
+  "fluid_outputs": [
+    {
+      "id": "iis:helium",
+      "amount": 200
+    }
+  ]
+}

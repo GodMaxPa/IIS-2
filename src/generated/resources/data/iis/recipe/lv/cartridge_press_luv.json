@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PWP",
+    "CMC",
+    "PWP"
+  ],
+  "key": {
+    "M": "iis:hull_luv",
+    "P": "iis:electric_piston_luv",
+    "C": "#c:circuits/master",
+    "W": "#iis:cables/1x/niobium_titanium"
+  },
+  "result": {
+    "id": "iis:cartridge_press_luv"
+  }
+}

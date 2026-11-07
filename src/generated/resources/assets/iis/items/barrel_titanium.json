@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/barrel_titanium",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "barrel_titanium"
+    }
+  },
+  "hand_animation_on_swap": false
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/tantalum",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_tantalum",
+      "count": 4
+    }
+  ],
+  "duration": 180,
+  "eut": 24
+}

@@ -226,7 +226,7 @@
       "x": 4.0,
       "y": 1.5,
       "dependencies": [
-        "1A00000000100004"
+        "1A0000000010002F"
       ],
       "icon": {
         "id": "iis:pistol_round",
@@ -1716,6 +1716,171 @@
             "count": 4
           },
           "id": "1C00000010002B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010002C",
+      "x": 6.8,
+      "y": 19.5,
+      "dependencies": [
+        "1A00000000100025"
+      ],
+      "icon": {
+        "id": "iis:vehicle_atv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vehicle_atv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000010002C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010002D",
+      "x": 5.6,
+      "y": 19.5,
+      "dependencies": [
+        "1A00000000100022"
+      ],
+      "icon": {
+        "id": "iis:fuel_pump",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fuel_pump",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000010002D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010002E",
+      "x": 3.2,
+      "y": 19.5,
+      "dependencies": [
+        "1A00000000100021"
+      ],
+      "icon": {
+        "id": "iis:cargo_kit",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cargo_kit",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000010002E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000010002F",
+      "x": 4.0,
+      "y": 0.0,
+      "dependencies": [
+        "1A00000000100004"
+      ],
+      "icon": {
+        "id": "iis:cartridge_press_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cartridge_press_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010002F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000010002F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100030",
+      "x": 5.4,
+      "y": 5.25,
+      "dependencies": [
+        "1A00000000100007"
+      ],
+      "icon": {
+        "id": "iis:mag_pistol",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mag_pistol",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010003000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000010003000"
         }
       ]
     }

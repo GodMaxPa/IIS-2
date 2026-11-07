@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:barrel_steel",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 16
+}

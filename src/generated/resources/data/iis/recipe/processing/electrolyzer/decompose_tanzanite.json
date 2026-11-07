@@ -1,0 +1,51 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/tanzanite",
+      "count": 22
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 13
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_calcium",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_aluminium",
+      "count": 3
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 3
+    },
+    {
+      "id": "iis:capsule",
+      "count": 13,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:oxygen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 440,
+  "eut": 120,
+  "fluid_outputs": [
+    {
+      "id": "iis:hydrogen",
+      "amount": 1000
+    }
+  ]
+}

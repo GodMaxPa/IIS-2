@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PWP",
+    "CMC",
+    "PWP"
+  ],
+  "key": {
+    "M": "iis:hull_zpm",
+    "P": "iis:electric_piston_zpm",
+    "C": "#c:circuits/ultimate",
+    "W": "#iis:cables/1x/naquadah"
+  },
+  "result": {
+    "id": "iis:cartridge_press_zpm"
+  }
+}

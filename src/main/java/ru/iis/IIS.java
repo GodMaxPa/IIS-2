@@ -47,6 +47,7 @@ public final class IIS {
         ru.iis.reactor.ReactorContent.register(modEventBus);
         ru.iis.gear.GearContent.register(modEventBus);
         ru.iis.equipment.EquipmentContent.register(modEventBus);
+        ru.iis.shop.ShopContent.register(modEventBus);
         ru.iis.compat.AeioContent.register(modEventBus);
         GtRecipes.register(modEventBus, NeoForge.EVENT_BUS);
         ru.iis.net.IISNetwork.register(modEventBus);

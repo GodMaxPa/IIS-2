@@ -1,0 +1,37 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:chassis_heavy",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:engine_hv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:wing",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:propeller",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:landing_gear",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:dashboard",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:vehicle_plane",
+      "count": 1
+    }
+  ],
+  "duration": 1200,
+  "eut": 120
+}

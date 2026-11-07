@@ -1,0 +1,29 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/lazurite",
+      "count": 28
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_aluminium",
+      "count": 6
+    },
+    {
+      "id": "iis:dust_silicon",
+      "count": 6
+    },
+    {
+      "id": "iis:dust_calcium",
+      "count": 8
+    },
+    {
+      "id": "iis:dust_sodium",
+      "count": 8
+    }
+  ],
+  "duration": 784,
+  "eut": 120
+}

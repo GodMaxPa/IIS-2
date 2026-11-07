@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/quicklime",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_calcite",
+      "count": 5
+    }
+  ],
+  "duration": 80,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:carbondioxide",
+      "amount": 3000
+    }
+  ]
+}

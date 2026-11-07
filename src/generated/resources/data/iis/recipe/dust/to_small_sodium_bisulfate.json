@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/sodium_bisulfate"
+  ],
+  "result": {
+    "id": "iis:small_dust_sodium_bisulfate",
+    "count": 4
+  }
+}

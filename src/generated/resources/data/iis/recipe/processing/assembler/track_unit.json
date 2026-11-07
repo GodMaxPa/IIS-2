@@ -1,0 +1,29 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/steel",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:wheel_rubber",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:gears/steel",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:conveyor_module_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:track_unit",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 120
+}

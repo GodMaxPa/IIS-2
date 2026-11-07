@@ -432,6 +432,15 @@
     "gui": "lv/replicator"
   },
   {
+    "id": "cartridge_press_lv",
+    "type": "cartridge_press",
+    "recipeMap": "cartridge_press",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/assembler"
+  },
+  {
     "id": "macerator_mv",
     "type": "macerator_mv",
     "recipeMap": "macerator",
@@ -853,6 +862,15 @@
     "outputs": 1,
     "tank": 16000,
     "gui": "lv/replicator"
+  },
+  {
+    "id": "cartridge_press_mv",
+    "type": "cartridge_press_mv",
+    "recipeMap": "cartridge_press",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/assembler"
   },
   {
     "id": "thermal_centrifuge_mv",
@@ -1287,6 +1305,15 @@
     "gui": "lv/replicator"
   },
   {
+    "id": "cartridge_press_hv",
+    "type": "cartridge_press_hv",
+    "recipeMap": "cartridge_press",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/assembler"
+  },
+  {
     "id": "thermal_centrifuge_hv",
     "type": "thermal_centrifuge_hv",
     "recipeMap": "thermal_centrifuge",
@@ -1717,6 +1744,15 @@
     "outputs": 1,
     "tank": 16000,
     "gui": "lv/replicator"
+  },
+  {
+    "id": "cartridge_press_ev",
+    "type": "cartridge_press_ev",
+    "recipeMap": "cartridge_press",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/assembler"
   },
   {
     "id": "thermal_centrifuge_ev",
@@ -2151,6 +2187,15 @@
     "gui": "lv/replicator"
   },
   {
+    "id": "cartridge_press_iv",
+    "type": "cartridge_press_iv",
+    "recipeMap": "cartridge_press",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/assembler"
+  },
+  {
     "id": "thermal_centrifuge_iv",
     "type": "thermal_centrifuge_iv",
     "recipeMap": "thermal_centrifuge",
@@ -2581,6 +2626,15 @@
     "outputs": 1,
     "tank": 16000,
     "gui": "lv/replicator"
+  },
+  {
+    "id": "cartridge_press_luv",
+    "type": "cartridge_press_luv",
+    "recipeMap": "cartridge_press",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/assembler"
   },
   {
     "id": "thermal_centrifuge_luv",
@@ -3015,6 +3069,15 @@
     "gui": "lv/replicator"
   },
   {
+    "id": "cartridge_press_zpm",
+    "type": "cartridge_press_zpm",
+    "recipeMap": "cartridge_press",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/assembler"
+  },
+  {
     "id": "thermal_centrifuge_zpm",
     "type": "thermal_centrifuge_zpm",
     "recipeMap": "thermal_centrifuge",
@@ -3445,6 +3508,15 @@
     "outputs": 1,
     "tank": 16000,
     "gui": "lv/replicator"
+  },
+  {
+    "id": "cartridge_press_uv",
+    "type": "cartridge_press_uv",
+    "recipeMap": "cartridge_press",
+    "inputs": 6,
+    "outputs": 1,
+    "tank": 16000,
+    "gui": "lv/assembler"
   },
   {
     "id": "thermal_centrifuge_uv",

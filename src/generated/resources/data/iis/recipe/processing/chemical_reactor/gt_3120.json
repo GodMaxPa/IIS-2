@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/phosphorus",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_phosphorous_pentoxide",
+      "count": 7
+    }
+  ],
+  "duration": 80,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 5000
+    }
+  ]
+}

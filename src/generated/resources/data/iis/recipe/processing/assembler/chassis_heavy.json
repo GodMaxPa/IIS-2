@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/stainless_steel",
+      "count": 8
+    },
+    {
+      "ingredient": "#c:plates/stainless_steel",
+      "count": 6
+    },
+    {
+      "ingredient": "#iis:screws/stainless_steel",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:chassis_heavy",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 120
+}

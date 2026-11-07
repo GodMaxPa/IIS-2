@@ -1,0 +1,21 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/blaze",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:gems/ender_pearl",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:ender_eye",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 30
+}

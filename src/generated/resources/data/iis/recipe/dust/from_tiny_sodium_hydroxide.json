@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:tiny_dusts/sodium_hydroxide",
+    "#iis:tiny_dusts/sodium_hydroxide",
+    "#iis:tiny_dusts/sodium_hydroxide",
+    "#iis:tiny_dusts/sodium_hydroxide",
+    "#iis:tiny_dusts/sodium_hydroxide",
+    "#iis:tiny_dusts/sodium_hydroxide",
+    "#iis:tiny_dusts/sodium_hydroxide",
+    "#iis:tiny_dusts/sodium_hydroxide",
+    "#iis:tiny_dusts/sodium_hydroxide"
+  ],
+  "result": {
+    "id": "iis:dust_sodium_hydroxide"
+  }
+}

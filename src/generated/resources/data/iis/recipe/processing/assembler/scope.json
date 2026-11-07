@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/titanium",
+      "count": 2
+    },
+    {
+      "ingredient": "#iis:lenses/olivine",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:rings/steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:scope",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 120
+}

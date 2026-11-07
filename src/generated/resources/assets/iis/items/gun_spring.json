@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/gun_spring",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "gun_spring"
+    }
+  },
+  "hand_animation_on_swap": false
+}

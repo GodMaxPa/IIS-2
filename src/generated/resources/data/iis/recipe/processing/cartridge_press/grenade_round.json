@@ -1,0 +1,25 @@
+{
+  "type": "iis:cartridge_press",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/steel",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/brass",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:tnt",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:grenade_round",
+      "count": 4
+    }
+  ],
+  "duration": 100,
+  "eut": 30
+}

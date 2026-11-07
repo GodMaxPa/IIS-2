@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/aluminium",
+      "count": 12
+    },
+    {
+      "ingredient": "#c:plates/rubber",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:glass_panes",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:boat_hull",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 30
+}

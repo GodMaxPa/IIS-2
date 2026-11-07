@@ -1,0 +1,27 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/apatite",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_calcium",
+      "count": 5
+    },
+    {
+      "id": "iis:dust_phosphate",
+      "count": 3
+    }
+  ],
+  "duration": 288,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:chlorine",
+      "amount": 1000
+    }
+  ]
+}

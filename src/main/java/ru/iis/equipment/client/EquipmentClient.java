@@ -60,7 +60,10 @@ public final class EquipmentClient {
             e.register(RELOAD);
             e.register(VEHICLE_FIRE);
         });
-        modBus.addListener((RegisterMenuScreensEvent e) -> e.register(EquipmentContent.VEHICLE_MENU.get(), VehicleScreen::new));
+        modBus.addListener((RegisterMenuScreensEvent e) -> {
+            e.register(EquipmentContent.VEHICLE_MENU.get(), VehicleScreen::new);
+            e.register(ru.iis.shop.ShopContent.SHOP_MENU.get(), ru.iis.shop.ShopScreen::new);
+        });
         modBus.addListener(EquipmentClient::extensions);
         modBus.addListener((RegisterGuiLayersEvent e) -> e.registerAbove(VanillaGuiLayers.HOTBAR, Identifier.fromNamespaceAndPath(IIS.MODID, "equipment_hud"), EquipmentClient::hud));
         Driveable.clientInput = EquipmentClient::input;
@@ -151,11 +154,19 @@ public final class EquipmentClient {
         Component text;
         if (w.electric()) {
             text = Component.translatable("hud.iis.gun.shots", ru.iis.lv.item.BatteryItem.charge(stack) / w.euPerShot);
+        } else if (w.plasma()) {
+            var tank = ru.iis.equipment.PlasmaGunItem.tank(stack);
+            text = tank.isEmpty() ? Component.translatable("hud.iis.gun.plasma_empty") : Component.translatable("hud.iis.gun.plasma", tank.fluidValue().getFluidType().getDescription(), tank.amount() / w.plasmaLiters());
         } else if (GunActions.reloading(stack, mc.level.getGameTime())) {
             text = Component.translatable("hud.iis.gun.reloading");
         } else {
-            int spare = mc.player.getAbilities().instabuild ? 0 : GunActions.countAmmo(mc.player, w.ammo);
+            int spare = mc.player.getAbilities().instabuild ? 0 : w.magazineType() != null ? GunActions.roundsInMagazines(mc.player, w.magazineType()) : GunActions.countAmmo(mc.player, w.ammo);
             text = Component.literal(GunActions.loaded(stack) + " / " + w.magazine + "  (" + spare + ")");
+        }
+        // длинная строка плазмы не помещается справа от панели: над панелью, у края экрана
+        if (x + mc.font.width(text) > g.guiWidth() - 2) {
+            x = g.guiWidth() - mc.font.width(text) - 4;
+            y -= 14;
         }
         g.text(mc.font, text, x, y, 0xFFFFFFFF, true);
     }

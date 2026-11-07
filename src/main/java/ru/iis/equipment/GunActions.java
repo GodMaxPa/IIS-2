@@ -24,6 +24,9 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.network.PacketDistributor;
+import ru.iis.fluid.CapsuleItem;
+import ru.iis.fluid.FluidContent;
+import ru.iis.lv.Fuels;
 import ru.iis.lv.item.BatteryItem;
 import ru.iis.net.IISNetwork;
 
@@ -77,11 +80,45 @@ public final class GunActions {
         return taken;
     }
 
+    /** Самый полный магазин этого вида в инвентаре; -1 — нет ни одного с патронами. */
+    public static int bestMagazine(Player p, Weapon.Magazine type) {
+        int best = -1, most = 0;
+        var inv = p.getInventory();
+        for (int i = 0; i < inv.getContainerSize(); i++) {
+            ItemStack s = inv.getItem(i);
+            if (s.getItem() instanceof MagazineItem m && m.type == type && MagazineItem.rounds(s) > most) {
+                most = MagazineItem.rounds(s);
+                best = i;
+            }
+        }
+        return best;
+    }
+
+    /** Сколько патронов во всех магазинах этого вида в инвентаре. */
+    public static int roundsInMagazines(Player p, Weapon.Magazine type) {
+        int n = 0;
+        var inv = p.getInventory();
+        for (int i = 0; i < inv.getContainerSize(); i++) {
+            ItemStack s = inv.getItem(i);
+            if (s.getItem() instanceof MagazineItem m && m.type == type) n += MagazineItem.rounds(s);
+        }
+        return n;
+    }
+
     /** Начать перезарядку: true — пошла. */
     public static boolean startReload(ServerLevel level, LivingEntity shooter, ItemStack stack, Weapon w) {
-        if (w.electric() || reloading(stack, level.getGameTime())) return false;
+        if (w.electric() || w.plasma() || reloading(stack, level.getGameTime())) return false;
         if (loaded(stack) >= w.magazine) return false;
-        if (shooter instanceof Player p && !free(p) && countAmmo(p, w.ammo) <= 0) return false;
+        Weapon.Magazine mag = w.magazineType();
+        if (shooter instanceof Player p && !free(p)) {
+            if (mag != null) {
+                // замена имеет смысл, только если найдётся магазин полнее того, что стоит
+                int slot = bestMagazine(p, mag);
+                if (slot < 0 || MagazineItem.rounds(p.getInventory().getItem(slot)) <= loaded(stack)) return false;
+            } else if (countAmmo(p, w.ammo) <= 0) {
+                return false;
+            }
+        }
         stack.set(EquipmentContent.GUN_RELOAD.get(), level.getGameTime() + w.reload);
         level.playSound(null, shooter.getX(), shooter.getY(), shooter.getZ(), SoundEvents.CROSSBOW_LOADING_START.value(), SoundSource.PLAYERS, 0.8F, 1.1F);
         return true;
@@ -93,6 +130,25 @@ public final class GunActions {
         if (end == 0 || end > level.getGameTime()) return;
         stack.remove(EquipmentContent.GUN_RELOAD.get());
         int have = loaded(stack);
+        Weapon.Magazine mag = w.magazineType();
+        if (mag != null && owner instanceof Player p && !free(p)) {
+            int slot = bestMagazine(p, mag);
+            if (slot < 0) return;
+            ItemStack fresh = p.getInventory().getItem(slot);
+            int rounds = MagazineItem.rounds(fresh);
+            boolean had = stack.getOrDefault(EquipmentContent.GUN_HAS_MAG.get(), false);
+            fresh.shrink(1);
+            stack.set(EquipmentContent.GUN_AMMO.get(), rounds);
+            stack.set(EquipmentContent.GUN_HAS_MAG.get(), true);
+            // снятый магазин с остатком возвращается в инвентарь
+            if (had) {
+                ItemStack old = new ItemStack(EquipmentContent.MAGAZINES.get(mag).get());
+                old.set(EquipmentContent.GUN_AMMO.get(), have);
+                if (!p.getInventory().add(old)) p.drop(old, false);
+            }
+            level.playSound(null, owner.getX(), owner.getY(), owner.getZ(), SoundEvents.CROSSBOW_LOADING_END.value(), SoundSource.PLAYERS, 0.8F, 1.2F);
+            return;
+        }
         int got;
         if (owner instanceof Player p && !free(p)) got = takeAmmo(p, w.ammo, w.reloadAmount(have, countAmmo(p, w.ammo)));
         else got = w.magazine - have;
@@ -104,6 +160,7 @@ public final class GunActions {
     public static boolean tryFire(ServerLevel level, LivingEntity shooter, ItemStack stack, Weapon w, boolean click) {
         long now = level.getGameTime();
         if (NEXT_SHOT.getOrDefault(shooter, 0L) > now) return false;
+        float scale = 1F;
         if (w.electric()) {
             long c = BatteryItem.charge(stack);
             if (c < w.euPerShot && !free(shooter)) {
@@ -111,6 +168,18 @@ public final class GunActions {
                 return false;
             }
             if (!free(shooter)) BatteryItem.setCharge(stack, c - w.euPerShot);
+        } else if (w.plasma()) {
+            FluidContent tank = PlasmaGunItem.tank(stack);
+            if (tank.amount() < w.plasmaLiters() && !free(shooter)) {
+                if (click) dry(level, shooter);
+                return false;
+            }
+            scale = tank.isEmpty() ? 1F : plasmaScale(tank);
+            if (!free(shooter)) {
+                int left = tank.amount() - w.plasmaLiters();
+                if (left <= 0) stack.remove(EquipmentContent.GUN_PLASMA.get());
+                else stack.set(EquipmentContent.GUN_PLASMA.get(), new FluidContent(tank.fluid(), left));
+            }
         } else {
             if (reloading(stack, now)) return false;
             int a = loaded(stack);
@@ -121,7 +190,7 @@ public final class GunActions {
             stack.set(EquipmentContent.GUN_AMMO.get(), a - 1);
         }
         NEXT_SHOT.put(shooter, now + w.interval);
-        fire(level, shooter, w);
+        fire(level, shooter, w, scale);
         return true;
     }
 
@@ -130,8 +199,17 @@ public final class GunActions {
         level.playSound(null, shooter.getX(), shooter.getY(), shooter.getZ(), SoundEvents.DISPENSER_FAIL, SoundSource.PLAYERS, 0.6F, 1.6F);
     }
 
-    /** Выстрел с заданного стрелка: снаряд или мгновенный луч. */
+    /** Сила выстрела плазмой из этого бака. */
+    public static float plasmaScale(FluidContent tank) {
+        return (float) Weapon.plasmaStrength(Fuels.power("plasma", tank.fluidValue()));
+    }
+
     public static void fire(ServerLevel level, LivingEntity shooter, Weapon w) {
+        fire(level, shooter, w, 1F);
+    }
+
+    /** Выстрел с заданного стрелка: снаряд или мгновенный луч. scale — множитель урона снаряда (вид плазмы). */
+    public static void fire(ServerLevel level, LivingEntity shooter, Weapon w, float scale) {
         Vec3 eye = shooter.getEyePosition();
         Vec3 look = shooter.getLookAngle();
         RandomSource rnd = level.getRandom();
@@ -144,6 +222,7 @@ public final class GunActions {
             ShotEntity shot = new ShotEntity(EquipmentContent.SHOT.get(), level);
             shot.setOwner(shooter);
             shot.setup(w, null);
+            shot.setScale(scale);
             shot.setPos(muzzle);
             shot.setDeltaMovement(d.scale(w.projectileSpeed()));
             shot.alignToMotion();
@@ -268,12 +347,16 @@ public final class GunActions {
 
     /** Взрыв снаряда: урон с падением к краю, стены заслоняют. Блоки не ломает, владелец получает половину. */
     public static void blast(ServerLevel level, Vec3 at, Entity direct, Entity owner, Weapon w) {
+        blast(level, at, direct, owner, w, 1F);
+    }
+
+    public static void blast(ServerLevel level, Vec3 at, Entity direct, Entity owner, Weapon w, float scale) {
         double r = w.blast;
         DamageSource src = source(level, w.kind, direct, owner);
         for (Entity e : level.getEntities(direct, new AABB(at, at).inflate(r), e -> e.isPickable() && !e.isSpectator())) {
             double d = e.getBoundingBox().distanceToSqr(at);
             d = Math.sqrt(d);
-            double dmg = w.blastAt(d);
+            double dmg = w.blastAt(d) * scale;
             if (dmg <= 0) continue;
             Vec3 c = e.getBoundingBox().getCenter();
             if (level.clip(new ClipContext(at, c, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, direct)).getType() != HitResult.Type.MISS && d > 1) continue;
@@ -289,10 +372,40 @@ public final class GunActions {
         level.playSound(null, at.x, at.y, at.z, SoundEvents.GENERIC_EXPLODE.value(), SoundSource.PLAYERS, (float) Math.min(4, r * 0.8), plasma ? 1.4F : 1.0F);
     }
 
-    /** Клавиша перезарядки (сервер). */
+    /** Клавиша перезарядки (сервер): магазин, патрон или капсула плазмы. */
     public static void reloadKey(ServerPlayer player) {
         ItemStack stack = player.getMainHandItem();
-        if (stack.getItem() instanceof Gun g && !g.weapon().electric()) startReload(player.level(), player, stack, g.weapon());
+        if (!(stack.getItem() instanceof Gun g)) return;
+        Weapon w = g.weapon();
+        if (w.plasma()) fillPlasma(player, stack, w);
+        else if (!w.electric()) startReload(player.level(), player, stack, w);
+    }
+
+    /** Залить в бак капсулу плазмы: другой вид не смешивается, сначала надо достреляться. */
+    public static boolean fillPlasma(Player p, ItemStack gun, Weapon w) {
+        FluidContent tank = PlasmaGunItem.tank(gun);
+        var inv = p.getInventory();
+        for (int i = 0; i < inv.getContainerSize(); i++) {
+            ItemStack s = inv.getItem(i);
+            if (!(s.getItem() instanceof CapsuleItem)) continue;
+            FluidContent c = CapsuleItem.content(s);
+            if (c.isEmpty() || Fuels.power("plasma", c.fluidValue()) <= 0) continue;
+            if (!tank.isEmpty() && !tank.fluid().equals(c.fluid())) {
+                p.sendOverlayMessage(net.minecraft.network.chat.Component.translatable("message.iis.gun.plasma_other"));
+                return false;
+            }
+            int take = Math.min(c.amount(), w.plasmaCapacity() - tank.amount());
+            if (take <= 0) return false;
+            gun.set(EquipmentContent.GUN_PLASMA.get(), new FluidContent(c.fluid(), tank.amount() + take));
+            ItemStack rest = CapsuleItem.withContent(s.copyWithCount(1), c.amount() - take <= 0 ? FluidContent.EMPTY : new FluidContent(c.fluid(), c.amount() - take));
+            s.shrink(1);
+            if (s.isEmpty()) inv.setItem(i, rest);
+            else if (!inv.add(rest)) p.drop(rest, false);
+            p.level().playSound(null, p.getX(), p.getY(), p.getZ(), SoundEvents.BUCKET_FILL_LAVA, SoundSource.PLAYERS, 0.7F, 1.6F);
+            return true;
+        }
+        p.sendOverlayMessage(net.minecraft.network.chat.Component.translatable("message.iis.gun.no_plasma"));
+        return false;
     }
 
     /** Общее у обоих видов оружия. */

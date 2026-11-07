@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/coal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_hydrated_coal",
+      "count": 1
+    }
+  ],
+  "duration": 12,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 125
+    }
+  ]
+}

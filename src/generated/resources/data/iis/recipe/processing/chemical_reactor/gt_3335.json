@@ -1,0 +1,39 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sodium_hydroxide",
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 4,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:phenol",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 960,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:chlorobenzene",
+      "amount": 4000
+    }
+  ]
+}

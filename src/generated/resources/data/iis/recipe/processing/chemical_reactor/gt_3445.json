@@ -1,0 +1,30 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sodium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_sodium_hydroxide",
+      "count": 3
+    }
+  ],
+  "duration": 600,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 3000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:hydrogen",
+      "amount": 1000
+    }
+  ],
+  "circuit": 1
+}

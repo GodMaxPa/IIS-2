@@ -39,12 +39,25 @@ class EquipmentLogicTest {
     @Test
     void everyWeaponHasOneWayToShoot() {
         for (Weapon w : Weapon.values()) {
-            assertTrue(w.electric() == (w.ammo == null), w.id);
+            assertTrue((w.electric() || w.plasma()) == (w.ammo == null), w.id);
+            if (w.magazineType() != null) {
+                assertEquals(w.magazine, w.magazineType().capacity, w.id);
+                assertEquals(w.ammo, w.magazineType().ammo, w.id);
+            }
             if (w.electric()) assertTrue(w.capacity >= w.euPerShot * 100, w.id + ": меньше ста выстрелов на заряд");
-            else assertTrue(w.magazine > 0 && w.reload > 0, w.id);
+            else if (!w.plasma()) assertTrue(w.magazine > 0 && w.reload > 0, w.id);
             assertEquals(w.projectile(), w.projectileSpeed() > 0, w.id);
             assertEquals(w.kind == Weapon.Kind.GRENADE || w.kind == Weapon.Kind.ROCKET || w.kind == Weapon.Kind.PLASMA, w.blast > 0, w.id);
         }
+    }
+
+    @Test
+    void plasmaStrengthGrowsWithItsEnergy() {
+        assertEquals(0.7, Weapon.plasmaStrength(4096), 1e-9);
+        assertEquals(1.5, Weapon.plasmaStrength(59392), 1e-9);
+        assertTrue(Weapon.plasmaStrength(16384) > 0.7 && Weapon.plasmaStrength(16384) < 1.5);
+        assertEquals(2.5, Weapon.plasmaStrength(102_400_000), 1e-9);
+        assertEquals(0, Weapon.plasmaStrength(0));
     }
 
     @Test
@@ -70,6 +83,11 @@ class EquipmentLogicTest {
         VehiclePhysics.State s = grounded();
         for (int i = 0; i < 600; i++) VehiclePhysics.step(VehicleKind.CAR, s, drive(true, true));
         assertTrue(s.speed > VehicleKind.CAR.maxSpeed * 0.9, "скорость " + s.speed);
+        VehiclePhysics.State kit = grounded();
+        kit.speedFactor = VehicleKind.KIT_SPEED;
+        kit.accelFactor = VehicleKind.KIT_ACCEL;
+        for (int i = 0; i < 600; i++) VehiclePhysics.step(VehicleKind.CAR, kit, drive(true, true));
+        assertTrue(kit.speed <= VehicleKind.CAR.maxSpeed * VehicleKind.KIT_SPEED + 1e-9, "с комплектом " + kit.speed);
         assertTrue(s.speed <= VehicleKind.CAR.maxSpeed + 1e-9);
     }
 
@@ -149,6 +167,49 @@ class EquipmentLogicTest {
         double[] m = {0, 0, 0};
         for (int i = 0; i < 40; i++) m = VehiclePhysics.step(VehicleKind.HELICOPTER, s, none);
         assertTrue(m[1] < 0 && m[1] > -0.4, "скорость снижения " + m[1]);
+    }
+
+    @Test
+    void truckLosesSpeedOnAStepAndWheelsKeepGripOverABump() {
+        VehiclePhysics.State truck = grounded();
+        truck.speed = 0.4;
+        truck.climbed = true;
+        VehiclePhysics.step(VehicleKind.TRUCK, truck, drive(false, true));
+        assertTrue(truck.speed < 0.25, "грузовик " + truck.speed);
+        VehiclePhysics.State car = grounded();
+        car.speed = 0.4;
+        car.climbed = true;
+        VehiclePhysics.step(VehicleKind.CAR, car, drive(false, true));
+        assertTrue(car.speed > 0.38, "автомобиль " + car.speed);
+        VehiclePhysics.State bump = grounded();
+        bump.onGround = false;
+        VehiclePhysics.step(VehicleKind.CAR, bump, drive(true, true));
+        assertTrue(bump.speed > 0, "над кочкой пропал газ");
+    }
+
+    @Test
+    void aWallTakesOnlyTheSpeedThatDidNotHappen() {
+        VehiclePhysics.State s = grounded();
+        s.speed = 0.6;
+        s.horizontalCollision = true;
+        s.actual = 0.45;
+        VehiclePhysics.step(VehicleKind.CAR, s, drive(true, true));
+        assertTrue(s.speed > 0.45, "скольжение вдоль стены почти не тормозит: " + s.speed);
+        s.speed = 0.6;
+        s.actual = 0;
+        VehiclePhysics.step(VehicleKind.CAR, s, drive(true, true));
+        assertTrue(s.speed < 0.1, "лобовой удар останавливает: " + s.speed);
+    }
+
+    @Test
+    void cargoFollowsTheLogicOfTheMachine() {
+        assertEquals(162, VehicleKind.TRUCK.cargoSlots(false));
+        assertEquals(324, VehicleKind.TRUCK.cargoSlots(true));
+        assertEquals(54, VehicleKind.STEAM_CAR.cargo);
+        assertEquals(27, VehicleKind.PLANE.cargo);
+        assertEquals(27, VehicleKind.JET.cargo);
+        assertTrue(VehicleKind.MOTORBIKE.cargo <= 14);
+        assertTrue(VehicleKind.ATV.step > VehicleKind.QUAD.step && VehicleKind.QUAD.step > VehicleKind.CAR.step);
     }
 
     @Test

@@ -1,0 +1,25 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sodium_hydroxide",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 960,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:chlorobenzene",
+      "amount": 4000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:phenol",
+      "amount": 4000
+    }
+  ],
+  "circuit": 1
+}

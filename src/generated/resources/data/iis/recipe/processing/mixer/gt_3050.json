@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#iis:small_dusts/quicklime",
+      "count": 8
+    }
+  ],
+  "outputs": [],
+  "duration": 80,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:aceticacid",
+      "amount": 16000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:calciumacetatesolution",
+      "amount": 18000
+    }
+  ],
+  "circuit": 1
+}

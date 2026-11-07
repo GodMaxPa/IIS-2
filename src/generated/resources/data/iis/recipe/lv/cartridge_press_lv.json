@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PWP",
+    "CMC",
+    "PWP"
+  ],
+  "key": {
+    "M": "iis:hull_lv",
+    "P": "iis:electric_piston_lv",
+    "C": "#c:circuits/basic",
+    "W": "#iis:cables/1x/tin"
+  },
+  "result": {
+    "id": "iis:cartridge_press_lv"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/chassis_light",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "chassis_light"
+    }
+  },
+  "hand_animation_on_swap": false
+}

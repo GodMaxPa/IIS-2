@@ -37,6 +37,8 @@ public enum GtRecipeMap {
     // D119: sFermentingRecipes, sPrinterRecipes, sAmplifiers, Massfabricator, sPlasmaArcFurnaceRecipes, Disassembler
     FERMENTER("fermenter", 1, 0),
     PRINTER("printer", 1, 1),
+    // D130: своя машина, в GT её нет
+    CARTRIDGE_PRESS("cartridge_press", 6, 1),
     AMPLIFAB("amplifab", 1, 0),
     MASSFAB("massfab", 1, 0),
     PLASMA_ARC_FURNACE("plasma_arc_furnace", 1, 6),

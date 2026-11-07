@@ -1,0 +1,25 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/phosphorous_pentoxide",
+      "count": 7
+    }
+  ],
+  "outputs": [],
+  "duration": 120,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 9000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:phosphoricacid_gt5u",
+      "amount": 16000
+    }
+  ],
+  "circuit": 1
+}

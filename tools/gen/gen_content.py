@@ -81,12 +81,16 @@ props = json.load(open(os.path.join(REF, 'iis_material_properties.json'), encodi
 veins_src = json.load(open(os.path.join(REF, 'iis_ore_veins.json'), encoding='utf-8'))
 small_src = json.load(open(os.path.join(REF, 'iis_small_ores.json'), encoding='utf-8'))
 ru = json.load(open(os.path.join(REF, 'gt5_lang_ru_materials.json'), encoding='utf-8'))
+ru.setdefault('sodiumhydroxide', 'Гидроксид натрия')
 ru_ore = ru.pop('__ore_names__', {})
 ru_meta = ru.pop('__metaitems__', {})
 ru_tools = ru.pop('__tools__', {})
 
 
 def prop(name, key, default=None):
+    # D130: GT MaterialBuilder(...).addDustItems(), IIS MaterialProperties.cfg has no line for it
+    if name == 'SodiumHydroxide' and key == 'MaterialTypes':
+        return 1
     return props.get(name.lower(), {}).get(key, default)
 
 
@@ -210,6 +214,8 @@ names |= {'Boron', 'BorosilicateGlass', 'Plutonium', 'Uranium235'}
 names |= {'Plutonium241', 'Europium', 'Duranium'}
 # D117: reactor and solar panels: thorium and naquadah rods give lutetium and naquadria, NaK coolant needs potassium, the 8V panel graphene
 names |= {'NaquadahEnriched', 'Naquadria', 'Lutetium', 'Potassium', 'Graphene'}
+# D130: what the skipped GT chemistry waits for: biodiesel and epoxy (sodium hydroxide), lime and magnesia, gunpowder dust, sugar, glauconite
+names |= {'SodiumHydroxide', 'Quicklime', 'Calcium', 'Magnesia', 'GlauconiteSand', 'SodiumSulfide', 'SodiumBisulfate', 'PhosphorousPentoxide', 'Gunpowder', 'Sugar', 'Blaze', 'HydratedCoal', 'Saltpeter', 'Tantalum'}
 # D121 (UV): osmiridium and naquadah alloy (GT_MachineRecipeLoader:1051-1052), what fusion makes (tritanium, americium, neutronium :1073-1085), raw meat dust for the growth medium (:457)
 names |= {'Osmiridium', 'NaquadahAlloy', 'Tritanium', 'Neutronium', 'Americium', 'MeatRaw'}
 # D122: vanadium steel for the advanced seismic prospector (GT_CraftingRecipeLoader:407)
@@ -481,7 +487,7 @@ for n in sorted(names):
         'color': (rgba[0] << 16) | (rgba[1] << 8) | rgba[2], 'iconSet': iset,
         'harvestLevel': max(0, min(7, int(prop(n, 'ToolQuality', 1)))), 'hosts': hosts, 'smallHosts': small_hosts,
         'ruSmallOre': ru_ore.get(str(16000 + m['id'])), 'formula': formula,
-        'types': prop(n, 'MaterialTypes', 0), 'subTags': sorted(subtags(n)),
+        'types': prop(n, 'MaterialTypes', 0) | (1 if n == 'SodiumHydroxide' else 0), 'subTags': sorted(subtags(n)),
         'directSmelting': mat_id(ds) if ds in code else mat_id(n),
         'oreMultiplier': prop(n, 'OreMultiplier', 1), 'smeltingMultiplier': prop(n, 'OreSmeltingMultiplier', 1),
         'blastFurnaceRequired': bool(prop(n, 'BlastFurnaceRequired', False)), 'blastFurnaceTemp': prop(n, 'BlastFurnaceTemp', 0),

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "bigger_ae2:quantum_cell_component",
+    "iis:cell_housing_advanced"
+  ],
+  "result": {
+    "id": "bigger_ae2:quantum_item_storage_cell",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bigger_ae2"
+    }
+  ]
+}

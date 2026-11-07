@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/mag_sniper",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "mag_sniper"
+    }
+  },
+  "hand_animation_on_swap": false
+}

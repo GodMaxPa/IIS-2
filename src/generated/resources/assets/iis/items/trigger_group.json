@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/trigger_group",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "trigger_group"
+    }
+  },
+  "hand_animation_on_swap": false
+}

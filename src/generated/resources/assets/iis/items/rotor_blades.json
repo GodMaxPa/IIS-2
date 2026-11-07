@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/rotor_blades",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "rotor_blades"
+    }
+  },
+  "hand_animation_on_swap": false
+}

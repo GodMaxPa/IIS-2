@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "#c:rods/titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:barrel_titanium",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 120
+}

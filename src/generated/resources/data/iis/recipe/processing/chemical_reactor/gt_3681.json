@@ -1,0 +1,45 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:bioethanol",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:butene",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 2,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:ethyltertbutylether",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 400,
+  "eut": 480
+}

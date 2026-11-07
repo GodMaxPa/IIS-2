@@ -200,8 +200,16 @@ public final class EquipShots {
                 server(mc, p -> {
                     ItemStack gun = new ItemStack(EquipmentContent.GUNS.get(w).get());
                     if (w.electric()) ru.iis.lv.item.BatteryItem.setCharge(gun, w.capacity);
+                    else if (w.plasma()) gun.set(EquipmentContent.GUN_PLASMA.get(), ru.iis.fluid.FluidContent.of(ru.iis.fluid.GtFluids.all().get("plasma_helium").source().get(), w.plasmaCapacity() / 2));
                     else gun.set(EquipmentContent.GUN_AMMO.get(), w.magazine);
                     p.setItemSlot(EquipmentSlot.MAINHAND, gun);
+                    if (w.magazineType() != null) {
+                        p.getInventory().clearContent();
+                        p.setItemSlot(EquipmentSlot.MAINHAND, gun);
+                        ItemStack mag = new ItemStack(EquipmentContent.MAGAZINES.get(w.magazineType()).get());
+                        mag.set(EquipmentContent.GUN_AMMO.get(), w.magazineType().capacity);
+                        p.getInventory().add(mag);
+                    }
                 });
             });
             add(12, mc -> shot(mc, "g_" + w.id + "_1p"));
@@ -361,6 +369,52 @@ public final class EquipShots {
             mc.options.setCameraType(CameraType.THIRD_PERSON_BACK);
         });
         add(4, mc -> shot(mc, "r_plane_flying"));
+        // проходимость на настоящем клиенте (D130): ступень или лестница впереди и полный газ
+        record Climb(VehicleKind kind, int wall, int stairs, int ticks) {}
+        for (Climb c : List.of(new Climb(VehicleKind.CAR, 1, 0, 70), new Climb(VehicleKind.CAR, 2, 0, 70), new Climb(VehicleKind.MOTORBIKE, 1, 0, 60), new Climb(VehicleKind.QUAD, 2, 0, 90), new Climb(VehicleKind.QUAD, 3, 0, 90),
+                new Climb(VehicleKind.ATV, 3, 0, 70), new Climb(VehicleKind.ATV, 4, 0, 70), new Climb(VehicleKind.TRUCK, 1, 0, 110), new Climb(VehicleKind.TANK, 2, 0, 160), new Climb(VehicleKind.CAR, 0, 10, 70), new Climb(VehicleKind.TRUCK, 0, 10, 200))) {
+            String tag = c.kind().id + (c.wall() > 0 ? "_wall" + c.wall() : "_stairs" + c.stairs());
+            add(3, mc -> {
+                mc.options.setCameraType(CameraType.FIRST_PERSON);
+                server(mc, p -> {
+                    p.stopRiding();
+                    clearEntities(p);
+                    ServerLevel l = p.level();
+                    for (int x = -6; x <= 6; x++) for (int z = -40; z <= 40; z++) for (int y = 1; y <= 14; y++) {
+                        int top = c.wall() > 0 ? (z >= -25 && z <= -22 ? c.wall() : 0) : Math.max(0, Math.min(c.stairs(), (z + 32) / 2));
+                        l.setBlock(POS.offset(x, y, z), y <= top && Math.abs(x) <= 4 ? Blocks.STONE.defaultBlockState() : Blocks.AIR.defaultBlockState(), 2 | 16);
+                    }
+                    Driveable v = EquipmentContent.VEHICLE_TYPES.get(c.kind()).get().create(l, EntitySpawnReason.COMMAND);
+                    v.snapTo(POS.getX() + 0.5, POS.getY() + 1, POS.getZ() - 36.5, 0, 0);
+                    v.setFuel(c.kind().tank);
+                    l.addFreshEntity(v);
+                    p.startRiding(v, true, false);
+                    p.setYRot(0);
+                });
+            });
+            add(6, mc -> {
+                mc.player.setYRot(0);
+                mc.player.setXRot(5);
+                mc.options.keyUp.setDown(true);
+            });
+            add(c.ticks(), mc -> {
+                mc.options.keyUp.setDown(false);
+                mc.options.setCameraType(CameraType.THIRD_PERSON_BACK);
+                Entity v = mc.player.getVehicle();
+                IIS.LOGGER.info("[IIS] climb {}: z={} height={} speed={} health={}", tag, v == null ? "none" : String.format("%.1f", v.getZ() - POS.getZ()), v == null ? "none" : String.format("%.1f", v.getY() - POS.getY() - 1),
+                        v == null ? "none" : String.format("%.2f", v.getDeltaMovement().horizontalDistance()), v instanceof Driveable d ? d.vehicleHealth() : -1);
+            });
+            add(4, mc -> shot(mc, "c_" + tag));
+        }
+        add(2, mc -> {
+            mc.options.setCameraType(CameraType.FIRST_PERSON);
+            server(mc, p -> {
+                p.stopRiding();
+                clearEntities(p);
+                ServerLevel l = p.level();
+                for (int x = -6; x <= 6; x++) for (int z = -40; z <= 40; z++) for (int y = 1; y <= 14; y++) l.setBlock(POS.offset(x, y, z), Blocks.AIR.defaultBlockState(), 2 | 16);
+            });
+        });
         // окна: грузовик, катер без груза, локомотивы
         add(2, mc -> {
             mc.options.setCameraType(CameraType.FIRST_PERSON);
@@ -376,6 +430,8 @@ public final class EquipShots {
             });
         });
         add(10, mc -> shot(mc, "w_truck"));
+        add(1, mc -> mc.gameMode.handleInventoryButtonClick(mc.player.containerMenu.containerId, 1));
+        add(6, mc -> shot(mc, "w_truck_page2"));
         add(2, mc -> {
             if (mc.player.containerMenu != mc.player.inventoryMenu) mc.player.closeContainer();
             server(mc, p -> {
@@ -399,6 +455,24 @@ public final class EquipShots {
             });
         });
         add(10, mc -> shot(mc, "w_loco_steam"));
+        add(2, mc -> {
+            if (mc.player.containerMenu != mc.player.inventoryMenu) mc.player.closeContainer();
+            mc.setScreen(null);
+        });
+        // магазин наград: что уже было в руках и пригоршня жетонов
+        add(2, mc -> server(mc, p -> {
+            clearEntities(p);
+            ServerLevel l = p.level();
+            p.getInventory().clearContent();
+            p.setData(ru.iis.shop.ShopContent.SEEN, new ArrayList<>(ru.iis.shop.ShopContent.prices().keySet().stream().filter(k -> k.contains("ingot") || k.contains("oak_log") || k.contains("cobblestone")).limit(70).toList()));
+            for (var credit : ru.iis.shop.ShopContent.creditItems().subList(0, 3)) p.getInventory().add(new ItemStack(credit, 24));
+            p.inventoryMenu.broadcastChanges();
+            BlockPos at = POS.offset(0, 1, 3);
+            l.setBlock(at, ru.iis.shop.ShopContent.SHOP.get().defaultBlockState(), 3);
+            view(p, at.getX() + 0.5, at.getY(), at.getZ() - 2.5, 0, 0);
+            l.getBlockState(at).useWithoutItem(l, p, new net.minecraft.world.phys.BlockHitResult(Vec3.atCenterOf(at), net.minecraft.core.Direction.NORTH, at, false));
+        }));
+        add(12, mc -> shot(mc, "w_shop"));
         add(2, mc -> {
             if (mc.player.containerMenu != mc.player.inventoryMenu) mc.player.closeContainer();
             mc.setScreen(null);

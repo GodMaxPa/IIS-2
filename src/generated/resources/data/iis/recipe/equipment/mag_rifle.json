@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "hP",
+    "SP",
+    " P"
+  ],
+  "key": {
+    "P": "#c:plates/stainless_steel",
+    "S": "iis:gun_spring",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:mag_rifle"
+  }
+}

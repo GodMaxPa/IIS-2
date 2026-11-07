@@ -1,0 +1,28 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/quicklime",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/stone",
+      "count": 3
+    }
+  ],
+  "outputs": [],
+  "duration": 20,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 500
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_concrete",
+      "amount": 576
+    }
+  ]
+}

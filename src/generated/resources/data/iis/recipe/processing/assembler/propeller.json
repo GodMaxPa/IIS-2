@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/aluminium",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:rings/aluminium",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_gears/steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:propeller",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 120
+}

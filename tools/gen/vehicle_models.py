@@ -487,4 +487,49 @@ def jet():
     return m
 
 
-ALL = [steam_car, quad, motorbike, car, truck, boat, plane, helicopter, tank, jet]
+def atv():
+    """All-terrain vehicle: high clearance, huge tyres, a roll cage and a roof rack."""
+    m = Mesh('atv')
+    col, dark_c = (72, 96, 56), (44, 58, 36)
+    # frame high above the axles
+    m.box(-10, 13, -32, 10, 16, 32, DARK, 'rivet')
+    m.rloft([(-34, 17, 15, 26, 16), (-30, 18, 14.5, 28, 17), (14, 18, 14.5, 28, 17), (24, 17.5, 15, 28, 16), (36, 15.5, 16, 26, 13)], col, 'plate')
+    # cabin, open to the sides behind the screen
+    m.rloft([(-24, 17, 28, 30, 16), (12, 17, 28, 30, 16)], dark_c, 'cloth', caps=False)
+    m.rloft([(12, 16.6, 28, 30, 16), (18, 16.2, 28, 42, 14)], GLASS_C, 'plain', glass=True)
+    m.rloft([(-26, 16.4, 44, 45.5, 15.4), (19, 16.4, 44, 45.5, 15.4)], dark_c, 'paint')
+    for s in (-1, 1):
+        for z in (-25, -8, 11):
+            xa, xb = sorted((s * 15.6, s * 17))
+            m.box(xa, 28, z, xb, 44, z + 1.4, DARK, 'metal')
+        xa, xb = sorted((s * 18.05, s * 18.2))
+        m.box(xa, 17, -28, xb, 26, 12, darker(col, 0.8), 'panel')
+        # jerry cans and snorkel side
+    # roof rack with a spare wheel
+    m.box(-14, 45.5, -24, 14, 46.5, 16, DARK, 'grill')
+    m.cyl('y', (0, 46.5, -8), 8.5, 3.5, RUBBER, n=14, mat='tread', cap_color=(46, 46, 50))
+    # snorkel, winch, bull bar, lamps
+    m.cyl('y', (15, 26, 14), 1.1, 20, DARK, n=8, mat='metal')
+    m.box(-9, 16, 36, 9, 21, 38, (70, 70, 74), 'rivet')
+    m.cyl('x', (-6, 18.5, 38.6), 2, 12, (150, 120, 50), n=10, mat='metal')
+    m.sym(15, 14, 36, 16.4, 28, 37.4, DARK, 'metal')
+    m.box(-16.4, 26.6, 36, 16.4, 28, 37.4, DARK, 'metal')
+    m.sym(9, 23, 36, 13.5, 26, 36.6, LAMP, 'plain', glow=True)
+    m.sym(11, 22, -34.6, 15, 25, -34, TAIL, 'plain', glow=True)
+    m.box(-12, 25, 12.4, 12, 28, 16, (28, 28, 30), 'cloth')
+    # seats
+    m.sym(3, 15.5, 0, 12, 17, 8, (60, 50, 44), 'cloth')
+    m.sym(3, 16, -1.5, 12, 28, 0, (60, 50, 44), 'cloth')
+    m.box(-12, 15.5, -15, 12, 17, -7, (60, 50, 44), 'cloth')
+    m.box(-12, 16, -16.5, 12, 26, -15, (60, 50, 44), 'cloth')
+    m.cyl('z', (7, 26, 11), 3, 0.6, (24, 24, 26), n=12, mat='plain')
+    # jacks of the suspension
+    for s in (-1, 1):
+        for z in (24, -22):
+            m.hexa([(s * 8 - 0.9, 15, z - 1), (s * 8 + 0.9, 15, z - 1), (s * 8 + 0.9, 15, z + 1), (s * 8 - 0.9, 15, z + 1), (s * 15 - 0.9, 8.5, z - 1), (s * 15 + 0.9, 8.5, z - 1), (s * 15 + 0.9, 8.5, z + 1), (s * 15 - 0.9, 8.5, z + 1)], (200, 170, 40), 'metal')
+        m.wheel(f'front{s}', s * 17.5, 9, 24, 9, 7, 'steer', RUBBER, (200, 170, 40))
+        m.wheel(f'rear{s}', s * 17.5, 9, -22, 9, 7, 'wheel', RUBBER, (200, 170, 40))
+    return m
+
+
+ALL = [steam_car, quad, motorbike, car, atv, truck, boat, plane, helicopter, tank, jet]

@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "#c:storage_blocks/tantalum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_tantalum",
+      "count": 9
+    }
+  ],
+  "duration": 3600,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 168
+    }
+  ]
+}

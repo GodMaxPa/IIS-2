@@ -2,15 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "PRR",
-    "MCP",
+    "PBB",
+    "RTS",
     "W h"
   ],
   "key": {
     "P": "#c:plates/stainless_steel",
+    "B": "iis:barrel_stainless",
     "R": "#iis:rings/stainless_steel",
-    "C": "#c:circuits/advanced",
-    "M": "iis:electric_piston_mv",
+    "T": "iis:trigger_group",
+    "S": "iis:gun_spring",
     "W": "#c:plates/plastic",
     "h": "#iis:tools/hammer"
   },

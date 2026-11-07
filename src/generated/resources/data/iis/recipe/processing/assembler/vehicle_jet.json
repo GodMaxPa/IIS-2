@@ -1,0 +1,37 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:chassis_armored",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:jet_turbine",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:wing",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:landing_gear",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:dashboard",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:circuits/elite",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:vehicle_jet",
+      "count": 1
+    }
+  ],
+  "duration": 2000,
+  "eut": 1920
+}

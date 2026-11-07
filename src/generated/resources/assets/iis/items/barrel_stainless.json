@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/barrel_stainless",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "barrel_stainless"
+    }
+  },
+  "hand_animation_on_swap": false
+}

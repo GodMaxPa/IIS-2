@@ -1,0 +1,1447 @@
+[
+{
+"line": 76,
+"method": "addFluidExtractionRecipe",
+"why": "ItemList.Crop_Drop_Rape.get(1, new Object[0])"
+},
+{
+"line": 80,
+"method": "addFluidExtractionRecipe",
+"why": "GT_Utility.copyAmount(1L, new Object[]{ForgeHooks.getGrassSeed(tWorld)})"
+},
+{
+"line": 101,
+"method": "addMixerRecipe",
+"why": "ItemList.IC2_Scrap.get(1L, new Object[0])"
+},
+{
+"line": 102,
+"method": "addMixerRecipe",
+"why": "ItemList.Food_Dough.get(2L, new Object[0])"
+},
+{
+"line": 103,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Chili, 1L)"
+},
+{
+"line": 105,
+"method": "addMixerRecipe",
+"why": "ItemList.IC2_Energium_Dust.get(1L, new Object[0])"
+},
+{
+"line": 106,
+"method": "addMixerRecipe",
+"why": "ItemList.IC2_Energium_Dust.get(9L, new Object[0])"
+},
+{
+"line": 108,
+"method": "addCentrifugeRecipe",
+"why": "ItemList.IC2_Energium_Dust.get(9L, new Object[0])"
+},
+{
+"line": 110,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.LiveRoot, 1L)"
+},
+{
+"line": 111,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.LiveRoot, 9L)"
+},
+{
+"line": 112,
+"method": "addMixerRecipe",
+"why": "GT_ModHandler.getModItem(aTextAE, aTextAEMM, 1L, 1)"
+},
+{
+"line": 113,
+"method": "addMixerRecipe",
+"why": "GT_ModHandler.getModItem(aTextAE, aTextAEMM, 1L, 1)"
+},
+{
+"line": 114,
+"method": "addMixerRecipe",
+"why": "ItemList.IC2_Fertilizer.get(1L, new Object[0])"
+},
+{
+"line": 115,
+"method": "addMixerRecipe",
+"why": "ItemList.FR_Fertilizer.get(1L, new Object[0])"
+},
+{
+"line": 116,
+"method": "addMixerRecipe",
+"why": "ItemList.FR_Compost.get(1L, new Object[0])"
+},
+{
+"line": 117,
+"method": "addMixerRecipe",
+"why": "ItemList.FR_Mulch.get(1L, new Object[0])"
+},
+{
+"line": 118,
+"method": "addMixerRecipe",
+"why": "GT_ModHandler.getModItem(aTextForestry, \"soil\", 2L, 1)"
+},
+{
+"line": 121,
+"method": "addMixerRecipe",
+"why": "GT_ModHandler.getIC2Item(\"distilledwaterCell\", 5L)"
+},
+{
+"line": 122,
+"method": "addMixerRecipe",
+"why": "FluidRegistry.getFluidStack(\"ic2coolant\", 125)"
+},
+{
+"line": 123,
+"method": "addMixerRecipe",
+"why": "FluidRegistry.getFluidStack(\"ic2coolant\", 1000)"
+},
+{
+"line": 125,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 126,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 127,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(12, new Object[]{})"
+},
+{
+"line": 128,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 129,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 130,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(12, new Object[]{})"
+},
+{
+"line": 131,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 132,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 133,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(12, new Object[]{})"
+},
+{
+"line": 134,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(64, new Object[]{})"
+},
+{
+"line": 135,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(64, new Object[]{})"
+},
+{
+"line": 136,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(64, new Object[]{})"
+},
+{
+"line": 139,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(2, new Object[]{})"
+},
+{
+"line": 140,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(2, new Object[]{})"
+},
+{
+"line": 142,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Lignite,1)"
+},
+{
+"line": 143,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Charcoal,1)"
+},
+{
+"line": 144,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Coal,1)"
+},
+{
+"line": 145,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Lignite,1)"
+},
+{
+"line": 146,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Charcoal,1)"
+},
+{
+"line": 147,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Coal,1)"
+},
+{
+"line": 148,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Lignite,1)"
+},
+{
+"line": 149,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Charcoal,1)"
+},
+{
+"line": 150,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Coal,1)"
+},
+{
+"line": 151,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Lignite,1)"
+},
+{
+"line": 152,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Charcoal,1)"
+},
+{
+"line": 153,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Coal,1)"
+},
+{
+"line": 157,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(4, new Object[]{})"
+},
+{
+"line": 158,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(4, new Object[]{})"
+},
+{
+"line": 159,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(4, new Object[]{})"
+},
+{
+"line": 160,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(4, new Object[]{})"
+},
+{
+"line": 161,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(4, new Object[]{})"
+},
+{
+"line": 162,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(4, new Object[]{})"
+},
+{
+"line": 164,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(2, new Object[]{})"
+},
+{
+"line": 165,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(2, new Object[]{})"
+},
+{
+"line": 166,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(2, new Object[]{})"
+},
+{
+"line": 167,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(2, new Object[]{})"
+},
+{
+"line": 168,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(2, new Object[]{})"
+},
+{
+"line": 169,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(2, new Object[]{})"
+},
+{
+"line": 174,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 175,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 176,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 177,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 178,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 179,
+"method": "addMixerRecipe",
+"why": "ItemList.SFMixture.get(8, new Object[]{})"
+},
+{
+"line": 181,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Lignite,1)"
+},
+{
+"line": 182,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Charcoal,1)"
+},
+{
+"line": 183,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Coal,1)"
+},
+{
+"line": 185,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Lignite,1)"
+},
+{
+"line": 186,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Charcoal,1)"
+},
+{
+"line": 187,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Coal,1)"
+},
+{
+"line": 189,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Lignite,1)"
+},
+{
+"line": 190,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Charcoal,1)"
+},
+{
+"line": 191,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Coal,1)"
+},
+{
+"line": 195,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Lignite,1)"
+},
+{
+"line": 196,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Charcoal,1)"
+},
+{
+"line": 197,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Coal,1)"
+},
+{
+"line": 199,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Lignite,1)"
+},
+{
+"line": 200,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Charcoal,1)"
+},
+{
+"line": 201,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Coal,1)"
+},
+{
+"line": 203,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Lignite,1)"
+},
+{
+"line": 204,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Charcoal,1)"
+},
+{
+"line": 205,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block,Materials.Coal,1)"
+},
+{
+"line": 208,
+"method": "addMixerRecipe",
+"why": "EnumCube.COKE_BLOCK.getItem()"
+},
+{
+"line": 209,
+"method": "addMixerRecipe",
+"why": "EnumCube.COKE_BLOCK.getItem()"
+},
+{
+"line": 210,
+"method": "addMixerRecipe",
+"why": "EnumCube.COKE_BLOCK.getItem()"
+},
+{
+"line": 212,
+"method": "addMixerRecipe",
+"why": "EnumCube.COKE_BLOCK.getItem()"
+},
+{
+"line": 213,
+"method": "addMixerRecipe",
+"why": "EnumCube.COKE_BLOCK.getItem()"
+},
+{
+"line": 214,
+"method": "addMixerRecipe",
+"why": "EnumCube.COKE_BLOCK.getItem()"
+},
+{
+"line": 230,
+"method": "addFluidSolidifierRecipe",
+"why": "tMaterial.getMolten(72L)"
+},
+{
+"line": 234,
+"method": "addFluidSolidifierRecipe",
+"why": "tMaterial.getMolten(72L)"
+},
+{
+"line": 238,
+"method": "addFluidSolidifierRecipe",
+"why": "tMaterial.getMolten(72L)"
+},
+{
+"line": 242,
+"method": "addFluidSolidifierRecipe",
+"why": "tMaterial.getMolten(72L)"
+},
+{
+"line": 246,
+"method": "addFluidSolidifierRecipe",
+"why": "tMaterial.getMolten(72L)"
+},
+{
+"line": 250,
+"method": "addFluidSolidifierRecipe",
+"why": "tMaterial.getMolten(72L)"
+},
+{
+"line": 254,
+"method": "addFluidSolidifierRecipe",
+"why": "tMaterial.getMolten(72L)"
+},
+{
+"line": 258,
+"method": "addFluidSolidifierRecipe",
+"why": "tMaterial.getMolten(72L)"
+},
+{
+"line": 262,
+"method": "addFluidSolidifierRecipe",
+"why": "tMaterial.getMolten(72L)"
+},
+{
+"line": 264,
+"method": "addFluidSolidifierRecipe",
+"why": "GT_ModHandler.getModItem(\"Thaumcraft\", \"ItemResource\", 1, 3)"
+},
+{
+"line": 265,
+"method": "addFluidSolidifierRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Mercury, 1L)"
+},
+{
+"line": 271,
+"method": "addFluidSolidifierRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 8)"
+},
+{
+"line": 275,
+"method": "addFluidSolidifierRecipe",
+"why": "ItemList.Bottle_Empty.get(1L, new Object[0])"
+},
+{
+"line": 276,
+"method": "addFluidSolidifierRecipe",
+"why": "ItemList.Food_Cheese.get(1L, new Object[0])"
+},
+{
+"line": 277,
+"method": "addFluidSolidifierRecipe",
+"why": "ItemList.Food_Cheese.get(1L, new Object[0])"
+},
+{
+"line": 278,
+"method": "addFluidSolidifierRecipe",
+"why": "new ItemStack(Blocks.anvil, 1, 0)"
+},
+{
+"line": 279,
+"method": "addFluidSolidifierRecipe",
+"why": "new ItemStack(Blocks.anvil, 1, 0)"
+},
+{
+"line": 280,
+"method": "addFluidSolidifierRecipe",
+"why": "GT_ModHandler.getModItem(\"Railcraft\", \"tile.railcraft.anvil\", 1L, 0)"
+},
+{
+"line": 282,
+"method": "addChemicalBathRecipe",
+"why": "ItemList.Food_Raw_Fries.get(1L, new Object[0])"
+},
+{
+"line": 283,
+"method": "addChemicalBathRecipe",
+"why": "GT_ModHandler.getIC2Item(\"dynamite\", 1L)"
+},
+{
+"line": 284,
+"method": "addChemicalRecipe",
+"why": "GT_ModHandler.getIC2Item(\"dynamite\", 1L)"
+},
+{
+"line": 285,
+"method": "addChemicalBathRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L)"
+},
+{
+"line": 327,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 8)"
+},
+{
+"line": 328,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 9)"
+},
+{
+"line": 329,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 10)"
+},
+{
+"line": 330,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 11)"
+},
+{
+"line": 331,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 12)"
+},
+{
+"line": 332,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 13)"
+},
+{
+"line": 333,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 14)"
+},
+{
+"line": 334,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 15)"
+},
+{
+"line": 335,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 8)"
+},
+{
+"line": 336,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 9)"
+},
+{
+"line": 337,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 10)"
+},
+{
+"line": 338,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 11)"
+},
+{
+"line": 339,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 12)"
+},
+{
+"line": 340,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 13)"
+},
+{
+"line": 341,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 14)"
+},
+{
+"line": 342,
+"method": "addChemicalBathRecipe",
+"why": "new ItemStack(GregTech_API.sBlockConcretes, 1, 15)"
+},
+{
+"line": 344,
+"method": "addChemicalBathRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 1L)"
+},
+{
+"line": 350,
+"method": "addChemicalBathRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 1L)"
+},
+{
+"line": 353,
+"method": "addChemicalBathRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 1L)"
+},
+{
+"line": 356,
+"method": "addChemicalBathRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 1L)"
+},
+{
+"line": 359,
+"method": "addChemicalBathRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 1L)"
+},
+{
+"line": 364,
+"method": "addChemicalBathRecipe",
+"why": "Dyes.VALUES[i].getFluidDye(j, 72L)"
+},
+{
+"line": 367,
+"method": "addChemicalBathRecipe",
+"why": "Dyes.VALUES[i].getFluidDye(j, 18L)"
+},
+{
+"line": 368,
+"method": "addChemicalBathRecipe",
+"why": "Dyes.VALUES[i].getFluidDye(j, 18L)"
+},
+{
+"line": 371,
+"method": "addFluidExtractionRecipe",
+"why": "ItemList.Dye_SquidInk.get(1L, new Object[0])"
+},
+{
+"line": 372,
+"method": "addFluidExtractionRecipe",
+"why": "ItemList.Dye_Indigo.get(1L, new Object[0])"
+},
+{
+"line": 373,
+"method": "addFluidExtractionRecipe",
+"why": "ItemList.Crop_Drop_Indigo.get(1L, new Object[0])"
+},
+{
+"line": 374,
+"method": "addFluidExtractionRecipe",
+"why": "ItemList.Crop_Drop_MilkWart.get(1L, new Object[0])"
+},
+{
+"line": 375,
+"method": "addFluidExtractionRecipe",
+"why": "ItemList.Crop_Drop_OilBerry.get(1L, new Object[0])"
+},
+{
+"line": 376,
+"method": "addFluidExtractionRecipe",
+"why": "ItemList.Crop_Drop_UUMBerry.get(1L, new Object[0])"
+},
+{
+"line": 377,
+"method": "addFluidExtractionRecipe",
+"why": "ItemList.Crop_Drop_UUABerry.get(1L, new Object[0])"
+},
+{
+"line": 383,
+"method": "addFluidExtractionRecipe",
+"why": "ItemList.IC2_Plantball.get(1L, new Object[0])"
+},
+{
+"line": 385,
+"method": "addFluidExtractionRecipe",
+"why": "GT_ModHandler.getModItem(\"Thaumcraft\", \"ItemResource\", 1, 3)"
+},
+{
+"line": 386,
+"method": "addFluidExtractionRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Mercury, 1L)"
+},
+{
+"line": 446,
+"method": "addChemicalRecipe",
+"why": "ItemList.Circuit_Board_Plastic.get(1, o)"
+},
+{
+"line": 447,
+"method": "addChemicalRecipe",
+"why": "ItemList.Circuit_Board_Plastic.get(2, o)"
+},
+{
+"line": 448,
+"method": "addChemicalRecipe",
+"why": "ItemList.Circuit_Board_Plastic.get(4, o)"
+},
+{
+"line": 449,
+"method": "addChemicalRecipe",
+"why": "ItemList.Circuit_Board_Epoxy.get(1, o)"
+},
+{
+"line": 450,
+"method": "addChemicalBathRecipe",
+"why": "ItemList.Circuit_Parts_GlassFiber.get(1, o)"
+},
+{
+"line": 451,
+"method": "addChemicalBathRecipe",
+"why": "GT_ModHandler.getIC2Item(\"carbonFiber\", 1)"
+},
+{
+"line": 452,
+"method": "addChemicalRecipe",
+"why": "ItemList.Circuit_Board_Fiberglass.get(1, o)"
+},
+{
+"line": 453,
+"method": "addChemicalRecipe",
+"why": "ItemList.Circuit_Board_Fiberglass.get(1, o)"
+},
+{
+"line": 455,
+"method": "addFluidSolidifierRecipe",
+"why": "ItemList.Circuit_Parts_PetriDish.get(1, o)"
+},
+{
+"line": 456,
+"method": "addFluidSolidifierRecipe",
+"why": "ItemList.Circuit_Parts_PetriDish.get(1, o)"
+},
+{
+"line": 518,
+"method": "addChemicalRecipe",
+"why": "ItemList.Circuit_Wafer_PIC.get(1, o)"
+},
+{
+"line": 519,
+"method": "addChemicalRecipe",
+"why": "ItemList.Circuit_Wafer_CPU.get(1, o)"
+},
+{
+"line": 520,
+"method": "addChemicalRecipe",
+"why": "ItemList.Circuit_Wafer_NanoCPU.get(1, o)"
+},
+{
+"line": 521,
+"method": "addChemicalRecipe",
+"why": "ItemList.Circuit_Wafer_NanoCPU.get(1, o)"
+},
+{
+"line": 685,
+"method": "addDistilleryRecipe",
+"why": "new FluidStack(ItemList.sOilExtraHeavy,10)"
+},
+{
+"line": 688,
+"method": "addFluidSolidifierRecipe",
+"why": "ItemList.GelledToluene.get(1, new Object[0])"
+},
+{
+"line": 689,
+"method": "addChemicalRecipe",
+"why": "ItemList.GelledToluene.get(4, new Object[0])"
+},
+{
+"line": 691,
+"method": "addChemicalRecipe",
+"why": "ItemList.GelledToluene.get(2, new Object[0])"
+},
+{
+"line": 694,
+"method": "addChemicalRecipe",
+"why": "ItemList.GelledToluene.get(4, new Object[0])"
+},
+{
+"line": 716,
+"method": "addDistilleryRecipe",
+"why": "FluidRegistry.getFluidStack(\"potion.potatojuice\", 2)"
+},
+{
+"line": 717,
+"method": "addDistilleryRecipe",
+"why": "FluidRegistry.getFluidStack(\"potion.lemonade\", 2)"
+},
+{
+"line": 769,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 770,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 771,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 772,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 773,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 774,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 775,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 776,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 777,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 778,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 779,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 780,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 781,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 782,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 783,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 784,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 785,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 786,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 787,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 788,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 790,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 791,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 792,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 793,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 794,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 1057,
+"method": "addFluidExtractionRecipe",
+"why": "GT_ModHandler.getIC2Item(\"TritiumCell\", 1)"
+},
+{
+"line": 1104,
+"method": "addCentrifugeRecipe",
+"why": "GT_ModHandler.getModItem(\"GalacticraftCore\", \"tile.moonBlock\", 1L, 5)"
+},
+{
+"line": 1106,
+"method": "addFluidExtractionRecipe",
+"why": "GT_ModHandler.getModItem(\"GalacticraftMars\", \"tile.mars\", 1L, 9)"
+},
+{
+"line": 1109,
+"method": "addCentrifugeRecipe",
+"why": "GT_ModHandler.getModItem(\"GalacticraftMars\", \"tile.asteroidsBlock\", 1L, 0)"
+},
+{
+"line": 1123,
+"method": "addDistilleryRecipe",
+"why": "new FluidStack(FluidRegistry.getFluid(\"ic2biomass\"), 12)"
+},
+{
+"line": 1124,
+"method": "addDistilleryRecipe",
+"why": "new FluidStack(FluidRegistry.getFluid(\"ic2biomass\"), 4)"
+},
+{
+"line": 1177,
+"method": "addChemicalRecipe",
+"why": "GT_ModHandler.getModItem(\"Railcraft\", \"tile.railcraft.glass\", 6L)"
+},
+{
+"line": 1178,
+"method": "addChemicalRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.cell, Materials.Carbon, 2L)"
+},
+{
+"line": 1186,
+"method": "addChemicalRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.block, Materials.Gold, 8L)"
+},
+{
+"line": 1188,
+"method": "addChemicalRecipe",
+"why": "new ItemStack(Items.magma_cream, 1, 0)"
+},
+{
+"line": 1190,
+"method": "addChemicalBathRecipe",
+"why": "ItemList.QuantumEye.get(1L, new Object[0])"
+},
+{
+"line": 1191,
+"method": "addChemicalBathRecipe",
+"why": "ItemList.QuantumStar.get(1L, new Object[0])"
+},
+{
+"line": 1715,
+"method": "addChemicalRecipe",
+"why": "GT_Utility.copyAmount(9, tCrop)"
+},
+{
+"line": 1725,
+"method": "addChemicalRecipe",
+"why": "GT_Utility.copyAmount(9, tCrop)"
+},
+{
+"line": 1735,
+"method": "addChemicalRecipe",
+"why": "GT_Utility.copyAmount(9, tCrop)"
+},
+{
+"line": 1745,
+"method": "addChemicalRecipe",
+"why": "GT_Utility.copyAmount(9, tCrop)"
+},
+{
+"line": 1755,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 1756,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 1757,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 1758,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 1759,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 1760,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 1761,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 1762,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 1763,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 1764,
+"method": "addChemicalRecipe",
+"why": "new FluidStack(tFluid, 1000)"
+},
+{
+"line": 1768,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Gold, 1L)"
+},
+{
+"line": 1769,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Iron, 2L)"
+},
+{
+"line": 1770,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Iron, 4L)"
+},
+{
+"line": 1771,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Iron, 1L)"
+},
+{
+"line": 1772,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Copper, 3L)"
+},
+{
+"line": 1773,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Copper, 3L)"
+},
+{
+"line": 1774,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Copper, 3L)"
+},
+{
+"line": 1775,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Copper, 1L)"
+},
+{
+"line": 1776,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Copper, 1L)"
+},
+{
+"line": 1777,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.getDust(Materials.SterlingSilver, 5L * 3628800)"
+},
+{
+"line": 1778,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Copper, 3L)"
+},
+{
+"line": 1779,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.getDust(Materials.BismuthBronze, 5L * 3628800)"
+},
+{
+"line": 1780,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.BlackBronze, 1L)"
+},
+{
+"line": 1781,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(OrePrefixes.dust, Materials.SterlingSilver, 1L)"
+},
+{
+"line": 1782,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.RoseGold, 1L)"
+},
+{
+"line": 1783,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.getDust(Materials.Ultimet, 9L * 3628800)"
+},
+{
+"line": 1784,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Brass, 7L)"
+},
+{
+"line": 1791,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Indium, 1L)"
+},
+{
+"line": 1796,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.getDust(Materials.FerriteMixture, 6L * 3628800)"
+},
+{
+"line": 1797,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix, Materials.Boron, 1L)"
+},
+{
+"line": 1799,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix.dust, Materials.Copper, 1L)"
+},
+{
+"line": 1800,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix.dust, Materials.Redstone, 1L)"
+},
+{
+"line": 1801,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix.dust, Materials.RedstoneAlloy, 1L)"
+},
+{
+"line": 1802,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix.dust, Materials.ConductiveIron, 1L)"
+},
+{
+"line": 1803,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix.dust, Materials.EnergeticAlloy, 1L)"
+},
+{
+"line": 1804,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix.dust, Materials.Steel, 1L)"
+},
+{
+"line": 1805,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix.dust, Materials.Iron, 1L)"
+},
+{
+"line": 1806,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix.dust, Materials.Gold, 1L)"
+},
+{
+"line": 1807,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix.dust, Materials.ElectricalSteel, 1L)"
+},
+{
+"line": 1808,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix.dust, Materials.DarkSteel, 1L)"
+},
+{
+"line": 1809,
+"method": "addMixerRecipe",
+"why": "GT_OreDictUnificator.get(tPrefix.dust, Materials.Tin, 2L)"
+},
+{
+"line": 1817,
+"method": "addMixerRecipe",
+"why": "GT_ModHandler.getIC2Item(\"biochaff\", 1)"
+},
+{
+"line": 1845,
+"method": "addCentrifugeRecipe",
+"why": "new ItemStack(Items.gold_ingot, 64)"
+},
+{
+"line": 1846,
+"method": "addCentrifugeRecipe",
+"why": "new ItemStack(Items.gold_ingot, 7)"
+},
+{
+"line": 1847,
+"method": "addCentrifugeRecipe",
+"why": "new ItemStack(Items.gold_nugget, 6)"
+},
+{
+"line": 1848,
+"method": "addCentrifugeRecipe",
+"why": "new ItemStack(Items.gold_nugget, 6)"
+},
+{
+"line": 1849,
+"method": "addCentrifugeRecipe",
+"why": "new ItemStack(Items.bowl, 16, 0)"
+},
+{
+"line": 1866,
+"method": "addCentrifugeRecipe",
+"why": "ItemList.Food_Raw_Potato.get(16L, new Object[0])"
+},
+{
+"line": 1867,
+"method": "addCentrifugeRecipe",
+"why": "ItemList.Food_Poisonous_Potato.get(12L, new Object[0])"
+},
+{
+"line": 1868,
+"method": "addCentrifugeRecipe",
+"why": "ItemList.Food_Baked_Potato.get(24L, new Object[0])"
+},
+{
+"line": 1876,
+"method": "addCentrifugeRecipe",
+"why": "GT_ModHandler.getIC2Item(\"terraWart\", 16L)"
+},
+{
+"line": 1877,
+"method": "addCentrifugeRecipe",
+"why": "GT_ModHandler.getModItem(\"TwilightForest\", \"item.meefRaw\", 12L, 32767)"
+},
+{
+"line": 1878,
+"method": "addCentrifugeRecipe",
+"why": "GT_ModHandler.getModItem(\"TwilightForest\", \"item.meefSteak\", 16L, 32767)"
+},
+{
+"line": 1879,
+"method": "addCentrifugeRecipe",
+"why": "GT_ModHandler.getModItem(\"TwilightForest\", \"item.venisonRaw\", 12L, 32767)"
+},
+{
+"line": 1880,
+"method": "addCentrifugeRecipe",
+"why": "GT_ModHandler.getModItem(\"TwilightForest\", \"item.venisonCooked\", 16L, 32767)"
+},
+{
+"line": 1884,
+"method": "addCentrifugeRecipe",
+"why": "ItemList.IC2_Plantball.get(1L, new Object[0])"
+},
+{
+"line": 1885,
+"method": "addCentrifugeRecipe",
+"why": "ItemList.IC2_Plantball.get(1L, new Object[0])"
+},
+{
+"line": 1887,
+"method": "addCentrifugeRecipe",
+"why": "ItemList.IC2_Resin.get(1L, new Object[0])"
+},
+{
+"line": 1902,
+"method": "addCentrifugeRecipe",
+"why": "FluidRegistry.getFluidStack(\"ic2pahoehoelava\", 100)"
+},
+{
+"line": 1905,
+"method": "addCentrifugeRecipe",
+"why": "GT_ModHandler.getModItem(aTextAE, aTextAEMM, 1L, 45)"
+},
+{
+"line": 3137,
+"method": "addChemicalRecipeForBasicMachineOnly",
+"why": "Materials.BisphenolA.getFluid(3000)"
+},
+{
+"line": 3138,
+"method": "addChemicalRecipeForBasicMachineOnly",
+"why": "Materials.BisphenolA.getCells(3)"
+},
+{
+"line": 3139,
+"method": "addChemicalRecipeForBasicMachineOnly",
+"why": "Materials.BisphenolA.getFluid(3000)"
+},
+{
+"line": 3140,
+"method": "addChemicalRecipeForBasicMachineOnly",
+"why": "Materials.BisphenolA.getCells(3)"
+},
+{
+"line": 3141,
+"method": "addChemicalRecipeForBasicMachineOnly",
+"why": "Materials.BisphenolA.getCells(3)"
+},
+{
+"line": 3144,
+"method": "addChemicalRecipe",
+"why": "Materials.BisphenolA.getCells(12)"
+},
+{
+"line": 3145,
+"method": "addChemicalRecipe",
+"why": "Materials.BisphenolA.getFluid(12000)"
+},
+{
+"line": 3414,
+"method": "addDistilleryRecipe",
+"why": "ItemList.IC2_Fertilizer.get(1, new Object[0])"
+},
+{
+"line": 3415,
+"method": "addDistilleryRecipe",
+"why": "ItemList.IC2_Fertilizer.get(1, new Object[0])"
+},
+{
+"line": 3416,
+"method": "addDistilleryRecipe",
+"why": "ItemList.IC2_Fertilizer.get(1, new Object[0])"
+},
+{
+"line": 3417,
+"method": "addDistilleryRecipe",
+"why": "ItemList.IC2_Fertilizer.get(1, new Object[0])"
+},
+{
+"line": 3418,
+"method": "addDistilleryRecipe",
+"why": "ItemList.IC2_Fertilizer.get(1, new Object[0])"
+},
+{
+"line": 3419,
+"method": "addDistilleryRecipe",
+"why": "ItemList.IC2_Fertilizer.get(1, new Object[0])"
+},
+{
+"line": 3420,
+"method": "addDistilleryRecipe",
+"why": "ItemList.IC2_Fertilizer.get(1, new Object[0])"
+},
+{
+"line": 3423,
+"method": "addDistilleryRecipe",
+"why": "new FluidStack(FluidRegistry.getFluid(\"ic2biogas\"), 1800)"
+},
+{
+"line": 3424,
+"method": "addDistilleryRecipe",
+"why": "new FluidStack(FluidRegistry.getFluid(\"ic2biogas\"), 3000)"
+},
+{
+"line": 3609,
+"method": "addChemicalRecipe",
+"why": "saturated[i].getGas(sFS * 1000)"
+},
+{
+"line": 3610,
+"method": "addChemicalRecipe",
+"why": "Materials.Empty.getCells(sFS - 2)"
+},
+{
+"line": 3611,
+"method": "addChemicalRecipe",
+"why": "saturated[i].getCells(sFS)"
+},
+{
+"line": 3612,
+"method": "addChemicalRecipe",
+"why": "saturated[i].getCells(sFS)"
+},
+{
+"line": 3695,
+"method": "addMixerRecipe",
+"why": "new FluidStack(FluidRegistry.getFluid(\"potion.\"+aName),750)"
+},
+{
+"line": 3698,
+"method": "addMixerRecipe",
+"why": "new FluidStack(FluidRegistry.getFluid(\"potion.\"+aName+\".strong\"),750)"
+},
+{
+"line": 3701,
+"method": "addMixerRecipe",
+"why": "new FluidStack(FluidRegistry.getFluid(\"potion.\"+aName+\".long\"),750)"
+}
+]

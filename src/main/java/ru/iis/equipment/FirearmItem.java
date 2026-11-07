@@ -85,7 +85,8 @@ public class FirearmItem extends Item implements GunActions.Gun {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> out, TooltipFlag flag) {
         tooltip(weapon, out);
-        out.accept(Component.translatable("tooltip.iis.gun.magazine", GunActions.loaded(stack), weapon.magazine, Component.translatable("item.iis." + weapon.ammo.id)).withStyle(ChatFormatting.GRAY));
+        String feed = weapon.magazineType() != null ? "item.iis." + weapon.magazineType().id : "item.iis." + weapon.ammo.id;
+        out.accept(Component.translatable(weapon.magazineType() != null ? "tooltip.iis.gun.magazine_item" : "tooltip.iis.gun.magazine", GunActions.loaded(stack), weapon.magazine, Component.translatable(feed)).withStyle(ChatFormatting.GRAY));
     }
 
     static void tooltip(Weapon w, Consumer<Component> out) {

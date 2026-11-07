@@ -125,6 +125,8 @@ MACHINES = [
     ('plasma_arc_furnace', 'plasmaarcfurnace', 'PLASMA_ARC_FURNACE', 'PlasmaArcFurnace', 'plasma_arc_furnace', 1, 6, 1000, 'Plasma Arc Furnace'),
     ('disassembler',  'disassembler',  'DISASSEMBLER',     'Disassembler', 'disassembler',  1, 9, 0,     'Disassembler'),
     ('replicator',    'replicator',    'REPLICATOR',       'Replicator',   None,            1, 1, 16000, 'Replicator'),   # D122
+    # D130: not in GT, our machine for cartridges; its picture is that of the assembler
+    ('cartridge_press', 'cartridge_press', 'ASSEMBLER',    'Assembler',    'cartridge_press', 6, 1, 16000, 'Cartridge Press'),
 ]
 # GT crafting of the D83 machines (both tiers, X.* resolved per tier like MV_CRAFT)
 NEW_CRAFT = {
@@ -150,6 +152,7 @@ NEW_CRAFT = {
     # D119
     'fermenter': (['WPW', 'GMG', 'WCW'], {'M': 'HULL', 'P': 'PUMP', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': 'GLASS'}),
     'printer': (['EWE', 'CMC', 'WEW'], {'M': 'HULL', 'E': 'MOTOR', 'C': 'CIRCUIT', 'W': 'WIRE'}),
+    'cartridge_press': (['PWP', 'CMC', 'PWP'], {'M': 'HULL', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE'}),
     'recycler': (['GCG', 'PMP', 'WCW'], {'M': 'HULL', 'P': 'PISTON', 'C': 'CIRCUIT', 'W': 'WIRE', 'G': '#c:dusts/glowstone'}),
     'amplifab': (['WPW', 'PMP', 'CPC'], {'M': 'HULL', 'P': 'PUMP', 'C': 'BETTER_CIRCUIT', 'W': 'WIRE4'}),
     'plasma_arc_furnace': (['WGW', 'CMC', 'TPT'], {'M': 'HULL', 'P': 'PLATE', 'C': 'BETTER_CIRCUIT', 'W': 'WIRE4', 'T': 'PUMP', 'G': '#c:dusts/graphite'}),

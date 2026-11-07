@@ -1676,7 +1676,17 @@ public final class StandBuilder {
         List<String> ammo = new ArrayList<>();
         for (ru.iis.equipment.Weapon.Ammo a : ru.iis.equipment.Weapon.Ammo.values()) ammo.add(a.id);
         z = items(2, z + 1, ammo, 9);
-        z = items(2, z + 1, List.of("wheel_wood", "wheel_rubber", "engine_steam", "engine_lv", "engine_mv", "engine_hv", "engine_ev", "jet_turbine"), 9);
+        z = items(2, z + 1, List.of("mag_pistol", "mag_smg", "mag_rifle", "mag_sniper", "mag_belt", "barrel_steel", "trigger_group", "gun_spring", "scope"), 9);
+        z = items(2, z + 1, List.of("wheel_wood", "wheel_rubber", "engine_steam", "engine_lv", "engine_mv", "engine_hv", "engine_ev", "jet_turbine", "cargo_kit"), 9);
+        z = items(2, z + 1, List.of("chassis_light", "chassis_heavy", "chassis_armored", "vehicle_suspension", "transmission", "fuel_tank", "drivetrain", "body_panels", "dashboard"), 9);
+        z = items(2, z + 1, List.of("wing", "propeller", "rotor_blades", "landing_gear", "track_unit", "boat_hull", "tank_turret"), 9);
+        // станок, заправщик, магазин
+        set(at(30, 0, 9), modBlock("iis:cartridge_press_lv"));
+        sign(at(30, 0, 8), "Патронный станок");
+        set(at(34, 0, 9), ru.iis.equipment.EquipmentContent.FUEL_PUMP.get().defaultBlockState());
+        sign(at(34, 0, 8), "Заправщик машин");
+        set(at(38, 0, 9), ru.iis.shop.ShopContent.SHOP.get().defaultBlockState());
+        sign(at(38, 0, 8), "Магазин наград");
         // на земле
         z += 8;
         labelAt(26, 4.0, z - 6, "Наземный транспорт: W, S газ и тормоз, A, D руль, пробел ручной тормоз, Shift выйти", "aqua", 1.1);
@@ -1695,6 +1705,7 @@ public final class StandBuilder {
             }
         }
         parkVehicle(ru.iis.equipment.vehicle.VehicleKind.BOAT, px, 1, z, "Катер");
+        parkVehicle(ru.iis.equipment.vehicle.VehicleKind.ATV, 64, 0, z, "Вездеход");
         // в воздухе: простор нужен, поэтому отдельным рядом
         z += 18;
         labelAt(26, 4.0, z - 8, "Самолёт: W, S газ, мышь куда лететь. Вертолёт: пробел вверх, Ctrl вниз, W A S D, винт раскручивается не сразу", "aqua", 1.1);

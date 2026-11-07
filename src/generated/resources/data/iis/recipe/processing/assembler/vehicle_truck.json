@@ -1,0 +1,37 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:chassis_heavy",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:engine_hv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:drivetrain",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:wheel_rubber",
+      "count": 6
+    },
+    {
+      "ingredient": "iis:body_panels",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:dashboard",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:vehicle_truck",
+      "count": 1
+    }
+  ],
+  "duration": 1000,
+  "eut": 120
+}

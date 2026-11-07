@@ -1,0 +1,27 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/powellite",
+      "count": 6
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_calcium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_molybdenum",
+      "count": 1
+    }
+  ],
+  "duration": 792,
+  "eut": 10,
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 4000
+    }
+  ]
+}

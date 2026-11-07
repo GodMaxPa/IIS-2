@@ -1,4 +1,7 @@
 [
+"iis:moremods/bigger_ae2/quantum_cell_component",
+"iis:moremods/bigger_ae2/quantum_fluid_storage_cell",
+"iis:moremods/bigger_ae2/quantum_item_storage_cell",
 "iis:moremods/chunkloaders/basic_chunk_loader",
 "iis:moremods/constructionwand/diamond_wand",
 "iis:moremods/constructionwand/infinity_wand",

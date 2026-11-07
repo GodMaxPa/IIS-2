@@ -27,9 +27,15 @@ AMMO_NAMES = {
     'grenade_round': ('Launcher Grenade', 'Граната к гранатомёту'), 'rocket_round': ('Rocket', 'Ракета'), 'tank_shell': ('Tank Shell', 'Танковый снаряд')}
 PART_NAMES = {
     'wheel_wood': ('Wooden Wheel', 'Деревянное колесо'), 'wheel_rubber': ('Rubber Wheel', 'Резиновое колесо'), 'engine_steam': ('Steam Engine', 'Паровая машина'), 'engine_lv': ('Engine (LV)', 'Двигатель (LV)'),
-    'engine_mv': ('Engine (MV)', 'Двигатель (MV)'), 'engine_hv': ('Engine (HV)', 'Двигатель (HV)'), 'engine_ev': ('Engine (EV)', 'Двигатель (EV)'), 'jet_turbine': ('Jet Turbine', 'Реактивная турбина')}
+    'engine_mv': ('Engine (MV)', 'Двигатель (MV)'), 'engine_hv': ('Engine (HV)', 'Двигатель (HV)'), 'engine_ev': ('Engine (EV)', 'Двигатель (EV)'), 'jet_turbine': ('Jet Turbine', 'Реактивная турбина'),
+    'chassis_light': ('Light Frame', 'Лёгкая рама'), 'chassis_heavy': ('Heavy Frame', 'Тяжёлая рама'), 'chassis_armored': ('Armoured Hull', 'Бронекорпус'), 'vehicle_suspension': ('Suspension', 'Подвеска'), 'transmission': ('Gearbox', 'Коробка передач'),
+    'fuel_tank': ('Fuel Tank', 'Топливный бак'), 'drivetrain': ('Drivetrain', 'Ходовая часть'), 'body_panels': ('Body Panels', 'Панели кузова'), 'dashboard': ('Dashboard', 'Приборная панель'), 'wing': ('Wing', 'Крыло'), 'propeller': ('Propeller', 'Воздушный винт'),
+    'rotor_blades': ('Rotor Blades', 'Лопасти несущего винта'), 'landing_gear': ('Landing Gear', 'Шасси самолёта'), 'track_unit': ('Track Unit', 'Гусеничная тележка'), 'boat_hull': ('Boat Hull', 'Корпус катера'), 'tank_turret': ('Tank Turret', 'Танковая башня'),
+    'cargo_kit': ('Cargo Kit', 'Грузовой комплект'), 'barrel_steel': ('Steel Barrel', 'Стальной ствол'), 'barrel_stainless': ('Stainless Barrel', 'Ствол из нержавеющей стали'), 'barrel_titanium': ('Titanium Barrel', 'Титановый ствол'),
+    'trigger_group': ('Trigger Group', 'Спусковой механизм'), 'gun_spring': ('Gun Spring', 'Оружейная пружина'), 'scope': ('Scope', 'Оптический прицел'),
+    'mag_pistol': ('Pistol Magazine', 'Пистолетный магазин'), 'mag_smg': ('SMG Magazine', 'Магазин пистолета-пулемёта'), 'mag_rifle': ('Rifle Magazine', 'Автоматный магазин'), 'mag_sniper': ('Sniper Magazine', 'Магазин снайперской винтовки'), 'mag_belt': ('Ammunition Box', 'Короб с лентой')}
 VEHICLE_NAMES = {
-    'steam_car': ('Steam Tractor', 'Паровой тягач'), 'quad': ('Quad Bike', 'Квадроцикл'), 'motorbike': ('Motorcycle', 'Мотоцикл'), 'car': ('Car', 'Автомобиль'), 'truck': ('Truck', 'Грузовик'),
+    'steam_car': ('Steam Tractor', 'Паровой тягач'), 'quad': ('Quad Bike', 'Квадроцикл'), 'motorbike': ('Motorcycle', 'Мотоцикл'), 'car': ('Car', 'Автомобиль'), 'atv': ('All-Terrain Vehicle', 'Вездеход'), 'truck': ('Truck', 'Грузовик'),
     'boat': ('Motor Boat', 'Катер'), 'plane': ('Airplane', 'Самолёт'), 'helicopter': ('Helicopter', 'Вертолёт'), 'tank': ('Tank', 'Танк'), 'jet': ('Jet Fighter', 'Реактивный самолёт')}
 SETS = {'musketeer': ('Musketeer', 'мушкетёра'), 'ballistic': ('Ballistic', 'бронежилета'), 'assault': ('Assault', 'штурмовика'), 'power_armor': ('Power Armor', 'силовой брони'), 'plasma_armor': ('Plasma Armor', 'плазменной брони')}
 
@@ -226,13 +232,29 @@ def generate(g):
         name(f'death.attack.{NS}.{d}.player', en, ru)
 
     # --- ammunition -----------------------------------------------------------------------------------------------------------------
-    shapeless('equipment/powder_cartridge', I('powder_cartridge'), 4, ['minecraft:paper', 'minecraft:gunpowder', BO('Lead')])
-    mrec('assembler', 'pistol_round', [ing(P('Brass')), ing('minecraft:gunpowder', 2), ing(BO('Lead'), 4)], [out(I('pistol_round'), 16)], 60, 16)
-    mrec('assembler', 'rifle_round', [ing(P('Brass'), 2), ing('minecraft:gunpowder', 4), ing(BO('Steel'), 4)], [out(I('rifle_round'), 16)], 80, 30)
-    mrec('assembler', 'shotgun_shell', [ing(P('Brass')), ing(P('Rubber')), ing('minecraft:gunpowder', 2), ing(BO('Lead'), 8)], [out(I('shotgun_shell'), 8)], 80, 30)
-    mrec('assembler', 'grenade_round', [ing(P('Steel'), 2), ing(P('Brass')), ing('minecraft:tnt')], [out(I('grenade_round'), 4)], 100, 30)
-    mrec('assembler', 'rocket_round', [ing(P('Aluminium'), 4), ing(R('Steel')), ing('minecraft:tnt', 2), ing('minecraft:gunpowder', 4)], [out(I('rocket_round')), ], 200, 120)
-    mrec('assembler', 'tank_shell', [ing(P('Steel'), 4), ing(P('Brass'), 2), ing('minecraft:tnt', 2)], [out(I('tank_shell'), 2)], 200, 120)
+    # owner: a paper cartridge is simple, a sheet of paper, a pinch of powder, a bit of iron or steel, by hand or on the table
+    shapeless('equipment/powder_cartridge', I('powder_cartridge'), 4, ['minecraft:paper', 'minecraft:gunpowder', '#c:nuggets/iron'])
+    shapeless('equipment/powder_cartridge_steel', I('powder_cartridge'), 4, ['minecraft:paper', 'minecraft:gunpowder', '#c:nuggets/steel'])
+    mrec('cartridge_press', 'pistol_round', [ing(P('Brass')), ing('minecraft:gunpowder', 2), ing(BO('Lead'), 4)], [out(I('pistol_round'), 16)], 60, 16)
+    mrec('cartridge_press', 'rifle_round', [ing(P('Brass'), 2), ing('minecraft:gunpowder', 4), ing(BO('Steel'), 4)], [out(I('rifle_round'), 16)], 80, 30)
+    mrec('cartridge_press', 'shotgun_shell', [ing(P('Brass')), ing(P('Rubber')), ing('minecraft:gunpowder', 2), ing(BO('Lead'), 8)], [out(I('shotgun_shell'), 8)], 80, 30)
+    mrec('cartridge_press', 'grenade_round', [ing(P('Steel'), 2), ing(P('Brass')), ing('minecraft:tnt')], [out(I('grenade_round'), 4)], 100, 30)
+    mrec('cartridge_press', 'rocket_round', [ing(P('Aluminium'), 4), ing(R('Steel')), ing('minecraft:tnt', 2), ing('minecraft:gunpowder', 4)], [out(I('rocket_round')), ], 200, 120)
+    mrec('cartridge_press', 'tank_shell', [ing(P('Steel'), 4), ing(P('Brass'), 2), ing('minecraft:tnt', 2)], [out(I('tank_shell'), 2)], 200, 120)
+    # magazines: reusable, no electronics
+    mag_spring = I('gun_spring')
+    shaped('equipment/mag_pistol', I('mag_pistol'), 1, ['hP', 'SP'], {'P': P('Steel'), 'S': mag_spring})
+    shaped('equipment/mag_smg', I('mag_smg'), 1, ['hP', 'SP', ' P'], {'P': P('Steel'), 'S': mag_spring})
+    shaped('equipment/mag_rifle', I('mag_rifle'), 1, ['hP', 'SP', ' P'], {'P': P('StainlessSteel'), 'S': mag_spring})
+    shaped('equipment/mag_sniper', I('mag_sniper'), 1, ['hP', 'SP'], {'P': P('Titanium'), 'S': mag_spring})
+    shaped('equipment/mag_belt', I('mag_belt'), 1, ['PPh', 'SGP', 'PPP'], {'P': P('Titanium'), 'S': mag_spring, 'G': tag_of('gear', 'Steel')})
+    # gun parts
+    shaped('equipment/gun_spring', I('gun_spring'), 2, ['hR', ' R'], {'R': R('Steel')})
+    mrec('lathe', 'barrel_steel', [ing(R('Steel'))], [out(I('barrel_steel'))], 200, 16)
+    mrec('lathe', 'barrel_stainless', [ing(R('StainlessSteel'))], [out(I('barrel_stainless'))], 300, 30)
+    mrec('lathe', 'barrel_titanium', [ing(R('Titanium'))], [out(I('barrel_titanium'))], 400, 120)
+    mrec('assembler', 'trigger_group', [ing(P('Steel')), ing(SG('Steel')), ing(SC('Steel'), 2), ing(mag_spring)], [out(I('trigger_group'))], 100, 16)
+    mrec('assembler', 'scope', [ing(R('Titanium'), 2), ing(tag_of('lens', 'Olivine')), ing(RI('Steel'), 2)], [out(I('scope'))], 200, 120)
 
     # --- guns --------------------------------------------------------------------------------------------------------------------------
     WOOD = '#minecraft:planks'
@@ -242,14 +264,16 @@ def generate(g):
     shaped('equipment/rifled_musket', I('rifled_musket'), 1, ['FRR', 'SPR', 'WWf'], {'F': FLINT, 'R': R('Steel'), 'S': SC('Steel'), 'P': P('Steel'), 'W': WOOD})
     shaped('equipment/blunderbuss', I('blunderbuss'), 1, ['FBB', 'SPB', 'WWh'], {'F': FLINT, 'B': P('Brass'), 'S': SC('Steel'), 'P': P('Steel'), 'W': WOOD})
 
-    shaped('equipment/pistol', I('pistol'), 1, ['PPR', 'dCG', 'W h'], {'P': P('Aluminium'), 'R': R('Steel'), 'C': C + 'good', 'G': SG('Steel'), 'W': P('Rubber')})
-    shaped('equipment/smg', I('smg'), 1, ['PPR', 'MCG', 'WPh'], {'P': P('Aluminium'), 'R': R('Steel'), 'C': C + 'good', 'G': SG('Steel'), 'M': I('electric_piston_lv'), 'W': P('Rubber')})
-    shaped('equipment/shotgun', I('shotgun'), 1, ['PRR', 'WCG', 'Wdh'], {'P': P('StainlessSteel'), 'R': R('StainlessSteel'), 'C': C + 'advanced', 'G': SG('StainlessSteel'), 'W': WOOD})
-    shaped('equipment/assault_rifle', I('assault_rifle'), 1, ['PPR', 'MCG', 'WPh'], {'P': P('StainlessSteel'), 'R': R('StainlessSteel'), 'C': C + 'advanced', 'G': SG('StainlessSteel'), 'M': I('electric_piston_mv'), 'W': P('Plastic')})
-    shaped('equipment/grenade_launcher', I('grenade_launcher'), 1, ['PRR', 'MCP', 'W h'], {'P': P('StainlessSteel'), 'R': RI('StainlessSteel'), 'C': C + 'advanced', 'M': I('electric_piston_mv'), 'W': P('Plastic')})
-    shaped('equipment/sniper_rifle', I('sniper_rifle'), 1, ['SRR', 'MCP', 'WPh'], {'S': I('sensor_ev'), 'R': R('Titanium'), 'C': C + 'data', 'M': I('electric_piston_hv'), 'P': P('Titanium'), 'W': P('Plastic')})
-    shaped('equipment/machine_gun', I('machine_gun'), 1, ['PRR', 'MCK', 'WPh'], {'P': P('Titanium'), 'R': R('Titanium'), 'C': C + 'data', 'M': I('electric_motor_ev'), 'K': I('conveyor_module_hv'), 'W': P('Plastic')})
-    shaped('equipment/rocket_launcher', I('rocket_launcher'), 1, ['PPP', 'SCM', 'PPP'], {'P': P('Titanium'), 'S': I('sensor_hv'), 'C': C + 'data', 'M': I('electric_piston_ev')})
+    # owner: no circuits in firearms; a barrel, a trigger group, a spring and the metal of the epoch
+    TG, GS = I('trigger_group'), I('gun_spring')
+    shaped('equipment/pistol', I('pistol'), 1, ['PPB', 'dTS', 'W h'], {'P': P('Aluminium'), 'B': I('barrel_steel'), 'T': TG, 'S': GS, 'W': P('Rubber')})
+    shaped('equipment/smg', I('smg'), 1, ['PPB', 'GTS', 'WPh'], {'P': P('Aluminium'), 'B': I('barrel_steel'), 'T': TG, 'S': GS, 'G': SG('Steel'), 'W': P('Rubber')})
+    shaped('equipment/shotgun', I('shotgun'), 1, ['PBR', 'WTS', 'Wdh'], {'P': P('StainlessSteel'), 'B': I('barrel_stainless'), 'R': R('StainlessSteel'), 'T': TG, 'S': GS, 'W': WOOD})
+    shaped('equipment/assault_rifle', I('assault_rifle'), 1, ['PPB', 'GTS', 'WPh'], {'P': P('StainlessSteel'), 'B': I('barrel_stainless'), 'T': TG, 'S': GS, 'G': SG('StainlessSteel'), 'W': P('Plastic')})
+    shaped('equipment/grenade_launcher', I('grenade_launcher'), 1, ['PBB', 'RTS', 'W h'], {'P': P('StainlessSteel'), 'B': I('barrel_stainless'), 'R': RI('StainlessSteel'), 'T': TG, 'S': GS, 'W': P('Plastic')})
+    shaped('equipment/sniper_rifle', I('sniper_rifle'), 1, ['OBB', 'GTS', 'WPh'], {'O': I('scope'), 'B': I('barrel_titanium'), 'T': TG, 'S': GS, 'G': SG('Titanium'), 'P': P('Titanium'), 'W': P('Plastic')})
+    shaped('equipment/machine_gun', I('machine_gun'), 1, ['PBB', 'GTS', 'WPh'], {'P': P('Titanium'), 'B': I('barrel_titanium'), 'T': TG, 'S': GS, 'G': tag_of('gear', 'Titanium'), 'W': P('Plastic')})
+    shaped('equipment/rocket_launcher', I('rocket_launcher'), 1, ['PPP', 'OTS', 'PPP'], {'P': P('Titanium'), 'O': I('scope'), 'T': TG, 'S': GS})
     shaped('equipment/laser_pistol', I('laser_pistol'), 1, ['PEG', 'BCd', 'W h'], {'P': P('Titanium'), 'E': I('emitter_ev'), 'G': tag_of('lens', 'Ruby'), 'B': I('energy_crystal'), 'C': C + 'data', 'W': P('Plastic')})
     shaped('equipment/laser_rifle', I('laser_rifle'), 1, ['PEE', 'BCG', 'WPh'], {'P': P('TungstenSteel'), 'E': I('emitter_iv'), 'G': tag_of('lens', 'Olivine'), 'B': I('lapotron_crystal'), 'C': C + 'elite', 'W': P('Plastic')})
     shaped('equipment/laser_cannon', I('laser_cannon'), 1, ['PEE', 'BCE', 'PPh'], {'P': P('HSSE'), 'E': I('emitter_luv'), 'B': I('energy_orb'), 'C': C + 'master'})
@@ -288,16 +312,66 @@ def generate(g):
     V = lambda v: I(f'vehicle_{v}')
     W, RW = I('wheel_wood'), I('wheel_rubber')
     GL = '#c:glass_panes'
-    shaped('equipment/vehicle_steam_car', V('steam_car'), 1, ['BPB', 'WEW', 'WPW'], {'B': WOOD, 'P': P('Bronze'), 'W': W, 'E': I('engine_steam')})
-    shaped('equipment/vehicle_quad', V('quad'), 1, ['PPP', 'WEW', 'WPW'], {'P': P('Steel'), 'W': RW, 'E': I('engine_lv')})
-    shaped('equipment/vehicle_motorbike', V('motorbike'), 1, ['  R', 'PEP', 'W W'], {'R': R('Aluminium'), 'P': P('Aluminium'), 'W': RW, 'E': I('engine_mv')})
-    shaped('equipment/vehicle_car', V('car'), 1, ['GGG', 'PEP', 'WPW'], {'G': GL, 'P': P('Aluminium'), 'W': RW, 'E': I('engine_mv')})
-    shaped('equipment/vehicle_boat', V('boat'), 1, ['P G', 'PEP', 'PPP'], {'G': GL, 'P': P('Aluminium'), 'E': I('engine_mv')})
-    shaped('equipment/vehicle_truck', V('truck'), 1, ['PCG', 'PEP', 'WPW'], {'G': GL, 'P': P('StainlessSteel'), 'C': 'minecraft:chest', 'W': RW, 'E': I('engine_hv')})
-    shaped('equipment/vehicle_plane', V('plane'), 1, ['WGW', 'PEP', 'R R'], {'W': P('Aluminium'), 'G': GL, 'P': P('StainlessSteel'), 'R': RW, 'E': I('engine_hv')})
-    shaped('equipment/vehicle_helicopter', V('helicopter'), 1, ['RMR', 'GEP', 'PPP'], {'R': R('Titanium'), 'M': I('electric_motor_ev'), 'G': GL, 'P': P('Titanium'), 'E': I('engine_ev')})
-    shaped('equipment/vehicle_tank', V('tank'), 1, ['PLP', 'WEW', 'WPW'], {'P': P('TungstenSteel'), 'L': I('rocket_launcher'), 'W': RW, 'E': I('engine_ev')})
-    shaped('equipment/vehicle_jet', V('jet'), 1, ['GCG', 'PTP', 'PTP'], {'G': GL, 'C': C + 'elite', 'P': P('TungstenSteel'), 'T': I('jet_turbine')})
+    # sub-assemblies (D130): the machine that makes a vehicle takes up to six kinds of parts, so these gather the small ones
+    mrec('assembler', 'chassis_light', [ing(R('Steel'), 8), ing(P('Steel'), 4), ing(SC('Steel'), 8)], [out(I('chassis_light'))], 200, 30)
+    mrec('assembler', 'chassis_heavy', [ing(R('StainlessSteel'), 8), ing(P('StainlessSteel'), 6), ing(SC('StainlessSteel'), 8)], [out(I('chassis_heavy'))], 300, 120)
+    mrec('assembler', 'chassis_armored', [ing(P('TungstenSteel'), 12), ing(R('Titanium'), 8), ing(SC('Titanium'), 8)], [out(I('chassis_armored'))], 400, 480)
+    mrec('assembler', 'vehicle_suspension', [ing(R('Steel'), 4), ing(RI('Steel'), 2), ing(I('gun_spring'), 4)], [out(I('vehicle_suspension'))], 100, 16)
+    mrec('assembler', 'transmission', [ing(tag_of('gear', 'Steel'), 4), ing(SG('Steel'), 4), ing(R('Steel'), 2)], [out(I('transmission'))], 200, 30)
+    mrec('assembler', 'fuel_tank', [ing(P('Steel'), 6), ing(RI('Steel'), 2)], [out(I('fuel_tank'))], 100, 16)
+    mrec('assembler', 'drivetrain', [ing(I('transmission')), ing(I('vehicle_suspension'), 2), ing(I('fuel_tank')), ing(R('Steel'), 4)], [out(I('drivetrain'))], 200, 30)
+    mrec('assembler', 'body_panels', [ing(P('Aluminium'), 6), ing(GL, 4), ing(SC('Aluminium'), 4)], [out(I('body_panels'))], 200, 30)
+    mrec('assembler', 'dashboard', [ing(C + 'basic'), ing(I('sensor_lv')), ing(P('Plastic'), 2)], [out(I('dashboard'))], 200, 30)
+    mrec('assembler', 'wing', [ing(P('Aluminium'), 8), ing(R('Aluminium'), 4), ing(SC('Aluminium'), 4)], [out(I('wing'))], 300, 120)
+    mrec('assembler', 'propeller', [ing(P('Aluminium'), 4), ing(RI('Aluminium')), ing(SG('Steel'), 2)], [out(I('propeller'))], 200, 120)
+    mrec('assembler', 'rotor_blades', [ing(P('Titanium'), 8), ing(R('Titanium'), 4), ing(RI('Titanium'))], [out(I('rotor_blades'))], 400, 480)
+    mrec('assembler', 'landing_gear', [ing(RW, 2), ing(R('StainlessSteel'), 4), ing(I('electric_piston_mv'))], [out(I('landing_gear'))], 200, 120)
+    mrec('assembler', 'track_unit', [ing(P('Steel'), 8), ing(RW, 4), ing(tag_of('gear', 'Steel'), 2), ing(I('conveyor_module_hv'))], [out(I('track_unit'))], 400, 120)
+    mrec('assembler', 'boat_hull', [ing(P('Aluminium'), 12), ing(P('Rubber'), 4), ing(GL, 2)], [out(I('boat_hull'))], 300, 30)
+    mrec('assembler', 'tank_turret', [ing(P('TungstenSteel'), 8), ing(I('barrel_titanium'), 2), ing(I('electric_motor_hv')), ing(I('scope'))], [out(I('tank_turret'))], 400, 480)
+    mrec('assembler', 'cargo_kit', [ing('minecraft:chest', 2), ing(P('Steel'), 4), ing(R('Steel'), 4)], [out(I('cargo_kit'))], 100, 16)
+    # the steam age has no machines yet: on the table, but with more of everything
+    shaped('equipment/vehicle_steam_car', V('steam_car'), 1, ['BCB', 'WEW', 'WRW'], {'B': P('Bronze'), 'C': 'minecraft:chest', 'R': R('Bronze'), 'W': W, 'E': I('engine_steam')})
+
+    def vehicle(vid, parts, dur, eut):
+        mrec('assembler', f'vehicle_{vid}', [ing(i, n) for i, n in parts], [out(V(vid))], dur, eut)
+
+    CL, CH, CA = I('chassis_light'), I('chassis_heavy'), I('chassis_armored')
+    DT, BP, DB = I('drivetrain'), I('body_panels'), I('dashboard')
+    vehicle('quad', [(CL, 1), (I('engine_lv'), 1), (RW, 4), (I('vehicle_suspension'), 2), (I('fuel_tank'), 1), (DB, 1)], 400, 30)
+    vehicle('motorbike', [(CL, 1), (I('engine_mv'), 1), (RW, 2), (I('vehicle_suspension'), 2), (I('fuel_tank'), 1), (DB, 1)], 400, 30)
+    vehicle('car', [(CL, 1), (I('engine_mv'), 1), (DT, 1), (RW, 4), (BP, 4), (DB, 1)], 600, 120)
+    vehicle('boat', [(I('boat_hull'), 1), (I('engine_mv'), 1), (DT, 1), (I('propeller'), 1), (DB, 1)], 600, 120)
+    vehicle('atv', [(CH, 1), (I('engine_hv'), 1), (DT, 2), (RW, 6), (BP, 4), (DB, 1)], 800, 120)
+    vehicle('truck', [(CH, 2), (I('engine_hv'), 1), (DT, 2), (RW, 6), (BP, 8), (DB, 1)], 1000, 120)
+    vehicle('plane', [(CH, 1), (I('engine_hv'), 1), (I('wing'), 2), (I('propeller'), 1), (I('landing_gear'), 2), (DB, 1)], 1200, 120)
+    vehicle('helicopter', [(CH, 1), (I('engine_ev'), 1), (I('rotor_blades'), 2), (DT, 1), (BP, 4), (DB, 1)], 1200, 480)
+    vehicle('tank', [(CA, 1), (I('engine_ev'), 2), (I('track_unit'), 2), (I('tank_turret'), 1), (DT, 2), (DB, 1)], 1600, 480)
+    vehicle('jet', [(CA, 1), (I('jet_turbine'), 2), (I('wing'), 2), (I('landing_gear'), 3), (DB, 2), (C + 'elite', 2)], 2000, 1920)
+    # the pump
+    shaped('equipment/fuel_pump', I('fuel_pump'), 1, ['PGP', 'MTM', 'PRP'], {'P': P('Steel'), 'G': GL, 'M': I('electric_pump_lv'), 'T': I('fuel_tank'), 'R': R('Steel')})
+    side = art.plate((196, 60, 44), 901)
+    front = art.plate((196, 60, 44), 902, False)
+    for x in range(4, 12):
+        for y in range(3, 9):
+            front.putpixel((x, y), (30, 34, 38, 255) if 4 < x < 11 and 3 < y < 8 else (200, 200, 205, 255))
+    for x, y in ((6, 5), (7, 5), (9, 5), (9, 6)):
+        front.putpixel((x, y), (120, 255, 150, 255))
+    for y in range(10, 14):
+        front.putpixel((7, y), (40, 40, 44, 255))
+        front.putpixel((8, y), (40, 40, 44, 255))
+    side.save(tex('block/fuel_pump_side.png'))
+    front.save(tex('block/fuel_pump_front.png'))
+    write(os.path.join(A, 'models', 'block', 'fuel_pump.json'), {'parent': 'minecraft:block/cube', 'textures': {'particle': f'{NS}:block/fuel_pump_side', 'north': f'{NS}:block/fuel_pump_front', 'south': f'{NS}:block/fuel_pump_front', 'east': f'{NS}:block/fuel_pump_side', 'west': f'{NS}:block/fuel_pump_side', 'up': f'{NS}:block/fuel_pump_side', 'down': f'{NS}:block/fuel_pump_side'}})
+    write(os.path.join(A, 'blockstates', 'fuel_pump.json'), {'variants': {'': {'model': f'{NS}:block/fuel_pump'}}})
+    write(os.path.join(A, 'items', 'fuel_pump.json'), {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/fuel_pump'}})
+    write(os.path.join(D, NS, 'loot_table', 'blocks', 'fuel_pump.json'), {'type': 'minecraft:block', 'random_sequence': f'{NS}:blocks/fuel_pump', 'pools': [{'rolls': 1.0, 'bonus_rolls': 0.0, 'conditions': [{'condition': 'minecraft:survives_explosion'}], 'entries': [{'type': 'minecraft:item', 'name': I('fuel_pump')}]}]})
+    g['block_tags'].setdefault('minecraft:mineable/pickaxe', []).append(I('fuel_pump'))
+    name(f'block.{NS}.fuel_pump', 'Fuel Pump', 'Заправщик машин')
+    name(f'block.{NS}.fuel_pump.tooltip.0', 'Holds 32 buckets of fuel from a pipe or capsule and fills any vehicle standing within 5 blocks, if the fuel suits it', 'Держит 32 ведра топлива из трубы или капсулы и заправляет стоящую рядом машину, в пределах 5 блоков, если топливо ей подходит')
+    # machine names: GT has none for the press
+    for tier, t in (('lv', 'LV'), ('mv', 'MV'), ('hv', 'HV'), ('ev', 'EV'), ('iv', 'IV'), ('luv', 'LuV'), ('zpm', 'ZPM'), ('uv', 'UV')):
+        name(f'block.{NS}.cartridge_press_{tier}', f'Cartridge Press ({t})', f'Патронный станок ({t})')
 
     # --- messages --------------------------------------------------------------------------------------------------------------------
     for k, en, ru in (
@@ -313,7 +387,25 @@ def generate(g):
             ('hud.iis.gun.shots', 'Shots: %s', 'Выстрелов: %s'), ('hud.iis.gun.reloading', 'Reloading...', 'Перезарядка...'),
             ('tooltip.iis.vehicle.speed', 'Top speed %s km/h, seats %s', 'Скорость до %s км/ч, мест: %s'),
             ('tooltip.iis.vehicle.solid', 'Burns furnace fuel', 'Топливо: то, что горит в печи'),
-            ('tooltip.iis.vehicle.liquid', 'Liquid fuel: bucket or capsule of what a combustion generator burns', 'Топливо: ведро или капсула того, что горит в дизельном генераторе'),
+            ('tooltip.iis.vehicle.liquid', 'Liquid fuel: bucket or capsule of what a combustion generator burns', 'Топливо: ведро или капсула того, что горит в дизельном или газовом генераторе'),
+            ('tooltip.iis.vehicle.aviation', 'Aviation fuel: gasoline or a burning gas', 'Авиационное топливо: бензин или горючий газ'),
+            ('tooltip.iis.vehicle.jet', 'Jet fuel: high octane gasoline only', 'Топливо: только высокооктановый бензин'),
+            ('tooltip.iis.vehicle.cargo_kit', 'Cargo kit: %s slots, slower', 'Грузовой комплект: %s слотов, скорость ниже'),
+            ('message.iis.vehicle.kit_on', 'Cargo kit fitted: %s slots, slower and thirstier', 'Грузовой комплект поставлен: %s слотов, скорость ниже, расход выше'),
+            ('message.iis.vehicle.kit_already', 'A cargo kit is already fitted', 'Грузовой комплект уже стоит'),
+            ('gui.iis.vehicle.cargo_n', 'Cargo: %s', 'Багажник: %s'),
+            ('gui.iis.vehicle.slot_aviation', 'Gasoline or a burning gas in a bucket or capsule', 'Бензин или горючий газ в ведре или капсуле'),
+            ('gui.iis.vehicle.slot_jet', 'High octane gasoline in a bucket or capsule', 'Высокооктановый бензин в ведре или капсуле'),
+            ('message.iis.fuel_pump', '%s: %s / %s L', '%s: %s из %s л'),
+            ('message.iis.fuel_pump.empty', 'Empty', 'Пусто'),
+            ('tooltip.iis.magazine.rounds', 'Rounds: %s of %s (%s)', 'Патронов: %s из %s (%s)'),
+            ('tooltip.iis.magazine.help', 'Hold right click to fill from the inventory', 'Держите ПКМ: набивается из инвентаря'),
+            ('tooltip.iis.gun.magazine_item', 'In the gun %s of %s. Needs: %s. R changes the magazine', 'В оружии %s из %s. Нужен: %s. R меняет магазин'),
+            ('tooltip.iis.gun.plasma', '%s: %s of %s L, %s L a shot', '%s: %s из %s л, %s л за выстрел'),
+            ('tooltip.iis.gun.plasma_empty', 'Tank empty, %s L a shot. R pours in a capsule of plasma', 'Бак пуст, %s л за выстрел. R заливает капсулу плазмы'),
+            ('tooltip.iis.gun.plasma_power', 'Power of this plasma: %s%%', 'Сила этой плазмы: %s%%'),
+            ('hud.iis.gun.plasma', '%s: %s shots', '%s: выстрелов %s'), ('hud.iis.gun.plasma_empty', 'No plasma: R', 'Нет плазмы: R'),
+            ('message.iis.gun.no_plasma', 'No capsule of plasma', 'Нет капсулы с плазмой'), ('message.iis.gun.plasma_other', 'Another plasma is in the tank: shoot it out first', 'В баке другая плазма: сначала отстреляйте её'),
             ('tooltip.iis.vehicle.fuel', 'Tank: %s%%', 'В баке: %s%%'), ('tooltip.iis.vehicle.cargo', 'Cargo: %s slots', 'Груз: %s слотов'),
             ('tooltip.iis.vehicle.help', 'Right click: get in, or refuel with fuel in hand. Sneak + right click: window', 'ПКМ — сесть, с топливом в руке — заправить. Shift+ПКМ — окно'),
             ('message.iis.vehicle.plane', 'W and S: throttle, mouse: where to fly, Shift: get out', 'W и S — газ, мышь — куда лететь, Shift — выйти'),
@@ -326,6 +418,9 @@ def generate(g):
             ('gui.iis.vehicle.slot_solid', 'Coal, charcoal, wood: anything a furnace burns', 'Уголь, древесный уголь, дрова: всё, что горит в печи'),
             ('gui.iis.vehicle.slot_liquid', 'Bucket or capsule of fuel', 'Ведро или капсула топлива')):
         name(k, en, ru)
+    # shop
+    import shop
+    shop.generate(g, name, tex, write, shaped, art)
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     return {'recipes': len(rec), 'meshes': len(meshes)}

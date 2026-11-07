@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:circuits/basic",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:sensor_lv",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/plastic",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dashboard",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

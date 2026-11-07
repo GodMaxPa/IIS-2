@@ -1,0 +1,23 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/hydrated_coal",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_coal",
+      "count": 8
+    }
+  ],
+  "duration": 352,
+  "eut": 5,
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

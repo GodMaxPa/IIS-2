@@ -1,0 +1,37 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:chassis_armored",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:engine_ev",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:track_unit",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:tank_turret",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:drivetrain",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:dashboard",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:vehicle_tank",
+      "count": 1
+    }
+  ],
+  "duration": 1600,
+  "eut": 480
+}

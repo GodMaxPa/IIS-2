@@ -1,0 +1,21 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/gold",
+      "count": 8
+    },
+    {
+      "ingredient": "minecraft:apple",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:golden_apple",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 30
+}

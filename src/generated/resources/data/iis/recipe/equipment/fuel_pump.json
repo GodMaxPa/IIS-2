@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PGP",
+    "MTM",
+    "PRP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "G": "#c:glass_panes",
+    "M": "iis:electric_pump_lv",
+    "T": "iis:fuel_tank",
+    "R": "#c:rods/steel"
+  },
+  "result": {
+    "id": "iis:fuel_pump"
+  }
+}

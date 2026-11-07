@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/aluminium",
+      "count": 8
+    },
+    {
+      "ingredient": "#c:rods/aluminium",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:screws/aluminium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wing",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 120
+}

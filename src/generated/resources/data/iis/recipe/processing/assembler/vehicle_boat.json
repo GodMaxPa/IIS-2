@@ -1,0 +1,33 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:boat_hull",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:engine_mv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:drivetrain",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:propeller",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:dashboard",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:vehicle_boat",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 120
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/calcium_chloride",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_calcium",
+      "count": 1
+    }
+  ],
+  "duration": 108,
+  "eut": 30,
+  "fluid_outputs": [
+    {
+      "id": "iis:chlorine",
+      "amount": 2000
+    }
+  ]
+}

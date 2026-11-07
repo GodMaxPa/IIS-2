@@ -1,0 +1,44 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "minecraft:copper_nugget",
+      "count": 1,
+      "chance": 2000
+    },
+    {
+      "id": "iis:nugget_tin",
+      "count": 1,
+      "chance": 1000
+    },
+    {
+      "id": "minecraft:gold_nugget",
+      "count": 1,
+      "chance": 250
+    },
+    {
+      "id": "iis:nugget_silver",
+      "count": 1,
+      "chance": 250
+    },
+    {
+      "id": "iis:nugget_tantalum",
+      "count": 1,
+      "chance": 250
+    },
+    {
+      "id": "iis:small_dust_tungstate",
+      "count": 1,
+      "chance": 250
+    }
+  ],
+  "duration": 80,
+  "eut": 80,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:lava",
+      "amount": 100
+    }
+  ]
+}

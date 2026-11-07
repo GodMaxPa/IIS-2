@@ -1,0 +1,29 @@
+{
+  "type": "iis:cartridge_press",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/aluminium",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:rods/steel",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:tnt",
+      "count": 2
+    },
+    {
+      "ingredient": "minecraft:gunpowder",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rocket_round",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 120
+}

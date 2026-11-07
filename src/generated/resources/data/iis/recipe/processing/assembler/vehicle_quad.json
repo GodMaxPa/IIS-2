@@ -1,0 +1,37 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:chassis_light",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:engine_lv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:wheel_rubber",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:vehicle_suspension",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:fuel_tank",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:dashboard",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:vehicle_quad",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 30
+}

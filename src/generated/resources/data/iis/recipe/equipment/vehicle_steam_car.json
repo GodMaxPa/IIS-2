@@ -2,13 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "BPB",
+    "BCB",
     "WEW",
-    "WPW"
+    "WRW"
   ],
   "key": {
-    "B": "#minecraft:planks",
-    "P": "#c:plates/bronze",
+    "B": "#c:plates/bronze",
+    "C": "minecraft:chest",
+    "R": "#c:rods/bronze",
     "W": "iis:wheel_wood",
     "E": "iis:engine_steam"
   },

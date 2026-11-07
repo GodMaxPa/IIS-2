@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/propeller",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "propeller"
+    }
+  },
+  "hand_animation_on_swap": false
+}

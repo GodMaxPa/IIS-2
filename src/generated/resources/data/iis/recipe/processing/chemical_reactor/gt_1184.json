@@ -1,0 +1,21 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:nuggets/gold",
+      "count": 8
+    },
+    {
+      "ingredient": "minecraft:carrot",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:golden_carrot",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 30
+}

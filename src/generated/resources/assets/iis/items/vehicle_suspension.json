@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/vehicle_suspension",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "vehicle_suspension"
+    }
+  },
+  "hand_animation_on_swap": false
+}

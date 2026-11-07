@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "X ",
+    " X"
+  ],
+  "key": {
+    "X": "#c:dusts/gunpowder"
+  },
+  "result": {
+    "id": "iis:tiny_dust_gunpowder",
+    "count": 18
+  }
+}

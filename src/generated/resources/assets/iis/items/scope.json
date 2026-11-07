@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/scope",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "scope"
+    }
+  },
+  "hand_animation_on_swap": false
+}

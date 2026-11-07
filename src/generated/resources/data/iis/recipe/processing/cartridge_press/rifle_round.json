@@ -1,0 +1,25 @@
+{
+  "type": "iis:cartridge_press",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/brass",
+      "count": 2
+    },
+    {
+      "ingredient": "minecraft:gunpowder",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:bolts/steel",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rifle_round",
+      "count": 16
+    }
+  ],
+  "duration": 80,
+  "eut": 30
+}

@@ -27,6 +27,7 @@ public class ShotEntity extends Projectile {
     private static final EntityDataAccessor<Boolean> DATA_TANK = SynchedEntityData.defineId(ShotEntity.class, EntityDataSerializers.BOOLEAN);
 
     private int age;
+    private float scale = 1F;
     private @Nullable Entity ignored;
 
     public ShotEntity(EntityType<? extends ShotEntity> type, Level level) {
@@ -37,6 +38,10 @@ public class ShotEntity extends Projectile {
     public void setup(Weapon w, @Nullable Entity ignore) {
         entityData.set(DATA_WEAPON, w.ordinal());
         ignored = ignore;
+    }
+
+    public void setScale(float s) {
+        scale = s;
     }
 
     public void markTank() {
@@ -118,7 +123,7 @@ public class ShotEntity extends Projectile {
     private void explode() {
         if (isRemoved() || !(level() instanceof ServerLevel sl)) return;
         Entity owner = getOwner();
-        GunActions.blast(sl, position(), this, owner == null ? this : owner, weapon());
+        GunActions.blast(sl, position(), this, owner == null ? this : owner, weapon(), scale);
         discard();
     }
 
@@ -128,6 +133,7 @@ public class ShotEntity extends Projectile {
         out.putInt("Weapon", entityData.get(DATA_WEAPON));
         out.putInt("Age", age);
         out.putBoolean("Tank", tank());
+        out.putFloat("Scale", scale);
     }
 
     @Override
@@ -136,5 +142,6 @@ public class ShotEntity extends Projectile {
         entityData.set(DATA_WEAPON, in.getIntOr("Weapon", Weapon.ROCKET_LAUNCHER.ordinal()));
         age = in.getIntOr("Age", 0);
         entityData.set(DATA_TANK, in.getBooleanOr("Tank", false));
+        scale = in.getFloatOr("Scale", 1F);
     }
 }

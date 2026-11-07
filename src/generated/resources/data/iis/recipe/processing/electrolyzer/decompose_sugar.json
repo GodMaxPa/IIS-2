@@ -1,0 +1,23 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sugar",
+      "count": 23
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_carbon",
+      "count": 12
+    }
+  ],
+  "duration": 184,
+  "eut": 30,
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 11000
+    }
+  ]
+}

@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "PRR",
-    "MCK",
+    "PBB",
+    "GTS",
     "WPh"
   ],
   "key": {
     "P": "#c:plates/titanium",
-    "R": "#c:rods/titanium",
-    "C": "#c:circuits/data",
-    "M": "iis:electric_motor_ev",
-    "K": "iis:conveyor_module_hv",
+    "B": "iis:barrel_titanium",
+    "T": "iis:trigger_group",
+    "S": "iis:gun_spring",
+    "G": "#c:gears/titanium",
     "W": "#c:plates/plastic",
     "h": "#iis:tools/hammer"
   },

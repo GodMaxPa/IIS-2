@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:gears/steel",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:small_gears/steel",
+      "count": 4
+    },
+    {
+      "ingredient": "#c:rods/steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:transmission",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

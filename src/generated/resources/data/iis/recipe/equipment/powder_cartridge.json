@@ -4,7 +4,7 @@
   "ingredients": [
     "minecraft:paper",
     "minecraft:gunpowder",
-    "#iis:bolts/lead"
+    "#c:nuggets/iron"
   ],
   "result": {
     "id": "iis:powder_cartridge",

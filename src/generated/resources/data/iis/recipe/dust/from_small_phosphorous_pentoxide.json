@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/phosphorous_pentoxide",
+    "#iis:small_dusts/phosphorous_pentoxide",
+    "#iis:small_dusts/phosphorous_pentoxide",
+    "#iis:small_dusts/phosphorous_pentoxide"
+  ],
+  "result": {
+    "id": "iis:dust_phosphorous_pentoxide"
+  }
+}

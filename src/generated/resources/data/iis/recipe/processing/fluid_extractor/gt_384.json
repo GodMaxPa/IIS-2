@@ -1,0 +1,24 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/hydrated_coal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_coal",
+      "count": 1,
+      "chance": 10000
+    }
+  ],
+  "duration": 32,
+  "eut": 4,
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 100
+    }
+  ]
+}

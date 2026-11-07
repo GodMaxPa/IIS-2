@@ -1,0 +1,27 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/calcite",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_calcium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_carbon",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:oxygen",
+      "amount": 3000
+    }
+  ]
+}

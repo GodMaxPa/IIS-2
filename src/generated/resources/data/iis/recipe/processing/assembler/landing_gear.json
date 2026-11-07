@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:wheel_rubber",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:rods/stainless_steel",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:electric_piston_mv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:landing_gear",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 120
+}

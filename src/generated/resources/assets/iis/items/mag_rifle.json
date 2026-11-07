@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/mag_rifle",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "mag_rifle"
+    }
+  },
+  "hand_animation_on_swap": false
+}

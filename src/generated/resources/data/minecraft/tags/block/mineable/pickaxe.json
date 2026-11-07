@@ -369,6 +369,7 @@
     "iis:plasma_arc_furnace_ev",
     "iis:disassembler_ev",
     "iis:replicator_ev",
+    "iis:cartridge_press_ev",
     "iis:thermal_centrifuge_ev",
     "iis:macerator_iv",
     "iis:electric_furnace_iv",
@@ -417,6 +418,7 @@
     "iis:plasma_arc_furnace_iv",
     "iis:disassembler_iv",
     "iis:replicator_iv",
+    "iis:cartridge_press_iv",
     "iis:thermal_centrifuge_iv",
     "iis:macerator_luv",
     "iis:electric_furnace_luv",
@@ -465,6 +467,7 @@
     "iis:plasma_arc_furnace_luv",
     "iis:disassembler_luv",
     "iis:replicator_luv",
+    "iis:cartridge_press_luv",
     "iis:thermal_centrifuge_luv",
     "iis:macerator_zpm",
     "iis:electric_furnace_zpm",
@@ -513,6 +516,7 @@
     "iis:plasma_arc_furnace_zpm",
     "iis:disassembler_zpm",
     "iis:replicator_zpm",
+    "iis:cartridge_press_zpm",
     "iis:thermal_centrifuge_zpm",
     "iis:macerator_uv",
     "iis:electric_furnace_uv",
@@ -561,6 +565,7 @@
     "iis:plasma_arc_furnace_uv",
     "iis:disassembler_uv",
     "iis:replicator_uv",
+    "iis:cartridge_press_uv",
     "iis:thermal_centrifuge_uv",
     "iis:scanner_ev",
     "iis:scanner_iv",
@@ -797,6 +802,7 @@
     "iis:block_stainless_steel",
     "iis:block_steel",
     "iis:block_steel_magnetic",
+    "iis:block_tantalum",
     "iis:block_thorium",
     "iis:block_tin",
     "iis:block_tin_alloy",
@@ -858,6 +864,7 @@
     "iis:batbox",
     "iis:cesu",
     "iis:mfe",
-    "iis:mfsu"
+    "iis:mfsu",
+    "iis:fuel_pump"
   ]
 }

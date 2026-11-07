@@ -1,0 +1,43 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sodium",
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_sodium_hydroxide",
+      "count": 3
+    },
+    {
+      "id": "iis:capsule",
+      "count": 1,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:hydrogen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 600,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 3000
+    }
+  ]
+}

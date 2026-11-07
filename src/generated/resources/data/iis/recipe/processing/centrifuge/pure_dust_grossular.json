@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_grossular",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_calcium",
+      "count": 1
     }
   ],
-  "duration": 22,
+  "duration": 176,
   "eut": 5
 }

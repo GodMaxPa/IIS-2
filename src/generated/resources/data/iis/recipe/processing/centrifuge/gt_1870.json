@@ -1,0 +1,18 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "minecraft:cake",
+      "count": 8
+    }
+  ],
+  "outputs": [],
+  "duration": 4608,
+  "eut": 5,
+  "fluid_outputs": [
+    {
+      "id": "iis:methane",
+      "amount": 576
+    }
+  ]
+}

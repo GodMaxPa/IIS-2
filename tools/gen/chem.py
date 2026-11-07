@@ -47,6 +47,17 @@ DYE_COLORS = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pin
 COLORED = {'wool': 'wool', 'carpet': 'carpet', 'stained_hardened_clay': 'terracotta', 'stained_glass': 'stained_glass',
            'stained_glass_pane': 'stained_glass_pane'}
 VANILLA_ITEMS.update({'hardened_clay': 'minecraft:terracotta', 'glass_pane': 'minecraft:glass_pane'})
+# D130: what GT5-II squeezes and ferments; names of 1.7.10 where they changed
+VANILLA_ITEMS.update({k: f'minecraft:{v}' for k, v in {
+    'wheat_seeds': 'wheat_seeds', 'melon_seeds': 'melon_seeds', 'pumpkin_seeds': 'pumpkin_seeds', 'dirt': 'dirt', 'grass': 'grass_block', 'mycelium': 'mycelium', 'glowstone': 'glowstone',
+    'brown_mushroom': 'brown_mushroom', 'red_mushroom': 'red_mushroom', 'brown_mushroom_block': 'brown_mushroom_block', 'red_mushroom_block': 'red_mushroom_block', 'melon_block': 'melon',
+    'beef': 'beef', 'bread': 'bread', 'cake': 'cake', 'chicken': 'chicken', 'porkchop': 'porkchop', 'cooked_beef': 'cooked_beef', 'cooked_chicken': 'cooked_chicken', 'cooked_porkchop': 'cooked_porkchop',
+    'cookie': 'cookie', 'mushroom_stew': 'mushroom_stew', 'nether_wart': 'nether_wart', 'golden_carrot': 'golden_carrot', 'speckled_melon': 'glistering_melon_slice', 'cooked_fished': 'cooked_cod'}.items()})
+# item, meta -> modern item
+VANILLA_META = {('fish', 0): 'minecraft:cod', ('fish', 1): 'minecraft:salmon', ('fish', 2): 'minecraft:tropical_fish', ('fish', 3): 'minecraft:pufferfish', ('fish', 32767): 'minecraft:cod',
+                ('coal', 1): 'minecraft:charcoal', ('sand', 1): 'minecraft:red_sand', ('golden_apple', 0): 'minecraft:golden_apple', ('golden_apple', 1): 'minecraft:enchanted_golden_apple'}
+# materials whose fluid has another id here
+FLUID_ALIAS = {'AntiKnock': 'ethyltertbutylether', 'GasolineRegular': 'gasoline', 'GasolinePremium': 'highoctanegasoline'}
 
 
 class Skip(Exception):
@@ -80,6 +91,8 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
             return 'minecraft:water'
         if material == 'Lava':
             return 'minecraft:lava'
+        if material in FLUID_ALIAS:
+            return f'{NS}:{FLUID_ALIAS[material]}'
         if material == 'Creosote':
             return f'{NS}:creosote'   # Railcraft creosote is our own IISFluids fluid (D58), not a GT duplicate
         low = material.lower()
@@ -247,6 +260,7 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
     stats['chemical_bath_ore'] = n_bath
 
     # --- 3. hand-written GT recipes ---------------------------------------------------------------------------------------
+    skipped_list = []
     calls = json.load(open(os.path.join(ROOT, 'reference', 'original', 'gt5_machine_recipes.json'), encoding='utf-8'))['calls']
 
     def expr(e):
@@ -254,6 +268,25 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
         s = re.sub(r'\s+', '', e)
         s = re.sub(r',newObject\[0\]|,o\)|,newObject\[0\]\)', lambda m: ')' if m.group(0).endswith(')') else '', s)
         s = s.replace(',newObject[0])', ')')
+        m = re.fullmatch(r'\(int\)\((\d+)L?\*3628800/3628800L?\)', s)
+        if m:
+            return ('int', int(m.group(1)))
+        m = re.fullmatch(r'GT_OreDictUnificator\.getDust\(Materials\.(\w+),(\d+)L?\*3628800\)', s)
+        if m:
+            if not ref('dust', m.group(1)):
+                raise Skip(e)
+            return ('item', ('dust', m.group(1)), int(m.group(2)))
+        if re.fullmatch(r'ItemList\.Cell_Air\.get\((\d+)L?\)', s):
+            fid = fluid_id('Air', 'gas')
+            if not fid:
+                raise Skip(e)
+            return ('cells', fid, int(re.search(r'\((\d+)', s).group(1)))
+        if re.fullmatch(r'ItemList\.Cell_Water\.get\((\d+)L?\)', s):
+            return ('cells', 'minecraft:water', int(re.search(r'\((\d+)', s).group(1)))
+        # IIS 1: GregTech.cfg MoreComplicatedChemicalRecipes=true
+        m = re.fullmatch(r'\(GT_Mod\.gregtechproxy\.mMoreComplicatedChemicalRecipes\?([\w.]+):[\w.]+\)(.*)', s)
+        if m:
+            s = m.group(1) + m.group(2)
         if s in ('GT_Values.NI', 'GT_Values.NF', 'null'):
             return ('none',)
         if s in ('true', 'false'):
@@ -321,10 +354,15 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
             if not fid:
                 raise Skip(e)
             return ('fluid', fid, int(m.group(3)))
-        m = re.fullmatch(r'newItemStack\((?:Items|Blocks)\.(\w+),(\d+)(?:,0|,32767)?\)', s)
-        if m and m.group(1) in VANILLA_ITEMS:
-            return ('item', VANILLA_ITEMS[m.group(1)], int(m.group(2)))
-        m = re.fullmatch(r'ItemList\.Shape_Mold_(Ingot|Plate|Nugget|Gear|Ball|Block)\.get\(0L?\)', s)
+        m = re.fullmatch(r'newItemStack\((?:Items|Blocks)\.(\w+)(?:,(\d+))?(?:,(\d+))?\)', s)
+        if m:
+            cnt_ = int(m.group(2) or 1)
+            meta_ = int(m.group(3) or 0)
+            if (m.group(1), meta_) in VANILLA_META:
+                return ('item', VANILLA_META[(m.group(1), meta_)], cnt_)
+            if m.group(1) in VANILLA_ITEMS and meta_ in (0, 32767):
+                return ('item', VANILLA_ITEMS[m.group(1)], cnt_)
+        m = re.fullmatch(r'ItemList\.Shape_Mold_(Ingot|Plate|Nugget|Gear|Ball|Block|Casing|Cylinder|Anvil|Bottle|Arrow)\.get\(0L?\)', s)
         if m:
             return ('mold', f'{NS}:mold_{m.group(1).lower()}')
         raise Skip(e)
@@ -398,11 +436,15 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
             o['count'] = o['count'] // t
         outs[:] = [o for o in outs if o['count'] > 0]
         return (dur + t - 1) // t
+    # D130: the mixer loop of GT over dust (GT_MachineRecipeLoader:1767-1796). Bronze, invar and the like are written by hand in lv.py, these had no maker
+    DUST_LOOP = {1767, 1777, 1779, 1781, 1783, 1788, 1789, 1790, 1795, 1796}
     for c in calls:
         if c['line'] == 1827:   # D111: mHardRadonRecipe (GT_Mod:313, off by default): only :1829, 100 L of radon, stays
             continue
         meth = c['method'].replace('ForBasicMachineOnly', '')
         args = c['args']
+        if c['line'] in DUST_LOOP:
+            args = [a.replace('tPrefix.mMaterialAmount', '3628800').replace('tPrefix.dust', 'OrePrefixes.dust').replace('tPrefix', 'OrePrefixes.dust') for a in args]
         key = (meth, len(args))
         if meth == 'addChemicalRecipe' and len(args) == 7:
             # (in, in, fin, fout, out, out2, dur) or (in, in, fin, fout, out, dur, eut)
@@ -434,9 +476,12 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
                 raw = re.sub(r'\s+', '', args[ch_i])
                 if raw not in ('null', 'GT_Values.NI'):
                     mm = re.fullmatch(r'newint\[\]\{([\d,]*)\}', raw)
-                    if not mm:
+                    if mm:
+                        chances = [int(v) for v in mm.group(1).split(',') if v]
+                    elif raw.isdigit():
+                        chances = [int(raw)]
+                    else:
                         raise Skip(raw)
-                    chances = [int(v) for v in mm.group(1).split(',') if v]
             outs = []
             for k, i in enumerate(outs_i):
                 x = parsed[i]
@@ -462,6 +507,7 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
                 continue
         except Skip as ex:
             skipped += 1
+            skipped_list.append({'line': c['line'], 'method': c['method'], 'why': str(ex.args[0]) if ex.args else '?'})
             reasons[re.sub(r'\s+', '', str(ex.args[0]) if ex.args else '?')[:90]] = reasons.get(re.sub(r'\s+', '', str(ex.args[0]) if ex.args else '?')[:90], 0) + 1
             continue
         rtype = machine[c['method']]
@@ -469,5 +515,8 @@ def chem_recipes(g, mrec, ing, out, ref, tag_of, prop, mat_id, names, WATER):
         taken[rtype] = taken.get(rtype, 0) + 1
     stats['gt_recipes'] = taken
     stats['gt_skipped'] = skipped
+    # the list of what is still out, for a person to read: reference/gt_skipped.json
+    with open(os.path.join(ROOT, 'reference', 'gt_skipped.json'), 'w', encoding='utf-8', newline='\n') as fh:
+        json.dump(skipped_list, fh, ensure_ascii=False, indent=0)
     stats['gt_skip_reasons'] = sorted(reasons.items(), key=lambda kv: -kv[1])[:40]
     return stats

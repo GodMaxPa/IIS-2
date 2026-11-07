@@ -3,14 +3,14 @@
   "category": "misc",
   "pattern": [
     "PPP",
-    "SCM",
+    "OTS",
     "PPP"
   ],
   "key": {
     "P": "#c:plates/titanium",
-    "S": "iis:sensor_hv",
-    "C": "#c:circuits/data",
-    "M": "iis:electric_piston_ev"
+    "O": "iis:scope",
+    "T": "iis:trigger_group",
+    "S": "iis:gun_spring"
   },
   "result": {
     "id": "iis:rocket_launcher"

@@ -342,7 +342,8 @@ def generate(g):
     base = first(os.path.join(BI, 'MACHINE_CASING_STABLE_TITANIUM.png'))
     machine('combustion_engine', {'north': over(base, 'OVERLAY_FRONT_DIESEL_ENGINE'), 'south': base, 'east': base, 'west': base, 'up': base, 'down': base},
             {'north': over(base, 'OVERLAY_FRONT_DIESEL_ENGINE_ACTIVE'), 'south': base, 'east': base, 'west': base, 'up': base, 'down': base})
-    name(f'block.{NS}.combustion_engine', 'Combustion Engine', ru('gt.blockmachines.multimachine.dieselengine.name', 'Дизельный двигатель'))
+    # D130: владелец ищет его как «большой дизельный генератор», в GT он «Large Combustion Engine»
+    name(f'block.{NS}.combustion_engine', 'Large Diesel Generator', 'Большой дизельный генератор')
     tooltip('combustion_engine', [('3x3x4 on stable titanium casings; 8 engine intakes around the controller', 'Размер 3×3×4 на стабильных титановых корпусах; вокруг контроллера 8 заборных корпусов'),
                                   ('Air in front of the intakes; 2 titanium gear boxes along the axis, dynamo at the back', 'Перед заборниками — воздух; по оси 2 титановые коробки передач, сзади динамо-люк'),
                                   ('Hatches in the side centers; muffler at the top of the rear layer', 'Люки — в серединах сторон; глушитель — сверху на третьем слое'),

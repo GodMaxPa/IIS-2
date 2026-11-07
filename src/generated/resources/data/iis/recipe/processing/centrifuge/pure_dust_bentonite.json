@@ -10,8 +10,12 @@
     {
       "id": "iis:dust_bentonite",
       "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_calcium",
+      "count": 1
     }
   ],
-  "duration": 16,
+  "duration": 128,
   "eut": 5
 }

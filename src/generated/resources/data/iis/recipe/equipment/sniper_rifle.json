@@ -2,15 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SRR",
-    "MCP",
+    "OBB",
+    "GTS",
     "WPh"
   ],
   "key": {
-    "S": "iis:sensor_ev",
-    "R": "#c:rods/titanium",
-    "C": "#c:circuits/data",
-    "M": "iis:electric_piston_hv",
+    "O": "iis:scope",
+    "B": "iis:barrel_titanium",
+    "T": "iis:trigger_group",
+    "S": "iis:gun_spring",
+    "G": "#iis:small_gears/titanium",
     "P": "#c:plates/titanium",
     "W": "#c:plates/plastic",
     "h": "#iis:tools/hammer"

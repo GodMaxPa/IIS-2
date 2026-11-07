@@ -1,5 +1,6 @@
 package ru.iis.equipment.vehicle;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -9,6 +10,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.ContainerHelper;
@@ -58,6 +60,7 @@ public class Driveable extends VehicleEntity {
     private static final EntityDataAccessor<Long> DATA_FUEL = SynchedEntityData.defineId(Driveable.class, EntityDataSerializers.LONG);
     private static final EntityDataAccessor<Float> DATA_HEALTH = SynchedEntityData.defineId(Driveable.class, EntityDataSerializers.FLOAT);
     private static final EntityDataAccessor<Boolean> DATA_ENGINE = SynchedEntityData.defineId(Driveable.class, EntityDataSerializers.BOOLEAN);
+    private static final EntityDataAccessor<Boolean> DATA_KIT = SynchedEntityData.defineId(Driveable.class, EntityDataSerializers.BOOLEAN);
 
     /** Задаёт клиент: что нажал местный игрок. На сервере не вызывается. */
     public static Function<Player, VehiclePhysics.Input> clientInput = p -> VehiclePhysics.Input.NONE;
@@ -72,7 +75,7 @@ public class Driveable extends VehicleEntity {
     private VehiclePhysics.@Nullable Input testInput;
 
     // только клиент, для модели
-    public float distance, distanceO, propAngle, propAngleO, roll, rollO, steerAngle, steerAngleO;
+    public float distance, distanceO, propAngle, propAngleO, roll, rollO, steerAngle, steerAngleO, terrainPitch, terrainPitchO;
     private double lastX, lastZ;
     // сервер: столкновения
     private final Vec3[] trail = new Vec3[9];
@@ -82,7 +85,8 @@ public class Driveable extends VehicleEntity {
     public Driveable(EntityType<? extends Driveable> type, Level level, VehicleKind kind) {
         super(type, level);
         this.kind = kind;
-        this.cargo = new SimpleContainer(1 + kind.cargoSlots());
+        // место сразу и под грузовой комплект: иначе при установке пришлось бы переносить содержимое
+        this.cargo = new SimpleContainer(1 + kind.cargoSlots(true));
         this.blocksBuilding = true;
         entityData.set(DATA_HEALTH, (float) kind.health);
     }
@@ -93,6 +97,7 @@ public class Driveable extends VehicleEntity {
         data.define(DATA_FUEL, 0L);
         data.define(DATA_HEALTH, 40F);
         data.define(DATA_ENGINE, false);
+        data.define(DATA_KIT, false);
     }
 
     public long fuel() {
@@ -109,6 +114,18 @@ public class Driveable extends VehicleEntity {
 
     public void setVehicleHealth(float v) {
         entityData.set(DATA_HEALTH, Math.max(0, Math.min(kind.health, v)));
+    }
+
+    public boolean hasKit() {
+        return entityData.get(DATA_KIT);
+    }
+
+    public void setKit(boolean on) {
+        entityData.set(DATA_KIT, on);
+    }
+
+    public int cargoSlots() {
+        return kind.cargoSlots(hasKit());
     }
 
     public boolean engineOn() {
@@ -178,6 +195,8 @@ public class Driveable extends VehicleEntity {
             double depth = getFluidHeight(FluidTags.WATER);
             state.inWater = depth > 0.05;
             state.depth = depth;
+            state.speedFactor = hasKit() ? VehicleKind.KIT_SPEED : 1;
+            state.accelFactor = hasKit() ? VehicleKind.KIT_ACCEL : 1;
             VehiclePhysics.Input in;
             if (getControllingPassenger() instanceof Player p && level().isClientSide()) in = clientInput.apply(p);
             else if (testInput != null) in = testInput;
@@ -187,7 +206,10 @@ public class Driveable extends VehicleEntity {
             setYRot(state.yaw);
             if (kind.flies()) setXRot(state.pitch);
             setDeltaMovement(m[0], m[1], m[2]);
+            double x0 = getX(), y0 = getY(), z0 = getZ();
             move(MoverType.SELF, getDeltaMovement());
+            state.actual = Math.hypot(getX() - x0, getZ() - z0);
+            state.climbed = getY() - y0 > 0.3;
         } else {
             setDeltaMovement(Vec3.ZERO);
         }
@@ -209,7 +231,8 @@ public class Driveable extends VehicleEntity {
             } else {
                 load = testInput != null && (testInput.forward() || testInput.up());
             }
-            setFuel(fuel() - (load ? kind.burn : kind.idle));
+            int use = load ? kind.burn : kind.idle;
+            setFuel(fuel() - (hasKit() ? Math.round(use * VehicleKind.KIT_BURN) : use));
         }
         refuelFromSlot();
         // столкновения и наезд на мобов считаем по смещению: оно одно и у водителя, и без него
@@ -228,10 +251,20 @@ public class Driveable extends VehicleEntity {
             }
         }
         if (speed > 0.2 && !kind.flies()) hitMobs(level, speed);
+        if (kind.crushes && speed > 0.03) crushLeaves(level);
         if (gunCooldown > 0) gunCooldown--;
         // катер на суше и всё в лаве горит; дождь не мешает
         if (isInLava()) {
             hurtVehicle(level, 2F);
+        }
+    }
+
+    /** Листва на пути ломается: иначе широкий корпус застревал бы в первом же дереве. Стволы держат. */
+    private void crushLeaves(ServerLevel level) {
+        Vec3 look = new Vec3(-Math.sin(Math.toRadians(getYRot())), 0, Math.cos(Math.toRadians(getYRot())));
+        var box = getBoundingBox().move(look.scale(0.5)).inflate(0.1, 0, 0.1);
+        for (BlockPos p : BlockPos.betweenClosed(BlockPos.containing(box.minX, box.minY, box.minZ), BlockPos.containing(box.maxX, box.maxY, box.maxZ))) {
+            if (level.getBlockState(p).is(BlockTags.LEAVES)) level.destroyBlock(p, false, this);
         }
     }
 
@@ -275,6 +308,7 @@ public class Driveable extends VehicleEntity {
         ItemStack stack = new ItemStack(getDropItem());
         stack.set(EquipmentContent.VEHICLE_FUEL.get(), keepFuel ? fuel() : 0L);
         stack.set(EquipmentContent.VEHICLE_DAMAGE.get(), keepFuel ? kind.health - vehicleHealth() : kind.health * 0.5F);
+        if (hasKit()) stack.set(EquipmentContent.VEHICLE_KIT.get(), true);
         spawnAtLocation(level, stack);
         discard();
     }
@@ -300,6 +334,28 @@ public class Driveable extends VehicleEntity {
         float wheel = Mth.clamp(deltaYaw * 8F, -28F, 28F);
         steerAngle += (wheel - steerAngle) * 0.3F;
         if (engineOn()) engineSmoke();
+        terrainPitchO = terrainPitch;
+        if (!kind.flies() && kind.move != VehicleKind.Move.WATER) terrainPitch += (terrainTilt() - terrainPitch) * 0.25F;
+    }
+
+    /** Наклон корпуса по земле под передними и задними колёсами: только для вида, машина сама ступенька за ступенькой. */
+    private float terrainTilt() {
+        double half = Math.max(0.8, getBbWidth());
+        double yaw = Math.toRadians(getYRot());
+        double fx = -Math.sin(yaw) * half, fz = Math.cos(yaw) * half;
+        double front = groundAt(getX() + fx, getZ() + fz), back = groundAt(getX() - fx, getZ() - fz);
+        if (Double.isNaN(front) || Double.isNaN(back)) return 0;
+        return (float) Mth.clamp(-Math.toDegrees(Math.atan2(front - back, half * 2)), -30, 30);
+    }
+
+    private double groundAt(double x, double z) {
+        BlockPos.MutableBlockPos p = new BlockPos.MutableBlockPos(Mth.floor(x), Mth.floor(getY()) + 3, Mth.floor(z));
+        for (int i = 0; i < 7; i++) {
+            var shape = level().getBlockState(p).getCollisionShape(level(), p);
+            if (!shape.isEmpty()) return p.getY() + shape.max(net.minecraft.core.Direction.Axis.Y);
+            p.move(0, -1, 0);
+        }
+        return Double.NaN;
     }
 
     private void engineSmoke() {
@@ -382,6 +438,17 @@ public class Driveable extends VehicleEntity {
         ItemStack held = player.getItemInHand(hand);
         boolean refillable = canFuel(held);
         if (level().isClientSide()) return InteractionResult.SUCCESS;
+        if (held.is(EquipmentContent.CARGO_KIT.get())) {
+            if (hasKit()) {
+                player.sendOverlayMessage(Component.translatable("message.iis.vehicle.kit_already"));
+            } else {
+                setKit(true);
+                if (!player.getAbilities().instabuild) held.shrink(1);
+                playSound(SoundEvents.ANVIL_USE, 0.6F, 1.2F);
+                player.sendOverlayMessage(Component.translatable("message.iis.vehicle.kit_on", cargoSlots()));
+            }
+            return InteractionResult.CONSUME;
+        }
         if (held.is(GearContent.DUCT_TAPE.get()) && vehicleHealth() < kind.health) {
             setVehicleHealth(vehicleHealth() + kind.health * 0.25F);
             if (!player.getAbilities().instabuild) held.shrink(1);
@@ -408,7 +475,7 @@ public class Driveable extends VehicleEntity {
     public void openMenu(Player player) {
         player.openMenu(new SimpleMenuProvider((id, inv, p) -> new VehicleMenu(id, inv, cargo, this), getDisplayName()), buf -> {
             buf.writeVarInt(getId());
-            buf.writeVarInt(kind.cargoRows);
+            buf.writeVarInt(cargoSlots());
         });
     }
 
@@ -445,12 +512,36 @@ public class Driveable extends VehicleEntity {
             f = c.fluidValue();
             amount = c.amount();
         }
-        return liquidValue(f) * amount;
+        return liquidValue(kind, f) * amount;
     }
 
     /** EU на литр: жидкое топливо дизельного и газового генератора GT. */
     public static long liquidValue(Fluid f) {
         return Math.max(Fuels.power("diesel", f), Fuels.power("gas", f));
+    }
+
+    private static final java.util.Set<String> GASOLINE = java.util.Set.of("gasoline", "highoctanegasoline");
+    private static final java.util.Set<String> BURNING_GAS = java.util.Set.of("gas_gas", "gas_natural_gas", "liquid_lpg", "methane", "ethane", "propane", "butane");
+
+    /** EU на литр для этой машины: винтовому самолёту бензин или горючий газ, реактивному только высокооктановый (D130). */
+    public static long liquidValue(VehicleKind kind, Fluid f) {
+        if (f == Fluids.EMPTY) return 0;
+        String id = net.minecraft.core.registries.BuiltInRegistries.FLUID.getKey(f).getPath();
+        return switch (kind.fuel) {
+            case SOLID -> 0;
+            case LIQUID -> liquidValue(f);
+            case AVIATION -> GASOLINE.contains(id) || BURNING_GAS.contains(id) ? liquidValue(f) : 0;
+            case JET -> id.equals("highoctanegasoline") ? liquidValue(f) : 0;
+        };
+    }
+
+    /** Принять литры из заправщика; вернёт, сколько взяла. */
+    public int refill(Fluid f, int liters) {
+        long value = liquidValue(kind, f);
+        if (value <= 0) return 0;
+        int take = (int) Math.min(liters, (kind.tank - fuel()) / value);
+        if (take > 0) setFuel(fuel() + take * value);
+        return take;
     }
 
     private static ItemStack emptied(ItemStack s) {
@@ -553,6 +644,7 @@ public class Driveable extends VehicleEntity {
         out.putLong("Fuel", fuel());
         out.putFloat("Health", vehicleHealth());
         out.putDouble("Throttle", state.throttle);
+        out.putBoolean("Kit", hasKit());
         ContainerHelper.saveAllItems(out, cargo.getItems());
     }
 
@@ -561,6 +653,7 @@ public class Driveable extends VehicleEntity {
         setFuel(in.getLongOr("Fuel", 0));
         setVehicleHealth(in.getFloatOr("Health", kind.health));
         state.throttle = in.getDoubleOr("Throttle", 0);
+        setKit(in.getBooleanOr("Kit", false));
         ContainerHelper.loadAllItems(in, cargo.getItems());
     }
 }

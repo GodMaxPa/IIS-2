@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/mag_smg",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "mag_smg"
+    }
+  },
+  "hand_animation_on_swap": false
+}

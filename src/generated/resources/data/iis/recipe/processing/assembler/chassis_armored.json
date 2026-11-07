@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/tungsten_steel",
+      "count": 12
+    },
+    {
+      "ingredient": "#c:rods/titanium",
+      "count": 8
+    },
+    {
+      "ingredient": "#iis:screws/titanium",
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:chassis_armored",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 480
+}

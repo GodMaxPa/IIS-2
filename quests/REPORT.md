@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1652; hidden until their items are ported: 289; chapters: 36, one of them ours (D129, 44 quests).
+Quests in IIS 1: 1943; written: 1653; hidden until their items are ported: 288; chapters: 36, one of them ours (D129, 49 quests).
 
 ## Most needed unported items (task count)
 
@@ -28,7 +28,6 @@ Quests in IIS 1: 1943; written: 1652; hidden until their items are ported: 289; 
 - 1 × `EnderIO:blockReservoir:0` 
 - 1 × `IC2:itemFertilizer:0` 
 - 1 × `gregtech:gt.blockgem1:8` Блок из жемчуга Края
-- 1 × `gregtech:gt.metaitem.01:2685` Гидроксид натрия
 - 1 × `gregtech:gt.blockreinforced:5` Пороховая бочка
 - 1 × `Railcraft:machine.beta:0` 
 - 1 × `Railcraft:machine.beta:1` 
@@ -37,7 +36,6 @@ Quests in IIS 1: 1943; written: 1652; hidden until their items are ported: 289; 
 - 1 × `Railcraft:machine.alpha:14` 
 - 1 × `gregtech:gt.blockmachines:108` Примитивная бронзовая доменная печь
 - 1 × `gregtech:gt.blockgem3:4` Блок древесного угля
-- 1 × `gregtech:gt.metaitem.01:2719` Сульфид натрия
 - 1 × `gregtech:gt.metaitem.01:17631` Пластина полифениленсульфида
 - 1 × `gregtech:gt.metaitem.01:29631` Фольга из полифениленсульфида
 - 1 × `gregtech:gt.metaitem.01:2676` Смесь металлов
@@ -84,6 +82,8 @@ Quests in IIS 1: 1943; written: 1652; hidden until their items are ported: 289; 
 - 1 × `GraviSuite:graviChestPlate:1` 
 - 1 × `GraviSuite:ultimateLappack:27` 
 - 1 × `GraviSuite:advNanoChestPlate:1` 
+- 1 × `GraviSuite:advLappack:1` 
+- 1 × `GraviSuite:itemSimpleItem:0` 
 
 ## Unported fluids
 

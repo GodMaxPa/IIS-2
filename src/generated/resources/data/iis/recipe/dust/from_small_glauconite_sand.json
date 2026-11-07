@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/glauconite_sand",
+    "#iis:small_dusts/glauconite_sand",
+    "#iis:small_dusts/glauconite_sand",
+    "#iis:small_dusts/glauconite_sand"
+  ],
+  "result": {
+    "id": "iis:dust_glauconite_sand"
+  }
+}

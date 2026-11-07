@@ -1,0 +1,29 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/steel",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_gears/steel",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:screws/steel",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:gun_spring",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:trigger_group",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 16
+}

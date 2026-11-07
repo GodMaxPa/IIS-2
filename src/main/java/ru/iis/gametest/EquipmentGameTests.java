@@ -79,6 +79,134 @@ final class EquipmentGameTests {
         h.succeed();
     }
 
+    /** Россыпью: ружьё заряжается патронами из инвентаря; без патронов молчит. */
+    static void looseReload(GameTestHelper h) {
+        floor(h);
+        Player p = shooter(h, 1.5, 4.5, 0);
+        ItemStack gun = new ItemStack(EquipmentContent.GUNS.get(Weapon.MUSKET).get());
+        p.setItemInHand(InteractionHand.MAIN_HAND, gun);
+        var level = h.getLevel();
+        h.assertFalse(GunActions.startReload(level, p, gun, Weapon.MUSKET), "заряжается из ничего");
+        p.getInventory().add(new ItemStack(EquipmentContent.AMMO.get(Weapon.Ammo.POWDER).get(), 3));
+        h.assertTrue(GunActions.startReload(level, p, gun, Weapon.MUSKET), "не заряжается");
+        h.runAtTickTime(Weapon.MUSKET.reload + 2, () -> {
+            GunActions.tickReload(level, p, gun, Weapon.MUSKET);
+            h.assertTrue(GunActions.loaded(gun) == 1 && GunActions.countAmmo(p, Weapon.Ammo.POWDER) == 2, "заряд " + GunActions.loaded(gun));
+            h.succeed();
+        });
+    }
+
+    /** Магазин: набивается патронами, R меняет пустой на полный, снятый возвращается в инвентарь. */
+    static void magazineSwap(GameTestHelper h) {
+        floor(h);
+        Player p = shooter(h, 1.5, 4.5, 0);
+        ItemStack gun = new ItemStack(EquipmentContent.GUNS.get(Weapon.PISTOL).get());
+        p.setItemInHand(InteractionHand.MAIN_HAND, gun);
+        var level = h.getLevel();
+        h.assertFalse(GunActions.startReload(level, p, gun, Weapon.PISTOL), "пистолет заряжается без магазина");
+        p.getInventory().add(new ItemStack(EquipmentContent.AMMO.get(Weapon.Ammo.PISTOL).get(), 20));
+        h.assertFalse(GunActions.startReload(level, p, gun, Weapon.PISTOL), "патроны россыпью вместо магазина");
+        ItemStack mag = new ItemStack(EquipmentContent.MAGAZINES.get(Weapon.Magazine.PISTOL).get());
+        mag.set(EquipmentContent.GUN_AMMO.get(), 12);
+        p.getInventory().add(mag);
+        h.assertTrue(GunActions.startReload(level, p, gun, Weapon.PISTOL), "магазин не взят");
+        h.runAtTickTime(Weapon.PISTOL.reload + 2, () -> {
+            GunActions.tickReload(level, p, gun, Weapon.PISTOL);
+            h.assertTrue(GunActions.loaded(gun) == 12, "в оружии " + GunActions.loaded(gun));
+            h.assertTrue(GunActions.bestMagazine(p, Weapon.Magazine.PISTOL) < 0, "магазин остался в инвентаре");
+            gun.set(EquipmentContent.GUN_AMMO.get(), 3);
+            ItemStack second = new ItemStack(EquipmentContent.MAGAZINES.get(Weapon.Magazine.PISTOL).get());
+            second.set(EquipmentContent.GUN_AMMO.get(), 12);
+            p.getInventory().add(second);
+            h.assertTrue(GunActions.startReload(level, p, gun, Weapon.PISTOL), "замена не началась");
+        });
+        h.runAtTickTime(2 * Weapon.PISTOL.reload + 6, () -> {
+            GunActions.tickReload(level, p, gun, Weapon.PISTOL);
+            h.assertTrue(GunActions.loaded(gun) == 12, "после замены " + GunActions.loaded(gun));
+            h.assertTrue(GunActions.roundsInMagazines(p, Weapon.Magazine.PISTOL) == 3, "снятый магазин " + GunActions.roundsInMagazines(p, Weapon.Magazine.PISTOL));
+            h.succeed();
+        });
+    }
+
+    /** Плазма: без неё молчит, капсула заливается, выстрел тратит литры, другой вид не смешивается. */
+    static void plasmaGunUsesPlasma(GameTestHelper h) {
+        floor(h);
+        Player p = shooter(h, 1.5, 4.5, 0);
+        ItemStack gun = new ItemStack(EquipmentContent.GUNS.get(Weapon.PLASMA_RIFLE).get());
+        p.setItemInHand(InteractionHand.MAIN_HAND, gun);
+        var level = h.getLevel();
+        h.assertFalse(GunActions.tryFire(level, p, gun, Weapon.PLASMA_RIFLE, true), "выстрел без плазмы");
+        var helium = ru.iis.fluid.GtFluids.all().get("plasma_helium").source().get();
+        var nickel = ru.iis.fluid.GtFluids.all().get("plasma_nickel").source().get();
+        ItemStack empty = new ItemStack(ru.iis.fluid.FluidContainers.CAPSULE.get());
+        p.getInventory().add(ru.iis.fluid.CapsuleItem.withContent(empty, ru.iis.fluid.FluidContent.of(helium, 1000)));
+        h.assertTrue(GunActions.fillPlasma(p, gun, Weapon.PLASMA_RIFLE), "капсула не залита");
+        h.assertTrue(ru.iis.equipment.PlasmaGunItem.tank(gun).amount() == 1000, "в баке " + ru.iis.equipment.PlasmaGunItem.tank(gun).amount());
+        h.assertTrue(GunActions.tryFire(level, p, gun, Weapon.PLASMA_RIFLE, true), "не выстрелил");
+        h.assertTrue(ru.iis.equipment.PlasmaGunItem.tank(gun).amount() == 1000 - Weapon.PLASMA_RIFLE.plasmaLiters(), "литры не потрачены");
+        h.assertTrue(Math.abs(GunActions.plasmaScale(ru.iis.equipment.PlasmaGunItem.tank(gun)) - 0.7F) < 1e-3, "сила гелия");
+        p.getInventory().add(ru.iis.fluid.CapsuleItem.withContent(empty, ru.iis.fluid.FluidContent.of(nickel, 1000)));
+        h.assertFalse(GunActions.fillPlasma(p, gun, Weapon.PLASMA_RIFLE), "смешал виды плазмы");
+        h.succeed();
+    }
+
+    /** Заправщик: подходящая машина заправляется, неподходящая нет. */
+    static void fuelPumpFills(GameTestHelper h) {
+        floor(h);
+        h.setBlock(new BlockPos(4, 2, 4), ru.iis.equipment.EquipmentContent.FUEL_PUMP.get());
+        var be = (ru.iis.equipment.vehicle.FuelPumpBlockEntity) h.getLevel().getBlockEntity(h.absolutePos(new BlockPos(4, 2, 4)));
+        var diesel = ru.iis.fluid.GtFluids.all().get("fuel").source().get();
+        be.tank.setAmount(diesel, 10000);
+        Driveable car = vehicle(h, VehicleKind.CAR, 1.5, 2, 1.5, 0);
+        Driveable jet = vehicle(h, VehicleKind.JET, 7.5, 2, 7.5, 0);
+        h.runAtTickTime(40, () -> {
+            h.assertTrue(car.fuel() > 0, "автомобиль не заправлен");
+            h.assertTrue(jet.fuel() == 0, "реактивный заправлен дизелем");
+            h.assertTrue(be.tank.amount() < 10000, "бак не тратится");
+            car.discard();
+            jet.discard();
+            h.succeed();
+        });
+    }
+
+    /** Грузовой комплект: багажник вдвое и в предмете сохраняется. */
+    static void cargoKit(GameTestHelper h) {
+        floor(h);
+        Driveable truck = vehicle(h, VehicleKind.TRUCK, 4.5, 2, 4.5, 0);
+        h.assertTrue(truck.cargoSlots() == 162, "грузовик " + truck.cargoSlots());
+        truck.setKit(true);
+        h.assertTrue(truck.cargoSlots() == 324, "с комплектом " + truck.cargoSlots());
+        h.assertTrue(truck.cargo.getContainerSize() == 325, "контейнер " + truck.cargo.getContainerSize());
+        truck.discard();
+        h.succeed();
+    }
+
+    /** Листва на пути вездехода ломается, у автомобиля нет. */
+    static void crushesLeaves(GameTestHelper h) {
+        floor(h);
+        for (int x = 1; x <= 7; x++) for (int y = 2; y <= 3; y++) h.setBlock(new BlockPos(x, y, 6), Blocks.OAK_LEAVES);
+        var dir = h.absoluteVec(new Vec3(4.5, 2, 8)).subtract(h.absoluteVec(new Vec3(4.5, 2, 2.5))).normalize();
+        float yaw = (float) (Math.atan2(-dir.x, dir.z) * 180 / Math.PI);
+        Driveable atv = vehicle(h, VehicleKind.ATV, 4.5, 2, 2.5, yaw);
+        atv.setFuel(1_000_000);
+        atv.setTestInput(new VehiclePhysics.Input(true, false, false, false, false, false, yaw, 0, true, true));
+        h.succeedWhen(() -> {
+            h.assertBlockPresent(Blocks.AIR, new BlockPos(4, 2, 6));
+        });
+    }
+
+    /** Магазин наград: продаёт только виденное, жетоны со сдачей. */
+    static void shopSells(GameTestHelper h) {
+        h.succeedIf(() -> {
+            var prices = ru.iis.shop.ShopContent.prices();
+            h.assertTrue(prices.size() > 100, "мало товаров: " + prices.size());
+            h.assertTrue(prices.containsKey("iis:ingot_steel"), "нет стали");
+            h.assertTrue(prices.get("iis:ingot_titanium").tier() == 2, "титан за серебряные: " + prices.get("iis:ingot_titanium").tier());
+            h.assertTrue(prices.get("minecraft:oak_log").tier() == 0, "дерево за медные");
+            h.assertFalse(prices.containsKey("iis:macerator_lv"), "машина в магазине");
+        });
+    }
+
     /** Магазин: выстрел тратит, пустой начинает перезарядку, она берёт патроны из инвентаря. */
     static void magazineAndReload(GameTestHelper h) {
         floor(h);
@@ -86,7 +214,9 @@ final class EquipmentGameTests {
         ItemStack gun = new ItemStack(EquipmentContent.GUNS.get(Weapon.PISTOL).get());
         gun.set(EquipmentContent.GUN_AMMO.get(), 1);
         p.setItemInHand(InteractionHand.MAIN_HAND, gun);
-        p.getInventory().add(new ItemStack(EquipmentContent.AMMO.get(Weapon.Ammo.PISTOL).get(), 20));
+        ItemStack loaded = new ItemStack(EquipmentContent.MAGAZINES.get(Weapon.Magazine.PISTOL).get());
+        loaded.set(EquipmentContent.GUN_AMMO.get(), 12);
+        p.getInventory().add(loaded);
         var level = h.getLevel();
         h.assertTrue(GunActions.tryFire(level, p, gun, Weapon.PISTOL, true), "не выстрелил");
         h.assertTrue(GunActions.loaded(gun) == 0, "патрон не потрачен");
@@ -98,7 +228,6 @@ final class EquipmentGameTests {
         h.runAtTickTime(Weapon.PISTOL.interval + Weapon.PISTOL.reload + 3, () -> {
             GunActions.tickReload(level, p, gun, Weapon.PISTOL);
             h.assertTrue(GunActions.loaded(gun) == Weapon.PISTOL.magazine, "в магазине " + GunActions.loaded(gun));
-            h.assertTrue(GunActions.countAmmo(p, Weapon.Ammo.PISTOL) == 20 - Weapon.PISTOL.magazine, "запас " + GunActions.countAmmo(p, Weapon.Ammo.PISTOL));
             h.succeed();
         });
     }
@@ -193,10 +322,24 @@ final class EquipmentGameTests {
         var fuel = ru.iis.fluid.GtFluids.all().get("gasoline");
         h.assertTrue(fuel != null, "нет бензина");
         h.assertTrue(Driveable.liquidValue(fuel.source().get()) == 384, "бензин " + Driveable.liquidValue(fuel.source().get()));
+        var octane = ru.iis.fluid.GtFluids.all().get("highoctanegasoline").source().get();
+        var diesel = ru.iis.fluid.GtFluids.all().get("fuel").source().get();
+        h.assertTrue(Driveable.liquidValue(VehicleKind.JET, fuel.source().get()) == 0, "реактивный на простом бензине");
+        h.assertTrue(Driveable.liquidValue(VehicleKind.JET, octane) == 768, "реактивный на высокооктановом");
+        h.assertTrue(Driveable.liquidValue(VehicleKind.PLANE, fuel.source().get()) == 384, "самолёт на бензине");
+        h.assertTrue(Driveable.liquidValue(VehicleKind.PLANE, diesel) == 0, "самолёт на дизеле");
+        h.assertTrue(Driveable.liquidValue(VehicleKind.CAR, diesel) > 0, "автомобиль на дизеле");
         ItemStack capsule = ru.iis.fluid.CapsuleItem.withContent(new ItemStack(ru.iis.fluid.FluidContainers.CAPSULE.get()), ru.iis.fluid.FluidContent.of(fuel.source().get(), 1000));
         h.assertTrue(car.fuelValue(capsule) == 384_000, "капсула " + car.fuelValue(capsule));
         h.assertFalse(car.canFuel(new ItemStack(ru.iis.fluid.FluidContainers.CAPSULE.get())), "пустая капсула");
         h.assertTrue(IISFluids.STEAM.get() != null, "пар");
+        // большой дизельный генератор и топливо, которое раньше не горело нигде (D130)
+        var gt = ru.iis.fluid.GtFluids.all();
+        h.assertTrue(ru.iis.lv.Fuels.power("diesel", octane) == 768, "генератор на высокооктановом");
+        h.assertTrue(ru.iis.lv.Fuels.power("diesel", gt.get("biodiesel").source().get()) == 192, "генератор на биодизеле");
+        h.assertTrue(ru.iis.lv.Fuels.power("diesel", gt.get("liquid_light_fuel").source().get()) == 256, "генератор на лёгком топливе");
+        h.assertTrue(ru.iis.lv.Fuels.power("gas", gt.get("gas_gas").source().get()) == 128, "турбина на газе");
+        h.assertTrue(ru.iis.lv.Fuels.power("gas", gt.get("liquid_lpg").source().get()) == 256, "турбина на LPG");
         h.succeed();
     }
 
@@ -307,11 +450,13 @@ final class EquipmentGameTests {
         java.util.List<String> bad = new java.util.ArrayList<>();
         java.util.List<String> ids = new java.util.ArrayList<>();
         for (Weapon w : Weapon.values()) ids.add("equipment/" + w.id);
-        for (VehicleKind k : VehicleKind.values()) ids.add("equipment/vehicle_" + k.id);
+        for (VehicleKind k : VehicleKind.values()) ids.add(k == VehicleKind.STEAM_CAR ? "equipment/vehicle_steam_car" : "processing/assembler/vehicle_" + k.id);
         for (String a : new String[]{"musketeer", "ballistic", "assault"}) for (String p : new String[]{"helmet", "chestplate", "leggings", "boots"}) ids.add("equipment/" + a + "_" + p);
         for (String a : new String[]{"power_armor", "plasma_armor"}) for (String p : new String[]{"helmet", "chestplate", "leggings", "boots"}) ids.add("processing/assembler/" + a + "_" + p);
-        for (String p : new String[]{"wheel_wood", "wheel_rubber", "engine_steam", "engine_lv", "engine_mv", "engine_hv", "engine_ev", "jet_turbine"}) ids.add("equipment/" + p);
-        for (Weapon.Ammo a : Weapon.Ammo.values()) ids.add(a == Weapon.Ammo.POWDER ? "equipment/powder_cartridge" : "processing/assembler/" + a.id);
+        for (String p : new String[]{"wheel_wood", "wheel_rubber", "engine_steam", "engine_lv", "engine_mv", "engine_hv", "engine_ev", "jet_turbine", "fuel_pump", "reward_shop", "gun_spring"}) ids.add("equipment/" + p);
+        for (String p : new String[]{"chassis_light", "chassis_heavy", "chassis_armored", "drivetrain", "body_panels", "dashboard", "wing", "propeller", "rotor_blades", "landing_gear", "track_unit", "boat_hull", "tank_turret", "cargo_kit", "trigger_group", "scope"}) ids.add("processing/assembler/" + p);
+        for (Weapon.Ammo a : Weapon.Ammo.values()) ids.add(a == Weapon.Ammo.POWDER ? "equipment/powder_cartridge" : "processing/cartridge_press/" + a.id);
+        for (Weapon.Magazine m : Weapon.Magazine.values()) ids.add("equipment/" + m.id);
         for (String id : ids) {
             var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.RECIPE, net.minecraft.resources.Identifier.fromNamespaceAndPath(ru.iis.IIS.MODID, id));
             if (recipes.byKey(key).isEmpty()) bad.add(id);

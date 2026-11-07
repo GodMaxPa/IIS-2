@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPh",
+    "SGP",
+    "PPP"
+  ],
+  "key": {
+    "P": "#c:plates/titanium",
+    "S": "iis:gun_spring",
+    "G": "#c:gears/steel",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:mag_belt"
+  }
+}

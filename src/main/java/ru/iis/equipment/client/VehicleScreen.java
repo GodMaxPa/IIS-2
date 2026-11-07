@@ -1,8 +1,8 @@
 package ru.iis.equipment.client;
 
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.Slot;
@@ -10,13 +10,35 @@ import ru.iis.equipment.vehicle.Driveable;
 import ru.iis.equipment.vehicle.VehicleKind;
 import ru.iis.equipment.vehicle.VehicleMenu;
 
-/** Окно машины. Панель и слоты рисует код: высота зависит от груза, текстура на каждый размер ничего бы не дала. */
+/** Окно машины. Панель и слоты рисует код: высота зависит от багажника, текстура на каждый размер ничего бы не дала. */
 public class VehicleScreen extends AbstractContainerScreen<VehicleMenu> {
     private static final int FACE = 0xFFC6C6C6, LIGHT = 0xFFFFFFFF, DARK = 0xFF555555, SLOT = 0xFF8B8B8B, EDGE = 0xFF000000, TEXT = 0xFF303030;
 
     public VehicleScreen(VehicleMenu menu, Inventory inventory, Component title) {
-        super(menu, inventory, title, VehicleMenu.WIDTH, VehicleMenu.invY(menu.rows) + 82);
-        inventoryLabelY = VehicleMenu.invY(menu.rows) - 10;
+        super(menu, inventory, title, VehicleMenu.WIDTH, VehicleMenu.invY(menu.rowsOnPage) + 82);
+        inventoryLabelY = VehicleMenu.invY(menu.rowsOnPage) - 10;
+    }
+
+    @Override
+    protected void init() {
+        super.init();
+        if (menu.pages() > 1) {
+            addRenderableWidget(Button.builder(Component.literal("<"), b -> flip(0)).bounds(leftPos + 118, topPos + VehicleMenu.TOP - 13, 14, 12).build());
+            addRenderableWidget(Button.builder(Component.literal(">"), b -> flip(1)).bounds(leftPos + 154, topPos + VehicleMenu.TOP - 13, 14, 12).build());
+        }
+    }
+
+    private void flip(int id) {
+        if (minecraft != null && minecraft.gameMode != null) minecraft.gameMode.handleInventoryButtonClick(menu.containerId, id);
+    }
+
+    @Override
+    public boolean mouseScrolled(double x, double y, double dx, double dy) {
+        if (menu.pages() > 1 && dy != 0) {
+            flip(dy > 0 ? 0 : 1);
+            return true;
+        }
+        return super.mouseScrolled(x, y, dx, dy);
     }
 
     @Override
@@ -28,6 +50,7 @@ public class VehicleScreen extends AbstractContainerScreen<VehicleMenu> {
         g.fill(x + 3, y + 3, x + w - 1, y + h - 1, DARK);
         g.fill(x + 3, y + 3, x + w - 3, y + h - 3, FACE);
         for (Slot s : menu.slots) {
+            if (!s.isActive()) continue;
             g.fill(x + s.x - 1, y + s.y - 1, x + s.x + 17, y + s.y + 17, DARK);
             g.fill(x + s.x, y + s.y, x + s.x + 17, y + s.y + 17, LIGHT);
             g.fill(x + s.x, y + s.y, x + s.x + 16, y + s.y + 16, SLOT);
@@ -46,7 +69,11 @@ public class VehicleScreen extends AbstractContainerScreen<VehicleMenu> {
     protected void extractLabels(GuiGraphicsExtractor g, int mouseX, int mouseY) {
         g.text(font, title, titleLabelX, titleLabelY, TEXT, false);
         g.text(font, playerInventoryTitle, inventoryLabelX, inventoryLabelY, TEXT, false);
-        if (menu.rows > 0) g.text(font, Component.translatable("gui.iis.vehicle.cargo"), 8, VehicleMenu.TOP - 10, TEXT, false);
+        if (menu.cargoSlots > 0) g.text(font, Component.translatable("gui.iis.vehicle.cargo_n", menu.cargoSlots), 8, VehicleMenu.TOP - 10, TEXT, false);
+        if (menu.pages() > 1) {
+            String pageText = (menu.page() + 1) + "/" + menu.pages();
+            g.text(font, pageText, 143 - font.width(pageText) / 2, VehicleMenu.TOP - 10, TEXT, false);
+        }
     }
 
     @Override
@@ -63,7 +90,7 @@ public class VehicleScreen extends AbstractContainerScreen<VehicleMenu> {
             }
         }
         if (mx >= 25 && mx < 43 && my >= 25 && my < 43 && menu.slots.get(0).getItem().isEmpty() && d != null) {
-            g.setTooltipForNextFrame(font, Component.translatable(d.kind.fuel == VehicleKind.Fuel.SOLID ? "gui.iis.vehicle.slot_solid" : "gui.iis.vehicle.slot_liquid"), mouseX, mouseY);
+            g.setTooltipForNextFrame(font, Component.translatable("gui.iis.vehicle.slot_" + d.kind.fuel.name().toLowerCase(java.util.Locale.ROOT)), mouseX, mouseY);
         }
     }
 }

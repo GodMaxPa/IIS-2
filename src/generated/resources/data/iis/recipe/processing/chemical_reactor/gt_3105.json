@@ -1,0 +1,52 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sodium_hydroxide",
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:allylchloride",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 3,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:saltwater",
+          "amount": 1000
+        }
+      }
+    },
+    {
+      "id": "iis:capsule",
+      "count": 6
+    }
+  ],
+  "duration": 480,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:hypochlorousacid",
+      "amount": 3000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_epichlorhydrin",
+      "amount": 12000
+    }
+  ]
+}

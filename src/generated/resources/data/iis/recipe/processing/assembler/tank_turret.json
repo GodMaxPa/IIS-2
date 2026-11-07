@@ -1,0 +1,29 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/tungsten_steel",
+      "count": 8
+    },
+    {
+      "ingredient": "iis:barrel_titanium",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:electric_motor_hv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:scope",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tank_turret",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 480
+}

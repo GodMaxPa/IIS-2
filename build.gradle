@@ -194,6 +194,9 @@ dependencies {
     localRuntime "maven.modrinth:storagedrawers:${storagedrawers_version}"
     localRuntime "maven.modrinth:applied-energistics-2-wireless-terminals:${ae2wtlib_version}"
     localRuntime "maven.modrinth:mouse-tweaks:${mousetweaks_version}"
+    localRuntime "maven.modrinth:bigger-ae2:${bigger_ae2_version}"
+    localRuntime "maven.modrinth:inventory-essentials:${inventory_essentials_version}"
+    localRuntime "maven.modrinth:balm:${balm_version}"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

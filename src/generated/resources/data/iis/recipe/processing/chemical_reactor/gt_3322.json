@@ -1,0 +1,30 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/salt",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_sodium_bisulfate",
+      "count": 7
+    }
+  ],
+  "duration": 60,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:sulfuricacid",
+      "amount": 7000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:hydrochloricacid_gt5u",
+      "amount": 2000
+    }
+  ],
+  "circuit": 1
+}

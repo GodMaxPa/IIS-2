@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/steel",
+      "count": 6
+    },
+    {
+      "ingredient": "#iis:rings/steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:fuel_tank",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 16
+}

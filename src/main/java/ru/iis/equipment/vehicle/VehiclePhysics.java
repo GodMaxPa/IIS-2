@@ -24,6 +24,14 @@ public final class VehiclePhysics {
         public boolean onGround, inWater, horizontalCollision;
         /** На сколько корпус погружён, блоков. */
         public double depth;
+        /** Сколько реально прошла машина за прошлый тик; меньше нуля — неизвестно. */
+        public double actual = -1;
+        /** За прошлый тик заехала на уступ. */
+        public boolean climbed;
+        /** Тиков в воздухе: через кочку сцепление пропадает не сразу. */
+        public int airTicks;
+        /** Грузовой комплект и прочее: множители скорости и разгона. */
+        public double speedFactor = 1, accelFactor = 1;
     }
 
     /** Шаг: обновляет состояние и возвращает смещение x, y, z за тик. */
@@ -46,8 +54,8 @@ public final class VehiclePhysics {
     private static double throttleForce(VehicleKind k, State s, Input in) {
         if (!in.fuel) return 0;
         double a = 0;
-        if (in.forward) a += s.speed < 0 ? BRAKE : k.accel;
-        if (in.back) a -= s.speed > 0 ? BRAKE : k.accel * 0.6;
+        if (in.forward) a += s.speed < 0 ? BRAKE : k.accel * s.accelFactor;
+        if (in.back) a -= s.speed > 0 ? BRAKE : k.accel * s.accelFactor * 0.6;
         return a;
     }
 
@@ -60,20 +68,30 @@ public final class VehiclePhysics {
         s.yaw += (float) (dir * k.turn * grip * sign);
     }
 
+    /** Упёрлась: скорость не больше той, что вышла на деле. Скольжение вдоль стены теряет только часть, лобовой удар всю. */
+    private static void limitToActual(State s, double accel) {
+        if (s.actual < 0 || !s.horizontalCollision) return;
+        double most = s.actual + accel * 4;
+        if (Math.abs(s.speed) > most) s.speed = Math.copySign(most, s.speed);
+    }
+
     private static double[] ground(VehicleKind k, State s, Input in) {
-        if (s.onGround) {
+        s.airTicks = s.onGround ? 0 : s.airTicks + 1;
+        boolean grip = s.onGround || s.airTicks < 6;
+        if (grip) {
             s.speed += throttleForce(k, s, in);
             if (in.up) s.speed = approach(s.speed, 0, BRAKE * 1.5);
             s.speed = s.speed * ROLL_DRAG;
             steer(k, s, in, k.move == VehicleKind.Move.TRACKED);
-            s.vy = -0.08;
         } else {
             s.speed *= AIR_DRAG;
-            s.vy = Math.max(TERMINAL, s.vy - GRAVITY);
         }
+        s.vy = s.onGround ? -0.08 : Math.max(TERMINAL, s.vy - GRAVITY);
         if (s.inWater && s.depth > 0.6) s.speed *= 0.8;
-        if (s.horizontalCollision) s.speed *= 0.4;
-        s.speed = clamp(s.speed, -k.maxSpeed * 0.35, k.maxSpeed);
+        if (s.climbed) s.speed *= k.climb;
+        limitToActual(s, k.accel);
+        double top = k.maxSpeed * s.speedFactor;
+        s.speed = clamp(s.speed, -top * 0.35, top);
         if (Math.abs(s.speed) < 0.0005) s.speed = 0;
         return motion(s, 1);
     }
@@ -90,17 +108,19 @@ public final class VehiclePhysics {
             s.speed *= s.onGround ? 0.7 : AIR_DRAG;
             s.vy = s.onGround ? -0.04 : Math.max(TERMINAL, s.vy - GRAVITY);
         }
-        if (s.horizontalCollision) s.speed *= 0.4;
-        s.speed = clamp(s.speed, -k.maxSpeed * 0.3, k.maxSpeed);
+        limitToActual(s, k.accel);
+        double top = k.maxSpeed * s.speedFactor;
+        s.speed = clamp(s.speed, -top * 0.3, top);
         return motion(s, 1);
     }
 
     private static double[] plane(VehicleKind k, State s, Input in) {
         if (in.fuel && in.forward) s.throttle = Math.min(1, s.throttle + 0.02);
         if (in.back || !in.fuel) s.throttle = Math.max(0, s.throttle - 0.02);
-        double target = s.throttle * k.maxSpeed;
-        if (s.speed < target) s.speed = Math.min(target, s.speed + k.accel);
-        else s.speed = Math.max(target, s.speed - k.accel * 0.5);
+        double target = s.throttle * k.maxSpeed * s.speedFactor;
+        double accel = k.accel * s.accelFactor;
+        if (s.speed < target) s.speed = Math.min(target, s.speed + accel);
+        else s.speed = Math.max(target, s.speed - accel * 0.5);
         // тормоз колёс
         if (s.onGround && in.back) s.speed = approach(s.speed, 0, BRAKE);
         double lift = k.stall <= 0 ? 1 : Math.min(1, s.speed / k.stall);
@@ -124,7 +144,7 @@ public final class VehiclePhysics {
         double sink = (1 - lift) * 0.5;
         s.vy = approach(s.vy, climb - sink, 0.08);
         s.vy = Math.max(TERMINAL, s.vy);
-        if (s.horizontalCollision) s.speed *= 0.4;
+        limitToActual(s, k.accel);
         return motion(s, Math.cos(pitch));
     }
 
@@ -152,8 +172,9 @@ public final class VehiclePhysics {
             sd = (in.right ? 1 : 0) - (in.left ? 1 : 0);
             s.yaw += clampF(wrap(in.lookYaw - s.yaw), -k.turn, k.turn);
         }
-        s.speed = approach(s.speed, fw * k.maxSpeed, k.accel);
-        s.strafe = approach(s.strafe, -sd * k.maxSpeed * 0.5, k.accel);
+        double accel = k.accel * s.accelFactor;
+        s.speed = approach(s.speed, fw * k.maxSpeed * s.speedFactor, accel);
+        s.strafe = approach(s.strafe, -sd * k.maxSpeed * s.speedFactor * 0.5, accel);
         s.speed *= 0.995;
         if (s.onGround) {
             s.speed *= 0.8;

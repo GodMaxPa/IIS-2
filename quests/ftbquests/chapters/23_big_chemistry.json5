@@ -135,6 +135,40 @@
       ]
     },
     {
+      "id": "1A00000000000186",
+      "x": 5.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000001DD",
+        "1A000000000002D3"
+      ],
+      "icon": {
+        "id": "iis:dust_sodium_hydroxide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_sodium_hydroxide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000018600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000018600"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000020B",
       "x": 0.5,
       "y": 2.0,
@@ -309,6 +343,39 @@
             "count": 2
           },
           "id": "1C00000000021200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000213",
+      "x": 12.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A000000000001DD"
+      ],
+      "icon": {
+        "id": "iis:dust_sodium_sulfide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_sodium_sulfide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000021300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000021300"
         }
       ]
     },

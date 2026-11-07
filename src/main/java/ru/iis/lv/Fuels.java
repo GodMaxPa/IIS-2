@@ -23,6 +23,10 @@ public final class Fuels {
     private Fuels() {}
 
     private static Map<String, Map<String, Integer>> table;
+    /** id жидкости -> имя в таблице топлив GT. */
+    private static final Map<String, String> ALIASES = Map.ofEntries(Map.entry("liquid_light_fuel", "lightfuel"), Map.entry("liquid_heavy_fuel", "heavyfuel"), Map.entry("liquid_sufluriclight_fuel", "sulfuriclightfuel"),
+            Map.entry("liquid_sulfuricheavy_fuel", "sulfuricheavyfuel"), Map.entry("gas_gas", "gas"), Map.entry("gas_natural_gas", "natruralgas"), Map.entry("gas_sulfuricgas", "sulfuricgas"),
+            Map.entry("liquid_light_oil", "oillight"), Map.entry("liquid_medium_oil", "oilmedium"), Map.entry("liquid_heavy_oil", "oilheavy"), Map.entry("bioethanol", "ethanol"));
 
     private static synchronized Map<String, Map<String, Integer>> table() {
         if (table == null) {
@@ -55,6 +59,11 @@ public final class Fuels {
         if (fluid == Fluids.EMPTY) return 0;
         Identifier id = BuiltInRegistries.FLUID.getKey(fluid);
         if (!IIS.MODID.equals(id.getNamespace())) return 0;
-        return table().getOrDefault(kind, Map.of()).getOrDefault(id.getPath(), 0);
+        // таблица по именам материалов GT, а часть жидкостей зовётся иначе: без этого нафта, лёгкое топливо, газ и LPG не горели нигде (D130)
+        String path = id.getPath();
+        Map<String, Integer> map = table().getOrDefault(kind, Map.of());
+        Integer v = map.get(path);
+        if (v == null) v = map.get(ALIASES.getOrDefault(path, path.startsWith("liquid_") ? path.substring(7) : path));
+        return v == null ? 0 : v;
     }
 }

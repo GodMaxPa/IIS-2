@@ -1,0 +1,31 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:sand",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/coal",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/saltpeter",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:soul_sand",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oil",
+      "amount": 160
+    }
+  ]
+}

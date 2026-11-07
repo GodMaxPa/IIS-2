@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "hR",
+    " R"
+  ],
+  "key": {
+    "R": "#c:rods/steel",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:gun_spring",
+    "count": 2
+  }
+}

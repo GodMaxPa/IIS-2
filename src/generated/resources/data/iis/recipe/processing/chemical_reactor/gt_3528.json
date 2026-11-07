@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/magnesia",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_magnesite",
+      "count": 5
+    }
+  ],
+  "duration": 80,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:carbondioxide",
+      "amount": 3000
+    }
+  ]
+}

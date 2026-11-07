@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/fuel_tank",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "fuel_tank"
+    }
+  },
+  "hand_animation_on_swap": false
+}

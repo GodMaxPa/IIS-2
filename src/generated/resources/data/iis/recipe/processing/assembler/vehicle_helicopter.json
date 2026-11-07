@@ -1,0 +1,37 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:chassis_heavy",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:engine_ev",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:rotor_blades",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:drivetrain",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:body_panels",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:dashboard",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:vehicle_helicopter",
+      "count": 1
+    }
+  ],
+  "duration": 1200,
+  "eut": 480
+}

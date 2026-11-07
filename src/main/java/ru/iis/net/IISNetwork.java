@@ -70,6 +70,17 @@ public final class IISNetwork {
         }
     }
 
+    /** Покупка в магазине наград (D130). */
+    public record ShopBuy(String id, int times) implements CustomPacketPayload {
+        public static final Type<ShopBuy> TYPE = new Type<>(Identifier.fromNamespaceAndPath(IIS.MODID, "shop_buy"));
+        public static final StreamCodec<ByteBuf, ShopBuy> CODEC = StreamCodec.composite(ByteBufCodecs.STRING_UTF8, ShopBuy::id, ByteBufCodecs.VAR_INT, ShopBuy::times, ShopBuy::new);
+
+        @Override
+        public Type<? extends CustomPacketPayload> type() {
+            return TYPE;
+        }
+    }
+
     private static void gunKey(Player player, int action) {
         if (!(player instanceof net.minecraft.server.level.ServerPlayer sp)) return;
         if (action == 0) ru.iis.equipment.GunActions.reloadKey(sp);
@@ -81,6 +92,9 @@ public final class IISNetwork {
                 .playToServer(WrenchKeys.TYPE, WrenchKeys.CODEC, (msg, ctx) -> setCtrl(ctx.player(), msg.ctrl()))
                 .playToServer(NightVisionKey.TYPE, NightVisionKey.CODEC, (msg, ctx) -> ru.iis.gear.GearEvents.toggleNightVision(ctx.player()))
                 .playToServer(GunKey.TYPE, GunKey.CODEC, (msg, ctx) -> gunKey(ctx.player(), msg.action()))
+                .playToServer(ShopBuy.TYPE, ShopBuy.CODEC, (msg, ctx) -> {
+                    if (ctx.player() instanceof net.minecraft.server.level.ServerPlayer sp && sp.containerMenu instanceof ru.iis.shop.ShopContent.ShopMenu) ru.iis.shop.ShopContent.buy(sp, msg.id(), msg.times());
+                })
                 .playToClient(ShotFx.TYPE, ShotFx.CODEC, (msg, ctx) -> ru.iis.equipment.client.ShotFxClient.accept(msg)));
     }
 

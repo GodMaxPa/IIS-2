@@ -1,0 +1,71 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:liquid_naphtha",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 16
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:liquid_toluene",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:methanol",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:acetone",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 20,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:gasoline",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 200,
+  "eut": 120
+}

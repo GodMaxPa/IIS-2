@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/landing_gear",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "landing_gear"
+    }
+  },
+  "hand_animation_on_swap": false
+}

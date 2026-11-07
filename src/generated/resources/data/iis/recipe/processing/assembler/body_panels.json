@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/aluminium",
+      "count": 6
+    },
+    {
+      "ingredient": "#c:glass_panes",
+      "count": 4
+    },
+    {
+      "ingredient": "#iis:screws/aluminium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:body_panels",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

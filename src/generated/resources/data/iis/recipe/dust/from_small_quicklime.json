@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:small_dusts/quicklime",
+    "#iis:small_dusts/quicklime",
+    "#iis:small_dusts/quicklime",
+    "#iis:small_dusts/quicklime"
+  ],
+  "result": {
+    "id": "iis:dust_quicklime"
+  }
+}

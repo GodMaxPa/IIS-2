@@ -24,8 +24,8 @@ public enum Weapon {
     LASER_RIFLE("laser_rifle", "iv", Kind.LASER,                  16, 1, 0.1, 3, 0, 0, 96, null, 3_000, 2_000_000, 5, true, 1.6F, 0.9F, 0.3F, 1, 0),
     LASER_CANNON("laser_cannon", "luv", Kind.LASER,              120, 1, 0.0, 20, 0, 0, 128, null, 60_000, 16_000_000, 6, false, 2.0F, 0.7F, 2.0F, 8, 0),
 
-    PLASMA_RIFLE("plasma_rifle", "zpm", Kind.PLASMA,              30, 1, 0.4, 4, 0, 0, 96, null, 40_000, 64_000_000, 7, true, 1.6F, 0.9F, 0.8F, 0, 2.0F),
-    PLASMA_CANNON("plasma_cannon", "uv", Kind.PLASMA,            300, 1, 0.1, 30, 0, 0, 128, null, 1_200_000, 512_000_000, 8, false, 2.0F, 0.6F, 4.0F, 0, 6.0F);
+    PLASMA_RIFLE("plasma_rifle", "zpm", Kind.PLASMA,              30, 1, 0.4, 4, 0, 0, 96, null, 0, 0, 7, true, 1.6F, 0.9F, 0.8F, 0, 2.0F),
+    PLASMA_CANNON("plasma_cannon", "uv", Kind.PLASMA,            300, 1, 0.1, 30, 0, 0, 128, null, 0, 0, 8, false, 2.0F, 0.6F, 4.0F, 0, 6.0F);
 
     public enum Kind { BULLET, GRENADE, ROCKET, LASER, PLASMA }
 
@@ -37,6 +37,21 @@ public enum Weapon {
 
         Ammo(String id) {
             this.id = id;
+        }
+    }
+
+    /** Многоразовый магазин (D130): один вид на несколько стволов только у одинакового патрона и размера. */
+    public enum Magazine {
+        PISTOL("mag_pistol", 12, Ammo.PISTOL), SMG("mag_smg", 30, Ammo.PISTOL), RIFLE("mag_rifle", 30, Ammo.RIFLE), SNIPER("mag_sniper", 5, Ammo.RIFLE), BELT("mag_belt", 100, Ammo.RIFLE);
+
+        public final String id;
+        public final int capacity;
+        public final Ammo ammo;
+
+        Magazine(String id, int capacity, Ammo ammo) {
+            this.id = id;
+            this.capacity = capacity;
+            this.ammo = ammo;
         }
     }
 
@@ -77,6 +92,43 @@ public enum Weapon {
 
     public boolean electric() {
         return euPerShot > 0;
+    }
+
+    /** Стреляет плазмой из своего бака (D130). */
+    public boolean plasma() {
+        return kind == Kind.PLASMA;
+    }
+
+    /** Литров плазмы на выстрел. */
+    public int plasmaLiters() {
+        return this == PLASMA_CANNON ? 100 : 10;
+    }
+
+    /** Литров в баке оружия. */
+    public int plasmaCapacity() {
+        return this == PLASMA_CANNON ? 4000 : 2000;
+    }
+
+    /** Магазин этого ствола; null — заряжается россыпью, по патрону. */
+    public Magazine magazineType() {
+        return switch (this) {
+            case PISTOL -> Magazine.PISTOL;
+            case SMG -> Magazine.SMG;
+            case ASSAULT_RIFLE -> Magazine.RIFLE;
+            case SNIPER_RIFLE -> Magazine.SNIPER;
+            case MACHINE_GUN -> Magazine.BELT;
+            default -> null;
+        };
+    }
+
+    /**
+     * Сила выстрела по виду плазмы: энергия в литре из таблицы GT, по логарифму. Гелий (4096 EU/л) 0.7, никель (59392) 1.5;
+     * тяжёлые плазмы сильнее, но не больше 2.5, иначе нейтроний (102400000) убивал бы всё.
+     */
+    public static double plasmaStrength(long euPerLiter) {
+        if (euPerLiter <= 0) return 0;
+        double t = Math.log((double) euPerLiter / 4096) / Math.log(59392.0 / 4096);
+        return Math.max(0.5, Math.min(2.5, 0.7 + 0.8 * t));
     }
 
     public boolean projectile() {

@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/cargo_kit",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "cargo_kit"
+    }
+  },
+  "hand_animation_on_swap": false
+}

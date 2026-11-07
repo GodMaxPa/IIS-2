@@ -1,0 +1,46 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_sodium_hydroxide",
+      "count": 3
+    },
+    {
+      "id": "iis:capsule",
+      "count": 1,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:chlorine",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 720,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:saltwater",
+      "amount": 5000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:hydrogen",
+      "amount": 1000
+    }
+  ],
+  "circuit": 11
+}

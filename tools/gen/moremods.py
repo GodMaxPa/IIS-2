@@ -17,9 +17,15 @@ OFF = {
                   'upgrades/iron_to_gold_chest_upgrade', 'upgrades/wood_to_copper_chest_upgrade', 'upgrades/wood_to_iron_chest_upgrade'],
     'chunkloaders': ['basic_chunk_loader'],
     'constructionwand': ['iron_wand', 'diamond_wand', 'infinity_wand'],
+    # D130: Bigger AE2 stands for ExtraCells of IIS 1, its own recipes are a few diamonds. Accelerators and the singularity cell were not in IIS 1
+    'bigger_ae2': ['4_core_crafting_accelerator', '16_core_crafting_accelerator', '64_core_crafting_accelerator', '256_core_crafting_accelerator', '1024_core_crafting_accelerator',
+                   'advanced_fluid_cell_housing', 'advanced_item_cell_housing', 'digital_singularity_cell_component', 'digital_singularity_fluid_storage_cell', 'digital_singularity_item_storage_cell',
+                   'quantum_cell_component', 'quantum_fluid_storage_cell', 'quantum_item_storage_cell', 'cell_upgrade/quantum_fluid_storage_cell', 'cell_upgrade/quantum_item_storage_cell'],
 }
 # nothing makes these any more: IronChests.zs removes them and adds no recipe
-HIDDEN = ['ironchest:copper_to_iron_chest_upgrade']
+HIDDEN = ['ironchest:copper_to_iron_chest_upgrade'] + [f'bigger_ae2:{i}' for i in (
+    '4_core_crafting_accelerator', '16_core_crafting_accelerator', '64_core_crafting_accelerator', '256_core_crafting_accelerator', '1024_core_crafting_accelerator', 'advanced_fluid_cell_housing', 'advanced_item_cell_housing',
+    'digital_singularity_cell_component', 'digital_singularity_fluid_storage_cell', 'digital_singularity_item_storage_cell')]
 
 
 def generate(g):
@@ -71,6 +77,12 @@ def generate(g):
     # --- Construction Wand: BetterRuildersWands.zs:4-20, wands of Better Builder's Wands ----------------------------------------
     for wand, plate, core in (('iron_wand', P('WroughtIron'), tag_of('ingot', 'WroughtIron')), ('diamond_wand', P('Diamond'), 'minecraft:diamond'), ('infinity_wand', P('NetherStar'), 'minecraft:nether_star')):
         rows(f'constructionwand/{wand}', f'constructionwand:{wand}', [' S ', 'FS ', 'PCH'], {'S': 'minecraft:stick', 'F': '#iis:tools/file', 'P': plate, 'C': core, 'H': '#iis:tools/hammer'})
+
+    # --- Bigger AE2: the quantum cell stands for 16384K of Extra-Cells.zs:251-257, four steps of four over 256K on the assembler ------
+    recipes['bigger_ae2/quantum_cell_component'] = {'type': f'{NS}:assembler', 'inputs': [{'ingredient': '#c:circuits/ultimate', 'count': 3}, {'ingredient': 'ae2:cell_component_256k', 'count': 64}, {'ingredient': 'ae2:engineering_processor', 'count': 1}],
+                                                    'outputs': [{'id': 'bigger_ae2:quantum_cell_component', 'count': 1}], 'duration': 180, 'eut': 1920}
+    recipes['bigger_ae2/quantum_item_storage_cell'] = {'type': 'minecraft:crafting_shapeless', 'category': 'misc', 'ingredients': ['bigger_ae2:quantum_cell_component', I('cell_housing_advanced')], 'result': {'id': 'bigger_ae2:quantum_item_storage_cell', 'count': 1}}
+    recipes['bigger_ae2/quantum_fluid_storage_cell'] = {'type': 'minecraft:crafting_shapeless', 'category': 'misc', 'ingredients': ['bigger_ae2:quantum_cell_component', 'ae2:fluid_cell_housing'], 'result': {'id': 'bigger_ae2:quantum_fluid_storage_cell', 'count': 1}}
 
     # --- writing ---------------------------------------------------------------------------------------------------------------
     for key, r in recipes.items():

@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/chassis_heavy",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "chassis_heavy"
+    }
+  },
+  "hand_animation_on_swap": false
+}

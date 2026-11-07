@@ -1,0 +1,71 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:gasoline",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 20
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:ethyltertbutylether",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:nitrousoxide",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 6
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:liquid_toluene",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:capsule",
+      "count": 30,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:highoctanegasoline",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 200,
+  "eut": 120
+}

@@ -1,0 +1,46 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/sodium_sulfide",
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "iis:fluid_content": {
+            "fluid": "iis:oxygen",
+            "amount": 1000
+          }
+        }
+      },
+      "count": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_salt",
+      "count": 1
+    },
+    {
+      "id": "iis:capsule",
+      "count": 8
+    }
+  ],
+  "duration": 240,
+  "eut": 360,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dichlorobenzene",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_polyphenylenesulfide",
+      "amount": 1000
+    }
+  ]
+}

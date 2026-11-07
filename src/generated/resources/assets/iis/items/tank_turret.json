@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/tank_turret",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "tank_turret"
+    }
+  },
+  "hand_animation_on_swap": false
+}

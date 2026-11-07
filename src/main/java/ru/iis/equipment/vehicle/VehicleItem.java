@@ -59,6 +59,7 @@ public class VehicleItem extends Item {
         }
         v.setFuel(stack.getOrDefault(EquipmentContent.VEHICLE_FUEL.get(), 0L));
         v.setVehicleHealth(kind.health - stack.getOrDefault(EquipmentContent.VEHICLE_DAMAGE.get(), 0F));
+        v.setKit(stack.getOrDefault(EquipmentContent.VEHICLE_KIT.get(), false));
         sl.addFreshEntity(v);
         if (!player.getAbilities().instabuild) stack.shrink(1);
         return InteractionResult.SUCCESS;
@@ -67,10 +68,11 @@ public class VehicleItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> out, TooltipFlag flag) {
         out.accept(Component.translatable("tooltip.iis.vehicle.speed", VehicleKind.kmh(kind.maxSpeed), kind.seats.length).withStyle(ChatFormatting.GRAY));
-        out.accept(Component.translatable(kind.fuel == VehicleKind.Fuel.SOLID ? "tooltip.iis.vehicle.solid" : "tooltip.iis.vehicle.liquid").withStyle(ChatFormatting.GRAY));
+        out.accept(Component.translatable("tooltip.iis.vehicle." + kind.fuel.name().toLowerCase(java.util.Locale.ROOT)).withStyle(ChatFormatting.GRAY));
         long fuel = stack.getOrDefault(EquipmentContent.VEHICLE_FUEL.get(), 0L);
         if (fuel > 0) out.accept(Component.translatable("tooltip.iis.vehicle.fuel", 100 * fuel / kind.tank).withStyle(ChatFormatting.GRAY));
-        if (kind.cargoRows > 0) out.accept(Component.translatable("tooltip.iis.vehicle.cargo", kind.cargoSlots()).withStyle(ChatFormatting.GRAY));
+        boolean kit = stack.getOrDefault(EquipmentContent.VEHICLE_KIT.get(), false);
+        out.accept(Component.translatable(kit ? "tooltip.iis.vehicle.cargo_kit" : "tooltip.iis.vehicle.cargo", kind.cargoSlots(kit)).withStyle(ChatFormatting.GRAY));
         out.accept(Component.translatable("tooltip.iis.vehicle.help").withStyle(ChatFormatting.DARK_GRAY));
     }
 }

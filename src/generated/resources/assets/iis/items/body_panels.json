@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/body_panels",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "body_panels"
+    }
+  },
+  "hand_animation_on_swap": false
+}

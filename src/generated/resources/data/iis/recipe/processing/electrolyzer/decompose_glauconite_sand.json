@@ -1,0 +1,51 @@
+{
+  "type": "iis:electrolyzer",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/glauconite_sand",
+      "count": 21
+    },
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "neoforge:components",
+        "items": "iis:capsule",
+        "components": {
+          "!iis:fluid_content": {}
+        }
+      },
+      "count": 12
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_potassium",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_magnesium",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_aluminium",
+      "count": 4
+    },
+    {
+      "id": "iis:capsule",
+      "count": 12,
+      "components": {
+        "iis:fluid_content": {
+          "fluid": "iis:oxygen",
+          "amount": 1000
+        }
+      }
+    }
+  ],
+  "duration": 378,
+  "eut": 120,
+  "fluid_outputs": [
+    {
+      "id": "iis:hydrogen",
+      "amount": 2000
+    }
+  ]
+}

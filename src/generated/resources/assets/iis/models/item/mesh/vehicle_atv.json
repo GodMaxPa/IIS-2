@@ -1,0 +1,144 @@
+{
+  "gui_light": "front",
+  "textures": {
+    "particle": "minecraft:block/iron_block"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        25,
+        215,
+        0
+      ],
+      "translation": [
+        0.36,
+        -4.71,
+        0
+      ],
+      "scale": [
+        0.208,
+        0.208,
+        0.208
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        -5.23,
+        0
+      ],
+      "scale": [
+        0.208,
+        0.208,
+        0.208
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.066,
+        0.066,
+        0.066
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        8,
+        0
+      ],
+      "scale": [
+        0.08,
+        0.08,
+        0.08
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        10,
+        200,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.093,
+        0.093,
+        0.093
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        10,
+        160,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.093,
+        0.093,
+        0.093
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        1
+      ],
+      "scale": [
+        0.08,
+        0.08,
+        0.08
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        1
+      ],
+      "scale": [
+        0.08,
+        0.08,
+        0.08
+      ]
+    }
+  }
+}

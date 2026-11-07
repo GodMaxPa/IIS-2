@@ -1,0 +1,24 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:charcoal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_ash",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 128,
+  "eut": 4,
+  "fluid_outputs": [
+    {
+      "id": "iis:woodtar",
+      "amount": 100
+    }
+  ]
+}

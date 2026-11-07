@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "minecraft:glowstone",
+      "count": 1
+    }
+  ],
+  "duration": 12,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_glowstone",
+      "amount": 576
+    }
+  ],
+  "keep": [
+    "iis:mold_block"
+  ]
+}

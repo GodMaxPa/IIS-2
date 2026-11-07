@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/boat_hull",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "boat_hull"
+    }
+  },
+  "hand_animation_on_swap": false
+}

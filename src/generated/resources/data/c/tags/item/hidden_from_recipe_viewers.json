@@ -3588,6 +3588,46 @@
     {
       "id": "ironchest:copper_to_iron_chest_upgrade",
       "required": false
+    },
+    {
+      "id": "bigger_ae2:4_core_crafting_accelerator",
+      "required": false
+    },
+    {
+      "id": "bigger_ae2:16_core_crafting_accelerator",
+      "required": false
+    },
+    {
+      "id": "bigger_ae2:64_core_crafting_accelerator",
+      "required": false
+    },
+    {
+      "id": "bigger_ae2:256_core_crafting_accelerator",
+      "required": false
+    },
+    {
+      "id": "bigger_ae2:1024_core_crafting_accelerator",
+      "required": false
+    },
+    {
+      "id": "bigger_ae2:advanced_fluid_cell_housing",
+      "required": false
+    },
+    {
+      "id": "bigger_ae2:advanced_item_cell_housing",
+      "required": false
+    },
+    {
+      "id": "bigger_ae2:digital_singularity_cell_component",
+      "required": false
+    },
+    {
+      "id": "bigger_ae2:digital_singularity_fluid_storage_cell",
+      "required": false
+    },
+    {
+      "id": "bigger_ae2:digital_singularity_item_storage_cell",
+      "required": false
     }
   ]
 }

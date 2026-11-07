@@ -1,0 +1,29 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:transmission",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:vehicle_suspension",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:fuel_tank",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:rods/steel",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:drivetrain",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

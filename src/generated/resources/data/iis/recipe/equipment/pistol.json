@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "PPR",
-    "dCG",
+    "PPB",
+    "dTS",
     "W h"
   ],
   "key": {
     "P": "#c:plates/aluminium",
-    "R": "#c:rods/steel",
-    "C": "#c:circuits/good",
-    "G": "#iis:small_gears/steel",
+    "B": "iis:barrel_steel",
+    "T": "iis:trigger_group",
+    "S": "iis:gun_spring",
     "W": "#c:plates/rubber",
     "d": "#iis:tools/screwdriver",
     "h": "#iis:tools/hammer"

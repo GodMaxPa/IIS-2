@@ -1080,6 +1080,21 @@
     "material": "black_steel"
   },
   {
+    "id": "dust_blaze",
+    "prefix": "dust",
+    "material": "blaze"
+  },
+  {
+    "id": "small_dust_blaze",
+    "prefix": "small_dust",
+    "material": "blaze"
+  },
+  {
+    "id": "tiny_dust_blaze",
+    "prefix": "tiny_dust",
+    "material": "blaze"
+  },
+  {
     "id": "dust_blue_steel",
     "prefix": "dust",
     "material": "blue_steel"
@@ -1553,6 +1568,21 @@
     "id": "tiny_dust_calcite",
     "prefix": "tiny_dust",
     "material": "calcite"
+  },
+  {
+    "id": "dust_calcium",
+    "prefix": "dust",
+    "material": "calcium"
+  },
+  {
+    "id": "small_dust_calcium",
+    "prefix": "small_dust",
+    "material": "calcium"
+  },
+  {
+    "id": "tiny_dust_calcium",
+    "prefix": "tiny_dust",
+    "material": "calcium"
   },
   {
     "id": "dust_calcium_chloride",
@@ -3785,6 +3815,21 @@
     "material": "glauconite"
   },
   {
+    "id": "dust_glauconite_sand",
+    "prefix": "dust",
+    "material": "glauconite_sand"
+  },
+  {
+    "id": "small_dust_glauconite_sand",
+    "prefix": "small_dust",
+    "material": "glauconite_sand"
+  },
+  {
+    "id": "tiny_dust_glauconite_sand",
+    "prefix": "tiny_dust",
+    "material": "glauconite_sand"
+  },
+  {
     "id": "small_dust_glowstone",
     "prefix": "small_dust",
     "material": "glowstone"
@@ -4075,6 +4120,21 @@
     "material": "grossular"
   },
   {
+    "id": "dust_gunpowder",
+    "prefix": "dust",
+    "material": "gunpowder"
+  },
+  {
+    "id": "small_dust_gunpowder",
+    "prefix": "small_dust",
+    "material": "gunpowder"
+  },
+  {
+    "id": "tiny_dust_gunpowder",
+    "prefix": "tiny_dust",
+    "material": "gunpowder"
+  },
+  {
     "id": "dust_hsse",
     "prefix": "dust",
     "material": "hsse"
@@ -4258,6 +4318,21 @@
     "id": "gear_hssg",
     "prefix": "gear",
     "material": "hssg"
+  },
+  {
+    "id": "dust_hydrated_coal",
+    "prefix": "dust",
+    "material": "hydrated_coal"
+  },
+  {
+    "id": "small_dust_hydrated_coal",
+    "prefix": "small_dust",
+    "material": "hydrated_coal"
+  },
+  {
+    "id": "tiny_dust_hydrated_coal",
+    "prefix": "tiny_dust",
+    "material": "hydrated_coal"
   },
   {
     "id": "crushed_ilmenite",
@@ -5298,6 +5373,21 @@
     "id": "turbine_blade_magnalium",
     "prefix": "turbine_blade",
     "material": "magnalium"
+  },
+  {
+    "id": "dust_magnesia",
+    "prefix": "dust",
+    "material": "magnesia"
+  },
+  {
+    "id": "small_dust_magnesia",
+    "prefix": "small_dust",
+    "material": "magnesia"
+  },
+  {
+    "id": "tiny_dust_magnesia",
+    "prefix": "tiny_dust",
+    "material": "magnesia"
   },
   {
     "id": "crushed_magnesite",
@@ -7340,6 +7430,21 @@
     "material": "phosphate"
   },
   {
+    "id": "dust_phosphorous_pentoxide",
+    "prefix": "dust",
+    "material": "phosphorous_pentoxide"
+  },
+  {
+    "id": "small_dust_phosphorous_pentoxide",
+    "prefix": "small_dust",
+    "material": "phosphorous_pentoxide"
+  },
+  {
+    "id": "tiny_dust_phosphorous_pentoxide",
+    "prefix": "tiny_dust",
+    "material": "phosphorous_pentoxide"
+  },
+  {
     "id": "dust_phosphorus",
     "prefix": "dust",
     "material": "phosphorus"
@@ -8158,6 +8263,21 @@
     "id": "screw_quartzite",
     "prefix": "screw",
     "material": "quartzite"
+  },
+  {
+    "id": "dust_quicklime",
+    "prefix": "dust",
+    "material": "quicklime"
+  },
+  {
+    "id": "small_dust_quicklime",
+    "prefix": "small_dust",
+    "material": "quicklime"
+  },
+  {
+    "id": "tiny_dust_quicklime",
+    "prefix": "tiny_dust",
+    "material": "quicklime"
   },
   {
     "id": "dust_rare_earth",
@@ -9080,6 +9200,51 @@
     "material": "sodium"
   },
   {
+    "id": "dust_sodium_bisulfate",
+    "prefix": "dust",
+    "material": "sodium_bisulfate"
+  },
+  {
+    "id": "small_dust_sodium_bisulfate",
+    "prefix": "small_dust",
+    "material": "sodium_bisulfate"
+  },
+  {
+    "id": "tiny_dust_sodium_bisulfate",
+    "prefix": "tiny_dust",
+    "material": "sodium_bisulfate"
+  },
+  {
+    "id": "dust_sodium_hydroxide",
+    "prefix": "dust",
+    "material": "sodium_hydroxide"
+  },
+  {
+    "id": "small_dust_sodium_hydroxide",
+    "prefix": "small_dust",
+    "material": "sodium_hydroxide"
+  },
+  {
+    "id": "tiny_dust_sodium_hydroxide",
+    "prefix": "tiny_dust",
+    "material": "sodium_hydroxide"
+  },
+  {
+    "id": "dust_sodium_sulfide",
+    "prefix": "dust",
+    "material": "sodium_sulfide"
+  },
+  {
+    "id": "small_dust_sodium_sulfide",
+    "prefix": "small_dust",
+    "material": "sodium_sulfide"
+  },
+  {
+    "id": "tiny_dust_sodium_sulfide",
+    "prefix": "tiny_dust",
+    "material": "sodium_sulfide"
+  },
+  {
     "id": "dust_soldering_alloy",
     "prefix": "dust",
     "material": "soldering_alloy"
@@ -9610,6 +9775,21 @@
     "material": "styrene_butadiene_rubber"
   },
   {
+    "id": "dust_sugar",
+    "prefix": "dust",
+    "material": "sugar"
+  },
+  {
+    "id": "small_dust_sugar",
+    "prefix": "small_dust",
+    "material": "sugar"
+  },
+  {
+    "id": "tiny_dust_sugar",
+    "prefix": "tiny_dust",
+    "material": "sugar"
+  },
+  {
     "id": "crushed_sulfur",
     "prefix": "crushed",
     "material": "sulfur"
@@ -9728,6 +9908,41 @@
     "id": "tiny_dust_tantalite",
     "prefix": "tiny_dust",
     "material": "tantalite"
+  },
+  {
+    "id": "dust_tantalum",
+    "prefix": "dust",
+    "material": "tantalum"
+  },
+  {
+    "id": "small_dust_tantalum",
+    "prefix": "small_dust",
+    "material": "tantalum"
+  },
+  {
+    "id": "tiny_dust_tantalum",
+    "prefix": "tiny_dust",
+    "material": "tantalum"
+  },
+  {
+    "id": "ingot_tantalum",
+    "prefix": "ingot",
+    "material": "tantalum"
+  },
+  {
+    "id": "nugget_tantalum",
+    "prefix": "nugget",
+    "material": "tantalum"
+  },
+  {
+    "id": "plate_tantalum",
+    "prefix": "plate",
+    "material": "tantalum"
+  },
+  {
+    "id": "foil_tantalum",
+    "prefix": "foil",
+    "material": "tantalum"
   },
   {
     "id": "crushed_tanzanite",
