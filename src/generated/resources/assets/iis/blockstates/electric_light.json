@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "iis:block/electric_light"
+    },
+    "lit=true": {
+      "model": "iis:block/electric_light_lit"
+    }
+  }
+}

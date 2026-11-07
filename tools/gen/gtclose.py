@@ -227,6 +227,63 @@ def generate(g):
     mrec('blast', 'cobaltite_roast', [ing(tag_of('dust', 'Cobaltite'))], [out(ref('dust', 'CobaltOxide')), out(ref('dust', 'ArsenicTrioxide'))], 120, 120, fin=fl('oxygen', 3000), fout={'id': I('sulfurdioxide'), 'amount': 1000}, temp=1200)
     mrec('blast', 'arsenic_trioxide', [ing(tag_of('dust', 'ArsenicTrioxide'), 2), ing(tag_of('dust', 'Carbon'))], [out(ref('ingot', 'Arsenic'))], 240, 120, fout={'id': I('carbondioxide'), 'amount': 1000}, temp=1200)
 
+    # --- D135: Ender IO 2.3 things of IIS 1 that the new Ender IO lacks (scripts/EnderIO.zs) ----------------------------------------
+    block_tags = g['block_tags']
+    def cube(bid, en, ru, im, lit_im=None):
+        for suf, pic in (('', im), ('_lit', lit_im)):
+            if pic is None:
+                continue
+            p = os.path.join(A, 'textures', 'block', 'eio', bid + suf + '.png')
+            os.makedirs(os.path.dirname(p), exist_ok=True)
+            pic.save(p)
+            write(os.path.join(A, 'models', 'block', bid + suf + '.json'), {'parent': 'minecraft:block/cube_all', 'textures': {'all': f'{NS}:block/eio/{bid}{suf}'}})
+        if lit_im is None:
+            write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': {'': {'model': f'{NS}:block/{bid}'}}})
+        else:
+            write(os.path.join(A, 'blockstates', bid + '.json'), {'variants': {'lit=false': {'model': f'{NS}:block/{bid}'}, 'lit=true': {'model': f'{NS}:block/{bid}_lit'}}})
+        write(os.path.join(A, 'items', bid + '.json'), {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/{bid}'}})
+        write(os.path.join(D, NS, 'loot_table', 'blocks', bid + '.json'), {'type': 'minecraft:block', 'random_sequence': f'{NS}:blocks/{bid}',
+              'pools': [{'rolls': 1.0, 'bonus_rolls': 0.0, 'conditions': [{'condition': 'minecraft:survives_explosion'}], 'entries': [{'type': 'minecraft:item', 'name': I(bid)}]}]})
+        block_tags.setdefault('minecraft:mineable/pickaxe', []).append(I(bid))
+        lang['en_us'][f'block.{NS}.{bid}'] = en
+        lang['ru_ru'][f'block.{NS}.{bid}'] = ru
+
+    def panel(base, accent, pattern):
+        im = Image.new('RGBA', (16, 16), base + (255,))
+        for y in range(16):
+            for x in range(16):
+                edge = x in (0, 15) or y in (0, 15)
+                if edge:
+                    im.putpixel((x, y), tuple(max(0, c - 45) for c in base) + (255,))
+                elif pattern(x, y):
+                    im.putpixel((x, y), accent + (255,))
+        return im
+    cube('item_buffer', 'Item Buffer', 'Предметный буфер', panel((150, 150, 155), (90, 70, 40), lambda x, y: 4 <= x <= 11 and 4 <= y <= 11 and (x in (4, 11) or y in (4, 11) or y == 7)))
+    cube('capacitor_bank_basic', 'Basic Capacitor Bank', 'Базовый банк конденсаторов', panel((120, 120, 128), (200, 40, 40), lambda x, y: x in (3, 6, 9, 12) and 3 <= y <= 12))
+    off = panel((200, 200, 190), (170, 170, 160), lambda x, y: 2 <= x <= 13 and 2 <= y <= 13)
+    on = panel((255, 250, 210), (255, 255, 240), lambda x, y: 2 <= x <= 13 and 2 <= y <= 13)
+    cube('electric_light', 'Electric Light', 'Электролампа', off, on)
+    cube('basic_light', 'Light', 'Лампа', off, on)
+    for k, en, ru in (('message.iis.cap_bank', 'Energy: %s / %s FE', 'Энергия: %s / %s FE'),
+                      ('block.iis.item_buffer.tooltip.0', '9 slots; pipes and conduits put in and take out from any side', '9 ячеек; трубы и провода кладут и забирают с любой стороны'),
+                      ('block.iis.capacitor_bank_basic.tooltip.0', 'Stores 1 000 000 FE and gives up to 1000 FE/t to neighbours; EU cables charge it', 'Хранит 1 000 000 FE и отдаёт соседям до 1000 FE/т; заряжается от проводов EU'),
+                      ('block.iis.electric_light.tooltip.0', 'Shines while it has energy: 1 FE/t', 'Светит, пока есть энергия: 1 FE/т'),
+                      ('block.iis.basic_light.tooltip.0', 'Shines on a redstone signal', 'Светит от красного сигнала')):
+        lang['en_us'][k] = en
+        lang['ru_ru'][k] = ru
+    img = Image.new('RGBA', (16, 16), (0, 0, 0, 0))
+    for y in range(3, 13):
+        for x in range(5, 11):
+            if (y + (x - 5)) % 3 == 0:
+                img.putpixel((x, y), (200, 30, 30, 255))
+    save_item('spring_small_red_alloy', 'Small Red Alloy Spring', 'Малая пружина из красного сплава', img)
+    mrec('bender', 'spring_small_red_alloy', [ing('#iis:wires/1x/red_alloy')], [out(I('spring_small_red_alloy'), 2)], 100, 8)
+    FQ = 'enderio:fused_quartz'
+    shaped('aeio/item_buffer', I('item_buffer'), 1, ['ISI', 'SCS', 'ISI'], {'I': tag_of('plate', 'Iron'), 'S': tag_of('plate', 'Steel'), 'C': 'minecraft:chest'})
+    shaped('aeio/capacitor_bank_basic', I('capacitor_bank_basic'), 1, ['WCW', 'CBC', 'WCW'], {'W': '#iis:wires/2x/iron', 'C': 'enderio:basic_capacitor', 'B': '#iis:batteries/elite'})
+    shaped('aeio/basic_light', I('basic_light'), 1, ['   ', ' Q ', 'IGI'], {'Q': FQ, 'I': tag_of('plate', 'Iron'), 'G': 'minecraft:glowstone'})
+    shaped('aeio/electric_light', I('electric_light'), 1, ['   ', ' Q ', 'ISI'], {'Q': FQ, 'I': tag_of('plate', 'Iron'), 'S': I('spring_small_red_alloy')})
+
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     return {'recipes': len(rec)}

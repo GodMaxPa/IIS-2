@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "iis:block/capacitor_bank_basic"
+    }
+  }
+}

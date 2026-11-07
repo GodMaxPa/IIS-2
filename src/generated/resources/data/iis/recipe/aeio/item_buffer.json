@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ISI",
+    "SCS",
+    "ISI"
+  ],
+  "key": {
+    "I": "#c:plates/iron",
+    "S": "#c:plates/steel",
+    "C": "minecraft:chest"
+  },
+  "result": {
+    "id": "iis:item_buffer"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    " Q ",
+    "IGI"
+  ],
+  "key": {
+    "Q": "enderio:fused_quartz",
+    "I": "#c:plates/iron",
+    "G": "minecraft:glowstone"
+  },
+  "result": {
+    "id": "iis:basic_light"
+  }
+}

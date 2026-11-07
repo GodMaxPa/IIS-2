@@ -910,6 +910,10 @@
     "iis:cesu",
     "iis:mfe",
     "iis:mfsu",
+    "iis:item_buffer",
+    "iis:capacitor_bank_basic",
+    "iis:electric_light",
+    "iis:basic_light",
     "iis:fuel_pump"
   ]
 }

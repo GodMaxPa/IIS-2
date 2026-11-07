@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    " Q ",
+    "ISI"
+  ],
+  "key": {
+    "Q": "enderio:fused_quartz",
+    "I": "#c:plates/iron",
+    "S": "iis:spring_small_red_alloy"
+  },
+  "result": {
+    "id": "iis:electric_light"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "iis:block/basic_light"
+    },
+    "lit=true": {
+      "model": "iis:block/basic_light_lit"
+    }
+  }
+}

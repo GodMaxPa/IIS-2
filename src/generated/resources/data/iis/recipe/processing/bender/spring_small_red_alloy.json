@@ -1,0 +1,17 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "#iis:wires/1x/red_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:spring_small_red_alloy",
+      "count": 2
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

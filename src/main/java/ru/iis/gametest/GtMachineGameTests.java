@@ -103,6 +103,30 @@ final class GtMachineGameTests {
         h.succeed();
     }
 
+    /** D135: вещи Ender IO 2.3 из ИИС 1. Банк конденсаторов отдаёт энергию электролампе, она горит; простая лампа горит от красного сигнала; буфер принимает предметы через возможность. */
+    static void eioLegacyBlocks(GameTestHelper h) {
+        BlockPos bank = new BlockPos(2, 2, 2), lamp = new BlockPos(3, 2, 2), basic = new BlockPos(6, 2, 2), lever = new BlockPos(6, 2, 3), buffer = new BlockPos(2, 2, 6);
+        h.setBlock(bank, ru.iis.compat.AeioContent.CAP_BANK_BASIC.get());
+        h.setBlock(lamp, ru.iis.compat.AeioContent.ELECTRIC_LIGHT.get());
+        h.setBlock(basic, ru.iis.compat.AeioContent.BASIC_LIGHT.get());
+        h.setBlock(buffer, ru.iis.compat.AeioContent.ITEM_BUFFER.get());
+        var be = (ru.iis.compat.EioBlocks.PoweredEntity) h.getBlockEntity(bank, ru.iis.compat.EioBlocks.PoweredEntity.class);
+        be.energy.set(50_000);
+        h.setBlock(lever, Blocks.REDSTONE_BLOCK);
+        var items = h.getLevel().getCapability(net.neoforged.neoforge.capabilities.Capabilities.Item.BLOCK, h.absolutePos(buffer), Direction.UP);
+        h.assertTrue(items != null && items.size() == 9, "у буфера нет 9 ячеек для труб");
+        h.runAtTickTime(10, () -> {
+            h.assertTrue(h.getBlockState(lamp).getValue(ru.iis.compat.EioBlocks.LIT), "электролампа не горит от банка");
+            h.assertTrue(be.energy.getAmountAsLong() < 50_000, "банк не отдал энергию");
+            h.assertTrue(h.getBlockState(basic).getValue(ru.iis.compat.EioBlocks.LIT), "простая лампа не горит от сигнала");
+            for (String id : new String[]{"aeio/item_buffer", "aeio/capacitor_bank_basic", "aeio/electric_light", "aeio/basic_light", "processing/bender/spring_small_red_alloy"}) {
+                var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.RECIPE, Identifier.fromNamespaceAndPath("iis", id));
+                h.assertTrue(h.getLevel().getServer().getRecipeManager().byKey(key).isPresent(), "нет рецепта " + id);
+            }
+            h.succeed();
+        });
+    }
+
     /** Ломтерезка и трансформатор MAX есть, рецепты разобрались. */
     static void slicerAndMaxTransformer(GameTestHelper h) {
         for (String id : new String[]{"slicer_lv", "slicer_uv", "adjustable_transformer_max", "well", "primitive_mine_digger", "primitive_small_ore_miner"}) {

@@ -2291,6 +2291,10 @@
     "This machine looks simple. But in fact it may do a lot of useful things. For example: concrete, industrial biomass, drilling fluid and some other things."
   ],
   "quest.1A00000000000243.title": "Basic Mixer",
+  "quest.1A00000000000244.quest_desc": [
+    "Very powerful tool to make the flexible transport system on you base, that should be in times better than using common gregtech item pipes."
+  ],
+  "quest.1A00000000000244.title": "Item Conduit",
   "quest.1A00000000000245.quest_desc": [
     "Use EBF to get a Pulsating Iron Ingot from Pulsating Iron Dust."
   ],
@@ -2427,6 +2431,10 @@
     "It is a mix of gold dust, soul sand and ashes. Use the mixer to make it."
   ],
   "quest.1A00000000000266.title": "Soularium Ingot",
+  "quest.1A00000000000267.quest_desc": [
+    "Just walk under earth surface... until you find any spawner of any mobs. You should to dig it to take. You even may broke the blaze spawner in the nether fortress - it suits you too."
+  ],
+  "quest.1A00000000000267.title": "Broken Spawner",
   "quest.1A00000000000268.quest_desc": [
     "Crafting recipe is the same as for previous coil block tiers, but you have to use the tungstensteel ingots as root stuff."
   ],
@@ -3791,6 +3799,10 @@
     "Place two of them not far between together and you will see a magic, if you stay on one and press shift while looking on other travel anchor."
   ],
   "quest.1A000000000003F2.title": "Travel Anchor",
+  "quest.1A000000000003F3.quest_desc": [
+    "Like a pipe with pump"
+  ],
+  "quest.1A000000000003F3.title": "Fluid Conduit",
   "quest.1A000000000003F4.quest_desc": [
     "Multiblock, that may pump fluids out from under bedrock space, in case if there are not void."
   ],

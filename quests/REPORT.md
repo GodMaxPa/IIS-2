@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1737; hidden until their items are ported: 203; chapters: 36, one of them ours (D129, 49 quests).
+Quests in IIS 1: 1943; written: 1740; hidden until their items are ported: 200; chapters: 36, one of them ours (D129, 49 quests).
 
 ## Most needed unported items (task count)
 
@@ -20,8 +20,6 @@ Quests in IIS 1: 1943; written: 1737; hidden until their items are ported: 203; 
 - 1 × `Forestry:factory2:2` 
 - 1 × `Railcraft:machine.alpha:14` 
 - 1 × `gregtech:gt.metaitem.01:2676` Смесь металлов
-- 1 × `EnderIO:itemItemConduit:0` 
-- 1 × `EnderIO:itemBrokenSpawner:0` 
 - 1 × `GalacticraftCore:item.schematic:1` 
 - 1 × `IC2:itemCellEmpty:5` 
 - 1 × `IC2:blockCrop:0` 
@@ -59,7 +57,6 @@ Quests in IIS 1: 1943; written: 1737; hidden until their items are ported: 203; 
 - 1 × `appliedenergistics2:item.ToolBiometricCard:0` 
 - 1 × `IC2:blockMachine3:7` 
 - 1 × `IC2:blockMachine2:2` 
-- 1 × `EnderIO:itemLiquidConduit:0` 
 - 1 × `Forestry:woodPulp:0` 
 - 1 × `IC2:itemWeedingTrowel:0` 
 - 1 × `BiblioCraft:BiblioLabel:0` 

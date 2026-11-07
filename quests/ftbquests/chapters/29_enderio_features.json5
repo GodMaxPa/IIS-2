@@ -110,6 +110,41 @@
       ]
     },
     {
+      "id": "1A00000000000244",
+      "x": 12.5,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000245",
+        "1A00000000000246",
+        "1A00000000000242"
+      ],
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "enderio:conduit",
+            "count": 1,
+            "components": {
+              "enderio:conduit": "enderio:item"
+            }
+          },
+          "match_components": "fuzzy",
+          "count": 1,
+          "id": "1B00000000024400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000024400"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000245",
       "x": 11.0,
       "y": 3.5,
@@ -556,7 +591,7 @@
         "1A00000000000266",
         "1A0000000000025D",
         "1A00000000000262",
-        "1A00000000000272"
+        "1A00000000000267"
       ],
       "icon": {
         "id": "enderio:soul_binder",
@@ -684,6 +719,39 @@
             "count": 5
           },
           "id": "1C00000000026600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000267",
+      "x": 2.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000272"
+      ],
+      "icon": {
+        "id": "enderio:broken_spawner",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "enderio:broken_spawner",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000026700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000026700"
         }
       ]
     },
@@ -1010,6 +1078,45 @@
             "count": 4
           },
           "id": "1C0000000003F100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003F3",
+      "x": 14.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000001CD",
+        "1A000000000000F1",
+        "1A00000000000184",
+        "1A000000000001EC",
+        "1A0000000000024C",
+        "1A00000000000148"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "enderio:conduit",
+            "count": 1,
+            "components": {
+              "enderio:conduit": "enderio:fluid"
+            }
+          },
+          "match_components": "fuzzy",
+          "count": 1,
+          "id": "1B0000000003F300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C0000000003F300"
         }
       ]
     },

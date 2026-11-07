@@ -198,3 +198,4 @@
 | Винт вертолёта, центр выстрела, предметы GT из квестов D132 | GameTest `equip_helicopter_rotor`, `equip_muzzle_centred`, `gt_quest_items`; `tools/check_reach.py`; снимки `-Pequipshots` (`eq_af_*`) |
 | Машины GT из квестов D133 | GameTest `gt_well_fills`, `gt_digger_digs`, `gt_miner_small_ore`, `gt_prospector_ore`, `gt_slicer_max_transformer` |
 | Космос, третий этап D134 | GameTest `rocket_tier3`, `oxygen_machines`, `cargo_loader`; `IIS_SPACE_CHECK=asteroids gradlew runServer` |
+| Ender IO: сверка с ИИС 1 D135 | GameTest `eio_legacy_blocks`; рецепты всех 37 вещей Ender IO, что крафтились в ИИС 1 |

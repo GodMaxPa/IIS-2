@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WCW",
+    "CBC",
+    "WCW"
+  ],
+  "key": {
+    "W": "#iis:wires/2x/iron",
+    "C": "enderio:basic_capacitor",
+    "B": "#iis:batteries/elite"
+  },
+  "result": {
+    "id": "iis:capacitor_bank_basic"
+  }
+}

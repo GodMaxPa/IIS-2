@@ -87,6 +87,8 @@ MC_RENAMES = {
     ('lit_pumpkin', 0): 'jack_o_lantern', ('noteblock', 0): 'note_block', ('web', 0): 'cobweb', ('sapling', 0): 'oak_sapling',
 }
 CELL_FLUIDS = {('gregtech:gt.metaitem.01', 30495): 'liquidair'}
+EIO_CONDUITS = {('EnderIO:itemItemConduit', 0): 'item', ('EnderIO:itemLiquidConduit', 0): 'fluid', ('EnderIO:itemLiquidConduit', 1): 'energetic_fluid', ('EnderIO:itemLiquidConduit', 2): 'vibrant_fluid',
+                ('EnderIO:itemPowerConduit', 0): 'energy', ('EnderIO:itemRedstoneConduit', 0): 'redstone', ('EnderIO:itemRedstoneConduit', 2): 'redstone'}
 # IC2 items that IIS 2 has an own counterpart for (D74: cells are capsules; D92: IC2 circuits are GT circuits)
 IC2_MAP = {
     ('itemCellEmpty', 0): f'{NS}:capsule', ('itemFluidCell', 0): f'{NS}:universal_capsule', ('itemHarz', 0): f'{NS}:sticky_resin',
@@ -143,6 +145,8 @@ GC_MAP.update({('gregtech:gt.blockmachines', 1171): 'iis:combustion_engine', ('g
                ('GalacticraftMars:item.itemTier3Rocket', 0): 'iis:rocket_t3', ('GalacticraftMars:item.itemTier3Rocket', 1): 'iis:rocket_t3', ('GalacticraftMars:item.itemTier3Rocket', 2): 'iis:rocket_t3', ('GalacticraftMars:item.itemTier3Rocket', 3): 'iis:rocket_t3',
                ('GalacticraftCore:tile.oxygenCollector', 0): 'iis:oxygen_collector', ('GalacticraftCore:tile.distributor', 0): 'iis:oxygen_distributor',
                ('GalacticraftCore:tile.cargo', 0): 'iis:cargo_loader', ('GalacticraftCore:tile.cargo', 4): 'iis:cargo_unloader',
+               ('EnderIO:blockBuffer', 0): 'iis:item_buffer', ('EnderIO:blockCapBank', 1): 'iis:capacitor_bank_basic', ('EnderIO:blockElectricLight', 0): 'iis:electric_light',
+               ('EnderIO:blockElectricLight', 2): 'iis:basic_light',
                ('gregtech:gt.metaitem.01', 32398): 'iis:slicer_blade_flat', ('gregtech:gt.metaitem.01', 32399): 'iis:slicer_blade_stripes',
                ('gregtech:gt.Volumetric_Flask', 0): 'iis:volumetric_flask', ('gregtech:gt.metaitem.02', 14802): 'iis:arrow_head_flint', ('gregtech:gt.metaitem.01', 30865): 'iis:dust_graphite'})
 GC_MAP.update({('gregtech:gt.blockgem1', 4): 'iis:block_blue_topaz', ('gregtech:gt.blockgem2', 12): 'iis:block_sapphire', ('gregtech:gt.blockgem2', 5): 'iis:block_opal', ('gregtech:gt.blockgem1', 7): 'iis:block_ender_eye'})
@@ -425,6 +429,12 @@ def main():
                     cell = CELL_FLUIDS.get((it['id:8'], it.get('Damage:2', 0)))
                     if cell and mp.fluid(cell):
                         tasks.append({'type': 'fluid', 'fluid': {'fluid': mp.fluid(cell), 'amount': 1000 * max(1, it.get('Count:3', 1))}})
+                        continue
+                    # D135: an Ender IO conduit is one item with a component: the task looks at the component too
+                    conduit = EIO_CONDUITS.get((it['id:8'], it.get('Damage:2', 0)))
+                    if conduit and 'enderio' in mp.mod_items:
+                        tasks.append({'type': 'item', 'item': {'id': 'enderio:conduit', 'count': 1, 'components': {'enderio:conduit': f'enderio:{conduit}'}},
+                                      'match_components': 'fuzzy', 'count': max(1, it.get('Count:3', 1))})
                         continue
                     m = mp.item(it['id:8'], it.get('Damage:2', 0), it.get('OreDict:8', ''))
                     if m is None:
