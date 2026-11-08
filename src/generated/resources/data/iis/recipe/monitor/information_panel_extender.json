@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GMG",
+    "PPP",
+    "PWP"
+  ],
+  "key": {
+    "G": "minecraft:lime_stained_glass_pane",
+    "M": "iis:computer_monitor",
+    "P": "#c:plates/wood",
+    "W": "#iis:cables/1x/red_alloy"
+  },
+  "result": {
+    "id": "iis:information_panel_extender"
+  }
+}

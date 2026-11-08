@@ -3,6 +3,7 @@
 Обновлено: 2026-11-06 — после D124. Ветка `feature/bio-fluids-lv3`, работа идёт локально (Claude Code на ПК владельца); push — только по просьбе владельца.
 
 ## Где мы
+- **Панели Nuclear Control (D141):** `ru.iis.monitor`; строки панели собирает сервер (`PanelBlockEntity#read`) и шлёт клиенту компонентами, текст рисует `PanelRenderer` через `submitText`.
 - **Щиты и турели (D140):** `ru.iis.defense`. Щиты — компонент `BlocksAttacks` (доли урона складываются), силовой платит зарядом в `LivingShieldBlockEvent`. Турель ищет цель и стреляет в `TurretBlockEntity#serverTick`, голову рисует `TurretRenderer` мешем `turret_<вид>`. В 26.1 `ClipContext` не принимает null вместо сущности — `CollisionContext.empty()`.
 - **Грядки IC2 (D139):** `ru.iis.crop`: культуры читаются из `iis/crops.json` (генератор `tools/gen/crops.py`, числа GT — из GT_CropLoader по `IIS_GT5_SRC`). Номер культуры в блоке — индекс в списке + 2: добавлять культуры только в конец, иначе сохранённые грядки сменят культуру. Органический репликатор — тип `organic_replicator` в `LvMachineType`, логика в `ElectricMachineBlockEntity#replicateSeeds`.
 - **Магии нет (D137):** `tools/gen/nomagic.py` переписывает сделки торговцев из ванильного JAR, `world.NoMagic` — добыча и мобы. В NeoForge 26.1 каждый файл в `loot_modifiers` — отдельный модификатор, общего списка нет.

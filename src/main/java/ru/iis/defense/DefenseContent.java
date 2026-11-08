@@ -114,7 +114,10 @@ public final class DefenseContent {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = TABS.register("defense", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.iis.defense"))
             .icon(() -> new ItemStack(TURRETS.get(TurretKind.MACHINE_GUN).get()))
-            .displayItems((params, out) -> TAB_ORDER.forEach(i -> out.accept(i.get())))
+            .displayItems((params, out) -> {
+                TAB_ORDER.forEach(i -> out.accept(i.get()));
+                ru.iis.monitor.MonitorContent.ITEMS.getEntries().forEach(i -> out.accept(i.get()));
+            })
             .build());
 
     private static void capabilities(RegisterCapabilitiesEvent event) {

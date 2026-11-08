@@ -182,14 +182,14 @@
         "1A000000000001FF"
       ],
       "icon": {
-        "id": "iis:cover_screen",
+        "id": "iis:computer_monitor",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:cover_screen",
+            "id": "iis:computer_monitor",
             "count": 1
           },
           "count": 1,

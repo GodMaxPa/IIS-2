@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CEU",
+    "PSP",
+    "whd"
+  ],
+  "key": {
+    "C": "#c:circuits/basic",
+    "E": "iis:information_panel_extender",
+    "U": "iis:color_upgrade",
+    "P": "iis:carbon_plate",
+    "S": "#c:plates/steel",
+    "w": "#iis:tools/wrench",
+    "h": "#iis:tools/hammer",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:advanced_panel_extender"
+  }
+}

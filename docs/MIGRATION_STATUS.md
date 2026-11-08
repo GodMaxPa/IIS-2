@@ -203,3 +203,4 @@
 | Магии нет D137 | GameTest `no_magic` |
 | Грядки IC2 с селекцией D139 | GameTest `crop_plant_grow_harvest`, `crop_crossbreeding`, `crop_weeds`, `crop_metal_needs_block`, `crop_machines`, `crop_organic_replicator` |
 | Щиты Кибера и турели D140 | GameTest `defense_shields`, `defense_turret_shoots` |
+| Панели IC2 Nuclear Control D141 | GameTest `monitor_panel_reads` |

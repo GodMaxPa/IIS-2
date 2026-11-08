@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iis:block/advanced_panel_extender"
+    },
+    "facing=east": {
+      "model": "iis:block/advanced_panel_extender",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iis:block/advanced_panel_extender",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iis:block/advanced_panel_extender",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iis:block/information_panel"
+    },
+    "facing=east": {
+      "model": "iis:block/information_panel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iis:block/information_panel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iis:block/information_panel",
+      "y": 270
+    }
+  }
+}

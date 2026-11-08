@@ -1120,6 +1120,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_defense', os.path.join(ROOT, 'tool
 _defense = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_defense)
 lv_stats['defense'] = _defense.generate(globals())
+# IC2 Nuclear Control panels (D141)
+_spec = _ilu.spec_from_file_location('iis_gen_monitor', os.path.join(ROOT, 'tools', 'gen', 'monitor.py'))
+_monitor = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_monitor)
+lv_stats['monitor'] = _monitor.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

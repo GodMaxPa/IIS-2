@@ -63,6 +63,29 @@ final class DefenseGameTests {
         h.succeed();
     }
 
+    /** D141: набор с датчиком на накопителе становится картой; панель с картой показывает запас энергии; вне дальности — «вне досягаемости». */
+    static void panelReads(GameTestHelper h) {
+        BlockPos store = new BlockPos(1, 1, 1), panel = new BlockPos(3, 1, 1);
+        h.setBlock(store, DefenseContent.BASES.get(0).get());
+        h.setBlock(panel, ru.iis.monitor.MonitorContent.PANEL.get());
+        TurretBaseBlockEntity b = h.getBlockEntity(store, TurretBaseBlockEntity.class);
+        b.energy.stored = 40;
+        ItemStack card = ru.iis.monitor.SensorCardItem.card(h.absolutePos(store), h.getLevel().dimension());
+        var p = h.getBlockEntity(panel, ru.iis.monitor.PanelBlockEntity.class);
+        h.assertTrue(p.accepts(card) && p.insert(card), "панель не берёт карту");
+        var lines = p.read(h.getLevel());
+        h.assertTrue(lines.stream().anyMatch(c -> c.getString().contains("40")), "панель не показала запас: " + lines);
+        ItemStack far = ru.iis.monitor.SensorCardItem.card(h.absolutePos(store).offset(100, 0, 0), h.getLevel().dimension());
+        p.setItem(0, far);
+        h.assertTrue(p.read(h.getLevel()).getFirst().getString().equals(net.minecraft.network.chat.Component.translatable("monitor.iis.out_of_range").getString()), "дальность не ограничена");
+        for (String id : new String[]{"monitor/information_panel", "monitor/information_panel_extender", "monitor/advanced_information_panel", "monitor/advanced_panel_extender",
+                "monitor/color_upgrade", "monitor/frequency_transmitter", "processing/assembler/range_upgrade", "processing/assembler/gt_sensor_kit", "processing/assembler/computer_monitor"}) {
+            var key = ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath("iis", id));
+            h.assertTrue(h.getLevel().recipeAccess().byKey(key).isPresent(), "нет рецепта " + id);
+        }
+        h.succeed();
+    }
+
     /** Пулемётная турель на базе 2 уровня стреляет в монстра, не трогает корову (режим «монстры»), тратит патроны и энергию; рельсотрон на ней молчит. */
     static void turretShoots(GameTestHelper h) {
         BlockPos base = new BlockPos(1, 1, 1), gun = base.above(), rail = base.east();

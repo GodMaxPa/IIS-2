@@ -51,6 +51,7 @@ public final class IIS {
         ru.iis.compat.AeioContent.register(modEventBus);
         ru.iis.crop.CropContent.register(modEventBus);
         ru.iis.defense.DefenseContent.register(modEventBus);
+        ru.iis.monitor.MonitorContent.register(modEventBus);
         ru.iis.world.NoMagic.register(modEventBus);
         GtRecipes.register(modEventBus, NeoForge.EVENT_BUS);
         ru.iis.net.IISNetwork.register(modEventBus);

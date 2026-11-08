@@ -1512,6 +1512,278 @@
           "id": "1C00000000070000"
         }
       ]
+    },
+    {
+      "id": "1A00000000000716",
+      "x": 14.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A00000000000717",
+        "1A00000000000719",
+        "1A0000000000071B",
+        "1A00000000000320"
+      ],
+      "icon": {
+        "id": "iis:advanced_information_panel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:advanced_information_panel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000071600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000717",
+      "x": 12.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000033C",
+        "1A00000000000718"
+      ],
+      "icon": {
+        "id": "iis:information_panel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:information_panel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000071700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000718",
+      "x": 12.5,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000221",
+        "1A000000000001EE"
+      ],
+      "icon": {
+        "id": "iis:gt_sensor_kit",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gt_sensor_kit",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000071800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000719",
+      "x": 15.5,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:color_upgrade",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:color_upgrade",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000071900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000071A",
+      "x": 15.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:frequency_transmitter",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frequency_transmitter",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000071A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000071B",
+      "x": 14.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000221",
+        "1A0000000000071A"
+      ],
+      "icon": {
+        "id": "iis:range_upgrade",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:range_upgrade",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000071B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000071C",
+      "x": 14.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000071D",
+        "1A00000000000719",
+        "1A00000000000320"
+      ],
+      "icon": {
+        "id": "iis:advanced_panel_extender",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:advanced_panel_extender",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000071C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000071D",
+      "x": 14.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000033C"
+      ],
+      "icon": {
+        "id": "iis:information_panel_extender",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:information_panel_extender",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000071D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000071D00"
+        }
+      ]
     }
   ],
   "icon": {

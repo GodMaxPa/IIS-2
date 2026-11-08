@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#iis:cables/1x/copper",
+    "#c:circuits/basic"
+  ],
+  "result": {
+    "id": "iis:frequency_transmitter"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:sensor_lv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:frequency_transmitter",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:range_upgrade",
+      "count": 1
+    }
+  ],
+  "duration": 1600,
+  "eut": 2
+}

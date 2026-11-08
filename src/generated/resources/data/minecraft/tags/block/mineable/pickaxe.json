@@ -936,6 +936,10 @@
     "iis:turret_rocket",
     "iis:turret_teleporter",
     "iis:turret_laser",
-    "iis:turret_railgun"
+    "iis:turret_railgun",
+    "iis:information_panel",
+    "iis:information_panel_extender",
+    "iis:advanced_information_panel",
+    "iis:advanced_panel_extender"
   ]
 }

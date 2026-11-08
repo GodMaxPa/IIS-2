@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RIU",
+    "PCP",
+    "whd"
+  ],
+  "key": {
+    "R": "iis:range_upgrade",
+    "I": "iis:information_panel",
+    "U": "iis:color_upgrade",
+    "P": "iis:carbon_plate",
+    "C": "#c:circuits/advanced",
+    "w": "#iis:tools/wrench",
+    "h": "#iis:tools/hammer",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:advanced_information_panel"
+  }
+}

@@ -2595,6 +2595,10 @@
     "Use double wires from naquadah alloy ingots.Then by wrench and 8 double wires make the coil block. Create 16 coil blocks in total."
   ],
   "quest.1A0000000000028E.title": "Naquadah Alloy Coil Block",
+  "quest.1A0000000000028F.quest_desc": [
+    "You may use compressor to collect air to empty cell."
+  ],
+  "quest.1A0000000000028F.title": "Compressed Air Cell",
   "quest.1A00000000000290.quest_desc": [
     "The main part of all ZPM machines (monoblocks)."
   ],
@@ -6731,6 +6735,38 @@
     "If you want, you can get an example of IC Blueprint with ready logic to control your energy generators such as Large Boler. On the down side is input for analog redstone signal. You should place this side to the battery buffer side with attached Energy Detector cover. In the example Blueprint settings will read the power of emitted redstone signal of Energy Detector and depending on that will send (or will not) out  a signal to turn on your generators. The range currently set between 6%% and 100%%. It means that if an energy level in your battery buffer will reduce lower than 6%% it will start to emit signal out until your buffer charged up to 100%%. NOTE, that after you set an Energy Detector on your battery buffer you have to set on it the config named \"Normal Electricity Storage (Including Batteries)\". Only in this mode it will works fine in pair with IC Gate contained this logic."
   ],
   "quest.1A00000000000715.title": "I want to get example",
+  "quest.1A00000000000716.quest_desc": [
+    "Advanced version of Industrial Information Panel"
+  ],
+  "quest.1A00000000000716.title": "Advanced Information Panel",
+  "quest.1A00000000000717.quest_desc": [
+    "It can display main info about any gregtech machine. Usually it used to view multiblock state. It is convenient to have ability to track an issues or level of efficiency  if you are far away of multiblock in your workroom."
+  ],
+  "quest.1A00000000000717.title": "Industrial Information Panel",
+  "quest.1A00000000000718.quest_desc": [
+    "A tool that can distantly connected to any gregtech machine to read it state. You may use it in tandem with information panel to view machine or multiblock parameters - it efficient, issues, working status etc."
+  ],
+  "quest.1A00000000000718.title": "GregTech Sensor Kit",
+  "quest.1A00000000000719.quest_desc": [
+    "A part of Advanced Industrial Panel"
+  ],
+  "quest.1A00000000000719.title": "Color Upgrade",
+  "quest.1A0000000000071A.quest_desc": [
+    "A part of Range Upgrade."
+  ],
+  "quest.1A0000000000071A.title": "Frequency Transmitter",
+  "quest.1A0000000000071B.quest_desc": [
+    "It is a part of advanced information panel. Also you may put it to information pagel to increase a distance of working."
+  ],
+  "quest.1A0000000000071B.title": "Range Upgrade",
+  "quest.1A0000000000071C.quest_desc": [
+    "A block that can extend a visible working surface of advanced information panel."
+  ],
+  "quest.1A0000000000071C.title": "Advanced Panel Extender",
+  "quest.1A0000000000071D.quest_desc": [
+    "A block that can extend a visible working surface of information panel."
+  ],
+  "quest.1A0000000000071D.title": "Information Panel Extender",
   "quest.1A0000000000071E.quest_desc": [
     "If you found a horse it will be useful."
   ],

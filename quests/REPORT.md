@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1783; hidden until their items are ported: 157; chapters: 36, one of them ours (D129, 49 quests).
+Quests in IIS 1: 1943; written: 1792; hidden until their items are ported: 148; chapters: 36, one of them ours (D129, 49 quests).
 
 ## Most needed unported items (task count)
 
@@ -17,7 +17,6 @@ Quests in IIS 1: 1943; written: 1783; hidden until their items are ported: 157; 
 - 1 × `Railcraft:machine.alpha:14` 
 - 1 × `gregtech:gt.metaitem.01:2676` Смесь металлов
 - 1 × `GalacticraftCore:item.schematic:1` 
-- 1 × `IC2:itemCellEmpty:5` 
 - 1 × `Forestry:thermionicTubes:1` 
 - 1 × `Forestry:ffarm:0` 
 - 1 × `Forestry:factory:1` 
@@ -70,14 +69,6 @@ Quests in IIS 1: 1943; written: 1783; hidden until their items are ported: 157; 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:55` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:54` 
 - 1 × `appliedenergistics2:item.ItemMultiPart:500` 
-- 1 × `IC2NuclearControl:blockNuclearControlMain:9` 
-- 1 × `IC2NuclearControl:blockNuclearControlMain:4` 
-- 1 × `gregtech:gt.metaitem.01:32763` Набор с датчиком GregTech
-- 1 × `IC2NuclearControl:ItemUpgrade:1` 
-- 1 × `IC2:itemFreq:0` 
-- 1 × `IC2NuclearControl:ItemUpgrade:0` 
-- 1 × `IC2NuclearControl:blockNuclearControlMain:10` 
-- 1 × `IC2NuclearControl:blockNuclearControlMain:5` 
 
 ## Unported fluids
 

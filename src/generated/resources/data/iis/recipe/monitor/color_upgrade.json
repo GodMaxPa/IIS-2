@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RYG",
+    "WCM",
+    "KNB"
+  ],
+  "key": {
+    "R": "#c:dyes/red",
+    "Y": "#c:dyes/yellow",
+    "G": "#c:dyes/green",
+    "W": "#c:dyes/white",
+    "C": "#c:circuits/advanced",
+    "M": "#c:dyes/magenta",
+    "K": "#c:dyes/black",
+    "N": "#c:dyes/cyan",
+    "B": "#c:dyes/blue"
+  },
+  "result": {
+    "id": "iis:color_upgrade"
+  }
+}

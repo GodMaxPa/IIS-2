@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MGM",
+    "CHC",
+    "PWP"
+  ],
+  "key": {
+    "M": "iis:computer_monitor",
+    "G": "minecraft:lime_stained_glass_pane",
+    "C": "#c:circuits/basic",
+    "H": "iis:casing_ulv",
+    "P": "#c:plates/iron",
+    "W": "#iis:cables/1x/red_alloy"
+  },
+  "result": {
+    "id": "iis:information_panel"
+  }
+}

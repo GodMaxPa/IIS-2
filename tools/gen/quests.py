@@ -86,7 +86,7 @@ MC_RENAMES = {
     ('stained_hardened_clay', 0): 'white_terracotta', ('hardened_clay', 0): 'terracotta', ('melon_block', 0): 'melon',
     ('lit_pumpkin', 0): 'jack_o_lantern', ('noteblock', 0): 'note_block', ('web', 0): 'cobweb', ('sapling', 0): 'oak_sapling',
 }
-CELL_FLUIDS = {('gregtech:gt.metaitem.01', 30495): 'liquidair'}
+CELL_FLUIDS = {('gregtech:gt.metaitem.01', 30495): 'liquidair', ('IC2:itemCellEmpty', 5): 'air'}  # D141: IC2 compressed air cell
 EIO_CONDUITS = {('EnderIO:itemItemConduit', 0): 'item', ('EnderIO:itemLiquidConduit', 0): 'fluid', ('EnderIO:itemLiquidConduit', 1): 'energetic_fluid', ('EnderIO:itemLiquidConduit', 2): 'vibrant_fluid',
                 ('EnderIO:itemPowerConduit', 0): 'energy', ('EnderIO:itemRedstoneConduit', 0): 'redstone', ('EnderIO:itemRedstoneConduit', 2): 'redstone'}
 # IC2 items that IIS 2 has an own counterpart for (D74: cells are capsules; D92: IC2 circuits are GT circuits)
@@ -223,6 +223,12 @@ GC_MAP.update({('IC2:blockCrop', 0): 'iis:crop_sticks', ('IC2:itemCropSeed', 0):
                ('IC2:itemTerraWart', 0): 'iis:terra_wart', ('IC2:itemHops', 0): 'iis:hops', ('IC2:itemCofeeBeans', 0): 'iis:coffee_beans'})
 GC_MAP.update({('gregtech:gt.metaitem.02', 32000 + k): f'iis:{v}' for k, v in {500: 'plumbilia_leaf', 501: 'argentia_leaf', 502: 'indigo_blossom', 505: 'tea_leaf', 510: 'oil_berry', 511: 'bobs_yer_uncle_berry', 512: 'uum_berry', 513: 'uua_berry', 520: 'milk_wart', 521: 'bauxia_leaf', 522: 'titania_leaf', 523: 'reactoria_leaf', 524: 'uranium_leaf', 526: 'thunder_leaf', 527: 'nickelback_leaf', 528: 'galvania_leaf', 529: 'pyrolusium_leaf', 530: 'coppon_fiber', 531: 'scheelinium_leaf', 532: 'platina_leaf', 533: 'quantaria_leaf', 534: 'quantaria_leaf_osmium', 535: 'stargatium_leaf', 540: 'tine_twig', 550: 'chilly_pepper', 551: 'lemon', 552: 'tomato', 553: 'max_tomato', 554: 'grapes', 555: 'onion', 556: 'cucumber', 557: 'rape'}.items()})
 GC_MAP.update({('gregtech:gt.blockmachines', 681 + i): f'iis:organic_replicator_{t}' for i, t in enumerate(('lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv'))})
+
+# D141: IC2 Nuclear Control panels and what they are made of
+GC_MAP.update({('IC2NuclearControl:blockNuclearControlMain', 4): 'iis:information_panel', ('IC2NuclearControl:blockNuclearControlMain', 5): 'iis:information_panel_extender',
+               ('IC2NuclearControl:blockNuclearControlMain', 9): 'iis:advanced_information_panel', ('IC2NuclearControl:blockNuclearControlMain', 10): 'iis:advanced_panel_extender',
+               ('IC2NuclearControl:ItemUpgrade', 0): 'iis:range_upgrade', ('IC2NuclearControl:ItemUpgrade', 1): 'iis:color_upgrade', ('IC2:itemFreq', 0): 'iis:frequency_transmitter',
+               ('gregtech:gt.metaitem.01', 32763): 'iis:gt_sensor_kit', ('gregtech:gt.metaitem.01', 32740): 'iis:computer_monitor'})
 
 RAILCRAFT_MAP = {
     ('detector', 0): 'detector_item', ('part.tie', 0): 'tie_wood', ('part.tie', 1): 'tie_stone', ('part.railbed', 0): 'railbed_wood',

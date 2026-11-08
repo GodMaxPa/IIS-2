@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "iis:block/monitor/advanced_panel_extender_front",
+    "side": "iis:block/monitor/advanced_panel_extender_side",
+    "top": "iis:block/monitor/advanced_panel_extender_side",
+    "particle": "iis:block/monitor/advanced_panel_extender_side"
+  }
+}
