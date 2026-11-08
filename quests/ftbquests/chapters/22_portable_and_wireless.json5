@@ -417,6 +417,41 @@
       ]
     },
     {
+      "id": "1A000000000003DD",
+      "x": 3.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000003D6",
+        "1A00000000000333",
+        "1A0000000000005C"
+      ],
+      "icon": {
+        "id": "ae2:wireless_access_point",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:wireless_access_point",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003DD00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C0000000003DD00"
+        }
+      ]
+    },
+    {
       "id": "1A000000000003E0",
       "x": 4.0,
       "y": 4.0,

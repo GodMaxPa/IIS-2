@@ -317,9 +317,7 @@
         "1A000000000003D9",
         "1A0000000000003A",
         "1A000000000003DB",
-        "1A000000000003D6",
-        "1A00000000000333",
-        "1A0000000000005C",
+        "1A000000000003DD",
         "1A00000000000337",
         "1A00000000000051"
       ],
@@ -418,6 +416,39 @@
       ]
     },
     {
+      "id": "1A00000000000477",
+      "x": 6.5,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000192"
+      ],
+      "icon": {
+        "id": "bibliocraft:oak_label",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "bibliocraft:oak_label",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000047700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000047700"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000478",
       "x": 8.0,
       "y": 2.0,
@@ -447,6 +478,41 @@
             "count": 1
           },
           "id": "1C00000000047800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000479",
+      "x": 8.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A00000000000477",
+        "1A00000000000478",
+        "1A00000000000193"
+      ],
+      "icon": {
+        "id": "bibliocraft:oak_fancy_sign",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "bibliocraft:oak_fancy_sign",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000047900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000047900"
         }
       ]
     },
@@ -513,6 +579,58 @@
             "count": 4
           },
           "id": "1C00000000047C00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000480",
+      "x": 2.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A000000000001B3",
+        "1A00000000000129"
+      ],
+      "icon": {
+        "id": "framedblocks:framing_saw",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "framedblocks:framing_saw",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048000"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "framedblocks:framing_saw",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048001"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "framedblocks:framing_saw",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048002"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000048000"
         }
       ]
     },
@@ -645,6 +763,72 @@
             "count": 4
           },
           "id": "1C00000000048400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000486",
+      "x": 2.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000000A4"
+      ],
+      "icon": {
+        "id": "framedblocks:framed_hammer",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "framedblocks:framed_hammer",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000048600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004B4",
+      "x": 11.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A000000000004B3"
+      ],
+      "icon": {
+        "id": "storagedrawers:oak_full_drawers_1",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "storagedrawers:oak_full_drawers_1",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004B400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000004B400"
         }
       ]
     },
@@ -787,6 +971,41 @@
       ]
     },
     {
+      "id": "1A000000000006A0",
+      "x": 11.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000004B4",
+        "1A0000000000018A",
+        "1A000000000000A4"
+      ],
+      "icon": {
+        "id": "storagedrawers:iron_storage_upgrade",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "storagedrawers:iron_storage_upgrade",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006A000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000006A000"
+        }
+      ]
+    },
+    {
       "id": "1A000000000006B5",
       "x": 8.0,
       "y": 0.5,
@@ -819,6 +1038,176 @@
             "count": 4
           },
           "id": "1C0000000006B500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006D5",
+      "x": 11.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A0000000000018A",
+        "1A000000000006A0"
+      ],
+      "icon": {
+        "id": "storagedrawers:gold_storage_upgrade",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "storagedrawers:gold_storage_upgrade",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006D500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000006D500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006D6",
+      "x": 11.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000018A",
+        "1A000000000006D5"
+      ],
+      "icon": {
+        "id": "storagedrawers:diamond_storage_upgrade",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "storagedrawers:diamond_storage_upgrade",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006D600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000006D600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006D7",
+      "x": 11.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A0000000000018A",
+        "1A000000000006D6"
+      ],
+      "icon": {
+        "id": "storagedrawers:emerald_storage_upgrade",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "storagedrawers:emerald_storage_upgrade",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006D700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000006D700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006D8",
+      "x": 11.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000018A",
+        "1A000000000006D7"
+      ],
+      "icon": {
+        "id": "storagedrawers:emerald_storage_upgrade",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "storagedrawers:emerald_storage_upgrade",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006D800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000006D800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006D9",
+      "x": 12.5,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000018A",
+        "1A000000000006D8"
+      ],
+      "icon": {
+        "id": "storagedrawers:emerald_storage_upgrade",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "storagedrawers:emerald_storage_upgrade",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006D900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000006D900"
         }
       ]
     },

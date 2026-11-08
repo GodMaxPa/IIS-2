@@ -129,6 +129,48 @@
       ]
     },
     {
+      "id": "1A00000000000124",
+      "x": 17.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000000129"
+      ],
+      "icon": {
+        "id": "minecraft:shears",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:shears",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012400"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:shears",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012401"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000012400"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000125",
       "x": 14.0,
       "y": 4.5,
@@ -1386,7 +1428,7 @@
       "x": 17.0,
       "y": 6.0,
       "dependencies": [
-        "1A00000000000129"
+        "1A00000000000124"
       ],
       "icon": {
         "id": "minecraft:black_wool",

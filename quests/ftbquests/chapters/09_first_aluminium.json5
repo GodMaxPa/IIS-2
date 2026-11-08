@@ -1421,6 +1421,39 @@
       ]
     },
     {
+      "id": "1A000000000003CD",
+      "x": 9.0,
+      "y": 10.5,
+      "dependencies": [
+        "1A000000000001F7"
+      ],
+      "icon": {
+        "id": "iis:wrench_iron",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wrench_iron",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003CD00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000003CD00"
+        }
+      ]
+    },
+    {
       "id": "1A000000000003D1",
       "x": 15.0,
       "y": 5.0,

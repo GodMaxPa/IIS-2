@@ -41,7 +41,7 @@ AE_PART = {16: 'fluix_glass_cable', 36: 'fluix_covered_cable', 56: 'fluix_smart_
 for base, form in ((0, 'fluix_glass_cable'), (20, 'fluix_covered_cable'), (40, 'fluix_smart_cable'), (60, 'fluix_smart_dense_cable')):
     for i, c in enumerate(COLORS):
         AE_PART[base + i] = form.replace('fluix', c)
-AE_NAMED = {'tile.BlockController': 'controller', 'tile.BlockEnergyCell': 'energy_cell', 'tile.BlockDenseEnergyCell': 'dense_energy_cell', 'tile.BlockChest': 'me_chest',
+AE_NAMED = {'tile.BlockWireless': 'wireless_access_point', 'tile.BlockController': 'controller', 'tile.BlockEnergyCell': 'energy_cell', 'tile.BlockDenseEnergyCell': 'dense_energy_cell', 'tile.BlockChest': 'me_chest',
             'tile.BlockDrive': 'drive', 'tile.BlockCraftingUnit': 'crafting_unit', 'tile.BlockCraftingUnit:1': 'crafting_accelerator', 'tile.BlockMolecularAssembler': 'molecular_assembler',
             'tile.BlockQuantumRing': 'quantum_ring', 'tile.BlockQuantumLinkChamber': 'quantum_link', 'tile.BlockSpatialPylon': 'spatial_pylon', 'tile.BlockSpatialIOPort': 'spatial_io_port',
             'tile.BlockInterface': 'interface', 'tile.BlockCellWorkbench': 'cell_workbench', 'tile.BlockIOPort': 'io_port', 'tile.BlockCondenser': 'condenser',

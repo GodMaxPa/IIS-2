@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1750; hidden until their items are ported: 190; chapters: 36, one of them ours (D129, 49 quests).
+Quests in IIS 1: 1943; written: 1764; hidden until their items are ported: 176; chapters: 36, one of them ours (D129, 49 quests).
 
 ## Most needed unported items (task count)
 
@@ -10,7 +10,6 @@ Quests in IIS 1: 1943; written: 1750; hidden until their items are ported: 190; 
 - 1 × `gregtech:gt.metaitem.02:8500` 
 - 1 × `GraviSuite:advDDrill:1` 
 - 1 × `extracells:certustank:0` 
-- 1 × `Railcraft:tool.steel.shears:0` 
 - 1 × `EnderIO:blockReservoir:0` 
 - 1 × `IC2:itemFertilizer:0` 
 - 1 × `Railcraft:machine.beta:0` 
@@ -50,22 +49,13 @@ Quests in IIS 1: 1943; written: 1750; hidden until their items are ported: 190; 
 - 1 × `GraviSuite:advJetpack:1` 
 - 1 × `GraviSuite:itemSimpleItem:6` 
 - 1 × `IC2:upgradeModule:0` 
-- 1 × `BuildCraft|Core:wrenchItem:0` 
-- 1 × `appliedenergistics2:tile.BlockWireless:0` 
 - 1 × `appliedenergistics2:tile.BlockSecurity:0` 
 - 1 × `appliedenergistics2:item.ToolBiometricCard:0` 
 - 1 × `IC2:blockMachine3:7` 
 - 1 × `IC2:blockMachine2:2` 
 - 1 × `Forestry:woodPulp:0` 
 - 1 × `IC2:itemWeedingTrowel:0` 
-- 1 × `BiblioCraft:BiblioLabel:0` 
-- 1 × `BiblioCraft:BiblioFancySign:0` 
-- 1 × `ForgeMicroblock:sawStone:0` 
-- 1 × `ForgeMicroblock:sawIron:0` 
-- 1 × `ForgeMicroblock:sawDiamond:0` 
-- 1 × `CarpentersBlocks:itemCarpentersHammer:0` 
 - 1 × `JABBA:mover:0` 
-- 1 × `JABBA:barrel:0` 
 - 1 × `chisel:concrete:10` 
 - 1 × `gregtech:gt.metaitem.02:32513` UUA-ягода
 - 1 × `gregtech:gt.metaitem.02:32512` UUM-ягода
@@ -83,13 +73,7 @@ Quests in IIS 1: 1943; written: 1750; hidden until their items are ported: 190; 
 - 1 × `gregtech:gt.blockmachines:1124` Конвертер магической энергии любителя
 - 1 × `gregtech:gt.blockmachines:1125` Конвертер магической энергии мастера
 - 1 × `gregtech:gt.blockmachines:1130` Абсорбер магической энергии профессионала
-- 1 × `JABBA:upgradeCore:0` 
 - 1 × `Railcraft:cube:4` 
-- 1 × `JABBA:upgradeCore:4` 
-- 1 × `JABBA:upgradeCore:5` 
-- 1 × `JABBA:upgradeCore:6` 
-- 1 × `JABBA:upgradeCore:8` 
-- 1 × `JABBA:upgradeCore:9` 
 - 1 × `JABBA:upgradeStructural:0` 
 - 1 × `JABBA:upgradeStructural:1` 
 - 1 × `JABBA:upgradeStructural:2` 

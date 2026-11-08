@@ -147,6 +147,12 @@ GC_MAP.update({('gregtech:gt.blockmachines', 1171): 'iis:combustion_engine', ('g
                ('GalacticraftCore:tile.cargo', 0): 'iis:cargo_loader', ('GalacticraftCore:tile.cargo', 4): 'iis:cargo_unloader',
                ('EnderIO:blockBuffer', 0): 'iis:item_buffer', ('EnderIO:blockCapBank', 1): 'iis:capacitor_bank_basic', ('EnderIO:blockElectricLight', 0): 'iis:electric_light',
                ('EnderIO:blockElectricLight', 2): 'iis:basic_light',
+               # D138: mods replaced by ready ones in D127 (JABBA -> Storage Drawers, Carpenter's Blocks and microblocks -> FramedBlocks, BiblioCraft -> BiblioCraft Legacy)
+               ('JABBA:barrel', 0): 'storagedrawers:oak_full_drawers_1', ('JABBA:upgradeCore', 0): 'storagedrawers:iron_storage_upgrade', ('JABBA:upgradeCore', 4): 'storagedrawers:gold_storage_upgrade',
+               ('JABBA:upgradeCore', 5): 'storagedrawers:diamond_storage_upgrade', ('JABBA:upgradeCore', 6): 'storagedrawers:emerald_storage_upgrade', ('JABBA:upgradeCore', 8): 'storagedrawers:emerald_storage_upgrade',
+               ('JABBA:upgradeCore', 9): 'storagedrawers:emerald_storage_upgrade', ('BiblioCraft:BiblioLabel', 0): 'bibliocraft:oak_label', ('BiblioCraft:BiblioFancySign', 0): 'bibliocraft:oak_fancy_sign',
+               ('CarpentersBlocks:itemCarpentersHammer', 0): 'framedblocks:framed_hammer', ('ForgeMicroblock:sawStone', 0): 'framedblocks:framing_saw', ('ForgeMicroblock:sawIron', 0): 'framedblocks:framing_saw',
+               ('ForgeMicroblock:sawDiamond', 0): 'framedblocks:framing_saw', ('Railcraft:tool.steel.shears', 0): 'minecraft:shears', ('BuildCraft|Core:wrenchItem', 0): 'iis:wrench_iron',
                # D136: Project Red of IIS 1 -> compact logic (Tiny Redstone, Little Big Redstone)
                ('ProjRed|Core:projectred.core.part', 0): 'tinyredstone:silicon', ('ProjRed|Core:projectred.core.part', 1): 'tinyredstone:redstone_panel',
                ('ProjRed|Core:projectred.core.part', 4): 'tinyredstone:tiny_redstone', ('ProjRed|Core:projectred.core.part', 5): 'tinyredstone:tiny_redstone_torch',
@@ -324,7 +330,7 @@ class Mapper:
         if r is None:
             return None
         ns, _, path = r.partition(':')
-        ok = path in self.ours if ns == NS else (path in self.mod_items[ns] if ns in self.mod_items else ns in ('ironchest', 'chunkloaders', 'constructionwand', 'chisel', 'tinyredstone', 'little_big_redstone', 'tinygates') or path in self.vanilla)
+        ok = path in self.ours if ns == NS else (path in self.mod_items[ns] if ns in self.mod_items else ns in ('ironchest', 'chunkloaders', 'constructionwand', 'chisel', 'tinyredstone', 'little_big_redstone', 'tinygates', 'storagedrawers', 'bibliocraft', 'framedblocks') or path in self.vanilla)
         return r if ok else None
 
     def structural(self, name, dmg):
