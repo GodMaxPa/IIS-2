@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:amethyst_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_amethyst",
+      "count": 4
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

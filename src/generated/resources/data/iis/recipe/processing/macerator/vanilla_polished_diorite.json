@@ -1,0 +1,22 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:polished_diorite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_stone",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_silicon_dioxide",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

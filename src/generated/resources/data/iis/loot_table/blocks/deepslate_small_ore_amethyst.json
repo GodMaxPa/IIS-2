@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "iis:gem_amethyst",
+          "name": "minecraft:amethyst_shard",
           "weight": 15
         },
         {

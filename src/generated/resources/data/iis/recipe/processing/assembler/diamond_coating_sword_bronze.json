@@ -1,0 +1,31 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:sword_bronze",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/diamond",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sword_bronze",
+      "count": 1,
+      "components": {
+        "minecraft:max_damage": 576,
+        "minecraft:lore": [
+          {
+            "translate": "tooltip.iis.diamond_coated",
+            "color": "aqua",
+            "italic": false
+          }
+        ]
+      }
+    }
+  ],
+  "duration": 200,
+  "eut": 16
+}

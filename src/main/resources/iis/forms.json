@@ -881,7 +881,7 @@
   "gear/titanium": "iis:gear_titanium",
   "gear/tungsten_steel": "iis:gear_tungsten_steel",
   "gem/amber": "iis:gem_amber",
-  "gem/amethyst": "iis:gem_amethyst",
+  "gem/amethyst": "minecraft:amethyst_shard",
   "gem/apatite": "iis:gem_apatite",
   "gem/blue_topaz": "iis:gem_blue_topaz",
   "gem/certus_quartz": "iis:gem_certus_quartz",

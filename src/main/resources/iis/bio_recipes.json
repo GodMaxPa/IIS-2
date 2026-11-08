@@ -500,6 +500,33 @@
   "spec": "L05"
  },
  {
+  "id": "honey_binder",
+  "station": "pot",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "minecraft:honeycomb",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 1000
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "binder",
+    "amount": 1000
+   }
+  ],
+  "heat": true,
+  "spec": "D143 пчёлы: соты — связующее"
+ },
+ {
   "id": "b06_gel",
   "station": "pot",
   "mode": 0,

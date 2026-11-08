@@ -330,11 +330,6 @@
     "material": "amethyst"
   },
   {
-    "id": "gem_amethyst",
-    "prefix": "gem",
-    "material": "amethyst"
-  },
-  {
     "id": "plate_amethyst",
     "prefix": "plate",
     "material": "amethyst"

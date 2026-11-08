@@ -65,6 +65,9 @@ public final class EarlyGame {
         }
         event.modify(Items.STONE_SWORD, b -> b.set(DataComponents.MAX_DAMAGE, STONE_DURABILITY));
         event.modify(Items.STONE_SPEAR, b -> b.set(DataComponents.MAX_DAMAGE, STONE_DURABILITY));
+        // D143: элитры не планируют без рамы уровня реактивного ранца (рецепт vanilla/elytra_frame возвращает GLIDER и снимает подсказку)
+        event.modify(Items.ELYTRA, b -> b.set(DataComponents.GLIDER, null).set(DataComponents.LORE, new net.minecraft.world.item.component.ItemLore(List.of(
+                net.minecraft.network.chat.Component.translatable("tooltip.iis.elytra_frame").withStyle(s -> s.withColor(net.minecraft.ChatFormatting.GRAY).withItalic(false))))));
     }
 
     public static void register(IEventBus modBus) {

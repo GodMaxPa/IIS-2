@@ -205,3 +205,4 @@
 | Щиты Кибера и турели D140 | GameTest `defense_shields`, `defense_turret_shoots` |
 | Панели IC2 Nuclear Control D141 | GameTest `monitor_panel_reads` |
 | Правки после теста выживания D142 | GameTest `early_tools_recipes`, `early_finite_water` |
+| Напыление, породы, новое ванильное D143 | GameTest `modern_vanilla` |

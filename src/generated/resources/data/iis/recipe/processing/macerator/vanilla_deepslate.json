@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:deepslate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:cobbled_deepslate",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

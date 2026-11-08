@@ -1,0 +1,26 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:gilded_blackstone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_stone",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_gold",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_gold",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

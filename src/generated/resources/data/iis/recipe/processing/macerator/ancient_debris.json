@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:ancient_debris",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:netherite_scrap",
+      "count": 2
+    }
+  ],
+  "duration": 400,
+  "eut": 30
+}

@@ -35,6 +35,36 @@ final class EarlyGameTests {
         h.succeed();
     }
 
+    /** D143: напыление ассемблером, ванильные породы в дробилке, аметист — самоцвет GT, крафтер после LV, элитры с рамой, без незеритовых инструментов. */
+    static void modernVanilla(GameTestHelper h) {
+        var recipes = h.getLevel().recipeAccess();
+        java.util.function.Function<String, java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<?>>> r =
+                id -> recipes.byKey(ResourceKey.create(Registries.RECIPE, Identifier.parse(id))).map(x -> (net.minecraft.world.item.crafting.RecipeHolder<?>) x);
+        var coating = r.apply("iis:processing/assembler/diamond_coating_pickaxe_bronze");
+        h.assertTrue(coating.isPresent() && coating.get().value() instanceof ru.iis.machine.recipe.GtRecipe, "нет рецепта напыления");
+        ItemStack coated = ((ru.iis.machine.recipe.GtRecipe) coating.get().value()).outputs().getFirst().create();
+        ItemStack plain = new ItemStack(net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(Identifier.parse("iis:pickaxe_bronze")));
+        h.assertTrue(coated.is(plain.getItem()) && coated.getMaxDamage() == plain.getMaxDamage() * 3 / 2, "прочность напылённой " + coated.getMaxDamage() + " / " + plain.getMaxDamage());
+        var obsidian = Blocks.OBSIDIAN.defaultBlockState();
+        h.assertTrue(!plain.isCorrectToolForDrops(obsidian) && coated.isCorrectToolForDrops(obsidian), "напылённая бронзовая кирка не берёт обсидиан");
+        var st = Blocks.STONE.defaultBlockState();
+        h.assertTrue(coated.getDestroySpeed(st) > plain.getDestroySpeed(st), "напылённая не быстрее " + coated.getDestroySpeed(st) + " / " + plain.getDestroySpeed(st));
+        for (String id : new String[]{"iis:processing/macerator/vanilla_granite", "iis:processing/macerator/vanilla_tuff", "iis:processing/macerator/vanilla_calcite",
+                "iis:processing/macerator/vanilla_amethyst_cluster", "iis:processing/macerator/ancient_debris", "iis:vanilla/crafter", "iis:vanilla/elytra_frame"}) {
+            h.assertTrue(r.apply(id).isPresent(), "нет рецепта " + id);
+        }
+        for (String id : new String[]{"minecraft:crafter", "minecraft:netherite_pickaxe_smithing", "minecraft:netherite_sword_smithing"}) {
+            h.assertTrue(r.apply(id).isEmpty(), "ванильный рецепт не выключен: " + id);
+        }
+        h.assertTrue(!net.minecraft.core.registries.BuiltInRegistries.ITEM.containsKey(Identifier.parse("iis:gem_amethyst"))
+                && new ItemStack(Items.AMETHYST_SHARD).is(net.minecraft.tags.TagKey.create(Registries.ITEM, Identifier.parse("c:gems/amethyst"))), "аметист не самоцвет GT");
+        h.assertTrue(!new ItemStack(Items.ELYTRA).has(net.minecraft.core.component.DataComponents.GLIDER), "элитры планируют без рамы");
+        var frame = r.apply("iis:vanilla/elytra_frame").get().value();
+        h.assertTrue(frame instanceof net.minecraft.world.item.crafting.ShapedRecipe sr && sr.assemble(net.minecraft.world.item.crafting.CraftingInput.of(3, 3,
+                java.util.Collections.nCopies(9, ItemStack.EMPTY))).has(net.minecraft.core.component.DataComponents.GLIDER), "рама не возвращает планирование");
+        h.succeed();
+    }
+
     /** Вода не бесконечная: между двумя источниками третий не появляется. */
     static void finiteWater(GameTestHelper h) {
         for (int x = 0; x < 5; x++) for (int z = 0; z < 3; z++) h.setBlock(new BlockPos(x + 1, 1, z + 1), Blocks.STONE);

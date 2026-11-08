@@ -72,6 +72,7 @@ RECIPES = [
     R('rotten_mass', 'mortar', 10, [I('minecraft:rotten_flesh')], out_items=[O('rotten_mass')], spec='D70'),
     # --- W04 сосуд на очаге W05 -----------------------------------------------------------------------------------------
     R('l05_binder', 'pot', 30, [I('binding_gel', 2)], [F('water', 1000)], out_fluids=[F('binder', 1000)], heat=True, spec='L05'),
+    R('honey_binder', 'pot', 30, [I('minecraft:honeycomb', 2)], [F('water', 1000)], out_fluids=[F('binder', 1000)], heat=True, spec='D143 пчёлы: соты — связующее'),
     R('b06_gel', 'pot', 120, [I('connective_fiber', 2)], [F('water', 250)], out_items=[O('binding_gel')], out_fluids=[F('runoff', 250)], heat=True, spec='B06'),
     # --- W08 ручной отжим, W10 гравитационный фильтр (D72) --------------------------------------------------------------
     R('l02_extract', 'press', 80, [I('plant_mass', 2)], [F('water', 1000)], [O('plant_residue')], [F('extract', 800), F('runoff', 200)], spec='L02'),

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "RCR",
+    "PEP",
+    "R R"
+  ],
+  "key": {
+    "R": "#c:rods/steel",
+    "C": "#c:circuits/advanced",
+    "P": "#c:plates/aluminium",
+    "E": "minecraft:elytra"
+  },
+  "result": {
+    "id": "minecraft:elytra",
+    "components": {
+      "minecraft:glider": {},
+      "!minecraft:lore": {}
+    }
+  }
+}

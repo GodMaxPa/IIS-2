@@ -1,0 +1,46 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:shovel_aluminium",
+      "count": 1
+    },
+    {
+      "ingredient": "#iis:small_dusts/diamond",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:shovel_aluminium",
+      "count": 1,
+      "components": {
+        "minecraft:max_damage": 384,
+        "minecraft:lore": [
+          {
+            "translate": "tooltip.iis.diamond_coated",
+            "color": "aqua",
+            "italic": false
+          }
+        ],
+        "minecraft:tool": {
+          "rules": [
+            {
+              "blocks": "#minecraft:incorrect_for_diamond_tool",
+              "correct_for_drops": false
+            },
+            {
+              "blocks": "#minecraft:mineable/shovel",
+              "correct_for_drops": true,
+              "speed": 12.5
+            }
+          ],
+          "damage_per_block": 1,
+          "can_destroy_blocks_in_creative": true
+        }
+      }
+    }
+  ],
+  "duration": 200,
+  "eut": 16
+}

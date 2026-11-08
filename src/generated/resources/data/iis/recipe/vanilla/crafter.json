@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "PAP",
+    "PTP",
+    "CDC"
+  ],
+  "key": {
+    "P": "#c:plates/iron",
+    "A": "iis:robot_arm_lv",
+    "T": "minecraft:crafting_table",
+    "C": "#c:circuits/basic",
+    "D": "minecraft:dropper"
+  },
+  "result": {
+    "id": "minecraft:crafter"
+  }
+}

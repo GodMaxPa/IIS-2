@@ -296,6 +296,7 @@ VANILLA = {
     ('gem', 'Coal'): 'minecraft:coal', ('gem', 'Diamond'): 'minecraft:diamond', ('gem', 'Emerald'): 'minecraft:emerald',
     ('gem', 'Lapis'): 'minecraft:lapis_lazuli', ('gem', 'NetherQuartz'): 'minecraft:quartz',
     ('gem', 'EnderPearl'): 'minecraft:ender_pearl', ('gem', 'EnderEye'): 'minecraft:ender_eye', ('gem', 'NetherStar'): 'minecraft:nether_star',
+    ('gem', 'Amethyst'): 'minecraft:amethyst_shard',   # D143: the vanilla shard is the GT gem
     ('gem', 'Flint'): 'minecraft:flint', ('gem', 'Charcoal'): 'minecraft:charcoal', ('plate', 'Paper'): 'minecraft:paper', ('dust', 'Redstone'): 'minecraft:redstone', ('rod', 'Wood'): 'minecraft:stick',
 }
 NOT_GENERATED_MATERIALS = {'Wood'}  # wood forms (planks, sticks) are vanilla
@@ -1156,6 +1157,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_earlygame', os.path.join(ROOT, 'to
 _earlygame = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_earlygame)
 lv_stats['earlygame'] = _earlygame.generate(globals())
+# Owner's decision of 08.11 (D143): diamond coating, vanilla stones and amethyst, vanilla content after 1.7.10
+_spec = _ilu.spec_from_file_location('iis_gen_modern', os.path.join(ROOT, 'tools', 'gen', 'modern.py'))
+_modern = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_modern)
+lv_stats['modern'] = _modern.generate(globals())
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)
 
