@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PSP",
+    "CHC",
+    "PBP"
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "S": "iis:sensor_lv",
+    "C": "#c:circuits/basic",
+    "H": "iis:hull_lv",
+    "B": "iis:turret_base_t1"
+  },
+  "result": {
+    "id": "iis:turret_base_t2"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "iis:block/defense/turret_base_t4_side",
+    "end": "iis:block/defense/turret_base_t4_top"
+  }
+}

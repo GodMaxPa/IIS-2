@@ -1115,6 +1115,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_equipment', os.path.join(ROOT, 'to
 _equipment = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_equipment)
 lv_stats['equipment'] = _equipment.generate(globals())
+# Shields and automatic turrets (D140)
+_spec = _ilu.spec_from_file_location('iis_gen_defense', os.path.join(ROOT, 'tools', 'gen', 'defense.py'))
+_defense = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_defense)
+lv_stats['defense'] = _defense.generate(globals())
 
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)

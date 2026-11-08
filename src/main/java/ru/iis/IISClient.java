@@ -87,6 +87,7 @@ public final class IISClient {
     /** Покрытия GT на гранях электроблоков. */
     private static void registerCoverRenderers(net.neoforged.neoforge.client.event.EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ru.iis.lv.LvContent.ELECTRIC_MACHINE_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
+        event.registerBlockEntityRenderer(ru.iis.defense.DefenseContent.TURRET_BE.get(), c -> new ru.iis.defense.client.TurretRenderer());
         event.registerBlockEntityRenderer(ru.iis.lv.LvContent.GENERATOR_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
         event.registerBlockEntityRenderer(ru.iis.lv.LvContent.BATTERY_BUFFER_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());
         event.registerBlockEntityRenderer(ru.iis.lv.LvContent.TRANSFORMER_BE.get(), c -> new ru.iis.cover.client.CoverRenderer<>());

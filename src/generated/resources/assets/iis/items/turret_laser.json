@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/turret_laser",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "turret_laser"
+    }
+  },
+  "hand_animation_on_swap": false
+}

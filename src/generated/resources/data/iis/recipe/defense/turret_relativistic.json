@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EFE",
+    "CSC",
+    "PPP"
+  ],
+  "key": {
+    "E": "iis:emitter_mv",
+    "F": "iis:field_generator_mv",
+    "C": "#c:circuits/good",
+    "S": "iis:sensor_mv",
+    "P": "#c:plates/aluminium"
+  },
+  "result": {
+    "id": "iis:turret_relativistic"
+  }
+}

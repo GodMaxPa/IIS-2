@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "CPC"
+  ],
+  "key": {
+    "S": "iis:solar_panel",
+    "C": "#c:circuits/basic",
+    "P": "#c:plates/steel"
+  },
+  "result": {
+    "id": "iis:turret_addon_solar"
+  }
+}

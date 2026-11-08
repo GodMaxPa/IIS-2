@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BFB",
+    "CSC",
+    "PEP"
+  ],
+  "key": {
+    "B": "iis:barrel_titanium",
+    "F": "iis:field_generator_ev",
+    "C": "#c:circuits/data",
+    "S": "iis:sensor_ev",
+    "E": "iis:emitter_ev",
+    "P": "#c:plates/tungsten_steel"
+  },
+  "result": {
+    "id": "iis:turret_railgun"
+  }
+}

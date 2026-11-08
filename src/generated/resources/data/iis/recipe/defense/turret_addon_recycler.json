@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PXP",
+    "CHC",
+    "PPP"
+  ],
+  "key": {
+    "X": "iis:electric_piston_mv",
+    "H": "#c:chests",
+    "C": "#c:circuits/good",
+    "P": "#c:plates/aluminium"
+  },
+  "result": {
+    "id": "iis:turret_addon_recycler"
+  }
+}

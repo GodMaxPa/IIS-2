@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  B",
+    "RDR",
+    "PPP"
+  ],
+  "key": {
+    "B": "#c:rods/iron",
+    "R": "minecraft:redstone",
+    "D": "minecraft:dispenser",
+    "P": "#c:plates/iron"
+  },
+  "result": {
+    "id": "iis:turret_potato"
+  }
+}

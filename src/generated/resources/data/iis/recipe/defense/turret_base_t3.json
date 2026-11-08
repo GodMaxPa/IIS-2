@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PSP",
+    "CHC",
+    "PBP"
+  ],
+  "key": {
+    "P": "#c:plates/aluminium",
+    "S": "iis:sensor_mv",
+    "C": "#c:circuits/good",
+    "H": "iis:hull_mv",
+    "B": "iis:turret_base_t2"
+  },
+  "result": {
+    "id": "iis:turret_base_t3"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:plates/tungsten_steel",
+      "count": 6
+    },
+    {
+      "ingredient": "iis:field_generator_iv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:emitter_iv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:energy_orb",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/elite",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:force_shield",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 1920
+}

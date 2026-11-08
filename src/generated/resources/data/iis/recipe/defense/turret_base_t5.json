@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PSP",
+    "CHC",
+    "PBP"
+  ],
+  "key": {
+    "P": "#c:plates/tungsten_steel",
+    "S": "iis:sensor_ev",
+    "C": "#c:circuits/data",
+    "H": "iis:hull_ev",
+    "B": "iis:turret_base_t4"
+  },
+  "result": {
+    "id": "iis:turret_base_t5"
+  }
+}

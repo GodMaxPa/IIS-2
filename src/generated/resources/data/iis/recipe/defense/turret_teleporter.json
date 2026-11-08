@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EYE",
+    "CFS",
+    "PPP"
+  ],
+  "key": {
+    "E": "iis:emitter_hv",
+    "Y": "minecraft:ender_eye",
+    "C": "#c:circuits/advanced",
+    "F": "iis:field_generator_hv",
+    "S": "iis:sensor_hv",
+    "P": "#c:plates/titanium"
+  },
+  "result": {
+    "id": "iis:turret_teleporter"
+  }
+}

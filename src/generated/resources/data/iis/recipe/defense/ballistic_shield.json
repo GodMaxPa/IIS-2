@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PGP",
+    "PRP",
+    "PSP"
+  ],
+  "key": {
+    "P": "#c:plates/aluminium",
+    "G": "iis:reinforced_glass",
+    "R": "#c:plates/rubber",
+    "S": "#c:rods/steel"
+  },
+  "result": {
+    "id": "iis:ballistic_shield"
+  }
+}

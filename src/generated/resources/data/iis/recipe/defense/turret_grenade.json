@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBC",
+    "TXS",
+    "PPP"
+  ],
+  "key": {
+    "B": "iis:barrel_stainless",
+    "C": "#c:circuits/good",
+    "T": "iis:trigger_group",
+    "X": "iis:electric_piston_mv",
+    "S": "iis:sensor_mv",
+    "P": "#c:plates/aluminium"
+  },
+  "result": {
+    "id": "iis:turret_grenade"
+  }
+}

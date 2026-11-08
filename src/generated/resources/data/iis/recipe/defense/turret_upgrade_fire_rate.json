@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " G ",
+    "CMC"
+  ],
+  "key": {
+    "G": "iis:gun_spring",
+    "M": "iis:electric_motor_lv",
+    "C": "#c:circuits/basic"
+  },
+  "result": {
+    "id": "iis:turret_upgrade_fire_rate"
+  }
+}

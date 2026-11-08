@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ELE",
+    "CSC",
+    "PPP"
+  ],
+  "key": {
+    "E": "iis:emitter_hv",
+    "L": "#iis:lenses/ruby",
+    "C": "#c:circuits/advanced",
+    "S": "iis:sensor_hv",
+    "P": "#c:plates/titanium"
+  },
+  "result": {
+    "id": "iis:turret_laser"
+  }
+}

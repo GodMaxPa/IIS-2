@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/turret_machine_gun",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "turret_machine_gun"
+    }
+  },
+  "hand_animation_on_swap": false
+}

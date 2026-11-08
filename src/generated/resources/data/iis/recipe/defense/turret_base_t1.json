@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PRP",
+    "RCR",
+    "PRP"
+  ],
+  "key": {
+    "P": "#c:plates/iron",
+    "R": "minecraft:redstone",
+    "C": "#c:chests"
+  },
+  "result": {
+    "id": "iis:turret_base_t1"
+  }
+}

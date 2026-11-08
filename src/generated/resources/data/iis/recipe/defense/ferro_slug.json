@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "h",
+    "R",
+    "M"
+  ],
+  "key": {
+    "R": "#c:rods/steel",
+    "M": "#c:rods/iron_magnetic",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:ferro_slug",
+    "count": 4
+  }
+}

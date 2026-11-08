@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "iis:block/turret_mount"
+    },
+    "facing=down": {
+      "model": "iis:block/turret_mount",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "iis:block/turret_mount",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "iis:block/turret_mount",
+      "x": 90,
+      "y": 180
+    },
+    "facing=east": {
+      "model": "iis:block/turret_mount",
+      "x": 90,
+      "y": 90
+    },
+    "facing=west": {
+      "model": "iis:block/turret_mount",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

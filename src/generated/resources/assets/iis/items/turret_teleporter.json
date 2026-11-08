@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/turret_teleporter",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "turret_teleporter"
+    }
+  },
+  "hand_animation_on_swap": false
+}

@@ -921,6 +921,21 @@
     "iis:basic_light",
     "iis:crop_matron",
     "iis:crop_harvester",
-    "iis:fuel_pump"
+    "iis:fuel_pump",
+    "iis:turret_base_t1",
+    "iis:turret_base_t2",
+    "iis:turret_base_t3",
+    "iis:turret_base_t4",
+    "iis:turret_base_t5",
+    "iis:turret_disposable",
+    "iis:turret_potato",
+    "iis:turret_machine_gun",
+    "iis:turret_incendiary",
+    "iis:turret_grenade",
+    "iis:turret_relativistic",
+    "iis:turret_rocket",
+    "iis:turret_teleporter",
+    "iis:turret_laser",
+    "iis:turret_railgun"
   ]
 }

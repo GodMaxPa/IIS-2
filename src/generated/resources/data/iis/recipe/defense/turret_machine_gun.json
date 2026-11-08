@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GBB",
+    "TMS",
+    "PPP"
+  ],
+  "key": {
+    "G": "iis:gun_spring",
+    "B": "iis:barrel_steel",
+    "T": "iis:trigger_group",
+    "M": "iis:electric_motor_lv",
+    "S": "iis:sensor_lv",
+    "P": "#c:plates/steel"
+  },
+  "result": {
+    "id": "iis:turret_machine_gun"
+  }
+}

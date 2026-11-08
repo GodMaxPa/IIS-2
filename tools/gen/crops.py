@@ -397,6 +397,8 @@ def generate(g):
                                                                          d.point((9, 5), fill=(60, 120, 230, 255))))
     machine('crop_harvester', 'Crop Harvester', 'Сборщик урожая', lambda d, f: (d.line([(5, 10), (10, 5)], fill=(180, 180, 190, 255)), d.point([(6, 6), (9, 9)], fill=(230, 200, 60, 255))))
     g['block_tags']['minecraft:mineable/pickaxe'] += [I('crop_matron'), I('crop_harvester')]
+    # vanilla farmland dries into dirt unless the block on it is in this tag (IC2 crops keep their farmland)
+    g['block_tags'].setdefault('minecraft:maintains_farmland', []).append(I('crop'))
 
     # --- recipes -------------------------------------------------------------------------------------------------------------------
     # IC2: "S S / S S" sticks -> 2 crops; scrap + bone meal -> 2 fertilizer; redstone / grin powder / empty cell -> Weed-EX (from memory)

@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/turret_rocket",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "turret_rocket"
+    }
+  },
+  "hand_animation_on_swap": false
+}

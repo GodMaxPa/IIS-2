@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "iis:item/mesh/turret_relativistic",
+    "model": {
+      "type": "iis:mesh",
+      "mesh": "turret_relativistic"
+    }
+  },
+  "hand_animation_on_swap": false
+}

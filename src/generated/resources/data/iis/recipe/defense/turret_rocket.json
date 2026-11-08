@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBB",
+    "TXS",
+    "PCP"
+  ],
+  "key": {
+    "B": "iis:barrel_titanium",
+    "T": "iis:trigger_group",
+    "X": "iis:electric_piston_hv",
+    "S": "iis:sensor_hv",
+    "C": "#c:circuits/advanced",
+    "P": "#c:plates/titanium"
+  },
+  "result": {
+    "id": "iis:turret_rocket"
+  }
+}

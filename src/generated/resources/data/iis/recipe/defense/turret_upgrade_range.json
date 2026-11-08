@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "CPC"
+  ],
+  "key": {
+    "S": "iis:sensor_lv",
+    "C": "#c:circuits/basic",
+    "P": "#c:plates/steel"
+  },
+  "result": {
+    "id": "iis:turret_upgrade_range"
+  }
+}

@@ -27,7 +27,7 @@
 | EnderIO, EnderCore | 2.3.0 | Машины, трубы | **B** — Ender IO 9.0.6-alpha с правилами ИИС 1 (D125) |
 | ProjectRed (Base, Compat, Fabrication, Integration, Lighting) | 4.7.0 | Редстоун, логика | **B** — Little Big Redstone 1.9.11, Tiny Redstone 7.0.5, Tiny Gates 6.0.2 с рецептами по Project-Red.zs (D136) |
 | Flans-Mod, HMG (handmadeguns) | — | Оружие и техника | C → идеи для «промышленного снаряжения» (свои реализации) |
-| openmodularturrets | 2.3.7 | Турели | C → возможно, часть снаряжения |
+| openmodularturrets | 2.3.7 | Турели | **A** — свои турели по конфигу ИИС 1 (D140) |
 | CustomOreGen | 1.2.24 | Генерация руд | C — заменяется рудными жилами GT |
 | undergroundBiomes | 0.8 | Каменные породы | C |
 | RTG | 1.1.1.7 | Ландшафт | C — современный ландшафт лучше |

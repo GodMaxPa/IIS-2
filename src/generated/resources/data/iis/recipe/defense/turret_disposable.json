@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RDR",
+    " P ",
+    "PPP"
+  ],
+  "key": {
+    "R": "minecraft:redstone",
+    "D": "minecraft:dispenser",
+    "P": "#c:plates/iron"
+  },
+  "result": {
+    "id": "iis:turret_disposable"
+  }
+}

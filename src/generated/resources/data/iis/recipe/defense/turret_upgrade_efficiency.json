@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CWC",
+    "CPC"
+  ],
+  "key": {
+    "W": "#iis:cables/1x/tin",
+    "C": "#c:circuits/basic",
+    "P": "#c:plates/steel"
+  },
+  "result": {
+    "id": "iis:turret_upgrade_efficiency"
+  }
+}
