@@ -445,7 +445,16 @@ public enum LvMachineType {
     SCANNER_IV("scanner", null, 1, 1, 0, "scanner", VoltageTier.IV),
     SCANNER_LUV("scanner", null, 1, 1, 0, "scanner", VoltageTier.LUV),
     SCANNER_ZPM("scanner", null, 1, 1, 0, "scanner", VoltageTier.ZPM),
-    SCANNER_UV("scanner", null, 1, 1, 0, "scanner", VoltageTier.UV);
+    SCANNER_UV("scanner", null, 1, 1, 0, "scanner", VoltageTier.UV),
+    // D139: GT_MetaTileEntity_OrganicReplicator: мешочек семян с анализом 4 копируется за UU-материю, бак 100 000
+    ORGANIC_REPLICATOR("organic_replicator", null, 1, 1, 100000, "organicreplicator"),
+    ORGANIC_REPLICATOR_MV("organic_replicator", null, 1, 1, 100000, "organicreplicator", VoltageTier.MV),
+    ORGANIC_REPLICATOR_HV("organic_replicator", null, 1, 1, 100000, "organicreplicator", VoltageTier.HV),
+    ORGANIC_REPLICATOR_EV("organic_replicator", null, 1, 1, 100000, "organicreplicator", VoltageTier.EV),
+    ORGANIC_REPLICATOR_IV("organic_replicator", null, 1, 1, 100000, "organicreplicator", VoltageTier.IV),
+    ORGANIC_REPLICATOR_LUV("organic_replicator", null, 1, 1, 100000, "organicreplicator", VoltageTier.LUV),
+    ORGANIC_REPLICATOR_ZPM("organic_replicator", null, 1, 1, 100000, "organicreplicator", VoltageTier.ZPM),
+    ORGANIC_REPLICATOR_UV("organic_replicator", null, 1, 1, 100000, "organicreplicator", VoltageTier.UV);
 
     public final String id;
     public final GtRecipeMap recipeMap;

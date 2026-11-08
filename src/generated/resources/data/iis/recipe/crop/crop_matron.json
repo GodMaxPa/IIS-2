@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ACA",
+    "PHV",
+    "BCE"
+  ],
+  "key": {
+    "A": "iis:robot_arm_lv",
+    "C": "#c:circuits/basic",
+    "P": "iis:electric_pump_lv",
+    "H": "iis:hull_lv",
+    "V": "iis:conveyor_module_lv",
+    "B": "minecraft:chest",
+    "E": "iis:capsule"
+  },
+  "result": {
+    "id": "iis:crop_matron"
+  }
+}

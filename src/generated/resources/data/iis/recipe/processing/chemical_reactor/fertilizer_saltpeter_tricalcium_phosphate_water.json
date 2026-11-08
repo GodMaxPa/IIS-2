@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/saltpeter",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/tricalcium_phosphate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:fertilizer",
+      "count": 3
+    }
+  ],
+  "duration": 300,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

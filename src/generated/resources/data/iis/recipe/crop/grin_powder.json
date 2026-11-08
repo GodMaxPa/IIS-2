@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:spider_eye",
+    "minecraft:poisonous_potato"
+  ],
+  "result": {
+    "id": "iis:grin_powder"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:pyrolusium_leaf",
+      "count": 9
+    },
+    {
+      "ingredient": "#iis:crushed_ores/grossular",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_grossular",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

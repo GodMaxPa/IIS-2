@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CRC",
+    "WFW",
+    "CMC"
+  ],
+  "key": {
+    "M": "iis:hull_uv",
+    "R": "iis:crop_sticks",
+    "C": "#c:circuits/superconductor",
+    "F": "iis:field_generator_uv",
+    "W": "#iis:cables/1x/naquadah_alloy"
+  },
+  "result": {
+    "id": "iis:organic_replicator_uv"
+  }
+}

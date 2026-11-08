@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " WW",
+    "RGR",
+    "RCR"
+  ],
+  "key": {
+    "W": "#iis:cables/1x/tin",
+    "R": "minecraft:redstone",
+    "G": "minecraft:glass",
+    "C": "#c:circuits/basic"
+  },
+  "result": {
+    "id": "iis:cropnalyzer"
+  }
+}

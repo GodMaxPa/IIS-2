@@ -6160,6 +6160,30 @@
       ]
     },
     {
+      "id": "1A000000000005CF",
+      "x": 11.0,
+      "y": 0.5,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:organic_replicator_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:organic_replicator_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005CF00"
+        }
+      ]
+    },
+    {
       "id": "1A000000000005D0",
       "x": 12.5,
       "y": 0.5,
@@ -6468,6 +6492,30 @@
           },
           "count": 1,
           "id": "1B0000000005DC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005DD",
+      "x": 11.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000F4",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:organic_replicator_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:organic_replicator_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005DD00"
         }
       ]
     },
@@ -6784,6 +6832,30 @@
       ]
     },
     {
+      "id": "1A000000000005EB",
+      "x": 11.0,
+      "y": 3.5,
+      "dependencies": [
+        "1A000000000000F7",
+        "1A000000000000EC"
+      ],
+      "icon": {
+        "id": "iis:organic_replicator_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:organic_replicator_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005EB00"
+        }
+      ]
+    },
+    {
       "id": "1A000000000005EC",
       "x": 12.5,
       "y": 3.5,
@@ -7092,6 +7164,30 @@
           },
           "count": 1,
           "id": "1B0000000005F800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000005F9",
+      "x": 11.0,
+      "y": 5.0,
+      "dependencies": [
+        "1A0000000000001F",
+        "1A00000000000110"
+      ],
+      "icon": {
+        "id": "iis:organic_replicator_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:organic_replicator_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000005F900"
         }
       ]
     },
@@ -7408,6 +7504,30 @@
       ]
     },
     {
+      "id": "1A00000000000607",
+      "x": 11.0,
+      "y": 6.5,
+      "dependencies": [
+        "1A00000000000006",
+        "1A0000000000016F"
+      ],
+      "icon": {
+        "id": "iis:organic_replicator_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:organic_replicator_iv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000060700"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000608",
       "x": 12.5,
       "y": 6.5,
@@ -7716,6 +7836,30 @@
           },
           "count": 1,
           "id": "1B00000000061400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000615",
+      "x": 11.0,
+      "y": 8.0,
+      "dependencies": [
+        "1A0000000000023A",
+        "1A00000000000092"
+      ],
+      "icon": {
+        "id": "iis:organic_replicator_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:organic_replicator_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000061500"
         }
       ]
     },
@@ -8032,6 +8176,30 @@
       ]
     },
     {
+      "id": "1A00000000000623",
+      "x": 11.0,
+      "y": 9.5,
+      "dependencies": [
+        "1A00000000000290",
+        "1A0000000000023F"
+      ],
+      "icon": {
+        "id": "iis:organic_replicator_zpm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:organic_replicator_zpm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000062300"
+        }
+      ]
+    },
+    {
       "id": "1A00000000000624",
       "x": 12.5,
       "y": 9.5,
@@ -8340,6 +8508,30 @@
           },
           "count": 1,
           "id": "1B00000000063000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000631",
+      "x": 11.0,
+      "y": 11.0,
+      "dependencies": [
+        "1A000000000002C1",
+        "1A00000000000295"
+      ],
+      "icon": {
+        "id": "iis:organic_replicator_uv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:organic_replicator_uv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000063100"
         }
       ]
     },

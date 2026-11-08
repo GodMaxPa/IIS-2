@@ -215,6 +215,15 @@ GC_MAP.update({('IC2:blockElectric', 0): 'iis:batbox', ('IC2:blockElectric', 7):
                ('IC2:itemPartCarbonFibre', 0): 'iis:carbon_fiber', ('IC2:itemPartAlloy', 0): 'iis:advanced_alloy_plate', ('IC2:itemIngot', 4): 'iis:mixed_metal_ingot', ('IC2:itemPartIridium', 0): 'iis:iridium_alloy_plate',
                ('IC2:blockAlloyGlass', 0): 'iis:reinforced_glass', ('IC2:blockMiningPipe', 0): 'iis:mining_pipe', ('IC2:blockScaffold', 0): 'minecraft:scaffolding',
                ('gregtech:gt.metaitem.01', 32597): 'iis:energy_orb', ('gregtech:gt.metaitem.01', 32599): 'iis:energy_orb_cluster'})
+# D139: IC2 crops, their tools and machines, GT crop drops and the organic replicator
+GC_MAP.update({('IC2:blockCrop', 0): 'iis:crop_sticks', ('IC2:itemCropSeed', 0): 'iis:crop_seed', ('IC2:itemFertilizer', 0): 'iis:fertilizer',
+               ('IC2:itemCropnalyzer', 26): 'iis:cropnalyzer', ('IC2:itemCropnalyzer', 1): 'iis:cropnalyzer', ('IC2:itemCropnalyzer', 0): 'iis:cropnalyzer',
+               ('IC2:itemGrinPowder', 0): 'iis:grin_powder', ('IC2:itemWeedEx', 0): 'iis:weed_ex', ('IC2:itemWeedingTrowel', 0): 'iis:weeding_trowel',
+               ('IC2:blockMachine2', 2): 'iis:crop_matron', ('IC2:blockMachine3', 7): 'iis:crop_harvester', ('ic2cropstools:itemLens', 0): 'iis:crop_lens',
+               ('IC2:itemTerraWart', 0): 'iis:terra_wart', ('IC2:itemHops', 0): 'iis:hops', ('IC2:itemCofeeBeans', 0): 'iis:coffee_beans'})
+GC_MAP.update({('gregtech:gt.metaitem.02', 32000 + k): f'iis:{v}' for k, v in {500: 'plumbilia_leaf', 501: 'argentia_leaf', 502: 'indigo_blossom', 505: 'tea_leaf', 510: 'oil_berry', 511: 'bobs_yer_uncle_berry', 512: 'uum_berry', 513: 'uua_berry', 520: 'milk_wart', 521: 'bauxia_leaf', 522: 'titania_leaf', 523: 'reactoria_leaf', 524: 'uranium_leaf', 526: 'thunder_leaf', 527: 'nickelback_leaf', 528: 'galvania_leaf', 529: 'pyrolusium_leaf', 530: 'coppon_fiber', 531: 'scheelinium_leaf', 532: 'platina_leaf', 533: 'quantaria_leaf', 534: 'quantaria_leaf_osmium', 535: 'stargatium_leaf', 540: 'tine_twig', 550: 'chilly_pepper', 551: 'lemon', 552: 'tomato', 553: 'max_tomato', 554: 'grapes', 555: 'onion', 556: 'cucumber', 557: 'rape'}.items()})
+GC_MAP.update({('gregtech:gt.blockmachines', 681 + i): f'iis:organic_replicator_{t}' for i, t in enumerate(('lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv'))})
+
 RAILCRAFT_MAP = {
     ('detector', 0): 'detector_item', ('part.tie', 0): 'tie_wood', ('part.tie', 1): 'tie_stone', ('part.railbed', 0): 'railbed_wood',
     ('part.railbed', 1): 'railbed_stone', ('part.rail', 0): 'rail_standard', ('part.rail', 1): 'rail_advanced', ('part.rail', 2): 'rail_wooden',

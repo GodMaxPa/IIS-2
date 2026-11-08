@@ -1,0 +1,33 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:scheelinium_leaf",
+      "count": 9
+    },
+    {
+      "ingredient": "#iis:crushed_ores/tungstate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_tungstate",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_manganese",
+      "amount": 144
+    }
+  ]
+}

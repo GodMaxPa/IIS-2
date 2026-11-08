@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:scheelinium_leaf",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_scheelite",
+      "count": 1
+    }
+  ],
+  "duration": 6016,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:uumatter",
+      "amount": 5
+    }
+  ]
+}

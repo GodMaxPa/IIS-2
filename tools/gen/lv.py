@@ -127,6 +127,8 @@ MACHINES = [
     ('plasma_arc_furnace', 'plasmaarcfurnace', 'PLASMA_ARC_FURNACE', 'PlasmaArcFurnace', 'plasma_arc_furnace', 1, 6, 1000, 'Plasma Arc Furnace'),
     ('disassembler',  'disassembler',  'DISASSEMBLER',     'Disassembler', 'disassembler',  1, 9, 0,     'Disassembler'),
     ('replicator',    'replicator',    'REPLICATOR',       'Replicator',   None,            1, 1, 16000, 'Replicator'),   # D122
+    # D139: GT_MetaTileEntity_OrganicReplicator (1 in, 1 out, UU-matter tank 100000): copies scanned seed bags
+    ('organic_replicator', 'organicreplicator', 'ORGANIC_REPLICATOR', 'OrganicReplicator', None, 1, 1, 100000, 'Organic Replicator'),
     # D130: not in GT, our machine for cartridges; its picture is that of the assembler
     ('cartridge_press', 'cartridge_press', 'ASSEMBLER',    'Assembler',    'cartridge_press', 6, 1, 16000, 'Cartridge Press'),
 ]

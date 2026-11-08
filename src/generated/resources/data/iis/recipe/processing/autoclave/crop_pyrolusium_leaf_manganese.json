@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:pyrolusium_leaf",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_manganese",
+      "count": 1
+    }
+  ],
+  "duration": 7040,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:uumatter",
+      "amount": 6
+    }
+  ]
+}

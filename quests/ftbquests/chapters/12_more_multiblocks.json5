@@ -246,6 +246,41 @@
       ]
     },
     {
+      "id": "1A00000000000146",
+      "x": -45.0,
+      "y": -8.0,
+      "dependencies": [
+        "1A000000000001DD",
+        "1A0000000000017C"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:fertilizer",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fertilizer",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000014600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000014600"
+        }
+      ]
+    },
+    {
       "id": "1A0000000000017C",
       "x": -45.0,
       "y": -6.5,

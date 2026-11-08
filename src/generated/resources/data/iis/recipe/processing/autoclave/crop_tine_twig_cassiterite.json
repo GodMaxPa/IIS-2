@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:tine_twig",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_cassiterite",
+      "count": 1
+    }
+  ],
+  "duration": 6400,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:uumatter",
+      "amount": 5
+    }
+  ]
+}

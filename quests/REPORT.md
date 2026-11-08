@@ -1,17 +1,15 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1764; hidden until their items are ported: 176; chapters: 36, one of them ours (D129, 49 quests).
+Quests in IIS 1: 1943; written: 1783; hidden until their items are ported: 157; chapters: 36, one of them ours (D129, 49 quests).
 
 ## Most needed unported items (task count)
 
-- 2 × `gregtech:gt.blockmachines:681` Органический репликатор (LV)
 - 1 × `extracells:ecbaseblock:0` 
 - 1 × `extracells:part.base:12` 
 - 1 × `gregtech:gt.metaitem.02:8500` 
 - 1 × `GraviSuite:advDDrill:1` 
 - 1 × `extracells:certustank:0` 
 - 1 × `EnderIO:blockReservoir:0` 
-- 1 × `IC2:itemFertilizer:0` 
 - 1 × `Railcraft:machine.beta:0` 
 - 1 × `Railcraft:machine.beta:1` 
 - 1 × `Railcraft:machine.beta:2` 
@@ -20,8 +18,6 @@ Quests in IIS 1: 1943; written: 1764; hidden until their items are ported: 176; 
 - 1 × `gregtech:gt.metaitem.01:2676` Смесь металлов
 - 1 × `GalacticraftCore:item.schematic:1` 
 - 1 × `IC2:itemCellEmpty:5` 
-- 1 × `IC2:blockCrop:0` 
-- 1 × `IC2:itemCropnalyzer:26` 
 - 1 × `Forestry:thermionicTubes:1` 
 - 1 × `Forestry:ffarm:0` 
 - 1 × `Forestry:factory:1` 
@@ -29,8 +25,6 @@ Quests in IIS 1: 1943; written: 1764; hidden until their items are ported: 176; 
 - 1 × `Forestry:ffarm:4` 
 - 1 × `Forestry:ffarm:3` 
 - 1 × `IronChest:BlockIronChest:4` 
-- 1 × `IC2:itemGrinPowder:0` 
-- 1 × `IC2:itemWeedEx:0` 
 - 1 × `GraviSuite:itemSimpleItem:3` 
 - 1 × `GraviSuite:itemSimpleItem:1` 
 - 1 × `GraviSuite:itemSimpleItem:2` 
@@ -51,21 +45,9 @@ Quests in IIS 1: 1943; written: 1764; hidden until their items are ported: 176; 
 - 1 × `IC2:upgradeModule:0` 
 - 1 × `appliedenergistics2:tile.BlockSecurity:0` 
 - 1 × `appliedenergistics2:item.ToolBiometricCard:0` 
-- 1 × `IC2:blockMachine3:7` 
-- 1 × `IC2:blockMachine2:2` 
 - 1 × `Forestry:woodPulp:0` 
-- 1 × `IC2:itemWeedingTrowel:0` 
 - 1 × `JABBA:mover:0` 
 - 1 × `chisel:concrete:10` 
-- 1 × `gregtech:gt.metaitem.02:32513` UUA-ягода
-- 1 × `gregtech:gt.metaitem.02:32512` UUM-ягода
-- 1 × `gregtech:gt.blockmachines:682` Органический репликатор (MV)
-- 1 × `gregtech:gt.blockmachines:683` Органический репликатор (HV)
-- 1 × `gregtech:gt.blockmachines:684` Органический репликатор (EV)
-- 1 × `gregtech:gt.blockmachines:685` Органический репликатор (IV)
-- 1 × `gregtech:gt.blockmachines:686` Органический репликатор (LuV)
-- 1 × `gregtech:gt.blockmachines:687` Органический репликатор (ZPM)
-- 1 × `gregtech:gt.blockmachines:688` Органический репликатор (UV)
 - 1 × `gregtech:gt.blockmachines:1127` Абсорбер магической энергии новичка
 - 1 × `gregtech:gt.blockmachines:1128` Абсорбер магической энергии любителя
 - 1 × `gregtech:gt.blockmachines:1129` Абсорбер магической энергии мастера
@@ -85,7 +67,6 @@ Quests in IIS 1: 1943; written: 1764; hidden until their items are ported: 176; 
 - 1 × `JABBA:upgradeStructural:8` 
 - 1 × `JABBA:upgradeStructural:9` 
 - 1 × `JABBA:upgradeStructural:10` 
-- 1 × `ic2cropstools:itemLens:0` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:55` 
 - 1 × `appliedenergistics2:item.ItemMultiMaterial:54` 
 - 1 × `appliedenergistics2:item.ItemMultiPart:500` 

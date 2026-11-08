@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/potassium",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/dark_ash",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:fertilizer",
+      "count": 2
+    }
+  ],
+  "duration": 200,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

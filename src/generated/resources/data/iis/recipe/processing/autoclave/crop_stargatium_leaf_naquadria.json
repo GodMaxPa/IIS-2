@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:stargatium_leaf",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_naquadria",
+      "count": 1
+    }
+  ],
+  "duration": 12544,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:uumatter",
+      "amount": 10
+    }
+  ]
+}

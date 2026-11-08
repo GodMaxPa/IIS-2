@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:bobs_yer_uncle_berry",
+      "count": 9
+    },
+    {
+      "ingredient": "#iis:crushed_ores/beryllium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_beryllium",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

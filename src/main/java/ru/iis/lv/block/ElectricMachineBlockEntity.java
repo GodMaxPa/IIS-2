@@ -65,7 +65,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         LvMachineType t = type(state);
         this.voltage = t.voltage();
         this.logic = new ElectricMachineLogic(voltage);
-        this.tank = new FluidTank(Math.max(1, t.tank), f -> t.id.equals("replicator") ? f == ru.iis.fluid.GtFluids.get("uumatter").source().get() : t.tank > 0 && t.recipeMap != null
+        this.tank = new FluidTank(Math.max(1, t.tank), f -> t.id.equals("replicator") || t.id.equals("organic_replicator") ? f == ru.iis.fluid.GtFluids.get("uumatter").source().get() : t.tank > 0 && t.recipeMap != null
                 && level instanceof ServerLevel sl && GtRecipes.acceptsFluid(sl, t.recipeMap, f), true, this::markDirty);
         this.outTank = new FluidTank(Math.max(1, t.tank), f -> false, true, this::markDirty);
         this.fluids = new net.neoforged.neoforge.transfer.CombinedResourceHandler<>(tank, outTank);
@@ -288,6 +288,7 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         if (t.id.equals("scanner")) return scan(sl, t);
         if (t.id.equals("seismic_prospector")) return prospect(sl, t);
         if (t.id.equals("replicator")) return replicate(sl, t);
+        if (t.id.equals("organic_replicator")) return replicateSeeds(sl, t);
         if (t.id.equals("recycler")) {
             // GT_Recipe_Map_Recycler: всё, кроме самого утиля, в утиль с шансом 12,5 %, 45 тиков, 1 EU/t (D119)
             ItemStack in = inputs.get(0);
@@ -354,6 +355,23 @@ public class ElectricMachineBlockEntity extends ElectricBlockEntity {
         setChanged();
         Overclock.Result oc = Overclock.basicMachine(Math.max(1, m.recipe().eut()), m.recipe().duration(), t.tier, 1);
         return new int[]{(int) oc.euPerTick(), oc.durationTicks()};
+    }
+
+    /**
+     * D139: GT_MetaTileEntity_OrganicReplicator#checkRecipe: мешочек с анализом 4 остаётся на входе, копия выходит с шансом min((уровень + 5) × 10, 100) %;
+     * UU-материи round((уровень культуры × 4 + свойства) × 2), V × 15/16 EU/t, (уровень культуры + 1) × 500 / 2^(уровень машины − 1) тиков; выход должен быть пуст.
+     */
+    private int @Nullable [] replicateSeeds(ServerLevel sl, LvMachineType t) {
+        ItemStack in = items.get(0);
+        ru.iis.crop.CropSeedItem.Seed s = ru.iis.crop.CropSeedItem.seed(in);
+        if (s == null || s.scan() < 4 || s.card() == null || !items.get(t.inputs).isEmpty()) return null;
+        int uum = Math.round((s.card().tier() * 4 + s.gain() + s.growth() + s.resistance()) * 2f);
+        if (uum > tank.amount()) return null;
+        tank.drainInternal(uum);
+        int efficiency = Math.min((t.tier.tier() + 5) * 10, 100);
+        pending = sl.getRandom().nextInt(100) > efficiency ? List.of() : List.of(in.copyWithCount(1));
+        setChanged();
+        return new int[]{(int) (voltage * 15 / 16), Math.max(1, (s.card().tier() + 1) * 500 >> (t.tier.tier() - 1))};
     }
 
     /** D122: GT_MetaTileEntity_Replicator#checkRecipe: сфера с элементом не тратится, UU-материи уходит по массе, пыль на выходе. */

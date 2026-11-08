@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:nickelback_leaf",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_wulfenite",
+      "count": 1
+    }
+  ],
+  "duration": 7808,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:uumatter",
+      "amount": 7
+    }
+  ]
+}

@@ -10,7 +10,7 @@ import ru.iis.machine.client.MachineScreen;
 public class ElectricMachineScreen extends MachineScreen<ElectricMachineMenu> {
     /** Текстуры GT, где нарисован слот входной жидкости (53,63). На остальных есть только правый, и он показывает то, что есть. */
     private static final java.util.Set<String> LEFT_FLUID = java.util.Set.of("arcfurnace", "assembler", "autoclave", "centrifuge", "chemicalbath", "chemicalreactor", "circuitassembler", "cutter", "distillery",
-            "electrolyzer", "fermenter", "filter", "fluidcanner", "fluidheater", "fluidsolidifier", "massfabricator", "mixer", "orewasher", "plasmaarcfurnace", "potionbrewer", "printer", "replicator", "rockbreaker", "scanner");
+            "electrolyzer", "fermenter", "filter", "fluidcanner", "fluidheater", "fluidsolidifier", "massfabricator", "mixer", "orewasher", "plasmaarcfurnace", "potionbrewer", "printer", "replicator", "organicreplicator", "rockbreaker", "scanner");
 
     private boolean leftFluid() {
         return LEFT_FLUID.contains(menu.type.gui);

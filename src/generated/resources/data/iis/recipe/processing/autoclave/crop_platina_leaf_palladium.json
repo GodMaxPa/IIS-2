@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:platina_leaf",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_palladium",
+      "count": 1
+    }
+  ],
+  "duration": 13568,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:uumatter",
+      "amount": 11
+    }
+  ]
+}

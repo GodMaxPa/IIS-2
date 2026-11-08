@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/lv/organic_replicator_hv_side_active",
+    "north": "iis:block/lv/organic_replicator_hv_front_active",
+    "south": "iis:block/lv/organic_replicator_hv_back_active",
+    "east": "iis:block/lv/organic_replicator_hv_side_active",
+    "west": "iis:block/lv/organic_replicator_hv_side_active",
+    "up": "iis:block/lv/organic_replicator_hv_top_active",
+    "down": "iis:block/lv/organic_replicator_hv_bottom_active"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/crop",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "crop": "iis:block/crop/corium_4",
+    "particle": "iis:block/crop/corium_4"
+  }
+}

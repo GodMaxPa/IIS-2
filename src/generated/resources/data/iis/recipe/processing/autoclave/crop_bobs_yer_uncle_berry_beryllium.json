@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:bobs_yer_uncle_berry",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_beryllium",
+      "count": 1
+    }
+  ],
+  "duration": 1152,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:uumatter",
+      "amount": 1
+    }
+  ]
+}

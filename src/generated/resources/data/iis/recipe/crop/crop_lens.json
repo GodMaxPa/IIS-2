@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "Gf ",
+    " S ",
+    "  R"
+  ],
+  "key": {
+    "G": "minecraft:glass_pane",
+    "S": "minecraft:string",
+    "R": "minecraft:stick",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:crop_lens"
+  }
+}

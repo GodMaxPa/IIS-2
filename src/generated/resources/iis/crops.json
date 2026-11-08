@@ -1,0 +1,2295 @@
+[
+  {
+    "id": "weed",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 0,
+    "max": 5,
+    "harvest": 5,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      0,
+      0,
+      1,
+      0,
+      5
+    ],
+    "attrs": [
+      "Weed",
+      "Bad"
+    ],
+    "drop": null,
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "wheat",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 1,
+    "max": 7,
+    "harvest": 7,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      0,
+      4,
+      0,
+      0,
+      2
+    ],
+    "attrs": [
+      "White",
+      "Food",
+      "Wheat"
+    ],
+    "drop": "minecraft:wheat",
+    "special": [],
+    "seed": [
+      "minecraft:wheat_seeds",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "pumpkin",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 1,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      0,
+      1,
+      0,
+      3,
+      1
+    ],
+    "attrs": [
+      "Orange",
+      "Decoration",
+      "Stem"
+    ],
+    "drop": "minecraft:pumpkin",
+    "special": [],
+    "seed": [
+      "minecraft:pumpkin_seeds",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "melon",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 2,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      0,
+      4,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Green",
+      "Food",
+      "Stem"
+    ],
+    "drop": "minecraft:melon_slice",
+    "special": [
+      "minecraft:melon"
+    ],
+    "seed": [
+      "minecraft:melon_seeds",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "dandelion",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 2,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      5,
+      1
+    ],
+    "attrs": [
+      "Yellow",
+      "Flower"
+    ],
+    "drop": "minecraft:yellow_dye",
+    "special": [],
+    "seed": [
+      "minecraft:dandelion",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "rose",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 2,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      5,
+      1
+    ],
+    "attrs": [
+      "Red",
+      "Flower",
+      "Rose"
+    ],
+    "drop": "minecraft:red_dye",
+    "special": [],
+    "seed": [
+      "minecraft:poppy",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "blackthorn",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 2,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      5,
+      1
+    ],
+    "attrs": [
+      "Black",
+      "Flower",
+      "Rose"
+    ],
+    "drop": "minecraft:ink_sac",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "tulip",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 2,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      5,
+      1
+    ],
+    "attrs": [
+      "Purple",
+      "Flower",
+      "Tulip"
+    ],
+    "drop": "minecraft:purple_dye",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "cyazint",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 2,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      5,
+      1
+    ],
+    "attrs": [
+      "Blue",
+      "Flower"
+    ],
+    "drop": "minecraft:cyan_dye",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "venomilia",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 3,
+    "max": 6,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      3,
+      1,
+      3,
+      3,
+      3
+    ],
+    "attrs": [
+      "Purple",
+      "Flower",
+      "Tulip",
+      "Poison"
+    ],
+    "drop": "minecraft:purple_dye",
+    "special": [
+      "iis:grin_powder"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "reed",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 2,
+    "max": 3,
+    "harvest": 2,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      0,
+      0,
+      2,
+      0,
+      2
+    ],
+    "attrs": [
+      "Reed"
+    ],
+    "drop": "minecraft:sugar_cane",
+    "special": [],
+    "seed": [
+      "minecraft:sugar_cane",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "stickreed",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 4,
+    "max": 4,
+    "harvest": 2,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      1,
+      0,
+      1
+    ],
+    "attrs": [
+      "Reed",
+      "Resin"
+    ],
+    "drop": "minecraft:sugar_cane",
+    "special": [
+      "iis:sticky_resin",
+      "iis:sticky_resin"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "cocoa",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 3,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      1,
+      3,
+      0,
+      4,
+      0
+    ],
+    "attrs": [
+      "Brown",
+      "Food",
+      "Stem"
+    ],
+    "drop": "minecraft:cocoa_beans",
+    "special": [],
+    "seed": [
+      "minecraft:cocoa_beans",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "redwheat",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 6,
+    "max": 7,
+    "harvest": 7,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      3,
+      0,
+      0,
+      0,
+      2
+    ],
+    "attrs": [
+      "Red",
+      "Redstone",
+      "Wheat"
+    ],
+    "drop": "minecraft:redstone",
+    "special": [
+      "minecraft:wheat"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "nether_wart",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 5,
+    "max": 3,
+    "harvest": 3,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      4,
+      2,
+      0,
+      0,
+      1
+    ],
+    "attrs": [
+      "Red",
+      "Nether",
+      "Ingredient",
+      "Soulsand"
+    ],
+    "drop": "minecraft:nether_wart",
+    "special": [],
+    "seed": [
+      "minecraft:nether_wart",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "terra_wart",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 5,
+    "max": 3,
+    "harvest": 3,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      3,
+      0,
+      0
+    ],
+    "attrs": [
+      "Blue",
+      "Aether",
+      "Consumable",
+      "Snow"
+    ],
+    "drop": "iis:terra_wart",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "ferru",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 6,
+    "max": 4,
+    "harvest": 4,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      0,
+      1,
+      0
+    ],
+    "attrs": [
+      "Gray",
+      "Leaves",
+      "Metal"
+    ],
+    "drop": "iis:small_dust_iron",
+    "special": [],
+    "seed": null,
+    "blockMat": "iron",
+    "block": "iron"
+  },
+  {
+    "id": "cyprium",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 6,
+    "max": 4,
+    "harvest": 4,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      0,
+      1,
+      0
+    ],
+    "attrs": [
+      "Orange",
+      "Leaves",
+      "Metal"
+    ],
+    "drop": "iis:small_dust_copper",
+    "special": [],
+    "seed": null,
+    "blockMat": "copper",
+    "block": "copper"
+  },
+  {
+    "id": "stagnium",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 6,
+    "max": 4,
+    "harvest": 4,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      0,
+      1,
+      0
+    ],
+    "attrs": [
+      "Shiny",
+      "Leaves",
+      "Metal"
+    ],
+    "drop": "iis:small_dust_tin",
+    "special": [],
+    "seed": null,
+    "blockMat": "tin",
+    "block": "tin"
+  },
+  {
+    "id": "plumbiscus",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 6,
+    "max": 4,
+    "harvest": 4,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      0,
+      1,
+      0
+    ],
+    "attrs": [
+      "Dense",
+      "Leaves",
+      "Metal"
+    ],
+    "drop": "iis:small_dust_lead",
+    "special": [],
+    "seed": null,
+    "blockMat": "lead",
+    "block": "lead"
+  },
+  {
+    "id": "shining",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 7,
+    "max": 4,
+    "harvest": 4,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Silver",
+      "Leaves",
+      "Metal"
+    ],
+    "drop": "iis:small_dust_silver",
+    "special": [],
+    "seed": null,
+    "blockMat": "silver",
+    "block": "silver"
+  },
+  {
+    "id": "aurelia",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 8,
+    "max": 4,
+    "harvest": 4,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Gold",
+      "Leaves",
+      "Metal"
+    ],
+    "drop": "iis:small_dust_gold",
+    "special": [],
+    "seed": null,
+    "blockMat": "gold",
+    "block": "gold"
+  },
+  {
+    "id": "coffee",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 7,
+    "max": 5,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      1,
+      4,
+      1,
+      2,
+      0
+    ],
+    "attrs": [
+      "Leaves",
+      "Ingredient",
+      "Beans"
+    ],
+    "drop": "iis:coffee_beans",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "hops",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 5,
+    "max": 7,
+    "harvest": 7,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      2,
+      2,
+      0,
+      1,
+      1
+    ],
+    "attrs": [
+      "Green",
+      "Ingredient",
+      "Wheat"
+    ],
+    "drop": "iis:hops",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "carrots",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 2,
+    "max": 3,
+    "harvest": 3,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      0,
+      4,
+      0,
+      0,
+      2
+    ],
+    "attrs": [
+      "Orange",
+      "Food",
+      "Carrots"
+    ],
+    "drop": "minecraft:carrot",
+    "special": [],
+    "seed": [
+      "minecraft:carrot",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "potato",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 2,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      0,
+      4,
+      0,
+      0,
+      2
+    ],
+    "attrs": [
+      "Yellow",
+      "Food",
+      "Potato"
+    ],
+    "drop": "minecraft:potato",
+    "special": [
+      "minecraft:poisonous_potato"
+    ],
+    "seed": [
+      "minecraft:potato",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "eating_plant",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 6,
+    "max": 6,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      3,
+      1,
+      4
+    ],
+    "attrs": [
+      "Bad",
+      "Food"
+    ],
+    "drop": "minecraft:rotten_flesh",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "red_mushroom",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 2,
+    "max": 3,
+    "harvest": 3,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      0,
+      4,
+      0,
+      0,
+      4
+    ],
+    "attrs": [
+      "Red",
+      "Food",
+      "Mushroom"
+    ],
+    "drop": "minecraft:red_mushroom",
+    "special": [],
+    "seed": [
+      "minecraft:red_mushroom",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "brown_mushroom",
+    "by": "IC2",
+    "mod": "IC2",
+    "tier": 2,
+    "max": 3,
+    "harvest": 3,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      0,
+      4,
+      0,
+      0,
+      4
+    ],
+    "attrs": [
+      "Brown",
+      "Food",
+      "Mushroom"
+    ],
+    "drop": "minecraft:brown_mushroom",
+    "special": [],
+    "seed": [
+      "minecraft:brown_mushroom",
+      1
+    ],
+    "block": null
+  },
+  {
+    "id": "indigo",
+    "by": "Eloraam",
+    "mod": "GregTech",
+    "tier": 2,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      4,
+      0
+    ],
+    "attrs": [
+      "Flower",
+      "Color",
+      "Ingredient"
+    ],
+    "drop": "iis:indigo_blossom",
+    "special": [],
+    "seed": [
+      "iis:indigo_blossom",
+      4
+    ],
+    "block": null
+  },
+  {
+    "id": "flax",
+    "by": "Eloraam",
+    "mod": "GregTech",
+    "tier": 2,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      2,
+      0,
+      1
+    ],
+    "attrs": [
+      "Silk",
+      "Vine",
+      "Addictive"
+    ],
+    "drop": "minecraft:string",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "oilberries",
+    "by": "Spacetoad",
+    "mod": "GregTech",
+    "tier": 9,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      6,
+      1,
+      2,
+      1,
+      12
+    ],
+    "attrs": [
+      "Fire",
+      "Dark",
+      "Reed",
+      "Rotten",
+      "Coal",
+      "Oil"
+    ],
+    "drop": "iis:oil_berry",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "bobsyeruncleranks",
+    "by": "GenerikB",
+    "mod": "GregTech",
+    "tier": 11,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      4,
+      0,
+      8,
+      2,
+      9
+    ],
+    "attrs": [
+      "Shiny",
+      "Vine",
+      "Emerald",
+      "Berylium",
+      "Crystal"
+    ],
+    "drop": "iis:bobs_yer_uncle_berry",
+    "special": [
+      "minecraft:emerald"
+    ],
+    "seed": null,
+    "blockMat": "emerald",
+    "block": "emerald"
+  },
+  {
+    "id": "diareed",
+    "by": "Direwolf20",
+    "mod": "GregTech",
+    "tier": 12,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      5,
+      0,
+      10,
+      2,
+      10
+    ],
+    "attrs": [
+      "Fire",
+      "Shiny",
+      "Reed",
+      "Coal",
+      "Diamond",
+      "Crystal"
+    ],
+    "drop": "iis:tiny_dust_diamond",
+    "special": [
+      "minecraft:diamond"
+    ],
+    "seed": null,
+    "blockMat": "diamond",
+    "block": "diamond"
+  },
+  {
+    "id": "withereed",
+    "by": "CovertJaguar",
+    "mod": "GregTech",
+    "tier": 8,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      4,
+      1,
+      3
+    ],
+    "attrs": [
+      "Fire",
+      "Undead",
+      "Reed",
+      "Coal",
+      "Rotten",
+      "Wither"
+    ],
+    "drop": "iis:dust_coal",
+    "special": [
+      "minecraft:coal",
+      "minecraft:coal"
+    ],
+    "seed": null,
+    "blockMat": "coal",
+    "block": "coal"
+  },
+  {
+    "id": "blazereed",
+    "by": "Mr. Brain",
+    "mod": "GregTech",
+    "tier": 6,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      0,
+      4,
+      1,
+      0,
+      0
+    ],
+    "attrs": [
+      "Fire",
+      "Blaze",
+      "Reed",
+      "Sulfur"
+    ],
+    "drop": "minecraft:blaze_powder",
+    "special": [
+      "minecraft:blaze_rod"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "eggplant",
+    "by": "Link",
+    "mod": "GregTech",
+    "tier": 6,
+    "max": 3,
+    "harvest": 3,
+    "after": 2,
+    "speed": 900,
+    "stats": [
+      0,
+      4,
+      1,
+      0,
+      0
+    ],
+    "attrs": [
+      "Chicken",
+      "Egg",
+      "Edible",
+      "Feather",
+      "Flower",
+      "Addictive"
+    ],
+    "drop": "minecraft:egg",
+    "special": [
+      "minecraft:chicken",
+      "minecraft:feather",
+      "minecraft:feather",
+      "minecraft:feather"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "corium",
+    "by": "Gregorius Techneticies",
+    "mod": "GregTech",
+    "tier": 6,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      0,
+      2,
+      3,
+      1,
+      0
+    ],
+    "attrs": [
+      "Cow",
+      "Silk",
+      "Vine"
+    ],
+    "drop": "minecraft:leather",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "corpseplant",
+    "by": "Mr. Kenny",
+    "mod": "GregTech",
+    "tier": 5,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      0,
+      2,
+      1,
+      0,
+      3
+    ],
+    "attrs": [
+      "Toxic",
+      "Undead",
+      "Vine",
+      "Edible",
+      "Rotten"
+    ],
+    "drop": "minecraft:rotten_flesh",
+    "special": [
+      "minecraft:bone_meal",
+      "minecraft:bone_meal",
+      "minecraft:bone"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "creeperweed",
+    "by": "General Spaz",
+    "mod": "GregTech",
+    "tier": 7,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      3,
+      0,
+      5,
+      1,
+      3
+    ],
+    "attrs": [
+      "Creeper",
+      "Vine",
+      "Explosive",
+      "Fire",
+      "Sulfur",
+      "Saltpeter",
+      "Coal"
+    ],
+    "drop": "minecraft:gunpowder",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "enderbloom",
+    "by": "RichardG",
+    "mod": "GregTech",
+    "tier": 10,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      5,
+      0,
+      2,
+      1,
+      6
+    ],
+    "attrs": [
+      "Ender",
+      "Flower",
+      "Shiny"
+    ],
+    "drop": "iis:dust_ender_pearl",
+    "special": [
+      "minecraft:ender_pearl",
+      "minecraft:ender_pearl",
+      "minecraft:ender_eye"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "meatrose",
+    "by": "VintageBeef",
+    "mod": "GregTech",
+    "tier": 7,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 1500,
+    "stats": [
+      0,
+      4,
+      1,
+      3,
+      0
+    ],
+    "attrs": [
+      "Edible",
+      "Flower",
+      "Cow",
+      "Fish",
+      "Chicken",
+      "Pig"
+    ],
+    "drop": "minecraft:pink_dye",
+    "special": [
+      "minecraft:beef",
+      "minecraft:porkchop",
+      "minecraft:chicken",
+      "minecraft:cod"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "milkwart",
+    "by": "Mr. Brain",
+    "mod": "GregTech",
+    "tier": 6,
+    "max": 3,
+    "harvest": 3,
+    "after": 1,
+    "speed": 900,
+    "stats": [
+      0,
+      3,
+      0,
+      1,
+      0
+    ],
+    "attrs": [
+      "Edible",
+      "Milk",
+      "Cow"
+    ],
+    "drop": "iis:milk_wart",
+    "special": [],
+    "seed": [
+      "iis:milk_wart",
+      4
+    ],
+    "block": null
+  },
+  {
+    "id": "slimeplant",
+    "by": "Neowulf",
+    "mod": "GregTech",
+    "tier": 6,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      3,
+      0,
+      0,
+      0,
+      2
+    ],
+    "attrs": [
+      "Slime",
+      "Bouncy",
+      "Sticky",
+      "Bush"
+    ],
+    "drop": "minecraft:slime_ball",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "spidernip",
+    "by": "Mr. Kenny",
+    "mod": "GregTech",
+    "tier": 4,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 600,
+    "stats": [
+      2,
+      1,
+      4,
+      1,
+      3
+    ],
+    "attrs": [
+      "Toxic",
+      "Silk",
+      "Spider",
+      "Flower",
+      "Ingredient",
+      "Addictive"
+    ],
+    "drop": "minecraft:string",
+    "special": [
+      "minecraft:spider_eye",
+      "minecraft:cobweb"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "tearstalks",
+    "by": "Neowulf",
+    "mod": "GregTech",
+    "tier": 8,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "attrs": [
+      "Healing",
+      "Nether",
+      "Ingredient",
+      "Reed",
+      "Ghast"
+    ],
+    "drop": "minecraft:ghast_tear",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "tine",
+    "by": "Gregorius Techneticies",
+    "mod": "GregTech",
+    "tier": 5,
+    "max": 3,
+    "harvest": 3,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      3,
+      0,
+      0
+    ],
+    "attrs": [
+      "Shiny",
+      "Metal",
+      "Pine",
+      "Tin",
+      "Bush"
+    ],
+    "drop": "iis:tine_twig",
+    "special": [],
+    "seed": null,
+    "blockMat": "tin",
+    "block": "tin"
+  },
+  {
+    "id": "coppon",
+    "by": "Mr. Brain",
+    "mod": "GregTech",
+    "tier": 6,
+    "max": 3,
+    "harvest": 3,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      1,
+      1,
+      1
+    ],
+    "attrs": [
+      "Shiny",
+      "Metal",
+      "Cotton",
+      "Copper",
+      "Bush"
+    ],
+    "drop": "iis:coppon_fiber",
+    "special": [],
+    "seed": null,
+    "blockMat": "copper",
+    "block": "copper"
+  },
+  {
+    "id": "gt_brown_mushrooms",
+    "by": "Mr. Brain",
+    "mod": "GregTech",
+    "tier": 1,
+    "max": 3,
+    "harvest": 3,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      0,
+      2,
+      0,
+      0,
+      2
+    ],
+    "attrs": [
+      "Edible",
+      "Mushroom",
+      "Ingredient"
+    ],
+    "drop": "minecraft:brown_mushroom",
+    "special": [],
+    "seed": [
+      "minecraft:brown_mushroom",
+      4
+    ],
+    "block": null
+  },
+  {
+    "id": "gt_red_mushrooms",
+    "by": "Mr. Kenny",
+    "mod": "GregTech",
+    "tier": 1,
+    "max": 3,
+    "harvest": 3,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      0,
+      1,
+      3,
+      0,
+      2
+    ],
+    "attrs": [
+      "Toxic",
+      "Mushroom",
+      "Ingredient"
+    ],
+    "drop": "minecraft:red_mushroom",
+    "special": [],
+    "seed": [
+      "minecraft:red_mushroom",
+      4
+    ],
+    "block": null
+  },
+  {
+    "id": "argentia",
+    "by": "Eloraam",
+    "mod": "GregTech",
+    "tier": 7,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      1,
+      0,
+      0
+    ],
+    "attrs": [
+      "Shiny",
+      "Metal",
+      "Silver",
+      "Reed"
+    ],
+    "drop": "iis:argentia_leaf",
+    "special": [],
+    "seed": null,
+    "blockMat": "silver",
+    "block": "silver"
+  },
+  {
+    "id": "plumbilia",
+    "by": "KingLemming",
+    "mod": "GregTech",
+    "tier": 6,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      2,
+      0,
+      3,
+      1,
+      1
+    ],
+    "attrs": [
+      "Heavy",
+      "Metal",
+      "Lead",
+      "Reed"
+    ],
+    "drop": "iis:plumbilia_leaf",
+    "special": [],
+    "seed": null,
+    "blockMat": "lead",
+    "block": "lead"
+  },
+  {
+    "id": "trollplant",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 6,
+    "max": 5,
+    "harvest": 4,
+    "after": 1,
+    "speed": 1000,
+    "stats": [
+      0,
+      0,
+      5,
+      2,
+      8
+    ],
+    "attrs": [
+      "Troll",
+      "Bad",
+      "Scrap"
+    ],
+    "drop": "iis:gem_fools_ruby",
+    "special": [
+      "iis:plant_ball",
+      "iis:scrap",
+      "iis:tiny_dust_plutonium241"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "lazulia",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 7,
+    "max": 4,
+    "harvest": 4,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      4,
+      2,
+      5,
+      7,
+      4
+    ],
+    "attrs": [
+      "Shiny",
+      "Bad",
+      "Crystal",
+      "Lapis"
+    ],
+    "drop": "iis:tiny_dust_lapis",
+    "special": [],
+    "seed": null,
+    "blockMat": "lapis",
+    "block": "lapis"
+  },
+  {
+    "id": "glowheat",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 10,
+    "max": 7,
+    "harvest": 7,
+    "after": 5,
+    "speed": 0,
+    "stats": [
+      3,
+      3,
+      3,
+      5,
+      4
+    ],
+    "attrs": [
+      "Light",
+      "Shiny",
+      "Crystal"
+    ],
+    "drop": "iis:tiny_dust_glowstone",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "fertilia",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 3,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      2,
+      3,
+      5,
+      4,
+      8
+    ],
+    "attrs": [
+      "Growth",
+      "Healing",
+      "Flower"
+    ],
+    "drop": "iis:tiny_dust_calcite",
+    "special": [
+      "iis:fertilizer",
+      "iis:tiny_dust_apatite",
+      "iis:dust_phosphate"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "bauxia",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 6,
+    "max": 3,
+    "harvest": 3,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      5,
+      0,
+      2,
+      3,
+      3
+    ],
+    "attrs": [
+      "Metal",
+      "Aluminium",
+      "Reed",
+      "Aluminium"
+    ],
+    "drop": "iis:bauxia_leaf",
+    "special": [],
+    "seed": null,
+    "blockMat": "aluminium",
+    "block": "aluminium"
+  },
+  {
+    "id": "titania",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 9,
+    "max": 3,
+    "harvest": 3,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      5,
+      0,
+      3,
+      3,
+      1
+    ],
+    "attrs": [
+      "Metal",
+      "Heavy",
+      "Reed",
+      "Titanium"
+    ],
+    "drop": "iis:titania_leaf",
+    "special": [],
+    "seed": null,
+    "blockMat": "titanium",
+    "block": "titanium"
+  },
+  {
+    "id": "reactoria",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 12,
+    "max": 4,
+    "harvest": 4,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      4,
+      0,
+      1,
+      2,
+      1
+    ],
+    "attrs": [
+      "Radioactive",
+      "Metal",
+      "Danger",
+      "Uranium"
+    ],
+    "drop": "iis:reactoria_leaf",
+    "special": [
+      "iis:uranium_leaf"
+    ],
+    "seed": null,
+    "blockMat": "uranium",
+    "block": "uranium"
+  },
+  {
+    "id": "god_of_thunder",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 9,
+    "max": 4,
+    "harvest": 4,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      3,
+      0,
+      5,
+      1,
+      2
+    ],
+    "attrs": [
+      "Radioactive",
+      "Metal",
+      "Coal",
+      "Thorium"
+    ],
+    "drop": "iis:small_dust_coal",
+    "special": [
+      "minecraft:coal",
+      "iis:thunder_leaf"
+    ],
+    "seed": null,
+    "blockMat": "thorium",
+    "block": "thorium"
+  },
+  {
+    "id": "transformium",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 12,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 2500,
+    "stats": [
+      6,
+      2,
+      1,
+      6,
+      1
+    ],
+    "attrs": [
+      "Transform",
+      "Coal",
+      "Reed"
+    ],
+    "drop": "iis:uua_berry",
+    "special": [
+      "iis:uua_berry",
+      "iis:uua_berry",
+      "iis:uua_berry",
+      "iis:uua_berry",
+      "iis:uum_berry"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "starwart",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 12,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 4000,
+    "stats": [
+      2,
+      0,
+      0,
+      1,
+      0
+    ],
+    "attrs": [
+      "Wither",
+      "Nether",
+      "Undead",
+      "Netherstar"
+    ],
+    "drop": "iis:small_dust_coal",
+    "special": [
+      "minecraft:coal",
+      "minecraft:skeleton_skull",
+      "minecraft:wither_skeleton_skull",
+      "minecraft:wither_skeleton_skull",
+      "iis:tiny_dust_nether_star"
+    ],
+    "seed": null,
+    "blockMat": "nether_star",
+    "block": "nether_star"
+  },
+  {
+    "id": "zomplant",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 3,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      3,
+      4,
+      2,
+      6
+    ],
+    "attrs": [
+      "Zombie",
+      "Rotten",
+      "Undead"
+    ],
+    "drop": "minecraft:rotten_flesh",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "nickelback",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 5,
+    "max": 3,
+    "harvest": 3,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      3,
+      0,
+      1,
+      2,
+      2
+    ],
+    "attrs": [
+      "Metal",
+      "Fire",
+      "Alloy"
+    ],
+    "drop": "iis:nickelback_leaf",
+    "special": [],
+    "seed": null,
+    "blockMat": "nickel",
+    "block": "nickel"
+  },
+  {
+    "id": "galvania",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 6,
+    "max": 3,
+    "harvest": 3,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      3,
+      0,
+      2,
+      2,
+      3
+    ],
+    "attrs": [
+      "Metal",
+      "Alloy",
+      "Bush"
+    ],
+    "drop": "iis:galvania_leaf",
+    "special": [],
+    "seed": null,
+    "blockMat": "zinc",
+    "block": "zinc"
+  },
+  {
+    "id": "evil_ore",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 8,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      4,
+      0,
+      2,
+      1,
+      3
+    ],
+    "attrs": [
+      "Crystal",
+      "Fire",
+      "Nether"
+    ],
+    "drop": "iis:tiny_dust_nether_quartz",
+    "special": [
+      "minecraft:quartz",
+      "iis:tiny_dust_certus_quartz"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "olivia",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 2,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      1,
+      0,
+      1,
+      4,
+      0
+    ],
+    "attrs": [
+      "Crystal",
+      "Shiny",
+      "Processing",
+      "Olivine"
+    ],
+    "drop": "iis:tiny_dust_olivine",
+    "special": [
+      "iis:gem_olivine"
+    ],
+    "seed": null,
+    "blockMat": "olivine",
+    "block": "olivine"
+  },
+  {
+    "id": "sapphirum",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 4,
+    "max": 4,
+    "harvest": 4,
+    "after": 3,
+    "speed": 0,
+    "stats": [
+      1,
+      0,
+      1,
+      5,
+      0
+    ],
+    "attrs": [
+      "Crystal",
+      "Shiny",
+      "Metal",
+      "Sapphire"
+    ],
+    "drop": "iis:tiny_dust_sapphire",
+    "special": [
+      "iis:gem_sapphire"
+    ],
+    "seed": null,
+    "blockMat": "sapphire",
+    "block": "sapphire"
+  },
+  {
+    "id": "pyrolusium",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 12,
+    "max": 3,
+    "harvest": 3,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "attrs": [
+      "Metal",
+      "Clean",
+      "Bush",
+      "Manganese"
+    ],
+    "drop": "iis:pyrolusium_leaf",
+    "special": [],
+    "seed": null,
+    "blockMat": "manganese",
+    "block": "manganese"
+  },
+  {
+    "id": "scheelinium",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 12,
+    "max": 3,
+    "harvest": 3,
+    "after": 2,
+    "speed": 0,
+    "stats": [
+      3,
+      0,
+      1,
+      1,
+      0
+    ],
+    "attrs": [
+      "Metal",
+      "Hard",
+      "Bush",
+      "Tungsten"
+    ],
+    "drop": "iis:scheelinium_leaf",
+    "special": [],
+    "seed": null,
+    "blockMat": "tungsten",
+    "block": "tungsten"
+  },
+  {
+    "id": "platina",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 11,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      3,
+      0,
+      0,
+      3,
+      0
+    ],
+    "attrs": [
+      "Metal",
+      "Shiny",
+      "Reed",
+      "Platinum"
+    ],
+    "drop": "iis:platina_leaf",
+    "special": [],
+    "seed": null,
+    "blockMat": "platinum",
+    "block": "platinum"
+  },
+  {
+    "id": "quantaria",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 12,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 1000,
+    "stats": [
+      4,
+      0,
+      0,
+      1,
+      0
+    ],
+    "attrs": [
+      "Metal",
+      "Iridium",
+      "Reed"
+    ],
+    "drop": "iis:quantaria_leaf",
+    "special": [
+      "iis:quantaria_leaf_osmium"
+    ],
+    "seed": null,
+    "blockMat": "iridium",
+    "block": "iridium"
+  },
+  {
+    "id": "stargatium",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 12,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 1500,
+    "stats": [
+      4,
+      0,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Metal",
+      "Heavy",
+      "Alien",
+      "Naquadah"
+    ],
+    "drop": "iis:tiny_dust_endstone",
+    "special": [
+      "iis:stargatium_leaf"
+    ],
+    "seed": null,
+    "blockMat": "naquadah",
+    "block": "naquadah"
+  },
+  {
+    "id": "lemon",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 4,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Food",
+      "Tree",
+      "Sour"
+    ],
+    "drop": "iis:lemon",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "chilly",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 4,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Food",
+      "Spicy"
+    ],
+    "drop": "iis:chilly_pepper",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "tomato",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 4,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Food"
+    ],
+    "drop": "iis:tomato",
+    "special": [
+      "iis:max_tomato"
+    ],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "grape",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 4,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Food"
+    ],
+    "drop": "iis:grapes",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "onion",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 4,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Food"
+    ],
+    "drop": "iis:onion",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "cucumber",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 4,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Food"
+    ],
+    "drop": "iis:cucumber",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "tea",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 4,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Food"
+    ],
+    "drop": "iis:tea_leaf",
+    "special": [],
+    "seed": null,
+    "block": null
+  },
+  {
+    "id": "rape",
+    "by": "unknown",
+    "mod": "GregTech",
+    "tier": 4,
+    "max": 4,
+    "harvest": 4,
+    "after": 1,
+    "speed": 0,
+    "stats": [
+      1,
+      1,
+      0,
+      2,
+      0
+    ],
+    "attrs": [
+      "Food",
+      "Oil"
+    ],
+    "drop": "iis:rape",
+    "special": [],
+    "seed": null,
+    "block": null
+  }
+]

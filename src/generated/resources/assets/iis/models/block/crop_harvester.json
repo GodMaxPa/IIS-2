@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "iis:block/crop/crop_harvester_front",
+    "side": "iis:block/crop/crop_harvester_side",
+    "top": "iis:block/crop/crop_harvester_top",
+    "particle": "iis:block/crop/crop_harvester_side"
+  }
+}

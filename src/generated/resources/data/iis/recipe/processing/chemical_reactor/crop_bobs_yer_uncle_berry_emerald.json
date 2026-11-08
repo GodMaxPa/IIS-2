@@ -1,0 +1,33 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:bobs_yer_uncle_berry",
+      "count": 9
+    },
+    {
+      "ingredient": "#iis:crushed_ores/emerald",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_emerald",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_beryllium",
+      "amount": 144
+    }
+  ]
+}

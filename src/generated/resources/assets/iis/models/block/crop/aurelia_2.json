@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/crop",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "crop": "iis:block/crop/aurelia_2",
+    "particle": "iis:block/crop/aurelia_2"
+  }
+}

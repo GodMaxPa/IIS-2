@@ -1,0 +1,33 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:nickelback_leaf",
+      "count": 9
+    },
+    {
+      "ingredient": "#iis:crushed_ores/garnierite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_garnierite",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_nickel",
+      "amount": 144
+    }
+  ]
+}

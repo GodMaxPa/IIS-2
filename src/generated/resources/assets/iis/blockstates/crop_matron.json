@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iis:block/crop_matron"
+    },
+    "facing=east": {
+      "model": "iis:block/crop_matron",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "iis:block/crop_matron",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "iis:block/crop_matron",
+      "y": 270
+    }
+  }
+}

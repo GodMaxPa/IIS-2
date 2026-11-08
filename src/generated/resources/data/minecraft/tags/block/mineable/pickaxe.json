@@ -392,6 +392,7 @@
     "iis:plasma_arc_furnace_ev",
     "iis:disassembler_ev",
     "iis:replicator_ev",
+    "iis:organic_replicator_ev",
     "iis:cartridge_press_ev",
     "iis:thermal_centrifuge_ev",
     "iis:macerator_iv",
@@ -442,6 +443,7 @@
     "iis:plasma_arc_furnace_iv",
     "iis:disassembler_iv",
     "iis:replicator_iv",
+    "iis:organic_replicator_iv",
     "iis:cartridge_press_iv",
     "iis:thermal_centrifuge_iv",
     "iis:macerator_luv",
@@ -492,6 +494,7 @@
     "iis:plasma_arc_furnace_luv",
     "iis:disassembler_luv",
     "iis:replicator_luv",
+    "iis:organic_replicator_luv",
     "iis:cartridge_press_luv",
     "iis:thermal_centrifuge_luv",
     "iis:macerator_zpm",
@@ -542,6 +545,7 @@
     "iis:plasma_arc_furnace_zpm",
     "iis:disassembler_zpm",
     "iis:replicator_zpm",
+    "iis:organic_replicator_zpm",
     "iis:cartridge_press_zpm",
     "iis:thermal_centrifuge_zpm",
     "iis:macerator_uv",
@@ -592,6 +596,7 @@
     "iis:plasma_arc_furnace_uv",
     "iis:disassembler_uv",
     "iis:replicator_uv",
+    "iis:organic_replicator_uv",
     "iis:cartridge_press_uv",
     "iis:thermal_centrifuge_uv",
     "iis:scanner_ev",
@@ -914,6 +919,8 @@
     "iis:capacitor_bank_basic",
     "iis:electric_light",
     "iis:basic_light",
+    "iis:crop_matron",
+    "iis:crop_harvester",
     "iis:fuel_pump"
   ]
 }

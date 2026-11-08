@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "iis:block/crop/crop_matron_front",
+    "side": "iis:block/crop/crop_matron_side",
+    "top": "iis:block/crop/crop_matron_top",
+    "particle": "iis:block/crop/crop_matron_side"
+  }
+}

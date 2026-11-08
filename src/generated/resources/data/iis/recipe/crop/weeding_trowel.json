@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RhR",
+    " R ",
+    "PRP"
+  ],
+  "key": {
+    "R": "#c:rods/iron",
+    "P": "#c:plates/rubber",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:weeding_trowel"
+  }
+}

@@ -441,6 +441,15 @@
     "gui": "lv/replicator"
   },
   {
+    "id": "organic_replicator_lv",
+    "type": "organic_replicator",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 100000,
+    "gui": "lv/organicreplicator"
+  },
+  {
     "id": "cartridge_press_lv",
     "type": "cartridge_press",
     "recipeMap": "cartridge_press",
@@ -880,6 +889,15 @@
     "outputs": 1,
     "tank": 16000,
     "gui": "lv/replicator"
+  },
+  {
+    "id": "organic_replicator_mv",
+    "type": "organic_replicator_mv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 100000,
+    "gui": "lv/organicreplicator"
   },
   {
     "id": "cartridge_press_mv",
@@ -1332,6 +1350,15 @@
     "gui": "lv/replicator"
   },
   {
+    "id": "organic_replicator_hv",
+    "type": "organic_replicator_hv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 100000,
+    "gui": "lv/organicreplicator"
+  },
+  {
     "id": "cartridge_press_hv",
     "type": "cartridge_press_hv",
     "recipeMap": "cartridge_press",
@@ -1780,6 +1807,15 @@
     "outputs": 1,
     "tank": 16000,
     "gui": "lv/replicator"
+  },
+  {
+    "id": "organic_replicator_ev",
+    "type": "organic_replicator_ev",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 100000,
+    "gui": "lv/organicreplicator"
   },
   {
     "id": "cartridge_press_ev",
@@ -2232,6 +2268,15 @@
     "gui": "lv/replicator"
   },
   {
+    "id": "organic_replicator_iv",
+    "type": "organic_replicator_iv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 100000,
+    "gui": "lv/organicreplicator"
+  },
+  {
     "id": "cartridge_press_iv",
     "type": "cartridge_press_iv",
     "recipeMap": "cartridge_press",
@@ -2680,6 +2725,15 @@
     "outputs": 1,
     "tank": 16000,
     "gui": "lv/replicator"
+  },
+  {
+    "id": "organic_replicator_luv",
+    "type": "organic_replicator_luv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 100000,
+    "gui": "lv/organicreplicator"
   },
   {
     "id": "cartridge_press_luv",
@@ -3132,6 +3186,15 @@
     "gui": "lv/replicator"
   },
   {
+    "id": "organic_replicator_zpm",
+    "type": "organic_replicator_zpm",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 100000,
+    "gui": "lv/organicreplicator"
+  },
+  {
     "id": "cartridge_press_zpm",
     "type": "cartridge_press_zpm",
     "recipeMap": "cartridge_press",
@@ -3580,6 +3643,15 @@
     "outputs": 1,
     "tank": 16000,
     "gui": "lv/replicator"
+  },
+  {
+    "id": "organic_replicator_uv",
+    "type": "organic_replicator_uv",
+    "recipeMap": null,
+    "inputs": 1,
+    "outputs": 1,
+    "tank": 100000,
+    "gui": "lv/organicreplicator"
   },
   {
     "id": "cartridge_press_uv",

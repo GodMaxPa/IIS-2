@@ -1,0 +1,27 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/potassium",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:dusts/tricalcium_phosphate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:fertilizer",
+      "count": 4
+    }
+  ],
+  "duration": 400,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 1000
+    }
+  ]
+}

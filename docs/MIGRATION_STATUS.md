@@ -201,3 +201,4 @@
 | Ender IO: сверка с ИИС 1 D135 | GameTest `eio_legacy_blocks`; рецепты всех 37 вещей Ender IO, что крафтились в ИИС 1 |
 | Компактная логика D136 | GameTest `compact_logic` |
 | Магии нет D137 | GameTest `no_magic` |
+| Грядки IC2 с селекцией D139 | GameTest `crop_plant_grow_harvest`, `crop_crossbreeding`, `crop_weeds`, `crop_metal_needs_block`, `crop_machines`, `crop_organic_replicator` |

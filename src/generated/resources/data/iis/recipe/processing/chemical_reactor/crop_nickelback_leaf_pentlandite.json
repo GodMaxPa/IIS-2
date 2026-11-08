@@ -1,0 +1,33 @@
+{
+  "type": "iis:chemical_reactor",
+  "inputs": [
+    {
+      "ingredient": "iis:nickelback_leaf",
+      "count": 9
+    },
+    {
+      "ingredient": "#iis:crushed_ores/pentlandite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_pentlandite",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_iron",
+      "amount": 144
+    }
+  ]
+}

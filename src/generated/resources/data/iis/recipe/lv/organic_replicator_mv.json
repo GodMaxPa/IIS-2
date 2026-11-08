@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CRC",
+    "WFW",
+    "CMC"
+  ],
+  "key": {
+    "M": "iis:hull_mv",
+    "R": "iis:crop_sticks",
+    "C": "#c:circuits/good",
+    "F": "iis:field_generator_mv",
+    "W": "#iis:cables/1x/copper"
+  },
+  "result": {
+    "id": "iis:organic_replicator_mv"
+  }
+}

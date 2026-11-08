@@ -1303,6 +1303,10 @@
     "Put glass with quartzite dust into an alloy smelter."
   ],
   "quest.1A00000000000145.title": "Fused Quartz",
+  "quest.1A00000000000146.quest_desc": [
+    "It may be obtained as by-product using a chemical reactor or a distillery."
+  ],
+  "quest.1A00000000000146.title": "Fertilizer",
   "quest.1A00000000000147.quest_desc": [
     "This machine can be used to get alloys such as bronze more profitably. Moreover, you don't need to use dusts only, you can create bronze from tin and copper ingots."
   ],
@@ -2803,6 +2807,14 @@
     "Like a basic, but works faster and can process recipes with more voltage."
   ],
   "quest.1A000000000002C4.title": "Advanced Distillery",
+  "quest.1A000000000002C6.quest_desc": [
+    "May be crafted on crafting table by sticks. The crop needs to get new types of plants via plants selection. For example from Sugar Canes."
+  ],
+  "quest.1A000000000002C6.title": "Crop",
+  "quest.1A000000000002C7.quest_desc": [
+    "Can detect the name of plant and it grow status. Also it can do analysis of seed after you get them. It consume about 900 eu per plant scanning, and about 10k eu per seed scan."
+  ],
+  "quest.1A000000000002C7.title": "Cropnalyzer",
   "quest.1A000000000002C8.quest_desc": [
     "Take it to hand and right-click on dirt. it is recommended to have a water near in 4 blocks."
   ],
@@ -3299,6 +3311,14 @@
     "It may be used as container for MV batteries."
   ],
   "quest.1A0000000000034B.title": "Medium Battery Hull",
+  "quest.1A0000000000034C.quest_desc": [
+    "Grin Powder may be created from some poison materials by macerator."
+  ],
+  "quest.1A0000000000034C.title": "Grin Powder",
+  "quest.1A0000000000034E.quest_desc": [
+    "Can be used to prevent weeds interceptions."
+  ],
+  "quest.1A0000000000034E.title": "Weed-EX",
   "quest.1A0000000000034F.quest_desc": [
     "It is cheaper to use pure certus quartz crystal instead of common certus quartz (for some recipes)"
   ],
@@ -3775,6 +3795,10 @@
     "Expensive part of some machines. Required osmium to be created from."
   ],
   "quest.1A000000000003E5.title": "Field Generator (LV)",
+  "quest.1A000000000003E6.quest_desc": [
+    "It may clone seed with same params. Efficient is 60%% - it means that there is 60%% chance for process to be succeeded. UU-matter is required to working."
+  ],
+  "quest.1A000000000003E6.title": "Basic Organic Replicator",
   "quest.1A000000000003E7.quest_desc": [
     "with help of this machine you may create an uu-matter from uu amplifier. It require 8 amperes to work. Each next level accelerate speed and energy consuming in 2 times, but in 2 times down amperes count."
   ],
@@ -3799,6 +3823,14 @@
     "May be produced from UU amplifier by mass fabricator. Use OSS to pour there liquid."
   ],
   "quest.1A000000000003EC.title": "UU-Matter",
+  "quest.1A000000000003EE.quest_desc": [
+    "It may work (pickup harvest) in area 11 by 11 (5 blocks from each side) and 3 blocks in height (under, above and on the same height level)."
+  ],
+  "quest.1A000000000003EE.title": "Crop Harvester",
+  "quest.1A000000000003EF.quest_desc": [
+    "It allow you to enable auto watering and fertilizing to plants around it, to up them growing speed. Working area is same as for crop harvester."
+  ],
+  "quest.1A000000000003EF.title": "Crop-Matron",
   "quest.1A000000000003F0.quest_desc": [
     "A cell that may change free space inside it."
   ],
@@ -4275,6 +4307,10 @@
     "Crowbar - can be crafted from any metal rods and any blue dye + hammer and file. You may use it to pull out covers such as plates that was set on the sides of machine or pipe."
   ],
   "quest.1A00000000000475.title": "Crowbar",
+  "quest.1A00000000000476.quest_desc": [
+    "Use it on weeds to pull them out."
+  ],
+  "quest.1A00000000000476.title": "Weeding Trowel",
   "quest.1A00000000000477.quest_desc": [
     "Require only Oak! You may place it on a chest. Than you may make RMB click on it with empty hand to open UI. There will be 3 slots to put some items as decorations or as labels."
   ],
@@ -4555,6 +4591,10 @@
     "It is required to make a coolant. To make it use mixer MV or better tier."
   ],
   "quest.1A000000000004CA.title": "MV (or better) Mixer",
+  "quest.1A000000000004CC.quest_desc": [
+    "If you have transformium seeds you are lucky. Do you have it?"
+  ],
+  "quest.1A000000000004CC.title": "UUA Berry",
   "quest.1A000000000004CF.quest_desc": [
     "Make it from wood planks."
   ],
@@ -5555,6 +5595,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005CE.title": "[sb] Basic Replicator",
+  "quest.1A000000000005CF.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005CF.title": "[sb] Basic Organic Replicator",
   "quest.1A000000000005D0.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5607,6 +5651,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005DC.title": "[sb] Advanced Replicator",
+  "quest.1A000000000005DD.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005DD.title": "[sb] Advanced Organic Replicator",
   "quest.1A000000000005DE.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5659,6 +5707,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005EA.title": "[sb] Advanced Replicator II",
+  "quest.1A000000000005EB.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005EB.title": "[sb] Advanced Organic Replicator II",
   "quest.1A000000000005EC.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5711,6 +5763,10 @@
     "One of many single-block machines."
   ],
   "quest.1A000000000005F8.title": "[sb] Advanced Replicator III",
+  "quest.1A000000000005F9.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A000000000005F9.title": "[sb] Advanced Organic Replicator III",
   "quest.1A000000000005FA.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5763,6 +5819,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000606.title": "[sb] Advanced Replicator IV",
+  "quest.1A00000000000607.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000607.title": "[sb] Advanced Organic Replicator IV",
   "quest.1A00000000000608.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5815,6 +5875,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000614.title": "[sb] Advanced Replicator V",
+  "quest.1A00000000000615.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000615.title": "[sb] Advanced Organic Replicator V",
   "quest.1A00000000000616.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5867,6 +5931,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000622.title": "[sb] Advanced Replicator VI",
+  "quest.1A00000000000623.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000623.title": "[sb] Advanced Organic Replicator VI",
   "quest.1A00000000000624.quest_desc": [
     "One of many single-block machines."
   ],
@@ -5919,6 +5987,10 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000630.title": "[sb] Advanced Replicator VII",
+  "quest.1A00000000000631.quest_desc": [
+    "One of many single-block machines."
+  ],
+  "quest.1A00000000000631.title": "[sb] Advanced Organic Replicator VII",
   "quest.1A00000000000632.quest_desc": [
     "One of many single-block machines."
   ],
@@ -6503,6 +6575,10 @@
     "Most of stone is fine to create stone brick that are suitable to craft farm blocks from them."
   ],
   "quest.1A000000000006E8.title": "Stone Bricks",
+  "quest.1A000000000006E9.quest_desc": [
+    "Early and easy way to detect what new plant you have got  by crossbreeding."
+  ],
+  "quest.1A000000000006E9.title": "Plant Lens",
   "quest.1A000000000006EA.quest_desc": [
     "A part of casing for pyrolyse oven."
   ],

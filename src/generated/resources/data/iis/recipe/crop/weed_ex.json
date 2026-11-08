@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " R ",
+    " G ",
+    " C "
+  ],
+  "key": {
+    "R": "minecraft:redstone",
+    "G": "iis:grin_powder",
+    "C": "iis:capsule"
+  },
+  "result": {
+    "id": "iis:weed_ex"
+  }
+}

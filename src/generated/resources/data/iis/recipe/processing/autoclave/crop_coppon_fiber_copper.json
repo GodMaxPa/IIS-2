@@ -1,0 +1,23 @@
+{
+  "type": "iis:autoclave",
+  "inputs": [
+    {
+      "ingredient": "iis:coppon_fiber",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:purified_copper",
+      "count": 1
+    }
+  ],
+  "duration": 8064,
+  "eut": 384,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:uumatter",
+      "amount": 7
+    }
+  ]
+}
