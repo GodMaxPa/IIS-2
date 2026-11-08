@@ -61,7 +61,8 @@ public final class ShopContent {
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(Registries.MENU, IIS.MODID);
     public static final DeferredRegister<AttachmentType<?>> ATTACHMENTS = DeferredRegister.create(NeoForgeRegistries.ATTACHMENT_TYPES, IIS.MODID);
 
-    public record Price(int tier, int give) {}
+    /** always — продаётся сразу, не дожидаясь, пока предмет побывает в инвентаре (еда, D142). */
+    public record Price(int tier, int give, boolean always) {}
 
     private static Map<String, Price> prices;
 
@@ -73,7 +74,7 @@ public final class ShopContent {
                     JsonObject root = JsonParser.parseReader(new InputStreamReader(in, StandardCharsets.UTF_8)).getAsJsonObject();
                     root.getAsJsonArray("items").forEach(e -> {
                         JsonObject o = e.getAsJsonObject();
-                        prices.put(o.get("id").getAsString(), new Price(o.get("tier").getAsInt(), o.get("give").getAsInt()));
+                        prices.put(o.get("id").getAsString(), new Price(o.get("tier").getAsInt(), o.get("give").getAsInt(), o.has("always") && o.get("always").getAsBoolean()));
                     });
                 }
             } catch (Exception e) {
@@ -96,6 +97,9 @@ public final class ShopContent {
         protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
             if (player instanceof ServerPlayer sp) {
                 List<String> seen = new ArrayList<>(sp.getData(SEEN));
+                prices().forEach((id, pr) -> {
+                    if (pr.always() && !seen.contains(id)) seen.add(id);
+                });
                 sp.openMenu(new SimpleMenuProvider((id, inv, p) -> new ShopMenu(id, inv, seen, pos), Component.translatable("gui.iis.shop.title")), buf -> {
                     buf.writeVarInt(seen.size());
                     seen.forEach(buf::writeUtf);

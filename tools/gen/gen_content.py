@@ -1151,6 +1151,14 @@ for w in ('oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 
           {'type': 'minecraft:crafting_shaped', 'category': 'building', 'pattern': ['s', 'L'],
            'key': {'s': '#iis:tools/saw', 'L': logs}, 'result': result(f'minecraft:{w}_planks', 4)})
 
+# Owner's notes of 08.11 (D142): IIS 1 early-game recipes, flint tools
+_spec = _ilu.spec_from_file_location('iis_gen_earlygame', os.path.join(ROOT, 'tools', 'gen', 'earlygame.py'))
+_earlygame = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_earlygame)
+lv_stats['earlygame'] = _earlygame.generate(globals())
+for name, r in recipes.items():
+    write(os.path.join(D, NS, 'recipe', name + '.json'), r)
+
 # ----------------------------------------------------------------------------------------------------------------
 # Tags, lang
 # ----------------------------------------------------------------------------------------------------------------

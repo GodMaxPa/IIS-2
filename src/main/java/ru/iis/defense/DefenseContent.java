@@ -51,7 +51,7 @@ public final class DefenseContent {
      * Баллистический щит MV: 30 % любого урона спереди, удары и снаряды (в том числе пули) — полностью, взрывы — наполовину; прочность 1680
      * (впятеро больше ванильного щита). Числа — предложение ИИ.
      */
-    public static final DeferredItem<Item> BALLISTIC_SHIELD = add(ITEMS.registerItem("ballistic_shield", p -> new Item(p.durability(1680)
+    public static final DeferredItem<net.minecraft.world.item.ShieldItem> BALLISTIC_SHIELD = add(ITEMS.registerItem("ballistic_shield", p -> new net.minecraft.world.item.ShieldItem(p.durability(1680)
             .equippableUnswappable(EquipmentSlot.OFFHAND).component(DataComponents.BREAK_SOUND, SoundEvents.SHIELD_BREAK)
             .delayedComponent(DataComponents.BLOCKS_ATTACKS, ctx -> new BlocksAttacks(0.25F, 1.0F, List.of(
                     new BlocksAttacks.DamageReduction(90.0F, Optional.empty(), 0.0F, 0.3F),

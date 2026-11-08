@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XwX",
+    "XCX",
+    " X "
+  ],
+  "key": {
+    "X": "#c:plates/iron",
+    "C": "#c:chests/wooden",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "minecraft:hopper"
+  }
+}

@@ -131,6 +131,7 @@
     "iis:hammer_tungsten_carbide",
     "iis:hammer_tungsten_steel",
     "iis:hammer_vanadium_steel",
-    "iis:hammer_wrought_iron"
+    "iis:hammer_wrought_iron",
+    "iis:flint_pickaxe"
   ]
 }

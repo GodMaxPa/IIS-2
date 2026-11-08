@@ -53,6 +53,7 @@ public final class IIS {
         ru.iis.defense.DefenseContent.register(modEventBus);
         ru.iis.monitor.MonitorContent.register(modEventBus);
         ru.iis.world.NoMagic.register(modEventBus);
+        ru.iis.world.EarlyGame.register(modEventBus);
         GtRecipes.register(modEventBus, NeoForge.EVENT_BUS);
         ru.iis.net.IISNetwork.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(ru.iis.lv.block.ElectricMachineBlock::onRightClickBlock);

@@ -52,6 +52,15 @@ def generate(g, name, tex, write, shaped, art):
             add(ref(prefix, n), t, give)
     for vid, t, give in VANILLA:
         add(f'minecraft:{vid}', t, give)
+    # D142 (owner): food is sold from the start, without having been found
+    from earlygame import FOOD
+    for vid, t, give in FOOD:
+        item = f'minecraft:{vid}'
+        if item in seen:
+            next(e for e in entries if e['id'] == item)['always'] = True
+        else:
+            seen.add(item)
+            entries.append({'id': item, 'tier': t, 'give': give, 'always': True})
     path = os.path.join(GEN, 'iis', 'shop_prices.json')
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8', newline='\n') as fh:

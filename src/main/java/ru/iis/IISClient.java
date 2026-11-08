@@ -34,6 +34,18 @@ public final class IISClient {
     public IISClient(IEventBus modBus) {
         modBus.addListener(IISClient::registerBlockTints);
         modBus.addListener(IISClient::registerScreens);
+        // D142: щиты держатся при блоке как ванильный (иначе 26.1 поворачивает не-ShieldItem, как меч в стойке)
+        modBus.addListener((net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent e) -> e.registerItem(
+                new net.neoforged.neoforge.client.extensions.common.IClientItemExtensions() {
+                    @Override
+                    public boolean applyForgeHandTransform(com.mojang.blaze3d.vertex.PoseStack pose, net.minecraft.client.player.LocalPlayer player, net.minecraft.world.entity.HumanoidArm arm,
+                                                           net.minecraft.world.item.ItemStack stack, float partialTick, float equipProcess, float swingProcess) {
+                        if (!player.isUsingItem() || player.getUseItem() != stack) return false;
+                        int invert = arm == net.minecraft.world.entity.HumanoidArm.RIGHT ? 1 : -1;
+                        pose.translate(invert * 0.56F, -0.52F + equipProcess * -0.6F, -0.72F);
+                        return true;
+                    }
+                }, ru.iis.defense.DefenseContent.BALLISTIC_SHIELD.get(), ru.iis.defense.DefenseContent.FORCE_SHIELD.get()));
         ru.iis.gear.GearClient.register(modBus);
         ru.iis.equipment.client.EquipmentClient.register(modBus);
         ru.iis.stand.StandShots.init();

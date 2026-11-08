@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XX ",
+    "XXh",
+    "XX "
+  ],
+  "key": {
+    "X": "#c:plates/iron",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "minecraft:iron_door",
+    "count": 3
+  }
+}

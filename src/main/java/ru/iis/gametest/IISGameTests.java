@@ -237,6 +237,8 @@ public final class IISGameTests {
             new Test("defense_shields", 20, DefenseGameTests::shields),
             new Test("defense_turret_shoots", 120, DefenseGameTests::turretShoots),
             new Test("monitor_panel_reads", 60, DefenseGameTests::panelReads),
+            new Test("early_tools_recipes", 20, EarlyGameTests::toolsAndRecipes),
+            new Test("early_finite_water", 80, EarlyGameTests::finiteWater),
             new Test("equip_boat_floats", 100, EquipmentGameTests::boatFloats),
             new Test("equip_wreck_drops", 20, EquipmentGameTests::wreckDropsItem),
             new Test("equip_tank_armor", 20, EquipmentGameTests::tankShrugsBullets),

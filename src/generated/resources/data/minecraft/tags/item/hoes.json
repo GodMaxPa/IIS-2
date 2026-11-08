@@ -66,6 +66,7 @@
     "iis:hoe_tungsten_carbide",
     "iis:hoe_tungsten_steel",
     "iis:hoe_vanadium_steel",
-    "iis:hoe_wrought_iron"
+    "iis:hoe_wrought_iron",
+    "iis:flint_hoe"
   ]
 }

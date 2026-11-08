@@ -66,6 +66,7 @@
     "iis:shovel_tungsten_carbide",
     "iis:shovel_tungsten_steel",
     "iis:shovel_vanadium_steel",
-    "iis:shovel_wrought_iron"
+    "iis:shovel_wrought_iron",
+    "iis:flint_shovel"
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "F",
+    "S",
+    "S"
+  ],
+  "key": {
+    "F": "minecraft:flint",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "iis:flint_shovel"
+  }
+}

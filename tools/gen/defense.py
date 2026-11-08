@@ -145,7 +145,14 @@ def generate(g):
     def mesh_special(base, mesh):
         return {'type': 'minecraft:special', 'base': base, 'model': {'type': f'{NS}:mesh', 'mesh': mesh}}
 
-    meshes = [head(k, c) for k, _, _, _, c in KINDS] + [shield_ballistic(), shield_force()]
+    def flip_z(m):
+        # D142: the shield was the other way round in depth: in the blocking pose of the hand it went behind the camera
+        for part in m.parts:
+            # with the vanilla (1, -1, -1) item transformation: the mesh is in vanilla model space (y down, z back), minus 8 for the renderer's centring
+            part.quads = [([(x, -16 - y, -16 - z) for x, y, z in q], col, mat, fl) for q, col, mat, fl in part.quads]
+        return m
+
+    meshes = [head(k, c) for k, _, _, _, c in KINDS] + [flip_z(shield_ballistic()), flip_z(shield_force())]
     for m in meshes:
         m.write(os.path.join(A, 'meshes', m.name + '.json'))
 
@@ -155,7 +162,9 @@ def generate(g):
             write(os.path.join(A, 'models', 'item', 'mesh', sid + suffix + '.json'), {'gui_light': 'front', 'textures': {'particle': 'minecraft:block/iron_block'}, 'display': disp})
         write(os.path.join(A, 'items', sid + '.json'), {'model': {'type': 'minecraft:condition', 'property': 'minecraft:using_item',
                                                                   'on_false': mesh_special(f'{NS}:item/mesh/{sid}', sid),
-                                                                  'on_true': mesh_special(f'{NS}:item/mesh/{sid}_blocking', sid)}, 'hand_animation_on_swap': False})
+                                                                  'on_true': mesh_special(f'{NS}:item/mesh/{sid}_blocking', sid),
+                                                                  'transformation': {'left_rotation': [0, 0, 0, 1], 'right_rotation': [0, 0, 0, 1], 'scale': [1, -1, -1], 'translation': [0, 0, 0]}},
+                                                        'hand_animation_on_swap': False})
         name(f'item.{NS}.{sid}', en, ru)
     name('item.iis.ballistic_shield.tooltip.0', 'MV. Holds bullets and blows; blasts by half, lasers and plasma by a third', 'MV. Держит пули и удары; взрывы — наполовину, лазер и плазму — на треть')
     name('item.iis.force_shield.tooltip.0', 'IV. Holds everything from the front; spends 5000 EU per blocked heart half instead of wearing out',

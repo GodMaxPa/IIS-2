@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " w ",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": "#c:rods/iron",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "minecraft:iron_bars",
+    "count": 16
+  }
+}

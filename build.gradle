@@ -84,6 +84,7 @@ neoForge {
             if (project.hasProperty('equipshots')) {
                 programArguments.addAll '--quickPlaySingleplayer', 'IIS2_Stand', '--width', '1600', '--height', '900'
                 systemProperty 'iis.equip.shots', '1'
+                if (project.hasProperty('only')) systemProperty 'iis.equip.only', project.property('only')
             }
             // gradlew runClient -Pquestshots: opens the quest chapter of weapons and vehicles (D129), takes a picture and exits
             if (project.hasProperty('questshots')) {

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "R R",
+    "SPS"
+  ],
+  "key": {
+    "R": "#iis:rings/iron",
+    "S": "minecraft:stick",
+    "P": "#minecraft:planks"
+  },
+  "result": {
+    "id": "minecraft:tripwire_hook"
+  }
+}

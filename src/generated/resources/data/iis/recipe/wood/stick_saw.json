@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s",
+    "P",
+    "P"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "minecraft:stick",
+    "count": 4
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XXh"
+  ],
+  "key": {
+    "X": "#c:plates/iron",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "minecraft:heavy_weighted_pressure_plate"
+  }
+}

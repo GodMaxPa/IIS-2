@@ -2,6 +2,7 @@ package ru.iis.stand;
 
 import net.minecraft.client.CameraType;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.client.Screenshot;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -125,6 +126,35 @@ public final class EquipShots {
                 for (int x = -40; x <= 40; x++) l.setBlock(POS.offset(x, 1, -12), Blocks.RAIL.defaultBlockState().setValue(net.minecraft.world.level.block.RailBlock.SHAPE, net.minecraft.world.level.block.state.properties.RailShape.EAST_WEST), 2 | 16);
             });
         });
+        // D142: щиты от первого лица, в руке и при блоке (правка владельца 08.11)
+        for (String sid : new String[]{"ballistic_shield", "force_shield"}) {
+            for (boolean off : new boolean[]{false, true}) {
+                InteractionHand hand = off ? InteractionHand.OFF_HAND : InteractionHand.MAIN_HAND;
+                add(4, mc -> {
+                    mc.options.hideGui = false;
+                    mc.options.setCameraType(CameraType.FIRST_PERSON);
+                    mc.player.setYRot(0);
+                    mc.player.setXRot(0);
+                    server(mc, p -> {
+                        p.getInventory().clearContent();
+                        ItemStack sh = new ItemStack(net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.fromNamespaceAndPath("iis", sid)));
+                        if (sh.getItem() instanceof ru.iis.lv.item.BatteryItem) ru.iis.lv.item.BatteryItem.setCharge(sh, 1_000_000);
+                        p.setItemInHand(hand, sh);
+                    });
+                });
+                add(10, mc -> shot(mc, "s_" + sid + (off ? "_off" : "_main") + "_idle"));
+                add(1, mc -> {
+                    mc.options.keyUse.setDown(true);
+                    mc.gameMode.useItem(mc.player, hand);
+                });
+                add(12, mc -> shot(mc, "s_" + sid + (off ? "_off" : "_main") + "_block"));
+                add(1, mc -> mc.options.keyUse.setDown(false));
+            }
+        }
+        if ("shields".equals(System.getProperty("iis.equip.only"))) {
+            add(2, Minecraft::stop);
+            return;
+        }
         // машины: с двух сторон
         for (VehicleKind k : VehicleKind.values()) {
             double d = Math.max(4.5, Math.max(k.width * 2.4, k.flies() ? 9.5 : 6));

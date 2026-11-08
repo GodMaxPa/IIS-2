@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LLL",
+    "LsL",
+    "LLL"
+  ],
+  "key": {
+    "L": "#minecraft:logs",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "minecraft:chest",
+    "count": 4
+  }
+}
