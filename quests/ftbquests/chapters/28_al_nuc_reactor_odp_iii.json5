@@ -351,47 +351,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:scanner_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:scanner_lv)item(iis:scanner_mv)item(iis:scanner_hv)item(iis:scanner_ev)item(iis:scanner_iv))"
+            }
           },
           "count": 1,
           "id": "1B00000000008700"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:scanner_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000008701"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:scanner_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000008702"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:scanner_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000008703"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:scanner_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000008704"
         }
       ],
       "rewards": [

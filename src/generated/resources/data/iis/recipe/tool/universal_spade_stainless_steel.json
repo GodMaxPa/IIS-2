@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/universal_spade/stainless_steel",
+    "#c:rods/stainless_steel",
+    "#iis:screws/stainless_steel",
+    "#iis:tools/screwdriver"
+  ],
+  "result": {
+    "id": "iis:universal_spade_stainless_steel"
+  }
+}

@@ -489,29 +489,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:autoclave_iv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:autoclave_iv)item(iis:autoclave_luv)item(iis:autoclave_zpm))"
+            }
           },
           "count": 1,
           "id": "1B00000000036C00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:autoclave_luv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000036C01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:autoclave_zpm",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000036C02"
         }
       ],
       "rewards": [

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/universal_spade/epoxid_fiber_reinforced",
+    "#c:rods/epoxid_fiber_reinforced",
+    "#iis:screws/epoxid_fiber_reinforced",
+    "#iis:tools/screwdriver"
+  ],
+  "result": {
+    "id": "iis:universal_spade_epoxid_fiber_reinforced"
+  }
+}

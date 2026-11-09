@@ -248,7 +248,11 @@ RAILCRAFT_MAP = {
     ('cart.energy.mfe', 0): 'battery_buffer_2x2_mv',
 }
 GT_TOOLS = {100: 'drill_lv', 110: 'chainsaw_lv', 120: 'wrench_lv', 0: 'sword', 2: 'pickaxe', 4: 'shovel', 6: 'axe', 8: 'hoe', 10: 'saw', 12: 'hammer', 14: 'soft_hammer', 16: 'wrench',
-            18: 'file', 20: 'crowbar', 22: 'screwdriver', 24: 'mortar', 26: 'wire_cutter', 34: 'knife'}
+            18: 'file', 20: 'crowbar', 22: 'screwdriver', 24: 'mortar', 26: 'wire_cutter', 34: 'knife',
+            # D144: the other GT tools
+            30: 'branch_cutter', 32: 'universal_spade', 36: 'butchery_knife', 40: 'sense', 42: 'plow', 44: 'plunger',
+            102: 'drill_mv', 104: 'drill_hv', 112: 'chainsaw_mv', 114: 'chainsaw_hv', 122: 'wrench_mv', 124: 'wrench_hv',
+            130: 'jackhammer', 140: 'buzzsaw', 150: 'screwdriver_lv'}
 TIERS = {'00': 'ulv', '09': 'max', '01': 'lv', '02': 'mv', '03': 'hv', '04': 'ev', '05': 'iv', '06': 'luv', '07': 'zpm', '08': 'uv'}
 # GT_Loader_MetaTileEntities:1468-1510 makeWires: start + 0..5 wires 1x..16x, + 6..10 cables 1x..12x
 GT_WIRES = {2000: 'red_alloy', 1200: 'cobalt', 1220: 'lead', 1240: 'tin', 1260: 'zinc', 1280: 'soldering_alloy', 1300: 'iron', 1320: 'nickel', 1340: 'cupronickel', 1360: 'copper', 1380: 'annealed_copper',
@@ -436,6 +440,25 @@ def bq_items(t):
     return [it for _, it in sorted(t.get('requiredItems:9', {}).items(), key=lambda e: int(e[0].split(':')[0]))]
 
 
+# D144: FTB Filter System smart filter (component ftbfiltersystem:filter, FilterParser: children written one after another)
+FILTER_ITEM, FILTER_COMPONENT = 'ftbfiltersystem:smart_filter', 'ftbfiltersystem:filter'
+ANY_OF = {'minecraft:red_bed': 'minecraft:beds'}
+GT_FLINT_TOOLS = {0: 'sword', 2: 'pickaxe', 4: 'shovel', 6: 'axe', 8: 'hoe'}
+
+
+def filter_item(expr):
+    return {'id': FILTER_ITEM, 'count': 1, 'components': {FILTER_COMPONENT: expr}}
+
+
+def flint_tool(it):
+    """A GT tool of flint in IIS 1 (gt.metatool.01 with GT.ToolStats PrimaryMaterial Flint) is our flint tool (D142, D144)."""
+    if it['id:8'] != 'gregtech:gt.metatool.01':
+        return None
+    mat = it.get('tag:10', {}).get('GT.ToolStats:10', {}).get('PrimaryMaterial:8')
+    kind = GT_FLINT_TOOLS.get(it.get('Damage:2', 0))
+    return f'iis:flint_{kind}' if mat == 'Flint' and kind else None
+
+
 def main():
     mp = Mapper()
     bq = json.load(open(os.path.join(INST, 'config', 'betterquesting', 'DefaultQuests.json'), encoding='utf-8'))
@@ -445,7 +468,13 @@ def main():
 
     missing_items, missing_fluids, dropped_rewards = collections.Counter(), collections.Counter(), collections.Counter()
     built, hidden = {}, {}
+    # D144 (owner): no "rewards store" chapter, the reward shop block sells instead; its quests are left out
+    store = {e['id:3'] for l in bq['questLines:9'].values() if 'rewards_store' in l['properties:10']['betterquesting:10'].get('name:8', '')
+             for e in l.get('quests:9', {}).values()}
     for qid, q in sorted(quests.items()):
+        if qid in store:
+            hidden[qid] = 'rewards store chapter (D144)'
+            continue
         props = q['properties:10']['betterquesting:10']
         tasks, reason = [], None
         for ti, (_, t) in enumerate(sorted(q.get('tasks:9', {}).items(), key=lambda e: int(e[0].split(':')[0]))):
@@ -463,12 +492,14 @@ def main():
                         tasks.append({'type': 'item', 'item': {'id': 'enderio:conduit', 'count': 1, 'components': {'enderio:conduit': f'enderio:{conduit}'}},
                                       'match_components': 'fuzzy', 'count': max(1, it.get('Count:3', 1))})
                         continue
-                    m = mp.item(it['id:8'], it.get('Damage:2', 0), it.get('OreDict:8', ''))
+                    m = flint_tool(it) or mp.item(it['id:8'], it.get('Damage:2', 0), it.get('OreDict:8', ''))
                     if m is None:
                         missing_items[(it['id:8'], it.get('Damage:2', 0))] += 1
                         reason = reason or f"{it['id:8']}:{it.get('Damage:2', 0)}"
                         continue
                     task = {'type': 'item', 'item': {'id': m, 'count': 1}, 'count': max(1, it.get('Count:3', 1))}
+                    if m in ANY_OF:   # D144: a bed of any colour and the like
+                        task['item'] = filter_item(f'item_tag({ANY_OF[m]})')
                     if t.get('consume:1', 0):
                         task['consume_items'] = True
                     tasks.append(task)
@@ -495,6 +526,13 @@ def main():
         if reason or not tasks:
             hidden[qid] = reason or 'no tasks'
             continue
+        if props.get('taskLogic:8') == 'OR' and len(tasks) > 1 and all(t['type'] == 'item' for t in tasks):
+            # D144: FTB Quests has no "any of the tasks"; a smart filter of FTB Filter System takes any of the items
+            parts = [t['item']['components'][FILTER_COMPONENT] if t['item']['id'] == FILTER_ITEM else f"item({t['item']['id']})" for t in tasks]
+            one = {'type': 'item', 'item': filter_item('or(' + ''.join(dict.fromkeys(parts)) + ')'), 'count': min(t['count'] for t in tasks)}
+            if any(t.get('consume_items') for t in tasks):
+                one['consume_items'] = True
+            tasks = [one]
         rewards = []
         for _, r in sorted(q.get('rewards:9', {}).items(), key=lambda e: int(e[0].split(':')[0])):
             if r['rewardID:8'] != 'bq_standard:item':
@@ -604,6 +642,14 @@ def main():
     own, _ = quests_equipment.add_chapter(os.path.join(OUT, 'chapters'), tr, len(lines), write, hexid,
                                           lambda i: os.path.exists(os.path.join(GEN, 'items', i.split(':', 1)[1] + '.json')))
     chapters += 1
+    # D144: our chapter of what the book of IIS 1 does not show
+    import quests_extra
+    own += quests_extra.add_chapter(os.path.join(OUT, 'chapters'), tr, len(lines) + 1, write, hexid,
+                                    lambda i: os.path.exists(os.path.join(GEN, 'items', i.split(':', 1)[1] + '.json')), filter_item)
+    chapters += 1
+    # D144: the crafting table recipe of the first task's item, drawn into the quest text
+    import quest_recipes
+    pictures = quest_recipes.add_pictures(ROOT, os.path.join(OUT, 'chapters'), tr)
     # BaseQuestFile#readData: these keys are required (orElseThrow) in file version 13
     write(os.path.join(OUT, 'data.json5'), {'version': 13, 'default_reward_team': False, 'default_consume_items': False,
                                             'default_autoclaim_rewards': 'disabled', 'default_quest_shape': 'circle',
@@ -624,7 +670,7 @@ def main():
     rep += ['', '## Dropped reward items', ''] + [f'- {c} × `{k}`' for k, c in dropped_rewards.most_common(30)]
     with open(os.path.join(ROOT, 'quests', 'REPORT.md'), 'w', encoding='utf-8', newline='\n') as fh:
         fh.write('\n'.join(rep) + '\n')
-    print(f'quests: {len(quests)} total, {len(placed)} written, {len(hidden)} hidden, {chapters} chapters, {own} of our own')
+    print(f'quests: {len(quests)} total, {len(placed)} written, {len(hidden)} hidden, {chapters} chapters, {own} of our own, {pictures} recipe pictures')
 
 
 def write(path, obj):

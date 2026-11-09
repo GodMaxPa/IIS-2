@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PfP",
+    "PdP",
+    "STS"
+  ],
+  "key": {
+    "P": "#c:plates/invar",
+    "S": "#c:rods/invar",
+    "T": "#iis:screws/invar",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:branch_cutter_invar"
+  }
+}

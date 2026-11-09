@@ -26,6 +26,8 @@ public class GtToolItem extends Item {
     /** D122: молот разведывает (GT_Tool_HardHammer:141, Behaviour_Prospecting(1, 1000)): единица прочности за стук. */
     @Override
     public net.minecraft.world.InteractionResult useOn(net.minecraft.world.item.context.UseOnContext ctx) {
+        net.minecraft.world.InteractionResult special = ToolBehaviours.useOn(this, ctx);   // D144: плуг, вантуз
+        if (special != null) return special;
         if (!toolType().equals("hammer") || ctx.getPlayer() == null) return super.useOn(ctx);
         if (!(ctx.getLevel() instanceof net.minecraft.server.level.ServerLevel sl)) return net.minecraft.world.InteractionResult.SUCCESS;
         java.util.List<net.minecraft.network.chat.Component> lines = HammerProspecting.knock(sl, ctx.getClickedPos(), ctx.getClickedFace(), def.quality());

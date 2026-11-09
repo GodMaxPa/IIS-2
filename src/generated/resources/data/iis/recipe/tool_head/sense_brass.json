@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPI",
+    "hf "
+  ],
+  "key": {
+    "P": "#c:plates/brass",
+    "I": "#c:ingots/brass",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:sense_head_brass"
+  }
+}

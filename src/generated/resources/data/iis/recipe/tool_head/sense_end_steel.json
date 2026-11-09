@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPI",
+    "hf "
+  ],
+  "key": {
+    "P": "#c:plates/end_steel",
+    "I": "#c:ingots/end_steel",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:sense_head_end_steel"
+  }
+}

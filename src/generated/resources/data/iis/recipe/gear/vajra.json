@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ILI",
+    "CJC",
+    "ITI"
+  ],
+  "key": {
+    "I": "#c:plates/iridium",
+    "L": "iis:lapotron_crystal",
+    "C": "#c:circuits/elite",
+    "J": "#iis:tools/jackhammer",
+    "T": "#c:plates/tungsten_steel"
+  },
+  "result": {
+    "id": "iis:vajra"
+  }
+}

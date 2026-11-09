@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/wrench_mv_polyphenylene_sulfide",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 14459120
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 11175936
+      }
+    ]
+  }
+}

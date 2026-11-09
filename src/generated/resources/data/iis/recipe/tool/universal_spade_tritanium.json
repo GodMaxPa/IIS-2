@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/universal_spade/tritanium",
+    "#c:rods/tritanium",
+    "#iis:screws/tritanium",
+    "#iis:tools/screwdriver"
+  ],
+  "result": {
+    "id": "iis:universal_spade_tritanium"
+  }
+}

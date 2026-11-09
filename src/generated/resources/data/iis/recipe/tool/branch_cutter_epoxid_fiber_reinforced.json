@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PfP",
+    "PdP",
+    "STS"
+  ],
+  "key": {
+    "P": "#c:plates/epoxid_fiber_reinforced",
+    "S": "#c:rods/epoxid_fiber_reinforced",
+    "T": "#iis:screws/epoxid_fiber_reinforced",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:branch_cutter_epoxid_fiber_reinforced"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/screwdriver_lv_epoxid_fiber_reinforced",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13158620
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 10514448
+      }
+    ]
+  }
+}

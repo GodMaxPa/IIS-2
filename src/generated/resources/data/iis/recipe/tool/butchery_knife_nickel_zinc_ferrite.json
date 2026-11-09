@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PPf",
+    "PP ",
+    "Sh "
+  ],
+  "key": {
+    "P": "#c:plates/nickel_zinc_ferrite",
+    "S": "#c:rods/nickel_zinc_ferrite",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:butchery_knife_nickel_zinc_ferrite"
+  }
+}

@@ -159,29 +159,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:block_sapphire",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:block_sapphire)item(iis:block_blue_topaz)item(iis:block_opal))"
+            }
           },
           "count": 1,
           "id": "1B00000000002800"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:block_blue_topaz",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000002801"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:block_opal",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000002802"
         }
       ],
       "rewards": [
@@ -211,29 +196,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:gem_sapphire",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:gem_sapphire)item(iis:gem_blue_topaz)item(iis:gem_opal))"
+            }
           },
           "count": 9,
           "id": "1B00000000002A00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:gem_blue_topaz",
-            "count": 1
-          },
-          "count": 9,
-          "id": "1B00000000002A01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:gem_opal",
-            "count": 1
-          },
-          "count": 9,
-          "id": "1B00000000002A02"
         }
       ],
       "rewards": [
@@ -470,29 +440,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:gem_exquisite_sapphire",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:gem_exquisite_sapphire)item(iis:gem_exquisite_blue_topaz)item(iis:gem_exquisite_opal))"
+            }
           },
           "count": 1,
           "id": "1B00000000005900"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:gem_exquisite_blue_topaz",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000005901"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:gem_exquisite_opal",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000005902"
         }
       ],
       "rewards": [
@@ -764,29 +719,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:lens_sapphire",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:lens_sapphire)item(iis:lens_blue_topaz)item(iis:lens_opal))"
+            }
           },
           "count": 1,
           "id": "1B0000000003B000"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:lens_blue_topaz",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000003B001"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:lens_opal",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000003B002"
         }
       ],
       "rewards": [

@@ -246,6 +246,54 @@ def generate(g):
     # memory
     shaped('gear/nano_saber', I('nano_saber'), 1, ['GA ', 'GA ', 'CEC'], {'G': DU('Glowstone'), 'A': I('advanced_alloy_plate'), 'C': CP, 'E': EC})
 
+    # --- D144 (owner): IC2 and GraviSuite tools of IIS 1, placed by IIS 2 tiers (AI proposal); icons from GT tool icons -----------
+    TT = os.path.join(g['ROOT'], 'tools', 'gen', 'textures', 'tools')
+
+    def tinted(name, col):
+        im = Image.open(os.path.join(TT, name + '.png')).convert('RGBA')
+        px = im.load()
+        for y in range(im.height):
+            for x in range(im.width):
+                r, gg, b, a = px[x, y]
+                v = (r + gg + b) / 765
+                px[x, y] = (int(col[0] * v), int(col[1] * v), int(col[2] * v), a)
+        ov = os.path.join(TT, name + '_OVERLAY.png')
+        if os.path.exists(ov):
+            im = Image.alpha_composite(im, Image.open(ov).convert('RGBA'))
+        return im
+
+    def layered(*parts):
+        out = Image.new('RGBA', (16, 16))
+        for p in parts:
+            out = Image.alpha_composite(out, p)
+        return out
+    for iid, en, ru, im in (
+            ('electric_treetap', 'Electric Treetap', 'Электрокраник', layered(tinted('PLUNGER', (150, 110, 70)), tinted('POWER_UNIT_LV', (200, 200, 210)))),
+            ('electric_wrench', 'Electric Wrench', 'Электроключ', layered(tinted('WRENCH', (190, 195, 205)), tinted('POWER_UNIT_LV', (200, 200, 210)))),
+            ('gravitool', 'GraviTool', 'Гравитул', layered(tinted('WRENCH', (90, 130, 230)), tinted('HANDLE_ELECTRIC_SCREWDRIVER', (60, 70, 110)))),
+            ('advanced_drill', 'Advanced Drill', 'Продвинутый бур', layered(tinted('POWER_UNIT_HV', (70, 80, 100)), tinted('JACKHAMMER', (120, 230, 240)))),
+            ('vajra', 'Vajra', 'Ваджра', layered(tinted('JACKHAMMER', (170, 90, 230)), tinted('POWER_UNIT_HV', (60, 30, 90))))):
+        item(iid, en, ru, im)
+    for k, en, ru in (('item.iis.power_tool.cost', '%s EU per use', '%s EU за действие'),
+                      ('item.iis.power_tool.area.on', 'Mining 3x3 (sneak + right click to switch)', 'Копка 3×3 (Shift + ПКМ — переключить)'),
+                      ('item.iis.power_tool.area.off', 'Mining one block (sneak + right click to switch)', 'Копка по одному блоку (Shift + ПКМ — переключить)'),
+                      ('item.iis.power_tool.silk.on', 'Whole blocks (sneak + right click to switch)', 'Блоки целиком (Shift + ПКМ — переключить)'),
+                      ('item.iis.power_tool.silk.off', 'Normal drops (sneak + right click to switch)', 'Обычная добыча (Shift + ПКМ — переключить)')):
+        name(k, en, ru)
+        name(k.replace('item.iis.', 'message.iis.'), en.split(' (')[0], ru.split(' (')[0])
+    shapeless = g['shapeless']
+    add_item_tag('iis:tools/wrench', I('electric_wrench'))
+    add_item_tag('iis:tools/wrench', I('gravitool'))
+    add_item_tag('iis:tools/screwdriver', I('gravitool'))
+    shapeless('gear/electric_treetap', I('electric_treetap'), 1, [I('treetap'), C + 'basic', BAT('basic')])
+    shaped('gear/electric_wrench', I('electric_wrench'), 1, ['P P', 'PCP', ' B '], {'P': P('Steel'), 'C': C + 'basic', 'B': BAT('basic')})
+    shaped('gear/gravitool', I('gravitool'), 1, ['PCP', 'WET', 'PHP'],
+           {'P': P('StainlessSteel'), 'C': C + 'advanced', 'W': I('electric_wrench'), 'E': I('energy_crystal'), 'T': I('electric_treetap'), 'H': '#minecraft:hoes'})
+    shaped('gear/advanced_drill', I('advanced_drill'), 1, ['TCT', 'CDC', 'TET'],
+           {'T': P('Titanium'), 'C': C + 'data', 'D': '#iis:tools/drill_hv', 'E': I('energy_crystal')})
+    shaped('gear/vajra', I('vajra'), 1, ['ILI', 'CJC', 'ITI'],
+           {'I': P('Iridium'), 'L': I('lapotron_crystal'), 'C': C + 'elite', 'J': '#iis:tools/jackhammer', 'T': P('TungstenSteel')})
+
     # --- storage blocks: zs:267-318 --------------------------------------------------------------------------------------------------
     def storage(bid, en, ru, voltage, side_col, port_col, lower, wire, plate_or_bat, hull, bat, circuit):
         rnd = random.Random(bid)

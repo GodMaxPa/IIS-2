@@ -1,0 +1,41 @@
+{
+  "type": "iis:tree_farm",
+  "inputs": [
+    {
+      "ingredient": "iis:rubber_sapling",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:bone_meal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rubber_log",
+      "count": 6
+    },
+    {
+      "id": "iis:rubber_sapling",
+      "count": 1
+    },
+    {
+      "id": "iis:rubber_sapling",
+      "count": 1,
+      "chance": 5000
+    },
+    {
+      "id": "iis:sticky_resin",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 600,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

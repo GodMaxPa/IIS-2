@@ -285,8 +285,13 @@ HEADS = [
     ('drill_head',     'toolHeadDrill',     8, '{} Drill Tip'),
     ('chainsaw_head',  'toolHeadChainsaw',  9, '{} Chainsaw Tip'),
     ('wrench_head',    'toolHeadWrench',   10, '{} Wrench Tip'),
+    # D144 (owner: the other GT tools of IIS 1): GT_MetaGenerated_Item_02 indices 11, 12, 13, 15
+    ('universal_spade_head', 'toolHeadUniversalSpade', 11, '{} Universal Spade Head'),
+    ('sense_head',     'toolHeadSense',    12, '{} Sense Blade'),
+    ('plow_head',      'toolHeadPlow',     13, '{} Plow Head'),
+    ('buzzsaw_head',   'toolHeadBuzzSaw',  15, '{} Buzzsaw Blade'),
 ]
-ELECTRIC_HEADS = ('drill_head', 'chainsaw_head', 'wrench_head')
+ELECTRIC_HEADS = ('drill_head', 'chainsaw_head', 'wrench_head', 'buzzsaw_head')
 # GT5 mNotGeneratedItems + modern vanilla items that take the place of GT items
 VANILLA = {
     ('dust', 'Glowstone'): 'minecraft:glowstone_dust',
@@ -327,8 +332,33 @@ TOOLS = {
     'drill_lv':    dict(gt=100, block=50, craft=100, mult=1.0, speed=3.0,  head='drill_head',   kind='drill', electric=True),
     'chainsaw_lv': dict(gt=110, block=50, craft=800, mult=1.0, speed=2.0,  head='chainsaw_head', kind='chainsaw', electric=True),
     'wrench_lv':   dict(gt=120, block=50, craft=800, mult=1.0, speed=2.0,  head='wrench_head',  kind='wrench', electric=True),
+    # D144 (owner): GT_Tool_Drill/Chainsaw/Wrench_MV/HV, GT_Tool_JackHammer, GT_Tool_BuzzSaw, GT_Tool_Screwdriver_LV (mHardRock = false);
+    # tier sets the battery and the body: LV stainless steel, MV titanium, HV tungstensteel (ProcessingToolHead)
+    'drill_mv':    dict(gt=102, block=200, craft=3200,  mult=2.0, speed=6.0, head='drill_head',    kind='drill', electric=True, tier=2),
+    'drill_hv':    dict(gt=104, block=800, craft=12800, mult=4.0, speed=9.0, head='drill_head',    kind='drill', electric=True, tier=3),
+    'chainsaw_mv': dict(gt=112, block=200, craft=3200,  mult=2.0, speed=3.0, head='chainsaw_head', kind='chainsaw', electric=True, tier=2),
+    'chainsaw_hv': dict(gt=114, block=800, craft=12800, mult=4.0, speed=4.0, head='chainsaw_head', kind='chainsaw', electric=True, tier=3),
+    'wrench_mv':   dict(gt=122, block=200, craft=3200,  mult=2.0, speed=3.0, head='wrench_head',   kind='wrench', electric=True, tier=2),
+    'wrench_hv':   dict(gt=124, block=800, craft=12800, mult=4.0, speed=4.0, head='wrench_head',   kind='wrench', electric=True, tier=3),
+    'jackhammer':  dict(gt=130, block=400, craft=3200,  mult=2.0, speed=12.0, head=None,           kind='pickaxe', electric=True, tier=3),
+    'buzzsaw':     dict(gt=140, block=50,  craft=100,   mult=1.0, speed=1.0, head='buzzsaw_head',  kind=None, electric=True, tier=1),
+    'screwdriver_lv': dict(gt=150, block=200, craft=200, mult=1.0, speed=1.0, head=None,           kind=None, electric=True, tier=1),
+    # simple GT tools (GT_Tool_Sense, Plow, UniversalSpade, BranchCutter, ButcheryKnife, Plunger); behaviour in ru.iis.tool.ToolBehaviours
+    'sense':       dict(gt=40, block=100, craft=400, mult=4.0,  speed=1.0,  head='sense_head',  kind='sense'),
+    'plow':        dict(gt=42, block=100, craft=400, mult=1.0,  speed=1.0,  head='plow_head',   kind='plow'),
+    'universal_spade': dict(gt=32, block=50, craft=400, mult=1.0, speed=0.75, head='universal_spade_head', kind='shovel'),
+    'branch_cutter': dict(gt=30, block=100, craft=400, mult=0.25, speed=0.25, head=None, kind='branch_cutter'),
+    'butchery_knife': dict(gt=36, block=200, craft=100, mult=1.0, speed=0.1, head=None, kind='sword'),
+    'plunger':     dict(gt=44, block=100, craft=400, mult=0.25, speed=1.0,  head=None,         kind=None),
 }
-ELECTRIC_EN = {'drill_lv': 'Drill (LV)', 'chainsaw_lv': 'Chainsaw (LV)', 'wrench_lv': 'Wrench (LV)'}
+ELECTRIC_EN = {'drill_lv': 'Drill (LV)', 'chainsaw_lv': 'Chainsaw (LV)', 'wrench_lv': 'Wrench (LV)',
+               'drill_mv': 'Drill (MV)', 'drill_hv': 'Drill (HV)', 'chainsaw_mv': 'Chainsaw (MV)', 'chainsaw_hv': 'Chainsaw (HV)',
+               'wrench_mv': 'Wrench (MV)', 'wrench_hv': 'Wrench (HV)', 'jackhammer': 'Jackhammer (HV)', 'buzzsaw': 'Buzzsaw (LV)',
+               'screwdriver_lv': 'Screwdriver (LV)', 'universal_spade': 'Universal Spade', 'branch_cutter': 'Branch Cutter',
+               'butchery_knife': 'Butchery Knife', 'sense': 'Sense'}
+ELECTRIC_BODY = {1: 'StainlessSteel', 2: 'Titanium', 3: 'TungstenSteel'}
+# tools whose head is a long rod of the material (GT: stickLong) — the material must have one
+LONG_ROD_TOOLS = ('jackhammer', 'screwdriver_lv')
 # ProcessingToolHead: a hammer of BOUNCY or WOOD material is a soft hammer (mallet), not a hard hammer
 SOFT_HAMMER_MATERIALS = ('Rubber', 'Wood')
 MORTAR_MATERIALS = ('Flint', 'Bronze', 'Iron')  # GT_MetaGenerated_Tool_01: flint/bronze/iron mortars (+steel later)
@@ -449,7 +479,9 @@ for tool, t in TOOLS.items():
         mats = [n for n in tool_mats if n not in SOFT_HAMMER_MATERIALS]
     elif tool == 'crowbar':
         mats = [n for n in tool_mats if n not in SOFT_HAMMER_MATERIALS]
-    elif t.get('electric'):
+    elif tool in LONG_ROD_TOOLS:
+        mats = [n for n in tool_mats if has_form('long_rod', n)]
+    elif t.get('electric') or tool in ('branch_cutter', 'butchery_knife', 'plunger'):
         mats = [n for n in tool_mats if has_form('plate', n)]
     for n in mats:
         if tool != 'mortar' and n == 'Flint':
@@ -457,7 +489,8 @@ for tool, t in TOOLS.items():
         dur = prop(n, 'ToolDurability', 0)
         # GT: MaxDamage = 100 * durability * multiplier; block break costs 50 -> 1 point here = 50 GT units
         max_damage = int(100 * dur * t['mult']) // 50
-        handle = 'StainlessSteel' if t.get('electric') else handle_material(n)   # GT: secondary material of LV electric tools
+        # GT: the secondary material of electric tools is the body (LV stainless steel, MV titanium, HV tungstensteel)
+        handle = ELECTRIC_BODY[t.get('tier', 1)] if t.get('electric') else handle_material(n)
         tools.append({'id': f'{tool}_{mat_id(n)}', 'tool': tool, 'material': mat_id(n), 'handle': mat_id(handle),
                       'maxDamage': max_damage, 'blockDamage': max(1, t['block'] // 50), 'craftDamage': max(1, t['craft'] // 50),
                       'speed': round(prop(n, 'ToolSpeed', 1.0) * t['speed'], 3), 'quality': prop(n, 'ToolQuality', 0),
@@ -669,7 +702,9 @@ RU_FALLBACK = {'crushed': 'Измельчённая руда', 'purified': 'Пр
                'ingot': 'Слиток', 'nugget': 'Самородок', 'gem': 'Кристалл', 'plate': 'Пластина', 'rod': 'Стержень',
                'bolt': 'Болт', 'screw': 'Винт', 'ring': 'Кольцо', 'sword_head': 'Лезвие меча', 'pickaxe_head': 'Наконечник кирки',
                'shovel_head': 'Полотно лопаты', 'axe_head': 'Наконечник топора', 'hoe_head': 'Полотно мотыги', 'saw_head': 'Лезвие пилы',
-               'lens': 'Линза', 'drill_head': 'Наконечник бура', 'chainsaw_head': 'Полотно цепной пилы', 'wrench_head': 'Головка ключа'}
+               'lens': 'Линза', 'drill_head': 'Наконечник бура', 'chainsaw_head': 'Полотно цепной пилы', 'wrench_head': 'Головка ключа',
+               'universal_spade_head': 'Головка универсальной лопаты', 'sense_head': 'Лезвие косы', 'plow_head': 'Лемех плуга',
+               'buzzsaw_head': 'Диск циркулярной пилы'}
 for it in items:
     n = next(k for k, v in mat_by_name.items() if v['id'] == it['material'])
     m = mat_by_name[n]
@@ -720,6 +755,15 @@ TOOL_LAYERS = {
     # GT_Tool_*_LV#getIcon: head = material tip, body = POWER_UNIT_LV tinted with the secondary material (stainless steel)
     'drill_lv': ('set:toolHeadDrill', 'icon:POWER_UNIT_LV'), 'chainsaw_lv': ('set:toolHeadChainsaw', 'icon:POWER_UNIT_LV'),
     'wrench_lv': ('set:toolHeadWrench', 'icon:POWER_UNIT_LV'),
+    # D144
+    'drill_mv': ('set:toolHeadDrill', 'icon:POWER_UNIT_MV'), 'drill_hv': ('set:toolHeadDrill', 'icon:POWER_UNIT_HV'),
+    'chainsaw_mv': ('set:toolHeadChainsaw', 'icon:POWER_UNIT_MV'), 'chainsaw_hv': ('set:toolHeadChainsaw', 'icon:POWER_UNIT_HV'),
+    'wrench_mv': ('set:toolHeadWrench', 'icon:POWER_UNIT_MV'), 'wrench_hv': ('set:toolHeadWrench', 'icon:POWER_UNIT_HV'),
+    'jackhammer': ('icon:JACKHAMMER', None), 'buzzsaw': ('set:toolHeadBuzzSaw', 'icon:HANDLE_BUZZSAW'),
+    'screwdriver_lv': ('set:toolHeadScrewdriver', 'icon:HANDLE_ELECTRIC_SCREWDRIVER'),
+    'sense': ('set:toolHeadSense', 'set:stick'), 'plow': ('set:toolHeadPlow', 'set:stick'),
+    'universal_spade': ('set:toolHeadUniversalSpade', 'set:stick'), 'branch_cutter': ('icon:GRAFTER', None),
+    'butchery_knife': ('icon:BUTCHERYKNIFE', None), 'plunger': ('icon:PLUNGER', None),
 }
 
 
@@ -761,8 +805,17 @@ for t in tools:
     lang['ru_ru'][f'item.{NS}.{t["id"]}'] = f"{tool_ru} ({m['ru']})"
     add_item_tag(f'iis:tools/{t["tool"]}', f'{NS}:{t["id"]}')
     # GT_MetaGenerated_Tool_01: the LV wrench is a craftingToolWrench, the chainsaw a craftingToolSaw; the chainsaw fells trees
-    if t['tool'] == 'wrench_lv':
+    if t['tool'] in ('wrench_lv', 'wrench_mv', 'wrench_hv'):
         add_item_tag('iis:tools/wrench', f'{NS}:{t["id"]}')
+    if t['tool'] in ('buzzsaw', 'universal_spade'):   # GT: craftingToolSaw (the universal spade is also a saw and a crowbar)
+        add_item_tag('iis:tools/saw', f'{NS}:{t["id"]}')
+    if t['tool'] == 'universal_spade':
+        add_item_tag('iis:tools/crowbar', f'{NS}:{t["id"]}')
+    if t['tool'] == 'screwdriver_lv':
+        add_item_tag('iis:tools/screwdriver', f'{NS}:{t["id"]}')
+    if t['tool'] in ('chainsaw_mv', 'chainsaw_hv'):
+        add_item_tag('iis:tools/saw', f'{NS}:{t["id"]}')
+        add_item_tag('iis:tree_fellers', f'{NS}:{t["id"]}')
     if t['tool'] == 'chainsaw_lv':
         add_item_tag('iis:tools/saw', f'{NS}:{t["id"]}')
         add_item_tag('iis:tree_fellers', f'{NS}:{t["id"]}')
@@ -770,6 +823,12 @@ for t in tools:
         add_item_tag({'pickaxe': 'minecraft:pickaxes', 'axe': 'minecraft:axes', 'shovel': 'minecraft:shovels',
                       'hoe': 'minecraft:hoes', 'sword': 'minecraft:swords'}[t['kind']], f'{NS}:{t["id"]}')
 
+# D144 (owner: "a tool rack"): BiblioCraft's tool rack takes bibliocraft:tool_rack_tools (#c:tools); our GT tools go there too
+for _tool in sorted({t['tool'] for t in tools}):
+    add_item_tag('bibliocraft:tool_rack_tools', f'#iis:tools/{_tool}')
+for _i in ('flint_sword', 'flint_shovel', 'flint_pickaxe', 'flint_axe', 'flint_hoe', 'treetap', 'electric_treetap', 'electric_wrench', 'gravitool',
+           'advanced_drill', 'vajra', 'mining_laser', 'nano_saber', 'soldering_iron_lv'):
+    add_item_tag('bibliocraft:tool_rack_tools', f'{NS}:{_i}')
 lang['en_us'].update({'itemGroup.iis.ores': 'IIS 2.0: Ores', 'itemGroup.iis.materials': 'IIS 2.0: Materials', 'itemGroup.iis.tools': 'IIS 2.0: Tools'})
 lang['ru_ru'].update({'itemGroup.iis.ores': 'ИИС 2.0: Руды', 'itemGroup.iis.materials': 'ИИС 2.0: Материалы', 'itemGroup.iis.tools': 'ИИС 2.0: Инструменты'})
 # LV electric tools (D78)
@@ -974,6 +1033,45 @@ for n in tool_mats:
                {'P': P, 'S': tag_of('rod', n), 'T': tag_of('screw', n)}, 'equipment')
     if has_plate and ref('rod', n):
         shaped(f'tool/knife_{mid}', f'{NS}:knife_{mid}', 1, ['fPh', ' S '], {'P': P, 'S': tag_of('rod', n)}, 'equipment')
+    # --- D144: the other GT tools of IIS 1 (ProcessingToolHead, ProcessingToolOther) -------------------------------------
+    if metal and has_plate:
+        shaped(f'tool_head/sense_{mid}', ref('sense_head', n), 1, ['PPI', 'hf '], {'P': P, 'I': I})
+        shaped(f'tool_head/plow_{mid}', ref('plow_head', n), 1, ['PP', 'PP', 'hf'], {'P': P})
+        shaped(f'tool_head/universal_spade_{mid}', ref('universal_spade_head', n), 1, ['fX'], {'X': tag_of('shovel_head', n)})
+        shaped(f'tool_head/buzzsaw_{mid}', ref('buzzsaw_head', n), 1, ['wXh', 'X X', 'fXx'], {'X': P})
+        for tool in ('sense', 'plow'):
+            shapeless(f'tool/{tool}_{mid}', f'{NS}:{tool}_{mid}', 1, [tag_of(f'{tool}_head', n), STICK], 'equipment')
+        if ref('rod', n) and ref('screw', n):
+            shapeless(f'tool/universal_spade_{mid}', f'{NS}:universal_spade_{mid}', 1,
+                      [tag_of('universal_spade_head', n), tag_of('rod', n), tag_of('screw', n), '#iis:tools/screwdriver'], 'equipment')
+            shaped(f'tool/branch_cutter_{mid}', f'{NS}:branch_cutter_{mid}', 1, ['PfP', 'PdP', 'STS'],
+                   {'P': P, 'S': tag_of('rod', n), 'T': tag_of('screw', n)}, 'equipment')
+        if ref('rod', n):
+            shaped(f'tool/butchery_knife_{mid}', f'{NS}:butchery_knife_{mid}', 1, ['PPf', 'PP ', 'Sh '], {'P': P, 'S': tag_of('rod', n)}, 'equipment')
+            for rub in ('Rubber', 'StyreneButadieneRubber', 'Silicone'):
+                if ref('plate', rub):
+                    shaped(f'tool/plunger_{mid}_{mat_id(rub)}', f'{NS}:plunger_{mid}', 1, ['xRR', ' SR', 'S f'],
+                           {'S': tag_of('rod', n), 'R': tag_of('plate', rub)}, 'equipment')
+        # electric MV/HV, buzzsaw, jackhammer, screwdriver: "SXd/GMG/PBP" etc.; the battery sets the capacity and gives the charge
+        BATS = {1: [(f'{NS}:battery_lithium_lv', 100000), (f'{NS}:battery_cadmium_lv', 75000), (f'{NS}:battery_lv', 50000)],
+                2: [(f'{NS}:battery_lithium_mv', 400000), (f'{NS}:battery_cadmium_mv', 300000), (f'{NS}:battery_sodium_mv', 200000)],
+                3: [(f'{NS}:battery_lithium_hv', 1600000), (f'{NS}:battery_cadmium_hv', 1200000), (f'{NS}:battery_sodium_hv', 800000)]}
+        MOTOR = {1: f'{NS}:electric_motor_lv', 2: f'{NS}:electric_motor_mv', 3: f'{NS}:electric_motor_hv'}
+        for tool, pattern in (('drill_mv', 'SXd/GMG/PBP'), ('drill_hv', 'SXd/GMG/PBP'), ('chainsaw_mv', 'SXd/GMG/PBP'), ('chainsaw_hv', 'SXd/GMG/PBP'),
+                              ('wrench_mv', 'SXd/GMG/PBP'), ('wrench_hv', 'SXd/GMG/PBP'), ('buzzsaw', 'PBM/dXG/SGP'),
+                              ('jackhammer', 'SXd/PRP/MPB'), ('screwdriver_lv', 'PdX/MGS/GBP')):
+            td = TOOLS[tool]
+            if tool in LONG_ROD_TOOLS and not ref('long_rod', n):
+                continue
+            body = ELECTRIC_BODY[td['tier']]
+            X = tag_of('long_rod', n) if tool in LONG_ROD_TOOLS else tag_of(td['head'], n)
+            for bat, cap in BATS[td['tier']]:
+                key = {'X': X, 'M': f'{NS}:electric_piston_hv' if tool == 'jackhammer' else MOTOR[td['tier']], 'S': tag_of('screw', body),
+                       'P': tag_of('plate', body), 'G': tag_of('small_gear', body), 'B': bat, 'R': tag_of('rod', body), 'd': '#iis:tools/screwdriver'}
+                rows = pattern.split('/')
+                key = {k: v for k, v in key.items() if any(k in r for r in rows)}
+                add_recipe(f'tool/{tool}_{mid}_{bat.split(":")[1]}', {'type': 'minecraft:crafting_shaped', 'category': 'equipment',
+                           'pattern': rows, 'key': key, 'result': {'id': f'{NS}:{tool}_{mid}', 'components': {f'{NS}:max_charge': cap}}})
 # ProcessingToolHead: wooden soft hammer (mallet) from planks
 shaped('tool/soft_hammer_wood', f'{NS}:soft_hammer_wood', 1, ['XX ', 'XXS', 'XX '], {'X': '#minecraft:planks', 'S': 'minecraft:stick'}, 'equipment')
 for n in MORTAR_MATERIALS:
@@ -1162,6 +1260,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_modern', os.path.join(ROOT, 'tools
 _modern = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_modern)
 lv_stats['modern'] = _modern.generate(globals())
+# Owner's notes of 09.11 (D144): vanilla recipes as in IIS 1
+_spec = _ilu.spec_from_file_location('iis_gen_iis1fix', os.path.join(ROOT, 'tools', 'gen', 'iis1fix.py'))
+_iis1fix = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_iis1fix)
+lv_stats['iis1fix'] = _iis1fix.generate(globals())
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)
 

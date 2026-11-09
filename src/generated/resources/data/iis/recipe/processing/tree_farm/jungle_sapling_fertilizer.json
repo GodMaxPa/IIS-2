@@ -1,0 +1,41 @@
+{
+  "type": "iis:tree_farm",
+  "inputs": [
+    {
+      "ingredient": "minecraft:jungle_sapling",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:fertilizer",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:jungle_log",
+      "count": 6
+    },
+    {
+      "id": "minecraft:jungle_sapling",
+      "count": 1
+    },
+    {
+      "id": "minecraft:jungle_sapling",
+      "count": 1,
+      "chance": 5000
+    },
+    {
+      "id": "minecraft:cocoa_beans",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 600,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

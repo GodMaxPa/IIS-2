@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PfP",
+    "PdP",
+    "STS"
+  ],
+  "key": {
+    "P": "#c:plates/rose_gold",
+    "S": "#c:rods/rose_gold",
+    "T": "#iis:screws/rose_gold",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:branch_cutter_rose_gold"
+  }
+}

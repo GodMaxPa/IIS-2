@@ -28,6 +28,9 @@ BOILERS = [
     ('boiler_coal_steel', 'boiler.steel', 101, 'High Pressure Coal Boiler', 'STEELBRICKS', 'BOILER_FRONT', 'BOILER_FRONT_ACTIVE', 'OVERLAY_PIPE', 'SteelBoiler'),
     ('boiler_lava_steel', 'boiler.lava', 102, 'High Pressure Lava Boiler', 'STEELBRICKS', 'BOILER_LAVA_FRONT', 'BOILER_LAVA_FRONT_ACTIVE', 'OVERLAY_PIPE', 'SteelBoiler'),
     ('boiler_solar_bronze', 'boiler.solar', 105, 'Simple Solar Boiler', 'BRONZEBRICKS', 'OVERLAY_PIPE', 'OVERLAY_PIPE', 'BOILER_SOLAR', 'SolarBoiler'),
+    # D144 (owner): a steel solar boiler for the steel part of the steam age; GT5-II has none, numbers of the GT5 Unofficial
+    # high pressure solar boiler (360 L/s, 120 L/s calcified)
+    ('boiler_solar_steel', 'boiler.solar.steel', 106, 'High Pressure Solar Boiler', 'STEELBRICKS', 'OVERLAY_PIPE', 'OVERLAY_PIPE', 'BOILER_SOLAR', 'SolarBoiler'),
 ]
 HULLS = [('hull_bronze', 'BRONZE', 'hull.bronze', 'Bronze Hull'), ('hull_bronze_bricked', 'BRONZEBRICKS', 'hull.bronze_bricked', 'Bricked Bronze Hull'),
          ('hull_steel', 'STEEL', 'hull.steel', 'Steel Hull'), ('hull_steel_bricked', 'STEELBRICKS', 'hull.steel_bricked', 'Bricked Steel Hull')]
@@ -221,8 +224,15 @@ def generate(g):
                    102: ['A Boiler running off Lava', 'Produces 600L of Steam per second',
                          'Drops to 200L of Steam per second as byproduct slot fills'],
                    105: ['Steam Power by the Sun', 'Produces 120L of Steam per second',
-                         'Calcifies over time, reducing Steam output to 40L/s', 'Break and replace to decalcify']}[desc]
+                         'Calcifies over time, reducing Steam output to 40L/s', 'Break and replace to decalcify'],
+                   106: ['Steam Power by the Sun, under pressure', 'Produces 360L of Steam per second',
+                         'Calcifies over time, reducing Steam output to 120L/s', 'Break and replace to decalcify']}[desc]
         tooltip(bid, desc, en_desc)
+        if desc == 106:
+            name(f'block.{NS}.{bid}', en, 'Солнечный котёл высокого давления')
+            for k, line in enumerate(['Пар от солнца, под давлением', 'Даёт 360 л пара в секунду',
+                                      'Со временем зарастает накипью: выход падает до 120 л/с', 'Сломайте и поставьте заново, чтобы убрать накипь']):
+                name(f'block.{NS}.{bid}.tooltip.{k}', en_desc[k], line)
         if desc == 102:  # the pack's line differs from GT's line; keep the meaning of the original
             name(f'block.{NS}.{bid}.tooltip.2', en_desc[2], 'Выход падает до 200 л/с по мере заполнения слота побочного продукта')
         if desc == 105:  # the pack's "Перерыв и замена" is a machine translation of "Break and replace"
@@ -309,6 +319,9 @@ def generate(g):
     shaped('machine/boiler_lava_steel', f'{NS}:boiler_lava_steel', 1, ['PPP', 'GGG', 'PMP'], {'P': P_S, 'G': GLASS, 'M': f'{NS}:hull_steel_bricked'})
     shaped('machine/boiler_solar_bronze', f'{NS}:boiler_solar_bronze', 1, ['GGG', 'SSS', 'PMP'],
            {'G': GLASS, 'S': tag_of('plate', 'Silver'), 'P': '#iis:pipes/small/bronze', 'M': f'{NS}:hull_bronze_bricked'})
+    # D144 (AI proposal): the bronze recipe one step up: steel pipes and hull, the bronze solar boiler inside
+    shaped('machine/boiler_solar_steel', f'{NS}:boiler_solar_steel', 1, ['GGG', 'SBS', 'PMP'],
+           {'G': GLASS, 'S': tag_of('plate', 'Silver'), 'B': f'{NS}:boiler_solar_bronze', 'P': '#iis:pipes/small/steel', 'M': f'{NS}:hull_steel_bricked'})
     for tier, mat in (('bronze', 'Bronze'), ('steel', 'Steel')):
         X = f'#iis:pipes/small/{tier}'
         H, HB = f'{NS}:hull_{tier}', f'{NS}:hull_{tier}_bricked'

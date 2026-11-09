@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/branch_cutter_naquadah",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 3289650
+      }
+    ]
+  }
+}

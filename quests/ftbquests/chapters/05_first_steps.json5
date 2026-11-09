@@ -228,7 +228,7 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:sword_iron",
+            "id": "iis:flint_sword",
             "count": 1
           },
           "count": 1,
@@ -328,7 +328,7 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:axe_iron",
+            "id": "iis:flint_axe",
             "count": 1
           },
           "count": 1,
@@ -859,7 +859,7 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:shovel_iron",
+            "id": "iis:flint_shovel",
             "count": 1
           },
           "count": 1,
@@ -893,38 +893,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:crushed_silver",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:crushed_silver)item(iis:impure_dust_silver)item(iis:ingot_silver)item(iis:ore_silver))"
+            }
           },
           "count": 1,
           "id": "1B0000000001D800"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:impure_dust_silver",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001D801"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:ingot_silver",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001D802"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:ore_silver",
-            "count": 1
-          },
-          "count": 64,
-          "id": "1B0000000001D803"
         }
       ],
       "rewards": [
@@ -988,7 +964,7 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:pickaxe_iron",
+            "id": "iis:flint_pickaxe",
             "count": 1
           },
           "count": 1,
@@ -1124,8 +1100,11 @@
         {
           "type": "item",
           "item": {
-            "id": "minecraft:red_bed",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(minecraft:beds)"
+            }
           },
           "count": 1,
           "id": "1B0000000004B100"

@@ -12055,6 +12055,26 @@
     "material": "aluminium"
   },
   {
+    "id": "universal_spade_head_aluminium",
+    "prefix": "universal_spade_head",
+    "material": "aluminium"
+  },
+  {
+    "id": "sense_head_aluminium",
+    "prefix": "sense_head",
+    "material": "aluminium"
+  },
+  {
+    "id": "plow_head_aluminium",
+    "prefix": "plow_head",
+    "material": "aluminium"
+  },
+  {
+    "id": "buzzsaw_head_aluminium",
+    "prefix": "buzzsaw_head",
+    "material": "aluminium"
+  },
+  {
     "id": "sword_head_beryllium",
     "prefix": "sword_head",
     "material": "beryllium"
@@ -12097,6 +12117,26 @@
   {
     "id": "wrench_head_beryllium",
     "prefix": "wrench_head",
+    "material": "beryllium"
+  },
+  {
+    "id": "universal_spade_head_beryllium",
+    "prefix": "universal_spade_head",
+    "material": "beryllium"
+  },
+  {
+    "id": "sense_head_beryllium",
+    "prefix": "sense_head",
+    "material": "beryllium"
+  },
+  {
+    "id": "plow_head_beryllium",
+    "prefix": "plow_head",
+    "material": "beryllium"
+  },
+  {
+    "id": "buzzsaw_head_beryllium",
+    "prefix": "buzzsaw_head",
     "material": "beryllium"
   },
   {
@@ -12145,6 +12185,26 @@
     "material": "black_bronze"
   },
   {
+    "id": "universal_spade_head_black_bronze",
+    "prefix": "universal_spade_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "sense_head_black_bronze",
+    "prefix": "sense_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "plow_head_black_bronze",
+    "prefix": "plow_head",
+    "material": "black_bronze"
+  },
+  {
+    "id": "buzzsaw_head_black_bronze",
+    "prefix": "buzzsaw_head",
+    "material": "black_bronze"
+  },
+  {
     "id": "sword_head_black_steel",
     "prefix": "sword_head",
     "material": "black_steel"
@@ -12187,6 +12247,26 @@
   {
     "id": "wrench_head_black_steel",
     "prefix": "wrench_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "universal_spade_head_black_steel",
+    "prefix": "universal_spade_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "sense_head_black_steel",
+    "prefix": "sense_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "plow_head_black_steel",
+    "prefix": "plow_head",
+    "material": "black_steel"
+  },
+  {
+    "id": "buzzsaw_head_black_steel",
+    "prefix": "buzzsaw_head",
     "material": "black_steel"
   },
   {
@@ -12235,6 +12315,26 @@
     "material": "blue_steel"
   },
   {
+    "id": "universal_spade_head_blue_steel",
+    "prefix": "universal_spade_head",
+    "material": "blue_steel"
+  },
+  {
+    "id": "sense_head_blue_steel",
+    "prefix": "sense_head",
+    "material": "blue_steel"
+  },
+  {
+    "id": "plow_head_blue_steel",
+    "prefix": "plow_head",
+    "material": "blue_steel"
+  },
+  {
+    "id": "buzzsaw_head_blue_steel",
+    "prefix": "buzzsaw_head",
+    "material": "blue_steel"
+  },
+  {
     "id": "sword_head_brass",
     "prefix": "sword_head",
     "material": "brass"
@@ -12277,6 +12377,26 @@
   {
     "id": "wrench_head_brass",
     "prefix": "wrench_head",
+    "material": "brass"
+  },
+  {
+    "id": "universal_spade_head_brass",
+    "prefix": "universal_spade_head",
+    "material": "brass"
+  },
+  {
+    "id": "sense_head_brass",
+    "prefix": "sense_head",
+    "material": "brass"
+  },
+  {
+    "id": "plow_head_brass",
+    "prefix": "plow_head",
+    "material": "brass"
+  },
+  {
+    "id": "buzzsaw_head_brass",
+    "prefix": "buzzsaw_head",
     "material": "brass"
   },
   {
@@ -12325,6 +12445,26 @@
     "material": "bronze"
   },
   {
+    "id": "universal_spade_head_bronze",
+    "prefix": "universal_spade_head",
+    "material": "bronze"
+  },
+  {
+    "id": "sense_head_bronze",
+    "prefix": "sense_head",
+    "material": "bronze"
+  },
+  {
+    "id": "plow_head_bronze",
+    "prefix": "plow_head",
+    "material": "bronze"
+  },
+  {
+    "id": "buzzsaw_head_bronze",
+    "prefix": "buzzsaw_head",
+    "material": "bronze"
+  },
+  {
     "id": "sword_head_carbon",
     "prefix": "sword_head",
     "material": "carbon"
@@ -12367,6 +12507,26 @@
   {
     "id": "wrench_head_carbon",
     "prefix": "wrench_head",
+    "material": "carbon"
+  },
+  {
+    "id": "universal_spade_head_carbon",
+    "prefix": "universal_spade_head",
+    "material": "carbon"
+  },
+  {
+    "id": "sense_head_carbon",
+    "prefix": "sense_head",
+    "material": "carbon"
+  },
+  {
+    "id": "plow_head_carbon",
+    "prefix": "plow_head",
+    "material": "carbon"
+  },
+  {
+    "id": "buzzsaw_head_carbon",
+    "prefix": "buzzsaw_head",
     "material": "carbon"
   },
   {
@@ -12415,6 +12575,26 @@
     "material": "chrome"
   },
   {
+    "id": "universal_spade_head_chrome",
+    "prefix": "universal_spade_head",
+    "material": "chrome"
+  },
+  {
+    "id": "sense_head_chrome",
+    "prefix": "sense_head",
+    "material": "chrome"
+  },
+  {
+    "id": "plow_head_chrome",
+    "prefix": "plow_head",
+    "material": "chrome"
+  },
+  {
+    "id": "buzzsaw_head_chrome",
+    "prefix": "buzzsaw_head",
+    "material": "chrome"
+  },
+  {
     "id": "sword_head_cobalt",
     "prefix": "sword_head",
     "material": "cobalt"
@@ -12457,6 +12637,26 @@
   {
     "id": "wrench_head_cobalt",
     "prefix": "wrench_head",
+    "material": "cobalt"
+  },
+  {
+    "id": "universal_spade_head_cobalt",
+    "prefix": "universal_spade_head",
+    "material": "cobalt"
+  },
+  {
+    "id": "sense_head_cobalt",
+    "prefix": "sense_head",
+    "material": "cobalt"
+  },
+  {
+    "id": "plow_head_cobalt",
+    "prefix": "plow_head",
+    "material": "cobalt"
+  },
+  {
+    "id": "buzzsaw_head_cobalt",
+    "prefix": "buzzsaw_head",
     "material": "cobalt"
   },
   {
@@ -12505,6 +12705,26 @@
     "material": "cobalt_brass"
   },
   {
+    "id": "universal_spade_head_cobalt_brass",
+    "prefix": "universal_spade_head",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "sense_head_cobalt_brass",
+    "prefix": "sense_head",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "plow_head_cobalt_brass",
+    "prefix": "plow_head",
+    "material": "cobalt_brass"
+  },
+  {
+    "id": "buzzsaw_head_cobalt_brass",
+    "prefix": "buzzsaw_head",
+    "material": "cobalt_brass"
+  },
+  {
     "id": "sword_head_cupronickel",
     "prefix": "sword_head",
     "material": "cupronickel"
@@ -12547,6 +12767,26 @@
   {
     "id": "wrench_head_cupronickel",
     "prefix": "wrench_head",
+    "material": "cupronickel"
+  },
+  {
+    "id": "universal_spade_head_cupronickel",
+    "prefix": "universal_spade_head",
+    "material": "cupronickel"
+  },
+  {
+    "id": "sense_head_cupronickel",
+    "prefix": "sense_head",
+    "material": "cupronickel"
+  },
+  {
+    "id": "plow_head_cupronickel",
+    "prefix": "plow_head",
+    "material": "cupronickel"
+  },
+  {
+    "id": "buzzsaw_head_cupronickel",
+    "prefix": "buzzsaw_head",
     "material": "cupronickel"
   },
   {
@@ -12595,6 +12835,26 @@
     "material": "dark_steel"
   },
   {
+    "id": "universal_spade_head_dark_steel",
+    "prefix": "universal_spade_head",
+    "material": "dark_steel"
+  },
+  {
+    "id": "sense_head_dark_steel",
+    "prefix": "sense_head",
+    "material": "dark_steel"
+  },
+  {
+    "id": "plow_head_dark_steel",
+    "prefix": "plow_head",
+    "material": "dark_steel"
+  },
+  {
+    "id": "buzzsaw_head_dark_steel",
+    "prefix": "buzzsaw_head",
+    "material": "dark_steel"
+  },
+  {
     "id": "sword_head_desh",
     "prefix": "sword_head",
     "material": "desh"
@@ -12637,6 +12897,26 @@
   {
     "id": "wrench_head_desh",
     "prefix": "wrench_head",
+    "material": "desh"
+  },
+  {
+    "id": "universal_spade_head_desh",
+    "prefix": "universal_spade_head",
+    "material": "desh"
+  },
+  {
+    "id": "sense_head_desh",
+    "prefix": "sense_head",
+    "material": "desh"
+  },
+  {
+    "id": "plow_head_desh",
+    "prefix": "plow_head",
+    "material": "desh"
+  },
+  {
+    "id": "buzzsaw_head_desh",
+    "prefix": "buzzsaw_head",
     "material": "desh"
   },
   {
@@ -12685,6 +12965,26 @@
     "material": "duranium"
   },
   {
+    "id": "universal_spade_head_duranium",
+    "prefix": "universal_spade_head",
+    "material": "duranium"
+  },
+  {
+    "id": "sense_head_duranium",
+    "prefix": "sense_head",
+    "material": "duranium"
+  },
+  {
+    "id": "plow_head_duranium",
+    "prefix": "plow_head",
+    "material": "duranium"
+  },
+  {
+    "id": "buzzsaw_head_duranium",
+    "prefix": "buzzsaw_head",
+    "material": "duranium"
+  },
+  {
     "id": "sword_head_electrum",
     "prefix": "sword_head",
     "material": "electrum"
@@ -12727,6 +13027,26 @@
   {
     "id": "wrench_head_electrum",
     "prefix": "wrench_head",
+    "material": "electrum"
+  },
+  {
+    "id": "universal_spade_head_electrum",
+    "prefix": "universal_spade_head",
+    "material": "electrum"
+  },
+  {
+    "id": "sense_head_electrum",
+    "prefix": "sense_head",
+    "material": "electrum"
+  },
+  {
+    "id": "plow_head_electrum",
+    "prefix": "plow_head",
+    "material": "electrum"
+  },
+  {
+    "id": "buzzsaw_head_electrum",
+    "prefix": "buzzsaw_head",
     "material": "electrum"
   },
   {
@@ -12775,6 +13095,26 @@
     "material": "end_steel"
   },
   {
+    "id": "universal_spade_head_end_steel",
+    "prefix": "universal_spade_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "sense_head_end_steel",
+    "prefix": "sense_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "plow_head_end_steel",
+    "prefix": "plow_head",
+    "material": "end_steel"
+  },
+  {
+    "id": "buzzsaw_head_end_steel",
+    "prefix": "buzzsaw_head",
+    "material": "end_steel"
+  },
+  {
     "id": "sword_head_enderium",
     "prefix": "sword_head",
     "material": "enderium"
@@ -12817,6 +13157,26 @@
   {
     "id": "wrench_head_enderium",
     "prefix": "wrench_head",
+    "material": "enderium"
+  },
+  {
+    "id": "universal_spade_head_enderium",
+    "prefix": "universal_spade_head",
+    "material": "enderium"
+  },
+  {
+    "id": "sense_head_enderium",
+    "prefix": "sense_head",
+    "material": "enderium"
+  },
+  {
+    "id": "plow_head_enderium",
+    "prefix": "plow_head",
+    "material": "enderium"
+  },
+  {
+    "id": "buzzsaw_head_enderium",
+    "prefix": "buzzsaw_head",
     "material": "enderium"
   },
   {
@@ -12865,6 +13225,26 @@
     "material": "epoxid"
   },
   {
+    "id": "universal_spade_head_epoxid",
+    "prefix": "universal_spade_head",
+    "material": "epoxid"
+  },
+  {
+    "id": "sense_head_epoxid",
+    "prefix": "sense_head",
+    "material": "epoxid"
+  },
+  {
+    "id": "plow_head_epoxid",
+    "prefix": "plow_head",
+    "material": "epoxid"
+  },
+  {
+    "id": "buzzsaw_head_epoxid",
+    "prefix": "buzzsaw_head",
+    "material": "epoxid"
+  },
+  {
     "id": "sword_head_epoxid_fiber_reinforced",
     "prefix": "sword_head",
     "material": "epoxid_fiber_reinforced"
@@ -12907,6 +13287,26 @@
   {
     "id": "wrench_head_epoxid_fiber_reinforced",
     "prefix": "wrench_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "universal_spade_head_epoxid_fiber_reinforced",
+    "prefix": "universal_spade_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "sense_head_epoxid_fiber_reinforced",
+    "prefix": "sense_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "plow_head_epoxid_fiber_reinforced",
+    "prefix": "plow_head",
+    "material": "epoxid_fiber_reinforced"
+  },
+  {
+    "id": "buzzsaw_head_epoxid_fiber_reinforced",
+    "prefix": "buzzsaw_head",
     "material": "epoxid_fiber_reinforced"
   },
   {
@@ -12955,6 +13355,26 @@
     "material": "gold"
   },
   {
+    "id": "universal_spade_head_gold",
+    "prefix": "universal_spade_head",
+    "material": "gold"
+  },
+  {
+    "id": "sense_head_gold",
+    "prefix": "sense_head",
+    "material": "gold"
+  },
+  {
+    "id": "plow_head_gold",
+    "prefix": "plow_head",
+    "material": "gold"
+  },
+  {
+    "id": "buzzsaw_head_gold",
+    "prefix": "buzzsaw_head",
+    "material": "gold"
+  },
+  {
     "id": "sword_head_hsse",
     "prefix": "sword_head",
     "material": "hsse"
@@ -12997,6 +13417,26 @@
   {
     "id": "wrench_head_hsse",
     "prefix": "wrench_head",
+    "material": "hsse"
+  },
+  {
+    "id": "universal_spade_head_hsse",
+    "prefix": "universal_spade_head",
+    "material": "hsse"
+  },
+  {
+    "id": "sense_head_hsse",
+    "prefix": "sense_head",
+    "material": "hsse"
+  },
+  {
+    "id": "plow_head_hsse",
+    "prefix": "plow_head",
+    "material": "hsse"
+  },
+  {
+    "id": "buzzsaw_head_hsse",
+    "prefix": "buzzsaw_head",
     "material": "hsse"
   },
   {
@@ -13045,6 +13485,26 @@
     "material": "hssg"
   },
   {
+    "id": "universal_spade_head_hssg",
+    "prefix": "universal_spade_head",
+    "material": "hssg"
+  },
+  {
+    "id": "sense_head_hssg",
+    "prefix": "sense_head",
+    "material": "hssg"
+  },
+  {
+    "id": "plow_head_hssg",
+    "prefix": "plow_head",
+    "material": "hssg"
+  },
+  {
+    "id": "buzzsaw_head_hssg",
+    "prefix": "buzzsaw_head",
+    "material": "hssg"
+  },
+  {
     "id": "sword_head_hsss",
     "prefix": "sword_head",
     "material": "hsss"
@@ -13087,6 +13547,26 @@
   {
     "id": "wrench_head_hsss",
     "prefix": "wrench_head",
+    "material": "hsss"
+  },
+  {
+    "id": "universal_spade_head_hsss",
+    "prefix": "universal_spade_head",
+    "material": "hsss"
+  },
+  {
+    "id": "sense_head_hsss",
+    "prefix": "sense_head",
+    "material": "hsss"
+  },
+  {
+    "id": "plow_head_hsss",
+    "prefix": "plow_head",
+    "material": "hsss"
+  },
+  {
+    "id": "buzzsaw_head_hsss",
+    "prefix": "buzzsaw_head",
     "material": "hsss"
   },
   {
@@ -13135,6 +13615,26 @@
     "material": "invar"
   },
   {
+    "id": "universal_spade_head_invar",
+    "prefix": "universal_spade_head",
+    "material": "invar"
+  },
+  {
+    "id": "sense_head_invar",
+    "prefix": "sense_head",
+    "material": "invar"
+  },
+  {
+    "id": "plow_head_invar",
+    "prefix": "plow_head",
+    "material": "invar"
+  },
+  {
+    "id": "buzzsaw_head_invar",
+    "prefix": "buzzsaw_head",
+    "material": "invar"
+  },
+  {
     "id": "sword_head_iridium",
     "prefix": "sword_head",
     "material": "iridium"
@@ -13177,6 +13677,26 @@
   {
     "id": "wrench_head_iridium",
     "prefix": "wrench_head",
+    "material": "iridium"
+  },
+  {
+    "id": "universal_spade_head_iridium",
+    "prefix": "universal_spade_head",
+    "material": "iridium"
+  },
+  {
+    "id": "sense_head_iridium",
+    "prefix": "sense_head",
+    "material": "iridium"
+  },
+  {
+    "id": "plow_head_iridium",
+    "prefix": "plow_head",
+    "material": "iridium"
+  },
+  {
+    "id": "buzzsaw_head_iridium",
+    "prefix": "buzzsaw_head",
     "material": "iridium"
   },
   {
@@ -13225,6 +13745,26 @@
     "material": "iron"
   },
   {
+    "id": "universal_spade_head_iron",
+    "prefix": "universal_spade_head",
+    "material": "iron"
+  },
+  {
+    "id": "sense_head_iron",
+    "prefix": "sense_head",
+    "material": "iron"
+  },
+  {
+    "id": "plow_head_iron",
+    "prefix": "plow_head",
+    "material": "iron"
+  },
+  {
+    "id": "buzzsaw_head_iron",
+    "prefix": "buzzsaw_head",
+    "material": "iron"
+  },
+  {
     "id": "sword_head_iron_magnetic",
     "prefix": "sword_head",
     "material": "iron_magnetic"
@@ -13267,6 +13807,26 @@
   {
     "id": "wrench_head_iron_magnetic",
     "prefix": "wrench_head",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "universal_spade_head_iron_magnetic",
+    "prefix": "universal_spade_head",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "sense_head_iron_magnetic",
+    "prefix": "sense_head",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "plow_head_iron_magnetic",
+    "prefix": "plow_head",
+    "material": "iron_magnetic"
+  },
+  {
+    "id": "buzzsaw_head_iron_magnetic",
+    "prefix": "buzzsaw_head",
     "material": "iron_magnetic"
   },
   {
@@ -13315,6 +13875,26 @@
     "material": "kanthal"
   },
   {
+    "id": "universal_spade_head_kanthal",
+    "prefix": "universal_spade_head",
+    "material": "kanthal"
+  },
+  {
+    "id": "sense_head_kanthal",
+    "prefix": "sense_head",
+    "material": "kanthal"
+  },
+  {
+    "id": "plow_head_kanthal",
+    "prefix": "plow_head",
+    "material": "kanthal"
+  },
+  {
+    "id": "buzzsaw_head_kanthal",
+    "prefix": "buzzsaw_head",
+    "material": "kanthal"
+  },
+  {
     "id": "sword_head_magnalium",
     "prefix": "sword_head",
     "material": "magnalium"
@@ -13357,6 +13937,26 @@
   {
     "id": "wrench_head_magnalium",
     "prefix": "wrench_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "universal_spade_head_magnalium",
+    "prefix": "universal_spade_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "sense_head_magnalium",
+    "prefix": "sense_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "plow_head_magnalium",
+    "prefix": "plow_head",
+    "material": "magnalium"
+  },
+  {
+    "id": "buzzsaw_head_magnalium",
+    "prefix": "buzzsaw_head",
     "material": "magnalium"
   },
   {
@@ -13405,6 +14005,26 @@
     "material": "manganese"
   },
   {
+    "id": "universal_spade_head_manganese",
+    "prefix": "universal_spade_head",
+    "material": "manganese"
+  },
+  {
+    "id": "sense_head_manganese",
+    "prefix": "sense_head",
+    "material": "manganese"
+  },
+  {
+    "id": "plow_head_manganese",
+    "prefix": "plow_head",
+    "material": "manganese"
+  },
+  {
+    "id": "buzzsaw_head_manganese",
+    "prefix": "buzzsaw_head",
+    "material": "manganese"
+  },
+  {
     "id": "sword_head_meteoric_iron",
     "prefix": "sword_head",
     "material": "meteoric_iron"
@@ -13447,6 +14067,26 @@
   {
     "id": "wrench_head_meteoric_iron",
     "prefix": "wrench_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "universal_spade_head_meteoric_iron",
+    "prefix": "universal_spade_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "sense_head_meteoric_iron",
+    "prefix": "sense_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "plow_head_meteoric_iron",
+    "prefix": "plow_head",
+    "material": "meteoric_iron"
+  },
+  {
+    "id": "buzzsaw_head_meteoric_iron",
+    "prefix": "buzzsaw_head",
     "material": "meteoric_iron"
   },
   {
@@ -13495,6 +14135,26 @@
     "material": "molybdenum"
   },
   {
+    "id": "universal_spade_head_molybdenum",
+    "prefix": "universal_spade_head",
+    "material": "molybdenum"
+  },
+  {
+    "id": "sense_head_molybdenum",
+    "prefix": "sense_head",
+    "material": "molybdenum"
+  },
+  {
+    "id": "plow_head_molybdenum",
+    "prefix": "plow_head",
+    "material": "molybdenum"
+  },
+  {
+    "id": "buzzsaw_head_molybdenum",
+    "prefix": "buzzsaw_head",
+    "material": "molybdenum"
+  },
+  {
     "id": "sword_head_naquadah",
     "prefix": "sword_head",
     "material": "naquadah"
@@ -13537,6 +14197,26 @@
   {
     "id": "wrench_head_naquadah",
     "prefix": "wrench_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "universal_spade_head_naquadah",
+    "prefix": "universal_spade_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "sense_head_naquadah",
+    "prefix": "sense_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "plow_head_naquadah",
+    "prefix": "plow_head",
+    "material": "naquadah"
+  },
+  {
+    "id": "buzzsaw_head_naquadah",
+    "prefix": "buzzsaw_head",
     "material": "naquadah"
   },
   {
@@ -13585,6 +14265,26 @@
     "material": "naquadah_alloy"
   },
   {
+    "id": "universal_spade_head_naquadah_alloy",
+    "prefix": "universal_spade_head",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "sense_head_naquadah_alloy",
+    "prefix": "sense_head",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "plow_head_naquadah_alloy",
+    "prefix": "plow_head",
+    "material": "naquadah_alloy"
+  },
+  {
+    "id": "buzzsaw_head_naquadah_alloy",
+    "prefix": "buzzsaw_head",
+    "material": "naquadah_alloy"
+  },
+  {
     "id": "sword_head_naquadah_enriched",
     "prefix": "sword_head",
     "material": "naquadah_enriched"
@@ -13627,6 +14327,26 @@
   {
     "id": "wrench_head_naquadah_enriched",
     "prefix": "wrench_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "universal_spade_head_naquadah_enriched",
+    "prefix": "universal_spade_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "sense_head_naquadah_enriched",
+    "prefix": "sense_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "plow_head_naquadah_enriched",
+    "prefix": "plow_head",
+    "material": "naquadah_enriched"
+  },
+  {
+    "id": "buzzsaw_head_naquadah_enriched",
+    "prefix": "buzzsaw_head",
     "material": "naquadah_enriched"
   },
   {
@@ -13675,6 +14395,26 @@
     "material": "naquadria"
   },
   {
+    "id": "universal_spade_head_naquadria",
+    "prefix": "universal_spade_head",
+    "material": "naquadria"
+  },
+  {
+    "id": "sense_head_naquadria",
+    "prefix": "sense_head",
+    "material": "naquadria"
+  },
+  {
+    "id": "plow_head_naquadria",
+    "prefix": "plow_head",
+    "material": "naquadria"
+  },
+  {
+    "id": "buzzsaw_head_naquadria",
+    "prefix": "buzzsaw_head",
+    "material": "naquadria"
+  },
+  {
     "id": "sword_head_neodymium",
     "prefix": "sword_head",
     "material": "neodymium"
@@ -13717,6 +14457,26 @@
   {
     "id": "wrench_head_neodymium",
     "prefix": "wrench_head",
+    "material": "neodymium"
+  },
+  {
+    "id": "universal_spade_head_neodymium",
+    "prefix": "universal_spade_head",
+    "material": "neodymium"
+  },
+  {
+    "id": "sense_head_neodymium",
+    "prefix": "sense_head",
+    "material": "neodymium"
+  },
+  {
+    "id": "plow_head_neodymium",
+    "prefix": "plow_head",
+    "material": "neodymium"
+  },
+  {
+    "id": "buzzsaw_head_neodymium",
+    "prefix": "buzzsaw_head",
     "material": "neodymium"
   },
   {
@@ -13765,6 +14525,26 @@
     "material": "neodymium_magnetic"
   },
   {
+    "id": "universal_spade_head_neodymium_magnetic",
+    "prefix": "universal_spade_head",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "sense_head_neodymium_magnetic",
+    "prefix": "sense_head",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "plow_head_neodymium_magnetic",
+    "prefix": "plow_head",
+    "material": "neodymium_magnetic"
+  },
+  {
+    "id": "buzzsaw_head_neodymium_magnetic",
+    "prefix": "buzzsaw_head",
+    "material": "neodymium_magnetic"
+  },
+  {
     "id": "sword_head_nichrome",
     "prefix": "sword_head",
     "material": "nichrome"
@@ -13807,6 +14587,26 @@
   {
     "id": "wrench_head_nichrome",
     "prefix": "wrench_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "universal_spade_head_nichrome",
+    "prefix": "universal_spade_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "sense_head_nichrome",
+    "prefix": "sense_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "plow_head_nichrome",
+    "prefix": "plow_head",
+    "material": "nichrome"
+  },
+  {
+    "id": "buzzsaw_head_nichrome",
+    "prefix": "buzzsaw_head",
     "material": "nichrome"
   },
   {
@@ -13855,6 +14655,26 @@
     "material": "nickel"
   },
   {
+    "id": "universal_spade_head_nickel",
+    "prefix": "universal_spade_head",
+    "material": "nickel"
+  },
+  {
+    "id": "sense_head_nickel",
+    "prefix": "sense_head",
+    "material": "nickel"
+  },
+  {
+    "id": "plow_head_nickel",
+    "prefix": "plow_head",
+    "material": "nickel"
+  },
+  {
+    "id": "buzzsaw_head_nickel",
+    "prefix": "buzzsaw_head",
+    "material": "nickel"
+  },
+  {
     "id": "sword_head_nickel_zinc_ferrite",
     "prefix": "sword_head",
     "material": "nickel_zinc_ferrite"
@@ -13897,6 +14717,26 @@
   {
     "id": "wrench_head_nickel_zinc_ferrite",
     "prefix": "wrench_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "universal_spade_head_nickel_zinc_ferrite",
+    "prefix": "universal_spade_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "sense_head_nickel_zinc_ferrite",
+    "prefix": "sense_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "plow_head_nickel_zinc_ferrite",
+    "prefix": "plow_head",
+    "material": "nickel_zinc_ferrite"
+  },
+  {
+    "id": "buzzsaw_head_nickel_zinc_ferrite",
+    "prefix": "buzzsaw_head",
     "material": "nickel_zinc_ferrite"
   },
   {
@@ -13945,6 +14785,26 @@
     "material": "osmiridium"
   },
   {
+    "id": "universal_spade_head_osmiridium",
+    "prefix": "universal_spade_head",
+    "material": "osmiridium"
+  },
+  {
+    "id": "sense_head_osmiridium",
+    "prefix": "sense_head",
+    "material": "osmiridium"
+  },
+  {
+    "id": "plow_head_osmiridium",
+    "prefix": "plow_head",
+    "material": "osmiridium"
+  },
+  {
+    "id": "buzzsaw_head_osmiridium",
+    "prefix": "buzzsaw_head",
+    "material": "osmiridium"
+  },
+  {
     "id": "sword_head_osmium",
     "prefix": "sword_head",
     "material": "osmium"
@@ -13987,6 +14847,26 @@
   {
     "id": "wrench_head_osmium",
     "prefix": "wrench_head",
+    "material": "osmium"
+  },
+  {
+    "id": "universal_spade_head_osmium",
+    "prefix": "universal_spade_head",
+    "material": "osmium"
+  },
+  {
+    "id": "sense_head_osmium",
+    "prefix": "sense_head",
+    "material": "osmium"
+  },
+  {
+    "id": "plow_head_osmium",
+    "prefix": "plow_head",
+    "material": "osmium"
+  },
+  {
+    "id": "buzzsaw_head_osmium",
+    "prefix": "buzzsaw_head",
     "material": "osmium"
   },
   {
@@ -14035,6 +14915,26 @@
     "material": "palladium"
   },
   {
+    "id": "universal_spade_head_palladium",
+    "prefix": "universal_spade_head",
+    "material": "palladium"
+  },
+  {
+    "id": "sense_head_palladium",
+    "prefix": "sense_head",
+    "material": "palladium"
+  },
+  {
+    "id": "plow_head_palladium",
+    "prefix": "plow_head",
+    "material": "palladium"
+  },
+  {
+    "id": "buzzsaw_head_palladium",
+    "prefix": "buzzsaw_head",
+    "material": "palladium"
+  },
+  {
     "id": "sword_head_plastic",
     "prefix": "sword_head",
     "material": "plastic"
@@ -14077,6 +14977,26 @@
   {
     "id": "wrench_head_plastic",
     "prefix": "wrench_head",
+    "material": "plastic"
+  },
+  {
+    "id": "universal_spade_head_plastic",
+    "prefix": "universal_spade_head",
+    "material": "plastic"
+  },
+  {
+    "id": "sense_head_plastic",
+    "prefix": "sense_head",
+    "material": "plastic"
+  },
+  {
+    "id": "plow_head_plastic",
+    "prefix": "plow_head",
+    "material": "plastic"
+  },
+  {
+    "id": "buzzsaw_head_plastic",
+    "prefix": "buzzsaw_head",
     "material": "plastic"
   },
   {
@@ -14125,6 +15045,26 @@
     "material": "platinum"
   },
   {
+    "id": "universal_spade_head_platinum",
+    "prefix": "universal_spade_head",
+    "material": "platinum"
+  },
+  {
+    "id": "sense_head_platinum",
+    "prefix": "sense_head",
+    "material": "platinum"
+  },
+  {
+    "id": "plow_head_platinum",
+    "prefix": "plow_head",
+    "material": "platinum"
+  },
+  {
+    "id": "buzzsaw_head_platinum",
+    "prefix": "buzzsaw_head",
+    "material": "platinum"
+  },
+  {
     "id": "sword_head_polyphenylene_sulfide",
     "prefix": "sword_head",
     "material": "polyphenylene_sulfide"
@@ -14167,6 +15107,26 @@
   {
     "id": "wrench_head_polyphenylene_sulfide",
     "prefix": "wrench_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "universal_spade_head_polyphenylene_sulfide",
+    "prefix": "universal_spade_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "sense_head_polyphenylene_sulfide",
+    "prefix": "sense_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "plow_head_polyphenylene_sulfide",
+    "prefix": "plow_head",
+    "material": "polyphenylene_sulfide"
+  },
+  {
+    "id": "buzzsaw_head_polyphenylene_sulfide",
+    "prefix": "buzzsaw_head",
     "material": "polyphenylene_sulfide"
   },
   {
@@ -14215,6 +15175,26 @@
     "material": "polytetrafluoroethylene"
   },
   {
+    "id": "universal_spade_head_polytetrafluoroethylene",
+    "prefix": "universal_spade_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "sense_head_polytetrafluoroethylene",
+    "prefix": "sense_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "plow_head_polytetrafluoroethylene",
+    "prefix": "plow_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
+    "id": "buzzsaw_head_polytetrafluoroethylene",
+    "prefix": "buzzsaw_head",
+    "material": "polytetrafluoroethylene"
+  },
+  {
     "id": "sword_head_polyvinyl_chloride",
     "prefix": "sword_head",
     "material": "polyvinyl_chloride"
@@ -14257,6 +15237,26 @@
   {
     "id": "wrench_head_polyvinyl_chloride",
     "prefix": "wrench_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "universal_spade_head_polyvinyl_chloride",
+    "prefix": "universal_spade_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "sense_head_polyvinyl_chloride",
+    "prefix": "sense_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "plow_head_polyvinyl_chloride",
+    "prefix": "plow_head",
+    "material": "polyvinyl_chloride"
+  },
+  {
+    "id": "buzzsaw_head_polyvinyl_chloride",
+    "prefix": "buzzsaw_head",
     "material": "polyvinyl_chloride"
   },
   {
@@ -14305,6 +15305,26 @@
     "material": "rose_gold"
   },
   {
+    "id": "universal_spade_head_rose_gold",
+    "prefix": "universal_spade_head",
+    "material": "rose_gold"
+  },
+  {
+    "id": "sense_head_rose_gold",
+    "prefix": "sense_head",
+    "material": "rose_gold"
+  },
+  {
+    "id": "plow_head_rose_gold",
+    "prefix": "plow_head",
+    "material": "rose_gold"
+  },
+  {
+    "id": "buzzsaw_head_rose_gold",
+    "prefix": "buzzsaw_head",
+    "material": "rose_gold"
+  },
+  {
     "id": "sword_head_rubber",
     "prefix": "sword_head",
     "material": "rubber"
@@ -14347,6 +15367,26 @@
   {
     "id": "wrench_head_rubber",
     "prefix": "wrench_head",
+    "material": "rubber"
+  },
+  {
+    "id": "universal_spade_head_rubber",
+    "prefix": "universal_spade_head",
+    "material": "rubber"
+  },
+  {
+    "id": "sense_head_rubber",
+    "prefix": "sense_head",
+    "material": "rubber"
+  },
+  {
+    "id": "plow_head_rubber",
+    "prefix": "plow_head",
+    "material": "rubber"
+  },
+  {
+    "id": "buzzsaw_head_rubber",
+    "prefix": "buzzsaw_head",
     "material": "rubber"
   },
   {
@@ -14395,6 +15435,26 @@
     "material": "silicone"
   },
   {
+    "id": "universal_spade_head_silicone",
+    "prefix": "universal_spade_head",
+    "material": "silicone"
+  },
+  {
+    "id": "sense_head_silicone",
+    "prefix": "sense_head",
+    "material": "silicone"
+  },
+  {
+    "id": "plow_head_silicone",
+    "prefix": "plow_head",
+    "material": "silicone"
+  },
+  {
+    "id": "buzzsaw_head_silicone",
+    "prefix": "buzzsaw_head",
+    "material": "silicone"
+  },
+  {
     "id": "sword_head_silver",
     "prefix": "sword_head",
     "material": "silver"
@@ -14437,6 +15497,26 @@
   {
     "id": "wrench_head_silver",
     "prefix": "wrench_head",
+    "material": "silver"
+  },
+  {
+    "id": "universal_spade_head_silver",
+    "prefix": "universal_spade_head",
+    "material": "silver"
+  },
+  {
+    "id": "sense_head_silver",
+    "prefix": "sense_head",
+    "material": "silver"
+  },
+  {
+    "id": "plow_head_silver",
+    "prefix": "plow_head",
+    "material": "silver"
+  },
+  {
+    "id": "buzzsaw_head_silver",
+    "prefix": "buzzsaw_head",
     "material": "silver"
   },
   {
@@ -14485,6 +15565,26 @@
     "material": "stainless_steel"
   },
   {
+    "id": "universal_spade_head_stainless_steel",
+    "prefix": "universal_spade_head",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "sense_head_stainless_steel",
+    "prefix": "sense_head",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "plow_head_stainless_steel",
+    "prefix": "plow_head",
+    "material": "stainless_steel"
+  },
+  {
+    "id": "buzzsaw_head_stainless_steel",
+    "prefix": "buzzsaw_head",
+    "material": "stainless_steel"
+  },
+  {
     "id": "sword_head_steel",
     "prefix": "sword_head",
     "material": "steel"
@@ -14527,6 +15627,26 @@
   {
     "id": "wrench_head_steel",
     "prefix": "wrench_head",
+    "material": "steel"
+  },
+  {
+    "id": "universal_spade_head_steel",
+    "prefix": "universal_spade_head",
+    "material": "steel"
+  },
+  {
+    "id": "sense_head_steel",
+    "prefix": "sense_head",
+    "material": "steel"
+  },
+  {
+    "id": "plow_head_steel",
+    "prefix": "plow_head",
+    "material": "steel"
+  },
+  {
+    "id": "buzzsaw_head_steel",
+    "prefix": "buzzsaw_head",
     "material": "steel"
   },
   {
@@ -14575,6 +15695,26 @@
     "material": "steel_magnetic"
   },
   {
+    "id": "universal_spade_head_steel_magnetic",
+    "prefix": "universal_spade_head",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "sense_head_steel_magnetic",
+    "prefix": "sense_head",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "plow_head_steel_magnetic",
+    "prefix": "plow_head",
+    "material": "steel_magnetic"
+  },
+  {
+    "id": "buzzsaw_head_steel_magnetic",
+    "prefix": "buzzsaw_head",
+    "material": "steel_magnetic"
+  },
+  {
     "id": "sword_head_styrene_butadiene_rubber",
     "prefix": "sword_head",
     "material": "styrene_butadiene_rubber"
@@ -14617,6 +15757,26 @@
   {
     "id": "wrench_head_styrene_butadiene_rubber",
     "prefix": "wrench_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "universal_spade_head_styrene_butadiene_rubber",
+    "prefix": "universal_spade_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "sense_head_styrene_butadiene_rubber",
+    "prefix": "sense_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "plow_head_styrene_butadiene_rubber",
+    "prefix": "plow_head",
+    "material": "styrene_butadiene_rubber"
+  },
+  {
+    "id": "buzzsaw_head_styrene_butadiene_rubber",
+    "prefix": "buzzsaw_head",
     "material": "styrene_butadiene_rubber"
   },
   {
@@ -14665,6 +15825,26 @@
     "material": "tin_alloy"
   },
   {
+    "id": "universal_spade_head_tin_alloy",
+    "prefix": "universal_spade_head",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "sense_head_tin_alloy",
+    "prefix": "sense_head",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "plow_head_tin_alloy",
+    "prefix": "plow_head",
+    "material": "tin_alloy"
+  },
+  {
+    "id": "buzzsaw_head_tin_alloy",
+    "prefix": "buzzsaw_head",
+    "material": "tin_alloy"
+  },
+  {
     "id": "sword_head_titanium",
     "prefix": "sword_head",
     "material": "titanium"
@@ -14707,6 +15887,26 @@
   {
     "id": "wrench_head_titanium",
     "prefix": "wrench_head",
+    "material": "titanium"
+  },
+  {
+    "id": "universal_spade_head_titanium",
+    "prefix": "universal_spade_head",
+    "material": "titanium"
+  },
+  {
+    "id": "sense_head_titanium",
+    "prefix": "sense_head",
+    "material": "titanium"
+  },
+  {
+    "id": "plow_head_titanium",
+    "prefix": "plow_head",
+    "material": "titanium"
+  },
+  {
+    "id": "buzzsaw_head_titanium",
+    "prefix": "buzzsaw_head",
     "material": "titanium"
   },
   {
@@ -14755,6 +15955,26 @@
     "material": "tritanium"
   },
   {
+    "id": "universal_spade_head_tritanium",
+    "prefix": "universal_spade_head",
+    "material": "tritanium"
+  },
+  {
+    "id": "sense_head_tritanium",
+    "prefix": "sense_head",
+    "material": "tritanium"
+  },
+  {
+    "id": "plow_head_tritanium",
+    "prefix": "plow_head",
+    "material": "tritanium"
+  },
+  {
+    "id": "buzzsaw_head_tritanium",
+    "prefix": "buzzsaw_head",
+    "material": "tritanium"
+  },
+  {
     "id": "sword_head_tungsten",
     "prefix": "sword_head",
     "material": "tungsten"
@@ -14797,6 +16017,26 @@
   {
     "id": "wrench_head_tungsten",
     "prefix": "wrench_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "universal_spade_head_tungsten",
+    "prefix": "universal_spade_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "sense_head_tungsten",
+    "prefix": "sense_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "plow_head_tungsten",
+    "prefix": "plow_head",
+    "material": "tungsten"
+  },
+  {
+    "id": "buzzsaw_head_tungsten",
+    "prefix": "buzzsaw_head",
     "material": "tungsten"
   },
   {
@@ -14845,6 +16085,26 @@
     "material": "tungsten_carbide"
   },
   {
+    "id": "universal_spade_head_tungsten_carbide",
+    "prefix": "universal_spade_head",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "sense_head_tungsten_carbide",
+    "prefix": "sense_head",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "plow_head_tungsten_carbide",
+    "prefix": "plow_head",
+    "material": "tungsten_carbide"
+  },
+  {
+    "id": "buzzsaw_head_tungsten_carbide",
+    "prefix": "buzzsaw_head",
+    "material": "tungsten_carbide"
+  },
+  {
     "id": "sword_head_tungsten_steel",
     "prefix": "sword_head",
     "material": "tungsten_steel"
@@ -14887,6 +16147,26 @@
   {
     "id": "wrench_head_tungsten_steel",
     "prefix": "wrench_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "universal_spade_head_tungsten_steel",
+    "prefix": "universal_spade_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "sense_head_tungsten_steel",
+    "prefix": "sense_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "plow_head_tungsten_steel",
+    "prefix": "plow_head",
+    "material": "tungsten_steel"
+  },
+  {
+    "id": "buzzsaw_head_tungsten_steel",
+    "prefix": "buzzsaw_head",
     "material": "tungsten_steel"
   },
   {
@@ -14935,6 +16215,26 @@
     "material": "vanadium_steel"
   },
   {
+    "id": "universal_spade_head_vanadium_steel",
+    "prefix": "universal_spade_head",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "sense_head_vanadium_steel",
+    "prefix": "sense_head",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "plow_head_vanadium_steel",
+    "prefix": "plow_head",
+    "material": "vanadium_steel"
+  },
+  {
+    "id": "buzzsaw_head_vanadium_steel",
+    "prefix": "buzzsaw_head",
+    "material": "vanadium_steel"
+  },
+  {
     "id": "sword_head_wrought_iron",
     "prefix": "sword_head",
     "material": "wrought_iron"
@@ -14977,6 +16277,26 @@
   {
     "id": "wrench_head_wrought_iron",
     "prefix": "wrench_head",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "universal_spade_head_wrought_iron",
+    "prefix": "universal_spade_head",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "sense_head_wrought_iron",
+    "prefix": "sense_head",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "plow_head_wrought_iron",
+    "prefix": "plow_head",
+    "material": "wrought_iron"
+  },
+  {
+    "id": "buzzsaw_head_wrought_iron",
+    "prefix": "buzzsaw_head",
     "material": "wrought_iron"
   }
 ]

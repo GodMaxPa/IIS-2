@@ -89,47 +89,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:printer_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:printer_lv)item(iis:printer_mv)item(iis:printer_hv)item(iis:printer_ev)item(iis:printer_iv))"
+            }
           },
           "count": 1,
           "id": "1B00000000008800"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:printer_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000008801"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:printer_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000008802"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:printer_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000008803"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:printer_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000008804"
         }
       ],
       "rewards": [
@@ -433,47 +400,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:chemical_bath_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:chemical_bath_lv)item(iis:chemical_bath_mv)item(iis:chemical_bath_hv)item(iis:chemical_bath_ev)item(iis:chemical_bath_iv))"
+            }
           },
           "count": 1,
           "id": "1B00000000022600"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:chemical_bath_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000022601"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:chemical_bath_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000022602"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:chemical_bath_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000022603"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:chemical_bath_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000022604"
         }
       ],
       "rewards": [

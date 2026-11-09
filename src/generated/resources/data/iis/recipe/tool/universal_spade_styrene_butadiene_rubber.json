@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/universal_spade/styrene_butadiene_rubber",
+    "#c:rods/styrene_butadiene_rubber",
+    "#iis:screws/styrene_butadiene_rubber",
+    "#iis:tools/screwdriver"
+  ],
+  "result": {
+    "id": "iis:universal_spade_styrene_butadiene_rubber"
+  }
+}

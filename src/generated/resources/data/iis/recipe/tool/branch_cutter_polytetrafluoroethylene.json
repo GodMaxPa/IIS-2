@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PfP",
+    "PdP",
+    "STS"
+  ],
+  "key": {
+    "P": "#c:plates/polytetrafluoroethylene",
+    "S": "#c:rods/polytetrafluoroethylene",
+    "T": "#iis:screws/polytetrafluoroethylene",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:branch_cutter_polytetrafluoroethylene"
+  }
+}

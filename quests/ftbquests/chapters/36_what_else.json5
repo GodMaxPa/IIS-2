@@ -1,0 +1,1191 @@
+{
+  "id": "1D00000000001001",
+  "filename": "36_what_else",
+  "order_index": 36,
+  "default_quest_shape": "",
+  "icon": {
+    "id": "iis:tree_farm",
+    "count": 1
+  },
+  "quests": [
+    {
+      "id": "1A00000000110000",
+      "x": -3.0,
+      "y": 4.5,
+      "icon": {
+        "id": "iis:tree_farm",
+        "count": 1
+      },
+      "size": 1.5,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000011000000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110001",
+      "x": 0.0,
+      "y": 0.0,
+      "dependencies": [
+        "1A00000000110000"
+      ],
+      "icon": {
+        "id": "iis:reward_shop",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:reward_shop",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011000100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110002",
+      "x": 0.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000110000"
+      ],
+      "icon": {
+        "id": "bibliocraft:oak_tool_rack",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "bibliocraft:oak_tool_rack",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011000200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110003",
+      "x": 0.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000110000"
+      ],
+      "icon": {
+        "id": "iis:charcoal_pile",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:charcoal_pile",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011000300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110004",
+      "x": 0.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000110003"
+      ],
+      "icon": {
+        "id": "iis:coke_oven",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:coke_oven",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011000400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110005",
+      "x": 0.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000110000"
+      ],
+      "icon": {
+        "id": "iis:primitive_mine_digger",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:primitive_mine_digger",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011000500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110006",
+      "x": 0.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000110000"
+      ],
+      "icon": {
+        "id": "iis:boiler_solar_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:boiler_solar_steel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011000600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110007",
+      "x": 0.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A00000000110000"
+      ],
+      "icon": {
+        "id": "iis:flint_pickaxe",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:flint_tools)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011000700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110008",
+      "x": 1.4,
+      "y": 10.05,
+      "dependencies": [
+        "1A00000000110007"
+      ],
+      "icon": {
+        "id": "iis:sense_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/sense)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011000800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110009",
+      "x": -1.4,
+      "y": 10.05,
+      "dependencies": [
+        "1A00000000110007"
+      ],
+      "icon": {
+        "id": "iis:plow_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/plow)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011000900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011000A",
+      "x": 1.4,
+      "y": 11.100000000000001,
+      "dependencies": [
+        "1A00000000110008"
+      ],
+      "icon": {
+        "id": "iis:branch_cutter_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/branch_cutter)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011000A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011000B",
+      "x": -1.4,
+      "y": 11.100000000000001,
+      "dependencies": [
+        "1A00000000110009"
+      ],
+      "icon": {
+        "id": "iis:butchery_knife_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/butchery_knife)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011000B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011000C",
+      "x": 0.0,
+      "y": 12.0,
+      "dependencies": [
+        "1A0000000011000A",
+        "1A0000000011000B"
+      ],
+      "icon": {
+        "id": "iis:universal_spade_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/universal_spade)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011000C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000011000C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011000D",
+      "x": 2.0,
+      "y": 0.0,
+      "dependencies": [
+        "1A00000000110003"
+      ],
+      "icon": {
+        "id": "iis:tree_farm",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:tree_farm",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011000D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000011000D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011000E",
+      "x": 2.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000110000"
+      ],
+      "icon": {
+        "id": "iis:quantum_chest_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:quantum_chest_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011000E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000011000E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011000F",
+      "x": 2.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000110000"
+      ],
+      "icon": {
+        "id": "iis:electric_treetap",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_treetap",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011000F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000011000F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110010",
+      "x": 2.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000110000"
+      ],
+      "icon": {
+        "id": "iis:electric_wrench",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_wrench",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000011001000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110011",
+      "x": 2.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000110000"
+      ],
+      "icon": {
+        "id": "iis:buzzsaw_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/buzzsaw)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011001100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000011001100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110012",
+      "x": 2.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000110011"
+      ],
+      "icon": {
+        "id": "iis:screwdriver_lv_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/screwdriver_lv)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011001200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000011001200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110013",
+      "x": 2.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A00000000110000"
+      ],
+      "icon": {
+        "id": "iis:turret_base_t1",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turret_base_t1",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001300"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turret_disposable",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001301"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000011001300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110014",
+      "x": 4.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000110010"
+      ],
+      "icon": {
+        "id": "iis:drill_mv_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/drill_mv)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011001400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000011001400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110015",
+      "x": 4.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000110014"
+      ],
+      "icon": {
+        "id": "iis:chainsaw_mv_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/chainsaw_mv)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011001500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000011001500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110016",
+      "x": 4.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000110013"
+      ],
+      "icon": {
+        "id": "iis:ballistic_shield",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ballistic_shield",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000011001600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110017",
+      "x": 4.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A00000000110013"
+      ],
+      "icon": {
+        "id": "iis:turret_base_t2",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turret_base_t2",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001700"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turret_machine_gun",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001701"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000011001700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110018",
+      "x": 6.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000110014"
+      ],
+      "icon": {
+        "id": "iis:drill_hv_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/drill_hv)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011001800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000011001800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110019",
+      "x": 6.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000110018"
+      ],
+      "icon": {
+        "id": "iis:jackhammer_steel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/jackhammer)"
+            }
+          },
+          "count": 1,
+          "id": "1B00000011001900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000011001900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011001A",
+      "x": 6.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000110010",
+        "1A0000000011000F"
+      ],
+      "icon": {
+        "id": "iis:gravitool",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gravitool",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000011001A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011001B",
+      "x": 6.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000110018"
+      ],
+      "icon": {
+        "id": "iis:seismic_prospector_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:seismic_prospector_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000011001B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011001C",
+      "x": 8.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000110018"
+      ],
+      "icon": {
+        "id": "iis:advanced_drill",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:advanced_drill",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000011001C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011001D",
+      "x": 8.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A00000000110017"
+      ],
+      "icon": {
+        "id": "iis:turret_base_t4",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turret_base_t4",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001D00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turret_rocket",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001D01"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000011001D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011001E",
+      "x": 8.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A0000000011001B"
+      ],
+      "icon": {
+        "id": "iis:naquadah_reactor_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:naquadah_reactor_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000011001E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000011001F",
+      "x": 10.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A0000000011001C"
+      ],
+      "icon": {
+        "id": "iis:vajra",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vajra",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011001F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000011001F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110020",
+      "x": 10.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000110016"
+      ],
+      "icon": {
+        "id": "iis:force_shield",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:force_shield",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011002000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000011002000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000110021",
+      "x": 10.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000011001D"
+      ],
+      "icon": {
+        "id": "iis:turret_base_t5",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turret_base_t5",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011002100"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:turret_railgun",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000011002101"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000011002100"
+        }
+      ]
+    }
+  ]
+}

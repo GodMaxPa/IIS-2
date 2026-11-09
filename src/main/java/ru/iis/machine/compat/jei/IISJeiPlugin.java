@@ -103,6 +103,10 @@ public final class IISJeiPlugin implements IModPlugin {
             r.add(ru.iis.multi.MultiContent.PYROLYSE_OVEN.get());
             return r;
         }
+        if (m == GtRecipeMap.TREE_FARM) {
+            r.add(ru.iis.multi.MultiContent.TREE_FARM.get());
+            return r;
+        }
         if (m == GtRecipeMap.COKE_OVEN) {
             r.add(ru.iis.lv.LvContent.COKE_OVEN.get());
             return r;

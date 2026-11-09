@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PP",
+    "PP",
+    "hf"
+  ],
+  "key": {
+    "P": "#c:plates/naquadah_enriched",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:plow_head_naquadah_enriched"
+  }
+}

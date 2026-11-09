@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " h ",
+    "PwP",
+    "WPW"
+  ],
+  "key": {
+    "P": "#c:plates/iron",
+    "W": "iis:minecart_wheels_iron",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "minecraft:minecart"
+  }
+}

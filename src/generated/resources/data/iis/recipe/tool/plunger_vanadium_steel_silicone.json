@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "xRR",
+    " SR",
+    "S f"
+  ],
+  "key": {
+    "S": "#c:rods/vanadium_steel",
+    "R": "#c:plates/silicone",
+    "x": "#iis:tools/wire_cutter",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:plunger_vanadium_steel"
+  }
+}

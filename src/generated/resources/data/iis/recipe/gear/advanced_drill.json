@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TCT",
+    "CDC",
+    "TET"
+  ],
+  "key": {
+    "T": "#c:plates/titanium",
+    "C": "#c:circuits/data",
+    "D": "#iis:tools/drill_hv",
+    "E": "iis:energy_crystal"
+  },
+  "result": {
+    "id": "iis:advanced_drill"
+  }
+}

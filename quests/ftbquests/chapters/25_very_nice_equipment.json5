@@ -1145,29 +1145,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:rod_lapis",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:rod_lapis)item(iis:rod_lazurite)item(iis:rod_sodalite))"
+            }
           },
           "count": 1,
           "id": "1B0000000003AE00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:rod_lazurite",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000003AE01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:rod_sodalite",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000003AE02"
         }
       ],
       "rewards": [
@@ -1266,38 +1251,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:mixer_mv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:mixer_mv)item(iis:mixer_hv)item(iis:mixer_ev)item(iis:mixer_iv))"
+            }
           },
           "count": 1,
           "id": "1B0000000004CA00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:mixer_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004CA01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:mixer_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004CA02"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:mixer_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004CA03"
         }
       ],
       "rewards": [
@@ -1326,20 +1287,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:crushed_tungstate",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:crushed_tungstate)item(iis:crushed_scheelite))"
+            }
           },
           "count": 1,
           "id": "1B0000000004D100"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:crushed_scheelite",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004D101"
         }
       ],
       "rewards": [
@@ -1371,29 +1326,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:plate_lapis",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:plate_lapis)item(iis:plate_lazurite)item(iis:plate_sodalite))"
+            }
           },
           "count": 1,
           "id": "1B0000000006B100"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:plate_lazurite",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006B101"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:plate_sodalite",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006B102"
         }
       ],
       "rewards": [

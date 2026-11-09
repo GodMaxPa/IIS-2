@@ -240,6 +240,8 @@ public final class IISGameTests {
             new Test("early_tools_recipes", 20, EarlyGameTests::toolsAndRecipes),
             new Test("early_finite_water", 80, EarlyGameTests::finiteWater),
             new Test("modern_vanilla", 20, EarlyGameTests::modernVanilla),
+            new Test("notes_0911", 20, NotesTests::notes),
+            new Test("world_backup_files", 20, NotesTests::backups),
             new Test("equip_boat_floats", 100, EquipmentGameTests::boatFloats),
             new Test("equip_wreck_drops", 20, EquipmentGameTests::wreckDropsItem),
             new Test("equip_tank_armor", 20, EquipmentGameTests::tankShrugsBullets),

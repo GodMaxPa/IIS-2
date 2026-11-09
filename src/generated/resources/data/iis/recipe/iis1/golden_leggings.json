@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PPP",
+    "PhP",
+    "P P"
+  ],
+  "key": {
+    "P": "#c:plates/gold",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "minecraft:golden_leggings"
+  }
+}

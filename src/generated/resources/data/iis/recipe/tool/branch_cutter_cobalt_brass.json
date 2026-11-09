@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PfP",
+    "PdP",
+    "STS"
+  ],
+  "key": {
+    "P": "#c:plates/cobalt_brass",
+    "S": "#c:rods/cobalt_brass",
+    "T": "#iis:screws/cobalt_brass",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:branch_cutter_cobalt_brass"
+  }
+}

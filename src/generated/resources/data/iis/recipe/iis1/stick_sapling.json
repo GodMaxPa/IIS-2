@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s",
+    "X"
+  ],
+  "key": {
+    "X": "#minecraft:saplings",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "minecraft:stick"
+  }
+}

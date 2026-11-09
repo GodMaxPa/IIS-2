@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s",
+    "X"
+  ],
+  "key": {
+    "X": "minecraft:dead_bush",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "minecraft:stick",
+    "count": 2
+  }
+}

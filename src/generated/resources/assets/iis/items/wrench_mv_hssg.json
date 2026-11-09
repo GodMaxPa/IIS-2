@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/wrench_mv_hssg",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 14459120
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 10066176
+      }
+    ]
+  }
+}

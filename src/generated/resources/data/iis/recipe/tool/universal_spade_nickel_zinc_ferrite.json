@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/universal_spade/nickel_zinc_ferrite",
+    "#c:rods/nickel_zinc_ferrite",
+    "#iis:screws/nickel_zinc_ferrite",
+    "#iis:tools/screwdriver"
+  ],
+  "result": {
+    "id": "iis:universal_spade_nickel_zinc_ferrite"
+  }
+}

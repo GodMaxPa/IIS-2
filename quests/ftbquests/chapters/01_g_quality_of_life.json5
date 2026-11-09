@@ -703,29 +703,14 @@
         {
           "type": "item",
           "item": {
-            "id": "framedblocks:framing_saw",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(framedblocks:framing_saw))"
+            }
           },
           "count": 1,
           "id": "1B00000000048000"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "framedblocks:framing_saw",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000048001"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "framedblocks:framing_saw",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000048002"
         }
       ],
       "rewards": [
@@ -952,47 +937,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:packager_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:packager_lv)item(iis:packager_mv)item(iis:packager_hv)item(iis:packager_ev)item(iis:packager_iv))"
+            }
           },
           "count": 1,
           "id": "1B0000000004D500"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:packager_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004D501"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:packager_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004D502"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:packager_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004D503"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:packager_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004D504"
         }
       ],
       "rewards": [
@@ -1021,47 +973,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:super_buffer_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:super_buffer_lv)item(iis:super_buffer_mv)item(iis:super_buffer_hv)item(iis:super_buffer_ev)item(iis:super_buffer_iv))"
+            }
           },
           "count": 1,
           "id": "1B0000000004D600"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:super_buffer_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004D601"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:super_buffer_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004D602"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:super_buffer_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004D603"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:super_buffer_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004D604"
         }
       ],
       "rewards": [
@@ -1337,29 +1256,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:prospector_luv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:prospector_luv)item(iis:prospector_zpm)item(iis:prospector_uv))"
+            }
           },
           "count": 1,
           "id": "1B0000000006F800"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:prospector_zpm",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006F801"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:prospector_uv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006F802"
         }
       ],
       "rewards": [

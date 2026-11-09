@@ -154,6 +154,23 @@ public final class GearContent {
 
     public static final DeferredItem<MiningLaserItem> MINING_LASER = register("mining_laser", MiningLaserItem::new);
     public static final DeferredItem<NanoSaberItem> NANO_SABER = register("nano_saber", NanoSaberItem::new);
+    // D144: электроинструменты IC2 и GraviSuite из ИИС 1, по уровням ИИС 2
+    private static final net.minecraft.tags.TagKey<net.minecraft.world.level.block.Block> MINEABLE_WRENCH =
+            net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.BLOCK, net.minecraft.resources.Identifier.fromNamespaceAndPath(ru.iis.IIS.MODID, "mineable/wrench"));
+    private static final net.minecraft.world.item.ToolMaterial POWER = new net.minecraft.world.item.ToolMaterial(
+            net.minecraft.tags.BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 1, 12.0f, 2.0f, 1, net.minecraft.tags.ItemTags.NETHERITE_TOOL_MATERIALS);
+    public static final DeferredItem<PowerToolItem> ELECTRIC_TREETAP = register("electric_treetap",
+            p -> new PowerToolItem(PowerToolItem.Kind.ELECTRIC_TREETAP, 10_000, 1, 50, p));
+    public static final DeferredItem<PowerToolItem> ELECTRIC_WRENCH = register("electric_wrench",
+            p -> new PowerToolItem(PowerToolItem.Kind.ELECTRIC_WRENCH, 12_000, 1, 100, p.tool(POWER, MINEABLE_WRENCH, 1.0f, -2.8f, 0f)));
+    public static final DeferredItem<PowerToolItem> GRAVITOOL = register("gravitool",
+            p -> new PowerToolItem(PowerToolItem.Kind.GRAVITOOL, 300_000, 3, 50, p.tool(POWER, MINEABLE_WRENCH, 2.0f, -2.8f, 0f)));
+    public static final DeferredItem<PowerToolItem> ADVANCED_DRILL = register("advanced_drill",
+            p -> new PowerToolItem(PowerToolItem.Kind.ADVANCED_DRILL, 2_000_000, 4, 160, p.tool(new net.minecraft.world.item.ToolMaterial(
+                    net.minecraft.tags.BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 1, 24.0f, 3.0f, 1, net.minecraft.tags.ItemTags.NETHERITE_TOOL_MATERIALS),
+                    ru.iis.tool.GtTools.MINEABLE_DRILL, 3.0f, -2.8f, 0f)));
+    public static final DeferredItem<PowerToolItem> VAJRA = register("vajra",
+            p -> new PowerToolItem(PowerToolItem.Kind.VAJRA, 10_000_000, 5, 3333, p.tool(POWER, net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE, 6.0f, -2.4f, 0f)));
 
     private static <I extends Item> DeferredItem<I> register(String id, java.util.function.Function<Item.Properties, I> f) {
         DeferredItem<I> i = ITEMS.registerItem(id, f, p -> p.stacksTo(1));

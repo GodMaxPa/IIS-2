@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "hP",
+    "Pf"
+  ],
+  "key": {
+    "P": "#c:plates/iron",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "minecraft:shears"
+  }
+}

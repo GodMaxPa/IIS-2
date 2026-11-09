@@ -119,29 +119,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:autoclave_hv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:autoclave_hv)item(iis:autoclave_ev)item(iis:autoclave_iv))"
+            }
           },
           "count": 1,
           "id": "1B00000000039100"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:autoclave_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000039101"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:autoclave_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000039102"
         }
       ],
       "rewards": [
@@ -1561,20 +1546,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:crowbar_red",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:crowbar_red)item(iis:crowbar_reinforced))"
+            }
           },
           "count": 1,
           "id": "1B00000000078E00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:crowbar_reinforced",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000078E01"
         }
       ],
       "rewards": [

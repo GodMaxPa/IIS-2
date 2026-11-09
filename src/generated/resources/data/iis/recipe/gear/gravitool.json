@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PCP",
+    "WET",
+    "PHP"
+  ],
+  "key": {
+    "P": "#c:plates/stainless_steel",
+    "C": "#c:circuits/advanced",
+    "W": "iis:electric_wrench",
+    "E": "iis:energy_crystal",
+    "T": "iis:electric_treetap",
+    "H": "#minecraft:hoes"
+  },
+  "result": {
+    "id": "iis:gravitool"
+  }
+}

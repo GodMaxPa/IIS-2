@@ -139,6 +139,40 @@ def generate(g):
     shaped('multi/pyrolyse_oven', f'{NS}:pyrolyse_oven', 1, ['WEP', 'EME', 'WCP'],
            {'M': f'{NS}:hull_mv', 'W': f'{NS}:electric_piston_mv', 'P': '#iis:wires/4x/cupronickel', 'E': '#c:circuits/good', 'C': f'{NS}:electric_pump_mv'})
 
+    # --- D144 (owner): LV tree farm, our own multiblock (Forestry had one); numbers are an AI proposal ---------------------
+    controller('tree_farm', 'casing_ulv', 'OVERLAY_FRONT_REPLICATOR', 'gt.blockmachines.multimachine.treefarm.name', 'Tree Farm', [
+        ('5x5x5; controller in the middle of the bottom front side', 'Размер 5×5×5; контроллер — в середине передней стороны низа'),
+        ('Bottom: 3x3 of dirt inside, ULV casings or hatches around', 'Низ: внутри поле 3×3 земли, по краю — каркасы ULV или люки'),
+        ('Three layers of air inside glass or ULV casing walls', 'Три слоя пустоты внутри стенок из стекла или каркасов ULV'),
+        ('Top: ULV casings', 'Верх: каркасы ULV'),
+        ('Sapling and water in, logs and saplings out', 'Саженец и вода на входе, брёвна и саженцы на выходе'),
+        ('Fertilizer or bone meal: twice as fast', 'С удобрением или костной мукой — вдвое быстрее')])
+    name(f'block.{NS}.tree_farm', 'Tree Farm', 'Автоферма дерева')
+    shaped('multi/tree_farm', f'{NS}:tree_farm', 1, ['RPR', 'CMC', 'RsR'],
+           {'R': f'{NS}:robot_arm_lv', 'P': f'{NS}:electric_pump_lv', 'C': '#c:circuits/basic', 'M': f'{NS}:hull_lv'})
+    # JEI category names of the multiblock recipe maps (they were missing: JEI showed the bare keys)
+    for k, en, ruu in (('implosion', 'Implosion Compressor', 'Имплозионный компрессор'), ('pyrolyse', 'Pyrolyse Oven', 'Пиролизная печь'),
+                       ('distillation_tower', 'Distillation Tower', 'Ректификационная колонна'), ('cracking', 'Oil Cracking Unit', 'Крекинговая установка'),
+                       ('tree_farm', 'Tree Farm', 'Автоферма дерева')):
+        if f'jei.{NS}.{k}' not in g['lang']['en_us']:
+            name(f'jei.{NS}.{k}', en, ruu)
+    WATER = {'ingredient': 'minecraft:water', 'amount': 1000}
+    for sap, log, extra in (('oak_sapling', 'oak_log', ('minecraft:apple', 1000)), ('spruce_sapling', 'spruce_log', None),
+                            ('birch_sapling', 'birch_log', None), ('jungle_sapling', 'jungle_log', ('minecraft:cocoa_beans', 1000)),
+                            ('acacia_sapling', 'acacia_log', None), ('dark_oak_sapling', 'dark_oak_log', ('minecraft:apple', 1000)),
+                            ('cherry_sapling', 'cherry_log', None), ('pale_oak_sapling', 'pale_oak_log', None),
+                            ('mangrove_propagule', 'mangrove_log', None), ('iis:rubber_sapling', 'iis:rubber_log', ('iis:sticky_resin', 5000))):
+        sap = sap if ':' in sap else f'minecraft:{sap}'
+        log = log if ':' in log else f'minecraft:{log}'
+        outs = [out(log, 6), out(sap), dict(out(sap), chance=5000), dict(out('minecraft:stick', 2), chance=5000)]
+        if extra:
+            outs[3:3] = [dict(out(extra[0]), chance=extra[1])]
+            outs = outs[:4]
+        rid = sap.split(':')[1]
+        mrec('tree_farm', rid, [ing(sap)], outs, 1200, 16, fin=WATER)
+        for fert in ('minecraft:bone_meal', f'{NS}:fertilizer'):
+            mrec('tree_farm', f'{rid}_{fert.split(":")[1]}', [ing(sap), ing(fert)], outs, 600, 16, fin=WATER)
+
     # --- implosion recipes ---------------------------------------------------------------------------------------
     def tnt(explosives):
         return max(1, explosives // 2)

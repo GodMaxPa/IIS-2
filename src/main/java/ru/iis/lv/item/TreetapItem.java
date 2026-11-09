@@ -23,6 +23,11 @@ public class TreetapItem extends Item {
 
     @Override
     public InteractionResult useOn(UseOnContext ctx) {
+        return extract(ctx, true);
+    }
+
+    /** Добыть смолу; wear — тратить прочность предмета (у электрокраника и гравитула её нет, D144). PASS — не отверстие. */
+    public static InteractionResult extract(UseOnContext ctx, boolean wear) {
         Level level = ctx.getLevel();
         BlockPos pos = ctx.getClickedPos();
         BlockState s = level.getBlockState(pos);
@@ -40,7 +45,7 @@ public class TreetapItem extends Item {
             e.setDefaultPickUpDelay();
             sl.addFreshEntity(e);
             sl.playSound(null, pos, SoundEvents.SLIME_BLOCK_BREAK, SoundSource.BLOCKS, 0.8f, 1.0f);
-            if (ctx.getPlayer() != null) ctx.getItemInHand().hurtAndBreak(1, ctx.getPlayer(), ctx.getHand());
+            if (wear && ctx.getPlayer() != null) ctx.getItemInHand().hurtAndBreak(1, ctx.getPlayer(), ctx.getHand());
         }
         return InteractionResult.SUCCESS;
     }

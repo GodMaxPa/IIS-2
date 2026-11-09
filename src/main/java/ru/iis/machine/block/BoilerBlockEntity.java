@@ -95,7 +95,7 @@ public class BoilerBlockEntity extends BaseContainerBlockEntity implements Machi
             level.playSound(null, worldPosition, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 0.5f, 1.0f);
         }
         // GT5-II: горящий котёл загрязняет раз в секунду (бронзовый и лавовый 20, стальной 30), солнечный — нет
-        if (logic.energy > 0 && time % 20 == 0 && level instanceof net.minecraft.server.level.ServerLevel sl && type() != BoilerType.SOLAR_BRONZE) {
+        if (logic.energy > 0 && time % 20 == 0 && level instanceof net.minecraft.server.level.ServerLevel sl && !type().kind.solar) {
             ru.iis.pollution.Pollution.add(sl, worldPosition, type() == BoilerType.COAL_STEEL
                     ? ru.iis.pollution.PollutionLogic.BOILER_STEEL : ru.iis.pollution.PollutionLogic.BOILER_BRONZE);
         }
@@ -137,7 +137,7 @@ public class BoilerBlockEntity extends BaseContainerBlockEntity implements Machi
             @Override
             public void pushSteam() {
                 Direction front = getBlockState().getValue(MachineBlock.FACING);
-                if (type == BoilerType.SOLAR_BRONZE) {
+                if (type.kind.solar) {
                     push(level, front);
                 } else {
                     for (Direction d : Direction.values()) {
@@ -149,7 +149,7 @@ public class BoilerBlockEntity extends BaseContainerBlockEntity implements Machi
             @Override
             public int refuel() {
                 return switch (type) {
-                    case SOLAR_BRONZE -> BoilerLogic.solarEnergy(level.canSeeSky(worldPosition.above()), level.isRaining(),
+                    case SOLAR_BRONZE, SOLAR_STEEL -> BoilerLogic.solarEnergy(level.canSeeSky(worldPosition.above()), level.isRaining(),
                             level.isThundering(), level.getSkyDarken() >= 4, level.isBrightOutside());
                     case LAVA_STEEL -> refuelLava();
                     default -> refuelSolid(level);
@@ -254,7 +254,7 @@ public class BoilerBlockEntity extends BaseContainerBlockEntity implements Machi
     }
 
     public static boolean isFuel(BoilerType type, ItemStack s) {
-        return type == BoilerType.LAVA_STEEL ? s.is(Items.LAVA_BUCKET) : type != BoilerType.SOLAR_BRONZE && fuelOf(s) != null;
+        return type == BoilerType.LAVA_STEEL ? s.is(Items.LAVA_BUCKET) : !type.kind.solar && fuelOf(s) != null;
     }
 
     // --- GUI ------------------------------------------------------------------------------------------------------

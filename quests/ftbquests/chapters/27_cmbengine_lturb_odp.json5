@@ -87,20 +87,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:hatch_data_access_ev",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:hatch_data_access_ev)item(iis:hatch_data_access_luv))"
+            }
           },
           "count": 1,
           "id": "1B00000000007E00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:hatch_data_access_luv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000007E01"
         }
       ],
       "rewards": [

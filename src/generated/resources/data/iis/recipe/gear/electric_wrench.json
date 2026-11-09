@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P P",
+    "PCP",
+    " B "
+  ],
+  "key": {
+    "P": "#c:plates/steel",
+    "C": "#c:circuits/basic",
+    "B": "#iis:batteries/basic"
+  },
+  "result": {
+    "id": "iis:electric_wrench"
+  }
+}

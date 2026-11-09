@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPI",
+    "hf "
+  ],
+  "key": {
+    "P": "#c:plates/tungsten_steel",
+    "I": "#c:ingots/tungsten_steel",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:sense_head_tungsten_steel"
+  }
+}

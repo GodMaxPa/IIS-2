@@ -102,20 +102,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:pickaxe_head_iron",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:pickaxe_head_iron)item(iis:pickaxe_head_bronze))"
+            }
           },
           "count": 1,
           "id": "1B0000000000B200"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:pickaxe_head_bronze",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000000B201"
         }
       ],
       "rewards": [

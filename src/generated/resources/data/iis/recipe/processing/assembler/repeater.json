@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:stone",
+      "count": 3
+    },
+    {
+      "ingredient": "minecraft:redstone_torch",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:repeater",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_redstone",
+      "amount": 144
+    }
+  ]
+}

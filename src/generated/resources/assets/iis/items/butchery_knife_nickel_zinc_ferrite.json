@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/butchery_knife_nickel_zinc_ferrite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 3947580
+      }
+    ]
+  }
+}

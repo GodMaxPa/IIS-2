@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPI",
+    "hf "
+  ],
+  "key": {
+    "P": "#c:plates/duranium",
+    "I": "#c:ingots/duranium",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:sense_head_duranium"
+  }
+}

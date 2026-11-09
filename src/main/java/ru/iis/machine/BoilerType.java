@@ -7,7 +7,8 @@ public enum BoilerType {
     COAL_BRONZE("boiler_coal_bronze", BoilerLogic.Kind.COAL_BRONZE, "bronzeboiler", 16000),
     COAL_STEEL("boiler_coal_steel", BoilerLogic.Kind.COAL_STEEL, "steelboiler", 32000),
     LAVA_STEEL("boiler_lava_steel", BoilerLogic.Kind.LAVA_STEEL, "steelboiler", 32000),
-    SOLAR_BRONZE("boiler_solar_bronze", BoilerLogic.Kind.SOLAR_BRONZE, "solarboiler", 16000);
+    SOLAR_BRONZE("boiler_solar_bronze", BoilerLogic.Kind.SOLAR_BRONZE, "solarboiler", 16000),
+    SOLAR_STEEL("boiler_solar_steel", BoilerLogic.Kind.SOLAR_STEEL, "solarboiler", 32000);
 
     public final String id;
     public final BoilerLogic.Kind kind;

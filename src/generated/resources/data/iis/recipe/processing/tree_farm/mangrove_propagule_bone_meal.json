@@ -1,0 +1,41 @@
+{
+  "type": "iis:tree_farm",
+  "inputs": [
+    {
+      "ingredient": "minecraft:mangrove_propagule",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:bone_meal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:mangrove_log",
+      "count": 6
+    },
+    {
+      "id": "minecraft:mangrove_propagule",
+      "count": 1
+    },
+    {
+      "id": "minecraft:mangrove_propagule",
+      "count": 1,
+      "chance": 5000
+    },
+    {
+      "id": "minecraft:stick",
+      "count": 2,
+      "chance": 5000
+    }
+  ],
+  "duration": 600,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

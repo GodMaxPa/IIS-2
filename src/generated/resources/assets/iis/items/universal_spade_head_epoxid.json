@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/universal_spade_head_epoxid",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13143060
+      }
+    ]
+  }
+}

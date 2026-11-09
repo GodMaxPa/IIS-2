@@ -19,20 +19,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:ingot_platinum",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:ingot_platinum)item(iis:dust_platinum))"
+            }
           },
           "count": 1,
           "id": "1B00000000002100"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_platinum",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000002101"
         }
       ],
       "rewards": [
@@ -898,47 +892,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:forming_press_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:forming_press_lv)item(iis:forming_press_mv)item(iis:forming_press_hv)item(iis:forming_press_ev)item(iis:forming_press_iv))"
+            }
           },
           "count": 1,
           "id": "1B00000000034600"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:forming_press_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000034601"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:forming_press_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000034602"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:forming_press_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000034603"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:forming_press_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000034604"
         }
       ],
       "rewards": [
@@ -1206,20 +1167,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:data_reader_mv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:data_reader_mv))"
+            }
           },
           "count": 1,
           "id": "1B0000000006B400"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:data_reader_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006B401"
         }
       ],
       "rewards": [
@@ -1249,47 +1204,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:compressor_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:compressor_lv)item(iis:compressor_mv)item(iis:compressor_hv)item(iis:compressor_ev)item(iis:compressor_iv))"
+            }
           },
           "count": 1,
           "id": "1B00000000072100"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:compressor_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000072101"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:compressor_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000072102"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:compressor_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000072103"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:compressor_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000072104"
         }
       ],
       "rewards": [

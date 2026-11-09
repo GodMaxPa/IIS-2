@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/wrench_hv_nickel_zinc_ferrite",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6579360
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 3947580
+      }
+    ]
+  }
+}

@@ -99,6 +99,8 @@ public final class MultiContent {
     public static final DeferredBlock<EbfBlock> IMPLOSION_COMPRESSOR = block("implosion_compressor", p -> new EbfBlock(p, ImplosionCompressorBlockEntity::new), MultiContent::metal);
     public static final DeferredBlock<EbfBlock> MULTI_SMELTER = block("multi_smelter", p -> new EbfBlock(p, MultiSmelterBlockEntity::new), MultiContent::metal);
     public static final DeferredBlock<EbfBlock> PYROLYSE_OVEN = block("pyrolyse_oven", p -> new EbfBlock(p, PyrolyseOvenBlockEntity::new), MultiContent::metal);
+    /** D144: автоферма дерева LV — свой многоблок ИИС 2 (в Forestry была ферма деревьев). */
+    public static final DeferredBlock<EbfBlock> TREE_FARM = block("tree_farm", p -> new EbfBlock(p, ru.iis.multi.block.TreeFarmBlockEntity::new), MultiContent::metal);
     public static final DeferredBlock<EbfBlock> DISTILLATION_TOWER = block("distillation_tower", p -> new EbfBlock(p, DistillationTowerBlockEntity::new), MultiContent::metal);
     public static final DeferredBlock<EbfBlock> OIL_CRACKER = block("oil_cracker", p -> new EbfBlock(p, OilCrackerBlockEntity::new), MultiContent::metal);
     public static final DeferredBlock<EbfBlock> LARGE_CHEMICAL_REACTOR = block("large_chemical_reactor", p -> new EbfBlock(p, LargeChemicalReactorBlockEntity::new), MultiContent::metal);
@@ -281,6 +283,8 @@ public final class MultiContent {
             () -> new BlockEntityType<>(MultiSmelterBlockEntity::new, MULTI_SMELTER.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PyrolyseOvenBlockEntity>> PYROLYSE_OVEN_BE = BLOCK_ENTITIES.register("pyrolyse_oven",
             () -> new BlockEntityType<>(PyrolyseOvenBlockEntity::new, PYROLYSE_OVEN.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ru.iis.multi.block.TreeFarmBlockEntity>> TREE_FARM_BE = BLOCK_ENTITIES.register("tree_farm",
+            () -> new BlockEntityType<>(ru.iis.multi.block.TreeFarmBlockEntity::new, TREE_FARM.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DistillationTowerBlockEntity>> DISTILLATION_TOWER_BE = BLOCK_ENTITIES.register("distillation_tower",
             () -> new BlockEntityType<>(DistillationTowerBlockEntity::new, DISTILLATION_TOWER.get()));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<OilCrackerBlockEntity>> OIL_CRACKER_BE = BLOCK_ENTITIES.register("oil_cracker",

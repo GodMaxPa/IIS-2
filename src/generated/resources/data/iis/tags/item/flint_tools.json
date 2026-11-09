@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "iis:flint_sword",
+    "iis:flint_shovel",
+    "iis:flint_pickaxe",
+    "iis:flint_axe",
+    "iis:flint_hoe"
+  ]
+}

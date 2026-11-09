@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SXd",
+    "GMG",
+    "PBP"
+  ],
+  "key": {
+    "X": "#iis:tool_heads/drill/black_bronze",
+    "M": "iis:electric_motor_mv",
+    "S": "#iis:screws/titanium",
+    "P": "#c:plates/titanium",
+    "G": "#iis:small_gears/titanium",
+    "B": "iis:battery_lithium_mv",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:drill_mv_black_bronze",
+    "components": {
+      "iis:max_charge": 400000
+    }
+  }
+}

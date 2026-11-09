@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "iis:item/materialicons/rough/toolheaduniversalspade",
+    "layer1": "iis:item/materialicons/rough/toolheaduniversalspade_overlay"
+  }
+}

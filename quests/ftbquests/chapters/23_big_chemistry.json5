@@ -960,47 +960,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:fluid_heater_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:fluid_heater_lv)item(iis:fluid_heater_mv)item(iis:fluid_heater_hv)item(iis:fluid_heater_ev)item(iis:fluid_heater_iv))"
+            }
           },
           "count": 1,
           "id": "1B00000000022C00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:fluid_heater_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000022C01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:fluid_heater_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000022C02"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:fluid_heater_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000022C03"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:fluid_heater_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000022C04"
         }
       ],
       "rewards": [

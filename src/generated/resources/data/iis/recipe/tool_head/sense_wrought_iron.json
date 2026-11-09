@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPI",
+    "hf "
+  ],
+  "key": {
+    "P": "#c:plates/wrought_iron",
+    "I": "#c:ingots/wrought_iron",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:sense_head_wrought_iron"
+  }
+}

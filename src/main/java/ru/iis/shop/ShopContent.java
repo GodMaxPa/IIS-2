@@ -193,10 +193,15 @@ public final class ShopContent {
         if (!p.getInventory().add(s) && !s.isEmpty()) p.drop(s, false);
     }
 
+    /** Можно ли купить: товар есть и игрок его видел; еда (always) продаётся и без «видел» (D144: сервер проверял «видел» и для неё). */
+    public static boolean allowed(@org.jspecify.annotations.Nullable Price price, List<String> seen, String id) {
+        return price != null && (price.always() || seen.contains(id));
+    }
+
     /** Покупка на сервере: только то, что игрок уже видел; true — прошла. */
     public static boolean buy(ServerPlayer p, String id, int times) {
         Price price = prices().get(id);
-        if (price == null || times < 1 || times > 64 || !p.getData(SEEN).contains(id)) return false;
+        if (times < 1 || times > 64 || !allowed(price, p.getData(SEEN), id)) return false;
         Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(id));
         int[] coins = countCredits(p);
         boolean free = p.getAbilities().instabuild;

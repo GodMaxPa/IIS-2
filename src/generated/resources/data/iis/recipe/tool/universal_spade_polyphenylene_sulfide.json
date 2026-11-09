@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/universal_spade/polyphenylene_sulfide",
+    "#c:rods/polyphenylene_sulfide",
+    "#iis:screws/polyphenylene_sulfide",
+    "#iis:tools/screwdriver"
+  ],
+  "result": {
+    "id": "iis:universal_spade_polyphenylene_sulfide"
+  }
+}

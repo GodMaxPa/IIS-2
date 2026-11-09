@@ -20,38 +20,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:steam_compressor_bronze",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:steam_compressor_bronze)item(iis:steam_compressor_steel)item(iis:compressor_lv)item(iis:compressor_mv))"
+            }
           },
           "count": 1,
           "id": "1B00000000004A00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:steam_compressor_steel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000004A01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:compressor_lv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000004A02"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:compressor_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000004A03"
         }
       ],
       "rewards": [
@@ -143,20 +119,14 @@
         {
           "type": "item",
           "item": {
-            "id": "minecraft:shears",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(minecraft:shears))"
+            }
           },
           "count": 1,
           "id": "1B00000000012400"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:shears",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000012401"
         }
       ],
       "rewards": [
@@ -324,20 +294,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:steam_macerator_bronze",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:steam_macerator_bronze)item(iis:steam_macerator_steel))"
+            }
           },
           "count": 1,
           "id": "1B00000000018700"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:steam_macerator_steel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000018701"
         }
       ],
       "rewards": [
@@ -866,20 +830,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:pipe_small_bronze",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:pipe_small_bronze)item(iis:pipe_medium_bronze))"
+            }
           },
           "count": 1,
           "id": "1B0000000001CD00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:pipe_medium_bronze",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001CD01"
         }
       ],
       "rewards": [
@@ -1396,20 +1354,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:small_dust_brick",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:small_dust_brick)item(iis:dust_brick))"
+            }
           },
           "count": 1,
           "id": "1B0000000004A300"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_brick",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004A301"
         }
       ],
       "rewards": [
@@ -1574,65 +1526,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:steam_extractor_bronze",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:steam_extractor_bronze)item(iis:steam_extractor_steel)item(iis:extractor_lv)item(iis:extractor_mv)item(iis:extractor_hv)item(iis:extractor_ev)item(iis:extractor_iv))"
+            }
           },
           "count": 1,
           "id": "1B0000000006AF00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:steam_extractor_steel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006AF01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:extractor_lv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006AF02"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:extractor_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006AF03"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:extractor_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006AF04"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:extractor_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006AF05"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:extractor_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006AF06"
         }
       ],
       "rewards": [

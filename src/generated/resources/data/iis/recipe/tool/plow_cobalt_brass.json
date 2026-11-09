@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/plow/cobalt_brass",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:plow_cobalt_brass"
+  }
+}

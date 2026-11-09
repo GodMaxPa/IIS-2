@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/universal_spade/meteoric_iron",
+    "#c:rods/meteoric_iron",
+    "#iis:screws/meteoric_iron",
+    "#iis:tools/screwdriver"
+  ],
+  "result": {
+    "id": "iis:universal_spade_meteoric_iron"
+  }
+}

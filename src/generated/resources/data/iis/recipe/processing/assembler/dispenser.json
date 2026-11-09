@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#c:cobblestones",
+      "count": 7
+    },
+    {
+      "ingredient": "minecraft:bow",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:dispenser",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_redstone",
+      "amount": 144
+    }
+  ]
+}

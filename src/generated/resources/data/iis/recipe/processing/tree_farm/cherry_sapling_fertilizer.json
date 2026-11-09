@@ -1,0 +1,41 @@
+{
+  "type": "iis:tree_farm",
+  "inputs": [
+    {
+      "ingredient": "minecraft:cherry_sapling",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:fertilizer",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:cherry_log",
+      "count": 6
+    },
+    {
+      "id": "minecraft:cherry_sapling",
+      "count": 1
+    },
+    {
+      "id": "minecraft:cherry_sapling",
+      "count": 1,
+      "chance": 5000
+    },
+    {
+      "id": "minecraft:stick",
+      "count": 2,
+      "chance": 5000
+    }
+  ],
+  "duration": 600,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "Sm"
+  ],
+  "key": {
+    "S": "minecraft:sugar_cane",
+    "m": "#iis:tools/mortar"
+  },
+  "result": {
+    "id": "minecraft:sugar"
+  }
+}

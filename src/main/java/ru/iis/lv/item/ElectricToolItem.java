@@ -36,7 +36,8 @@ public class ElectricToolItem extends BatteryItem {
     private final MaterialData.ToolDef def;
 
     public ElectricToolItem(Properties properties, MaterialData.ToolDef def) {
-        super(100000, 32, 1, properties);
+        // D144: MV и HV принимают свой ток (128 и 512 EU/t), как батареи своего уровня
+        super(100000, 32L << (2 * (ru.iis.tool.GtTools.electricTier(def.tool()) - 1)), ru.iis.tool.GtTools.electricTier(def.tool()), properties);
         this.def = def;
     }
 

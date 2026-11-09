@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    " m "
+  ],
+  "key": {
+    "S": "minecraft:sugar_cane",
+    "m": "#iis:tools/mortar"
+  },
+  "result": {
+    "id": "iis:dust_paper",
+    "count": 2
+  }
+}

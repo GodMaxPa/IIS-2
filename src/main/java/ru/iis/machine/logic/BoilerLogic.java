@@ -24,7 +24,13 @@ public final class BoilerLogic {
         COAL_BRONZE(45,   25,   16000, 500,  12,   1,   1,   false),
         COAL_STEEL (40,   10,   32000, 1000, 12,   2,   1,   false),
         LAVA_STEEL (20,   10,   32000, 1000, 8,    3,   1,   false),
-        SOLAR_BRONZE(45,  25,   32000, 500,  12,   5,   5,   true);
+        SOLAR_BRONZE(45,  25,   32000, 500,  12,   5,   5,   true),
+        /** D144: котёл высокого давления GT5 Unofficial — втрое больше пара (360 л/с, после накипи 120 л/с). */
+        SOLAR_STEEL (40,  25,   32000, 1000, 12,   5,   5,   true);
+
+        /** Пар за цикл у солнечного котла: чистый и после накипи. */
+        public int solarMax() { return this == SOLAR_STEEL ? SOLAR_OUTPUT * 3 : SOLAR_OUTPUT; }
+        public int solarMin() { return this == SOLAR_STEEL ? SOLAR_MIN_OUTPUT * 3 : SOLAR_MIN_OUTPUT; }
 
         /** Остывание на {@link #step} после стольких тиков (счётчик должен превысить это число). */
         public final int lossTimerLimit;
@@ -120,7 +126,7 @@ public final class BoilerLogic {
                     if (kind.solar) {
                         water -= 1;
                         runTime++;
-                        out = solarOutput(runTime);
+                        out = solarOutput(runTime) * kind.solarMax() / SOLAR_OUTPUT;
                     } else {
                         if (env.consumesWater()) water -= 1;
                         out = env.steamPerWater();

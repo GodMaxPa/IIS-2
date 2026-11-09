@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/drill_hv_vanadium_steel",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6579360
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 12632256
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "type": "iis:tree_farm",
+  "inputs": [
+    {
+      "ingredient": "minecraft:dark_oak_sapling",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:dark_oak_log",
+      "count": 6
+    },
+    {
+      "id": "minecraft:dark_oak_sapling",
+      "count": 1
+    },
+    {
+      "id": "minecraft:dark_oak_sapling",
+      "count": 1,
+      "chance": 5000
+    },
+    {
+      "id": "minecraft:apple",
+      "count": 1,
+      "chance": 1000
+    }
+  ],
+  "duration": 1200,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1000
+    }
+  ]
+}

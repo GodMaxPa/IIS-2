@@ -678,6 +678,7 @@
     "iis:implosion_compressor",
     "iis:multi_smelter",
     "iis:pyrolyse_oven",
+    "iis:tree_farm",
     "iis:clean_stainless_casing",
     "iis:distillation_tower",
     "iis:oil_cracker",

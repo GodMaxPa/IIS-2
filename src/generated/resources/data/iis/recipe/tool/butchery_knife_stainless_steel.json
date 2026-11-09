@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PPf",
+    "PP ",
+    "Sh "
+  ],
+  "key": {
+    "P": "#c:plates/stainless_steel",
+    "S": "#c:rods/stainless_steel",
+    "f": "#iis:tools/file",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:butchery_knife_stainless_steel"
+  }
+}

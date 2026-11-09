@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "iis:treetap",
+    "#c:circuits/basic",
+    "#iis:batteries/basic"
+  ],
+  "result": {
+    "id": "iis:electric_treetap"
+  }
+}

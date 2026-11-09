@@ -494,20 +494,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:gem_quartzite",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:gem_quartzite)item(iis:dust_quartzite))"
+            }
           },
           "count": 1,
           "id": "1B0000000001EC00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_quartzite",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001EC01"
         }
       ],
       "rewards": [
@@ -536,47 +530,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:autoclave_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:autoclave_lv)item(iis:autoclave_mv)item(iis:autoclave_hv)item(iis:autoclave_ev)item(iis:autoclave_iv))"
+            }
           },
           "count": 1,
           "id": "1B0000000001ED00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:autoclave_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001ED01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:autoclave_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001ED02"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:autoclave_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001ED03"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:autoclave_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001ED04"
         }
       ],
       "rewards": [

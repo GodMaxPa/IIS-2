@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:redstone_torch",
+      "count": 3
+    },
+    {
+      "ingredient": "#c:gems/quartz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:comparator",
+      "count": 1
+    }
+  ],
+  "duration": 800,
+  "eut": 1,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_concrete",
+      "amount": 144
+    }
+  ]
+}

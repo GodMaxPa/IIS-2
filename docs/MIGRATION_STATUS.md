@@ -206,3 +206,4 @@
 | Панели IC2 Nuclear Control D141 | GameTest `monitor_panel_reads` |
 | Правки после теста выживания D142 | GameTest `early_tools_recipes`, `early_finite_water` |
 | Напыление, породы, новое ванильное D143 | GameTest `modern_vanilla` |
+| Правки 09.11 D144 | GameTest `notes_0911`, `world_backup_files` |

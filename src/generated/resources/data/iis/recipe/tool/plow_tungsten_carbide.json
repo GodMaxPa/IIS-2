@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/plow/tungsten_carbide",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "iis:plow_tungsten_carbide"
+  }
+}

@@ -461,29 +461,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:battery_buffer_3x3_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:battery_buffer_3x3_lv)item(iis:battery_buffer_2x2_lv)item(iis:battery_buffer_4x4_lv))"
+            }
           },
           "count": 1,
           "id": "1B00000000013400"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:battery_buffer_2x2_lv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000013401"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:battery_buffer_4x4_lv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000013402"
         }
       ],
       "rewards": [
@@ -1146,38 +1131,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:gem_exquisite_ruby",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:gem_exquisite_ruby)item(iis:gem_exquisite_jasper)item(iis:gem_exquisite_garnet_red))"
+            }
           },
           "count": 1,
           "id": "1B0000000001E800"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:gem_exquisite_ruby",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001E801"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:gem_exquisite_jasper",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001E802"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:gem_exquisite_garnet_red",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001E803"
         }
       ],
       "rewards": [
@@ -1239,38 +1200,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:lens_ruby",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:lens_ruby)item(iis:lens_fools_ruby)item(iis:lens_jasper)item(iis:lens_garnet_red))"
+            }
           },
           "count": 1,
           "id": "1B0000000001FD00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:lens_fools_ruby",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001FD01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:lens_jasper",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001FD02"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:lens_garnet_red",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001FD03"
         }
       ],
       "rewards": [

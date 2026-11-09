@@ -495,47 +495,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:disassembler_iv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:disassembler_iv)item(iis:disassembler_lv)item(iis:disassembler_mv)item(iis:disassembler_hv)item(iis:disassembler_ev))"
+            }
           },
           "count": 1,
           "id": "1B0000000002B700"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:disassembler_lv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000002B701"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:disassembler_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000002B702"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:disassembler_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000002B703"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:disassembler_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000002B704"
         }
       ],
       "rewards": [

@@ -20,20 +20,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:gem_certus_quartz",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:gem_certus_quartz)item(iis:dust_certus_quartz))"
+            }
           },
           "count": 1,
           "id": "1B00000000004000"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_certus_quartz",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000004001"
         }
       ],
       "rewards": [
@@ -95,20 +89,14 @@
         {
           "type": "item",
           "item": {
-            "id": "minecraft:quartz",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(minecraft:quartz)item(iis:dust_nether_quartz))"
+            }
           },
           "count": 1,
           "id": "1B0000000000F100"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_nether_quartz",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000000F101"
         }
       ],
       "rewards": [

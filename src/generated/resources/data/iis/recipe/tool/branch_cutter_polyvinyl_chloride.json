@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PfP",
+    "PdP",
+    "STS"
+  ],
+  "key": {
+    "P": "#c:plates/polyvinyl_chloride",
+    "S": "#c:rods/polyvinyl_chloride",
+    "T": "#iis:screws/polyvinyl_chloride",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:branch_cutter_polyvinyl_chloride"
+  }
+}

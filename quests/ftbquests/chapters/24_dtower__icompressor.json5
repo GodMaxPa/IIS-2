@@ -1455,29 +1455,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:gem_exquisite_emerald",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:gem_exquisite_emerald)item(iis:gem_exquisite_green_sapphire)item(iis:gem_exquisite_olivine))"
+            }
           },
           "count": 1,
           "id": "1B00000000079300"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:gem_exquisite_green_sapphire",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000079301"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:gem_exquisite_olivine",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000079302"
         }
       ],
       "rewards": [

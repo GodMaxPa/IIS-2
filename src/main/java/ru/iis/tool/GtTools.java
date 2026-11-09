@@ -29,7 +29,16 @@ public final class GtTools {
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, IIS.MODID);
     private static final List<DeferredItem<GtToolItem>> ALL = new ArrayList<>();
     /** Электроинструменты LV (D78): регистрирует ru.iis.lv.LvContent, у них заряд вместо прочности. */
-    public static final Set<String> ELECTRIC = Set.of("drill_lv", "chainsaw_lv", "wrench_lv");
+    public static final Set<String> ELECTRIC = Set.of("drill_lv", "chainsaw_lv", "wrench_lv",
+            // D144: электроинструменты GT MV/HV, отбойный молоток, циркулярная пила, шуруповёрт
+            "drill_mv", "drill_hv", "chainsaw_mv", "chainsaw_hv", "wrench_mv", "wrench_hv", "jackhammer", "buzzsaw", "screwdriver_lv");
+
+    /** Уровень напряжения электроинструмента GT: LV 1, MV 2, HV 3 (отбойный молоток — HV). */
+    public static int electricTier(String tool) {
+        if (tool.endsWith("_mv")) return 2;
+        if (tool.endsWith("_hv") || tool.equals("jackhammer")) return 3;
+        return 1;
+    }
     /** GT_Tool_Drill_LV#isMinableBlock: всё, что берут кирка и лопата. */
     public static final TagKey<Block> MINEABLE_DRILL = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(IIS.MODID, "mineable/drill"));
 
@@ -79,6 +88,10 @@ public final class GtTools {
             // GT_Tool_Drill_LV (урон 2), GT_Tool_Chainsaw_LV (урон 3, пила по дереву)
             case "drill" -> p.tool(mat, MINEABLE_DRILL, 2.0f, -2.8f, 0f);
             case "chainsaw" -> p.tool(mat, BlockTags.MINEABLE_WITH_AXE, 3.0f, -3.0f, 0f);
+            // D144: GT_Tool_Sense (урон 3, косит растения вокруг), GT_Tool_Plow (пашет 3×3), GT_Tool_BranchCutter (листва -> саженцы)
+            case "sense" -> p.tool(mat, BlockTags.MINEABLE_WITH_HOE, 3.0f, -3.0f, 0f);
+            case "plow" -> p.tool(mat, BlockTags.MINEABLE_WITH_SHOVEL, 1.0f, -3.0f, 0f);
+            case "branch_cutter" -> p.tool(mat, BlockTags.LEAVES, 2.5f, -3.0f, 0f);
             default -> throw new IllegalArgumentException("Unknown tool kind " + d.kind());
         };
         return out;

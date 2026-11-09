@@ -375,29 +375,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:battery_cadmium_hv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:battery_cadmium_hv)item(iis:battery_lithium_hv)item(iis:battery_sodium_hv))"
+            }
           },
           "count": 1,
           "id": "1B00000000011200"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:battery_lithium_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000011201"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:battery_sodium_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000011202"
         }
       ],
       "rewards": [

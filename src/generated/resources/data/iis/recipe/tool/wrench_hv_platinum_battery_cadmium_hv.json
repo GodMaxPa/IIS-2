@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SXd",
+    "GMG",
+    "PBP"
+  ],
+  "key": {
+    "X": "#iis:tool_heads/wrench/platinum",
+    "M": "iis:electric_motor_hv",
+    "S": "#iis:screws/tungsten_steel",
+    "P": "#c:plates/tungsten_steel",
+    "G": "#iis:small_gears/tungsten_steel",
+    "B": "iis:battery_cadmium_hv",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:wrench_hv_platinum",
+    "components": {
+      "iis:max_charge": 1200000
+    }
+  }
+}

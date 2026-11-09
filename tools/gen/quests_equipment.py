@@ -106,8 +106,26 @@ Q = [
      ('Патроны с гильзой делает только он. Бумажные патроны по-прежнему собираются в руках.', 'Only this machine makes cartridges with a case. Paper ones are still made by hand.')),
     ('mag_pistol', 2.7, 3.5, ['mag_pistol'], ['pistol'], None, ('Магазин', 'Magazine'),
      ('Держите ПКМ: магазин набивается патронами из инвентаря. R на оружии меняет его на самый полный, снятый возвращается к вам.', 'Hold right click to fill it from the inventory. R on the gun swaps it for the fullest one and returns the old one.')),
+    # --- D144 (owner): a branch that explains the other ammunition, magazines and the turrets' ammunition -----------------------------
+    ('ammo_guide', 3, -1, [], ['cartridge_press_lv'], None, ('Какие патроны к чему', 'Which ammunition for what'),
+     ('Бумажный патрон — кремнёвый пистолет, мушкет, штуцер и мушкетон.\nПистолетный патрон — пистолет и пистолет-пулемёт.\nВинтовочный патрон — автомат, снайперская винтовка, пулемёт и пулемётная турель.\nРужейный патрон — помповое ружьё.\nГраната — гранатомёт и гранатомётная турель.\nРакета — ручная ракетная пушка и ракетная турель.\nТанковый снаряд — только танк, кладётся в его груз, G — выстрел.\nЛазеры стреляют зарядом, плазменное оружие — плазмой из капсулы.\n\nПатроны с гильзой делает патронный станок, бумажные — верстак.',
+      'Paper cartridge: flintlock pistol, musket, rifled musket, blunderbuss.\nPistol round: pistol and submachine gun.\nRifle round: assault rifle, sniper rifle, machine gun and the machine gun turret.\nShotgun shell: pump shotgun.\nGrenade: grenade launcher and grenade turret.\nRocket: rocket launcher and rocket turret.\nTank shell: the tank only, in its cargo, G fires.\nLasers fire their charge, plasma guns plasma from a capsule.\n\nCased rounds come from the cartridge press, paper ones from the crafting table.')),
+    ('mag_smg', 4, -1, ['mag_smg'], ['ammo_guide', 'smg'], None, ('Магазин пистолета-пулемёта', 'Submachine gun magazine'),
+     ('Пистолетные патроны для пистолета-пулемёта. Набивается так же, как пистолетный: держите ПКМ.', 'Pistol rounds for the submachine gun. Fill it like the pistol one: hold right click.')),
+    ('mag_rifle', 5, -1, ['mag_rifle'], ['ammo_guide', 'assault_rifle'], None, ('Автоматный магазин', 'Assault rifle magazine'),
+     ('Винтовочные патроны для автомата.', 'Rifle rounds for the assault rifle.')),
+    ('mag_sniper', 6, -1, ['mag_sniper'], ['mag_rifle', 'sniper_rifle'], None, ('Магазин снайперской винтовки', 'Sniper rifle magazine'),
+     ('Немного винтовочных патронов для снайперской винтовки.', 'A few rifle rounds for the sniper rifle.')),
+    ('mag_belt', 7, -1, ['mag_belt'], ['mag_sniper', 'machine_gun'], None, ('Короб с лентой', 'Ammo belt box'),
+     ('Сто винтовочных патронов для пулемёта: перезарядка долгая, зато надолго.', 'A hundred rifle rounds for the machine gun: a long reload that lasts.')),
+    ('turret_ammo', 3, -2, [], ['ammo_guide'], None, ('Чем стреляют турели', 'What turrets fire'),
+     ('Патроны кладутся в базу турели, энергия тоже берётся из неё.\nОдноразовая — булыжник. Картофельная пушка — картошка.\nПулемётная — винтовочные патроны. Зажигательная — огненный порошок.\nГранатомётная — гранаты. Ракетная — ракеты.\nРельсотрон — ферросердечники.\nРелятивистская, лазерная и телепортатор патронов не берут: только энергию.\nУтилизатор в базе иногда возвращает патрон.',
+      'Ammunition goes into the turret base, energy comes from it too.\nDisposable: cobblestone. Potato cannon: potatoes.\nMachine gun: rifle rounds. Incendiary: blaze powder.\nGrenade: grenades. Rocket: rockets.\nRailgun: ferro slugs.\nRelativistic, laser and teleporter take no ammunition, only energy.\nA recycler in the base sometimes gives a round back.')),
+    ('ferro_slug', 5, -2, ['ferro_slug'], ['turret_ammo'], None, ('Ферросердечник', 'Ferro slug'),
+     ('Снаряд рельсотрона: самый тяжёлый выстрел турелей.', 'The railgun projectile: the heaviest shot of the turrets.')),
 ]
 SET_PARTS = ('helmet', 'chestplate', 'leggings', 'boots')
+ICONS = {'ammo_guide': 'rifle_round', 'turret_ammo': 'turret_machine_gun'}
 
 
 def add_chapter(chapters_dir, tr, order_index, write, hexid, item_exists):
@@ -127,8 +145,8 @@ def add_chapter(chapters_dir, tr, order_index, write, hexid, item_exists):
             qo['icon'] = {'id': ids[1] if items == 'set' else ids[0], 'count': 1}
             qo['tasks'] = [{'type': 'item', 'item': {'id': i, 'count': 1}, 'count': 1, 'id': hexid(0x1B, (qid << 8) | n)} for n, i in enumerate(ids)]
         else:
-            qo['icon'] = {'id': f'{NS}:assault_rifle', 'count': 1}
-            qo['size'] = 1.5
+            qo['icon'] = {'id': f'{NS}:{ICONS.get(key, "assault_rifle")}', 'count': 1}
+            qo['size'] = 1.5 if key == 'start' else 1.0
             qo['tasks'] = [{'type': 'checkmark', 'id': hexid(0x1B, qid << 8)}]
         rewards = []
         if ids:

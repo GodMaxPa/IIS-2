@@ -1211,47 +1211,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:microwave_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:microwave_lv)item(iis:microwave_mv)item(iis:microwave_hv)item(iis:microwave_ev)item(iis:microwave_iv))"
+            }
           },
           "count": 1,
           "id": "1B00000000068B00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:microwave_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000068B01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:microwave_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000068B02"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:microwave_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000068B03"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:microwave_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000068B04"
         }
       ],
       "rewards": [
@@ -1313,47 +1280,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:monster_repellent_lv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:monster_repellent_lv)item(iis:monster_repellent_mv)item(iis:monster_repellent_hv)item(iis:monster_repellent_ev)item(iis:monster_repellent_iv))"
+            }
           },
           "count": 1,
           "id": "1B00000000068F00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:monster_repellent_mv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000068F01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:monster_repellent_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000068F02"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:monster_repellent_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000068F03"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:monster_repellent_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000068F04"
         }
       ],
       "rewards": [

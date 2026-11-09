@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "S",
+    "S"
+  ],
+  "key": {
+    "S": "minecraft:stone"
+  },
+  "result": {
+    "id": "minecraft:stone_button",
+    "count": 2
+  }
+}

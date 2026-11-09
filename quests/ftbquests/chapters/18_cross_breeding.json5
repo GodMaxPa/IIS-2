@@ -182,29 +182,14 @@
         {
           "type": "item",
           "item": {
-            "id": "minecraft:stone_hoe",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(minecraft:stone_hoe)item(minecraft:wooden_hoe)item(iis:flint_hoe))"
+            }
           },
           "count": 1,
           "id": "1B0000000002C800"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:wooden_hoe",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000002C801"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:hoe_iron",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000002C802"
         }
       ],
       "rewards": [
@@ -776,20 +761,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:uua_berry",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:uua_berry)item(iis:uum_berry))"
+            }
           },
           "count": 1,
           "id": "1B0000000004CC00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:uum_berry",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004CC01"
         }
       ],
       "rewards": [

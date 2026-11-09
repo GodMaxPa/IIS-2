@@ -1207,74 +1207,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:hatch_input_ulv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:hatch_input_ulv)item(iis:hatch_output_ulv)item(iis:hatch_output_lv)item(iis:hatch_input_lv))"
+            }
           },
           "count": 1,
           "id": "1B00000000067E00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:hatch_output_ulv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000067E01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:hatch_input_ulv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000067E02"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:hatch_output_lv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000067E03"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:hatch_input_lv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000067E04"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:hatch_output_ulv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000067E05"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:hatch_input_lv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000067E06"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:hatch_output_lv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000067E07"
         }
       ],
       "rewards": [

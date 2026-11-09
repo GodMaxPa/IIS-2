@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/universal_spade/neodymium_magnetic",
+    "#c:rods/neodymium_magnetic",
+    "#iis:screws/neodymium_magnetic",
+    "#iis:tools/screwdriver"
+  ],
+  "result": {
+    "id": "iis:universal_spade_neodymium_magnetic"
+  }
+}

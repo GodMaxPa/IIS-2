@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#iis:tool_heads/universal_spade/tungsten_carbide",
+    "#c:rods/tungsten_carbide",
+    "#iis:screws/tungsten_carbide",
+    "#iis:tools/screwdriver"
+  ],
+  "result": {
+    "id": "iis:universal_spade_tungsten_carbide"
+  }
+}

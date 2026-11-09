@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "fX"
+  ],
+  "key": {
+    "X": "#iis:tool_heads/shovel/tungsten",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:universal_spade_head_tungsten"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "wXh",
+    "X X",
+    "fXx"
+  ],
+  "key": {
+    "X": "#c:plates/tin_alloy",
+    "w": "#iis:tools/wrench",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file",
+    "x": "#iis:tools/wire_cutter"
+  },
+  "result": {
+    "id": "iis:buzzsaw_head_tin_alloy"
+  }
+}

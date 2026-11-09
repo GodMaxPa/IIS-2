@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PBM",
+    "dXG",
+    "SGP"
+  ],
+  "key": {
+    "X": "#iis:tool_heads/buzzsaw/tin_alloy",
+    "M": "iis:electric_motor_lv",
+    "S": "#iis:screws/stainless_steel",
+    "P": "#c:plates/stainless_steel",
+    "G": "#iis:small_gears/stainless_steel",
+    "B": "iis:battery_lv",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:buzzsaw_tin_alloy",
+    "components": {
+      "iis:max_charge": 50000
+    }
+  }
+}

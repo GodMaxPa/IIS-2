@@ -74,6 +74,8 @@ public enum GtRecipeMap {
     // каждую), sCrackingRecipes (две жидкости на входе)
     IMPLOSION("implosion", 2, 2),
     PYROLYSE("pyrolyse", 2, 1),
+    // D144: автоферма дерева (своя, не GT): саженец, вода, удобрение -> брёвна, саженцы, палки, яблоки
+    TREE_FARM("tree_farm", 2, 4),
     DISTILLATION_TOWER("distillation_tower", 0, 1, 1, 11),
     CRACKING("cracking", 0, 0, 2, 1),
     // D110: GT_Recipe_AssemblyLine: до 15 входов и 4 жидкостей строго по порядку; keep[0] — исследуемый предмет (mResearchItem), temp — время исследования (mResearchTime)

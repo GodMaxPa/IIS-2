@@ -26,38 +26,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:rocket_t1",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:rocket_t1))"
+            }
           },
           "count": 1,
           "id": "1B00000000027F00"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:rocket_t1",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000027F01"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:rocket_t1",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000027F02"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:rocket_t1",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000027F03"
         }
       ],
       "rewards": [
@@ -1125,38 +1101,14 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:fluid_canner_mv",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:fluid_canner_mv)item(iis:fluid_canner_hv)item(iis:fluid_canner_ev)item(iis:fluid_canner_iv))"
+            }
           },
           "count": 1,
           "id": "1B00000000032300"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:fluid_canner_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000032301"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:fluid_canner_ev",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000032302"
-        },
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:fluid_canner_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000032303"
         }
       ],
       "rewards": [

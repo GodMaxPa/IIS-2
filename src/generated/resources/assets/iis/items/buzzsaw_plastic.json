@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/buzzsaw_plastic",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 13158620
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 13158600
+      }
+    ]
+  }
+}

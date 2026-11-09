@@ -88,4 +88,5 @@ def generate(g):
     write(os.path.join(D, NS, 'tags', 'item', 'flint_tool_materials.json'), {'values': [MC('flint')]})
     for tag, t in (('swords', 'sword'), ('shovels', 'shovel'), ('pickaxes', 'pickaxe'), ('axes', 'axe'), ('hoes', 'hoe')):
         g['add_item_tag'](f'minecraft:{tag}', I(f'flint_{t}'))
+        g['add_item_tag']('iis:flint_tools', I(f'flint_{t}'))   # D144: the quest asks for any of them
     return {'flint_tools': 5}

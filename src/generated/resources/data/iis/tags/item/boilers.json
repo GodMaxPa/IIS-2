@@ -4,6 +4,7 @@
     "iis:boiler_coal_bronze",
     "iis:boiler_coal_steel",
     "iis:boiler_lava_steel",
-    "iis:boiler_solar_bronze"
+    "iis:boiler_solar_bronze",
+    "iis:boiler_solar_steel"
   ]
 }

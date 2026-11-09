@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SXd",
+    "GMG",
+    "PBP"
+  ],
+  "key": {
+    "X": "#iis:tool_heads/chainsaw/beryllium",
+    "M": "iis:electric_motor_mv",
+    "S": "#iis:screws/titanium",
+    "P": "#c:plates/titanium",
+    "G": "#iis:small_gears/titanium",
+    "B": "iis:battery_cadmium_mv",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:chainsaw_mv_beryllium",
+    "components": {
+      "iis:max_charge": 300000
+    }
+  }
+}

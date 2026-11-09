@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "P k"
+  ],
+  "key": {
+    "P": "minecraft:paper",
+    "k": "#iis:tools/knife"
+  },
+  "result": {
+    "id": "minecraft:feather",
+    "count": 2
+  }
+}

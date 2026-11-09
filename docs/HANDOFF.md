@@ -3,6 +3,7 @@
 Обновлено: 2026-11-06 — после D124. Ветка `feature/bio-fluids-lv3`, работа идёт локально (Claude Code на ПК владельца); push — только по просьбе владельца.
 
 ## Где мы
+- **Правки 09.11 (D144):** рецепты ИИС 1 — `tools/gen/iis1fix.py`; квесты: задача «любой из» — предмет `ftbfiltersystem:smart_filter` с компонентом `ftbfiltersystem:filter` (`or(item(a)item(b))`, `item_tag(...)`), картинки рецептов делает `tools/gen/quest_recipes.py`, поэтому `quests.py` надо запускать **до** сборки JAR. Событие ломания блока в NeoForge 26.1 — `level.block.BreakBlockEvent`. Новые инструменты GT — строки `TOOLS` в `gen_content.py`, электрические перечислены в `GtTools.ELECTRIC`.
 - **Напыление и новое ванильное (D143):** `tools/gen/modern.py`. Напыление — рецепт ассемблера, выход которого несёт компоненты `max_damage`, `tool`, `lore`; кода нет. Элитрам `GLIDER` снимается в `EarlyGame#weakenStone`, рецепт рамы его возвращает (`!minecraft:lore` снимает подсказку).
 - **Начало игры (D142):** ванильные рецепты ИИС 1 — в пакете переопределений (`tools/gen/earlygame.py`), каменные инструменты меняются в `ModifyDefaultComponentsEvent` (блоки брать из `HolderLookup.Provider` инициализатора: реестр уже заморожен), бесконечные жидкости — `CreateFluidSourceEvent`. Щит, не являющийся `ShieldItem`, при блоке поворачивается рукой как меч — отсюда `IClientItemExtensions#applyForgeHandTransform`.
 - **Панели Nuclear Control (D141):** `ru.iis.monitor`; строки панели собирает сервер (`PanelBlockEntity#read`) и шлёт клиенту компонентами, текст рисует `PanelRenderer` через `submitText`.

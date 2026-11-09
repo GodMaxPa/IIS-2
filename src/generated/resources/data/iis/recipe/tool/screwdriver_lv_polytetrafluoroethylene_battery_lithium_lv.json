@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PdX",
+    "MGS",
+    "GBP"
+  ],
+  "key": {
+    "X": "#iis:long_rods/polytetrafluoroethylene",
+    "M": "iis:electric_motor_lv",
+    "S": "#iis:screws/stainless_steel",
+    "P": "#c:plates/stainless_steel",
+    "G": "#iis:small_gears/stainless_steel",
+    "B": "iis:battery_lithium_lv",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:screwdriver_lv_polytetrafluoroethylene",
+    "components": {
+      "iis:max_charge": 100000
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PP",
+    "PP",
+    "hf"
+  ],
+  "key": {
+    "P": "#c:plates/styrene_butadiene_rubber",
+    "h": "#iis:tools/hammer",
+    "f": "#iis:tools/file"
+  },
+  "result": {
+    "id": "iis:plow_head_styrene_butadiene_rubber"
+  }
+}

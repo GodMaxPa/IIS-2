@@ -1883,6 +1883,213 @@
           "id": "1C00000010003000"
         }
       ]
+    },
+    {
+      "id": "1A00000000100031",
+      "x": 6.0,
+      "y": -1.5,
+      "dependencies": [
+        "1A0000000010002F"
+      ],
+      "icon": {
+        "id": "iis:rifle_round",
+        "count": 1
+      },
+      "size": 1.0,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000010003100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100032",
+      "x": 8.0,
+      "y": -1.5,
+      "dependencies": [
+        "1A00000000100031",
+        "1A00000000100008"
+      ],
+      "icon": {
+        "id": "iis:mag_smg",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mag_smg",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010003200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000010003200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100033",
+      "x": 10.0,
+      "y": -1.5,
+      "dependencies": [
+        "1A00000000100031",
+        "1A0000000010000A"
+      ],
+      "icon": {
+        "id": "iis:mag_rifle",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mag_rifle",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010003300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000010003300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100034",
+      "x": 12.0,
+      "y": -1.5,
+      "dependencies": [
+        "1A00000000100033",
+        "1A0000000010000D"
+      ],
+      "icon": {
+        "id": "iis:mag_sniper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mag_sniper",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010003400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000010003400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100035",
+      "x": 14.0,
+      "y": -1.5,
+      "dependencies": [
+        "1A00000000100034",
+        "1A0000000010000E"
+      ],
+      "icon": {
+        "id": "iis:mag_belt",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mag_belt",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010003500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000010003500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100036",
+      "x": 6.0,
+      "y": -3.0,
+      "dependencies": [
+        "1A00000000100031"
+      ],
+      "icon": {
+        "id": "iis:turret_machine_gun",
+        "count": 1
+      },
+      "size": 1.0,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000010003600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000100037",
+      "x": 10.0,
+      "y": -3.0,
+      "dependencies": [
+        "1A00000000100036"
+      ],
+      "icon": {
+        "id": "iis:ferro_slug",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ferro_slug",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000010003700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C00000010003700"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "iis:item/plunger_polytetrafluoroethylene",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 7188913
+      }
+    ]
+  }
+}

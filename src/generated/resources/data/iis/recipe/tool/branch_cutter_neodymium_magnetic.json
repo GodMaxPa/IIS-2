@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PfP",
+    "PdP",
+    "STS"
+  ],
+  "key": {
+    "P": "#c:plates/neodymium_magnetic",
+    "S": "#c:rods/neodymium_magnetic",
+    "T": "#iis:screws/neodymium_magnetic",
+    "f": "#iis:tools/file",
+    "d": "#iis:tools/screwdriver"
+  },
+  "result": {
+    "id": "iis:branch_cutter_neodymium_magnetic"
+  }
+}

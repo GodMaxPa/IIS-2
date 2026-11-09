@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "iis:block/multi/casing_ulv",
+    "north": "iis:block/multi/tree_farm_front",
+    "south": "iis:block/multi/casing_ulv",
+    "east": "iis:block/multi/casing_ulv",
+    "west": "iis:block/multi/casing_ulv",
+    "up": "iis:block/multi/casing_ulv",
+    "down": "iis:block/multi/casing_ulv"
+  }
+}
