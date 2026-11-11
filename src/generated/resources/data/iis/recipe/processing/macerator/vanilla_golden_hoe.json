@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:golden_hoe",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_gold",
+      "count": 2
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

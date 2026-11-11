@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SS ",
+    "SR ",
+    "  S"
+  ],
+  "key": {
+    "S": "minecraft:string",
+    "R": "iis:sticky_resin"
+  },
+  "result": {
+    "id": "minecraft:lead"
+  }
+}

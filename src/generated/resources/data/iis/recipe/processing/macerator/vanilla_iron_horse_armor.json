@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:iron_horse_armor",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron",
+      "count": 6
+    }
+  ],
+  "duration": 1200,
+  "eut": 2
+}

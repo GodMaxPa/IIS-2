@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PP",
+    "WW",
+    "WW"
+  ],
+  "key": {
+    "P": "#c:plates/iron",
+    "W": "#minecraft:planks"
+  },
+  "result": {
+    "id": "minecraft:smithing_table"
+  }
+}

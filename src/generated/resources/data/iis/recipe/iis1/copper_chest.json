@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PPP",
+    "PCP",
+    "PPP"
+  ],
+  "key": {
+    "P": "#c:plates/copper",
+    "C": "#c:chests/wooden"
+  },
+  "result": {
+    "id": "minecraft:copper_chest"
+  }
+}

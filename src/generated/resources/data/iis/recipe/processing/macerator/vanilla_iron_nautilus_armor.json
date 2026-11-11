@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:iron_nautilus_armor",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron",
+      "count": 5
+    }
+  ],
+  "duration": 1000,
+  "eut": 2
+}

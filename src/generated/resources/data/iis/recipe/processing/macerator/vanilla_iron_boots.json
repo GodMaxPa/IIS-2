@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:iron_boots",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron",
+      "count": 4
+    }
+  ],
+  "duration": 800,
+  "eut": 2
+}

@@ -444,6 +444,10 @@ def bq_items(t):
 FILTER_ITEM, FILTER_COMPONENT = 'ftbfiltersystem:smart_filter', 'ftbfiltersystem:filter'
 ANY_OF = {'minecraft:red_bed': 'minecraft:beds'}
 GT_FLINT_TOOLS = {0: 'sword', 2: 'pickaxe', 4: 'shovel', 6: 'axe', 8: 'hoe'}
+# D145 (owner: "point out the primitive mine digger"): it hung behind the quests of its five parts; it opens with the bronze hull now
+EARLY = {0x732: [0x67C]}
+EXTRA_TEXT = {0x732: ('Открывается сразу после бронзового корпуса. Работает на мускульной силе: положите примитивный бур и лестницы, жмите кнопку в окне (тратит сытость). Копает шахту вниз, ставит лестницу и останавливается на руде. Удобно искать жилы.',
+                      'Opens right after the bronze hull. Runs on muscle power: put in a primitive drill and ladders and press the button in its window (costs food). It digs a shaft down, places a ladder and stops at ore. Handy for finding veins.')}
 
 
 def filter_item(expr):
@@ -500,6 +504,9 @@ def main():
                     task = {'type': 'item', 'item': {'id': m, 'count': 1}, 'count': max(1, it.get('Count:3', 1))}
                     if m in ANY_OF:   # D144: a bed of any colour and the like
                         task['item'] = filter_item(f'item_tag({ANY_OF[m]})')
+                    elif it['id:8'] == 'gregtech:gt.metatool.01' and not m.startswith('iis:flint_') and GT_TOOLS.get(it.get('Damage:2', 0)):
+                        # D145 (owner): a GT tool of any material, not only the iron one
+                        task['item'] = filter_item(f'item_tag(iis:tools/{GT_TOOLS[it.get("Damage:2", 0)]})')
                     if t.get('consume:1', 0):
                         task['consume_items'] = True
                     tasks.append(task)
@@ -607,7 +614,7 @@ def main():
             qo = {'id': hexid(0x1A, qid), 'x': x, 'y': y}
             if abs(sx - 1.0) > 1e-6:
                 qo['size'] = sx
-            deps = visible_deps(qid)
+            deps = EARLY.get(qid, visible_deps(qid))
             if deps:
                 qo['dependencies'] = [hexid(0x1A, d) for d in deps]
                 if b['or'] and len(deps) > 1:
@@ -621,6 +628,10 @@ def main():
                 qo['rewards'] = [dict(r, id=hexid(0x1C, (qid << 8) | i)) for i, r in enumerate(b['rewards'])]
             text(f'quest.{qo["id"]}', b['props'].get('name:8', ''), 'title')
             text(f'quest.{qo["id"]}', b['props'].get('desc:8', ''), 'desc')
+            if qid in EXTRA_TEXT:
+                for loc, line in zip(('ru_ru', 'en_us'), EXTRA_TEXT[qid]):
+                    tr[loc][f'quest.{qo["id"]}.quest_desc'] = list(tr[loc].get(f'quest.{qo["id"]}.quest_desc', [])) + ['', line]
+                qo.pop('hide_until_deps_visible', None)
             cq.append(qo)
         if not cq and not links:
             continue

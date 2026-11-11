@@ -67,8 +67,11 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:wrench_iron",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/wrench)"
+            }
           },
           "count": 1,
           "id": "1B00000000007300"
@@ -207,8 +210,11 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:wire_cutter_iron",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/wire_cutter)"
+            }
           },
           "count": 1,
           "id": "1B00000000014900"
@@ -305,8 +311,11 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:mortar_iron",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/mortar)"
+            }
           },
           "count": 1,
           "id": "1B0000000001A500"
@@ -338,8 +347,11 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:knife_iron",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/knife)"
+            }
           },
           "count": 1,
           "id": "1B0000000001AB00"

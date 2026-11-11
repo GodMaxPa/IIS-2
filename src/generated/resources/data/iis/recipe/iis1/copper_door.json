@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "XX ",
+    "XXh",
+    "XX "
+  ],
+  "key": {
+    "X": "#c:plates/copper",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "minecraft:copper_door",
+    "count": 3
+  }
+}

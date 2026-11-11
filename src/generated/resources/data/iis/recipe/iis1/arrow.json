@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "  A",
+    " S ",
+    "F  "
+  ],
+  "key": {
+    "A": "iis:arrow_head_flint",
+    "S": "minecraft:stick",
+    "F": "minecraft:feather"
+  },
+  "result": {
+    "id": "minecraft:arrow"
+  }
+}

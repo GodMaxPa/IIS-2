@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "minecraft:iron_helmet",
+  "result": {
+    "id": "minecraft:iron_nugget",
+    "count": 22
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

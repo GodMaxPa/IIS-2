@@ -226,6 +226,8 @@ def add_pictures(root, chapters_dir, tr):
         for q in ch.get('quests', []):
             task = next((t for t in q.get('tasks', []) if t.get('type') == 'item'), None)
             iid = task and task['item'].get('id')
+            if iid == 'ftbfiltersystem:smart_filter':   # any of several items: draw the one on the quest's icon
+                iid = q.get('icon', {}).get('id')
             if not iid or iid == 'ftbfiltersystem:smart_filter':
                 continue
             if iid not in done:

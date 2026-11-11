@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    "SSS"
+  ],
+  "key": {
+    "P": "#c:plates/iron",
+    "S": "minecraft:stone"
+  },
+  "result": {
+    "id": "minecraft:stonecutter"
+  }
+}

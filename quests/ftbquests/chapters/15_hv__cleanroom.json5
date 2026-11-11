@@ -1316,8 +1316,11 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:drill_lv_iron",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/drill_lv)"
+            }
           },
           "count": 1,
           "id": "1B00000000069F00"

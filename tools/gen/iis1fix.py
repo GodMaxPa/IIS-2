@@ -23,8 +23,25 @@ OFF = ['iron_block', 'gold_block', 'copper_block', 'diamond_block', 'emerald_blo
        'iron_ingot_from_iron_block', 'gold_ingot_from_gold_block', 'copper_ingot', 'copper_ingot_from_waxed_copper_block', 'diamond', 'emerald',
        'lapis_lazuli', 'redstone', 'coal', 'torch', 'soul_torch', 'charcoal', 'bucket', 'minecart', 'shears', 'repeater', 'comparator', 'dispenser',
        'dropper', 'tnt_minecart', 'paper', 'sugar_from_sugar_cane', 'tnt', 'glass_bottle', 'cookie', 'ender_chest', 'blaze_powder', 'saddle'] \
-    + [f'{m}_{p}' for m in ('iron', 'golden', 'copper') for p in ('helmet', 'chestplate', 'leggings', 'boots')]
-ARMOUR = {'helmet': ['PPP', 'PhP'], 'chestplate': ['PhP', 'PPP', 'PPP'], 'leggings': ['PPP', 'PhP', 'P P'], 'boots': ['P P', 'PhP']}
+    + [f'{m}_{p}' for m in ('iron', 'golden', 'copper') for p in ('helmet', 'chestplate', 'leggings', 'boots')] \
+    + [  # D145 (owner, 11.11: "very thoroughly"): NuggetsFix.zs/IngotsFix.zs (no nuggets or ingots by hand), storage blocks of every kind,
+       # GT_IndustialCraftRecipesLoader:227 flint and steel, ToolFix.zs:38 arrow, Chisel.zs:9 sandstone, GT_IC2.zs:660 lead,
+       # Vanilla.zs:hopper_minecart; the vanilla smelting of tools into one nugget gives way to the GT amounts (below)
+       'iron_nugget', 'gold_nugget', 'copper_nugget', 'netherite_block', 'netherite_ingot_from_netherite_block', 'raw_iron_block', 'raw_iron',
+       'raw_gold_block', 'raw_gold', 'raw_copper_block', 'raw_copper', 'flint_and_steel', 'arrow', 'sandstone', 'lead', 'hopper_minecart',
+       'iron_nugget_from_smelting', 'iron_nugget_from_blasting', 'gold_nugget_from_smelting', 'gold_nugget_from_blasting',
+       'copper_nugget_from_smelting', 'copper_nugget_from_blasting',
+       # things that did not exist in 1.7.10, made by the IIS 1 rule for iron things (recipereplacements: plates and tools); AI
+       'iron_trapdoor', 'iron_chain', 'copper_chain', 'copper_bars', 'copper_door', 'copper_trapdoor', 'copper_chest', 'lightning_rod', 'spyglass',
+       'blast_furnace', 'stonecutter', 'smithing_table', 'shield', 'crossbow']
+# ingots of metal in a vanilla tool or armour piece (GT ItemData), for the furnace (half, in nuggets) and machines (all)
+METAL_IN = {'pickaxe': 3, 'shovel': 1, 'axe': 3, 'hoe': 2, 'sword': 2, 'spear': 1, 'helmet': 5, 'chestplate': 8, 'leggings': 7, 'boots': 4,
+            'horse_armor': 6, 'nautilus_armor': 5}
+VANILLA_METALS = {'iron': ('Iron', 'iron'), 'golden': ('Gold', 'gold'), 'copper': ('Copper', 'copper')}
+VANILLA_BLOCKS = {'Iron': 'iron_block', 'Gold': 'gold_block', 'Copper': 'copper_block', 'Diamond': 'diamond_block', 'Emerald': 'emerald_block',
+                  'Lapis': 'lapis_block', 'Redstone': 'redstone_block', 'Coal': 'coal_block'}
+ARC_INTO = {'Iron': 'WroughtIron', 'Copper': 'AnnealedCopper'}   # GT mSmeltInto of the arc furnace
+ARMOUR ={'helmet': ['PPP', 'PhP'], 'chestplate': ['PhP', 'PPP', 'PPP'], 'leggings': ['PPP', 'PhP', 'P P'], 'boots': ['P P', 'PhP']}
 
 
 def generate(g):
@@ -38,6 +55,10 @@ def generate(g):
         if fin:
             r['fluid_inputs'] = [fin]
         rec[f'{rtype}/{rid}'] = r
+
+    def add_blasting(name, ingredient, item, count):
+        g['add_recipe'](name, {'type': 'minecraft:blasting', 'category': 'misc', 'ingredient': ingredient, 'result': g['result'](item, count),
+                               'experience': 0.1, 'cookingtime': 100})
 
     never = {'neoforge:conditions': [{'type': 'neoforge:never'}]}
     for rid in OFF:
@@ -76,7 +97,59 @@ def generate(g):
     for rid, src, dst in (('cobblestone', 'stone', 'cobblestone'), ('gravel', 'cobblestone', 'gravel'), ('sand', 'gravel', 'sand'),
                           ('cracked_stone_bricks', 'stone_bricks', 'cracked_stone_bricks')):
         shaped(f'iis1/hammer_{rid}', MC(dst), 1, ['h', 'X'], {'X': MC(src)})
-    shaped('iis1/stone_button', MC('stone_button'), 2, ['S', 'S'], {'S': MC('stone')}, 'redstone')
+    # (no 2-button recipe: Vanilla.zs removes GT's "S/S" -> 2 stone buttons)
+    # --- D145 -----------------------------------------------------------------------------------------------------------------------
+    ref, mat_by_name, mass, smelting = g['ref'], g['mat_by_name'], g['mass'], g['smelting']
+    shaped('iis1/flint_and_steel', MC('flint_and_steel'), 1, ['S ', ' F'], {'S': tag_of('nugget', 'Steel'), 'F': MC('flint')}, 'equipment')
+    shaped('iis1/arrow', MC('arrow'), 1, ['  A', ' S ', 'F  '], {'A': I('arrow_head_flint'), 'S': MC('stick'), 'F': MC('feather')}, 'equipment')
+    shaped('iis1/lead', MC('lead'), 1, ['SS ', 'SR ', '  S'], {'S': MC('string'), 'R': I('sticky_resin')}, 'equipment')
+    mrec('compressor', 'sandstone', [ing('#c:sands/colorless', 4)], [out(MC('sandstone'))], 300, 2)
+    mrec('assembler', 'hopper_minecart', [ing(MC('minecart')), ing(MC('hopper'))], [out(MC('hopper_minecart'))], 400, 4)
+    shaped('iis1/iron_trapdoor', MC('iron_trapdoor'), 1, ['PPh', 'PP '], {'P': P('Iron')}, 'redstone')
+    shaped('iis1/copper_trapdoor', MC('copper_trapdoor'), 1, ['PPh', 'PP '], {'P': P('Copper')}, 'redstone')
+    shaped('iis1/copper_door', MC('copper_door'), 3, ['XX ', 'XXh', 'XX '], {'X': P('Copper')}, 'redstone')
+    shaped('iis1/iron_chain', MC('iron_chain'), 1, ['R', 'R', 'R'], {'R': tag_of('ring', 'Iron')}, 'building')
+    shaped('iis1/copper_chain', MC('copper_chain'), 1, ['R', 'R', 'R'], {'R': tag_of('rod', 'Copper')}, 'building')   # GT has no copper rings
+    shaped('iis1/copper_bars', MC('copper_bars'), 8, [' w ', 'XXX', 'XXX'], {'X': tag_of('rod', 'Copper')}, 'building')
+    shaped('iis1/copper_chest', MC('copper_chest'), 1, ['PPP', 'PCP', 'PPP'], {'P': P('Copper'), 'C': '#c:chests/wooden'}, 'building')
+    shaped('iis1/lightning_rod', MC('lightning_rod'), 1, ['R', 'R', 'R'], {'R': tag_of('rod', 'Copper')}, 'redstone')
+    shaped('iis1/spyglass', MC('spyglass'), 1, [' A ', ' P ', ' P '], {'A': MC('amethyst_shard'), 'P': P('Copper')}, 'equipment')
+    shaped('iis1/blast_furnace', MC('blast_furnace'), 1, ['PPP', 'PFP', 'SSS'], {'P': P('Iron'), 'F': MC('furnace'), 'S': MC('smooth_stone')}, 'misc')
+    shaped('iis1/stonecutter', MC('stonecutter'), 1, [' P ', 'SSS'], {'P': P('Iron'), 'S': MC('stone')}, 'misc')
+    shaped('iis1/smithing_table', MC('smithing_table'), 1, ['PP', 'WW', 'WW'], {'P': P('Iron'), 'W': '#minecraft:planks'}, 'misc')
+    shaped('iis1/shield', MC('shield'), 1, ['WPW', 'WWW', ' W '], {'P': P('Iron'), 'W': '#minecraft:planks'}, 'equipment')
+    shaped('iis1/crossbow', MC('crossbow'), 1, ['SPS', 'THT', ' S '], {'S': MC('stick'), 'P': P('Iron'), 'T': MC('string'), 'H': MC('tripwire_hook')}, 'equipment')
+    # vanilla tools and armour back into metal: furnace half in nuggets, macerator all as dust, arc furnace all as ingots (GT)
+    for pre, (mat, short) in VANILLA_METALS.items():
+        nug, dust, arc = f'minecraft:{short}_nugget', ref('dust', mat), ref('ingot', ARC_INTO.get(mat, mat))
+        for part, n in METAL_IN.items():
+            item = MC(f'{pre}_{part}')
+            smelting(f'iis1/smelt_{pre}_{part}', item, nug, n * 9 // 2, 0.1)
+            add_blasting(f'iis1/blast_{pre}_{part}', item, nug, n * 9 // 2)
+            mrec('macerator', f'vanilla_{pre}_{part}', [ing(item)], [out(dust, n)], 200 * n, 2)
+            mrec('arc_furnace', f'vanilla_{pre}_{part}', [ing(item)], [out(arc, n)], mass(mat) * n, 96,
+                 {'ingredient': I('oxygen'), 'amount': mass(mat) * n})
+    for part, rings in (('helmet', 5), ('chestplate', 8), ('leggings', 7), ('boots', 4)):   # steel rings: a quarter of an ingot each
+        item = MC(f'chainmail_{part}')
+        smelting(f'iis1/smelt_chainmail_{part}', item, 'minecraft:iron_nugget', rings * 9 // 8, 0.1)
+        mrec('macerator', f'vanilla_chainmail_{part}', [ing(item)], [out(ref('small_dust', 'Steel'), rings)], 100 * rings, 2)
+    # storage blocks: only machines make them (compressor), and every block goes back: macerator 9 dust, arc furnace and furnace 9 ingots
+    n_blocks = 0
+    for n, m in sorted(mat_by_name.items()):
+        blk = VANILLA_BLOCKS.get(n) or ref('block', n)
+        if not blk:
+            continue
+        mid = m['id']
+        if ref('dust', n):
+            mrec('macerator', f'block_{mid}', [ing(blk)], [out(ref('dust', n), 9)], max(400, mass(n) * 9), 2)
+        if ref('ingot', n):
+            into = ARC_INTO.get(n, n)
+            if ref('ingot', into):
+                mrec('arc_furnace', f'block_{mid}', [ing(blk)], [out(ref('ingot', into), 9)], mass(n) * 9, 96,
+                     {'ingredient': I('oxygen'), 'amount': mass(n) * 9})
+            if not m['blastFurnaceRequired'] and 'NO_SMELTING' not in m['subTags']:
+                smelting(f'iis1/smelt_block_{mid}', blk, ref('ingot', n), 9, 0.7)
+        n_blocks += 1
     # --- redstone parts in the assembler -----------------------------------------------------------------------------------------
     redstone = {'ingredient': I('molten_redstone'), 'amount': 144}
     concrete = {'ingredient': I('molten_concrete'), 'amount': 144}
@@ -88,4 +161,4 @@ def generate(g):
     mrec('assembler', 'tnt_minecart', [ing(MC('minecart')), ing(MC('tnt'))], [out(MC('tnt_minecart'))], 400, 4)
     for rid, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', rid + '.json'), r)
-    return {'off': len(OFF), 'machine': len(rec)}
+    return {'off': len(OFF), 'machine': len(rec), 'blocks': n_blocks}

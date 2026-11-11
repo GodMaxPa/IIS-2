@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "gold_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_gold",
+      "count": 9
+    }
+  ],
+  "duration": 1764,
+  "eut": 2
+}

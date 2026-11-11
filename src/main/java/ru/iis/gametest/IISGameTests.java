@@ -241,6 +241,7 @@ public final class IISGameTests {
             new Test("early_finite_water", 80, EarlyGameTests::finiteWater),
             new Test("modern_vanilla", 20, EarlyGameTests::modernVanilla),
             new Test("notes_0911", 20, NotesTests::notes),
+            new Test("notes_1111", 20, NotesTests::notes1111),
             new Test("world_backup_files", 20, NotesTests::backups),
             new Test("equip_boat_floats", 100, EquipmentGameTests::boatFloats),
             new Test("equip_wreck_drops", 20, EquipmentGameTests::wreckDropsItem),

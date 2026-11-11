@@ -57,6 +57,27 @@ final class NotesTests {
         h.succeed();
     }
 
+    /** Правки 11.11 (D145): ванильное по ИИС 1, переплавка инструментов и блоков, автоферма по уровням, первые ружья руками. */
+    static void notes1111(GameTestHelper h) {
+        for (String id : new String[]{"minecraft:iron_nugget", "minecraft:gold_nugget", "minecraft:flint_and_steel", "minecraft:netherite_block",
+                "minecraft:arrow", "minecraft:sandstone", "minecraft:iron_trapdoor", "minecraft:gold_nugget_from_smelting", "minecraft:raw_iron_block"}) {
+            h.assertTrue(!recipe(h, id), "ванильный рецепт не выключен: " + id);
+        }
+        for (String id : new String[]{"iis:iis1/flint_and_steel", "iis:iis1/arrow", "iis:iis1/lead", "iis:iis1/iron_trapdoor", "iis:iis1/smelt_golden_pickaxe",
+                "iis:processing/macerator/vanilla_golden_pickaxe", "iis:processing/arc_furnace/vanilla_iron_chestplate", "iis:processing/macerator/block_iron",
+                "iis:processing/arc_furnace/block_iron", "iis:iis1/smelt_block_iron", "iis:processing/compressor/sandstone",
+                "iis:equipment/flintlock_pistol_iron", "iis:equipment/musket_iron", "iis:equipment/powder_cartridge_bolt"}) {
+            h.assertTrue(recipe(h, id), "нет рецепта " + id);
+        }
+        var smelt = h.getLevel().recipeAccess().byKey(ResourceKey.create(Registries.RECIPE, Identifier.parse("iis:iis1/smelt_golden_pickaxe"))).get().value();
+        h.assertTrue(smelt instanceof net.minecraft.world.item.crafting.AbstractCookingRecipe c
+                && c.assemble(new net.minecraft.world.item.crafting.SingleRecipeInput(new ItemStack(Items.GOLDEN_PICKAXE))).getCount() == 13,
+                "золотая кирка в печи даёт не 13 самородков");
+        h.assertTrue(ru.iis.multi.block.TreeFarmBlockEntity.casingLevel(ru.iis.lv.LvContent.CASING_MV.get()) == 3
+                && ru.iis.multi.block.TreeFarmBlockEntity.casingLevel(ru.iis.multi.MultiContent.CASING_ULV.get()) == 1, "уровни каркасов автофермы");
+        h.succeed();
+    }
+
     /** Бэкап: архив пишется, старые сверх 20 удаляются. */
     static void backups(GameTestHelper h) {
         try {

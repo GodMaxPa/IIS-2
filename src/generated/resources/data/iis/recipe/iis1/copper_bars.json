@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " w ",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": "#c:rods/copper",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "minecraft:copper_bars",
+    "count": 8
+  }
+}

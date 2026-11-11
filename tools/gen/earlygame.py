@@ -55,7 +55,8 @@ def generate(g):
             ('iron_door', 'iron_door', 3, ['XX ', 'XXh', 'XX '], {'X': P('Iron')}),
             ('cauldron', 'cauldron', 1, ['X X', 'XhX', 'XXX'], {'X': P('Iron')}),
             ('hopper', 'hopper', 1, ['XwX', 'XCX', ' X '], {'X': P('Iron'), 'C': '#c:chests/wooden'}),
-            ('iron_bars', 'iron_bars', 16, [' w ', 'XXX', 'XXX'], {'X': tag_of('rod', 'Iron')}),
+            # GT_CraftingRecipeLoader:43 "tStack.stackSize /= 2": 8 bars from 6 rods (was 16, D145)
+            ('iron_bars', 'iron_bars', 8, [' w ', 'XXX', 'XXX'], {'X': tag_of('rod', 'Iron')}),
             ('heavy_weighted_pressure_plate', 'heavy_weighted_pressure_plate', 1, ['XXh'], {'X': P('Iron')}),
             ('light_weighted_pressure_plate', 'light_weighted_pressure_plate', 1, ['XXh'], {'X': P('Gold')})):
         override(rid, never)

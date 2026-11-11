@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "#c:sands/colorless",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:sandstone",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

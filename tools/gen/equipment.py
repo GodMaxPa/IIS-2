@@ -261,6 +261,12 @@ def generate(g):
     FLINT = 'minecraft:flint'
     shaped('equipment/flintlock_pistol', I('flintlock_pistol'), 1, ['FRR', 'dSP', 'W h'], {'F': FLINT, 'R': R('WroughtIron'), 'S': SC('WroughtIron'), 'P': P('WroughtIron'), 'W': WOOD})
     shaped('equipment/musket', I('musket'), 1, ['FRR', 'SPR', 'WWh'], {'F': FLINT, 'R': R('WroughtIron'), 'S': SC('WroughtIron'), 'P': P('WroughtIron'), 'W': WOOD})
+    # D145 (owner): the first guns without the steam age and LV: plain iron, whose plates, rods and screws are made by hand with GT tools
+    shaped('equipment/flintlock_pistol_iron', I('flintlock_pistol'), 1, ['FRR', 'dSP', 'W h'], {'F': FLINT, 'R': R('Iron'), 'S': SC('Iron'), 'P': P('Iron'), 'W': WOOD})
+    shaped('equipment/musket_iron', I('musket'), 1, ['FRR', 'SPR', 'WWh'], {'F': FLINT, 'R': R('Iron'), 'S': SC('Iron'), 'P': P('Iron'), 'W': WOOD})
+    # nuggets come only from machines (IIS 1 NuggetsFix.zs, D145): a bolt sawn from a rod does for the ball
+    shapeless('equipment/powder_cartridge_bolt', I('powder_cartridge'), 4, ['minecraft:paper', 'minecraft:gunpowder', tag_of('bolt', 'Iron')])
+    shapeless('equipment/powder_cartridge_lead', I('powder_cartridge'), 4, ['minecraft:paper', 'minecraft:gunpowder', tag_of('bolt', 'Lead')])
     shaped('equipment/rifled_musket', I('rifled_musket'), 1, ['FRR', 'SPR', 'WWf'], {'F': FLINT, 'R': R('Steel'), 'S': SC('Steel'), 'P': P('Steel'), 'W': WOOD})
     shaped('equipment/blunderbuss', I('blunderbuss'), 1, ['FBB', 'SPB', 'WWh'], {'F': FLINT, 'B': P('Brass'), 'S': SC('Steel'), 'P': P('Steel'), 'W': WOOD})
 

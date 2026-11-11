@@ -1,0 +1,23 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "minecraft:golden_sword",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:gold_ingot",
+      "count": 2
+    }
+  ],
+  "duration": 392,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 392
+    }
+  ]
+}

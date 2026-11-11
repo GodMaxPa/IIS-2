@@ -19,8 +19,11 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:file_iron",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/file)"
+            }
           },
           "count": 1,
           "id": "1B00000000012900"
@@ -52,8 +55,11 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:soft_hammer_rubber",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/soft_hammer)"
+            }
           },
           "count": 1,
           "id": "1B00000000013600"
@@ -85,8 +91,11 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:saw_iron",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/saw)"
+            }
           },
           "count": 1,
           "id": "1B00000000019200"
@@ -120,8 +129,11 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:hammer_iron",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/hammer)"
+            }
           },
           "count": 1,
           "id": "1B00000000019700"
@@ -153,8 +165,11 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:screwdriver_iron",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/screwdriver)"
+            }
           },
           "count": 1,
           "id": "1B00000000019800"
@@ -469,8 +484,11 @@
         {
           "type": "item",
           "item": {
-            "id": "iis:crowbar_iron",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(iis:tools/crowbar)"
+            }
           },
           "count": 1,
           "id": "1B00000000047500"

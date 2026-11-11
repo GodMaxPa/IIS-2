@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:iron_chestplate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_iron",
+      "count": 8
+    }
+  ],
+  "duration": 1600,
+  "eut": 2
+}

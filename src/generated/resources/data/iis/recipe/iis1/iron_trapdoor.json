@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "pattern": [
-    "S",
-    "S"
+    "PPh",
+    "PP "
   ],
   "key": {
-    "S": "minecraft:stone"
+    "P": "#c:plates/iron",
+    "h": "#iis:tools/hammer"
   },
   "result": {
-    "id": "minecraft:stone_button",
-    "count": 2
+    "id": "minecraft:iron_trapdoor"
   }
 }

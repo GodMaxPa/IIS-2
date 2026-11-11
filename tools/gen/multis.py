@@ -142,9 +142,10 @@ def generate(g):
     # --- D144 (owner): LV tree farm, our own multiblock (Forestry had one); numbers are an AI proposal ---------------------
     controller('tree_farm', 'casing_ulv', 'OVERLAY_FRONT_REPLICATOR', 'gt.blockmachines.multimachine.treefarm.name', 'Tree Farm', [
         ('5x5x5; controller in the middle of the bottom front side', 'Размер 5×5×5; контроллер — в середине передней стороны низа'),
-        ('Bottom: 3x3 of dirt inside, ULV casings or hatches around', 'Низ: внутри поле 3×3 земли, по краю — каркасы ULV или люки'),
-        ('Three layers of air inside glass or ULV casing walls', 'Три слоя пустоты внутри стенок из стекла или каркасов ULV'),
-        ('Top: ULV casings', 'Верх: каркасы ULV'),
+        ('Bottom: 3x3 of dirt inside, casings or hatches around', 'Низ: внутри поле 3×3 земли, по краю — каркасы или люки'),
+        ('Three layers of air inside glass or casing walls', 'Три слоя пустоты внутри стенок из стекла или каркасов'),
+        ('Top: casings; all casings of one tier: ULV, LV, MV, HV, EV or IV machine casings', 'Верх: каркасы; все каркасы одного уровня: ULV, LV, MV, HV, EV или IV'),
+        ('Each tier above ULV: twice as fast (x4 power), +50% logs', 'Каждый уровень выше ULV: вдвое быстрее (энергии ×4), брёвен +50 %'),
         ('Sapling and water in, logs and saplings out', 'Саженец и вода на входе, брёвна и саженцы на выходе'),
         ('Fertilizer or bone meal: twice as fast', 'С удобрением или костной мукой — вдвое быстрее')])
     name(f'block.{NS}.tree_farm', 'Tree Farm', 'Автоферма дерева')

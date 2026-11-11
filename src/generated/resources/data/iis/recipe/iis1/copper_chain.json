@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "R",
+    "R",
+    "R"
+  ],
+  "key": {
+    "R": "#c:rods/copper"
+  },
+  "result": {
+    "id": "minecraft:copper_chain"
+  }
+}

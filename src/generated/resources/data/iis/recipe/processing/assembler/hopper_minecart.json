@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:minecart",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:hopper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:hopper_minecart",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

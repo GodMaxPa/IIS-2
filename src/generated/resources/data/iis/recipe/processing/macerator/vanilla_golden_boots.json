@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:golden_boots",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_gold",
+      "count": 4
+    }
+  ],
+  "duration": 800,
+  "eut": 2
+}

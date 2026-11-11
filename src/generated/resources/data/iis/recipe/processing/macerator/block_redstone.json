@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "redstone_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:redstone",
+      "count": 9
+    }
+  ],
+  "duration": 765,
+  "eut": 2
+}

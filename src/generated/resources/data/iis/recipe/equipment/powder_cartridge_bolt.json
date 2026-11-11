@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:gunpowder",
+    "#iis:bolts/iron"
+  ],
+  "result": {
+    "id": "iis:powder_cartridge",
+    "count": 4
+  }
+}

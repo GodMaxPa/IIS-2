@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "emerald_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_emerald",
+      "count": 9
+    }
+  ],
+  "duration": 400,
+  "eut": 2
+}

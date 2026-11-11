@@ -44,8 +44,8 @@ Q = [
      ('Лопата, пила и монтировка в одном.', 'A shovel, a saw and a crowbar in one.')),
     # --- LV ----------------------------------------------------------------------------------------------------------------------
     ('tree_farm', 1, 0, ['tree_farm'], ['charcoal_pile'], ('Автоферма дерева', 'Tree farm'),
-     ('Многоблок 5×5×5: внизу поле земли 3×3 и люки, стенки из стекла, сверху каркасы ULV. Саженец и вода дают брёвна и новые саженцы, удобрение ускоряет вдвое. Брёвна — в угольную яму или пиролизную печь.',
-      'A 5x5x5 multiblock: 3x3 of dirt and hatches below, glass walls, ULV casings on top. A sapling and water give logs and new saplings; fertilizer doubles the speed. Logs go to the charcoal pile or the pyrolyse oven.')),
+     ('Многоблок 5×5×5: внизу поле земли 3×3 и люки, стенки из стекла, сверху каркасы. Саженец и вода дают брёвна и новые саженцы, удобрение ускоряет вдвое. Каркасы LV, MV, HV, EV, IV вместо ULV: каждый уровень вдвое быстрее и +50 % брёвен. Брёвна — в угольную яму или пиролизную печь.',
+      'A 5x5x5 multiblock: 3x3 of dirt and hatches below, glass walls, casings on top. A sapling and water give logs and new saplings; fertilizer doubles the speed. LV to IV machine casings instead of ULV: each tier twice as fast and +50% logs. Logs go to the charcoal pile or the pyrolyse oven.')),
     ('quantum_chest', 1, 1, ['quantum_chest_lv'], ['start'], ('Квантовый сундук', 'Quantum chest'),
      ('Огромный запас одного предмета в одном блоке.', 'A huge stock of one item in one block.')),
     ('electric_treetap', 1, 2, ['electric_treetap'], ['start'], ('Электрокраник', 'Electric treetap'),

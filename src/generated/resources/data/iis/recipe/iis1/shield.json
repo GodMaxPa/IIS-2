@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "WPW",
+    "WWW",
+    " W "
+  ],
+  "key": {
+    "P": "#c:plates/iron",
+    "W": "#minecraft:planks"
+  },
+  "result": {
+    "id": "minecraft:shield"
+  }
+}
