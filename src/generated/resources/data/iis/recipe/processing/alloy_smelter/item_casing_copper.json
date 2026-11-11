@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/copper",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:item_casing_copper",
+      "count": 3
+    }
+  ],
+  "duration": 128,
+  "eut": 1,
+  "keep": [
+    "iis:mold_casing"
+  ]
+}

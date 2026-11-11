@@ -132,6 +132,12 @@ public final class RailContent {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ElectricFeederBlockEntity>> FEEDER_BE = BLOCK_ENTITIES.register("electric_feeder",
             () -> new BlockEntityType<>(ElectricFeederBlockEntity::new, ELECTRIC_FEEDER.get()));
 
+    /** D146: водонапорная башня Railcraft — полый куб 3×3×3 из обшивки. */
+    public static final DeferredBlock<ru.iis.rail.block.WaterTankBlock> WATER_TANK_SIDING = block("water_tank_siding", ru.iis.rail.block.WaterTankBlock::new,
+            p -> p.mapColor(MapColor.WOOD).strength(2.0f, 3.0f).sound(SoundType.WOOD));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ru.iis.rail.block.WaterTankBlockEntity>> WATER_TANK_BE = BLOCK_ENTITIES.register("water_tank",
+            () -> new BlockEntityType<>(ru.iis.rail.block.WaterTankBlockEntity::new, WATER_TANK_SIDING.get()));
+
     // --- сигналы, детектор, погрузчики, инструменты (заход 3) ----------------------------------------------------
     public static final DeferredItem<Item> SIGNAL_LAMP = item("signal_lamp");
     private static Block.Properties signal(Block.Properties p) {
@@ -228,5 +234,7 @@ public final class RailContent {
         NeoForge.EVENT_BUS.addListener(RailEvents::onEntityInteract);
         NeoForge.EVENT_BUS.addListener(RailEvents::onEntityLeave);
         NeoForge.EVENT_BUS.addListener(RailEvents::onPlayerTick);
+        modBus.addListener((net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent e) -> e.registerBlockEntity(
+                net.neoforged.neoforge.capabilities.Capabilities.Fluid.BLOCK, WATER_TANK_BE.get(), ru.iis.rail.block.WaterTankBlockEntity::handler));
     }
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:ingot_arsenic",
+  "result": {
+    "id": "iis:nugget_arsenic",
+    "count": 9
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

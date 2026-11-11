@@ -645,6 +645,42 @@
       ]
     },
     {
+      "id": "1A000000000001C5",
+      "x": 2.75,
+      "y": 8.75,
+      "size": 1.5,
+      "dependencies": [
+        "1A000000000001BA",
+        "1A000000000001D2",
+        "1A000000000001CF"
+      ],
+      "icon": {
+        "id": "iis:water_tank_siding",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:water_tank_siding",
+            "count": 1
+          },
+          "count": 26,
+          "id": "1B0000000001C500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000001C500"
+        }
+      ]
+    },
+    {
       "id": "1A000000000001C6",
       "x": 8.0,
       "y": 7.5,

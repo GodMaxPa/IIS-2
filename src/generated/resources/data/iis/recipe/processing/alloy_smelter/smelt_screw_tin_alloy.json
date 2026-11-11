@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "iis:screw_tin_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_tin_alloy",
+      "count": 1
+    }
+  ],
+  "duration": 130,
+  "eut": 3,
+  "keep": [
+    "iis:mold_nugget"
+  ]
+}

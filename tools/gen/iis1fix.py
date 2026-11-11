@@ -50,10 +50,12 @@ def generate(g):
     ing = lambda i, c=1: {'ingredient': i, 'count': c}
     out = lambda i, c=1: {'id': i, 'count': c}
 
-    def mrec(rtype, rid, inputs, outputs, dur, eut, fin=None):
+    def mrec(rtype, rid, inputs, outputs, dur, eut, fin=None, keep=None):
         r = {'type': f'{NS}:{rtype}', 'inputs': inputs, 'outputs': outputs, 'duration': int(dur), 'eut': int(eut)}
         if fin:
             r['fluid_inputs'] = [fin]
+        if keep:
+            r['keep'] = [keep]
         rec[f'{rtype}/{rid}'] = r
 
     def add_blasting(name, ingredient, item, count):
@@ -159,6 +161,74 @@ def generate(g):
     mrec('assembler', 'dropper', [ing('#c:cobblestones', 7), ing(MC('redstone'))], [out(MC('dropper'))], 400, 4)
     mrec('assembler', 'dispenser', [ing('#c:cobblestones', 7), ing(MC('bow'))], [out(MC('dispenser'))], 400, 4, redstone)
     mrec('assembler', 'tnt_minecart', [ing(MC('minecart')), ing(MC('tnt'))], [out(MC('tnt_minecart'))], 400, 4)
+
+    # --- D146 (owner: "the alloy smelter misses many recipes", "wrought iron cannot be had"): GT5 as in IIS 1 -------------------------
+    # GT_ModHandler#addSmeltingAndAlloySmeltingRecipe: every furnace smelting into an ingot, nugget or block is also an alloy smelter
+    # recipe with the mould of the result (130 t, 3 EU/t); ProcessingNugget: 9 nuggets + ingot mould -> ingot (200 t, 2), ingot + nugget
+    # mould -> 9 nuggets (100 t, 1), and an ingot without a smelting of its own smelts into 9 nuggets (so iron ingot -> iron nuggets ->
+    # wrought iron nuggets, the IIS 1 chain); ProcessingDust: 4 small or 9 tiny piles + ingot mould; GT_RecipeRegistrator#registerReverseSmelting:
+    # parts of up to one ingot of metal smelt back (furnace and alloy smelter); ProcessingDye: stained glass; ProcessingShaping: item
+    # casings; GT_MachineRecipeLoader:470, 1023-1026: glass tube, redstone alloy, conductive iron, soularium.
+    item_ref = g['item_ref']
+    kind_of = {v: p for (p, mname), v in item_ref.items() if p in ('ingot', 'nugget', 'block', 'gem')}
+    for v, p in (('minecraft:iron_ingot', 'ingot'), ('minecraft:gold_ingot', 'ingot'), ('minecraft:copper_ingot', 'ingot'),
+                 ('minecraft:iron_nugget', 'nugget'), ('minecraft:gold_nugget', 'nugget'), ('minecraft:copper_nugget', 'nugget')):
+        kind_of[v] = p
+    MOLD = {'ingot': I('mold_ingot'), 'nugget': I('mold_nugget'), 'block': I('mold_block')}
+    SKIP = ('crushed', 'purified', 'centrifuged', 'ore', 'raw', 'impure', 'pure_')
+    n_alloy = 0
+    for name, r in sorted(g['recipes'].items()):
+        if r.get('type') != 'minecraft:smelting' or name.startswith('iis1/smelt_') or any(s in name for s in SKIP):
+            continue
+        res = r['result']
+        kind = kind_of.get(res['id'])
+        src = r['ingredient'] if isinstance(r['ingredient'], str) else None
+        if kind not in MOLD or not src:
+            continue
+        mrec('alloy_smelter', f'smelt_{name.replace("/", "_")}', [ing(src)], [out(res['id'], res.get('count', 1))], 130, 3, keep=MOLD[kind])
+        n_alloy += 1
+    smelted = {r['ingredient'] for r in g['recipes'].values() if r.get('type') == 'minecraft:smelting' and isinstance(r.get('ingredient'), str)}
+    VAN_INGOT = {'Iron': 'minecraft:iron_ingot', 'Gold': 'minecraft:gold_ingot', 'Copper': 'minecraft:copper_ingot'}
+    PARTS = {'plate': 9, 'small_gear': 9, 'long_rod': 9, 'rod': 4, 'ring': 2, 'foil': 2, 'bolt': 1, 'screw': 1, 'wire_fine': 1}  # nuggets in a part
+    for n, m in sorted(mat_by_name.items()):
+        ingot, nugget, mid = ref('ingot', n), ref('nugget', n), m['id']
+        if not ingot or m['blastFurnaceRequired'] or 'NO_SMELTING' in m['subTags'] or n in ('Naquadah', 'NaquadahEnriched'):
+            continue
+        if nugget:
+            mrec('alloy_smelter', f'nugget_from_ingot_{mid}', [ing(tag_of('ingot', n))], [out(nugget, 9)], 100, 1, keep=MOLD['nugget'])
+            mrec('alloy_smelter', f'ingot_from_nugget_{mid}', [ing(tag_of('nugget', n), 9)], [out(ingot)], 200, 2, keep=MOLD['ingot'])
+            ingot_item = VAN_INGOT.get(n, ingot)
+            if ingot_item not in smelted and tag_of('ingot', n) not in smelted:
+                smelting(f'iis1/smelt_ingot_{mid}', ingot_item, nugget, 9, 0.1)
+        for pre, count in (('small_dust', 4), ('tiny_dust', 9)):
+            if ref(pre, n) and ref('dust', n):
+                mrec('alloy_smelter', f'ingot_from_{pre}_{mid}', [ing(tag_of(pre, n), count)], [out(ingot)], 130, 3, keep=MOLD['ingot'])
+        if 'METAL' not in m['subTags']:
+            continue
+        for part, nug in PARTS.items():
+            item = ref(part, n)
+            if not item or item in smelted:
+                continue
+            res, cnt = (ingot, 1) if nug == 9 else (nugget, nug)
+            if not res:
+                continue
+            smelting(f'iis1/smelt_{part}_{mid}', item, res, cnt, 0.1)
+            mrec('alloy_smelter', f'smelt_{part}_{mid}', [ing(item)], [out(res, cnt)], 130, 3, keep=MOLD['ingot' if nug == 9 else 'nugget'])
+            n_alloy += 1
+    for color in ('white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown',
+                  'green', 'red', 'black'):
+        mrec('alloy_smelter', f'stained_glass_{color}', [ing(MC('glass'), 8), ing(f'#c:dyes/{color}')], [out(MC(f'{color}_stained_glass'), 8)], 200, 8)
+        if ref('dust', 'Glass'):
+            mrec('alloy_smelter', f'stained_glass_{color}_dust', [ing(tag_of('dust', 'Glass'), 8), ing(f'#c:dyes/{color}')], [out(MC(f'{color}_stained_glass'), 8)], 200, 8)
+    for mat, cid in (('Iron', 'iron'), ('Tin', 'tin'), ('Lead', 'lead'), ('Copper', 'copper'), ('Bronze', 'bronze'), ('Gold', 'gold')):
+        mrec('alloy_smelter', f'item_casing_{cid}', [ing(tag_of('ingot', mat), 2)], [out(I(f'item_casing_{cid}'), 3)], 128, 1, keep=I('mold_casing'))
+    if ref('dust', 'Glass'):
+        mrec('alloy_smelter', 'glass_tube', [ing(tag_of('dust', 'Glass'))], [out(I('glass_tube'))], 160, 8, keep=I('mold_ball'))
+    for rid, a, b, res in (('redstone_alloy', tag_of('dust', 'Redstone'), tag_of('ingot', 'Silicon'), ref('ingot', 'RedstoneAlloy')),
+                           ('conductive_iron', tag_of('dust', 'Redstone'), tag_of('ingot', 'Iron'), ref('ingot', 'ConductiveIron')),
+                           ('soularium', MC('soul_sand'), tag_of('ingot', 'Gold'), ref('ingot', 'Soularium'))):
+        if res:
+            mrec('alloy_smelter', rid, [ing(a), ing(b)], [out(res)], 400, 24)
     for rid, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', rid + '.json'), r)
     return {'off': len(OFF), 'machine': len(rec), 'blocks': n_blocks}

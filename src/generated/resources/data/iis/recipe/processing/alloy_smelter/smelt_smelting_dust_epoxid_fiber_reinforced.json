@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/epoxid_fiber_reinforced",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_epoxid_fiber_reinforced",
+      "count": 1
+    }
+  ],
+  "duration": 130,
+  "eut": 3,
+  "keep": [
+    "iis:mold_ingot"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "ISI",
+    "PPP"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "I": "#c:plates/iron",
+    "S": "minecraft:slime_ball"
+  },
+  "result": {
+    "id": "iis:water_tank_siding",
+    "count": 6
+  }
+}

@@ -78,6 +78,31 @@ final class NotesTests {
         h.succeed();
     }
 
+    /** Правки 11.11 (2) (D146): печь сплавов как в GT, цепочка кованого железа, водонапорная башня. */
+    static void notes1111b(GameTestHelper h) {
+        for (String id : new String[]{"iis:processing/alloy_smelter/nugget_from_ingot_iron", "iis:processing/alloy_smelter/ingot_from_nugget_wrought_iron",
+                "iis:processing/alloy_smelter/ingot_from_tiny_dust_copper", "iis:processing/alloy_smelter/smelt_smelting_dust_iron",
+                "iis:processing/alloy_smelter/stained_glass_red", "iis:processing/alloy_smelter/item_casing_iron", "iis:processing/alloy_smelter/smelt_plate_iron",
+                "iis:iis1/smelt_ingot_iron", "iis:iis1/smelt_plate_iron", "iis:smelting/nugget_iron_wrought", "iis:rail/water_tank_siding_slime_ball"}) {
+            h.assertTrue(recipe(h, id), "нет рецепта " + id);
+        }
+        var smelt = h.getLevel().recipeAccess().byKey(ResourceKey.create(Registries.RECIPE, Identifier.parse("iis:iis1/smelt_ingot_iron"))).get().value();
+        h.assertTrue(smelt instanceof net.minecraft.world.item.crafting.AbstractCookingRecipe c
+                && c.assemble(new net.minecraft.world.item.crafting.SingleRecipeInput(new ItemStack(Items.IRON_INGOT))).is(Items.IRON_NUGGET), "железный слиток в печи не даёт самородки");
+        h.assertTrue(ru.iis.rail.block.WaterTankBlockEntity.refill(net.minecraft.world.level.biome.Biome.Precipitation.RAIN, false, true) == 10
+                && ru.iis.rail.block.WaterTankBlockEntity.refill(net.minecraft.world.level.biome.Biome.Precipitation.RAIN, true, true) == 30
+                && ru.iis.rail.block.WaterTankBlockEntity.refill(net.minecraft.world.level.biome.Biome.Precipitation.NONE, true, true) == 0, "набор воды башней");
+        var siding = ru.iis.rail.RailContent.WATER_TANK_SIDING.get().defaultBlockState();
+        for (int x = 0; x < 3; x++) for (int y = 0; y < 3; y++) for (int z = 0; z < 3; z++) {
+            if (x == 1 && y == 1 && z == 1) continue;
+            h.setBlock(new net.minecraft.core.BlockPos(x + 1, y + 1, z + 1), siding);
+        }
+        net.minecraft.core.BlockPos corner = h.absolutePos(new net.minecraft.core.BlockPos(1, 3, 1));
+        h.assertTrue(h.getLevel().getBlockEntity(corner) instanceof ru.iis.rail.block.WaterTankBlockEntity w && w.master() != null
+                && ru.iis.rail.block.WaterTankBlockEntity.isMaster(h.getLevel(), h.absolutePos(new net.minecraft.core.BlockPos(2, 1, 2))), "башня 3×3×3 не собралась");
+        h.succeed();
+    }
+
     /** Бэкап: архив пишется, старые сверх 20 удаляются. */
     static void backups(GameTestHelper h) {
         try {

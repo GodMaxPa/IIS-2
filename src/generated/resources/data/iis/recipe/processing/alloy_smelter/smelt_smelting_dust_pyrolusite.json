@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/pyrolusite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_manganese",
+      "count": 6
+    }
+  ],
+  "duration": 130,
+  "eut": 3,
+  "keep": [
+    "iis:mold_nugget"
+  ]
+}

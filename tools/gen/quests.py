@@ -246,6 +246,7 @@ RAILCRAFT_MAP = {
     ('tool.crowbar.reinforced', 0): 'crowbar_reinforced',
     # the IC2 MFE cart is not ported: the electric locomotive takes an MV 2x2 battery buffer instead (PORTING_NOTES, D102)
     ('cart.energy.mfe', 0): 'battery_buffer_2x2_mv',
+    ('machine.alpha', 14): 'water_tank_siding',   # D146: water tank
 }
 GT_TOOLS = {100: 'drill_lv', 110: 'chainsaw_lv', 120: 'wrench_lv', 0: 'sword', 2: 'pickaxe', 4: 'shovel', 6: 'axe', 8: 'hoe', 10: 'saw', 12: 'hammer', 14: 'soft_hammer', 16: 'wrench',
             18: 'file', 20: 'crowbar', 22: 'screwdriver', 24: 'mortar', 26: 'wire_cutter', 34: 'knife',

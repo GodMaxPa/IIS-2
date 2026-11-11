@@ -2444,6 +2444,13 @@
     "{image:iis:textures/quest_recipe/minecraft__charcoal.png width:120 height:72 align:center}"
   ],
   "quest.1A000000000001C4.title": "Charcoal",
+  "quest.1A000000000001C5.quest_desc": [
+    "To build this, you have to place these blocks as a cube, but with an empty center block on the middle layer. This multiblock will work as a small source of water, but anyway, it should be enough for a few bronze coal boilers, if your home is not in a desert, of course, since WTS may conjure water out of the air, and its collection speed depends on the biome. Rain increases collection speed significantly, but there are no rainfalls in the desert. And one more hint: place this structure under the open sky, otherwise the workrate will be low.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__water_tank_siding.png width:120 height:72 align:center}"
+  ],
+  "quest.1A000000000001C5.title": "Water Tank",
   "quest.1A000000000001C6.quest_desc": [
     "This machine can be used to get 2 plates from 3 ingots - this is more efficient than using a regular hammer. Another way to use a forge hammer - to obtain crushed ore from ore blocks or make impure dust from crushed ore very quickly. Also you will be able to make sand from... well, it would be better if you searched recipes by yourself.",
     "",

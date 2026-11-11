@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_meteoric_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_meteoric_iron",
+      "count": 1
+    }
+  ],
+  "duration": 130,
+  "eut": 3,
+  "keep": [
+    "iis:mold_ingot"
+  ]
+}

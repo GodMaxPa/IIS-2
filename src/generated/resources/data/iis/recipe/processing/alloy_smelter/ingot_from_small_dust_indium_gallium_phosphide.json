@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#iis:small_dusts/indium_gallium_phosphide",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_indium_gallium_phosphide",
+      "count": 1
+    }
+  ],
+  "duration": 130,
+  "eut": 3,
+  "keep": [
+    "iis:mold_ingot"
+  ]
+}

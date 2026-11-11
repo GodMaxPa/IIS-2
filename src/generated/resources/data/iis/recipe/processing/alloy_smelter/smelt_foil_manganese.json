@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "iis:foil_manganese",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_manganese",
+      "count": 2
+    }
+  ],
+  "duration": 130,
+  "eut": 3,
+  "keep": [
+    "iis:mold_nugget"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:ingot_tin",
+  "result": {
+    "id": "iis:nugget_tin",
+    "count": 9
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:wire_fine_copper",
+  "result": {
+    "id": "minecraft:copper_nugget"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

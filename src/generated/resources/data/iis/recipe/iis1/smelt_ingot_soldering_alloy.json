@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:ingot_soldering_alloy",
+  "result": {
+    "id": "iis:nugget_soldering_alloy",
+    "count": 9
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

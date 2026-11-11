@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/stibnite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_antimony",
+      "count": 6
+    }
+  ],
+  "duration": 130,
+  "eut": 3,
+  "keep": [
+    "iis:mold_nugget"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/styrene_butadiene_rubber",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_styrene_butadiene_rubber",
+      "count": 1
+    }
+  ],
+  "duration": 130,
+  "eut": 3,
+  "keep": [
+    "iis:mold_ingot"
+  ]
+}

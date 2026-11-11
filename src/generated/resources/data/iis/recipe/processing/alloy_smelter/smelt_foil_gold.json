@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "iis:foil_gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:gold_nugget",
+      "count": 2
+    }
+  ],
+  "duration": 130,
+  "eut": 3,
+  "keep": [
+    "iis:mold_nugget"
+  ]
+}

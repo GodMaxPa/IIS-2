@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:ingot_desh",
+  "result": {
+    "id": "iis:nugget_desh",
+    "count": 9
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

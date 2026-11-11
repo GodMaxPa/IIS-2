@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/gold",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:gold_ingot",
+      "count": 1
+    }
+  ],
+  "duration": 130,
+  "eut": 3,
+  "keep": [
+    "iis:mold_ingot"
+  ]
+}

@@ -1,6 +1,6 @@
 # IIS 1 quests -> FTB Quests (D101)
 
-Quests in IIS 1: 1943; written: 1715; hidden until their items are ported: 225; chapters: 36, one of them ours (D129, 90 quests).
+Quests in IIS 1: 1943; written: 1716; hidden until their items are ported: 224; chapters: 36, one of them ours (D129, 90 quests).
 
 ## Most needed unported items (task count)
 
@@ -14,7 +14,6 @@ Quests in IIS 1: 1943; written: 1715; hidden until their items are ported: 225; 
 - 1 × `Railcraft:machine.beta:1` 
 - 1 × `Railcraft:machine.beta:2` 
 - 1 × `Forestry:factory2:2` 
-- 1 × `Railcraft:machine.alpha:14` 
 - 1 × `gregtech:gt.metaitem.01:2676` Смесь металлов
 - 1 × `GalacticraftCore:item.schematic:1` 
 - 1 × `Forestry:thermionicTubes:1` 

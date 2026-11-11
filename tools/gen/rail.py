@@ -668,6 +668,36 @@ def generate(g):
     name(f'block.{NS}.electric_feeder.tooltip.0', 'Feeds electric tracks next to it from GT cables, up to 512 V',
          'Питает соседние электрические пути от проводов GT, до 512 В')
     name(f'message.{NS}.electric_feeder', 'Stored: %s / %s EU', 'Запас: %s / %s EU')
+    # --- D146: water tank siding (Railcraft TANK_WATER; GT_RailcraftRecipesLoader:111 "PPP/ISI/PPP", IIS 1 railcraft_stuff_use_plates) --
+    im = canvas(); d = ImageDraw.Draw(im)
+    d.rectangle([0, 0, 15, 15], fill=(150, 110, 62, 255))
+    for y in (3, 7, 11):
+        d.line([0, y, 15, y], fill=(118, 84, 46, 255))
+    for x0, y0 in ((5, 0), (11, 4), (3, 8), (9, 12)):
+        d.line([x0, y0, x0, y0 + 2], fill=(118, 84, 46, 255))
+    for y in (1, 14):
+        d.rectangle([0, y - 1, 15, y], fill=(110, 112, 118, 255))
+        for x in (2, 7, 12):
+            d.point((x, y - 1), fill=(170, 172, 178, 255))
+    d.rectangle([0, 0, 15, 15], outline=(70, 50, 30, 255))
+    im.save(tex('block/rail/water_tank_siding'))
+    write(os.path.join(A, 'models', 'block', 'rail', 'water_tank_siding.json'), {'parent': 'minecraft:block/cube_all', 'textures': {'all': f'{NS}:block/rail/water_tank_siding'}})
+    write(os.path.join(A, 'blockstates', 'water_tank_siding.json'), {'variants': {'': {'model': f'{NS}:block/rail/water_tank_siding'}}})
+    write(os.path.join(A, 'items', 'water_tank_siding.json'), {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/rail/water_tank_siding'}})
+    write(os.path.join(D, NS, 'loot_table', 'blocks', 'water_tank_siding.json'), {
+        'type': 'minecraft:block', 'pools': [{'rolls': 1, 'entries': [{'type': 'minecraft:item', 'name': f'{NS}:water_tank_siding'}],
+                                              'conditions': [{'condition': 'minecraft:survives_explosion'}]}]})
+    block_tags.setdefault('minecraft:mineable/axe', []).append(f'{NS}:water_tank_siding')
+    name(f'block.{NS}.water_tank_siding', 'Water Tank Siding', 'Обшивка водонапорной башни')
+    for i, (en, ru) in enumerate((('Hollow 3x3x3 cube of 26 sidings collects water from the air', 'Полый куб 3×3×3 из 26 блоков собирает воду из воздуха'),
+                                  ('More in rain, none in a desert, half without open sky; 400 buckets', 'В дождь больше, в пустыне нет, без неба вдвое меньше; 400 вёдер'),
+                                  ('Gives water down from the bottom; pipes take it from any siding', 'Отдаёт воду вниз; трубы забирают из любого блока обшивки'))):
+        name(f'block.{NS}.water_tank_siding.tooltip.{i}', en, ru)
+    name(f'message.{NS}.water_tank', 'Water: %s / %s buckets', 'Вода: %s / %s вёдер')
+    name(f'message.{NS}.water_tank.incomplete', 'Not a complete 3x3x3 tank', 'Куб 3×3×3 не собран')
+    for slime in ('minecraft:slime_ball', f'{NS}:sticky_resin'):
+        shaped(f'water_tank_siding_{slime.split(":")[1]}', ['PPP', 'ISI', 'PPP'], {'P': '#minecraft:planks', 'I': '#c:plates/iron', 'S': slime},
+               I('water_tank_siding'), 6)
     for eid in ('loco_steam', 'loco_electric', 'track_layer', 'tunnel_bore'):
         name(f'entity.{NS}.{eid}', *ITEMS[eid])
     name(f'item.{NS}.loco_steam.tooltip.0', 'Water and solid fuel; boils at 100 °C, needs half a steam tank to move',

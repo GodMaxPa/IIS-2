@@ -1,0 +1,21 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:dusts/glass",
+      "count": 8
+    },
+    {
+      "ingredient": "#c:dyes/red",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:red_stained_glass",
+      "count": 8
+    }
+  ],
+  "duration": 200,
+  "eut": 8
+}

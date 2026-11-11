@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:iron_nugget",
+      "count": 9
+    }
+  ],
+  "duration": 100,
+  "eut": 1,
+  "keep": [
+    "iis:mold_nugget"
+  ]
+}

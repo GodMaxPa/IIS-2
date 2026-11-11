@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:bolt_uranium",
+  "result": {
+    "id": "iis:nugget_uranium"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#iis:tiny_dusts/gallium",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_gallium",
+      "count": 1
+    }
+  ],
+  "duration": 130,
+  "eut": 3,
+  "keep": [
+    "iis:mold_ingot"
+  ]
+}

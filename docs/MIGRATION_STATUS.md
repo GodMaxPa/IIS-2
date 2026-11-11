@@ -208,3 +208,4 @@
 | Напыление, породы, новое ванильное D143 | GameTest `modern_vanilla` |
 | Правки 09.11 D144 | GameTest `notes_0911`, `world_backup_files` |
 | Правки 11.11 D145 | GameTest `notes_1111` |
+| Печь сплавов, кованое железо, водонапорная башня D146 | GameTest `notes_1111b` |

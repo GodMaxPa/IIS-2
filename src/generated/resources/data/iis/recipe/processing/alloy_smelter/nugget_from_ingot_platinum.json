@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/platinum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_platinum",
+      "count": 9
+    }
+  ],
+  "duration": 100,
+  "eut": 1,
+  "keep": [
+    "iis:mold_nugget"
+  ]
+}
