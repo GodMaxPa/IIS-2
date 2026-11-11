@@ -302,6 +302,9 @@ VANILLA = {
     ('gem', 'Lapis'): 'minecraft:lapis_lazuli', ('gem', 'NetherQuartz'): 'minecraft:quartz',
     ('gem', 'EnderPearl'): 'minecraft:ender_pearl', ('gem', 'EnderEye'): 'minecraft:ender_eye', ('gem', 'NetherStar'): 'minecraft:nether_star',
     ('gem', 'Amethyst'): 'minecraft:amethyst_shard',   # D143: the vanilla shard is the GT gem
+    # D147 (diagnostic): GT_Loader_OreDictionary:70-76 — sugar, gunpowder, blaze powder and blaze rod are the GT dusts and rod
+    ('dust', 'Sugar'): 'minecraft:sugar', ('dust', 'Gunpowder'): 'minecraft:gunpowder', ('dust', 'Blaze'): 'minecraft:blaze_powder',
+    ('rod', 'Blaze'): 'minecraft:blaze_rod',
     ('gem', 'Flint'): 'minecraft:flint', ('gem', 'Charcoal'): 'minecraft:charcoal', ('plate', 'Paper'): 'minecraft:paper', ('dust', 'Redstone'): 'minecraft:redstone', ('rod', 'Wood'): 'minecraft:stick',
 }
 NOT_GENERATED_MATERIALS = {'Wood'}  # wood forms (planks, sticks) are vanilla
