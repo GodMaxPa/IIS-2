@@ -8,7 +8,6 @@
   "chapter.1D00000000000006.title": "First Aluminium",
   "chapter.1D00000000000007.title": "D.Tower & I.Compressor",
   "chapter.1D00000000000008.title": "Circuit & Turbine & Pump",
-  "chapter.1D00000000000009.title": "First Steps",
   "chapter.1D0000000000000A.title": "Good Circuit",
   "chapter.1D0000000000000B.title": "Big chemistry",
   "chapter.1D0000000000000C.title": "N. Star & Fusion Reactor",
@@ -27,7 +26,6 @@
   "chapter.1D00000000000019.title": "[G] Quality of Life",
   "chapter.1D0000000000001A.title": "[G] SB Machines",
   "chapter.1D0000000000001B.title": "Steam & Steel",
-  "chapter.1D0000000000001C.title": "First Tools",
   "chapter.1D0000000000001D.title": "Nether & LBB",
   "chapter.1D0000000000001E.title": "AE2: Proc. & Cont.",
   "chapter.1D0000000000001F.title": "HV & Cleanroom",
@@ -35,6 +33,8 @@
   "chapter.1D00000000000021.title": "Project Red",
   "chapter.1D00000000001000.title": "Weapons and vehicles",
   "chapter.1D00000000001001.title": "What else IIS 2 has",
+  "chapter.1D00000000001010.title": "Landing",
+  "chapter.1D00000000001011.title": "Bronze and tools",
   "quest.1A00000000000000.quest_desc": [
     "A part of some IV tier machines."
   ],
@@ -505,10 +505,6 @@
     "{image:iis:textures/quest_recipe/minecraft__redstone_torch.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000000066.title": "Redstone Torch",
-  "quest.1A00000000000067.quest_desc": [
-    "Redstone quests chain. Height for search: 10-40 REDSTONE vein (Redstone, Ruby and Cinnabar)."
-  ],
-  "quest.1A00000000000067.title": "Real Redstone",
   "quest.1A00000000000068.quest_desc": [
     "Calc. processor + redstone torch. You may place this item onto a glass cable and configure it to emit redstone signal depending on the number of certain items. It can help you to automatically start/stop some production processes."
   ],
@@ -555,13 +551,6 @@
     "{image:iis:textures/quest_recipe/iis__electric_blast_furnace.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000000072.title": "Electric blast furnace",
-  "quest.1A00000000000073.quest_desc": [
-    "It can dismantle gregtech machines, connect or disconnect pipes, set the direction of a gas or steam flow.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__wrench_iron.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000073.title": "Wrench (gregtech)",
   "quest.1A00000000000074.quest_desc": [
     "Use a metal bender.",
     "",
@@ -827,25 +816,10 @@
     "To make a tin alloy ingot you have to smelt iron and tin 1-to-1 in an alloy smelter. Then use a bender to make the plate."
   ],
   "quest.1A000000000000A3.title": "Tin Alloy",
-  "quest.1A000000000000A4.quest_desc": [
-    "Height for search: 10-40 IRON ORE vein (Brown Limonite, Yellow Limonite, Banded Iron, Malachite) or 50-120 MAGNETITE vein (Magnetite, Iron, VanadiumMagnetite) or 10 - 30 COPPER vein (Chalcopyrite, Iron, Pyrite, Copper). Find and smelt Iron/Magnetite/Limonite/Banded Iron ores to get an iron ingot. Note that with level 1 pickaxe (stone or flint one) you can only dig Brown Limonite ore. Other ores require at least second level pickaxe to dig them out. Another way to find iron ore is to dig it out of a small ore block."
-  ],
-  "quest.1A000000000000A4.title": "Iron",
-  "quest.1A000000000000A5.quest_desc": [
-    "Height for search: 40-120 TIN vein (Cassiterite, Tin). Melt tin ore to get a tin ingot. Also you may smelt an \"Impure Pile of Tin Dust\", which you can find by breaking small tin ore blocks."
-  ],
-  "quest.1A000000000000A5.title": "Tin",
   "quest.1A000000000000A6.quest_desc": [
     "Height to search: 5 - 30 BERYLLIUM vein (Beryllium, Emerald, Thorium). Use a regular furnace to get ingot. Then use a bender to get a plate."
   ],
   "quest.1A000000000000A6.title": "Beryllium",
-  "quest.1A000000000000A7.quest_desc": [
-    "Craft a furnace to smelt ores or cook food. Note! some quests contain two rewards: fixed and one more is variation. Variation you may choose in the bottom of this window by click arrow right.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__furnace.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000000A7.title": "First Furnace",
   "quest.1A000000000000A8.quest_desc": [
     "It may be used in nuclear power.",
     "",
@@ -897,13 +871,6 @@
     "Height to search: 20 - 30. You may get uranium-235 as by-product only from uraninite and uranium ores."
   ],
   "quest.1A000000000000B1.title": "Uranium 235 Nugget",
-  "quest.1A000000000000B2.quest_desc": [
-    "For starters, you have to craft an Iron or Bronze pickaxe head. Then use a wooden stick to make a second level pickaxe. It can dig most of gregtech ores (but not all). Later you can craft a level 3 pickaxe from §9cobalt §for §bdiamonds§f.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__pickaxe_head_iron.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000000B2.title": "2 Level Pickaxe",
   "quest.1A000000000000B3.quest_desc": [
     "Put EUNF into an empty fuel rod with a canning machine."
   ],
@@ -1160,10 +1127,6 @@
     "A RAM chip often used for crafting circuits."
   ],
   "quest.1A000000000000E8.title": "Random Access Memory Chip",
-  "quest.1A000000000000E9.quest_desc": [
-    "Height to search: 30-60 GALENA vein (Galena, Silver, Lead). You may find silver ore in a vein of galena ore."
-  ],
-  "quest.1A000000000000E9.title": "Silver Ingot",
   "quest.1A000000000000EA.quest_desc": [
     "An alloy of silver and gold (use an alloy smelter)."
   ],
@@ -1274,10 +1237,6 @@
     "{image:iis:textures/quest_recipe/iis__dust_black_bronze.png width:120 height:72 align:center}"
   ],
   "quest.1A000000000000FD.title": "Black Bronze Dust",
-  "quest.1A000000000000FE.quest_desc": [
-    "Height for search: 10-30 COPPER vein (Chalcopyrite, Iron, Pyrite, Copper) or 80-120 TETRAHEDRITE vein (Tetrahedrite, Copper, Stibnite). Melt copper ore to get a copper ingot. Also you may smelt an \"Impure Pile of Copper Dust\", which you can find by breaking small copper ore blocks."
-  ],
-  "quest.1A000000000000FE.title": "Copper",
   "quest.1A000000000000FF.quest_desc": [
     "Black Bronze, Nickel and Steel - that is all. Use NEI.",
     "",
@@ -1454,13 +1413,6 @@
     "{image:iis:textures/quest_recipe/iis__rod_iron_magnetic.png width:120 height:72 align:center}"
   ],
   "quest.1A0000000000011E.title": "Magnetic Iron Rod",
-  "quest.1A0000000000011F.quest_desc": [
-    "Use a file on an ingot to make the rod. Later you will be able to make it using a lathe or an extruder.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__rod_iron.png width:120 height:72 align:center}"
-  ],
-  "quest.1A0000000000011F.title": "Iron Rod",
   "quest.1A00000000000120.quest_desc": [
     "It is time to craft an Electric motor (LV). You will find a lot of items where it can be used.",
     "",
@@ -1619,13 +1571,6 @@
     "{image:iis:textures/quest_recipe/iis__soft_hammer_rubber.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000000136.title": "Soft Mallet",
-  "quest.1A00000000000137.quest_desc": [
-    "Just craft it after making wooden planks.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__crafting_table.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000137.title": "Crafting Table",
   "quest.1A00000000000138.quest_desc": [
     "This block is required for most of gregtech multiblock machines. For starters, prepare following tools: a screwdriver, a wrench, a wire cutter, a hammer, a crowbar, a file, a saw and a soft mallet. Then place them in a crafting table around an LV machine hull.",
     "",
@@ -1704,17 +1649,6 @@
     "{image:iis:textures/quest_recipe/iis__steam_alloy_smelter_bronze.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000000147.title": "Steam Alloy Smelter",
-  "quest.1A00000000000148.quest_desc": [
-    "Create a glass block from sand by putting it into a furnace."
-  ],
-  "quest.1A00000000000148.title": "Glass",
-  "quest.1A00000000000149.quest_desc": [
-    "You may use most of metals to craft a wire cutter. Early in the game it may be used to craft wires from plates or fine wire from foil. Also it can help you to dismantle wires placed at your base.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__wire_cutter_iron.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000149.title": "Wire Cutter (gregtech)",
   "quest.1A0000000000014A.quest_desc": [
     "Recipe is the same as for other pipes, but the difference is the material of the plates - use titanium.",
     "",
@@ -2037,24 +1971,10 @@
     "{image:iis:textures/quest_recipe/iis__boiler_coal_bronze.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000000189.title": "Small Coal Boiler",
-  "quest.1A0000000000018A.quest_desc": [
-    "You wanna push? Buy (or craft) the piston!",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__piston.png width:120 height:72 align:center}"
-  ],
-  "quest.1A0000000000018A.title": "Piston",
   "quest.1A0000000000018B.quest_desc": [
     "Kill 3 Creepers"
   ],
   "quest.1A0000000000018B.title": "Creeper",
-  "quest.1A0000000000018C.quest_desc": [
-    "Create a fire sword to cook animals alive. It can be crafted from 2 flints and a stick.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__flint_sword.png width:120 height:72 align:center}"
-  ],
-  "quest.1A0000000000018C.title": "Sword",
   "quest.1A0000000000018D.quest_desc": [
     "You have to craft a powder barrel from gunpowder. A powder barrel is a dangerous version of TNT. In case if you put it in any place, you will not be able to pick it up anymore. It will blow up if you try to break it. One of the helpful ways to use it is to blow diamond ore if you do not have a 3-rd level pickaxe. Note that the chance to save ore in the explosion is only 30%%. So, it is a fast and easy way to dig hard ores, but the efficiency is very low.",
     "",
@@ -2062,10 +1982,6 @@
     "{image:iis:textures/quest_recipe/iis__powder_barrel.png width:120 height:72 align:center}"
   ],
   "quest.1A0000000000018D.title": "Powder Barrel",
-  "quest.1A0000000000018E.quest_desc": [
-    "You may get it from spiders or wool."
-  ],
-  "quest.1A0000000000018E.title": "String",
   "quest.1A0000000000018F.quest_desc": [
     "Wood plank is the base material to craft a circuit board. To make it you should put wood pulp into a compressor.",
     "",
@@ -2201,13 +2117,6 @@
     "{image:iis:textures/quest_recipe/minecraft__lever.png width:120 height:72 align:center}"
   ],
   "quest.1A000000000001A4.title": "Lever",
-  "quest.1A000000000001A5.quest_desc": [
-    "Craft a mortar from stone and flint.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__mortar_iron.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001A5.title": "Mortar",
   "quest.1A000000000001A6.quest_desc": [
     "Use a wire cutter on a copper plate.",
     "",
@@ -2229,13 +2138,6 @@
     "{image:iis:textures/quest_recipe/minecraft__leather.png width:120 height:72 align:center}"
   ],
   "quest.1A000000000001A8.title": "Leather",
-  "quest.1A000000000001AB.quest_desc": [
-    "Not only a (bad) weapon, but also a handy way to craft paper or rubber rings.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__knife_iron.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001AB.title": "Knife (gregtech)",
   "quest.1A000000000001AC.quest_desc": [
     "You don't have to craft it immediately. But it will be required in future. To craft it, you have to compress 9 diamonds with a compressor."
   ],
@@ -2261,38 +2163,6 @@
     "{image:iis:textures/quest_recipe/iis__shape_extruder_ring.png width:120 height:72 align:center}"
   ],
   "quest.1A000000000001AF.title": "Extruder Shape (Ring)",
-  "quest.1A000000000001B0.quest_desc": [
-    "Just dig anywhere.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__cobblestone.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001B0.title": "Get cobblestone",
-  "quest.1A000000000001B1.quest_desc": [
-    "Find any tree and get two blocks of wood."
-  ],
-  "quest.1A000000000001B1.title": "First step",
-  "quest.1A000000000001B2.quest_desc": [
-    "Create the Flint Axe.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__flint_axe.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001B2.title": "Axe",
-  "quest.1A000000000001B3.quest_desc": [
-    "Dig gravel to find a flint. It may drop out with a small chance. But if you do not want to spend your time, you can use a few other ways: 1) craft it from 4 gravel blocks. 2) If you are lucky enough to find a sheep and obtain wool - you may craft a useful tool - scoop (to sift gravel).",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__flint.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001B3.title": "Flint",
-  "quest.1A000000000001B4.quest_desc": [
-    "Craft your first wooden pickaxe. There are many options of what to craft pickaxe from: stone, flint, iron, steel, bronze, cobalt and etc. Some materials used to make a pickaxe are harder than other and can dig out more solid resource blocks.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__wooden_pickaxe.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001B4.title": "Pickaxe (wooden)",
   "quest.1A000000000001B5.quest_desc": [
     "A mix of brass, aluminium and cobalt dusts.",
     "",
@@ -2300,78 +2170,6 @@
     "{image:iis:textures/quest_recipe/iis__dust_cobalt_brass.png width:120 height:72 align:center}"
   ],
   "quest.1A000000000001B5.title": "Cobalt Brass Dust",
-  "quest.1A000000000001B6.quest_desc": [
-    "Fry cobblestone to get..."
-  ],
-  "quest.1A000000000001B6.title": "Stone source",
-  "quest.1A000000000001B7.quest_desc": [
-    "Fry a chicken."
-  ],
-  "quest.1A000000000001B7.title": "Cook as cook",
-  "quest.1A000000000001B8.quest_desc": [
-    "Find and dig out some sand.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__sand.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001B8.title": "Sand",
-  "quest.1A000000000001B9.quest_desc": [
-    "Find gravel.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__gravel.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001B9.title": "Gravel",
-  "quest.1A000000000001BA.quest_desc": [
-    "Craft an Iron Plate with a hammer and two iron ingots.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__plate_iron.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001BA.title": "Iron Plate",
-  "quest.1A000000000001BB.quest_desc": [
-    "Craft a bucket with a hammer and 3 iron plates.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__bucket.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001BB.title": "Bucket",
-  "quest.1A000000000001BC.quest_desc": [
-    "Craft a cauldron - use 7 iron plates and a hammer.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__cauldron.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001BC.title": "Cauldron",
-  "quest.1A000000000001BD.quest_desc": [
-    "Use a Mortar to get Copper and Tin dusts from tin and copper ingots. Then craft bronze dust from 3 copper dusts and 1 tin dust.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__dust_bronze.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001BD.title": "Bronze Dust",
-  "quest.1A000000000001BE.quest_desc": [
-    "Smelt bronze dust to get a bronze ingot. Then use a hammer to get bronze plates.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__plate_bronze.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001BE.title": "Bronze Plate",
-  "quest.1A000000000001BF.quest_desc": [
-    "You have to find clay - usually you may find it in a river or an ocean beach underwater."
-  ],
-  "quest.1A000000000001BF.title": "Clay (balls)",
-  "quest.1A000000000001C0.quest_desc": [
-    "Use a Furnace to get a brick from clay."
-  ],
-  "quest.1A000000000001C0.title": "Brick",
-  "quest.1A000000000001C1.quest_desc": [
-    "Use 4 bricks to create a bricks block.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__bricks.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001C1.title": "Bricks block",
   "quest.1A000000000001C2.quest_desc": [
     "Use bricks blocks and bronze plates with a hammer to get bricked bronze hull. It is the base part of most steam machines.",
     "",
@@ -2457,67 +2255,10 @@
     "Use a steam compressor to make the block of iron from 9 iron ingots."
   ],
   "quest.1A000000000001CE.title": "Block of Iron",
-  "quest.1A000000000001CF.quest_desc": [
-    "Find Sticky Resin."
-  ],
-  "quest.1A000000000001CF.title": "Sticky Resin",
-  "quest.1A000000000001D0.quest_desc": [
-    "Do you have some wood? If yes - you can craft a treetap out of 5 wooden planks. It is a useful thing to make torches from sticky resin.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__treetap.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001D0.title": "Treetap",
-  "quest.1A000000000001D1.quest_desc": [
-    "Your first light. You can craft it out of sticky resin and stick.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__torch.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001D1.title": "Torch",
-  "quest.1A000000000001D2.quest_desc": [
-    "It may be used as a part of a Water Tank in the recipe.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__slime_ball.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001D2.title": "Slimeball",
-  "quest.1A000000000001D3.quest_desc": [
-    "Craft at least one chest and one door. Build any... basically any box, but with a door to protect yourself from night monsters.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__chest.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001D3.title": "Home, sweet home...",
-  "quest.1A000000000001D4.quest_desc": [
-    "This is a very useful block that can be used as a ladder. Moreover, if they are placed on each other like a tower, you can easily bring them all down just by breaking the bottom block.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__scaffolding.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001D4.title": "Scaffold",
-  "quest.1A000000000001D5.quest_desc": [
-    "Craft a flint shovel.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__flint_shovel.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001D5.title": "Shovel",
   "quest.1A000000000001D6.quest_desc": [
     "Pour water into this solar boiler and place it beneath the clear sky (transparent blocks such as glass are allowed)."
   ],
   "quest.1A000000000001D6.title": "Simple Solar Boiler",
-  "quest.1A000000000001D7.quest_desc": [
-    "Use a forge hammer to craft 2 silver plates from 3 silver ingots.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__plate_silver.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000001D7.title": "Silver Plate",
-  "quest.1A000000000001D8.quest_desc": [
-    "Height to search: 30-60 GALENA vein (Galena, Silver, Lead). You may find silver ore in a vein of galena ore."
-  ],
-  "quest.1A000000000001D8.title": "Crushed Silver Ore",
   "quest.1A000000000001D9.quest_desc": [
     "This is a way to produce 2 wires from 1 ingot. Also it is a more profitable way to get fine wires.",
     "",
@@ -4702,13 +4443,6 @@
     "One of four parts of high-tech armor."
   ],
   "quest.1A00000000000393.title": "NanoSuit Bodyarmor",
-  "quest.1A00000000000394.quest_desc": [
-    "Use a file, stones and stone buttons to craft it.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__small_gear_stone.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000394.title": "Stone Gear",
   "quest.1A00000000000395.quest_desc": [
     "Like MV tier battery, but worse.",
     "",
@@ -5011,10 +4745,6 @@
     "{image:iis:textures/quest_recipe/iis__wire_cupronickel_2x.png width:120 height:72 align:center}"
   ],
   "quest.1A000000000003D2.title": "2x Cupronickel Wire",
-  "quest.1A000000000003D3.quest_desc": [
-    "May be crafted from 6 glass blocks"
-  ],
-  "quest.1A000000000003D3.title": "Glass Pane (for windows)",
   "quest.1A000000000003D5.quest_desc": [
     "Use endereye on lathe"
   ],
@@ -5565,34 +5295,6 @@
     "{image:iis:textures/quest_recipe/iis__rod_invar.png width:120 height:72 align:center}"
   ],
   "quest.1A0000000000043C.title": "Invar Rod",
-  "quest.1A0000000000043D.quest_desc": [
-    "It is significantly stronger than stone pickaxe.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__flint_pickaxe.png width:120 height:72 align:center}"
-  ],
-  "quest.1A0000000000043D.title": "Pickaxe (flint)",
-  "quest.1A00000000000440.quest_desc": [
-    "Simplest shovel. Required only wood to be created from.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__wooden_shovel.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000440.title": "Wooden Shovel",
-  "quest.1A00000000000441.quest_desc": [
-    "It is significantly stronger than wooden shovel.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__stone_shovel.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000441.title": "Stone Shovel",
-  "quest.1A00000000000442.quest_desc": [
-    "It is significantly stronger than wooden pickaxe.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__stone_pickaxe.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000442.title": "Stone Pickaxe",
   "quest.1A00000000000444.quest_desc": [
     "Better than common boiler, but require more coal to heat up.",
     "",
@@ -5600,10 +5302,6 @@
     "{image:iis:textures/quest_recipe/iis__boiler_coal_steel.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000000444.title": "High Pressure Coal Boliler",
-  "quest.1A00000000000445.quest_desc": [
-    "Nice alloy, that you may create from tin and copper. It is a main material for steam machines."
-  ],
-  "quest.1A00000000000445.title": "Bronze Ingot",
   "quest.1A00000000000446.quest_desc": [
     "Use saw on any wooden plank to get a wooden slab.",
     "",
@@ -5677,13 +5375,6 @@
     "{image:iis:textures/quest_recipe/iis__frame_bronze.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000000452.title": "Bronze Frame Box",
-  "quest.1A00000000000453.quest_desc": [
-    "Just a bronze stick. It may be used as a part of some machines.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__rod_bronze.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000453.title": "Bronze Rod",
   "quest.1A00000000000454.quest_desc": [
     "It is a HV energy storage.",
     "",
@@ -5817,20 +5508,6 @@
     "Empty battery casing, that may be filled by sodium, lithium or cadmium. It was in case if you want to create an accumulator. But you may craft a single-use battery by filling to it with mercury or with sulfuric acid."
   ],
   "quest.1A00000000000470.title": "Large Battery Hull",
-  "quest.1A00000000000472.quest_desc": [
-    "A part of well",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__small_gear_wood.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000472.title": "Wood Gear",
-  "quest.1A00000000000473.quest_desc": [
-    "It is a nice block that allows you to extract water. It require not much materials to craft. It may pump out fluids from under-bedrock. Yes, it's may be not only water, and you may find even an oil! Btw, there is a chance that the area where you place a well, will be empty. So, a nice choose will be if you find a water for a first, and only then place you base near.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__well.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000473.title": "Well",
   "quest.1A00000000000474.quest_desc": [
     "One of many single-block machines.",
     "",
@@ -6159,27 +5836,6 @@
     "{image:iis:textures/quest_recipe/iis__ring_steel.png width:120 height:72 align:center}"
   ],
   "quest.1A000000000004B0.title": "Steel Ring",
-  "quest.1A000000000004B1.quest_desc": [
-    "Use 3 wooden planks and 3 blocks of wool to craft a bed. It will give you ability to skip a night (if you play solo) while you sleeping.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__red_bed.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000004B1.title": "Bed",
-  "quest.1A000000000004B2.quest_desc": [
-    "Find and kill few sheeps to get 3 wools in total.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__white_wool.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000004B2.title": "Wool (any color)",
-  "quest.1A000000000004B3.quest_desc": [
-    "Use a saw on any wood planks to get wooden slabs.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__oak_slab.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000004B3.title": "Wooden Slab",
   "quest.1A000000000004B4.quest_desc": [
     "Can contain up to 64 stacks of one item type (may be upgraded)."
   ],
@@ -6262,13 +5918,6 @@
     "If you have transformium seeds you are lucky. Do you have it?"
   ],
   "quest.1A000000000004CC.title": "UUA Berry",
-  "quest.1A000000000004CF.quest_desc": [
-    "Make it from wood planks.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__stick.png width:120 height:72 align:center}"
-  ],
-  "quest.1A000000000004CF.title": "Stick",
   "quest.1A000000000004D1.quest_desc": [
     "You have to find a rare ore vien... Height to search: 20 - 50 TUNGSTATE vein (Scheelite, Tungstate, Lithium). But there is one other way to get this enough rare stuff. Any way, if you found tungstate ore vien - you are lucky!"
   ],
@@ -8871,13 +8520,6 @@
     "One of many single-block machines."
   ],
   "quest.1A00000000000672.title": "[sb] High Pressure Lava Boiler",
-  "quest.1A00000000000673.quest_desc": [
-    "Nice choose to transport a water. It is a cheapest way for fluids. But don't try to use these pipes for steam.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__pipe_medium_wood.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000673.title": "Wooden Fluid Pipe",
   "quest.1A00000000000674.quest_desc": [
     "As an other plates you may do it from 2 ingots by hammer.",
     "",
@@ -8934,13 +8576,6 @@
     "{image:iis:textures/quest_recipe/iis__electric_oven_zpm.png width:120 height:72 align:center}"
   ],
   "quest.1A0000000000067B.title": "[sb] Advanced Electric Oven VI",
-  "quest.1A0000000000067C.quest_desc": [
-    "A part of some bronze steam machines.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__hull_bronze.png width:120 height:72 align:center}"
-  ],
-  "quest.1A0000000000067C.title": "Bronze Hull",
   "quest.1A0000000000067D.quest_desc": [
     "A part of Primitive Pump Filter",
     "",
@@ -9570,13 +9205,6 @@
     "Good way to rename ME interface. New name of renamed ME interface will be visible in ME terminal."
   ],
   "quest.1A00000000000703.title": "Quartz Cutting Knife",
-  "quest.1A00000000000705.quest_desc": [
-    "Currently you can only make 2 planks from 1 wood log by crafting. But later you may use cutting tools or machines to increase output result.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__oak_planks.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000705.title": "Wood Planks",
   "quest.1A00000000000706.quest_desc": [
     "A template of you logic. It can be changed and reused."
   ],
@@ -9745,20 +9373,6 @@
     "You may use HV+ macerator to get a tiny dust of tungsten."
   ],
   "quest.1A0000000000072A.title": "End Stone",
-  "quest.1A0000000000072B.quest_desc": [
-    "You can craft it from iron rods and plates with help of wrench.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__gear_iron.png width:120 height:72 align:center}"
-  ],
-  "quest.1A0000000000072B.title": "Iron Gear",
-  "quest.1A0000000000072C.quest_desc": [
-    "Common stone button, can be crafted from stone and stone from cobblestone by furnace.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__stone_button.png width:120 height:72 align:center}"
-  ],
-  "quest.1A0000000000072C.title": "A Button",
   "quest.1A0000000000072D.quest_desc": [
     "It used in some machines to change recipe output.",
     "",
@@ -9814,27 +9428,6 @@
     "{image:iis:textures/quest_recipe/iis__item_loader.png width:120 height:72 align:center}"
   ],
   "quest.1A0000000000073B.title": "Item Loader",
-  "quest.1A00000000000740.quest_desc": [
-    "A nice tool to get a lot of flint from gravel. About gravel - you can get it from cobblestone by forge hammer.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__scoop.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000740.title": "Scoop",
-  "quest.1A00000000000741.quest_desc": [
-    "Find a sheep and ask it, where you can find a wool.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__white_wool.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000741.title": "A wool with any color",
-  "quest.1A0000000000076D.quest_desc": [
-    "Common bow, that allow you to range attack",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__bow.png width:120 height:72 align:center}"
-  ],
-  "quest.1A0000000000076D.title": "Bow",
   "quest.1A0000000000078A.quest_desc": [
     "A block, that can unload items from carts",
     "",
@@ -9888,13 +9481,6 @@
     "{image:iis:textures/quest_recipe/iis__primitive_drill.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000000798.title": "Primitive drill head",
-  "quest.1A00000000000799.quest_desc": [
-    "Common wooden ladder, that can help you to climb up.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/minecraft__ladder.png width:120 height:72 align:center}"
-  ],
-  "quest.1A00000000000799.title": "Ladder",
   "quest.1A00000000100000.quest_desc": [
     "This chapter runs beside the main book and locks nothing in it. Columns are epochs. Guns and ammunition on top, armour in the middle, vehicles below.",
     "",
@@ -10377,5 +9963,432 @@
     "Crafting table recipe:",
     "{image:iis:textures/quest_recipe/iis__turret_base_t5.png width:120 height:72 align:center}"
   ],
-  "quest.1A00000000110021.title": "Railgun"
+  "quest.1A00000000110021.title": "Railgun",
+  "quest.1A00000000120000.quest_desc": [
+    "The shuttle crashed, and it is yours: one per player for the whole world. No new one after death.",
+    "",
+    "Its electronics are burnt, its hull is extremely tough. It is nearly useless now, but keep it: the hull can be recycled much later, and the growth on its roof is where the Bio path begins.",
+    "",
+    "This chapter and the next are written for IIS 2. The book of IIS 1 goes on after them."
+  ],
+  "quest.1A00000000120000.title": "Crash landing",
+  "quest.1A00000000120001.quest_desc": [
+    "Cyber is machines: stone, bronze, steam, electricity from LV to UV. This book leads along it.",
+    "",
+    "Bio is a living colony. It starts from the core and the maw on the roof of your shuttle: feed the maw and the tissue begins to grow.",
+    "",
+    "Duo is for when both branches are developed.",
+    "",
+    "The paths neither block nor need each other. Nothing is chosen for good."
+  ],
+  "quest.1A00000000120001.title": "Three paths",
+  "quest.1A00000000120002.quest_desc": [
+    "A crafting table recipe is drawn right in the quest text. See the other recipes in JEI: R on an item for how to make it, U for its uses.",
+    "",
+    "Quests pay credits. The reward shop takes them (chapter \"What else IIS 2 has\").",
+    "",
+    "Chapters marked [G] are general: progress, comforts, every machine and multiblock.",
+    "",
+    "The world is archived every game day, the last 20 copies are kept."
+  ],
+  "quest.1A00000000120002.title": "How to read the book",
+  "quest.1A00000000120003.quest_desc": [
+    "Fell any tree."
+  ],
+  "quest.1A00000000120003.title": "Wood",
+  "quest.1A00000000120004.quest_desc": [
+    "A log gives only two planks in the crafting grid. A saw gives more: it is in the next chapter.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__oak_planks.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120004.title": "Planks",
+  "quest.1A00000000120005.quest_desc": [
+    "Nearly all of the early game is made on it.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__crafting_table.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120005.title": "Crafting table",
+  "quest.1A00000000120006.quest_desc": [
+    "Tool handles and torches.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__stick.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120006.title": "Sticks",
+  "quest.1A00000000120007.quest_desc": [
+    "Gravel lies by water and in caves. Flint drops from it.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__gravel.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120007.title": "Gravel",
+  "quest.1A00000000120008.quest_desc": [
+    "Flint does not drop from every block: place the gravel and dig again.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__flint.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120008.title": "Flint",
+  "quest.1A00000000120009.quest_desc": [
+    "The first real pickaxe. Flint tools here are what stone ones are in the plain game, and stone ones are worse.",
+    "",
+    "An iron pickaxe cannot be crafted from ingots: it needs a head forged with a hammer. That is the next chapter.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__flint_pickaxe.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120009.title": "Flint pickaxe",
+  "quest.1A0000000012000A.quest_desc": [
+    "Fells wood much faster than hands.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__flint_axe.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012000A.title": "Flint axe",
+  "quest.1A0000000012000B.quest_desc": [
+    "Gravel, sand and clay go faster.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__flint_shovel.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012000B.title": "Flint shovel",
+  "quest.1A0000000012000C.quest_desc": [
+    "Handy at night.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__flint_sword.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012000C.title": "Flint sword",
+  "quest.1A0000000012000D.quest_desc": [
+    "Eight of them make a furnace.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__cobblestone.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012000D.title": "Cobblestone",
+  "quest.1A0000000012000E.quest_desc": [
+    "Smelts ore and cooks food.",
+    "",
+    "Logs give no charcoal in a furnace: it is burnt in a charcoal pile (chapter \"Steam & Steel\"). Burn planks and coal for now.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__furnace.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012000E.title": "Furnace",
+  "quest.1A0000000012000F.quest_desc": [
+    "Smelt cobblestone. Stone goes into the mortar and stone parts."
+  ],
+  "quest.1A0000000012000F.title": "Stone",
+  "quest.1A00000000120010.quest_desc": [
+    "Cook any meat or fish."
+  ],
+  "quest.1A00000000120010.title": "A hot dinner",
+  "quest.1A00000000120011.quest_desc": [
+    "A chest and a door. Any box with a door keeps the night out; the shuttle makes a good landmark too.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__chest.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120011.title": "Shelter",
+  "quest.1A00000000120012.quest_desc": [
+    "Three blocks of wool of any colour, from sheep.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__white_wool.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120012.title": "Wool",
+  "quest.1A00000000120013.quest_desc": [
+    "Skips the night and keeps your respawn point.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__red_bed.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120013.title": "Bed",
+  "quest.1A00000000120014.quest_desc": [
+    "Collects resin from rubber trees.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__treetap.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120014.title": "Treetap",
+  "quest.1A00000000120015.quest_desc": [
+    "Find a rubber tree: its trunk has a resin hole on one side. Right click a full hole with the treetap for resin; it refills with time. A log you placed gives none."
+  ],
+  "quest.1A00000000120015.title": "Sticky resin",
+  "quest.1A00000000120016.quest_desc": [
+    "The first torches are made of resin and a stick.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__torch.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120016.title": "Torch",
+  "quest.1A00000000120017.quest_desc": [
+    "There is no plain ore in the world. Ore is gathered in large veins: find one and it lasts. Single small ores turn up between the veins.",
+    "",
+    "Where to look in the Overworld (IIS 2 heights; older quests of the book give other ones):",
+    "Y 0 to 128: tin (cassiterite)",
+    "Y 64 to 128: copper (tetrahedrite), antimony",
+    "Y -48 to -16: copper (chalcopyrite), pyrite, iron",
+    "Y -48 to 0: iron (limonites, banded iron), malachite",
+    "Y 16 to 128: iron (magnetite)",
+    "Y 16 to 64: coal",
+    "Y 16 to 144: lignite",
+    "Y -16 to 32: lead and silver (galena)",
+    "Y -48 to 0: redstone, ruby, cinnabar",
+    "Y -48 to 0: nickel, cobalt",
+    "Y -56 to -32: diamonds, graphite"
+  ],
+  "quest.1A00000000120017.title": "Ore lies in veins",
+  "quest.1A00000000120018.quest_desc": [
+    "The cassiterite vein is the most common and lies at nearly any height. A furnace smelts the ore."
+  ],
+  "quest.1A00000000120018.title": "Tin",
+  "quest.1A00000000120019.quest_desc": [
+    "Tetrahedrite in the mountains or chalcopyrite deep underground."
+  ],
+  "quest.1A00000000120019.title": "Copper",
+  "quest.1A0000000012001A.quest_desc": [
+    "Magnetite above sea level or limonites in the deep."
+  ],
+  "quest.1A0000000012001A.title": "Iron",
+  "quest.1A0000000012001B.quest_desc": [
+    "Fuel for the furnace and the boilers to come."
+  ],
+  "quest.1A0000000012001B.title": "Coal",
+  "quest.1A0000000012001C.quest_desc": [
+    "Silver lies in the galena vein with lead. The solar boiler will need it."
+  ],
+  "quest.1A0000000012001C.title": "Silver ore",
+  "quest.1A0000000012001D.quest_desc": [
+    "For glass.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__sand.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012001D.title": "Sand",
+  "quest.1A0000000012001E.quest_desc": [
+    "Sand in a furnace."
+  ],
+  "quest.1A0000000012001E.title": "Glass",
+  "quest.1A0000000012001F.quest_desc": [
+    "Six glass blocks on the table."
+  ],
+  "quest.1A0000000012001F.title": "Glass pane",
+  "quest.1A00000000120020.quest_desc": [
+    "Clay lies under water in rivers and on beaches."
+  ],
+  "quest.1A00000000120020.title": "Clay",
+  "quest.1A00000000120021.quest_desc": [
+    "A clay ball in a furnace."
+  ],
+  "quest.1A00000000120021.title": "Brick",
+  "quest.1A00000000120022.quest_desc": [
+    "Bricks go into the first steam boiler and the charcoal pile.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__bricks.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120022.title": "Bricks",
+  "quest.1A00000000120023.quest_desc": [
+    "From slimes in swamps. The water tank siding will need it.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__slime_ball.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120023.title": "Slime",
+  "quest.1A00000000120024.quest_desc": [
+    "From here on nearly everything is made with a tool in the crafting grid: a hammer forges plates, a file turns rods, a saw cuts, a wrench assembles hulls. A tool is not used up, it wears.",
+    "",
+    "The tools themselves are in \"[G] Quality of Life\": start with a hammer, a file and a saw. A tool of any metal will do."
+  ],
+  "quest.1A00000000120024.title": "GregTech tools",
+  "quest.1A00000000120025.quest_desc": [
+    "Grinds ingots and stones into dust right in the crafting grid.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__mortar_flint.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120025.title": "Mortar",
+  "quest.1A00000000120026.quest_desc": [
+    "Grind the ingots with the mortar and mix three copper dusts with one of tin.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__dust_bronze.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120026.title": "Bronze dust",
+  "quest.1A00000000120027.quest_desc": [
+    "Dust into the furnace. Bronze is the metal of the whole steam age."
+  ],
+  "quest.1A00000000120027.title": "Bronze",
+  "quest.1A00000000120028.quest_desc": [
+    "Ingots and a hammer in the crafting grid.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__plate_bronze.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120028.title": "Bronze plate",
+  "quest.1A00000000120029.quest_desc": [
+    "The base of steam machines. It also opens the primitive mine digger (chapter \"Steam & Steel\").",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__hull_bronze.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120029.title": "Bronze hull",
+  "quest.1A0000000012002A.quest_desc": [
+    "An ingot and a file.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__rod_bronze.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012002A.title": "Bronze rod",
+  "quest.1A0000000012002B.quest_desc": [
+    "Forge an iron or bronze pickaxe head and join it with a stick. It mines ore the flint one cannot.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__pickaxe_head_bronze.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012002B.title": "A better pickaxe",
+  "quest.1A0000000012002C.quest_desc": [
+    "Iron ingots and a hammer.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__plate_iron.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012002C.title": "Iron plate",
+  "quest.1A0000000012002D.quest_desc": [
+    "An ingot and a file. A lathe turns rods later.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__rod_iron.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012002D.title": "Iron rod",
+  "quest.1A0000000012002E.quest_desc": [
+    "Takes GregTech machines down, connects pipes and is in nearly every hull recipe.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__wrench_iron.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012002E.title": "Wrench",
+  "quest.1A0000000012002F.quest_desc": [
+    "Rods, plates and a wrench.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__gear_iron.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012002F.title": "Iron gear",
+  "quest.1A00000000120030.quest_desc": [
+    "Three iron plates and a hammer: ingots make no bucket.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__bucket.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120030.title": "Bucket",
+  "quest.1A00000000120031.quest_desc": [
+    "Seven iron plates and a hammer.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__cauldron.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120031.title": "Cauldron",
+  "quest.1A00000000120032.quest_desc": [
+    "The redstone vein lies deep, with ruby and cinnabar.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__redstone.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120032.title": "Redstone",
+  "quest.1A00000000120033.quest_desc": [
+    "Planks, cobblestone, redstone and a bronze ingot. A part of the first steam machines.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__piston.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120033.title": "Piston",
+  "quest.1A00000000120034.quest_desc": [
+    "Silver ore in a furnace."
+  ],
+  "quest.1A00000000120034.title": "Silver ingot",
+  "quest.1A00000000120035.quest_desc": [
+    "For the solar boiler.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__plate_silver.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120035.title": "Silver plate",
+  "quest.1A00000000120036.quest_desc": [
+    "From spiders or from wool."
+  ],
+  "quest.1A00000000120036.title": "String",
+  "quest.1A00000000120037.quest_desc": [
+    "Strikes from afar.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__bow.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120037.title": "Bow",
+  "quest.1A00000000120038.quest_desc": [
+    "A plank and a saw.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__small_gear_wood.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120038.title": "Small wooden gear",
+  "quest.1A00000000120039.quest_desc": [
+    "Wooden gears, a stick, planks, string, cobblestone and a bucket. Gives water with no river nearby: the boilers to come need a lot.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__well.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120039.title": "Well",
+  "quest.1A0000000012003A.quest_desc": [
+    "Of stone.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__stone_button.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012003A.title": "Stone button",
+  "quest.1A0000000012003B.quest_desc": [
+    "Smooth stone (stone smelted once more) and a file.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__small_gear_stone.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012003B.title": "Stone gear",
+  "quest.1A0000000012003C.quest_desc": [
+    "A poor weapon, but it cuts paper rings and much else.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__knife_iron.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012003C.title": "Knife",
+  "quest.1A0000000012003D.quest_desc": [
+    "Cut plates into wires and foil into fine wire.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__wire_cutter_iron.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012003D.title": "Wire cutter",
+  "quest.1A0000000012003E.quest_desc": [
+    "Planks and a saw.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/minecraft__oak_slab.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012003E.title": "Wooden slab",
+  "quest.1A0000000012003F.quest_desc": [
+    "The cheapest water line. Keep steam out of wooden pipes.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__pipe_medium_wood.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012003F.title": "Wooden pipe",
+  "quest.1A00000000120040.quest_desc": [
+    "Wool, a plank and sticks.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__scoop.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120040.title": "Scoop"
 }

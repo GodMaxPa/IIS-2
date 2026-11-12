@@ -557,6 +557,42 @@ def main():
         built[qid] = {'props': props, 'tasks': tasks, 'rewards': rewards, 'icon': icon_id,
                       'deps': list(q.get('preRequisites:11', [])), 'or': props.get('questLogic:8') == 'OR'}
 
+    # D151: the opening chapters are written anew for IIS 2 (quests_start.py). A quest of the old ones is replaced by the new quest
+    # that asks for the same thing; one with no counterpart hands its dependencies on, like a hidden quest.
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import quests_start
+    line_keys = sorted(bq['questLines:9'], key=lambda k: int(k.split(':')[0]))
+
+    def line_name(line):
+        return re.sub(r'[^a-z0-9_]+', '_', line['properties:10']['betterquesting:10'].get('name:8', '').replace('bq.questline.', '').replace('.name', '').lower()).strip('_')
+
+    def signature(task):
+        if task['type'] != 'item':
+            return None
+        it = task['item']
+        return it['components'][FILTER_COMPONENT] if it['id'] == FILTER_ITEM else it['id']
+
+    owner, owner_idx, start_order = {}, {}, {}
+    for idx, k in enumerate(line_keys):
+        name = line_name(bq['questLines:9'][k])
+        if name in quests_start.replaced_lines():
+            start_order[name] = idx
+        for e in bq['questLines:9'][k].get('quests:9', {}).values():
+            owner.setdefault(e['id:3'], name)
+            owner_idx.setdefault(e['id:3'], idx)
+    if set(start_order) != quests_start.replaced_lines():
+        raise SystemExit(f'quests_start: chapters of the book not found: {quests_start.replaced_lines() - set(start_order)}')
+    successors = quests_start.by_task()
+    replaced = {}
+    for qid in [q for q in built if owner.get(q) in start_order]:
+        replaced[qid] = successors.get(signature(built[qid]['tasks'][0]))
+        del built[qid]
+    kept = {}
+    for qid in sorted((q for q in built if q in owner_idx), key=lambda q: (owner_idx[q], q)):
+        sig = signature(built[qid]['tasks'][0])
+        if sig and len(built[qid]['tasks']) == 1:
+            kept.setdefault(sig, qid)
+
     # dependencies through hidden quests: a hidden quest is replaced by its own (visible) dependencies
     memo = {}
 
@@ -569,6 +605,8 @@ def main():
                 continue
             if d in built:
                 out.append(d)
+            elif replaced.get(d) is not None:
+                out.append(replaced[d])
             elif d in quests:
                 out += visible_deps(d, seen + (qid,))
         memo[qid] = list(dict.fromkeys(out))
@@ -599,6 +637,8 @@ def main():
         lid = line.get('lineID:3', idx)
         lp = line['properties:10']['betterquesting:10']
         entries = [e for _, e in sorted(line.get('quests:9', {}).items(), key=lambda e: int(e[0].split(':')[0]))]
+        if line_name(line) in start_order:
+            continue
         cq, links = [], []
         for e in entries:
             qid = e['id:3']
@@ -615,7 +655,7 @@ def main():
             qo = {'id': hexid(0x1A, qid), 'x': x, 'y': y}
             if abs(sx - 1.0) > 1e-6:
                 qo['size'] = sx
-            deps = EARLY.get(qid, visible_deps(qid))
+            deps = [replaced.get(d, d) for d in EARLY[qid] if replaced.get(d, d) is not None] if qid in EARLY else visible_deps(qid)
             if deps:
                 qo['dependencies'] = [hexid(0x1A, d) for d in deps]
                 if b['or'] and len(deps) > 1:
@@ -648,8 +688,11 @@ def main():
         text(f'chapter.{cid}', lp.get('name:8', ''), 'title')
         write(os.path.join(OUT, 'chapters', fname + '.json5'), ch)
         chapters += 1
+    # D151: the opening chapters of IIS 2 in the place of the old ones
+    exists = lambda i: os.path.exists(os.path.join(GEN, 'items', i.split(':', 1)[1] + '.json'))
+    start = quests_start.add_chapters(os.path.join(OUT, 'chapters'), tr, start_order, write, hexid, exists, filter_item, kept.get)
+    chapters += 2
     # D129: our own chapter after the book of IIS 1
-    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import quests_equipment
     own, _ = quests_equipment.add_chapter(os.path.join(OUT, 'chapters'), tr, len(lines), write, hexid,
                                           lambda i: os.path.exists(os.path.join(GEN, 'items', i.split(':', 1)[1] + '.json')))
@@ -682,7 +725,7 @@ def main():
     rep += ['', '## Dropped reward items', ''] + [f'- {c} × `{k}`' for k, c in dropped_rewards.most_common(30)]
     with open(os.path.join(ROOT, 'quests', 'REPORT.md'), 'w', encoding='utf-8', newline='\n') as fh:
         fh.write('\n'.join(rep) + '\n')
-    print(f'quests: {len(quests)} total, {len(placed)} written, {len(hidden)} hidden, {chapters} chapters, {own} of our own, {pictures} recipe pictures')
+    print(f'quests: {len(quests)} total, {len(placed)} written, {len(hidden)} hidden, {chapters} chapters, {own} of our own, {start} of the IIS 2 opening (replacing {len(replaced)}), {pictures} recipe pictures')
 
 
 def write(path, obj):

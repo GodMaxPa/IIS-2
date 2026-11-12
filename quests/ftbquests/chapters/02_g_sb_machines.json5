@@ -9,7 +9,7 @@
       "x": 0.5,
       "y": 14.0,
       "dependencies": [
-        "1A000000000001BE"
+        "1A00000000120028"
       ],
       "icon": {
         "id": "iis:steam_macerator_bronze",
@@ -32,7 +32,7 @@
       "x": 11.0,
       "y": 14.0,
       "dependencies": [
-        "1A000000000001BE"
+        "1A00000000120028"
       ],
       "icon": {
         "id": "iis:boiler_coal_bronze",
@@ -1829,7 +1829,7 @@
       "x": 2.0,
       "y": 14.0,
       "dependencies": [
-        "1A000000000001BE"
+        "1A00000000120028"
       ],
       "icon": {
         "id": "iis:steam_forge_hammer_bronze",
@@ -5308,7 +5308,7 @@
       "x": 3.5,
       "y": 14.0,
       "dependencies": [
-        "1A000000000001BE"
+        "1A00000000120028"
       ],
       "icon": {
         "id": "iis:steam_alloy_smelter_bronze",
@@ -5761,7 +5761,7 @@
       "x": 5.0,
       "y": 14.0,
       "dependencies": [
-        "1A000000000001BE"
+        "1A00000000120028"
       ],
       "icon": {
         "id": "iis:steam_compressor_bronze",
@@ -5807,7 +5807,7 @@
       "x": 6.5,
       "y": 14.0,
       "dependencies": [
-        "1A000000000001BE"
+        "1A00000000120028"
       ],
       "icon": {
         "id": "iis:steam_furnace_bronze",
@@ -5830,7 +5830,7 @@
       "x": 8.0,
       "y": 14.0,
       "dependencies": [
-        "1A000000000001BE"
+        "1A00000000120028"
       ],
       "icon": {
         "id": "iis:steam_extractor_bronze",
@@ -9763,7 +9763,7 @@
       "x": 15.5,
       "y": 14.0,
       "dependencies": [
-        "1A000000000001BE"
+        "1A00000000120028"
       ],
       "icon": {
         "id": "iis:boiler_solar_bronze",

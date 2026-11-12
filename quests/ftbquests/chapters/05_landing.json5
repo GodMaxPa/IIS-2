@@ -1,31 +1,90 @@
 {
-  "id": "1D00000000000009",
-  "filename": "05_first_steps",
+  "id": "1D00000000001010",
+  "filename": "05_landing",
   "order_index": 5,
   "default_quest_shape": "",
+  "icon": {
+    "id": "iis:flint_pickaxe",
+    "count": 1
+  },
   "quests": [
     {
-      "id": "1A000000000000A4",
-      "x": 9.5,
-      "y": 8.0,
+      "id": "1A00000000120000",
+      "x": 0.0,
+      "y": 4.5,
+      "icon": {
+        "id": "minecraft:campfire",
+        "count": 1
+      },
+      "size": 1.5,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000012000000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120001",
+      "x": 0.0,
+      "y": 2.25,
       "dependencies": [
-        "1A000000000000A7",
-        "1A0000000000043D",
-        "1A00000000000442"
+        "1A00000000120000"
       ],
       "icon": {
-        "id": "minecraft:iron_ingot",
+        "id": "minecraft:compass",
+        "count": 1
+      },
+      "size": 1.5,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000012000100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120002",
+      "x": 0.0,
+      "y": 6.75,
+      "dependencies": [
+        "1A00000000120000"
+      ],
+      "icon": {
+        "id": "minecraft:book",
+        "count": 1
+      },
+      "size": 1.5,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000012000200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120003",
+      "x": 1.5,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120000"
+      ],
+      "icon": {
+        "id": "minecraft:oak_log",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "minecraft:iron_ingot",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(minecraft:logs)"
+            }
           },
-          "count": 1,
-          "id": "1B0000000000A400"
+          "count": 4,
+          "id": "1B00000012000300"
         }
       ],
       "rewards": [
@@ -33,34 +92,35 @@
           "type": "item",
           "item": {
             "id": "iis:credit_copper",
-            "count": 3
+            "count": 1
           },
-          "id": "1C0000000000A400"
+          "id": "1C00000012000300"
         }
       ]
     },
     {
-      "id": "1A000000000000A5",
-      "x": 11.0,
-      "y": 8.0,
+      "id": "1A00000000120004",
+      "x": 3.0,
+      "y": 4.5,
       "dependencies": [
-        "1A000000000000A7",
-        "1A0000000000043D",
-        "1A00000000000442"
+        "1A00000000120003"
       ],
       "icon": {
-        "id": "iis:ingot_tin",
+        "id": "minecraft:oak_planks",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:ingot_tin",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(minecraft:planks)"
+            }
           },
-          "count": 1,
-          "id": "1B0000000000A500"
+          "count": 4,
+          "id": "1B00000012000400"
         }
       ],
       "rewards": [
@@ -68,88 +128,18 @@
           "type": "item",
           "item": {
             "id": "iis:credit_copper",
-            "count": 3
-          },
-          "id": "1C0000000000A500"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000000A7",
-      "x": 10.25,
-      "y": 10.25,
-      "size": 2.5,
-      "dependencies": [
-        "1A000000000001B0"
-      ],
-      "icon": {
-        "id": "minecraft:furnace",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:furnace",
             "count": 1
           },
-          "count": 1,
-          "id": "1B0000000000A700"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 2
-          },
-          "id": "1C0000000000A700"
+          "id": "1C00000012000400"
         }
       ]
     },
     {
-      "id": "1A000000000000FE",
-      "x": 12.5,
-      "y": 8.0,
+      "id": "1A00000000120005",
+      "x": 4.5,
+      "y": 4.5,
       "dependencies": [
-        "1A000000000000A7",
-        "1A0000000000043D",
-        "1A00000000000442"
-      ],
-      "icon": {
-        "id": "iis:ingot_annealed_copper",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:copper_ingot",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000000FE00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 3
-          },
-          "id": "1C0000000000FE00"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000137",
-      "x": 2.0,
-      "y": 2.5,
-      "size": 2.0,
-      "dependencies": [
-        "1A00000000000705"
+        "1A00000000120004"
       ],
       "icon": {
         "id": "minecraft:crafting_table",
@@ -163,7 +153,7 @@
             "count": 1
           },
           "count": 1,
-          "id": "1B00000000013700"
+          "id": "1B00000012000500"
         }
       ],
       "rewards": [
@@ -173,131 +163,30 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C00000000013700"
+          "id": "1C00000012000500"
         }
       ]
     },
     {
-      "id": "1A00000000000148",
-      "x": 5.0,
-      "y": 10.5,
-      "dependencies": [
-        "1A000000000001B8",
-        "1A000000000000A7"
-      ],
-      "icon": {
-        "id": "minecraft:glass",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:glass",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000014800"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C00000000014800"
-        }
-      ]
-    },
-    {
-      "id": "1A0000000000018C",
-      "x": 8.5,
-      "y": 3.5,
-      "dependencies": [
-        "1A000000000001B3",
-        "1A00000000000137",
-        "1A000000000004CF"
-      ],
-      "icon": {
-        "id": "iis:sword_iron",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:flint_sword",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000018C00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C00000000018C00"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001B0",
-      "x": 6.5,
-      "y": 7.5,
-      "dependencies": [
-        "1A000000000001B4",
-        "1A0000000000043D"
-      ],
-      "dependency_requirement": "one_completed",
-      "icon": {
-        "id": "minecraft:cobblestone",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:cobblestone",
-            "count": 1
-          },
-          "count": 8,
-          "id": "1B0000000001B000"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C0000000001B000"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001B1",
-      "x": 2.0,
+      "id": "1A00000000120006",
+      "x": 4.5,
       "y": 6.0,
+      "dependencies": [
+        "1A00000000120004"
+      ],
       "icon": {
-        "id": "minecraft:oak_sapling",
+        "id": "minecraft:stick",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "minecraft:oak_log",
+            "id": "minecraft:stick",
             "count": 1
           },
-          "count": 2,
-          "id": "1B0000000001B100"
+          "count": 4,
+          "id": "1B00000012000600"
         }
       ],
       "rewards": [
@@ -307,32 +196,30 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C0000000001B100"
+          "id": "1C00000012000600"
         }
       ]
     },
     {
-      "id": "1A000000000001B2",
-      "x": 8.5,
-      "y": 0.5,
+      "id": "1A00000000120007",
+      "x": 1.5,
+      "y": 1.5,
       "dependencies": [
-        "1A000000000001B3",
-        "1A00000000000137",
-        "1A000000000004CF"
+        "1A00000000120000"
       ],
       "icon": {
-        "id": "iis:axe_iron",
+        "id": "minecraft:gravel",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:flint_axe",
+            "id": "minecraft:gravel",
             "count": 1
           },
-          "count": 1,
-          "id": "1B0000000001B200"
+          "count": 4,
+          "id": "1B00000012000700"
         }
       ],
       "rewards": [
@@ -342,16 +229,16 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C0000000001B200"
+          "id": "1C00000012000700"
         }
       ]
     },
     {
-      "id": "1A000000000001B3",
-      "x": 10.5,
-      "y": 2.5,
+      "id": "1A00000000120008",
+      "x": 3.0,
+      "y": 1.5,
       "dependencies": [
-        "1A000000000001B9"
+        "1A00000000120007"
       ],
       "icon": {
         "id": "minecraft:flint",
@@ -364,8 +251,8 @@
             "id": "minecraft:flint",
             "count": 1
           },
-          "count": 1,
-          "id": "1B0000000001B300"
+          "count": 3,
+          "id": "1B00000012000800"
         }
       ],
       "rewards": [
@@ -375,31 +262,32 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C0000000001B300"
+          "id": "1C00000012000800"
         }
       ]
     },
     {
-      "id": "1A000000000001B4",
-      "x": 6.5,
-      "y": 6.0,
+      "id": "1A00000000120009",
+      "x": 6.0,
+      "y": 1.5,
       "dependencies": [
-        "1A00000000000137",
-        "1A000000000004CF"
+        "1A00000000120008",
+        "1A00000000120005",
+        "1A00000000120006"
       ],
       "icon": {
-        "id": "minecraft:wooden_pickaxe",
+        "id": "iis:flint_pickaxe",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "minecraft:wooden_pickaxe",
+            "id": "iis:flint_pickaxe",
             "count": 1
           },
           "count": 1,
-          "id": "1B0000000001B400"
+          "id": "1B00000012000900"
         }
       ],
       "rewards": [
@@ -409,16 +297,187 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C0000000001B400"
+          "id": "1C00000012000900"
         }
       ]
     },
     {
-      "id": "1A000000000001B6",
-      "x": 12.5,
-      "y": 11.0,
+      "id": "1A0000000012000A",
+      "x": 6.0,
+      "y": 0.0,
       "dependencies": [
-        "1A000000000000A7"
+        "1A00000000120008",
+        "1A00000000120005",
+        "1A00000000120006"
+      ],
+      "icon": {
+        "id": "iis:flint_axe",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:flint_axe",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012000A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012000A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012000B",
+      "x": 6.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000120008",
+        "1A00000000120005",
+        "1A00000000120006"
+      ],
+      "icon": {
+        "id": "iis:flint_shovel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:flint_shovel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012000B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012000B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012000C",
+      "x": 7.5,
+      "y": 0.0,
+      "dependencies": [
+        "1A00000000120008",
+        "1A00000000120005",
+        "1A00000000120006"
+      ],
+      "icon": {
+        "id": "iis:flint_sword",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:flint_sword",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012000C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012000C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012000D",
+      "x": 7.5,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000120009"
+      ],
+      "icon": {
+        "id": "minecraft:cobblestone",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:cobblestone",
+            "count": 1
+          },
+          "count": 8,
+          "id": "1B00000012000D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012000D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012000E",
+      "x": 9.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A0000000012000D"
+      ],
+      "icon": {
+        "id": "minecraft:furnace",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:furnace",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012000E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012000E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012000F",
+      "x": 10.5,
+      "y": 0.0,
+      "dependencies": [
+        "1A0000000012000E"
       ],
       "icon": {
         "id": "minecraft:stone",
@@ -432,7 +491,7 @@
             "count": 1
           },
           "count": 5,
-          "id": "1B0000000001B600"
+          "id": "1B00000012000F00"
         }
       ],
       "rewards": [
@@ -442,30 +501,33 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C0000000001B600"
+          "id": "1C00000012000F00"
         }
       ]
     },
     {
-      "id": "1A000000000001B7",
-      "x": 12.5,
-      "y": 9.5,
+      "id": "1A00000000120010",
+      "x": 10.5,
+      "y": 1.5,
       "dependencies": [
-        "1A000000000000A7"
+        "1A0000000012000E"
       ],
       "icon": {
-        "id": "minecraft:cooked_chicken",
+        "id": "minecraft:cooked_beef",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "minecraft:cooked_chicken",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(minecraft:cooked_beef)item(minecraft:cooked_porkchop)item(minecraft:cooked_chicken)item(minecraft:cooked_mutton)item(minecraft:cooked_rabbit)item(minecraft:cooked_cod)item(minecraft:cooked_salmon))"
+            }
           },
           "count": 2,
-          "id": "1B0000000001B700"
+          "id": "1B00000012001000"
         }
       ],
       "rewards": [
@@ -475,303 +537,16 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C0000000001B700"
+          "id": "1C00000012001000"
         }
       ]
     },
     {
-      "id": "1A000000000001B8",
-      "x": 3.5,
-      "y": 9.0,
-      "icon": {
-        "id": "minecraft:sand",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:sand",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001B800"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C0000000001B800"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001B9",
-      "x": 10.5,
-      "y": 0.5,
-      "icon": {
-        "id": "minecraft:gravel",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:gravel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001B900"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C0000000001B900"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001BF",
-      "x": 5.0,
-      "y": 7.5,
-      "icon": {
-        "id": "minecraft:clay_ball",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:clay_ball",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001BF00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C0000000001BF00"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001C0",
-      "x": 6.5,
-      "y": 9.0,
+      "id": "1A00000000120011",
+      "x": 6.0,
+      "y": 4.5,
       "dependencies": [
-        "1A000000000001BF",
-        "1A000000000000A7"
-      ],
-      "icon": {
-        "id": "minecraft:brick",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:brick",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001C000"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C0000000001C000"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001C1",
-      "x": 5.0,
-      "y": 9.0,
-      "dependencies": [
-        "1A000000000001C0"
-      ],
-      "icon": {
-        "id": "minecraft:bricks",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:bricks",
-            "count": 1
-          },
-          "count": 3,
-          "id": "1B0000000001C100"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 2
-          },
-          "id": "1C0000000001C100"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001CF",
-      "x": 2.0,
-      "y": 7.5,
-      "dependencies": [
-        "1A000000000001D0"
-      ],
-      "icon": {
-        "id": "iis:sticky_resin",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:sticky_resin",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001CF00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C0000000001CF00"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001D0",
-      "x": 0.5,
-      "y": 5.5,
-      "dependencies": [
-        "1A00000000000137"
-      ],
-      "icon": {
-        "id": "iis:treetap",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:treetap",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001D000"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C0000000001D000"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001D1",
-      "x": 3.5,
-      "y": 7.5,
-      "dependencies": [
-        "1A000000000001CF",
-        "1A000000000004CF"
-      ],
-      "icon": {
-        "id": "minecraft:torch",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:torch",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001D100"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C0000000001D100"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001D2",
-      "x": 2.0,
-      "y": 9.0,
-      "icon": {
-        "id": "minecraft:slime_ball",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:slime_ball",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001D200"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C0000000001D200"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001D3",
-      "x": 0.0,
-      "y": 2.5,
-      "dependencies": [
-        "1A00000000000137"
+        "1A00000000120005"
       ],
       "icon": {
         "id": "minecraft:chest",
@@ -785,16 +560,19 @@
             "count": 1
           },
           "count": 1,
-          "id": "1B0000000001D300"
+          "id": "1B00000012001100"
         },
         {
           "type": "item",
           "item": {
-            "id": "minecraft:oak_door",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "item_tag(minecraft:wooden_doors)"
+            }
           },
           "count": 1,
-          "id": "1B0000000001D301"
+          "id": "1B00000012001101"
         }
       ],
       "rewards": [
@@ -804,89 +582,19 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C0000000001D300"
+          "id": "1C00000012001100"
         }
       ]
     },
     {
-      "id": "1A000000000001D4",
-      "x": 5.5,
-      "y": 0.5,
+      "id": "1A00000000120012",
+      "x": 4.5,
+      "y": 7.5,
       "dependencies": [
-        "1A00000000000137",
-        "1A000000000004CF"
+        "1A00000000120000"
       ],
       "icon": {
-        "id": "minecraft:scaffolding",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:scaffolding",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001D400"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C0000000001D400"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001D5",
-      "x": 8.5,
-      "y": 2.0,
-      "dependencies": [
-        "1A000000000001B3",
-        "1A00000000000137",
-        "1A000000000004CF"
-      ],
-      "icon": {
-        "id": "iis:shovel_iron",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:flint_shovel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000001D500"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C0000000001D500"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000001D8",
-      "x": 12.0,
-      "y": 2.5,
-      "dependencies": [
-        "1A0000000000043D",
-        "1A00000000000442"
-      ],
-      "icon": {
-        "id": "iis:crushed_silver",
+        "id": "minecraft:white_wool",
         "count": 1
       },
       "tasks": [
@@ -896,44 +604,11 @@
             "id": "ftbfiltersystem:smart_filter",
             "count": 1,
             "components": {
-              "ftbfiltersystem:filter": "or(item(iis:crushed_silver)item(iis:impure_dust_silver)item(iis:ingot_silver)item(iis:ore_silver))"
+              "ftbfiltersystem:filter": "item_tag(minecraft:wool)"
             }
           },
-          "count": 1,
-          "id": "1B0000000001D800"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 2
-          },
-          "id": "1C0000000001D800"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000003D3",
-      "x": 3.5,
-      "y": 10.5,
-      "dependencies": [
-        "1A00000000000148"
-      ],
-      "icon": {
-        "id": "minecraft:glass_pane",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:glass_pane",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000003D300"
+          "count": 3,
+          "id": "1B00000012001200"
         }
       ],
       "rewards": [
@@ -943,154 +618,17 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C0000000003D300"
+          "id": "1C00000012001200"
         }
       ]
     },
     {
-      "id": "1A0000000000043D",
-      "x": 8.5,
-      "y": 5.0,
+      "id": "1A00000000120013",
+      "x": 6.0,
+      "y": 7.5,
       "dependencies": [
-        "1A000000000001B3",
-        "1A00000000000137",
-        "1A000000000004CF"
-      ],
-      "icon": {
-        "id": "iis:pickaxe_iron",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:flint_pickaxe",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000043D00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C00000000043D00"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000440",
-      "x": 7.0,
-      "y": 0.5,
-      "dependencies": [
-        "1A00000000000137",
-        "1A000000000004CF"
-      ],
-      "icon": {
-        "id": "minecraft:wooden_shovel",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:wooden_shovel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000044000"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C00000000044000"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000441",
-      "x": 5.0,
-      "y": 6.0,
-      "dependencies": [
-        "1A000000000001B0",
-        "1A00000000000137",
-        "1A000000000004CF"
-      ],
-      "icon": {
-        "id": "minecraft:stone_shovel",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:stone_shovel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000044100"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C00000000044100"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000442",
-      "x": 8.5,
-      "y": 6.5,
-      "dependencies": [
-        "1A000000000001B0"
-      ],
-      "icon": {
-        "id": "minecraft:stone_pickaxe",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:stone_pickaxe",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000044200"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C00000000044200"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000004B1",
-      "x": 2.0,
-      "y": 0.5,
-      "dependencies": [
-        "1A000000000004B2",
-        "1A00000000000137"
+        "1A00000000120012",
+        "1A00000000120005"
       ],
       "icon": {
         "id": "minecraft:red_bed",
@@ -1107,7 +645,7 @@
             }
           },
           "count": 1,
-          "id": "1B0000000004B100"
+          "id": "1B00000012001300"
         }
       ],
       "rewards": [
@@ -1117,27 +655,487 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C0000000004B100"
+          "id": "1C00000012001300"
         }
       ]
     },
     {
-      "id": "1A000000000004B2",
-      "x": 0.0,
-      "y": 0.5,
+      "id": "1A00000000120014",
+      "x": 6.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000120005"
+      ],
       "icon": {
-        "id": "minecraft:white_wool",
+        "id": "iis:treetap",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "minecraft:white_wool",
+            "id": "iis:treetap",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012001400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012001400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120015",
+      "x": 7.5,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000120014"
+      ],
+      "icon": {
+        "id": "iis:sticky_resin",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sticky_resin",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012001500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012001500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120016",
+      "x": 9.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000120015",
+        "1A00000000120006"
+      ],
+      "icon": {
+        "id": "minecraft:torch",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:torch",
+            "count": 1
+          },
+          "count": 4,
+          "id": "1B00000012001600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012001600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120017",
+      "x": 9.0,
+      "y": 3.75,
+      "dependencies": [
+        "1A00000000120009"
+      ],
+      "icon": {
+        "id": "iis:ore_cassiterite",
+        "count": 1
+      },
+      "size": 1.5,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000012001700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120018",
+      "x": 12.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000120017",
+        "1A0000000012000E"
+      ],
+      "icon": {
+        "id": "iis:ingot_tin",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_tin",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012001800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012001800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120019",
+      "x": 12.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120017",
+        "1A0000000012000E"
+      ],
+      "icon": {
+        "id": "minecraft:copper_ingot",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:copper_ingot",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012001900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012001900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012001A",
+      "x": 12.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000120017",
+        "1A0000000012000E"
+      ],
+      "icon": {
+        "id": "minecraft:iron_ingot",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:iron_ingot",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012001A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012001A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012001B",
+      "x": 12.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000120017"
+      ],
+      "icon": {
+        "id": "minecraft:coal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:coal",
+            "count": 1
+          },
+          "count": 8,
+          "id": "1B00000012001B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012001B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012001C",
+      "x": 12.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000120017"
+      ],
+      "icon": {
+        "id": "iis:ore_silver",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:crushed_silver)item(iis:impure_dust_silver)item(iis:ingot_silver)item(iis:ore_silver))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000012001C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012001C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012001D",
+      "x": 1.5,
+      "y": 9.0,
+      "dependencies": [
+        "1A00000000120000"
+      ],
+      "icon": {
+        "id": "minecraft:sand",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:sand",
+            "count": 1
+          },
+          "count": 4,
+          "id": "1B00000012001D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012001D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012001E",
+      "x": 9.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000012001D",
+        "1A0000000012000E"
+      ],
+      "icon": {
+        "id": "minecraft:glass",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:glass",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012001E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012001E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012001F",
+      "x": 10.5,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000012001E"
+      ],
+      "icon": {
+        "id": "minecraft:glass_pane",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:glass_pane",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012001F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012001F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120020",
+      "x": 1.5,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000120000"
+      ],
+      "icon": {
+        "id": "minecraft:clay_ball",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:clay_ball",
+            "count": 1
+          },
+          "count": 4,
+          "id": "1B00000012002000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012002000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120021",
+      "x": 9.0,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000120020",
+        "1A0000000012000E"
+      ],
+      "icon": {
+        "id": "minecraft:brick",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:brick",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012002100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000012002100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120022",
+      "x": 10.5,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000120021"
+      ],
+      "icon": {
+        "id": "minecraft:bricks",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:bricks",
             "count": 1
           },
           "count": 3,
-          "id": "1B0000000004B200"
+          "id": "1B00000012002200"
         }
       ],
       "rewards": [
@@ -1147,30 +1145,30 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C0000000004B200"
+          "id": "1C00000012002200"
         }
       ]
     },
     {
-      "id": "1A000000000004CF",
-      "x": 3.5,
-      "y": 6.0,
+      "id": "1A00000000120023",
+      "x": 1.5,
+      "y": 7.5,
       "dependencies": [
-        "1A00000000000705"
+        "1A00000000120000"
       ],
       "icon": {
-        "id": "minecraft:stick",
+        "id": "minecraft:slime_ball",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "minecraft:stick",
+            "id": "minecraft:slime_ball",
             "count": 1
           },
           "count": 1,
-          "id": "1B0000000004CF00"
+          "id": "1B00000012002300"
         }
       ],
       "rewards": [
@@ -1180,80 +1178,9 @@
             "id": "iis:credit_copper",
             "count": 1
           },
-          "id": "1C0000000004CF00"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000705",
-      "x": 2.0,
-      "y": 4.5,
-      "dependencies": [
-        "1A000000000001B1"
-      ],
-      "icon": {
-        "id": "minecraft:oak_planks",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:oak_planks",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000070500"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C00000000070500"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000799",
-      "x": 4.0,
-      "y": 0.5,
-      "dependencies": [
-        "1A00000000000137",
-        "1A000000000004CF"
-      ],
-      "icon": {
-        "id": "minecraft:ladder",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:ladder",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000079900"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 1
-          },
-          "id": "1C00000000079900"
+          "id": "1C00000012002300"
         }
       ]
     }
-  ],
-  "icon": {
-    "id": "minecraft:crafting_table",
-    "count": 1
-  }
+  ]
 }
