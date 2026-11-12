@@ -69,6 +69,11 @@ public final class BioFluids {
     /** Энергетическая среда E1. */
     public static final Def E1 = fluid("e1", 0xFFE8B040, 1200);
     public static final Def G1 = fluid("g1", 0xFFB04880, 1500);
+    // черновик Б-2 (D148): пищеварительная кислота рудного желудка, кислый сток, фермент HV, ростовая среда MV
+    public static final Def ACID = fluid("digestive_acid", 0xFFB8D040, 1100);
+    public static final Def ACID_RUNOFF = fluid("acid_runoff", 0xFF7A8A30, 1300);
+    public static final Def ENZYME = fluid("enzyme_solution", 0xFF60C8A0, 1200);
+    public static final Def G2 = fluid("g2", 0xFF8040A0, 1500);
 
     /** Порядок для синхронизации интерфейса: 0 — пусто, 1 — вода, дальше жидкости Био. */
     public static List<Fluid> syncOrder() {

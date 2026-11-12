@@ -63,6 +63,7 @@ public final class BioJeiPlugin implements IModPlugin {
             case NEST -> BioContent.NEST.get();
             case GLAND -> BioContent.GLAND.get();
             case MEMBRANE_FILTER -> BioContent.MEMBRANE_FILTER.get();
+            default -> BioContent.STATIONS2.get(s).get();
         };
     }
 

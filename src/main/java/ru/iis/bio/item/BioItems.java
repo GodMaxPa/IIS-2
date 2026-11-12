@@ -104,6 +104,33 @@ public final class BioItems {
     /** Фильтровальная прокладка B27: 100 партий мембранного фильтра F09 (D73). */
     public static final DeferredItem<Item> FINE_FILTER_PAD = reg("fine_filter_pad", p -> new Item(p.durability(100)));
 
+    // --- черновик Б-2 (D148): мутанты, хитин, руда, оболочки MV–HV ---------------------------------------------------------
+    /** Щуп наблюдения: ПКМ по животному — фиксирует исходное состояние и показывает линию, стадию, запас продукта. */
+    public static final DeferredItem<Item> PROBE = reg("observation_probe", p -> new Item(p.stacksTo(1)));
+    /** Сборный скребок: ПКМ по рабочей линии — собрать продукт; 64 сбора. */
+    public static final DeferredItem<Item> SCRAPER = reg("collection_scraper", p -> new Item(p.durability(64)));
+    /** Агенты воздействия по профилям {@link ru.iis.bio.mutant.Mutants.Profile} (в порядке перечисления). */
+    public static final List<DeferredItem<Item>> AGENTS = List.of(simple("agent_pig_fleshy"), simple("agent_cow_binding"),
+            simple("agent_sheep_longfiber"), simple("agent_chicken_shell"));
+    /** Туша мясистой свиньи: больше мясного и соединительного сырья. */
+    public static final DeferredItem<Item> CARCASS_FLESHY = reg("carcass_fleshy", p -> new CarcassItem(p.stacksTo(8)));
+    public static final DeferredItem<Item> BINDING_SECRETION = simple("binding_secretion");
+    public static final DeferredItem<Item> LONG_FIBER = simple("long_fiber");
+    public static final DeferredItem<Item> DENSE_SHELL = simple("dense_shell");
+    public static final DeferredItem<Item> COMPOST = simple("bio_compost");
+    public static final DeferredItem<Item> CHITIN_CULTURE = reg("chitin_culture", p -> new LivingItem(p));
+    public static final DeferredItem<Item> CHITIN_FLAKE = simple("chitin_flake");
+    public static final DeferredItem<Item> CHITIN_PLATE = simple("chitin_plate");
+    /** Армированная оболочка MV: из продукта любой одной мутантной линии (§17.5: LV → MV). */
+    public static final DeferredItem<Item> REINFORCED_SHELL = reg("reinforced_shell", p -> new LivingItem(p));
+    public static final DeferredItem<Item> HYBRID_SEED = reg("hybrid_seed", p -> new LivingItem(p));
+    public static final DeferredItem<Item> ENZYME_CULTURE = reg("enzyme_culture", p -> new LivingItem(p));
+    public static final DeferredItem<Item> EMBRYO = reg("organ_embryo", p -> new LivingItem(p));
+    /** Регулируемая оболочка HV: первый экземпляр растёт в MV-инкубаторе. */
+    public static final DeferredItem<Item> REGULATED_SHELL = reg("regulated_shell", p -> new LivingItem(p));
+    public static final DeferredItem<Item> MINERAL_BINDER = simple("mineral_binder");
+    public static final DeferredItem<Item> MINERAL_SEDIMENT = simple("mineral_sediment");
+
     public static void register(IEventBus modBus) {
         ITEMS.register(modBus);
         COMPONENTS.register(modBus);

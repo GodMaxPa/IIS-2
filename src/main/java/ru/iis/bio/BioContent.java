@@ -110,6 +110,37 @@ public final class BioContent {
     /** F09 мембранный фильтр LV. */
     public static final DeferredBlock<StationBlock> MEMBRANE_FILTER = station("membrane_filter", Station.MEMBRANE_FILTER, p -> p.mapColor(MapColor.CRIMSON_NYLIUM).sound(BioSounds.FLESH).strength(1.5f).noOcclusion());
 
+    // --- черновик Б-2 (D148): отходная яма, органы LV–HV, живое хранилище, канал предметов, площадка вивария ---------------------
+    public static final java.util.Map<Station, DeferredBlock<StationBlock>> STATIONS2 = new java.util.EnumMap<>(Station.class);
+    public static final java.util.List<DeferredItem<BlockItem>> B2_ITEMS = new java.util.ArrayList<>();
+    static {
+        for (Station st : new Station[]{Station.SUMP, Station.LOOSENER, Station.COMPACTOR, Station.ORE_STOMACH, Station.CROSSBREEDER, Station.INCUBATOR,
+                Station.ISOLATOR, Station.ACCELERATOR, Station.BIOREACTOR, Station.SEPARATOR}) {
+            String id = st == Station.SUMP ? "waste_sump" : st.id;
+            DeferredBlock<StationBlock> b = st == Station.SUMP
+                    ? station(id, st, p -> p.mapColor(MapColor.STONE).sound(net.minecraft.world.level.block.SoundType.STONE).strength(1.5f).noOcclusion())
+                    : station(id, st, p -> p.mapColor(MapColor.CRIMSON_NYLIUM).sound(BioSounds.FLESH).strength(1.5f).noOcclusion().lightLevel(s -> 2));
+            STATIONS2.put(st, b);
+            B2_ITEMS.add(ITEMS.registerSimpleBlockItem(id, b));
+        }
+    }
+    public static final DeferredBlock<ru.iis.bio.block.LivingStoreBlock> LIVING_STORE = BLOCKS.registerBlock("living_store", ru.iis.bio.block.LivingStoreBlock::new,
+            p -> p.mapColor(MapColor.CRIMSON_NYLIUM).sound(BioSounds.FLESH).strength(1.5f));
+    public static final DeferredBlock<ru.iis.bio.block.ItemChannelBlock> ITEM_CHANNEL = BLOCKS.registerBlock("peristaltic_channel", ru.iis.bio.block.ItemChannelBlock::new,
+            p -> p.mapColor(MapColor.CRIMSON_NYLIUM).sound(BioSounds.FLESH).strength(0.8f).noOcclusion());
+    /** Площадка вивария: рядом с ней (4 блока) проводится воздействие на животное. */
+    public static final DeferredBlock<Block> VIVARIUM_PAD = BLOCKS.registerBlock("vivarium_pad", Block::new,
+            p -> p.mapColor(MapColor.CRIMSON_NYLIUM).sound(BioSounds.FLESH).strength(1.0f));
+    static {
+        B2_ITEMS.add(ITEMS.registerSimpleBlockItem("living_store", LIVING_STORE));
+        B2_ITEMS.add(ITEMS.registerSimpleBlockItem("peristaltic_channel", ITEM_CHANNEL));
+        B2_ITEMS.add(ITEMS.registerSimpleBlockItem("vivarium_pad", VIVARIUM_PAD));
+    }
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ru.iis.bio.block.LivingStoreBlockEntity>> LIVING_STORE_BE = BLOCK_ENTITIES.register("living_store",
+            () -> new BlockEntityType<>(ru.iis.bio.block.LivingStoreBlockEntity::new, LIVING_STORE.get()));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ru.iis.bio.block.ItemChannelBlockEntity>> ITEM_CHANNEL_BE = BLOCK_ENTITIES.register("peristaltic_channel",
+            () -> new BlockEntityType<>(ru.iis.bio.block.ItemChannelBlockEntity::new, ITEM_CHANNEL.get()));
+
     public static final java.util.List<DeferredItem<BlockItem>> STATION_ITEMS = java.util.List.of(
             ITEMS.registerSimpleBlockItem("butcher_block", BUTCHER), ITEMS.registerSimpleBlockItem("stone_mortar", MORTAR),
             ITEMS.registerSimpleBlockItem("stone_pot", POT), ITEMS.registerSimpleBlockItem("stone_hearth", HEARTH),
@@ -170,8 +201,9 @@ public final class BioContent {
             () -> new BlockEntityType<>(ru.iis.bio.block.VesselBlockEntity::new, VESSELS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<StationBlockEntity>> STATION_BE = BLOCK_ENTITIES.register("bio_station",
-            () -> new BlockEntityType<>(StationBlockEntity::new, BUTCHER.get(), MORTAR.get(), POT.get(), MIXER.get(), SUBSTRATE.get(), BED.get(), PRESS.get(), FILTER.get(), NEST.get(), GLAND.get(),
-                    MEMBRANE_FILTER.get()));
+            () -> new BlockEntityType<>(StationBlockEntity::new, java.util.stream.Stream.concat(
+                    java.util.stream.Stream.of(BUTCHER, MORTAR, POT, MIXER, SUBSTRATE, BED, PRESS, FILTER, NEST, GLAND, MEMBRANE_FILTER), STATIONS2.values().stream())
+                    .map(DeferredBlock::get).toArray(Block[]::new)));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<HearthBlockEntity>> HEARTH_BE = BLOCK_ENTITIES.register("stone_hearth",
             () -> new BlockEntityType<>(HearthBlockEntity::new, HEARTH.get()));
 
@@ -192,6 +224,7 @@ public final class BioContent {
                 out.accept(ENGINE_ITEM.get());
                 STATION_ITEMS.forEach(i -> out.accept(i.get()));
                 VESSEL_ITEMS.forEach(i -> out.accept(i.get()));
+                B2_ITEMS.forEach(i -> out.accept(i.get()));
                 BioItems.TAB.forEach(i -> out.accept(i.get()));
             })
             .build());
@@ -205,6 +238,7 @@ public final class BioContent {
         MENUS.register(modBus);
         BioItems.register(modBus);
         BioFluids.register(modBus);
+        ru.iis.bio.mutant.Mutants.register(modBus);
         NeoForge.EVENT_BUS.addListener(Butchery::onDrops);
         modBus.addListener(BioContent::registerCapabilities);
         NeoForge.EVENT_BUS.addListener(ShuttleSpawner::onLogin);
@@ -216,6 +250,9 @@ public final class BioContent {
     private static void registerCapabilities(net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent event) {
         var FLUID = net.neoforged.neoforge.capabilities.Capabilities.Fluid.BLOCK;
         event.registerBlockEntity(FLUID, STATION_BE.get(), (be, side) -> be.fluids);
+        var ITEM = net.neoforged.neoforge.capabilities.Capabilities.Item.BLOCK;
+        event.registerBlockEntity(ITEM, LIVING_STORE_BE.get(), (be, side) -> net.neoforged.neoforge.transfer.item.VanillaContainerWrapper.of(be));
+        event.registerBlockEntity(ITEM, ITEM_CHANNEL_BE.get(), (be, side) -> net.neoforged.neoforge.transfer.item.VanillaContainerWrapper.of(be));
         event.registerBlockEntity(FLUID, CORE_BE.get(), (be, side) -> be.fluids());
         event.registerBlockEntity(FLUID, VESSEL_BE.get(), ru.iis.bio.block.VesselBlockEntity::fluidHandler);
         event.registerBlockEntity(FLUID, LIVING_TANK_BE.get(), ru.iis.bio.block.LivingTankBlockEntity::fluidHandler);

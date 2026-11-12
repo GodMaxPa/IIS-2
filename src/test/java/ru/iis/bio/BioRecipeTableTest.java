@@ -17,7 +17,9 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class BioRecipeTableTest {
     private static final Set<String> FLUIDS = Set.of("water", "n0", "primary_fraction", "runoff", "hydrolysate", "suspension", "binder", "g0",
-            "extract", "emulsion", "concentrate", "w0", "n1", "e1", "g1");
+            "extract", "emulsion", "concentrate", "w0", "n1", "e1", "g1",
+            // черновик Б-2 (D148)
+            "digestive_acid", "acid_runoff", "enzyme_solution", "g2");
 
     @Test
     void tableIsWellFormed() {
@@ -61,12 +63,17 @@ class BioRecipeTableTest {
                 // туши — убийство ножом (Butchery), неразвитая культура — соскоб ткани колонии челнока
                 "iis:carcass_small", "iis:carcass_medium", "iis:carcass_large", "iis:carcass_rotten", "iis:primitive_culture",
                 // места, которые крафтятся на верстаке из ванили; карман есть у ядра
-                "station:butcher", "station:mortar", "station:pot", "station:mixer", "station:pocket"));
+                "station:butcher", "station:mortar", "station:pot", "station:mixer", "station:pocket",
+                // Б-2 (D148): отходная яма — верстак; продукты мутантных линий собираются с живых животных (Mutants), туша — ножом
+                "station:sump", "minecraft:egg", "#minecraft:wool", "iis:carcass_fleshy", "iis:binding_secretion", "iis:long_fiber", "iis:dense_shell"));
         // крафт и места из продуктов среза
         List<Map.Entry<String, String>> unlocks = List.of(Map.entry("iis:plant_fiber", "iis:woven_mandrel"), Map.entry("iis:hand_substrate", "station:substrate"),
                 Map.entry("iis:growth_bed", "station:bed"), Map.entry("iis:plant_fiber", "station:press"), Map.entry("iis:plant_fiber", "iis:filter_pad"),
                 Map.entry("iis:filter_pad", "station:filter"), Map.entry("iis:forming_nest", "station:nest"),
-                Map.entry("iis:nutrient_gland", "station:gland"), Map.entry("iis:membrane_filter", "station:membrane_filter"));
+                Map.entry("iis:nutrient_gland", "station:gland"), Map.entry("iis:membrane_filter", "station:membrane_filter"),
+                Map.entry("iis:loosener", "station:loosener"), Map.entry("iis:compactor", "station:compactor"), Map.entry("iis:ore_stomach", "station:ore_stomach"),
+                Map.entry("iis:crossbreeder", "station:crossbreeder"), Map.entry("iis:incubator", "station:incubator"), Map.entry("iis:isolator", "station:isolator"),
+                Map.entry("iis:accelerator", "station:accelerator"), Map.entry("iis:bioreactor", "station:bioreactor"), Map.entry("iis:separator", "station:separator"));
         boolean changed = true;
         while (changed) {
             changed = false;
@@ -77,6 +84,8 @@ class BioRecipeTableTest {
                 for (BioRecipe.In in : r.items()) {
                     String k = in.key();
                     if (k.equals("#iis:bio/seeds")) ok &= have.contains("iis:primitive_culture") || have.contains("iis:base_seed");
+                    else if (k.startsWith("#iis:ores/")) ok &= true;   // руда — из мира
+                    else if (k.startsWith("iis:crushed_")) ok &= have.contains("station:loosener");   // дроблёная руда — из разрыхлителя
                     else ok &= have.contains(k);
                 }
                 for (BioRecipe.FluidIn f : r.fluids()) ok &= have.contains(f.fluid());
@@ -90,7 +99,10 @@ class BioRecipeTableTest {
                 "iis:base_seed", "iis:growth_bed", "iis:feeding_maw", "station:bed",
                 "extract", "w0", "emulsion", "concentrate", "n1", "e1", "g1", "iis:tissue_microchannel", "iis:capillary_bundle",
                 "iis:narrow_fibrous_vessel", "iis:working_fibrous_vessel", "iis:muscle_node", "iis:forming_nest", "iis:muscle_pump",
-                "iis:nutrient_gland", "iis:membrane_filter", "iis:living_tank", "iis:check_valve", "iis:manual_clamp", "iis:valve_petal")) {
+                "iis:nutrient_gland", "iis:membrane_filter", "iis:living_tank", "iis:check_valve", "iis:manual_clamp", "iis:valve_petal",
+                // Б-2 (D148): чистое Био доходит до HV и до пыли металла без машин Кибера
+                "iis:reinforced_shell", "iis:ore_stomach", "iis:incubator", "iis:regulated_shell", "iis:accelerator", "iis:bioreactor", "iis:separator",
+                "iis:living_store", "iis:peristaltic_channel", "iis:dust_copper", "iis:mineral_binder", "g2", "enzyme_solution")) {
             assertTrue(have.contains(must), "unreachable: " + must);
         }
         for (BioRecipe r : BioRecipe.all()) {

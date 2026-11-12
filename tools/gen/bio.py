@@ -414,7 +414,13 @@ def generate(g):
     _spec = _ilu.spec_from_file_location('iis_gen_bio_b1', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bio_b1.py'))
     _b1 = _ilu.module_from_spec(_spec)
     _spec.loader.exec_module(_b1)
+    # черновик Б-2 (D148): остаток LV, мутанты, руды, хранилище и перенос, каркас MV-HV — дополняет таблицы Б-1 до их записи
+    _spec = _ilu.spec_from_file_location('iis_gen_bio_b2', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bio_b2.py'))
+    _b2 = _ilu.module_from_spec(_spec)
+    _spec.loader.exec_module(_b2)
+    stats['b2'] = _b2.extend(_b1, g)
     stats['b1'] = _b1.generate_b1(g)
+    stats['b2'].update(_b2.generate(_b1, g))
     return stats
 
 

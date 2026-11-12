@@ -92,6 +92,8 @@ class PathIndependenceTest {
                     JsonObject oo = o.getAsJsonObject();
                     String id = oo.has("item") ? oo.get("item").getAsString() : oo.has("fluid") ? oo.get("fluid").getAsString() : null;
                     if (id != null && !id.contains(":")) id = "iis:" + id;   // жидкости Био записаны без пространства имён
+                    // D148: пыли и дроблёная руда — общие материалы мира (Био тоже перерабатывает руду), это не «продукт Био»
+                    if (id != null && (id.startsWith("iis:dust_") || id.startsWith("iis:tiny_dust_") || id.startsWith("iis:crushed_"))) continue;
                     if (id != null && id.startsWith("iis:")) out.add(id);
                 }
             }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "C C",
+    "CPC",
+    "CCC"
+  ],
+  "key": {
+    "C": "minecraft:cobblestone",
+    "P": "#minecraft:planks"
+  },
+  "result": {
+    "id": "iis:waste_sump",
+    "count": 1
+  }
+}

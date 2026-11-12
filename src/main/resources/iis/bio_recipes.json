@@ -2592,5 +2592,10217 @@
   "upkeep": 0.01,
   "lineage": true,
   "spec": "B14"
+ },
+ {
+  "id": "sump_residue",
+  "station": "sump",
+  "mode": 0,
+  "seconds": 60,
+  "items": [
+   {
+    "key": "iis:organic_residue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "runoff",
+    "amount": 1000
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:bio_compost",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "D148 черновик"
+ },
+ {
+  "id": "sump_plant",
+  "station": "sump",
+  "mode": 0,
+  "seconds": 60,
+  "items": [
+   {
+    "key": "iis:plant_residue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "runoff",
+    "amount": 1000
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:bio_compost",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "D148 черновик"
+ },
+ {
+  "id": "sump_rotten",
+  "station": "sump",
+  "mode": 0,
+  "seconds": 60,
+  "items": [
+   {
+    "key": "iis:rotten_mass",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "runoff",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:bio_compost",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "D148 черновик"
+ },
+ {
+  "id": "sump_acid",
+  "station": "sump",
+  "mode": 0,
+  "seconds": 60,
+  "items": [
+   {
+    "key": "iis:bone_powder",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 1000
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:mineral_sediment",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "D148 черновик: нейтрализация кислого стока"
+ },
+ {
+  "id": "probe",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 20,
+  "items": [
+   {
+    "key": "iis:bone_rib",
+    "count": 1
+   },
+   {
+    "key": "iis:sinew_cord",
+    "count": 1
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:observation_probe",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "D148"
+ },
+ {
+  "id": "scraper",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 20,
+  "items": [
+   {
+    "key": "iis:bone_rib",
+    "count": 2
+   },
+   {
+    "key": "iis:sinew_cord",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:collection_scraper",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "D148"
+ },
+ {
+  "id": "carcass_fleshy",
+  "station": "butcher",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:carcass_fleshy",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:meat_mass",
+    "count": 8
+   },
+   {
+    "item": "iis:connective_fiber",
+    "count": 4
+   },
+   {
+    "item": "iis:thick_sinew",
+    "count": 2
+   },
+   {
+    "item": "iis:bone_fragment",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:bio_knife",
+  "spec": "§19.8 pig_fleshy"
+ },
+ {
+  "id": "secretion_gel",
+  "station": "mortar",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "iis:binding_secretion",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:binding_gel",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§19.8 cow_binding"
+ },
+ {
+  "id": "shell_powder",
+  "station": "mortar",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "iis:dense_shell",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:bone_powder",
+    "count": 3
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§19.8 chicken_shell"
+ },
+ {
+  "id": "sediment_powder",
+  "station": "mortar",
+  "mode": 0,
+  "seconds": 10,
+  "items": [
+   {
+    "key": "iis:mineral_sediment",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:bone_powder",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "D148"
+ },
+ {
+  "id": "secretion_binder",
+  "station": "pot",
+  "mode": 0,
+  "seconds": 15,
+  "items": [
+   {
+    "key": "iis:binding_secretion",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "water",
+    "amount": 1000
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "binder",
+    "amount": 1000
+   }
+  ],
+  "heat": true,
+  "spec": "§19.8 cow_binding"
+ },
+ {
+  "id": "agent_pig",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:meat_mass",
+    "count": 2
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:agent_pig_fleshy",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§17.4 агент"
+ },
+ {
+  "id": "agent_cow",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:binding_gel",
+    "count": 2
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:agent_cow_binding",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§17.4 агент"
+ },
+ {
+  "id": "agent_sheep",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "#minecraft:wool",
+    "count": 2
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:agent_sheep_longfiber",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§17.4 агент"
+ },
+ {
+  "id": "agent_chicken",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "minecraft:egg",
+    "count": 2
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:agent_chicken_shell",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§17.4 агент"
+ },
+ {
+  "id": "long_fibrous",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 60,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:long_fiber",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:fibrous_tissue",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§19.8 sheep_longfiber"
+ },
+ {
+  "id": "chitin_culture",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 240,
+  "items": [
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   },
+   {
+    "key": "iis:bone_powder",
+    "count": 2
+   },
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:chitin_culture",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§19 самостоятельная хитиновая культура (черновик)"
+ },
+ {
+  "id": "chitin_flake",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:chitin_culture",
+    "count": 1
+   },
+   {
+    "key": "iis:bone_powder",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:chitin_flake",
+    "count": 6
+   }
+  ],
+  "out_fluids": [],
+  "spec": "D148 черновик"
+ },
+ {
+  "id": "vivarium_pad",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 1
+   },
+   {
+    "key": "iis:soft_tissue",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:vivarium_pad",
+    "count": 4
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§17.4 виварий (черновик)"
+ },
+ {
+  "id": "living_store",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 180,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 4
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 150
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:living_store",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "D148 живое хранилище"
+ },
+ {
+  "id": "peristaltic_channel",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 90,
+  "items": [
+   {
+    "key": "iis:tissue_lining",
+    "count": 1
+   },
+   {
+    "key": "iis:muscle_bundle",
+    "count": 1
+   },
+   {
+    "key": "iis:bone_ring",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 50
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:peristaltic_channel",
+    "count": 4
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "D148 перенос предметов"
+ },
+ {
+  "id": "loosener",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 300,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 1
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 2
+   },
+   {
+    "key": "iis:bone_rib",
+    "count": 4
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:loosener",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 LV разрыхлитель"
+ },
+ {
+  "id": "compactor",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 300,
+  "items": [
+   {
+    "key": "iis:woven_frame",
+    "count": 2
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 2
+   },
+   {
+    "key": "iis:bone_ring",
+    "count": 2
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:compactor",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 LV уплотнитель"
+ },
+ {
+  "id": "ore_stomach",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 600,
+  "items": [
+   {
+    "key": "iis:reinforced_shell",
+    "count": 2
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 2
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 2
+   },
+   {
+    "key": "iis:bone_ring",
+    "count": 2
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:ore_stomach",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 MV рудный желудок"
+ },
+ {
+  "id": "crossbreeder",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 600,
+  "items": [
+   {
+    "key": "iis:reinforced_shell",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 4
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 1
+   },
+   {
+    "key": "iis:valve_petal",
+    "count": 2
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:crossbreeder",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 MV скрещиватель"
+ },
+ {
+  "id": "incubator",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 600,
+  "items": [
+   {
+    "key": "iis:reinforced_shell",
+    "count": 3
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 4
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 2
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:incubator",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 MV инкубатор"
+ },
+ {
+  "id": "isolator",
+  "station": "nest",
+  "mode": 0,
+  "seconds": 300,
+  "items": [
+   {
+    "key": "iis:reinforced_shell",
+    "count": 1
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 2
+   },
+   {
+    "key": "iis:fine_filter_pad",
+    "count": 1
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 1
+   },
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:isolator",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 MV изолятор культур"
+ },
+ {
+  "id": "chitin_plate",
+  "station": "compactor",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:chitin_flake",
+    "count": 4
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "binder",
+    "amount": 100
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:chitin_plate",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "spec": "D148 черновик"
+ },
+ {
+  "id": "shell_sheep",
+  "station": "compactor",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 2
+   },
+   {
+    "key": "iis:chitin_plate",
+    "count": 1
+   },
+   {
+    "key": "iis:long_fiber",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "binder",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:reinforced_shell",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§17.5 sheep_longfiber"
+ },
+ {
+  "id": "shell_cow",
+  "station": "compactor",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 2
+   },
+   {
+    "key": "iis:chitin_plate",
+    "count": 1
+   },
+   {
+    "key": "iis:binding_secretion",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "binder",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:reinforced_shell",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§17.5 cow_binding"
+ },
+ {
+  "id": "shell_chicken",
+  "station": "compactor",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 2
+   },
+   {
+    "key": "iis:chitin_plate",
+    "count": 1
+   },
+   {
+    "key": "iis:dense_shell",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "binder",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:reinforced_shell",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§17.5 chicken_shell"
+ },
+ {
+  "id": "shell_pig",
+  "station": "compactor",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 2
+   },
+   {
+    "key": "iis:chitin_plate",
+    "count": 1
+   },
+   {
+    "key": "iis:thick_sinew",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "binder",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:reinforced_shell",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§17.5 pig_fleshy"
+ },
+ {
+  "id": "cross_muscle",
+  "station": "crossbreeder",
+  "mode": 0,
+  "seconds": 300,
+  "items": [
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   },
+   {
+    "key": "iis:muscle_seed",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:hybrid_seed",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 MV"
+ },
+ {
+  "id": "cross_chitin",
+  "station": "crossbreeder",
+  "mode": 0,
+  "seconds": 300,
+  "items": [
+   {
+    "key": "iis:base_seed",
+    "count": 1
+   },
+   {
+    "key": "iis:chitin_culture",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:hybrid_seed",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 MV"
+ },
+ {
+  "id": "acid",
+  "station": "isolator",
+  "mode": 0,
+  "seconds": 60,
+  "items": [
+   {
+    "key": "iis:rotten_mass",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "hydrolysate",
+    "amount": 500
+   },
+   {
+    "fluid": "extract",
+    "amount": 500
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 1000
+   }
+  ],
+  "spec": "D148 черновик"
+ },
+ {
+  "id": "enzyme_culture",
+  "station": "isolator",
+  "mode": 0,
+  "seconds": 180,
+  "items": [
+   {
+    "key": "iis:hybrid_seed",
+    "count": 1
+   },
+   {
+    "key": "iis:organic_residue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "n1",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:enzyme_culture",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 MV стабильная ферментная культура"
+ },
+ {
+  "id": "enzyme_solution",
+  "station": "isolator",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:enzyme_culture",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "w0",
+    "amount": 1000
+   },
+   {
+    "fluid": "n1",
+    "amount": 250
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 1000
+   }
+  ],
+  "spec": "D148 черновик"
+ },
+ {
+  "id": "g2",
+  "station": "isolator",
+  "mode": 0,
+  "seconds": 60,
+  "items": [
+   {
+    "key": "iis:energy_paste",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 800
+   },
+   {
+    "fluid": "enzyme_solution",
+    "amount": 200
+   }
+  ],
+  "out_items": [],
+  "out_fluids": [
+   {
+    "fluid": "g2",
+    "amount": 1000
+   }
+  ],
+  "spec": "D148 черновик: среда MV"
+ },
+ {
+  "id": "embryo",
+  "station": "incubator",
+  "mode": 0,
+  "seconds": 240,
+  "items": [
+   {
+    "key": "iis:hybrid_seed",
+    "count": 1
+   },
+   {
+    "key": "iis:soft_tissue",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g1",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:organ_embryo",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 MV"
+ },
+ {
+  "id": "regulated_shell",
+  "station": "incubator",
+  "mode": 1,
+  "seconds": 480,
+  "items": [
+   {
+    "key": "iis:reinforced_shell",
+    "count": 2
+   },
+   {
+    "key": "iis:organ_embryo",
+    "count": 1
+   },
+   {
+    "key": "iis:chitin_plate",
+    "count": 2
+   },
+   {
+    "key": "iis:enzyme_culture",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g2",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:regulated_shell",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 HV: первый экземпляр на MV"
+ },
+ {
+  "id": "accelerator",
+  "station": "incubator",
+  "mode": 1,
+  "seconds": 900,
+  "items": [
+   {
+    "key": "iis:regulated_shell",
+    "count": 2
+   },
+   {
+    "key": "iis:organ_embryo",
+    "count": 1
+   },
+   {
+    "key": "iis:muscle_node",
+    "count": 2
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g2",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:accelerator",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 HV ускоритель роста"
+ },
+ {
+  "id": "bioreactor",
+  "station": "incubator",
+  "mode": 1,
+  "seconds": 900,
+  "items": [
+   {
+    "key": "iis:regulated_shell",
+    "count": 3
+   },
+   {
+    "key": "iis:organ_embryo",
+    "count": 1
+   },
+   {
+    "key": "iis:chitin_plate",
+    "count": 4
+   },
+   {
+    "key": "iis:tissue_lining",
+    "count": 2
+   },
+   {
+    "key": "iis:bone_ring",
+    "count": 4
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g2",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:bioreactor",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 HV биохимический реактор"
+ },
+ {
+  "id": "separator",
+  "station": "incubator",
+  "mode": 1,
+  "seconds": 900,
+  "items": [
+   {
+    "key": "iis:regulated_shell",
+    "count": 2
+   },
+   {
+    "key": "iis:organ_embryo",
+    "count": 1
+   },
+   {
+    "key": "iis:fine_filter_pad",
+    "count": 2
+   },
+   {
+    "key": "iis:living_membrane",
+    "count": 4
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g2",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:separator",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 HV разделение растворов"
+ },
+ {
+  "id": "acc_tissue",
+  "station": "accelerator",
+  "mode": 0,
+  "seconds": 20,
+  "items": [
+   {
+    "key": "iis:growth_substrate",
+    "count": 1
+   },
+   {
+    "key": "#iis:bio/seeds",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g2",
+    "amount": 25
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:soft_tissue",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 HV"
+ },
+ {
+  "id": "acc_membrane",
+  "station": "accelerator",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g2",
+    "amount": 25
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:living_membrane",
+    "count": 1
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "lineage": true,
+  "spec": "§6 HV"
+ },
+ {
+  "id": "acc_lining",
+  "station": "accelerator",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:living_membrane",
+    "count": 1
+   },
+   {
+    "key": "iis:fibrous_tissue",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g2",
+    "amount": 25
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:tissue_lining",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "tool": "iis:woven_mandrel",
+  "lineage": true,
+  "spec": "§6 HV"
+ },
+ {
+  "id": "acc_fibrous",
+  "station": "accelerator",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:soft_tissue",
+    "count": 1
+   },
+   {
+    "key": "iis:plant_fiber",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "g2",
+    "amount": 25
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:fibrous_tissue",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "lineage": true,
+  "spec": "§6 HV"
+ },
+ {
+  "id": "mineral_binder",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 120,
+  "items": [
+   {
+    "key": "iis:bone_powder",
+    "count": 4
+   },
+   {
+    "key": "iis:mineral_sediment",
+    "count": 2
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 250
+   },
+   {
+    "fluid": "binder",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:mineral_binder",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 HV: минеральное связующее для EV"
+ },
+ {
+  "id": "sep_runoff",
+  "station": "separator",
+  "mode": 0,
+  "seconds": 40,
+  "items": [],
+  "fluids": [
+   {
+    "fluid": "runoff",
+    "amount": 1000
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:mineral_sediment",
+    "count": 1
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "w0",
+    "amount": 700
+   },
+   {
+    "fluid": "hydrolysate",
+    "amount": 100
+   }
+  ],
+  "spec": "§6 HV"
+ },
+ {
+  "id": "sep_acid",
+  "station": "separator",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:bone_powder",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 1000
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:mineral_sediment",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "w0",
+    "amount": 600
+   }
+  ],
+  "spec": "§6 HV"
+ },
+ {
+  "id": "loosen_almandine",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/almandine",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_almandine",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_almandine",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_almandine",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_almandine",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_almandine",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_almandine",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_almandine",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_almandine",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_aluminium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/aluminium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_aluminium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_aluminium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_aluminium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_aluminium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_aluminium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_aluminium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_aluminium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_aluminium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_apatite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/apatite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_apatite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_apatite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_apatite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_apatite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_apatite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_apatite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_apatite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_apatite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_banded_iron",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/banded_iron",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_banded_iron",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_banded_iron",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_banded_iron",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_banded_iron",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_banded_iron",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_banded_iron",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_banded_iron",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_banded_iron",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_barite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/barite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_barite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_barite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_barite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_barite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_barite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_barite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_barite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_barite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_bastnasite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/bastnasite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_bastnasite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_bastnasite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_bastnasite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_bastnasite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_bastnasite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_bastnasite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_bastnasite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_bastnasite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_bauxite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/bauxite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_bauxite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_bauxite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_bauxite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_bauxite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_bauxite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_bauxite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_bauxite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_bauxite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_bentonite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/bentonite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_bentonite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_bentonite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_bentonite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_bentonite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_bentonite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_bentonite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_bentonite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_bentonite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_beryllium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/beryllium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_beryllium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_beryllium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_beryllium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_beryllium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_beryllium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_beryllium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_beryllium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_beryllium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_brown_limonite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/brown_limonite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_brown_limonite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_brown_limonite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_brown_limonite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_brown_limonite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_brown_limonite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_brown_limonite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_brown_limonite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_brown_limonite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_calcite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/calcite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_calcite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_calcite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_calcite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_calcite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_calcite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_calcite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_calcite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_calcite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_cassiterite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/cassiterite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_cassiterite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_cassiterite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_cassiterite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_cassiterite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_cassiterite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_cassiterite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_cassiterite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_cassiterite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_certus_quartz",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/certus_quartz",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_certus_quartz",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_certus_quartz",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_certus_quartz",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_certus_quartz",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_certus_quartz",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_certus_quartz",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_certus_quartz",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_certus_quartz",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_chalcopyrite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/chalcopyrite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_chalcopyrite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_chalcopyrite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_chalcopyrite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_chalcopyrite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_chalcopyrite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_chalcopyrite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_chalcopyrite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_chalcopyrite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_cinnabar",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/cinnabar",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_cinnabar",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_cinnabar",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_cinnabar",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_cinnabar",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_cinnabar",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_cinnabar",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_cinnabar",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_cinnabar",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_coal",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/coal",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_coal",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_coal",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_coal",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_coal",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_coal",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_coal",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_coal",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_coal",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_cobaltite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/cobaltite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_cobaltite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_cobaltite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_cobaltite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_cobaltite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_cobaltite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_cobaltite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_cobaltite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_cobaltite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_cooperite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/cooperite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_cooperite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_cooperite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_cooperite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_cooperite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_cooperite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_cooperite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_cooperite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_cooperite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_copper",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/copper",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_copper",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_copper",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_copper",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_copper",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_copper",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_copper",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_copper",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_copper",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_desh",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/desh",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_desh",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_desh",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_desh",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_desh",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_desh",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_desh",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_desh",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_desh",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_diamond",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/diamond",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_diamond",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_diamond",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_diamond",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_diamond",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_diamond",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_diamond",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_diamond",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_diamond",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_emerald",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/emerald",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_emerald",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_emerald",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_emerald",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_emerald",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_emerald",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_emerald",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_emerald",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_emerald",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_europium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/europium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_europium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_europium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_europium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_europium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_europium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_europium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_europium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_europium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_galena",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/galena",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_galena",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_galena",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_galena",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_galena",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_galena",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_galena",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_galena",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_galena",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_gallium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/gallium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_gallium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_gallium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_gallium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_gallium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_gallium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_gallium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_gallium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_gallium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_garnierite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/garnierite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_garnierite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_garnierite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_garnierite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_garnierite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_garnierite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_garnierite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_garnierite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_garnierite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_glauconite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/glauconite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_glauconite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_glauconite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_glauconite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_glauconite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_glauconite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_glauconite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_glauconite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_glauconite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_gold",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/gold",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_gold",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_gold",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_gold",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_gold",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_gold",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_gold",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_gold",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_gold",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_graphite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/graphite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_graphite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_graphite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_graphite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_graphite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_graphite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_graphite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_graphite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_graphite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_green_sapphire",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/green_sapphire",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_green_sapphire",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_green_sapphire",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_green_sapphire",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_green_sapphire",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_green_sapphire",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_green_sapphire",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_green_sapphire",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_green_sapphire",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_grossular",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/grossular",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_grossular",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_grossular",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_grossular",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_grossular",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_grossular",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_grossular",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_grossular",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_grossular",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_ilmenite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/ilmenite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_ilmenite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_ilmenite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_ilmenite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_ilmenite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_ilmenite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_ilmenite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_ilmenite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_ilmenite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_iridium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/iridium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_iridium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_iridium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_iridium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_iridium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_iridium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_iridium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_iridium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_iridium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_iron",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/iron",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_iron",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_iron",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_iron",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_iron",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_iron",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_iron",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_iron",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_iron",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_lapis",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/lapis",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_lapis",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_lapis",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_lapis",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lapis",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_lapis",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_lapis",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_lapis",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lapis",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_lazurite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/lazurite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_lazurite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_lazurite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_lazurite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lazurite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_lazurite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_lazurite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_lazurite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lazurite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_lead",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/lead",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_lead",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_lead",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_lead",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lead",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_lead",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_lead",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_lead",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lead",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_lepidolite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/lepidolite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_lepidolite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_lepidolite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_lepidolite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lepidolite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_lepidolite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_lepidolite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_lepidolite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lepidolite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_lignite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/lignite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_lignite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_lignite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_lignite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lignite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_lignite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_lignite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_lignite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lignite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_lithium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/lithium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_lithium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_lithium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_lithium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lithium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_lithium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_lithium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_lithium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lithium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_lutetium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/lutetium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_lutetium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_lutetium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_lutetium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lutetium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_lutetium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_lutetium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_lutetium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_lutetium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_magnesite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/magnesite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_magnesite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_magnesite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_magnesite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_magnesite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_magnesite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_magnesite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_magnesite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_magnesite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_magnetite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/magnetite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_magnetite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_magnetite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_magnetite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_magnetite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_magnetite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_magnetite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_magnetite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_magnetite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_malachite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/malachite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_malachite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_malachite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_malachite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_malachite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_malachite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_malachite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_malachite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_malachite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_meteoric_iron",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/meteoric_iron",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_meteoric_iron",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_meteoric_iron",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_meteoric_iron",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_meteoric_iron",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_meteoric_iron",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_meteoric_iron",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_meteoric_iron",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_meteoric_iron",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_molybdenite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/molybdenite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_molybdenite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_molybdenite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_molybdenite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_molybdenite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_molybdenite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_molybdenite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_molybdenite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_molybdenite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_molybdenum",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/molybdenum",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_molybdenum",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_molybdenum",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_molybdenum",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_molybdenum",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_molybdenum",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_molybdenum",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_molybdenum",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_molybdenum",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_monazite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/monazite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_monazite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_monazite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_monazite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_monazite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_monazite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_monazite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_monazite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_monazite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_naquadah",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/naquadah",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_naquadah",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_naquadah",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_naquadah",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_naquadah",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_naquadah",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_naquadah",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_naquadah",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_naquadah",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_naquadah_enriched",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/naquadah_enriched",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_naquadah_enriched",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_naquadah_enriched",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_naquadah_enriched",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_naquadah_enriched",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_naquadah_enriched",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_naquadah_enriched",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_naquadah_enriched",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_naquadah_enriched",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_neodymium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/neodymium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_neodymium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_neodymium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_neodymium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_neodymium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_neodymium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_neodymium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_neodymium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_neodymium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_nether_quartz",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/nether_quartz",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_nether_quartz",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_nether_quartz",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_nether_quartz",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_nether_quartz",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_nether_quartz",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_nether_quartz",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_nether_quartz",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_nether_quartz",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_nickel",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/nickel",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_nickel",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_nickel",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_nickel",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_nickel",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_nickel",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_nickel",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_nickel",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_nickel",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_oilsands",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/oilsands",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_oilsands",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_oilsands",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_oilsands",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_oilsands",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_oilsands",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_oilsands",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_oilsands",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_oilsands",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_olivine",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/olivine",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_olivine",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_olivine",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_olivine",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_olivine",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_olivine",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_olivine",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_olivine",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_olivine",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_palladium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/palladium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_palladium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_palladium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_palladium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_palladium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_palladium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_palladium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_palladium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_palladium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_pentlandite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/pentlandite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_pentlandite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_pentlandite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_pentlandite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pentlandite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_pentlandite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_pentlandite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_pentlandite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pentlandite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_pitchblende",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/pitchblende",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_pitchblende",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_pitchblende",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_pitchblende",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pitchblende",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_pitchblende",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_pitchblende",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_pitchblende",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pitchblende",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_platinum",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/platinum",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_platinum",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_platinum",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_platinum",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_platinum",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_platinum",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_platinum",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_platinum",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_platinum",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_powellite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/powellite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_powellite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_powellite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_powellite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_powellite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_powellite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_powellite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_powellite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_powellite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_pyrite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/pyrite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_pyrite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_pyrite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_pyrite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pyrite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_pyrite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_pyrite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_pyrite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pyrite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_pyrochlore",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/pyrochlore",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_pyrochlore",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_pyrochlore",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_pyrochlore",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pyrochlore",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_pyrochlore",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_pyrochlore",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_pyrochlore",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pyrochlore",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_pyrolusite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/pyrolusite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_pyrolusite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_pyrolusite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_pyrolusite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pyrolusite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_pyrolusite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_pyrolusite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_pyrolusite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pyrolusite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_pyrope",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/pyrope",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_pyrope",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_pyrope",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_pyrope",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pyrope",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_pyrope",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_pyrope",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_pyrope",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_pyrope",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_quartzite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/quartzite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_quartzite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_quartzite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_quartzite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_quartzite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_quartzite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_quartzite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_quartzite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_quartzite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_redstone",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/redstone",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_redstone",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_redstone",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_redstone",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "minecraft:redstone",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_redstone",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_redstone",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_redstone",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "minecraft:redstone",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_rock_salt",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/rock_salt",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_rock_salt",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_rock_salt",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_rock_salt",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_rock_salt",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_rock_salt",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_rock_salt",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_rock_salt",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_rock_salt",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_ruby",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/ruby",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_ruby",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_ruby",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_ruby",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_ruby",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_ruby",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_ruby",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_ruby",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_ruby",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_salt",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/salt",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_salt",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_salt",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_salt",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_salt",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_salt",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_salt",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_salt",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_salt",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_sapphire",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/sapphire",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_sapphire",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_sapphire",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_sapphire",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_sapphire",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_sapphire",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_sapphire",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_sapphire",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_sapphire",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_scheelite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/scheelite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_scheelite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_scheelite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_scheelite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_scheelite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_scheelite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_scheelite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_scheelite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_scheelite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_silver",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/silver",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_silver",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_silver",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_silver",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_silver",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_silver",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_silver",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_silver",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_silver",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_soapstone",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/soapstone",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_soapstone",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_soapstone",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_soapstone",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_soapstone",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_soapstone",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_soapstone",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_soapstone",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_soapstone",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_sodalite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/sodalite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_sodalite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_sodalite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_sodalite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_sodalite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_sodalite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_sodalite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_sodalite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_sodalite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_spessartine",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/spessartine",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_spessartine",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_spessartine",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_spessartine",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_spessartine",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_spessartine",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_spessartine",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_spessartine",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_spessartine",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_sphalerite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/sphalerite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_sphalerite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_sphalerite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_sphalerite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_sphalerite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_sphalerite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_sphalerite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_sphalerite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_sphalerite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_spodumene",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/spodumene",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_spodumene",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_spodumene",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_spodumene",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_spodumene",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_spodumene",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_spodumene",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_spodumene",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_spodumene",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_stibnite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/stibnite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_stibnite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_stibnite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_stibnite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_stibnite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_stibnite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_stibnite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_stibnite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_stibnite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_sulfur",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/sulfur",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_sulfur",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_sulfur",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_sulfur",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_sulfur",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_sulfur",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_sulfur",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_sulfur",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_sulfur",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_talc",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/talc",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_talc",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_talc",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_talc",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_talc",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_talc",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_talc",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_talc",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_talc",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_tantalite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/tantalite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_tantalite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_tantalite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_tantalite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tantalite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_tantalite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_tantalite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_tantalite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tantalite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_tetrahedrite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/tetrahedrite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_tetrahedrite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_tetrahedrite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_tetrahedrite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tetrahedrite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_tetrahedrite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_tetrahedrite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_tetrahedrite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tetrahedrite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_thorium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/thorium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_thorium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_thorium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_thorium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_thorium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_thorium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_thorium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_thorium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_thorium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_tin",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/tin",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_tin",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_tin",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_tin",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tin",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_tin",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_tin",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_tin",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tin",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_titanium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/titanium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_titanium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_titanium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_titanium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_titanium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_titanium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_titanium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_titanium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_titanium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_tricalcium_phosphate",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/tricalcium_phosphate",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_tricalcium_phosphate",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_tricalcium_phosphate",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_tricalcium_phosphate",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tricalcium_phosphate",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_tricalcium_phosphate",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_tricalcium_phosphate",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_tricalcium_phosphate",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tricalcium_phosphate",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_tungstate",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/tungstate",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_tungstate",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_tungstate",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_tungstate",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tungstate",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_tungstate",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_tungstate",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_tungstate",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tungstate",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_tungsten",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/tungsten",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_tungsten",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_tungsten",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_tungsten",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tungsten",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_tungsten",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_tungsten",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_tungsten",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_tungsten",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_uraninite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/uraninite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_uraninite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_uraninite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_uraninite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_uraninite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_uraninite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_uraninite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_uraninite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_uraninite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_uranium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/uranium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_uranium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_uranium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_uranium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_uranium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_uranium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_uranium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_uranium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_uranium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_vanadium",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/vanadium",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_vanadium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_vanadium",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_vanadium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_vanadium",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_vanadium",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_vanadium",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_vanadium",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_vanadium",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_vanadium_magnetite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/vanadium_magnetite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_vanadium_magnetite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_vanadium_magnetite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_vanadium_magnetite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_vanadium_magnetite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_vanadium_magnetite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_vanadium_magnetite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_vanadium_magnetite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_vanadium_magnetite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_wulfenite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/wulfenite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_wulfenite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_wulfenite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_wulfenite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_wulfenite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_wulfenite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_wulfenite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_wulfenite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_wulfenite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
+ },
+ {
+  "id": "loosen_yellow_limonite",
+  "station": "loosener",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "#iis:ores/yellow_limonite",
+    "count": 1
+   }
+  ],
+  "fluids": [],
+  "out_items": [
+   {
+    "item": "iis:crushed_yellow_limonite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [],
+  "spec": "§6 LV: руда -> 2 дроблёной (черновик)"
+ },
+ {
+  "id": "digest_yellow_limonite",
+  "station": "ore_stomach",
+  "mode": 0,
+  "seconds": 40,
+  "items": [
+   {
+    "key": "iis:crushed_yellow_limonite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "digestive_acid",
+    "amount": 250
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_yellow_limonite",
+    "count": 1
+   },
+   {
+    "item": "iis:tiny_dust_yellow_limonite",
+    "count": 3
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 250
+   }
+  ],
+  "spec": "§6 MV: 1 дроблёная -> пыль + 3 крошечные (черновик)"
+ },
+ {
+  "id": "leach_yellow_limonite",
+  "station": "bioreactor",
+  "mode": 0,
+  "seconds": 30,
+  "items": [
+   {
+    "key": "iis:crushed_yellow_limonite",
+    "count": 1
+   }
+  ],
+  "fluids": [
+   {
+    "fluid": "enzyme_solution",
+    "amount": 100
+   },
+   {
+    "fluid": "water",
+    "amount": 500
+   }
+  ],
+  "out_items": [
+   {
+    "item": "iis:dust_yellow_limonite",
+    "count": 2
+   }
+  ],
+  "out_fluids": [
+   {
+    "fluid": "acid_runoff",
+    "amount": 200
+   }
+  ],
+  "spec": "§6 HV: 1 дроблёная -> 2 пыли (черновик)"
  }
 ]

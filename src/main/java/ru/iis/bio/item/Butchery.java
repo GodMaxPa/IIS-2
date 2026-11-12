@@ -58,6 +58,8 @@ public final class Butchery {
             case LARGE -> BioItems.CARCASS_LARGE.get();
             case ROTTEN -> BioItems.CARCASS_ROTTEN.get();
         };
+        // D148: рабочая мясистая линия свиньи даёт свою тушу (больше мясного и соединительного сырья)
+        if (ru.iis.bio.mutant.Mutants.working(mob) == ru.iis.bio.mutant.Mutants.Profile.PIG_FLESHY) item = BioItems.CARCASS_FLESHY.get();
         ItemStack stack = new ItemStack(item);
         List<ItemStack> extras = new ArrayList<>();
         EntityType<?> t = mob.getType();

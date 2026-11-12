@@ -406,6 +406,10 @@ public final class IISGameTests {
             new Test("bio_hearth_fuel_slot", 20, FluidGameTests::hearthFuelSlot),
             new Test("bio_press_extract", 2000, FluidGameTests::pressExtract),
             new Test("bio_filter_w0", 1100, FluidGameTests::filterW0),
+            // черновик Био Б-2 (D148)
+            new Test("bio_mutant_sheep_line", 40, BioDraftGameTests::mutantSheepLine),
+            new Test("bio_mutant_pig_carcass", 40, BioDraftGameTests::mutantPigCarcass),
+            new Test("bio_channel_feeds_organ", 40, BioDraftGameTests::channelFeedsOrgan),
             // D101
             new Test("fluid_canner_mercury_battery", 100, UxGameTests::fluidCannerMercuryBattery),
             new Test("single_use_batteries", 20, UxGameTests::singleUseBatteries),
