@@ -88,6 +88,8 @@ public final class IISNetwork {
     }
 
     public static void register(IEventBus modBus) {
+        // D147: the held-Ctrl mark of a player who left does not stay in memory
+        net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.entity.player.PlayerEvent.PlayerLoggedOutEvent e) -> CTRL.remove(e.getEntity().getUUID()));
         modBus.addListener((RegisterPayloadHandlersEvent e) -> e.registrar("1")
                 .playToServer(WrenchKeys.TYPE, WrenchKeys.CODEC, (msg, ctx) -> setCtrl(ctx.player(), msg.ctrl()))
                 .playToServer(NightVisionKey.TYPE, NightVisionKey.CODEC, (msg, ctx) -> ru.iis.gear.GearEvents.toggleNightVision(ctx.player()))
