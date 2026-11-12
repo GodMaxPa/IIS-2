@@ -104,6 +104,15 @@ public final class StandHooks {
             IIS.LOGGER.info("STAND_CHECK overflow chest holds {}", n);
         }
         IIS.LOGGER.info("STAND_CHECK blocks shown {}, leftovers {}", r.shown(), r.leftovers());
+        // D147: нагрузка — весь стенд работает без игроков; время последних 100 тиков
+        long[] times = level.getServer().getTickTimesNanos();
+        long sum = 0, max = 0;
+        for (long t : times) {
+            sum += t;
+            max = Math.max(max, t);
+        }
+        IIS.LOGGER.info("STAND_CHECK load: forced chunks {}, tick avg {} ms, max {} ms (last {} ticks)", r.allForced().size(),
+                String.format(java.util.Locale.ROOT, "%.2f", sum / 1e6 / Math.max(1, times.length)), String.format(java.util.Locale.ROOT, "%.2f", max / 1e6), times.length);
     }
 
     public static int command(CommandSourceStack src) {
