@@ -561,8 +561,18 @@ def _retry_remove(func, path, _exc):
     func(path)
 
 
+# The recipe pictures of the quest book are written by tools/gen/quests.py, not here: they survive the cleaning (D147: a build made
+# after gen_content.py alone had no pictures in the quests)
+_QUEST_PICS = os.path.join(GEN, 'assets', NS, 'textures', 'quest_recipe')
+_QUEST_KEEP = os.path.join(ROOT, 'build', 'quest_recipe_keep')
+if os.path.isdir(_QUEST_PICS):
+    shutil.rmtree(_QUEST_KEEP, ignore_errors=True)
+    os.makedirs(os.path.dirname(_QUEST_KEEP), exist_ok=True)
+    shutil.copytree(_QUEST_PICS, _QUEST_KEEP)
 if os.path.isdir(GEN):
     shutil.rmtree(GEN, onerror=_retry_remove)
+if os.path.isdir(_QUEST_KEEP):
+    shutil.copytree(_QUEST_KEEP, _QUEST_PICS)
 A, D = os.path.join(GEN, 'assets', NS), os.path.join(GEN, 'data')
 
 
