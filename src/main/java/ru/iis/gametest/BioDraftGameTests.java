@@ -51,6 +51,24 @@ final class BioDraftGameTests {
         h.succeed();
     }
 
+    /** Каждый предмет таблицы рецептов Био существует в игре (D150: «толстая жила» была в рецептах, но не в реестре). */
+    static void recipeItemsExist(GameTestHelper h) {
+        java.util.Set<String> missing = new java.util.TreeSet<>();
+        for (ru.iis.bio.production.BioRecipe r : ru.iis.bio.production.BioRecipe.all()) {
+            java.util.List<String> ids = new java.util.ArrayList<>();
+            r.items().forEach(i -> ids.add(i.key()));
+            r.outItems().forEach(o -> ids.add(o.item()));
+            if (!r.tool().isEmpty()) ids.add(r.tool());
+            for (String id : ids) {
+                if (id.startsWith("#") || id.equals("food")) continue;
+                net.minecraft.resources.Identifier key = net.minecraft.resources.Identifier.parse(id.contains(":") ? id : "iis:" + id);
+                if (!net.minecraft.core.registries.BuiltInRegistries.ITEM.containsKey(key)) missing.add(id + " (" + r.id() + ")");
+            }
+        }
+        h.assertTrue(missing.isEmpty(), "bio recipes name items that do not exist: " + missing);
+        h.succeed();
+    }
+
     /** Рабочая мясистая свинья даёт свою тушу; обычная — среднюю. */
     static void mutantPigCarcass(GameTestHelper h) {
         Pig plain = h.spawn(EntityType.PIG, new BlockPos(3, 2, 4));

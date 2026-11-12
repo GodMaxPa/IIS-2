@@ -114,6 +114,8 @@ public final class BioItems {
             simple("agent_sheep_longfiber"), simple("agent_chicken_shell"));
     /** Туша мясистой свиньи: больше мясного и соединительного сырья. */
     public static final DeferredItem<Item> CARCASS_FLESHY = reg("carcass_fleshy", p -> new CarcassItem(p.stacksTo(8)));
+    /** Толстая жила: из туши мясистой свиньи, идёт в армированную оболочку (D148; предмет забыли зарегистрировать — D150). */
+    public static final DeferredItem<Item> THICK_SINEW = simple("thick_sinew");
     public static final DeferredItem<Item> BINDING_SECRETION = simple("binding_secretion");
     public static final DeferredItem<Item> LONG_FIBER = simple("long_fiber");
     public static final DeferredItem<Item> DENSE_SHELL = simple("dense_shell");

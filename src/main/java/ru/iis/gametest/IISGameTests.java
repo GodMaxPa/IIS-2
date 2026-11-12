@@ -383,6 +383,7 @@ public final class IISGameTests {
             new Test("bio_lv_nest_needs_buffers", 60, FluidGameTests::nestNeedsBuffers),
             new Test("stand_world_works", 1800, FluidGameTests::standWorks),
             new Test("lv_circuit_selects_recipe", 20, CircuitGameTests::circuitSelectsRecipe),
+            new Test("recipe_most_demanding_wins", 40, CircuitGameTests::mostDemandingRecipeWins),
             new Test("lv_bender_steel_capsules", 1500, CircuitGameTests::benderSteelCapsules),
             new Test("lv3_electrolyzer_pyrolusite", 600, ChemGameTests::electrolyzerPyrolusite),
             new Test("lv3_electrolyzer_water", 2600, ChemGameTests::electrolyzerWater),
@@ -410,6 +411,7 @@ public final class IISGameTests {
             new Test("bio_mutant_sheep_line", 40, BioDraftGameTests::mutantSheepLine),
             new Test("bio_mutant_pig_carcass", 40, BioDraftGameTests::mutantPigCarcass),
             new Test("bio_channel_feeds_organ", 40, BioDraftGameTests::channelFeedsOrgan),
+            new Test("bio_recipe_items_exist", 40, BioDraftGameTests::recipeItemsExist),
             // D101
             new Test("fluid_canner_mercury_battery", 100, UxGameTests::fluidCannerMercuryBattery),
             new Test("single_use_batteries", 20, UxGameTests::singleUseBatteries),

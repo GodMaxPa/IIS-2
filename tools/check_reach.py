@@ -43,6 +43,7 @@ def expand(i):
 
 
 recipes = []
+META = {}   # recipe id -> (type, EU/t), read by quest_walk.py
 for f in glob.glob(f'{R}/data/iis/recipe/**/*.json', recursive=True):
     d = json.load(open(f, encoding='utf-8'))
     rid = f.replace('\\', '/').split('/recipe/')[1][:-5]
@@ -98,6 +99,7 @@ for f in glob.glob(f'{R}/data/iis/recipe/**/*.json', recursive=True):
         if d.get('cleanroom'):
             reqs.append(['iis:cleanroom'])
     recipes.append((rid, reqs, outs))
+    META[rid] = (t, d.get('eut', 0))
 # D125: recipes of AE2 and Ender IO that stay on (the list of the jars minus the switched-off files of the override pack)
 _mods = json.load(open('reference/original/aeio_mods.json', encoding='utf-8'))
 for _ns in ('ae2', 'enderio'):
@@ -106,15 +108,16 @@ for _ns in ('ae2', 'enderio'):
             recipes.append((f'{_ns}/{_p}', [expand(i) for i in _e['in']], ['conduit:' + _e['conduit'] if _e.get('conduit') else _e['out']]))
 print(len(recipes), 'recipes')
 
+MACHINES = ('ore_washer_', 'ore_drill_', 'primitive_small_ore_miner', 'ore_stomach')   # D150: not ore, though named like it: they were taken as found in the world
 have = set()
 for f in glob.glob(f'{R}/assets/iis/items/*.json'):
     b = os.path.basename(f)[:-5]
-    if b.startswith(('ore_', 'deepslate_ore_', 'netherrack_ore', 'endstone_ore', 'small_ore')) or '_ore_' in b:
+    if (b.startswith(('ore_', 'deepslate_ore_', 'netherrack_ore', 'endstone_ore', 'small_ore')) or '_ore_' in b) and not b.startswith(MACHINES):
         have.add('iis:' + b)
 # what ore blocks drop in the world (small ores drop crushed ore, dust and gems)
 for f in glob.glob(f'{R}/data/iis/loot_table/blocks/*.json'):
     b = os.path.basename(f)[:-5]
-    if b.startswith(('ore_', 'deepslate_ore_', 'small_ore', 'deepslate_small', 'nether_', 'end_')) or '_ore_' in b:
+    if (b.startswith(('ore_', 'deepslate_ore_', 'small_ore', 'deepslate_small', 'nether_', 'end_')) or '_ore_' in b) and not b.startswith(MACHINES):
         t = open(f, encoding='utf-8').read()
         for part in t.split('"name"')[1:]:
             have.add(part.split('"')[1])
@@ -143,10 +146,20 @@ for f_ in ('uranium', 'mox', 'thorium', 'naquadah'):
 # the NASA workbench is a menu, not a recipe (D115)
 recipes.append(('space/rocket_t1', [['iis:nasa_workbench'], ['iis:nose_cone'], ['iis:heavy_plating'], ['iis:rocket_fins'], ['iis:rocket_engine_t1']], ['iis:rocket_t1']))
 recipes.append(('space/rocket_t2', [['iis:nasa_workbench'], ['iis:nose_cone'], ['iis:heavy_plating_t2'], ['iis:rocket_fins'], ['iis:rocket_engine_t1']], ['iis:rocket_t2']))
+recipes.append(('space/rocket_t3', [['iis:nasa_workbench'], ['iis:heavy_nose_cone'], ['iis:heavy_plating_t3'], ['iis:heavy_rocket_fins'], ['iis:heavy_rocket_engine'], ['iis:rocket_booster']], ['iis:rocket_t3']))
+# D150: what code makes, not a recipe: the recycler turns anything into scrap (D119), a ripe crop gives its harvest (crossbreeding on crop sticks)
+recipes.append(('code/recycler', [['iis:recycler_' + t_ for t_ in ('lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv')]], ['iis:scrap']))
+for c_ in json.load(open(f'{R}/iis/crops.json', encoding='utf-8')):
+    o_ = [x for x in [c_.get('drop')] + list(c_.get('special') or []) if x]
+    if o_:
+        recipes.append(('crop/' + c_['id'], [['iis:crop_sticks']], o_))
 # --with=iis:dust_naquadah: pretend an item is available, to see what else a missing source hides (D112: naquadah waits for space, D17)
 for a_ in [x for x in sys.argv[1:] if x.startswith('--with=')]:
     have.add(a_[7:])
     sys.argv.remove(a_)
+
+
+SEEDS = set(have)   # what the world gives before any recipe, read by quest_walk.py
 
 
 def ok(item):

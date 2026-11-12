@@ -50,5 +50,6 @@
       "id": "iis:phenol",
       "amount": 6000
     }
-  ]
+  ],
+  "circuit": 2
 }

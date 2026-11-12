@@ -49,8 +49,28 @@ public final class GtRecipes {
         return SERIALIZER.get(map).get();
     }
 
+    /** Рецепты карты в порядке выбора: кэш на набор рецептов игры (после /reload набор новый). */
+    private static final Map<RecipeMap, Map<GtRecipeMap, List<RecipeHolder<GtRecipe>>>> ORDERED = Collections.synchronizedMap(new WeakHashMap<>());
+
+    /**
+     * Рецепты карты, самые требовательные первыми (D150): все, кто перебирает их «до первого подходящего», берут рецепт,
+     * которому нужно больше всего из лежащего в слотах. Иначе рецепт «4 стержня → рама» навсегда закрывал бы любой рецепт
+     * с четырьмя такими же стержнями и чем-то ещё. При равенстве — по id, как отдаёт игра.
+     */
     public static Collection<RecipeHolder<GtRecipe>> all(RecipeMap recipes, GtRecipeMap map) {
-        return recipes.byType(type(map));
+        return ORDERED.computeIfAbsent(recipes, k -> Collections.synchronizedMap(new EnumMap<>(GtRecipeMap.class))).computeIfAbsent(map, m -> {
+            List<RecipeHolder<GtRecipe>> list = new ArrayList<>(recipes.byType(type(m)));
+            list.sort(Comparator.comparing((RecipeHolder<GtRecipe> h) -> specificity(h.value()), Arrays::compare).reversed());
+            return List.copyOf(list);
+        });
+    }
+
+    /** Мера требовательности рецепта: сколько разных входов (с неизрасходуемыми и схемой), жидкостей, предметов и мБ. */
+    public static long[] specificity(GtRecipe r) {
+        long items = 0, mb = 0;
+        for (var i : r.inputs()) items += i.count();
+        for (var f : r.fluidInputs()) mb += f.amount();
+        return new long[] {r.inputs().size() + r.keep().size() + (r.circuit() >= 0 ? 1 : 0), r.fluidInputs().size(), items, mb};
     }
 
     /** Используется ли жидкость во входах рецептов карты (GT: машина принимает только такие жидкости). */

@@ -25,5 +25,6 @@
     }
   ],
   "duration": 50,
-  "eut": 16
+  "eut": 16,
+  "circuit": 1
 }

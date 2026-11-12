@@ -19,5 +19,6 @@
       "ingredient": "iis:uumatter",
       "amount": 20
     }
-  ]
+  ],
+  "circuit": 5
 }

@@ -1348,3 +1348,9 @@ for n in ('overworld', 'large_biomes', 'amplified'):  # large noise-based iron/c
 
 print(f'{len(materials)} materials, {len(ore_blocks)} ore blocks, {len(small_blocks)} small ore blocks, {len(veins)} veins, {len(items)} items, '
       f'{len(tools)} tools ({", ".join(tool_mats)} + mortars), {len(recipes)} recipes; steam: {steam_stats}; lv: {lv_stats}')
+
+# D150: recipes hidden by another recipe of the same machine get a programmed circuit (after everything is written)
+_spec = _ilu.spec_from_file_location('iis_gen_shadowfix', os.path.join(ROOT, 'tools', 'gen', 'shadowfix.py'))
+_shadowfix = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_shadowfix)
+print('shadowfix:', _shadowfix.generate(globals()))

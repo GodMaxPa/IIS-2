@@ -13,5 +13,6 @@
     }
   ],
   "duration": 2400,
-  "eut": 30
+  "eut": 30,
+  "circuit": 6
 }
