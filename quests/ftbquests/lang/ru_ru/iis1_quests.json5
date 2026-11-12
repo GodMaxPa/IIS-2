@@ -868,10 +868,7 @@
   ],
   "quest.1A000000000000AA.title": "Двойная бериллиевая пластина",
   "quest.1A000000000000AB.quest_desc": [
-    "С её помощью можно расширить рабочую зону ядерного реактора.",
-    "",
-    "Рецепт на верстаке:",
-    "{image:iis:textures/quest_recipe/iis__reactor_chamber.png width:120 height:72 align:center}"
+    "С её помощью можно расширить рабочую зону ядерного реактора."
   ],
   "quest.1A000000000000AB.title": "Реакторная камера",
   "quest.1A000000000000AC.quest_desc": [
@@ -2151,10 +2148,7 @@
   ],
   "quest.1A0000000000019A.title": "Медная проволока",
   "quest.1A0000000000019B.quest_desc": [
-    "Основной компонент для вакуумных трубок.",
-    "",
-    "Рецепт на верстаке:",
-    "{image:iis:textures/quest_recipe/iis__glass_tube.png width:120 height:72 align:center}"
+    "Основной компонент для вакуумных трубок."
   ],
   "quest.1A0000000000019B.title": "Стеклянная трубочка",
   "quest.1A0000000000019C.quest_desc": [
@@ -9675,10 +9669,7 @@
   ],
   "quest.1A00000000000719.title": "Улучшение \"Цветность\"",
   "quest.1A0000000000071A.quest_desc": [
-    "Компонент улучшения \"Усиление сигнала\".",
-    "",
-    "Рецепт на верстаке:",
-    "{image:iis:textures/quest_recipe/iis__frequency_transmitter.png width:120 height:72 align:center}"
+    "Компонент улучшения \"Усиление сигнала\"."
   ],
   "quest.1A0000000000071A.title": "Частотный связыватель",
   "quest.1A0000000000071B.quest_desc": [

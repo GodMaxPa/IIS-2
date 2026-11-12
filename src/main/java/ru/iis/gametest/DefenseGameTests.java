@@ -79,7 +79,7 @@ final class DefenseGameTests {
         p.setItem(0, far);
         h.assertTrue(p.read(h.getLevel()).getFirst().getString().equals(net.minecraft.network.chat.Component.translatable("monitor.iis.out_of_range").getString()), "дальность не ограничена");
         for (String id : new String[]{"monitor/information_panel", "monitor/information_panel_extender", "monitor/advanced_information_panel", "monitor/advanced_panel_extender",
-                "monitor/color_upgrade", "monitor/frequency_transmitter", "processing/assembler/range_upgrade", "processing/assembler/gt_sensor_kit", "processing/assembler/computer_monitor"}) {
+                "monitor/color_upgrade", "processing/assembler/frequency_transmitter", "processing/assembler/range_upgrade", "processing/assembler/gt_sensor_kit", "processing/assembler/computer_monitor"}) {
             var key = ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath("iis", id));
             h.assertTrue(h.getLevel().recipeAccess().byKey(key).isPresent(), "нет рецепта " + id);
         }

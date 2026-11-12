@@ -2,14 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "Ps"
+    "PPk"
   ],
   "key": {
-    "P": "iis:double_plate_paper",
-    "s": "#iis:tools/saw"
+    "P": "minecraft:paper",
+    "k": "#iis:tools/knife"
   },
   "result": {
-    "id": "iis:ring_paper",
-    "count": 2
+    "id": "iis:ring_paper"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "#iis:cables/1x/copper",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/basic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:frequency_transmitter",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

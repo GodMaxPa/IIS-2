@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "G G",
-    "G G",
-    " G "
+    "X",
+    "m"
   ],
   "key": {
-    "G": "minecraft:glass_pane"
+    "X": "minecraft:blaze_rod",
+    "m": "#iis:tools/mortar"
   },
   "result": {
-    "id": "iis:glass_tube",
+    "id": "minecraft:blaze_powder",
     "count": 2
   }
 }

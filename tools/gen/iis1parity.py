@@ -116,6 +116,29 @@ def generate(g):
         elif (name.startswith('tool_head/') or name.startswith('part/long_rod_')) and any(name.endswith('_' + s) for s in soft):
             drop(name)
             bump('soft_parts_off')
+    # second pass over the lists (D147): only in machines in IIS 1 — reactor chamber (assembler, EV hull), glass tube (alloy smelter,
+    # ball mould), frequency transmitter (assembler)
+    for name in ('reactor/reactor_chamber', 'lv/glass_tube', 'monitor/frequency_transmitter'):
+        r = recipes.get(name)
+        if r and r['result']['id'] in machine:
+            drop(name)
+            bump('machine_only_off')
+    # the transmitter keeps a recipe of its own with a fixed name (GameTest monitor_panel_reads): IIS 1 numbers, our copper cable
+    write(os.path.join(D, NS, 'recipe', 'processing', 'assembler', 'frequency_transmitter.json'),
+          {'type': f'{NS}:assembler', 'inputs': [{'ingredient': '#iis:cables/1x/copper', 'count': 1}, {'ingredient': '#c:circuits/basic', 'count': 1}],
+           'outputs': [{'id': f'{NS}:frequency_transmitter', 'count': 1}], 'duration': 100, 'eut': 8})
+    # paper ring: knife and 2 paper -> 1 (was saw and cardboard -> 2); small coil with a ferrite bolt gives 4; blaze powder with a mortar
+    # (the vanilla recipe stays off); hydrated coal dust from coal dust and a bucket of water (the bucket comes back)
+    if 'gt/ring_paper' in recipes:
+        drop('gt/ring_paper')
+        shaped('iis1p/ring_paper', f'{NS}:ring_paper', 1, ['PPk'], {'P': MC('paper')})
+    if 'lv/coil_small' in recipes and ref('bolt', 'NickelZincFerrite'):
+        shaped('iis1p/coil_small_ferrite', f'{NS}:coil_small', 4, ['WWW', 'WDW', 'WWW'],
+               {'W': recipes['lv/coil_small']['key']['W'], 'D': tag_of('bolt', 'NickelZincFerrite')})
+    shaped('iis1p/blaze_powder_mortar', MC('blaze_powder'), 2, ['X', 'm'], {'X': MC('blaze_rod')})
+    if ref('dust', 'HydratedCoal'):
+        shapeless('iis1p/hydrated_coal_8', ref('dust', 'HydratedCoal'), 8, [tag_of('dust', 'Coal')] * 8 + [MC('water_bucket')])
+        shapeless('iis1p/hydrated_coal_1', ref('dust', 'HydratedCoal'), 1, [tag_of('dust', 'Coal'), MC('water_bucket')])
     never = {'neoforge:conditions': [{'type': 'neoforge:never'}]}
     for rid in ('bread', 'quartz_block', 'bowl'):
         write(os.path.join(OVR, 'data', 'minecraft', 'recipe', rid + '.json'), never)
@@ -125,8 +148,15 @@ def generate(g):
     if os.path.exists(jar):
         z = zipfile.ZipFile(jar)
         for n in z.namelist():
-            m = re.match(r'data/minecraft/recipe/(\w+_door)\.json$', n)
-            if not m or m.group(1) in ('iron_door', 'copper_door'):
+            m = re.match(r'data/minecraft/recipe/(\w+_door|\w+_fence)\.json$', n)
+            if not m or m.group(1) in ('iron_door', 'copper_door', 'nether_brick_fence'):
+                continue
+            if m.group(1).endswith('_fence'):   # GT: a wooden fence recipe gives 2 (IIS 1: 6 sticks -> 2)
+                r = json.loads(z.read(n))
+                if r.get('type') == 'minecraft:crafting_shaped' and r['result'].get('count', 1) == 3:
+                    r['result']['count'] = 2
+                    write(os.path.join(OVR, 'data', 'minecraft', 'recipe', m.group(1) + '.json'), r)
+                    bump('fences')
                 continue
             r = json.loads(z.read(n))
             if r.get('type') == 'minecraft:crafting_shaped' and r['result'].get('count', 1) == 3:

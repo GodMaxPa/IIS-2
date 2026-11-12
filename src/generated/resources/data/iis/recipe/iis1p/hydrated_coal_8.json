@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/coal",
+    "#c:dusts/coal",
+    "#c:dusts/coal",
+    "#c:dusts/coal",
+    "#c:dusts/coal",
+    "#c:dusts/coal",
+    "#c:dusts/coal",
+    "#c:dusts/coal",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "iis:dust_hydrated_coal",
+    "count": 8
+  }
+}

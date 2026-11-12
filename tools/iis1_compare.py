@@ -177,6 +177,8 @@ def main():
             m1, m2 = max(x[0] for x in r1), max(x[0] for x in r2)
             hand1 = min((x[2] for x in r1 if x[1] >= 0), default=0)
             hand2 = min(x[2] for x in r2)
+            if ':tiny_dust_' in iid and (m1, m2) == (9, 18):   # D110: 18 tiny piles from two dusts instead of 9 from one
+                continue
             if m1 != m2 or (hand1 == 0) != (hand2 == 0):
                 d.append((iid, r1, r2))
     print(f'IIS 1 crafting recipes with a mapped output: {sum(len(v) for v in one.values())} for {len(one)} items; IIS 2: {sum(len(v) for v in two.values())} for {len(two)} items')

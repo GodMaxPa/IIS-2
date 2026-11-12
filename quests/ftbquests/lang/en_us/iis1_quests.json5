@@ -868,10 +868,7 @@
   ],
   "quest.1A000000000000AA.title": "Double Beryllium Plate",
   "quest.1A000000000000AB.quest_desc": [
-    "It may extend inner working area of a nuclear reactor.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__reactor_chamber.png width:120 height:72 align:center}"
+    "It may extend inner working area of a nuclear reactor."
   ],
   "quest.1A000000000000AB.title": "Reactor Chamber",
   "quest.1A000000000000AC.quest_desc": [
@@ -2151,10 +2148,7 @@
   ],
   "quest.1A0000000000019A.title": "Fine copper wire",
   "quest.1A0000000000019B.quest_desc": [
-    "The main item for vacuum tubes.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__glass_tube.png width:120 height:72 align:center}"
+    "The main item for vacuum tubes."
   ],
   "quest.1A0000000000019B.title": "Glass Tube",
   "quest.1A0000000000019C.quest_desc": [
@@ -9675,10 +9669,7 @@
   ],
   "quest.1A00000000000719.title": "Color Upgrade",
   "quest.1A0000000000071A.quest_desc": [
-    "A part of Range Upgrade.",
-    "",
-    "Crafting table recipe:",
-    "{image:iis:textures/quest_recipe/iis__frequency_transmitter.png width:120 height:72 align:center}"
+    "A part of Range Upgrade."
   ],
   "quest.1A0000000000071A.title": "Frequency Transmitter",
   "quest.1A0000000000071B.quest_desc": [
