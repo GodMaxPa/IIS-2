@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:drill_head_carbon",
+  "result": {
+    "id": "iis:ingot_carbon",
+    "count": 4
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

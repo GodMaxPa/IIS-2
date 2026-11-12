@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:bolt_vanadium_steel",
+  "result": {
+    "id": "iis:nugget_vanadium_steel"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

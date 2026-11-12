@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:rod_neodymium_magnetic",
+  "result": {
+    "id": "iis:nugget_neodymium",
+    "count": 4
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

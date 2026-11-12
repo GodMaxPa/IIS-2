@@ -113,6 +113,8 @@ public class BioStationMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        return player.distanceToSqr(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5) <= 64.0;
+        // D147: станцию могли сломать, пока окно открыто, — её предметы уже выпали, окно обязано закрыться (иначе дюп)
+        return player.level().getBlockEntity(pos) instanceof StationLogic.Host
+                && player.distanceToSqr(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5) <= 64.0;
     }
 }

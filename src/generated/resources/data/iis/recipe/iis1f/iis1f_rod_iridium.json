@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:rod_iridium",
+  "result": {
+    "id": "iis:nugget_iridium",
+    "count": 4
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

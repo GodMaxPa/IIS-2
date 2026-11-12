@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:small_gear_tungsten_steel",
+  "result": {
+    "id": "iis:ingot_tungsten_steel"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

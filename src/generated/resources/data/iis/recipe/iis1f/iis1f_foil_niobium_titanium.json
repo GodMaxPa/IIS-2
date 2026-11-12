@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:foil_niobium_titanium",
+  "result": {
+    "id": "iis:nugget_niobium_titanium",
+    "count": 2
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

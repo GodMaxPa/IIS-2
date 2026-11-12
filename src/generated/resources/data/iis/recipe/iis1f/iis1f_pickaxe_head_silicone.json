@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:pickaxe_head_silicone",
+  "result": {
+    "id": "iis:ingot_silicone",
+    "count": 3
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:pipe_tiny_titanium",
+  "result": {
+    "id": "iis:nugget_titanium",
+    "count": 4
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

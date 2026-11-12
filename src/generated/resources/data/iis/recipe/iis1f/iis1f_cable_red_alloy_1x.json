@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:cable_red_alloy_1x",
+  "result": {
+    "id": "iis:nugget_red_alloy",
+    "count": 4
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

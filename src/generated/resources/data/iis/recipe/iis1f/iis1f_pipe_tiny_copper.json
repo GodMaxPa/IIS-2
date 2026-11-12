@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:pipe_tiny_copper",
+  "result": {
+    "id": "minecraft:copper_nugget",
+    "count": 4
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

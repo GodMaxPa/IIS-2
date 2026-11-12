@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:screw_aluminium",
+  "result": {
+    "id": "iis:nugget_aluminium"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "iis:ingot_naquadah_alloy",
+  "result": {
+    "id": "iis:nugget_naquadah_alloy",
+    "count": 9
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

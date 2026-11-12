@@ -61,4 +61,13 @@ def generate(g):
             n += 1
             write(os.path.join(D, NS, 'recipe', 'processing', m, f'iis1_{n:04d}.json'), j)
         stats[m] = n
+    # furnace recipes of IIS 1 that IIS 2 lacked (tools/iis1_furnace_compare.py --write): parts, tool heads, wires and cables back into metal
+    fpath = os.path.join(ROOT, 'reference', 'iis1_furnace_import.json')
+    if os.path.exists(fpath):
+        n = 0
+        for src, dst, cnt in json.load(open(fpath, encoding='utf-8')):
+            if exists(src) and exists(dst):
+                n += 1
+                g['smelting'](f'iis1f/iis1f_{src.split(":")[1]}', src, dst, cnt, 0.1)
+        stats['furnace'] = n
     return stats

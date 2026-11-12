@@ -68,6 +68,10 @@ def main():
     time.sleep(2)
     send('tick query')
     time.sleep(2)
+    if '--idle' in sys.argv:            # D147: an empty server must not pause after pause-when-empty-seconds (60 by default)
+        time.sleep(70)
+        send('tick query')
+        time.sleep(2)
     send('stop')
     try:
         proc.wait(180)
@@ -94,6 +98,8 @@ def main():
     check(scan and re.search(r'vanilla ore blocks=0\s*$', scan.group(0).strip()), 'no vanilla ores', 'vanilla ores present: ' + (scan.group(0) if scan else ''))
     for line in re.findall(r'(Average time per tick: [^\r\n]*|P50: [^\r\n]*)', log):
         print('   tick: ' + line.strip())
+    if '--idle' in sys.argv:
+        check('Server empty for' not in log, 'empty server keeps ticking (world.runWhenEmpty)', 'the empty server paused')
     broken = re.findall(r"(Couldn't parse data file '[^']+'[^\r\n]{0,200}|Parsing error loading recipe [^\r\n]{0,200}|Couldn't load tag [^\r\n]{0,200})", log)
     check(not broken, 'no broken data files', f'{len(broken)} broken data files')
     for b in broken[:20]:
