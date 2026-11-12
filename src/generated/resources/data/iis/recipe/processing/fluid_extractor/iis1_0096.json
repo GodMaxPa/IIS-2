@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:alloy_smelter_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_stainless_steel",
+      "count": 8
+    }
+  ],
+  "duration": 192,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_kanthal",
+      "amount": 1152
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "iis:distillation_tower",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:small_dust_salt",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 64,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:saltwater",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 750
+    }
+  ]
+}

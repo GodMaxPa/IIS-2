@@ -1,0 +1,32 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_brown_limonite",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:dust_carbon",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:iron_ingot",
+      "count": 2
+    },
+    {
+      "id": "iis:tiny_dust_ash",
+      "count": 2
+    }
+  ],
+  "duration": 240,
+  "eut": 120,
+  "fluid_outputs": [
+    {
+      "id": "iis:carbondioxide",
+      "amount": 1000
+    }
+  ],
+  "temp": 1200
+}

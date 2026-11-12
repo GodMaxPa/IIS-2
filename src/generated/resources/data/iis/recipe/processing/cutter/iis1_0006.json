@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:orange_stained_glass",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:orange_stained_glass_pane",
+      "count": 8
+    }
+  ],
+  "duration": 50,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 1
+    }
+  ]
+}

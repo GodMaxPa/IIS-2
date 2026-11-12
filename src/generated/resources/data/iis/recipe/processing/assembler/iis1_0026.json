@@ -1,0 +1,34 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_mv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:electric_piston_mv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:rod_aluminium",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:circuit_integrated_good",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:cable_copper_1x",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:robot_arm_mv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 30,
+  "circuit": 5
+}

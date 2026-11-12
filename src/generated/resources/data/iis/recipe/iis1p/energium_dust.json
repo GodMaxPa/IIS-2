@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/redstone",
+    "#c:dusts/redstone",
+    "#c:dusts/redstone",
+    "#c:dusts/redstone",
+    "#c:dusts/redstone",
+    "#c:dusts/ruby",
+    "#c:dusts/ruby",
+    "#c:dusts/ruby",
+    "#c:dusts/ruby"
+  ],
+  "result": {
+    "id": "iis:energium_dust",
+    "count": 9
+  }
+}

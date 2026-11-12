@@ -1,0 +1,27 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "iis:extruder_zpm",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_naquadah",
+      "count": 9
+    },
+    {
+      "id": "iis:ingot_iridium",
+      "count": 8
+    }
+  ],
+  "duration": 2418,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 2418
+    }
+  ]
+}

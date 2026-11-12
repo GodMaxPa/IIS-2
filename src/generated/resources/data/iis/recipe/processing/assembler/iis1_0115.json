@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:foil_polyvinyl_chloride",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:paper",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:book",
+      "count": 1
+    }
+  ],
+  "duration": 20,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:glue",
+      "amount": 20
+    }
+  ]
+}

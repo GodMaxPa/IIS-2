@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:rock_breaker_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_tin",
+      "count": 4
+    }
+  ],
+  "duration": 312,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_steel",
+      "amount": 1872
+    }
+  ]
+}

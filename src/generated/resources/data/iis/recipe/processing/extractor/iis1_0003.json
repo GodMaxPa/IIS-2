@@ -1,0 +1,17 @@
+{
+  "type": "iis:extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:snow",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:snowball",
+      "count": 4
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

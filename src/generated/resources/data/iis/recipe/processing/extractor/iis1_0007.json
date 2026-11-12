@@ -1,0 +1,17 @@
+{
+  "type": "iis:extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:coppon_fiber",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_copper",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

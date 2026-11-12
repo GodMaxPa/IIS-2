@@ -1,0 +1,41 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:monster_repellent_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:emitter_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:emitter_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:emitter_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:mixer_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_steel",
+      "count": 38
+    }
+  ],
+  "duration": 192,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_stainlesssteel",
+      "amount": 1152
+    }
+  ]
+}

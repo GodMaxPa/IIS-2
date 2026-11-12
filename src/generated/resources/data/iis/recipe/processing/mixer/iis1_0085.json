@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:small_dust_ender_pearl",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:small_dust_blaze",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_ender_eye",
+      "count": 1
+    }
+  ],
+  "duration": 25,
+  "eut": 8
+}

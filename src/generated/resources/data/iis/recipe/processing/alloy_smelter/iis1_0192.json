@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "iis:ingot_iridium",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_iridium",
+      "count": 1
+    }
+  ],
+  "duration": 5,
+  "eut": 64,
+  "keep": [
+    "iis:mold_block"
+  ]
+}

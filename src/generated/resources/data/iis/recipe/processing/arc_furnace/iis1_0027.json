@@ -1,0 +1,23 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "minecraft:chest",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_ash",
+      "count": 1
+    }
+  ],
+  "duration": 98,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 98
+    }
+  ]
+}

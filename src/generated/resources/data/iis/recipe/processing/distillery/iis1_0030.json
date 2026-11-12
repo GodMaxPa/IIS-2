@@ -1,0 +1,20 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [],
+  "duration": 20,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_medium_oil",
+      "amount": 50
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_sufluriclight_fuel",
+      "amount": 25
+    }
+  ],
+  "circuit": 2
+}

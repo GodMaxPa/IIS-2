@@ -1,0 +1,26 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_iv",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:plate_silicone",
+      "count": 6
+    },
+    {
+      "ingredient": "iis:cable_tungsten_1x",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:conveyor_module_iv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 480,
+  "circuit": 5
+}

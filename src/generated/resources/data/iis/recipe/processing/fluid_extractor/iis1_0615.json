@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:large_gas_turbine",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_titanium",
+      "count": 8
+    }
+  ],
+  "duration": 672,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_stainlesssteel",
+      "amount": 4032
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_mv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:plate_aluminium",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:rod_aluminium",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:cable_copper_1x",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:small_gear_aluminium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_piston_mv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 30,
+  "circuit": 5
+}

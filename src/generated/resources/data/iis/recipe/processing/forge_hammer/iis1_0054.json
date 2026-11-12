@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:sensor_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_electrum",
+      "count": 48
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

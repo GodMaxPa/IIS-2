@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:glowstone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_glowstone",
+      "count": 4
+    }
+  ],
+  "duration": 100,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 1
+    }
+  ]
+}

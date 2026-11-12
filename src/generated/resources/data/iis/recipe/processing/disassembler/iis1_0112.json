@@ -1,0 +1,33 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_piston_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_lv",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_steel",
+      "count": 3
+    },
+    {
+      "id": "iis:rod_steel",
+      "count": 2
+    },
+    {
+      "id": "iis:cable_tin_1x",
+      "count": 2
+    },
+    {
+      "id": "iis:small_gear_steel",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

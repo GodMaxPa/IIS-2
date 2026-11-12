@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:stick",
+      "count": 3
+    },
+    {
+      "ingredient": "minecraft:string",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:bow",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

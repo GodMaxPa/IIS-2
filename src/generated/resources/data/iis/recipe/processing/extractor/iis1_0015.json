@@ -1,0 +1,17 @@
+{
+  "type": "iis:extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:clay",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:clay_ball",
+      "count": 4
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

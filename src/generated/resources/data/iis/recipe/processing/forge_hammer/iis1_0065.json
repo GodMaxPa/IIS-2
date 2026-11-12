@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_electrum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_electrum",
+      "count": 3
+    }
+  ],
+  "duration": 151,
+  "eut": 16
+}

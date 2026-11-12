@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:water_pump_ulv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:piston",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_medium_bronze",
+      "count": 1
+    },
+    {
+      "id": "minecraft:piston",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_medium_wood",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_bronze",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_medium_wood",
+      "count": 1
+    },
+    {
+      "id": "minecraft:piston",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_medium_bronze",
+      "count": 1
+    },
+    {
+      "id": "minecraft:piston",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

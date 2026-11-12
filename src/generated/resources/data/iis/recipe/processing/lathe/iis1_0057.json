@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_cobalt_brass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_cobalt_brass",
+      "count": 1
+    }
+  ],
+  "duration": 7,
+  "eut": 4
+}

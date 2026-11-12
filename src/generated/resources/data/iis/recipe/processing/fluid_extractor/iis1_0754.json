@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:polarizer_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_tin",
+      "count": 6
+    }
+  ],
+  "duration": 192,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_steel",
+      "amount": 1152
+    }
+  ]
+}

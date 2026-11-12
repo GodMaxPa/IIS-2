@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:extruder_mv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_aluminium",
+      "count": 8
+    }
+  ],
+  "duration": 192,
+  "eut": 55,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_cupronickel",
+      "amount": 1152
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:wrench_head_iron_magnetic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_steel",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_iron",
+      "amount": 576
+    }
+  ]
+}

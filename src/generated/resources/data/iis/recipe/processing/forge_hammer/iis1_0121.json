@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_chrome",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:long_rod_chrome",
+      "count": 1
+    }
+  ],
+  "duration": 52,
+  "eut": 16
+}

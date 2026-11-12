@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:distillation_tower",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_large_stainless_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_large_stainless_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

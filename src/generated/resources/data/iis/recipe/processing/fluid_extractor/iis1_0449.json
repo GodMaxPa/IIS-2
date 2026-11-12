@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:hull_uv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_naquadah_alloy",
+      "count": 4
+    }
+  ],
+  "duration": 192,
+  "eut": 81,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_osmium",
+      "amount": 1152
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:tiny_dust_iron",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:tiny_dust_nickel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_invar",
+      "count": 3
+    }
+  ],
+  "duration": 33,
+  "eut": 8
+}

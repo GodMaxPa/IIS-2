@@ -1,0 +1,29 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:emitter_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:emerald",
+      "count": 1
+    },
+    {
+      "id": "iis:rod_chrome",
+      "count": 4
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 2
+    },
+    {
+      "id": "iis:cable_gold_1x",
+      "count": 2
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:arc_furnace_zpm",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_naquadah_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_graphite",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_naquadah_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_quantummainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_zpm",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_quantummainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_hsse",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_hsse",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_hsse",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,25 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:field_generator_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_nether_star",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_osmium_8x",
+      "count": 4
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 4
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

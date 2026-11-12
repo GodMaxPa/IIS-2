@@ -1,0 +1,23 @@
+{
+  "type": "iis:distillation_tower",
+  "inputs": [],
+  "outputs": [],
+  "duration": 600,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dilutedsulfuricacid",
+      "amount": 10000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:sulfuricacid",
+      "amount": 7000
+    },
+    {
+      "id": "minecraft:water",
+      "amount": 3000
+    }
+  ]
+}

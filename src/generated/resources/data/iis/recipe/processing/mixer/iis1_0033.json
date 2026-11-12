@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:tiny_dust_indium",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:tiny_dust_gallium",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:tiny_dust_phosphorus",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_indium_gallium_phosphide",
+      "count": 3
+    }
+  ],
+  "duration": 22,
+  "eut": 8
+}

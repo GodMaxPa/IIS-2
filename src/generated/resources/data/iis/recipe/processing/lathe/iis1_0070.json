@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_bismuth",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_bismuth",
+      "count": 1
+    }
+  ],
+  "duration": 26,
+  "eut": 4
+}

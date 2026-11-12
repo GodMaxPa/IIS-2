@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:fluid_solidifier_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_pump_iv",
+      "count": 1
+    },
+    {
+      "id": "minecraft:glass",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_platinum_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_platinum_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "minecraft:chest",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

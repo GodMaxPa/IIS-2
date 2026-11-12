@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:bone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:bone_meal",
+      "count": 4
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

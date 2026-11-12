@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "iis:ingot_pulsating_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_pulsating_iron",
+      "count": 9
+    }
+  ],
+  "duration": 100,
+  "eut": 1,
+  "keep": [
+    "iis:mold_nugget"
+  ]
+}

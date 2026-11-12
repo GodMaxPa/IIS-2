@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:disassembler_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:copper_ingot",
+      "count": 24
+    }
+  ],
+  "duration": 768,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_steel",
+      "amount": 4608
+    }
+  ]
+}

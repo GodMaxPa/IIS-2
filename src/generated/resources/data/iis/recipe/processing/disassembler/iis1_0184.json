@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:scanner_uv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_wetwaremainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:emitter_uv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_wetwaremainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_naquadah_alloy_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_uv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_naquadah_alloy_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_wetwaremainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:sensor_uv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_wetwaremainframe",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

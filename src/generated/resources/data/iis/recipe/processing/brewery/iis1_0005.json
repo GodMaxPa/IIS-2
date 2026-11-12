@@ -1,0 +1,24 @@
+{
+  "type": "iis:brewery",
+  "inputs": [
+    {
+      "ingredient": "minecraft:redstone",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 128,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:creosote",
+      "amount": 750
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:lubricant",
+      "amount": 750
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "minecraft:golden_apple",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:gold_ingot",
+      "count": 64
+    }
+  ],
+  "duration": 9216,
+  "eut": 5,
+  "fluid_outputs": [
+    {
+      "id": "iis:methane",
+      "amount": 4608
+    }
+  ]
+}

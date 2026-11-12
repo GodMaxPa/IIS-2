@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_assembler_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_vanadium_gallium",
+      "count": 1
+    }
+  ],
+  "duration": 192,
+  "eut": 66,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_chrome",
+      "amount": 1152
+    }
+  ]
+}

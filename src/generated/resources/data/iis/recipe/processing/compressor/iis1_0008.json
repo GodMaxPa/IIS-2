@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "iis:coppon_fiber",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:orange_wool",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

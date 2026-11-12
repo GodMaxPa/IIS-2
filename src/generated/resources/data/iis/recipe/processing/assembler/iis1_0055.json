@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_steel",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:ring_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rotor_steel",
+      "count": 1
+    }
+  ],
+  "duration": 240,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_tin",
+      "amount": 32
+    }
+  ]
+}

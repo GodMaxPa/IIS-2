@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "minecraft:blaze_powder",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_dark_ash",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_sulfur",
+      "count": 1
+    }
+  ],
+  "duration": 920,
+  "eut": 10
+}

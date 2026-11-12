@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:sifter_uv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_osmium",
+      "count": 8
+    }
+  ],
+  "duration": 192,
+  "eut": 120,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_naquadahalloy",
+      "amount": 1152
+    }
+  ]
+}

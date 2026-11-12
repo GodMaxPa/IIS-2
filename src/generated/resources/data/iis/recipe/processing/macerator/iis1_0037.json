@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:wire_zinc_1x",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_zinc",
+      "count": 2
+    }
+  ],
+  "duration": 32,
+  "eut": 4
+}

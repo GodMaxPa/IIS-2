@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "minecraft:white_wool",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:green_wool",
+      "count": 1
+    }
+  ],
+  "duration": 64,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dye_chemical_dyegreen",
+      "amount": 72
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_polyphenylene_sulfide",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_polyphenylene_sulfide",
+      "count": 3
+    }
+  ],
+  "duration": 9,
+  "eut": 16
+}

@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:lathe_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_niobium_titanium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_niobium_titanium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_motor_luv",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_luv",
+      "count": 1
+    },
+    {
+      "id": "iis:industrial_diamond",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_niobium_titanium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_piston_luv",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

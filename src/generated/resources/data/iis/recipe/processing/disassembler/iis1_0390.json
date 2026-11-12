@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electromagnetic_separator_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:conveyor_module_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_platinum_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_annealed_copper_8x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_platinum_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:rod_vanadium_gallium",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_platinum_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_annealed_copper_8x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

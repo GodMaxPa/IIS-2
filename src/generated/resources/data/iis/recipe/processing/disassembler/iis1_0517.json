@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:replicator_zpm",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:emitter_zpm",
+      "count": 1
+    },
+    {
+      "id": "iis:field_generator_zpm",
+      "count": 1
+    },
+    {
+      "id": "iis:emitter_zpm",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_crystalmainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_zpm",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_crystalmainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:emitter_zpm",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_naquadah_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:emitter_zpm",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

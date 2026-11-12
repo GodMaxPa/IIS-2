@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:alloy_smelter_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_titanium",
+      "count": 8
+    }
+  ],
+  "duration": 192,
+  "eut": 73,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_nichrome",
+      "amount": 1152
+    }
+  ]
+}

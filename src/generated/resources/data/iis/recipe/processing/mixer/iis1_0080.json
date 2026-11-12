@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_coal",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 16,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 216
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dye_watermixed_dyeblack",
+      "amount": 192
+    }
+  ],
+  "circuit": 4
+}

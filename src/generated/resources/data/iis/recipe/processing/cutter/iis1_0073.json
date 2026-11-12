@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:lapis_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_lapis",
+      "count": 9
+    }
+  ],
+  "duration": 280,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 6
+    }
+  ]
+}

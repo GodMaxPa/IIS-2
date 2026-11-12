@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_electrum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_electrum",
+      "count": 1
+    }
+  ],
+  "duration": 18,
+  "eut": 4
+}

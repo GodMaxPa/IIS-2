@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:lens_glass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_glass",
+      "count": 3
+    }
+  ],
+  "duration": 16,
+  "eut": 4
+}

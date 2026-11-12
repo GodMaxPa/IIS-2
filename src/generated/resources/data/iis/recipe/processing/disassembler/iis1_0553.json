@@ -1,0 +1,25 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:field_generator_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_ender_pearl",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_osmium_1x",
+      "count": 4
+    },
+    {
+      "id": "iis:circuit_basic",
+      "count": 4
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_gold",
+      "count": 3
+    }
+  ],
+  "duration": 196,
+  "eut": 16
+}

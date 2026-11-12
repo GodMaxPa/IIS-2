@@ -1,0 +1,25 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:field_generator_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:quantum_star",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_osmium_16x",
+      "count": 4
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 4
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,26 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "iis:small_dust_ilmenite",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:small_dust_carbon",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_wrought_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_rutile",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 500,
+  "temp": 1700
+}

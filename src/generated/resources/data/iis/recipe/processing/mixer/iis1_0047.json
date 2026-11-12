@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:small_dust_saltpeter",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:small_dust_sulfur",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:small_dust_coal",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_gunpowder",
+      "count": 6
+    }
+  ],
+  "duration": 150,
+  "eut": 8
+}

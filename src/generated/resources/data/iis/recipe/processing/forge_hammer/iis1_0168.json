@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_hsse",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:long_rod_hsse",
+      "count": 1
+    }
+  ],
+  "duration": 81,
+  "eut": 16
+}

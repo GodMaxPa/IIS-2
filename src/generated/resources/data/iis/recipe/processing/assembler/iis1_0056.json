@@ -1,0 +1,34 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_lv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:plate_steel",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:rod_steel",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:cable_tin_1x",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:small_gear_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_piston_lv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 30,
+  "circuit": 5
+}

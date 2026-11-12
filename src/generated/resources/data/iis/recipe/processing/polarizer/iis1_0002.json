@@ -1,0 +1,17 @@
+{
+  "type": "iis:polarizer",
+  "inputs": [
+    {
+      "ingredient": "iis:double_plate_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_steel_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 256,
+  "eut": 16
+}

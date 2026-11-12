@@ -1,0 +1,26 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "iis:ore_meteoric_iron",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:dust_quicklime",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_meteoric_iron",
+      "count": 3
+    },
+    {
+      "id": "iis:small_dust_dark_ash",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 120,
+  "temp": 1500
+}

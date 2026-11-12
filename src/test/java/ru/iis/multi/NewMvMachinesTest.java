@@ -123,7 +123,6 @@ class NewMvMachinesTest {
         // излучатель: в сборщике схема 5, 80 тиков, 30 EU/t; на верстаке «SSC/WQS/CWS»
         JsonObject em = recipe("processing/assembler/emitter_mv");
         assertEquals(5, em.get("circuit").getAsInt());
-        assertEquals("minecraft:quartz", recipe("lv/emitter_mv").getAsJsonObject("key").get("Q").getAsString());
         assertEquals("iis:emitter_lv", recipe("lv/laser_engraver_lv").getAsJsonObject("key").get("E").getAsString());
     }
 

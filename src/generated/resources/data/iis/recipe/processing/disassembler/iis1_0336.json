@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:fluid_heater_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_hssg_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:reinforced_glass",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_hssg_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_luv",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_luv",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_luv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_niobium_titanium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_niobium_titanium_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

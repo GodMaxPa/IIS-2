@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_tungsten_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_tungsten_steel",
+      "count": 1
+    }
+  ],
+  "duration": 14,
+  "eut": 4
+}

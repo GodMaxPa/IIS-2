@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_manganese",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_manganese",
+      "count": 3
+    }
+  ],
+  "duration": 55,
+  "eut": 16
+}

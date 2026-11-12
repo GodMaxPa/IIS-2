@@ -283,7 +283,7 @@ def generate(g):
         else:
             name(f'block.{NS}.{pid}.tooltip.2', 'Not gas proof: gases leak out', 'Пропускает газ: газы утекают')
         # crafting: only where the plate exists (other materials come with their metallurgy)
-        if size in PIPE_CRAFT and mat in ('wood', 'copper', 'stainless_steel'):
+        if size in PIPE_CRAFT and mat in ('wood', 'copper', 'stainless_steel', 'titanium', 'tungsten_steel', 'polytetrafluoroethylene'):
             pat, cnt = PIPE_CRAFT[size]
             key = ({'P': '#minecraft:planks', 'h': '#iis:tools/soft_hammer', 'w': '#iis:tools/saw'} if mat == 'wood'
                    else {'P': f'#c:plates/{mat}', 'h': '#iis:tools/hammer', 'w': '#iis:tools/wrench'})

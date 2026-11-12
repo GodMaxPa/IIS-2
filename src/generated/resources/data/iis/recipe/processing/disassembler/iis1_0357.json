@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:amplifab_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_platinum_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_platinum_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

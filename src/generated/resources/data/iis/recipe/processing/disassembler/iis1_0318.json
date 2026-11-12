@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:prospector_uv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:emitter_uv",
+      "count": 1
+    },
+    {
+      "id": "iis:field_generator_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:sensor_uv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_crystalmainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:computer_monitor",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_crystalmainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_neutronium",
+      "count": 1
+    },
+    {
+      "id": "iis:energy_cluster",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_neutronium",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

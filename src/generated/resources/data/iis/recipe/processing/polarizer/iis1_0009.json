@@ -1,0 +1,17 @@
+{
+  "type": "iis:polarizer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:iron_nugget",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_iron_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 16
+}

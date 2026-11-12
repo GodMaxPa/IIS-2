@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:assembly_line",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:assembler_casing",
+      "count": 1
+    },
+    {
+      "id": "iis:robot_arm_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:assembler_casing",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:assembler_casing",
+      "count": 1
+    },
+    {
+      "id": "iis:robot_arm_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:assembler_casing",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

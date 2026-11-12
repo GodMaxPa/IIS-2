@@ -1,0 +1,41 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:casing_fusion_2",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_americium",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_americium",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_americium",
+      "count": 1
+    },
+    {
+      "id": "iis:casing_fusion",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_americium",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_americium",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_americium",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

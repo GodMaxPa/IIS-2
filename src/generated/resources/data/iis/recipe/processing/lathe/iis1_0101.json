@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_naquadah_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_naquadah_alloy",
+      "count": 1
+    }
+  ],
+  "duration": 12,
+  "eut": 4
+}

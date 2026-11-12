@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:ender_pearl",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:rod_platinum",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:circuit_data",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:cable_aluminium_1x",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:emitter_ev",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 240,
+  "circuit": 5
+}

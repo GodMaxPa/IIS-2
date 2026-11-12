@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_enderium",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_enderium_base",
+      "count": 2
+    },
+    {
+      "id": "iis:dust_ender_pearl",
+      "count": 1
+    }
+  ],
+  "duration": 2016,
+  "eut": 10
+}

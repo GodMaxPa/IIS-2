@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:macerator_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_steel",
+      "count": 13
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

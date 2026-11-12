@@ -1,0 +1,17 @@
+{
+  "type": "iis:sifter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:gravel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:flint",
+      "count": 1
+    }
+  ],
+  "duration": 800,
+  "eut": 16
+}

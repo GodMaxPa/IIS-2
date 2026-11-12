@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:redstone",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:plate_iron",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:compass",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

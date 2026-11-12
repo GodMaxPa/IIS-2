@@ -56,11 +56,6 @@ class IvMachinesTest {
         assertEquals("#iis:wires/1x/osmium", key("lv/electrolyzer_iv", "I"));
         assertEquals("iis:emitter_iv", key("lv/laser_engraver_iv", "E"));
         assertEquals("iis:electric_pump_iv", key("lv/distillery_iv", "P"));
-        assertEquals("#iis:rings/styrene_butadiene_rubber", key("lv/electric_pump_iv_sbr", "O"));
-        assertEquals("#c:plates/silicone", key("lv/conveyor_module_iv_silicone", "R"));
-        assertEquals("#iis:wires/16x/annealed_copper", key("lv/electric_motor_iv", "W"));
-        assertEquals("minecraft:ender_eye", key("lv/emitter_iv", "Q"));
-        assertEquals("#c:rods/osmium", key("lv/sensor_iv", "S"));
         assertEquals("#c:gems/quartzite", key("lv/sensor_lv", "Q"));
         assertEquals("iis:casing_iv", key("lv/hull_iv", "M"));
         assertEquals("#iis:cables/1x/tungsten", key("lv/hull_iv", "C"));

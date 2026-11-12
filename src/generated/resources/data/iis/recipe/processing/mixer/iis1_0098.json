@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_banded_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 16,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 288
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dye_watermixed_dyered",
+      "amount": 216
+    }
+  ],
+  "circuit": 4
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:hull_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:gold_ingot",
+      "count": 1
+    }
+  ],
+  "duration": 192,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_stainlesssteel",
+      "amount": 1152
+    }
+  ]
+}

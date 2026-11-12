@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:field_generator_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_nether_star",
+      "count": 1
+    }
+  ],
+  "duration": 384,
+  "eut": 81,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_osmium",
+      "amount": 2304
+    }
+  ]
+}

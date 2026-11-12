@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/brass",
+    "#c:dusts/brass",
+    "#c:dusts/brass",
+    "#c:dusts/brass",
+    "#c:dusts/brass",
+    "#c:dusts/brass",
+    "#c:dusts/brass",
+    "#c:dusts/aluminium",
+    "#c:dusts/cobalt"
+  ],
+  "result": {
+    "id": "iis:dust_cobalt_brass",
+    "count": 9
+  }
+}

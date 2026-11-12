@@ -74,6 +74,9 @@ public final class IISConfig {
     public static final ModConfigSpec.BooleanValue FAST_LEAF_DECAY = B
             .comment("Leaves cut off from their tree fall in 4-11 ticks (FastLeafDecay of IIS 1.19.1, D87). Быстрое опадание листвы.")
             .define("fastLeafDecay", true);
+    public static final ModConfigSpec.BooleanValue RUN_WHEN_EMPTY = B
+            .comment("A dedicated server keeps ticking with no players online: factories, crops and world backups go on (overrides pause-when-empty-seconds of server.properties, D147). Сервер без игроков не встаёт на паузу.")
+            .define("runWhenEmpty", true);
 
     static {
         B.pop();

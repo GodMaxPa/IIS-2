@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:diesel_generator_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:gold_nugget",
+      "count": 13
+    }
+  ],
+  "duration": 384,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_stainlesssteel",
+      "amount": 2304
+    }
+  ]
+}

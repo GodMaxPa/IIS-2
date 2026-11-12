@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:chemical_reactor_zpm",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_iridium",
+      "count": 12
+    }
+  ],
+  "duration": 576,
+  "eut": 28,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_plastic",
+      "amount": 3456
+    }
+  ]
+}

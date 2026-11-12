@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_uranium235",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_uranium235",
+      "count": 1
+    }
+  ],
+  "duration": 29,
+  "eut": 4
+}

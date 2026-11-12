@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:gem_chipped_diamond",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_diamond",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_diamond",
+      "count": 1
+    }
+  ],
+  "duration": 768,
+  "eut": 8
+}

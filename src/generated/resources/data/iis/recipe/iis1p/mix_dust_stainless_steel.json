@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/iron",
+    "#c:dusts/iron",
+    "#c:dusts/iron",
+    "#c:dusts/iron",
+    "#c:dusts/iron",
+    "#c:dusts/iron",
+    "#c:dusts/nickel",
+    "#c:dusts/manganese",
+    "#c:dusts/chrome"
+  ],
+  "result": {
+    "id": "iis:dust_stainless_steel",
+    "count": 9
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:ender_pearl",
+      "count": 6
+    },
+    {
+      "ingredient": "minecraft:blaze_rod",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:ender_eye",
+      "count": 6
+    }
+  ],
+  "duration": 2500,
+  "eut": 2
+}

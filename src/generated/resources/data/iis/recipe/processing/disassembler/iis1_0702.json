@@ -1,0 +1,25 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:conveyor_module_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_lv",
+      "count": 2
+    },
+    {
+      "id": "iis:plate_rubber",
+      "count": 6
+    },
+    {
+      "id": "iis:cable_tin_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

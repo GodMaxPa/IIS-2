@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/iron",
+    "#c:dusts/aluminium",
+    "#c:dusts/chrome"
+  ],
+  "result": {
+    "id": "iis:dust_kanthal",
+    "count": 3
+  }
+}

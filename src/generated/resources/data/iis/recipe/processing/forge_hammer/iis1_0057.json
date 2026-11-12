@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:field_generator_uv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_electrum",
+      "count": 64
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

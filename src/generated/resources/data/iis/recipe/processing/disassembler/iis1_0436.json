@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:hatch_data_access_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:data_stick",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:data_stick",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:data_stick",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:data_stick",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

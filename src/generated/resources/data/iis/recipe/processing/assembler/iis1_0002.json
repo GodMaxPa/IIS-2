@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:wire_fine_annealed_copper",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:small_dust_gallium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:diode",
+      "count": 16
+    }
+  ],
+  "duration": 400,
+  "eut": 48,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_plastic",
+      "amount": 288
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:diamond_sawblade",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_diamond",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_diamond",
+      "count": 1
+    },
+    {
+      "id": "iis:gear_cobalt_brass",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_diamond",
+      "count": 1
+    },
+    {
+      "id": "iis:small_dust_diamond",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

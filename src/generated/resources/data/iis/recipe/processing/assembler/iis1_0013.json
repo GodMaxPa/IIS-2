@@ -1,0 +1,32 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:mfsu",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:sensor_ev",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:reactor_heat_switch_diamond",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:charging_lapotron_crystal",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 1920,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 1440
+    }
+  ],
+  "circuit": 3
+}

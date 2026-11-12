@@ -1,0 +1,20 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [],
+  "duration": 16,
+  "eut": 64,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:woodvinegar",
+      "amount": 200
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:methanol",
+      "amount": 60
+    }
+  ],
+  "circuit": 4
+}

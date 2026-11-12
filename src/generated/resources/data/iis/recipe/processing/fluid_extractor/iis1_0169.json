@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:item_pipe_restrictive_medium_osmium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_steel",
+      "count": 6
+    }
+  ],
+  "duration": 72,
+  "eut": 81,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_osmium",
+      "amount": 432
+    }
+  ]
+}

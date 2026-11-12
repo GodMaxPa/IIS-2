@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:chainsaw_head_rose_gold",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_steel",
+      "count": 40
+    }
+  ],
+  "duration": 48,
+  "eut": 51,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_rosegold",
+      "amount": 288
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_silicon_dioxide",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:dust_carbon",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_silicon",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_ash",
+      "count": 1
+    }
+  ],
+  "duration": 240,
+  "eut": 120,
+  "fluid_outputs": [
+    {
+      "id": "iis:carbonmonoxide",
+      "amount": 2000
+    }
+  ],
+  "temp": 1200
+}

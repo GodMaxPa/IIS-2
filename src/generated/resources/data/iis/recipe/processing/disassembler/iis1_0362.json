@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:arc_furnace_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_aluminium_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_graphite",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_titanium",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_titanium",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_titanium",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

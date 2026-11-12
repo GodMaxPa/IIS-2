@@ -1,0 +1,39 @@
+{
+  "type": "iis:distillation_tower",
+  "inputs": [],
+  "outputs": [],
+  "duration": 40,
+  "eut": 256,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:woodvinegar",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:aceticacid",
+      "amount": 100
+    },
+    {
+      "id": "minecraft:water",
+      "amount": 500
+    },
+    {
+      "id": "iis:bioethanol",
+      "amount": 10
+    },
+    {
+      "id": "iis:methanol",
+      "amount": 300
+    },
+    {
+      "id": "iis:acetone",
+      "amount": 50
+    },
+    {
+      "id": "iis:methylacetate",
+      "amount": 10
+    }
+  ]
+}

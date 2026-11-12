@@ -1,0 +1,21 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:hatch_energy_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_tungsten_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_iv",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

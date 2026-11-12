@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s",
+    "X"
+  ],
+  "key": {
+    "X": "#iis:long_rods/epoxid_fiber_reinforced",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:rod_epoxid_fiber_reinforced",
+    "count": 2
+  }
+}

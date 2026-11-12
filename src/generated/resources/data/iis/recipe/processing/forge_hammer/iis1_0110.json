@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:beacon",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_glass",
+      "count": 5
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

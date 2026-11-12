@@ -1,0 +1,25 @@
+{
+  "type": "iis:pyrolyse",
+  "inputs": [
+    {
+      "ingredient": "iis:bio_chaff",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 200,
+  "eut": 10,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 1500
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:fermentedbiomass",
+      "amount": 1500
+    }
+  ],
+  "circuit": 2
+}

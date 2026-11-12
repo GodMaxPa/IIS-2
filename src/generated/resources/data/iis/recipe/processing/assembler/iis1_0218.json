@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_wood",
+      "count": 8
+    },
+    {
+      "ingredient": "minecraft:redstone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:note_block",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 4
+}

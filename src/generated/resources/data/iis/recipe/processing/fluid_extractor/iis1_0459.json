@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:assembler_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_steel",
+      "count": 20
+    }
+  ],
+  "duration": 480,
+  "eut": 52,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_copper",
+      "amount": 2880
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:robot_arm_mv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_aluminium",
+      "count": 9
+    }
+  ],
+  "duration": 420,
+  "eut": 52,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_copper",
+      "amount": 2520
+    }
+  ]
+}

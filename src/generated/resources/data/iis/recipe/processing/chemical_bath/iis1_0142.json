@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "minecraft:glass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:lime_stained_glass",
+      "count": 1
+    }
+  ],
+  "duration": 64,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dye_watermixed_dyelime",
+      "amount": 18
+    }
+  ]
+}

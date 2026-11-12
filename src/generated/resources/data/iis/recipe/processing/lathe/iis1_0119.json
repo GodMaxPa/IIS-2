@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:gem_flawed_topaz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_topaz",
+      "count": 2
+    },
+    {
+      "id": "iis:small_dust_topaz",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 12
+}

@@ -6,6 +6,9 @@
   "mixins": [
     "OldMinecartBehaviorMixin"
   ],
+  "server": [
+    "DedicatedServerMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

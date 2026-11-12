@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:wire_superconductor_1x",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:casing_max",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hull_max",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_polytetrafluoroethylene",
+      "amount": 288
+    }
+  ]
+}

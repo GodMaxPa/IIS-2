@@ -1,0 +1,25 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:super_buffer_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:data_orb",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_luv",
+      "count": 1
+    },
+    {
+      "id": "iis:conveyor_module_luv",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

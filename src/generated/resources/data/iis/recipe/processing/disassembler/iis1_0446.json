@@ -1,0 +1,29 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:sensor_mv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:quartz",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_aluminium",
+      "count": 4
+    },
+    {
+      "id": "iis:rod_electrum",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

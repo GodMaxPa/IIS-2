@@ -1,0 +1,17 @@
+{
+  "type": "iis:thermal_centrifuge",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_clay",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_silicon_dioxide",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 48
+}

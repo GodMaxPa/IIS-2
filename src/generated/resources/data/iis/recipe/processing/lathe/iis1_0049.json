@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_manganese",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_manganese",
+      "count": 1
+    }
+  ],
+  "duration": 6,
+  "eut": 4
+}

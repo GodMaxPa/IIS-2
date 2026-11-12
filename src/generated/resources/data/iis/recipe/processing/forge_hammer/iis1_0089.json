@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_zinc",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_zinc",
+      "count": 3
+    }
+  ],
+  "duration": 65,
+  "eut": 16
+}

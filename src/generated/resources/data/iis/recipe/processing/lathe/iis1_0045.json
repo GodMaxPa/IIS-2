@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:gem_chipped_amethyst",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_amethyst",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_amethyst",
+      "count": 1
+    }
+  ],
+  "duration": 27,
+  "eut": 8
+}

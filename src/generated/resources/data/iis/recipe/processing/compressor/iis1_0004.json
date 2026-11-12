@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:water_bucket",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:snow",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

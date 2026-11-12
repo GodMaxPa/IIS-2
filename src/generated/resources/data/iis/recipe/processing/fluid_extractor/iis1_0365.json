@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:plasma_arc_furnace_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_platinum",
+      "count": 4
+    }
+  ],
+  "duration": 216,
+  "eut": 74,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_tungstensteel",
+      "amount": 1296
+    }
+  ]
+}

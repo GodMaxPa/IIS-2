@@ -1,0 +1,23 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "minecraft:dropper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:redstone",
+      "count": 1
+    }
+  ],
+  "duration": 85,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 85
+    }
+  ]
+}

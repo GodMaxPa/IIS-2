@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s",
+    "X"
+  ],
+  "key": {
+    "X": "#iis:long_rods/nickel_zinc_ferrite",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:rod_nickel_zinc_ferrite",
+    "count": 2
+  }
+}

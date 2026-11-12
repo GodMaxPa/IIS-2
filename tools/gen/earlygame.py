@@ -52,7 +52,7 @@ def generate(g):
     # --- iron things from plates and rods (recipereplacements) ------------------------------------------------------------------------
     P = lambda m: tag_of('plate', m)
     for rid, out, n, pat, key in (
-            ('iron_door', 'iron_door', 3, ['XX ', 'XXh', 'XX '], {'X': P('Iron')}),
+            ('iron_door', 'iron_door', 1, ['XX ', 'XXh', 'XX '], {'X': P('Iron')}),
             ('cauldron', 'cauldron', 1, ['X X', 'XhX', 'XXX'], {'X': P('Iron')}),
             ('hopper', 'hopper', 1, ['XwX', 'XCX', ' X '], {'X': P('Iron'), 'C': '#c:chests/wooden'}),
             # GT_CraftingRecipeLoader:43 "tStack.stackSize /= 2": 8 bars from 6 rods (was 16, D145)

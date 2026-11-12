@@ -1,0 +1,21 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:hatch_input_bus_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:chest",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_hv",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,43 @@
+{
+  "type": "iis:circuit_assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_board_epoxy",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:circuit_nanoprocessor",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:chip_ram",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:chip_nor",
+      "count": 32
+    },
+    {
+      "ingredient": "iis:chip_nand",
+      "count": 64
+    },
+    {
+      "ingredient": "iis:wire_fine_platinum",
+      "count": 32
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:data_orb",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 1200,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 144
+    }
+  ]
+}

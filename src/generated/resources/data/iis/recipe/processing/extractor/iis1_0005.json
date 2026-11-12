@@ -1,0 +1,17 @@
+{
+  "type": "iis:extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:lilac",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:magenta_dye",
+      "count": 3
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

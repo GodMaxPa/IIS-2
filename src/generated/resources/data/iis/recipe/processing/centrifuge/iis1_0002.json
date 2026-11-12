@@ -1,0 +1,23 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "minecraft:mushroom_stew",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:bowl",
+      "count": 1
+    }
+  ],
+  "duration": 288,
+  "eut": 5,
+  "fluid_outputs": [
+    {
+      "id": "iis:methane",
+      "amount": 36
+    }
+  ]
+}

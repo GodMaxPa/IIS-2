@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_tungsten",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_tungsten",
+      "count": 3
+    }
+  ],
+  "duration": 183,
+  "eut": 16
+}

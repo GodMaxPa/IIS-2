@@ -1,0 +1,21 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:hatch_input_ulv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:glass",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_ulv",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

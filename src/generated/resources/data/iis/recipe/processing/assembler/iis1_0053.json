@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:redstone",
+      "count": 4
+    },
+    {
+      "ingredient": "minecraft:glowstone_dust",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:redstone_lamp",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 1
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "minecraft:oak_sapling",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:stick",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_wood",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 8
+}

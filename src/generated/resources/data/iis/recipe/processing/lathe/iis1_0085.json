@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:gem_chipped_garnet_red",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_garnet_red",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_garnet_red",
+      "count": 1
+    }
+  ],
+  "duration": 23,
+  "eut": 8
+}

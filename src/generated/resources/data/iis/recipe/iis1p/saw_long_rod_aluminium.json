@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s",
+    "X"
+  ],
+  "key": {
+    "X": "#iis:long_rods/aluminium",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:rod_aluminium",
+    "count": 2
+  }
+}

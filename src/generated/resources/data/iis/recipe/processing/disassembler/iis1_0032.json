@@ -1,0 +1,41 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:item_distributor_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    },
+    {
+      "id": "minecraft:chest",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    },
+    {
+      "id": "iis:conveyor_module_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:conveyor_module_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:conveyor_module_iv",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

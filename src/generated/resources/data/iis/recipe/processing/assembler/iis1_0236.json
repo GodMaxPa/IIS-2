@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:quartz",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:plate_aluminium",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:rod_electrum",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:circuit_integrated_good",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sensor_mv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 30,
+  "circuit": 5
+}

@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:fusion_coil",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:neutron_reflector",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:field_generator_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:coil_superconductor",
+      "count": 1
+    },
+    {
+      "id": "iis:field_generator_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:neutron_reflector",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:emitter_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_tin",
+      "count": 1
+    }
+  ],
+  "duration": 48,
+  "eut": 48,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_brass",
+      "amount": 288
+    }
+  ]
+}

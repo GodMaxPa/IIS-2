@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:lens_ender_pearl",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_ender_pearl",
+      "count": 3
+    }
+  ],
+  "duration": 62,
+  "eut": 4
+}

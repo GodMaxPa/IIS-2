@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:diamond_sawblade",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_cobalt_brass",
+      "count": 4
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

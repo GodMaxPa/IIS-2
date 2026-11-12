@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:large_boiler_tungstensteel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:tungstensteel_firebox_casing",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

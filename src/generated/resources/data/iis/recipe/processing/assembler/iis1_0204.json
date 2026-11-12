@@ -1,0 +1,24 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:paper",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:double_plate_paper",
+      "count": 1
+    }
+  ],
+  "duration": 64,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:glue",
+      "amount": 10
+    }
+  ],
+  "circuit": 2
+}

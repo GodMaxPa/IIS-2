@@ -1,0 +1,32 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:mfe",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:sensor_hv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:reactor_heat_switch_spread",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:charging_energy_crystal",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 480,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 576
+    }
+  ],
+  "circuit": 3
+}

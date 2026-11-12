@@ -1,0 +1,17 @@
+{
+  "type": "iis:polarizer",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_neodymium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_neodymium_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 256
+}

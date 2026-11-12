@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:emerald",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:rod_chrome",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:circuit_advanced",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:cable_gold_1x",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:emitter_hv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 120,
+  "circuit": 5
+}

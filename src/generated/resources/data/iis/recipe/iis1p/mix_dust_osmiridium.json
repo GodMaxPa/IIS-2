@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/iridium",
+    "#c:dusts/iridium",
+    "#c:dusts/iridium",
+    "#c:dusts/osmium"
+  ],
+  "result": {
+    "id": "iis:dust_osmiridium",
+    "count": 3
+  }
+}

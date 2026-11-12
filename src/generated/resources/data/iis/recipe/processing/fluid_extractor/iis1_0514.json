@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:chainsaw_head_enderium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_steel",
+      "count": 40
+    }
+  ],
+  "duration": 48,
+  "eut": 77,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_enderium",
+      "amount": 288
+    }
+  ]
+}

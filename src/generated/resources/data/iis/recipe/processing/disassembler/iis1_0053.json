@@ -1,0 +1,29 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:sensor_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:emerald",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_stainless_steel",
+      "count": 4
+    },
+    {
+      "id": "iis:rod_chrome",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

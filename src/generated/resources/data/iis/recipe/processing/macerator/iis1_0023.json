@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:foil_niobium_titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_niobium_titanium",
+      "count": 1
+    }
+  ],
+  "duration": 17,
+  "eut": 4
+}

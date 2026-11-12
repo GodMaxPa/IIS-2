@@ -1,0 +1,33 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:robot_arm_mv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_mv",
+      "count": 2
+    },
+    {
+      "id": "iis:electric_piston_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:rod_aluminium",
+      "count": 2
+    },
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_copper_1x",
+      "count": 3
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

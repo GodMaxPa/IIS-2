@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:oak_planks",
+      "count": 8
+    },
+    {
+      "ingredient": "minecraft:diamond",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:jukebox",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

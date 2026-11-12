@@ -1,0 +1,34 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_hv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:plate_stainless_steel",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:rod_stainless_steel",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:cable_gold_1x",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:small_gear_stainless_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_piston_hv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 120,
+  "circuit": 5
+}

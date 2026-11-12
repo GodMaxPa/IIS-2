@@ -1,0 +1,21 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:cable_red_alloy_1x",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_red_alloy",
+      "count": 2
+    },
+    {
+      "id": "iis:small_dust_ash",
+      "count": 1
+    }
+  ],
+  "duration": 226,
+  "eut": 4
+}

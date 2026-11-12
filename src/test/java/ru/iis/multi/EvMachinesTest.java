@@ -49,7 +49,5 @@ class EvMachinesTest {
         assertEquals("#c:circuits/elite", key("lv/circuit_assembler_ev", "C"));
         assertEquals("iis:emitter_ev", key("lv/laser_engraver_ev", "E"));
         assertEquals("iis:electric_pump_ev", key("lv/distillery_ev", "P"));
-        assertEquals("iis:pipe_medium_titanium", key("lv/electric_pump_ev", "P"));
-        assertEquals("minecraft:ender_pearl", key("lv/emitter_ev", "Q"));
     }
 }

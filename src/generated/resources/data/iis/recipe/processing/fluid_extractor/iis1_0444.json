@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:conveyor_module_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:copper_ingot",
+      "count": 4
+    }
+  ],
+  "duration": 144,
+  "eut": 28,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_rubber",
+      "amount": 864
+    }
+  ]
+}

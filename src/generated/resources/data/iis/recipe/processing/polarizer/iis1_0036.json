@@ -1,0 +1,17 @@
+{
+  "type": "iis:polarizer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:iron_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_iron_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 1152,
+  "eut": 16
+}

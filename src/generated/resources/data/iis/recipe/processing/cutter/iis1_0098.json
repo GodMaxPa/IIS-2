@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "iis:light_concrete",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_concrete",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 32,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 10
+    }
+  ]
+}

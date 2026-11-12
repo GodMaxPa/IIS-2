@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_pump_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_stainless_steel",
+      "count": 39
+    }
+  ],
+  "duration": 384,
+  "eut": 52,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_copper",
+      "amount": 2304
+    }
+  ]
+}

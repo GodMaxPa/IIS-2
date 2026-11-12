@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:item_casing_copper",
+      "count": 1
+    }
+  ],
+  "duration": 16,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_copper",
+      "amount": 72
+    }
+  ],
+  "keep": [
+    "iis:mold_casing"
+  ]
+}

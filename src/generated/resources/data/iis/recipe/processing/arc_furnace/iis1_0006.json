@@ -1,0 +1,23 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "iis:block_naquadah_enriched",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_naquadah_enriched",
+      "count": 9
+    }
+  ],
+  "duration": 882,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 882
+    }
+  ]
+}

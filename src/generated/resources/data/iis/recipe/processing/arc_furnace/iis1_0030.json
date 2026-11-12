@@ -1,0 +1,31 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "iis:battery_charger_uv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_naquadah_alloy",
+      "count": 4
+    },
+    {
+      "id": "iis:ingot_osmium",
+      "count": 8
+    },
+    {
+      "id": "iis:dust_ash",
+      "count": 1
+    }
+  ],
+  "duration": 5146,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 5146
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:sword_head_iron",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:stick",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:iron_sword",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 16
+}

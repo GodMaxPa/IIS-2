@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:item_pipe_restrictive_huge_nickel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_steel",
+      "count": 11
+    }
+  ],
+  "duration": 288,
+  "eut": 58,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_nickel",
+      "amount": 1728
+    }
+  ]
+}

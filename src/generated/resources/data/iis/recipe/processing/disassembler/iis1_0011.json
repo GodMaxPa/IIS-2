@@ -1,0 +1,33 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:type_filter_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:item_filter",
+      "count": 1
+    },
+    {
+      "id": "minecraft:chest",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_lv",
+      "count": 1
+    },
+    {
+      "id": "iis:conveyor_module_lv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

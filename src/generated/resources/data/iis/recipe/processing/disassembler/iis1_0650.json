@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:plasma_generator_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rod_plutonium241",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:rod_plutonium241",
+      "count": 1
+    },
+    {
+      "id": "iis:field_generator_hv",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_luv",
+      "count": 1
+    },
+    {
+      "id": "iis:field_generator_hv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_tungsten_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_tungsten_4x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_osmium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_osmium",
+      "count": 3
+    }
+  ],
+  "duration": 190,
+  "eut": 16
+}

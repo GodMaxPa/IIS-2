@@ -1,0 +1,23 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_glowstone",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:glowstone_dust",
+      "count": 1
+    }
+  ],
+  "duration": 98,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 98
+    }
+  ]
+}

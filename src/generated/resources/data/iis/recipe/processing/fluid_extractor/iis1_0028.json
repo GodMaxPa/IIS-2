@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:replicator_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_steel",
+      "count": 8
+    }
+  ],
+  "duration": 192,
+  "eut": 48,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_brass",
+      "amount": 1152
+    }
+  ]
+}

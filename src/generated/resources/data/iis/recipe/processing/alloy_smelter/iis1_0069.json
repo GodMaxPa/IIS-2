@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "iis:ingot_electrical_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_electrical_steel",
+      "count": 9
+    }
+  ],
+  "duration": 100,
+  "eut": 1,
+  "keep": [
+    "iis:mold_nugget"
+  ]
+}

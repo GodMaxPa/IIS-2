@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:alloy_smelter_zpm",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_iridium",
+      "count": 8
+    }
+  ],
+  "duration": 240,
+  "eut": 103,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_naquadah",
+      "amount": 1440
+    }
+  ]
+}

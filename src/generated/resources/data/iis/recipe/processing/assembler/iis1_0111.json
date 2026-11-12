@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:cable_vanadium_gallium_1x",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:casing_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hull_luv",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_plastic",
+      "amount": 288
+    }
+  ]
+}

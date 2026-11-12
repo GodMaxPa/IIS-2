@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:chainsaw_head_tritanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_steel",
+      "count": 40
+    }
+  ],
+  "duration": 48,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_tritanium",
+      "amount": 288
+    }
+  ]
+}

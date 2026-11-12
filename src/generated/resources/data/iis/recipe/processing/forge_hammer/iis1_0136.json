@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:jukebox",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_wood",
+      "count": 8
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

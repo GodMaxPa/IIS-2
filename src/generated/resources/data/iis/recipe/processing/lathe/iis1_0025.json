@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_enderium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_enderium",
+      "count": 1
+    }
+  ],
+  "duration": 15,
+  "eut": 4
+}

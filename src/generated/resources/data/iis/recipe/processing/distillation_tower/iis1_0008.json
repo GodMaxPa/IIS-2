@@ -1,0 +1,48 @@
+{
+  "type": "iis:distillation_tower",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:fertilizer",
+      "count": 1
+    }
+  ],
+  "duration": 75,
+  "eut": 180,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:fermentedbiomass",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:aceticacid",
+      "amount": 25
+    },
+    {
+      "id": "minecraft:water",
+      "amount": 375
+    },
+    {
+      "id": "iis:bioethanol",
+      "amount": 150
+    },
+    {
+      "id": "iis:methanol",
+      "amount": 150
+    },
+    {
+      "id": "iis:ammonia",
+      "amount": 100
+    },
+    {
+      "id": "iis:carbondioxide",
+      "amount": 400
+    },
+    {
+      "id": "iis:methane",
+      "amount": 600
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:steam_macerator_bronze",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_bronze",
+      "count": 12
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

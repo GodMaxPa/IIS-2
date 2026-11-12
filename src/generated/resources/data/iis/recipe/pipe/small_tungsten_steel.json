@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PwP",
+    "P P",
+    "PhP"
+  ],
+  "key": {
+    "P": "#c:plates/tungsten_steel",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:pipe_small_tungsten_steel",
+    "count": 6
+  }
+}

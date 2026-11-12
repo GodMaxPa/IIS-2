@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:stick",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:ring_iron",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:tripwire_hook",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

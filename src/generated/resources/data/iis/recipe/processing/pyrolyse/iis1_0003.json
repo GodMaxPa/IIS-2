@@ -1,0 +1,30 @@
+{
+  "type": "iis:pyrolyse",
+  "inputs": [
+    {
+      "ingredient": "minecraft:sugar",
+      "count": 23
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_charcoal",
+      "count": 12
+    }
+  ],
+  "duration": 160,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:nitrogen",
+      "amount": 500
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "minecraft:water",
+      "amount": 11000
+    }
+  ],
+  "circuit": 2
+}

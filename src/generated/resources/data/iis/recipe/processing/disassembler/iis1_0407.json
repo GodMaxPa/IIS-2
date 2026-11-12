@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:concrete_backfiller_2",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:frame_titanium",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_large_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:frame_titanium",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    },
+    {
+      "id": "iis:concrete_backfiller_1",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_motor_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_motor_ev",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

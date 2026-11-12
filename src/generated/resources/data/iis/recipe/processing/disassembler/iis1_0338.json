@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:battery_charger_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_tungsten_16x",
+      "count": 1
+    },
+    {
+      "id": "minecraft:chest",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_tungsten_16x",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_tungsten_16x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_tungsten_16x",
+      "count": 1
+    },
+    {
+      "id": "iis:energy_orb",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:energy_orb",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:chainsaw_head_electrum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_steel",
+      "count": 40
+    }
+  ],
+  "duration": 48,
+  "eut": 50,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_electrum",
+      "amount": 288
+    }
+  ]
+}

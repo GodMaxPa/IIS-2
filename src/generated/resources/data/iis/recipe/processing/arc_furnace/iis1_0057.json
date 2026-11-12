@@ -1,0 +1,35 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "iis:robot_arm_zpm",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_platinum",
+      "count": 10
+    },
+    {
+      "id": "iis:ingot_hsse",
+      "count": 49
+    },
+    {
+      "id": "iis:ingot_vanadium_gallium",
+      "count": 32
+    },
+    {
+      "id": "iis:ingot_neodymium",
+      "count": 6
+    }
+  ],
+  "duration": 25385,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 25385
+    }
+  ]
+}

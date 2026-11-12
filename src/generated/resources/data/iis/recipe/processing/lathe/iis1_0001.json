@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_lead",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_lead",
+      "count": 1
+    }
+  ],
+  "duration": 25,
+  "eut": 4
+}

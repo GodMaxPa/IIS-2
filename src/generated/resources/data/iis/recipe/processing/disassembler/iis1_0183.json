@@ -1,0 +1,29 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:sensor_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:ender_pearl",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_titanium",
+      "count": 4
+    },
+    {
+      "id": "iis:rod_platinum",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:polarizer",
+  "inputs": [
+    {
+      "ingredient": "iis:small_dust_wrought_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_iron_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 32,
+  "eut": 16
+}

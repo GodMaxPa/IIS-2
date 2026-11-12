@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:large_boiler_tungstensteel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_aluminium",
+      "count": 2
+    }
+  ],
+  "duration": 96,
+  "eut": 74,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_tungstensteel",
+      "amount": 576
+    }
+  ]
+}

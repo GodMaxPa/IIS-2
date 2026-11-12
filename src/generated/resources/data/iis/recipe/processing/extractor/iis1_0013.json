@@ -1,0 +1,17 @@
+{
+  "type": "iis:extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:peony",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:pink_dye",
+      "count": 3
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

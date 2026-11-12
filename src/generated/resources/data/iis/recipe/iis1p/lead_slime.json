@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SS ",
+    "SR ",
+    "  S"
+  ],
+  "key": {
+    "S": "minecraft:string",
+    "R": "#c:slime_balls"
+  },
+  "result": {
+    "id": "minecraft:lead",
+    "count": 2
+  }
+}

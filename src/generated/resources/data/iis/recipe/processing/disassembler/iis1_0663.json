@@ -1,0 +1,33 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:robot_arm_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_lv",
+      "count": 2
+    },
+    {
+      "id": "iis:electric_piston_lv",
+      "count": 1
+    },
+    {
+      "id": "iis:rod_steel",
+      "count": 2
+    },
+    {
+      "id": "iis:circuit_basic",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_tin_1x",
+      "count": 3
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:packager_mv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:chest",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    },
+    {
+      "id": "minecraft:chest",
+      "count": 1
+    },
+    {
+      "id": "iis:robot_arm_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:conveyor_module_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_copper_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_copper_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:gem_quartzite",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:plate_steel",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:rod_brass",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:circuit_basic",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sensor_lv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 30,
+  "circuit": 5
+}

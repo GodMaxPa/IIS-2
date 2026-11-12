@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:large_boiler_titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:gold_ingot",
+      "count": 2
+    }
+  ],
+  "duration": 96,
+  "eut": 62,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_titanium",
+      "amount": 576
+    }
+  ]
+}

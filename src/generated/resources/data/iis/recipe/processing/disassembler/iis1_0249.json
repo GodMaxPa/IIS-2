@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:brewery_uv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:reinforced_glass",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_uv",
+      "count": 1
+    },
+    {
+      "id": "iis:reinforced_glass",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_naquadah_alloy_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_uv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_naquadah_alloy_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_crystalmainframe",
+      "count": 1
+    },
+    {
+      "id": "minecraft:blaze_rod",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_crystalmainframe",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

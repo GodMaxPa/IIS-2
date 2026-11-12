@@ -1,0 +1,33 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:robot_arm_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_ev",
+      "count": 2
+    },
+    {
+      "id": "iis:electric_piston_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:rod_titanium",
+      "count": 2
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 3
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

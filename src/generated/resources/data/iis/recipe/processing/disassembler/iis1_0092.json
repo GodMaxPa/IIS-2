@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:recycler_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:glowstone_dust",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_basic",
+      "count": 1
+    },
+    {
+      "id": "minecraft:glowstone_dust",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_piston_lv",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_lv",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_piston_lv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_tin_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_basic",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_tin_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

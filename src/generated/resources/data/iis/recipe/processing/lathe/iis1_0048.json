@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_magnalium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_magnalium",
+      "count": 1
+    }
+  ],
+  "duration": 3,
+  "eut": 4
+}

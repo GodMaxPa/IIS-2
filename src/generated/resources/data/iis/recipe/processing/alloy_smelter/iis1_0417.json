@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "iis:ingot_naquadah_enriched",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_naquadah_enriched",
+      "count": 1
+    }
+  ],
+  "duration": 5,
+  "eut": 256,
+  "keep": [
+    "iis:mold_block"
+  ]
+}

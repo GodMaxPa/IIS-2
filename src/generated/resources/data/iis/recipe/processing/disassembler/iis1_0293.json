@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:regulator_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    },
+    {
+      "id": "iis:item_filter",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    },
+    {
+      "id": "iis:robot_arm_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:robot_arm_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    },
+    {
+      "id": "minecraft:chest",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

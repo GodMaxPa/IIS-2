@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:wrench_head_cobalt",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_steel",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 59,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_cobalt",
+      "amount": 576
+    }
+  ]
+}

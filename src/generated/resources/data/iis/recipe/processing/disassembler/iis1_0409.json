@@ -1,0 +1,29 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:sensor_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:gem_quartzite",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_steel",
+      "count": 4
+    },
+    {
+      "id": "iis:rod_brass",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_basic",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

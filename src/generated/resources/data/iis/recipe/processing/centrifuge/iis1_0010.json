@@ -1,0 +1,33 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "minecraft:mycelium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:brown_mushroom",
+      "count": 1,
+      "chance": 2500
+    },
+    {
+      "id": "minecraft:red_mushroom",
+      "count": 1,
+      "chance": 2500
+    },
+    {
+      "id": "iis:tiny_dust_clay",
+      "count": 1,
+      "chance": 5000
+    },
+    {
+      "id": "minecraft:sand",
+      "count": 1,
+      "chance": 5000
+    }
+  ],
+  "duration": 650,
+  "eut": 30
+}

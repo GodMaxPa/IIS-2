@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:bender_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_tungsten",
+      "count": 1
+    }
+  ],
+  "duration": 192,
+  "eut": 74,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_tungstensteel",
+      "amount": 1152
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_stainless_steel",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:long_rod_stainless_steel",
+      "count": 1
+    }
+  ],
+  "duration": 55,
+  "eut": 16
+}

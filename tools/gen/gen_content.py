@@ -1268,6 +1268,16 @@ _spec = _ilu.spec_from_file_location('iis_gen_iis1fix', os.path.join(ROOT, 'tool
 _iis1fix = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_iis1fix)
 lv_stats['iis1fix'] = _iis1fix.generate(globals())
+# D147: machine recipes of the real IIS 1 pack that were missing (reference/iis1_import.json)
+_spec = _ilu.spec_from_file_location('iis_gen_iis1import', os.path.join(ROOT, 'tools', 'gen', 'iis1import.py'))
+_iis1import = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_iis1import)
+lv_stats['iis1import'] = _iis1import.generate(globals())
+
+_spec = _ilu.spec_from_file_location('iis_gen_iis1parity', os.path.join(ROOT, 'tools', 'gen', 'iis1parity.py'))
+_iis1parity = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_iis1parity)
+lv_stats['iis1parity'] = _iis1parity.generate(globals())
 for name, r in recipes.items():
     write(os.path.join(D, NS, 'recipe', name + '.json'), r)
 

@@ -1,0 +1,37 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_ev",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:ring_silicone",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:rotor_stainless_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:screw_stainless_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:cable_aluminium_1x",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:pipe_medium_titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_pump_ev",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 240
+}

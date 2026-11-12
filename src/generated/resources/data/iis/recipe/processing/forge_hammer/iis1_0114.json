@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_nickel_zinc_ferrite",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:long_rod_nickel_zinc_ferrite",
+      "count": 1
+    }
+  ],
+  "duration": 33,
+  "eut": 16
+}

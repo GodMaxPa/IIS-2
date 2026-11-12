@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "h",
+    "X"
+  ],
+  "key": {
+    "X": "#iis:flawless_gems/diamond",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "minecraft:diamond",
+    "count": 2
+  }
+}

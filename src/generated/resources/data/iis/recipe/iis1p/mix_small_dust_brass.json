@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/tetrahedrite",
+    "#c:dusts/tetrahedrite",
+    "#c:dusts/tetrahedrite",
+    "#c:dusts/zinc"
+  ],
+  "result": {
+    "id": "iis:small_dust_brass",
+    "count": 9
+  }
+}

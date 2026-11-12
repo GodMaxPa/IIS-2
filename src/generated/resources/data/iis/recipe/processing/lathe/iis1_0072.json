@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:gem_flawed_olivine",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_olivine",
+      "count": 2
+    },
+    {
+      "id": "iis:small_dust_olivine",
+      "count": 1
+    }
+  ],
+  "duration": 28,
+  "eut": 12
+}

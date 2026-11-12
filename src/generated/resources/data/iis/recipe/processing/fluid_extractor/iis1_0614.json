@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:chemical_reactor_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_titanium",
+      "count": 8
+    }
+  ],
+  "duration": 288,
+  "eut": 28,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_plastic",
+      "amount": 1728
+    }
+  ]
+}

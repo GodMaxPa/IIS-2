@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:minecart",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:trapped_chest",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:chest_minecart",
+      "count": 1
+    }
+  ],
+  "duration": 400,
+  "eut": 4
+}

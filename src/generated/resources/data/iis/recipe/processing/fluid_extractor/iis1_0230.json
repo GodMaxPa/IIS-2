@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:oil_cracker",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_stainless_steel",
+      "count": 8
+    }
+  ],
+  "duration": 768,
+  "eut": 55,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_cupronickel",
+      "amount": 4608
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:stick",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:dust_tricalcium_phosphate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:torch",
+      "count": 6
+    }
+  ],
+  "duration": 400,
+  "eut": 1
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "h",
+    "X"
+  ],
+  "key": {
+    "X": "#iis:flawed_gems/amethyst",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:gem_chipped_amethyst",
+    "count": 2
+  }
+}

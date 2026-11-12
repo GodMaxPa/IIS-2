@@ -1,0 +1,17 @@
+{
+  "type": "iis:polarizer",
+  "inputs": [
+    {
+      "ingredient": "iis:universal_spade_head_neodymium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:universal_spade_head_neodymium_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 128,
+  "eut": 256
+}

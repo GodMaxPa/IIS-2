@@ -1,0 +1,25 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:adjustable_transformer_max",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:transformer_uv",
+      "count": 1
+    },
+    {
+      "id": "iis:adjustable_transformer_uv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_wetwaremainframe",
+      "count": 2
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

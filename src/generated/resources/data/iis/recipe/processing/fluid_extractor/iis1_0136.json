@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:lathe_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_aluminium",
+      "count": 22
+    }
+  ],
+  "duration": 192,
+  "eut": 62,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_titanium",
+      "amount": 1152
+    }
+  ]
+}

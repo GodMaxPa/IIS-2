@@ -1,0 +1,25 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:field_generator_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:quantum_eye",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_osmium_4x",
+      "count": 4
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 4
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

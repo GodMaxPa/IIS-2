@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_plutonium241",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_plutonium241",
+      "count": 1
+    }
+  ],
+  "duration": 30,
+  "eut": 4
+}

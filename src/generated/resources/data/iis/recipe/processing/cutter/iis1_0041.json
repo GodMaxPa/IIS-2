@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:diamond_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_diamond",
+      "count": 9
+    }
+  ],
+  "duration": 15360,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 540
+    }
+  ]
+}

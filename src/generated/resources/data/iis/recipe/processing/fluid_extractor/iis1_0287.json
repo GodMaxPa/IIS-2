@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:ore_drill_4",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_tritanium",
+      "count": 6
+    }
+  ],
+  "duration": 336,
+  "eut": 62,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_titanium",
+      "amount": 2016
+    }
+  ]
+}

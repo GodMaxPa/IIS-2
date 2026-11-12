@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_ender_pearl",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:blaze_powder",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_ender_eye",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

@@ -284,3 +284,8 @@ idea {
 tasks.matching { it.name == 'runServer' }.configureEach {
     standardInput = System.in
 }
+
+// D147: with the machine recipes of IIS 1 the mod has more than 65535 files; the plain zip format cannot hold that many
+tasks.withType(Jar).configureEach {
+    zip64 = true
+}

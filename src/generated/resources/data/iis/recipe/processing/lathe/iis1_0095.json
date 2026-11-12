@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_olivine",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_olivine",
+      "count": 1
+    }
+  ],
+  "duration": 3,
+  "eut": 4
+}

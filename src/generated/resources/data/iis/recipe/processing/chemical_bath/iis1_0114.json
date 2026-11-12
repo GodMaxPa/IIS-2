@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "minecraft:glass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:brown_stained_glass",
+      "count": 1
+    }
+  ],
+  "duration": 64,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dye_chemical_dyebrown",
+      "amount": 18
+    }
+  ]
+}

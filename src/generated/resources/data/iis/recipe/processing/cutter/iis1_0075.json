@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "iis:dark_concrete",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_concrete",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 32,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 2
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_carbon",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:long_rod_carbon",
+      "count": 1
+    }
+  ],
+  "duration": 12,
+  "eut": 16
+}

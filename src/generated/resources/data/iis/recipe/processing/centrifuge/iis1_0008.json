@@ -1,0 +1,21 @@
+{
+  "type": "iis:centrifuge",
+  "inputs": [
+    {
+      "ingredient": "minecraft:magma_cream",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:blaze_powder",
+      "count": 1
+    },
+    {
+      "id": "minecraft:slime_ball",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 5
+}

@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:multimeter",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:emitter_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_aluminium",
+      "count": 1
+    },
+    {
+      "id": "iis:sensor_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    },
+    {
+      "id": "iis:computer_monitor",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_aluminium",
+      "count": 1
+    },
+    {
+      "id": "iis:battery_lithium_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_aluminium",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

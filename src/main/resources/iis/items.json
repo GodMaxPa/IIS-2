@@ -1090,11 +1090,6 @@
     "material": "black_steel"
   },
   {
-    "id": "dust_blaze",
-    "prefix": "dust",
-    "material": "blaze"
-  },
-  {
     "id": "small_dust_blaze",
     "prefix": "small_dust",
     "material": "blaze"
@@ -4243,11 +4238,6 @@
     "id": "tiny_dust_grossular",
     "prefix": "tiny_dust",
     "material": "grossular"
-  },
-  {
-    "id": "dust_gunpowder",
-    "prefix": "dust",
-    "material": "gunpowder"
   },
   {
     "id": "small_dust_gunpowder",
@@ -10088,11 +10078,6 @@
     "id": "long_rod_styrene_butadiene_rubber",
     "prefix": "long_rod",
     "material": "styrene_butadiene_rubber"
-  },
-  {
-    "id": "dust_sugar",
-    "prefix": "dust",
-    "material": "sugar"
   },
   {
     "id": "small_dust_sugar",

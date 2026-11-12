@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_vanadium_gallium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_vanadium_gallium",
+      "count": 3
+    }
+  ],
+  "duration": 55,
+  "eut": 16
+}

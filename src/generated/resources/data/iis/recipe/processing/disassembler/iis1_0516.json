@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:organic_replicator_mv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    },
+    {
+      "id": "iis:crop_sticks",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_copper_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:field_generator_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_copper_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

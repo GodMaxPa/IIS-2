@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:wire_graphene_8x",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_graphene",
+      "count": 4
+    }
+  ],
+  "duration": 392,
+  "eut": 4
+}

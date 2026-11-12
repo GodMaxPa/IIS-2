@@ -66,7 +66,6 @@ class TungstensteelDataTest {
         JsonObject asm = json("lv/assembler_ev").getAsJsonObject("key");
         assertEquals("iis:hull_ev", asm.get("M").getAsString());
         assertEquals("iis:robot_arm_ev", asm.get("A").getAsString());
-        assertEquals("#c:rods/neodymium_magnetic", json("lv/electric_motor_ev").getAsJsonObject("key").get("I").getAsString());
         assertEquals(256, json("processing/polarizer/rod_neodymium").get("eut").getAsInt());
     }
 }

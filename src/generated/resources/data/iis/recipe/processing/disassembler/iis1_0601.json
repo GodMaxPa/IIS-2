@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:polarizer_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wire_yttrium_barium_cuprate_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:rod_vanadium_gallium",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_yttrium_barium_cuprate_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_niobium_titanium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_luv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_niobium_titanium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_yttrium_barium_cuprate_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:rod_vanadium_gallium",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_yttrium_barium_cuprate_4x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

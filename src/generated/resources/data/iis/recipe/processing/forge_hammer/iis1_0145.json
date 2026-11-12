@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_rose_gold",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:long_rod_rose_gold",
+      "count": 1
+    }
+  ],
+  "duration": 169,
+  "eut": 16
+}

@@ -1,0 +1,27 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "minecraft:note_block",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_ash",
+      "count": 1
+    },
+    {
+      "id": "minecraft:redstone",
+      "count": 1
+    }
+  ],
+  "duration": 183,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 183
+    }
+  ]
+}

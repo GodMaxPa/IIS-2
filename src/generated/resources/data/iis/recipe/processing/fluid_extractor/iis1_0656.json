@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:golden_hoe",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_ash",
+      "count": 2
+    }
+  ],
+  "duration": 48,
+  "eut": 51,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_gold",
+      "amount": 288
+    }
+  ]
+}

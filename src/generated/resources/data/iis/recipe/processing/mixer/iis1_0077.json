@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_quicklime",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 16,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "minecraft:water",
+      "amount": 216
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dye_watermixed_dyewhite",
+      "amount": 192
+    }
+  ],
+  "circuit": 4
+}

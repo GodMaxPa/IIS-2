@@ -1,0 +1,35 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "iis:robot_arm_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_annealed_copper",
+      "count": 10
+    },
+    {
+      "id": "iis:ingot_tungsten_steel",
+      "count": 9
+    },
+    {
+      "id": "iis:nugget_tungsten",
+      "count": 49
+    },
+    {
+      "id": "iis:nugget_neodymium",
+      "count": 13
+    }
+  ],
+  "duration": 8341,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 8341
+    }
+  ]
+}

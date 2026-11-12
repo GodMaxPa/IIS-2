@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:drill_head_hssg",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_steel",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 94,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_hssg",
+      "amount": 576
+    }
+  ]
+}

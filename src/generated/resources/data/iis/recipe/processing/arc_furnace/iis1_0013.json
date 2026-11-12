@@ -1,0 +1,35 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "iis:robot_arm_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_annealed_copper",
+      "count": 10
+    },
+    {
+      "id": "iis:ingot_hssg",
+      "count": 35
+    },
+    {
+      "id": "iis:ingot_yttrium_barium_cuprate",
+      "count": 8
+    },
+    {
+      "id": "iis:ingot_neodymium",
+      "count": 3
+    }
+  ],
+  "duration": 10372,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 10372
+    }
+  ]
+}

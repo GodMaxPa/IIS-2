@@ -1,0 +1,20 @@
+{
+  "type": "iis:extruder",
+  "inputs": [
+    {
+      "ingredient": "minecraft:gold_ingot",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:item_casing_gold",
+      "count": 2
+    }
+  ],
+  "duration": 32,
+  "eut": 48,
+  "keep": [
+    "iis:shape_extruder_casing"
+  ]
+}

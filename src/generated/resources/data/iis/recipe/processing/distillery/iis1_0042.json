@@ -1,0 +1,20 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [],
+  "duration": 48,
+  "eut": 30,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:gas_gas",
+      "amount": 100
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:propane",
+      "amount": 7
+    }
+  ],
+  "circuit": 2
+}

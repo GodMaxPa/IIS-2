@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s",
+    "X"
+  ],
+  "key": {
+    "X": "#iis:long_rods/meteoric_iron",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:rod_meteoric_iron",
+    "count": 2
+  }
+}

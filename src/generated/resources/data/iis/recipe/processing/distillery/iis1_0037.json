@@ -1,0 +1,20 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [],
+  "duration": 40,
+  "eut": 72,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:liquid_heavy_oil",
+      "amount": 100
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:liquid_sulfuricnaphtha",
+      "amount": 15
+    }
+  ],
+  "circuit": 3
+}

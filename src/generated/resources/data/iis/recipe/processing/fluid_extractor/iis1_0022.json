@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:water_pump_mv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_steel",
+      "count": 6
+    }
+  ],
+  "duration": 192,
+  "eut": 43,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_aluminium",
+      "amount": 1152
+    }
+  ]
+}

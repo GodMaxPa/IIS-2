@@ -1,0 +1,37 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_pump_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:ring_silicone",
+      "count": 2
+    },
+    {
+      "id": "iis:rotor_tungsten_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:screw_tungsten_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_tungsten_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_medium_tungsten_steel",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

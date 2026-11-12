@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:autoclave_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_hssg",
+      "count": 1
+    },
+    {
+      "id": "iis:reinforced_glass",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_hssg",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_hssg",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_luv",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_hssg",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_pump_luv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

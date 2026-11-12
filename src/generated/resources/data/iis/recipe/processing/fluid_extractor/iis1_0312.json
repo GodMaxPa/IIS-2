@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:wrench_head_neodymium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_steel",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 50,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_neodymium",
+      "amount": 576
+    }
+  ]
+}

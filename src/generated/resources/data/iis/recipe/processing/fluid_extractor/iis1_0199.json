@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:combustion_engine",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_aluminium",
+      "count": 1
+    }
+  ],
+  "duration": 384,
+  "eut": 62,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_titanium",
+      "amount": 2304
+    }
+  ]
+}

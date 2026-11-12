@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_yellow_limonite",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 16,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:distilled_water",
+      "amount": 288
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:dye_watermixed_dyeyellow",
+      "amount": 216
+    }
+  ],
+  "circuit": 4
+}

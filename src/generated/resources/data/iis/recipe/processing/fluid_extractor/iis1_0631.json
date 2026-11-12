@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:iron_sword",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_ash",
+      "count": 1
+    }
+  ],
+  "duration": 48,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_iron",
+      "amount": 288
+    }
+  ]
+}

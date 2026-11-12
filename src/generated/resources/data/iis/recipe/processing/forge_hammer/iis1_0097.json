@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_neodymium_magnetic",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:long_rod_neodymium_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 146,
+  "eut": 16
+}

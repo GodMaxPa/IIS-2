@@ -1,0 +1,33 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_piston_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_tungsten_steel",
+      "count": 3
+    },
+    {
+      "id": "iis:rod_tungsten_steel",
+      "count": 2
+    },
+    {
+      "id": "iis:cable_tungsten_1x",
+      "count": 2
+    },
+    {
+      "id": "iis:small_gear_tungsten_steel",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

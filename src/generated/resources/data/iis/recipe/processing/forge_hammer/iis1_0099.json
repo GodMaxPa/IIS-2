@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_naquadah",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_naquadah",
+      "count": 3
+    }
+  ],
+  "duration": 98,
+  "eut": 16
+}

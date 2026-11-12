@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:grinder_diamond",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_diamond",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_diamond",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:industrial_diamond",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_diamond",
+      "count": 1
+    },
+    {
+      "id": "iis:plate_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:dust_diamond",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

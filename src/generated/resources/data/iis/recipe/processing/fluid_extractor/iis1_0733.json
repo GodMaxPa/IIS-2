@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:pyrolyse_casing",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:iron_ingot",
+      "count": 1
+    }
+  ],
+  "duration": 72,
+  "eut": 60,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_iron",
+      "amount": 432
+    }
+  ]
+}

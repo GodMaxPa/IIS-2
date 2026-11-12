@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:hatch_muffler_max",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_steel",
+      "count": 3
+    }
+  ],
+  "duration": 192,
+  "eut": 141,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_neutronium",
+      "amount": 1152
+    }
+  ]
+}

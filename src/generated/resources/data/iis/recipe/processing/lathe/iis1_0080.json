@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:gem_flawed_garnet_yellow",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_garnet_yellow",
+      "count": 2
+    },
+    {
+      "id": "iis:small_dust_garnet_yellow",
+      "count": 1
+    }
+  ],
+  "duration": 23,
+  "eut": 12
+}

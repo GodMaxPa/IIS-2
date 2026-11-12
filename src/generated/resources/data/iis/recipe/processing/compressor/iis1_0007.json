@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:blaze_powder",
+      "count": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:blaze_rod",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

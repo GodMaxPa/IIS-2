@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_copper",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_copper",
+      "count": 3
+    }
+  ],
+  "duration": 63,
+  "eut": 16
+}

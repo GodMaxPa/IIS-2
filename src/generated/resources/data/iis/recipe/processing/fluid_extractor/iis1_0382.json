@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:polarizer_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_chrome",
+      "count": 8
+    }
+  ],
+  "duration": 192,
+  "eut": 94,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_yttriumbariumcuprate",
+      "amount": 1152
+    }
+  ]
+}

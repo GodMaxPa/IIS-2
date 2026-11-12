@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:nether_star",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:obsidian",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:beacon",
+      "count": 1
+    }
+  ],
+  "duration": 32,
+  "eut": 16,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_glass",
+      "amount": 720
+    }
+  ]
+}

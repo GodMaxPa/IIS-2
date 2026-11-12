@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_furnace_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_basic",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_copper_2x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_basic",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_copper_2x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_lv",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_copper_2x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_tin_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_copper_2x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_tin_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

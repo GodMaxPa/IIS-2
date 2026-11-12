@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_bronze",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:ring_bronze",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rotor_bronze",
+      "count": 1
+    }
+  ],
+  "duration": 240,
+  "eut": 24,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 16
+    }
+  ]
+}

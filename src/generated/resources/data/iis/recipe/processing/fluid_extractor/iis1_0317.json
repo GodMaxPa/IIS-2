@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:redstone_lamp",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:redstone",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 44,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_glowstone",
+      "amount": 576
+    }
+  ]
+}

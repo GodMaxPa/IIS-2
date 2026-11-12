@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:lathe_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_platinum",
+      "count": 13
+    }
+  ],
+  "duration": 192,
+  "eut": 74,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_tungstensteel",
+      "amount": 1152
+    }
+  ]
+}

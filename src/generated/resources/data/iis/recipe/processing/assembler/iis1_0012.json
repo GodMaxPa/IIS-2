@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:tripwire_hook",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:chest",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:trapped_chest",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 4
+}

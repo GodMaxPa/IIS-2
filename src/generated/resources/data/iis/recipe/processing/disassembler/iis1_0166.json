@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:assembler_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:robot_arm_hv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    },
+    {
+      "id": "iis:robot_arm_hv",
+      "count": 1
+    },
+    {
+      "id": "iis:conveyor_module_hv",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_hv",
+      "count": 1
+    },
+    {
+      "id": "iis:conveyor_module_hv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_gold_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_gold_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

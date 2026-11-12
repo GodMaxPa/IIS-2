@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_piston_zpm",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_hsse",
+      "count": 25
+    }
+  ],
+  "duration": 768,
+  "eut": 63,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_platinum",
+      "amount": 4608
+    }
+  ]
+}

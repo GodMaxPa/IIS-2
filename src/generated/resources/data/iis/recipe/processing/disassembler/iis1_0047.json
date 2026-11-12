@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:chemical_reactor_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pipe_large_plastic",
+      "count": 1
+    },
+    {
+      "id": "iis:rotor_stainless_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_large_plastic",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_motor_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

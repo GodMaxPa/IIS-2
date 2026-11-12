@@ -1,0 +1,17 @@
+{
+  "type": "iis:polarizer",
+  "inputs": [
+    {
+      "ingredient": "iis:chainsaw_head_neodymium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:chainsaw_head_neodymium_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 256,
+  "eut": 256
+}

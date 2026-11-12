@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:tiny_dust_copper",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:tiny_dust_barium",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:tiny_dust_yttrium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_yttrium_barium_cuprate",
+      "count": 6
+    }
+  ],
+  "duration": 66,
+  "eut": 8
+}

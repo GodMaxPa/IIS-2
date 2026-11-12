@@ -1,0 +1,27 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "minecraft:redstone_lamp",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:glowstone_dust",
+      "count": 4
+    },
+    {
+      "id": "minecraft:redstone",
+      "count": 4
+    }
+  ],
+  "duration": 732,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 732
+    }
+  ]
+}

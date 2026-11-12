@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_niobium_titanium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_niobium_titanium",
+      "count": 3
+    }
+  ],
+  "duration": 71,
+  "eut": 16
+}

@@ -1,0 +1,35 @@
+{
+  "type": "iis:distillation_tower",
+  "inputs": [],
+  "outputs": [],
+  "duration": 40,
+  "eut": 256,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:woodgas",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:carbondioxide",
+      "amount": 490
+    },
+    {
+      "id": "iis:ethylene",
+      "amount": 20
+    },
+    {
+      "id": "iis:methane",
+      "amount": 130
+    },
+    {
+      "id": "iis:carbonmonoxide",
+      "amount": 340
+    },
+    {
+      "id": "iis:hydrogen",
+      "amount": 20
+    }
+  ]
+}

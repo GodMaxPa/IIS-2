@@ -1,0 +1,18 @@
+{
+  "type": "iis:bender",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_iron",
+      "count": 3
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:bucket",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 4,
+  "circuit": 12
+}

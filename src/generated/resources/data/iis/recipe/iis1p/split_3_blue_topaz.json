@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "h",
+    "X"
+  ],
+  "key": {
+    "X": "#iis:flawed_gems/blue_topaz",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:gem_chipped_blue_topaz",
+    "count": 2
+  }
+}

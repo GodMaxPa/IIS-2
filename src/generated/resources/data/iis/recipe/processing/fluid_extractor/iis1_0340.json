@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:drill_head_electrum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_steel",
+      "count": 4
+    }
+  ],
+  "duration": 96,
+  "eut": 50,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_electrum",
+      "amount": 576
+    }
+  ]
+}

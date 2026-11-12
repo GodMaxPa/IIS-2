@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "h",
+    "X"
+  ],
+  "key": {
+    "X": "#iis:flawless_gems/emerald",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "minecraft:emerald",
+    "count": 2
+  }
+}

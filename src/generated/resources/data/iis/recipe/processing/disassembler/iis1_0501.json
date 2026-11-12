@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:oil_drill_1",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:frame_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:frame_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:frame_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_good",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_motor_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_motor_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:electric_motor_mv",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

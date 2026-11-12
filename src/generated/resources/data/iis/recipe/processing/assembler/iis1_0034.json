@@ -1,0 +1,32 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:cesu",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:sensor_mv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:reactor_heat_switch",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:charging_battery_adv",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_solderingalloy",
+      "amount": 288
+    }
+  ],
+  "circuit": 3
+}

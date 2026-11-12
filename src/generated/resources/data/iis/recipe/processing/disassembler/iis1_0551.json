@@ -1,0 +1,45 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:transformer_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:coil_small",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_tungsten_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_ev",
+      "count": 1
+    },
+    {
+      "id": "iis:coil_small",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

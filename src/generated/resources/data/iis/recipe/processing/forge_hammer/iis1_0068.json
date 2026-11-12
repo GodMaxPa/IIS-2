@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:lathe_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_tungsten_steel",
+      "count": 8
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

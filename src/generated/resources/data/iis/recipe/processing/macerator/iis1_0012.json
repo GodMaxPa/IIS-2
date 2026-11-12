@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:lens_fools_ruby",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_fools_ruby",
+      "count": 3
+    }
+  ],
+  "duration": 73,
+  "eut": 4
+}

@@ -1,0 +1,27 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:leather",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:lead",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:name_tag",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:glue",
+      "amount": 50
+    }
+  ]
+}

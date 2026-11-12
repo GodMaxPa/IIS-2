@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s",
+    "X"
+  ],
+  "key": {
+    "X": "#iis:long_rods/enderium",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:rod_enderium",
+    "count": 2
+  }
+}

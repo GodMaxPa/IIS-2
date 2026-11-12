@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:glass_tube",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:wire_fine_copper",
+      "count": 2
+    },
+    {
+      "ingredient": "minecraft:paper",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:vacuum_tube",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eut": 8
+}

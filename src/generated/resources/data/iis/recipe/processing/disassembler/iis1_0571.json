@@ -1,0 +1,41 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:engine_intake_casing",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:rotor_titanium",
+      "count": 1
+    },
+    {
+      "id": "iis:rotor_titanium",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_medium_titanium",
+      "count": 1
+    },
+    {
+      "id": "iis:stable_titanium_casing",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_medium_titanium",
+      "count": 1
+    },
+    {
+      "id": "iis:rotor_titanium",
+      "count": 1
+    },
+    {
+      "id": "iis:rotor_titanium",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

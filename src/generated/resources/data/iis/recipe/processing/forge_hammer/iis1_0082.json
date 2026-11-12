@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:ender_chest",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_obsidian",
+      "count": 8
+    }
+  ],
+  "duration": 200,
+  "eut": 30
+}

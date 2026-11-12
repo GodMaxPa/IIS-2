@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:ender_eye",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:rod_osmium",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:circuit_elitenanocomputer",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:cable_tungsten_1x",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:emitter_iv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 480,
+  "circuit": 5
+}

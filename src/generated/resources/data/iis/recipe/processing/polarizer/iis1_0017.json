@@ -1,0 +1,17 @@
+{
+  "type": "iis:polarizer",
+  "inputs": [
+    {
+      "ingredient": "iis:wrench_head_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:wrench_head_steel_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 512,
+  "eut": 16
+}

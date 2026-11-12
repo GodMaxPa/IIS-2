@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:circuit_assembler_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:robot_arm_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:emitter_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:conveyor_module_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:conveyor_module_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_platinum_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_platinum_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

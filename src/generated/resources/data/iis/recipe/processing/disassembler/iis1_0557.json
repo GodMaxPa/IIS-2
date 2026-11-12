@@ -1,0 +1,37 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:adjustable_transformer_ev",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:transformer_ulv",
+      "count": 8
+    },
+    {
+      "id": "iis:transformer_lv",
+      "count": 4
+    },
+    {
+      "id": "iis:transformer_mv",
+      "count": 2
+    },
+    {
+      "id": "iis:transformer_hv",
+      "count": 1
+    },
+    {
+      "id": "iis:computer_monitor",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_data",
+      "count": 4
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

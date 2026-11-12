@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_tantalum",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_tantalum",
+      "count": 3
+    }
+  ],
+  "duration": 180,
+  "eut": 16
+}

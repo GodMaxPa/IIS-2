@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:rock_breaker_zpm",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_naquadah",
+      "count": 1
+    }
+  ],
+  "duration": 192,
+  "eut": 73,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_iridium",
+      "amount": 1152
+    }
+  ]
+}

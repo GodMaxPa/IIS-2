@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "s",
+    "X"
+  ],
+  "key": {
+    "X": "#iis:long_rods/rose_gold",
+    "s": "#iis:tools/saw"
+  },
+  "result": {
+    "id": "iis:rod_rose_gold",
+    "count": 2
+  }
+}

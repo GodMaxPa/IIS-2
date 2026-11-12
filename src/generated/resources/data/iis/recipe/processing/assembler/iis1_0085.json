@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:hoe_head_gold",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:stick",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:golden_hoe",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 16
+}

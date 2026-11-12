@@ -1,0 +1,17 @@
+{
+  "type": "iis:polarizer",
+  "inputs": [
+    {
+      "ingredient": "iis:drill_head_neodymium",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:drill_head_neodymium_magnetic",
+      "count": 1
+    }
+  ],
+  "duration": 512,
+  "eut": 256
+}

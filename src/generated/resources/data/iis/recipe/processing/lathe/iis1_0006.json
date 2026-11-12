@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_meteoric_iron",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_meteoric_iron",
+      "count": 1
+    }
+  ],
+  "duration": 12,
+  "eut": 4
+}

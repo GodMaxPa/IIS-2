@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:item_pipe_restrictive_large_cobalt",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_steel",
+      "count": 1
+    }
+  ],
+  "duration": 144,
+  "eut": 59,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_cobalt",
+      "amount": 864
+    }
+  ]
+}

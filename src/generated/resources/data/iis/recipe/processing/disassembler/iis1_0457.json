@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:alloy_smelter_uv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_crystalmainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_naquadah_alloy_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_crystalmainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_naquadah_alloy_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_uv",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_naquadah_alloy_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_naquadah_alloy_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_naquadah_alloy_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_naquadah_alloy_4x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

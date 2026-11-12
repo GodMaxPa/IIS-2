@@ -1,0 +1,25 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:pump_intake_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:pipe_medium_stainless_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:ring_stainless_steel",
+      "count": 4
+    },
+    {
+      "id": "iis:fluid_filter",
+      "count": 4
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

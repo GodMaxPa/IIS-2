@@ -1,0 +1,25 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:fertilizer",
+      "count": 1
+    }
+  ],
+  "duration": 1500,
+  "eut": 8,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:fermentedbiomass",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:methane",
+      "amount": 600
+    }
+  ],
+  "circuit": 7
+}

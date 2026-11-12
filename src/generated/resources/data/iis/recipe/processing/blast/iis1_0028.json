@@ -1,0 +1,26 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "iis:ore_brown_limonite",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:dust_calcite",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:iron_ingot",
+      "count": 4
+    },
+    {
+      "id": "iis:small_dust_dark_ash",
+      "count": 1
+    }
+  ],
+  "duration": 500,
+  "eut": 120,
+  "temp": 1500
+}

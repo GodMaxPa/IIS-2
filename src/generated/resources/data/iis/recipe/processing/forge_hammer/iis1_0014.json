@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_aluminium",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:long_rod_aluminium",
+      "count": 1
+    }
+  ],
+  "duration": 26,
+  "eut": 16
+}

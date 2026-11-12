@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_yttrium_barium_cuprate",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_yttrium_barium_cuprate",
+      "count": 3
+    }
+  ],
+  "duration": 51,
+  "eut": 16
+}

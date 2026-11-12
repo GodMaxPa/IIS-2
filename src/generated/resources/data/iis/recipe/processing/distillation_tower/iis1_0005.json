@@ -1,0 +1,31 @@
+{
+  "type": "iis:distillation_tower",
+  "inputs": [],
+  "outputs": [],
+  "duration": 40,
+  "eut": 256,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:woodtar",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:creosote",
+      "amount": 500
+    },
+    {
+      "id": "iis:phenol",
+      "amount": 75
+    },
+    {
+      "id": "iis:benzene",
+      "amount": 350
+    },
+    {
+      "id": "iis:liquid_toluene",
+      "amount": 75
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "minecraft:sugar",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:brown_mushroom",
+      "count": 1
+    },
+    {
+      "ingredient": "minecraft:spider_eye",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:fermented_spider_eye",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

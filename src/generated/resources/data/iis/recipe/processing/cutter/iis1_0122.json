@@ -1,0 +1,23 @@
+{
+  "type": "iis:cutter",
+  "inputs": [
+    {
+      "ingredient": "minecraft:obsidian",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:plate_obsidian",
+      "count": 1
+    }
+  ],
+  "duration": 200,
+  "eut": 32,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:lubricant",
+      "amount": 5
+    }
+  ]
+}

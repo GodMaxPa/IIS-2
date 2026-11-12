@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_naquadah_alloy",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_naquadah_alloy",
+      "count": 3
+    }
+  ],
+  "duration": 98,
+  "eut": 16
+}

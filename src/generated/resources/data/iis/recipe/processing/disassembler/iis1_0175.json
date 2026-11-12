@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:large_plasma_turbine",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:small_gear_tungsten_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_master",
+      "count": 1
+    },
+    {
+      "id": "iis:small_gear_tungsten_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_uv",
+      "count": 1
+    },
+    {
+      "id": "iis:small_gear_tungsten_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_huge_tungsten_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:small_gear_tungsten_steel",
+      "count": 1
+    },
+    {
+      "id": "iis:pipe_huge_tungsten_steel",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

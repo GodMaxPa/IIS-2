@@ -1,0 +1,35 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "iis:sensor_uv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_electrum",
+      "count": 16
+    },
+    {
+      "id": "iis:ingot_platinum",
+      "count": 53
+    },
+    {
+      "id": "iis:ingot_stainless_steel",
+      "count": 48
+    },
+    {
+      "id": "iis:ingot_osmiridium",
+      "count": 48
+    }
+  ],
+  "duration": 254307,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 254307
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_hssg",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_hssg",
+      "count": 3
+    }
+  ],
+  "duration": 98,
+  "eut": 16
+}

@@ -1,0 +1,21 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:paper",
+      "count": 8
+    },
+    {
+      "ingredient": "minecraft:compass",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:map",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 8
+}

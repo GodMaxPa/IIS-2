@@ -1,0 +1,21 @@
+{
+  "type": "iis:fluid_solidifier",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "minecraft:glass_bottle",
+      "count": 1
+    }
+  ],
+  "duration": 12,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:molten_glass",
+      "amount": 144
+    }
+  ],
+  "keep": [
+    "iis:mold_bottle"
+  ]
+}

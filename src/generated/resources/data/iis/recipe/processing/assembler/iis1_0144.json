@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:ender_pearl",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:plate_titanium",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:rod_platinum",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:circuit_nanocomputer",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:sensor_ev",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 240,
+  "circuit": 5
+}

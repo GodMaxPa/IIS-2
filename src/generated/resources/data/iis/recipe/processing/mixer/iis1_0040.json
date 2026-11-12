@@ -1,0 +1,25 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:tiny_dust_iron",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:tiny_dust_aluminium",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:tiny_dust_chrome",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_kanthal",
+      "count": 3
+    }
+  ],
+  "duration": 33,
+  "eut": 8
+}

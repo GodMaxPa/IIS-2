@@ -1,0 +1,21 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:hatch_dynamo_mv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:hull_mv",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_copper_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

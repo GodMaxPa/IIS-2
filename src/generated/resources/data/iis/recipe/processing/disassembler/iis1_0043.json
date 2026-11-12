@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:alloy_smelter_zpm",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:circuit_quantummainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_naquadah_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_quantummainframe",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_naquadah_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_zpm",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_naquadah_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_naquadah_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:wire_naquadah_4x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_naquadah_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

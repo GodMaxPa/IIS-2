@@ -1,0 +1,35 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "iis:field_generator_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_electrum",
+      "count": 21
+    },
+    {
+      "id": "iis:ingot_osmium",
+      "count": 40
+    },
+    {
+      "id": "iis:ingot_chrome",
+      "count": 32
+    },
+    {
+      "id": "iis:block_yttrium_barium_cuprate",
+      "count": 2
+    }
+  ],
+  "duration": 47938,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 47938
+    }
+  ]
+}

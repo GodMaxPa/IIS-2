@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "ae2:fluix_glass_cable",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:lime_glass_cable",
+      "count": 1
+    }
+  ],
+  "duration": 2,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:dye_watermixed_dyelime",
+      "amount": 144
+    }
+  ]
+}

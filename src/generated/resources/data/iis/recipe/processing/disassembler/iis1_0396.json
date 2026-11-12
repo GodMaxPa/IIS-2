@@ -1,0 +1,33 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:robot_arm_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_iv",
+      "count": 2
+    },
+    {
+      "id": "iis:electric_piston_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:rod_tungsten_steel",
+      "count": 2
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_tungsten_1x",
+      "count": 3
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "h",
+    "X"
+  ],
+  "key": {
+    "X": "#iis:crushed_ores/fools_ruby",
+    "h": "#iis:tools/hammer"
+  },
+  "result": {
+    "id": "iis:impure_dust_fools_ruby"
+  }
+}

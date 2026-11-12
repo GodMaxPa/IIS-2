@@ -1,0 +1,45 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:transformer_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:coil_small",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_gold_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_gold_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_aluminium_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_hv",
+      "count": 1
+    },
+    {
+      "id": "iis:coil_small",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_gold_1x",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_gold_1x",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

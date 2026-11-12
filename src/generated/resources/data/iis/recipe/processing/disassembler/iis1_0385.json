@@ -1,0 +1,49 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:primitive_mine_digger",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_gear_stone",
+      "count": 1
+    },
+    {
+      "id": "minecraft:piston",
+      "count": 1
+    },
+    {
+      "id": "iis:small_gear_stone",
+      "count": 1
+    },
+    {
+      "id": "minecraft:ladder",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_bronze",
+      "count": 1
+    },
+    {
+      "id": "minecraft:ladder",
+      "count": 1
+    },
+    {
+      "id": "iis:small_gear_stone",
+      "count": 1
+    },
+    {
+      "id": "minecraft:piston",
+      "count": 1
+    },
+    {
+      "id": "iis:small_gear_stone",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

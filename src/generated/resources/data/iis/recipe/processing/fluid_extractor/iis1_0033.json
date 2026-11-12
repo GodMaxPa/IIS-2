@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:fluid_solidifier_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_steel",
+      "count": 8
+    }
+  ],
+  "duration": 329,
+  "eut": 31,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_tin",
+      "amount": 1976
+    }
+  ]
+}

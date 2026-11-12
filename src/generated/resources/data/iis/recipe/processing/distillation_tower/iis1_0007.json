@@ -1,0 +1,32 @@
+{
+  "type": "iis:distillation_tower",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:small_dust_charcoal",
+      "count": 1
+    }
+  ],
+  "duration": 40,
+  "eut": 256,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:charcoal_byproducts",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:woodtar",
+      "amount": 250
+    },
+    {
+      "id": "iis:woodvinegar",
+      "amount": 500
+    },
+    {
+      "id": "iis:woodgas",
+      "amount": 250
+    }
+  ]
+}

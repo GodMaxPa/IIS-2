@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "minecraft:flint",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:arrow_head_flint",
+      "count": 2
+    },
+    {
+      "id": "iis:small_dust_flint",
+      "count": 1
+    }
+  ],
+  "duration": 50,
+  "eut": 8
+}

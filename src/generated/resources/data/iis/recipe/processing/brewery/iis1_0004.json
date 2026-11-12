@@ -1,0 +1,24 @@
+{
+  "type": "iis:brewery",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_soapstone",
+      "count": 1
+    }
+  ],
+  "outputs": [],
+  "duration": 128,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oil",
+      "amount": 750
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:lubricant",
+      "amount": 750
+    }
+  ]
+}

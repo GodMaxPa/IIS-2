@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_carbon",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_carbon",
+      "count": 1
+    }
+  ],
+  "duration": 1,
+  "eut": 4
+}

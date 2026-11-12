@@ -1,0 +1,24 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "minecraft:piston",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:sticky_piston",
+      "count": 1
+    }
+  ],
+  "duration": 100,
+  "eut": 4,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:glue",
+      "amount": 100
+    }
+  ],
+  "circuit": 1
+}

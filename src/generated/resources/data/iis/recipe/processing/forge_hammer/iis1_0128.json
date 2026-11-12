@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_nichrome",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_nichrome",
+      "count": 3
+    }
+  ],
+  "duration": 56,
+  "eut": 16
+}

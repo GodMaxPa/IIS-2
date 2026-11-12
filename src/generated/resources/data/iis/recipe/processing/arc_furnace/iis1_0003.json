@@ -1,0 +1,35 @@
+{
+  "type": "iis:arc_furnace",
+  "inputs": [
+    {
+      "ingredient": "iis:field_generator_zpm",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_platinum",
+      "count": 26
+    },
+    {
+      "id": "iis:block_electrum",
+      "count": 21
+    },
+    {
+      "id": "iis:block_osmium",
+      "count": 9
+    },
+    {
+      "id": "iis:block_vanadium_gallium",
+      "count": 8
+    }
+  ],
+  "duration": 106886,
+  "eut": 96,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 106886
+    }
+  ]
+}

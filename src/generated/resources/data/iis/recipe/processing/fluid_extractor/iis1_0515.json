@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:emitter_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_chrome",
+      "count": 8
+    }
+  ],
+  "duration": 1152,
+  "eut": 50,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_electrum",
+      "amount": 6912
+    }
+  ]
+}

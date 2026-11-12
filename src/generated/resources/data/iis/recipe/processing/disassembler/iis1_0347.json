@@ -1,0 +1,33 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:robot_arm_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_hv",
+      "count": 2
+    },
+    {
+      "id": "iis:electric_piston_hv",
+      "count": 1
+    },
+    {
+      "id": "iis:rod_stainless_steel",
+      "count": 2
+    },
+    {
+      "id": "iis:circuit_advanced",
+      "count": 1
+    },
+    {
+      "id": "iis:cable_gold_1x",
+      "count": 3
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

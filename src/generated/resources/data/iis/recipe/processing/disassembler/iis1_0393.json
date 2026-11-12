@@ -1,0 +1,41 @@
+{
+  "type": "iis:disassembler",
+  "inputs": [
+    {
+      "ingredient": "iis:monster_repellent_iv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:emitter_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:emitter_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:emitter_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:hull_iv",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    },
+    {
+      "id": "iis:circuit_elite",
+      "count": 1
+    }
+  ],
+  "duration": 2400,
+  "eut": 16
+}

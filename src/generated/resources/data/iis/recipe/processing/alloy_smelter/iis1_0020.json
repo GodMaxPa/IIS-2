@@ -1,0 +1,20 @@
+{
+  "type": "iis:alloy_smelter",
+  "inputs": [
+    {
+      "ingredient": "iis:ingot_yttrium_barium_cuprate",
+      "count": 9
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:block_yttrium_barium_cuprate",
+      "count": 1
+    }
+  ],
+  "duration": 5,
+  "eut": 256,
+  "keep": [
+    "iis:mold_block"
+  ]
+}

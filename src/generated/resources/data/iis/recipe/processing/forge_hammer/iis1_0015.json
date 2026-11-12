@@ -1,0 +1,17 @@
+{
+  "type": "iis:forge_hammer",
+  "inputs": [
+    {
+      "ingredient": "iis:plate_black_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:foil_black_steel",
+      "count": 3
+    }
+  ],
+  "duration": 64,
+  "eut": 16
+}

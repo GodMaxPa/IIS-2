@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_certus_quartz",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_certus_quartz",
+      "count": 1
+    }
+  ],
+  "duration": 12,
+  "eut": 4
+}

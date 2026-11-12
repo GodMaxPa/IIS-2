@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "minecraft:poisonous_potato",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:grin_powder",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

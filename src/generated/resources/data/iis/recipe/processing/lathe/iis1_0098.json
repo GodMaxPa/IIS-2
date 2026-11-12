@@ -1,0 +1,21 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:gem_flawed_opal",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:bolt_opal",
+      "count": 2
+    },
+    {
+      "id": "iis:small_dust_opal",
+      "count": 1
+    }
+  ],
+  "duration": 20,
+  "eut": 12
+}

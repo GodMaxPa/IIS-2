@@ -1,0 +1,17 @@
+{
+  "type": "iis:compressor",
+  "inputs": [
+    {
+      "ingredient": "minecraft:clay_ball",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "id": "minecraft:clay",
+      "count": 1
+    }
+  ],
+  "duration": 300,
+  "eut": 2
+}

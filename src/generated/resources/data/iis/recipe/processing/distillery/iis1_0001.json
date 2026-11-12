@@ -1,0 +1,20 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [],
+  "duration": 20,
+  "eut": 60,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:calciumacetatesolution",
+      "amount": 450
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:acetone",
+      "amount": 250
+    }
+  ],
+  "circuit": 1
+}

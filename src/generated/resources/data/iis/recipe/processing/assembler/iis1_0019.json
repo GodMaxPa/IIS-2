@@ -1,0 +1,34 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_iv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:plate_tungsten_steel",
+      "count": 3
+    },
+    {
+      "ingredient": "iis:rod_tungsten_steel",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:cable_tungsten_1x",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:small_gear_tungsten_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_piston_iv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 480,
+  "circuit": 5
+}

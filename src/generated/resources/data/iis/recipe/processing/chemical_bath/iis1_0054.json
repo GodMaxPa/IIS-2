@@ -1,0 +1,23 @@
+{
+  "type": "iis:chemical_bath",
+  "inputs": [
+    {
+      "ingredient": "ae2:brown_smart_dense_cable",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ae2:fluix_smart_dense_cable",
+      "count": 1
+    }
+  ],
+  "duration": 20,
+  "eut": 2,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:chlorine",
+      "amount": 50
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "iis:distillery",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "iis:small_dust_charcoal",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 64,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:charcoal_byproducts",
+      "amount": 1000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:woodvinegar",
+      "amount": 500
+    }
+  ],
+  "circuit": 2
+}

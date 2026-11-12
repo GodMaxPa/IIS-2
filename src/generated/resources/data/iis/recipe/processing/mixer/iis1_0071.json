@@ -1,0 +1,21 @@
+{
+  "type": "iis:mixer",
+  "inputs": [
+    {
+      "ingredient": "iis:tiny_dust_boron",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:tiny_dust_glass",
+      "count": 7
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:tiny_dust_borosilicate_glass",
+      "count": 8
+    }
+  ],
+  "duration": 22,
+  "eut": 8
+}

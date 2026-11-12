@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/wood"
+  ],
+  "result": {
+    "id": "iis:small_dust_wood",
+    "count": 4
+  }
+}

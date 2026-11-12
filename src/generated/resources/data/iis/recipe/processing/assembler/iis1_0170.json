@@ -1,0 +1,37 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_motor_hv",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:ring_styrene_butadiene_rubber",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:rotor_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:screw_steel",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:cable_gold_1x",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:pipe_medium_stainless_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_pump_hv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 120
+}

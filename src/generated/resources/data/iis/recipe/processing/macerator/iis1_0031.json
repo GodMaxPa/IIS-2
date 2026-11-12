@@ -1,0 +1,17 @@
+{
+  "type": "iis:macerator",
+  "inputs": [
+    {
+      "ingredient": "iis:gem_chipped_ruby",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:small_dust_fools_ruby",
+      "count": 1
+    }
+  ],
+  "duration": 24,
+  "eut": 4
+}

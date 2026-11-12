@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:electric_pump_lv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:ingot_bronze",
+      "count": 3
+    }
+  ],
+  "duration": 140,
+  "eut": 31,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_tin",
+      "amount": 844
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PhP",
+    "P P",
+    "PwP"
+  ],
+  "key": {
+    "P": "#c:plates/polytetrafluoroethylene",
+    "h": "#iis:tools/hammer",
+    "w": "#iis:tools/wrench"
+  },
+  "result": {
+    "id": "iis:pipe_large_polytetrafluoroethylene",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:printer_zpm",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_naquadah",
+      "count": 22
+    }
+  ],
+  "duration": 192,
+  "eut": 73,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_iridium",
+      "amount": 1152
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "iis:fluid_extractor",
+  "inputs": [
+    {
+      "ingredient": "iis:printer_luv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:nugget_niobium_titanium",
+      "count": 13
+    }
+  ],
+  "duration": 192,
+  "eut": 66,
+  "fluid_outputs": [
+    {
+      "id": "iis:molten_chrome",
+      "amount": 1152
+    }
+  ]
+}

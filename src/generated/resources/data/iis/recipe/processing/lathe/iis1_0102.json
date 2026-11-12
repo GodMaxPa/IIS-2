@@ -1,0 +1,17 @@
+{
+  "type": "iis:lathe",
+  "inputs": [
+    {
+      "ingredient": "iis:bolt_blue_steel",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:screw_blue_steel",
+      "count": 1
+    }
+  ],
+  "duration": 9,
+  "eut": 4
+}

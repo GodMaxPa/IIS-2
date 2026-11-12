@@ -1,0 +1,34 @@
+{
+  "type": "iis:blast",
+  "inputs": [
+    {
+      "ingredient": "iis:dust_pyrite",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:dust_banded_iron",
+      "count": 1
+    },
+    {
+      "id": "iis:tiny_dust_ash",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eut": 120,
+  "fluid_inputs": [
+    {
+      "ingredient": "iis:oxygen",
+      "amount": 3000
+    }
+  ],
+  "fluid_outputs": [
+    {
+      "id": "iis:sulfurdioxide",
+      "amount": 2000
+    }
+  ],
+  "temp": 1200
+}

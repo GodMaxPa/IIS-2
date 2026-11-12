@@ -1,0 +1,30 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:rod_steel_magnetic",
+      "count": 1
+    },
+    {
+      "ingredient": "iis:rod_aluminium",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:wire_copper_2x",
+      "count": 4
+    },
+    {
+      "ingredient": "iis:cable_copper_1x",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:electric_motor_mv",
+      "count": 1
+    }
+  ],
+  "duration": 80,
+  "eut": 30,
+  "circuit": 5
+}
