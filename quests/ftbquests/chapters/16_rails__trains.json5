@@ -1,101 +1,63 @@
 {
-  "id": "1D00000000000017",
-  "filename": "29_enderio_features",
-  "order_index": 29,
+  "id": "1D00000000000003",
+  "filename": "16_rails__trains",
+  "order_index": 16,
   "default_quest_shape": "",
   "quests": [
     {
-      "id": "1A00000000000022",
+      "id": "1A0000000000010B",
       "x": 3.5,
-      "y": 6.5,
+      "y": 7.5,
       "dependencies": [
-        "1A00000000000023"
+        "1A0000000000019F",
+        "1A0000000012003D"
       ],
       "icon": {
-        "id": "iis:rod_osmium",
+        "id": "iis:wire_fine_red_alloy",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:rod_osmium",
+            "id": "iis:wire_fine_red_alloy",
             "count": 1
           },
           "count": 1,
-          "id": "1B00000000002200"
+          "id": "1B00000000010B00"
         }
       ],
       "rewards": [
         {
           "type": "item",
           "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 3
+            "id": "iis:credit_copper",
+            "count": 1
           },
-          "id": "1C00000000002200"
+          "id": "1C00000000010B00"
         }
       ]
     },
     {
-      "id": "1A00000000000071",
-      "x": 12.5,
-      "y": 5.0,
+      "id": "1A0000000000019D",
+      "x": 6.5,
+      "y": 7.5,
       "dependencies": [
-        "1A00000000000020",
-        "1A00000000000072",
-        "1A000000000003CD",
-        "1A00000000000245"
+        "1A000000000006AB"
       ],
       "icon": {
-        "id": "enderio:yeta_wrench",
+        "id": "iis:detector_item",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "enderio:yeta_wrench",
+            "id": "iis:detector_item",
             "count": 1
           },
           "count": 1,
-          "id": "1B00000000007100"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 1
-          },
-          "id": "1C00000000007100"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000242",
-      "x": 11.0,
-      "y": 2.0,
-      "dependencies": [
-        "1A0000000000017E",
-        "1A000000000001E0",
-        "1A00000000000243",
-        "1A00000000000241"
-      ],
-      "icon": {
-        "id": "enderio:conduit_binder",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:conduit_binder",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000024200"
+          "id": "1B00000000019D00"
         }
       ],
       "rewards": [
@@ -105,32 +67,66 @@
             "id": "iis:credit_copper",
             "count": 3
           },
-          "id": "1C00000000024200"
+          "id": "1C00000000019D00"
         }
       ]
     },
     {
-      "id": "1A00000000000244",
+      "id": "1A0000000000038F",
       "x": 12.5,
-      "y": 2.0,
+      "y": 6.0,
       "dependencies": [
-        "1A00000000000245",
-        "1A00000000000246",
-        "1A00000000000242"
+        "1A00000000120032"
       ],
+      "icon": {
+        "id": "iis:energium_dust",
+        "count": 1
+      },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "enderio:conduit",
+            "id": "iis:energium_dust",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000038F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000038F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000391",
+      "x": 14.0,
+      "y": 4.0,
+      "dependencies": [
+        "1A000000000000C6"
+      ],
+      "icon": {
+        "id": "iis:autoclave_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
             "count": 1,
             "components": {
-              "enderio:conduit": "enderio:item"
+              "ftbfiltersystem:filter": "or(item(iis:autoclave_hv)item(iis:autoclave_ev)item(iis:autoclave_iv))"
             }
           },
-          "match_components": "fuzzy",
           "count": 1,
-          "id": "1B00000000024400"
+          "id": "1B00000000039100"
         }
       ],
       "rewards": [
@@ -140,973 +136,197 @@
             "id": "iis:credit_cupronickel",
             "count": 2
           },
-          "id": "1C00000000024400"
+          "id": "1C00000000039100"
         }
       ]
     },
     {
-      "id": "1A00000000000245",
-      "x": 11.0,
-      "y": 3.5,
-      "dependencies": [
-        "1A00000000000072",
-        "1A000000000006C0",
-        "1A00000000000115"
-      ],
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:ingot_pulsating_iron",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000024500"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 1
-          },
-          "id": "1C00000000024500"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000246",
-      "x": 12.5,
-      "y": 0.5,
-      "dependencies": [
-        "1A000000000000EA"
-      ],
-      "icon": {
-        "id": "iis:item_pipe_medium_electrum",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:item_pipe_medium_electrum",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000024600"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 3
-          },
-          "id": "1C00000000024600"
-        }
-      ]
-    },
-    {
-      "id": "1A0000000000024B",
-      "x": 9.5,
-      "y": 3.5,
-      "dependencies": [
-        "1A00000000000245",
-        "1A0000000000024C",
-        "1A000000000001ED"
-      ],
-      "icon": {
-        "id": "enderio:pulsating_crystal",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:pulsating_crystal",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000024B00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 2
-          },
-          "id": "1C00000000024B00"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000254",
-      "x": 8.0,
-      "y": 3.5,
-      "dependencies": [
-        "1A00000000000255",
-        "1A0000000000024B",
-        "1A00000000000256"
-      ],
-      "icon": {
-        "id": "enderio:double_layer_capacitor",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:double_layer_capacitor",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000025400"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 2
-          },
-          "id": "1C00000000025400"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000255",
-      "x": 9.5,
-      "y": 5.0,
-      "dependencies": [
-        "1A00000000000142",
-        "1A000000000000EB"
-      ],
-      "icon": {
-        "id": "enderio:basic_capacitor",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:basic_capacitor",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000025500"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 5
-          },
-          "id": "1C00000000025500"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000257",
-      "x": 2.0,
-      "y": 6.5,
-      "dependencies": [
-        "1A000000000000F9"
-      ],
-      "icon": {
-        "id": "iis:centrifuge_hv",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:centrifuge_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000025700"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 2
-          },
-          "id": "1C00000000025700"
-        }
-      ]
-    },
-    {
-      "id": "1A0000000000025A",
-      "x": 3.5,
-      "y": 0.5,
-      "dependencies": [
-        "1A0000000000025B"
-      ],
-      "icon": {
-        "id": "enderio:reinforced_obsidian_block",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:reinforced_obsidian_block",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000025A00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 1
-          },
-          "id": "1C00000000025A00"
-        }
-      ]
-    },
-    {
-      "id": "1A0000000000025B",
-      "x": 5.0,
-      "y": 2.0,
-      "dependencies": [
-        "1A00000000000270"
-      ],
-      "icon": {
-        "id": "iis:frame_dark_steel",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:frame_dark_steel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000025B00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 7
-          },
-          "id": "1C00000000025B00"
-        }
-      ]
-    },
-    {
-      "id": "1A0000000000025C",
-      "x": 5.0,
-      "y": 5.0,
-      "dependencies": [
-        "1A00000000000261",
-        "1A00000000000262",
-        "1A00000000000260",
-        "1A00000000000263",
-        "1A00000000000264"
-      ],
-      "icon": {
-        "id": "enderio:powered_spawner",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:powered_spawner",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000025C00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_silver",
-            "count": 2
-          },
-          "id": "1C00000000025C00"
-        }
-      ]
-    },
-    {
-      "id": "1A0000000000025D",
-      "x": 3.5,
-      "y": 5.0,
-      "dependencies": [
-        "1A00000000000257"
-      ],
-      "icon": {
-        "id": "iis:nugget_plutonium241",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:nugget_plutonium241",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000025D00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 3
-          },
-          "id": "1C00000000025D00"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000260",
-      "x": 5.0,
-      "y": 6.5,
-      "dependencies": [
-        "1A00000000000046",
-        "1A00000000000022"
-      ],
-      "icon": {
-        "id": "iis:emitter_iv",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:emitter_iv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000026000"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 6
-          },
-          "id": "1C00000000026000"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000261",
-      "x": 6.5,
-      "y": 5.0,
-      "dependencies": [
-        "1A0000000000026C",
-        "1A000000000001ED"
-      ],
-      "icon": {
-        "id": "enderio:vibrant_crystal",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:vibrant_crystal",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000026100"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 3
-          },
-          "id": "1C00000000026100"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000262",
-      "x": 5.0,
-      "y": 3.5,
-      "dependencies": [
-        "1A0000000000025B"
-      ],
-      "icon": {
-        "id": "enderio:void_chassis",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:void_chassis",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000026200"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 1
-          },
-          "id": "1C00000000026200"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000263",
-      "x": 3.5,
-      "y": 3.5,
-      "dependencies": [
-        "1A00000000000265",
-        "1A00000000000266",
-        "1A0000000000025D",
-        "1A00000000000262",
-        "1A00000000000267"
-      ],
-      "icon": {
-        "id": "enderio:soul_binder",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:soul_binder",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000026300"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 4
-          },
-          "id": "1C00000000026300"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000264",
-      "x": 6.5,
-      "y": 3.5,
-      "dependencies": [
-        "1A0000000000026D",
-        "1A00000000000261",
-        "1A00000000000254"
-      ],
-      "icon": {
-        "id": "enderio:octadic_capacitor",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:octadic_capacitor",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000026400"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 3
-          },
-          "id": "1C00000000026400"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000265",
-      "x": 3.5,
-      "y": 2.0,
-      "dependencies": [
-        "1A000000000000C1",
-        "1A00000000000023"
-      ],
-      "icon": {
-        "id": "iis:field_generator_hv",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:field_generator_hv",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000026500"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 3
-          },
-          "id": "1C00000000026500"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000266",
-      "x": 2.0,
-      "y": 2.0,
-      "dependencies": [
-        "1A000000000006BB",
-        "1A00000000000072"
-      ],
-      "icon": {
-        "id": "iis:ingot_soularium",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:ingot_soularium",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000026600"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 5
-          },
-          "id": "1C00000000026600"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000267",
-      "x": 2.0,
-      "y": 5.0,
-      "dependencies": [
-        "1A00000000000272"
-      ],
-      "icon": {
-        "id": "enderio:broken_spawner",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:broken_spawner",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000026700"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 1
-          },
-          "id": "1C00000000026700"
-        }
-      ]
-    },
-    {
-      "id": "1A0000000000026C",
-      "x": 6.5,
-      "y": 6.5,
-      "dependencies": [
-        "1A000000000006C1",
-        "1A00000000000115"
-      ],
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:ingot_vibrant_alloy",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000026C00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 2
-          },
-          "id": "1C00000000026C00"
-        }
-      ]
-    },
-    {
-      "id": "1A0000000000026D",
-      "x": 8.0,
-      "y": 5.0,
-      "dependencies": [
-        "1A000000000006C2",
-        "1A00000000000115"
-      ],
-      "icon": {
-        "id": "iis:ingot_energetic_alloy",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:ingot_energetic_alloy",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000026D00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 1
-          },
-          "id": "1C00000000026D00"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000270",
-      "x": 6.5,
-      "y": 2.0,
-      "dependencies": [
-        "1A000000000006BD",
-        "1A00000000000115"
-      ],
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:ingot_dark_steel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000027000"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 6
-          },
-          "id": "1C00000000027000"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000271",
-      "x": 9.5,
-      "y": 0.5,
-      "dependencies": [
-        "1A00000000000072",
-        "1A000000000006BC"
-      ],
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:ingot_electrical_steel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000027100"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 4
-          },
-          "id": "1C00000000027100"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000272",
-      "x": 2.0,
-      "y": 3.5,
-      "dependencies": [
-        "1A00000000000278"
-      ],
-      "icon": {
-        "id": "enderio:soul_vial",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:soul_vial",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000027200"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 7
-          },
-          "id": "1C00000000027200"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000273",
-      "x": 0.5,
-      "y": 0.5,
-      "dependencies": [
-        "1A00000000000048"
-      ],
-      "icon": {
-        "id": "minecraft:soul_sand",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:soul_sand",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000027300"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 2
-          },
-          "id": "1C00000000027300"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000276",
-      "x": 0.5,
-      "y": 5.0,
-      "dependencies": [
-        "1A000000000001AD"
-      ],
-      "icon": {
-        "id": "iis:mold_bottle",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:mold_bottle",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000027600"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 2
-          },
-          "id": "1C00000000027600"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000277",
-      "x": 0.5,
-      "y": 3.5,
-      "dependencies": [
-        "1A00000000000276",
-        "1A0000000012001E"
-      ],
-      "icon": {
-        "id": "minecraft:glass_bottle",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "minecraft:glass_bottle",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000027700"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 2
-          },
-          "id": "1C00000000027700"
-        }
-      ]
-    },
-    {
-      "id": "1A00000000000278",
-      "x": 0.5,
-      "y": 2.0,
-      "dependencies": [
-        "1A00000000000277",
-        "1A00000000000266",
-        "1A00000000000226",
-        "1A0000000000024C"
-      ],
-      "icon": {
-        "id": "enderio:soul_vial",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:soul_vial",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B00000000027800"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 6
-          },
-          "id": "1C00000000027800"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000003F1",
-      "x": 11.0,
-      "y": 0.5,
-      "dependencies": [
-        "1A00000000000271"
-      ],
-      "icon": {
-        "id": "iis:plate_electrical_steel",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:plate_electrical_steel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000003F100"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 4
-          },
-          "id": "1C0000000003F100"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000003F3",
+      "id": "1A000000000003C0",
       "x": 14.0,
-      "y": 5.0,
+      "y": 9.0,
       "dependencies": [
-        "1A000000000001CD",
-        "1A000000000000F1",
-        "1A00000000000184",
-        "1A000000000001EC",
-        "1A0000000000024C",
-        "1A0000000012001E"
+        "1A0000000000017C",
+        "1A000000000002C4",
+        "1A00000000000215"
       ],
       "dependency_requirement": "one_completed",
       "tasks": [
         {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:creosote",
+            "amount": 1
+          },
+          "id": "1B0000000003C000"
+        }
+      ],
+      "rewards": [
+        {
           "type": "item",
           "item": {
-            "id": "enderio:conduit",
-            "count": 1,
-            "components": {
-              "enderio:conduit": "enderio:fluid"
-            }
+            "id": "iis:credit_copper",
+            "count": 3
           },
-          "match_components": "fuzzy",
+          "id": "1C0000000003C000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000446",
+      "x": 14.0,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000000192"
+      ],
+      "icon": {
+        "id": "minecraft:oak_slab",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:oak_slab",
+            "count": 1
+          },
           "count": 1,
-          "id": "1B0000000003F300"
+          "id": "1B00000000044600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000044600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000447",
+      "x": 12.5,
+      "y": 9.0,
+      "dependencies": [
+        "1A00000000000446",
+        "1A000000000003C0"
+      ],
+      "icon": {
+        "id": "iis:tie_wood",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:tie_wood",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000044700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000044700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000448",
+      "x": 11.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A00000000000447"
+      ],
+      "icon": {
+        "id": "iis:railbed_wood",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:railbed_wood",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000044800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000044800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000449",
+      "x": 12.5,
+      "y": 10.5,
+      "dependencies": [
+        "1A00000000000447",
+        "1A00000000000127",
+        "1A000000000001E3"
+      ],
+      "icon": {
+        "id": "iis:rail_wooden",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rail_wooden",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000044900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000044900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000044A",
+      "x": 9.5,
+      "y": 6.0,
+      "dependencies": [
+        "1A0000000012002D",
+        "1A00000000000056"
+      ],
+      "icon": {
+        "id": "iis:rail_standard",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rail_standard",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000044A00"
         }
       ],
       "rewards": [
@@ -1116,169 +336,32 @@
             "id": "iis:credit_copper",
             "count": 6
           },
-          "id": "1C0000000003F300"
+          "id": "1C00000000044A00"
         }
       ]
     },
     {
-      "id": "1A000000000004C7",
-      "x": 14.0,
-      "y": 0.5,
+      "id": "1A0000000000044B",
+      "x": 11.0,
+      "y": 10.5,
       "dependencies": [
-        "1A000000000004C9",
-        "1A00000000000193"
+        "1A00000000000449",
+        "1A00000000000448",
+        "1A000000000001E3"
       ],
       "icon": {
-        "id": "enderio:basic_item_filter",
+        "id": "iis:track_wooden",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "enderio:basic_item_filter",
+            "id": "iis:track_wooden",
             "count": 1
           },
           "count": 1,
-          "id": "1B0000000004C700"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 4
-          },
-          "id": "1C0000000004C700"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000004C8",
-      "x": 14.0,
-      "y": 2.0,
-      "dependencies": [
-        "1A000000000004C7",
-        "1A000000000001E6",
-        "1A00000000000256"
-      ],
-      "icon": {
-        "id": "enderio:advanced_item_filter",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "enderio:advanced_item_filter",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000004C800"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 6
-          },
-          "id": "1C0000000004C800"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000006BB",
-      "x": 2.0,
-      "y": 0.5,
-      "dependencies": [
-        "1A00000000000273",
-        "1A000000000000EB",
-        "1A00000000000243"
-      ],
-      "icon": {
-        "id": "iis:dust_soularium",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_soularium",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006BB00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 4
-          },
-          "id": "1C0000000006BB00"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000006BC",
-      "x": 8.0,
-      "y": 0.5,
-      "dependencies": [
-        "1A00000000000243",
-        "1A0000000000015F"
-      ],
-      "icon": {
-        "id": "iis:dust_electrical_steel",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_electrical_steel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006BC00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 4
-          },
-          "id": "1C0000000006BC00"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000006BD",
-      "x": 8.0,
-      "y": 2.0,
-      "dependencies": [
-        "1A000000000006BE",
-        "1A000000000006BC"
-      ],
-      "icon": {
-        "id": "iis:dust_dark_steel",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_dark_steel",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006BD00"
+          "id": "1B00000000044B00"
         }
       ],
       "rewards": [
@@ -1288,172 +371,32 @@
             "id": "iis:credit_copper",
             "count": 5
           },
-          "id": "1C0000000006BD00"
+          "id": "1C00000000044B00"
         }
       ]
     },
     {
-      "id": "1A000000000006BE",
-      "x": 6.5,
-      "y": 0.5,
-      "dependencies": [
-        "1A00000000000175",
-        "1A00000000000187"
-      ],
-      "icon": {
-        "id": "iis:dust_obsidian",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_obsidian",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006BE00"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 4
-          },
-          "id": "1C0000000006BE00"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000006C0",
-      "x": 12.5,
-      "y": 3.5,
-      "dependencies": [
-        "1A00000000000243",
-        "1A00000000000020",
-        "1A00000000000460"
-      ],
-      "icon": {
-        "id": "iis:dust_pulsating_iron",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_pulsating_iron",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006C000"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 4
-          },
-          "id": "1C0000000006C000"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000006C1",
-      "x": 8.0,
-      "y": 6.5,
-      "dependencies": [
-        "1A000000000006C2",
-        "1A000000000000F2",
-        "1A00000000000046"
-      ],
-      "icon": {
-        "id": "iis:dust_vibrant_alloy",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_vibrant_alloy",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006C100"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_cupronickel",
-            "count": 1
-          },
-          "id": "1C0000000006C100"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000006C2",
-      "x": 9.5,
-      "y": 6.5,
-      "dependencies": [
-        "1A000000000000EB",
-        "1A000000000000FF",
-        "1A000000000006C3",
-        "1A00000000000243"
-      ],
-      "icon": {
-        "id": "iis:dust_energetic_alloy",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:dust_energetic_alloy",
-            "count": 1
-          },
-          "count": 1,
-          "id": "1B0000000006C200"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 6
-          },
-          "id": "1C0000000006C200"
-        }
-      ]
-    },
-    {
-      "id": "1A000000000006C3",
+      "id": "1A0000000000044C",
       "x": 11.0,
-      "y": 6.5,
+      "y": 7.5,
       "dependencies": [
-        "1A00000000000243",
-        "1A00000000000460",
-        "1A00000000120034"
+        "1A0000000000044A",
+        "1A00000000000448",
+        "1A000000000001E3"
       ],
       "icon": {
-        "id": "iis:dust_conductive_iron",
+        "id": "minecraft:rail",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:dust_conductive_iron",
+            "id": "minecraft:rail",
             "count": 1
           },
           "count": 1,
-          "id": "1B0000000006C300"
+          "id": "1B00000000044C00"
         }
       ],
       "rewards": [
@@ -1461,36 +404,71 @@
           "type": "item",
           "item": {
             "id": "iis:credit_copper",
-            "count": 4
+            "count": 7
           },
-          "id": "1C0000000006C300"
+          "id": "1C00000000044C00"
         }
       ]
     },
     {
-      "id": "1A0000000000071F",
-      "x": 11.0,
-      "y": 5.0,
+      "id": "1A0000000000044D",
+      "x": 3.5,
+      "y": 10.5,
       "dependencies": [
-        "1A00000000000074",
-        "1A00000000000175",
-        "1A000000000002DD",
-        "1A000000000004AD",
-        "1A0000000000024B"
+        "1A00000000000197",
+        "1A0000000012002E",
+        "1A00000000000450"
       ],
       "icon": {
-        "id": "enderio:vacuum_chest",
+        "id": "iis:minecart_wheels_iron",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "enderio:vacuum_chest",
+            "id": "iis:minecart_wheels_iron",
             "count": 1
           },
           "count": 1,
-          "id": "1B00000000071F00"
+          "id": "1B00000000044D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000044D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000044E",
+      "x": 1.0,
+      "y": 2.0,
+      "size": 2.0,
+      "dependencies": [
+        "1A0000000000044F",
+        "1A00000000000444",
+        "1A000000000002F3",
+        "1A000000000001A3"
+      ],
+      "icon": {
+        "id": "iis:loco_steam",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:loco_steam",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000044E00"
         }
       ],
       "rewards": [
@@ -1500,22 +478,1107 @@
             "id": "iis:credit_cupronickel",
             "count": 2
           },
-          "id": "1C00000000071F00"
+          "id": "1C00000000044E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000044F",
+      "x": 1.0,
+      "y": 11.5,
+      "size": 2.0,
+      "dependencies": [
+        "1A0000000000044D"
+      ],
+      "icon": {
+        "id": "minecraft:minecart",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:minecart",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000044F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000000044F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000450",
+      "x": 3.5,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000012002D",
+        "1A00000000000197"
+      ],
+      "icon": {
+        "id": "iis:ring_iron",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ring_iron",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000045000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000454",
+      "x": 14.5,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000120034",
+        "1A000000000000FA",
+        "1A000000000000EC",
+        "1A00000000000390"
+      ],
+      "icon": {
+        "id": "iis:mfe",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mfe",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000045400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000455",
+      "x": 15.5,
+      "y": 11.5,
+      "dependencies": [
+        "1A00000000000454",
+        "1A0000000000044F"
+      ],
+      "icon": {
+        "id": "iis:battery_buffer_2x2_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:battery_buffer_2x2_mv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000045500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000456",
+      "x": 5.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A000000000001F7",
+        "1A000000000003F5"
+      ],
+      "icon": {
+        "id": "iis:steel_gear_box_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steel_gear_box_casing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000045600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000457",
+      "x": 2.0,
+      "y": 4.0,
+      "dependencies": [
+        "1A00000000000456",
+        "1A000000000001E2",
+        "1A0000000000044F",
+        "1A00000000000458",
+        "1A0000000000045C"
+      ],
+      "icon": {
+        "id": "iis:track_layer",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:track_layer",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000045700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000458",
+      "x": 5.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A000000000001E3",
+        "1A000000000006AC"
+      ],
+      "icon": {
+        "id": "iis:circuit_receiver",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_receiver",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000045800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000459",
+      "x": 12.5,
+      "y": 4.5,
+      "icon": {
+        "id": "iis:color_upgrade",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:lime_dye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045900"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:yellow_dye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045901"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:red_dye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045902"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000045900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000045A",
+      "x": 11.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A0000000012001A",
+        "1A00000000120032"
+      ],
+      "icon": {
+        "id": "minecraft:compass",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:compass",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000045A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000045D",
+      "x": 3.5,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000000457",
+        "1A00000000000456",
+        "1A0000000000044E"
+      ],
+      "icon": {
+        "id": "iis:tunnel_bore",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:tunnel_bore",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C00000000045D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000045E",
+      "x": 15.5,
+      "y": 1.5,
+      "size": 2.0,
+      "dependencies": [
+        "1A00000000000456",
+        "1A0000000000045C",
+        "1A00000000000455",
+        "1A000000000000EC",
+        "1A000000000000F9"
+      ],
+      "icon": {
+        "id": "iis:loco_electric",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:loco_electric",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000045E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000045E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000462",
+      "x": 3.5,
+      "y": 6.0,
+      "dependencies": [
+        "1A000000000001E3",
+        "1A0000000000010B"
+      ],
+      "icon": {
+        "id": "iis:circuit_controller",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_controller",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000046200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000463",
+      "x": 5.75,
+      "y": 5.25,
+      "size": 2.5,
+      "dependencies": [
+        "1A00000000000066",
+        "1A00000000000458",
+        "1A0000000012003A"
+      ],
+      "icon": {
+        "id": "iis:signal_tuner",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:signal_tuner",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000046300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000465",
+      "x": 5.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000000463"
+      ],
+      "icon": {
+        "id": "iis:signal_receiver_box",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:signal_receiver_box",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000046500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000466",
+      "x": 3.5,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000000462",
+        "1A00000000000463"
+      ],
+      "icon": {
+        "id": "iis:signal_controller_box",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:signal_controller_box",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000046600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004C9",
+      "x": 9.5,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000012001A",
+        "1A0000000012002E"
+      ],
+      "icon": {
+        "id": "minecraft:hopper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:hopper",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004C900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000004C900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006A4",
+      "x": 6.5,
+      "y": 3.0,
+      "dependencies": [
+        "1A000000000001A8",
+        "1A0000000012001F",
+        "1A0000000000009B",
+        "1A00000000000458"
+      ],
+      "icon": {
+        "id": "iis:trackman_goggles",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:trackman_goggles",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006A400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000006A400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006A5",
+      "x": 12.5,
+      "y": 3.0,
+      "dependencies": [
+        "1A000000000001E3",
+        "1A000000000000ED"
+      ],
+      "icon": {
+        "id": "iis:circuit_signal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_signal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006A500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000006A500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006A6",
+      "x": 11.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A000000000006AE",
+        "1A000000000006A7"
+      ],
+      "icon": {
+        "id": "iis:block_signal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_signal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006A600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000006A600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006A7",
+      "x": 8.75,
+      "y": 3.75,
+      "size": 2.5,
+      "dependencies": [
+        "1A0000000012001F",
+        "1A0000000000045A",
+        "1A0000000012003A"
+      ],
+      "icon": {
+        "id": "iis:signal_surveyor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:signal_surveyor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006A700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000006A700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006A8",
+      "x": 9.5,
+      "y": 7.5,
+      "dependencies": [
+        "1A0000000000044C",
+        "1A00000000000184",
+        "1A0000000000024C",
+        "1A000000000001E3",
+        "1A000000000006AC"
+      ],
+      "icon": {
+        "id": "minecraft:powered_rail",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:powered_rail",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006A800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000006A800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006A9",
+      "x": 8.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A000000000006AB",
+        "1A000000000006A8"
+      ],
+      "icon": {
+        "id": "iis:track_locking",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:track_locking",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006A900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000006A900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006AA",
+      "x": 12.5,
+      "y": 7.5,
+      "dependencies": [
+        "1A0000000000044C",
+        "1A000000000006AE"
+      ],
+      "icon": {
+        "id": "iis:track_locomotive",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:track_locomotive",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006AA00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000006AA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006AB",
+      "x": 8.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A0000000012000E"
+      ],
+      "icon": {
+        "id": "minecraft:stone_pressure_plate",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:stone_pressure_plate",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006AB00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000006AB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006AE",
+      "x": 11.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A0000000000015E",
+        "1A00000000120032",
+        "1A0000000012001F",
+        "1A00000000000459"
+      ],
+      "icon": {
+        "id": "iis:signal_lamp",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:signal_lamp",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006AE00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000006AE00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000073B",
+      "x": 6.5,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000000019D",
+        "1A000000000004C9"
+      ],
+      "icon": {
+        "id": "iis:item_loader",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:item_loader",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000073B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000073B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000078A",
+      "x": 9.5,
+      "y": 10.5,
+      "dependencies": [
+        "1A0000000000019D",
+        "1A000000000004C9"
+      ],
+      "icon": {
+        "id": "iis:item_unloader",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:item_unloader",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000078A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000078A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000078B",
+      "x": 5.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000000073B",
+        "1A0000000000078E"
+      ],
+      "icon": {
+        "id": "iis:item_loader_advanced",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:item_loader_advanced",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000078B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000078B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000078C",
+      "x": 8.0,
+      "y": 10.5,
+      "dependencies": [
+        "1A0000000000078A",
+        "1A0000000000078E"
+      ],
+      "icon": {
+        "id": "iis:item_unloader_advanced",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:item_unloader_advanced",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000078C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000078C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000078D",
+      "x": 5.0,
+      "y": 10.5,
+      "icon": {
+        "id": "minecraft:red_dye",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:red_dye",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000078D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000078D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000078E",
+      "x": 6.5,
+      "y": 10.5,
+      "dependencies": [
+        "1A0000000000078D"
+      ],
+      "icon": {
+        "id": "iis:crowbar_red",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:crowbar_red)item(iis:crowbar_reinforced))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000000078E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000078E00"
         }
       ]
     }
   ],
   "quest_links": [
     {
-      "id": "1E000000017003F2",
-      "linked_quest": "1A000000000003F2",
-      "x": 9.5,
-      "y": 2.0,
-      "size": 1.0
+      "id": "1E00000000300390",
+      "linked_quest": "1A00000000000390",
+      "x": 14.25,
+      "y": 5.75,
+      "size": 1.5
     }
   ],
   "icon": {
-    "id": "minecraft:ender_eye",
+    "id": "minecraft:rail",
     "count": 1
   }
 }

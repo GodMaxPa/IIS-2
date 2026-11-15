@@ -715,6 +715,11 @@ def main():
         os.makedirs(os.path.join(OUT, 'lang', loc), exist_ok=True)
         write(os.path.join(OUT, 'lang', loc, 'iis1_quests.json5'), dict(sorted(table.items())))
 
+    # D152: the book rebuilt around IIS 2: chapters by energy tier, texts from IIS 2 data
+    import quests_book
+    book = quests_book.rebuild(ROOT, OUT)
+    print('book by tiers:', book)
+
     rep = [f'# IIS 1 quests -> FTB Quests (D101)', '',
            f'Quests in IIS 1: {len(quests)}; written: {len(placed)}; hidden until their items are ported: {len(hidden)}; chapters: {chapters}, one of them ours (D129, {own} quests).', '',
            '## Most needed unported items (task count)', '']

@@ -1,0 +1,6296 @@
+{
+  "id": "1D00000000001021",
+  "default_quest_shape": "",
+  "icon": {
+    "id": "iis:hull_lv",
+    "count": 1
+  },
+  "quests": [
+    {
+      "id": "1A00000000130001",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.5,
+      "icon": {
+        "id": "iis:hull_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000013000100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000B1",
+      "x": 2.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000316",
+        "1A00000000000482",
+        "1A00000000000483",
+        "1A00000000000484"
+      ],
+      "icon": {
+        "id": "iis:nugget_uranium235",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:nugget_uranium235",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000B100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000000B100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000120",
+      "x": 2.0,
+      "y": 69.0,
+      "dependencies": [
+        "1A00000000000121",
+        "1A0000000000011E",
+        "1A000000000001A6"
+      ],
+      "icon": {
+        "id": "iis:electric_motor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_motor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000012000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000125",
+      "x": 2.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A0000000012002E",
+        "1A00000000000674"
+      ],
+      "icon": {
+        "id": "iis:casing_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:casing_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000012500"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000019E",
+      "x": 2.0,
+      "y": 30.0,
+      "dependencies": [
+        "1A000000000001C3"
+      ],
+      "icon": {
+        "id": "iis:dust_charcoal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_charcoal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000019E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000019E00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001C4",
+      "x": 2.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A000000000001C3"
+      ],
+      "icon": {
+        "id": "minecraft:charcoal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:charcoal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001C400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000001C400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001E8",
+      "x": 2.0,
+      "y": 10.0,
+      "dependencies": [
+        "1A00000000120009"
+      ],
+      "icon": {
+        "id": "iis:gem_exquisite_ruby",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:gem_exquisite_ruby)item(iis:gem_exquisite_jasper)item(iis:gem_exquisite_garnet_red))"
+            }
+          },
+          "count": 1,
+          "id": "1B0000000001E800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000001E800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001EA",
+      "x": 2.0,
+      "y": 12.0,
+      "dependencies": [
+        "1A0000000000010E"
+      ],
+      "icon": {
+        "id": "iis:tiny_dust_gallium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:tiny_dust_gallium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001EA00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000001EA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F6",
+      "x": 2.0,
+      "y": 85.0,
+      "dependencies": [
+        "1A000000000003E3",
+        "1A00000000120008"
+      ],
+      "icon": {
+        "id": "iis:coal_ball",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:coal_ball",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000001F600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000201",
+      "x": 2.0,
+      "y": 14.0,
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:chlorine",
+            "amount": 1
+          },
+          "id": "1B00000000020100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000020100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000221",
+      "x": 2.0,
+      "y": 73.0,
+      "dependencies": [
+        "1A000000000001EC",
+        "1A00000000000487",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:sensor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sensor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000022100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002ED",
+      "x": 2.0,
+      "y": 83.0,
+      "icon": {
+        "id": "iis:match",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:match",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002ED00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000002ED00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000340",
+      "x": 2.0,
+      "y": 17.5,
+      "dependencies": [
+        "1A000000000000F4"
+      ],
+      "icon": {
+        "id": "iis:frame_aluminium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frame_aluminium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000034000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000B0",
+      "x": 4.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A000000000000AE",
+        "1A000000000000B1"
+      ],
+      "icon": {
+        "id": "iis:enriched_uranium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:enriched_uranium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000B000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000000B000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000114",
+      "x": 4.0,
+      "y": 17.5,
+      "dependencies": [
+        "1A00000000000340"
+      ],
+      "icon": {
+        "id": "iis:frost_proof_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frost_proof_casing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000011400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000011400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000128",
+      "x": 4.0,
+      "y": 64.0,
+      "size": 2.5,
+      "dependencies": [
+        "1A00000000000126",
+        "1A0000000000011D",
+        "1A00000000000120",
+        "1A000000000001CD",
+        "1A0000000000011C"
+      ],
+      "icon": {
+        "id": "iis:steam_turbine_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:steam_turbine_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 7
+          },
+          "id": "1C00000000012800"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000012E",
+      "x": 4.0,
+      "y": 70.5,
+      "dependencies": [
+        "1A00000000000130",
+        "1A00000000000120",
+        "1A000000000004AA"
+      ],
+      "icon": {
+        "id": "iis:electric_piston_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_piston_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000012E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000131",
+      "x": 4.0,
+      "y": 72.0,
+      "dependencies": [
+        "1A0000000000009B",
+        "1A00000000000120",
+        "1A00000000000132"
+      ],
+      "icon": {
+        "id": "iis:electric_pump_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_pump_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000013100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000013100"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000019C",
+      "x": 4.0,
+      "y": 16.5,
+      "dependencies": [
+        "1A00000000000193",
+        "1A0000000000019A",
+        "1A0000000000019E",
+        "1A000000000003E3"
+      ],
+      "icon": {
+        "id": "iis:resistor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:resistor",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B00000000019C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000019C00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001CC",
+      "x": 4.0,
+      "y": 9.0,
+      "dependencies": [
+        "1A0000000000004A",
+        "1A000000000001C4"
+      ],
+      "icon": {
+        "id": "iis:block_charcoal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_charcoal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001CC00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000001CC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001E6",
+      "x": 4.0,
+      "y": 79.0,
+      "dependencies": [
+        "1A0000000000010E"
+      ],
+      "icon": {
+        "id": "iis:item_filter",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:item_filter",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001E600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000001E600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001EB",
+      "x": 4.0,
+      "y": 11.5,
+      "dependencies": [
+        "1A000000000001EA"
+      ],
+      "icon": {
+        "id": "iis:diode",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:diode",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001EB00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000001EB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F3",
+      "x": 4.0,
+      "y": 85.0,
+      "dependencies": [
+        "1A000000000001F6"
+      ],
+      "icon": {
+        "id": "iis:compressed_coal_ball",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:compressed_coal_ball",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000001F300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F9",
+      "x": 4.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A000000000001FA",
+        "1A00000000000125"
+      ],
+      "icon": {
+        "id": "iis:thermal_centrifuge_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:thermal_centrifuge_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000001F900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001FD",
+      "x": 4.0,
+      "y": 10.0,
+      "dependencies": [
+        "1A000000000001E8"
+      ],
+      "icon": {
+        "id": "iis:lens_ruby",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:lens_ruby)item(iis:lens_fools_ruby)item(iis:lens_jasper)item(iis:lens_garnet_red))"
+            }
+          },
+          "count": 1,
+          "id": "1B0000000001FD00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000001FD00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000020B",
+      "x": 4.0,
+      "y": 14.0,
+      "dependencies": [
+        "1A00000000000201"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:chloroform",
+            "amount": 1
+          },
+          "id": "1B00000000020B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000000020B00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000342",
+      "x": 4.0,
+      "y": 12.5,
+      "dependencies": [
+        "1A000000000001EA"
+      ],
+      "icon": {
+        "id": "iis:plate_gallium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_gallium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000034200"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000046D",
+      "x": 4.0,
+      "y": 83.0,
+      "size": 2.5,
+      "dependencies": [
+        "1A00000000000175",
+        "1A000000000002EE",
+        "1A000000000002ED",
+        "1A0000000000046F"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:netherrack",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000046D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000046D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000488",
+      "x": 4.0,
+      "y": 73.0,
+      "dependencies": [
+        "1A00000000000221"
+      ],
+      "icon": {
+        "id": "iis:miner_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:miner_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000048800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000048800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000048",
+      "x": 6.0,
+      "y": 81.0,
+      "dependencies": [
+        "1A0000000000046D"
+      ],
+      "icon": {
+        "id": "minecraft:blaze_rod",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:blaze_rod",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000004800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000004800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000056",
+      "x": 6.0,
+      "y": 70.0,
+      "dependencies": [
+        "1A00000000000128",
+        "1A0000000000012E"
+      ],
+      "icon": {
+        "id": "iis:bender_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bender_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000005600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000058",
+      "x": 6.0,
+      "y": 79.0,
+      "dependencies": [
+        "1A000000000001E6",
+        "1A00000000000128"
+      ],
+      "icon": {
+        "id": "iis:sifter_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sifter_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000005800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000005800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000088",
+      "x": 6.0,
+      "y": 47.0,
+      "dependencies": [
+        "1A000000000002DB",
+        "1A00000000000128"
+      ],
+      "icon": {
+        "id": "iis:printer_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:printer_lv)item(iis:printer_mv)item(iis:printer_hv)item(iis:printer_ev)item(iis:printer_iv))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000000008800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000008800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000F1",
+      "x": 6.0,
+      "y": 80.0,
+      "dependencies": [
+        "1A0000000000046D"
+      ],
+      "icon": {
+        "id": "minecraft:quartz",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(minecraft:quartz)item(iis:dust_nether_quartz))"
+            }
+          },
+          "count": 1,
+          "id": "1B0000000000F100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000000F100"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000012B",
+      "x": 6.0,
+      "y": 74.0,
+      "dependencies": [
+        "1A00000000000128",
+        "1A0000000000012E"
+      ],
+      "icon": {
+        "id": "iis:lathe_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lathe_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000012B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000013A",
+      "x": 6.0,
+      "y": 57.0,
+      "dependencies": [
+        "1A00000000000128",
+        "1A000000000003C6"
+      ],
+      "icon": {
+        "id": "iis:electrolyzer_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electrolyzer_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000013A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000013A00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000140",
+      "x": 6.0,
+      "y": 67.0,
+      "dependencies": [
+        "1A00000000000131"
+      ],
+      "icon": {
+        "id": "iis:canner_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:canner_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000014000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000014000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000142",
+      "x": 6.0,
+      "y": 77.0,
+      "dependencies": [
+        "1A00000000000141"
+      ],
+      "icon": {
+        "id": "iis:battery_hull_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:battery_hull_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000014200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000014200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000184",
+      "x": 6.0,
+      "y": 82.0,
+      "dependencies": [
+        "1A00000000000128",
+        "1A0000000000012E",
+        "1A00000000000131"
+      ],
+      "icon": {
+        "id": "iis:fluid_extractor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_extractor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000018400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000018400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001D9",
+      "x": 6.0,
+      "y": 52.5,
+      "dependencies": [
+        "1A00000000000128",
+        "1A0000000012003D"
+      ],
+      "icon": {
+        "id": "iis:wiremill_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wiremill_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001D900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000001D900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001DA",
+      "x": 6.0,
+      "y": 63.0,
+      "dependencies": [
+        "1A00000000000128"
+      ],
+      "icon": {
+        "id": "iis:centrifuge_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:centrifuge_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001DA00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000001DA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001DB",
+      "x": 6.0,
+      "y": 78.0,
+      "dependencies": [
+        "1A00000000000131",
+        "1A0000000000012E",
+        "1A00000000000128"
+      ],
+      "icon": {
+        "id": "iis:extractor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:extractor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001DB00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000001DB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001DD",
+      "x": 6.0,
+      "y": 71.0,
+      "dependencies": [
+        "1A00000000000128"
+      ],
+      "icon": {
+        "id": "iis:chemical_reactor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chemical_reactor_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001DD00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000001DD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001E0",
+      "x": 6.0,
+      "y": 61.0,
+      "dependencies": [
+        "1A00000000000131",
+        "1A00000000000128"
+      ],
+      "icon": {
+        "id": "iis:fluid_solidifier_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_solidifier_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001E000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000001E000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001E7",
+      "x": 6.0,
+      "y": 58.5,
+      "dependencies": [
+        "1A00000000000128",
+        "1A0000000000072D"
+      ],
+      "icon": {
+        "id": "iis:ore_washer_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ore_washer_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001E700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000001E700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001ED",
+      "x": 6.0,
+      "y": 68.0,
+      "dependencies": [
+        "1A00000000000131"
+      ],
+      "icon": {
+        "id": "iis:autoclave_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:autoclave_lv)item(iis:autoclave_mv)item(iis:autoclave_hv)item(iis:autoclave_ev)item(iis:autoclave_iv))"
+            }
+          },
+          "count": 1,
+          "id": "1B0000000001ED00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000001ED00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F2",
+      "x": 6.0,
+      "y": 85.0,
+      "dependencies": [
+        "1A000000000001F3"
+      ],
+      "icon": {
+        "id": "iis:coal_chunk",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:coal_chunk",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000001F200"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000022C",
+      "x": 6.0,
+      "y": 83.0,
+      "dependencies": [
+        "1A00000000000131"
+      ],
+      "icon": {
+        "id": "iis:fluid_heater_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:fluid_heater_lv)item(iis:fluid_heater_mv)item(iis:fluid_heater_hv)item(iis:fluid_heater_ev)item(iis:fluid_heater_iv))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000000022C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000022C00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000243",
+      "x": 6.0,
+      "y": 64.0,
+      "dependencies": [
+        "1A00000000000128"
+      ],
+      "icon": {
+        "id": "iis:mixer_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mixer_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000024300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000253",
+      "x": 6.0,
+      "y": 88.0,
+      "dependencies": [
+        "1A0000000000046D"
+      ],
+      "icon": {
+        "id": "minecraft:wither_skeleton_skull",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:wither_skeleton_skull",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000025300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000025300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D2",
+      "x": 6.0,
+      "y": 76.0,
+      "dependencies": [
+        "1A00000000000131"
+      ],
+      "icon": {
+        "id": "iis:fluid_canner_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_canner_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002D200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000002D200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002E2",
+      "x": 6.0,
+      "y": 62.0,
+      "dependencies": [
+        "1A00000000000128",
+        "1A000000000004AB",
+        "1A0000000012002D"
+      ],
+      "icon": {
+        "id": "iis:polarizer_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:polarizer_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002E200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000002E200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002EB",
+      "x": 6.0,
+      "y": 69.0,
+      "dependencies": [
+        "1A00000000000131"
+      ],
+      "icon": {
+        "id": "iis:fermenter_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fermenter_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002EB00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000002EB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002FB",
+      "x": 6.0,
+      "y": 55.0,
+      "dependencies": [
+        "1A000000000001F7",
+        "1A00000000000128"
+      ],
+      "icon": {
+        "id": "iis:diesel_generator_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:diesel_generator_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002FB00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000002FB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002FC",
+      "x": 6.0,
+      "y": 56.0,
+      "dependencies": [
+        "1A00000000000128"
+      ],
+      "icon": {
+        "id": "iis:gas_turbine_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gas_turbine_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002FC00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000002FC00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000346",
+      "x": 6.0,
+      "y": 65.0,
+      "dependencies": [
+        "1A00000000000126",
+        "1A0000000000012E"
+      ],
+      "icon": {
+        "id": "iis:forming_press_mv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:forming_press_lv)item(iis:forming_press_mv)item(iis:forming_press_hv)item(iis:forming_press_ev)item(iis:forming_press_iv))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000000034600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000034600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000489",
+      "x": 6.0,
+      "y": 73.0,
+      "dependencies": [
+        "1A00000000000488"
+      ],
+      "icon": {
+        "id": "iis:solar_panel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000000048900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:solar_panel",
+            "count": 1
+          },
+          "id": "1C00000000048900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004D2",
+      "x": 6.0,
+      "y": 72.0,
+      "dependencies": [
+        "1A00000000000131"
+      ],
+      "icon": {
+        "id": "iis:fluid_regulator_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fluid_regulator_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C0000000004D200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000721",
+      "x": 6.0,
+      "y": 66.0,
+      "dependencies": [
+        "1A00000000000128",
+        "1A0000000000012E"
+      ],
+      "icon": {
+        "id": "iis:compressor_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:compressor_lv)item(iis:compressor_mv)item(iis:compressor_hv)item(iis:compressor_ev)item(iis:compressor_iv))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000000072100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000072100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000060",
+      "x": 8.0,
+      "y": 82.0,
+      "dependencies": [
+        "1A000000000000F1",
+        "1A0000000000012B"
+      ],
+      "icon": {
+        "id": "iis:rod_nether_quartz",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_nether_quartz",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000006000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000006000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000061",
+      "x": 8.0,
+      "y": 66.0,
+      "dependencies": [
+        "1A00000000000040",
+        "1A0000000000012B"
+      ],
+      "icon": {
+        "id": "iis:rod_certus_quartz",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_certus_quartz",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000006100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000006100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000B4",
+      "x": 8.0,
+      "y": 63.0,
+      "dependencies": [
+        "1A00000000000056"
+      ],
+      "icon": {
+        "id": "iis:fuel_rod_empty",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fuel_rod_empty",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000B400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000000B400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000BD",
+      "x": 8.0,
+      "y": 86.0,
+      "dependencies": [
+        "1A00000000000048"
+      ],
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:purified_sphalerite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000BD00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:purified_galena",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000BD01"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_phosphorus",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000BD02"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000000BD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000D3",
+      "x": 8.0,
+      "y": 50.0,
+      "dependencies": [
+        "1A000000000001DA",
+        "1A0000000000013A"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:hydrogen",
+            "amount": 1
+          },
+          "id": "1B0000000000D300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000000D300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000E6",
+      "x": 8.0,
+      "y": 76.0,
+      "dependencies": [
+        "1A00000000000058"
+      ],
+      "icon": {
+        "id": "iis:gem_exquisite_green_sapphire",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gem_exquisite_green_sapphire",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000E600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000000E600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000103",
+      "x": 8.0,
+      "y": 80.0,
+      "dependencies": [
+        "1A00000000000058"
+      ],
+      "icon": {
+        "id": "iis:gem_exquisite_diamond",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gem_exquisite_diamond",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000010300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000000010300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000111",
+      "x": 8.0,
+      "y": 61.0,
+      "dependencies": [
+        "1A000000000002E2",
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "iis:rod_steel_magnetic",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_steel_magnetic",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000011100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000011100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000113",
+      "x": 8.0,
+      "y": 51.0,
+      "dependencies": [
+        "1A000000000001D9"
+      ],
+      "icon": {
+        "id": "iis:wire_fine_tin",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_fine_tin",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000011300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000011300"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000012D",
+      "x": 8.0,
+      "y": 73.0,
+      "dependencies": [
+        "1A00000000000056",
+        "1A0000000000012A"
+      ],
+      "icon": {
+        "id": "iis:plate_invar",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_invar",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000012D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000015F",
+      "x": 8.0,
+      "y": 48.5,
+      "dependencies": [
+        "1A0000000000013A"
+      ],
+      "icon": {
+        "id": "iis:dust_silicon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_silicon",
+            "count": 1
+          },
+          "count": 32,
+          "id": "1B00000000015F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000015F00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000017C",
+      "x": 8.0,
+      "y": 79.0,
+      "dependencies": [
+        "1A00000000000048",
+        "1A00000000000131"
+      ],
+      "icon": {
+        "id": "iis:distillery_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:distillery_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000017C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000017C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000017F",
+      "x": 8.0,
+      "y": 81.0,
+      "dependencies": [
+        "1A00000000000184",
+        "1A00000000000215"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:woodtar",
+            "amount": 1
+          },
+          "id": "1B00000000017F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000017F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000182",
+      "x": 8.0,
+      "y": 70.0,
+      "dependencies": [
+        "1A00000000000183",
+        "1A00000000000184"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:seedoil",
+            "amount": 1
+          },
+          "id": "1B00000000018200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000018200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001DC",
+      "x": 8.0,
+      "y": 77.0,
+      "dependencies": [
+        "1A000000000001DA",
+        "1A000000000001DB",
+        "1A000000000006AF"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:dust_raw_rubber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_raw_rubber",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001DC00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000001DC00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F1",
+      "x": 8.0,
+      "y": 85.0,
+      "dependencies": [
+        "1A000000000001F2"
+      ],
+      "icon": {
+        "id": "iis:industrial_diamond",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:industrial_diamond",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000001F100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F8",
+      "x": 8.0,
+      "y": 52.0,
+      "dependencies": [
+        "1A000000000001D9"
+      ],
+      "icon": {
+        "id": "iis:mining_pipe",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:mining_pipe",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000001F800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000208",
+      "x": 8.0,
+      "y": 75.0,
+      "dependencies": [
+        "1A000000000001DA",
+        "1A0000000000013A"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:oxygen",
+            "amount": 1
+          },
+          "id": "1B00000000020800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000020800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000213",
+      "x": 8.0,
+      "y": 67.0,
+      "dependencies": [
+        "1A000000000001DD"
+      ],
+      "icon": {
+        "id": "iis:dust_sodium_sulfide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_sodium_sulfide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000021300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000021300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000222",
+      "x": 8.0,
+      "y": 83.0,
+      "dependencies": [
+        "1A0000000000022B",
+        "1A0000000000022C",
+        "1A0000000000022D"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:growthmediumsterilized",
+            "amount": 1
+          },
+          "id": "1B00000000022200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000022200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000223",
+      "x": 8.0,
+      "y": 43.5,
+      "dependencies": [
+        "1A0000000000013A",
+        "1A0000000000019E",
+        "1A000000000003E3"
+      ],
+      "icon": {
+        "id": "iis:dust_carbon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_carbon",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000022300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000022300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000241",
+      "x": 8.0,
+      "y": 58.0,
+      "dependencies": [
+        "1A000000000001E7"
+      ],
+      "icon": {
+        "id": "iis:dust_stone",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_stone",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000024100"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000024E",
+      "x": 8.0,
+      "y": 88.0,
+      "dependencies": [
+        "1A00000000000253"
+      ],
+      "icon": {
+        "id": "minecraft:nether_star",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:nether_star",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000024E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000269",
+      "x": 8.0,
+      "y": 55.0,
+      "dependencies": [
+        "1A000000000001DA"
+      ],
+      "icon": {
+        "id": "iis:dust_vanadium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_vanadium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000026900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000026900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002CA",
+      "x": 8.0,
+      "y": 56.0,
+      "dependencies": [
+        "1A000000000001DA",
+        "1A000000000003F4"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:oil",
+            "amount": 1
+          },
+          "id": "1B0000000002CA00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000002CA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D3",
+      "x": 8.0,
+      "y": 69.0,
+      "dependencies": [
+        "1A00000000000056"
+      ],
+      "icon": {
+        "id": "iis:capsule",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:capsule",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002D300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C0000000002D300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002FA",
+      "x": 8.0,
+      "y": 72.0,
+      "dependencies": [
+        "1A00000000000048",
+        "1A00000000000131"
+      ],
+      "icon": {
+        "id": "iis:brewery_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:brewery_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002FA00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000002FA00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000305",
+      "x": 8.0,
+      "y": 57.0,
+      "dependencies": [
+        "1A000000000001DA"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:mercury",
+            "amount": 1
+          },
+          "id": "1B00000000030500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000030500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000335",
+      "x": 8.0,
+      "y": 68.0,
+      "dependencies": [
+        "1A000000000001EC",
+        "1A0000000000012B"
+      ],
+      "icon": {
+        "id": "iis:rod_quartzite",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_quartzite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000033500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000033500"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000039D",
+      "x": 8.0,
+      "y": 87.0,
+      "dependencies": [
+        "1A00000000000184",
+        "1A000000000002D2",
+        "1A00000000000142"
+      ],
+      "icon": {
+        "id": "iis:battery_re",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:battery_re",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000039D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000039D00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003AE",
+      "x": 8.0,
+      "y": 71.0,
+      "dependencies": [
+        "1A0000000000012B"
+      ],
+      "icon": {
+        "id": "iis:rod_lapis",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:rod_lapis)item(iis:rod_lazurite)item(iis:rod_sodalite))"
+            }
+          },
+          "count": 1,
+          "id": "1B0000000003AE00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000003AE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003D2",
+      "x": 8.0,
+      "y": 54.0,
+      "dependencies": [
+        "1A000000000003D1",
+        "1A000000000001D9"
+      ],
+      "icon": {
+        "id": "iis:wire_cupronickel_2x",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_cupronickel_2x",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003D200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000003D200"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000041B",
+      "x": 8.0,
+      "y": 59.0,
+      "dependencies": [
+        "1A000000000001DA",
+        "1A000000000001E7"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:dust_aluminium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_aluminium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000041B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000041B00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000437",
+      "x": 8.0,
+      "y": 74.0,
+      "dependencies": [
+        "1A000000000000F1",
+        "1A00000000000040"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "ae2:quartz_glass",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:quartz_glass",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000043700"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000043C",
+      "x": 8.0,
+      "y": 78.0,
+      "dependencies": [
+        "1A0000000000012A",
+        "1A0000000000012B"
+      ],
+      "icon": {
+        "id": "iis:rod_invar",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_invar",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000043C00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000729",
+      "x": 8.0,
+      "y": 64.5,
+      "dependencies": [
+        "1A0000000000013A"
+      ],
+      "icon": {
+        "id": "iis:dust_sodium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_sodium",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B00000000072900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000072900"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000733",
+      "x": 8.0,
+      "y": 84.0,
+      "dependencies": [
+        "1A0000000012003C",
+        "1A0000000000012B"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "minecraft:bowl",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:bowl",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000073300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000073300"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000002D",
+      "x": 10.0,
+      "y": 73.5,
+      "dependencies": [
+        "1A00000000000103",
+        "1A0000000000012B"
+      ],
+      "icon": {
+        "id": "iis:lens_diamond",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lens_diamond",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000002D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000000002D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000002F",
+      "x": 10.0,
+      "y": 70.5,
+      "dependencies": [
+        "1A000000000000E6",
+        "1A0000000000012B"
+      ],
+      "icon": {
+        "id": "iis:lens_green_sapphire",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:lens_green_sapphire",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000002F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000000002F00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000BA",
+      "x": 10.0,
+      "y": 63.5,
+      "size": 1.5,
+      "dependencies": [
+        "1A000000000001E0",
+        "1A000000000001DF",
+        "1A000000000001DD",
+        "1A000000000001DC",
+        "1A000000000001DE"
+      ],
+      "icon": {
+        "id": "iis:plate_rubber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_rubber",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000BA00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000000BA00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000D1",
+      "x": 10.0,
+      "y": 50.0,
+      "dependencies": [
+        "1A000000000000D3"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:deuterium",
+            "amount": 1
+          },
+          "id": "1B0000000000D100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000000D100"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000012C",
+      "x": 10.0,
+      "y": 72.5,
+      "dependencies": [
+        "1A0000000000043C"
+      ],
+      "icon": {
+        "id": "iis:frame_invar",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:frame_invar",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 1
+          },
+          "id": "1C00000000012C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000013E",
+      "x": 10.0,
+      "y": 64.5,
+      "dependencies": [
+        "1A00000000000142",
+        "1A00000000000140",
+        "1A00000000000729"
+      ],
+      "icon": {
+        "id": "iis:battery_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:battery_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000013E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000013E00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000146",
+      "x": 10.0,
+      "y": 62.5,
+      "dependencies": [
+        "1A000000000001DD",
+        "1A0000000000017C"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:fertilizer",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:fertilizer",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000014600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000014600"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000017B",
+      "x": 10.0,
+      "y": 68.5,
+      "dependencies": [
+        "1A0000000000017C"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:methanol",
+            "amount": 1
+          },
+          "id": "1B00000000017B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000017B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000017D",
+      "x": 10.0,
+      "y": 75.5,
+      "dependencies": [
+        "1A0000000000017F"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:liquid_toluene",
+            "amount": 1
+          },
+          "id": "1B00000000017D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000017D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000186",
+      "x": 10.0,
+      "y": 69.5,
+      "dependencies": [
+        "1A000000000001DD",
+        "1A000000000002D3"
+      ],
+      "icon": {
+        "id": "iis:dust_sodium_hydroxide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_sodium_hydroxide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000018600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000018600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F0",
+      "x": 10.0,
+      "y": 77.5,
+      "dependencies": [
+        "1A000000000001F1"
+      ],
+      "icon": {
+        "id": "iis:grinder_diamond",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:grinder_diamond",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000001F000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000214",
+      "x": 10.0,
+      "y": 67.5,
+      "dependencies": [
+        "1A0000000000017F"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:benzene",
+            "amount": 1
+          },
+          "id": "1B00000000021400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000021400"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000021B",
+      "x": 10.0,
+      "y": 79.5,
+      "dependencies": [
+        "1A0000000000017F"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:phenol",
+            "amount": 1
+          },
+          "id": "1B00000000021B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000021B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000024D",
+      "x": 10.0,
+      "y": 83.5,
+      "dependencies": [
+        "1A0000000000024E"
+      ],
+      "icon": {
+        "id": "iis:block_nether_star",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_nether_star",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000024D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000028F",
+      "x": 10.0,
+      "y": 66.5,
+      "dependencies": [
+        "1A0000000000004A",
+        "1A000000000002D3"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:air",
+            "amount": 1000
+          },
+          "id": "1B00000000028F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000028F00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002B0",
+      "x": 10.0,
+      "y": 48.0,
+      "dependencies": [
+        "1A0000000000015F"
+      ],
+      "icon": {
+        "id": "iis:block_silicon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_silicon",
+            "count": 1
+          },
+          "count": 16,
+          "id": "1B0000000002B000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000002B000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002CE",
+      "x": 10.0,
+      "y": 71.5,
+      "dependencies": [
+        "1A00000000000208",
+        "1A000000000001DE"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:sulfurtrioxide",
+            "amount": 1
+          },
+          "id": "1B0000000002CE00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000002CE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D1",
+      "x": 10.0,
+      "y": 74.5,
+      "dependencies": [
+        "1A0000000000017C"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:ammonia",
+            "amount": 1
+          },
+          "id": "1B0000000002D100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000002D100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000397",
+      "x": 10.0,
+      "y": 58.0,
+      "dependencies": [
+        "1A00000000000243",
+        "1A00000000000241",
+        "1A000000000001E0",
+        "1A00000000000438"
+      ],
+      "icon": {
+        "id": "iis:light_concrete",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:light_concrete",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000039700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000039700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003A6",
+      "x": 10.0,
+      "y": 80.5,
+      "dependencies": [
+        "1A0000000000017C"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:distilled_water",
+            "amount": 1
+          },
+          "id": "1B0000000003A600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000003A600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003AB",
+      "x": 10.0,
+      "y": 82.5,
+      "dependencies": [
+        "1A0000000000039D"
+      ],
+      "icon": {
+        "id": "iis:batbox",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:batbox",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003AB00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000003AB00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003BF",
+      "x": 10.0,
+      "y": 81.5,
+      "dependencies": [
+        "1A0000000000017C",
+        "1A000000000003C0"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:lubricant",
+            "amount": 1
+          },
+          "id": "1B0000000003BF00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000003BF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003FD",
+      "x": 10.0,
+      "y": 65.5,
+      "dependencies": [
+        "1A000000000001DA",
+        "1A00000000120015",
+        "1A000000000002D3"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:glue",
+            "amount": 1
+          },
+          "id": "1B0000000003FD00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000003FD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004BD",
+      "x": 10.0,
+      "y": 49.0,
+      "dependencies": [
+        "1A0000000000015F"
+      ],
+      "icon": {
+        "id": "iis:ingot_silicon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_silicon",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004BD00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000004BD00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000727",
+      "x": 10.0,
+      "y": 78.5,
+      "dependencies": [
+        "1A000000000001DD",
+        "1A000000000001DE",
+        "1A000000000001DC"
+      ],
+      "icon": {
+        "id": "iis:ingot_rubber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_rubber",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000072700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000734",
+      "x": 10.0,
+      "y": 76.5,
+      "dependencies": [
+        "1A00000000000733",
+        "1A0000000000018B",
+        "1A00000000000193"
+      ],
+      "icon": {
+        "id": "iis:small_gunpowder_bundle",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:small_gunpowder_bundle",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000073400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000073400"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000012F",
+      "x": 12.0,
+      "y": 68.5,
+      "dependencies": [
+        "1A0000000000012C",
+        "1A0000000000012D"
+      ],
+      "icon": {
+        "id": "iis:heat_proof_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:heat_proof_casing",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000012F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000012F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000134",
+      "x": 12.0,
+      "y": 62.5,
+      "dependencies": [
+        "1A0000000000013E",
+        "1A0000000000013D"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:battery_buffer_3x3_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:battery_buffer_3x3_lv)item(iis:battery_buffer_2x2_lv)item(iis:battery_buffer_4x4_lv))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000000013400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000013400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000139",
+      "x": 12.0,
+      "y": 60.0,
+      "dependencies": [
+        "1A0000000000013D",
+        "1A000000000000BA"
+      ],
+      "icon": {
+        "id": "iis:soldering_iron_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:soldering_iron_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000013900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000013900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000015D",
+      "x": 12.0,
+      "y": 64.5,
+      "dependencies": [
+        "1A000000000002D2",
+        "1A0000000000028F",
+        "1A00000000000721"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:nitrogen",
+            "amount": 1
+          },
+          "id": "1B00000000015D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000015D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000179",
+      "x": 12.0,
+      "y": 70.5,
+      "dependencies": [
+        "1A0000000000017D",
+        "1A0000000000017E"
+      ],
+      "icon": {
+        "id": "iis:gelled_toluene",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gelled_toluene",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000017900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000017900"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000185",
+      "x": 12.0,
+      "y": 67.5,
+      "dependencies": [
+        "1A00000000000186",
+        "1A0000000000017B",
+        "1A00000000000182"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:glycerol",
+            "amount": 1
+          },
+          "id": "1B00000000018500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000000018500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001E1",
+      "x": 12.0,
+      "y": 57.0,
+      "dependencies": [
+        "1A000000000000BA"
+      ],
+      "icon": {
+        "id": "iis:conveyor_module_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:conveyor_module_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001E100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000001E100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000217",
+      "x": 12.0,
+      "y": 66.5,
+      "dependencies": [
+        "1A00000000000214"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:dichlorobenzene",
+            "amount": 1
+          },
+          "id": "1B00000000021700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000021700"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000024F",
+      "x": 12.0,
+      "y": 82.0,
+      "dependencies": [
+        "1A0000000000024D"
+      ],
+      "icon": {
+        "id": "iis:plate_nether_star",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_nether_star",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000024F00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D4",
+      "x": 12.0,
+      "y": 69.5,
+      "dependencies": [
+        "1A000000000002D1",
+        "1A00000000000208"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:nitricoxide",
+            "amount": 1
+          },
+          "id": "1B0000000002D400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C0000000002D400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002E6",
+      "x": 12.0,
+      "y": 61.5,
+      "dependencies": [
+        "1A000000000000BA",
+        "1A0000000012003C"
+      ],
+      "icon": {
+        "id": "iis:ring_rubber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ring_rubber",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B0000000002E600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000002E600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003A2",
+      "x": 12.0,
+      "y": 63.5,
+      "dependencies": [
+        "1A000000000000EC",
+        "1A0000000000013E",
+        "1A0000000000015E"
+      ],
+      "icon": {
+        "id": "iis:jetpack",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:jetpack",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003A200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 4
+          },
+          "id": "1C0000000003A200"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004BC",
+      "x": 12.0,
+      "y": 49.0,
+      "dependencies": [
+        "1A000000000004BD"
+      ],
+      "icon": {
+        "id": "iis:plate_silicon",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_silicon",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004BC00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000004BC00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000726",
+      "x": 12.0,
+      "y": 72.0,
+      "dependencies": [
+        "1A00000000000727"
+      ],
+      "icon": {
+        "id": "iis:rod_rubber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_rubber",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000072600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000138",
+      "x": 14.0,
+      "y": 60.0,
+      "dependencies": [
+        "1A00000000000139",
+        "1A00000000000136",
+        "1A00000000000475"
+      ],
+      "icon": {
+        "id": "iis:hatch_maintenance",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hatch_maintenance",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000013800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C00000000013800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001E2",
+      "x": 14.0,
+      "y": 59.0,
+      "dependencies": [
+        "1A0000000000012E",
+        "1A000000000001E1"
+      ],
+      "icon": {
+        "id": "iis:robot_arm_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:robot_arm_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001E200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000001E200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000216",
+      "x": 14.0,
+      "y": 66.5,
+      "dependencies": [
+        "1A00000000000213",
+        "1A00000000000217"
+      ],
+      "icon": {
+        "id": "iis:plate_polyphenylene_sulfide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_polyphenylene_sulfide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000021600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000021600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000226",
+      "x": 14.0,
+      "y": 58.0,
+      "dependencies": [
+        "1A00000000000131",
+        "1A000000000001E1"
+      ],
+      "icon": {
+        "id": "iis:chemical_bath_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:chemical_bath_lv)item(iis:chemical_bath_mv)item(iis:chemical_bath_hv)item(iis:chemical_bath_ev)item(iis:chemical_bath_iv))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000000022600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000022600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D5",
+      "x": 14.0,
+      "y": 67.5,
+      "dependencies": [
+        "1A000000000002D4"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:nitrogendioxide",
+            "amount": 1
+          },
+          "id": "1B0000000002D500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C0000000002D500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004AD",
+      "x": 14.0,
+      "y": 54.0,
+      "dependencies": [
+        "1A00000000000128",
+        "1A000000000001E1",
+        "1A000000000002B4"
+      ],
+      "icon": {
+        "id": "iis:cutter_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:cutter_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004AD00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000004AD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001E3",
+      "x": 16.0,
+      "y": 60.5,
+      "dependencies": [
+        "1A000000000001E2"
+      ],
+      "icon": {
+        "id": "iis:assembler_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:assembler_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001E300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 7
+          },
+          "id": "1C0000000001E300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000218",
+      "x": 16.0,
+      "y": 66.5,
+      "dependencies": [
+        "1A00000000000216"
+      ],
+      "icon": {
+        "id": "iis:foil_polyphenylene_sulfide",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:foil_polyphenylene_sulfide",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000021800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000021800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002B7",
+      "x": 16.0,
+      "y": 56.0,
+      "dependencies": [
+        "1A000000000001E2"
+      ],
+      "icon": {
+        "id": "iis:disassembler_iv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:disassembler_iv)item(iis:disassembler_lv)item(iis:disassembler_mv)item(iis:disassembler_hv)item(iis:disassembler_ev))"
+            }
+          },
+          "count": 1,
+          "id": "1B0000000002B700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C0000000002B700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D6",
+      "x": 16.0,
+      "y": 67.5,
+      "dependencies": [
+        "1A000000000002D5",
+        "1A00000000000211"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:nitricacid",
+            "amount": 1
+          },
+          "id": "1B0000000002D600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C0000000002D600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000398",
+      "x": 16.0,
+      "y": 58.0,
+      "dependencies": [
+        "1A00000000000397",
+        "1A00000000000226"
+      ],
+      "icon": {
+        "id": "iis:dark_concrete",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dark_concrete",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000039800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000039800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002B6",
+      "x": 18.0,
+      "y": 56.0,
+      "dependencies": [
+        "1A000000000002B7"
+      ],
+      "icon": {
+        "id": "iis:stem_cell",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:egg",
+            "count": 1
+          },
+          "count": 16,
+          "id": "1B0000000002B600"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:stem_cell",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002B601"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C0000000002B600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D7",
+      "x": 18.0,
+      "y": 67.5,
+      "dependencies": [
+        "1A000000000002D6"
+      ],
+      "icon": {
+        "id": "iis:purified_pentlandite",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:purified_pentlandite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002D700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000002D700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D8",
+      "x": 18.0,
+      "y": 68.5,
+      "dependencies": [
+        "1A000000000002D6"
+      ],
+      "icon": {
+        "id": "iis:purified_chalcopyrite",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:purified_chalcopyrite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002D800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000002D800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000439",
+      "x": 18.0,
+      "y": 69.5,
+      "dependencies": [
+        "1A0000000000043B",
+        "1A000000000001E3",
+        "1A0000000012001F"
+      ],
+      "icon": {
+        "id": "iis:universal_capsule",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:universal_capsule",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000043900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000043900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004D7",
+      "x": 18.0,
+      "y": 43.5,
+      "dependencies": [
+        "1A000000000001E3",
+        "1A000000000004D8",
+        "1A00000000000223",
+        "1A00000000000193"
+      ],
+      "icon": {
+        "id": "iis:simple_fluid_filter",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:simple_fluid_filter",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000004D700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000728",
+      "x": 18.0,
+      "y": 72.0,
+      "dependencies": [
+        "1A00000000000726",
+        "1A000000000000BA",
+        "1A000000000003FD",
+        "1A000000000001E3"
+      ],
+      "icon": {
+        "id": "iis:waterproof_kit",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:waterproof_kit",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000072800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000072800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000735",
+      "x": 18.0,
+      "y": 57.0,
+      "dependencies": [
+        "1A000000000001E3",
+        "1A000000000003FD"
+      ],
+      "icon": {
+        "id": "iis:double_plate_paper",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:double_plate_paper",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000073500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000073500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001F4",
+      "x": 20.0,
+      "y": 72.0,
+      "dependencies": [
+        "1A000000000001F0",
+        "1A00000000000728"
+      ],
+      "icon": {
+        "id": "iis:rock_breaker_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rock_breaker_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001F400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 7
+          },
+          "id": "1C0000000001F400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002CF",
+      "x": 20.0,
+      "y": 69.0,
+      "dependencies": [
+        "1A000000000002D7",
+        "1A00000000000437",
+        "1A00000000000438",
+        "1A0000000012002E"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:solution_nickelsulfate",
+            "amount": 1
+          },
+          "id": "1B0000000002CF00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C0000000002CF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D0",
+      "x": 20.0,
+      "y": 70.0,
+      "dependencies": [
+        "1A000000000002D8"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:solution_bluevitriol",
+            "amount": 1
+          },
+          "id": "1B0000000002D000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C0000000002D000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002D9",
+      "x": 20.0,
+      "y": 66.0,
+      "dependencies": [
+        "1A000000000002D7",
+        "1A000000000002D8"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:tiny_dust_platinum_group_sludge",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:tiny_dust_platinum_group_sludge",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002D900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000002D900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002F6",
+      "x": 20.0,
+      "y": 67.0,
+      "dependencies": [
+        "1A00000000000243",
+        "1A000000000002EC",
+        "1A00000000000437",
+        "1A00000000000438",
+        "1A00000000000439"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:biomass",
+            "amount": 1
+          },
+          "id": "1B0000000002F600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000002F600"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002F8",
+      "x": 20.0,
+      "y": 68.0,
+      "dependencies": [
+        "1A000000000002FA",
+        "1A000000000002EC",
+        "1A00000000000437",
+        "1A00000000000438",
+        "1A00000000000439"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:biomass",
+            "amount": 1
+          },
+          "id": "1B0000000002F800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000002F800"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002F9",
+      "x": 20.0,
+      "y": 71.0,
+      "dependencies": [
+        "1A0000000000017C",
+        "1A00000000000437",
+        "1A00000000000438",
+        "1A00000000000439"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:bioethanol",
+            "amount": 1
+          },
+          "id": "1B0000000002F900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000002F900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000004D9",
+      "x": 20.0,
+      "y": 43.5,
+      "dependencies": [
+        "1A000000000004D7"
+      ],
+      "icon": {
+        "id": "iis:filter_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:filter_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000004D900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000004D900"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000736",
+      "x": 20.0,
+      "y": 57.0,
+      "dependencies": [
+        "1A00000000000735",
+        "1A0000000012003C"
+      ],
+      "icon": {
+        "id": "iis:punch_card",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:punch_card",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000073600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000000073600"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000017A",
+      "x": 22.0,
+      "y": 68.0,
+      "dependencies": [
+        "1A000000000002CE",
+        "1A000000000002CF",
+        "1A000000000002D0"
+      ],
+      "dependency_requirement": "one_completed",
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:sulfuricacid",
+            "amount": 1
+          },
+          "id": "1B00000000017A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000017A00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002F7",
+      "x": 22.0,
+      "y": 67.0,
+      "dependencies": [
+        "1A000000000002EB",
+        "1A000000000002F6",
+        "1A000000000002F8",
+        "1A000000000002EC",
+        "1A00000000000215"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:fermentedbiomass",
+            "amount": 1
+          },
+          "id": "1B0000000002F700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000002F700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000178",
+      "x": 24.0,
+      "y": 68.0,
+      "dependencies": [
+        "1A00000000000179",
+        "1A0000000000017A"
+      ],
+      "icon": {
+        "id": "minecraft:tnt",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:tnt",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000017800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000017800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000180",
+      "x": 24.0,
+      "y": 66.5,
+      "dependencies": [
+        "1A000000000002D6",
+        "1A0000000000017A"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:liquid_nitrationmixture",
+            "amount": 1
+          },
+          "id": "1B00000000018000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000018000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000181",
+      "x": 26.0,
+      "y": 66.5,
+      "dependencies": [
+        "1A00000000000185",
+        "1A00000000000180"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:glyceryl",
+            "amount": 1
+          },
+          "id": "1B00000000018100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000018100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000177",
+      "x": 28.0,
+      "y": 66.5,
+      "dependencies": [
+        "1A00000000000181"
+      ],
+      "icon": {
+        "id": "iis:dynamite",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dynamite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000017700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C00000000017700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000038",
+      "x": 2.0,
+      "y": 91.0,
+      "dependencies": [
+        "1A0000000000033C",
+        "1A0000000000006A",
+        "1A0000000000003F"
+      ],
+      "icon": {
+        "id": "ae2:semi_dark_monitor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:semi_dark_monitor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000003800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000003800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000099",
+      "x": 3.5,
+      "y": 91.0,
+      "dependencies": [
+        "1A00000000120009"
+      ],
+      "icon": {
+        "id": "iis:dust_yttrium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_yttrium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000009900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000009900"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000C0",
+      "x": 5.0,
+      "y": 91.0,
+      "dependencies": [
+        "1A00000000120009"
+      ],
+      "icon": {
+        "id": "iis:dust_cobaltite",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_cobaltite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000C000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000000C000"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000DC",
+      "x": 6.5,
+      "y": 91.0,
+      "dependencies": [
+        "1A000000000000D9"
+      ],
+      "icon": {
+        "id": "iis:dust_potassium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_potassium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000DC00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C0000000000DC00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000013B",
+      "x": 8.0,
+      "y": 91.0,
+      "dependencies": [
+        "1A0000000000009B"
+      ],
+      "icon": {
+        "id": "enderio:iron_gear",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hatch_muffler_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000013B00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hatch_input_bus_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000013B01"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hatch_output_bus_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000013B02"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hatch_energy_lv",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B00000000013B03"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000013B00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001EF",
+      "x": 9.5,
+      "y": 91.0,
+      "dependencies": [
+        "1A000000000001EE",
+        "1A000000000000F5"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001EF00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000001EF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000001FB",
+      "x": 11.0,
+      "y": 91.0,
+      "dependencies": [
+        "1A000000000001FC"
+      ],
+      "icon": {
+        "id": "iis:arc_furnace_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:arc_furnace_lv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000001FB00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000001FB00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000288",
+      "x": 12.5,
+      "y": 91.0,
+      "dependencies": [
+        "1A00000000120009"
+      ],
+      "icon": {
+        "id": "iis:dust_iridium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_iridium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000028800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000028800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000336",
+      "x": 14.0,
+      "y": 91.0,
+      "dependencies": [
+        "1A00000000000040"
+      ],
+      "icon": {
+        "id": "ae2:charged_certus_quartz_crystal",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ae2:charged_certus_quartz_crystal",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000033600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 5
+          },
+          "id": "1C00000000033600"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000034F",
+      "x": 15.5,
+      "y": 91.0,
+      "dependencies": [
+        "1A00000000000040"
+      ],
+      "icon": {
+        "id": "iis:crystal_pure_certus",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:crystal_pure_certus",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000034F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 6
+          },
+          "id": "1C00000000034F00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000003FB",
+      "x": 17.0,
+      "y": 91.0,
+      "dependencies": [
+        "1A00000000120009"
+      ],
+      "icon": {
+        "id": "iis:gem_flawless_sapphire",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gem_flawless_sapphire",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000003FB00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 1
+          },
+          "id": "1C0000000003FB00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000409",
+      "x": 18.5,
+      "y": 91.0,
+      "dependencies": [
+        "1A00000000120009"
+      ],
+      "icon": {
+        "id": "iis:dust_niobium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_niobium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000040900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000040900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000068B",
+      "x": 20.0,
+      "y": 91.0,
+      "dependencies": [
+        "1A000000000001EE",
+        "1A0000000000068C"
+      ],
+      "icon": {
+        "id": "iis:microwave_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:microwave_lv)item(iis:microwave_mv)item(iis:microwave_hv)item(iis:microwave_ev)item(iis:microwave_iv))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000000068B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000068B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000068F",
+      "x": 21.5,
+      "y": 91.0,
+      "dependencies": [
+        "1A000000000001EE"
+      ],
+      "icon": {
+        "id": "iis:monster_repellent_lv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:monster_repellent_lv)item(iis:monster_repellent_mv)item(iis:monster_repellent_hv)item(iis:monster_repellent_ev)item(iis:monster_repellent_iv))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000000068F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C00000000068F00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006C7",
+      "x": 23.0,
+      "y": 91.0,
+      "dependencies": [
+        "1A000000000004D1"
+      ],
+      "icon": {
+        "id": "iis:dust_scheelite",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_scheelite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006C700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 3
+          },
+          "id": "1C0000000006C700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006CD",
+      "x": 24.5,
+      "y": 91.0,
+      "icon": {
+        "id": "iis:gem_exquisite_olivine",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gem_exquisite_olivine",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006CD00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000006CD00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006CF",
+      "x": 2.0,
+      "y": 92.5,
+      "dependencies": [
+        "1A000000000006D0"
+      ],
+      "icon": {
+        "id": "iis:plate_olivine",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_olivine",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006CF00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000006CF00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006ED",
+      "x": 3.5,
+      "y": 92.5,
+      "dependencies": [
+        "1A000000000000F4"
+      ],
+      "icon": {
+        "id": "iis:small_gear_aluminium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:small_gear_aluminium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006ED00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000006ED00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006EE",
+      "x": 5.0,
+      "y": 92.5,
+      "dependencies": [
+        "1A000000000000F4"
+      ],
+      "icon": {
+        "id": "iis:rod_aluminium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rod_aluminium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006EE00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 4
+          },
+          "id": "1C0000000006EE00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000006FE",
+      "x": 6.5,
+      "y": 92.5,
+      "dependencies": [
+        "1A000000000000E2"
+      ],
+      "icon": {
+        "id": "iis:wire_fine_soldering_alloy",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_fine_soldering_alloy",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000006FE00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 3
+          },
+          "id": "1C0000000006FE00"
+        }
+      ]
+    }
+  ],
+  "filename": "03_lv",
+  "order_index": 3
+}

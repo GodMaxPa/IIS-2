@@ -1,0 +1,1237 @@
+{
+  "id": "1D00000000001026",
+  "default_quest_shape": "",
+  "icon": {
+    "id": "iis:hull_luv",
+    "count": 1
+  },
+  "quests": [
+    {
+      "id": "1A00000000130006",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.5,
+      "icon": {
+        "id": "iis:hull_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000013000600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000016",
+      "x": 2.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A0000000000028C",
+        "1A0000000000028B"
+      ],
+      "icon": {
+        "id": "iis:ingot_naquadah_alloy",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_naquadah_alloy",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000001600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 1
+          },
+          "id": "1C00000000001600"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000008C",
+      "x": 2.0,
+      "y": 11.0,
+      "dependencies": [
+        "1A0000000000001A",
+        "1A0000000000008D",
+        "1A0000000000008E",
+        "1A0000000000008F",
+        "1A00000000000090"
+      ],
+      "icon": {
+        "id": "iis:electric_motor_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_motor_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000008C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C00000000008C00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000CD",
+      "x": 2.0,
+      "y": 15.5,
+      "dependencies": [
+        "1A000000000000D5"
+      ],
+      "icon": {
+        "id": "iis:plate_europium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_europium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000CD00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C0000000000CD00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000236",
+      "x": 2.0,
+      "y": 13.0,
+      "dependencies": [
+        "1A000000000000D5"
+      ],
+      "icon": {
+        "id": "iis:ingot_europium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_europium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000023600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000023600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000247",
+      "x": 2.0,
+      "y": 18.0,
+      "dependencies": [
+        "1A0000000000025E"
+      ],
+      "icon": {
+        "id": "iis:casing_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:casing_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000024700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 2
+          },
+          "id": "1C00000000024700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000283",
+      "x": 2.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A000000000000D5"
+      ],
+      "icon": {
+        "id": "iis:plate_duranium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_duranium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000028300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000028300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002A2",
+      "x": 2.0,
+      "y": 12.0,
+      "dependencies": [
+        "1A00000000000018",
+        "1A00000000000260",
+        "1A0000000000016E",
+        "1A0000000000001D"
+      ],
+      "icon": {
+        "id": "iis:emitter_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:emitter_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C0000000002A200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000015",
+      "x": 4.0,
+      "y": 2.0,
+      "dependencies": [
+        "1A00000000000016"
+      ],
+      "icon": {
+        "id": "iis:plate_naquadah_alloy",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:plate_naquadah_alloy",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000001500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000001500"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000CC",
+      "x": 4.0,
+      "y": 15.0,
+      "dependencies": [
+        "1A000000000000C9",
+        "1A000000000000CD",
+        "1A0000000000009E"
+      ],
+      "icon": {
+        "id": "iis:robust_hssg_casing",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:robust_hssg_casing",
+            "count": 1
+          },
+          "count": 70,
+          "id": "1B0000000000CC00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C0000000000CC00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000027C",
+      "x": 4.0,
+      "y": 16.0,
+      "dependencies": [
+        "1A00000000000289",
+        "1A0000000000028A",
+        "1A00000000000260",
+        "1A000000000000CD"
+      ],
+      "icon": {
+        "id": "iis:rocket_booster",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_booster",
+            "count": 1
+          },
+          "count": 2,
+          "id": "1B00000000027C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000027C00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000280",
+      "x": 4.0,
+      "y": 17.0,
+      "dependencies": [
+        "1A00000000000281",
+        "1A00000000000282",
+        "1A000000000000CD",
+        "1A00000000000283",
+        "1A00000000000284"
+      ],
+      "icon": {
+        "id": "iis:heavy_ingot_t2",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:heavy_ingot_t2",
+            "count": 1
+          },
+          "count": 10,
+          "id": "1B00000000028000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000028000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000294",
+      "x": 4.0,
+      "y": 14.0,
+      "dependencies": [
+        "1A00000000000236",
+        "1A000000000000CD"
+      ],
+      "dependency_requirement": "one_completed",
+      "icon": {
+        "id": "iis:block_europium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:block_europium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000029400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000296",
+      "x": 4.0,
+      "y": 13.0,
+      "dependencies": [
+        "1A000000000002A2"
+      ],
+      "icon": {
+        "id": "iis:field_generator_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:field_generator_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000029600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000297",
+      "x": 4.0,
+      "y": 18.0,
+      "dependencies": [
+        "1A00000000000247"
+      ],
+      "icon": {
+        "id": "iis:casing_fusion",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:casing_fusion",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000029700"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002A1",
+      "x": 4.0,
+      "y": 11.0,
+      "dependencies": [
+        "1A00000000000236"
+      ],
+      "icon": {
+        "id": "iis:raw_crystal_chip",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_aluminium",
+            "count": 1
+          },
+          "count": 16,
+          "id": "1B0000000002A100"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "minecraft:iron_ingot",
+            "count": 1
+          },
+          "count": 24,
+          "id": "1B0000000002A101"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_tin",
+            "count": 1
+          },
+          "count": 32,
+          "id": "1B0000000002A102"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wafer_advanced",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A103"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:gem_exquisite_olivine",
+            "count": 1
+          },
+          "count": 18,
+          "id": "1B0000000002A104"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_europium",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A105"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:raw_crystal_chip",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A106"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 1
+          },
+          "id": "1C0000000002A100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002A3",
+      "x": 4.0,
+      "y": 12.0,
+      "dependencies": [
+        "1A0000000000008C"
+      ],
+      "icon": {
+        "id": "iis:electric_piston_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:electric_piston_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C0000000002A300"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002A4",
+      "x": 4.0,
+      "y": 10.0,
+      "dependencies": [
+        "1A0000000000008C",
+        "1A00000000000007"
+      ],
+      "icon": {
+        "id": "iis:conveyor_module_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:conveyor_module_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C0000000002A400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000CF",
+      "x": 6.0,
+      "y": 10.0,
+      "dependencies": [
+        "1A000000000002A3"
+      ],
+      "icon": {
+        "id": "iis:robot_arm_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:robot_arm_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000000CF00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C0000000000CF00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000027B",
+      "x": 6.0,
+      "y": 16.0,
+      "dependencies": [
+        "1A00000000000280"
+      ],
+      "icon": {
+        "id": "iis:heavy_plating_t2",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:heavy_plating_t2",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000027B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000029E",
+      "x": 6.0,
+      "y": 11.0,
+      "dependencies": [
+        "1A000000000002A1",
+        "1A00000000000083"
+      ],
+      "icon": {
+        "id": "iis:crystal_chip_elite",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:crystal_chip_elite",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 1
+          },
+          "id": "1C00000000029E00"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000002A0",
+      "x": 6.0,
+      "y": 12.0,
+      "dependencies": [
+        "1A000000000002A2",
+        "1A000000000002A3",
+        "1A0000000000023A"
+      ],
+      "icon": {
+        "id": "iis:laser_engraver_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:laser_engraver_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B0000000002A000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C0000000002A000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000279",
+      "x": 8.0,
+      "y": 16.0,
+      "size": 2.5,
+      "dependencies": [
+        "1A0000000000027F",
+        "1A0000000000027B",
+        "1A0000000000027C"
+      ],
+      "icon": {
+        "id": "iis:rocket_t2",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:rocket_t2",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000027900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000029C",
+      "x": 8.0,
+      "y": 11.0,
+      "dependencies": [
+        "1A0000000000029E",
+        "1A0000000000029F",
+        "1A000000000002A0"
+      ],
+      "icon": {
+        "id": "iis:chip_crystal_cpu",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chip_crystal_cpu",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000029C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000029D",
+      "x": 8.0,
+      "y": 10.0,
+      "dependencies": [
+        "1A000000000000CF",
+        "1A000000000002A4",
+        "1A000000000002A2",
+        "1A0000000000023A"
+      ],
+      "icon": {
+        "id": "iis:circuit_assembler_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:circuit_assembler_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000029D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000029D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000027E",
+      "x": 10.0,
+      "y": 16.0,
+      "dependencies": [
+        "1A00000000000279"
+      ],
+      "icon": {
+        "id": "iis:dust_naquadah",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_naquadah",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000027E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000027D",
+      "x": 12.0,
+      "y": 16.0,
+      "size": 2.5,
+      "dependencies": [
+        "1A0000000000027E"
+      ],
+      "icon": {
+        "id": "iis:ingot_naquadah",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_naquadah",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000027D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 1
+          },
+          "id": "1C00000000027D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000370",
+      "x": 14.0,
+      "y": 15.5,
+      "dependencies": [
+        "1A0000000000027D"
+      ],
+      "icon": {
+        "id": "iis:dust_naquadria",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:dust_naquadria",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000037000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 4
+          },
+          "id": "1C00000000037000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000419",
+      "x": 14.0,
+      "y": 16.5,
+      "dependencies": [
+        "1A0000000000027D"
+      ],
+      "icon": {
+        "id": "iis:wire_naquadah_1x",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:wire_naquadah_1x",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000041900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 2
+          },
+          "id": "1C00000000041900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000000036D",
+      "x": 16.0,
+      "y": 15.5,
+      "dependencies": [
+        "1A00000000000370"
+      ],
+      "icon": {
+        "id": "iis:ingot_naquadria",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ingot_naquadria",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000036D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_silver",
+            "count": 6
+          },
+          "id": "1C00000000036D00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000011",
+      "x": 2.0,
+      "y": 21.0,
+      "dependencies": [
+        "1A00000000000018",
+        "1A00000000000019",
+        "1A0000000000001A",
+        "1A0000000000001B",
+        "1A0000000000001C"
+      ],
+      "icon": {
+        "id": "iis:sensor_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:sensor_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000001100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C00000000001100"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000D4",
+      "x": 3.5,
+      "y": 21.0,
+      "dependencies": [
+        "1A000000000000D1",
+        "1A000000000000D5",
+        "1A000000000000D0",
+        "1A000000000000D2"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:plasma_helium",
+            "amount": 1
+          },
+          "id": "1B0000000000D400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 1
+          },
+          "id": "1C0000000000D400"
+        }
+      ]
+    },
+    {
+      "id": "1A000000000000D6",
+      "x": 5.0,
+      "y": 21.0,
+      "dependencies": [
+        "1A000000000000D2",
+        "1A000000000000D5"
+      ],
+      "tasks": [
+        {
+          "type": "fluid",
+          "fluid": {
+            "fluid": "iis:plasma_oxygen",
+            "amount": 1
+          },
+          "id": "1B0000000000D600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_gold",
+            "count": 1
+          },
+          "id": "1C0000000000D600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000239",
+      "x": 6.5,
+      "y": 21.0,
+      "dependencies": [
+        "1A0000000000023A"
+      ],
+      "icon": {
+        "id": "iis:hatch_energy_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hatch_energy_luv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000000023900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C00000000023900"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000000274",
+      "x": 8.0,
+      "y": 21.0,
+      "dependencies": [
+        "1A0000000000023A"
+      ],
+      "icon": {
+        "id": "iis:battery_buffer_4x4_luv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:battery_buffer_4x4_luv)item(iis:battery_buffer_2x2_luv)item(iis:battery_buffer_3x3_luv))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000000027400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_cupronickel",
+            "count": 7
+          },
+          "id": "1C00000000027400"
+        }
+      ]
+    }
+  ],
+  "filename": "08_luv",
+  "order_index": 8
+}

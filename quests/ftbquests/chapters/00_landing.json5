@@ -1,7 +1,7 @@
 {
   "id": "1D00000000001010",
-  "filename": "05_landing",
-  "order_index": 5,
+  "filename": "00_landing",
+  "order_index": 0,
   "default_quest_shape": "",
   "icon": {
     "id": "iis:flint_pickaxe",

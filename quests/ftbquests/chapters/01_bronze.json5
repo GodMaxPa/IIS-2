@@ -1,7 +1,7 @@
 {
   "id": "1D00000000001011",
-  "filename": "06_bronze",
-  "order_index": 6,
+  "filename": "01_bronze",
+  "order_index": 1,
   "default_quest_shape": "",
   "icon": {
     "id": "iis:ingot_bronze",
