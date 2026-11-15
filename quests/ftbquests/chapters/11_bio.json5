@@ -1,0 +1,1211 @@
+{
+  "id": "1D00000000001012",
+  "filename": "11_bio",
+  "order_index": 11,
+  "default_quest_shape": "",
+  "icon": {
+    "id": "iis:colony_core",
+    "count": 1
+  },
+  "quests": [
+    {
+      "id": "1A00000000120041",
+      "x": 0.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120000"
+      ],
+      "icon": {
+        "id": "iis:colony_core",
+        "count": 1
+      },
+      "size": 1.5,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000012004100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120042",
+      "x": 1.5,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120041"
+      ],
+      "icon": {
+        "id": "iis:feeding_maw",
+        "count": 1
+      },
+      "size": 1.5,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000012004200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120043",
+      "x": 1.5,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000120041"
+      ],
+      "icon": {
+        "id": "iis:bio_knife",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bio_knife",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120044",
+      "x": 3.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000120043"
+      ],
+      "icon": {
+        "id": "iis:carcass_medium",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:carcass_small)item(iis:carcass_medium)item(iis:carcass_large))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000012004400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120045",
+      "x": 4.5,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000120044"
+      ],
+      "icon": {
+        "id": "iis:butcher_block",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:butcher_block",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120046",
+      "x": 3.0,
+      "y": 0.0,
+      "dependencies": [
+        "1A00000000120041"
+      ],
+      "icon": {
+        "id": "iis:stone_mortar",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:stone_mortar",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120047",
+      "x": 3.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000120041"
+      ],
+      "icon": {
+        "id": "iis:stone_hearth",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:stone_hearth",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120048",
+      "x": 4.5,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000120047"
+      ],
+      "icon": {
+        "id": "iis:stone_pot",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:stone_pot",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120049",
+      "x": 3.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120042"
+      ],
+      "icon": {
+        "id": "iis:measuring_ladle",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:measuring_ladle",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012004A",
+      "x": 6.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000120048"
+      ],
+      "icon": {
+        "id": "iis:measuring_vessel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:measuring_vessel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012004B",
+      "x": 4.5,
+      "y": 0.0,
+      "dependencies": [
+        "1A00000000120043"
+      ],
+      "icon": {
+        "id": "iis:primitive_culture",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:primitive_culture",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012004C",
+      "x": 4.5,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120049",
+        "1A00000000120046"
+      ],
+      "icon": {
+        "id": "iis:base_seed",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:base_seed",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012004D",
+      "x": 6.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000120045"
+      ],
+      "icon": {
+        "id": "iis:hand_substrate",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:hand_substrate",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012004E",
+      "x": 7.5,
+      "y": 1.5,
+      "dependencies": [
+        "1A0000000012004D",
+        "1A0000000012004C"
+      ],
+      "icon": {
+        "id": "iis:soft_tissue",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:soft_tissue",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012004F",
+      "x": 9.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A0000000012004E"
+      ],
+      "icon": {
+        "id": "iis:living_membrane",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:living_membrane",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012004F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012004F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120050",
+      "x": 10.5,
+      "y": 1.5,
+      "dependencies": [
+        "1A0000000012004F"
+      ],
+      "icon": {
+        "id": "iis:growth_bed",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:growth_bed",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120051",
+      "x": 12.0,
+      "y": 0.0,
+      "dependencies": [
+        "1A00000000120050"
+      ],
+      "icon": {
+        "id": "iis:feeding_maw",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:feeding_maw",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120052",
+      "x": 6.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120049"
+      ],
+      "icon": {
+        "id": "iis:stone_press",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:stone_press",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120053",
+      "x": 7.5,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120048"
+      ],
+      "icon": {
+        "id": "iis:filter_vessel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:filter_vessel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120054",
+      "x": 9.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120050"
+      ],
+      "icon": {
+        "id": "iis:living_tank",
+        "count": 1
+      },
+      "size": 1.5,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "id": "1B00000012005400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120055",
+      "x": 12.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000120050"
+      ],
+      "icon": {
+        "id": "iis:forming_nest",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:forming_nest",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120056",
+      "x": 13.5,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000120050"
+      ],
+      "icon": {
+        "id": "iis:nutrient_gland",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:nutrient_gland",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005600"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120057",
+      "x": 13.5,
+      "y": 0.0,
+      "dependencies": [
+        "1A00000000120050"
+      ],
+      "icon": {
+        "id": "iis:membrane_filter",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:membrane_filter",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120058",
+      "x": 13.5,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120054"
+      ],
+      "icon": {
+        "id": "iis:muscle_pump",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:muscle_pump",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120059",
+      "x": 13.5,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000120055"
+      ],
+      "icon": {
+        "id": "iis:living_tank",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:living_tank",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012005A",
+      "x": 15.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000120055"
+      ],
+      "icon": {
+        "id": "iis:living_store",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:living_store",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012005B",
+      "x": 16.5,
+      "y": 3.0,
+      "dependencies": [
+        "1A0000000012005A"
+      ],
+      "icon": {
+        "id": "iis:peristaltic_channel",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:peristaltic_channel",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012005C",
+      "x": 15.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000120055"
+      ],
+      "icon": {
+        "id": "iis:chitin_plate",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:chitin_plate",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012005D",
+      "x": 15.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000120055"
+      ],
+      "icon": {
+        "id": "iis:loosener",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:loosener",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012005E",
+      "x": 16.5,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000120055"
+      ],
+      "icon": {
+        "id": "iis:vivarium_pad",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:vivarium_pad",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005E00"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:observation_probe",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005E01"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012005F",
+      "x": 18.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A0000000012005E"
+      ],
+      "icon": {
+        "id": "iis:long_fiber",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:long_fiber)item(iis:binding_secretion)item(iis:dense_shell)item(iis:thick_sinew))"
+            }
+          },
+          "count": 1,
+          "id": "1B00000012005F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120060",
+      "x": 19.5,
+      "y": 6.0,
+      "dependencies": [
+        "1A0000000012005F",
+        "1A0000000012005C"
+      ],
+      "icon": {
+        "id": "iis:reinforced_shell",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:reinforced_shell",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006000"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006000"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120061",
+      "x": 21.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000120060",
+        "1A0000000012005D"
+      ],
+      "icon": {
+        "id": "iis:ore_stomach",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:ore_stomach",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006100"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006100"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120062",
+      "x": 21.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120060"
+      ],
+      "icon": {
+        "id": "iis:incubator",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:incubator",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006200"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006200"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120063",
+      "x": 21.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000120060"
+      ],
+      "icon": {
+        "id": "iis:isolator",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:isolator",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006300"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006300"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120064",
+      "x": 22.5,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120062",
+        "1A00000000120063"
+      ],
+      "icon": {
+        "id": "iis:bioreactor",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:bioreactor",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006400"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006400"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120065",
+      "x": 22.5,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000120062"
+      ],
+      "icon": {
+        "id": "iis:accelerator",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:accelerator",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006500"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006500"
+        }
+      ]
+    }
+  ]
+}

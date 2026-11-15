@@ -28,6 +28,7 @@ POOL = ['steam__steel', 'circuit__turbine__pump', 'first_aluminium', 'good_circu
         'al_nuc_reactor_odp_iii', 'n_star__fusion_reactor', 'naquadah__fusion_ii', 'large_plasma_generator', 'rocket__odp__array', 'end_game_content']
 # the book in its new order: our opening, the tiers, then the topical chapters as they were
 FRONT = ['landing', 'bronze']
+AFTER_TIERS = ['bio']   # our second path, right after the tiers of the first
 TOPICAL = ['g_general_progress', 'g_quality_of_life', 'g_sb_machines', 'g_multiblocks', 'project_red', 'rails__trains', 'cross_breeding', 'ae2_proc__cont',
            'advanced_me_network', 'portable_and_wireless', 'space_rocket__moon', 'enderio_features']
 HEAD = {
@@ -76,7 +77,7 @@ def rebuild(root, out):
     for f in sorted(glob.glob(os.path.join(cdir, '*.json5'))):
         chapters[os.path.basename(f)[3:-6]] = json.load(open(f, encoding='utf-8'))
     lang = [json.load(open(os.path.join(out, 'lang', loc, 'iis1_quests.json5'), encoding='utf-8')) for loc in ('ru_ru', 'en_us')]
-    unknown = set(chapters) - set(POOL) - set(FRONT) - set(TOPICAL)
+    unknown = set(chapters) - set(POOL) - set(FRONT) - set(TOPICAL) - set(AFTER_TIERS)
     own = sorted(n for n in unknown if int(chapters[n]['id'][2:], 16) >= 0x1000)   # our chapters: weapons, what else
     if unknown - set(own):
         raise SystemExit(f'quests_book: chapters of the book with no place in the new one: {sorted(unknown - set(own))}')
@@ -279,12 +280,18 @@ def rebuild(root, out):
                 near = parents if sweep % 2 == 0 else children
                 want = {i: (sum(y[k] for k in near[i]) / len(near[i]) if near[i] else y[i]) for i in layers[d]}
                 cur = None
+                step = 0.5 if len(layers[d]) > 20 else 1.0   # a crowded column is split in two, staggered
                 for i in sorted(layers[d], key=lambda k: (want[k], k)):
-                    cur = want[i] if cur is None else max(cur + 1.0, want[i])
+                    cur = want[i] if cur is None else max(cur + step, want[i])
                     y[i] = cur
         top = min(y.values(), default=0.0)
         by_id = {q['id']: q for q in qs}
-        out_ = [(by_id[i], (2.0 + depth[i] * 2.0, round((y[i] - top) * 2) / 2 + 2.0)) for i in y]
+        shift = {}
+        for d in layers:
+            if len(layers[d]) > 20:
+                for n, i in enumerate(sorted(layers[d], key=lambda k: y[k])):
+                    shift[i] = 1.0 if n % 2 else 0.0
+        out_ = [(by_id[i], (2.0 + depth[i] * 2.5 + shift.get(i, 0.0), round((y[i] - top) * 2) / 2 + 2.0)) for i in y]
         base = max((p_[1] for _, p_ in out_), default=0.0) + 3.0
         for n, q in enumerate(sorted(loose, key=lambda q: q['id'])):
             out_.append((q, (2.0 + (n % 16) * 1.5, base + (n // 16) * 1.5)))
@@ -312,7 +319,7 @@ def rebuild(root, out):
     # ------------------------------------------------------------------ write the book in its new order
     for f in glob.glob(os.path.join(cdir, '*.json5')):
         os.remove(f)
-    book = [(n, chapters[n]) for n in FRONT] + new_chapters + [(n, chapters[n]) for n in TOPICAL if n in chapters] + [(n, chapters[n]) for n in own]
+    book = [(n, chapters[n]) for n in FRONT] + new_chapters + [(n, chapters[n]) for n in AFTER_TIERS] + [(n, chapters[n]) for n in TOPICAL if n in chapters] + [(n, chapters[n]) for n in own]
     ids = {q['id'] for _, ch in book for q in ch['quests']}
     for idx, (n, ch) in enumerate(book):
         ch['filename'] = f'{idx:02d}_{n}'

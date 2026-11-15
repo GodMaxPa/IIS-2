@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "B",
-    "S"
+    "P P",
+    " S "
   ],
   "key": {
-    "B": "minecraft:bowl",
+    "P": "#minecraft:planks",
     "S": "minecraft:stick"
   },
   "result": {

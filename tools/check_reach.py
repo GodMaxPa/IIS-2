@@ -153,6 +153,41 @@ for c_ in json.load(open(f'{R}/iis/crops.json', encoding='utf-8')):
     o_ = [x for x in [c_.get('drop')] + list(c_.get('special') or []) if x]
     if o_:
         recipes.append(('crop/' + c_['id'], [['iis:crop_sticks']], o_))
+# D153: more of what code makes: the charcoal pile burns logs into brittle charcoal, a bucket scoops creosote, the asteroids are behind rocket 3
+recipes.append(('code/charcoal_pile', [['iis:charcoal_pile'], ['minecraft:oak_log']], ['iis:brittle_charcoal']))
+recipes.append(('code/creosote_bucket', [['minecraft:bucket'], ['F:iis:creosote']], ['iis:creosote_bucket']))
+recipes.append(('world/asteroids', [['iis:rocket_t3']], ['iis:asteroid_rock']))
+seeds += ['iis:rubber_leaves', 'iis:rubber_sapling']
+have.update(seeds)   # the list was never used: the rubber tree itself counted as unreachable
+# D152: the Bio path: places and organs of iis/bio_recipes.json; the shuttle gives the core, the maw and the tissue; the knife gives carcasses
+# and the scraping; a working mutant line gives its product to the scraper
+_BIO_PLACE = {'butcher': 'butcher_block', 'mortar': 'stone_mortar', 'pot': 'stone_pot', 'press': 'stone_press', 'filter': 'filter_vessel', 'mixer': 'measuring_vessel',
+              'pocket': 'colony_core', 'substrate': 'hand_substrate', 'bed': 'growth_bed', 'nest': 'forming_nest', 'gland': 'nutrient_gland', 'sump': 'waste_sump'}
+
+
+def _bio_fluid(f):
+    return 'F:minecraft:water' if f == 'water' else 'F:bio:' + f
+
+
+def _bio_key(k):
+    if k == 'food':
+        return ['minecraft:bread']
+    e = expand(k)
+    return ['minecraft:__world__' + k] if any(x.startswith('MISSING_TAG') for x in e) else e
+
+
+for r_ in json.load(open('src/main/resources/iis/bio_recipes.json', encoding='utf-8')):
+    q_ = [['iis:' + _BIO_PLACE.get(r_['station'], r_['station'])]] + [_bio_key(i['key']) for i in r_.get('items', [])] + [[_bio_fluid(f['fluid'])] for f in r_.get('fluids', [])]
+    if r_.get('tool'):
+        q_.append([r_['tool']])
+    recipes.append(('bio/' + r_['id'], q_, [o['item'] for o in r_.get('out_items', [])] + [_bio_fluid(f['fluid']) for f in r_.get('out_fluids', [])]))
+seeds += ['iis:colony_core', 'iis:feeding_maw', 'iis:bio_tissue']
+have.update(seeds)
+recipes.append(('bio/knife_carcass', [['iis:bio_knife']], ['iis:carcass_small', 'iis:carcass_medium', 'iis:carcass_large', 'iis:carcass_rotten']))
+recipes.append(('bio/knife_scraping', [['iis:bio_knife'], ['iis:bio_tissue']], ['iis:primitive_culture']))
+for a_, o_ in (('sheep_longfiber', 'long_fiber'), ('cow_binding', 'binding_secretion'), ('chicken_shell', 'dense_shell')):
+    recipes.append(('bio/line_' + o_, [['iis:agent_' + a_], ['iis:observation_probe'], ['iis:vivarium_pad'], ['iis:collection_scraper']], ['iis:' + o_]))
+recipes.append(('bio/line_carcass_fleshy', [['iis:agent_pig_fleshy'], ['iis:observation_probe'], ['iis:vivarium_pad'], ['iis:bio_knife']], ['iis:carcass_fleshy']))
 # --with=iis:dust_naquadah: pretend an item is available, to see what else a missing source hides (D112: naquadah waits for space, D17)
 for a_ in [x for x in sys.argv[1:] if x.startswith('--with=')]:
     have.add(a_[7:])

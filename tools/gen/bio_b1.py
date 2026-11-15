@@ -179,7 +179,8 @@ ITEM_TAGS = {
 CRAFTING = {
     'bio_knife': (['F', 'S'], {'F': 'minecraft:flint', 'S': 'minecraft:stick'}),
     'woven_mandrel': (['FSF', 'FSF'], {'F': f'{NS}:plant_fiber', 'S': 'minecraft:stick'}),
-    'measuring_ladle': (['B', 'S'], {'B': 'minecraft:bowl', 'S': 'minecraft:stick'}),
+    # D152: not a bowl: since D147 a bowl is cut with a GT knife, and Bio must not need Cyber tools (D36)
+    'measuring_ladle': (['P P', ' S '], {'P': '#minecraft:planks', 'S': 'minecraft:stick'}),
     'butcher_block': (['SS', 'PP', 'PP'], {'S': 'minecraft:stick', 'P': '#minecraft:planks'}),
     'stone_mortar': ([' S ', 'C C', ' C '], {'S': 'minecraft:stick', 'C': 'minecraft:cobblestone'}),
     'stone_pot': (['C C', 'CCC'], {'C': 'minecraft:cobblestone'}),

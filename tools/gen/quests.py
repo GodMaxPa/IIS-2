@@ -691,7 +691,7 @@ def main():
     # D151: the opening chapters of IIS 2 in the place of the old ones
     exists = lambda i: os.path.exists(os.path.join(GEN, 'items', i.split(':', 1)[1] + '.json'))
     start = quests_start.add_chapters(os.path.join(OUT, 'chapters'), tr, start_order, write, hexid, exists, filter_item, kept.get)
-    chapters += 2
+    chapters += 3
     # D129: our own chapter after the book of IIS 1
     import quests_equipment
     own, _ = quests_equipment.add_chapter(os.path.join(OUT, 'chapters'), tr, len(lines), write, hexid,

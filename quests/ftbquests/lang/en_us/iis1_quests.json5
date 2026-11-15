@@ -35,6 +35,7 @@
   "chapter.1D00000000001001.title": "What else IIS 2 has",
   "chapter.1D00000000001010.title": "Landing",
   "chapter.1D00000000001011.title": "Bronze and tools",
+  "chapter.1D00000000001012.title": "Bio: the living colony",
   "chapter.1D00000000001020.title": "Steam and steel",
   "chapter.1D00000000001021.title": "LV: the first electricity",
   "chapter.1D00000000001022.title": "MV",
@@ -1162,7 +1163,7 @@
   "quest.1A00000000000099.title": "Yttrium Dust",
   "quest.1A0000000000009B.quest_desc": [
     "Available from: no electricity.",
-    "One way: Bricked Blast Furnace: 1 × Block of Iron, 36 × Coal Dust. 3240 s.",
+    "One way: Bricked Blast Furnace: 1 × Block of Iron, 36 × Charcoal Dust. 3240 s.",
     "",
     "Use an iron ingot and charcoal or charcoal blocks to get steel ingots."
   ],
@@ -1396,8 +1397,7 @@
   ],
   "quest.1A000000000000BF.title": "Arsenic Ingot",
   "quest.1A000000000000C0.quest_desc": [
-    "Available from: LV.",
-    "One way: Ore Washing Plant: 1 × Impure Pile of Cobaltite Dust, 100 mB Water. 4 EU/t, 0.4 s.",
+    "Available from: no electricity.",
     "Where to look: End, Nether, Overworld, Y -48…0 (vein: Garnierite Ore); Mars, Y -56…0 (vein: Graphite Ore); Overworld, Y -56…-32 (vein: Graphite Ore).",
     "",
     "You can create a cobalt pickaxe that can dig even diamond blocks. To make a cobalt ingot from cobaltite dust you have to put it into your primitive blast furnace with coal or charcoal. Or you can directly put cobaltite ore into a regular furnace (but with lower efficiency). In the second case you will get 1 ingot per ore block instead of 2 ingots per block ore when using a macerator and a primitive blast furnace.",
@@ -3092,7 +3092,8 @@
   ],
   "quest.1A0000000000019D.title": "Detector - Item",
   "quest.1A0000000000019E.quest_desc": [
-    "Available from: LV.",
+    "Available from: no electricity.",
+    "One way: Macerator: 1 × Charcoal. 2 EU/t, 20 s.",
     "",
     "Just put usual charcoal into a macerator.",
     "",
@@ -3230,8 +3231,7 @@
   ],
   "quest.1A000000000001C3.title": "Charcoal Pile Igniter",
   "quest.1A000000000001C4.quest_desc": [
-    "Available from: LV.",
-    "One way: Mixer: 4 × Sugar, 1000 mB Sulfuric Acid. 2 EU/t, 30 s.",
+    "Available from: no electricity.",
     "",
     "Use a charcoal pile igniter to transform wood into charcoal. For starters, craft at least 9 brick blocks and put them in the shape of a square 3 by 3. Then put logs (wood) onto it, from 1 to 5 blocks height. Position the charcoal pile igniter on top in the center. All sides including top have to be covered by dirt.",
     "",
@@ -3303,7 +3303,7 @@
   ],
   "quest.1A000000000001CB.title": "Bronze Plated Bricks",
   "quest.1A000000000001CC.quest_desc": [
-    "Available from: LV.",
+    "Available from: no electricity.",
     "One way: Compressor: 9 × Charcoal. 2 EU/t, 15 s.",
     "",
     "To get it, just compress charcoal in a compressor 9-to-1. Then it will have burn time like 10 charcoals, so it is more profitable."
@@ -3357,7 +3357,7 @@
   "quest.1A000000000001DB.title": "Basic Extractor",
   "quest.1A000000000001DC.quest_desc": [
     "Available from: no electricity.",
-    "One way: Extractor: 1 × Rubber Wood. 2 EU/t, 15 s.",
+    "One way: Extractor: 16 × Rubber Leaves. 2 EU/t, 15 s.",
     "",
     "...can be obtained from sticky resin. Needed to create rubber.",
     "",
@@ -4448,7 +4448,7 @@
   "quest.1A00000000000269.quest_desc": [
     "Available from: LV.",
     "One way: Centrifuge: 2 × Vanadium Magnetite Dust. 10 EU/t, 16.8 s.",
-    "Where to look: Mars, Moon, Overworld, Y 32…64 (vein: Magnetite Ore); Mars, Nether, Overworld, Y 16…128 (vein: Magnetite Ore); End, Overworld, Y -56…-16 (vein: Beryllium Ore).",
+    "Where to look: Mars, Moon, Overworld, Y 32…64 (vein: Magnetite Ore); Mars, Nether, Overworld, Y 16…128 (vein: Magnetite Ore); Mars, Y -56…0 (vein: Graphite Ore); Overworld, Y -56…-32 (vein: Graphite Ore).",
     "",
     "Use Centrifuge to separate the Vanadium Magnetite Dust.",
     "",
@@ -4685,8 +4685,7 @@
   ],
   "quest.1A00000000000287.title": "Meteoric Iron Ingot",
   "quest.1A00000000000288.quest_desc": [
-    "Available from: LV.",
-    "One way: Ore Washing Plant: 1 × Impure Pile of Iridium Dust, 100 mB Water. 4 EU/t, 0.4 s.",
+    "Available from: no electricity.",
     "Where to look: Moon, Y -32…16 (vein: Sapphire Ore); End, Mars, Overworld, Y 0…16 (vein: Sheldonite Ore).",
     "",
     "But you should know that the chance to find this vein of ore is very small. In this case you may to use other way to get it. And this way named \"Platinum Group Sludge Dust\" (or PGS dust). You may get the info how to get it in quest set #6 - \"Polyethylene & PGS\"",
@@ -6193,8 +6192,7 @@
   ],
   "quest.1A00000000000351.title": "Nichrome Ingot",
   "quest.1A00000000000353.quest_desc": [
-    "Available from: LV.",
-    "One way: Ore Washing Plant: 1 × Impure Pile of Tungstate Dust, 100 mB Water. 4 EU/t, 0.4 s.",
+    "Available from: no electricity.",
     "Where to look: End, Moon, Overworld, Y -32…16 (vein: Scheelite Ore); Mars, Y -56…0 (vein: Graphite Ore); Overworld, Y -56…-32 (vein: Graphite Ore).",
     "",
     "But it wil be hard to find. So you may use centrifuge MV+ tier to separate lava to get few type of resources including the small pile of tangstate dust with a tiny chance (only 2.5%% per every 100 mb).",
@@ -12680,8 +12678,7 @@
   ],
   "quest.1A000000000006C3.title": "Conductive Iron Dust",
   "quest.1A000000000006C7.quest_desc": [
-    "Available from: LV.",
-    "One way: Ore Washing Plant: 1 × Impure Pile of Scheelite Dust, 100 mB Water. 4 EU/t, 0.4 s.",
+    "Available from: no electricity.",
     "Where to look: End, Moon, Overworld, Y -32…16 (vein: Scheelite Ore); Mars, Y -56…0 (vein: Graphite Ore); Overworld, Y -56…-32 (vein: Graphite Ore).",
     "",
     "But it wil be hard to find. So you may use centrifuge MV+ tier to separate lava to get few type of resources including the small pile of tangstate dust with a tiny chance (only 2.5%% per every 100 mb).",
@@ -14317,6 +14314,191 @@
     "{image:iis:textures/quest_recipe/iis__scoop.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000120040.title": "Scoop",
+  "quest.1A00000000120041.quest_desc": [
+    "A colony core and a maw sit on the roof of your shuttle. The Bio path starts from them: a living colony instead of machines. It needs nothing of Cyber and does not get in its way.",
+    "",
+    "The colour and pulse of the core show the colony's state: asleep, starving, fed, growing, alarmed. Right click the core for its digestive pocket.",
+    "",
+    "Do not break the colony's tissue without need: it gets alarmed. See JEI for the recipes of every Bio place and organ.",
+    "",
+    "Everything above the LV tier of Bio is a draft: numbers and recipes will change."
+  ],
+  "quest.1A00000000120041.title": "The growth on the shuttle",
+  "quest.1A00000000120042.quest_desc": [
+    "Right click the maw with any food. Raw food gives 10 mB of N0 nutrition per hunger point.",
+    "",
+    "A fed colony grows tissue over the hull and around it, cell by cell. Without food the tissue withers and retreats from its far edge. Whatever is cut off from the core dies."
+  ],
+  "quest.1A00000000120042.title": "Feed the maw",
+  "quest.1A00000000120043.quest_desc": [
+    "Flint and a stick. An animal killed with this knife leaves a carcass instead of its usual drops. It also scrapes a culture off the colony's tissue.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__bio_knife.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120043.title": "Stone butchery knife",
+  "quest.1A00000000120044.quest_desc": [
+    "Small, medium or large, by the size of the animal."
+  ],
+  "quest.1A00000000120044.title": "A carcass",
+  "quest.1A00000000120045.quest_desc": [
+    "A hand place: a carcass comes apart into meat mass, fibre and bone. Simple things are put together here too: the growth substrate, the probe, the scraper.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__butcher_block.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120045.title": "Butcher block",
+  "quest.1A00000000120046.quest_desc": [
+    "Grinds food and plants into masses. A mass with water in the core's pocket gives far more nutrition than raw food, and the growth fraction too.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__stone_mortar.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120046.title": "Stone mortar",
+  "quest.1A00000000120047.quest_desc": [
+    "Heat under the cooking pot.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__stone_hearth.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120047.title": "Hearth",
+  "quest.1A00000000120048.quest_desc": [
+    "Stands on the hearth. Cooks the binder and other mixes.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__stone_pot.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120048.title": "Stone cooking pot",
+  "quest.1A00000000120049.quest_desc": [
+    "Carries Bio fluids between places. A bucket carries water too. Capsules and tanks of Cyber fit every place and organ as well.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__measuring_ladle.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120049.title": "Measuring ladle",
+  "quest.1A0000000012004A.quest_desc": [
+    "Mixes fluids by hand: the concentrate, the N1, E1 and G1 media.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__measuring_vessel.png width:120 height:72 align:center}"
+  ],
+  "quest.1A0000000012004A.title": "Measuring vessel",
+  "quest.1A0000000012004B.quest_desc": [
+    "A scraping off the colony's living tissue, taken with the knife."
+  ],
+  "quest.1A0000000012004B.title": "Primitive culture",
+  "quest.1A0000000012004C.quest_desc": [
+    "The core's pocket in budding mode: meat mass and plant mass on the growth fraction. A seed goes into every living organ."
+  ],
+  "quest.1A0000000012004C.title": "Base seed of the colony",
+  "quest.1A0000000012004D.quest_desc": [
+    "The first living place: soft tissue and the membrane grow on it. It feeds on the colony's N0, so stand it on the colony's tissue."
+  ],
+  "quest.1A0000000012004D.title": "Hand growth substrate",
+  "quest.1A0000000012004E.quest_desc": [
+    "Grows on the substrate. The base of every organ; a patch for a worn vessel."
+  ],
+  "quest.1A0000000012004E.title": "Soft tissue",
+  "quest.1A0000000012004F.quest_desc": [
+    "Soft tissue on the G0 medium."
+  ],
+  "quest.1A0000000012004F.title": "Living membrane",
+  "quest.1A00000000120050.quest_desc": [
+    "Grows organs: a new maw, fibrous tissue, the first LV organs."
+  ],
+  "quest.1A00000000120050.title": "Growth bed",
+  "quest.1A00000000120051.quest_desc": [
+    "The loop is closed: the colony has grown an organ of its own. A maw works right next to the core or to the colony's tissue."
+  ],
+  "quest.1A00000000120051.title": "A new maw",
+  "quest.1A00000000120052.quest_desc": [
+    "Presses the extract out of masses.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__stone_press.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120052.title": "Hand press",
+  "quest.1A00000000120053.quest_desc": [
+    "Cleans water into W0. The pad is replaceable.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__filter_vessel.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120053.title": "Gravity filter",
+  "quest.1A00000000120054.quest_desc": [
+    "Vessels connect by themselves and live on the colony's N0. A pump moves the fluid: the colony core right next to the net, or the LV muscle pump. Without a pump it only runs down.",
+    "",
+    "Right click a vessel for pressure, flow and wear. Above the safe pressure the wall wears, at the bursting one it bursts: do not join an LV pump to ULV vessels."
+  ],
+  "quest.1A00000000120054.title": "Vessels",
+  "quest.1A00000000120055.quest_desc": [
+    "The first LV organ: the other organs of the tier grow in it. Its N1 and E1 buffers are filled with a ladle or a capsule."
+  ],
+  "quest.1A00000000120055.title": "Forming nest",
+  "quest.1A00000000120056.quest_desc": [
+    "Makes the N1, E1 and G1 media with no hand mixing."
+  ],
+  "quest.1A00000000120056.title": "Nutrient gland",
+  "quest.1A00000000120057.quest_desc": [
+    "Clean W0 water in a stream."
+  ],
+  "quest.1A00000000120057.title": "Membrane filter",
+  "quest.1A00000000120058.quest_desc": [
+    "An LV pump: takes from the back, feeds forward."
+  ],
+  "quest.1A00000000120058.title": "Muscle pump",
+  "quest.1A00000000120059.quest_desc": [
+    "8000 mB. Sneak and right click to switch between taking and giving."
+  ],
+  "quest.1A00000000120059.title": "Living tank",
+  "quest.1A0000000012005A.quest_desc": [
+    "27 slots."
+  ],
+  "quest.1A0000000012005A.title": "Living store",
+  "quest.1A0000000012005B.quest_desc": [
+    "Moves items between stores, organs and channels. Puts into an organ only what its recipes take."
+  ],
+  "quest.1A0000000012005B.title": "Peristaltic channel",
+  "quest.1A0000000012005C.quest_desc": [
+    "A chitin culture in the nest gives flakes, the compactor presses them into a plate."
+  ],
+  "quest.1A0000000012005C.title": "Chitin",
+  "quest.1A0000000012005D.quest_desc": [
+    "Ore into two crushed. The first step of Bio towards metal."
+  ],
+  "quest.1A0000000012005D.title": "Loosener",
+  "quest.1A0000000012005E.quest_desc": [
+    "Mutants are living animals with a working line. Look an animal over with the probe, then give it an exposure agent within 4 blocks of a vivarium pad. The line shows in 2 minutes: the animal changes its name and size."
+  ],
+  "quest.1A0000000012005E.title": "Vivarium",
+  "quest.1A0000000012005F.quest_desc": [
+    "The pig gives its own carcass (thick sinew), the cow the secretion, the sheep the long fibre, the chicken the dense shell. Collected with the scraper once in 5 minutes."
+  ],
+  "quest.1A0000000012005F.title": "Product of a line",
+  "quest.1A00000000120060.quest_desc": [
+    "The way into MV: from the product of any one line."
+  ],
+  "quest.1A00000000120060.title": "Reinforced shell",
+  "quest.1A00000000120061.quest_desc": [
+    "MV. Crushed ore on acid into metal dust and three tiny piles. A plain furnace smelts the dust into an ingot."
+  ],
+  "quest.1A00000000120061.title": "Ore stomach",
+  "quest.1A00000000120062.quest_desc": [
+    "MV. Grows organ embryos and the first HV organs."
+  ],
+  "quest.1A00000000120062.title": "Incubator",
+  "quest.1A00000000120063.quest_desc": [
+    "MV. Acid, the enzyme culture, the G2 medium."
+  ],
+  "quest.1A00000000120063.title": "Culture isolator",
+  "quest.1A00000000120064.quest_desc": [
+    "HV. Two dusts from one crushed ore."
+  ],
+  "quest.1A00000000120064.title": "Biochemical reactor",
+  "quest.1A00000000120065.quest_desc": [
+    "HV. Tissues in tens of seconds instead of minutes."
+  ],
+  "quest.1A00000000120065.title": "Growth accelerator",
   "quest.1A00000000130000.quest_desc": [
     "The first machines run on steam: a boiler heats water, steam goes to machines through bronze pipes.",
     "",

@@ -32,6 +32,7 @@ public final class IIS {
         OreBlocks.register(modEventBus);
         IISWorldgen.register(modEventBus);
         MaterialItems.register(modEventBus);
+        ru.iis.core.CreativeTabs.register(modEventBus);   // D153: вкладки по назначению
         modEventBus.addListener(IISPacks::addPacks);
         GtTools.register(modEventBus);
         IISFluids.register(modEventBus);

@@ -842,6 +842,13 @@ for _tool in sorted({t['tool'] for t in tools}):
 for _i in ('flint_sword', 'flint_shovel', 'flint_pickaxe', 'flint_axe', 'flint_hoe', 'treetap', 'electric_treetap', 'electric_wrench', 'gravitool',
            'advanced_drill', 'vajra', 'mining_laser', 'nano_saber', 'soldering_iron_lv'):
     add_item_tag('bibliocraft:tool_rack_tools', f'{NS}:{_i}')
+# D153: creative tabs by purpose (ru.iis.core.CreativeTabs); the tabs of the subsystems above are built but not shown
+_CATS = [('materials', 'Ores and materials', 'Руды и материалы'), ('parts', 'Parts and components', 'Детали и компоненты'), ('machines', 'Machines', 'Машины'),
+         ('multi', 'Multiblocks', 'Многоблоки'), ('pipes', 'Pipes, wires, fluids', 'Трубы, провода, жидкости'), ('tools', 'Tools', 'Инструменты'),
+         ('combat', 'Weapons and armour', 'Оружие и броня'), ('transport', 'Transport and space', 'Транспорт и космос'), ('defense', 'Defense', 'Оборона'),
+         ('bio', 'Bio', 'Био'), ('misc', 'Automation, crops and the rest', 'Автоматика, грядки и прочее')]
+lang['en_us'].update({f'itemGroup.iis.cat_{k}': f'IIS 2: {e}' for k, e, r in _CATS})
+lang['ru_ru'].update({f'itemGroup.iis.cat_{k}': f'ИИС 2: {r}' for k, e, r in _CATS})
 lang['en_us'].update({'itemGroup.iis.ores': 'IIS 2.0: Ores', 'itemGroup.iis.materials': 'IIS 2.0: Materials', 'itemGroup.iis.tools': 'IIS 2.0: Tools'})
 lang['ru_ru'].update({'itemGroup.iis.ores': 'ИИС 2.0: Руды', 'itemGroup.iis.materials': 'ИИС 2.0: Материалы', 'itemGroup.iis.tools': 'ИИС 2.0: Инструменты'})
 # LV electric tools (D78)

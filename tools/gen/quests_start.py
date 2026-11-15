@@ -136,8 +136,69 @@ BRONZE = [
     ('scoop', 5, 6, ['iis:scoop'], ['wool', 'table', 'stick'], ('Сачок', 'Scoop'), ('Шерсть, доска и палки.', 'Wool, a plank and sticks.')),
 ]
 
+CARCASS = 'or(item(iis:carcass_small)item(iis:carcass_medium)item(iis:carcass_large))'
+MUTANT = 'or(item(iis:long_fiber)item(iis:binding_secretion)item(iis:dense_shell)item(iis:thick_sinew))'
+# D152: the Bio path as it is built (prototype, slices B-1, D72, D73 and the draft B-2). Recipes of the places are in JEI.
+BIO = [
+    ('b_start', 0, 3, [], ['start'], ('Очаг на челноке', 'The growth on the shuttle'),
+     ('На крыше вашего челнока — ядро колонии и пасть. С них начинается путь Био: живая колония вместо машин. Он не требует ничего из Кибера и ничем ему не мешает.\n\nЦвет и пульс ядра показывают состояние колонии: спит, голодает, сыта, растёт, встревожена. ПКМ по ядру открывает его пищеварительный карман.\n\nНе ломайте ткань колонии без нужды: она тревожится. Рецепты всех мест и органов Био смотрите в JEI.\n\nВсё выше ступени LV в Био — черновик: числа и рецепты ещё будут меняться.',
+      'A colony core and a maw sit on the roof of your shuttle. The Bio path starts from them: a living colony instead of machines. It needs nothing of Cyber and does not get in its way.\n\nThe colour and pulse of the core show the colony\'s state: asleep, starving, fed, growing, alarmed. Right click the core for its digestive pocket.\n\nDo not break the colony\'s tissue without need: it gets alarmed. See JEI for the recipes of every Bio place and organ.\n\nEverything above the LV tier of Bio is a draft: numbers and recipes will change.')),
+    ('b_feed', 1, 3, [], ['b_start'], ('Накормить пасть', 'Feed the maw'),
+     ('ПКМ любой едой по пасти. Сырая еда даёт 10 мБ питания N0 за каждое очко сытости.\n\nСытая колония растит ткань по корпусу и вокруг него, клетка за клеткой. Без еды ткань увядает и отступает с дальнего края. Всё, что оторвано от ядра, отмирает.',
+      'Right click the maw with any food. Raw food gives 10 mB of N0 nutrition per hunger point.\n\nA fed colony grows tissue over the hull and around it, cell by cell. Without food the tissue withers and retreats from its far edge. Whatever is cut off from the core dies.')),
+    ('b_knife', 1, 1, ['iis:bio_knife'], ['b_start'], ('Каменный разделочный нож', 'Stone butchery knife'),
+     ('Кремень и палка. Животное, убитое этим ножом, оставляет тушу вместо обычной добычи. Им же снимают соскоб с ткани колонии.', 'Flint and a stick. An animal killed with this knife leaves a carcass instead of its usual drops. It also scrapes a culture off the colony\'s tissue.')),
+    ('b_carcass', 2, 1, [CARCASS], ['b_knife'], ('Туша', 'A carcass'), ('Малая, средняя или большая — по размеру животного.', 'Small, medium or large, by the size of the animal.')),
+    ('b_butcher', 3, 1, ['iis:butcher_block'], ['b_carcass'], ('Разделочная площадка', 'Butcher block'),
+     ('Ручное место: туша расходится на мясную массу, волокно и кость. Здесь же собирают простые вещи: ростовую подложку, щуп, скребок.', 'A hand place: a carcass comes apart into meat mass, fibre and bone. Simple things are put together here too: the growth substrate, the probe, the scraper.')),
+    ('b_mortar', 2, 0, ['iis:stone_mortar'], ['b_start'], ('Каменная ступа', 'Stone mortar'),
+     ('Перетирает еду и растения в массы. Масса с водой в кармане ядра даёт намного больше питания, чем сырая еда, и ещё ростовую фракцию.', 'Grinds food and plants into masses. A mass with water in the core\'s pocket gives far more nutrition than raw food, and the growth fraction too.')),
+    ('b_hearth', 2, 5, ['iis:stone_hearth'], ['b_start'], ('Очаг', 'Hearth'), ('Жар под варочным сосудом.', 'Heat under the cooking pot.')),
+    ('b_pot', 3, 5, ['iis:stone_pot'], ['b_hearth'], ('Каменный варочный сосуд', 'Stone cooking pot'), ('Ставится на очаг. Варит связующее и другие смеси.', 'Stands on the hearth. Cooks the binder and other mixes.')),
+    ('b_ladle', 2, 3, ['iis:measuring_ladle'], ['b_feed'], ('Мерный ковш', 'Measuring ladle'),
+     ('Переносит жидкости Био между местами. Воду носит и ведро. Капсулы и резервуары Кибера тоже подходят ко всем местам и органам.', 'Carries Bio fluids between places. A bucket carries water too. Capsules and tanks of Cyber fit every place and organ as well.')),
+    ('b_vessel', 4, 5, ['iis:measuring_vessel'], ['b_pot'], ('Мерный смесительный сосуд', 'Measuring vessel'), ('Смешивает жидкости вручную: концентрат, среды N1, E1 и G1.', 'Mixes fluids by hand: the concentrate, the N1, E1 and G1 media.')),
+    ('b_culture', 3, 0, ['iis:primitive_culture'], ['b_knife'], ('Неразвитая культура', 'Primitive culture'), ('Соскоб ножом с живой ткани колонии.', 'A scraping off the colony\'s living tissue, taken with the knife.')),
+    ('b_seed', 3, 3, ['iis:base_seed'], ['b_ladle', 'b_mortar'], ('Базовый посев колонии', 'Base seed of the colony'),
+     ('Карман ядра в режиме почкования: мясная и растительная масса на ростовой фракции. Посев идёт в каждый живой орган.', 'The core\'s pocket in budding mode: meat mass and plant mass on the growth fraction. A seed goes into every living organ.')),
+    ('b_substrate', 4, 1, ['iis:hand_substrate'], ['b_butcher'], ('Ручная ростовая подложка', 'Hand growth substrate'),
+     ('Первое живое место: на нём растут мягкая ткань и мембрана. Питается N0 колонии, поэтому ставьте её на ткань колонии.', 'The first living place: soft tissue and the membrane grow on it. It feeds on the colony\'s N0, so stand it on the colony\'s tissue.')),
+    ('b_soft', 5, 1, ['iis:soft_tissue'], ['b_substrate', 'b_seed'], ('Мягкая ткань', 'Soft tissue'), ('Растёт на подложке. Основа всех органов; заплатка для изношенного сосуда.', 'Grows on the substrate. The base of every organ; a patch for a worn vessel.')),
+    ('b_membrane', 6, 1, ['iis:living_membrane'], ['b_soft'], ('Живая мембрана', 'Living membrane'), ('Мягкая ткань на среде G0.', 'Soft tissue on the G0 medium.')),
+    ('b_bed', 7, 1, ['iis:growth_bed'], ['b_membrane'], ('Ростовое ложе', 'Growth bed'),
+     ('Растит органы: новую пасть, волокнистую ткань, первые органы LV.', 'Grows organs: a new maw, fibrous tissue, the first LV organs.')),
+    ('b_maw', 8, 0, ['iis:feeding_maw'], ['b_bed'], ('Новая пасть', 'A new maw'),
+     ('Цикл замкнулся: колония вырастила собственный орган. Пасть работает вплотную к ядру или к ткани колонии.', 'The loop is closed: the colony has grown an organ of its own. A maw works right next to the core or to the colony\'s tissue.')),
+    ('b_press', 4, 3, ['iis:stone_press'], ['b_ladle'], ('Ручной отжим', 'Hand press'), ('Отжимает экстракт из масс.', 'Presses the extract out of masses.')),
+    ('b_filter', 5, 3, ['iis:filter_vessel'], ['b_pot'], ('Гравитационный фильтр', 'Gravity filter'), ('Чистит воду до W0. Прокладка сменная.', 'Cleans water into W0. The pad is replaceable.')),
+    ('b_vessels', 6, 3, [], ['b_bed'], ('Сосуды', 'Vessels'),
+     ('Сосуды соединяются сами и живут на N0 колонии. Жидкость качает насос: ядро колонии вплотную к сети или мышечный насос LV. Без насоса она только стекает вниз.\n\nПКМ по сосуду показывает давление, поток и износ. Выше безопасного давления стенка изнашивается, на разрывном лопается: насос LV в сосуды ULV не подключайте.',
+      'Vessels connect by themselves and live on the colony\'s N0. A pump moves the fluid: the colony core right next to the net, or the LV muscle pump. Without a pump it only runs down.\n\nRight click a vessel for pressure, flow and wear. Above the safe pressure the wall wears, at the bursting one it bursts: do not join an LV pump to ULV vessels.')),
+    ('b_nest', 8, 2, ['iis:forming_nest'], ['b_bed'], ('Формовочное гнездо', 'Forming nest'), ('Первый орган LV: в нём растут остальные органы этой ступени. Буферы N1 и E1 наполняются ковшом или капсулой.', 'The first LV organ: the other organs of the tier grow in it. Its N1 and E1 buffers are filled with a ladle or a capsule.')),
+    ('b_gland', 9, 1, ['iis:nutrient_gland'], ['b_bed'], ('Питательная железа', 'Nutrient gland'), ('Готовит среды N1, E1 и G1 без ручного смешивания.', 'Makes the N1, E1 and G1 media with no hand mixing.')),
+    ('b_mfilter', 9, 0, ['iis:membrane_filter'], ['b_bed'], ('Мембранный фильтр', 'Membrane filter'), ('Чистая вода W0 потоком.', 'Clean W0 water in a stream.')),
+    ('b_pump', 9, 3, ['iis:muscle_pump'], ['b_vessels'], ('Мышечный насос', 'Muscle pump'), ('Насос LV: берёт сзади, подаёт вперёд.', 'An LV pump: takes from the back, feeds forward.')),
+    ('b_tank', 9, 2, ['iis:living_tank'], ['b_nest'], ('Живой резервуар', 'Living tank'), ('8000 мБ. Shift+ПКМ переключает приём и выдачу.', '8000 mB. Sneak and right click to switch between taking and giving.')),
+    ('b_store', 10, 2, ['iis:living_store'], ['b_nest'], ('Живое хранилище', 'Living store'), ('27 ячеек.', '27 slots.')),
+    ('b_channel', 11, 2, ['iis:peristaltic_channel'], ['b_store'], ('Перистальтический канал', 'Peristaltic channel'),
+     ('Переносит предметы между хранилищами, органами и каналами. В орган кладёт только то, что входит в его рецепты.', 'Moves items between stores, organs and channels. Puts into an organ only what its recipes take.')),
+    ('b_chitin', 10, 4, ['iis:chitin_plate'], ['b_nest'], ('Хитин', 'Chitin'), ('Хитиновая культура в гнезде даёт чешуйки, уплотнитель прессует их в пластину.', 'A chitin culture in the nest gives flakes, the compactor presses them into a plate.')),
+    ('b_loosener', 10, 5, ['iis:loosener'], ['b_nest'], ('Разрыхлитель', 'Loosener'), ('Руда → две дроблёные. Первый шаг Био к металлу.', 'Ore into two crushed. The first step of Bio towards metal.')),
+    ('b_mutant', 11, 4, ['iis:vivarium_pad', 'iis:observation_probe'], ['b_nest'], ('Виварий', 'Vivarium'),
+     ('Мутанты — живые животные с рабочей линией. Осмотрите животное щупом, затем дайте агент воздействия не дальше 4 блоков от площадки вивария. Через 2 минуты линия проявится: у животного сменится имя и размер.', 'Mutants are living animals with a working line. Look an animal over with the probe, then give it an exposure agent within 4 blocks of a vivarium pad. The line shows in 2 minutes: the animal changes its name and size.')),
+    ('b_line', 12, 4, [MUTANT], ['b_mutant'], ('Продукт линии', 'Product of a line'),
+     ('Свинья даёт свою тушу (толстая жила), корова — секрет, овца — длинное волокно, курица — плотную оболочку. Сбор скребком раз в 5 минут.', 'The pig gives its own carcass (thick sinew), the cow the secretion, the sheep the long fibre, the chicken the dense shell. Collected with the scraper once in 5 minutes.')),
+    ('b_shell', 13, 4, ['iis:reinforced_shell'], ['b_line', 'b_chitin'], ('Армированная оболочка', 'Reinforced shell'), ('Вход в MV: из продукта любой одной линии.', 'The way into MV: from the product of any one line.')),
+    ('b_stomach', 14, 5, ['iis:ore_stomach'], ['b_shell', 'b_loosener'], ('Рудный желудок', 'Ore stomach'), ('MV. Дроблёная руда на кислоте → пыль металла и три крошечные кучки. Слиток из пыли плавит обычная печь.', 'MV. Crushed ore on acid into metal dust and three tiny piles. A plain furnace smelts the dust into an ingot.')),
+    ('b_incubator', 14, 3, ['iis:incubator'], ['b_shell'], ('Инкубатор', 'Incubator'), ('MV. Растит зародыши органов и первые органы HV.', 'MV. Grows organ embryos and the first HV organs.')),
+    ('b_isolator', 14, 4, ['iis:isolator'], ['b_shell'], ('Изолятор культур', 'Culture isolator'), ('MV. Кислота, ферментная культура, среда G2.', 'MV. Acid, the enzyme culture, the G2 medium.')),
+    ('b_reactor', 15, 3, ['iis:bioreactor'], ['b_incubator', 'b_isolator'], ('Биохимический реактор', 'Biochemical reactor'), ('HV. Две пыли с одной дроблёной руды.', 'HV. Two dusts from one crushed ore.')),
+    ('b_accelerator', 15, 4, ['iis:accelerator'], ['b_incubator'], ('Ускоритель роста', 'Growth accelerator'), ('HV. Ткани за десятки секунд вместо минут.', 'HV. Tissues in tens of seconds instead of minutes.')),
+]
+
 CHAPTERS = [('landing', 'first_steps', LANDING, ('Высадка', 'Landing'), 'iis:flint_pickaxe'),
-            ('bronze', 'first_tools', BRONZE, ('Бронза и инструменты', 'Bronze and tools'), 'iis:ingot_bronze')]
+            ('bronze', 'first_tools', BRONZE, ('Бронза и инструменты', 'Bronze and tools'), 'iis:ingot_bronze'),
+            ('bio', None, BIO, ('Био: живая колония', 'Bio: the living colony'), 'iis:colony_core')]
 # old task -> new quest, where the task itself changed
 ALIAS = {'minecraft:white_wool': 'wool', 'item_tag(minecraft:beds)': 'bed', 'minecraft:oak_log': 'logs', 'minecraft:oak_planks': 'planks',
          'minecraft:wooden_pickaxe': 'flint_pickaxe', 'minecraft:stone_pickaxe': 'flint_pickaxe', 'minecraft:stone_shovel': 'flint_shovel', 'minecraft:wooden_shovel': 'flint_shovel',
@@ -166,8 +227,8 @@ def parse(task):
 def by_task():
     """Signature of the first task -> quest id, for the quests of the old chapters to find their successors."""
     out = {}
-    for _, _, table, _, _ in CHAPTERS:
-        for q in table:
+    for _, old_, table, _, _ in CHAPTERS:
+        for q in table if old_ else ():
             if q[3]:
                 out.setdefault(parse(q[3][0])[0], KEYS[q[0]])
     for sig, key in ALIAS.items():
@@ -176,7 +237,7 @@ def by_task():
 
 
 def replaced_lines():
-    return {old for _, old, _, _, _ in CHAPTERS}
+    return {old for _, old, _, _, _ in CHAPTERS if old}
 
 
 def add_chapters(chapters_dir, tr, order, write, hexid, item_exists, filter_item, find_old):
@@ -221,8 +282,8 @@ def add_chapters(chapters_dir, tr, order, write, hexid, item_exists, filter_item
             tr['ru_ru'][f'quest.{qo["id"]}.quest_desc'] = text[0].split('\n')
             tr['en_us'][f'quest.{qo["id"]}.quest_desc'] = text[1].split('\n')
             out.append(qo)
-        idx = order[old]
-        cid = hexid(0x1D, 0x1010 + (0 if name == 'landing' else 1))
+        idx = order.get(old, 90)
+        cid = hexid(0x1D, 0x1010 + [c[0] for c in CHAPTERS].index(name))
         fname = f'{idx:02d}_{name}'
         write(os.path.join(chapters_dir, fname + '.json5'), {'id': cid, 'filename': fname, 'order_index': idx, 'default_quest_shape': '',
                                                              'icon': {'id': icon, 'count': 1}, 'quests': out})
@@ -236,4 +297,5 @@ def add_chapters(chapters_dir, tr, order, write, hexid, item_exists, filter_item
 ICONS = {'start': 'minecraft:campfire', 'paths': 'minecraft:compass', 'book': 'minecraft:book', 'veins': 'iis:ore_cassiterite', 'tools': 'iis:hammer_iron',
          'logs': 'minecraft:oak_log', 'planks': 'minecraft:oak_planks', 'wool': 'minecraft:white_wool', 'bed': 'minecraft:red_bed', 'food': 'minecraft:cooked_beef',
          'silver': 'iis:ore_silver', 'mortar': 'iis:mortar_flint', 'pick2': 'iis:pickaxe_head_bronze', 'wrench': 'iis:wrench_iron', 'knife': 'iis:knife_iron',
-         'wire_cutter': 'iis:wire_cutter_iron', 'slab': 'minecraft:oak_slab', 'home': 'minecraft:chest'}
+         'wire_cutter': 'iis:wire_cutter_iron', 'slab': 'minecraft:oak_slab', 'home': 'minecraft:chest', 'b_start': 'iis:colony_core', 'b_feed': 'iis:feeding_maw', 'b_vessels': 'iis:living_tank', 'b_carcass': 'iis:carcass_medium',
+         'b_line': 'iis:long_fiber'}
