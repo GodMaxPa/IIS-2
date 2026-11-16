@@ -1119,6 +1119,11 @@ _spec = _ilu.spec_from_file_location('iis_gen_bio', os.path.join(ROOT, 'tools', 
 _bio = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_bio)
 lv_stats['bio'] = _bio.generate(globals())
+# материнский корабль (D156): блоки корпуса, существа, добыча, размещение в мире
+_spec = _ilu.spec_from_file_location('iis_gen_ship', os.path.join(ROOT, 'tools', 'gen', 'ship.py'))
+_ship = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_ship)
+lv_stats['ship'] = _ship.generate(globals())
 # Fluids for all of IIS 2 (D72): GT fluids, pipes, capsules, universal tanks
 _spec = _ilu.spec_from_file_location('iis_gen_fluids', os.path.join(ROOT, 'tools', 'gen', 'fluids.py'))
 _fluids = _ilu.module_from_spec(_spec)

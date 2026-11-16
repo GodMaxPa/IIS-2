@@ -671,7 +671,7 @@
       "x": 21.0,
       "y": 6.0,
       "dependencies": [
-        "1A00000000120060"
+        "1A00000000120061"
       ],
       "icon": {
         "id": "iis:nutrient_gland",
@@ -867,19 +867,19 @@
     {
       "id": "1A0000000012005C",
       "x": 15.0,
-      "y": 6.0,
+      "y": 0.0,
       "dependencies": [
         "1A00000000120055"
       ],
       "icon": {
-        "id": "iis:chitin_plate",
+        "id": "iis:wild_growth",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:chitin_plate",
+            "id": "iis:wild_growth",
             "count": 1
           },
           "count": 1,
@@ -900,19 +900,19 @@
     {
       "id": "1A0000000012005D",
       "x": 15.0,
-      "y": 7.5,
+      "y": 6.0,
       "dependencies": [
         "1A00000000120055"
       ],
       "icon": {
-        "id": "iis:loosener",
+        "id": "iis:chitin_plate",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:loosener",
+            "id": "iis:chitin_plate",
             "count": 1
           },
           "count": 1,
@@ -932,6 +932,39 @@
     },
     {
       "id": "1A0000000012005E",
+      "x": 15.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000120055"
+      ],
+      "icon": {
+        "id": "iis:loosener",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:loosener",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012005E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012005E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012005F",
       "x": 16.5,
       "y": 6.0,
       "dependencies": [
@@ -949,7 +982,7 @@
             "count": 1
           },
           "count": 1,
-          "id": "1B00000012005E00"
+          "id": "1B00000012005F00"
         },
         {
           "type": "item",
@@ -958,43 +991,7 @@
             "count": 1
           },
           "count": 1,
-          "id": "1B00000012005E01"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": {
-            "id": "iis:credit_copper",
-            "count": 2
-          },
-          "id": "1C00000012005E00"
-        }
-      ]
-    },
-    {
-      "id": "1A0000000012005F",
-      "x": 18.0,
-      "y": 6.0,
-      "dependencies": [
-        "1A0000000012005E"
-      ],
-      "icon": {
-        "id": "iis:long_fiber",
-        "count": 1
-      },
-      "tasks": [
-        {
-          "type": "item",
-          "item": {
-            "id": "ftbfiltersystem:smart_filter",
-            "count": 1,
-            "components": {
-              "ftbfiltersystem:filter": "or(item(iis:long_fiber)item(iis:binding_secretion)item(iis:dense_shell)item(iis:thick_sinew))"
-            }
-          },
-          "count": 1,
-          "id": "1B00000012005F00"
+          "id": "1B00000012005F01"
         }
       ],
       "rewards": [
@@ -1010,22 +1007,24 @@
     },
     {
       "id": "1A00000000120060",
-      "x": 19.5,
+      "x": 18.0,
       "y": 6.0,
       "dependencies": [
-        "1A0000000012005F",
-        "1A0000000012005C"
+        "1A0000000012005F"
       ],
       "icon": {
-        "id": "iis:reinforced_shell",
+        "id": "iis:long_fiber",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:reinforced_shell",
-            "count": 1
+            "id": "ftbfiltersystem:smart_filter",
+            "count": 1,
+            "components": {
+              "ftbfiltersystem:filter": "or(item(iis:long_fiber)item(iis:binding_secretion)item(iis:dense_shell)item(iis:thick_sinew))"
+            }
           },
           "count": 1,
           "id": "1B00000012006000"
@@ -1044,21 +1043,21 @@
     },
     {
       "id": "1A00000000120061",
-      "x": 22.5,
-      "y": 7.5,
+      "x": 19.5,
+      "y": 6.0,
       "dependencies": [
-        "1A00000000120056",
+        "1A00000000120060",
         "1A0000000012005D"
       ],
       "icon": {
-        "id": "iis:ore_stomach",
+        "id": "iis:reinforced_shell",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:ore_stomach",
+            "id": "iis:reinforced_shell",
             "count": 1
           },
           "count": 1,
@@ -1079,19 +1078,20 @@
     {
       "id": "1A00000000120062",
       "x": 22.5,
-      "y": 4.5,
+      "y": 7.5,
       "dependencies": [
-        "1A00000000120056"
+        "1A00000000120056",
+        "1A0000000012005E"
       ],
       "icon": {
-        "id": "iis:incubator",
+        "id": "iis:ore_stomach",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:incubator",
+            "id": "iis:ore_stomach",
             "count": 1
           },
           "count": 1,
@@ -1112,19 +1112,19 @@
     {
       "id": "1A00000000120063",
       "x": 22.5,
-      "y": 6.0,
+      "y": 4.5,
       "dependencies": [
         "1A00000000120056"
       ],
       "icon": {
-        "id": "iis:isolator",
+        "id": "iis:incubator",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:isolator",
+            "id": "iis:incubator",
             "count": 1
           },
           "count": 1,
@@ -1144,21 +1144,20 @@
     },
     {
       "id": "1A00000000120064",
-      "x": 24.0,
-      "y": 4.5,
+      "x": 22.5,
+      "y": 6.0,
       "dependencies": [
-        "1A00000000120062",
-        "1A00000000120063"
+        "1A00000000120056"
       ],
       "icon": {
-        "id": "iis:bioreactor",
+        "id": "iis:isolator",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:bioreactor",
+            "id": "iis:isolator",
             "count": 1
           },
           "count": 1,
@@ -1179,19 +1178,20 @@
     {
       "id": "1A00000000120065",
       "x": 24.0,
-      "y": 6.0,
+      "y": 4.5,
       "dependencies": [
-        "1A00000000120062"
+        "1A00000000120063",
+        "1A00000000120064"
       ],
       "icon": {
-        "id": "iis:accelerator",
+        "id": "iis:bioreactor",
         "count": 1
       },
       "tasks": [
         {
           "type": "item",
           "item": {
-            "id": "iis:accelerator",
+            "id": "iis:bioreactor",
             "count": 1
           },
           "count": 1,
@@ -1206,6 +1206,39 @@
             "count": 2
           },
           "id": "1C00000012006500"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120066",
+      "x": 24.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000120063"
+      ],
+      "icon": {
+        "id": "iis:accelerator",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:accelerator",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006600"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006600"
         }
       ]
     }

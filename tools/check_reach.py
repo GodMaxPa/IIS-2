@@ -182,6 +182,8 @@ for r_ in json.load(open('src/main/resources/iis/bio_recipes.json', encoding='ut
         q_.append([r_['tool']])
     recipes.append(('bio/' + r_['id'], q_, [o['item'] for o in r_.get('out_items', [])] + [_bio_fluid(f['fluid']) for f in r_.get('out_fluids', [])]))
 seeds += ['iis:colony_core', 'iis:feeding_maw', 'iis:bio_tissue']
+# D156: the mother ship is a structure of the world: its blocks are mined there
+seeds += ['iis:ship_plating', 'iis:ship_deck', 'iis:ship_bulkhead', 'iis:ship_light', 'iis:ship_lift', 'iis:wild_growth']
 have.update(seeds)
 recipes.append(('bio/knife_carcass', [['iis:bio_knife']], ['iis:carcass_small', 'iis:carcass_medium', 'iis:carcass_large', 'iis:carcass_rotten']))
 recipes.append(('bio/knife_scraping', [['iis:bio_knife'], ['iis:bio_tissue']], ['iis:primitive_culture']))

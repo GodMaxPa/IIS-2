@@ -14466,45 +14466,55 @@
   ],
   "quest.1A0000000012005B.title": "Peristaltic channel",
   "quest.1A0000000012005C.quest_desc": [
+    "Your shuttle fled a mother ship. Such ships lie in the Overworld: rarely, about one per fifteen hundred to two thousand blocks, and only where you have not been yet. A fallen hull shows from afar: the ground around it is covered with wild growth.",
+    "",
+    "The way in is a breach in the nose. Three tiers inside: the upper one is infested corridors with crawlers, the middle one holds supermutants and the hall of the superorganism core, the lower one is technical bays with a way out into the caves under the ship. The tiers are joined by cargo lift pads: right click goes down, sneak and right click goes up.",
+    "",
+    "The bays hold Bio samples and rare metals. The main chest is behind the core. The core does not leave its place, strikes with spores and calls its guard: come to it with good armour and weapons.",
+    "",
+    "The command /locate structure iis:mother_ship shows the nearest ship."
+  ],
+  "quest.1A0000000012005C.title": "A mother ship",
+  "quest.1A0000000012005D.quest_desc": [
     "A chitin culture in the nest gives flakes, the compactor presses them into a plate. All of it on the G0 medium."
   ],
-  "quest.1A0000000012005C.title": "Chitin",
-  "quest.1A0000000012005D.quest_desc": [
+  "quest.1A0000000012005D.title": "Chitin",
+  "quest.1A0000000012005E.quest_desc": [
     "Ore into two crushed. The first step of Bio towards metal. Stands on the colony's tissue and feeds on its N0."
   ],
-  "quest.1A0000000012005D.title": "Loosener",
-  "quest.1A0000000012005E.quest_desc": [
+  "quest.1A0000000012005E.title": "Loosener",
+  "quest.1A0000000012005F.quest_desc": [
     "Mutants are living animals with a working line. Look an animal over with the probe, then give it an exposure agent within 4 blocks of a vivarium pad. The line shows in 2 minutes: the animal changes its name and size."
   ],
-  "quest.1A0000000012005E.title": "Vivarium",
-  "quest.1A0000000012005F.quest_desc": [
+  "quest.1A0000000012005F.title": "Vivarium",
+  "quest.1A00000000120060.quest_desc": [
     "The pig gives its own carcass (thick sinew), the cow the secretion, the sheep the long fibre, the chicken the dense shell. Collected with the scraper once in 5 minutes."
   ],
-  "quest.1A0000000012005F.title": "Product of a line",
-  "quest.1A00000000120060.quest_desc": [
+  "quest.1A00000000120060.title": "Product of a line",
+  "quest.1A00000000120061.quest_desc": [
     "The way into MV: fibrous tissue, a chitin plate and the product of any one line, in the compactor on the G0 medium."
   ],
-  "quest.1A00000000120060.title": "Reinforced shell",
-  "quest.1A00000000120061.quest_desc": [
+  "quest.1A00000000120061.title": "Reinforced shell",
+  "quest.1A00000000120062.quest_desc": [
     "MV, grown on the G1 medium. Crushed ore on acid into metal dust and three tiny piles. A plain furnace smelts the dust into an ingot."
   ],
-  "quest.1A00000000120061.title": "Ore stomach",
-  "quest.1A00000000120062.quest_desc": [
+  "quest.1A00000000120062.title": "Ore stomach",
+  "quest.1A00000000120063.quest_desc": [
     "MV. Grows organ embryos and the first HV organs."
   ],
-  "quest.1A00000000120062.title": "Incubator",
-  "quest.1A00000000120063.quest_desc": [
+  "quest.1A00000000120063.title": "Incubator",
+  "quest.1A00000000120064.quest_desc": [
     "MV. Acid, the enzyme culture, the G2 medium."
   ],
-  "quest.1A00000000120063.title": "Culture isolator",
-  "quest.1A00000000120064.quest_desc": [
+  "quest.1A00000000120064.title": "Culture isolator",
+  "quest.1A00000000120065.quest_desc": [
     "HV. Two dusts from one crushed ore."
   ],
-  "quest.1A00000000120064.title": "Biochemical reactor",
-  "quest.1A00000000120065.quest_desc": [
+  "quest.1A00000000120065.title": "Biochemical reactor",
+  "quest.1A00000000120066.quest_desc": [
     "HV. Tissues in tens of seconds instead of minutes."
   ],
-  "quest.1A00000000120065.title": "Growth accelerator",
+  "quest.1A00000000120066.title": "Growth accelerator",
   "quest.1A00000000130000.quest_desc": [
     "The first machines run on steam: a boiler heats water, steam goes to machines through bronze pipes.",
     "",

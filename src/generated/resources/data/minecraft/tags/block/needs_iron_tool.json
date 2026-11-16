@@ -139,6 +139,10 @@
     "iis:deepslate_small_ore_topaz",
     "iis:nether_small_ore_topaz",
     "iis:shuttle_hull",
-    "iis:shuttle_engine"
+    "iis:shuttle_engine",
+    "iis:ship_plating",
+    "iis:ship_deck",
+    "iis:ship_bulkhead",
+    "iis:ship_lift"
   ]
 }

@@ -136,7 +136,7 @@ public final class CreativeTabs {
             case "equipment" -> starts(path, VEHICLE) ? Cat.TRANSPORT : Cat.COMBAT;
             case "rail", "space" -> Cat.TRANSPORT;
             case "defense" -> Cat.DEFENSE;
-            case "bio" -> Cat.BIO;
+            case "bio", "ship" -> Cat.BIO;
             default -> Cat.MISC;   // автоматика и хранилища, грядки, AE и Ender IO
         };
     }

@@ -59,6 +59,7 @@ public final class IISClient {
                 e.register(Identifier.fromNamespaceAndPath(IIS.MODID, "battery_charge"), ru.iis.lv.client.BatteryChargeProperty.CODEC));
         modBus.addListener(IISClient::registerFluidModels);
         modBus.addListener(IISClient::registerCoverRenderers);
+        ru.iis.ship.client.ShipClient.register(modBus);
         modBus.addListener((net.neoforged.neoforge.client.event.EntityRenderersEvent.RegisterLayerDefinitions e) -> e.registerLayerDefinition(ru.iis.space.client.SpaceClient.ROCKET_LAYER, ru.iis.space.client.SpaceClient::rocketLayer));
         NeoForge.EVENT_BUS.addListener(IISClient::machineTooltips);
         NeoForge.EVENT_BUS.addListener(ru.iis.client.WrenchGrid::onExtract);

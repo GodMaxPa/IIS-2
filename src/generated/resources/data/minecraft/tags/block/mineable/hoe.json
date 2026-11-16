@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "iis:rubber_leaves"
+    "iis:rubber_leaves",
+    "iis:wild_growth"
   ]
 }

@@ -1,0 +1,7 @@
+{
+  "type": "iis:mother_ship",
+  "biomes": "#iis:has_structure/mother_ship",
+  "spawn_overrides": {},
+  "step": "surface_structures",
+  "terrain_adaptation": "none"
+}
