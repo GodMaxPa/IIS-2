@@ -89,6 +89,11 @@ public class StationBlockEntity extends BlockEntity implements StationLogic.Host
         return c != null && c.drainN0(mb);
     }
 
+    @Override
+    public boolean pull(java.util.List<ru.iis.bio.production.BioTank> tanks, net.minecraft.world.level.material.Fluid fluid, int amount) {
+        return ru.iis.bio.production.ColonySupply.pull(serverLevel(), core(), tanks, fluid, amount);
+    }
+
     // --- меню -----------------------------------------------------------------------------------------------------
     @Override
     public Component getDisplayName() {

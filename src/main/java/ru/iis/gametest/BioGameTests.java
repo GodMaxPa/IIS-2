@@ -245,14 +245,14 @@ final class BioGameTests {
         return n;
     }
 
-    /** Карман: масса растений + масса мяса + 500 воды → 350 N0 (в запас колонии) + 50 ростовой фракции + 100 стока (L01). */
+    /** Карман: масса растений + масса мяса + 500 воды → 350 N0 (в запас колонии) + 100 стока (L01; ростовой фракции с D155 нет). */
     static void pocketL01(GameTestHelper h) {
         ColonyCoreBlockEntity c = core(h, new BlockPos(4, 1, 4));
         c.pocket.setItem(0, bio(ru.iis.bio.item.BioItems.PLANT_MASS.get(), 1));
         c.pocket.setItem(1, bio(ru.iis.bio.item.BioItems.MEAT_MASS.get(), 1));
         c.pocket.tanks.get(0).fill(net.minecraft.world.level.material.Fluids.WATER, 500, false);
         h.succeedWhen(() -> {
-            h.assertTrue(fluid(c.pocket, ru.iis.bio.fluid.BioFluids.PRIMARY) == 50, "primary fraction " + fluid(c.pocket, ru.iis.bio.fluid.BioFluids.PRIMARY));
+            h.assertTrue(fluid(c.pocket, ru.iis.bio.fluid.BioFluids.PRIMARY) == 0, "no growth fraction in the simple start");
             h.assertTrue(fluid(c.pocket, ru.iis.bio.fluid.BioFluids.RUNOFF) == 100, "runoff " + fluid(c.pocket, ru.iis.bio.fluid.BioFluids.RUNOFF));
             h.assertTrue(c.colony().awake() && c.colony().nutrition() > 340 && c.colony().nutrition() <= 350, "N0 " + c.colony().nutrition());
             h.assertTrue(c.pocket.tanks.get(0).amount() == 0, "water left " + c.pocket.tanks.get(0).amount());
@@ -304,20 +304,41 @@ final class BioGameTests {
         });
     }
 
-    /** Мерный сосуд: 600 N0 + 200 гидролизата + 150 связующего + 50 взвеси → 1 000 G0 (L10). */
+    /** Мерный сосуд, простой старт (D155): 600 N0 + связующий гель + костный порошок → 1 000 G0. */
     static void mixerG0(GameTestHelper h) {
         StationBlockEntity m = station(h, new BlockPos(4, 1, 4), BioContent.MIXER.get());
         m.logic.tanks.get(0).fill(ru.iis.bio.fluid.BioFluids.N0.source().get(), 600, false);
-        m.logic.tanks.get(1).fill(ru.iis.bio.fluid.BioFluids.HYDROLYSATE.source().get(), 200, false);
-        m.logic.tanks.get(2).fill(ru.iis.bio.fluid.BioFluids.BINDER.source().get(), 150, false);
-        m.logic.tanks.get(3).fill(ru.iis.bio.fluid.BioFluids.SUSPENSION.source().get(), 50, false);
+        m.logic.setItem(0, bio(ru.iis.bio.item.BioItems.GEL.get(), 1));
+        m.logic.setItem(1, bio(ru.iis.bio.item.BioItems.BONE_POWDER.get(), 1));
         h.succeedWhen(() -> {
             h.assertTrue(fluid(m.logic, ru.iis.bio.fluid.BioFluids.G0) == 1000, "G0 " + fluid(m.logic, ru.iis.bio.fluid.BioFluids.G0));
-            h.assertTrue(fluid(m.logic, ru.iis.bio.fluid.BioFluids.N0) == 0 && fluid(m.logic, ru.iis.bio.fluid.BioFluids.SUSPENSION) == 0, "inputs not consumed");
+            h.assertTrue(fluid(m.logic, ru.iis.bio.fluid.BioFluids.N0) == 0 && m.logic.getItem(0).isEmpty() && m.logic.getItem(1).isEmpty(), "inputs not consumed");
         });
     }
 
-    /** Ручная подложка у колонии: подложка + неразвитая культура + 50 ростовой фракции → мягкая ткань той же линии; питается N0 колонии. */
+    /**
+     * Простой старт (D155): гнездо на ткани колонии само берёт G0 из живого резервуара колонии — без сосудов и ковша;
+     * питается N0 колонии. Мягкая ткань + длинное волокно + 50 G0 → 2 волокнистые ткани.
+     */
+    static void nestTakesMediumFromTank(GameTestHelper h) {
+        ColonyCoreBlockEntity c = core(h, new BlockPos(4, 1, 4));
+        c.feed(900);
+        h.onEachTick(() -> { if (c.colony().nutrition() < 300) c.feed(500); });
+        BlockPos tankAbs = h.absolutePos(new BlockPos(2, 1, 2));
+        h.getLevel().setBlock(tankAbs, BioContent.LIVING_TANK.get().defaultBlockState(), 3);
+        ru.iis.bio.block.LivingTankBlockEntity tank = (ru.iis.bio.block.LivingTankBlockEntity) h.getLevel().getBlockEntity(tankAbs);
+        tank.tank().fill(ru.iis.bio.fluid.BioFluids.G0.source().get(), 1000, false);
+        StationBlockEntity nest = station(h, new BlockPos(5, 1, 4), BioContent.NEST.get());
+        nest.logic.setItem(0, bio(ru.iis.bio.item.BioItems.SOFT_TISSUE.get(), 1));
+        nest.logic.setItem(1, bio(ru.iis.command.SelfTest.item("long_fiber"), 1));
+        h.succeedWhen(() -> {
+            ItemStack out = nest.logic.getItem(Station.NEST.inputs);
+            h.assertTrue(out.is(ru.iis.bio.item.BioItems.FIBROUS_TISSUE.get()) && out.getCount() == 2, "no fibrous tissue: " + out + ", status " + nest.logic.status());
+            h.assertTrue(tank.tank().amount() == 950, "the nest must take 50 mB of G0 from the living tank: " + tank.tank().amount());
+        });
+    }
+
+    /** Ручная подложка у колонии: подложка + неразвитая культура + 50 N0 (берёт сама у ядра, D155) → мягкая ткань той же линии. */
     static void substrateTissue(GameTestHelper h) {
         ColonyCoreBlockEntity c = core(h, new BlockPos(4, 1, 4));
         c.feed(500);
@@ -327,7 +348,6 @@ final class BioGameTests {
         ItemStack culture = bio(ru.iis.bio.item.BioItems.PRIMITIVE_CULTURE.get(), 1);
         culture.set(ru.iis.bio.item.BioItems.LINEAGE.get(), c.lineage());
         s.logic.setItem(1, culture);
-        s.logic.tanks.get(0).fill(ru.iis.bio.fluid.BioFluids.PRIMARY.source().get(), 50, false);
         h.succeedWhen(() -> {
             ItemStack out = s.logic.getItem(Station.SUBSTRATE.inputs);
             h.assertTrue(out.is(ru.iis.bio.item.BioItems.SOFT_TISSUE.get()), "no soft tissue: " + out);
@@ -340,7 +360,7 @@ final class BioGameTests {
         StationBlockEntity s = station(h, new BlockPos(4, 1, 4), BioContent.SUBSTRATE.get());
         s.logic.setItem(0, bio(ru.iis.bio.item.BioItems.GROWTH_SUBSTRATE.get(), 1));
         s.logic.setItem(1, bio(ru.iis.bio.item.BioItems.PRIMITIVE_CULTURE.get(), 1));
-        s.logic.tanks.get(0).fill(ru.iis.bio.fluid.BioFluids.PRIMARY.source().get(), 50, false);
+        s.logic.tanks.get(0).fill(ru.iis.bio.fluid.BioFluids.N0.source().get(), 50, false);
         h.runAfterDelay(60, () -> {
             h.assertTrue(s.logic.status() == ru.iis.bio.production.StationLogic.Status.NO_COLONY, "status " + s.logic.status());
             h.assertTrue(s.logic.getItem(0).getCount() == 1, "inputs must stay");

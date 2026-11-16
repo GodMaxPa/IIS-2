@@ -14319,6 +14319,8 @@
     "",
     "The colour and pulse of the core show the colony's state: asleep, starving, fed, growing, alarmed. Right click the core for its digestive pocket.",
     "",
+    "Up to the LV tier Bio runs on four fluids: water, the colony's nutrition N0, the growth medium G0 and runoff. No vessels or pumps are needed: places and organs standing on the colony's tissue take nutrition from the core and the medium from a living tank themselves. Vessels, pressure and the complex media start at MV.",
+    "",
     "Do not break the colony's tissue without need: it gets alarmed. See JEI for the recipes of every Bio place and organ.",
     "",
     "Everything above the LV tier of Bio is a draft: numbers and recipes will change."
@@ -14349,7 +14351,7 @@
   ],
   "quest.1A00000000120045.title": "Butcher block",
   "quest.1A00000000120046.quest_desc": [
-    "Grinds food and plants into masses. A mass with water in the core's pocket gives far more nutrition than raw food, and the growth fraction too.",
+    "Grinds food and plants into masses, bone into bone powder. A mass with water in the core's pocket gives far more nutrition than raw food.",
     "",
     "Crafting table recipe:",
     "{image:iis:textures/quest_recipe/iis__stone_mortar.png width:120 height:72 align:center}"
@@ -14363,48 +14365,48 @@
   ],
   "quest.1A00000000120047.title": "Hearth",
   "quest.1A00000000120048.quest_desc": [
-    "Stands on the hearth. Cooks the binder and other mixes.",
+    "Stands on the hearth. Cooks the binding gel out of connective fibre and water: the gel goes into the growth substrate and the growth medium.",
     "",
     "Crafting table recipe:",
     "{image:iis:textures/quest_recipe/iis__stone_pot.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000120048.title": "Stone cooking pot",
   "quest.1A00000000120049.quest_desc": [
-    "Carries Bio fluids between places. A bucket carries water too. Capsules and tanks of Cyber fit every place and organ as well.",
+    "Carries Bio fluids: the N0 nutrition from the core to the measuring vessel, the finished G0 medium to the bed or to a living tank. A bucket carries water too. Capsules and tanks of Cyber fit every place and organ as well.",
     "",
     "Crafting table recipe:",
     "{image:iis:textures/quest_recipe/iis__measuring_ladle.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000120049.title": "Measuring ladle",
   "quest.1A0000000012004A.quest_desc": [
-    "Mixes fluids by hand: the concentrate, the N1, E1 and G1 media.",
+    "The measuring vessel mixes the growth medium: 600 mB of the N0 nutrition (a ladle from the core), binding gel and bone powder give 1000 mB of G0. Everything up to the MV tier grows on it.",
     "",
     "Crafting table recipe:",
     "{image:iis:textures/quest_recipe/iis__measuring_vessel.png width:120 height:72 align:center}"
   ],
-  "quest.1A0000000012004A.title": "Measuring vessel",
+  "quest.1A0000000012004A.title": "The G0 growth medium",
   "quest.1A0000000012004B.quest_desc": [
     "A scraping off the colony's living tissue, taken with the knife."
   ],
   "quest.1A0000000012004B.title": "Primitive culture",
   "quest.1A0000000012004C.quest_desc": [
-    "The core's pocket in budding mode: meat mass and plant mass on the growth fraction. A seed goes into every living organ."
+    "The core's pocket in budding mode: meat mass and plant mass on water. A seed goes into every living organ."
   ],
   "quest.1A0000000012004C.title": "Base seed of the colony",
   "quest.1A0000000012004D.quest_desc": [
-    "The first living place: soft tissue and the membrane grow on it. It feeds on the colony's N0, so stand it on the colony's tissue."
+    "The first living place: soft tissue and the membrane grow on it. Stand it on the colony's tissue: it takes the N0 nutrition from the core itself."
   ],
   "quest.1A0000000012004D.title": "Hand growth substrate",
   "quest.1A0000000012004E.quest_desc": [
-    "Grows on the substrate. The base of every organ; a patch for a worn vessel."
+    "Grows on the hand substrate out of a growth substrate and a culture (or a seed); the substrate takes 50 mB of N0 from the core. The base of every organ."
   ],
   "quest.1A0000000012004E.title": "Soft tissue",
   "quest.1A0000000012004F.quest_desc": [
-    "Soft tissue on the G0 medium."
+    "Soft tissue on the G0 medium, the mandrel in the tool slot. Pour the medium into the substrate with a ladle."
   ],
   "quest.1A0000000012004F.title": "Living membrane",
   "quest.1A00000000120050.quest_desc": [
-    "Grows organs: a new maw, fibrous tissue, the first LV organs."
+    "Grows organs: a new maw, fibrous tissue, the muscle node, the forming nest."
   ],
   "quest.1A00000000120050.title": "Growth bed",
   "quest.1A00000000120051.quest_desc": [
@@ -14412,43 +14414,47 @@
   ],
   "quest.1A00000000120051.title": "A new maw",
   "quest.1A00000000120052.quest_desc": [
-    "Presses the extract out of masses.",
+    "The extract out of plant mass and water: a feed of the gland.",
     "",
     "Crafting table recipe:",
     "{image:iis:textures/quest_recipe/iis__stone_press.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000120052.title": "Hand press",
   "quest.1A00000000120053.quest_desc": [
-    "Cleans water into W0. The pad is replaceable.",
+    "Cleans water into W0 for the N1 medium. The pad is replaceable.",
     "",
     "Crafting table recipe:",
     "{image:iis:textures/quest_recipe/iis__filter_vessel.png width:120 height:72 align:center}"
   ],
   "quest.1A00000000120053.title": "Gravity filter",
   "quest.1A00000000120054.quest_desc": [
-    "Vessels connect by themselves and live on the colony's N0. A pump moves the fluid: the colony core right next to the net, or the LV muscle pump. Without a pump it only runs down.",
+    "From MV on fluids travel in vessels. They grow in the nest on the G1 medium, connect by themselves and live on the colony's N0. A pump moves the fluid: the colony core right next to the net, or the muscle pump. Without a pump it only runs down.",
     "",
-    "Right click a vessel for pressure, flow and wear. Above the safe pressure the wall wears, at the bursting one it bursts: do not join an LV pump to ULV vessels."
+    "Right click a vessel for pressure, flow and wear. Above the safe pressure the wall wears, at the bursting one it bursts: do not join a muscle pump to the thin vessels (the microchannel, the capillary bundle).",
+    "",
+    "Organs of MV and above feed on their own N1 and E1 buffers: fill them through vessels, with a ladle or a capsule."
   ],
   "quest.1A00000000120054.title": "Vessels",
   "quest.1A00000000120055.quest_desc": [
-    "The first LV organ: the other organs of the tier grow in it. Its N1 and E1 buffers are filled with a ladle or a capsule."
+    "The first LV organ: the other organs of the tier grow in it, faster and on less medium than in the bed. Stands on the colony's tissue: feeds on its N0 and takes the G0 medium from a living tank itself."
   ],
   "quest.1A00000000120055.title": "Forming nest",
   "quest.1A00000000120056.quest_desc": [
-    "Makes the N1, E1 and G1 media with no hand mixing."
+    "The first MV organ, grown in the nest with a reinforced shell. Only the gland makes the N1, E1 and G1 media, and vessels, the pump and the other MV organs grow on G1.",
+    "",
+    "It needs the fluids the simple start did without: clean W0 water (the filter), the extract (the press), the hydrolysate (the core's pocket, second mode), the suspension and the emulsion (the measuring vessel), the binder (the cooking pot). The full depth of Bio starts here."
   ],
   "quest.1A00000000120056.title": "Nutrient gland",
   "quest.1A00000000120057.quest_desc": [
-    "Clean W0 water in a stream."
+    "An MV organ: clean W0 water in a stream. Lives on its own N1 buffer."
   ],
   "quest.1A00000000120057.title": "Membrane filter",
   "quest.1A00000000120058.quest_desc": [
-    "An LV pump: takes from the back, feeds forward."
+    "An MV pump: takes from the back, feeds forward. N1 and E1 buffers."
   ],
   "quest.1A00000000120058.title": "Muscle pump",
   "quest.1A00000000120059.quest_desc": [
-    "8000 mB. Sneak and right click to switch between taking and giving."
+    "8000 mB, the colony's store. Fill it with the G0 medium with a ladle: the substrate, the bed, the nest and the organs on the colony's tissue take as much as a recipe needs themselves. No vessels are needed for that."
   ],
   "quest.1A00000000120059.title": "Living tank",
   "quest.1A0000000012005A.quest_desc": [
@@ -14460,11 +14466,11 @@
   ],
   "quest.1A0000000012005B.title": "Peristaltic channel",
   "quest.1A0000000012005C.quest_desc": [
-    "A chitin culture in the nest gives flakes, the compactor presses them into a plate."
+    "A chitin culture in the nest gives flakes, the compactor presses them into a plate. All of it on the G0 medium."
   ],
   "quest.1A0000000012005C.title": "Chitin",
   "quest.1A0000000012005D.quest_desc": [
-    "Ore into two crushed. The first step of Bio towards metal."
+    "Ore into two crushed. The first step of Bio towards metal. Stands on the colony's tissue and feeds on its N0."
   ],
   "quest.1A0000000012005D.title": "Loosener",
   "quest.1A0000000012005E.quest_desc": [
@@ -14476,11 +14482,11 @@
   ],
   "quest.1A0000000012005F.title": "Product of a line",
   "quest.1A00000000120060.quest_desc": [
-    "The way into MV: from the product of any one line."
+    "The way into MV: fibrous tissue, a chitin plate and the product of any one line, in the compactor on the G0 medium."
   ],
   "quest.1A00000000120060.title": "Reinforced shell",
   "quest.1A00000000120061.quest_desc": [
-    "MV. Crushed ore on acid into metal dust and three tiny piles. A plain furnace smelts the dust into an ingot."
+    "MV, grown on the G1 medium. Crushed ore on acid into metal dust and three tiny piles. A plain furnace smelts the dust into an ingot."
   ],
   "quest.1A00000000120061.title": "Ore stomach",
   "quest.1A00000000120062.quest_desc": [

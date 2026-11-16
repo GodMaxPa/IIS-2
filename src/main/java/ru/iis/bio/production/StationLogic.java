@@ -55,6 +55,14 @@ public class StationLogic extends SimpleContainer {
             return true;
         }
 
+        /**
+         * Простой старт (D155): живое место само добирает недостающую жидкость рецепта из запасов колонии — N0 из ядра,
+         * остальное из живых резервуаров на её территории. true — во входном баке теперь есть нужный объём.
+         */
+        default boolean pull(List<BioTank> tanks, Fluid fluid, int amount) {
+            return false;
+        }
+
         /** Линия колонии, если входа с линией нет (карман ядра). */
         default String defaultLineage() {
             return "";
@@ -278,11 +286,17 @@ public class StationLogic extends SimpleContainer {
             boolean fluidsOk = true;
             for (BioRecipe.FluidIn f : r.fluids()) {
                 Fluid fl = BioFluids.byKey(f.fluid());
-                if (fl == null || tankWith(fl, f.amount()) == null) fluidsOk = false;
+                if (fl == null || (tankWith(fl, f.amount()) == null && !(supplied() && r.fluids().size() == 1 && host.pull(tanks, fl, f.amount())
+                        && tankWith(fl, f.amount()) != null))) fluidsOk = false;
             }
             if (fluidsOk && outputsFit(r)) return r;
         }
         return null;
+    }
+
+    /** Берёт ли место жидкости из запасов колонии само: живые места и карман ядра. */
+    private boolean supplied() {
+        return station.colony || station == Station.POCKET;
     }
 
     /** Есть ли место под выход (проверка до запуска, чтобы не списать входы впустую). */

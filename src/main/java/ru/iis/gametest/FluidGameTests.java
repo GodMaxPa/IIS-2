@@ -283,31 +283,26 @@ final class FluidGameTests {
         h.succeedWhen(() -> h.assertTrue(h.getBlockState(new BlockPos(4, 1, 4)).isAir(), "ULV vessel must burst under an LV pump"));
     }
 
-    /** F06: 600 N1 + 300 концентрата + 100 эмульсии → 1 000 E1 за 30 с; буферы корпуса тратятся (N1/E1 по 12 мБ). */
+    /** F06 (с D155 — первый орган MV, живёт на N0 колонии): 600 N1 + 300 концентрата + 100 эмульсии → 1 000 E1 за 30 с. */
     static void glandMakesE1(GameTestHelper h) {
+        ColonyCoreBlockEntity core = fedCore(h, new BlockPos(3, 1, 4));
+        h.onEachTick(() -> { if (core.colony().nutrition() < 300) core.colony().setNutrition(1000); });
         BlockPos abs = h.absolutePos(new BlockPos(4, 1, 4));
         h.getLevel().setBlock(abs, BioContent.GLAND.get().defaultBlockState(), 3);
         StationBlockEntity g = (StationBlockEntity) h.getLevel().getBlockEntity(abs);
         g.logic.tanks.get(0).fill(BioFluids.N1.source().get(), 600, false);
         g.logic.tanks.get(1).fill(BioFluids.CONCENTRATE.source().get(), 300, false);
         g.logic.tanks.get(2).fill(BioFluids.EMULSION.source().get(), 100, false);
-        var n1 = g.logic.tanks.get(Station.GLAND.n1Buffer());
-        var e1 = g.logic.tanks.get(Station.GLAND.e1Buffer());
-        n1.fill(BioFluids.N1.source().get(), 250, false);
-        e1.fill(BioFluids.E1.source().get(), 250, false);
-        h.succeedWhen(() -> {
-            h.assertTrue(fluid(g, BioFluids.E1) - e1.amount() == 1000, "E1 product " + (fluid(g, BioFluids.E1) - e1.amount()));
-            h.assertTrue(e1.amount() <= 239 && e1.amount() >= 236, "E1 buffer " + e1.amount());
-        });
+        h.succeedWhen(() -> h.assertTrue(fluid(g, BioFluids.E1) == 1000, "E1 product " + fluid(g, BioFluids.E1) + ", status " + g.logic.status()));
     }
 
-    /** Гнездо без N1/E1 в буферах стоит (нет питания). */
+    /** Гнездо без колонии стоит (D155: живёт на N0 колонии, буферов N1/E1 у него больше нет). */
     static void nestNeedsBuffers(GameTestHelper h) {
         BlockPos abs = h.absolutePos(new BlockPos(4, 1, 4));
         h.getLevel().setBlock(abs, BioContent.NEST.get().defaultBlockState(), 3);
         StationBlockEntity n = (StationBlockEntity) h.getLevel().getBlockEntity(abs);
         h.runAfterDelay(20, () -> {
-            h.assertTrue(n.logic.status() == ru.iis.bio.production.StationLogic.Status.NO_NUTRIENT, "nest status " + n.logic.status());
+            h.assertTrue(n.logic.status() == ru.iis.bio.production.StationLogic.Status.NO_COLONY, "nest status " + n.logic.status());
             h.succeed();
         });
     }

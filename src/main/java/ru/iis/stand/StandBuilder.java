@@ -1415,6 +1415,7 @@ public final class StandBuilder {
 
     private void fillLvBuffers(StationBlockEntity st) {
         Station s = st.logic.station;
+        if (!s.lv()) return;   // D155: органы LV и железа живут на N0 колонии, буферов у них нет
         st.logic.tanks.get(s.n1Buffer()).fill(BioFluids.N1.source().get(), Station.LV_BUFFER, false);
         if (s.lvE > 0) st.logic.tanks.get(s.e1Buffer()).fill(BioFluids.E1.source().get(), Station.LV_BUFFER, false);
     }
@@ -1434,7 +1435,7 @@ public final class StandBuilder {
         if (sub != null) {
             sub.logic.setItem(0, s(BioItems.GROWTH_SUBSTRATE, 4));
             sub.logic.setItem(1, s(BioItems.PRIMITIVE_CULTURE, 4));
-            sub.logic.tanks.get(0).fill(BioFluids.PRIMARY.source().get(), 1000, false);
+            sub.logic.tanks.get(0).fill(BioFluids.N0.source().get(), 1000, false);
         }
         StationBlockEntity bed = station(c.east(), BioContent.BED.get());
         if (bed != null) {
@@ -1467,10 +1468,10 @@ public final class StandBuilder {
         }
         StationBlockEntity mix = station(at(11, 0, z), BioContent.MIXER.get());
         if (mix != null) {
+            // простой старт (D155): G0 из N0, геля и костного порошка
             mix.logic.tanks.get(0).fill(BioFluids.N0.source().get(), 1000, false);
-            mix.logic.tanks.get(1).fill(BioFluids.HYDROLYSATE.source().get(), 1000, false);
-            mix.logic.tanks.get(2).fill(BioFluids.BINDER.source().get(), 1000, false);
-            mix.logic.tanks.get(3).fill(BioFluids.SUSPENSION.source().get(), 1000, false);
+            mix.logic.setItem(0, s(BioItems.GEL, 4));
+            mix.logic.setItem(1, s(BioItems.BONE_POWDER, 4));
         }
         StationBlockEntity press = station(at(14, 0, z), BioContent.PRESS.get());
         if (press != null) {
@@ -1483,15 +1484,18 @@ public final class StandBuilder {
             filter.logic.tanks.get(0).fill(Fluids.WATER, 1000, false);
         }
 
-        // LV-органы с полными буферами N1/E1 и загруженной партией
+        // органы с загруженной партией. Гнездо и железа живут на N0 колонии (D155) — рядом с каждым своё сытое ядро;
+        // мембранный фильтр (MV) — на буфере N1
         z = 20;
+        core(at(3, 0, z));
+        core(at(7, 0, z));
         StationBlockEntity nest = station(at(2, 0, z), BioContent.NEST.get());
         if (nest != null) {
             fillLvBuffers(nest);
             nest.logic.setItem(0, s(BioItems.MUSCLE_BUNDLE, 4));
             nest.logic.setItem(1, s(BioItems.SINEW_CORD, 4));
             nest.logic.setItem(2, s(BioItems.BONE_RIB, 4));
-            nest.logic.tanks.get(0).fill(BioFluids.G1.source().get(), 1000, false);
+            nest.logic.tanks.get(0).fill(BioFluids.G0.source().get(), 1000, false);
         }
         StationBlockEntity gland = station(at(6, 0, z), BioContent.GLAND.get());
         if (gland != null) {

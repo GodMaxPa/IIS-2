@@ -193,6 +193,12 @@ public class ColonyCoreBlockEntity extends BlockEntity implements StationLogic.H
         return lineage;
     }
 
+    /** Карман ядра берёт ростовую среду из живых резервуаров колонии (D155); N0 у него свой. */
+    @Override
+    public boolean pull(java.util.List<BioTank> tanks, Fluid fluid, int amount) {
+        return fluid != BioFluids.N0.source().get() && ru.iis.bio.production.ColonySupply.pull(serverLevel(), this, tanks, fluid, amount);
+    }
+
     @Override
     public Component getDisplayName() {
         return Component.translatable("gui.iis.bio.pocket");

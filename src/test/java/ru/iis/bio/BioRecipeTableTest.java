@@ -42,6 +42,52 @@ class BioRecipeTableTest {
         }
     }
 
+    /**
+     * Простой старт (D155): до LV — только вода, N0, G0 и сток, без сосудов. Всё, что нужно для формовочного гнезда, органов LV,
+     * мутантных линий и армированной оболочки (вход в MV), собирается без остальных жидкостей и без железы.
+     */
+    @Test
+    void simpleStartNeedsFourFluids() {
+        Set<String> simple = Set.of("water", "n0", "g0", "runoff");
+        Set<String> have = new HashSet<>(Set.of("water", "food", "#minecraft:planks", "#iis:bio/raw_meat", "#iis:bio/vegetables", "minecraft:wheat", "minecraft:bone",
+                "minecraft:rotten_flesh", "minecraft:stick", "iis:bio_knife", "iis:carcass_small", "iis:carcass_medium", "iis:carcass_large", "iis:carcass_rotten",
+                "iis:primitive_culture", "station:butcher", "station:mortar", "station:pot", "station:mixer", "station:pocket", "station:sump",
+                "minecraft:egg", "#minecraft:wool", "iis:carcass_fleshy", "iis:binding_secretion", "iis:long_fiber", "iis:dense_shell"));
+        List<Map.Entry<String, String>> unlocks = List.of(Map.entry("iis:plant_fiber", "iis:woven_mandrel"), Map.entry("iis:hand_substrate", "station:substrate"),
+                Map.entry("iis:growth_bed", "station:bed"), Map.entry("iis:forming_nest", "station:nest"), Map.entry("iis:loosener", "station:loosener"),
+                Map.entry("iis:compactor", "station:compactor"));
+        boolean changed = true;
+        while (changed) {
+            changed = false;
+            for (BioRecipe r : BioRecipe.all()) {
+                if (!have.contains("station:" + r.station())) continue;
+                if (!r.tool().isEmpty() && !have.contains(r.tool())) continue;
+                boolean ok = true;
+                for (BioRecipe.In in : r.items()) {
+                    String k = in.key();
+                    if (k.equals("#iis:bio/seeds")) ok &= have.contains("iis:primitive_culture") || have.contains("iis:base_seed");
+                    else if (k.startsWith("#iis:ores/")) ok &= true;
+                    else ok &= have.contains(k);
+                }
+                for (BioRecipe.FluidIn f : r.fluids()) ok &= simple.contains(f.fluid()) && have.contains(f.fluid());
+                if (!ok) continue;
+                for (BioRecipe.Out o : r.outItems()) changed |= have.add(o.item());
+                for (BioRecipe.FluidOut o : r.outFluids()) changed |= have.add(o.fluid());
+            }
+            for (var e : unlocks) if (have.contains(e.getKey())) changed |= have.add(e.getValue());
+        }
+        for (String must : List.of("g0", "iis:soft_tissue", "iis:living_membrane", "iis:base_seed", "iis:growth_bed", "iis:feeding_maw", "iis:forming_nest",
+                "iis:living_tank", "iis:living_store", "iis:peristaltic_channel", "iis:loosener", "iis:compactor", "iis:chitin_plate", "iis:vivarium_pad",
+                "iis:reinforced_shell", "iis:nutrient_gland")) {
+            assertTrue(have.contains(must), "the simple start cannot reach " + must);
+        }
+        // сосуды, насос, клапан и сложные среды — только с MV (после железы)
+        for (String late : List.of("g1", "n1", "e1", "iis:muscle_pump", "iis:check_valve", "iis:narrow_fibrous_vessel", "iis:working_fibrous_vessel",
+                "iis:capillary_bundle", "iis:tissue_microchannel", "iis:membrane_filter", "iis:ore_stomach")) {
+            assertFalse(have.contains(late), late + " must not be reachable before the gland");
+        }
+    }
+
     /** Нет рецепта, который выдаёт больше той же жидкости, чем съедает (бесплатного размножения среды). */
     @Test
     void noFluidMultiplication() {
@@ -95,7 +141,7 @@ class BioRecipeTableTest {
             }
             for (var e : unlocks) if (have.contains(e.getKey())) changed |= have.add(e.getValue());
         }
-        for (String must : List.of("n0", "primary_fraction", "hydrolysate", "binder", "suspension", "g0", "iis:soft_tissue", "iis:living_membrane",
+        for (String must : List.of("n0", "hydrolysate", "binder", "suspension", "g0", "iis:soft_tissue", "iis:living_membrane",
                 "iis:base_seed", "iis:growth_bed", "iis:feeding_maw", "station:bed",
                 "extract", "w0", "emulsion", "concentrate", "n1", "e1", "g1", "iis:tissue_microchannel", "iis:capillary_bundle",
                 "iis:narrow_fibrous_vessel", "iis:working_fibrous_vessel", "iis:muscle_node", "iis:forming_nest", "iis:muscle_pump",

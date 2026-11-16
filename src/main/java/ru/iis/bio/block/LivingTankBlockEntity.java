@@ -51,6 +51,10 @@ public class LivingTankBlockEntity extends BlockEntity {
         return tank;
     }
 
+    public boolean starving() {
+        return starving;
+    }
+
     public boolean supplying() {
         return supplying;
     }

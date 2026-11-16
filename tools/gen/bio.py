@@ -419,6 +419,11 @@ def generate(g):
     _b2 = _ilu.module_from_spec(_spec)
     _spec.loader.exec_module(_b2)
     stats['b2'] = _b2.extend(_b1, g)
+    # простой старт (D155): до LV четыре жидкости и без сосудов — переписывает таблицы перед записью
+    _spec = _ilu.spec_from_file_location('iis_gen_bio_simple', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bio_simple.py'))
+    _bs = _ilu.module_from_spec(_spec)
+    _spec.loader.exec_module(_bs)
+    stats['simple'] = _bs.apply(_b1)
     stats['b1'] = _b1.generate_b1(g)
     stats['b2'].update(_b2.generate(_b1, g))
     return stats
