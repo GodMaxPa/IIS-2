@@ -362,6 +362,8 @@ final class FluidGameTests {
         BlockPos o = stand.bioOrigin();
         var net = stand.network();
         h.succeedWhen(() -> {
+            String chainProblems = chainProblems(level, stand.chains());
+            h.assertTrue(chainProblems.isEmpty(), "stand chains:" + chainProblems);
             for (BlockPos p : stand.controllers()) {
                 if (level.getBlockEntity(p) instanceof ru.iis.multi.block.MultiblockControllerBlockEntity m) h.assertTrue(m.formed(), "stand structure at " + p + " not formed: " + level.getBlockState(p).getBlock());
             }
@@ -392,6 +394,40 @@ final class FluidGameTests {
                         "stand station at " + p + " must be working: " + (st == null ? "missing" : st.logic.status()));
             }
         });
+    }
+
+    /** Новые залы (D158): каждая цепочка дошла хотя бы до второго звена. Пустая строка — всё работает. */
+    private static String chainProblems(net.minecraft.world.level.Level level, java.util.Map<String, BlockPos> chains) {
+        StringBuilder sb = new StringBuilder();
+        BlockPos oreFirst = chains.get("ore_first");
+        if (itemCount(level, oreFirst.west(4)) == 0 && itemCount(level, chains.get("ore_out")) == 0) sb.append(" [ore line: nothing reached the washer, macerator holds ")
+                .append(itemCount(level, oreFirst)).append("]");
+        BlockPos steamOut = chains.get("steam_out");
+        if (itemCount(level, steamOut.south().above()) == 0 && itemCount(level, steamOut) == 0) sb.append(" [steam tower: nothing reached the furnace, macerator holds ")
+                .append(itemCount(level, steamOut.south().above(3))).append("]");
+        if (itemCount(level, chains.get("alloy_out")) == 0) sb.append(" [steam alloy smelter made no bronze]");
+        if (level.getBlockEntity(chains.get("steam_hammer")) instanceof net.minecraft.world.Container hammer && hammer.getItem(0).getCount() >= 64) sb.append(" [steam hammer on pipes idle]");
+        if (level.getBlockEntity(chains.get("steam_lv")) instanceof ru.iis.lv.block.ElectricMachineBlockEntity m && m.getItem(0).getCount() >= 64) sb.append(" [LV macerator on the turbine idle]");
+        for (String k : new String[]{"bio_bed", "bio_nest", "bio_loosener"}) {
+            if (!(level.getBlockEntity(chains.get(k)) instanceof StationBlockEntity st)) sb.append(" [").append(k).append(" missing]");
+            else if (!st.logic.busy() && !produced(st)) sb.append(" [").append(k).append(": ").append(st.logic.status()).append("]");
+        }
+        if (!(level.getBlockEntity(chains.get("implant_table")) instanceof ru.iis.implant.SurgeryTableBlockEntity t) || t.energy.stored <= 0) sb.append(" [surgery table has no power]");
+        if (!level.getBlockState(chains.get("ship_lift")).is(ru.iis.ship.ShipContent.LIFT.get())) sb.append(" [the ship is not built]");
+        if (sb.length() > 0) {
+            BlockPos so = chains.get("steam_out").south();
+            for (int dy = 0; dy <= 5; dy++) sb.append(" | tower+").append(dy).append('=').append(level.getBlockState(so.above(dy)).getBlock().getDescriptionId());
+            sb.append(" | boiler=").append(level.getBlockState(so.above(1).west()).getBlock().getDescriptionId()).append('/').append(level.getBlockState(so.above(1).east()).getBlock().getDescriptionId());
+            BlockPos bed = chains.get("bio_bed");
+            for (net.minecraft.core.Direction d : net.minecraft.core.Direction.values()) sb.append(" | bed.").append(d).append('=').append(level.getBlockState(bed.relative(d)).getBlock().getDescriptionId());
+        }
+        return sb.toString();
+    }
+
+    private static int itemCount(net.minecraft.world.level.Level level, BlockPos p) {
+        int n = 0;
+        if (level.getBlockEntity(p) instanceof net.minecraft.world.Container c) for (int i = 0; i < c.getContainerSize(); i++) n += c.getItem(i).getCount();
+        return n;
     }
 
     /** Место уже выдало продукт (бак продукта или выходной слот не пусты). */

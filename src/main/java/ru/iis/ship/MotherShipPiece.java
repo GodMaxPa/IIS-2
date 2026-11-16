@@ -116,9 +116,9 @@ public class MotherShipPiece extends StructurePiece {
                         if (!level.isOutsideBuildHeight(p)) level.setBlock(p, CAVE_AIR, 2);
                     }
                 }
-                // заражённая земля вокруг корпуса: чем ближе к борту, тем гуще
+                // заражённая земля вокруг корпуса (в готовом мире — стенд, тест — карта высот без _WG)
                 if (!column && ShipLayout.hash(seed, x, 99, z) % 4 == 0) {
-                    int top = level.getHeight(Heightmap.Types.OCEAN_FLOOR_WG, wx, wz) - 1;
+                    int top = level.getHeight(level instanceof net.minecraft.server.level.ServerLevel ? Heightmap.Types.OCEAN_FLOOR : Heightmap.Types.OCEAN_FLOOR_WG, wx, wz) - 1;
                     p.set(wx, top, wz);
                     if (top > y0 && level.getBlockState(p).isSolidRender() && !level.getBlockState(p).is(plating.getBlock())) level.setBlock(p, growth, 2);
                 }

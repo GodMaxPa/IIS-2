@@ -77,6 +77,10 @@ public final class StandHooks {
             if (level.getBlockEntity(p) instanceof MultiblockControllerBlockEntity m) {
                 if (m.formed()) formed++;
                 else broken.add(level.getBlockState(p).getBlock().getDescriptionId());
+            } else if (level.getBlockEntity(p) instanceof ru.iis.lv.block.CokeOvenBlockEntity c) {
+                // коксовая печь — не обычный контроллер: форму проверяет сама
+                if (c.checkStructure(level)) formed++;
+                else broken.add(level.getBlockState(p).getBlock().getDescriptionId());
             } else {
                 broken.add("other " + level.getBlockState(p).getBlock().getDescriptionId());
             }

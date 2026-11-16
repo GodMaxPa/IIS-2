@@ -109,6 +109,8 @@ public final class StandBuilder {
     private final Set<Long> keepForced = new HashSet<>();
     private StandNetworkInfo network;
     private BlockPos bioOrigin;
+    /** Контрольные точки рабочих цепочек новых залов (D158): имя → блок, по которому видно, что цепочка работает. */
+    private final Map<String, BlockPos> chains = new LinkedHashMap<>();
 
     private record Hall(String title, int x, int z) {}
 
@@ -125,12 +127,17 @@ public final class StandBuilder {
     }
 
     /** Результат постройки: что оставить загруженным и что проверять. */
-    public record Result(Set<Long> allForced, Set<Long> keep, List<View> views, List<BlockPos> controllers, StandNetworkInfo network, BlockPos bioOrigin, int shown, int leftovers) {}
+    public record Result(Set<Long> allForced, Set<Long> keep, List<View> views, List<BlockPos> controllers, StandNetworkInfo network, BlockPos bioOrigin, int shown, int leftovers,
+                         Map<String, BlockPos> chains) {}
 
     /** Построить; y0 — уровень, на котором стоят блоки (над полом). */
     public static Result build(ServerLevel level, int y0) {
         StandBuilder b = new StandBuilder(level, y0);
         b.networkHall();
+        b.oreHall();
+        b.steamHall();
+        b.bioChainHall();
+        b.shipHall();
         b.machinesHall();
         b.energyHall();
         b.automationHall();
@@ -157,7 +164,7 @@ public final class StandBuilder {
             b.command(c);
         }
         IIS.LOGGER.info("[IIS] stand built at y={}: {} blocks shown, {} in the leftovers hall, {} halls", y0, b.shown.size(), left, b.halls.size());
-        return new Result(b.forced, b.keepForced, b.views, b.controllers, b.network, b.bioOrigin, b.shown.size(), left);
+        return new Result(b.forced, b.keepForced, b.views, b.controllers, b.network, b.bioOrigin, b.shown.size(), left, b.chains);
     }
 
     private void command(String c) {
@@ -364,6 +371,7 @@ public final class StandBuilder {
         halls.add(new Hall(currentTitle, (x0 + x1) / 2, z0));
         label(cx, y0 + 6.6, z0 - 0.5, currentTitle, "gold", 3.2, true);
         label(cx, y0 + 4.2, z0 - 0.5, currentAbout, "white", 1.0, false);
+        lectern(new BlockPos(x0 + 1, y0, z0), currentTitle, StandBooks.text(currentTitle, currentAbout));
         BlockPos back = new BlockPos(x1 - 1, y0, z0);
         track(back);
         level.setBlock(back, Blocks.DARK_OAK_SIGN.defaultBlockState().setValue(StandingSignBlock.ROTATION, 8), 2);
@@ -371,6 +379,22 @@ public final class StandBuilder {
         views.add(new View(currentTitle, cx, y0 + 12, z0 - 7, 0, 32));
         views.add(new View(currentTitle + " 2", cx, y0 + 3, z0 + 3, 0, 18));
         cursor = x0 - 7;
+    }
+
+    /** Пюпитр с книгой-пояснением у входа в зал (D158): читается с севера. */
+    private void lectern(BlockPos p, String title, String text) {
+        track(p);
+        level.setBlock(p, Blocks.LECTERN.defaultBlockState().setValue(net.minecraft.world.level.block.LecternBlock.FACING, Direction.NORTH)
+                .setValue(net.minecraft.world.level.block.LecternBlock.HAS_BOOK, true), 2);
+        ItemStack book = new ItemStack(Items.WRITTEN_BOOK);
+        List<net.minecraft.server.network.Filterable<Component>> pages = new ArrayList<>();
+        for (String page : StandBooks.pages(text)) pages.add(net.minecraft.server.network.Filterable.passThrough(Component.literal(page)));
+        String t = title.length() > 32 ? title.substring(0, 32) : title;
+        book.set(net.minecraft.core.component.DataComponents.WRITTEN_BOOK_CONTENT,
+                new net.minecraft.world.item.component.WrittenBookContent(net.minecraft.server.network.Filterable.passThrough(t), "ИИС 2", 0, pages, true));
+        if (level.getBlockEntity(p) instanceof net.minecraft.world.level.block.entity.LecternBlockEntity l) l.setBook(book);
+        level.setBlock(p.above(2), Blocks.AIR.defaultBlockState(), 2);
+        label(p.getX() + 0.5, y0 + 1.9, p.getZ() + 0.5, "Книга зала (ПКМ)", "green", 0.8, false);
     }
 
     /** Строка таблицы: подпись и блоки по столбцам (null — пропуск). */
@@ -645,6 +669,7 @@ public final class StandBuilder {
         BlockPos boiler = at(38, 0, 5);
         set(boiler, IISMachines.BOILERS.get(BoilerType.COAL_BRONZE).get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
         BoilerBlockEntity bb = be(boiler, BoilerBlockEntity.class);
+        for (int k = 0; k < 16; k++) bb.fillWaterFromBucket();   // горячий котёл без воды взрывается, когда вода приходит: заливаем сразу
         bb.logic().temperature = 500;
         bb.setItem(BoilerBlockEntity.SLOT_FUEL, new ItemStack(Items.COAL, 64));
         tank(at(38, 1, 5), "universal_tank_steel", Fluids.WATER, 128000);
@@ -676,6 +701,289 @@ public final class StandBuilder {
         views.add(new View("Сеть круг MV", ox - 12, y0 + 4, oz + 1, 0, 20));
         views.add(new View("Сеть круг LV", ox - 30, y0 + 4, oz + 0, 0, 22));
         views.add(new View("Сеть печь", ox - 15, y0 + 6, oz + 3, 0, 30));
+    }
+
+    // --- рабочие цепочки (D158, просьба владельца 16.11: «добавь работающие цепочки и больше разъяснений») -----------------------
+    /** Солнечный буфер HV с батареями: источник зала. Лицо (выход) — на запад, к кабелю. */
+    private void solarBuffer(int x, int z) {
+        BlockPos p = at(x, 0, z);
+        set(p, LvContent.BATTERY_BUFFERS_HV.get(1).get().defaultBlockState().setValue(MachineBlock.FACING, Direction.WEST));
+        BatteryBufferBlockEntity b = be(p, BatteryBufferBlockEntity.class);
+        b.covers().attach(Direction.UP, CoverKind.SOLAR_HV);
+        for (int k = 0; k < 4; k++) {
+            ItemStack bat = new ItemStack(LvContent.BATTERY_LITHIUM_HV.get());
+            BatteryItem.setCharge(bat, ((BatteryItem) bat.getItem()).capacity);
+            b.setItem(k, bat);
+        }
+        b.energy.stored = b.energy.capacity;
+    }
+
+    private void fullChest(BlockPos p, ItemStack stack) {
+        set(p, Blocks.CHEST.defaultBlockState());
+        ChestBlockEntity c = be(p, ChestBlockEntity.class);
+        if (c != null) for (int i = 0; i < 27; i++) c.setItem(i, stack.copy());
+    }
+
+    private void hopper(BlockPos p, Direction facing) {
+        set(p, Blocks.HOPPER.defaultBlockState().setValue(net.minecraft.world.level.block.HopperBlock.FACING, facing));
+    }
+
+    private void keepHall() {
+        for (int cxx = (hallMinX - 2) >> 4; cxx <= (hallMaxX + 2) >> 4; cxx++) for (int czz = (oz - 3) >> 4; czz <= (hallMaxZ + 3) >> 4; czz++) keepForced.add(ChunkPos.pack(cxx, czz));
+    }
+
+    /** Переработка руды: руда → дроблёная → промытая → центрифугированная → пыль → металл; побочное и излишки — в сундуки. */
+    private void oreHall() {
+        beginHall("Переработка руды", "Полная линия на MV: каждый шаг даёт побочный продукт. Руда из сундука идёт по трубам сама, готовый металл копится в конце");
+        String HV = "cable_gold_4x", MV = "cable_copper_4x", ITEM = "item_pipe_medium_brass";
+        Block orange = Blocks.ORANGE_CONCRETE, green = Blocks.LIME_CONCRETE;
+        solarBuffer(1, 6);
+        cable(2, 6, HV);
+        set(at(3, 0, 6), LvContent.TRANSFORMER_MV.get().defaultBlockState().setValue(TransformerBlock.FACING, Direction.EAST));
+        for (int x = 4; x <= 23; x++) cable(x, 6, MV);
+        paintLine(4, 6, 23, 6, orange);
+        sign(at(1, 0, 4), "Солнце HV → трансформатор → MV");
+        LvMachineType[] types = {LvMachineType.MACERATOR_MV, LvMachineType.ORE_WASHER_MV, LvMachineType.THERMAL_CENTRIFUGE_MV, LvMachineType.MACERATOR_MV, LvMachineType.ELECTRIC_FURNACE_MV};
+        String[] steps = {
+                "1. Дробитель\nРуда халькопирита → 2 дроблёные руды\nиногда пыль пирита и камня",
+                "2. Рудопромывочная машина\nДроблёная + 1000 мБ воды → очищенная\n+ крошечная пыль пирита, каменная пыль\nВода — из бака сверху",
+                "3. Термоцентрифуга\nОчищенная → центрифугированная\n+ крошечная пыль кобальта",
+                "4. Дробитель\nЦентрифугированная → пыль халькопирита\nиногда пыль кадмия",
+                "5. Электропечь\nПыль халькопирита → 6 медных самородков"};
+        String[] signs = {"1. Дробитель MV", "2. Промывка MV", "3. Термоцентрифуга MV", "4. Дробитель MV", "5. Электропечь MV"};
+        for (int i = 0; i < types.length; i++) {
+            int x = 6 + 4 * i;
+            ElectricMachineBlockEntity m = machine(x, 5, types[i], Direction.NORTH);
+            m.itemTransfer = true;
+            m.setOutputSide(Direction.WEST, false);
+            sign(at(x, 0, 3), signs[i]);
+            labelAt(x, 3.4 + (i % 2) * 1.3, 5, steps[i], i == 4 ? "gold" : "white", 0.7);
+            if (i == 0) m.setItem(0, stack("ore_chalcopyrite", 64));
+            // труба к следующей машине; из середины — ограничительная ветка в сундук побочного и излишков
+            for (int px = x + 1; px <= x + 3; px++) {
+                if (px == x + 2 && i < types.length - 1) itemPipe(px, 0, 5, ITEM, Direction.WEST, Direction.EAST, Direction.NORTH);
+                else itemPipe(px, 0, 5, ITEM, Direction.WEST, Direction.EAST);
+            }
+            paintLine(x + 1, 5, x + 3, 5, green);
+            if (i < types.length - 1) {
+                itemPipe(x + 2, 0, 4, "item_pipe_restrictive_medium_brass", Direction.SOUTH, Direction.NORTH);
+                chest(at(x + 2, 0, 3), List.of(), "Побочное и излишки");
+            }
+        }
+        // руда: сундук над воронкой над первым дробителем
+        hopper(at(6, 1, 5), Direction.DOWN);
+        fullChest(at(6, 2, 5), stack("ore_chalcopyrite", 64));
+        labelAt(6, 6.2, 5, "Сундук с рудой\nВоронка подаёт её в дробитель", "green", 0.7);
+        tank(at(10, 1, 5), "universal_tank_steel", Fluids.WATER, 128000);
+        chest(at(26, 0, 5), List.of(), "Готовый металл");
+        labelAt(26, 2.6, 5, "Итог линии\nМедные самородки", "gold", 0.8);
+        labelAt(14, 7.4, 2, "Зачем так длинно: руда в печи даёт один слиток, полная линия — больше металла и побочные металлы.\nМашины сами выталкивают продукт в трубу (кнопка авто-выдачи в окне машины). Что следующая машина не берёт, уходит по ограничительной трубе в сундук", "aqua", 0.8);
+        chains.put("ore_out", at(26, 0, 5));
+        chains.put("ore_first", at(6, 0, 5));
+        keepHall();
+        endHall(Blocks.GRAY_CONCRETE);
+    }
+
+    private ru.iis.machine.block.SteamMachineBlockEntity steamMachine(BlockPos p, String id) {
+        set(p, IISMachines.STEAM_MACHINES.get(id).get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
+        return be(p, ru.iis.machine.block.SteamMachineBlockEntity.class);
+    }
+
+    /** Горящий угольный котёл с баком воды сверху. */
+    private void hotBoiler(BlockPos p) {
+        hotBoiler(p, BoilerType.COAL_BRONZE);
+    }
+
+    private void hotBoiler(BlockPos p, BoilerType type) {
+        set(p, IISMachines.BOILERS.get(type).get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
+        BoilerBlockEntity bb = be(p, BoilerBlockEntity.class);
+        for (int k = 0; k < 16; k++) bb.fillWaterFromBucket();   // горячий котёл без воды взрывается, когда вода приходит: заливаем сразу
+        bb.logic().temperature = 500;
+        bb.setItem(BoilerBlockEntity.SLOT_FUEL, new ItemStack(Items.COAL, 64));
+        tank(p.above(), "universal_tank_steel", Fluids.WATER, 128000);
+    }
+
+    /** Пар и начало игры: котёл греет воду, пар крутит бронзовые машины; котёл с турбиной дают первый LV. */
+    private void steamHall() {
+        beginHall("Пар и начало игры", "Первая ступень Кибера: угольный котёл, бронзовые паровые машины и первая электроэнергия от паровой турбины");
+        // башня: руда падает сверху вниз — дробитель, затем печь
+        int z = 6;
+        fullChest(at(4, 5, z), stack("ore_iron", 64));
+        hopper(at(4, 4, z), Direction.DOWN);
+        steamMachine(at(4, 3, z), "steam_macerator_bronze");
+        hopper(at(4, 2, z), Direction.DOWN);
+        steamMachine(at(4, 1, z), "steam_furnace_bronze");
+        hopper(at(4, 0, z), Direction.NORTH);
+        chest(at(4, 0, z - 1), List.of(), "Железные самородки");
+        set(at(5, 0, z), Blocks.BRICKS.defaultBlockState());
+        hotBoiler(at(5, 1, z));
+        hotBoiler(at(5, 3, z));
+        labelAt(4, 7.2, z, "1. Башня на пару\nСундук с рудой → воронка → паровой дробитель (руда → 2 дроблёные) → воронка → паровая печь (дроблёная → 10 самородков) → сундук", "gold", 0.8);
+        labelAt(7, 3.2, z, "Котлы стоят вплотную сбоку:\nкотёл сам отдаёт пар соседям.\nВода — из бака над котлом,\nуголь — в слоте топлива", "white", 0.7);
+        labelAt(2, 2.4, z + 1, "Сзади машины — выпуск пара:\nего нельзя загораживать,\nрядом стоять больно", "red", 0.7);
+        chains.put("steam_out", at(4, 0, z - 1));
+        // бронза: медь и олово в паровой плавильне сплавов
+        ru.iis.machine.block.SteamMachineBlockEntity alloy = steamMachine(at(11, 1, z), "steam_alloy_smelter_bronze");
+        alloy.setItem(0, new ItemStack(Items.COPPER_INGOT, 63));
+        alloy.setItem(1, stack("ingot_tin", 21));
+        hopper(at(11, 0, z), Direction.NORTH);
+        chest(at(11, 0, z - 1), List.of(), "Бронза");
+        set(at(12, 0, z), Blocks.BRICKS.defaultBlockState());
+        hotBoiler(at(12, 1, z));
+        // коллектор пара: три стальных котла за машиной сводят пар в одну трубу, она входит в машину сбоку
+        String header = "pipe_medium_bronze";
+        for (int x = 13; x <= 15; x++) {
+            set(at(x, 0, z + 2), Blocks.BRICKS.defaultBlockState());
+            hotBoiler(at(x, 1, z + 2), BoilerType.COAL_STEEL);
+        }
+        for (int x = 11; x <= 15; x++) {
+            if (x >= 13) fluidPipe(x, 1, z + 3, header, Direction.WEST, Direction.EAST, Direction.NORTH);   // к котлу
+            else fluidPipe(x, 1, z + 3, header, Direction.WEST, Direction.EAST);
+        }
+        fluidPipe(10, 1, z + 3, header, Direction.WEST, Direction.NORTH);
+        fluidPipe(10, 1, z + 2, header, Direction.NORTH, Direction.SOUTH);
+        fluidPipe(10, 1, z + 1, header, Direction.NORTH, Direction.SOUTH);
+        fluidPipe(10, 1, z, header, Direction.SOUTH, Direction.WEST);
+        labelAt(11, 4.4, z, "2. Бронза\nПаровая плавильня сплавов:\n3 меди + 1 олово → 4 бронзы.\nИз бронзы — все паровые машины", "gold", 0.8);
+        labelAt(13, 4.6, z + 3, "Коллектор пара\nСплав бронзы требует 16 ед. пара в тик, а малый бронзовый котёл даёт около 3.\nЕсли пара не хватает, машина «заикается» и теряет весь прогресс операции.\nПоэтому здесь три стальных котла (по 7,5) сводят пар в одну трубу", "yellow", 0.7);
+        chains.put("alloy_out", at(11, 0, z - 1));
+        // пар по трубам
+        hotBoiler(at(16, 0, z));
+        String pipe = IISMachines.PIPES.containsKey("pipe_small_bronze") ? "pipe_small_bronze" : "pipe_small_copper";
+        for (int x = 17; x <= 19; x++) fluidPipe(x, 0, z, pipe, Direction.WEST, Direction.EAST);
+        paintLine(17, z, 19, z, Blocks.LIGHT_BLUE_CONCRETE);
+        ru.iis.machine.block.SteamMachineBlockEntity hammer = steamMachine(at(20, 0, z), "steam_forge_hammer_bronze");
+        hammer.setItem(0, stack("crushed_iron", 64));
+        sign(at(18, 0, z - 1), "Труба: пар");
+        sign(at(20, 0, z - 2), "Паровой молот");
+        labelAt(18, 3.4, z, "3. Пар по трубам\nКотёл далеко от машины: пар идёт по бронзовой трубе.\nМолот бьёт дроблёную руду в грязную пыль", "white", 0.8);
+        chains.put("steam_hammer", at(20, 0, z));
+        // первый LV
+        hotBoiler(at(25, 0, 5));
+        set(at(24, 0, 5), LvContent.GENERATORS.get(GeneratorType.STEAM_TURBINE).get().defaultBlockState().setValue(MachineBlock.FACING, Direction.SOUTH));
+        for (int x = 24; x <= 28; x++) cable(x, 6, "cable_tin_4x");
+        paintLine(24, 6, 28, 6, Blocks.LIGHT_GRAY_CONCRETE);
+        ElectricMachineBlockEntity mac = machine(28, 5, LvMachineType.MACERATOR, Direction.NORTH);
+        mac.setItem(0, new ItemStack(Items.IRON_INGOT, 64));
+        sign(at(24, 0, 3), "Паровая турбина LV");
+        sign(at(28, 0, 3), "Дробитель LV");
+        labelAt(26, 3.6, 5, "4. Первый LV\nКотёл → паровая турбина → кабель → электрический дробитель.\nС этого начинается ступень LV: машины быстрее и не требуют выпуска пара", "gray", 0.8);
+        chains.put("steam_lv", at(28, 0, 5));
+        keepHall();
+        endHall(Blocks.BROWN_CONCRETE);
+    }
+
+    /** Био, простой старт (D155): ядро кормится из кармана, среда лежит в живом резервуаре, места и органы берут её сами. */
+    private void bioChainHall() {
+        beginHall("Био: простой старт", "Живая колония без сосудов: четыре жидкости, органы на ткани колонии сами берут питание у ядра и среду из резервуара");
+        ColonyCoreBlockEntity core = core(at(8, 0, 7));
+        if (core != null) {
+            core.seedTissue(6);
+            for (int i = 0; i < Station.POCKET.inputs; i++) core.pocket.setItem(i, new ItemStack(Items.BREAD, 64));
+        }
+        sign(at(8, 0, 5), "1. Ядро колонии: карман полон хлеба");
+        labelAt(8, 3.6, 7, "1. Ядро и карман\nПКМ по ядру — пищеварительный карман. Еда в кармане превращается в питание N0: от него живёт колония и все органы вокруг", "red", 0.8);
+        // мерный сосуд: G0
+        StationBlockEntity mix = station(at(2, 0, 7), BioContent.MIXER.get());
+        if (mix != null) {
+            mix.logic.tanks.get(0).fill(BioFluids.N0.source().get(), 1000, false);
+            mix.logic.setItem(0, s(BioItems.GEL, 4));
+            mix.logic.setItem(1, s(BioItems.BONE_POWDER, 4));
+        }
+        labelAt(2, 3.0, 7, "2. Мерный сосуд\n600 мБ N0 (ковшом из ядра) + связующий гель + костный порошок → 1000 мБ ростовой среды G0", "white", 0.7);
+        // живой резервуар: запас среды
+        BlockPos tankPos = at(5, 0, 10);
+        set(tankPos, BioContent.LIVING_TANK.get().defaultBlockState());
+        LivingTankBlockEntity lt = be(tankPos, LivingTankBlockEntity.class);
+        if (lt != null) lt.tank().fill(BioFluids.G0.source().get(), LivingTankBlockEntity.CAPACITY, false);
+        sign(tankPos.north(), "3. Живой резервуар: 8000 мБ G0");
+        labelAt(5, 2.8, 10, "3. Живой резервуар\nЗапас среды колонии. Наполняется ковшом. Сосуды и насосы до MV не нужны", "white", 0.7);
+        // ложе и гнездо вплотную к ядру: среду берут из резервуара сами
+        StationBlockEntity bed = station(at(7, 0, 7), BioContent.BED.get());
+        if (bed != null) {
+            bed.logic.setItem(0, s(BioItems.GROWTH_SUBSTRATE, 16));
+            bed.logic.setItem(1, s(BioItems.BASE_SEED, 16));
+        }
+        StationBlockEntity nest = station(at(9, 0, 7), BioContent.NEST.get());
+        if (nest != null) {
+            nest.logic.setItem(0, s(BioItems.MUSCLE_BUNDLE, 16));
+            nest.logic.setItem(1, s(BioItems.SINEW_CORD, 16));
+            nest.logic.setItem(2, s(BioItems.BONE_RIB, 16));
+        }
+        labelAt(7, 5.0, 7, "4. Ростовое ложе\nПодложка + посев → мягкая ткань.\nБак ложа пуст: 50 мБ G0 оно берёт из резервуара само", "gold", 0.7);
+        labelAt(10, 5.0, 7, "5. Формовочное гнездо (LV)\nМышечный пучок + шнур + ребро → мышечный узел.\nПитается N0 ядра, среду берёт само", "gold", 0.7);
+        // разрыхлитель за ядром: руду подаёт канал из хранилища
+        BlockPos loosenerPos = at(8, 0, 8);
+        // без station(): её табличка встала бы севернее — на место ядра
+        set(loosenerPos, BioContent.STATIONS2.get(Station.LOOSENER).get().defaultBlockState());
+        sign(at(7, 0, 8), "Разрыхлитель (LV)");
+        for (int zz = 9; zz <= 10; zz++) set(at(8, 0, zz), BioContent.ITEM_CHANNEL.get().defaultBlockState().setValue(ItemChannelBlock.FACING, Direction.NORTH));
+        BlockPos storePos = at(8, 0, 11);
+        set(storePos, BioContent.LIVING_STORE.get().defaultBlockState());
+        LivingStoreBlockEntity store = be(storePos, LivingStoreBlockEntity.class);
+        if (store != null) for (int i = 0; i < 4; i++) store.setItem(i, stack("ore_chalcopyrite", 64));
+        labelAt(8, 3.0, 10, "6. Руда без машин\nЖивое хранилище → перистальтический канал → разрыхлитель: руда → 2 дроблёные.\nКанал кладёт в орган только то, что входит в его рецепты", "white", 0.7);
+        labelAt(8, 7.4, 4, "Правило простого старта: до ступени LV — вода, питание N0, среда G0 и сток. Место или орган должны стоять вплотную к ядру или к ткани колонии.\nСосуды, давление и сложные среды начинаются с MV — с питательной железы (зал «Био»)", "aqua", 0.8);
+        chains.put("bio_bed", at(7, 0, 7));
+        chains.put("bio_nest", at(9, 0, 7));
+        chains.put("bio_loosener", loosenerPos);
+        keepHall();
+        endHall(Blocks.POLISHED_DEEPSLATE);
+    }
+
+    private void tpSign(BlockPos p, String text, int x, int y, int z) {
+        track(p);
+        level.setBlock(p, Blocks.DARK_OAK_SIGN.defaultBlockState().setValue(StandingSignBlock.ROTATION, 8), 2);
+        writeSign(p, text, "/tp @s " + x + " " + y + " " + z);
+    }
+
+    /** Материнский корабль (D156) целиком и киберимпланты (D157): стол под энергией и сундук имплантов. */
+    private void shipHall() {
+        beginHall("Корабль и импланты", "Материнский корабль в натуральную величину — внутрь ведут таблички. Перед ним: существа корабля и хирургический стол под энергией");
+        // корабль: нос на западе (справа от зрителя), стоит на полу — в мире он зарыт по пол верхнего яруса
+        int sx = ox - 54, sz = oz + 10;
+        ru.iis.ship.MotherShipPiece piece = new ru.iis.ship.MotherShipPiece(sx, y0, sz, 7L);
+        piece.postProcess(level, level.structureManager(), level.getChunkSource().getGenerator(), level.getRandom(), piece.getBoundingBox(),
+                new ChunkPos(sx >> 4, sz >> 4), new BlockPos(sx, y0, sz));
+        for (int dx = -8; dx <= 56; dx += 8) for (int dz = -8; dz <= 56; dz += 8) track(new BlockPos(sx + dx, y0, sz + dz));
+        shown.addAll(List.of(ru.iis.ship.ShipContent.PLATING.get(), ru.iis.ship.ShipContent.DECK.get(), ru.iis.ship.ShipContent.BULKHEAD.get(),
+                ru.iis.ship.ShipContent.LIGHT.get(), ru.iis.ship.ShipContent.GROWTH.get(), ru.iis.ship.ShipContent.LIFT.get()));
+        int mz = sz + ru.iis.ship.ShipLayout.MID_Z;
+        tpSign(at(24, 0, 4), "В корабль: ярус 1 (ПКМ)", sx + 10, y0 + ru.iis.ship.ShipLayout.FLOOR_1 + 1, mz);
+        tpSign(at(26, 0, 4), "Ярус 2: зал ядра (ПКМ)", sx + 14, y0 + ru.iis.ship.ShipLayout.FLOOR_2 + 1, mz);
+        tpSign(at(28, 0, 4), "Ярус 3: низ (ПКМ)", sx + 34, y0 + ru.iis.ship.ShipLayout.FLOOR_3 + 1, mz);
+        labelAt(26, 3.4, 4, "Материнский корабль\nВ мире лежит зарытым: пол верхнего яруса на уровне земли, вход — пролом в носу.\nЯрус 1 — ползуны. Ярус 2 — супермутанты и ядро сверхорганизма (босс). Ярус 3 — выход в пещеры.\nПлощадки лифта: ПКМ — вниз, Shift + ПКМ — вверх.\nОсторожно: в режиме выживания существа нападают", "red", 0.9);
+        // существа на постаментах: без ИИ, не нападают
+        String[][] mobs = {{"ship_crawler", "Ползун: 16 здоровья, урон 3. Ярусы 1 и 3"}, {"ship_brute", "Супермутант: 60 здоровья, урон 9, броня 6. Ярус 2"},
+                {"ship_overmind", "Ядро сверхорганизма: 400 здоровья, споры на 24 блока, зовёт охрану"}};
+        for (int i = 0; i < mobs.length; i++) {
+            BlockPos base = at(34 + 5 * i, 0, 4);
+            set(base, Blocks.SMOOTH_QUARTZ.defaultBlockState());
+            command(String.format(Locale.ROOT, "summon iis:%s %d %d %d {NoAI:1b,PersistenceRequired:1b,Invulnerable:1b,Silent:1b}", mobs[i][0], base.getX(), base.getY() + 1, base.getZ()));
+            sign(base.north(), mobs[i][1]);
+        }
+        labelAt(39, 5.4, 4, "Существа корабля\nЗдесь они неподвижны и не нападают", "white", 0.8);
+        // импланты: стол под энергией
+        solarBuffer(4, 4);
+        cable(5, 4, "cable_gold_4x");
+        BlockPos table = at(6, 0, 4);
+        set(table, ru.iis.implant.ImplantContent.SURGERY_TABLE.get().defaultBlockState().setValue(MachineBlock.FACING, Direction.NORTH));
+        ru.iis.implant.SurgeryTableBlockEntity tb = be(table, ru.iis.implant.SurgeryTableBlockEntity.class);
+        if (tb != null) tb.energy.stored = tb.energy.capacity;
+        sign(table.north(), "Хирургический стол (HV)");
+        List<ItemStack> implants = new ArrayList<>();
+        ru.iis.implant.Implants.ITEM_OF.values().forEach(i -> implants.add(new ItemStack(i.get())));
+        for (int k = 0; k < 4; k++) {
+            ItemStack bat = new ItemStack(LvContent.BATTERY_LITHIUM_HV.get());
+            BatteryItem.setCharge(bat, ((BatteryItem) bat.getItem()).capacity);
+            implants.add(bat);
+        }
+        chest(at(8, 0, 4), implants, "Все импланты и батареи");
+        labelAt(6, 3.6, 4, "Киберимпланты\n1. Возьмите из сундука «Внутреннюю батарею» и ПКМ ею по столу: 10 секунд, не отходите, будет больно.\n2. Так же — остальные области: глаза, мозг, сердце, руки, ноги, кожа.\n3. ПКМ пустой рукой по столу — состояние тела; строка [снять] в чате вынимает имплант.\nТело заряжается, пока вы стоите у стола, и от батарей в инвентаре", "aqua", 0.8);
+        chains.put("implant_table", table);
+        chains.put("ship_lift", new BlockPos(sx + ru.iis.ship.ShipLayout.LIFT_A_X, y0 + ru.iis.ship.ShipLayout.FLOOR_1, mz));
+        keepHall();
+        endHall(Blocks.GRAY_CONCRETE);
     }
 
     // --- 2. Машины ----------------------------------------------------------------------------------------------------
