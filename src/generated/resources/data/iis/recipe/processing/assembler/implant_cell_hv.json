@@ -1,0 +1,25 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:energy_crystal",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:plates/stainless_steel",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:circuits/advanced",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:implant_cell_hv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 480
+}

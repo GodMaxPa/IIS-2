@@ -1,0 +1,387 @@
+{
+  "id": "1D00000000001013",
+  "filename": "12_implants",
+  "order_index": 12,
+  "default_quest_shape": "",
+  "icon": {
+    "id": "iis:implant_heart_hv",
+    "count": 1
+  },
+  "quests": [
+    {
+      "id": "1A00000000120067",
+      "x": 0.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000120000"
+      ],
+      "icon": {
+        "id": "iis:surgery_table",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:surgery_table",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006700"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006700"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120068",
+      "x": 1.5,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000120067"
+      ],
+      "icon": {
+        "id": "iis:implant_cell_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_cell_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006800"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006800"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120069",
+      "x": 3.0,
+      "y": 0.0,
+      "dependencies": [
+        "1A00000000120068"
+      ],
+      "icon": {
+        "id": "iis:implant_eyes_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_eyes_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006900"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006900"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012006A",
+      "x": 3.0,
+      "y": 1.5,
+      "dependencies": [
+        "1A00000000120068"
+      ],
+      "icon": {
+        "id": "iis:implant_brain_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_brain_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006A00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006A00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012006B",
+      "x": 3.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000120068"
+      ],
+      "icon": {
+        "id": "iis:implant_heart_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_heart_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006B00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006B00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012006C",
+      "x": 3.0,
+      "y": 4.5,
+      "dependencies": [
+        "1A00000000120068"
+      ],
+      "icon": {
+        "id": "iis:implant_arms_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_arms_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006C00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006C00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012006D",
+      "x": 3.0,
+      "y": 6.0,
+      "dependencies": [
+        "1A00000000120068"
+      ],
+      "icon": {
+        "id": "iis:implant_legs_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_legs_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006D00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006D00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012006E",
+      "x": 3.0,
+      "y": 7.5,
+      "dependencies": [
+        "1A00000000120068"
+      ],
+      "icon": {
+        "id": "iis:implant_skin_hv",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_skin_hv",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006E00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006E00"
+        }
+      ]
+    },
+    {
+      "id": "1A0000000012006F",
+      "x": 6.0,
+      "y": 3.0,
+      "dependencies": [
+        "1A00000000120068"
+      ],
+      "icon": {
+        "id": "iis:implant_cell_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_cell_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012006F00"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012006F00"
+        }
+      ]
+    },
+    {
+      "id": "1A00000000120070",
+      "x": 7.5,
+      "y": 3.0,
+      "dependencies": [
+        "1A0000000012006F"
+      ],
+      "icon": {
+        "id": "iis:implant_eyes_ev",
+        "count": 1
+      },
+      "tasks": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_eyes_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012007000"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_brain_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012007001"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_heart_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012007002"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_arms_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012007003"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_legs_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012007004"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:implant_skin_ev",
+            "count": 1
+          },
+          "count": 1,
+          "id": "1B00000012007005"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": {
+            "id": "iis:credit_copper",
+            "count": 2
+          },
+          "id": "1C00000012007000"
+        }
+      ]
+    }
+  ]
+}

@@ -28,7 +28,7 @@ POOL = ['steam__steel', 'circuit__turbine__pump', 'first_aluminium', 'good_circu
         'al_nuc_reactor_odp_iii', 'n_star__fusion_reactor', 'naquadah__fusion_ii', 'large_plasma_generator', 'rocket__odp__array', 'end_game_content']
 # the book in its new order: our opening, the tiers, then the topical chapters as they were
 FRONT = ['landing', 'bronze']
-AFTER_TIERS = ['bio']   # our second path, right after the tiers of the first
+AFTER_TIERS = ['bio', 'implants']   # our second path, right after the tiers of the first
 TOPICAL = ['g_general_progress', 'g_quality_of_life', 'g_sb_machines', 'g_multiblocks', 'project_red', 'rails__trains', 'cross_breeding', 'ae2_proc__cont',
            'advanced_me_network', 'portable_and_wireless', 'space_rocket__moon', 'enderio_features']
 HEAD = {
@@ -61,6 +61,18 @@ HEIGHTS = [re.compile(r'(?:[Вв]ысота для поиска|[Hh]eight to sea
 
 def hexid(kind, n):
     return f'{(kind << 56) | n:016X}'
+
+
+def _open_retry(path, tries=20):
+    """Windows may hold a file that was written a moment ago (indexer, antivirus): open for writing with a few retries."""
+    import time
+    for k in range(tries):
+        try:
+            return open(path, 'w', encoding='utf-8', newline='\n')
+        except OSError:
+            if k == tries - 1:
+                raise
+            time.sleep(0.5)
 
 
 def rebuild(root, out):
@@ -332,7 +344,7 @@ def rebuild(root, out):
             json.dump(ch, fh, ensure_ascii=False, indent=2)
             fh.write('\n')
     for loc, table in zip(('ru_ru', 'en_us'), lang):
-        with open(os.path.join(out, 'lang', loc, 'iis1_quests.json5'), 'w', encoding='utf-8', newline='\n') as fh:
+        with _open_retry(os.path.join(out, 'lang', loc, 'iis1_quests.json5')) as fh:
             json.dump(dict(sorted(table.items())), fh, ensure_ascii=False, indent=2)
             fh.write('\n')
     return {TIER_KEYS[t]: len(v) for t, v in tiers.items()}

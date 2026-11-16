@@ -1,0 +1,29 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:sensor_hv",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/advanced",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/stainless_steel",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:circuits/advanced",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:implant_brain_hv",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 480
+}

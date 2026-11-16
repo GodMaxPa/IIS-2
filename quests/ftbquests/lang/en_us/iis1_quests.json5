@@ -36,6 +36,7 @@
   "chapter.1D00000000001010.title": "Landing",
   "chapter.1D00000000001011.title": "Bronze and tools",
   "chapter.1D00000000001012.title": "Bio: the living colony",
+  "chapter.1D00000000001013.title": "Cyber implants",
   "chapter.1D00000000001020.title": "Steam and steel",
   "chapter.1D00000000001021.title": "LV: the first electricity",
   "chapter.1D00000000001022.title": "MV",
@@ -14515,6 +14516,53 @@
     "HV. Tissues in tens of seconds instead of minutes."
   ],
   "quest.1A00000000120066.title": "Growth accelerator",
+  "quest.1A00000000120067.quest_desc": [
+    "From the HV tier on you can improve your own body. The table is an HV machine: bring power to it. It installs and removes cyber implants; every operation costs EU (100 000 for the HV tier, 400 000 for EV), takes 10 seconds, hurts and weakens you for a minute. Stay by the table while it works.",
+    "",
+    "Right click the table with an implant to install it. Right click with an empty hand for the state of your body; taken areas have a [remove] line in the chat.",
+    "",
+    "The body has seven areas: cell, eyes, brain, heart, arms, legs, skin. One implant in each. Implants stay after death, but the body's charge drops to zero.",
+    "",
+    "Crafting table recipe:",
+    "{image:iis:textures/quest_recipe/iis__surgery_table.png width:120 height:72 align:center}"
+  ],
+  "quest.1A00000000120067.title": "Surgery table",
+  "quest.1A00000000120068.quest_desc": [
+    "The first implant: the EU reserve of the body itself, 1 000 000 EU. Without a cell no other implant works. It charges by itself: from the table while you stand next to it, and from plain batteries in your inventory. Out of charge, the bonuses switch off until it is charged again."
+  ],
+  "quest.1A00000000120068.title": "Internal cell",
+  "quest.1A00000000120069.quest_desc": [
+    "Night vision. 1 EU/t."
+  ],
+  "quest.1A00000000120069.title": "Optic implant",
+  "quest.1A0000000012006A.quest_desc": [
+    "Reach +1 block. 2 EU/t."
+  ],
+  "quest.1A0000000012006A.title": "Neural interface",
+  "quest.1A0000000012006B.quest_desc": [
+    "Health +3 hearts. 2 EU/t."
+  ],
+  "quest.1A0000000012006B.title": "Artificial heart",
+  "quest.1A0000000012006C.quest_desc": [
+    "Mining speed +25%, attack damage +2. 2 EU/t."
+  ],
+  "quest.1A0000000012006C.title": "Reinforced arm joints",
+  "quest.1A0000000012006D.quest_desc": [
+    "Speed +15%, a higher jump, safe fall +3 blocks. 2 EU/t."
+  ],
+  "quest.1A0000000012006D.title": "Reinforced leg joints",
+  "quest.1A0000000012006E.quest_desc": [
+    "Armour +4, on top of what you wear. 2 EU/t."
+  ],
+  "quest.1A0000000012006E.title": "Subdermal plating",
+  "quest.1A0000000012006F.quest_desc": [
+    "4 000 000 EU. An EV implant is made of the HV implant of the same area and EV parts; its bonus and its use are twice as high, and some have an extra: the eyes do not go blind, the heart heals slowly, the legs step up a block, the skin is tougher."
+  ],
+  "quest.1A0000000012006F.title": "EV cell",
+  "quest.1A00000000120070.quest_desc": [
+    "All six areas at the EV tier: 22 EU/t, an EV cell lasts two and a half hours."
+  ],
+  "quest.1A00000000120070.title": "The full EV set",
   "quest.1A00000000130000.quest_desc": [
     "The first machines run on steam: a boiler heats water, steam goes to machines through bronze pipes.",
     "",

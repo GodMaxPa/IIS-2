@@ -44,6 +44,7 @@ public final class IIS {
         ru.iis.auto.StorageBlocks.register(modEventBus);
         ru.iis.bio.BioContent.register(modEventBus);
         ru.iis.ship.ShipContent.register(modEventBus);   // D156: материнский корабль
+        ru.iis.implant.ImplantContent.register(modEventBus);   // D157: киберимпланты
         ru.iis.rail.RailContent.register(modEventBus);
         ru.iis.space.SpaceContent.register(modEventBus);
         ru.iis.reactor.ReactorContent.register(modEventBus);

@@ -1,0 +1,33 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:sensor_ev",
+      "count": 1
+    },
+    {
+      "ingredient": "#c:circuits/data",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/titanium",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:circuits/data",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:implant_brain_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:implant_brain_ev",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 1920
+}

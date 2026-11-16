@@ -1,0 +1,29 @@
+{
+  "type": "iis:assembler",
+  "inputs": [
+    {
+      "ingredient": "iis:robot_arm_ev",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:plates/titanium",
+      "count": 2
+    },
+    {
+      "ingredient": "#c:circuits/data",
+      "count": 2
+    },
+    {
+      "ingredient": "iis:implant_arms_hv",
+      "count": 1
+    }
+  ],
+  "outputs": [
+    {
+      "id": "iis:implant_arms_ev",
+      "count": 1
+    }
+  ],
+  "duration": 600,
+  "eut": 1920
+}

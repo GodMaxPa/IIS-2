@@ -210,9 +210,30 @@ BIO = [
     ('b_accelerator', 16, 4, ['iis:accelerator'], ['b_incubator'], ('Ускоритель роста', 'Growth accelerator'), ('HV. Ткани за десятки секунд вместо минут.', 'HV. Tissues in tens of seconds instead of minutes.')),
 ]
 
+# D157: cyber implants, from HV. Recipes of the implants are in JEI (assembler).
+IMPLANTS = [
+    ('i_table', 0, 2, ['iis:surgery_table'], ['start'], ('Хирургический стол', 'Surgery table'),
+     ('Со ступени HV можно улучшать собственное тело. Стол — машина HV: подведите к нему энергию. Он ставит и снимает киберимпланты; каждая операция стоит EU (100 000 для ступени HV, 400 000 для EV), длится 10 секунд, причиняет боль и на минуту ослабляет. Не отходите от стола, пока идёт операция.\n\nПКМ имплантом по столу — установить. ПКМ пустой рукой — состояние тела; у занятых областей в чате есть строка [снять].\n\nУ тела семь областей: батарея, глаза, мозг, сердце, руки, ноги, кожа. В каждой — один имплант. Импланты остаются после смерти, но заряд тела обнуляется.',
+      'From the HV tier on you can improve your own body. The table is an HV machine: bring power to it. It installs and removes cyber implants; every operation costs EU (100 000 for the HV tier, 400 000 for EV), takes 10 seconds, hurts and weakens you for a minute. Stay by the table while it works.\n\nRight click the table with an implant to install it. Right click with an empty hand for the state of your body; taken areas have a [remove] line in the chat.\n\nThe body has seven areas: cell, eyes, brain, heart, arms, legs, skin. One implant in each. Implants stay after death, but the body\'s charge drops to zero.')),
+    ('i_cell', 1, 2, ['iis:implant_cell_hv'], ['i_table'], ('Внутренняя батарея', 'Internal cell'),
+     ('Первый имплант: запас EU самого тела, 1 000 000 EU. Без батареи остальные импланты не работают. Заряжается сама — от стола, когда вы стоите рядом, и от обычных батарей в инвентаре. Кончился заряд — бонусы выключаются до подзарядки.',
+      'The first implant: the EU reserve of the body itself, 1 000 000 EU. Without a cell no other implant works. It charges by itself: from the table while you stand next to it, and from plain batteries in your inventory. Out of charge, the bonuses switch off until it is charged again.')),
+    ('i_eyes', 2, 0, ['iis:implant_eyes_hv'], ['i_cell'], ('Глазной имплант', 'Optic implant'), ('Ночное зрение. 1 EU/т.', 'Night vision. 1 EU/t.')),
+    ('i_brain', 2, 1, ['iis:implant_brain_hv'], ['i_cell'], ('Нейроинтерфейс', 'Neural interface'), ('Дальность руки +1 блок. 2 EU/т.', 'Reach +1 block. 2 EU/t.')),
+    ('i_heart', 2, 2, ['iis:implant_heart_hv'], ['i_cell'], ('Искусственное сердце', 'Artificial heart'), ('Здоровье +3 сердца. 2 EU/т.', 'Health +3 hearts. 2 EU/t.')),
+    ('i_arms', 2, 3, ['iis:implant_arms_hv'], ['i_cell'], ('Усиленные суставы рук', 'Reinforced arm joints'), ('Скорость копания +25%, урон +2. 2 EU/т.', 'Mining speed +25%, attack damage +2. 2 EU/t.')),
+    ('i_legs', 2, 4, ['iis:implant_legs_hv'], ['i_cell'], ('Усиленные суставы ног', 'Reinforced leg joints'), ('Скорость +15%, выше прыжок, безопасное падение +3 блока. 2 EU/т.', 'Speed +15%, a higher jump, safe fall +3 blocks. 2 EU/t.')),
+    ('i_skin', 2, 5, ['iis:implant_skin_hv'], ['i_cell'], ('Подкожная броня', 'Subdermal plating'), ('Броня +4, складывается с надетой. 2 EU/т.', 'Armour +4, on top of what you wear. 2 EU/t.')),
+    ('i_cell_ev', 4, 2, ['iis:implant_cell_ev'], ['i_cell'], ('Батарея EV', 'EV cell'),
+     ('4 000 000 EU. Импланты ступени EV делаются из импланта HV той же области и деталей EV; бонус и расход у них вдвое выше, у некоторых есть добавка: глаза не слепнут, сердце понемногу лечит, ноги шагают на блок, кожа твёрже.',
+      '4 000 000 EU. An EV implant is made of the HV implant of the same area and EV parts; its bonus and its use are twice as high, and some have an extra: the eyes do not go blind, the heart heals slowly, the legs step up a block, the skin is tougher.')),
+    ('i_full_ev', 5, 2, ['iis:implant_eyes_ev', 'iis:implant_brain_ev', 'iis:implant_heart_ev', 'iis:implant_arms_ev', 'iis:implant_legs_ev', 'iis:implant_skin_ev'], ['i_cell_ev'],
+     ('Полный набор EV', 'The full EV set'), ('Все шесть областей на ступени EV: 22 EU/т, батареи EV хватает на два с половиной часа работы.', 'All six areas at the EV tier: 22 EU/t, an EV cell lasts two and a half hours.')),
+]
 CHAPTERS = [('landing', 'first_steps', LANDING, ('Высадка', 'Landing'), 'iis:flint_pickaxe'),
             ('bronze', 'first_tools', BRONZE, ('Бронза и инструменты', 'Bronze and tools'), 'iis:ingot_bronze'),
-            ('bio', None, BIO, ('Био: живая колония', 'Bio: the living colony'), 'iis:colony_core')]
+            ('bio', None, BIO, ('Био: живая колония', 'Bio: the living colony'), 'iis:colony_core'),
+            ('implants', None, IMPLANTS, ('Киберимпланты', 'Cyber implants'), 'iis:implant_heart_hv')]
 # old task -> new quest, where the task itself changed
 ALIAS = {'minecraft:white_wool': 'wool', 'item_tag(minecraft:beds)': 'bed', 'minecraft:oak_log': 'logs', 'minecraft:oak_planks': 'planks',
          'minecraft:wooden_pickaxe': 'flint_pickaxe', 'minecraft:stone_pickaxe': 'flint_pickaxe', 'minecraft:stone_shovel': 'flint_shovel', 'minecraft:wooden_shovel': 'flint_shovel',

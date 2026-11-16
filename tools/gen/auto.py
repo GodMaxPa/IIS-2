@@ -474,6 +474,13 @@ def generate(g):
     for mat_name, block in (('Iron', 'minecraft:iron_block'), ('Gold', 'minecraft:gold_block'), ('Copper', 'minecraft:copper_block')):
         mrec('compressor', f'block_{mat_name.lower()}', [ing(tag_of('ingot', mat_name), 9)], [out(block)], 300, 2)
 
+    # киберимпланты (D157): хирургический стол и импланты — теми же помощниками (блок-машина, рецепты машин)
+    import importlib.util as _ilu
+    _spec = _ilu.spec_from_file_location('iis_gen_implants', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'implants.py'))
+    _implants = _ilu.module_from_spec(_spec)
+    _spec.loader.exec_module(_implants)
+    stats.update(_implants.generate(g, dict(name=name, machine=machine, tooltip=tooltip, ing=ing, out=out, mrec=mrec, casing=casing, shaped=shaped, tex_out=tex_out)))
+
     for key, r in rec.items():
         write(os.path.join(D, NS, 'recipe', 'processing', key + '.json'), r)
     stats['recipes'] = len(rec)

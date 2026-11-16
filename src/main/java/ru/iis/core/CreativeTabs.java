@@ -132,7 +132,7 @@ public final class CreativeTabs {
             case "multi", "reactor" -> Cat.MULTI;
             case "fluids" -> Cat.PIPES;
             case "tools", "electric_tools" -> Cat.TOOLS;
-            case "gear" -> Cat.COMBAT;
+            case "gear", "implants" -> Cat.COMBAT;
             case "equipment" -> starts(path, VEHICLE) ? Cat.TRANSPORT : Cat.COMBAT;
             case "rail", "space" -> Cat.TRANSPORT;
             case "defense" -> Cat.DEFENSE;
